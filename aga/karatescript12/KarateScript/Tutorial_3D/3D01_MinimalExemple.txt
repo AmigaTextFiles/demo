@@ -1,0 +1,182 @@
+
+ Here is our first karate script using 3d:
+ In this 3d extension, there are a lot of constructors to build objects
+relatives to 3d, and only a few effect to manipulate and draw them:
+
+ To make a 3D effects run on your screen, you will always have to build:
+
+  - A 'world3d', always using the <World3D > constructor.
+
+  - One or more 3d objects in space (we will call them ob3d):
+     you attach them to a world3d.
+     there are many constructors for this. (here we use < cube>.)
+     you can attach many objects to a world3d.
+
+  - One or more t3d (3d textures) which defines a type of rendering
+    for a given polygon.  (here we use < t3dFlat>, a one-color texture.)
+    When you construct a 'ob3d', you can specify which texture (t3d) will be used.
+
+ So this very simple exemple creates a world named 'world1',
+ then 3 textures,
+ then it creates a cube named 'our_cube' that use the textures, and
+ our_cube is attached to 'world1'.
+
+ We also need a < KCAM> camera, (already seen in karate exemple D03),
+ to define the point of view in the geometry.
+
+ Then in the drawing part, we use 2 new Effect:
+ 'Set3DObject' can change the position, rotation and scale of an object in real time.
+ 'Draw3DWorld' Draw a whole world (it draws the objects attached to it)
+ on a rectangle according to a camera object.
+
+ Now Let's construct all that and comment it:
+
+--------------------------------- objects constructions ----
+<MAIN> myscript |0|1</MAIN>              the main script to play...(see classic karate tutorials)
+
+<KCAM> the_camera |0|0|-3|0|0|0|0.5  </KCAM> camera (position: x,y,z rotation: o1,o2,o3, FOV focale length. )
+ we put the camera behind coordinate 0,0,0 (where object is),
+ in order to look at it. Note that the last parameter (0.5) is the focale length
+ (distance between the eye and the projected plane): the more it is little,
+ the more the view angle width is big.
+
+
+<World3D> world1 </World3D> create an empty world.
+
+ We create flat color textures with < t3dFlat>, specifying the color used
+in the 256 color palette:
+
+<t3dFlat> texture0 | 16  </t3dFlat> color number.
+<t3dFlat> texture1 | 17  </t3dFlat>
+<t3dFlat> texture2 | 18  </t3dFlat>
+
+cube is a 'ob3d' object constructors. Such constructors always need
+a label, the label of the world where it is attached, then a description
+of their initial position (x,y,z), rotations (o1,o2,o3), and scale (sx,sy,sz).
+(note scale should be set at default to 1, not 0.) This 9 parameters are called
+the matrix parameters, and can be changed dynamicaly with effect 'Set3DObject'.
+ Then, after the 9 matrix parameters, parameters may vary:
+ for < cube> , we just need the 6 textures applied to each cube size
+ For all Object constructors, you can fill or not a texture parameter
+ (you can let it empty) then the corresponding polygons will not be built:
+
+<cube> our_cube | world1 |0|0|0|0|0|0|1|1|1 |texture0 |texture1 |texture2 |texture1 |texture2| texture0 </cube>
+         initial position(x,y,z), rotation(o1,o2,o3), scale (sx,sy,sz), textures,...
+
+ < cube> are always 1.0 unit sized, but you can change the 3 scale parameters.
+          (trick: and even set them to negative values, it reverses objects.)
+
+
+ IMPORTANT NOTE: textures and worlds
+ have to be defined BEFORE the constructor that reference them.
+  If texture0 was defined after our_cube, it couldn't find it.
+
+
+
+<KIMG> image | data/tv.iff </kimg> we just need an image to set the screen palette.
+
+--------------------------------- script definition ----
+<KSCRIPT>  let's write a script to play.
+    <ID> myscript </ID>
+    <PLAY> mypart | 40000 | 0 | 1 </PLAY> play mypart 800 seconds.
+</KSCRIPT>
+
+<KPART>
+    <ID> mypart </ID>
+
+
+    <Fx><Pa>setpalette</Pa>  set the screen palette
+        <Pa> image </Pa>   we have seen each image stands for a 256 color palette too.
+    </Fx>
+
+
+    <Fx><Pa>fillrc</Pa>  clear the screen background to color 24.
+        <Pa>  </Pa>   default screen rectangle.
+        <Pa> cte | 24 </Pa>
+    </Fx>
+
+
+    'Set3DObject' provide a way to modify an object position, rotations,
+    and scale applied to the object. The new values override the ones defined
+    in the object's constructor.
+
+    <Fx><Pa> Set3DObject </Pa>      make the cube rotate all the time on the 3 axis:
+        <Pa>  our_cube </Pa>        (note our_cube is attached to world1.)
+
+        <Pa> 3cte |0|0|0  </Pa>     set at position 0,0,0
+
+        <Pa> aff |0.4|0.006 </Pa>   rotation: make angles follow affine curve.
+        <Pa> aff |0.6|0.01</Pa>
+        <Pa> aff |0.8|0.00</Pa>
+
+        <Pa> 3cte|1|1|1 </Pa>       scale always set to 1,1,1.
+    </Fx>
+
+    'Draw3DWorld' is the effect that draw the world:
+
+      <Fx><Pa> Draw3DWorld </Pa>
+            <Pa>   </Pa>        the rectangle where to draw (here: default)
+            <Pa> world1 </Pa>      the 3D world to draw !
+            <Pa> the_camera </Pa>  note camera postion is 0,0,-3, looking 0,0,0.
+            <Pa> cte|0 </Pa>       time march, may be used for some lightwave stuffs...
+            <Pa> cte|0.25 </Pa>    near-cut-plane distance to camera (must be >0)
+            <Pa> cte|20</Pa>       far-cut-plane distance to camera (must be >near)
+        </Fx>
+
+        Note Draw3DWorld need distances to a near-cut-plane and a
+        far-cut-plane: all object nearer or farer will be space-cut.
+        this is a convenient feature on all modern 3d engines, and you can
+        make a lot of trick with it.
+
+</KPART>
+
+ Some other interesting notes about the karate 3d engines:
+
+  You got to be aware space coordinates are valid between -32000 to 32000,
+  afterwhat your objects will diseappear. Consider the Unit (1.0) stands
+  for a meter. You can modelise object with a maximum precision (1.0/65536.0)
+
+ Now, all angles for rotations in karate (and 3d) stands like 1.0 = Pi (180°),
+ so -2 = 0 = 2 =4.
+
+  Also, there is no Z-buffer in karate3D for 680X0, for efficacity reasons.
+ It uses an algorythm with polygon sorting. It means you got to
+ create your object with no polygon crossing, or it will do strange things.
+ Keep it in mind.
+
+ Another more technic information (is you are not used with mathematics,pass.)
+
+  The projection used for perpective is very simple. karate consider
+ that the default screen is 1.0-unit-width sized, horizontaly and vertically.
+ so you can imagine a square for it.
+ with 'Draw3DWorld', the same square, with the same dimension, exist in
+ your space. See the schema: to find projected point ON the screen line,
+ draw a line from each point of the cube to the camera center. It will
+ cross the screen on a point, that is the projected point. Now notice why
+ with the same drawing, having a shorter focale length gives a wider angle of view.
+ Notice too that if the distance from camera to cube is 2.0, and focale length is
+ 1.0, and cube width is 1.0, the cube will take the half of the screen.
+
+
+Z axis.
+î
+|
+|________________ <- far-cut-plane
+|  space drawn.   /
+|                /
+|      /\       /
+|     /  \ <- the cube rotating.
+|\    \  /    /
+| \    \/    /
+|  \________/ _    <- karate screen with cube drawn on it. (near-cut-plane can be there also.)
+|   \      /  |
+|    \    /   |<-this line represents the focale length.
+|     \  /    |
+|      \/  <- | the camera position ( z=0 in camera origin )
++-------------|--------------> X (or Y) axis.
+
+ Last note: monitors are not usually 'squares' but rectangles, and that projection might
+ not please you. No matter: create another rectangle with < krect> with
+ different position sizing (like 0.0|0.2|1.0|0.8), you will then be able to manipulate
+ each aspect of karate3d's projection ;-).
+

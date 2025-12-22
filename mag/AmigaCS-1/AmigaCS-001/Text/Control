@@ -1,0 +1,36 @@
+@{d FFFFFF}                                    @{c 00FFEF}Ovládání Diskmagu@{c}
+                                   @{c 00FFEF}¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+  @{c FFF414}LEVÉ TLAÇÍTKO MYÎI@{c}   - výbër z nabídky, posun v textu
+  @{c FFF414}PRAVÉ TLAÇITKO MYÎI@{c}  - návrat na pêedchozí nabídku
+  @{c FFF414}ESCAPE@{c}               - návrat na pêedchozí nabídku
+  @{c FFF414}ÎIPKA VLEVO@{c}          - pêedchozí stránka textu
+  @{c FFF414}ÎIPKA NAHORU@{c}         - návrat na pêedchozí nabídku
+  @{c FFF414}ÎIPKA VPRAVO@{c}         - dalîí stránka textu
+  @{c FFF414}BACKSPACE@{c}            - pêedchozí stránka textu
+  @{c FFF414}SPACE@{c}                - dalîí stránka textu
+  @{c FFF414}TAB@{c}                  - cyklický výbër poloùek nabídky (vpêed)
+  @{c FFF414}LEVÝ SHIFT@{c}           - cyklický výbër poloùek nabídky (vzad)
+  @{c FFF414}ENTER@{c}                - volba vybrané poloùky nabídky
+  @{c FFF414}M@{c}                    - vypnutí/zapnutí hudby
+  @{c FFF414}Q@{c}                    - okamùité ukonçení diskmagu
+
+
+
+                                     @{c 00FFEF}V hlavní nabídce@{c}
+                                     @{c 00FFEF}¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+  @{c FFF414}F1@{c}  -  rubrika "Úvod"
+  @{c FFF414}F2@{c}  -  rubrika "Hardware & Software"
+  @{c FFF414}F3@{c}  -  rubrika "Games"
+  @{c FFF414}F4@{c}  -  rubrika "Ostatní"
+                                         @{c 00FFEF}ToolTypy@{c}
+  @{c FFF414}MODEID@{c}          - reùim obrazovky (pokud není zadán, otevêe se requester)
+  @{c FFF414}TEXTPATH@{c}        - cesta k textûm diskmagu (obvykle PROGDIR:Text)
+  @{c FFF414}GFXPATH@{c}         - cesta ke grafice diskmagu (obvykle PROGDIR:Gfx)
+  @{c FFF414}MENUPATH@{c}        - cesta k nabídkám diskmagu (obvykle PROGDIR:Menu)
+  @{c FFF414}PICTPATH@{c}        - cesta k obrázkûm diskmagu (obvykle PROGDIR:Pics)
+  @{c FFF414}BOXES@{c}           - zapíná (YES) nebo vypíná (NO) çtverce pêi mazání obrazovky
+  @{c FFF414}MUSIC@{c}           - trvale zapíná (YES) nebo vypíná (NO) hudbu v diskmagu
+  @{c FFF414}EFFECT@{c}          - zapíná (YES) nebo vypíná (NO) prolínací efekt
+  @{c FFF414}OSC@{c}             - zapíná (YES) nebo vypíná (NO) animaci osciloskopu
+  @{c FFF414}DELAY1@{c}          - prodleva pêi kreslení çtvercû (hodí se pro CGX)
+  @{c FFF414}DELAY2@{c}          - prodleva pêi mazání çtvercû (hodí se pro CGX)

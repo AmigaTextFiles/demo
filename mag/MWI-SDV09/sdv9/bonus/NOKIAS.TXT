@@ -1,0 +1,937 @@
+
+
+                 
+                                  ·     ·
+                               _ __\   /__ _
+                            _ _)\\  \ /  //(_ _
+                           -\   __\° X °/__   /-
+                    _ __ ___ ___)  \/_\/  (___ ___ __ _
+           ((-   - -\\\_\\__\\__  _ /¦\ _  __//__//_///- -   -))
+                       _.      \__)_¯_¯_(__/      ._          
+           _/          \|_       | | | | |       _|/          \_
+         __\ ___ _/\____\/__ __ _| | | | |_ __ __\/____/\_ ___ /__
+       _/   \  (_)  \_  \/  /_/\\| |_|_| |//\_\  \/  _/  (_)  /   \_
+       |                    \_\/ | | | | | \/_/                    |
+      _|                      __ | | | | | __                     _|_
+      \|_                     \/_| | | | |_\/                      |/
+       |                     · _)  ¯_¯_¯  (_ ·                     |
+       |  ·H2o!·              \\___ \ / ___//                      |
+       ¯\_______________________ _)  Y  (_ _______________________/¯
+             __                  \___ ___/                  __
+         - ->\__ LOS ENDOS BBS <<-  (_)  ->> LOS ENDOS BBS __/<- -
+                           
+
+
+
+              _________\ __________________________ _________
+            :_\         \\                        (_)       /_:
+            |   ##:##:## - @@-@@-@@   HELLFiRE           EHQ  |
+  _______ _ | _ __  _____ _ ___.__    NiGHtFALL          EHQ  |      S
+._\  ___///_|_\\\ \/    /_\\\  |  \_. DiGitAL CORRUPtiON DKHQ |      K
+|  \______  |    _/   _/     \__    | FREEZERS           EHQ  |      Y
+|        |  |    \     \       |    | SHELtER            DKHQ |
+|___________|_____\     \___________| UNiQUE             WHQ  |      T
+            |   tGø\_____/            AUDIOPHiLES        WHQ  |      O
+            |                                                 |      W
+            |       ÷ RiNGDOWN ÷             ÷ tELNEt ÷       |      E
+            | SLOt #1: +45-PRiVATE!    SLOt #6: D Y N A M i C |      R
+            | SLOt #2: +45-PRiVATE!    SLOt #7: D Y N A M i C |
+            | SLOt #3: +45-PRiVATE!    SLOt #8: D Y N A M i C |      P
+            | SLOt #4: +45-PRiVATE!    SLOt #9: D Y N A M i C |      O
+            |                                                 |      W
+            |        ÷ iSDN ÷              ÷ SUPPORtiNG ÷     |      E
+            | SLOt #5: +45-PRiVATE!     Amiga/PC/N64/Mac/MP3  |      R
+            |                                                 |
+            |    RUNNiNG A4000/CYBERSTORM'o6o/5oMHZ/16GB HD   |
+            |   .______ _   _ ________. _ ____      _ ______  | _ __________
+            |  _|     ///_._\\\ __    |_\\\ _/____._\\\  __/__|_\\\_       /
+            |  \_         |     \/    |     \     |     _\    |    /     _/
+            |   |         |     /     |     /\    |           |    \      \_
+            |   |_________|___________|_____/\____|___________|     \______/
+            |__                _                            __|______|
+            : /_______________( )___________________________\ :
+GSMonline's Tech Info Page, Secrets and Codes for Nokia GSM
+
+Phones. Last Modified: 12 March 1997
+
+
+
+
+
+
+
+-----------------------------------------------------------------
+
+-------
+
+
+
+
+
+NOKIA 1610
+
+
+
+
+
+
+
+To view IMEI number *#06#
+
+
+
+
+
+
+
+To view Software Version enter *#170602112302#
+
+Latest Version is under Phone Info
+
+
+
+
+
+
+
+Pinouts 
+
+
+
+
+
+
+
+Desktop Charger-------------------------|
+
+             |    /-Antenna Connector   |
+
+          |   | on 8110 only         |
+
+CHARGER--|   +  |    TOP OF PHONE      -
+
+         V   V  V   1  2  3  4  5  6   V     
+
+     (o) | | ( ) [=  =  =  =  =  =] | |
+
+                     7  8  9  10 11 12          
+
+
+
+
+
+
+
+
+
+1    GND       Digital Ground
+
+2    V_OUT     Accessory Output Supply. (Min/Typ/Max -
+
+3.25V...10V - Output Current 50mA)
+
+3    XMIC External Microphone Input and Accessory Identification
+
+               Identification
+
+               *TYP/MAX: 8...50 mV(The Maximum Value Corresponds
+
+to  0dBm Network
+
+               LEVEL WITH INPUT AMPLIFIER GAIN SET TO 20 dB
+
+,TYPICAL VALUE IS MAXIMUM VALUE -16 dB)
+
+     ID        Accessory Identification
+
+               *1,7...2,05 V HEADSET ADAPTOR CONNECTED
+
+               *1,15...1,4 V COMPACT HANDSFREE UNIT CONNECTED 
+
+4    NC        Not Connected
+
+5    NC        Not Connected
+
+6    MBUS Serial Control Bus
+
+               *Logic Low Level: 0....0.5V
+
+               *Logic High Level:2.4V....3.2V
+
+7    NC        Not Connected
+
+8    SGND Signal Ground
+
+9    XEAR External Speaker and Mute Control
+
+               *Min/Typ/Max: 0....32....500 mV (Typical level
+
+corresponds to -16 dBM)
+
+               Network Level with Volume Control in Nominal
+
+Position 8dB Below Maximum
+
+               Maximum 0 dBM Maximum Volume Codec Gain -6dB)
+
+               Mute ON (HF SPEAKER MUTE ):0...0,5 V d.c.
+
+               Mute OFF (HF SPEAKER ACTIVE ): 1,0...1,7 V d.c.
+
+10   Hook      Hook Signal
+
+               *Hook Off (Handset in Use): 0....0.5V
+
+               *Hook On (Handset in Use): 2.4V....3.2V
+
+11   NC        Not Connected
+
+12   V_IN      Charging Supply Voltage (Max 16V)
+
+
+
+
+
+
+
+-----------------------------------------------------------------
+
+-------
+
+
+
+
+
+NOKIA 2010
+
+
+
+
+
+
+
+To view IMEI number *#06#
+
+
+
+
+
+
+
+To view Software Version enter *#9999#
+
+
+
+
+
+-----------------------------------------------------------------
+
+-------
+
+
+
+
+
+NOKIA 2110 / PHILIPS 747
+
+
+
+
+
+
+
+To view IMEI number *#06#
+
+
+
+
+
+
+
+To view Software Version enter *#9999#
+
+
+
+
+
+
+
+Latest Version is under Phone Info
+
+
+
+
+
+
+
+Type is NHE-1XN
+
+
+
+
+
+-----------------------------------------------------------------
+
+-------
+
+
+
+
+
+NOKIA 2110e/i / PHILIPS 747II
+
+
+
+
+
+
+
+To view IMEI number *#06#
+
+
+
+
+
+
+
+To view Software Version enter *#170602112302#
+
+If you have latest software version you have to enter
+
+*#682371158412125#
+
+
+
+
+
+
+
+Latest Version is under Phone Info
+
+
+
+
+
+
+
+To view Week and Year of manufacture enter *#3283#
+
+
+
+
+
+
+
+On phones prior to 01/01/96 1295 means December 95, On phones
+
+after 01/01/96 2196 means 21st week of 1996. Posted to
+
+Alt.Cellular-Phone-Tech by Rob Martin
+
+
+
+
+
+
+
+To enter small letters hold down the key for a few seconds and it
+
+will turn caps off
+
+
+
+
+
+
+
+
+
+NOKIA 2110 PINOUTS
+
+
+
+
+
+
+
+Pinouts of X100 system connector
+
+
+
+
+
+
+
+ANT 16 9 Charging connector
+
+(O) I-I-I-I-I-I-I-I ( ) ( o )
+
+CON 8 1
+
+
+
+
+
+
+
+
+
+The left symbol (O) is the antenna connector for car kits. The
+
+symbol numbered 16-9 on the top and 8-1 on the bottom is the
+
+system connector. the ( ) is the open space next to the connector
+
+and the ( o ) is the charging connector for you home-charger.
+
+
+
+
+
+
+
+
+
+PIN  Name Description
+
+---  ---- -----------
+
+1,9  GND       Digital ground
+
+2    MIC/JCONN External audio input from accessories or handsfree
+
+microphone. Multiplexed with junction box connection control
+
+signal
+
+3    AGND      Analogue ground for accessories
+
+4    TDA       Transmitted DBUS data to the accessories
+
+5    M2BUS          Serial Bidirectional data and control between
+
+the handportable and accessories
+
+6    HOOK/RXD2 Hook indication. HP has a 100KE pull-up resistor.
+
+7    PHFS/TXD2 Handsfree device power on/off, data to flash
+
+programming device.
+
+8,16 VCHAR          Battery charging voltage
+
+10   EAR/HFPWR External Audio output to accessories or handsfree
+
+speaker
+
+11   DSYNC          DBUS data bit sync clock
+
+12   RDA       DBUS recieved data from the accessories
+
+13   BENA      Power supply to headset adapter
+
+14   VF        Programming voltage for FLASH
+
+15   DCLK      DBUS data clock
+
+
+
+
+
+
+
+
+
+As you can imagine. YOU CAN DESTROY YOUR NOKIA BY FOOLING AROUND
+
+WITH THESE CONNECTIONS. Therefor I accept NO responsability for
+
+any possible damages. My advice to you is to think twice before
+
+doing something and if you are going to try make use of a car-kit
+
+holder to get access to the X100 connector since it is to tiny to
+
+use a self-fashioned connector. IT IS POSSIBLE TO REPROGRAM THE
+
+NOKIA 2110 as is indicated by the pinout description so watch it
+
+!
+
+
+
+Posted to Alt.Cellular-Phone-Tech by Hans Engelen 
+
+
+
+
+
+
+
+DTMF PROGRAMMING
+
+
+
+
+
+
+
+If you dial in to a service number which requires DTMF strings
+
+after you have dialed in, you can program the whole sequence.
+
+What you do is:
+
+
+
+
+
+
+
+•Key in the number. 
+
+
+
+•Press the * three times: a 'p' appears (pause). 
+
+
+
+•Key in the DTMF code, you can use 'p' again in this string. 
+
+
+
+•Store this in memory. 
+
+
+
+•If you select the memory place, and dial the stored number, the
+
+mobile will wait a few seconds (pause) and then send the string
+
+as DTMF. 
+
+
+
+•Another option is to press the * four times: a 'w' appears
+
+(wait). When the 'w' is reached in the callstring, 'DTMF' appears
+
+at the left menu button. When you press the left menu button the
+
+mobile starts sending DTMF. 
+
+
+
+
+
+
+
+
+
+
+
+CARKIT PROGRAMMING
+
+
+
+
+
+
+
+If you use a carkit with handsfree AND additional handset, and
+
+you want to switch from handset to handsfree:
+
+
+
+
+
+
+
+•Press the left menu button, and put the additional handset on
+
+hook. 
+
+
+
+•Now you are on handsfree. 
+
+
+
+
+
+
+
+
+
+
+
+Interesting thing to try
+
+
+
+
+
+
+
+As you may know, 2110i supports Call Cost Limit function which
+
+means that you can limit the maximum of calls from your phone.
+
+This function has a feature that it shows the remaining credits
+
+in the third row of the display. It should decrease every time
+
+you make a call, but if your operator doesn't support this yet,
+
+you can display your phone number or anything else there.
+
+
+
+And how to do this? First, go to the "DURATION AND COST" menu.
+
+Select "CALL COSTS LIMIT". The phone asks you the PIN2-code, you
+
+should get it from your operator. After entering PIN2, select
+
+"Set". Phone asks you "Limit:". Enter maximun of seven numbers
+
+you want to be visible on display, for example my phone number is
+
+0405100210, so I enter 5100210. So these numbers will be last
+
+numbers on display.
+
+
+
+And then go to back to the "DURATION AND COST" menu. Select "SHOW
+
+COST IN". Enter the PIN2-code. Select "Currency". Enter "Unit
+
+price:", I recommend setting it "1". Phone asks you "Currency
+
+unit:" Enter the maximum of three numbers or letters or symbols
+
+you want to be visible as first numbers/letters/ symbols on
+
+display. I entered "040".
+
+
+
+Now you are ready. Quit the menu and the number should be on the
+
+third row of the display! So, on my display, the last row of the
+
+display says 0405100210. It stays there even if you switch off
+
+your phone. (Of course it disappears while
+
+you dial a number or use the menu etc.)
+
+Marko Konttinen
+
+
+
+
+
+-----------------------------------------------------------------
+
+-------
+
+
+
+
+
+NOKIA 8110
+
+
+
+
+
+
+
+To view IMEI number *#06#
+
+
+
+
+
+
+
+To view Software Version enter *#8110#
+
+Latest Version is under Phone Info.
+
+
+
+
+
+
+
+Type of Phone is NHE-6
+
+
+
+
+
+
+
+Pinouts
+
+
+
+
+
+
+
+Desktop Charger-------------------------|
+
+             |    /-Antenna Connector   |
+
+          |   | on 8110 only         |
+
+CHARGER--|   +  |    TOP OF PHONE      -
+
+         V   V  V   1  2  3  4  5  6   V     
+
+     (o) | | ( ) [=  =  =  =  =  =] | |
+
+                     7  8  9  10 11 12
+
+
+
+
+
+
+
+
+
+1         GND       Charger/System Ground
+
+2    V_OUT     Accessory Output Supply. (Min/Typ/Max - 3.4V...10V
+
+- Output Current 50mA)
+
+3    XMIC External Microphone Input and Accessory Identification
+
+               Identification
+
+               *TYP/MAX: 8...50 mV(The Maximum Value Corresponds
+
+to  0dBm Network
+
+               Level with input amplifier gain set to 20 dB
+
+,typical value is maximum value -16 dB)
+
+     ID        Accessory Identification
+
+               *1,7...2,05 V Headset Adapter Connected
+
+               *1,15...1,4 V Compact Handsfree Unit Connected
+
+               *2.22...2.56 V Infra Red Link Conneceted
+
+4    EXT_RF    External RF Control Input
+
+               Min/Max: 0...0.5V External RF in use
+
+               Min/Max: 2.4...3.2V Internal Antenna in use
+
+5    TX        FBUS Transmit
+
+6    MBUS Serial Control Bus
+
+               *Logic Low Level: 0....0.5V
+
+               *Logic High Level:2.4V....3.2V
+
+7    BENA Not Connected
+
+8    SGND Signal Ground
+
+9    XEAR External Speaker and Mute Control
+
+               *Min/Typ/Max: 0....32....500 mV (Typical level
+
+corresponds to -16 dBM)
+
+               Network Level with Volume Control in Nominal
+
+Position 8dB Below Maximum
+
+               Maximum 0 dBM Maximum Volume Codec Gain -6dB)
+
+               Mute ON (HF SPEAKER MUTE ):0...0,5 V d.c.
+
+               Mute OFF (HF SPEAKER ACTIVE ): 1,0...1,7 V d.c.
+
+10   Hook      Hook Signal
+
+               *Hook Off (Handset in Use): 0....0.5V
+
+               *Hook On (Handset in Use): 2.4V....3.2V
+
+11   RX        FBUS Receive
+
+               *Accessory FBUS Receive Signal
+
+12   V_IN      Charging Supply Voltage (Max 16V)         
+
+
+
+
+
+
+
+-----------------------------------------------------------------
+
+-------
+
+
+
+
+
+NOKIA 9000
+
+
+
+
+
+
+
+To view IMEI number *#06#
+
+
+
+
+
+
+
+To view Software Version enter *#682371158412125#
+
+
+
+
+
+
+
+Latest Version is under Phone Info
+
+
+
+
+
+
+
+To view Week and Year of manufacture enter *#3283#
+
+
+
+
+
+
+
+Type of Phone is GE8
+
+
+
+
+
+-----------------------------------------------------------------
+
+-------
+
+
+
+
+
+NOKIA GENERAL INFO
+
+
+
+
+
+
+
+This information is only applicable to the 2010, 2110, 2110e (and
+
+probably all analog's bar 636 and maybe 232), not the 1610 or
+
+8110 to my knowledge as they use different charger units etc...
+
+
+
+
+
+
+
+The Nokia mains powered charger delivers 12Vdc current limited to
+
+about 770mA. End of charge detection is done by the phone itself.
+
+Note that connecting 12Vdc without current limiting to the phone
+
+is likely to damage either or both the phone and the battery.
+
+Sometimes the phone will display "not charging", other times the
+
+switching transistor inside the phone will die.
+
+
+
+
+
+-----------------------------------------------------------------
+
+-------
+
+
+
+
+
+Copyright © 1997
+     _____     ___ ___   ____
+.____\  _/___ _\  /  /_ _\   \ _.__________________________________________.
+|     \___   \   /_    \_ \_  \                                            |
+._______./____\.___(____/__/     _       ÷ s k y  t o w e r  b b s ÷       |
+|                 -gdm^lkr/______\--- -                              - --- .
+| 4 ringdown nodes                   hellfire - freezers - nightfall ehq   |
+.  4 telnet nodes                     digital corruption - shelter dkhq    |
+|   2 isdn nodes                          unique - audiophiles  whq        |
+| -> - y e s -  - ---- -- >      with *amiga*pc*n64*mac*mp3 confs on board | 
+|                                                                          7
+|        sani: a4ooo with cyberstorm + cyberstorm o6o/5o + 16gb hd         |
+|                            ded-moroz : enzo                              |
+|                            _____    _____   ___  ___    _____    _____   |
+|  arrived at   _____________\_ _/__._) _ /_ _\  /\  /_ __\ __/_ __\_  /___.
+7    ##:##:##   \                   |   (   \          \_ __)   \   __/    | 
+|_    @@-@@-@@   \._________________|________\.__/\_____/_\______\._\______|
+ /________________\
+@BEGIN_FILE_ID.DIZSecret codes for different GSM nokia phones
+@END_FILE_ID.DIZ
+
+
+
+                 
+                                  ·     ·
+                               _ __\   /__ _
+                            _ _)\\  \ /  //(_ _
+                           -\   __\° X °/__   /-
+                    _ __ ___ ___)  \/_\/  (___ ___ __ _
+           ((-   - -\\\_\\__\\__  _ /¦\ _  __//__//_///- -   -))
+                       _.      \__)_¯_¯_(__/      ._          
+           _/          \|_       | | | | |       _|/          \_
+         __\ ___ _/\____\/__ __ _| | | | |_ __ __\/____/\_ ___ /__
+       _/   \  (_)  \_  \/  /_/\\| |_|_| |//\_\  \/  _/  (_)  /   \_
+       |                    \_\/ | | | | | \/_/                    |
+      _|                      __ | | | | | __                     _|_
+      \|_                     \/_| | | | |_\/                      |/
+       |                     · _)  ¯_¯_¯  (_ ·                     |
+       |  ·H2o!·              \\___ \ / ___//                      |
+       ¯\_______________________ _)  Y  (_ _______________________/¯
+             __                  \___ ___/                  __
+         - ->\__ LOS ENDOS BBS <<-  (_)  ->> LOS ENDOS BBS __/<- -
+                           
+
+

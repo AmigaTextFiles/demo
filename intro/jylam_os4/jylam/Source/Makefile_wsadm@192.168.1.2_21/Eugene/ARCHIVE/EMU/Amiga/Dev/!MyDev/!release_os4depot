@@ -1,0 +1,6 @@
+sdlmove: main.c
+	ppc-amigaos-gcc `sdl-config --cflags --libs` -lm -w main.c -o ../jylam -lSDL
+	ppc-amigaos-strip --strip-unneeded --remove-section .comment ../jylam
+
+clean:
+	rm sdlmove

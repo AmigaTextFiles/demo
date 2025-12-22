@@ -1,0 +1,8 @@
+if exists s:Demo
+  echo "*N Demo was activated, now deactivated.*N"
+  delete s:Demo
+    else
+  echo "*N Demo was deactivated, now activated.*N"
+  echo >s:Demo "Demo active"
+  endif
+

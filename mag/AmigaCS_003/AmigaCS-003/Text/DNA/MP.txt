@@ -1,0 +1,18 @@
+@{d FFE0A3}@{c FFF77A}1. Memory Protection (MP)@{c}
+
+Znemoùñuje  prístup (read, write, execute, a iné CPU módy) k urçitým oblastiam pamäte.
+Pouùívajú  sa  rôzne  stupne  ochrany...   od  ochrany  vîetkého  po  ochranu iba tých
+najdôleùitejîích   oblastí   (Enforcer   je   príkladom  çiastoçnej  ochrany  pamäte).
+Implementácia MP môùe byï rýchla i lacná zároveñ.  @{c FFB48F}(tady by më zajímalo, jak je na tom
+s ochranou pamëti MMC?  Bude mít MMU takové moùnosti jako têeba PowerPC (hlavnë myslím
+ProcessID pro MMU pages)?...  pozn.Shaman)@{c}.
+
+@{c FFF77A}2. Memory Mapping (MM)@{c}
+
+Programom  pouùívané  adresy  sa mapujú na adresy fyzickej pamäte.  Napríklad, program
+zaçína  na  adrese 00000000, ktorá sa namapuje na adresu 7C0021000 v RAM.  Ale program
+si ªmyslí¥, ùe je vo svojej vlastnej pamäti.  To mimo iného znamená, ùe program nemusí
+pri nahrávaní prejsï "relokáciou".  Implementácia MM môùe byï taktieù rýchla i lacná.
+
+@{i}Moderné operaçné systémy pouùívajú obe metódy ochrany (plus systém virtuálnej pamäte).@{ui}
+                                   @{c FFF77A}Carl Sassenrath@{c}

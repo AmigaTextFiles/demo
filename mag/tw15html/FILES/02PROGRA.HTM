@@ -1,0 +1,236 @@
+<HTML>
+<HEAD>
+<TITLE></TITLE></HEAD>
+<BODY BACKGROUND="..\bgnd.jpg" BGCOLOR="#000000" TEXT="#FFFFFF">
+<CENTER>
+<table border=0><TR><TD>
+<pre>
+
+<font color =#70FFFF><CENTER><FONT SIZE=5><B>Programming</CENTER></FONT></B>
+
+
+
+<font color =#FFFF4C>                             By Kei/Carnage
+<font color =#944C4C>
+ Everyone seems to be still arguing about AMOS so I figured I'd put my 2
+cents worth into the pot.
+ Programming  a  computer can be fun or a hassle, it all depends on you.
+If  you  have  this  really  great idea in your head for a game or small
+intro  and  you  have only coded in Speccy BASIC or AmigaBASIC then AMOS
+shouldn't  be  much trouble for you.  To me, it's a quick fix for anyone
+wanting to code an idea NOW!
+ I  remember reading an article a while back saying that AMOS was a lazy
+man's  language  and  I agree but it is useful!  If you have an idea you
+want  to  code  then  AMOS  is  almost  like speaking to the computer in
+english.
+ Back  in  1992 there were 3 of us in CyberDreams and only 2 of us could
+code.   We  used  AMOS  because  it  was easy to master and you could do
+pretty  much  anything  with  it.   However it has disadvantages such as
+extraordinarily  large files once compiled, but you could load the music
+modules  and images into it (banks) so you ended up with one file and if
+you used it's own compressor it was a bugger to rip stuff from it!
+ You  tend  to get stuck in a rut though where churning out stuff is all
+to  easy and design and looks begin to suffer as the average development
+process is 2 hours to a day on average.  AMOS makes life too easy.
+ I  gave up AMOS when my group started getting better coders.  This gave
+me  more time to mess with graphics and ascii art.  However because I've
+spent  most  of  my  time  after school in further education I have come
+across  a  host  of  other languages.  I'll give you my views on those I
+coded in (and some I still do) below.  These are my own viewpoints.
+
+<CENTER><FONT SIZE=5><B>6502 Machine code</CENTER></FONT></B>
+
+
+
+Not  asembler!   Assembler  is  lines  of  code  such as "move.b #FF,D0"
+whereas  this  was  stuff  like  "0A  02"  where  0A  could be LDA (Load
+Accumulator) etc..  It's been a while since I've done this but from what
+I  can  remember,  you  dry ran your program on paper then converted the
+mnemonics  to hex values, entered them into the computer and tested them
+by  doing  trace  steps.   The  computers we used back then were Hewlett
+Packard suitcase models (3K) and Eliza and Visa project computers.
+
+<CENTER><FONT SIZE=5><B>68000 and 68020 Assembler</CENTER></FONT></B>
+
+
+
+ I  hated  having  to  learn  this  language.   This  was one of the few
+languages  I  taught  myself  at  first by using a book (Abacus book 4 I
+think).   It  was  a slow and tedius process and was basically a case of
+moving data around and adding values.  I mainly coded some CLI hacks and
+a  couple  of  GUI  programs  which  was  a  bitch.  Ever tried teaching
+yourself  how  to  use  intuition?   When you do you'll know what I'm on
+about.
+ At  university some years later we used Sun Sparcs (UNIX) running cross
+emulators  (68000)  to  code  in  assemler.   Some  instructions are not
+portable  to  the Amiga such as the TRAP instruction.  It causes a guru!
+I  learned  a  bit  more  and went back to assembler at home on my (now)
+A1200.   Attempted  some  68020  specific  code but wasn't too impressed
+after I'd used up 2 hours coding something that would of took 30 seconds
+in  AMOS.   However the difference between the AMOS and ASM programs was
+45k  (both  uncrunched)  so  I  can  see  the advantages if you have the
+patience.   Coding programs like TYPE and DELETE is easy but an intro...
+I'll  leave  that  to  those  with a couple of years of assembler coding
+under their belts!
+
+<CENTER><FONT SIZE=5><B>BASIC and varients</CENTER></FONT></B>
+
+
+
+ BASIC (Beginners All-purpose Symbolic Instruction Code) was the closest
+thing  you  could  get  to  english before 4GLs were created.  I started
+coding  in  this  on  my  Spectrun  48k+ because after a while games got
+boring,  especially if you had ran out of pocket money and had completed
+most  games  in your collection.  You started off (well I did) by typing
+in those game sources from books untill you got familiar with the syntax
+and  you  could write your own programs.  Saving to cassette seemed easy
+at the time but I'll keep my floppies nowadays thank you!
+ AmigaBASIC was a bitch.  I hated it so I never really bothered with it.
+There  was  about  3  different BASICs on the PC as I recall.  I used to
+code  in one many years ago (GFW?/GFA?) but I don't have any source left
+to use to recall the syntax.
+ AMOS  took  a  few days to master (I sent off for the Amiga Format book
+and  disks  for  £13.95  way  back when).  If you wanted a picture to be
+displayed  you would load it in:  LOAD IFF "df0:pic1.iff",0 then pack it
+to  a  bank and when you wanted to display in your program:  UNPACK 5 TO
+0.   Simple.   However  I was using v1.34 at the time and it insisted om
+saving  this 48k library file with every program I wrote so if you coded
+a "Hello World" program it would be about 50k or more!
+
+<CENTER><FONT SIZE=5><B>PASCAL and PASCAL-FC</CENTER></FONT></B>
+
+
+
+ PASCAL  is not far from BASIC to be honest.  It's designed to teach you
+how to code in a structured way.  I did this on one of those TFW courses
+some  years  ago.   You had to follow a 4 week syllabus which I did in a
+week.   I then coded some snazzy effects and fractal generators and quiz
+games  because  screen manipulation was so easy.  I think you typed USES
+CRT  or something with TURBO PASCAL.  I ported my programs to my A500 at
+the time using Hisoft Pascal.  Slightly similar to TURBO PASCAL.
+ PASCAL-FC  is  a  real-time  PASCAL  language for the PC and UNIX based
+machines.   It's  designed  for  use  on single or multi-processor based
+systems  like  UNIX  and  allows  you  to protect shared resources using
+semaphores  and  monitors  to  provide  a  condition  known  as  "Mutual
+Exclusion".  Not advisable to any non-degree students.
+
+<CENTER><FONT SIZE=5><B>FORTH</CENTER></FONT></B>
+
+
+
+Ever  tried  learning french?  Have you ever heard a french person speak
+english  then?   Yes?  Do you know how they get things backwards and say
+things  like "I am good.  Yes?".  Well FORTH is like that, everything is
+backwards  and  you have to turn your mind inside out to think in FORTH.
+The  source compiles down pretty well but it's so annoying to think this
+way  when  there  are easier higher level languages available.  I barely
+passed my project in this!
+
+<CENTER><FONT SIZE=5><B>COBOL</CENTER></FONT></B>
+
+
+
+This  was  a  2nd year degree option and it sounded real easy so I chose
+it.  Boy was I wrong!  It was so boring that it held no interest for me.
+The syntax is laid out like a book where you have the contents page then
+the  chapters.   You  declared everything several times at the top using
+levels  like  01,03,05,88 etc..  then you would have procedures etc.  It
+was like an english text file but long winded and directly aimed at guys
+in suits who think spreadsheets kick ass!  This was an experience I want
+to forget!  If you don't wish to end up a suit programming databases for
+the rest of your life then avoid COBOL!  COBOL compilers are named after
+the  year  they  were  introduced  so  you  get compilers like COBOL-77,
+COBOL-85 and COBOL-90.
+
+<CENTER><FONT SIZE=5><B>C and varients</CENTER></FONT></B>
+
+
+
+ I  first  came  across C on that TFW course I mentioned above.  We used
+Turbo  C  and  it  was easy to jump from Turbo Pascal to Turbo C as they
+used the same interface and the syntax was similar.  You could even load
+in  some  PASCAL  source  and  edit  it into C by changing commands like
+WRITELN  into  PRINTF  and  READLN  into  SCANF.  Simple!  At home on my
+computer I tried using Lattice C v5 but it wasn't the same.
+ At  university we started doing ISO C.  This is the very standardised C
+that  has  been  agreed upon by the International Standards Organisation
+(ISO).  ISO C is portable to most machines.  I found I could use Turbo C
+on  my  PC to code a routine and port it to my Amiga using SAS C v6.  If
+machine  specific  code  was  then needed I'd code it seperately on each
+machine.
+ Now comes the bastard of all C languages, C++.  Also known as an Object
+Orientated  Programming  language (OOP).  I had to do this as part of my
+degree  and  believe  me,  it  is  a right pain in the butt!  First off,
+instead  of  using  the  old  #include  &lt;stdio.h&gt;  for  PRINTF and SCANF
+statements,  you use #include &lt;iostream.h&gt; because files are now streams
+and  data  flows to and from them.  So an output command looks something
+like  COUT&lt;&lt;"Hiya  World  "&lt;&lt;1234&lt;&lt;endl; Fun?  Not really.  It does have
+some uses like hiding and protecting data and once you get to grips with
+classes  and  .h  files  you  can use existing  objects created by other
+programers like "time.h".
+
+<CENTER><FONT SIZE=5><B>The Rest..</CENTER></FONT></B>
+
+
+
+ I've coded in many languages over the years that I've forgotten most of
+it.   I  find  that  if I do not have a use for it outside of education,
+then  after  the  course  is over (and I hopefully passed it), I'll move
+onto  something  else.   I  do  sometimes  find  some uses for languages
+though.   I  can  still code in PASCAL and PASCAL-FC as they are usefull
+for  coding  little  programs  for UNIX.  I still code in C on my Amiga.
+I've  coded  some  Workbench  hacks and I'm slowly replacing some system
+commands on my A1200 so it feels like the Amiga but has the best of UNIX
+and  PC commands as well (ie MOVE, LS, RM..).  I also code in C on my PC
+(Turbo C and Borland C++ 4.51).
+ I  use  SQL (4GL) at university still at present but have no real plans
+in   continuing   to  use  this  database  script  language  outside  of
+university.   I use HTML for creating web pages and I believe in the 4th
+year of my degree course I also get to code in PERL and JAVA in order to
+do some CGI.
+
+<CENTER><FONT SIZE=5><B>Conclusion</CENTER></FONT></B>
+
+
+
+ The  choice  of  a  programming language should reflect the reasons you
+wish  to  code.   If  you only want to code on your Amiga then languages
+like AMOS, BLITZ and Amiga E are ok.  However if you want to be employed
+as a programmer then C is the most used language in the commercial world
+followed  by COBOL in the business and industrial world.  Some companies
+have  varients or 4GLs such as NOKIA which uses a language roughly based
+on  C.  They may require you to know C before they take you on and train
+you in their "in-house" language.
+ Assembler is not portable no matter what you have heard.  It is CPU and
+architecture specific.  What I mean is that if you code for the Amiga in
+assembler  it  won't  work  on  the  PC  as Intel assembler and Motorola
+asembler  are  very  different (especially with register use), hence CPU
+specific,  and your 68000 based Amiga assembler will not work on a 68000
+based   Apple   Mackintosh  computer  because  the  way  the  CPU's  are
+implemented  is different, hence architecture specific.  You cannot beat
+assembler  for getting speed out of a machine but portability is not one
+of it's advantages.
+ C  on  the other hand is very portable, especially ISO.  It tends to be
+backwards  compatible as well.  For instance C++ allows you to still use
+the old C standard libraries like "stdio.h" but it would prefer you used
+the OOP based ones.
+ If  like  me,  you own Amiga's and PC's then try C as it's very easy to
+port code between machines.  Otherwise, work out what you wish to do now
+and  in  the  future  and which computers you'll be coding on, then make
+your choice.
+ Depending  on  who  you  listen  to,  by  the time you come to choose a
+language,  some  people  say  JAVA will be the lanuage everyone uses and
+others  say  it  will be DELPHI or some other 4GL.  Your best bet if you
+haven't already started to learn a language is to teach yourself PASCAL,
+then  C  and then an OOP language like C++.  If you want to code for the
+Amiga,  everyone  seems  to be recommending Amiga E these days, even the
+assembler coders!
+
+
+
+end
+</PRE>
+</TD></TR></TABLE>
+</CENTRE>
+</BODY>
+</HTML>

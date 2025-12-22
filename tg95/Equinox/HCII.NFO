@@ -1,0 +1,218 @@
+
+
+
+
+			================
+			HYDROCEPHALUS II
+			================
+		
+		
+---------------
+1. Introduction
+---------------
+
+	This file gives information that was usually written in the actual demo
+	in the "good-old-days", including all other stupid text you might find
+	interesting. Rather than spoil your entertainment with boring 
+	textwriters we, like many others, have chosen to put this text
+	into a single ASCII-file. 
+
+
+---------------
+2. Requirements
+---------------
+	
+	HCII requires:
+		
+		- ECS(not AGA!) graphic
+		- 68020 processor or better
+		- 1MB Chip memory
+ 		- 1MB Fast memory
+
+----------
+3. History	
+----------	
+	
+	Hydrocephalus(HC from now on) was released one week after the first
+	Gathering (it was finished under the demo competition) and just
+	vanished among all the other demos released at the party. We decided
+	to make a new demo. To make a long history short; the HCII project
+	started for two(!) years ago, and was not finished until now because we
+	are two lazy coders with a lot of other things to do than to
+	just code(sad but true (: )
+	 
+
+
+---------------
+4. Full credits
+---------------
+
+	4.1 Coding
+	
+	All coding done in 680x0 asm by Vip'n'Ray of Equinox. 
+	
+	4.2 Graphics
+	
+	Most of the graphics was drawn by Sauron(Sigurd N. Kristiansen) at least
+	two years ago, and some of the graphics is even "fucked up" by us to
+	fit some technical requirements concerning some of the routines.
+	Sigurd don't even know that this demo-project has been finished, as he
+	now works for "you-know-who" software firm in Oslo. Thanks Sigurd!
+	
+	All bubbles and the opening Equinox-logo was drawn by Supra of Equinox.
+	Sorry, we never took contact with you again, but we don't have your address!
+	 
+	4.3 Music
+	
+	All music and sound-fx was made by Cyntex (Mads S. Jensen) of Equinox.
+
+
+------------
+5. Technical
+------------
+	
+	Almost all parts uses 16 colors chunky, and the speed would
+	probably increase dramatically if we just chunky converted those
+	parts of the buffer that the different objects covered. We didn't
+	because;
+			1) We were to lazy (:
+			2) We wrote all routines to handle full 320*256
+			   pixels because we will use some of them in
+			   a game
+
+
+	5.1 Texturemapping part
+	
+	Ordinary affine texturemapping (boring primitive we know, but...).
+	We will probably do some real perspective ones later (have someone
+	out there got away with the f..ing two-divs-pr-pixel shit? Contact
+	us, so we can share some ideas)
+	
+	5.2 Gouraud-shading part
+	
+	An inconvex cylinder(16 subdivisions) shaded with gouraud-shading in 
+	16 colors. We actually did code a phong-shading routine in C++ for HCII,
+	but since we only uses 16 colors we decided that it was not worth the
+	effort (we will implement it in 600x0-asm soon though). 
+	
+	5.3 Motion-blur part
+
+	A fake but rather nice looking motion-blur simulation.
+	
+	5.4 Spline-shading part
+	
+	Some cool precalculated spline object were the shading follows the
+	splines in a rather diffuse way (looks good we think). 
+	
+	5.5 Antialiased B-Spline part
+	
+	The most advanced coded routine(but as always it doesn't show). The
+	3D primitives is calculated as rotation-objects with 16 subdivisions
+	pr. object. Each of the segments consist of Cubic Uniform Nonrational
+	B-Splines with 10 control-points. Between each control point the curve
+	has 8 knots (interpolated using a fast forward differencing algorithm ->
+	6 adds pr. 3D-point) which gives 10*8*16 = 1280 3D points. Each of these
+	3D points are rendered (after perspective transforming) with Wu's AALine
+	algorithm in 16 colors.
+	
+	5.6 Bump-mapping part
+	
+	We don't know if we're first out with real-time bumpmapping, but at least
+	not *many* have done it before us. After playing around with the idea
+	for some time we discovered a totally new way of doing bump-mapping! 
+	"Our" new algorithm only needs;
+		
+		- One table look-up
+		- One add
+		- A few compares
+		
+	(The above is of course for each pixel)
+	
+	Unfortunately the bump-effect was not that visible, but this is because
+	we only uses 16 (!) colors. Think of this done in 256(or more) colors...
+	
+		* Descent/Doom with bump-mapping -> Fantastic!
+		
+	
+	  		
+
+------------	
+6. Greetings
+------------
+
+	We send greetings to everybody we know, and specially to;
+	
+		- All Eqx-members
+		- All those computer.graphics.algorithms contributors
+		- Marius Kintel 
+		- Thomas Hagen (for inspiration) 
+	
+	6.1 Vip(Lasse S. Jensen)'s personal greetings
+	
+	Foerst og fremst en kjempe varm hilsen til dama mi; Sissel for aa holde
+	ut med meg i de siste to ukene(temmelig hektisk eller hva, Sissel??)
+	Videre vil jeg takk mine foreldre for nok en gang *ikke* ha noe tro paa
+	mitt n-te prosjekt(hva skulle jeg vel gjort uten en slik motivasjon?)
+	
+	En hilsen gaar ogsaa til Thore og Thommas som jeg skulle ha snakket med
+	for alt for lenge siden (les: 2 (!) aar siden) ; beklager, jeg sender
+	dere noe i nearmeste fremtid!	
+	
+	- Illusions gutta ; La oss code videre paa prosjektet vaart!
+	    Ole: Jeg herja Bumpmappinga, he, he.
+	- Marius Kintel; hvordan gaar det med VR-prosjektet? Gaat tom
+	  for minne? (: 
+	- Sigurd; Kontakt meg!
+	- T&T/Interlink: Mat Henry med denne!
+	- Jan Erik Wold: Hvordan gaar det med C++ codinga? Vi snakkes...
+	- Geir Jensen: Hvordan er det med programmeringen? For daarlig
+          KONSULENT betaling? (snik..) 
+	
+		
+	6.2 Ray(Roy Berg)'s personal greetings
+
+	Som dere sikkert har hoert, "koser" jeg meg i militaeret for
+	tiden, og derfor har kontakten med dere andre blitt heller
+	daarlig.
+
+	Vil sende noen hilsner til:
+
+	- Johan Steen:	  Beklager at jeg ikke har skrevet tilbake i det
+			  siste.. 
+	- Stian Rolfsen:  La oss feste sammen igjen! Hvordan gaar det
+			  med studiene  ;-)
+	- Robert Schmidt: Noen nye prosjekter paa gang? Zox3D var
+			  pent laget! 
+	- Thore Johnsen:  Hvordan blir det med jobb? Fortsatt arbeids-
+			  ledig?
+	- Thomas Mo:	  Noen planer om CD-utgivelse?
+
+	- Alle som gikk ut fra Trondheim Ingenioerhoegskole i '94;
+	  Vi er kremen...
+
+	Og til alle andre hardtarbeidende programmerere der ute som
+	fortsetter aa holde liv i Amiga'n!
+
+	- DIMME!  (3 maaneder igjen, militaert sucks!)
+
+
+
+--------------------
+7. How to contact us
+--------------------
+	
+	E-mail:		lassesj@edb.tih.no
+			royb@colargol.edb.tih.no
+			
+	Snail-mail:	Lasse S. Jensen or Mads S. Jensen
+			Markaplassen 271
+			7053 Ranheim
+			Norway
+			
+			Roy Berg
+			Postbox 4186
+			7002 Trondheim
+			Norway
+					
+			
+			

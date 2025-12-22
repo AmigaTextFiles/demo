@@ -1,0 +1,62 @@
+.KEY PREFSWIN/s,MUI/s,HELP/s
+
+; $VER: UPRoughEP Start-script 1.1 (09-May-02) ©2000-2002 Up Rough Soundsystem
+
+;Just if boot without startup-sequence...
+C:Assign >NIL: ENV: EXISTS              
+IF WARN
+    IF NOT EXISTS "Ram:Env"
+        C:MakeDir >NIL: Ram:Env
+        C:MakeDir >NIL: Ram:Env/sys
+    ENDIF
+    C:Assign >NIL: ENV: Ram:Env
+ENDIF
+
+C:Assign >NIL: T: EXISTS
+IF WARN
+    IF NOT EXISTS "Ram:T"
+        C:MakeDir >NIL: Ram:T
+    ENDIF
+    C:Assign >NIL: T: Ram:T
+ENDIF
+
+;Help argument
+IF "<HELP>" EQ "HELP"
+    Set Choice `RequestChoice "EP help message!" "EPStart is a script that makes it easier to start EP.*NU SHOULD use it instead of starting EP directly :)*NThe arguments u can pass to it r:*NHELP  -  Show this requester...*NPREFSWIN  -  Open the prefs window.*NMUI  -  Use mui for the prefs window." "Start me up!" "Quit"`
+    IF VAL $Choice EQ 0
+        Skip OUCH
+    ENDIF
+ENDIF
+
+;Fix the assign if it doesn't exist...
+C:Assign >NIL: EP: EXISTS
+IF WARN
+    IF EXISTS "EP"                  ;Started from upep dir?
+        C:Assign >NIL: EP: ""       ;Yepps
+    ELSE
+        Set Choice `RequestChoice "EP error message!" "EP: hasn't been assigned and couldn't be assigned*Nbecause u didn't start this script from the dir u've*Ngot the EP exe in...what to do now...?" "Assign req" "Quit"`
+        IF VAL $Choice EQ 0     ;Quit?
+            Skip OUCH
+        ELSE                    ;Assign requester
+            UnSet UPEPDir
+            Set UPEPDir `RequestFile TITLE "Select path for EP:" DRAWERSONLY`
+            IF "$UPEPDir" EQ "*$UPEPDir"
+                Skip OUCH       ;Cancel
+            ELSE
+                IF "$UPEPDir" EQ ""             
+                    C:Assign >NIL: EP: ""           ;OK was just pressed
+                ELSE
+                    C:Assign >NIL: EP: "$UPEPDir"   ;A dir was selected
+                ENDIF
+            ENDIF
+        ENDIF
+    ENDIF
+ENDIF
+
+;Run the exe...
+Set OldDir `C:Cd`   ;Save current dir
+C:Cd >NIL: "EP:"
+
+Stack 10000
+CD EP:
+EP PREFSWIN MUI

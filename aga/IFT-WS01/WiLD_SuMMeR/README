@@ -1,0 +1,123 @@
+
+WiLD SuMMeR
+-----------
+
+an animation show by WK-Artworks and Infect.
+
+This demo was made & released at the Summer Party 96 in Denmark.
+We planned to release DataWorld II there, but due to some unforeseen problems
+with the competitions (the organizers were not able to pay the announced prize
+money) Eksec decided to retain DataWorld II and release a new demo instead.
+He spent some 8 hours at the party to create WiLD SuMMeR using WILDFIRE by
+WK-Artworks. Finally this hastyly put together demo won the second place.
+
+We decided to overwork the demo completely before releasing it officially.
+So here it is:   WiLD SuMMeR FiNaL
+
+
+Requirements
+------------
+
+ -AGA, MC68020, OS V39, 4 MB FASTRAM
+ -recommended: MC68030 @ 28MHz (or faster processor), 8 MB FASTRAM
+
+
+Installation
+------------
+
+Extract all archives (IFT-WS#?.lha) to the same path (32 MB space needed).
+The directory structure should look like this:
+
+  WiLD_SuMMeR/#?              scripts and text files
+    anims/#?                  animations (YAFA format)
+    c/YP                      YAFA player
+    music/mod.disco_dubs      music (ProTracker module)
+    transitions/#?            transition animations (YAFA format)
+
+
+Running WiLD SuMMeR
+-------------------
+
+We included several script files for different machine configurations:
+
+These are the original scripts, they play most anims @ 25fps.
+(requires fast loading, duration: 3 min 40 sec)
+ 4MB_short: needs about 3.1MB free FASTRAM
+ 8MB_short: needs about 6.5MB free FASTRAM (more load buffers)
+
+These scripts play the anims @ 16.6fps, useful when loading from slower media.
+(duration: 7 min 20 sec, music plays twice, some anims loop several times)
+ 4MB_long: needs about 3.1MB free FASTRAM
+ 8MB_long: needs about 6.5MB free FASTRAM (more load buffers)
+
+There are some keys you can press while playing:
+ ESC, LMB - exit
+ N - next animation
+ SPACE - pause/continue
+ S - sleep
+ F1...F10 - set speed
+
+It is of course possible to play single anims using the YAFA player 'YP'.
+Use 'yp -h' for the list of options.
+
+
+Copyright, Distribution
+-----------------------
+
+This demo is FREEWARE, which means it may be distributed freely, but the
+Copyright is owned by the authors:
+ Animations by WK-Artworks
+ Music by DJ Mellow Noise
+ Player by Smack/Infect and WK-Artworks
+ additional animations by Eksec/Infect and Smack/Infect
+ Title logo by Spiv/Infect
+
+It is not allowed to distribute this demo on CD-ROM (except Aminet CD)
+without an explicit permission. Write to:
+
+ Andreas Küssner (Eksec/Infect)
+ Bernard Krone Str. 15
+ 48480 Spelle
+ Germany
+
+
+Contact
+-------
+
+ WK-Artworks (animations, 'WILDFIRE - The animation processor' programming)
+ Andreas Maschke
+ Zenkerstrasse 5
+ 06108 Halle/Saale
+ Germany
+ EMail: epgbc@cluster1.urz.uni-halle.de
+
+
+ Smack/Infect (player programming)
+ Michael Henke
+ Praetoriusstr. 1/205
+ 06124 Halle/Saale
+ Germany
+ EMail: epgbd@cluster1.urz.uni-halle.de
+
+
+ DJ Mellow Noise/Infect (music)
+ Dennis Mundt
+ Wolfsburger Strasse 42
+ 06126 Halle/Saale
+ Germany
+
+
+ Spiv/Infect (graphics, multimedia design)
+ Stephan Schroeder
+ Strasse des 18. Oktober 33
+ Zimmer 601
+ 04103 Leipzig
+ Germany
+ EMail: spiv@hgb-leipzig.de
+
+
+ Eksec/Infect (organizer, Infect leader)
+ Andreas Küssner
+ Bernard Krone Str. 15
+ 48480 Spelle
+ Germany

@@ -1,0 +1,140 @@
+
+<KIMG> texture12 | data/part12/texture.iff </KIMG>
+
+<KCAM> camera12 |0|30|-40|0|0|0|0.3  </KCAM>
+
+<KCOLORTABLE> table12 | data/part12/table12.iff |0|255|255|255    </KCOLORTABLE>
+
+<KCAM> cam_12 |0|0|0|0|0|0|1  </KCAM> camera (x,y,z,o1,o2,o3,FOV)
+
+<KIMG> greetz | data/part12/greetz.iff </KIMG>
+
+<KTABLE> paltab12 | 0,1 | 1180,1 | 1200,0 </KTABLE>
+
+<KRECT> rect__2 | 0.65 | 0.145 | 0.90 | 0.305 |  | 0.65 | 0.145 | 0.9 | 0.305 | </KRECT>
+<KRECT> rect__3 | 0.65 | 0.12 | 0.90 | 0.33 |  | 0.65 | 0.12 | 0.9 | 0.33 | </KRECT>
+<KRECT> rect__4 | 0.645 | 0.115 | 0.903 | 0.335 |  | 0.645 | 0.115 | 0.903 | 0.335 | </KRECT>
+
+
+<KPART>
+  <ID> Part12 </ID>
+
+  <Fx><Pa> FillRc </Pa><Pa></Pa><Pa>cte| 0 </Pa></Fx>
+
+  <Fx>
+      <Pa>BindPalette</Pa>
+      <Pa> aft | paltab12 | 0 | 0 </Pa>
+      <Pa>CTE|0</Pa>              type of fade:0,1,2,3
+      <Pa>CTE|255</Pa>            optional color 0->255 (0)
+      <Pa>texture12</Pa>     palette where to fade ( "B" )
+      <Pa>texture12</Pa>            optional source Palette(2)
+      <Pa>CTE|0</Pa>              type of fade:0,1,2,3
+      <Pa>CTE|255</Pa>            optional color 0->255 (0)
+      <Pa>texture12</Pa>       Palette where to fade ( "B" )
+      <Pa>texture12</Pa>       optional source Palette(2)
+      <Pa>CTE|0</Pa>              type of fade:0,1,2,3
+      <Pa>CTE|255</Pa>            optional color 0->255 (0)
+      <Pa>texture12</Pa>       Palette where to fade ( "B" )
+      <Pa>texture12</Pa>       optional source Palette(2)
+  </Fx>
+
+
+  <Fx>
+      <Pa> setcamcoord  </Pa>
+      <PA> cam_12 </Pa>
+      <PA> 2cte|0|0</Pa>
+      <PA> aff|0|4 </Pa>
+
+      <PA> aff|0|0.001 </Pa>
+      <PA> cte|0 </Pa>
+      <PA> aff|0|0.002 </Pa>
+      <PA> cte|0.3 </Pa>
+   </Fx>
+
+    <Fx><Pa> Ground </Pa>
+            <Pa> MainScreen</Pa>          rectangle where to draw.
+            <Pa> texture12 </Pa>      256x256 image to deform.
+            <Pa> cam_12 </Pa>     camera
+
+            <Pa>cte|1</Pa>          ceiling dist.
+            <Pa>CTE|1</Pa>          floor dist
+
+            <Pa>CTE|0</Pa>          ?
+            <Pa>CTE|0</Pa>          ?
+            <Pa>CTE|0</Pa>          mapping type: 0= normal
+            </Fx>
+
+
+
+//screen in screen
+
+    <Fx><Pa>fillrc</Pa>
+        <Pa> rect__4</Pa>
+        <Pa> cte | 150 </Pa>
+    </Fx>
+
+
+    <Fx><Pa>fillrc</Pa>
+        <Pa> rect__3 </Pa>
+        <Pa> cte | 0 </Pa>
+    </Fx>
+
+    <Fx>
+        <Pa> Twirl </Pa>                some normal twirl on the background.
+        <Pa>rect__2</Pa>
+        <Pa> warp9 </Pa>
+
+        <Pa>SIN|0.5|1|0.15</Pa> ofsx
+        <Pa>COS|0.5|1|0.45</Pa> ofsY
+
+        <Pa>SIN|0|0.1|1</Pa> start angle
+        <Pa>CTE|0</Pa>    amp. angle
+        <Pa>CTE|0</Pa>    freq angle
+
+        <Pa>CTE|0</Pa>         start dist.
+        <Pa>SIN|-1|0.6|0.05</Pa> amp.dist
+        <Pa>COS|0|0.2|10</Pa> freq dist
+
+        <Pa>CTE|0</Pa> mapping type
+    </Fx>
+
+    <Fx><Pa> Set3DObject </Pa>
+        <Pa> knot_invisible </Pa>
+
+        <Pa> cte | 25 </Pa>
+        <Pa> cte | 40 </Pa>
+        <Pa> cte | 0 </Pa>
+
+        <Pa> aff |-0.01|0.005</Pa>
+        <Pa> aff |0.1|0.006</Pa>
+        <Pa> aff |0.0|0.007</Pa>
+
+        <Pa> 3cte|1|1|1 </Pa>  scale
+    </Fx>
+
+
+    <Fx><Pa> Draw3DWorld </Pa>
+        <Pa> mainscreen </Pa>
+        <Pa> world_invisible </Pa>
+        <Pa> camera12 </Pa>
+        <Pa> cte|0 </Pa>
+        <Pa> cte|1 </Pa>
+        <Pa> cte|200</Pa>
+    </Fx>
+
+
+   <Fx><Pa> Sprite </Pa>
+        <Pa>mainscreen</Pa>
+        <Pa> greetz </Pa>
+        <Pa> cte | 0 </Pa>
+        <Pa> aff | 0.8 | -0.0018 </Pa>
+        <Pa> cte | 1 </Pa>
+        <Pa> aff | 3.3 | -0.0018 </Pa>
+    </Fx>
+
+
+
+
+</KPART>
+
+

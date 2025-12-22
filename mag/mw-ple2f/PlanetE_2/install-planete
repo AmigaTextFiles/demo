@@ -1,0 +1,73 @@
+
+; Planet E Installer - Issue 2+
+
+(user 0)
+(set old_level @user-level)
+
+(complete 0)
+
+(user 2)
+
+(set dest2 (askdir (prompt "Select Directory you wish Planet-E Issue 2 to be installed")
+		  (default "sys:")
+                  (help "A directory 'PlanetE' will be created"
+                        "in the partition or directory chosen."
+			"The PlanetE files will be placed here."
+		  )
+          )
+)
+
+(set destfonts "FONTS:")
+(set destlibs "LIBS:")
+
+
+(user old_level)
+
+(set dest1 (tackon dest2 "PlanetE"))
+
+(set destdata (tackon dest1 "data"))
+(set destart (tackon dest1 "art"))
+(set destbin (tackon dest1 "bin"))
+
+(makedir dest1 (infos))
+
+(message "Installing Font to FONTS:" )
+(copyfiles (source "fonts") (dest destfonts) (all))
+
+(if (exists "LIBS:powerpacker.library")
+	(   (set noppinstall "Not Installing")
+	)
+
+	(
+		(message "Installing powerpacker.library to LIBS:" )
+		(copyfiles (source "libs/powerpacker.library") (dest destlibs) )
+	)
+)
+
+(complete 1)
+
+(set @default-dest destdata)
+(message "Installing Internal Data files to " destdata)
+(copyfiles (source "data") (dest destdata) (all))
+(copyfiles (source "PlanetE_Issue_2") (dest dest1) (infos))
+(copyfiles (source "Xicon") (dest dest1))
+
+(complete 10)
+
+(set @default-dest destart)
+(message "Installing Articles to " destart)
+(copyfiles (source "art") (dest destart) (all))
+
+(complete 30)
+
+(set @default-dest destbin)
+(message "Installing Music to " destbin)
+(copyfiles (source "bin") (dest destbin) (all))
+
+(complete 90)
+
+(set @default-dest dest1)
+(message "Installing Main Executable PlanetE to " dest1)
+(copyfiles (source "planete") (dest dest1) (infos))
+
+(complete 100)

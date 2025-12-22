@@ -1,0 +1,38 @@
+==============================================
+Short:    v2.8a AmigaDos Version replacement.
+Author:   hparting@hem.passagen.se (Håkan Parting)
+==============================================
+
+VersionWB is a replacement for the usual AmigaDos Version 
+command, which now uses XfdMaster.library if available.
+
+If you want the version information to be presented in a re-
+quester, this program is for you. Instead of like c:version just 
+tell the version and revision number by default, VersionWB 
+always tells you all it could find.
+
+VersionWB have these features:
+* It will bring up a requester with the version information.
+* It support several files in the command line parameter 
+template.
+* You can shift-doubleclick an icon with VersionWB and
+then get all that version stuff.
+* You may also pick the file you want to know the version 
+number of by using a file requester.
+* It will find version strings in WB1.3 libraries and devices,
+c:version does not, e.g. narrator.device.
+* If you use it with ToolManager you can have an appicon in
+your Workbench. Drop the icon on the appicon, and the
+version information will be presented (if the file contains a
+version string).
+* It also has an optional text output.
+* It recognizes any packed file (uses xfdmaster.library).
+* All other features of AmigaDos Version, as far as I know 8-).
+* Can be opened on a publicscreen
+* Can set the filenote of files to there versioninfo.
+* Can set the filedate to the one found in the version string
+* Finds even files in your shell-path
+ 
+This program is Gift-Ware.
+Version 2.8a (28.11.97)
+Copyright 1994/1995/1996/1997 Håkan Parting

@@ -1,0 +1,99 @@
+Welcome to Synergy by Sector 7
+
+ This is our contribution to the SILIconvention party held in
+Bremen/Germany from 28.03-31.03.1997. It was meant to be an
+entry to the Amiga-Democompetition, but after Arsenic left us,
+we were all alone in the "competition" (1st place...).
+
+
+-----> What you need: <---------------------------------------------------
+
+ AGA-Amiga with 6 MB Fastram (sorry, but there will be NO 4 MB version!)
+
+ It has been made on an Amiga 1200/68030-50 MHz/12 MB Fast where it
+already runs at (almost) maximum possible speed.
+
+
+-----> How to run from hard-disk: <---------------------------------------
+
+ Have all files in one directory and start SYNERGY.EXE either from
+Shell or from Workbench. There is no need to "cd" to this directory,
+just keep the files together ("PROGDIR:", if you know what i mean).
+
+
+---> Note about DATABURST: <----------------------------------------------
+
+ The databurst has to be disabled (at least on 68030-50 MHz) !
+SYNERGY.BAT does this for you and then starts Synergy.exe.
+
+ My System has the databurst disabled permanently. SetPatch 40.16 seems
+to do this automatically on startup. I`m not totally sure, but i think
+i`ve read that databurst HAS to be disabled on 68030 based systems?!?
+
+ Anyway! Disabling the datacache does not affect the performance of
+the demonstration at all, but removes ugly optical errors while
+bumpmapping. So leave the databurst off and all will just work fine.
+
+
+---> How to install on floppy-disks (for swapping): <---------------------
+
+ Take 3 disks, format them e.g. with FastFileSystem and name the first
+"Synergy1", the second "Synergy2" and the third "Synergy3".
+
+ Copy Synergy.d3 and all TouchMe-files to the third disk, Synergy.d2
+to the second and ALL other files (INCLUDING THIS TEXT AND SYNERGY.BAT)
+to the first one.
+
+ Install "Synergy1" (Open a Shell-window, insert "Synergy1" in
+drive df0: and type "install df0:") and you are able to run it straight
+from disk.
+
+
+---> How to reach us: <---------------------------------------------------
+
+  .CDK [Music,Swap]                   .JCS [Gfx]
+
+  Jochen Oppermann                    Jan-Christoph Sievers
+  Danzigerstr.12                      Wilhelm Buschstr.3
+  D-31553 Sachsenhagen                D-31553 Sachsenhagen
+  Germany                             Germany
+  phone:+49-(0)5725-6512              phone:+49-(0)5725-1000
+
+
+  .Kane [Sysop,Swap]                  .Marc [Music,Swap]
+
+  Mattias Andersson                   Marcus Kaluschke
+  Stugsundsv.8                        Ostpreussenstr.30
+  82650 Söderhamn                     D-31553 Sachsenhagen
+  Sweden                              Germany
+  phone:+46-(0)270-13916              phone:+49-(0)5725-270
+
+
+  .NoName [Code]
+
+  Leif Oppermann
+  Meeresblickstr.11
+  31556 Wölpinghausen
+  Germany
+  phone:+49-(0)5037-799
+  eMail:l_oppermann@fs1.arch.fh-hannover.de
+
+
+---> The end: <-----------------------------------------------------------
+  
+Hope you like it at least half as much as we do...
+
+ Yours Leif 'NoName' Oppermann (10.04.97)
+
+
+PS: I (NoName) would like to get in contact with foreign people.
+    I am especially interested in overseas (What`s up down under?).
+    You don`t need to be interested in computers at all, but you
+    could of course, it`s just for learning to know each other.
+    YOU are welcome!
+
+PPS: There is a little bonus for you: "TouchMe" by JCS.
+     This picture won the first price at SILIconvention, although
+     it only ranked second. Fiver2 just left the party before the
+     prices were given; sometimes life is a bitch (Playstation
+     makes fun anyway) ...

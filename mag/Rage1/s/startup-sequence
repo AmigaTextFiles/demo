@@ -1,0 +1,14 @@
+; ErEmAtiOn presents.
+; RAGE! Startup-sequence.
+; ©1996 Weitten Pascal.
+; Release Date: 12.06.1996.
+
+; Assigns and Text printing
+  eighty on
+  Assign env: RAGE!#01:
+  Assign fonts: RAGE!#01:fonts
+  Type s/ReadMe.txt ;-cfff
+
+; Loading Main program
+  RAGE!#01
+

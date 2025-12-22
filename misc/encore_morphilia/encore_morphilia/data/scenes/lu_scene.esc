@@ -1,0 +1,108 @@
+{
+  "cameras": [
+    {
+      "far_clip_plane": 100.0,
+      "fov_x": 49.134342,
+      "fov_y": 28.841546,
+      "hide": false,
+      "name": "camera_2",
+      "near_clip_plane": 0.1,
+      "position": [
+        0.0,
+        1.118236,
+        -1.651812
+      ],
+      "rotation": [
+        -29.999998,
+        180.000005,
+        1.6e-05
+      ]
+    },
+    {
+      "far_clip_plane": 100.0,
+      "fov_x": 49.134342,
+      "fov_y": 28.841546,
+      "hide": false,
+      "name": "camera_1",
+      "near_clip_plane": 0.1,
+      "position": [
+        -1.501616,
+        0.955115,
+        -1.142239
+      ],
+      "rotation": [
+        -19.805695,
+        -141.041016,
+        -0.0
+      ]
+    }
+  ],
+  "enc_info": {
+    "data_type": "ENCSCN",
+    "date": "29 Mar 2020 20:41:14",
+    "version": "2.0"
+  },
+  "name": "lu_scene",
+  "objects": [
+    {
+      "mesh_name": "lu_processor",
+      "name": "processor",
+      "position": [
+        -0.000147,
+        -0.001362,
+        -0.000768
+      ]
+    },
+    {
+      "mesh_name": "lu_butterfly_3_left_wing",
+      "name": "butterfly_3_left_wing",
+      "position": [
+        -0.01,
+        0.09724,
+        0.038934
+      ],
+      "rotation": [
+        -79.999998,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "mesh_name": "lu_butterfly_3_right_wing",
+      "name": "butterfly_3_right_wing",
+      "position": [
+        0.01,
+        0.09724,
+        0.038934
+      ],
+      "rotation": [
+        -79.999998,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "mesh_name": "lu_butterfly_3_torso",
+      "name": "butterfly_3_torso",
+      "position": [
+        0.0,
+        0.09724,
+        0.038934
+      ],
+      "rotation": [
+        -79.999998,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "mesh_name": "lu_butterfly_3_legs",
+      "name": "butterfly_3_legs",
+      "position": [
+        0.0,
+        0.09724,
+        0.038934
+      ]
+    }
+  ]
+}

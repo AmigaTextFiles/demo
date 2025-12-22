@@ -1,0 +1,96 @@
+[bkg=bg.pbm][h1]The Sam460LE - An AmigaOS 4 Compatible System
+By Puni/Void
+
+punivoid@protonmail.com
+
+July 7, 2024
+
+
+AmigaOS 4? PowerPC? Yes, this platform is still alive with new hardware, software, and an active community of users and developers. Even though the official development from Hyperion Entertainment, the creators of AmigaOS 4, is not very active (it has been a long time since an update was released, not even thinking about a new version), A-EON Technology and others have stepped up to delivering everything from graphics drivers to games. While being more busy with AmigaOS 3.2, Hyperion has churned out a new port of Heretic II and an update to Quake II for AmigaOS 4, as well as Gorky 17 for classics. The main forum for users is Amigans.net. The connected Discord channel of Amigans.net is the best place to visit for real-time chat.
+
+The current state of the hardware market for AmigaOS 4 compatible computers is better than it was a few years ago. There are now several options available for those who want to get into the platform:
+
+- A1222+ from AAA Technology
+- X5040 from AAA Technology
+- Sam460LE from ACube Systems
+
+In this article, we will have a look at the Sam460LE. What is it exactly, what kind of performance are we talking about and where can you buy it?
+
+ACube Systems from Italy is the business behind the Sam460LE. This motherboard was released in 2023. It is a continuation or re-make of the Sam460CR and Sam460EX. It was first announced in February 2022 when it was possible to sign up on a pre-order list. It followed a small run of Sam460EX that was done recently before that. Since it sold out quickly, they decided to have another go.
+
+If you are curious about the company, ACube Systems started in January 2007 from the synergy of the Italian companies Alternative Holding Group Srl, Soft3, and Virtual Works. They teamed up to bring the Sam440EP (AmigaOS 4 compatible) to the market. Later, they released the Sam440EP Flex, the Minimig, and other versions of the Sam460. You can visit them online at acube-systems.biz.
+
+The specifications of the Sam460LE are as follows:
+
+- Micro-ATX form factor
+- 460ex PowerPC CPU clocked at 1.10 GHZ
+- Max 2 GB DDR2 RAM - 200-pin SODIMM
+- PCIe 4x, PCIe 1x, PCI
+- 6x USB2 EHCI/OHCI ports, 1 USB 1.1 port
+- Gigabit Ethernet
+- MicroSD slot at the back of the board
+
+The changes are not big if you compare it with the previous Sam460 motherboards, but there are a couple of significant improvements.
+
+The first one is that they've made the gap between PCi ports much bigger than before. The reason is that users can then install a double-slot graphics card. With the advanced Radeon graphics driver from A-EON Technology, you can now use a more "modern" graphics card like the Radeon RX 570.
+
+The second one is that you now have a MicroSD slot more accessible than before. Instead of having to open the computer to change it, you can now just pop it out on the back. When I bought the Sam460LE it came with a rescue card on MicroSD, which makes it easy to get the computer back to basic if something goes wrong. The location of the port makes a lot of sense in this respect.
+
+There are, unfortunately, drawbacks as well and we have to be honest about those. There's no in-built audio or SATA/IDE connectors. This means that you'll need to buy a SATA controller if you want to use an SSD or a mechanical HD, and a sound card if you want to enjoy music and sound effects on your system. Fortunately, these are not very expensive and are not too difficult to obtain either new or from the second-hand market. You can, however, purchase a complete Sam460LE computer system equipped with those if you don't want to source them yourself.
+
+With the technical aspects done, you might be thinking about performance. The specifications are not impressive compared to today PC's, but in the Amiga world, they are quite powerful. But, more specifically, how does the Sam460LE compare to the other options for running AmigaOS 4?
+
+In 2024, the Sam460LE is the weakest option when it comes to raw CPU power. It is the slowest one, but it does support newer graphics cards which does weigh up for this in some use cases, such as gaming. Also, compared to the recently released A1222+ from A-EON Technology, it is more compatible and works better with 3D games (for example games similar to Doom and Quake).
+
+Personally, and I've seen others experiencing the same, the weaker CPU causes problems when emulating Classic Amiga. The audio can in some cases stutter when you try to run classic games. A few work ok, but there are many the Sam460 struggles with. It is a shame, since combined with RunInUAE (you can double-click a WHD-Load game and it will launch straight away from the Workbench, almost like a native piece of software) it is a very promising solution. A more optimized version of E-UAE could potentially solve this problem, but as for now, I don't think the Sam460 delivers enough in the Classic Amiga emulation scenario. That said, it works ok when emulating a classic Workbench setup.
+
+In the other areas, the performance is dependent on which graphics card you have. A newer one combined with the RadeonHD driver will for example make it possible to watch videos in high resolution (4K). You will also get better performance in 3D games such as the new port of Heretic II from Hyperion Entertainment. With an old card, such as the HD 5450, you can watch lower-resolution videos and play games like Tower 57, Swamp Defense, and ScummVM, but you won't be able to play more complex 3D games. It is also not capable of running old ports of some 3D games.
+
+As for applications, it works well. It feels fast and responsive. The same goes for the overall Workbench experience. Here I don't think there are much difference between the AmigaOS 4 computer options, except for demanding software connected to image effects and rendering, and web browsing. You can surf the web with the Sam460LE but don't expect it to fly. ;-) For Amiga-orientated websites it works great, but you'll struggle with modern websites. Some work, others don't. On MorphOS, you got the Wayfarer web browser from Jacadcaps, which is regularly being updated. It is compatible with modern websites and is highly usable on a high-end PowerMac G5 for example. It even works fine on my Mac Mini G4! Sadly, such a browser is not available on AmigaOS 4. Right now you have Odyssey, NetSurf, and IBrowse. Still, with Sam you can access many websites, do FTP, chat on IRC, and so forth. It is also worth mentioning that you can access AmiStore from AmigaKit and A-EON Technology (this is an application you download and run outside of a browser) to purchase drivers, programs, games, and more.
+
+As a reader of Versus, you're probably interested in knowing if demoscene productions run on the Sam460LE. Yes, many demos and musicdisks on OS4Depot work fine on it! If you want to run a classic one like Arte! by Sanity, you are out of luck though. While the effects run ok with frameskip in emulation, the audio is far out, unfortunately. It is a bit hit-and-miss in the emulation department, but AmigaOS 4 native productions should run great. If someone out there reads this and shakes their head in disbelief, I'd love to hear from you concerning this (punivoid@protonmail.com), because I have been trying to get classic productions running smoothly for a long time without success.
+
+The older Sam460 motherboards supported MorphOS. I have read that the Sam460LE also does this. You can also run Debian 8 and Ubuntu 16.04 on it. A dual-boot with AmigaOS 4 and MorphOS should then be possible.
+
+Ok, we've now had a brief look at what the Sam460LE is capable of. Let us sum up the positive and negative aspects of it.
+
++ Room for a big graphics card
++ One of the most tried and tested solutions for AmigaOS 4 over the years
++ Built by ACube Systems
++ More compatible with software than the A1222+
++ Easy to find parts (sound card, SATA)
++ Price - Cheaper than other options
++ Low electricity
+
+- Does not come with sound card, SATA
+- A bit flaky with E-UAE and emulation of classic
+- Weakest CPU in raw power
+- Price-performance ratio
+
+So, if you are considering getting into AmigaOS 4, should you go for a Sam460LE?
+
+This depends on what you are planning to use the computer for. It is a great solution for casual AmigaOS 4 usage. With a good graphics card you can do a lot of what the X5000 can do, but when it comes to gaming, emulation, and heavy-duty rendering you'll notice it is lagging behind. Still, I'd wager you won't notice much difference using Workbench, common programs, and games. It is also more compatible than the A1222+. Almost everything you try on it will run, which is not the case with the A1222+ due to having SPE to deal with maths. All in all, a good choice I think. :-)
+
+Here I'd like to add a link to a great comparison that exists between the Sam460LE and A1222+. The Czech AmigaOS 4 user Sailor has done an extensive test of the two computers head to head. It is in the Czech language, but a translator tool can help you here.
+
+https://www.amigaportal.cz/node/167255
+
+A recommended read!
+
+That said, I'd like to add that if you are curious about AmigaOS 4 and don't want to invest money just yet, try emulating it with WinUAE / Amiga Forever or run it with QUEMU. Emulation is a great way to try before you buy. Then you can see if this platform is for you. For many it is a bit obscure and hard to get into, getting an overview of what works and not, which drivers to install, and so forth, but for some this is appealing. ;-) As someone once said, it is the journey that is important, not only the destination.
+
+OK, now, where can you buy the Sam460LE?
+
+The motherboard is available from ACube Systems. The price is currently 889.38 EUR.
+
+https://shop.acube-systems.biz/sam-motherboards/124-sam460.html
+
+A complete system can be bought from Amedia Computer in France. The price is currently 1269 EUR.
+
+https://www.amedia-computer.com/en/accueil/349-complete-configuration-slim-sam460le.html
+
+Amigastore.eu offers a complete build (on request, 15 days) for 1249 EUR.
+
+https://amigastore.eu/en/981-sam-460le-pre-configured-complete-system.html
+
+Thanks for reading. I hope you have found it interesting and that it was of help if you are considering getting into the AmigaOS 4 platform.

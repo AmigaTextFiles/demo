@@ -1,0 +1,131 @@
+setfont topaz 8
+echo "*N Installation of the ADemo93 onto A1200 or A4000*N"
+; Stand 7.7.93, P. Kittel, CBM Ffm
+echo   " This demo does NOT run on computers without AGA chip set!"
+echo   " The computer MUST have a harddisk."
+echo   " On the harddisk, the complete OS 3.0 MUST be installed."
+echo   " You MUST use a multiscan monitor (e. g. Commodore 1950, 1960, 1942),"
+echo   " as the demo consists mostly of interlaced pictures that would else"
+echo   " extremely flicker."
+echo "*N IF this all is ok, then proceed with Return key, or abort with"
+ask    " y and then Return:*N"
+if warn
+  endcli
+  quit
+  endif
+
+echo "*N Diskette ADemo93.1:"
+echo "*N Copy the System directories"
+echo   " Some system files will get overwritten by special versions."
+echo   " Before that, they will be safely copied to a directory SYSOLD in"
+echo   " the system partition, from where they can get restored if necessary."
+if not exists sys:SYSOLD/prefs/env-archive
+  failat 22
+  makedir sys:SYSOLD
+  makedir sys:SYSOLD/c
+  copy c:IPrefs sys:SYSOLD/c
+  makedir sys:SYSOLD/prefs
+  makedir sys:SYSOLD/prefs/env-archive
+  makedir sys:SYSOLD/prefs/env-archive/sys
+  copy sys:prefs/env-archive/sys/(sc|ic|ov)#? sys:SYSOLD/prefs/env-archive/sys quiet
+  makedir sys:SYSOLD/devs
+  makedir sys:SYSOLD/devs/monitors
+  copy devs:monitors sys:SYSOLD/devs/monitors quiet
+  failat 10
+  endif
+
+copy ADemo93.1:sys sys: all clone quiet
+delete >nil: sys:prefs/env-archive/sys/oversca#? quiet
+if not exists work:
+  echo "*N This Amiga has no Work: partition."
+  echo   " Please, as an exception, insert a line in the file s:Startup-Sequence"
+  echo   " with an Assign for Work: to some reasonable path. Put this line"
+  echo   " just before the call for User-Startup."
+  echo   " Then reboot the Amiga and start the installation again."
+  ask  "*N End with Return key"
+  endcli
+  endif
+if not exists work:demo
+  echo "*N Create own Demo directories on Work:"
+  makedir work:demo
+  endif
+if not exists work:demo/s
+  makedir work:demo/s
+  endif
+if not exists work:demo/c
+  makedir work:demo/c
+  endif
+if not exists work:demo/pic
+  makedir work:demo/pic
+  endif
+if not exists work:demo/anim
+  makedir work:demo/anim
+  endif
+assign ds: work:demo/s
+assign dc: work:demo/c
+assign da: work:demo/anim
+assign dp: work:demo/pic
+echo "*N Copy the Demo scripts"
+copy ADemo93.1:work/s ds: clone quiet
+copy ds:Demo01 s: clone
+if exists s:User-Startup
+  search >nil: s:User-Startup Demoscript
+  if warn
+    echo "*N Demo part precedes existing User-Startup."
+    join ds:user-startup s:user-startup as ram:us
+    copy ram:us s:User-Startup
+    delete >nil: ram:us
+      else
+    echo "*N Demo is already integrated in User-Startup."
+    endif
+      else
+  echo "*N User-Startup gets created."
+  copy ds:User-Startup s:
+  endif
+echo "*N Copy the Demo commands"
+copy ADemo93.1:work/c dc: quiet
+echo "*N Copy some animation files"
+copy ADemo93.1:work/anim da: quiet
+echo "*N Copy image files"
+copy ADemo93.1:work/pic dp: quiet
+echo "*N Please insert Diskette ADemo93.2"
+if exists ADemo93.2:
+  echo " ok"
+  endif
+copy ADemo93.2:#? dp: quiet
+echo "*N Please insert Diskette ADemo93.3"
+if exists ADemo93.3:
+  echo " ok"
+  endif
+copy ADemo93.3:#? dp: quiet
+echo "*N Please insert Diskette ADemo93.4"
+if exists ADemo93.4:
+  echo " ok"
+  endif
+copy ADemo93.4:#? dp: quiet
+echo "*N Please insert Diskette ADemo93.5"
+if exists ADemo93.5:
+  echo " ok"
+  endif
+copy ADemo93.5:#? dp: quiet
+
+echo >s:Demo "Activated!"
+echo "*N*N The Demo is now readily installed and activated,"
+echo     " so that it automatically starts after the next boot."
+echo "*N After the first start of the demo, use the Overscan Prefs"
+echo   " editor and readjust the monitor to proper width, height"
+echo   " and positions of the image."
+echo "*N A file named s:Demo was created (some arbitrary contents)."
+echo   " If this exists, the Amiga boots into this demo."
+echo   " If you want to work normally with the computer, just delete this file."
+echo   " To change easily between automatic demo start and normal working on"
+echo   " the computer, the Shell script Demo01 is provided. In a Shell, just"
+echo   " call Demo01 (or s:Demo01), then this mode will be changed, and you"
+echo   " get an appropriate message."
+echo "*N If you want to start the demo out of normal work with the computer,"
+echo   " use the provided Shell script DemoStart. Just call Demostart (or"
+echo   " s:DemoStart) in a Shell, and the demo starts. This has no influence"
+echo   " on whether the demo starts automatically on next boot."
+ask  "*N*N End of Installation with Return key."
+endcli
+

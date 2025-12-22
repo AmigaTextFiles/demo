@@ -1,0 +1,92 @@
+ecnew.font,8
+«»
+«c1»«ac»
+THREE TIMES THE EUROCHART«»
+«»
+«c3»By Darkhawk of IRIS«»
+«c2»«»«as»
+In order to be a truly multiplatform (yet still Amiga-centric) mag, the 
+Eurochart has from issue #48 on branched out into three new and different 
+magengines. These engines are not a-like, and thus you will get a somewhat 
+different reading experience, depending on which mag you read. This article is 
+intended to explain what the three versions have and have not, so that you don't 
+feel curious as to what you are missing out on.«»
+«»
+«c4»AOS4, MOS, LINUX, WINDOWS AND 68k+GFXCARD«»
+«c2»«»
+These versions are based upon the Panorama2 engine, which several mags, most 
+noticeably the PC mag Hugi are using. This magengine was not present on any 
+Amiga specific platforms, and thus Ransom of IRIS spent all of his scenish year 
+on porting this engine and making it run well on Amiga OS'es. Chris Dragan, the 
+maker of Panorama2 also joined up in this endeavor, further strengthening our expertise with this engine, so it is a safe bet that you can expect us to improve on it in the future
+too.«»
+«»
+This is the most feature laden of the three magengines per default. It supports 
+a lot of nifty and cool things, including pageblending, 24bit images, high 
+resolution, advanced search, saving of articles, links, and so on. Its panels 
+and some of the clipart are unique to this version, as is all of the mag music. Also, it sports the most cliparts of the three versions, and is also by far the biggest in terms of bytes. Welcome to the modern ways of computing I
+guess.«»
+«»
+A noticeable shortcoming in this engine, when comparing with traditional Amiga diskmags is the inability to switch between articles by using the Up/Down arrows. Infact you
+can't switch articles at all, except when
+you're in the menu! Hopefully we can solve this for the next issue
+though.«»
+«»
+A word about the 68k+gfxcard version of this engine. Don't! We did this in order 
+to ascertain whether it would be in any way realistic to port the mag for the 
+classic Amiga's. Not totally surprising, the speed of the mag on a native 060 
+with gfxcard is slower than the slowest slideshow. On my WinUAE, which is around 
+2-3 times faster than my real A4060, it runs painfully slow (and I mean 
+painfully). I didn't even want to look when Ransom tested it on an A4060. If you 
+have a really fast PC, it might be readable in WinUAE, but what's the point in 
+that? There are certainly room for platform specific optimizations and 
+downgrades to the engine, but with this initial speed, and its built in focus on 
+24bit images, we do not think we can ever make this engine fast enough for
+68k.«»
+«»
+So, we could either drop 68k support, or come up with something else, and we did 
+the following...«»
+«»
+«c4»68k+AGA«»
+«c2»«»
+For a 68k mag, this engine is pretty advanced, having been used for 
+D.I.S.C. previously. It has some noticeably shortcomings, but is otherwise rich 
+in features. It is possible to have 256+64 colours on screen, due to copper 
+magic, giving more breathing space to clipart. It uses links to good effect 
+(when the editor is enough of a crazy workhorse to do them), it has a (for 
+diskmags) very advanced GUI based layout system, and it has almost all the bells 
+and whistles that traditional Amiga mags have had.«»
+«»
+Shortcomings include only featuring a .mod player, no search function and it 
+always returning to the first page in the menu when going there (as opposed to 
+the page where the article you had just read was). These things are fixable 
+though, and if Dr. Doom is a nice boy, they will get fixed in the future too (yeah
+right).«»
+«»
+Unique to this version are the panels and the tunes.«»
+«»
+«c4»C64«»
+«c2»«»
+Xeron came up with this engine in just a few days of inspired coding, enabling 
+us to bring you the EC on the C64 too, something we're quite proud of, and happy 
+about too, as we've always wanted to be a part of the C64 scene. Hopefully 
+this is only a first start for us, and hopefully people in the C64 scene will 
+take notice and begin supporting us (hint, hint).«»
+«»
+Since there is no going back except by clicking on a button, and because of 
+the way article order is done, it has been too difficult to include the old 
+EC statistics into this version, sadly. We will try to do something about 
+this naturally, but whereas the EC #48 68k has some things that are 
+unique to it, we must conclude that it is indeed, much to our chagrin, 
+a watered down version of the AOS4/MOS/WindoSws/Linux release.«»
+«»
+Unique to this version is all gfx and music, only the articles (and the chart, 
+of course) are the same as in the other versions. There is monochrome clipart present, that are the same as in the other versions, except for the clipart. Not having seen many C64 mags recently, I cannot judge how feature laden this one is, but it does have everything a basic mag
+needs.«»
+«»
+These computer platforms are not the only ones we can or want to support, but as 
+we do not ourselves have access to machines running ZETA/BeOS or MacOS for 
+instance, we haven't done versions for those yet. If the interest is there, this 
+can easily be achieved in the future.«»
+«»
+«e»

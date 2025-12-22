@@ -1,0 +1,115 @@
+
+ karate provides a < include> tag that can be used in the text script called
+by the karate command:
+
+ this is not a complete karate script !!! this is an include
+ with a sub-script that is called in tutorial C04.
+
+
+<KRECT>    quad1a   |0|0|1|1| quad1
+                    |0|0|1|1| quad1 </KRECT>
+
+<KIMG> texture256x256 | data/texture1.iff </KIMG>
+
+--------------------------------------------------
+<KSCRIPT><ID> SubScript1 </ID>
+        <PLAY> part1 | 200 | 0 | 1 </PLAY>
+        <PLAY> part2 | 200 | 0 | 1 </PLAY>
+        <PLAY> part3 | 200 | 0 | 1 </PLAY>
+        <PLAY> part1 | 200 | 200 | 1 </PLAY>
+        <PLAY> part2 | 200 | 200 | 1 </PLAY>
+        <PLAY> part3 | 200 | 200 | 1 </PLAY>
+        <PLAY> part1 | 200 | 400 | 1 </PLAY>
+        <PLAY> part2 | 200 | 400 | 1 </PLAY>
+        <PLAY> part3 | 200 | 400 | 1 </PLAY>
+        <PLAY> part1 | 200 | 600 | 1 </PLAY>
+        <PLAY> part2 | 200 | 600 | 1 </PLAY>
+        <PLAY> part3 | 200 | 600 | 1 </PLAY>
+
+
+</KSCRIPT>
+------------------------
+///<KPART>  <ID> part1  </ID>
+
+
+   <Fx>
+        <Pa> Twirl </Pa>
+        <Pa> quad1a  </Pa>
+        <Pa> texture256x256 </Pa>
+
+        <Pa>SIN|0|1|0.25</Pa> ofsx
+        <Pa>COS|0|1|0.25</Pa> ofsY
+
+        <Pa>SIN|0|0.1|1</Pa> start angle
+        <Pa>CTE|0</Pa>    amp. angle
+        <Pa>CTE|0</Pa>    freq angle
+
+        <Pa>CTE|0</Pa>         start dist.
+        <Pa>SIN|0|0.6|0.5</Pa> amp.dist
+        <Pa>COS|0|0.2|32</Pa> freq dist
+
+        <Pa>CTE|0</Pa> mapping type
+    </Fx>
+
+
+///</KPART>
+------------------------
+///<KPART>  <ID> part2 </ID>
+
+   <Fx>
+        <Pa> Twirl </Pa>
+        <Pa> quad1a  </Pa>
+        <Pa> texture256x256 </Pa>
+
+        <Pa>SIN|0|1|0.25</Pa> ofsx
+        <Pa>COS|0|1|0.25</Pa> ofsY
+
+        <Pa>SIN|0|0.1|1</Pa> start angle
+        <Pa>CTE|0</Pa>    amp. angle
+        <Pa>CTE|0</Pa>    freq angle
+
+        <Pa>CTE|0</Pa>         start dist.
+        <Pa>SIN|0|0.6|0.5</Pa> amp.dist
+        <Pa>COS|0|0.2|32</Pa> freq dist
+
+        <Pa>CTE|0</Pa> mapping type
+    </Fx>
+    
+
+///</KPART>
+------------------------
+///<KPART>  <ID> part3 </ID>
+
+ 
+   <Fx>
+        <Pa> Twirl </Pa>
+        <Pa> quad1a  </Pa>
+        <Pa> texture256x256 </Pa>
+
+        <Pa>SIN|0|1|0.25</Pa> ofsx
+        <Pa>COS|0|1|0.25</Pa> ofsY
+
+        <Pa>SIN|0|0.1|1</Pa> start angle
+        <Pa>CTE|0</Pa>    amp. angle
+        <Pa>CTE|0</Pa>    freq angle
+
+        <Pa>CTE|0</Pa>         start dist.
+        <Pa>SIN|0|0.6|0.5</Pa> amp.dist
+        <Pa>COS|0|0.2|32</Pa> freq dist
+
+        <Pa>CTE|0</Pa> mapping type
+    </Fx>
+
+
+///</KPART>
+
+
+
+
+
+
+
+
+
+
+

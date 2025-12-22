@@ -1,0 +1,31 @@
+AmigaOs4 release of "One day miracle" by Fit
+Originally released at Assembly'02
+Ported by Varthall/Up Rough (varti01@hotpop.com), released on 1st April 2005
+
+Code - Marq & Pete
+Add. code - Yzi
+Sound - Roz
+Graphics - Marq
+
+
+Changes:
+
+- main.c: added M_PI definition from newlib's math.h
+- main.c: added waits to improve system's multitasking during play
+
+
+Known issues:
+
+- this demo is quite CPU intensive. I've compiled it with level 2 gcc
+optimizations on a G4 cpu to make it run faster, let me know if you have any
+problems on your system. Note that the windowed mode is faster than the
+fullscren one.
+
+- there seems to be a bug in the code when run in normal pixel fullscreen mode,
+the palette is changed and it runs in 8 bit instead of 32.
+
+
+To compile: run "make" in the cool_gfx, cool_mzz and vecsys directories, then
+in the root one. 
+
+Thanks to Fabio Ferriccioli/Quantum Leap for his useful tutorial on SDL.

@@ -1,0 +1,72 @@
+;work:snoopy/snoopy work:snoopy/Scripts/snoopdos.script output=work:log.txt
+
+c:ATA3.driver QUIET 
+run <>NIL: c:blizkick c:kick31.rom EXTRESBUF=65535 MODULE c:bppcfix
+
+SetPatch QUIET
+C:Version >NIL:
+C:AddBuffers >NIL: DF0: 15
+FailAt 21
+
+C:MakeDir RAM:T RAM:Clipboards RAM:ENV RAM:ENV/Sys
+C:Copy >NIL: ENVARC: RAM:ENV ALL NOREQ
+
+Resident >NIL: C:Assign PURE
+Resident >NIL: C:Execute PURE
+
+Assign >NIL: ENV: RAM:ENV
+Assign >NIL: T: RAM:T
+Assign >NIL: CLIPS: RAM:Clipboards
+Assign >NIL: REXX: S:
+Assign >NIL: PRINTERS: DEVS:Printers
+Assign >NIL: KEYMAPS: DEVS:Keymaps
+Assign >NIL: LOCALE: SYS:Locale
+Assign >NIL: LIBS: SYS:Classes ADD
+Assign >NIL: HELP: LOCALE:Help DEFER
+
+
+C:SmartCrash <>NIL: USEREQTOOLS xen_win.font 11   ; smart suspend/reboot winfow by Piru
+C:SegTracker <>NIL:                               ; updates for suspend/reboot window (see enforcer docs)
+
+run <>NIL: C: CMQ060                              ; Exec.library path by Piru (new MemCopy,etc),
+                                                  ; speedup to 30%
+
+
+cd libs:warp-os
+loadlib powerpc.library
+
+
+BindDrivers
+C:Mount >NIL: DEVS:DOSDrivers/~(#?.info)
+
+C:LoadMonDrvs
+
+;SYS:Utilities/RainBoot2.8/Rainboot2 CONFIG SYS:RainBoot2.8/my_config/AmigaOS35.config MODEID $50081000 RTG
+
+
+SetEnv Language "english"
+SetEnv Workbench $Workbench
+SetEnv Kickstart $Kickstart
+UnSet Workbench
+UnSet Kickstart
+
+
+C:AddDataTypes REFRESH QUIET
+C:IPrefs
+C:ConClip
+
+
+Path >NIL: RAM: C: SYS:Utilities SYS:Rexxc SYS:System S: SYS:Prefs SYS:WBStartup SYS:Tools SYS:Tools/Commodities
+
+
+SYS:System/REXXMast >NIL:
+
+IF EXISTS S:User-Startup
+  Execute S:User-Startup
+EndIF
+
+Resident Execute REMOVE
+Resident Assign REMOVE
+
+C:LoadWB
+EndCLI >NIL:

@@ -1,0 +1,66 @@
+
+
+                        W   a   v   e    60%
+                       ----------------------
+
+This is the 60% release of the winning amiga 4k-Intro on TP7. This  intro
+should  have  contained additional THX-Music , but due to several reasons
+this was never finished and will never be finished. So this is the  final
+release.
+
+Several bugs were fixed - the intro doesnt crash on exit now. I also made
+a very simple 030 version. This version just includes (a slower) 030 c2p,
+which should improve the framerate on 030 a  little.  Unfortunately  this
+also  leads  to  some  flickernig and tearing, which could have been only
+removed by a major rewrite of the display-code. Running the  060  version
+on  a  68030  will give a very low framerate, but there wont be that much
+flicker.
+
+Please dont expect even the 030 version to run fast  on  your  030/50  or
+below.  All  routines are quite complex and are optimized for lengths, so
+that they need lots of raw CPU  Power.  Well  -  you  should  upgrade  to
+040/060 anyways :)
+
+If you are using a 1260 board, please  use  either  Speedychip  (Aminet),
+Oxypatcher (commercial) or the newest Phase 5 68060 library (phase5 ftp).
+These utilities will enhance the chipmem access speed, which improves the
+overall performance of the intro.
+
+Have Fun!
+
+Azure.
+
+azure@gmx.net
+
+Take a look at  http://come.to/amiga  if  you  are  interested  in  amiga
+programming.
+
+Some words about the routines:
+------------------------------
+
+-The 3d scenes are controlled by a hermite spline raycaster with a
+ virtial camera system featuring aimpoints. (like Nullobjects in LW)
+-All effects have subpixel/texel accuracy.
+-The tunnel, the tunnel with holes and the disc (Planet? Or whatever :))
+ were done with raycasting. Please note, that the holes in the second
+ tunnel arent genlocked textures, but purely mathematical objects.
+
+Credits:
+--------
+
+-Full intro code by Azure.
+-Cruncher also programmed by Azure.
+-040/060 c2p by Azure.
+-030 cpu only c2p by Kalms.
+
+
+This Archive:
+-------------
+
+Wave60_040++.exe   040/060 Version     2432 bytes = 2.375kb
+Wave60_030.exe         030 Version     2408 bytes = 2.351kb
+azr_wave.readme         Guess what ?
+
+
+This readme is almost of the same length as the full intro!!
+

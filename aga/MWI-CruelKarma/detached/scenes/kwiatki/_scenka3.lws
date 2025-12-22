@@ -1,0 +1,176 @@
+LWSC
+1
+
+FirstFrame 1
+LastFrame 60
+FrameStep 1
+PreviewFirstFrame 1
+PreviewLastFrame 300
+PreviewFrameStep 1
+FramesPerSecond 30.000000
+
+LoadObject D:/Roboczy/others/Mawi/Cruel_carma_flow/005_kwiat/kwiat_2.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  10
+  0.00275 -0.0026 0 -203.2 -5.400001 0 1 1 1
+  0 0 0 0 0
+  0.001693351 0.0005499994 -7.741115e-005 -203 -5.900001 -12 1 1 1
+  34 0 0 0 0
+  -0.007130212 -0.001400001 0.002455165 -198.2001 -6.1 -12.3 1 1 1
+  40 0 0 0 0
+  -0.02989388 0.0001499994 0.001878605 -203 -5.900001 -8.000001 1 1 1
+  64 0 0 0 0
+  -0.03624612 -0.0008509791 0.003601364 -203 -5.900001 -10.99791 1 1 1
+  72 0 0 0 0
+  -0.06343188 0.0007761365 0.005193077 -203 -5.900001 -14.79093 1 1 1
+  108 0 0 0 0
+  -0.0715934 0.0003846795 0.005041089 -203 -5.900001 -15.25675 1 1 1
+  118 0 0 0 0
+  -0.0739092 -0.0005866156 0.004952434 -203 -5.900001 -14.6002 1 1 1
+  123 0 0 0 0
+  -0.1091702 -0.0004000008 0.005252965 -203 -5.900001 -4.800002 1 1 1
+  150 0 0 0 0
+  -0.6560701 -0.0004000008 0.005252965 -203 -5.900001 -4.800002 1 1 1
+  300 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+LoadObject D:/Roboczy/others/Mawi/Cruel_carma_flow/005_kwiat/lapa2.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  7
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+  0 0 0 0 0 16.50001 1 1 1
+  34 0 0 0 0
+  -0.002742399 0.0022 0.0005845911 0 0 16.50001 1 1 1
+  38 0 0 0 0
+  -0.06474805 0.002063873 0.003280036 0 0 16.50001 1 1 1
+  108 0 0 0 0
+  -0.06919771 0.00205 0.003412606 0 0 16.50001 1 1 1
+  113 0 0 0 0
+  -0.1023977 0.0021 0.003412606 0 0 16.50001 1 1 1
+  150 0 0 0 0
+  -0.6507977 0.0021 0.003412606 0 0 16.50001 1 1 1
+  300 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+LoadObject D:/Roboczy/others/Mawi/Cruel_carma_flow/005_kwiat/flarki.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 2
+ShadowOptions 7
+
+LoadObject D:/Roboczy/others/Mawi/Cruel_carma_flow/005_kwiat/podloga.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.005899999 -0.05145 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+LoadObject D:/Roboczy/others/Mawi/Cruel_carma_flow/005_kwiat/sciana.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.00195 0.1693 0.25585 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+AmbientColor 255 255 255
+AmbIntensity 0.250000
+
+AddLight
+LightName Light
+ShowLight 1 7
+LightMotion (unnamed)
+  9
+  2
+  -2 2 -2 45 35 0 1 1 1
+  0 0 0 0 0
+  -2 2 -2 45 35 0 1 1 1
+  60 0 0 0 0
+EndBehavior 1
+LightColor 255 255 255
+LgtIntensity 1.000000
+LightType 0
+ShadowType 1
+
+ShowCamera 1 7
+CameraMotion (unnamed)
+  9
+  11
+  -0.003986681 0.07911967 -0.08193891 15.09999 24.53998 0 1 1 1
+  0 0 0 0 0
+  -0.02687276 0.07219018 -0.07675815 16.31102 21.82548 -5.173931 1 1 1
+  32 0 0 0 0
+  -0.02978227 0.07178961 -0.07574593 14.47799 23.20421 -2.947607 1 1 1
+  36 0 0 0 0
+  -0.03126442 0.07185099 -0.0750349 14.32381 24.13204 -0.1921351 1 1 1
+  38 0 0 0 0
+  -0.05072298 0.07446965 -0.06436571 20.79997 24.73995 -8.199997 1 1 1
+  64 0 0 0 0
+  -0.09515889 0.1324196 -0.001747221 67.69999 54.33996 0 1 1 1
+  116 0 0 0 0
+  -0.137603 0.1959686 -0.00343511 68.80663 54.86472 0 1 1 1
+  137 0 0 0 0
+  -0.1678169 0.2430195 0.01576728 89.7 59.33994 -23.79999 1 1 1
+  150 0 0 0 0
+  -0.1679099 0.2463828 0.02103995 101.4474 59.4345 -24.67209 1 1 1
+  153 0 0 0 0
+  -0.1301538 0.2566696 0.0301338 250.4001 57.2399 -18.19999 1 1 1
+  185 0 0 0 0
+  -0.04379958 0.2566696 0.04071444 264.9001 8.339896 8.00001 1 1 1
+  300 0 0 0 0
+EndBehavior 1
+ZoomFactor 2.228000
+Resolution 1
+PixelAspectRatio 2
+SegmentMemory 2200000
+Antialiasing 0
+AdaptiveSampling 1
+AdaptiveThreshold 16
+FilmSize 2
+FieldRendering 0
+MotionBlur 0
+DepthOfField 0
+
+SolidBackdrop 1
+BackdropColor 0 0 0
+ZenithColor 0 40 80
+SkyColor 120 180 240
+GroundColor 50 40 30
+NadirColor 100 80 60
+FogType 0
+DitherIntensity 1
+AnimatedDither 0
+
+RenderMode 2
+RayTraceEffects 0
+DataOverlayLabel  
+
+ViewMode 5
+ViewAimpoint -0.066200 0.067650 0.000000
+ViewDirection 0.300197 -0.314159 0.000000
+ViewZoomFactor 0.351166
+GridNumber 40
+GridSize 0.010000
+ShowMotionPath 1
+ShowBGImage 0
+ShowFogRadius 0
+ShowRedraw 0
+ShowSafeAreas 0
+ShowFieldChart 0

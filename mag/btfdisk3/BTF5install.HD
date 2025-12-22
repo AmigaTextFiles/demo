@@ -1,0 +1,88 @@
+; ** Beyond The Frontier Installer. **
+; ** (c) SLADE - A51 1996. **
+; ** This Installer is full of comments.  I have commented it this much **
+; ** so you could use to as a tutorial to teach yourself.  Have Fun!!. **
+	
+
+(complete 0)
+(set BS-E-dest
+	(askdir
+		(prompt "Please Select or create a drawer to install Beyond>The<Frontier5:")
+			(help ask-dirhelp
+			"\n"
+			"This will ask you to give a destination drawer to "
+			"which this issue will be installed.\n")
+		(default @default-dest)
+	)
+)
+
+(set @default-dest BS-E-dest)
+
+
+(complete 35)
+(
+(working "Installing Beyond>The<Frontier5(DISK-1):...")
+	(copyfiles
+		(prompt "")
+		(help @copyfiles-help)
+		(source "Beyond>The<Frontier5(DISK-1):")
+		(dest @default-dest)
+		(pattern "#?")
+		(infos)
+	)
+)
+
+(complete 50)
+
+(
+
+(working "Installing Beyond>The<Frontier5(DISK-2):...")
+	(copyfiles
+		(prompt "")
+		(help @copyfiles-help)
+		(source "Beyond>The<Frontier5(DISK-2):")
+		(dest @default-dest)
+		(pattern "#?")
+		(infos)
+	)
+)
+
+(complete 65)
+(
+(working "Installing Beyond>The<Frontier5(DISK-3):...")
+	(copyfiles
+		(prompt "")
+		(help @copyfiles-help)
+		(source "Beyond>The<Frontier5(DISK-3):")
+		(dest @default-dest)
+		(pattern "#?")
+		(infos)
+	)
+)
+
+
+
+
+(complete 80)
+
+(startup "Beyond>The<Frontier>V:"
+(prompt "The following assigns. \n"
+	 "ASSIGN BEYOND>THE<FRONTIER5(DISK-1):\n"
+	 "ASSIGN BEYOND>THE<FRONTIER5(DISK-2):\n"
+	 "ASSIGN BEYOND>THE<FRONTIER5(DISK-3): to " BS-E-dest ""
+	 "\n"
+	 "will be added to your user-startup")
+(help "This adds the needed assigns to your user-startup")
+(command "ASSIGN Beyond>The<Frontier5(DISK-1): " BS-E-dest "\n")
+(command "ASSIGN Beyond>The<Frontier5(DISK-2): " BS-E-dest "\n")
+(command "ASSIGN Beyond>The<Frontier5(DISK-3): " BS-E-dest "")
+)
+
+
+
+
+(complete 100)
+(exit)
+; ** So, you come back again.  you must really like reading these
+; ** little messages on the bottom of the installer.
+; ** I did`nt write the RAM installer.

@@ -1,0 +1,83 @@
+                   <B>Прогрaммировaние под AmigaOS нa aссемблере</B>
+
+...продолжение, нaчaло см. в номерах 1 и 2
+
+                                9.1  Команды CLI
+
+ В  этой рубрике мы с вами научимся запускать программы AmigaOS, непосредственно
+из  вашей  программы.   Т.е.   функции, которые мы рассмотрим, запускают обычные
+команды  AmigaOS,  которые  Вы  пишете в CLI окне, непосредственно из программы,
+написанной на Ассемблере.
+
+ Функция  Execute  находится в dos.library, а это значит, что для её вызова надо
+открыть эту библиотеку (см.  номера 1 и 2).
+
+    move.l dosbase(pc),a6   ;адрес открытой dos.library
+    move.l #command,d1  ;указатель на текстовую строку, содержащую путь к
+                ;запускаемому файлу или команде AmigaOS
+    moveq.l #0,d2       ;идентификатор файла ввода, <I>если d2 содержит
+                ;указатель на какой-либо файл, то выполнятся
+                ;все последовательности команд в этом файле</I>
+                ;так например, запускается startup-sequence.
+    move.l consolehandle(pc),d3 ;идентификатор вывода, т.е. то, куда будут
+                    ;выводиться все действия запущенных вами
+                ;команд (ошибки, сообщения о выполнении).
+                ;Если 0, то вывод будет направляться в
+                ;стандартную CLI консоль, если указатель на
+                ;файл, то весь вывод будет направлен в этот
+                ;файл, также можно направить вывод на любое
+                ;устройство, например на принтер.
+    jsr _LVOExecute(a6) ;вызов функции
+...
+dosbase dc.l 0
+command dc.b "dir",0    ;будет выполнена команда dir. <B>Строка обязательно должна
+            ;заканчиваться нулевым байтом</B>.
+consolehandle dc.l 0    ;идентификатор вывода
+
+                         9.2 Как создать новый процесс
+
+ Для  создания  нового  процесса,  из  вашей программы мы воспользуемся функцией
+dos.library - CreateNewProc.
+
+ 	move.l #TagListNP,d1		;Тэг лист с описанием процесса
+	move.l dosbase(pc),a6
+	jsr _LVOCreateNewProc(a6)
+...
+TagListNP
+	dc.l NP_Entry,new_mus	;указатель на адресс процесса
+	dc.l NP_Name,IntName	;указатель на имя процесса
+	dc.l 0
+...
+IntName dc.b "Music",0
+
+  Использование  функции  достаточно  просто.   В  TagListNP мы вносим параметры
+запускаемого  нами  процесса.  NP_Entry - адресс нашего процесса.  NP_Name - его
+имя.   Кроме  этого  для  процесса можно задавать стек - NP_StackSize, если этот
+параметр  не  указывать,  то стек устанавливается равным 4000.  Можно установить
+приоритеты  и  многое  другое.   Вот  список наиболее применяемых тегов для этой
+функции.
+
+NP_Input	; указатель на канал ввода - default is Open("NIL:"...)
+NP_Output	; указатель на канал вывода - default is Open("NIL:"...)
+NP_CloseInput	; close input filehandle on exit
+		; default TRUE
+NP_CloseOutput	; close output filehandle on exit
+		; default TRUE
+NP_Error	; filehandle - default is Open("NIL:"...)
+NP_CloseError	; close error filehandle on exit
+				 ; default TRUE
+NP_CurrentDir	; установка программной директории
+NP_StackSize	; стек - default 4000    
+NP_Name		; имя процесса - default "New Process"
+NP_Priority	; приоритет - default same as parent (текущий т.е. приоритет той
+программы из которой был запущен этот процесс
+NP_ConsoleTask	; consoletask - default same as parent    
+NP_WindowPtr	; указатель на окно - default is same as parent
+NP_HomeDir	; установка "домашней" директории - default current home dir   
+NP_Cli		; создание CLI труктуры - default FALSE
+NP_Path		; path - default is  only valid if a cli process!
+NP_CommandName	; commandname - valid only for CLI
+NP_ExitCode	; code to be called on process exit
+NP_ExitData	; optional argument for NP_EndCode rtn -
+				 
+Levitator/team PowerAmiga

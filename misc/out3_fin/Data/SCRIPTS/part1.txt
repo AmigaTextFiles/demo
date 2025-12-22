@@ -1,0 +1,47 @@
+<KPART>
+  <ID> Part1 </ID>
+
+  <Fx>
+    <Pa>PlayDBM</Pa>
+    <Pa>dbmmusic</Pa>
+  </Fx>
+
+  <Fx><Pa> FillRc </Pa><Pa></Pa><Pa>cte| 0 </Pa></Fx>
+
+  <Fx>
+      <Pa>BindPalette</Pa>
+      <Pa> sin | 0 | 0.184 | 1 </Pa>
+      <Pa>CTE|0</Pa>              type of fade:0,1,2,3
+      <Pa>CTE|0</Pa>            optional color 0->255 (0)
+      <Pa>text1</Pa>     palette where to fade ( "B" )
+      <Pa>text1</Pa>            optional source Palette(2)
+      <Pa>CTE|0</Pa>              type of fade:0,1,2,3
+      <Pa>CTE|0</Pa>            optional color 0->255 (0)
+      <Pa>text1</Pa>       Palette where to fade ( "B" )
+      <Pa>text1</Pa>       optional source Palette(2)
+      <Pa>CTE|0</Pa>              type of fade:0,1,2,3
+      <Pa>CTE|0</Pa>            optional color 0->255 (0)
+      <Pa>text1</Pa>       Palette where to fade ( "B" )
+      <Pa>text1</Pa>       optional source Palette(2)
+  </Fx>
+
+  <Fx>
+      <Pa> Sprite </Pa>
+      <Pa> mainscreen </Pa>
+      <Pa> text1 </Pa>
+      <Pa> 4cte | 0.10 | 0.40 | 0.9 | 0.60 </pa>
+  </Fx>
+
+  <Fx>
+      <Pa> radialblur </Pa>
+      <Pa> mainscreen </Pa>        rectangle where to make radialblur
+      <Pa> table1 </Pa>       the color remap table to apply color operation
+      <Pa> aff | 1 | -0.0015 </Pa>      X center of radial zoom according to position
+      <Pa> sin | 0.5 | 0.2 | 0.02 </Pa>      Y center of radial zoom according to position
+      <Pa> cte | 0.7 </Pa>      X rate of zoom. please >0
+      <Pa> cte | 0.7 </Pa>      Y rate of zoom. please >0
+  </Fx>
+
+</KPART>
+
+

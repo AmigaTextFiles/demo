@@ -1,0 +1,105 @@
+
+ OK, 
+
+ This tutorial will learn you how to use the "Ground"
+Texture deformation 3D effect. As all 3D effects, it needs a camera.
+
+  You have discovered the cameras objects
+ you can create with < KCAM> in the multiparameter
+ tutorial  ( A06 ).
+
+ you have seen a camera object has a position
+ (x,y,z)
+ three angles:
+ o1, rotate on Z axis
+ o2, rotate on X axis
+ o3, rotate on Y axis (must be that...)
+
+ and also a length "FOV" that give the angle of view and must be >0.
+
+ the "Gound" Fx will draw on your rectangle a view of a
+ ground-and-ceiling environment, texture-mapping a 256x256 image.
+
+ ( I repeat: all "deformed" images on karate must be 256x256,
+ only-zoomed-ones can have any resolutions.)
+
+ You set a distance of the floor and the ceiling from the space
+ origin 0,0,0. Be awared results are stranges if the camera is
+ placed under the ground or over the ceiling !!!
+
+ so this is very simple to use: reset your camera position or values:
+ (this can be done here with setcamcoords for describing movements.)
+ then use the ground fx with the camera.
+
+ See more in tutorial D03....
+
+
+<MAIN> myscript |0|1</MAIN>              the main script to play...
+
+<KIMG> texture256x256_2 | data/texture2.iff </KIMG>   let's create an image.
+                                                    Note this image must be 256x256.
+<KIMG> impacman | data/oldpac.iff </KIMG>       These one, used for sprites
+<KIMG> imghost  | data/ghost1.iff </KIMG>       can be any-sized.
+<KIMG> imghost2  | data/inky.iff </KIMG>
+
+<KCAM> cam_1 |0|0|0|0|0|0|1  </KCAM> camera (x,y,z,o1,o2,o3,FOV)
+
+--------------------------------------------------
+<KSCRIPT>                           let's write a script to play.
+
+    <ID> myscript </ID>
+
+    <PLAY> mypart | 10000 | 0 | 1 </PLAY>
+  
+</KSCRIPT>
+
+--------------------------------------------------------
+<KPART>
+
+    <ID> mypart </ID>
+
+    <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> texture256x256_2 </Pa>   we have seen each image stands for a 256 color palette too.
+    </Fx>
+
+
+    <Fx><Pa> SetCamCoord </Pa>
+            <Pa> cam_1 </Pa>
+
+            <Pa>sin|0|0.12|2</Pa>    x
+            <Pa>sin|0|0.1|0.75</Pa>        y
+            <Pa>sin|0|0.08|2</Pa>    z
+
+            <Pa>sin|0|0.08|0.15</Pa>    o1
+            <Pa>sin|0|0.05|0.1</Pa>    o2
+            <Pa>sin|0|0.03|0.5</Pa>    o3
+
+            <Pa>CTE|0.6</Pa>       fov
+            </Fx>
+
+    <Fx><Pa> Ground </Pa>
+            <Pa> </Pa>          rectangle where to draw.
+            <Pa> texture256x256_2 </Pa>      256x256 image to deform.
+            <Pa> cam_1 </Pa>     camera
+
+            <Pa>cte|1</Pa>          ceiling dist.
+            <Pa>CTE|1</Pa>          floor dist
+
+            <Pa>CTE|0</Pa>          ?
+            <Pa>CTE|0</Pa>          ?
+            <Pa>CTE|0</Pa>          mapping type: 0= normal
+            </Fx>
+
+   
+
+    + 1 sprite :-)
+    <Fx><Pa> Sprite </Pa>
+        <Pa></Pa>
+        <Pa> imghost   </Pa>
+        <Pa> 4cte|0|0|0.15|0.15 </Pa>
+    </Fx>
+
+
+
+</KPART>

@@ -1,0 +1,64 @@
+@{d C5FFE9}  Závidíte  tëm  neznabohûm  vlastnícím tu náhraùku kalkulaçky, kterou propaguje jistý
+B.G.?   Dëláte  chybu,  protoùe  není  o  co  stát.   Vlastnë nebylo, dokud se na této
+platformë neobjevily audio samply ve formátu @{c 3FFFC1}MP3@{c}.  Tento formát byl jeîtë pêed nëjakou
+dobou svëtu neznámý a bylo nemyslitelné nëco takového provozovat doma na svém poçítaçi
+(=Amize  :),  neboï tento formát je velice nároçný na systémový ças procesoru, kterého
+není  nikdy  nazbyt.   A  tak  zde vznikl jeden zásadní problém.  Chci doma poslouchat
+samplované  songy  v  CD kvalitë, které by nezabíraly mnoho místa na disku.  Êeîení je
+v MP3 a koupi výkonného poçítaçe.
+
+  Nevím jak vám, ale mnë se zdá toto êeîení pêíliî nákladné a navíc pod pojmem výkonný
+poçítaç  si  kaùdý  nezasvëcený çlovëk pêedstaví minimálnë PentiumII-400.  Fuj, nikdy.
+Mám Amigu, chci mít Amigu a také chci poslouchat m-pé-trojky.  To ale nebylo donedávna
+moùné,  protoùe  dodnes bëùná konfigurace na Amize je procesor 030 na 50MHz a ten, jak
+sami uznáte, pêíliî velkým výkonem neoplývá.  No a asi proto se také nikdo nezatëùoval
+vývojem  pêehrávaçe MP3 pro Amigu.  Naîlo se sice pár jedincú, ale jejich výtvory mëly
+jeden zásadní nedostatek.  Ke spuîtëní bylo zapotêebí minimálnë procesor 040 nebo lépe
+060.  No, ale to je minulost a my se pêece chceme zabývat souçasností.
+
+   Na  Aminetu  se  totiù  zaçal  çasto  objevovat pêehrávaç @{c 3FFFC1}MPEGA@{c} a pokaùdé v novëjîí
+verzi.   Jiù v prvopoçátcích vývoje tohoto programu podporoval vîechny typy procesorû,
+a to i staêiçkou 020.  Na nëm si vîak neposlechnete ùádnou MP trojku ani v monu, natoù
+pak  ve  stereu.   S pêíchodem MPEGA ve verzi 3.1 se ale hodnë vëcí zmënilo.  Nyní vám
+totiù  staçí  na  poslech  pouhá  030  a  to  je uù docela rozumné (neplatí pro naîeho
+îéfredaktora  ;-).   Je  to sice poslech na çtvrtinové frekvenci a v nejniùîí kvalitë,
+ale i to je velký pokrok.  Je to moùné pouze díky rychlejîímu, skvële optimalizovanému
+dekódovacímu  algoritmu,  který byl implementován právë do tohoto programu.  Tím doîlo
+k tomu,  ùe  na  060 se dají songy ve formátu MP3 poslouchat v CD kvalitë, a jeîtë vám
+zbyde aù 60% procesorového çasu.
+
+  No,  ale nechme planého básnëní o MPEGA a pojðme se podívat na jeho výhody a potaùmo
+i nevýhody.   Hlavní  pêedností  je,  jak jiù bylo êeçeno, jeho rychlost i na slabîích
+konfiguracích  oproti  jiným  pêehrávaçûm,  které jsem mël moùnost "testovat".  Dalîím
+velkým  plusem  je jeho schopnost dekódovat samply z formátu MP3 do AIFF, nebo do WAV.
+To  jsou  16bitové  formáty,  a  tak kdyù této moùnosti vyuùijete, mûùete se i na holé
+dvanáctce  s  troîkou  té  Fastky  tëîit  z písniçek skoro v CD kvalitë, respektive ve
+14bitech.
+
+  MPEGA  také  podporuje preloading a to se také hodí zejména ménë majetným Amigistûm,
+protoùe  poçítaç  pêehrává data z pamëti, coù je o poznání rychlejîí, neù je pêehrávat
+pêímo  z disku.  Na druhou stranu dvacítkáêûm nepomûùe ani Bûh svatý, natoù pak nëjaký
+preloading @{i}(Hi JR! :-)@{ui}.
+
+
+  Jedna  z  dalîích  výhod, o které bych se rád zmínil, je moùnost vyuùít jako výstupu
+nëkterou  ze zvukových karet, které se k Amize dají koupit (draho, ale dají).  Toto je
+umoùnëno pêímou podporou AHI.  Opët to nemá na rychlost dekódování samplû ùádný vliv.
+
+
+  Hlavní  výhody  jsem  jiù zmínil, a tak se mûùeme smële pêesunout k té horîí stránce
+vëci, a tou je kompletní ovládání ze shellu, coù je ale pro nëkteré Amigisty pracující
+na  unixových  stanicích  velká  výhoda  @{i}(við  Schizzy? :-)@{ui}.   To  se  ale dá napravit
+jednoduchým  arexxovým  skriptem,  který mûùete najít na Aminetu, nebo pêímo pro MPEGA
+naprogramovaným GUI, které je ale velice nespolehlivé (alespoñ u më).
+
+@{d C5FFE9}
+  S jinými nevýhodami jsem se u tohoto pêehrávaçe nesetkal a to je asi dobêe.  Zkrátka
+si  nemûùu  MPEGA  vynachválit.   Zkuste  ho a uvidíte sami, ùe váî práîek by to na 40
+takhle  nevypral  @{i}@{c 3FFFC1}(MPEGA  totiù pere i na 30 resp. na 030 ... pozn.ShAmaN)@{c}@{ui}.  Sakra, uù
+jsem  z  tëch  reklam  celej  zblblej.   No  zkrátka  -  na to, ùe je tenhle pêehrávaç
+@{c 3FFFC1}GiftWare@{c}, je na velmi vysoké úrovni.  Asi poîlu autorovi pohled.  To më pêece nezabije
+a jeho doufám taky ne...
+
+
+                                         @{c 3FFFC1}Ya@{c}

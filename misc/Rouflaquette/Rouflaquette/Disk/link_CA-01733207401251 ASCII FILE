@@ -1,0 +1,4 @@
+stack 50000
+sc nolink main.c
+sc nolink pt/play.c
+sc link main.o pt/play.o to main

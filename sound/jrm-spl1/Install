@@ -1,0 +1,120 @@
+; $VER: dA JoRMaS: Splidium (16.06.96)
+; Installer Revision 1 (16.06.96)
+
+(complete 0)
+;=============================================================================
+; English strings
+
+(set #intro
+(cat "\n\n\n\n\nWelcome to the Splidium installer.\n\n"
+     "This program lets you install the Splidium music disk "
+     "on your system."
+))
+
+(set #destdir
+(cat "Please select a place for Splidium. "
+     "A drawer called 'Splidium' will be created here. "
+     "The minimum space required is about 1.7Mb."
+))
+
+(set #destexists
+(cat "\n\n\n\n\nA Splidium drawer does already exist in your selected destination directory. "
+     "By proceeding, you indicate that you wish to delete the "
+     "contents of this drawer and replace them with the new "
+     "installation."
+))
+
+(set #insertdiskmsg
+(cat "\n\n\n\n\nPlease insert the disk labelled\n\n"
+))
+
+;=============================================================================
+; Procedure Definitions
+
+(procedure @GetDisk
+	(
+		(askdisk
+			(prompt #insertdiskmsg #filesourcedisk)
+			(help #diskhelp)
+			(dest #filesourcedisk)
+		)
+	)
+)
+
+;=============================================================================
+; Say hello
+
+(set @default-dest "SYS:")
+(message #intro)
+
+;=============================================================================
+; Ask for destination directory
+
+(set @default-dest
+	(askdir
+		(prompt #destdir)
+		(help @askdir-help)
+		(default @default-dest)
+	)
+)
+
+(set @default-dest (expandpath @default-dest))
+(set destination (tackon @default-dest "Splidium"))
+
+(if (<> (exists destination) 0)
+(
+	(message #destexists)
+	(run (cat "delete " destination " all >nil:"))
+	(run (cat "delete " destination ".info >nil:"))
+))
+
+;=============================================================================
+; Lets go, create destination directory, copy main files and libs
+
+(complete 5)
+
+(makedir destination (help @makedir-help))
+;(run (cat "copy ENV:Sys/Def_Drawer.info \"" destination ".info\""))
+
+(complete 10)
+
+(copyfiles
+	(prompt "Copying disk 1 files...")
+	(source "Splidium1:")
+	(pattern "~(install#?|Disk.info|c|devs|s|file_id.diz)")
+	(dest destination)
+	(infos)
+	(help @copyfiles-help)
+)
+
+(complete 55)
+(set #filesourcedisk "Splidium2")
+(@GetDisk)
+(copyfiles
+	(prompt "Copying disk 2 files...")
+	(source "Splidium2:")
+	(pattern "~(#?.info|file_id.diz)")
+	(dest destination)
+	(infos)
+	(help @copyfiles-help)
+)
+
+(complete 99)
+
+;=============================================================================
+; Startup Sequence
+
+(startup "Splidium"
+	(prompt "Some commands will be added to your \"s:user-startup\" file.")
+	(help @startup-help)
+	(command "if exists \"" destination "\"\n")
+	(command "   assign Splidium1: \"" destination "\"\n")
+	(command "   assign Splidium2: \"" destination "\"\n")
+	(command "endif")
+)
+
+;=============================================================================
+; Finish
+
+(complete 100)
+(exit "Please reboot your computer before running Splidium.")

@@ -1,0 +1,1256 @@
+{
+  "actions": [
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 5220,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "encore"
+        }
+      ],
+      "loops": 1,
+      "name": "encoreAction",
+      "start_time": 20,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 11.19999981,
+            "interpolation": "linear",
+            "time": 2260
+          },
+          {
+            "float_values": 0.40000001,
+            "interpolation": "linear",
+            "time": 3000
+          },
+          {
+            "float_values": 11.19999981,
+            "interpolation": "linear",
+            "time": 2480
+          },
+          {
+            "float_values": 0.0,
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "cover_1"
+        }
+      ],
+      "loops": 1,
+      "name": "cover_1Action",
+      "start_time": 0,
+      "type": "position_y"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 2280,
+            "uint8_values": 0
+          },
+          {
+            "time": 240,
+            "uint8_values": 1
+          },
+          {
+            "time": 2740,
+            "uint8_values": 1
+          },
+          {
+            "time": 2460,
+            "uint8_values": 0
+          },
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "cover_1"
+        }
+      ],
+      "loops": 1,
+      "name": "cover_1Action",
+      "start_time": 0,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 2280
+          },
+          {
+            "float_values": 1.0,
+            "time": 20
+          },
+          {
+            "float_values": 0.0,
+            "time": 420
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 2300
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 220
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 20
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 2420
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 260
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 1860
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "cover_1"
+        },
+        {
+          "name": "cover_2"
+        }
+      ],
+      "loops": 1,
+      "name": "full",
+      "start_time": 0,
+      "type": "mesh_shape"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 18.89855957,
+            "interpolation": "linear",
+            "time": 5240
+          },
+          {
+            "float_values": 14.0,
+            "interpolation": "linear",
+            "time": 20
+          },
+          {
+            "float_values": 19.0,
+            "interpolation": "linear",
+            "time": 4760
+          },
+          {
+            "float_values": 16.79999924,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "camera_1"
+        }
+      ],
+      "loops": 1,
+      "name": "camera_1Action",
+      "start_time": 0,
+      "type": "position_z"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "time": 40,
+            "uint8_values": 0
+          },
+          {
+            "time": 2940,
+            "uint8_values": 0
+          },
+          {
+            "time": 2440,
+            "uint8_values": 1
+          },
+          {
+            "time": 2320,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "background"
+        }
+      ],
+      "loops": 1,
+      "name": "backgroundAction",
+      "start_time": 2240,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 11.0,
+            "interpolation": "linear",
+            "time": 2520
+          },
+          {
+            "float_values": 0.5,
+            "interpolation": "linear",
+            "time": 2280
+          },
+          {
+            "float_values": 11.19999981,
+            "interpolation": "linear",
+            "time": 420
+          },
+          {
+            "float_values": 11.0,
+            "interpolation": "linear",
+            "time": 2040
+          },
+          {
+            "float_values": 0.30000001,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "cover_2"
+        }
+      ],
+      "loops": 1,
+      "name": "cover_2Action",
+      "start_time": 2720,
+      "type": "position_y"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "time": 2540,
+            "uint8_values": 0
+          },
+          {
+            "time": 2680,
+            "uint8_values": 1
+          },
+          {
+            "time": 2060,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "cover_2"
+        }
+      ],
+      "loops": 1,
+      "name": "cover_2Action",
+      "start_time": 2700,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "time": 4520,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "morphiller"
+        }
+      ],
+      "loops": 1,
+      "name": "morphillerAction",
+      "start_time": 5240,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 0.5,
+            "interpolation": "linear",
+            "time": 4440
+          },
+          {
+            "float_values": 2.5,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "tear_1"
+        }
+      ],
+      "loops": 1,
+      "name": "tear_1Action",
+      "start_time": 780,
+      "type": "scale_y"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 5240,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "tear_1"
+        }
+      ],
+      "loops": 1,
+      "name": "tear_1Action",
+      "start_time": 0,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 0.5,
+            "interpolation": "linear",
+            "time": 4440
+          },
+          {
+            "float_values": 1.8,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "tear_2"
+        }
+      ],
+      "loops": 1,
+      "name": "tear_2Action",
+      "start_time": 780,
+      "type": "scale_y"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 5240,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "tear_2"
+        }
+      ],
+      "loops": 1,
+      "name": "tear_2Action",
+      "start_time": 0,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 0.5,
+            "interpolation": "linear",
+            "time": 3320
+          },
+          {
+            "float_values": 2.46,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "tear_3"
+        }
+      ],
+      "loops": 1,
+      "name": "tear_3Action",
+      "start_time": 1900,
+      "type": "scale_y"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 5240,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "tear_3"
+        }
+      ],
+      "loops": 1,
+      "name": "tear_3Action",
+      "start_time": 0,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 0.6,
+            "interpolation": "linear",
+            "time": 5200
+          },
+          {
+            "float_values": 2.1,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "tear_4"
+        }
+      ],
+      "loops": 1,
+      "name": "tear_4Action",
+      "start_time": 20,
+      "type": "scale_y"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 5240,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "tear_4"
+        }
+      ],
+      "loops": 1,
+      "name": "tear_4Action",
+      "start_time": 0,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 0.5,
+            "interpolation": "linear",
+            "time": 4320
+          },
+          {
+            "float_values": 1.6,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "tear_5"
+        }
+      ],
+      "loops": 1,
+      "name": "tear_5Action",
+      "start_time": 900,
+      "type": "scale_y"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 5240,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "tear_5"
+        }
+      ],
+      "loops": 1,
+      "name": "tear_5Action",
+      "start_time": 0,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 0.5,
+            "interpolation": "linear",
+            "time": 4500
+          },
+          {
+            "float_values": 2.7,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "tear_6"
+        }
+      ],
+      "loops": 1,
+      "name": "tear_6Action",
+      "start_time": 5260,
+      "type": "scale_y"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "time": 4520,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "tear_6"
+        }
+      ],
+      "loops": 1,
+      "name": "tear_6Action",
+      "start_time": 5240,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 0.5,
+            "interpolation": "linear",
+            "time": 3740
+          },
+          {
+            "float_values": 2.1,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "tear_7"
+        }
+      ],
+      "loops": 1,
+      "name": "tear_7Action",
+      "start_time": 6020,
+      "type": "scale_y"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 4520,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "tear_7"
+        }
+      ],
+      "loops": 1,
+      "name": "tear_7Action",
+      "start_time": 5240,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 0.48,
+            "interpolation": "linear",
+            "time": 4500
+          },
+          {
+            "float_values": 2.82,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "tear_8"
+        }
+      ],
+      "loops": 1,
+      "name": "tear_8Action",
+      "start_time": 5260,
+      "type": "scale_y"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "time": 4520,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "tear_8"
+        }
+      ],
+      "loops": 1,
+      "name": "tear_8Action",
+      "start_time": 5240,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 0.5,
+            "interpolation": "linear",
+            "time": 3420
+          },
+          {
+            "float_values": 3.2,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "tear_9"
+        }
+      ],
+      "loops": 1,
+      "name": "tear_9Action",
+      "start_time": 6340,
+      "type": "scale_y"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "time": 4520,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "tear_9"
+        }
+      ],
+      "loops": 1,
+      "name": "tear_9Action",
+      "start_time": 5240,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 0.48,
+            "interpolation": "linear",
+            "time": 3340
+          },
+          {
+            "float_values": 3.9,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "tear_10"
+        }
+      ],
+      "loops": 1,
+      "name": "tear_10Action",
+      "start_time": 6420,
+      "type": "scale_y"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "time": 4520,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "tear_10"
+        }
+      ],
+      "loops": 1,
+      "name": "tear_10Action",
+      "start_time": 5240,
+      "type": "hide"
+    }
+  ],
+  "cameras": [
+    {
+      "far_clip_plane": 80.0,
+      "fov_x": 49.069203,
+      "fov_y": 28.800001,
+      "hide": false,
+      "name": "camera_1",
+      "near_clip_plane": 0.1,
+      "position": [
+        0.0,
+        0.0,
+        18.89855957
+      ],
+      "rotation": [
+        3e-06,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "enc_info": {
+    "data_type": "ENCSCN",
+    "date": "20 Jun 2023 20:11:01",
+    "version": "2.0"
+  },
+  "loops": 1,
+  "name": "Scene",
+  "objects": [
+    {
+      "material": {
+        "diffuse_color_rgba": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "mesh_name": "ti_encore",
+      "name": "encore",
+      "order": 6,
+      "position": [
+        0.0,
+        0.0,
+        0.02
+      ],
+      "properties": {
+        "depth_mask": 0,
+        "depth_test": 0
+      }
+    },
+    {
+      "material": {
+        "diffuse_color_rgba": [
+          0.75,
+          0.75,
+          0.75,
+          1.0
+        ]
+      },
+      "mesh_name": "ti_cover_1",
+      "name": "cover_1",
+      "order": 3,
+      "position": [
+        0.0,
+        11.19999981,
+        -0.0
+      ],
+      "properties": {
+        "depth_mask": 0,
+        "depth_test": 0,
+        "face_visibility": "front_back"
+      }
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.75,
+          0.75,
+          0.75,
+          1.0
+        ]
+      },
+      "mesh_name": "ti_background",
+      "name": "background",
+      "order": 4,
+      "position": [
+        0.0,
+        0.0,
+        0.01
+      ],
+      "properties": {
+        "depth_mask": 0,
+        "depth_test": 0
+      }
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "mesh_name": "ti_cover_1",
+      "name": "cover_2",
+      "order": 20,
+      "position": [
+        0.0,
+        11.0,
+        0.03
+      ],
+      "properties": {
+        "depth_mask": 0,
+        "depth_test": 0
+      }
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_morphiller",
+      "name": "morphiller",
+      "order": 17,
+      "position": [
+        0.0,
+        0.0,
+        0.02
+      ],
+      "properties": {
+        "depth_mask": 0,
+        "depth_test": 0
+      }
+    },
+    {
+      "material": {
+        "diffuse_color_rgba": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "mesh_name": "ti_tear",
+      "name": "tear_1",
+      "order": 7,
+      "position": [
+        5.40091276,
+        -0.77256489,
+        0.015
+      ],
+      "properties": {
+        "depth_mask": 0,
+        "depth_test": 0
+      },
+      "scale": [
+        1.2,
+        0.5,
+        1.0
+      ]
+    },
+    {
+      "material": {
+        "diffuse_color_rgba": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "mesh_name": "ti_tear",
+      "name": "tear_2",
+      "order": 7,
+      "position": [
+        1.60948181,
+        -0.77256489,
+        0.015
+      ],
+      "properties": {
+        "depth_mask": 0,
+        "depth_test": 0
+      },
+      "scale": [
+        1.0,
+        0.5,
+        1.0
+      ]
+    },
+    {
+      "material": {
+        "diffuse_color_rgba": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "mesh_name": "ti_tear",
+      "name": "tear_3",
+      "order": 7,
+      "position": [
+        -3.90054202,
+        -0.77256489,
+        0.015
+      ],
+      "properties": {
+        "depth_mask": 0,
+        "depth_test": 0
+      },
+      "scale": [
+        0.6,
+        0.5,
+        1.0
+      ]
+    },
+    {
+      "material": {
+        "diffuse_color_rgba": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "mesh_name": "ti_tear",
+      "name": "tear_4",
+      "order": 7,
+      "position": [
+        -5.53530407,
+        -0.68003118,
+        0.015
+      ],
+      "properties": {
+        "depth_mask": 0,
+        "depth_test": 0
+      },
+      "scale": [
+        1.0,
+        0.6,
+        1.0
+      ]
+    },
+    {
+      "material": {
+        "diffuse_color_rgba": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "mesh_name": "ti_tear",
+      "name": "tear_5",
+      "order": 7,
+      "position": [
+        -3.57667398,
+        -0.77256489,
+        0.015
+      ],
+      "properties": {
+        "depth_mask": 0,
+        "depth_test": 0
+      },
+      "scale": [
+        1.1,
+        0.5,
+        1.0
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "mesh_name": "ti_tear",
+      "name": "tear_6",
+      "order": 7,
+      "position": [
+        -1.52065206,
+        -1.0607394,
+        0.015
+      ],
+      "properties": {
+        "depth_mask": 0,
+        "depth_test": 0
+      },
+      "scale": [
+        0.7,
+        0.5,
+        1.0
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "mesh_name": "ti_tear",
+      "name": "tear_7",
+      "order": 7,
+      "position": [
+        -1.76497388,
+        -1.0607394,
+        0.015
+      ],
+      "properties": {
+        "depth_mask": 0,
+        "depth_test": 0
+      },
+      "scale": [
+        0.5,
+        0.5,
+        1.0
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "mesh_name": "ti_tear",
+      "name": "tear_8",
+      "order": 7,
+      "position": [
+        5.70440006,
+        -0.4638333,
+        0.015
+      ],
+      "properties": {
+        "depth_mask": 0,
+        "depth_test": 0
+      },
+      "scale": [
+        0.9,
+        0.48,
+        1.0
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "mesh_name": "ti_tear",
+      "name": "tear_9",
+      "order": 7,
+      "position": [
+        -5.60420799,
+        -0.43280858,
+        0.015
+      ],
+      "properties": {
+        "depth_mask": 0,
+        "depth_test": 0
+      },
+      "scale": [
+        1.0,
+        0.5,
+        1.0
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "mesh_name": "ti_tear",
+      "name": "tear_10",
+      "order": 7,
+      "position": [
+        2.32859278,
+        -0.4638333,
+        0.015
+      ],
+      "properties": {
+        "depth_mask": 0,
+        "depth_test": 0
+      },
+      "scale": [
+        1.0,
+        0.48,
+        1.0
+      ]
+    }
+  ],
+  "time": 10000
+}

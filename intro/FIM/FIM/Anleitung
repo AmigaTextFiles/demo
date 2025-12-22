@@ -1,0 +1,363 @@
+
+
+##################################################################
+##                                                              ##
+##       A N L E I T U N G   Z U  'FASTINTRO-MAKER V2.2'        ##
+##                                                              ##
+##################################################################
+##                                                              ##
+## FASTINTRO-MAKER (F.I.M.) V2.2 IST SHAREWARE !! BEI BENUTZUNG ##
+##       SENDEN SIE MIR BITTE  DM 10 , BZW. US$ 7 DOLLAR.       ##
+##                                                              ##
+##                                                              ##
+## MICHAEL BIALAS, FREIBURGERSTR.2, 6200 WIESBADEN, DEUTSCHLAND ##
+##                                                              ##
+##                                                              ##
+##   DIE AKTUELLSTE VERSION VON F.I.M. FINDEN SIE NUR AUF DEN   ##
+##    PUBLIC-PACKS-OS2.x (PD-DISKETTEN) VON MB-DATENTECHNIK.    ##
+##                                                              ##
+## INFO/KATALOGDISKETTE ANFORDERN !!! 10.-DM SCHEIN/SCHECK AN:  ##
+##                                                              ##
+##                       MB-DATENTECHNIK                        ##
+##                       MICHAEL  BIALAS                        ##
+##                       FREIBURGERSTR.2                        ##
+##                       6200  WIESBADEN                        ##
+##                       >-DEUTSCHLAND-<                        ##
+##                                                              ##
+##################################################################
+##                                                              ##
+## DIE BENUTZER, DIE IHRE SHAREWARE-GEBÜHR EINSENDEN UND DIE    ##
+## NEUESTE VERSION VON F.I.M. HABEN MÖCHTEN, SOLLTEN ZUSÄTZLICH ##
+## 4.-DM(INLAND) BZW. 5,-DM(AUSLAND) FÜR PORTO&DISK MITSCHICKEN.##
+## ES WERDEN KEINE RÜCKPORTO/DISK/VERPACKUNGSKOSTEN ÜBERNOMMEN. ##
+##                                                              ##
+##################################################################
+##                                                              ##
+## V1.0 (08.09.92)  erste Release (FishDisk/Kickstart).         ##
+##                                                              ##
+## V1.1 (29.11.92)  Errors in der Intro-Copperliste enfernt.    ##
+##                                                              ##
+## V1.2 (03.12.92)  Filerequester verändert. Merkt sich immer   ##
+##                  das letzte Verzeichnis.                     ##
+##                                                              ##
+## V1.3 (09.12.92)  Bug im IntroFileheader verzweifelt gesucht, ##
+##                  gefunden und entfernt.                      ##
+##                                                              ##
+## V1.4 (12.12.92)  Jinx8 & Byte8 Font dazu installiert.        ##
+##                  kleiner Fehler beim drucken von großen      ##
+##                  Texten entfernt.                            ##
+##                                                              ##
+## V1.5 (13.12.92)  CrunchDemo-Funktion entfernt un durch       ##
+##                  durch B/F-Sinus-Effekt ersetzt.             ##
+##                                                              ##
+## V1.6 (14.12.92)  BootsaveFunktion eingebaut. Nach dem Disk-  ##
+##                  installieren wird die DiskBitmap erneuert.  ##
+##                                                              ##
+## V1.7 (09.01.93)  MusikModul-Lade/CheckFunktion installiert.  ##
+##                                                              ##
+## V1.8 (11.01.93)  MusicReplayer für SonicArranger-Module      ##
+##                  installiert. Filenamen-Ausgabe der          ##
+##                  SonicModule installiert.                    ##
+##                                                              ##
+## V1.9 (13.01.93)  Noch einige Bugs entfernt. Zusätzlichen     ##
+##                  FehlerRequester für OpenError beim          ##
+##                  TD.Device installiert.                      ##
+##                                                              ##
+## V2.0 (17.01.93)  Zusätzlichen FehlerReq. beim abspeichern    ##
+##                  von schon existierenden Files installiert.  ##
+##                                                              ##
+## V2.1 (19.01.93)  S.A.Replay entfernt,durch ProTrackerReplay  ##
+##                  ersetzt.(Replay war führte zum SystemCrash) ##
+##                  (Fehlerreport von Stefan Stand)             ##
+##                                                              ##
+## V2.2 (20.01.93)  ModuleCheck&UserAbfrage für ProtrackerClone ##
+##                  bzw.Updates installiert.                    ##
+##                                                              ##
+##################################################################
+##                                                              ##
+##    F.I.M. WURDE MIT FOLGENDER HARDWARE ERSTELLT/GESTESTET    ##
+##    ------------------------------------------------------    ##
+##    AMIGA2000 - 1MBCHIP/8MBFAST - OS2.04/1.3 - 68000/68030    ##
+##                                                              ##
+##################################################################
+
+-----------------------------------------------------------------------------
+Einführung
+-----------------------------------------------------------------------------
+
+Was ist 'FASTINTRO-MAKER' (KurzForm=F.I.M.)?
+
+'F.I.M.' ist ein Demo/IntroMaker oder Letterwriter (wie Sie es gern hätten),
+Aufgrund der Verwendung von neuen SystemRoutinen läuft der Editor nur ab
+AmigaOS 2.0. Die fertig erstellten Intro`s laufen aber problemlos unter
+Kickstart 1.2/1.3 sowie 2.x (Vom CLI sowie von Workbench)
+
+FASTINTRO-MAKER V2.2 BENÖTIGT AMIGA-OS2.0 + ASL.LIBRARY
+
+-----------------------------------------------------------------------------
+Vertrieb & Weitergabe Info
+-----------------------------------------------------------------------------
+
+Die Aufnahme in andere PD-Serien/Disketten ist nur erlaubt, wenn alle Dateien
+in unverändertem Zustand in einem Verzeichis (unverstreut) vorliegen.
+Das verändern der Deutschen/Englischen Anleitung ist VERBOTEN !!!.
+Auflistung der Dateien die in einem Verzeichnis vorliegen müssen:
+
+FastIntroMaker_V2.2
+FastIntroMaker_V2.2.info
+FastIntroMaker.Document
+FastIntroMaker.Document.info
+FastIntroMaker.Anleitung
+FastIntroMaker.Anleitung.info
+
+Das Uploaden in irgendwelche BBS`s/Mailboxen ist nur erlaubt, wenn sich die
+oben aufgelisteten Dateien unverändert & vollständig in einem Archiv befinden.
+
+
+-----------------------------------------------------------------------------
+Programmstart
+-----------------------------------------------------------------------------
+
+Sie können 'F.I.M.' durch Doppelklicken des Workbench-Icons oder im
+CLI durch Eingabe des Dateinamens starten.Geben Sie `Run FastIntroMaker_V2.2`
+ein, so können Sie weiterhin im CLI arbeiten, auch kann dann das
+Fenster mit 'EndCli' geschlossen werden.
+
+Nachdem `F.I.M.` geladen wurde öffnet sich ein Fenster mit mehreren
+Gadgets, welche nun erklärt werden.
+
+
+-----------------------------------------------------------------------------
+GadgetFunktionen
+-----------------------------------------------------------------------------
+Gadget-Name        |  Gadget-Funktion
+-----------------------------------------------------------------------------
+LOAD NEW TEXT      |  EINLADEN EINES NEUEN ANZEIGE-TEXTES.
+                   |  Ein neuer ASCII-Text wird in den Buffer geladen und
+                   |  auf der rechten Bildschirmseite angezeigt. Beim
+                   |  benutzen von nicht erlaubten TextZeichen, muss der Text
+                   |  abgeändert werden.
+                   |
+LOAD NEW PICT      |  EINLADEN EINES NEUEN HINTERGRUND-BILDES.
+                   |  Ein neues Bild im IFF-Format 320×256 (8Farben) wird
+                   |  in den Bild-Buffer geladen und im aktuellen Intro
+                   |  als Hintergrund angezeigt.
+                   |  ACHTUNG: Das BildFormat muss 320×256 (8Farben) sein.
+                   |  Andere Formate werden von F.I.M. Version 2.2 nicht
+                   |  unterstützt !!!
+                   |
+LOAD NEW MUSIC     |  EINLADEN EINES NEUEN MUSIKMODULS (PROTRACKER).
+                   |  Ein Musikmodul, welches im Intro nebenbei abgespielt
+                   |  wird, wird in den Musik-Buffer geladen.
+                   |  Das verfügbare Musimodul darf eine Laenge von
+                   |  max. 32KB NICHT überschreiten.
+                   |  NÄHERE INFORMATIONEN ZU DIESER FUNKTION (SIEHE UNTEN)
+                   |
+SAVE CURRENT INTRO |  ABSPEICHERN DES AKTUELLEN INTROS.
+                   |  Das aktuelle Intro wird mit allen Einstellungen
+                   |  sowie evtl. Icon abgespeichert.
+                   |
+SAVE AS BOOTINTRO  |  ABSPEICHERN ALS BOOTINTRO (PER TRACKDISK.DEVICE).
+                   |  Das aktuelle Intro wird incl. Bootblock-Lader auf
+                   |  Diskette geschrieben. Die beschriebenen Blöcke
+                   |  werden in der Diskbitmap als belegt gekennzeichnet.
+                   |  NÄHERE INFORMATIONEN ZU DIESER FUNKTION (SIEHE UNTEN)
+                   |
+TEST INTRO         |  ANZEIGEN DES AKTUELLEN INTROS.
+                   |  Das Intro wird mit allen aktuellen Einstellungen
+                   |  angezeigt.
+                   |
+QUIT               |  FASTINTROMAKER BEENDEN !!!
+                   |  Beendet F.I.M. und gibt den belegten Speicher an das
+                   |  System zurück.
+                   |
+SAVE & QUIT        |  ABSPEICHERN DES AKTUELLEN INTROS & F.I.M. BEENDEN.
+                   |  Nach fehlerfreiem Abspeichern des aktuellen Intros wird
+                   |  F.I.M. beendet und der belegte Speicher zurückgegeben.
+                   |
+-----------------------------------------------------------------------------
+                   |
+FONT.............. |  Hier kann der aktuelle ZeichenSatz des Intros gegen
+                   |  einen anderen ausgetauscht werden.
+                   |
+EXIT.............. |  Mit diesem Gadget wird die Beendigungs-Funktion des
+                   |  laufenden Intros gewählt (z.B. linke/rechte Maustaste)
+                   |
+FG/BG/NO EFFEKT... |  Hier wird der aktuelle Intro(SINUS)Effekt eingestellt.
+                   |  NO BG/FG SINUS = Sinus Effekt aus.
+                   |  F-GROUND SINUS = Sinus Effekt mit Vordergrund (Text)
+                   |  B-GROUND SINUS = Sinus Effekt mit Hintergrund (Bild)
+                   |
+INTRO-ICON ON/OFF. |  Mit diesem Gadget wählen Sie ob zusätzlich ein Icon
+                   |  für alle abgespeicherten Intros erstellt werden soll.
+                   |
+TEXTCOLOR......... |  Hier werden die aktuellen Text Farben eingestellt.
+                   |
+TEXTSPEED......... |  Hier wird die Geschwindigkeit der Textausgabe im Intro
+                   |  eingestellt.
+                   |
+-----------------------------------------------------------------------------
+Unterstützte ASCII-Zeichen
+-----------------------------------------------------------------------------
+In dieser Tabelle stehen die derzeit unterstützten ASCII-Zeichen von F.I.M.:
+
+A-Z (Groß-Klein)
+-------------------------------------------------------
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+abcdefghijklmnopqrstuvwxyz
+
+Sonderzeichen1 / 0-9
+-------------------------------------------------------
+"![\]^_`{|}~ÄäÜüÖö#$%&'()*+,-./:;<=>?@ß0123456789
+
+Sonderzeichen2    TastenKombination   Bedeutung/Ausehen
+-------------------------------------------------------
+     ©                R.ALT + e               COPYRIGHT
+     °                R.ALT + 4            DICKER PUNKT
+     ·                R.ALT + 8       VIERECK UMRANDUNG
+     ø                R.ALT + o            DREIECK OBEN
+     µ                R.ALT + u           DREIECK UNTEN
+     »                R.ALT + 0          DREIECK RECHTS
+     «                R.ALT + 9           DREIECK LINKS
+     ×                R.ALT + x                 GESICHT
+     ±                R.ALT + y      VIERECK AUSGEFÜLLT
+
+Alle hier aufgelisteten ASCII-Zeichen können in den DemoTexten verwendet
+werden.
+
+
+-----------------------------------------------------------------------------
+NÄHERE INFORMATIONEN.......
+-----------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+Das erstellen/benutzen von MusikModulen...
+-----------------------------------------------------------------------------
+
+Die derzeitige Version von F.I.M. unterstützt NUR SoundModule, welche mit
+dem Programm `PROTRACKER` erstellt wurden. Das benutzen von Protracker,
+Soundtracker/Noisetracker-Modulen ist auch möglich. Es wird aber keine
+Garantie über das fehlerfreie abspielen des Moduls gegeben, da sich
+mache Effekt/Soundparameter von Version zu Version verändern.
+
+Diese Version von F.I.M. unterstützt nur Module mit MAXIMAL 32KBYTE Länge.
+
+Je nach Feedback der registrierten Benutzer von F.I.M. wird es eine/keine
+neue Version, welche auch andere SoundProgramme unterstützt und keine
+Kbyte-Limits enthält geben.
+
+
+-----------------------------------------------------------------------------
+Das erstellen von DemoTexten...
+-----------------------------------------------------------------------------
+
+Zum erstellen brauchen Sie nichts weiter als einen einfachen TextEditor. Es
+genügt sogar der `ED`-Editor der Workbench. Zu beachten ist folgendes:
+
+Der Text darf eine max. ZeilenAnzahl von 31 nicht überschreiten. Längere
+Texte werden einfach von F.I.M. gekürzt. Genauer gesagt, es werden nur die
+ersten 32 Zeilen des Textes eingelesen.
+
+Nun zur Zeilenbreite... Es sind max. 40 Zeichen pro Zeile erlaubt. Bei
+längeren Zeilen wird der (Zeichen)Rest in die nächste Zeile verlegt.
+
+Am besten erstellen Sie sich einen Text und laden Ihn ein. So wie der Text
+im F.I.M.-Textdisplay dargestellt wird erscheint er auch im Intro.
+
+Zum benutzen von Sonderzeichen verwenden sie die obige Zeichen-Tabelle.
+
+
+-----------------------------------------------------------------------------
+Das erstellen von DemoBildern...
+-----------------------------------------------------------------------------
+
+Zum erstellen von Demo-Bildern gibt es nicht viel zu sagen. Einfach ein Bild
+mit dem Format IFF 320×256 Pixel (8Farben) erstellen und einladen.
+
+
+-----------------------------------------------------------------------------
+Das speichern von Intros als BootIntros...
+-----------------------------------------------------------------------------
+
+Zum speichern des aktuellen Intros als BootIntro, benötigen sie nur eine
+leere DOS-Diskette.
+
+Leer sollte die Disk sein, da F.I.M. ohne Rücksicht auf Verluste die ersten
+Blöcke der Disk überschreibt und eventuelle dort plazierte Dateien zerstört.
+
+Eine DOS-Diskette sollte es sein, da F.I.M. sonst die DiskBitmap nicht
+updaten/erneuern kann und eine FehlerMeldung ausgibt.
+
+
+EIN KLEINES BEISPIEL......
+
+1.)
+Am besten Sie benutzen eine frisch formatierte Diskette, legen diese in das
+Laufwerk DF0: und betätigen das `SAVE BOOTINTRO` Gadget.
+
+2.)
+Es folgt ein Requester in dem Sie entscheiden können ob das Intro mit
+aktueller Musik oder ohne MusikModul abgespeichert werden soll.
+
+3.)
+Ein neuer Requester erscheint. Und hier können Sie nun die Disk beschreiben
+(INSTALL DF0:) oder die ganze Aktion abbrechen (ABORT OPERATION). 
+
+4.)
+Nachdem die Laufwerks-Lampe/LED erloschen ist und keine Fehlermelungen 
+ausgegeben wurden, können sie F.I.M. nun beenden oder wie gewohnt weiter
+arbeiten.
+
+
+ACHTUNG VIRUSKILLER:
+--------------------
+Manche VirusSchutzprogramme verbieten das schreiben eines neuen Bootblocks
+auf Diskette. Da das Intro ohne das Bootladeprg. nicht funktioniert, sollten
+kurzzeitig Antivirusprg. dieser Art deaktiviert werden !!!
+
+
+-----------------------------------------------------------------------------
+Sonstiges
+-----------------------------------------------------------------------------
+Die fertigen Intros...
+
+Alle mit F.I.M. erstellten Intros müssten ohne Probleme von der Workbench
+sowie vom Cli, mit oder ohne FastMem/1MB ChipMem.... laufen.
+
+
+Neue Versionen von F.I.M.... der Autor.....
+
+Da ich eigentlich viel Spass beim erstellen von F.I.M. hatte, bin ich gern
+bereit der Öffentlichkeit eine neue Version vom FastIntro-Maker zur
+Verfügung zu stellen. Ich habe noch massenhaft viele Ideen für Routinen
+die man noch in F.I.M.-Intros einbauen könnte und welche das Aussehen
+der Intros noch interessanter machen würden.
+
+ABER.... aufgrund des Feedbacks der User, welche Shareware-Programme
+benutzen ohne die Programierer in kleinster Weise für das Erstellen der
+Programme zu belohnen, kann ich eine neue Version von F.I.M. nicht fest
+ankündigen......
+
+Die Anzahl der ankommenden Shareware-Gebühren wird entscheiden ob es sich
+lohnt eine neue Version von F.I.M. zu veröffentlichen.
+
+
+-----------------------------------------------------------------------------
+Schlußwort
+-----------------------------------------------------------------------------
+
+Jeder Benutzer von `F.I.M.` handelt auf eigenes Risiko. Es wird keine
+Verantwortung für zerstörte Daten/Disketten o.ä. übernommen. Auch für evtl.
+übersehene Bugs/Programierfehler welche die korrekte Lauffähigkeit von
+`F.I.M.` in Frage stellen, wird keine Verantwortung übernommen.
+
+Davon abgesehen ist `F.I.M.` vor Veröffentlichung ausgiebig gestestet
+worden und kann unter Verantwortungsvoller Benutzung keinen Schaden
+anrichten.
+
+
+-----------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+20/1/1993 M.Bialas  (Amiga, die Freiheit nehm` Ich mir !!!)
+-----------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+

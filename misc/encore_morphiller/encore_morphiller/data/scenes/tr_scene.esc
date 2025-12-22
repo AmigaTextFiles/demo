@@ -1,0 +1,1821 @@
+{
+  "actions": [
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              4.30130434,
+              3.9437201,
+              166.49658203
+            ],
+            "interpolation": "linear",
+            "time": 2800
+          },
+          {
+            "float_values": [
+              5.68247414,
+              5.28627634,
+              146.3789978
+            ],
+            "time": 20
+          },
+          {
+            "float_values": [
+              -11.73769569,
+              2.30704951,
+              135.00889587
+            ],
+            "interpolation": "linear",
+            "time": 1740
+          },
+          {
+            "float_values": [
+              -11.73770046,
+              2.30704975,
+              135.00900269
+            ],
+            "time": 20
+          },
+          {
+            "float_values": [
+              -3.65468311,
+              1.60016274,
+              50.32249451
+            ],
+            "interpolation": "linear",
+            "time": 2620
+          },
+          {
+            "float_values": [
+              4.72392321,
+              3.949857,
+              50.32249451
+            ],
+            "time": 20
+          },
+          {
+            "float_values": [
+              0.0,
+              3.949857,
+              -28.23254395
+            ],
+            "interpolation": "linear",
+            "time": 2780
+          },
+          {
+            "float_values": [
+              0.0,
+              1.16287839,
+              -18.16482735
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "camera_1"
+        }
+      ],
+      "loops": 1,
+      "name": "camera_1_action",
+      "start_time": 0,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -8.587389,
+              -199.154096,
+              -0.0
+            ],
+            "interpolation": "linear",
+            "time": 2800
+          },
+          {
+            "float_values": [
+              -8.587403,
+              -199.154,
+              -0.0
+            ],
+            "time": 20
+          },
+          {
+            "float_values": [
+              3e-06,
+              -106.917623,
+              -0.0
+            ],
+            "interpolation": "linear",
+            "time": 1740
+          },
+          {
+            "float_values": [
+              3e-06,
+              -45.470707,
+              -0.0
+            ],
+            "time": 20
+          },
+          {
+            "float_values": [
+              3e-06,
+              -168.089562,
+              -0.0
+            ],
+            "interpolation": "linear",
+            "time": 2620
+          },
+          {
+            "float_values": [
+              3e-06,
+              -204.221509,
+              -0.0
+            ],
+            "time": 20
+          },
+          {
+            "float_values": [
+              3e-06,
+              180.000019,
+              -0.0
+            ],
+            "interpolation": "linear",
+            "time": 2780
+          },
+          {
+            "float_values": [
+              3e-06,
+              180.000019,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "camera_1"
+        }
+      ],
+      "loops": 1,
+      "name": "camera_1_action",
+      "start_time": 0,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 201.41148376,
+            "interpolation": "linear",
+            "time": 10000
+          },
+          {
+            "float_values": -11.26736069,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "loco"
+        }
+      ],
+      "loops": 1,
+      "name": "locoAction",
+      "start_time": 0,
+      "type": "position_z"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 206.63279724,
+            "interpolation": "linear",
+            "time": 10000
+          },
+          {
+            "float_values": -6.04604721,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "coal_wagon"
+        }
+      ],
+      "loops": 1,
+      "name": "coal_wagonAction",
+      "start_time": 0,
+      "type": "position_z"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 213.50738525,
+            "interpolation": "linear",
+            "time": 10000
+          },
+          {
+            "float_values": 0.8285408,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wagon_1"
+        }
+      ],
+      "loops": 1,
+      "name": "wagon_1Action",
+      "start_time": 0,
+      "type": "position_z"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 5360,
+            "uint8_values": 1
+          },
+          {
+            "time": 0,
+            "uint8_values": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "railway_track_2"
+        }
+      ],
+      "loops": 1,
+      "name": "railway_track_2Action",
+      "start_time": 1860,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 5360,
+            "uint8_values": 1
+          },
+          {
+            "time": 0,
+            "uint8_values": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "railway_track_3"
+        }
+      ],
+      "loops": 1,
+      "name": "railway_track_3Action",
+      "start_time": 1860,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 5360,
+            "uint8_values": 1
+          },
+          {
+            "time": 0,
+            "uint8_values": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "railway_track_4"
+        }
+      ],
+      "loops": 1,
+      "name": "railway_track_4Action",
+      "start_time": 1860,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 5360,
+            "uint8_values": 1
+          },
+          {
+            "time": 0,
+            "uint8_values": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "railway_track_1"
+        }
+      ],
+      "loops": 1,
+      "name": "railway_track_1Action",
+      "start_time": 1860,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": [
+              8.0,
+              8.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "loco_light"
+        }
+      ],
+      "loops": 1,
+      "name": "loco_lightAction",
+      "start_time": 9600,
+      "type": "scale_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 5360,
+            "uint8_values": 1
+          },
+          {
+            "time": 0,
+            "uint8_values": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "railway_track_5"
+        }
+      ],
+      "loops": 1,
+      "name": "railway_track_5Action",
+      "start_time": 1860,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 2720,
+            "uint8_values": 1
+          },
+          {
+            "time": 0,
+            "uint8_values": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "railway_track_6"
+        }
+      ],
+      "loops": 1,
+      "name": "railway_track_6Action",
+      "start_time": 1860,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 2720,
+            "uint8_values": 1
+          },
+          {
+            "time": 0,
+            "uint8_values": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "railway_track_7"
+        }
+      ],
+      "loops": 1,
+      "name": "railway_track_7Action",
+      "start_time": 1860,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 2720,
+            "uint8_values": 1
+          },
+          {
+            "time": 0,
+            "uint8_values": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "railway_track_8"
+        }
+      ],
+      "loops": 1,
+      "name": "railway_track_8Action",
+      "start_time": 1860,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 960,
+            "uint8_values": 1
+          },
+          {
+            "time": 0,
+            "uint8_values": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "railway_track_9"
+        }
+      ],
+      "loops": 1,
+      "name": "railway_track_9Action",
+      "start_time": 1860,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 960,
+            "uint8_values": 1
+          },
+          {
+            "time": 4400,
+            "uint8_values": 0
+          },
+          {
+            "time": 1540,
+            "uint8_values": 1
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "railway_track_10"
+        }
+      ],
+      "loops": 1,
+      "name": "railway_track_10Action",
+      "start_time": 1860,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 960,
+            "uint8_values": 1
+          },
+          {
+            "time": 4400,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "railway_track_11"
+        }
+      ],
+      "loops": 1,
+      "name": "railway_track_11Action",
+      "start_time": 1860,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 960,
+            "uint8_values": 1
+          },
+          {
+            "time": 4400,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "railway_track_12"
+        }
+      ],
+      "loops": 1,
+      "name": "railway_track_12Action",
+      "start_time": 1860,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 960,
+            "uint8_values": 1
+          },
+          {
+            "time": 4400,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "railway_track_13"
+        }
+      ],
+      "loops": 1,
+      "name": "railway_track_13Action",
+      "start_time": 1860,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 960,
+            "uint8_values": 1
+          },
+          {
+            "time": 4400,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "railway_track_14"
+        }
+      ],
+      "loops": 1,
+      "name": "railway_track_14Action",
+      "start_time": 1860,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 960,
+            "uint8_values": 1
+          },
+          {
+            "time": 4400,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "railway_track_15"
+        }
+      ],
+      "loops": 1,
+      "name": "railway_track_15Action",
+      "start_time": 1860,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 20,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "railway_track_16"
+        }
+      ],
+      "loops": 1,
+      "name": "railway_track_16Action",
+      "start_time": 7200,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 20,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "railway_track_17"
+        }
+      ],
+      "loops": 1,
+      "name": "railway_track_17Action",
+      "start_time": 7200,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 2820,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "railway_track_18"
+        }
+      ],
+      "loops": 1,
+      "name": "railway_track_18Action",
+      "start_time": 0,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 2820,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "railway_track_19"
+        }
+      ],
+      "loops": 1,
+      "name": "railway_track_19Action",
+      "start_time": 0,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 2820,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "railway_track_20"
+        }
+      ],
+      "loops": 1,
+      "name": "railway_track_20Action",
+      "start_time": 0,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 2820,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "railway_track_21"
+        }
+      ],
+      "loops": 1,
+      "name": "railway_track_21Action",
+      "start_time": 0,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 2820,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "railway_track_22"
+        }
+      ],
+      "loops": 1,
+      "name": "railway_track_22Action",
+      "start_time": 0,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 2820,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "railway_track_23"
+        }
+      ],
+      "loops": 1,
+      "name": "railway_track_23Action",
+      "start_time": 0,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 2820,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "railway_track_24"
+        }
+      ],
+      "loops": 1,
+      "name": "railway_track_24Action",
+      "start_time": 0,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 2820,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "railway_track_25"
+        }
+      ],
+      "loops": 1,
+      "name": "railway_track_25Action",
+      "start_time": 0,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 223.51148987,
+            "interpolation": "linear",
+            "time": 10000
+          },
+          {
+            "float_values": 10.83264542,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wagon_2"
+        }
+      ],
+      "loops": 1,
+      "name": "wagon_2Action",
+      "start_time": 0,
+      "type": "position_z"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": -0.0,
+            "interpolation": "linear",
+            "time": 2800
+          },
+          {
+            "float_values": -240.000007,
+            "time": 20
+          },
+          {
+            "float_values": 200.000001,
+            "interpolation": "linear",
+            "time": 1740
+          },
+          {
+            "float_values": -0.0,
+            "time": 20
+          },
+          {
+            "float_values": -0.0,
+            "interpolation": "linear",
+            "time": 2620
+          },
+          {
+            "float_values": -120.000003,
+            "time": 20
+          },
+          {
+            "float_values": 199.999987,
+            "interpolation": "linear",
+            "time": 2780
+          },
+          {
+            "float_values": 199.999987,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "rays_1"
+        }
+      ],
+      "loops": 1,
+      "name": "rays_1Action",
+      "start_time": 0,
+      "type": "rotation_z"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 208.46606445,
+            "interpolation": "linear",
+            "time": 2800
+          },
+          {
+            "float_values": 226.98266602,
+            "time": 20
+          },
+          {
+            "float_values": 34.44316101,
+            "interpolation": "linear",
+            "time": 1740
+          },
+          {
+            "float_values": 213.11541748,
+            "time": 20
+          },
+          {
+            "float_values": 39.44226837,
+            "interpolation": "linear",
+            "time": 2620
+          },
+          {
+            "float_values": 138.65896606,
+            "time": 20
+          },
+          {
+            "float_values": -34.0234375,
+            "interpolation": "linear",
+            "time": 2780
+          },
+          {
+            "float_values": 13.36175919,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "rays_1"
+        }
+      ],
+      "loops": 1,
+      "name": "rays_1Action",
+      "start_time": 0,
+      "type": "position_z"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": -0.0,
+            "interpolation": "linear",
+            "time": 2800
+          },
+          {
+            "float_values": 360.00001,
+            "time": 20
+          },
+          {
+            "float_values": -0.0,
+            "interpolation": "linear",
+            "time": 1740
+          },
+          {
+            "float_values": -159.999995,
+            "time": 20
+          },
+          {
+            "float_values": -0.0,
+            "interpolation": "linear",
+            "time": 2620
+          },
+          {
+            "float_values": 270.000001,
+            "time": 20
+          },
+          {
+            "float_values": 270.000001,
+            "interpolation": "linear",
+            "time": 2780
+          },
+          {
+            "float_values": 270.000001,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "rays_2"
+        }
+      ],
+      "loops": 1,
+      "name": "rays_2Action",
+      "start_time": 0,
+      "type": "rotation_z"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 164.44018555,
+            "interpolation": "linear",
+            "time": 2800
+          },
+          {
+            "float_values": 189.95127869,
+            "time": 20
+          },
+          {
+            "float_values": 138.11390686,
+            "interpolation": "linear",
+            "time": 1740
+          },
+          {
+            "float_values": 144.15577698,
+            "time": 20
+          },
+          {
+            "float_values": 45.27417755,
+            "interpolation": "linear",
+            "time": 2620
+          },
+          {
+            "float_values": 86.98493195,
+            "time": 20
+          },
+          {
+            "float_values": -10.05760956,
+            "interpolation": "linear",
+            "time": 2780
+          },
+          {
+            "float_values": 55.25259399,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "rays_2"
+        }
+      ],
+      "loops": 1,
+      "name": "rays_2Action",
+      "start_time": 0,
+      "type": "position_z"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": -0.0,
+            "interpolation": "linear",
+            "time": 2800
+          },
+          {
+            "float_values": -299.999995,
+            "time": 20
+          },
+          {
+            "float_values": -100.000001,
+            "interpolation": "linear",
+            "time": 1740
+          },
+          {
+            "float_values": 120.000003,
+            "time": 20
+          },
+          {
+            "float_values": 120.000003,
+            "interpolation": "linear",
+            "time": 2620
+          },
+          {
+            "float_values": -79.999998,
+            "time": 20
+          },
+          {
+            "float_values": -79.999998,
+            "interpolation": "linear",
+            "time": 2780
+          },
+          {
+            "float_values": -79.999998,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "rays_3"
+        }
+      ],
+      "loops": 1,
+      "name": "rays_3Action",
+      "start_time": 0,
+      "type": "rotation_z"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 175.30116272,
+            "interpolation": "linear",
+            "time": 2800
+          },
+          {
+            "float_values": 211.63845825,
+            "time": 20
+          },
+          {
+            "float_values": 92.74822235,
+            "interpolation": "linear",
+            "time": 1740
+          },
+          {
+            "float_values": 136.93664551,
+            "time": 20
+          },
+          {
+            "float_values": 83.21257019,
+            "interpolation": "linear",
+            "time": 2620
+          },
+          {
+            "float_values": 103.49261475,
+            "time": 20
+          },
+          {
+            "float_values": 4.5324173,
+            "interpolation": "linear",
+            "time": 2780
+          },
+          {
+            "float_values": 5.30997276,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "rays_3"
+        }
+      ],
+      "loops": 1,
+      "name": "rays_3Action",
+      "start_time": 0,
+      "type": "position_z"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": -0.0,
+            "interpolation": "linear",
+            "time": 2800
+          },
+          {
+            "float_values": -270.000001,
+            "time": 20
+          },
+          {
+            "float_values": -0.0,
+            "interpolation": "linear",
+            "time": 1740
+          },
+          {
+            "float_values": -270.000001,
+            "time": 20
+          },
+          {
+            "float_values": -219.999997,
+            "interpolation": "linear",
+            "time": 2620
+          },
+          {
+            "float_values": 100.000001,
+            "time": 20
+          },
+          {
+            "float_values": 100.000001,
+            "interpolation": "linear",
+            "time": 2780
+          },
+          {
+            "float_values": 100.000001,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "rays_4"
+        }
+      ],
+      "loops": 1,
+      "name": "rays_3.001Action",
+      "start_time": 0,
+      "type": "rotation_z"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 156.06428528,
+            "interpolation": "linear",
+            "time": 2800
+          },
+          {
+            "float_values": 233.50907898,
+            "time": 20
+          },
+          {
+            "float_values": 62.6577301,
+            "interpolation": "linear",
+            "time": 1740
+          },
+          {
+            "float_values": 209.54396057,
+            "time": 20
+          },
+          {
+            "float_values": 115.97744751,
+            "interpolation": "linear",
+            "time": 2620
+          },
+          {
+            "float_values": 224.8843689,
+            "time": 20
+          },
+          {
+            "float_values": 36.43527222,
+            "interpolation": "linear",
+            "time": 2780
+          },
+          {
+            "float_values": 103.12045288,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "rays_4"
+        }
+      ],
+      "loops": 1,
+      "name": "rays_3.001Action",
+      "start_time": 0,
+      "type": "position_z"
+    }
+  ],
+  "cameras": [
+    {
+      "far_clip_plane": 500.0,
+      "fov_x": 49.069203,
+      "fov_y": 28.800001,
+      "hide": false,
+      "name": "camera_1",
+      "near_clip_plane": 0.1,
+      "position": [
+        4.30130434,
+        3.9437201,
+        166.49658203
+      ],
+      "rotation": [
+        -8.587389,
+        -199.154096,
+        0.0
+      ]
+    }
+  ],
+  "enc_info": {
+    "data_type": "ENCSCN",
+    "date": "22 Jun 2023 22:02:29",
+    "version": "2.0"
+  },
+  "loops": 1,
+  "name": "Scene",
+  "objects": [
+    {
+      "mesh_name": "tr_loco",
+      "name": "loco",
+      "position": [
+        2e-08,
+        1.2e-07,
+        201.41148376
+      ],
+      "properties": {
+        "gen_vcolors": 1
+      },
+      "tag": 551
+    },
+    {
+      "mesh_name": "tr_coal_wagon",
+      "name": "coal_wagon",
+      "position": [
+        0.0,
+        6e-08,
+        206.63279724
+      ],
+      "properties": {
+        "gen_vcolors": 1
+      }
+    },
+    {
+      "mesh_name": "tr_wagon",
+      "name": "wagon_1",
+      "position": [
+        -1e-08,
+        0.0,
+        213.50738525
+      ],
+      "properties": {
+        "gen_vcolors": 1
+      }
+    },
+    {
+      "hide": true,
+      "mesh_name": "tr_railway_track",
+      "name": "railway_track_2"
+    },
+    {
+      "hide": true,
+      "mesh_name": "tr_railway_track",
+      "name": "railway_track_3",
+      "position": [
+        0.0,
+        0.0,
+        10.19999981
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "tr_railway_track",
+      "name": "railway_track_4",
+      "position": [
+        0.0,
+        0.0,
+        20.39999962
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "tr_railway_track",
+      "name": "railway_track_1",
+      "position": [
+        0.0,
+        0.0,
+        -10.19999981
+      ],
+      "properties": {
+        "gen_vcolors": 1
+      }
+    },
+    {
+      "mesh_name": "tr_loco_light",
+      "name": "loco_light",
+      "position": [
+        4e-08,
+        1.13999999,
+        -4.09399986
+      ],
+      "properties": {
+        "blending": "additive",
+        "depth_mask": 0
+      },
+      "tag": 550
+    },
+    {
+      "hide": true,
+      "mesh_name": "tr_railway_track",
+      "name": "railway_track_5",
+      "position": [
+        0.0,
+        0.0,
+        30.59999847
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "tr_railway_track",
+      "name": "railway_track_6",
+      "position": [
+        0.0,
+        0.0,
+        40.79999924
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "tr_railway_track",
+      "name": "railway_track_7",
+      "position": [
+        0.0,
+        0.0,
+        51.0
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "tr_railway_track",
+      "name": "railway_track_8",
+      "position": [
+        0.0,
+        0.0,
+        61.00000381
+      ],
+      "properties": {
+        "gen_vcolors": 1
+      }
+    },
+    {
+      "hide": true,
+      "mesh_name": "tr_railway_track",
+      "name": "railway_track_9",
+      "position": [
+        0.0,
+        0.0,
+        71.20000458
+      ],
+      "properties": {
+        "gen_vcolors": 1
+      }
+    },
+    {
+      "hide": true,
+      "mesh_name": "tr_railway_track",
+      "name": "railway_track_10",
+      "position": [
+        0.0,
+        0.0,
+        81.40000153
+      ],
+      "properties": {
+        "gen_vcolors": 1
+      }
+    },
+    {
+      "hide": true,
+      "mesh_name": "tr_railway_track",
+      "name": "railway_track_11",
+      "position": [
+        0.0,
+        0.0,
+        91.59999847
+      ],
+      "properties": {
+        "gen_vcolors": 1
+      }
+    },
+    {
+      "hide": true,
+      "mesh_name": "tr_railway_track",
+      "name": "railway_track_12",
+      "position": [
+        0.0,
+        0.0,
+        101.79999542
+      ],
+      "properties": {
+        "gen_vcolors": 1
+      }
+    },
+    {
+      "hide": true,
+      "mesh_name": "tr_railway_track",
+      "name": "railway_track_13",
+      "position": [
+        0.0,
+        0.0,
+        111.99999237
+      ],
+      "properties": {
+        "gen_vcolors": 1
+      }
+    },
+    {
+      "hide": true,
+      "mesh_name": "tr_railway_track",
+      "name": "railway_track_14",
+      "position": [
+        0.0,
+        0.0,
+        122.19998932
+      ],
+      "properties": {
+        "gen_vcolors": 1
+      }
+    },
+    {
+      "hide": true,
+      "mesh_name": "tr_railway_track",
+      "name": "railway_track_15",
+      "position": [
+        0.0,
+        0.0,
+        132.3999939
+      ],
+      "properties": {
+        "gen_vcolors": 1
+      }
+    },
+    {
+      "mesh_name": "tr_railway_track",
+      "name": "railway_track_16",
+      "position": [
+        0.0,
+        0.0,
+        142.59999084
+      ],
+      "properties": {
+        "gen_vcolors": 1
+      }
+    },
+    {
+      "mesh_name": "tr_railway_track",
+      "name": "railway_track_17",
+      "position": [
+        0.0,
+        0.0,
+        152.79998779
+      ],
+      "properties": {
+        "gen_vcolors": 1
+      }
+    },
+    {
+      "mesh_name": "tr_railway_track",
+      "name": "railway_track_18",
+      "position": [
+        0.0,
+        0.0,
+        162.99998474
+      ],
+      "properties": {
+        "gen_vcolors": 1
+      }
+    },
+    {
+      "mesh_name": "tr_railway_track",
+      "name": "railway_track_19",
+      "position": [
+        0.0,
+        0.0,
+        173.19998169
+      ],
+      "properties": {
+        "gen_vcolors": 1
+      }
+    },
+    {
+      "mesh_name": "tr_railway_track",
+      "name": "railway_track_20",
+      "position": [
+        0.0,
+        0.0,
+        183.39997864
+      ],
+      "properties": {
+        "gen_vcolors": 1
+      }
+    },
+    {
+      "mesh_name": "tr_railway_track",
+      "name": "railway_track_21",
+      "position": [
+        0.0,
+        0.0,
+        193.59997559
+      ],
+      "properties": {
+        "gen_vcolors": 1
+      }
+    },
+    {
+      "mesh_name": "tr_railway_track",
+      "name": "railway_track_22",
+      "position": [
+        0.0,
+        0.0,
+        203.79997253
+      ],
+      "properties": {
+        "gen_vcolors": 1
+      }
+    },
+    {
+      "mesh_name": "tr_railway_track",
+      "name": "railway_track_23",
+      "position": [
+        0.0,
+        0.0,
+        213.99996948
+      ],
+      "properties": {
+        "gen_vcolors": 1
+      }
+    },
+    {
+      "mesh_name": "tr_railway_track",
+      "name": "railway_track_24",
+      "position": [
+        0.0,
+        0.0,
+        213.99996948
+      ],
+      "properties": {
+        "gen_vcolors": 1
+      }
+    },
+    {
+      "mesh_name": "tr_railway_track",
+      "name": "railway_track_25",
+      "position": [
+        0.0,
+        0.0,
+        224.19996643
+      ],
+      "properties": {
+        "gen_vcolors": 1
+      }
+    },
+    {
+      "mesh_name": "tr_wagon",
+      "name": "wagon_2",
+      "position": [
+        -1e-08,
+        0.0,
+        223.51148987
+      ],
+      "properties": {
+        "gen_vcolors": 1
+      }
+    },
+    {
+      "material": {
+        "diffuse_color_rgba": [
+          0.3,
+          0.3,
+          0.3,
+          1.0
+        ]
+      },
+      "mesh_name": "tr_rays_1",
+      "name": "rays_1",
+      "order": 10,
+      "position": [
+        0.0,
+        1.69378638,
+        208.46606445
+      ],
+      "properties": {
+        "blending": "additive",
+        "depth_mask": 0,
+        "face_visibility": "front_back"
+      },
+      "scale": [
+        1.9,
+        1.8,
+        1.2
+      ]
+    },
+    {
+      "material": {
+        "diffuse_color_rgba": [
+          0.3,
+          0.3,
+          0.3,
+          1.0
+        ]
+      },
+      "mesh_name": "tr_rays_1",
+      "name": "rays_2",
+      "order": 11,
+      "position": [
+        0.0,
+        1.69378638,
+        164.44018555
+      ],
+      "properties": {
+        "blending": "additive",
+        "depth_mask": 0,
+        "face_visibility": "front_back"
+      },
+      "scale": [
+        2.1,
+        2.1,
+        -1.5
+      ]
+    },
+    {
+      "material": {
+        "diffuse_color_rgba": [
+          0.3,
+          0.3,
+          0.3,
+          1.0
+        ]
+      },
+      "mesh_name": "tr_rays_1",
+      "name": "rays_3",
+      "order": 12,
+      "position": [
+        0.0,
+        1.69378638,
+        175.30116272
+      ],
+      "properties": {
+        "blending": "additive",
+        "depth_mask": 0,
+        "face_visibility": "front_back"
+      },
+      "scale": [
+        2.0,
+        2.0,
+        1.0
+      ]
+    },
+    {
+      "material": {
+        "diffuse_color_rgba": [
+          0.3,
+          0.3,
+          0.3,
+          1.0
+        ]
+      },
+      "mesh_name": "tr_rays_1",
+      "name": "rays_4",
+      "order": 13,
+      "position": [
+        0.0,
+        1.69378638,
+        156.06428528
+      ],
+      "properties": {
+        "blending": "additive",
+        "depth_mask": 0,
+        "face_visibility": "front_back"
+      },
+      "scale": [
+        2.3,
+        2.3,
+        2.0
+      ]
+    }
+  ],
+  "time": 10000
+}

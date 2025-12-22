@@ -1,0 +1,185 @@
+V3.0
+
+MOUSE on
+FKEYS on
+
+EVENT Text01.iff
+SOUND play "Hale:Music/mod.spoiiing" volume 64 pan 0 period 350 loops 2
+PICTURE "Hale:Pictures/Text01.iff"
+PAUSE 10
+END
+
+EVENT Massive.anim
+ANIM "Hale:Anims/Massive.anim" 20 1 disk
+PAUSE 2
+END
+
+EVENT Text02.iff
+PICTURE "Hale:Pictures/Text02.iff"
+PAUSE 10
+END
+
+EVENT Comet.anim
+ANIM "Hale:Anims/Comet.anim" 20 1 disk
+PAUSE 2
+END
+
+EVENT Text03.iff
+PICTURE "Hale:Pictures/Text03.iff"
+PAUSE 10
+END
+
+EVENT Text04.iff
+PICTURE "Hale:Pictures/Text04.iff"
+PAUSE 10
+END
+
+EVENT Text05.iff
+PICTURE "Hale:Pictures/Text05.iff"
+PAUSE 10
+END
+
+EVENT Fireball.anim
+ANIM "Hale:Anims/Fireball.anim" 20 1 disk
+PAUSE 2
+END
+
+EVENT Hale-Bopp01.iff
+PICTURE "Hale:Pictures/Hale-Bopp01.iff"
+PAUSE 10
+END
+
+EVENT MarsMan01.anim
+SOUND stop fade 4
+ANIM "Hale:Anims/MarsMan01.anim" 20 1 disk
+PAUSE 2
+END
+
+EVENT Hale-Bopp03.iff
+SOUND play "Hale:Music/mod.Nk-Demo4" volume 64 pan 0 period 350 loops 1 fadeout 6
+PICTURE "Hale:Pictures/Hale-Bopp03.iff"
+PAUSE 10
+END
+
+EVENT MarsMan02.anim
+ANIM "Hale:Anims/MarsMan02.anim" 20 1 disk
+PAUSE 2
+END
+
+EVENT Hale-Bopp04.iff
+PICTURE "Hale:Pictures/Hale-Bopp04.iff"
+PAUSE 10
+END
+
+EVENT Jumpgate.anim
+ANIM "Hale:Anims/Jumpgate.anim" 20 1 disk
+PAUSE 2
+END
+
+EVENT Ratdog.iff
+PICTURE "Hale:Pictures/Ratdog.iff"
+PAUSE 10
+END
+
+EVENT Box.anim
+ANIM "Hale:Anims/Box.anim" 20 10
+PAUSE 2
+END
+
+EVENT FireMax.iff
+PICTURE "Hale:Pictures/FireMax.iff"
+PAUSE 10
+END
+
+EVENT Wheel.anim
+ANIM "Hale:Anims/Wheel.anim" 20 10
+PAUSE 2
+END
+
+EVENT Hale-Bopp06.iff
+SOUND stop fade 4
+PICTURE "Hale:Pictures/Hale-Bopp06.iff"
+PAUSE 10
+END
+
+EVENT World01-1.anim
+SOUND play "Hale:Music/mod.plast 2" volume 64 pan 0 period 350 loops 2 fadein 3 fadeout 3
+ANIM "Hale:Anims/World01-1.anim" 20 1 disk
+PAUSE 2
+END
+
+EVENT MassiveStone01.iff
+PICTURE "Hale:Pictures/MassiveStone01.iff"
+PAUSE 10
+END
+
+EVENT World01-2.anim
+ANIM "Hale:Anims/World01-2.anim" 20 1 disk
+PAUSE 2
+END
+
+EVENT Hale-Bopp02.iff
+PICTURE "Hale:Pictures/Hale-Bopp02.iff"
+PAUSE 10
+END
+
+EVENT World02-1.anim
+ANIM "Hale:Anims/World02-1.anim" 20 1 disk
+PAUSE 2
+END
+
+EVENT MassiveStone02.iff
+PICTURE "Hale:Pictures/MassiveStone02.iff"
+PAUSE 10
+END
+
+EVENT World02-2.anim
+ANIM "Hale:Anims/World02-2.anim" 20 1 disk
+PAUSE 2
+END
+
+EVENT Master.iff
+PICTURE "Hale:Pictures/Master.iff"
+PAUSE 10
+END
+
+EVENT Thrym&Kerfue.iff
+PICTURE "Hale:Pictures/Thrym&Kerfue.iff"
+PAUSE 10
+END
+
+EVENT Models.iff
+PICTURE "Hale:Pictures/Models.iff"
+PAUSE 7
+END
+
+EVENT Thrym&Kerfue.iff.1
+PICTURE "Hale:Pictures/Thrym&Kerfue.iff"
+PAUSE 7
+END
+
+EVENT Sound.iff
+PICTURE "Hale:Pictures/Sound.iff"
+PAUSE 7
+END
+
+EVENT Music.iff
+PICTURE "Hale:Pictures/Music.iff"
+PAUSE 7
+END
+
+EVENT Mosher.iff
+PICTURE "Hale:Pictures/Mosher.iff"
+PAUSE 7
+END
+
+EVENT Hardware.iff
+PICTURE "Hale:Pictures/Hardware.iff"
+PAUSE 7
+END
+
+EVENT TheEnd.iff
+SOUND stop fade 3
+PICTURE "Hale:Pictures/TheEnd.iff"
+PAUSE 7
+END

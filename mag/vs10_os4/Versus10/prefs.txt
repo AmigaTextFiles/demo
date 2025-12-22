@@ -1,0 +1,56 @@
+# menu prefs
+# menu coords is: (first menu) start x, start y, stop x, stop y, (second menu) start x, start y, stop x, stop y, ...
+MENUS: 18
+MENU_COORDS: 0,0,107,55,108,0,218,55,220,0,320,55,322,0,434,55,435,0,548,55,550,0,655,55,656,0,755,55,756,0,858,55,859,0,959,55,960,0,1065,55,1066,0,1160,55,1161,0,1279,55,543,941,657,959,658,941,752,959,859,941,908,959,909,941,956,959,1258,55,1279,139,1258,856,1279,942
+MENU_LINKS: 000_content,9_01_demo,9_02_intro,9_03_4k,9_04_coder,9_05_graphician,9_06_musician,9_07_website,9_08_party,9_09_group,9_10_ascii,9_11_musicdisk,_PREV,_NEXT,_PMUSIC,_NMUSIC,_PPAGE,_NPAGE
+
+# scroll text prefs
+# (Start)Coords should be even numbers to be handled correct in lowres!
+# Coords is (first scrolltext) start x, start y, (second scrolltext) start x, start y, ...
+# Length is length in characters...
+SCROLLTEXTS: 1
+SCROLL_COORDS: 0,56
+SCROLL_LENGTH: 77
+SCROLL_FILES: 1_main
+
+# article prefs
+
+# how much the bkg picture is shown in %
+BKG_DIMMER_VALUE: 30
+
+# max characters on a row is 70 in this example
+ARTICLE_MAX_CHARACTERS_ROW: 78
+
+# max rows on screen is 60 (top to bottom) in this example
+ARTICLE_ROWS: 46
+
+# spacing between the rows, should be even numbers to be handled correct in lowres
+ARTICLE_ROW_OFFSET: 2
+
+# X: 0-1280 (screenmode independent)
+# if MAX_CHARACTERS_ROW is 70 => 70*16 = 1120 => space on sides is 1280-1120 = 160 => 80 on each side to be in center => X = 80
+# should be even numbers to be handled correct in lowres!
+# Y: 0-960 (screenmode independent)
+# should be even numbers to be handled correct in lowres!
+ARTICLE_TEXT_START: 6,90
+
+# If and where an bar showing the location of the text segment on screen in the article
+# should be even numbers to be handled correct in lowres!
+ARTICLE_BAR_COORDS: 1260,140,1280,854
+
+# If the title row should be displayed above the article (above the ARTICLE_TEXT_START_X). 1 = Yes, other = No
+ARTICLE_SHOW_TITLE: 0
+
+# The color and alpha the article title and pagecounter is displayed with (r,g,b,a)
+ARTICLE_TITLE_COLOR: 0.2,0.6,0.2,1.0
+
+# Number of seconds a picture will be shown in slideshow mode (20% fade in time and 20% fade out time)
+# Example: 5 => 1 second fade in, 3 seconds static, 1 second fade out
+SLIDESHOW_CHANGE_TIME: 5
+
+# Key shortcuts, ascii values
+#KEY_SHORTCUTS: 0=000_content,1=1_1,2=2_1,3=3_01,4=4_1,5=5_01,6=6_1
+# Special key shortcuts, F1-F12
+KEY_SPECIAL_SHORTCUTS: F1=000_content,F2=9_01_demo,F3=9_02_intro,F4=9_03_4k,F5=9_04_coder,F6=9_05_graphician,F7=9_06_musician,F8=9_07_website,F9=9_08_party,F10=9_09_group,F11=9_10_ascii,F12=9_11_musicdisc
+
+STARTUP_IMAGE: logo.pbm

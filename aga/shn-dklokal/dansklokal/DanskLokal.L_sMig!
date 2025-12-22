@@ -1,0 +1,27 @@
+                  Velkommen til Søhesten's 1. produktion:
+
+                           D A N S K   L O K A L
+
+  Noter: Alt hvad der kan forveksles med fejl, er sat ind med vilje, for at
+demoen ikke skal virke alt for perfekt! :) (Eller også kan 3-D ikke kode
+ordentligt!)..
+
+  Vi takker BlueBerry for hans samnling af C2P-routiner, som er brugt gennem
+hele demoen!
+
+  Demoen kræver at STC.library er i "LIBS:" ! Vi har inkluderet filen, i
+tilfælde af at man ikke er i besiddelse af dem (STC020.library er til folk,
+der ejer en CPU over 68000, og denne skal også ind i "LIBS:"). Alternativt
+kan man benytte sig af det medfølgende script, kaldet "Start", som assigner
+LIBS: til det nuværende directory, og executer "DanskLokal.Exe".
+
+ Med hensyn til PPC CPU testen, prøver systemet først at åbne
+"powerpc.library" (WarpUP WarpOS kernel), og hvis dette ikke findes,
+benyttes "ppc.library" (Phase5's kernel). Hvis ingen af disse er fundet,
+går systemet ud fra at ingen PPC CPU er til stede.
+
+  Er du interesseret i at joine, kan du kontakte 3-D via Fidonet
+på adressen: 2:236/516.12!
+
+
+                                                                 D. 22/6-98!

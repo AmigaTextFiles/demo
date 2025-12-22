@@ -1,0 +1,41 @@
+
+SCOPEXT3 by Smack/Infect
+
+This little prog is not for use on slow Amigas. A 32 bit processor
+and some FastRAM are required, and if it's still too slow the prog
+will cancel on its own.
+
+The bytes are read from the parallel port at a rate of 36.8kHz.
+Playback is also done at this rate (without Audio DMA!), so it's
+quite good quality (at least for 8-bit-sound)
+
+The display is 736x128 pixels large, waveform consists of 736x8 dots.
+To give you some figures about the perfomance:
+    575 KB/sec clear Fast RAM
+    575 KB/sec copy Fast -> Chip
+    294400 dots/sec waveform plotting
+    36800 interrupts/sec sampling+playback
+NOTE: VBR to FastRAM makes this prog slightly faster.
+
+Use these keys while the prog is running:
+    F9  show free processor time
+    F10 hold display
+    ESC exit
+
+The source code is incomplete (includes missing), but you can
+have a look at the routines if you're interested.
+
+I would like to get some mail from you, so write to:
+   Michael Henke, Praetorius-Str.1/205, 06126 Halle, Germany
+   or epgbd@cluster1.urz.uni-halle.de
+
+bye.
+
+
+PS: Tune in to the best german radio station - MDR Sputnik.
+    Europewide on Astra satellite:
+       chan. 43 MDR (11.112 GHz horiz), audio 7.38/7.56 Mhz
+    Also available in many local cable networks.
+    features: no: commercial breaks, traffic information, silly dancemusic
+              yes: rock, black music (eg. BBBC from London), world music
+    yep, try it out...

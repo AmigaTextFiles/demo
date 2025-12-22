@@ -1,0 +1,106 @@
+
+ karate provides a < include> tag that can be used in the text script called
+by the karate command:
+
+ <INCLUDE > othersub-script.txt  </INCLUDE>
+
+ othersub-script.txt will just be read in addition to the current script.
+you can include as many files as you want in the main script, but
+be awared it is not recursive. if a.txt includes b.txt and
+b.txt includes c.txt, if you call "karate s=a.txt", a.txt and
+b.txt will be read, but c.txt will be ignored.
+
+ each objects, parts, or scripts declared in a main file or an
+ included file are visibles from the both. it is true for included
+ files between them. everyone sees everyone.
+ you can set your < kmain> tag in any of them, but there only must
+ be one < kmain>.
+
+ If there is a syntax error in one of the file, don't be afraid,
+  karate 's error message give the name AND the line number of
+  the faulty syntax.
+
+ Why should you use that include tag ?
+
+ - If you find your script text is too big, you can use this way
+to re-organize your sources and makes it more clear.
+
+ - Using an include file as a library of macro-command as < kpart>s
+ in an include is a great idea, as you can use them in the main script
+ with the <playpart> fx.
+
+ - If you are 20 persons working on the same demo, it is a great
+ idea to create an include file BY scener working on it, with
+ only one of them merging all that in the main script:
+  Don't forget you can mount scripts one after one in the times,
+  or plays them in the same time, recursively, as graphical layers.
+
+-----------------------------------------------------------------
+
+ So we include 2 text with 2 scripts and their datas.
+ then we display the 2 scripts in their 2 separate rectangles.
+
+<INCLUDE>   Tutorial_C/C04b.txt </INCLUDE> containing SubScript1 and SubRect1
+<INCLUDE>   Tutorial_C/C04c.txt </INCLUDE> containing SubScript2 and SubRect2
+
+<MAIN> mainscript |0|1</MAIN>              the main script to play...
+-------------------------------------
+
+ note that datas like colortable can be usefull for the
+ included scripts, so we declare them in the main text:
+
+<KCOLORTABLE> coltab1 | data/remaptable.iff |1|  0|  0|  0    </KCOLORTABLE>
+<KCOLORTABLE> coltab2 | data/remaptable.iff |2|  255|  255|  0    </KCOLORTABLE>
+
+ there are our 2 rectangles.
+ other rectangles declared in the includes are their sons.
+
+<KRECT> quad1 |0|0|0.5|1| |0|0|1|1| </KRECT>
+<KRECT> quad2 |0.5|0|1|1| |0|0|1|1| </KRECT>
+ 
+--------------------------------------------------
+<KSCRIPT><ID> mainscript </ID>
+        <PLAY> mainpart | 20000 | 0 | 1 </PLAY>
+</KSCRIPT>
+------------------------
+///<KPART>  <ID> mainpart  </ID>
+
+ set the screen colors once in a frame :
+
+        <Fx><Pa>BindPalette</Pa>
+            <Pa>  bounce |0|200|19000|0|1</Pa>
+
+            <Pa>CTE|0</Pa>              type of fade:0,1,2,3  see tutorial B04.
+            <Pa>CTE|128</Pa>            optional color 0->255 (0)
+            <Pa> texture256x256 </Pa>     palette where to fade ( "B" )
+            <Pa> texture256x256</Pa>            optional source Palette(2)
+
+            <Pa>CTE|0</Pa>              type of fade:0,1,2,3
+            <Pa>CTE|64</Pa>            optional color 0->255 (0)
+            <Pa>texture256x256</Pa>       Palette where to fade ( "B" )
+            <Pa>texture256x256</Pa>       optional source Palette(2)
+
+            <Pa>CTE|0</Pa>              type of fade:0,1,2,3
+            <Pa>CTE|255</Pa>            optional color 0->255 (0)
+            <Pa>texture256x256</Pa>       Palette where to fade ( "B" )
+            <Pa>texture256x256</Pa>       optional source Palette(2)
+        </Fx>
+
+ plays the 2 scripts from includes:
+
+    ------------------------
+    <Fx><Pa> PlayScript  </Pa>
+        <Pa> SubScript1  </Pa>
+        <pa> aftmod|subtime1|0|1 </pa> <ktable>subtime1|0,0|2000,2000</ktable>  trick to play the script looping.
+    </Fx>
+    ------------------------
+    <Fx><Pa> PlayScript  </Pa>
+        <Pa> SubScript2  </Pa>
+        <pa> aftmod|subtime1|0|1 </pa>
+    </Fx>
+    ------------------------
+
+
+///</KPART>
+------------------------ 
+

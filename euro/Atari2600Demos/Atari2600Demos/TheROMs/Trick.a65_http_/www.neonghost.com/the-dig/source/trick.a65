@@ -1,0 +1,183 @@
+;---------------------------------------------------------------------------
+
+;   * Subject: Re: [stella] New trick?
+;   * From: Eckhard_Stolberg@public.uni-hamburg.de (Eckhard Stolberg)
+;   * Date: Tue, 26 Aug 1997 16:13:57 +0200
+
+;---------------------------------------------------------------------------
+
+        processor 6502
+        include vcs.h
+
+;
+; 6532 (RIOT) registers
+;
+SWACNT          =     $0281
+SWBCNT          =     $0283
+
+;
+; ROM definitions
+;
+RomStart        =     $F000
+RomEnd          =     $FFFF
+IntVectors      =     $FFFA
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; Program initialization
+;
+                ORG     RomStart
+
+Cart_Init:
+                SEI                             ; Disable interrupts.:
+                CLD                             ; Clear "decimal" mode.
+
+                LDX     #$FF
+                TXS                             ; Clear the stack
+
+Common_Init:
+                LDX     #$28            ; Clear the TIA registers ($04-$2C)
+                LDA     #$00
+TIAClear:
+                STA     $04,X
+                DEX
+                BPL     TIAClear        ; loop exits with X=$FF
+
+                LDX     #$FF
+RAMClear:
+                STA     $00,X           ; Clear the RAM ($FF-$80)
+                DEX
+                BMI     RAMClear        ; loop exits with X=$7F
+
+                LDX     #$FF
+                TXS                             ; Reset the stack
+
+IOClear:
+                STA     SWBCNT          ; console I/O always set to INPUT
+                STA     SWACNT          ; set controller I/O to INPUT
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; Main program loop
+;
+NewScreen:
+                LDA     #$02
+                STA     WSYNC           ; Wait for horizontal sync
+                STA     VBLANK          ; Turn on VBLANK
+                STA     VSYNC           ; Turn on VSYNC
+                STA     WSYNC           ; Leave VSYNC on for 3 lines
+                STA     WSYNC
+                STA     WSYNC
+                LDA     #$00
+                STA     VSYNC           ; Turn VSYNC off
+
+                LDA     #43             ; VBLANK for 37 lines
+                STA     TIM64T          ; 43*64intvls=2752=8256colclks=36.2lines
+
+                LDA     #0
+                STA     GRP0
+                STA     GRP1
+                STA     $80
+                LDA     #$10
+                STA     $82
+                LDA     #$F3
+                STA     $81
+                LDA     #$F3
+                STA     $83
+                LDA     #$06
+                STA     COLUP0
+                LDA     #$0a
+                STA     COLUP1
+VBLANKLoop:
+                LDA     INTIM
+                BNE     VBLANKLoop      ; wait for VBLANK timer
+                STA     WSYNC           ; finish waiting for the current line
+                STA     VBLANK          ; Turn off VBLANK
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+ScreenStart:
+       LDY      #0
+       LDX      #192
+       LDA      #1
+       STA      NUSIZ0
+       STA      NUSIZ1
+B1:    STA      WSYNC   ;3
+       LDA      ($80),Y ;5
+       STA      GRP0    ;3
+       LDA      ($82),Y ;5
+       STA      GRP1    ;3
+       LDA      $86     ;3
+       STA      RESP0   ;3
+       STA      RESP1   ;3
+
+       STA      RESP0   ;3
+       STA      RESP1   ;3
+       STA      RESP0   ;3
+       STA      RESP1   ;3
+       STA      RESP0   ;3
+       STA      RESP1   ;3
+       STA      RESP0   ;3
+       STA      RESP1   ;3
+       STA      RESP0   ;3
+       STA      RESP1   ;3
+       STA      RESP0   ;3
+       STA      RESP1   ;3
+       STA      RESP0   ;3
+       INY              ;2
+       DEX              ;2
+       BNE      B1
+       LDA      #2
+       STA      VBLANK
+       STA      WSYNC
+       STA      WSYNC
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+OverscanStart:  LDA     #35             ;skip 30 lines (overscan)
+                STA     TIM64T
+
+OverscanLoop:
+                LDA     INTIM
+                BNE     OverscanLoop    ; wait for Overscan timer
+                STA     WSYNC           ; finish waiting for the current line
+
+                JMP     NewScreen
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                ORG     $F300
+GRAPHICS        .byte     $81,$7e,$7e,$60,$60,$60,$60,$78
+                .byte     $78,$60,$60,$60,$60,$7e,$7e,$81
+                .byte     $81,$3c,$3c,$66,$66,$60,$60,$3c
+                .byte     $3c,$06,$06,$66,$66,$3c,$3c,$81
+                .byte     $81,$7e,$7e,$60,$60,$60,$60,$78
+                .byte     $78,$60,$60,$60,$60,$7e,$7e,$81
+                .byte     $81,$3c,$3c,$66,$66,$60,$60,$3c
+                .byte     $3c,$06,$06,$66,$66,$3c,$3c,$81
+                .byte     $81,$7e,$7e,$60,$60,$60,$60,$78
+                .byte     $78,$60,$60,$60,$60,$7e,$7e,$81
+                .byte     $81,$3c,$3c,$66,$66,$60,$60,$3c
+                .byte     $3c,$06,$06,$66,$66,$3c,$3c,$81
+                .byte     $81,$7e,$7e,$60,$60,$60,$60,$78
+                .byte     $78,$60,$60,$60,$60,$7e,$7e,$81
+                .byte     $81,$3c,$3c,$66,$66,$60,$60,$3c
+                .byte     $3c,$06,$06,$66,$66,$3c,$3c,$81
+                .byte     $81,$7e,$7e,$60,$60,$60,$60,$78
+                .byte     $78,$60,$60,$60,$60,$7e,$7e,$81
+                .byte     $81,$3c,$3c,$66,$66,$60,$60,$3c
+                .byte     $3c,$06,$06,$66,$66,$3c,$3c,$81
+                .byte     $81,$7e,$7e,$60,$60,$60,$60,$78
+                .byte     $78,$60,$60,$60,$60,$7e,$7e,$81
+                .byte     $81,$3c,$3c,$66,$66,$60,$60,$3c
+                .byte     $3c,$06,$06,$66,$66,$3c,$3c,$81
+                .byte     $81,$7e,$7e,$60,$60,$60,$60,$78
+                .byte     $78,$60,$60,$60,$60,$7e,$7e,$81
+                .byte     $81,$3c,$3c,$66,$66,$60,$60,$3c
+                .byte     $3c,$06,$06,$66,$66,$3c,$3c,$81
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; Set up the 6502 interrupt vector table
+;
+                ORG     IntVectors
+NMI             .word      Cart_Init
+Reset           .word      Cart_Init
+IRQ             .word      Cart_Init
+
+;                END

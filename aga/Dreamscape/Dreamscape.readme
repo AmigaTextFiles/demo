@@ -1,0 +1,42 @@
+Short:    Dreamscape by Triumph (TG96), CV64 support!
+Uploader: nilsco@ifi.uio.no (Nils Corneliusen)
+Author:   nilsco@ifi.uio.no (Nils Corneliusen)
+Type:     demo/aga
+
+The Triumph Software demo from The Gathering 96.
+
+It works perfectly ok on a 68030/50mhz equipped A1200, but you may
+try running it with the "-maxspeed" option on a Cybervision64
+based 040/060 machine for interesting results!
+
+(It also "works" on 020+ based ecs systems in grey mode, but I
+wouldn't recommend that!)
+
+Credits for this production go to:
+
+Code by:
+Nils "Darkman" Corneliusen (Nils.Corneliusen@spk.dep.telemax.no)
+- main code
+
+Carl "Smeagol" Aaby (carla@ifi.uio.no)
+- additional code, fx
+
+Graphics by:
+Ivan Moen (moeni@...)
+Morten Johnsen (mortenjo@ifi.uio.no)
+
+Music by:
+Kim "Quest" Berg
+
+
+Caveats:
+
+The Cybergraphics routines may or may not work on other boards than
+Cybervision 64 and other revisions of the driver. I make a lot of
+tricky assumptions about both the hardware and the software to make
+it as fast as possible.
+
+Maybe if a better low level library for cgfx is written, I'll add
+support for all boards. I hinted about this on the cgfx mailing list
+a long time ago, but got mostly flames in return. Hopefully, the
+producers of the cybergfx software will start listening to our wishes.

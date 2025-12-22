@@ -1,0 +1,160 @@
+This is a demo of Real-Time Mapping of a reflection of a graphic onto
+a sphere.  It is system-friendly, it multitasks, it uses an Intuition
+Screen, and GASP! -- it's written in C.
+
+It runs a little slow on a stock 68000 machine (5-10 fps) but on any
+accelerated machine, speed is decent.  It goes quite fine on a 1200.
+Remember, I wrote this overnight just to show the theory... If I wanted
+it to be as fast as possible, I would have written the entire demo
+section in assembly.  Anyhow, it will run much faster on a machine with
+some sort of fast memory (not all CHIP or PSEUDO-FAST).
+
+By the way, I don't know what you consider to be real-time, but I use
+no precalculated frames.  I do calculate a mapping table but why not???
+The thing needs to be calculated at least once and it never changes.
+I don't use a pre-calc'ed table per se as I do the computations in the
+program (so the average joe can see how it's done).
+
+Anyhow, I can imagine getting this thing to go much faster with just a
+few small changes which I might get around to later.
+
+A tribute to people who want to write system friendlier code...
+
+------------------------------------------------------------------------
+
+Now some theory...  The most difficult part of Realtime Raytracing as it's
+often been called incorrectly (it's really realtime ampping), is to
+compute the mapping.  Anyone with a little high school geometry who
+knows the formula for a sphere and that similar triangles have the same
+ratio per side should be able to figure this out (it's very straight-
+forward).  A simple RADIUS-16 (32 wide) sphere mapping follows:
+
+
+VOID CalculateMap()
+{
+  short  y,y1,x,x1;
+  long   x2;
+  double r;
+
+  for(y=0; y<31; y++)
+    {
+      y1=y-15;
+      for(x=0; x<32; x++)
+        {
+          x1=x-15;
+          x2=(256-(y1*y1)-(x1*x1));
+          if (x2>0)
+            {
+              r=32.0/sqrt((double)x2);
+              r*=((double)x1);
+              r+=15.5;
+              x2=(short)r;
+              Xarray[y][x]=x2;
+            }
+          else
+            {
+              Xarray[y][x]=9999;
+            }
+        }
+    }
+}
+
+   Ahh, that was easy.  Just copy and paste right out of my demo code.
+
+Now, once you've got a mapping, making a sphere bounce around with that
+mapping is about this hard....
+
+VOID DoDemo()
+{
+  register short xx,yy;
+  short x,y,xdir,ydir,xxx,yyy;
+  ULONG *place;
+
+  x=160; y=45;
+  xdir=-1; ydir=1;
+
+  while((CurrentFront!=0)||(! LEFTMOUSE))
+    {
+      x+=xdir; if((x<10)||(x>278)) xdir=-xdir;
+      y+=ydir; if((y<40)||(y>123)) ydir=-ydir;
+      place=&ReflectPlane[0];
+      BP_CLEAR.dpt=(WORD *)&BMraw[NextFront][(y-6)*40];
+      for(yy=0;yy!=31;yy++)
+        {
+          if((yy&7)==0) SLAM_BLITTER(&BP_CLEAR);
+          output=0;
+          for(xx=0;xx!=31;xx++)
+            {
+              xxx=Xarray[yy][xx]+x;
+              if((xxx>0)&&(xxx<319))
+                {
+                  yyy=Xarray[xx][yy]+y;
+                  if ((yyy>0)&&(yyy<199)) ReadPoint(xxx,yyy);
+                }
+              output+=output;
+            }
+            *(place++)=output;
+        }
+      DrawBall(x,y,NextFront);
+      SetView(NextFront);
+    }
+}
+
+   Yep, that's the entire main loop of my demo.  Calculates the sphere's
+position.  For every point on the sphere, it calculates a reflection
+(using ReadPoint and a table look-up).  It draws the output onto the
+ball and then draws the ball onto the sphere.  SetView is simply double
+buffering using Intuition (ick@! slow!! #$%$!$#) routines to be system
+friendly.
+
+OH, SLAM_BLITTER is just a little call to make blitter programming easy
+from C.  I use it in a lot of SilverFox SoftWare programs.  Anyhow, in
+this case, it just clears the old ball image.
+
+Note that ReadPoint will note a point being found by incrementing output.
+
+
+***** VOID __regargs ReadPoint(long int sX(d0), long int sY(d1));
+@ReadPoint::
+     move.l    d2,a1          ;Save d2 in a1
+     BASEREG   a4
+
+     move.l    d1,d2          ; d1*=MOD (40)
+     lsl.l     #2,d2
+     add.l     d2,d1
+     lsl.l     #3,d1
+
+     move.l    d0,d2
+     andi.w    #15,d2         ;d0=sX-=(d2=(sx&15))
+
+     sub.l     d2,d0
+     lsr.l     #3,d0          ;d0=sX>>3
+     add.l     d1,d0          ;d0=(sX>>3)+(MOD*sY)
+     add.l     _RStartPlane(a4),d0 ;d0=StartPlane[d0]
+     move.l    #$8000,d1      ;Pixel=(0x8000>>d1)
+     lsr.l     d2,d1
+
+     movea.l   d0,a0          ;Read(OffSet,Pixel)
+     and.w     (a0),d1
+
+     beq.s     rp_nopixel
+     addq.l    #1,_output(a4)
+rp_nopixel
+
+     BASEREG   OFF
+     move.l    a1,d2          ;Restore d2 from a1
+     rts
+
+
+   OK, so I lied.  I used a little ASM but the system call ReadPixel was
+way to slow, and besides... I didn't write my ASM for speed but more for
+clarity (really, I could have used offset table lookups and pseudo C
+equivalents are given for the code).  Besides, anyone can write their own
+write/read pixel routine or you shouldn't even be trying to program demos.
+
+-------------------------------------------------------------------------
+
+Written By Adisak Pochanayon  pochanay@cae.wisc.edu
+
+Check out SilverFox SoftWare's games wherever you go...
+

@@ -1,0 +1,206 @@
+LWSC
+1
+
+FirstFrame 1
+LastFrame 60
+FrameStep 1
+PreviewFirstFrame 0
+PreviewLastFrame 500
+PreviewFrameStep 1
+FramesPerSecond 30
+
+LoadObject podloga.lwo
+ShowObject 8 3
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+LoadObject kulki.lwo
+ShowObject 8 3
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+LoadObject ob1.lwo
+ShowObject 8 3
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+LoadObject ob2.lwo
+ShowObject 8 3
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+AmbientColor 255 255 255
+AmbIntensity 0.3
+
+AddLight
+LightName Light
+ShowLight 1 5
+LightMotion (unnamed)
+  9
+  1
+  -6.24264 21.15 -6.879038 38.19997 69.60004 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LightColor 128 64 64
+LgtIntensity 0.14
+LightType 2
+ConeAngle 30
+EdgeAngle 5
+ShadowType 2
+ShadowMapSize 3000
+UseConeAngle 1
+ShadowFuzziness 10
+
+AddLight
+LightName Light
+ShowLight 1 5
+LightMotion (unnamed)
+  9
+  1
+  2.7 9.099999 -19.9 -3.9 19 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LightColor 0 64 128
+LgtIntensity 0.14
+LightType 0
+ShadowType 0
+
+AddLight
+LightName Light
+ShowLight 1 5
+LightMotion (unnamed)
+  9
+  1
+  -0.05000001 1.050001 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LightColor 151 75 0
+LgtIntensity 1
+LightType 1
+LensFlare 1
+FlareIntensity 0.5
+FlareDissolve 0
+LensFlareFade 4
+LensFlareOptions 31
+FlareRingColor 80 20 10
+FlareRingSize 0.22
+FlareStarFilter 10
+FlareRandStreakInt 0.03
+FlareRandStreakDens 50
+FlareRandStreakSharp 6
+ShadowType 1
+
+AddLight
+LightName Light
+ShowLight 1 5
+LightMotion (unnamed)
+  9
+  1
+  3.15 2.400001 2.150001 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LightColor 0 64 128
+LgtIntensity 1
+LightType 1
+LensFlare 1
+FlareIntensity 0.5
+FlareDissolve 0
+LensFlareFade 4
+LensFlareOptions 31
+FlareRingColor 80 20 10
+FlareRingSize 0.22
+FlareStarFilter 10
+FlareRandStreakInt 0.03
+FlareRandStreakDens 50
+FlareRandStreakSharp 6
+ShadowType 1
+
+ShowCamera 1 2
+CameraMotion (unnamed)
+  9
+  9
+  -0.05 1.05 0 0 0 0 1 1 1
+  0 0 0 0 0
+  -0.05 1.05 0 -180 0 0 1 1 1
+  125 0 0 0 0
+  -0.05 1.05 0 -267.3002 -93.70007 0 1 1 1
+  200 0 0 0 0
+  -0.05 5.042999 0 -275.5 50.59993 42.2 1 1 1
+  250 0 0 0 0
+  -1.625724 4.812998 -0.3084095 -306.4999 34.49993 20.40001 1 1 1
+  300 0 0 0 0
+  -0.3528933 4.192997 -2.250406 -343 18.39993 0 1 1 1
+  354 0 0 0 0
+  3.207724 1.982995 -1.001877 -343 18.39993 63.89999 1 1 1
+  432 0 0 0 0
+  3.332406 1.466724 -0.343845 -349.0806 14.0701 41.91986 1 1 1
+  450 0 0 0 0
+  2.609299 0.8729959 2.051505 -338.6004 -126.8001 -42.20001 1 1 1
+  500 0 0 0 0
+EndBehavior 1
+ZoomFactor 0.8619995
+Resolution 1
+CustomSize 640 380
+PixelAspectRatio -1
+CustomPixelRatio 1
+MaskPosition 0 0 640 480
+MotionBlur 0
+FieldRendering 0
+SegmentMemory 8000000
+ApertureHeight 0.015
+Antialiasing 0
+AdaptiveSampling 1
+AdaptiveThreshold 26
+
+SolidBackdrop 1
+BackdropColor 0 0 0
+ZenithColor 0 40 80
+SkyColor 120 180 240
+GroundColor 50 40 30
+NadirColor 100 80 60
+FogType 0
+DitherIntensity 1
+AnimatedDither 0
+
+RenderMode 2
+RayTraceEffects 0
+RayTraceOptimization 1
+DataOverlayLabel  
+SaveRGB 0
+SaveAlpha 0
+
+ViewType 9
+CenterItem 1
+ViewAimpoint -0.05 1.05 0
+ViewZoomFactor 0.5312413
+
+GridNumber 80
+GridSize 1
+NearClipDistance 0.1
+CameraViewBG 1
+ShowMotionPath 1
+ShowFogRadius 0
+ShowFogEffect 1
+ShowSafeAreas 0
+ShowFieldChart 0
+OverlayColor 1

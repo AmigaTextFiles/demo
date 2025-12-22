@@ -1,0 +1,5300 @@
+{
+  "actions": [
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1040,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_3_13"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.038",
+      "start_time": 6800,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.390966,
+              -0.587494,
+              -0.5
+            ],
+            "interpolation": "linear",
+            "time": 1040
+          },
+          {
+            "float_values": [
+              -4.224081,
+              -0.392899,
+              -0.5
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_3_13"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.038",
+      "start_time": 6840,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -0.0
+            ],
+            "interpolation": "linear",
+            "time": 1040
+          },
+          {
+            "float_values": [
+              -28.899999,
+              0.0,
+              -24.299998
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_3_13"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.038",
+      "start_time": 6840,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1040,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_3_12"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.037",
+      "start_time": 6640,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.233867,
+              -0.863818,
+              -0.5
+            ],
+            "interpolation": "linear",
+            "time": 1040
+          },
+          {
+            "float_values": [
+              -4.111185,
+              -1.14448,
+              -0.5
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_3_12"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.037",
+      "start_time": 6680,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              12.199999
+            ],
+            "interpolation": "linear",
+            "time": 1040
+          },
+          {
+            "float_values": [
+              11.7,
+              0.0,
+              -15.999998
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_3_12"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.037",
+      "start_time": 6680,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1040,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_3_11"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.036",
+      "start_time": 6560,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.256985,
+              -0.67298,
+              -0.5
+            ],
+            "interpolation": "linear",
+            "time": 1040
+          },
+          {
+            "float_values": [
+              -4.011761,
+              -0.587633,
+              -0.5
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_3_11"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.036",
+      "start_time": 6600,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              12.699999,
+              0.0,
+              -17.099998
+            ],
+            "interpolation": "linear",
+            "time": 1040
+          },
+          {
+            "float_values": [
+              -19.500001,
+              0.0,
+              2.5
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_3_11"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.036",
+      "start_time": 6600,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1040,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_3_10"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.035",
+      "start_time": 6280,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.252509,
+              -0.782088,
+              -0.5
+            ],
+            "interpolation": "linear",
+            "time": 1040
+          },
+          {
+            "float_values": [
+              -4.105952,
+              -0.904085,
+              -0.5
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_3_10"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.035",
+      "start_time": 6320,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              9.2,
+              0.0,
+              11.799999
+            ],
+            "interpolation": "linear",
+            "time": 1040
+          },
+          {
+            "float_values": [
+              -8.4,
+              0.0,
+              -18.599998
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_3_10"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.035",
+      "start_time": 6320,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1040,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_3_9"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.034",
+      "start_time": 6000,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.276832,
+              -0.782088,
+              -0.5
+            ],
+            "interpolation": "linear",
+            "time": 1040
+          },
+          {
+            "float_values": [
+              -4.098224,
+              -0.782088,
+              -0.5
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_3_9"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.034",
+      "start_time": 6040,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              6.4,
+              0.0,
+              -16.359999
+            ],
+            "interpolation": "linear",
+            "time": 1040
+          },
+          {
+            "float_values": [
+              -32.299999,
+              0.0,
+              -26.859999
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_3_9"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.034",
+      "start_time": 6040,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1040,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_3_8"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.033",
+      "start_time": 5720,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.342284,
+              -0.600417,
+              -0.5
+            ],
+            "interpolation": "linear",
+            "time": 1040
+          },
+          {
+            "float_values": [
+              -4.071633,
+              -0.600417,
+              -0.5
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_3_8"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.033",
+      "start_time": 5760,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              8.099999,
+              0.0,
+              -12.299999
+            ],
+            "interpolation": "linear",
+            "time": 1040
+          },
+          {
+            "float_values": [
+              -9.799999,
+              0.0,
+              14.399999
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_3_8"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.033",
+      "start_time": 5760,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1040,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_3_7"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.032",
+      "start_time": 5560,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.290715,
+              -0.853304,
+              -0.5
+            ],
+            "interpolation": "linear",
+            "time": 1040
+          },
+          {
+            "float_values": [
+              -4.910022,
+              -0.938131,
+              -0.5
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_3_7"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.032",
+      "start_time": 5600,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -13.1
+            ],
+            "interpolation": "linear",
+            "time": 1040
+          },
+          {
+            "float_values": [
+              28.199998,
+              0.0,
+              10.3
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_3_7"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.032",
+      "start_time": 5600,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1040,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_3_6"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.031",
+      "start_time": 5280,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.28575,
+              -0.647614,
+              -0.5
+            ],
+            "interpolation": "linear",
+            "time": 1040
+          },
+          {
+            "float_values": [
+              -4.067215,
+              -0.586505,
+              -0.5
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_3_6"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.031",
+      "start_time": 5320,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              7.1
+            ],
+            "interpolation": "linear",
+            "time": 1040
+          },
+          {
+            "float_values": [
+              -27.999999,
+              0.0,
+              -19.799998
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_3_6"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.031",
+      "start_time": 5320,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1040,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_3_5"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.030",
+      "start_time": 5000,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.199896,
+              -0.793269,
+              -0.5
+            ],
+            "interpolation": "linear",
+            "time": 1040
+          },
+          {
+            "float_values": [
+              -4.084261,
+              -0.85386,
+              -0.5
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_3_5"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.030",
+      "start_time": 5040,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -0.0
+            ],
+            "interpolation": "linear",
+            "time": 1040
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -22.399998
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_3_5"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.030",
+      "start_time": 5040,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1040,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_3_4"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.029",
+      "start_time": 4480,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.24918,
+              -0.651175,
+              -0.5
+            ],
+            "interpolation": "linear",
+            "time": 1040
+          },
+          {
+            "float_values": [
+              -4.061901,
+              -0.908479,
+              -0.5
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_3_4"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.029",
+      "start_time": 4520,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -15.699999
+            ],
+            "interpolation": "linear",
+            "time": 1040
+          },
+          {
+            "float_values": [
+              45.699997,
+              0.0,
+              -8.5
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_3_4"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.029",
+      "start_time": 4520,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1040,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_3_3"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.028",
+      "start_time": 4160,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.172301,
+              -0.7666,
+              -0.5
+            ],
+            "interpolation": "linear",
+            "time": 1040
+          },
+          {
+            "float_values": [
+              -4.020311,
+              -0.43902,
+              -0.5
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_3_3"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.028",
+      "start_time": 4200,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -20.199999,
+              0.0,
+              20.899998
+            ],
+            "interpolation": "linear",
+            "time": 1040
+          },
+          {
+            "float_values": [
+              23.899998,
+              0.0,
+              -31.799998
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_3_3"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.028",
+      "start_time": 4200,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1040,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_3_2"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.027",
+      "start_time": 3880,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.235957,
+              -0.735574,
+              -0.5
+            ],
+            "interpolation": "linear",
+            "time": 1040
+          },
+          {
+            "float_values": [
+              -4.04523,
+              -0.649883,
+              -0.5
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_3_2"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.027",
+      "start_time": 3920,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -23.599997
+            ],
+            "interpolation": "linear",
+            "time": 1040
+          },
+          {
+            "float_values": [
+              -32.799996,
+              0.0,
+              -4.199999
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_3_2"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.027",
+      "start_time": 3920,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1040,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_3_1"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.026",
+      "start_time": 3640,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.345863,
+              -0.628841,
+              -0.5
+            ],
+            "interpolation": "linear",
+            "time": 1040
+          },
+          {
+            "float_values": [
+              -4.109842,
+              -0.828458,
+              -0.5
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_3_1"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.026",
+      "start_time": 3680,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              18.6
+            ],
+            "interpolation": "linear",
+            "time": 1040
+          },
+          {
+            "float_values": [
+              22.299999,
+              0.0,
+              2.609245
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_3_1"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.026",
+      "start_time": 3680,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1040,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_2_13"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.025",
+      "start_time": 6680,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.246189,
+              -0.661398,
+              -0.2
+            ],
+            "interpolation": "linear",
+            "time": 1040
+          },
+          {
+            "float_values": [
+              -3.956542,
+              -0.752385,
+              -0.2
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_2_13"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.025",
+      "start_time": 6720,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -13.999999
+            ],
+            "interpolation": "linear",
+            "time": 1040
+          },
+          {
+            "float_values": [
+              -29.999997,
+              0.0,
+              0.9
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_2_13"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.025",
+      "start_time": 6720,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1040,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_2_12"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.024",
+      "start_time": 6360,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.276518,
+              -0.70755,
+              -0.2
+            ],
+            "interpolation": "linear",
+            "time": 1040
+          },
+          {
+            "float_values": [
+              -3.967407,
+              -0.91213,
+              -0.2
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_2_12"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.024",
+      "start_time": 6400,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              15.499999
+            ],
+            "interpolation": "linear",
+            "time": 1040
+          },
+          {
+            "float_values": [
+              23.099999,
+              0.0,
+              -11.499998
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_2_12"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.024",
+      "start_time": 6400,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1040,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_2_11"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.023",
+      "start_time": 6040,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.25736,
+              -0.685214,
+              -0.2
+            ],
+            "interpolation": "linear",
+            "time": 1040
+          },
+          {
+            "float_values": [
+              -3.936323,
+              -0.477706,
+              -0.2
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_2_11"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.023",
+      "start_time": 6080,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -17.300002
+            ],
+            "interpolation": "linear",
+            "time": 1040
+          },
+          {
+            "float_values": [
+              -45.006886,
+              0.0,
+              -6.604258
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_2_11"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.023",
+      "start_time": 6080,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1040,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_2_10"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.022",
+      "start_time": 5760,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.309793,
+              -0.557416,
+              -0.2
+            ],
+            "interpolation": "linear",
+            "time": 1040
+          },
+          {
+            "float_values": [
+              -3.945909,
+              -0.738736,
+              -0.2
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_2_10"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.022",
+      "start_time": 5800,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              10.899999
+            ],
+            "interpolation": "linear",
+            "time": 1040
+          },
+          {
+            "float_values": [
+              0.0,
+              -22.0,
+              0.1
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_2_10"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.022",
+      "start_time": 5800,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1040,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_2_9"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.021",
+      "start_time": 5600,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.340068,
+              -0.760281,
+              -0.2
+            ],
+            "interpolation": "linear",
+            "time": 1040
+          },
+          {
+            "float_values": [
+              -3.982615,
+              -0.587896,
+              -0.2
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_2_9"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.021",
+      "start_time": 5640,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              16.9,
+              0.0,
+              -0.0
+            ],
+            "interpolation": "linear",
+            "time": 1040
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -28.699997
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_2_9"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.021",
+      "start_time": 5640,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1040,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_2_8"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.020",
+      "start_time": 5320,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.257601,
+              -0.589359,
+              -0.2
+            ],
+            "interpolation": "linear",
+            "time": 1040
+          },
+          {
+            "float_values": [
+              -3.975493,
+              -1.045811,
+              -0.2
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_2_8"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.020",
+      "start_time": 5360,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              14.799999
+            ],
+            "interpolation": "linear",
+            "time": 1040
+          },
+          {
+            "float_values": [
+              17.699998,
+              0.0,
+              -5.5
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_2_8"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.020",
+      "start_time": 5360,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1040,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_2_7"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.019",
+      "start_time": 5040,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.416113,
+              -0.574861,
+              -0.2
+            ],
+            "interpolation": "linear",
+            "time": 1040
+          },
+          {
+            "float_values": [
+              -3.94173,
+              -0.727989,
+              -0.2
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_2_7"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.019",
+      "start_time": 5080,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -38.192478,
+              -0.412274,
+              -0.0
+            ],
+            "interpolation": "linear",
+            "time": 1040
+          },
+          {
+            "float_values": [
+              -9.400001,
+              0.0,
+              -24.799999
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_2_7"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.019",
+      "start_time": 5080,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1040,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_2_6"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.018",
+      "start_time": 4840,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.344686,
+              -0.641323,
+              -0.2
+            ],
+            "interpolation": "linear",
+            "time": 1040
+          },
+          {
+            "float_values": [
+              -3.980802,
+              -0.380303,
+              -0.2
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_2_6"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.018",
+      "start_time": 4880,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              29.139438
+            ],
+            "interpolation": "linear",
+            "time": 1040
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -19.460558
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_2_6"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.018",
+      "start_time": 4880,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1040,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_2_5"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.017",
+      "start_time": 4480,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.328158,
+              -0.754741,
+              -0.2
+            ],
+            "interpolation": "linear",
+            "time": 1040
+          },
+          {
+            "float_values": [
+              -3.904943,
+              -0.994301,
+              -0.2
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_2_5"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.017",
+      "start_time": 4520,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -16.866899,
+              0.0,
+              -6.775559
+            ],
+            "interpolation": "linear",
+            "time": 1040
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -13.375559
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_2_5"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.017",
+      "start_time": 4520,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1040,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_2_4"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.016",
+      "start_time": 4360,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.324879,
+              -0.633672,
+              -0.191524
+            ],
+            "interpolation": "linear",
+            "time": 1040
+          },
+          {
+            "float_values": [
+              -3.927091,
+              -0.872316,
+              -0.2
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_2_4"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.016",
+      "start_time": 4400,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              44.969911,
+              0.0,
+              10.999999
+            ],
+            "interpolation": "linear",
+            "time": 1040
+          },
+          {
+            "float_values": [
+              -17.724616,
+              0.0,
+              -16.00447
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_2_4"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.016",
+      "start_time": 4400,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1040,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_2_3"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.015",
+      "start_time": 4160,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.35864,
+              -0.726457,
+              -0.2
+            ],
+            "interpolation": "linear",
+            "time": 1040
+          },
+          {
+            "float_values": [
+              -3.867618,
+              -0.954756,
+              -0.2
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_2_3"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.015",
+      "start_time": 4200,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -0.0
+            ],
+            "interpolation": "linear",
+            "time": 1040
+          },
+          {
+            "float_values": [
+              52.099997,
+              0.0,
+              5.1
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_2_3"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.015",
+      "start_time": 4200,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1040,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_2_2"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.014",
+      "start_time": 3920,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.376695,
+              -0.681037,
+              -0.2
+            ],
+            "interpolation": "linear",
+            "time": 1040
+          },
+          {
+            "float_values": [
+              -3.860246,
+              -0.486695,
+              -0.2
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_2_2"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.014",
+      "start_time": 3960,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -38.926443,
+              0.0,
+              -14.890753
+            ],
+            "interpolation": "linear",
+            "time": 1040
+          },
+          {
+            "float_values": [
+              -61.09999,
+              0.0,
+              5.3
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_2_2"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.014",
+      "start_time": 3960,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1040,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_2_1"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.013",
+      "start_time": 3720,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.277719,
+              -0.682372,
+              -0.2
+            ],
+            "interpolation": "linear",
+            "time": 1040
+          },
+          {
+            "float_values": [
+              -3.854504,
+              -0.407759,
+              -0.2
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_2_1"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.013",
+      "start_time": 3760,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              10.28724,
+              0.0,
+              -14.832984
+            ],
+            "interpolation": "linear",
+            "time": 1040
+          },
+          {
+            "float_values": [
+              -38.926443,
+              0.0,
+              -14.890753
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_2_1"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.013",
+      "start_time": 3760,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1320,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_1_13"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.012",
+      "start_time": 6640,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.369772,
+              -0.649128,
+              0.2
+            ],
+            "interpolation": "linear",
+            "time": 1320
+          },
+          {
+            "float_values": [
+              -3.819251,
+              -0.680851,
+              0.2
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_1_13"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.012",
+      "start_time": 6680,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -27.159998,
+              0.0,
+              7.191999
+            ],
+            "interpolation": "linear",
+            "time": 1320
+          },
+          {
+            "float_values": [
+              20.839997,
+              0.0,
+              -17.007999
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_1_13"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.012",
+      "start_time": 6680,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1440,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_1_12"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.011",
+      "start_time": 6200,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.360796,
+              -0.567106,
+              0.2
+            ],
+            "interpolation": "linear",
+            "time": 1440
+          },
+          {
+            "float_values": [
+              -3.801476,
+              -0.42918,
+              0.2
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_1_12"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.011",
+      "start_time": 6240,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              10.131998
+            ],
+            "interpolation": "linear",
+            "time": 1440
+          },
+          {
+            "float_values": [
+              -28.199997,
+              0.0,
+              -31.868
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_1_12"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.011",
+      "start_time": 6240,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1440,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_1_11"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.010",
+      "start_time": 5640,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.325245,
+              -0.700861,
+              0.2
+            ],
+            "interpolation": "linear",
+            "time": 1440
+          },
+          {
+            "float_values": [
+              -3.783524,
+              -0.826926,
+              0.2
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_1_11"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.010",
+      "start_time": 5680,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -28.972303,
+              0.0,
+              -14.952
+            ],
+            "interpolation": "linear",
+            "time": 1440
+          },
+          {
+            "float_values": [
+              25.327692,
+              0.0,
+              -4.452
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_1_11"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.010",
+      "start_time": 5680,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 1080,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_1_10"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.009",
+      "start_time": 5160,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.374523,
+              -0.66114,
+              0.2
+            ],
+            "interpolation": "linear",
+            "time": 1080
+          },
+          {
+            "float_values": [
+              -3.858486,
+              -0.520345,
+              0.2
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_1_10"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.009",
+      "start_time": 5200,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -44.870419,
+              1.444505,
+              -0.0
+            ],
+            "interpolation": "linear",
+            "time": 1080
+          },
+          {
+            "float_values": [
+              23.443694,
+              0.0,
+              -17.939999
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_1_10"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.009",
+      "start_time": 5200,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1440,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_1_9"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.008",
+      "start_time": 4560,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.326043,
+              -0.642112,
+              0.2
+            ],
+            "interpolation": "linear",
+            "time": 1440
+          },
+          {
+            "float_values": [
+              -3.829592,
+              -1.116192,
+              0.2
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_1_9"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.008",
+      "start_time": 4600,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              31.293693,
+              0.0,
+              -0.0
+            ],
+            "interpolation": "linear",
+            "time": 1440
+          },
+          {
+            "float_values": [
+              -16.206304,
+              0.0,
+              8.199999
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_1_9"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.008",
+      "start_time": 4600,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1440,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_1_8"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.007",
+      "start_time": 4240,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.334291,
+              -0.627294,
+              0.2
+            ],
+            "interpolation": "linear",
+            "time": 1440
+          },
+          {
+            "float_values": [
+              -3.795794,
+              -0.592178,
+              0.2
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_1_8"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.007",
+      "start_time": 4280,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              6.973693,
+              0.0,
+              -9.94849
+            ],
+            "interpolation": "linear",
+            "time": 1440
+          },
+          {
+            "float_values": [
+              -21.526304,
+              0.0,
+              -2.74849
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_1_8"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.007",
+      "start_time": 4280,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1440,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_1_7"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.006",
+      "start_time": 3880,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.346486,
+              -0.715079,
+              0.2
+            ],
+            "interpolation": "linear",
+            "time": 1440
+          },
+          {
+            "float_values": [
+              -3.80799,
+              -0.615697,
+              0.2
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_1_7"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.006",
+      "start_time": 3920,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              19.273692,
+              0.0,
+              -1.728491
+            ],
+            "interpolation": "linear",
+            "time": 1440
+          },
+          {
+            "float_values": [
+              6.973693,
+              0.0,
+              -33.228488
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_1_7"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.006",
+      "start_time": 3920,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1120,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_1_6"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.005",
+      "start_time": 3400,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.354571,
+              -0.728503,
+              0.2
+            ],
+            "interpolation": "linear",
+            "time": 1120
+          },
+          {
+            "float_values": [
+              -3.779333,
+              -0.871444,
+              0.2
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_1_6"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.005",
+      "start_time": 3440,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              22.185356,
+              48.53405,
+              -0.0
+            ],
+            "interpolation": "linear",
+            "time": 1120
+          },
+          {
+            "float_values": [
+              -32.820254,
+              0.0,
+              -27.699998
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_1_6"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.005",
+      "start_time": 3440,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1440,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_1_4"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.004",
+      "start_time": 3520,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.341697,
+              -0.667068,
+              0.2
+            ],
+            "interpolation": "linear",
+            "time": 1440
+          },
+          {
+            "float_values": [
+              -3.800838,
+              -0.894946,
+              0.2
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_1_4"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.004",
+      "start_time": 3560,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              23.934284,
+              0.0,
+              9.910384
+            ],
+            "interpolation": "linear",
+            "time": 1440
+          },
+          {
+            "float_values": [
+              -29.613303,
+              0.0,
+              -9.12191
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_1_4"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.004",
+      "start_time": 3560,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1440,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_1_5"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.003",
+      "start_time": 3600,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.322847,
+              -0.611722,
+              0.2
+            ],
+            "interpolation": "linear",
+            "time": 1440
+          },
+          {
+            "float_values": [
+              -3.826971,
+              -0.668795,
+              0.2
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_1_5"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.003",
+      "start_time": 3640,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              22.185356,
+              48.53405,
+              -0.0
+            ],
+            "interpolation": "linear",
+            "time": 1440
+          },
+          {
+            "float_values": [
+              -7.264721,
+              -3.753826,
+              -0.0
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_1_5"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.003",
+      "start_time": 3640,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1440,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_1_3"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.002",
+      "start_time": 3240,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.358143,
+              -0.66208,
+              0.2
+            ],
+            "interpolation": "linear",
+            "time": 1440
+          },
+          {
+            "float_values": [
+              -3.800838,
+              -0.420866,
+              0.2
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_1_3"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.002",
+      "start_time": 3280,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              30.793631,
+              0.0,
+              -15.528968
+            ],
+            "interpolation": "linear",
+            "time": 1440
+          },
+          {
+            "float_values": [
+              0.0,
+              14.327929,
+              -3.587337
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_1_3"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.002",
+      "start_time": 3280,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1280,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_1_2"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.001",
+      "start_time": 3040,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.414714,
+              -0.683505,
+              0.2
+            ],
+            "interpolation": "linear",
+            "time": 1280
+          },
+          {
+            "float_values": [
+              -3.82982,
+              -1.055623,
+              0.2
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_1_2"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.001",
+      "start_time": 3080,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              33.070529,
+              -10.06999,
+              -0.0
+            ],
+            "interpolation": "linear",
+            "time": 1280
+          },
+          {
+            "float_values": [
+              2.564755,
+              0.0,
+              3.742777
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_1_2"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction.001",
+      "start_time": 3080,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 1440,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_1_1"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction",
+      "start_time": 3040,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.427935,
+              -0.646829,
+              0.2
+            ],
+            "interpolation": "linear",
+            "time": 1440
+          },
+          {
+            "float_values": [
+              -3.799104,
+              -0.757901,
+              0.2
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_1_1"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction",
+      "start_time": 3080,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              30.793631,
+              0.0,
+              -15.528968
+            ],
+            "interpolation": "linear",
+            "time": 1440
+          },
+          {
+            "float_values": [
+              -33.288846,
+              0.0,
+              -13.354015
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bfly_1_1"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction",
+      "start_time": 3080,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 1000,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "scroll_3"
+        }
+      ],
+      "loops": 1,
+      "name": "scroll_3_action",
+      "start_time": 2160,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 1000,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "scroll_2"
+        }
+      ],
+      "loops": 1,
+      "name": "scroll_2_action",
+      "start_time": 1960,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 1000,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "scroll_1"
+        }
+      ],
+      "loops": 1,
+      "name": "scroll_1_action",
+      "start_time": 760,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 800,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "title_blur"
+        }
+      ],
+      "loops": 1,
+      "name": "title_blur_action",
+      "start_time": 3200,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 40
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 4200
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 320
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 160
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 320
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 280
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 320
+          },
+          {
+            "float_values": 0.5,
+            "interpolation": "linear",
+            "time": 280
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 600
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 240
+          },
+          {
+            "float_values": 0.7,
+            "interpolation": "linear",
+            "time": 240
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 640
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 200
+          },
+          {
+            "float_values": 0.4,
+            "interpolation": "linear",
+            "time": 280
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 440
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "title_blur"
+        }
+      ],
+      "loops": 1,
+      "name": "title_blur_matAction",
+      "start_time": 0,
+      "type": "alpha"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.076211,
+              -0.641001,
+              -0.02,
+              -0.076211,
+              -0.641001,
+              -0.02,
+              -0.076211,
+              -0.641001,
+              -0.02
+            ],
+            "interpolation": "bezier",
+            "time": 320
+          },
+          {
+            "float_values": [
+              -1.95,
+              -0.641001,
+              -0.02,
+              -1.95,
+              -0.641001,
+              -0.02,
+              -1.95,
+              -0.641001,
+              -0.02
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "title_blur"
+        }
+      ],
+      "loops": 1,
+      "name": "title_blur_action",
+      "start_time": 4240,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.195215,
+              0.703258,
+              1.0,
+              0.195215,
+              0.703258,
+              1.0,
+              0.195215,
+              0.703258,
+              1.0
+            ],
+            "interpolation": "bezier",
+            "time": 320
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "title_blur"
+        }
+      ],
+      "loops": 1,
+      "name": "title_blur_action",
+      "start_time": 4240,
+      "type": "scale_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 3560,
+            "uint8_values": 1
+          },
+          {
+            "time": 0,
+            "uint8_values": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "title_normal"
+        }
+      ],
+      "loops": 1,
+      "name": "title_normal_action",
+      "start_time": 1000,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 1.0,
+            "time": 4560
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 480
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 280
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 320
+          },
+          {
+            "float_values": 0.5,
+            "interpolation": "linear",
+            "time": 280
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 600
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 240
+          },
+          {
+            "float_values": 0.3,
+            "interpolation": "linear",
+            "time": 240
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 640
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 200
+          },
+          {
+            "float_values": 0.6,
+            "interpolation": "linear",
+            "time": 280
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 440
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "title_normal"
+        }
+      ],
+      "loops": 1,
+      "name": "title_normal_matAction",
+      "start_time": 0,
+      "type": "alpha"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -1.95,
+              -0.641001,
+              -0.01,
+              -1.95,
+              -0.641001,
+              -0.01,
+              -1.95,
+              -0.641001,
+              -0.01
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "title_normal"
+        }
+      ],
+      "loops": 1,
+      "name": "title_normal_action",
+      "start_time": 4560,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 160
+          },
+          {
+            "float_values": 0.5,
+            "interpolation": "linear",
+            "time": 160
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 160
+          },
+          {
+            "float_values": 0.8,
+            "interpolation": "linear",
+            "time": 240
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 200
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 200
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 120
+          },
+          {
+            "float_values": 0.5,
+            "interpolation": "linear",
+            "time": 120
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 120
+          },
+          {
+            "float_values": 0.4,
+            "interpolation": "linear",
+            "time": 120
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 160
+          },
+          {
+            "float_values": 0.7,
+            "interpolation": "linear",
+            "time": 120
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "head_1"
+        }
+      ],
+      "loops": 1,
+      "name": "speak",
+      "start_time": 600,
+      "type": "mesh_shape"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 280
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 3720
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 1320
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "head_1"
+        }
+      ],
+      "loops": 1,
+      "name": "scream",
+      "start_time": 3000,
+      "type": "mesh_shape"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "bezier",
+            "time": 1320
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "head_1"
+        }
+      ],
+      "loops": 1,
+      "name": "butterfly",
+      "start_time": 7000,
+      "type": "mesh_shape"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -0.0,
+              0.0,
+              0.0,
+              -0.0,
+              0.0,
+              0.0,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 1320
+          },
+          {
+            "float_values": [
+              -2.115005,
+              -0.20029,
+              -0.0,
+              -2.115005,
+              -0.20029,
+              -0.0,
+              -2.115005,
+              -0.20029,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "head_1"
+        }
+      ],
+      "loops": 1,
+      "name": "head_1Action",
+      "start_time": 7000,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 600
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 6400
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 760
+          },
+          {
+            "float_values": [
+              0.5,
+              0.5,
+              0.5
+            ],
+            "interpolation": "linear",
+            "time": 760
+          },
+          {
+            "float_values": [
+              0.5,
+              0.5,
+              0.5
+            ],
+            "interpolation": "linear",
+            "time": 440
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "head_1"
+        }
+      ],
+      "loops": 1,
+      "name": "head_matAction",
+      "start_time": 0,
+      "type": "diffuse_color_rgb"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -3.26,
+              0.0,
+              5.0,
+              -3.26,
+              0.0,
+              5.0,
+              -3.26,
+              0.0,
+              5.0
+            ],
+            "interpolation": "bezier",
+            "time": 480
+          },
+          {
+            "float_values": [
+              -1.25,
+              0.0,
+              5.0,
+              -1.25,
+              0.0,
+              5.0,
+              -1.25,
+              0.0,
+              5.0
+            ],
+            "interpolation": "bezier",
+            "time": 5120
+          },
+          {
+            "float_values": [
+              -1.418751,
+              -0.1,
+              4.662395,
+              -1.25,
+              -0.016024,
+              5.0,
+              -1.529493,
+              -0.155109,
+              4.440843
+            ],
+            "interpolation": "bezier",
+            "time": 3360
+          },
+          {
+            "float_values": [
+              -1.961621,
+              -0.316689,
+              3.685368,
+              -1.961621,
+              -0.316689,
+              3.685368,
+              -1.961621,
+              -0.316689,
+              3.685368
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "camera_1"
+        }
+      ],
+      "loops": 1,
+      "name": "camera_1Action.001",
+      "start_time": 0,
+      "type": "position_xyz"
+    }
+  ],
+  "cameras": [
+    {
+      "far_clip_plane": 100.0,
+      "fov_x": 49.134342,
+      "fov_y": 28.841546,
+      "hide": false,
+      "name": "camera_1",
+      "near_clip_plane": 0.1,
+      "position": [
+        -3.26,
+        0.0,
+        5.0
+      ],
+      "rotation": [
+        -4e-06,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "enc_info": {
+    "data_type": "ENCSCN",
+    "date": "03 Jul 2020 21:21:40",
+    "version": "2.0"
+  },
+  "loops": 1,
+  "name": "title_scene_2",
+  "objects": [
+    {
+      "hide": true,
+      "name": "bfly_3_13",
+      "position": [
+        -0.390966,
+        -0.587494,
+        -0.5
+      ]
+    },
+    {
+      "hide": true,
+      "name": "bfly_3_12",
+      "position": [
+        -0.233867,
+        -0.863818,
+        -0.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        12.199999
+      ]
+    },
+    {
+      "hide": true,
+      "name": "bfly_3_11",
+      "position": [
+        -0.256985,
+        -0.67298,
+        -0.5
+      ],
+      "rotation": [
+        12.699999,
+        0.0,
+        -17.099998
+      ]
+    },
+    {
+      "hide": true,
+      "name": "bfly_3_10",
+      "position": [
+        -0.252509,
+        -0.782088,
+        -0.5
+      ],
+      "rotation": [
+        9.2,
+        0.0,
+        11.799999
+      ]
+    },
+    {
+      "hide": true,
+      "name": "bfly_3_9",
+      "position": [
+        -0.276832,
+        -0.782088,
+        -0.5
+      ],
+      "rotation": [
+        6.4,
+        0.0,
+        -16.359999
+      ]
+    },
+    {
+      "hide": true,
+      "name": "bfly_3_8",
+      "position": [
+        -0.342284,
+        -0.600417,
+        -0.5
+      ],
+      "rotation": [
+        8.099999,
+        0.0,
+        -12.299999
+      ]
+    },
+    {
+      "hide": true,
+      "name": "bfly_3_7",
+      "position": [
+        -0.290715,
+        -0.853304,
+        -0.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        -13.1
+      ]
+    },
+    {
+      "hide": true,
+      "name": "bfly_3_6",
+      "position": [
+        -0.28575,
+        -0.647614,
+        -0.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        7.1
+      ]
+    },
+    {
+      "hide": true,
+      "name": "bfly_3_5",
+      "position": [
+        -0.199896,
+        -0.793269,
+        -0.5
+      ]
+    },
+    {
+      "hide": true,
+      "name": "bfly_3_4",
+      "position": [
+        -0.24918,
+        -0.651175,
+        -0.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        -15.699999
+      ]
+    },
+    {
+      "hide": true,
+      "name": "bfly_3_3",
+      "position": [
+        -0.172301,
+        -0.7666,
+        -0.5
+      ],
+      "rotation": [
+        -20.199999,
+        0.0,
+        20.899998
+      ]
+    },
+    {
+      "hide": true,
+      "name": "bfly_3_2",
+      "position": [
+        -0.235957,
+        -0.735574,
+        -0.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        -23.599997
+      ]
+    },
+    {
+      "hide": true,
+      "name": "bfly_3_1",
+      "position": [
+        -0.345863,
+        -0.628841,
+        -0.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        18.6
+      ]
+    },
+    {
+      "hide": true,
+      "name": "bfly_2_13",
+      "position": [
+        -0.246189,
+        -0.661398,
+        -0.2
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        -13.999999
+      ]
+    },
+    {
+      "hide": true,
+      "name": "bfly_2_12",
+      "position": [
+        -0.276518,
+        -0.70755,
+        -0.2
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        15.499999
+      ]
+    },
+    {
+      "hide": true,
+      "name": "bfly_2_11",
+      "position": [
+        -0.25736,
+        -0.685214,
+        -0.2
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        -17.300002
+      ]
+    },
+    {
+      "hide": true,
+      "name": "bfly_2_10",
+      "position": [
+        -0.309793,
+        -0.557416,
+        -0.2
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        10.899999
+      ]
+    },
+    {
+      "hide": true,
+      "name": "bfly_2_9",
+      "position": [
+        -0.340068,
+        -0.760281,
+        -0.2
+      ],
+      "rotation": [
+        16.9,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "hide": true,
+      "name": "bfly_2_8",
+      "position": [
+        -0.257601,
+        -0.589359,
+        -0.2
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        14.799999
+      ]
+    },
+    {
+      "hide": true,
+      "name": "bfly_2_7",
+      "position": [
+        -0.416113,
+        -0.574861,
+        -0.2
+      ],
+      "rotation": [
+        -38.192478,
+        -0.412274,
+        -0.0
+      ]
+    },
+    {
+      "hide": true,
+      "name": "bfly_2_6",
+      "position": [
+        -0.344686,
+        -0.641323,
+        -0.2
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        29.139438
+      ]
+    },
+    {
+      "hide": true,
+      "name": "bfly_2_5",
+      "position": [
+        -0.328158,
+        -0.754741,
+        -0.2
+      ],
+      "rotation": [
+        -16.866899,
+        0.0,
+        -6.775559
+      ]
+    },
+    {
+      "hide": true,
+      "name": "bfly_2_4",
+      "position": [
+        -0.324879,
+        -0.633672,
+        -0.191524
+      ],
+      "rotation": [
+        44.969911,
+        0.0,
+        10.999999
+      ]
+    },
+    {
+      "hide": true,
+      "name": "bfly_2_3",
+      "position": [
+        -0.35864,
+        -0.726457,
+        -0.2
+      ]
+    },
+    {
+      "hide": true,
+      "name": "bfly_2_2",
+      "position": [
+        -0.376695,
+        -0.681037,
+        -0.2
+      ],
+      "rotation": [
+        -38.926443,
+        0.0,
+        -14.890753
+      ]
+    },
+    {
+      "hide": true,
+      "name": "bfly_2_1",
+      "position": [
+        -0.277719,
+        -0.682372,
+        -0.2
+      ],
+      "rotation": [
+        10.28724,
+        0.0,
+        -14.832984
+      ]
+    },
+    {
+      "hide": true,
+      "name": "bfly_1_13",
+      "position": [
+        -0.369772,
+        -0.649128,
+        0.2
+      ],
+      "rotation": [
+        -27.159998,
+        0.0,
+        7.191999
+      ]
+    },
+    {
+      "hide": true,
+      "name": "bfly_1_12",
+      "position": [
+        -0.360796,
+        -0.567106,
+        0.2
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        10.131998
+      ]
+    },
+    {
+      "hide": true,
+      "name": "bfly_1_11",
+      "position": [
+        -0.325245,
+        -0.700861,
+        0.2
+      ],
+      "rotation": [
+        -28.972303,
+        0.0,
+        -14.952
+      ]
+    },
+    {
+      "hide": true,
+      "name": "bfly_1_10",
+      "position": [
+        -0.374523,
+        -0.66114,
+        0.2
+      ],
+      "rotation": [
+        -44.870419,
+        1.444505,
+        -0.0
+      ]
+    },
+    {
+      "hide": true,
+      "name": "bfly_1_9",
+      "position": [
+        -0.326043,
+        -0.642112,
+        0.2
+      ],
+      "rotation": [
+        31.293693,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "hide": true,
+      "name": "bfly_1_8",
+      "position": [
+        -0.334291,
+        -0.627294,
+        0.2
+      ],
+      "rotation": [
+        6.973693,
+        0.0,
+        -9.94849
+      ]
+    },
+    {
+      "hide": true,
+      "name": "bfly_1_7",
+      "position": [
+        -0.346486,
+        -0.715079,
+        0.2
+      ],
+      "rotation": [
+        19.273692,
+        0.0,
+        -1.728491
+      ]
+    },
+    {
+      "hide": true,
+      "name": "bfly_1_6",
+      "position": [
+        -0.354571,
+        -0.728503,
+        0.2
+      ],
+      "rotation": [
+        22.185356,
+        48.53405,
+        -0.0
+      ]
+    },
+    {
+      "hide": true,
+      "name": "bfly_1_4",
+      "position": [
+        -0.341697,
+        -0.667068,
+        0.2
+      ],
+      "rotation": [
+        23.934284,
+        0.0,
+        9.910384
+      ]
+    },
+    {
+      "hide": true,
+      "name": "bfly_1_5",
+      "position": [
+        -0.322847,
+        -0.611722,
+        0.2
+      ],
+      "rotation": [
+        22.185356,
+        48.53405,
+        -0.0
+      ]
+    },
+    {
+      "hide": true,
+      "name": "bfly_1_3",
+      "position": [
+        -0.358143,
+        -0.66208,
+        0.2
+      ],
+      "rotation": [
+        30.793631,
+        0.0,
+        -15.528968
+      ]
+    },
+    {
+      "hide": true,
+      "name": "bfly_1_2",
+      "position": [
+        -0.414714,
+        -0.683505,
+        0.2
+      ],
+      "rotation": [
+        33.070529,
+        -10.06999,
+        -0.0
+      ]
+    },
+    {
+      "hide": true,
+      "name": "bfly_1_1",
+      "position": [
+        -0.427935,
+        -0.646829,
+        0.2
+      ],
+      "rotation": [
+        30.793631,
+        0.0,
+        -15.528968
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "specular_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "ti_scroll_3",
+      "name": "scroll_3",
+      "order": 7,
+      "position": [
+        -1.625005,
+        -0.700049,
+        1.023582
+      ],
+      "properties": {
+        "blending": "multiply"
+      },
+      "rotation": [
+        -13.662923,
+        48.291282,
+        -3.186187
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "specular_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "ti_scroll_2",
+      "name": "scroll_2",
+      "order": 6,
+      "position": [
+        -1.683851,
+        -0.761271,
+        0.738225
+      ],
+      "properties": {
+        "blending": "multiply"
+      },
+      "rotation": [
+        -13.786114,
+        47.114204,
+        -2.704624
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "specular_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "ti_scroll_1",
+      "name": "scroll_1",
+      "order": 5,
+      "position": [
+        -1.749344,
+        -0.782946,
+        0.678793
+      ],
+      "properties": {
+        "blending": "multiply"
+      },
+      "rotation": [
+        -13.786723,
+        47.101435,
+        -2.756582
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "specular_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "ti_title_blur",
+      "name": "title_blur",
+      "order": 10,
+      "position": [
+        -0.076211,
+        -0.641001,
+        -0.02
+      ],
+      "properties": {
+        "blending": "multiply"
+      },
+      "scale": [
+        0.1952,
+        0.7033,
+        1.0
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "specular_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "ti_title_normal",
+      "name": "title_normal",
+      "order": 20,
+      "position": [
+        -1.95,
+        -0.641001,
+        -0.01
+      ],
+      "properties": {
+        "blending": "multiply"
+      }
+    },
+    {
+      "material": {
+        "diffuse_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "specular_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "ti_head_1",
+      "name": "head_1",
+      "order": 30,
+      "properties": {
+        "blending": "multiply",
+        "face_visibility": "front_back"
+      }
+    },
+    {
+      "mesh_name": "ti_background_3",
+      "name": "background_3",
+      "order": -500,
+      "position": [
+        0.0,
+        0.0,
+        -10.0
+      ]
+    },
+    {
+      "mesh_name": "ti_butterfly_2_wing_right",
+      "name": "butterfly_2_wing_right",
+      "position": [
+        -1.69699,
+        0.388521,
+        0.178791
+      ]
+    },
+    {
+      "mesh_name": "ti_butterfly_2_trunk",
+      "name": "butterfly_2_trunk",
+      "position": [
+        -1.69699,
+        0.388521,
+        0.178791
+      ]
+    },
+    {
+      "mesh_name": "ti_butterfly_2_wing_left",
+      "name": "butterfly_2_wing_left",
+      "position": [
+        -1.69699,
+        0.388521,
+        0.178791
+      ]
+    }
+  ],
+  "time": 8960
+}

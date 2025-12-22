@@ -1,0 +1,117 @@
+
+ Using the dbm.Fx objects and effects...
+
+ Important note: you need the dbplayer.library in your libs: !!!
+
+  DiGIBooster is a powerful music editor and .DBM are a
+  wonderful music format.
+
+ You can choose between dbm.Fx and p61.Fx music player in Karate.
+ Please choose one or the other, not both !!!
+
+ DBM...
+ support multi-voice (up to 128) use AHI, has a kick-ass
+ editor (digibooster) still supported, and it will
+ certainly work on future amigas if you have the dbplayer.library.
+
+ Maybe future .Fx version will bring new command like
+ pattern-jumping for DBM.
+
+-------------------------------------------------
+<MAIN> myscript |0|1</MAIN>              the main script to play...
+
+
+ nice zaac picture :-)
+<KIMG> rele | data/realeyez.iff </KIMG>
+
+a camera
+<KCAM> cam_1 | 0|0|0|0|0|0|1  </KCAM>
+
+a music
+<KDBM> DBMmusic | data/chiptune.DBM  </KDBM>
+
+--------------------------------------------------
+<KSCRIPT>                           let's write a script to play.
+
+    <ID> myscript </ID>
+
+    <PLAY> part1        | 200 | 0 | 1 </PLAY>
+    <PLAY> part2        | 300 | 0 | 1 </PLAY>
+    <PLAY> silentpart!   | 50 | 0 | 1 </PLAY>
+    <PLAY> part1 | 5000 | 0 | 1 </PLAY>
+  
+</KSCRIPT>
+------------------------
+///<KPART>  <ID> part1  </ID>
+
+
+---------------     always set the palette at start.
+    <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> rele </Pa>   we have seen each image stands for a 256 color palette too.
+    </Fx>
+---------------     throw the music
+    <Fx><Pa> PlayDBM</Pa>
+        <Pa> DBMmusic   </Pa>
+    </Fx>
+------------------ draw image
+    <Fx>
+        <Pa> SpritePlain </Pa>
+        <Pa></Pa>
+        <Pa> rele </Pa>
+        <Pa> 4cte |0|0|1|1 </Pa>
+    </Fx>
+
+   
+
+///</KPART>
+------------------------
+///<KPART>  <ID> silentpart!  </ID>
+
+    <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> rele </Pa>
+    </Fx>
+
+  <Fx><PA>fillrc</Pa><PA></Pa> <PA>cte| 0 </Pa>  </Fx>
+
+   
+    <Fx><Pa> StopDBM</Pa></Fx>
+
+
+
+///</KPART>
+------------------------
+///<KPART>  <ID> part2  </ID>
+
+    <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> rele </Pa>   we have seen each image stands for a 256 color palette too.
+    </Fx>
+
+  
+---------------- we use P61Vol effect to set the volume. let's move a camera
+                    with the same value.
+
+    <Fx><Pa> setcamcoord  </Pa>
+        <PA> cam_1 </Pa>
+        <PA> 2cte |0|0</Pa>   x,y,
+        <PA> cos |-2|1.5|1   </Pa>     z
+        <PA>  4cte|0|0|0|1  </Pa>        o1 o2 o3 fov
+    </Fx>
+
+    <Fx><PA>fillrc</Pa><PA></Pa> <PA>cte| 0 </Pa>  </Fx>
+
+    <Fx><PA> SpritePlain  </Pa> sprite with color 0
+        <PA>    </Pa>
+        <PA> rele  </Pa>
+        <PA> 4cam | cam_1 | 1|1|0|0|0  </Pa>
+    </Fx>
+
+    <fx><pa>DBMVol</Pa>
+        <Pa>  cos |0.5|1.5|0.5    </Pa>
+    </Fx>
+
+
+///</KPART>
+------------------------

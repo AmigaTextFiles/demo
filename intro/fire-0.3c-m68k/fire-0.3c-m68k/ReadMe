@@ -1,0 +1,39 @@
+fire 0.3b
+
+
+This is a SDL demo with fire/flames and some other whirling effect.
+
+
+Usage:
+
+The following command line parameters are supported:
+
+ -h : help
+ -v : version
+ -verbose : verbose mode
+ -width <value> : width of the screen in pixels
+ -height <value> : height of the screen in pixels
+ -fullscreen : run in fullscreen video mode if possible
+
+
+Author: Stephan Uhlmann 
+
+
+Amiga 68k port by Piotr Bandurski
+
+
+Changes:
+
+0.3a:
+
+- a lot faster
+- hide mouse pointer in the fullscreen mode
+
+0.3b:
+
+- added "-verbose" option
+  (old statistics are back)
+
+0.3c:
+
+- fixed some enforcer hits

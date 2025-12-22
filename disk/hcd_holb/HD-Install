@@ -1,0 +1,103 @@
+; Install-script for Hymns Of Logic by Agamemnon / Hardcore Design
+
+(complete 0)
+
+(set #which-disk
+(cat "\nSelect directory to install to, if you choose another\none you have to edit the startupscript!"
+))
+
+(set #ask-hymns1
+(cat "\n\nPlease insert the \"Hymns Of Logic\" disk 1 in any floppy drive."
+))
+
+(set #ask-hymns2
+(cat "\n\nPlease insert the \"Hymns Of Logic\" disk 2 in any floppy drive."
+))
+
+(set #which-icons
+(cat "\nInstall MagicWB style icons?"
+))
+(makedir "SYS:Hymns")
+
+(set #which-icons-help
+(cat "\nThe MagicWB icon for Hymns Of Logic. "
+     @askbool-help
+))
+
+(set target (askdir (prompt #which-disk)
+		(help #which-disk-help)
+		(default "SYS:Hymns")
+	)
+)
+
+(set @default-dest target)
+(complete 10)
+    (askdisk (prompt #ask-hymns2)
+	     (help @askdisk-help)
+	     (dest "HYMNS2")
+    )
+
+(complete 12)
+(copyfiles (source "HYMNS2:HymnsOfLogic")
+	   (dest target)
+)
+(complete 15)
+(copyfiles (source "HYMNS2:Groove Yard")
+	   (dest target)
+)
+(complete 20)
+(copyfiles (source "HYMNS2:Popin' Up")
+	   (dest target)
+)
+(complete 25)
+(copyfiles (source "HYMNS2:The Steel Dome")
+	   (dest target)
+)
+(complete 30)
+(set iconz (askbool (prompt #which-icons)
+		(help #which-icons-help)
+		(choices "Yes!" "No!")
+	  )
+)
+(complete 38)
+
+    (if (= iconz 0)                           
+        (set #iconname (cat "HYMNS2:HymnsOfLogic.info" )
+	)
+        (set #iconname (cat "HYMNS2:Hymns-MWB.inf" )
+	)
+    )
+(complete 49)
+(copyfiles
+	(prompt "Installing icons...")
+	(help @copyfiles-help)
+	(source #iconname)
+	(dest target)
+	(newname "HymnsOfLogic.info" )
+)
+(askdisk (prompt #ask-hymns1)
+  (help @askdisk-help)
+  (dest "HYMNS1")
+)
+(complete 55)
+(copyfiles (source "HYMNS1:HymnsIntro.exe")
+	   (dest target)
+)
+(complete 60)
+(copyfiles (source "HYMNS1:HymnsOfLogic.exe")
+	   (dest target)
+)
+(complete 75)
+(copyfiles (source "HYMNS1:Blue Vibrations")
+	   (dest target)
+)
+(complete 80)
+(copyfiles (source "HYMNS1:South Of Sense")
+	   (dest target)
+)
+(complete 95)
+(copyfiles (source "HYMNS1:Trip To OutLand")
+	   (dest target)
+)
+
+(complete 100)

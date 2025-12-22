@@ -1,0 +1,163 @@
+@database mystify.guide
+@width 80
+@author Quaid / BFB Team.
+
+@node main "Mystify Music disk from BFB Team."
+
+	MYSTIFY Music disk from BFB Team.
+	---------------------------------
+
+	Release Date: 16.10.1995
+
+	@{" Disclaimer       " link disclaimer} Read this!!
+	@{" Distribution     " link distribution} How to distribute.
+
+	@{" What is mystify  " link mystify} What's special in mystify.
+	@{" Trouble shooting " link troubles} I can't launch My copy of Mystify
+
+	@{" Credits          " link creds} Creds and addys.
+
+@endnode
+
+@node disclaimer "Disclaimer"
+
+          THERE IS   NO  WARRANTY  FOR  THE  PROGRAMS,  TO  THE  EXTENT
+       PERMITTED  BY  APPLICABLE  LAW.  EXCEPT WHEN OTHERWISE STATED IN
+       WRITING  THE  COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE
+       PROGRAMS  "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED
+       OR   IMPLIED,   INCLUDING,  BUT  NOT  LIMITED  TO,  THE  IMPLIED
+       WARRANTIES  OF  MERCHANTABILITY  AND  FITNESS  FOR  A PARTICULAR
+       PURPOSE.   THE  ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF
+       THE  PROGRAMS IS WITH YOU.  SHOULD THE PROGRAMS PROVE DEFECTIVE,
+       YOU  ASSUME  THE  COST  OF  ALL  NECESSARY  SERVICING, REPAIR OR
+       CORRECTION.
+
+          IN NO  EVENT  UNLESS  REQUIRED BY APPLICABLE LAW OR AGREED TO
+       IN  WRITING  WILL  ANY  COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO
+       MAY  REDISTRIBUTE  THE PROGRAMS AS PERMITTED ABOVE, BE LIABLE TO
+       YOU  FOR  DAMAGES, INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL OR
+       CONSEQUENTIAL  DAMAGES  ARISING  OUT  OF THE USE OR INABILITY TO
+       USE  THE  PROGRAMS (INCLUDING BUT NOT LIMITED TO LOSS OF DATA OR
+       DATA  BEING  RENDERED  INACCURATE  OR LOSSES SUSTAINED BY YOU OR
+       THIRD  PARTIES  OR A FAILURE OF THE PROGRAMS TO OPERATE WITH ANY
+       OTHER  PROGRAMS),  EVEN  IF  SUCH HOLDER OR OTHER PARTY HAS BEEN
+       ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+@endnode
+
+@node mystify "What is mystify"
+
+	What is mystify:
+	----------------
+
+	- Mystify is MULTITASKING music disk
+	- It contains good music from BFB Team's musician.
+	- It's capable to run on ANY amiga with KS 1.3 and above.
+	- It uses ONLY system fuctions, so if Mystify isn't working with your
+	  graphics card, you can't blame me. (I hope :)
+	- It can be installed on HD.
+	- Doesn't require AGA but can be run on one.
+	- Because Mystify uses system's screen, it automacicly supports
+	  mode promotions.
+	- And the best: It doesn't crash. (Pretty wild, huh :)
+
+@endnode
+
+@node distribution "Distribution"
+
+	Distribution:
+	-------------
+
+	This program may be distributed freely if...
+
+	... you are not charging any money with it.
+	... all files stay unalerted.
+	... it's not used for commercial purposes without our permission.
+
+@endnode
+
+@node troubles "Trouble shooting"
+
+	Somewhy you are not able to run Mystify. I've collected some
+	error cases and sollutions for them in a list below:
+
+	Q: I type mystify in a cli window but after a short loading
+	   nothing happens.
+	A: There may be 3 reasons for this: diskfont.library couldn't be
+	   opened, you have ran out of memory or Mystify failed when he
+	   tried to open fonts. Currently Mystify uses fonts opal 12 and
+	   ruby 12. Make sure that they exist in your fonts: drawer.
+
+	Q: I have made an icon for Mystify, but when I try to launch it, my
+	   machine crashes to guru 87000004.
+	A: Mystify isn't meant to be runnable from WB. That's because files
+	   cannot be located without special code. And because I'm too lazy
+	   to write such piece of code, you won't be able to run it from WB
+	   and that's about that.
+
+	Q: After start mystify starts to load a module but that fails and
+	   says only: No chip mem!. 
+	A: That's because you ARE short of chipmem. I use P61 mods, with
+	   packed samples, so the biggest modules may not fit into 512 kb
+	   chip memory. If you get this message, don't you think that it
+	   would be time to buy a new amiga. Like A1200. ;)
+
+	Q: After start Mystify just says "Cannot locate modules" or "Where
+	   is modnames.dat"
+	A: You have tried to run mystify from a drawer that doesn't contain
+	   all needed files. You see, mystify tries to load modules from
+	   drawer "Modules/" from where it was run from. If this drawer
+	   doesn't exist or is empty then mystify will fail.
+	   ModNames.dat and ModuleTxts.dat must be in the same directory 
+	   that Mystify was ran from. They contain important info for
+	   Mystify.
+
+	If you can't find what's wrong even with these instructions, then
+	you may contact me and ask. My address can be found @{" here " link creds}
+	
+@endnode
+
+@node creds "Credits and addresses"
+
+	Credits and addresses:
+	----------------------
+
+	Code: 		Quaid / BFB Team.
+	Music:	 	Di-Mension / BFB Team.
+	Gfx:		Mistral / Parallax.
+	P61 replayer:	Guru / S2 (a.k.a. Jarno Paananen) Thanks Jarno for
+			great replay routine.
+
+	To contact us use these addresses:
+
+	Quaid:
+	------
+	EMail: <quaid@lyyra.kempele.fi>   SMail: Quaid / BFB Team.
+	       <quaid@louhi.kempele.fi>		 Jarkko Vatjus-Anttila
+						 Linnukkatie 2
+	W3:    http://lyyra.kempele.fi/~quaid	 90450 Kempele
+						 Finland
+
+	Di-Mension:
+	-----------
+	Smail: 	Di-Mension / BFB Team.
+		Aki Flink
+		Oulaistentie
+		86400 Vihanti
+		Finland
+
+	Mistral:
+	--------
+	EMail: <sima@mimas.otol.fi>	  SMail: Mistral / Parallax
+						 Sami Kemilä
+	IRCNICK: Sima_				 Kivitie 5
+						 91700 Vaala
+						 Finland
+
+
+	Or you may even contact Ksylitol BBS:
+
+	Ksyli-BBS d0RMANt AcTi0N - +358 (9)81 5361 093
+
+@endnode
+

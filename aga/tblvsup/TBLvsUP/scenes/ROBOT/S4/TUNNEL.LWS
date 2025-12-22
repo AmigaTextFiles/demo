@@ -1,0 +1,134 @@
+LWSC
+1
+
+FirstFrame 1
+LastFrame 60
+FrameStep 1
+PreviewFirstFrame 1
+PreviewLastFrame 280
+PreviewFrameStep 1
+FramesPerSecond 30.000000
+
+LoadObject C:\demo\kdemo\demo\main\robot\s4\robcool.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  13
+  1.025 0.34 -12.95 49.1 -2.6 0 1 1 1
+  0 0 0 0 0
+  0.8947146 -0.1550001 -12.76692 49.1 -2.6 0 1 1 1
+  22 0 0 0 0
+  1.069216 0.5299999 -12.95719 49.1 -2.6 0 1 1 1
+  43 0 0 0 0
+  0.8 0.1012239 -12.78228 49.1 -2.6 0 1 1 1
+  65 0 0 0 0
+  1.066884 0.5289999 -12.94945 49.1 -2.6 0 1 1 1
+  89 0 0 0 0
+  0.8005394 0.03499989 -12.78259 49.1 -2.6 0 1 1 1
+  117 0 0 0 0
+  1.053309 0.5449998 -12.99556 49.1 -2.6 0 1 1 1
+  145 0 0 0 0
+  0.805007 0.1709999 -12.7465 49.1 -2.6 0 1 1 1
+  162 0 0 0 0
+  1.051184 0.5419996 -13.01654 49.1 -2.6 0 1 1 1
+  184 0 0 0 0
+  0.7362422 0.1599998 -12.74643 49.1 -2.6 0 1 1 1
+  202 0 0 0 0
+  0.9111235 0.5499995 -12.94407 49.1 -2.6 0 1 1 1
+  222 0 0 0 0
+  0.7251934 0.1279998 -12.73997 49.1 -2.6 0 1 1 1
+  256 0 0 0 0
+  0.9460216 0.5569996 -13.00743 49.1 -2.6 0 1 1 1
+  280 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+LoadObject C:\demo\kdemo\demo\main\robot\s4\tun.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  3
+  248.1001 773.6999 -25.54033 4 0.2 -17.4 1 1 1
+  0 0 0 0 0
+  167.9784 587.7875 1.166933 3 0.15 -13.05 1 1 1
+  70 0 0 0 0
+  0 30.05027 0 0 0 0 1 1 1
+  280 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+AmbientColor 255 255 255
+AmbIntensity 0.250000
+
+AddLight
+LightName Light
+ShowLight 1 7
+LightMotion (unnamed)
+  9
+  1
+  -2 2 -2 45 35 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LightColor 255 255 255
+LgtIntensity 1.000000
+LightType 0
+ShadowType 1
+
+ShowCamera 1 7
+CameraMotion (unnamed)
+  9
+  6
+  -3.440245 -1.288401 -27.94793 10.5 -10.5 0 1 1 1
+  0 0 0 0 0
+  -9.436208 -1.288401 -20.08505 50.00002 -24.9 0 1 1 1
+  70 0 0 0 0
+  -9.179959 -5.9384 -12.70722 97.50001 -32.89998 0 1 1 1
+  169 0 0 0 0
+  -9.955966 -6.396574 -17.30589 65.09333 -36.16966 0 1 1 1
+  212 0 0 0 0
+  -6.856035 -2.338401 -20.25785 29.10001 -24.19998 0 1 1 1
+  250 0 0 0 0
+  -4.779776 2.4116 -22.0976 33.50001 -13.29998 0 1 1 1
+  280 0 0 0 0
+EndBehavior 1
+ZoomFactor 2.200000
+Resolution 1
+CustomSize 320 200
+PixelAspectRatio 2
+SegmentMemory 22000000
+Antialiasing 0
+AdaptiveSampling 1
+AdaptiveThreshold 16
+FilmSize 2
+FieldRendering 0
+MotionBlur 0
+DepthOfField 0
+
+SolidBackdrop 1
+BackdropColor 0 0 0
+ZenithColor 0 40 80
+SkyColor 120 180 240
+GroundColor 50 40 30
+NadirColor 100 80 60
+FogType 0
+DitherIntensity 1
+AnimatedDither 0
+
+RenderMode 2
+RayTraceEffects 0
+ClipRayColors 0
+DataOverlayLabel  
+FullSceneParamEval 0
+
+ViewMode 5
+ViewAimpoint 0.000000 0.000000 0.000000
+ViewDirection 0.300197 -0.314159 0.000000
+ViewZoomFactor 63.686176
+GridNumber 0
+GridSize 10.000000
+ShowMotionPath 1
+ShowBGImage 0
+ShowFogRadius 0
+ShowRedraw 0
+ShowSafeAreas 0
+ShowFieldChart 0

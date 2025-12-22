@@ -1,0 +1,89 @@
+
+ -----------------------------------------
+         SCOPEXT by Smack/Infect
+ -----------------------------------------
+
+ this tiny prog is some kind of a 'sampling oscilloscope'. it uses
+ the parallel port sampler, if you don't have one, then this prog
+ will be useless for you.
+
+ requires: AGA/68020+/OS V37+
+
+ the sampling rate is 16kHz so frequencies above 8kHz will not be
+ visible. if you say now 'this is not very much' then i wanna tell you:
+ 16kHz means that during every pal-frame we receive 320 bytes so it fits
+ perfectly on a lores screen. and there's simply not enough cpu power
+ on todays amigas to use a higher resolution for this task. (i think ;-)
+
+ the prog is controlled via keyboard so try these:
+  F1 - lores 20ms display
+  F2 - hires 40ms display
+  F3 - single dot
+  F4 - eight average dots
+  F5 - line  (*)
+  F6 - solid (*)
+  F7 - spectrum analyzer
+  F9 - show idle cpu time
+  F10- freeze display
+  ESC- exit
+
+ NOTE: the modes marked with (*) need different amounts of cpu time
+       depending on the current sample data.
+       if the screen borders get red then the plotting routine runs
+       too slow. to avoid this you could   a) get a powerful cpu and
+       some fast ram   b) use F2 for 40ms display   c) if that doesn't
+       help choose a different plotting mode
+
+ ABOUT THE SPECTRUM ANALYZER:
+
+ it uses a 128-point fourier transformation which seems to be quite accurate.
+ each bar represents a band of about 125Hz, the 64 bars go upto 8kHz.
+
+ the spectrum analyzer always scans only 256 bytes of the sample,
+ this is due to the fft loop, sorry! if your machine is fast enough you
+ should run it on 20ms display, so you 'miss' only 64 bytes each frame
+ which is 20% of the whole sample. on 40ms display your chances to miss
+ short impulses (such as hihats etc.) are 60%...
+ i don't know how to fix the problem of these 'time gaps' without coding
+ a new fft loop from scratch!
+
+
+
+ and remember: this is only a programming experiment. you can't claim
+ me for any damages or trouble my prog could cause. it's all your
+ fault coz you dared to start it ;-)
+
+
+ contact me if you want:
+     Michael Henke
+     Praetorius-Str.1/205
+     06124 Halle
+     Germany
+
+
+
+ HISTORY
+
+ 170195
+  -first release
+
+ 190195
+  -FFT spectrum analyzer implemented
+    NOTE: in this first version there are some 'inaccuracies' in the
+    frequency range. i will fix it as soon as i get some equipment to
+    calibrate the frequencies. and maybe i'll implement 'acoustic scaling'
+    which linearizes the spectrum like the human ear does.
+
+ 200195
+  -spectrum analyzer calibrated (using Masque's Chicken Dialer!!)
+  -peak levels implemented
+
+ 240195
+  -code optimizing
+  -fixed a serious bug in the sampling routine that appeared on the 68030
+   but not on the 68020!  (strange?   it was caused by an unintentional
+   instruction overlap in the cpu's pipeline.)
+
+ 310195
+  -sprite anim built in -> dramatical file length increase, but who cares?!
+   the logo can be switched on/off using the HELP key

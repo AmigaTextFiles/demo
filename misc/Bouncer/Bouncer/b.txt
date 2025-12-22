@@ -1,0 +1,17 @@
+Bouncer is a 3-dimensional simulation of a bouncing ball written in
+Creative Solutions' Multi-Forth.  The unarc'ed size of the file is on
+the large side because I haven't taken the time to strip out all the
+extra baggage.  The application was compiled on top of the default 
+Multi-Forth system, then turnkeyed, so you can see that Multi-Forth
+by itself isn't very large.
+
+The source is largely the same as that which appeared in Volume 2,
+Number 1 of Amazing Computing.  I cleaned up a few things and randomized
+the initial velocities.  The major shortcoming of the demo is lack of
+sound effects.  I have done some work with audio in recent issues of the
+magazine, and I expect to go back and add stereo to the Bouncer sometime
+soon.
+
+Jon R. Bryan
+cis 70310,777/73557,465
+Plink jon*forth

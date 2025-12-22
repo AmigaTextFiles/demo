@@ -1,0 +1,57 @@
+[bkg=bg.pbm][h1]Making BBS Compatible Releases 
+by jPV/RNO 
+
+
+Once upon a time, there was a strict etiquette as to how demoscene related productions should be released. It was mainly dictated by Bulletin Board Systems (BBS/board) where such productions were distributed electronically. Then the big bad Internet came along and its population began to forget those established rules. Even though a small group of indomitable elite forces didn't give up and moved from dial-up BBSes to telnet based BBSes, but they couldn't fight against all the ensuing anarchy. Releases, that oldskoolers would consider "lame", took over the world, and couldn't be uploaded to the few remaining boards without extra effort, and soon the whole BBS scene started to fade away...
+
+However, who would have guessed that the BBS scene would be suddenly resurrected a few years ago? Old boards were put online via telnet on the Internet, and people became suddenly enthusiastic about their roots. Maybe it's time to refresh our thoughts regarding properly made releases too? After all, a professionally created package finishes off a product that you can be proud of.
+
+Even if you're not using a BBS, you should still make your productions BBS compatible, because you can be sure that someone else will upload it to BBSes and may modify your release in a way you won't like. They can get quick and dirty descriptions and filenames, that don't necessarily represent what you'd like to see on your productions. In any case, there's something cool about doing it the right way. :) Let's forget plain executables on vanishing Dropbox links and make releases great again!
+
+
+Here are the main points you should remember when preparing an Amiga production to be released:
+
+1) Use formats that are standard on Amiga, like LhA, DMS, or plain text files (.txt). Unarchived executables and alien formats like Zip, RAR, etc. will lose Amiga's file attributes and comments, and in the worst case executables won't launch at all after unarchiving them.
+
+Remember to create archives in an Amiga environment to preserve the attributes in the first place and to retain compatibility with real Amiga programs, as you might end up with unsupported compression formats with LhA under Linux, etc..
+
+The ADF format isn't good either, as it can't store a description text and doesn't have any data integrity checking, but ADF files can be archived with LhA if any other format isn't an option for you. 
+
+
+2) Use the 8.3 format for your release's filename. BBSes have stuck with the short filename format for compatibility with BBS software for all ages and platforms. So, 8 characters or less for the name and 3 for the extension (grp-prod.lha).
+
+
+3) Include a FILE_ID.DIZ text/file, which is a short description of the release. A BBS software finds the description automatically then and displays it when listing files. It's also a quick way to check what archives contain otherwise too. You can also include some nice ASCII graphics in the description, but remember its limits. No line should be longer than 44 characters (even though some specs claim 45), and there shouldn't be more than 11 lines (or 10 if you keep to the strictest specs.). Some boards can show more lines, but some will truncate it to 11 or so.
+
+
+3.1) When including a FILE_ID.DIZ file in an archive, place it in the root directory of the archive. Do NOT put it in a subdir.
+
+This is WRONG:
+myprod/myprod.exe
+myprod/file_id.diz
+
+This is CORRECT:
+myprod/myprod.exe
+file_id.diz
+
+
+3.2) Instead of archiving floppy disk images in, for example, LhA archives, they can be created and distributed as DMS images, which have several advantages over ADF and others. DMS files are compressed, have error checking for data integrity, and they can contain text files in special extra tracks. There's a dedicated FileID track to store a FILE_ID.DIZ text, and BBSes check it for a file description. The FileID track can be created with DMSPro (v2.04 etc.) or modified afterwards with a separate program like DMSDescript, which can add, extract, and delete file_id.diz texts from DMS files. BTW. DMS files can also be loaded into UAE, just like ADF files, if you worry about that.
+
+
+3.3) FILE_ID.DIZ can be added in text files too if you're going to release ASCII collections, party results, vote sheets, etc.. A description text has to be placed between @BEGIN_FILE_ID.DIZ and @END_FILE_ID.DIZ tags in a text file. The description starts immediately after the @BEGIN_FILE_ID.DIZ text, so do NOT add space or new line characters between it and your description!
+
+This is WRONG:
+@BEGIN_FILE_ID.DIZ
+First line
+Second line
+@END_FILE_ID.DIZ
+
+This is CORRECT:
+@BEGIN_FILE_ID.DIZFirst line
+Second line
+@END_FILE_ID.DIZ
+
+Also note that many BBSes search this information only from .TXT, .NFO, and .DOC files! So use those extensions instead of .asc or other non-standard extensions. .TXT is a good all-arounder, because .NFO is only used for longer information texts about releases and .DOC is commonly associated with Word documents nowadays, or autodoc files on Amiga ;)
+
+
+I think these three main points should be enough for quality releases at BBSes and other locations. There are other ways to make BBS releases too, but they don't work that well elsewhere, and vice versa.

@@ -1,0 +1,187 @@
+!On AI graphics
+Titus
+91
+
+µF2µJCCommentary: AI Graphics and their impact on the demoscene
+
+µF1µC2by Titus/Rabenauge
+
+µC0µF0µJLAI graphics are everywhere, now. The impact of that historic change is the right moment for demoscene artists to revalue their position and the value of graphics in the demoscene.
+
+
+µF0µC1The dawn of ai artµC0µF1
+
+Some people date the first steps of AI graphics technology back to the late 1960s where Harold Cohen did his first experiments with algorithmic and generative art. He build 1973 µC2"Aaron"µC0, an art program with 1.5 MB of Lisp Code, that created art with the help of a small robot called "turtle" that was equipped a marker and was drawing shapes on pieces of paper. 
+
+Interesting and similiar to some demos enough, that program was based on a defined set or rules and forms. (This and "turtle" sounds familiar to us demosceners, doesn't it ;)). 
+
+Cohen himself extended these pieces, as he colored them or even made some sculptures out of these forms. These pieces hang around in museums around the world. From the comments I could read about him, it seems that Cohen tried to recreate and reduce the internal (decision making) creative processes of artists. He defined a set of rules and the output that "Aaron" and "turtle" created, have been for him the assumption which Aaron himself had of an exterior world. The only thing that makes me think of AI in this context is the name "Aaron" perhaps - which has given the machine a more human touch for an audience. Imho a good sales pitch for Cohen. 
+
+And - no wonder - even then there was a discussion - is this art or not. Something which Cohen himself denied in some interviews, just to relativize it in the second sentence with some schmonsense.
+
+µF0µC1Present SituationµC0µF1
+
+It is the end of december 2023 as I am writing this. It was just in the recent history of the years 2014 and 2015, that the results of the first GANs and Google's DeepDreams looked like a strange dog-face filter. Something that looked psychdelic enough to laugh about it. It is astounishing how far, since then, AI generated graphics evolved.
+And if you follow the news around it, the speed it keeps changing and advancing seem to be daily, now. Funny as it was: meanwhile AI has reached ultimatly the mainstream. 
+
+AI helps out by the creation of code, reformats and translates Text-Files and Source Code is created with the help of Tools like Githubs/Microsofts CoPilot or ChatGPT. And more to come, if we like it or not. As usually it goes that way: first comes the technology and society tries to adjust.
+
+µF0µC1State of the art and artist in the sceneµC0µF1
+
+But graphics artists have already a problem in the demoscene - as part of it they are mostly seen as the smallest part of the job. 
+And this view exists since the start of the demoscene. There from the beginnings with these scans and/or re-pixel from metal covers and Boris Valleyo images. (For the last time I say - give that guy and µC2Simon BisleyµC0 a demoscene lifetime award for his influence on the demoscene! Ah wait, there is µC2no pure graphics category on the Meteorics AwardsµC0!)
+
+Not good for an artistic ego. And also the reason that so many talented graphic artists prefer not to spend too much time in the scene and waved their goodbyes over all these demoscene years. 
+
+
+Let us first take a short detour away from the topic of ai art and let us focus us on the usage and importance of graphic and design in demos at the current state. I want to show up some interesting parallels to an older topic. 
+
+Many coders follow a "code first" and design "maybe" policy. Some are even creating graphics for demos by "wiring" them themself together.
+
+For most programmers art and design are just a necessary part of a demo, but not the main focus. 
+
+From a friendly coder I shortly heard the sentence: "I don't care about the origin of a graphic - as it comes to demos - it is about the code". That was coming from an known coder on an oldschool platform.
+
+On the modern platforms, like pc or consoles if you are coding a 256b or 4k you mostly don't have to care about it. (Maybe sometimes coders ask here for a tad view on the design, maybe). Here size dictates the mixture of design, graphics and effects. For bigger sized releases from 64k to Demos, it is today mostly 3D Art and design for Motion and storyline that is required.
+
+And many coders see it coming from maybe an ex-cracker or open-source ideology as quite "all right" just to recycle, convert or wire graphics. A demoscene programmer will have always a converter for that in his toolchain. Hell - and the words µC2"wired graphics"µC0 alone emphasizes that attitude itself. Meaning here: "wired" for copy, montage and/or converting and maybe add some final touches with some to that graphics.
+
+Artistically it also doesn't really matter for a demo. Not anyone can see the difference between a hell crazy ham6 effect demo on amiga with scanned photos/images versus a demo with great optimised "wired" graphics. So naturally the approach of art in the demoscene is more that of a functional design for many programmers. And in the end also the audience votes decide. 
+
+
+Don't get me wrong: it is not about the use of new tools. If someone wants to use modern tools to create art or if the artist is still using the old tools with joystick on the C64. Fine with me.
+
+It is about orginality and not pure copying. Even if there the talk often goes "... great artists steal": that comment is not about the already existing art - it is about the idea behind one or even better multiple origins that you adapt to build up your own vision. I personally love it if I see a new art piece and can pinpoint to see which artist is behind it.
+
+I mean this like in a good music cover you hear the influences of the voice and instruments of another artist behind it. Problem with it - you have to live with the fact that sometimes people don't like your very personal pixel or brush strokes.
+Live with it.
+
+The µC2"No Copy"µC0 - battle cry in the end of the 90ties is long gone and already forgotten for many. Maybe someone of the newer sceners should look up µC7scenes.at/jp20ncpyµC0 for some history lessons. Boris Vallejo and comics haven't just been copied in the begining of 80s the scene. That could be seen as a childs mistake. It was still up to the end of the 90ties where some legends still copied Vallejo graphics and joker comics to ensure that it came to similiar discussions like the currents about ai graphics. 
+
+µF0µC1A critical view on AI ART GenerationµC0µF1
+
+And here we jump back to the ai art. So far I just wanted to point out that there are some parallels from the copy images to using ai graphics discussions. 
+
+Reason: they touch the same problems. First in the lack of innovation of ideas and then into a less personal creative work. 
+
+I will here focus just on the generation of art not on other tools that might have some good use cases like upscalers or other AI effects.
+
+First a few superficial words to the technical aspect of ai images - it seems like a perfect and fast solution to skip the artist. Enter your text prompt and let the tool spit out an image. Maybe tweak around the prompt until you get an awesome picture. 
+
+Some GANs ("Generative Adversarial Net") as ML (Machine Learning) frameworks allow the generation of realistic data depending on a Model. Behind the interface of the prompt interface (commndline, web UI or some gui Tool, like e.g. Automatic1111, InvokeAI) this model will be triggered. A model means a combination of programs which detect or predict specific patterns using a collection of data sets and definied possibilites. 
+
+The patterns are matching the input and also some ways on how the generated noise will be fitting the output generated. Based on used elements the used noise seed will be associated with a given prompt and/or control data (e.g. like another image as additional input).
+
+For that some Machine Learning algorithms are used, which learn from data how to decide or predict a combination of given data and finally how the output is created.
+
+Models are trained mainly by comparison of a generative model (this produces something as it tries to rebuild how model data is placed into a space) and/or with a discriminative model (discriminative in the way, that it recognizes existing data). 
+
+From a technical point - totally acceptable. And totally in sync for me with the attitude of demo programmers. 
+But there are some problems with the used models and ai generation of images:
+
+- The training data was scraped from existing artists and graphics forums of course. 
+- Even if there might be regulations to exclude data from models in the future - it is still possible to adjust the focus of existing models to a given subject/style e.g. with a Low-Rank Adaptation of a existing model. These small lora files then extend these models.
+- Models can be trained "silly" - which means that they tend to focus "too much" on rendering a trained style or topic too close to the always same result. Mostly it is then too close to the original or has a too low amount of possible different views of a subject rendered. Which totally leads to a trap of plagiarism, without you even knowing it. 
+
+
+- Many image generators like Dall-E or Midjourney are commercial products.
+-> you have no real insight in their models or the data they collect about you. As it is relly easy to set up an own server with a "commericial" 
+-> there they use the entered prompts and the image decisions trees itself for further training the data for input and output. 
+-> no control over your entered prompts / used image references or other input data.
+-> Energy costs
+-> Data Storage expands - may it be for the used models and trained data that expands, as for the fact that the generated art need more. Just look over the side border to books: since the beginning of this year the amount of ai created stories there exploded
+
+- legitimation processes are impossible
+- If you think a local installation and some good graphic cards are a save solution: even "local" installations call a lot home. 
+- Local installed it also brings new possibilities to hack your computer as it is possible to manipulate models.
+
+Except for the security aspect - I think it all runs into the same problems like a copy or any photobashing. If it is badly done - you see it or you have even some element in it that obviously is a copy or a bad photo compostion.
+
+I have tested a few models in image generation and even other image generation tools like e.g. a comic book generator. There you could define a comic style like e.g. franco-belgian comic and give some prompts for some given layout and the single panels in it. And I could see 1 to 1 images from moebius and some have been cleverly but obviously merged from 2 original panels to 1! 
+
+And as if this is not enough the prompts also lead into these traps. It is easy to adopt a style or topic of an artist with prompts parts like: 
+
+"in the style of <enter name here>", award winning, <art forum name>, <enter name of public person> or the name of an art character like Jessica Rabbit. And see there, you get something very simliar and familiar. 
+
+Actually I find the philosphy of the prompts very interesting, as it shows a lot about us humans if you look like 
+
+a) what was used for an model or lora to train as parameters and 
+b) what are people entering in their prompts. ?
+
+Look at sites like Prompthero (µC7scenes.at/jpprmthroµC0) or civitai.com/images to see which prompts have been used and judge for yourself. 
+
+µF0µC1What is the position of the artist in this? In which ways it is currently a good tool?µC0µF1
+
+If you use generated AI art for inspiration - that is always fine in my eyes. But like I already wrote: it is about the idea behind one or even better multiple origins that you adapt to build up your own vision. A second thing for Prototyping ideas maybe.
+
+The artist µC2NecroµC0 (µC7scenes.at/jpnkroµC0) is using photobashing to create his artworks with 3D and blending images. He did also generate parts for him and used these to photobash it. This is nothing new - and many demoscene artists did so already in the wiring process.
+Here it might depend on the size of the parts you add. But you can not control that in any way - and how will you judge it even from steps. Seems creative enough for necro if you see the endresults. 
+
+And he did that already before he did introduce ai art into his workflow. Find here Necro's workflow explained: µC7scenes.at/jpnkro2µC0 (finale image and one post below with the explanation).
+
+Using to copy a style for own topics: well here it begins to be harsh. 
+
+There was this situation with µC2Simon StaalenhagµC0, who created images which have been the inspiration for the series "Tales from the Loop". He is stylewise a target for - let me name it "style theft". Some "ai artist" posted last year on twitter, tagging Simon Staalenhag himself, that he trained a model that can create graphics like that for him without Simon, now. He did even write in an annoying way. Without many words - that was a real asshole move.
+
+And it shows something different, too. It doesn't matter how many years of training you put into your own style. It just can be copied in a few hours by a Machine Learning Tool. Some will say it is like sampling - as long it is far enough from the orginal. Ok, you are a tech guru - but can you explain how to come to that point without a computer? 
+
+Then there is the motivation to learn something about art anyway. How to build up e.g. pixelart. Give this following tool a look if want to see how far pixelart with Retro Diffusion Extension for Aseprite is: 
+
+µC7scenes.at/jp20retdifµC0
+
+Also the creation of art itself changes. AI Tools are already part of photoshop. And since november this year the first examples of realtime generative ai art with FastSDXL and LCM-Lora have been possible. Here you have the possibility to realtime paint in a dual split screen. You enter a prompt and paint left some colors in a minimalistic painter window. Then appears in the other window a rendered result.
+
+Some people will say - yeah it leads to an art process that allows anyone to create art, now. I say they are missing some soul and basics. 
+Even if I look far beyond the art creation tools - I see some many awesome possibilities for this technology.  
+
+µF0µC1What can we do ?µC0µF1
+
+Not much in my opinion. Fakers are gonna fake or well... "wire". Like I pointed out, the "no copy" issue didn't change a lot for the demoscene in the past. The steps that should be submitted at compos didn't stop faking and copies, too. But some ideas are in the room. 
+
+For Example: 
+
+On the CSDB µC2Sander/FocusµC0 opened a forum thread to maybe initate a "Graphics on C64 demoscene: Guide of Ethics – a Proposal"
+
+He wrote: (snip/snap) 
+
+
+-snip-
+
+µC4Dear fellow sceners,
+This is an attempt to get more understanding among, and for, C64 demoscene pixel artists. It’s not written to limit anyone, but a prayer for more transparency.
+Read the document here: ->Graphics on C64 demoscene: Guide of Ethics – a Proposal<-
+We tried to give define and value different processes. Which is a result of discussion, where we saw mutual grounds and felt the need to write these down.
+We will update the document periodically, when enough input has been gathered and sorted out.
+We’d really love to hear your thoughts on the subjects in the document.
+Please post them in this thread.
+
+(Personally I will not always fully comply to these guidelines myself, but I will continue to be transparant about it. However, I do agree with the values communicated in this document.)µC0
+
+-snap- 
+
+So more transparency - about it - would be nice to judge a final image. But if they didn't point it out before - why now. 
+Source: CSDB Thread "Graphics on C64 demoscene: Guide of Ethics – a Proposal": 
+
+µC7scenes.at/jp20-csdbµC0
+
+For the comments see the link above, if you have the patience for that. But Sander is hitting a point. 
+
+To extend this I add these two ideas: 
+- add competitions especially targeted at ai, be it for graphics, music and code, it might be less necessary to get your kicks with an ai graphic in a default competition. This could help to keep it transparent and reroute maybe a lot releases that else what be ended up in a regular competition. 
+- additional we could change or add art competitions into realtime competitions. How can you prove that art is human made? If you have an audience to prove it 100 %. And at a party you can control the limits someone is using. 
+
+µF0µC1What is the value and meaning of art?µC0µF1
+
+Sure - art itself is free - and it shouldn't be bound on to much regulation or taboos. And yes: technology changes, so art does too. For me Demoscene is about creativity. It is about the creativity with the use of computers and software. And this is always shown and tested mostly in competitions.
+
+With the introduction of cross-development tools, demos changed already a lot. Same goes for the graphics tools. There is a freedom of art, so more tools, more possibilites.
+
+But as a demoscener you know that limitations are also a way of freedom. 
+
+In the end the real questions are:
+
+- we have to ask ourself as an artists: why we are artists and for whom and what do we want to do something as an artist? Are copies and ai art the real answer to this?
+
+- this question is for the demoscene community itself (Yeah, I also mean the programmers): What makes you - and how are you - consuming art? What is it worth for the scene? 
+
+For myself I can answer these questions - as for the scene it will be a united effort to answer this. 

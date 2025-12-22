@@ -1,0 +1,1292 @@
+V3.0
+
+MOUSE on
+FKEYS on
+
+EVENT Blank
+SOUND play "mrt:data/music" volume 16 pan 0 period 350 loops -1 fadein 3 fadeout 3
+PICTURE "mrt:data/00"
+TABS 50 100 150 200 250
+MARGINS on 16 303
+COLOR 0 8 8 0 0 0 12 8 0 15 0 0 0 0 0
+ATTRIBUTES antialias kerning
+STYLE 0 3 4 3 6 1 1 65 9 2 13 0 0 5 0 2 4 30 3
+TEXTWIPE dump speed 1
+BOX -22 -10 648 108
+FONT AC.font 8
+COLOR 9 8 8 9 14 2 12 8 0 15 2 3 5 3 1
+ATTRIBUTES inactive antialias kerning
+STYLE 0 3 4 3 6 1 1 65 9 2 13 3 2 5 1 2 4 30 3
+TEXT 0 83 ""
+PAUSE 1
+END
+
+EVENT 00
+PICTURE "mrt:data/00"
+RESOLUTION 640 101 8 21000
+WIPE push west speed 3
+TABS 100 200 300 400 500
+MARGINS on 32 607
+FONT AC.font 8
+COLOR 9 8 8 9 14 2 12 8 0 15 2 3 5 3 1
+ATTRIBUTES underline 3D edge inactive antialias center kerning
+STYLE 0 3 4 3 6 1 1 65 9 2 13 3 2 5 1 2 4 30 3
+TEXTWIPE dump speed 1
+TEXT 319 83 ""
+END
+
+EVENT Blank.1
+PICTURE "mrt:data/00"
+WIPE push west speed 3
+TABS 50 100 150 200 250
+MARGINS on 16 303
+COLOR 0 8 8 9 14 2 12 8 0 15 2 3 5 3 1
+ATTRIBUTES antialias kerning
+STYLE 0 3 4 3 6 1 1 65 9 2 13 0 0 5 0 2 4 30 3
+TEXTWIPE dump speed 1
+BOX 2 -6 639 111
+FONT AC.font 8
+COLOR 9 8 8 9 14 2 12 8 0 15 2 3 5 3 1
+ATTRIBUTES inactive antialias kerning
+STYLE 0 3 4 3 6 1 1 65 9 2 13 3 2 5 1 2 4 30 3
+TEXT 0 83 ""
+PAUSE 2
+END
+
+EVENT "Hej, wszëdzie mnie"
+PICTURE "mrt:data/01"
+WIPE fade speed 5
+TABS 100 200 300 400 500
+MARGINS on 32 607
+FONT CasablancaPL.font 30
+COLOR 0 3 3 3 3 2 0 3 0 0 0 0 0 0 0
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 27 3 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 218 272 "Hej, wszëdzie mnie"
+ATTRIBUTES kerning
+TEXT 199 315 "peîno, a jeszcze demo"
+TEXT 247 362 "o mnie zrobili."
+TEXT 218 368 " "
+PAUSE 8
+END
+
+EVENT "Pomyôlaîam sobie, ûe wygram"
+PICTURE "mrt:data/02"
+WIPE diagonal southeast speed 5
+TABS 100 200 300 400 500
+MARGINS on 32 607
+FONT FuturaB_PL.font 17 15
+COLOR 0 2 2 2 2 0 0 2 0 0 0 0 0 0 0
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 16 1 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 202 195 "Pomyôlaîam sobie, ûe wygram"
+ATTRIBUTES kerning
+TEXT 180 216 "demo compo, ale na drodze stoi mi"
+TEXT 284 235 "jeszcze ktoô"
+PAUSE 8
+END
+
+EVENT "Piotr,sîyszaîam, ûe"
+PICTURE "mrt:data/03"
+WIPE xword speed 5
+TABS 100 200 300 400 500
+MARGINS on 32 607
+FONT CasablancaPL.font 30
+COLOR 0 2 2 2 2 0 0 2 0 0 0 0 0 0 0
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 27 3 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 30 15 ""
+FONT FrancePL.font 30
+TEXT 232 284 "Piotr,sîyszaîam, ûe"
+ATTRIBUTES kerning
+TEXT 207 309 "wystawiasz demo."
+TEXT 201 352 "Ale i tak nie wygrasz,"
+ATTRIBUTES remap kerning
+TEXT 205 374 "bo dziô zwyciëûam JA,"
+ATTRIBUTES kerning
+TEXT 205 406 "tylko zlikwidujë"
+FONT UnityPL.font 27 26
+STYLE 0 3 4 3 6 1 1 24 2 1 13 0 2 5 1 0 4 4 3
+TEXT 312 444 "MR. T"
+PAUSE 8
+END
+
+EVENT "Hej, MR. T"
+PICTURE "mrt:data/04"
+WIPE pers speed 5
+TABS 50 100 100 150 200 200 250 300 400 500
+MARGINS on 16 303
+FONT ApplePL.font 8 13
+COLOR 0 2 2 2 2 0 0 2 0 0 0 0 0 0 0
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 12 1 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 30 15 ""
+FONT GoudyB_PL.font 31 23
+STYLE 0 3 4 3 6 1 1 10 1 1 13 0 2 1 1 0 4 4 3
+TEXT 52 135 "Hej, MR. T"
+TEXT 43 166 "Britney teû "
+ATTRIBUTES kerning
+TEXT 43 191 "wystawia"
+TEXT 83 217 "demo."
+PAUSE 6
+END
+
+EVENT "Britney Spears!"
+SOUND play "mrt:data/music2" volume 18 pan 0 period 350 loops -1 fadein 2 fadeout 3
+PICTURE "mrt:data/05"
+WIPE center speed 5
+TABS 50 100 150 200 250 100 200 300 400 500
+MARGINS on 16 303
+FONT CasablancaPL.font 30
+COLOR 0 2 2 2 2 0 0 2 0 0 0 0 0 0 0
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 27 3 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 30 15 ""
+FONT ApplePL.font 8 13
+STYLE 0 3 4 3 6 1 1 12 1 1 13 0 2 5 1 0 4 4 3
+TEXT 28 40 "Britney Spears!"
+ATTRIBUTES kerning
+TEXT 29 61 "Fajdam mleko"
+TEXT 31 84 "twojej matki,"
+TEXT 23 111 "odplugaw sië od "
+FONT HoustonPL.font 25 31
+STYLE 0 3 4 3 6 1 1 27 4 1 13 0 2 5 1 0 4 4 3
+TEXT 48 158 "MR.T"
+PAUSE 7
+END
+
+EVENT "Jestem PAKEREM!!"
+SOUND play "mrt:data/paker" volume 64 pan 0 period 322 loops 1
+PICTURE "mrt:data/06"
+WIPE curtain speed 9
+TABS 50 100 100 150 200 200 250 300 400 500
+MARGINS on 16 303
+FONT CasablancaPL.font 30
+COLOR 0 2 2 2 2 0 0 2 0 0 0 0 0 0 0
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 27 3 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 30 15 ""
+TEXT 60 186 "Jestem PAKEREM!!"
+PAUSE 6
+END
+
+EVENT "Nie podskakuj"
+PICTURE "mrt:data/07"
+WIPE brick speed 5
+TABS 50 100 150 200 250 100 200 300 400 500
+MARGINS on 16 303
+FONT ApplePL.font 8 13
+COLOR 0 2 2 2 2 0 0 2 0 0 0 0 0 0 0
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 12 1 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 30 15 ""
+TEXT 189 141 "Nie podskakuj"
+TEXT 176 159 "do mnie ty"
+ATTRIBUTES kerning
+TEXT 255 162 "jebany"
+TEXT 176 176 "czarny rasisto."
+TEXT 171 203 "Jesteô Volens,"
+TEXT 237 217 "Nolens"
+TEXT 200 232 "i Kraplak"
+PAUSE 7
+END
+
+EVENT "A MASZ!!"
+SOUND play "mrt:data/ya1" volume 64 pan 0 period 322 loops 1
+PICTURE "mrt:data/08"
+WIPE nuclear speed 10
+TABS 50 100 150 200 250 100 200 300 400 500
+MARGINS on 16 303
+FONT ApplePL.font 8 13
+COLOR 0 2 2 2 2 0 0 2 0 0 0 0 0 0 0
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 12 1 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 30 15 ""
+FONT GoudyB_PL.font 31 23
+STYLE 0 3 4 3 6 1 1 20 3 1 13 0 2 5 1 0 4 4 3
+TEXT 178 38 "A MASZ!!"
+FONT ApplePL.font 8 13
+ATTRIBUTES kerning
+STYLE 0 3 4 3 6 1 1 12 1 1 13 0 2 5 1 0 4 4 3
+TEXT 168 81 "Za Volensa, Nolensa"
+TEXT 199 101 "i Kraplaka"
+PAUSE 6
+END
+
+EVENT "Twoje rutynowe"
+PICTURE "mrt:data/09"
+WIPE sun speed 5
+TABS 50 100 150 200 250 100 200 300 400 500
+MARGINS on 16 303
+FONT CasablancaPL.font 30
+COLOR 0 2 2 2 2 0 0 2 0 0 0 0 0 0 0
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 27 3 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 30 15 ""
+FONT ApplePL.font 8 13
+STYLE 0 3 4 3 6 1 1 12 1 1 13 0 2 5 1 0 4 4 3
+TEXT 142 20 "Twoje rutynowe"
+TEXT 118 35 "dziaîania nie robiâ na"
+ATTRIBUTES kerning
+TEXT 122 48 "mnie efektu. "
+TEXT 222 53 "Fajny"
+TEXT 134 68 " bigskrin, NIEEEEE??"
+PAUSE 8
+END
+
+EVENT "Nie moûe byê,"
+PICTURE "mrt:data/10"
+WIPE flipover south speed 5
+TABS 50 100 150 200 250 100 200 300 400 500
+MARGINS on 16 303
+FONT ApplePL.font 8 13
+COLOR 0 2 2 2 2 0 0 2 0 0 0 0 0 0 0
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 12 1 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 30 15 ""
+TEXT 24 46 "Nie moûe byê,"
+ATTRIBUTES kerning
+TEXT 24 61 "koorva!!"
+TEXT 24 76 ""
+TEXT 26 89 "Te rence juû"
+TEXT 19 104 "nie jedno demo"
+TEXT 30 135 "zakodowaîy"
+PAUSE 8
+END
+
+EVENT "Efekt to ja"
+PICTURE "mrt:data/11"
+WIPE charmblend north speed 5
+TABS 100 200 300 400 500
+MARGINS on 32 607
+FONT CasablancaPL.font 30
+COLOR 0 2 2 2 2 0 0 2 0 0 0 0 0 0 0
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 27 3 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 30 15 ""
+FONT HoustonPL.font 25 31
+STYLE 0 3 4 3 6 1 1 27 4 1 13 0 2 5 1 0 4 4 3
+TEXT 370 158 "Efekt to ja"
+ATTRIBUTES kerning
+TEXT 369 210 "ci pokaûe!"
+PAUSE 5
+END
+
+EVENT "Spróbuj zrobiê"
+SOUND play "mrt:data/ya2" volume 64 pan 0 period 322 loops 1
+PICTURE "mrt:data/12"
+WIPE superimpose speed 5
+TABS 100 200 300 400 500
+MARGINS on 32 607
+FONT KabanaBookPL.font 30
+COLOR 0 2 2 2 2 0 0 2 0 0 0 0 0 0 0
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 27 3 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 30 15 ""
+TEXT 342 145 "Spróbuj zrobiê"
+TEXT 363 190 "takie bloby!!"
+PAUSE 5
+END
+
+EVENT "O w mordë!"
+PICTURE "mrt:data/13"
+WIPE nuclear speed 10
+TABS 50 100 150 200 250 100 200 300 400 500
+MARGINS on 16 303
+COLOR 255 2 2 2 2 0 255 2 0 255 252 215 80 190 255
+ATTRIBUTES kerning
+STYLE 0 3 4 3 6 1 1 27 3 1 13 0 0 5 0 0 4 4 3
+TEXTWIPE dump speed 1
+ELLIPSE 10 123 221 220
+FONT CasablancaPL.font 30
+COLOR 0 2 2 2 2 0 0 2 0 0 0 0 0 0 0
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 27 3 1 13 0 2 5 1 0 4 4 3
+TEXT 30 15 ""
+FONT FuturaB_PL.font 22 20
+STYLE 0 3 4 3 6 1 1 21 1 1 13 0 2 5 1 0 4 4 3
+TEXT 54 140 "O w mordë!"
+ATTRIBUTES kerning
+TEXT 39 164 "JEDNA "
+TEXT 109 183 "RAMKA "
+PAUSE 6
+END
+
+EVENT 14
+SOUND play "mrt:data/kenny" volume 64 pan 0 period 322 loops 1
+PICTURE "mrt:data/14"
+WIPE superimpose speed 5
+TABS 63 113 163 213 263 100 200 300 400 500
+MARGINS on 29 330
+FONT CasablancaPL.font 30
+COLOR 0 2 2 2 2 0 0 2 0 0 0 0 0 0 0
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 27 3 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 30 15 ""
+PAUSE 6
+END
+
+EVENT 15
+SOUND play "mrt:data/music1" volume 16 pan 0 period 350 loops -1 fadein 3 fadeout 3
+PICTURE "mrt:data/15"
+WIPE derreck south speed 5
+TABS 100 200 300 400 500
+MARGINS on 32 607
+FONT CasablancaPL.font 30
+COLOR 0 2 2 2 2 0 0 2 0 0 0 0 0 0 0
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 27 3 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 30 15 ""
+FONT BassoonPL.font 30
+STYLE 0 3 4 3 6 1 1 28 2 1 13 0 2 5 1 0 4 4 3
+TEXT 272 356 "no to teraz mogë"
+ATTRIBUTES kerning
+TEXT 261 389 "zajâê odpowiednie"
+TEXT 310 419 "miejsce na "
+TEXT 311 451 "chartsach"
+PAUSE 7
+END
+
+EVENT Wstawaj
+PICTURE "mrt:data/16"
+WIPE checker south speed 5
+TABS 50 100 150 200 250 100 200 300 400 500
+MARGINS on 16 303
+FONT ApplePL.font 8 13
+COLOR 0 2 2 2 2 0 0 2 0 0 0 0 0 0 0
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 12 1 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 30 15 ""
+TEXT 209 93 "Wstawaj"
+FONT FuturaB_PL.font 22 20
+ATTRIBUTES kerning
+STYLE 0 3 4 3 6 1 1 21 1 1 13 0 2 5 1 0 4 4 3
+TEXT 180 133 "Prymitywie"
+TEXT 234 168 "!!!"
+PAUSE 5
+END
+
+EVENT ktoto
+PICTURE "mrt:data/sc"
+WIPE fade speed 5
+TABS 100 200 300 400 500
+MARGINS on 32 607
+COLOR 176 2 2 2 2 0 176 2 0 176 178 23 184 4 176
+ATTRIBUTES kerning
+STYLE 0 3 4 3 6 1 1 27 3 1 13 0 0 5 0 0 4 4 3
+TEXTWIPE sun speed 6
+ELLIPSE 165 18 305 76
+FONT CasablancaPL.font 30
+COLOR 0 2 2 2 2 0 0 2 0 0 0 0 0 0 0
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 27 3 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE xword speed 6
+TEXT 193 33 "Kto to?"
+TEXTWIPE windmill speed 6
+TEXTOUT 2 pause 5
+TEXTWIPE checker south speed 6
+TEXTOUT 1
+COLOR 176 2 2 2 2 0 176 2 0 176 178 23 184 4 176
+ATTRIBUTES kerning
+STYLE 0 3 4 3 6 1 1 27 3 1 13 0 0 5 0 0 4 4 3
+TEXTWIPE swiss speed 6
+ELLIPSE 8 8 174 94
+FONT FrancePL.font 45 50
+COLOR 0 2 2 2 2 0 0 2 0 0 0 0 0 0 0
+STYLE 0 3 4 3 6 1 1 43 6 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE smallblend south speed 6
+TEXT 41 28 "HGW!"
+TEXTWIPE rollon north speed 6
+TEXTOUT 4 pause 5
+TEXTWIPE backgammon north speed 6
+TEXTOUT 3
+PAUSE 13
+END
+
+EVENT Hanna
+PICTURE "mrt:data/17"
+WIPE superimpose speed 5
+TABS 50 100 150 200 250
+MARGINS on 16 303
+FONT CasablancaPL.font 30
+COLOR 0 2 2 2 2 0 0 2 0 0 0 0 0 0 0
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 27 3 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 30 15 ""
+FONT FrancePL.font 30
+TEXT 258 281 ""
+ATTRIBUTES kerning
+TEXT 207 313 ""
+TEXT 201 345 ""
+FONT CasablancaPL.font 30
+ATTRIBUTES remap kerning
+TEXT 45 26 "Hanna"
+ATTRIBUTES kerning
+TEXT 54 58 "GW??"
+FONT FuturaB_PL.font 22 20
+STYLE 0 3 4 3 6 1 1 21 1 1 13 0 2 5 1 0 4 4 3
+TEXT 37 155 "We wîasnej"
+TEXT 78 179 "osobie"
+TEXT 62 205 "kórwa!!"
+PAUSE 8
+END
+
+EVENT "Pokonamy britney."
+PICTURE "mrt:data/18"
+WIPE turn speed 5
+TABS 50 100 150 200 250
+MARGINS on 16 640
+FONT BassoonPL.font 30
+COLOR 0 2 2 2 2 0 0 2 0 0 0 0 0 0 0
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 28 2 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 30 15 ""
+FONT FrancePL.font 30
+STYLE 0 3 4 3 6 1 1 27 3 1 13 0 2 5 1 0 4 4 3
+TEXT 258 281 ""
+ATTRIBUTES kerning
+TEXT 207 313 ""
+TEXT 201 345 ""
+FONT BassoonPL.font 30
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 28 2 1 13 0 2 5 1 0 4 4 3
+TEXT 202 333 "Pokonamy britney."
+ATTRIBUTES kerning
+TEXT 323 321 ""
+TEXT 323 353 ""
+FONT BassoonPL.font 60 65
+STYLE 0 3 4 3 6 1 1 59 6 2 13 0 2 5 1 0 4 4 3
+TEXT 215 380 "Mam PLAN"
+PAUSE 6
+END
+
+EVENT Mam
+PICTURE "mrt:data/19"
+WIPE diagonal southeast speed 5
+TABS 50 100 150 200 250
+MARGINS on 16 303
+FONT ApplePL.font 8 13
+COLOR 0 2 2 2 2 0 0 2 0 0 0 0 0 0 0
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 12 1 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 30 15 ""
+FONT FrancePL.font 30
+STYLE 0 3 4 3 6 1 1 27 3 1 13 0 2 5 1 0 4 4 3
+TEXT 258 281 ""
+ATTRIBUTES kerning
+TEXT 207 313 ""
+TEXT 201 345 ""
+FONT ApplePL.font 8 13
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 12 1 1 13 0 2 5 1 0 4 4 3
+TEXT 228 162 "Mam"
+ATTRIBUTES kerning
+TEXT 201 178 "wraûenie,"
+TEXT 216 200 "ûe masz "
+TEXT 246 217 "plan"
+PAUSE 6
+END
+
+EVENT uwazaj,majâ
+PICTURE "mrt:data/sc"
+WIPE fade speed 5
+TABS 100 200 300 400 500
+MARGINS on 32 607
+COLOR 176 2 2 2 2 0 176 2 0 176 178 23 184 4 176
+ATTRIBUTES kerning
+STYLE 0 3 4 3 6 1 1 27 3 1 13 0 0 5 0 0 4 4 3
+TEXTWIPE smallblend south speed 6
+ELLIPSE 9 6 303 70
+FONT CasablancaPL.font 30
+COLOR 0 2 2 2 2 0 0 2 0 0 0 0 0 0 0
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 27 3 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE strangepush speed 6
+TEXT 48 21 "Uwaûaj! Majâ plan!"
+TEXTWIPE diamond speed 6
+TEXTOUT 2 pause 9
+TEXTWIPE escalator3 speed 6
+TEXTOUT 1
+FONT FrancePL.font 30
+TEXTWIPE dump speed 1
+TEXT 258 281 ""
+ATTRIBUTES kerning
+TEXT 207 313 ""
+TEXT 201 345 ""
+PAUSE 6
+END
+
+EVENT "Gdzie teraz"
+PICTURE "mrt:data/20"
+WIPE fade speed 5
+TABS 50 100 150 200 250
+MARGINS on 16 303
+FONT ApplePL.font 8 13
+COLOR 0 2 2 2 2 0 0 2 0 0 0 0 0 0 0
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 12 1 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 30 15 ""
+FONT FrancePL.font 30
+STYLE 0 3 4 3 6 1 1 27 3 1 13 0 2 5 1 0 4 4 3
+TEXT 258 281 ""
+ATTRIBUTES kerning
+TEXT 207 313 ""
+TEXT 201 345 ""
+FONT FuturaB_PL.font 22 20
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 21 1 1 13 0 2 5 1 0 4 4 3
+TEXT 24 163 "Gdzie teraz"
+ATTRIBUTES kerning
+TEXT 24 187 "jest Britney?"
+FONT ApplePL.font 8 13
+STYLE 0 3 4 3 6 1 1 12 1 1 13 0 2 5 1 0 4 4 3
+TEXT 197 160 "Zamieszki przed"
+TEXT 191 174 "premierâ"
+TEXT 258 174 "nowego"
+TEXT 197 194 "dema Britney"
+TEXT 197 209 "w Szczecinie"
+PAUSE 9
+END
+
+EVENT "O Boûe!! Tam jest"
+SOUND play "mrt:data/music3" volume 15 pan 0 period 350 loops -1 fadein 2 fadeout 2
+PICTURE "mrt:data/20"
+WIPE corner southeast speed 10
+TABS 50 100 150 200 250
+MARGINS on 16 303
+COLOR 255 2 2 2 2 0 255 2 0 255 241 217 144 202 255
+ATTRIBUTES kerning
+STYLE 0 3 4 3 6 1 1 27 3 1 13 0 0 5 0 0 4 4 3
+TEXTWIPE dump speed 1
+ELLIPSE 5 139 326 259
+FONT BrochurePL.font 30
+COLOR 0 2 2 2 2 0 0 2 0 0 0 0 0 0 0
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 28 2 1 13 0 2 5 1 0 4 4 3
+TEXT 66 160 "O Boûe!! Tam jest"
+FONT FrancePL.font 30
+STYLE 0 3 4 3 6 1 1 27 3 1 13 0 2 5 1 0 4 4 3
+TEXT 258 281 "Paty"
+ATTRIBUTES kerning
+TEXT 207 313 "T"
+TEXT 201 345 ""
+FONT BrochurePL.font 30
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 28 2 1 13 0 2 5 1 0 4 4 3
+TEXT 98 201 "Party Place!!"
+PAUSE 7
+END
+
+EVENT Myôlë,ûe
+PICTURE "mrt:data/06"
+WIPE newscrollin north speed 5
+TABS 50 100 150 200 250
+MARGINS on 16 303
+FONT CasablancaPL.font 30
+COLOR 0 2 2 2 2 0 0 2 0 0 0 0 0 0 0
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 27 3 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 30 15 ""
+FONT FrancePL.font 30
+TEXT 258 281 ""
+ATTRIBUTES kerning
+TEXT 207 313 ""
+TEXT 201 345 ""
+FONT FuturaB_PL.font 22 20
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 21 1 1 13 0 2 5 1 0 4 4 3
+TEXT 110 165 "Myôlë,ûe"
+ATTRIBUTES kerning
+TEXT 51 188 "zdâûymy przed"
+TEXT 111 216 "DEMO COMPO"
+PAUSE 7
+END
+
+EVENT "Myôlaîam, ûe"
+PICTURE "mrt:data/22"
+WIPE fade speed 5
+TABS 50 100 150 200 250
+MARGINS on 16 303
+FONT CasablancaPL.font 30
+COLOR 0 2 2 2 2 0 0 2 0 0 0 0 0 0 0
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 27 3 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 30 15 ""
+FONT FrancePL.font 30
+TEXT 258 281 ""
+ATTRIBUTES kerning
+TEXT 207 313 ""
+TEXT 201 345 ""
+FONT FuturaB_PL.font 22 20
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 21 1 1 13 0 2 5 1 0 4 4 3
+TEXT 136 135 "Myôlaîam, ûe"
+ATTRIBUTES kerning
+TEXT 134 161 "bëdzie wiëcej "
+TEXT 148 184 "Hiszpanów"
+TEXT 142 209 "na party..."
+PAUSE 9
+END
+
+EVENT "Mam cië"
+PICTURE "mrt:data/23"
+WIPE rollodex north speed 10
+TABS 50 100 150 200 250
+MARGINS on 16 303
+FONT CasablancaPL.font 30
+COLOR 0 2 2 2 2 0 0 2 0 0 0 0 0 0 0
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 27 3 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 30 15 ""
+FONT FrancePL.font 30
+TEXT 258 281 ""
+ATTRIBUTES kerning
+TEXT 207 313 ""
+TEXT 201 345 ""
+FONT ApplePL.font 8 13
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 12 1 1 13 0 2 5 1 0 4 4 3
+TEXT 220 31 "Mam cië"
+FONT FuturaB_PL.font 22 20
+ATTRIBUTES kerning
+STYLE 0 3 4 3 6 1 1 21 1 1 13 0 2 5 1 0 4 4 3
+TEXT 207 47 "koorva"
+FONT ApplePL.font 8 13
+STYLE 0 3 4 3 6 1 1 12 1 1 13 0 2 5 1 0 4 4 3
+TEXT 155 140 "O miîo was widzeê."
+TEXT 142 166 "Gorâco zapraszam do"
+TEXT 139 182 "zîoûenia pocaîunku na"
+TEXT 136 198 "mniej szlachetnej czësci"
+TEXT 173 217 "mego ciaîa."
+PAUSE 9
+END
+
+EVENT Rumia
+SOUND play "mrt:data/kia" volume 64 pan 0 period 322 loops 1
+PICTURE "mrt:data/24"
+WIPE superimpose speed 10
+TABS 50 100 150 200 250
+MARGINS on 16 303
+FONT ApplePL.font 8 13
+COLOR 0 2 2 2 2 0 0 2 0 0 0 0 0 0 0
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 12 1 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 30 15 ""
+FONT FrancePL.font 30
+STYLE 0 3 4 3 6 1 1 27 3 1 13 0 2 5 1 0 4 4 3
+TEXT 258 281 ""
+ATTRIBUTES kerning
+TEXT 207 313 ""
+TEXT 201 345 ""
+FONT FuturaB_PL.font 22 20
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 21 1 1 13 0 2 5 1 0 4 4 3
+TEXT 205 25 "Rumia"
+FONT ApplePL.font 8 13
+ATTRIBUTES kerning
+STYLE 0 3 4 3 6 1 1 12 1 1 13 0 2 5 1 0 4 4 3
+TEXT 181 48 "Elektryczne"
+TEXT 249 64 "techno"
+FONT FuturaB_PL.font 22 20
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 21 1 1 13 0 2 5 1 0 4 4 3
+TEXT 211 83 "POWER"
+PAUSE 6
+END
+
+EVENT "Ta muzyka"
+PICTURE "mrt:data/25"
+WIPE fade speed 5
+TABS 50 100 150 200 250
+MARGINS on 16 303
+FONT ApplePL.font 8 13
+COLOR 0 2 2 2 2 0 0 2 0 0 0 0 0 0 0
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 12 1 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 30 15 ""
+FONT FrancePL.font 30
+STYLE 0 3 4 3 6 1 1 27 3 1 13 0 2 5 1 0 4 4 3
+TEXT 258 281 ""
+ATTRIBUTES kerning
+TEXT 207 313 ""
+TEXT 201 345 ""
+FONT ApplePL.font 8 13
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 12 1 1 13 0 2 5 1 0 4 4 3
+TEXT 182 170 "Ta muzyka"
+ATTRIBUTES kerning
+TEXT 219 187 "nie robi"
+TEXT 191 206 "na mnie"
+TEXT 197 224 "wraûenia."
+PAUSE 8
+END
+
+EVENT 24
+SOUND play "mrt:script" volume 64 pan 0 period 259 loops 1 fadeout 3
+PICTURE "mrt:data/26"
+WIPE superimpose speed 5
+TABS 50 100 150 200 250
+MARGINS on 16 303
+FONT CasablancaPL.font 30
+COLOR 0 2 2 2 2 0 0 2 0 0 0 0 0 0 0
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 27 3 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 30 15 ""
+FONT FrancePL.font 30
+TEXT 258 281 ""
+ATTRIBUTES kerning
+TEXT 207 313 ""
+TEXT 201 345 ""
+PAUSE 4
+END
+
+EVENT "O Jezusie!!!"
+PICTURE "mrt:data/27"
+WIPE fadetowhite speed 10
+TABS 50 100 150 200 250
+MARGINS on 16 303
+FONT CasablancaPL.font 30
+COLOR 0 2 2 2 2 0 0 2 0 0 0 0 0 0 0
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 27 3 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 30 15 ""
+FONT FrancePL.font 30
+TEXT 258 281 ""
+ATTRIBUTES kerning
+TEXT 207 313 ""
+TEXT 201 345 ""
+FONT BrooklynPL.font 30
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 26 4 1 13 0 2 5 1 0 4 4 3
+TEXT 84 21 "O Jezusie!!!"
+PAUSE 4
+END
+
+EVENT "O Boûe!"
+PICTURE "mrt:data/28"
+WIPE fade speed 5
+TABS 50 100 150 200 250
+MARGINS on 16 303
+FONT ApplePL.font 8 13
+COLOR 0 2 2 2 2 0 0 2 0 0 0 0 0 0 0
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 12 1 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 30 15 ""
+FONT FrancePL.font 30
+STYLE 0 3 4 3 6 1 1 27 3 1 13 0 2 5 1 0 4 4 3
+TEXT 258 281 ""
+ATTRIBUTES kerning
+TEXT 207 313 ""
+TEXT 201 345 ""
+FONT ApplePL.font 8 13
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 12 1 1 13 0 2 5 1 0 4 4 3
+TEXT 45 36 "O Boûe!"
+ATTRIBUTES kerning
+TEXT 19 56 "To akwizytorka"
+ATTRIBUTES remap kerning
+TEXT 14 71 "OFE \"\SCENA\"\"
+TEXT 17 92 "To to babsko,co"
+ATTRIBUTES kerning
+TEXT 22 104 "fejkuje votki"
+TEXT 25 129 "dla Lamersów"
+PAUSE 9
+END
+
+EVENT "Co ty mówisz,"
+PICTURE "mrt:data/29"
+WIPE fade speed 5
+TABS 100 200 300 400 500
+MARGINS on 32 607
+FONT CasablancaPL.font 30
+COLOR 0 2 2 2 2 0 0 2 0 0 0 0 0 0 0
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 27 3 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 30 15 ""
+FONT FrancePL.font 30
+TEXT 258 281 ""
+ATTRIBUTES kerning
+TEXT 207 313 ""
+TEXT 201 345 ""
+FONT GatineauPL.font 45
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 38 6 1 13 0 2 5 1 0 4 4 3
+TEXT 194 254 "Co ty mówisz,"
+ATTRIBUTES kerning
+TEXT 165 293 "nasze dema sâ"
+TEXT 211 344 "ômieszne i sië"
+TEXT 218 392 "podobajâ!!"
+PAUSE 7
+END
+
+EVENT Ojojojoj!!
+PICTURE "mrt:data/30"
+WIPE checker south speed 5
+TABS 100 200 300 400 500
+MARGINS on 32 607
+FONT CasablancaPL.font 30
+COLOR 0 2 2 2 2 0 0 2 0 0 0 0 0 0 0
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 27 3 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 30 15 ""
+FONT FrancePL.font 30
+TEXT 258 281 ""
+ATTRIBUTES kerning
+TEXT 207 313 ""
+TEXT 201 345 ""
+FONT CasablancaPL.font 45
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 39 6 1 13 0 2 5 1 0 4 4 3
+TEXT 411 134 "Ojojojoj!!"
+FONT FrancePL.font 30
+STYLE 0 3 4 3 6 1 1 27 3 1 13 0 2 5 1 0 4 4 3
+TEXT 73 292 "Ja ci pokaûe"
+ATTRIBUTES kerning
+TEXT 59 327 "gdzie te dema"
+TEXT 66 367 "sâ ômieszne!!"
+PAUSE 7
+END
+
+EVENT "O cie Florek!!"
+PICTURE "mrt:data/31"
+WIPE sun speed 5
+TABS 100 200 300 400 500
+MARGINS on 32 607
+FONT CasablancaPL.font 30
+COLOR 0 2 2 2 2 0 0 2 0 0 0 0 0 0 0
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 27 3 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 30 15 ""
+FONT FrancePL.font 30
+ATTRIBUTES bold remap kerning
+TEXT 258 281 ""
+ATTRIBUTES bold kerning
+TEXT 207 313 ""
+TEXT 201 345 ""
+FONT KabanaBookPL.font 30
+ATTRIBUTES bold remap kerning
+TEXT 92 203 "O cie Florek!!"
+TEXT 58 237 "Tutaj nawet UKF"
+ATTRIBUTES bold kerning
+TEXT 36 269 " zawraca!!"
+TEXT 93 298 "Ale moûe kiedyô"
+TEXT 49 328 "zrobiâ party na tej"
+TEXT 114 364 "satelicie."
+PAUSE 9
+END
+
+EVENT "Ale sië "
+SOUND play "mrt:data/musicend" volume 12 pan 0 period 350 loops -1 fadein 2 fadeout 2
+PICTURE "mrt:data/32"
+WIPE fade speed 5
+TABS 50 100 150 200 250
+MARGINS on 16 303
+FONT ApplePL.font 8 13
+COLOR 0 2 2 2 2 0 0 2 0 0 0 0 0 0 0
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 12 1 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 30 15 ""
+FONT FrancePL.font 30
+STYLE 0 3 4 3 6 1 1 27 3 1 13 0 2 5 1 0 4 4 3
+TEXT 258 281 ""
+ATTRIBUTES kerning
+TEXT 207 313 ""
+TEXT 201 345 ""
+FONT ApplePL.font 8 13
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 12 1 1 13 0 2 5 1 0 4 4 3
+TEXT 52 40 "Ale sië "
+ATTRIBUTES kerning
+TEXT 26 61 "napracowaliômy"
+TEXT 23 89 "nad wygraniem "
+TEXT 38 113 "tego compo"
+PAUSE 6
+END
+
+EVENT "Spoko T."
+PICTURE "mrt:data/33"
+WIPE center speed 5
+TABS 50 100 150 200 250
+MARGINS on 16 303
+FONT CasablancaPL.font 30
+COLOR 0 2 2 2 2 0 0 2 0 0 0 0 0 0 0
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 27 3 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 30 15 ""
+FONT FrancePL.font 30
+TEXT 258 281 ""
+ATTRIBUTES kerning
+TEXT 207 313 ""
+TEXT 201 345 ""
+FONT FuturaB_PL.font 22 20
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 21 1 1 13 0 2 5 1 0 4 4 3
+TEXT 201 150 "Spoko T."
+FONT ApplePL.font 8 13
+ATTRIBUTES kerning
+STYLE 0 3 4 3 6 1 1 12 1 1 13 0 2 5 1 0 4 4 3
+TEXT 189 196 "Idú sië napij"
+TEXT 220 215 "mleka"
+PAUSE 6
+END
+
+EVENT 34
+PICTURE "mrt:data/34"
+WIPE hugedots speed 1
+TABS 50 100 150 200 250
+MARGINS on 16 303
+FONT CasablancaPL.font 30
+COLOR 0 2 2 2 2 0 0 2 0 0 0 0 0 0 0
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 27 3 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 30 15 ""
+FONT FrancePL.font 30
+TEXT 258 281 ""
+ATTRIBUTES kerning
+TEXT 207 313 ""
+TEXT 201 345 ""
+PAUSE 4
+END
+
+EVENT Wpierdalaê
+PICTURE "mrt:data/35"
+WIPE superimpose speed 5
+TABS 50 100 150 200 250
+MARGINS on 16 303
+FONT ApplePL.font 8 13
+COLOR 0 2 2 2 2 0 0 2 0 0 0 0 0 0 0
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 12 1 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 30 15 ""
+FONT FrancePL.font 30
+STYLE 0 3 4 3 6 1 1 27 3 1 13 0 2 5 1 0 4 4 3
+TEXT 258 281 ""
+ATTRIBUTES kerning
+TEXT 207 313 ""
+TEXT 201 345 ""
+FONT ApplePL.font 8 13
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 12 1 1 13 0 2 5 1 0 4 4 3
+TEXT 30 48 "Wpierdalaê"
+ATTRIBUTES kerning
+TEXT 45 63 "mleko"
+TEXT 29 96 "GÓWNIARZE!!"
+PAUSE 6
+END
+
+EVENT Chamstwo
+PICTURE "mrt:data/sc"
+WIPE fade speed 5
+TABS 100 200 300 400 500
+MARGINS on 32 607
+COLOR 176 2 2 2 2 0 176 2 0 176 178 23 184 4 176
+ATTRIBUTES kerning
+STYLE 0 3 4 3 6 1 1 27 3 1 13 0 0 5 0 0 4 4 3
+TEXTWIPE swiss speed 6
+ELLIPSE -5 3 191 86
+FONT ApplePL.font 8 13
+COLOR 0 2 2 2 2 0 0 2 0 0 0 0 0 0 0
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 12 1 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE escalator3 speed 6
+TEXT 29 23 "Straszne chamstwo "
+ATTRIBUTES kerning
+TEXTWIPE link speed 1
+TEXT 33 39 "sië na to party "
+TEXT 44 57 "zjechaîo... "
+TEXTWIPE diamond speed 6
+TEXTOUT 2 pause 5
+TEXTWIPE link speed 1
+TEXTOUT 4
+TEXTOUT 3
+TEXTWIPE funkis speed 6
+TEXTOUT 1
+COLOR 176 2 2 2 2 0 176 2 0 176 178 23 184 4 176
+STYLE 0 3 4 3 6 1 1 27 3 1 13 0 0 5 0 0 4 4 3
+TEXTWIPE checker south speed 6
+ELLIPSE 133 9 304 85
+COLOR 0 2 2 2 2 0 0 2 0 0 0 0 0 0 0
+STYLE 0 3 4 3 6 1 1 12 1 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE xword speed 6
+TEXT 166 37 "Nooo. A najwiëcej"
+TEXTWIPE link speed 1
+TEXT 192 55 " z Czech!"
+TEXTWIPE escalator3 speed 6
+TEXTOUT 6 pause 5
+TEXTWIPE link speed 1
+TEXTOUT 7
+TEXTWIPE spiral speed 6
+TEXTOUT 5
+PAUSE 12
+END
+
+EVENT "THE END"
+BLANK 640 512 8 lace hires 0
+WIPE fade speed 5
+TABS 100 200 300 400 500
+MARGINS on 32 607
+PALETTE 010101 100e10 171618 172321 261508 250f1d 252324 351704 340e1c 342325 281732 172833 292732 392a34 373939 2a2251 38464c 4b1b05 480b24 421e23 521f23 422a26 522b26 4e1331 422733 522634 42353b 523439 4d344b 534437 42484c 524d51 575a59 6b2005 690a25 063
+FONT BassoonPL.font 60
+COLOR 0 2 2 2 2 2 0 2 0 0 0 0 0 0 0
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 55 5 2 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 30 15 ""
+FONT FrancePL.font 30
+ATTRIBUTES remap center kerning
+STYLE 0 3 4 3 6 1 1 27 3 1 13 0 2 5 1 0 4 4 3
+TEXT 319 375 ""
+ATTRIBUTES center kerning
+TEXT 319 407 ""
+ATTRIBUTES kerning
+TEXT 201 345 ""
+FONT BassoonPL.font 125
+COLOR 255 2 2 2 2 0 255 2 0 255 234 204 66 199 255
+ATTRIBUTES remap center kerning
+STYLE 0 3 4 3 6 1 1 111 14 2 13 0 2 5 1 0 4 4 3
+TEXT 152 178 "THE END"
+FONT BrooklynPL.font 30
+STYLE 0 3 4 3 6 1 1 26 4 1 13 0 2 5 1 0 4 4 3
+TEXT 230 356 "i dziëkujemy "
+ATTRIBUTES center kerning
+TEXT 223 388 "za gîosowanie "
+TEXT 271 420 "na nas."
+PAUSE 6
+END
+
+EVENT "Pieprzone "
+PICTURE "mrt:data/37"
+WIPE fade speed 5
+TABS 100 200 300 400 500
+MARGINS on 32 607
+FONT ApplePL.font 8 13
+COLOR 0 2 2 2 2 0 0 2 0 0 0 0 0 0 0
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 12 1 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 30 15 ""
+FONT FrancePL.font 30
+STYLE 0 3 4 3 6 1 1 27 3 1 13 0 2 5 1 0 4 4 3
+TEXT 258 281 ""
+ATTRIBUTES kerning
+TEXT 207 313 ""
+TEXT 201 345 ""
+FONT FuturaB_PL.font 22 20
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 21 1 1 13 0 2 5 1 0 4 4 3
+TEXT 169 64 "Pieprzone "
+ATTRIBUTES kerning
+TEXT 172 102 "nagrody"
+TEXT 172 144 "sâ dobre!!"
+ATTRIBUTES remap kerning
+TEXT 177 43 ""
+PAUSE 7
+END
+
+EVENT "JUÛ WKRÓTCE"
+BLANK 640 512 8 lace hires 0
+WIPE fade speed 5
+TABS 100 200 300 400 500
+MARGINS on 32 607
+PALETTE 010101 100e10 171618 172321 261508 250f1d 252324 351704 340e1c 342325 281732 172833 292732 392a34 373939 2a2251 38464c 4b1b05 480b24 421e23 521f23 422a26 522b26 4e1331 422733 522634 42353b 523439 4d344b 534437 42484c 524d51 575a59 6b2005 690a25 063
+FONT CasablancaPL.font 30
+COLOR 0 2 2 2 2 2 0 2 0 0 0 0 0 0 0
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 27 3 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 30 15 ""
+FONT FrancePL.font 30
+TEXT 258 281 ""
+ATTRIBUTES kerning
+TEXT 207 313 ""
+TEXT 201 345 ""
+FONT CasablancaPL.font 75
+COLOR 255 2 2 2 2 0 255 2 0 255 234 204 66 199 255
+ATTRIBUTES remap center kerning
+STYLE 0 3 4 3 6 1 1 64 9 2 13 0 2 5 1 0 4 4 3
+TEXT 69 171 "JUÛ WKRÓTCE"
+ATTRIBUTES center kerning
+TEXT 298 248 "..."
+PAUSE 4
+END
+
+EVENT 36
+PICTURE "mrt:data/36"
+RESOLUTION 640 103 8 21000
+WIPE fade speed 5
+TABS 100 200 300 400 500
+MARGINS on 32 607
+COLOR 0 2 2 2 2 0 0 2 0 0 0 0 0 0 0
+ATTRIBUTES kerning
+STYLE 0 3 4 3 6 1 1 27 3 1 13 0 0 5 0 0 4 4 3
+TEXTWIPE dump speed 1
+BOX -22 -64 657 124
+FONT CasablancaPL.font 30
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 27 3 1 13 0 2 5 1 0 4 4 3
+TEXT 30 15 ""
+FONT FrancePL.font 30
+TEXT 258 281 ""
+ATTRIBUTES kerning
+TEXT 207 313 ""
+TEXT 201 345 ""
+END
+
+EVENT 36.1
+PICTURE "mrt:data/36"
+RESOLUTION 640 103 8 21000
+WIPE push west speed 3
+TABS 100 200 300 400 500
+MARGINS on 32 607
+FONT CasablancaPL.font 30
+COLOR 0 2 2 2 2 0 0 2 0 0 0 0 0 0 0
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 27 3 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 30 15 ""
+FONT FrancePL.font 30
+TEXT 258 281 ""
+ATTRIBUTES kerning
+TEXT 207 313 ""
+TEXT 201 345 ""
+END
+
+EVENT 36.2
+PICTURE "mrt:data/36"
+RESOLUTION 640 103 8 21000
+WIPE push west speed 3
+TABS 100 200 300 400 500
+MARGINS on 32 607
+COLOR 0 2 2 2 2 0 0 2 0 0 0 0 0 0 0
+ATTRIBUTES kerning
+STYLE 0 3 4 3 6 1 1 27 3 1 13 0 0 5 0 0 4 4 3
+TEXTWIPE dump speed 1
+BOX -6 -83 370 135
+FONT CasablancaPL.font 30
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 27 3 1 13 0 2 5 1 0 4 4 3
+TEXT 30 15 ""
+FONT FrancePL.font 30
+TEXT 258 281 ""
+ATTRIBUTES kerning
+TEXT 207 313 ""
+TEXT 201 345 ""
+END
+
+EVENT "hej scully"
+PICTURE "mrt:data/sc"
+WIPE fade speed 5
+TABS 100 200 300 400 500
+MARGINS on 32 607
+COLOR 176 2 2 2 2 0 176 2 0 176 178 23 184 4 176
+ATTRIBUTES kerning
+STYLE 0 3 4 3 6 1 1 27 3 1 13 0 0 5 0 0 4 4 3
+TEXTWIPE sun speed 6
+ELLIPSE 139 13 309 89
+FONT FuturaB_PL.font 22 20
+COLOR 0 2 2 2 2 0 0 2 0 0 0 0 0 0 0
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 21 1 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE diagonal southeast speed 6
+TEXT 199 21 "Hej! "
+FONT ApplePL.font 8 13
+ATTRIBUTES kerning
+STYLE 0 3 4 3 6 1 1 12 1 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE link speed 1
+TEXT 146 50 "To demo jest zrobione"
+TEXT 182 64 " na Skali!!"
+TEXTWIPE pers speed 6
+TEXTOUT 2 pause 6
+TEXTWIPE link speed 1
+TEXTOUT 3
+TEXTOUT 4
+TEXTWIPE hugedots speed 1
+TEXTOUT 1
+FONT FrancePL.font 30
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 27 3 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 258 281 ""
+ATTRIBUTES kerning
+TEXT 207 313 ""
+TEXT 201 345 ""
+FONT FuturaB_PL.font 22 20
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 21 1 1 13 0 2 5 1 0 4 4 3
+TEXT 220 59 ""
+PAUSE 10
+END
+
+EVENT co?
+SOUND stop fade 20
+PICTURE "mrt:data/scul"
+WIPE xword speed 5
+TABS 100 200 300 400 500
+MARGINS on 32 607
+FONT CasablancaPL.font 30
+COLOR 0 2 2 2 2 0 0 2 0 0 0 0 0 0 0
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 27 3 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 30 15 ""
+FONT FrancePL.font 30
+TEXT 258 281 ""
+ATTRIBUTES kerning
+TEXT 207 313 ""
+TEXT 201 345 ""
+PAUSE 10
+END
+
+EVENT Blank.2
+BLANK 640 512 4 lace hires 0
+WIPE fade speed 5
+TABS 100 200 300 400 500
+MARGINS on 32 607
+PALETTE 010101 100e10 171618 172321 261508 250f1d 252324 351704 340e1c 342325 281732 172833 292732 392a34 373939 2a2251 38464c 4b1b05 480b24 421e23 521f23 422a26 522b26 4e1331 422733 522634 42353b 523439 4d344b 534437 42484c 524d51 575a59 6b2005 690a25 063
+FONT CasablancaPL.font 30
+COLOR 0 2 2 2 2 2 0 2 0 0 0 0 0 0 0
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 27 3 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 30 15 ""
+FONT FrancePL.font 30
+TEXT 258 281 ""
+ATTRIBUTES kerning
+TEXT 207 313 ""
+TEXT 201 345 ""
+PAUSE -1
+END

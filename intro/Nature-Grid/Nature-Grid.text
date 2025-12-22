@@ -1,0 +1,47 @@
+
+              · ._____ ._____.______.__ __._____._____  ·
+              : |:·   \|  ·  |_    _)  |·:|:·.  \  ___) :
+              ¦ |  ¡   )  ¡  | |  | |  |  |     /  _)_  ¦
+              | |  |__/|:.|__| |:.| |  !  |  |__)__ .:| |
+              | `--'   `--'    `--' `-----'--'     `--' |
+              `-- presents -----------------------------'
+              ¡             "  G  r  i  d  "            ¡
+              `-----------------------------------------'
+                 a 40k Intro for Mekka/Symposium 1999
+
+Credits
+-------
+ Pezac ............ effects, texture engine, textures, design
+ Yomat ............ 3d engine, c2p's, maths, modelling, textures
+ Pipe ............. audio engine, music, modelling
+ C-Frog ........... font
+ Jarno Paananen ... replayer
+
+Features
+--------
+- 3d scene
+- HAM8 effects
+- 100% calculated samples including the drums. The bassline generator
+  is our own and not based on that tb.c like every other engine.
+- 100% calculated textures
+- No FPU required
+
+Requirements
+------------
+- AGA :)
+- 68020
+- 8 megs of fastmem
+
+Info
+----
+- Tested on 030/50 and 060/50, worked fine
+- This intro requires a big chunk of chipmem in one piece, so you
+  probably have to run it on a freshly rebooted system or in worst
+  case (i.e. a fat WB) boot with no startup-sequence
+
+Contact
+-------
+- Pezac, pezac@c64.org
+- Pipe, pipe@c64.org
+- C-Frog, cfrog_nat@hotmail.com
+- Nature's homepage, http://move.to/nature

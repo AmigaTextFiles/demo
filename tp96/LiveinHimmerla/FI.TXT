@@ -1,0 +1,81 @@
+
+
+
+
+
+    #   #]L J[#""'   ][]#.][   ][ ][# #[ #[#L J#]F""]F"#][  .##.]#.][#""#
+    #   # 7#F #""    ][]F#J[   ]F"7[# ##J#[#7#F#]F"']F"#][  J##L]F#J[# .#
+    """'"  "  """'   `'`' "'   `' `'" "`"`'"`"'"`"""`' "`""""  "`' "'"""'
+
+
+		("Live In Himmerland" - a 36 Kb intro for TP'96)
+
+				  BY
+
+
+
+                   ___________ _____ __ __ ______
+                  f   __/     7     7  Y  7     /
+                  |  __7|  7  |  7--|  |  |  ¯¯¯7
+                  |  |  |     |     |     |¯¯¯  |
+                  `--'  `-----'-----'-----'-----'=A=
+                  ____  ______________ ________ __
+                 f    \f     /     /  7  ___/  `  7
+                 |  7  7  ¯¯7l  ¯¯¯7  |  \_ 7  \  |
+                 |     |  ¯¯¯7¯¯¯  |  |     |  |  |
+                 `-----'-----'-----'--'-----'--l__j
+
+
+
+Credits:
+
+- 68030, Music and font by Kollaps / Focus Design.
+- Prorunner-replay by Cosmos / Sanity
+- Focus Design ascii-logo (above) by Amadeus
+
+Software used:
+
+- Asmone V1.29 (neverending thanks to Promax, Deftronic and TFA for making it!)
+- Protracker vNewest??, Hearttracker (doesn't like 030...)
+- Deluxepaint III 
+- Iffmaster (by Arcane)
+- StoneCracker (by Mr. Spiv)
+
+Greetings:
+
+- Watch the demo and notice!
+
+Detailed info:
+
+- Firesmooth-text:
+	320x102 pixels in 7 planes.  Realtime smooth and fade.
+- Iceberg voxel:
+	176x204 pixels. 2 colors in superhires (simultan 16 colors)
+	First drawn in fastram. Then copied to chip and then filled by
+	the BLITTER! (Og det er som bekendt GRATIS!!)
+- Fång (with Zbuffer):
+	352x204 pixels in 7 planes!!. Features waving and moveable lightsource.
+	(Miracles(by Stellar)-bug included....(notice the first movement....))
+- Fång,texture and ENV + Zrot:
+	128x128 pixels in 8 planes.. Actually it runs in 2 frames at 50 Mhz 
+	without music, but now 3 frames....  (^$^#&&&@!)
+	It features Phong,Texturemap and Env (and Z-rotated background)
+- Spacecut transformer CPU filled vector:
+	Filled vectors seems to be old and out now, taken over by texturemap-
+	ping as standard.
+	But notice all the features in this routine - and the speed!!!
+	Everything is made by CPU and drawn in 3 bitplanes.
+	It contains multi objects ("vektorlandskab"), transforming and
+	the still not-so-easy-to-do SPACECUT.
+- The-End Bumpmap:
+	320x128 pixels in 7 planes. Normal bumpmap. (I guess...)
+
+
+All algorithms and maths were solved by me, exept the fake-light princip, 
+which I got explained by Fresh Prince/Rebels. Thank you!
+
+The module "Spis chips til.2" is dedicated to the people who appreciates
+my chip-modules. You surprised me really!!! I hope you also like this one!
+
+
+		Kollaps / Focus Design 25-12-96. Hej!

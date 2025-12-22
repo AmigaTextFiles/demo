@@ -1,0 +1,47 @@
+==============================================
+New time preferences replacement V40.1ß4
+Author : amigafan@cityweb.de (Thomas Pucyk)
+Requires: OS 3.0+ (v39), 020+
+==============================================
+
+This litte program is indended to replace the old and badlooking 
+time preferences of Workbench 3.0+. This clone really deserves 
+the version number 39 and up. It includes an handcrafted 
+font-sensitive Gadtools GUI (i hate MUI) and backfill- patterns. 
+BUT! It is far from being complete. I am too lazy this year and my 
+exams are coming towards me so if you like this litte proggie and 
+want it to be completed, email me in mass and motivate me to 
+complete it. I have gadget help and perhaps a analog clock in the 
+window in mind. Anyway this is what the WB3.1 programs should 
+all look like. (Hope the guys of Amiga Inc. will do it better)
+
+This FIFTH upload is now FULLY localized. (Till now only a 
+german catalog included) If anyone wants to do a catalog file, the 
+descriptor file is included. (But you have to define the shortcuts for 
+the GUI by hand till now, I will probably automate this one of the 
+next releases). Please email the finished catalog to me so I can 
+add it to the archive.
+
+It has NINE supported tooltypes.
+1. PUBSCREEN:  should be self-explanatory (e.g. PUBSCREEN = 
+Workbench)
+2. PATTERN : the pattern to load for backfill (e.g. PATTERN = 
+Patternname)
+3. AMPM : chooses if a 24h or 12h clock to be displayed (e.g. 
+AMPM = TRUE)
+4. MONTHSTYLE: chooses if the month in the textgadget has to 
+be written by name or by number (MONTHSTYLE=NAME or 
+MONTHSTYLE = NUMBER)
+5. SIZEGADGET: chooses if a sizegadget should be used (e.g. 
+SIZEGADGET = TRUE) to give the SIZEGADGET-tooltype a 
+sense you can now choose the window dimensions through 
+tooltypes.
+6. WINLEFT : x-position of window (defaults to 0)
+7. WINTOP : y-position of window
+8. WINWIDTH  : width of window (defaults to 350)
+9. WINHEIGHT : height of window (defaults to 250)
+
+BUGS:
+none, so far. (Perhaps the unfinished GUI IMHO:). This software is 
+BETA and should be considered being not finished. Usage at own 
+risk.

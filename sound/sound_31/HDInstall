@@ -1,0 +1,145 @@
+;$VER: Sound #3 The Trance Issue HD Installation script V1.30 (21.09.95)
+;
+; This script is a hand rework of an original script created with
+; Script Maker V2.0, but changed for own needs...
+;
+
+(complete 0)
+(set @default-dest "Work:")
+
+; Set up various Texts
+
+(
+	set #Intro-Txt
+	(
+		cat	"\n\nWelcome to \n"
+				"Sound #3 The Trance Issue\n"
+				"Hard Disk Install Script\n\n\n\n"
+	)
+)
+
+(
+	set #Warning-Txt
+	(
+		cat	"Warning !\n\n\n"
+				"Sound #3 The Trance Issue requires 1.5 MB free on your disk \n\n"
+				"Think of it before destroying your disk...\n\n"
+	)
+)
+
+(
+	set #Path-Txt
+	(
+		cat	"Select the target directory. A directory Sound3 will "
+				"be created there."
+	)
+)
+
+(
+	set #Path-Help
+	(
+		cat	"\nThis section lets you choose the "
+				"target directory to install Sound #3 The Trance Issue. \n\n"
+				"A directory Sound3 will be created there.\n\n"
+				"Default is Work:\n\n\n"
+				@askdir-help
+	)
+)
+
+
+; The actual Main routine of the Script
+
+(
+	message #Intro-Txt
+)
+
+(
+	message #Warning-Txt
+)
+
+; Select Installation destination
+(
+	set target 
+	(
+		askdir
+		(
+			prompt #Path-Txt
+		)
+		(
+			help #Path-Help
+		)
+		(
+			default @default-dest
+		)
+		(
+			newpath
+		)
+	)
+)
+
+(
+	set @default-dest target
+)
+
+; Create some needed Sub dirs
+(
+	makedir
+	(
+		tackon target "Fonts"
+	)
+)
+(makedir(tackon target "DOC"))
+(makedir(tackon target "GFX"))
+(makedir(tackon target "MSX"))
+
+(
+	complete 5
+)
+
+; Do file copying.. Only one of the copyings has been 'folded out'
+;  as they all are similar
+(
+	copyfiles
+	(
+		prompt "Copying to " #target
+	)
+	(
+		help @copy-files-help
+	)
+	(
+		source "Sound3_1:"
+	)
+	(
+		dest
+		(
+			tackon target "Sound3"
+		)
+	)
+	(
+		pattern "Sound#?"
+	)
+)
+(complete 12)
+(copyfiles (prompt "Copying to " #target) (help @copy-files-help) (source "Sound3_1:")
+(dest (tackon target "Sound3")) (pattern "DO#?"))
+
+(complete 25)
+(copyfiles (prompt "Copying to " #target) (help @copy-files-help) (source "Sound3_1:")
+(dest (tackon target "Sound3")) (pattern "GF#?"))
+
+(complete 37)
+(copyfiles (prompt "Copying to " #target) (help @copy-files-help) (source "Sound3_1:")
+(dest (tackon target "Sound3")) (pattern "MS#?"))
+
+(complete 50)
+(copyfiles (prompt "Copying to " #target) (help @copy-files-help) (source "Sound3_2:")
+(dest (tackon target "Sound3")) (pattern "GF#?"))
+
+(complete 75)
+(copyfiles (prompt "Copying to " #target) (help @copy-files-help) (source "Sound3_2:")
+(dest (tackon target "Sound3")) (pattern "MS#?"))
+
+(complete 95)
+(copyfiles (prompt "Copying to " #target) (help @copy-files-help) (source "Sound3_2:")
+(dest (tackon target "Sound3")) (pattern "DISK2#?"))
+(complete 100)

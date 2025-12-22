@@ -1,0 +1,142 @@
+@database Times.guide
+@master
+@index fuckit
+
+@Node "Main" ""
+@FONT "CRYSTAL.FONT" 8
+@{JCENTER}
+@{APEN 3}@{BPEN 2}phase distortion@{APEN 1}@{BPEN 0}
+
+@{APEN 2}@{BPEN 3}presents@{APEN 1}@{BPEN 0}
+
+
+t
+
+i
+
+M
+
+e
+
+S
+
+
+
+  @{"CLICK" link "fuckit" 0}   
+
+@endnode
+
+@node "fuckit" ""
+@FONT "ABERDEEN.FONT" 026
+@{JCENTER}
+
+@{APEN 2}@{BPEN 3}<- t i M e S ->@{APEN 1}@{BPEN 0}
+
+
+@{"First Words" link "fw" 0}
+   @{"Music" link "mods" 0}   
+@{"Credits" link "credits" 0}
+      @{"Last Words" link "lw" 0}      
+
+@endnode
+
+@node "fw" ""
+@FONT "CRYSTAL.FONT" 8
+@{JCENTER}
+@{APEN 2}@{BPEN 3}Introduction@{APEN 1}@{BPEN 0}
+
+
+"Times" is a special musicial project of myself. I began last year with
+different ECHO Tests in OSS, and started to compose different tunes in OSS. 
+After two tunes (christmas time) i had a blackout and big break and i don't
+continued the project. For 1 week i continued it, and finished it
+with 4 new OSS-Mods ... (in 1 week) ... Most of the tunes are filled with
+bugs and errors, so pleaaase .. STAY COOOOOL !! :))
+
+
+@endnode
+
+@node "Mods" ""
+@FONT "CRYSTAL.FONT" 8
+@{JCENTER}
+
+@{APEN 2}@{BPEN 3}Times - Music EP@{APEN 1}@{BPEN 0}
+
+
+@{APEN 3}[.TIMES.]-[.00.]@{BPEN 2}@{APEN 1}@{BPEN 0}
+
+@{"Opening Title from Times" system "HIP TIMES00.OSS"}
+
+
+@{APEN 3}[.TIMES.]-[.01.]@{BPEN 2}@{APEN 1}@{BPEN 0}
+
+@{"Turn Around" system "HIP TIMES01.OSS"}
+
+
+@{APEN 3}[.TIMES.]-[.02.]@{BPEN 2}@{APEN 1}@{BPEN 0}
+
+@{"Only a Dream" system "HIP TIMES02.OSS"}
+
+
+@{APEN 3}[.TIMES.]-[.03.]@{BPEN 2}@{APEN 1}@{BPEN 0}
+
+@{"Too Agressive" system "HIP TIMES03.OSS"}
+
+
+@{APEN 3}[.TIMES.]-[.04.]@{BPEN 2}@{APEN 1}@{BPEN 0} 
+
+@{"Friends" system "HIP TIMES04.OSS"}
+
+
+@{APEN 3}[.TIMES.]-[.05.]@{BPEN 2}@{APEN 1}@{BPEN 0}
+
+@{"Closing Title from Times" system "HIP TIMES05.OSS"}
+
+@endnode
+
+
+@node "credits" ""
+@FONT "CRYSTAL.FONT" 8
+@{JCENTER}
+
+@{APEN 2}@{BPEN 3}Credits@{APEN 1}@{BPEN 0}
+
+
+
+Idea By Pirat/Phd
+
+
+Music By Pirat/Phd
+
+
+Guide By Pirat/Phd
+
+
+
+@endnode
+
+@node "lw" ""
+@FONT "CRYSTAL.FONT" 8
+@{JCENTER}
+
+@{APEN 2}@{BPEN 3}Regards and Thanx 2 following people@{APEN 1}@{BPEN 0}
+
+
+Teijo, OSS
+
+K-P, best player ever
+
+Juice, brilliant job for phd
+
+Wiz Kid, the best ears ever
+
+Teis, nice chats in my board
+
+Linus, phunkey adventures
+
+Lopez, kewl phoning
+
+AmigaScne, great chats
+
+
+@endnode

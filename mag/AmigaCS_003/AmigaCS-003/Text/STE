@@ -1,0 +1,32 @@
+@{b}@{d 8C93FF}GEM Bench v4.03@{ub}
+============================================
+ST  TOS 1.00
+AES vF.F7
+GEMDOS v0.19
+MiNT not present
+Blitter not present
+NVDI not present
+Video Mode: 640*400*1
+LineF FPU installed
+Run and Malloc from FastRAM
+Ref: STE + Blitter + FPU, ST High
+============================================
+@{b}GEM Dialog Box:@{ub}             6.540     84%
+@{b}VDI Text:@{ub}                   7.400     74%
+@{b}VDI Text Effects:@{ub}          12.660    116%
+@{b}VDI Small Text:@{ub}             6.620     91%
+@{b}VDI Graphics:@{ub}               9.600    245%
+@{b}GEM Window:@{ub}                 2.320     68%
+@{b}Integer Division:@{ub}           1.000   1800%
+@{b}Float Math:@{ub}                 0.100    770%
+@{b}RAM Access:@{ub}                 0.540   1166%
+@{b}ROM Access:@{ub}                 1.720    366%
+@{b}Blitting:@{ub}                   0.000   ----
+@{b}VDI Scroll:@{ub}                 5.120     83%
+@{b}Justified Text:@{ub}             6.640     82%
+@{b}VDI Enquire:@{ub}                1.420    186%
+@{b}New Dialogs:@{ub}                6.040    126%
+============================================
+@{b}Graphics:@{ub}                            @{i}115%@{ui}
+@{b}CPU:@{ub}                                @{i}1025%@{ui}
+@{b}Average:@{ub}                             @{i}375%@{ui}

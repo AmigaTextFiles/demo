@@ -1,0 +1,84 @@
+
+                                 Oubliette
+                       2nd in 64k Intro Competition
+
+              Brought to you by Venus Art at Gravity Party II
+                      30-31 August 1997 Opole Poland
+
+ Once  again  we  have  prepared something really outstanding for the 65536
+bytes   intro  competition.   As  always  this  production  is  running  in
+multitasking, with full CyberGraphX support.
+The CyberGraphX mode should now run a little bit faster cos' now the bitmaps
+are placed in fast mem , not in chip mem like in 'Grotesque!'.
+(blame me, I'm an idiot;-)
+
+This is the fixed version of Oubliette. Th version that was spread at the
+party, doesn't worked with CyberGraphX. I've tested it and now there should
+be no more problems.There is still no doublebuffering in CyberGraphX mode.
+I'dont have graphics board right now and i'm unable to add this feature.
+
+ (when you run the intro with FPS parammeter you will get informations
+about current frame rate - 'Oubliette.executable FPS')
+
+ - Who Made What???
+
+	- Programming & 3D technology : NOE & BJSebo
+	- Music:		      : Wierza / Venture (thanx a lot)
+	- 3D Objects & Design         : BJSebo
+
+	- I would also like to thanks Pippen / Venture for hardware support
+	  (Now I'm sure that 68060 is better then 68020 ;-)
+
+ - Hmmm... Some requirements???
+	- Motorola 68020
+        - 8Mb of fast ram
+	- AGA  (it  is possible to watch the intro on non AGA machines,but
+		you should have graphics board running under CyberGraphX)
+
+ - Hmmm nr 2 Some recommended hardware
+	- MC 68040 40Mhz (at least - intro was done on '060 and shows his best
+			  on such a machine)
+	- Graphics board running under CyberGraphX.
+
+ - We have made some tests:
+
+      - A1200 14Mhz 8Mb  AGA            (Arrrggggh - don't try this at home)
+      - A1230 40Mhz 8Mb  AGA            (nice?)
+      - A1240 40Mhz 16Mb ZorroII CV643D (hmmm... Zorro II sucks...)
+      - A1260 66Mhz 32Mb AGA            (thats what I call pleasure)
+      - A4060 50Mhz 72Mb ZorroIII CV64  (ROCK IT BABE!!!)
+
+ - Have we used some software???
+	- SasC development package v6.57
+	- Devpac Assembler v3.11
+	- PicCon v2.20
+	- PPaint v7.0
+	- Vertex v2.0
+	- LightWave v3.5
+	- Virtua Art 3D Library v0.9
+
+ - Feeling dizzy??? - wanna contact us???
+
+	e-mail:
+
+	Jacek Cybularczyk        - noe@dedal.man.szczecin.pl
+	Sebastian Jedruszkiewicz - bjsebo@delta.ii.tuniv.szczecin.pl
+	Artur 'CALF' Cieslak     - aca@ajax.szczecin.csbi.com.pl
+
+
+ - What's Up, Doc???
+
+	- both Noe & Calf have finally finished the Technical University of
+	  Szczecin  !!!.  Now  they  are specialists in Computer Graphics &
+	  & Multimedia !!!.
+	- nobody left us - nobody joined us.
+	
+	- Member List (29-08-97):
+	  - BJSebo - main organizer,programmer (C,Asm,Power C)
+	  - Noe    - programmer (C,C++,Asm)
+	  - Calf   - programmer (C,C++,Asm) 3D Artist
+
+
+-----------------------------------------------------------------------------
+                             See Ya In Hell!!!
+-----------------------------------------------------------------------------

@@ -1,0 +1,61 @@
+
+
+IFTPlay V0.8 command line options:
+----------------------------------
+
+
+
+ FILE
+    YAFA file to be played
+    if no file is specified a reqtools file requester will pop up
+
+
+ B=BUFFERS/K/N
+    set the loadbuffer size (bigger = smoother playing)
+    default is 12, min/max: 2/80
+
+
+ S=SPEED/K/N
+    set the playing speed (lower = faster)
+    default is the value in the anim file, min/max: 1/9
+
+
+ Z=ZOOM/S
+    do 2x2 zoom while playing
+
+
+ PD=PSEUDODITHER/S
+    activate simple dithering for zoom mode
+
+
+ MP=MUSICPLAY/S
+    send 'play' message to IFTP61A at anim start
+
+
+ MQ=MUSICQUIT/S
+    send 'quit' message to IFTP61A at program end
+
+
+ TL=TOTALLOOPS/K/N
+    set number of anim loops to be played until prog exits
+
+
+ TF=TOTALFRAMES/K/N
+    set number of anim frames to be played until prog exits
+
+
+ TT=TOTALTICKS/K/N
+    set playing time until prog exits (1 sec = 50 ticks)
+
+
+ W=WAIT/S
+    wait for the user to press spacebar before anim start
+
+
+ V=VERBOSE/S
+    the prog will tell you many things you usually don't need to know
+
+
+ I=INFO/S
+    the anim will not be played, you only get some information about the file
+

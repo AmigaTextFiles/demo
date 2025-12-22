@@ -1,0 +1,33 @@
+Short:    Quick PPC Port of Megademo IV
+Author:   Azure, Fiver2, Sire, MagicSN@Birdland.es.bawue.de (PPC Port)
+Uploader: MagicSN@Birdland.es.bawue.de
+Type:     demo/mega
+
+You need the GFX- and Sound-Files still. They are available at:
+
+http://members.xoom.com/amiga/mdiv2/download.html
+
+Note, that this is only a quick port, without any optimizations done.
+I did not look, if this demo uses too much Contextswitches or such.
+I did not even implement sound yet.
+
+You need:
+
+- rtgmaster.library V34+
+- WarpOS
+- the GFX+Sound files of the demo
+- A PPC Board :)
+- A GFX Board
+
+The demo runs both on Screen and on Workbench, but due to a bug (???) in
+the latest CyberGraphX versions, it does not list 24 Bit Modes any longer
+in the rtgmaster Requester for CyberGraphX. This works with Picasso96,
+though. So you probably need an old CyberGraphX version (where it still
+worked) or Picasso96 to run this demo.
+
+Workbench Window Mode should work with new CyberGraphX Versions too.
+And yes, i already reported this to the CyberGraphX authors.
+
+I included all source changes to the original sources.
+
+Steffen Haeuser

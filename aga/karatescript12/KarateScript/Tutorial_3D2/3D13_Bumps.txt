@@ -1,0 +1,284 @@
+
+ You will learn about 2 new complex textures constructors in this tutorial:
+
+----------------------------------------- < t3denvmapdbl>
+
+    < t3denvmapdbl> label |
+        256 pix width map image | 256 pix width env.map | colortable 256x256
+        </t3denvmapdbl>
+
+ "t3denvmapdbl" acts exactly like if you use "t3dmapping", the simple texture
+ mapping, and then apply "t3dEnvMap", the environment mapping on it, using
+ a colortable to mix the both. But it does it faster, in one pass.
+
+ In other word: it does a texture mapping AND an environment mapping, using
+ 2 256x256 color images, and then it mixes the colors using the palette-to-palette
+ part of a colortable object.
+
+ This color mixing operation is defined with the second parameter of the colortable
+ contructor: 0 means "50% transparency", 1 means additive...
+
+ Now, specialy for this rendering, a new color operation has been added:
+ 2: multiply the colors. It means if the environment color is grey (128,128,128),
+ the mapping color is unchanged. If the environment color is darker than grey,
+ the mapping color goes darker. If the environment color is clearer than grey,
+ the mapping color goes clearer.
+ Only some environment textures will graphically fit with this colortable mode,
+ but as the mix do the calculation component by component (red, green, blue),
+ it can looks like a 24bit operation.(operation actually done in the colortable.)
+ This colortable mode is also usefull  for the next type of rendering:
+
+----------------------------------------- < t3dmapbump>
+
+  < t3dmapbump> label |
+        env image| bump image | opt.color image| opt.colortable 256x256
+        </t3dmapbump>
+
+ this rendering allows to render a surface with an elevation map:
+ it gives a relief according to the lightning. This technique is known as
+ "bump".
+
+ There is 2 ways to use this constructor:
+
+ First, using only the 2 first parameters, for a bumped environment mapping:
+  - an 256 pixel width environment image that stands for the light around the object,
+  like in "t3dEnvMap"
+  - then an image that stands for the elevation map. It must be 256 pixel width,
+  but can be of any color or palette. The clearer pixel will be "higher".
+  The elevation map is used the same way as color mapping, using UV coordinates
+  defined by the object.
+
+  You can have a more rich bump rendering, using 2 more parameters:
+
+   -an optionnal 256 pixel width color image, used the same way as "t3dmapping".
+   -and a colortable that manage the operation of color mixing between
+     the environment and mapping colors.
+
+     As for "t3denvmapdbl", you can use a colortable with parameter "2"
+     for then palette-to-palette operation. This way environment
+     texture can darken or lighten the colormap a different way.
+
+ ---------------------------------------
+
+<KCOLORTABLE> coltab1 | data/remaptable.iff |0|  255|  255|255 </KCOLORTABLE>
+<KCOLORTABLE> coltab2 | data/remaptable.iff |2|  255|  255|255 </KCOLORTABLE>
+
+ load bitmap image objects:
+
+<kimg> i_logo | data/logozaac.iff </kimg>
+<kimg> i_txt1 | data/texture1.iff </kimg>
+<kimg> i_txt2 | data/texture2.iff </kimg>
+<kimg> i_texture256x256 | data/speedy.iff </kimg>
+
+ create textures objects:
+
+<t3denvmapdbl> t_EnvMapDbl | i_logo | i_txt2  | coltab1 </t3denvmapdbl>
+<t3dmapbump> t_BumpSimple | i_txt2 | i_logo </t3dmapbump>
+<t3dmapbump> t_BumpColor  | i_txt2 | i_txt1 |i_txt1 | coltab2  </t3dmapbump>
+<t3dmapbump> t_BumpLogoColor | i_txt2 | i_txt2  |i_txt2| coltab2 </t3dmapbump>
+
+<KCAM> the_camera |0|0|-3|0|0|0|0.4  </KCAM> camera (position: x,y,z rotation: o1,o2,o3, FOV focale length. )
+
+<World3D> world_dblmap </World3D>
+<World3D> world_bumpSimple </World3D>
+<World3D> world_BumpColor  </World3D>
+<World3D> world_BumpLogoColor  </World3D>
+
+<tore> o_tore_dblmap | world_dblmap |0|0|0|0|0|0|1|1|1|
+        14 | 8 | 1.4 | 0.7 | 0|0|0.2|2|1.0 |t_EnvMapDbl|t_EnvMapDbl|t_EnvMapDbl|t_EnvMapDbl </tore>
+
+<tore> o_toreBumpSimple | world_bumpSimple |0|0|0|0|0|0|1|1|1|
+        14 | 8 | 1.4 | 0.7 | 0|0.0|0.2|2.0|1.0 |t_BumpSimple|t_BumpSimple|t_BumpSimple|t_BumpSimple </tore>
+
+<tore> o_toreBumpColor | world_BumpColor |0|0|0|0|0|0|1|1|1|
+        14 | 8 | 1.4 | 0.7 | 0|0.0|0.0|1.0|1.0 |t_BumpColor|t_BumpColor|t_BumpColor|t_BumpColor </tore>
+
+<tore> o_toreBumpLogoColor | world_BumpLogoColor |0|0|0|0|0|0|1|1|1|
+        14 | 8 | 1.4 | 0.7 | 0|0|0.2|2|1.0 |t_BumpLogoColor|t_BumpLogoColor|t_BumpLogoColor|t_BumpLogoColor </tore>
+
+<Main> mainscript |0|1</Main>
+<KScript>
+    <Id> mainscript </Id>
+    <Play> mainpart | 3000 | 0 | 1 </Play>
+</KScript>
+
+<KScript>
+    <Id> myscript </Id>
+    <Play> part_dblmap | 600 | 0 | 1 </Play>
+    <Play> part_BumpSimple | 800 | 0 | 1 </Play>
+    <Play> part_BumpColor | 600 | 0 | 1 </Play>
+    <Play> part_BumpLogoColor | 1000 | 0 | 1 </Play>
+</KScript>
+
+///<KPART> <ID> mainpart </ID>
+
+    <Fx><Pa>setpalette</Pa>  set the screen palette
+        <Pa> i_logo </Pa>
+    </Fx>
+
+    <Fx><Pa>fillrc</Pa>  clear the screen background
+        <Pa>  </Pa>
+        <Pa> cte | 24 </Pa>
+    </Fx>
+ 
+<bmfont>  animpacman | data/oldpacAnim.iff |85|76| 3 | abc </bmfont>
+<ktext> animtxt1 | abcabcabcabc  </ktext>
+   <Fx><Pa> Sprite </Pa>
+        <Pa></Pa>
+        <Pa> imanimtext | animpacman | animtxt1 | 200 | 1 </Pa>
+        <Pa> bounce |0|100|2900|-0.25|0.05</pa>
+        <Pa> sin |0.1|0.5|0.05</pa>
+        <Pa> bounce |0|100|2900|0|0.25</pa>
+        <Pa> sin |0.3|0.5|0.05</pa>
+   </Fx>
+
+    <Fx><Pa>PlayScript</Pa>
+        <Pa> myscript </Pa>
+        <Pa> aff|0 |1 </Pa>
+    </Fx>
+
+
+///</KPART>
+
+ --------------------------------------------------
+///<KPART> <ID> part_dblmap </ID>
+
+    'Set3DObject' provide a way to modify an object position, rotations,
+    and scale applied to the object. The new values override the ones defined
+    in the object's constructor.
+
+   <Fx><Pa> Set3DObject </Pa>      make the cube rotate all the time on the 3 axis:
+        <Pa> o_tore_dblmap </Pa>        (note our_cube is attached to world1.)
+
+        <Pa> cte |0.5  </Pa>
+        <Pa> bounce |0|75|525|6|0  </Pa>
+        <Pa> cte |-0.75  </Pa>     set at position
+
+        <Pa> sin |-0.5|0.16|0.25</Pa>
+        <Pa> aff |0|-0.005 </Pa>   rotation: make angles follow affine curve.
+        <Pa> cte |0.4</Pa>
+
+        <Pa> 3cte|1|1|1 </Pa>       scale always set to 1,1,1.
+    </Fx>
+
+    'Draw3DWorld' is the effect that draw the world:
+
+      <Fx><Pa> Draw3DWorld </Pa>
+            <Pa>  </Pa>        the rectangle where to draw (here: default)
+            <Pa> world_dblmap </Pa>      the 3D world to draw !
+            <Pa> the_camera </Pa>  note camera postion is 0,0,-3, looking 0,0,0.
+            <Pa> cte|0 </Pa>       time march, may be used for some lightwave stuffs...
+            <Pa> cte|0.25 </Pa>    near-cut-plane distance to camera (must be >0)
+            <Pa> cte|20</Pa>       far-cut-plane distance to camera (must be >near)
+        </Fx>
+
+///</KPART>
+///<KPART> <ID> part_BumpSimple </ID>
+
+   
+
+    'Set3DObject' provide a way to modify an object position, rotations,
+    and scale applied to the object. The new values override the ones defined
+    in the object's constructor.
+
+   <Fx><Pa> Set3DObject </Pa>      make the cube rotate all the time on the 3 axis:
+        <Pa> o_toreBumpSimple </Pa>        (note our_cube is attached to world1.)
+
+        <Pa> cte |0.5  </Pa>
+        <Pa> bounce |0|75|725|-6|0  </Pa>
+        <Pa> cte |-0.75  </Pa>     set at position
+
+        <Pa> sin |0.5|0.16|0.2</Pa>
+        <Pa> aff |0|0.004 </Pa>   rotation: make angles follow affine curve.
+        <Pa> cte |-0.4</Pa>
+
+        <Pa> 3cte|1|1|1 </Pa>       scale always set to 1,1,1.
+    </Fx>
+
+    'Draw3DWorld' is the effect that draw the world:
+
+      <Fx><Pa> Draw3DWorld </Pa>
+            <Pa>  </Pa>        the rectangle where to draw (here: default)
+            <Pa> world_bumpSimple </Pa>      the 3D world to draw !
+            <Pa> the_camera </Pa>  note camera postion is 0,0,-3, looking 0,0,0.
+            <Pa> cte|0 </Pa>       time march, may be used for some lightwave stuffs...
+            <Pa> cte|0.25 </Pa>    near-cut-plane distance to camera (must be >0)
+            <Pa> cte|20</Pa>       far-cut-plane distance to camera (must be >near)
+        </Fx>
+
+///</KPART>
+///<KPART> <ID> part_BumpColor </ID>
+   
+
+    <Fx><Pa> ScrollT3d </Pa> scrol texture ( see tut. 3D09)
+        <Pa> t_BumpColor  </Pa>
+        <Pa> sin |0|0.08|0.75</Pa>
+        <Pa> sin |0|0.1|0.75</Pa>
+    </Fx>
+
+    'Set3DObject' provide a way to modify an object position, rotations,
+    and scale applied to the object. The new values override the ones defined
+    in the object's constructor.
+
+   <Fx><Pa> Set3DObject </Pa>      make the cube rotate all the time on the 3 axis:
+        <Pa> o_toreBumpColor</Pa>        (note our_cube is attached to world1.)
+
+        <Pa> cte |0.5  </Pa>
+        <Pa> bounce |0|75|525|6|0  </Pa>
+        <Pa> cte |-0.75  </Pa>     set at position
+
+        <Pa> sin |-0.5|0.16|0.2</Pa>
+        <Pa> aff |0|-0.004 </Pa>   rotation: make angles follow affine curve.
+        <Pa> cte |0.4</Pa>
+
+        <Pa> 3cte|1|1|1 </Pa>       scale always set to 1,1,1.
+    </Fx>
+
+    'Draw3DWorld' is the effect that draw the world:
+
+      <Fx><Pa> Draw3DWorld </Pa>
+            <Pa>  </Pa>        the rectangle where to draw (here: default)
+            <Pa> world_BumpColor  </Pa>      the 3D world to draw !
+            <Pa> the_camera </Pa>  note camera postion is 0,0,-3, looking 0,0,0.
+            <Pa> cte|0 </Pa>       time march, may be used for some lightwave stuffs...
+            <Pa> cte|0.25 </Pa>    near-cut-plane distance to camera (must be >0)
+            <Pa> cte|20</Pa>       far-cut-plane distance to camera (must be >near)
+        </Fx>
+
+///</KPART>
+///<KPART> <ID> part_BumpLogoColor </ID>
+
+    'Set3DObject' provide a way to modify an object position, rotations,
+    and scale applied to the object. The new values override the ones defined
+    in the object's constructor.
+
+   <Fx><Pa> Set3DObject </Pa>      make the cube rotate all the time on the 3 axis:
+        <Pa> o_toreBumpLogoColor </Pa>        (note our_cube is attached to world1.)
+
+        <Pa> cte |0.5  </Pa>
+        <Pa> bounce |0|75|925|-6|0  </Pa>
+        <Pa> cte |-0.75  </Pa>     set at position
+
+        <Pa> sin |-0.5|0.16|0.2</Pa>
+        <Pa> aff |0|-0.004 </Pa>   rotation: make angles follow affine curve.
+        <Pa> cte |0.4</Pa>
+
+        <Pa> 3cte|1|1|1 </Pa>       scale always set to 1,1,1.
+    </Fx>
+
+    'Draw3DWorld' is the effect that draw the world:
+
+      <Fx><Pa> Draw3DWorld </Pa>
+            <Pa>  </Pa>        the rectangle where to draw (here: default)
+            <Pa> world_BumpLogoColor </Pa>      the 3D world to draw !
+            <Pa> the_camera </Pa>  note camera postion is 0,0,-3, looking 0,0,0.
+            <Pa> cte|0 </Pa>       time march, may be used for some lightwave stuffs...
+            <Pa> cte|0.25 </Pa>    near-cut-plane distance to camera (must be >0)
+            <Pa> cte|20</Pa>       far-cut-plane distance to camera (must be >near)
+        </Fx>
+
+///</KPART>
+
+
+
+ 

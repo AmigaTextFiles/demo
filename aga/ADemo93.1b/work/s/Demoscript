@@ -1,0 +1,117 @@
+lab start
+
+dis2 dp:A1200.HAM8
+textsc ds:a1200.txt1
+textsc ds:a1200.txt2
+
+dis2 dp:butrfish.ham8
+textsc ds:ham8.txt1
+
+dis2 dp:Nebel.ham8
+textsc ds:ham8.txt2
+
+dis2 dp:auto.ham8
+textsc ds:auto.txt1
+
+dis2 dp:earth7.iff
+textsc ds:spri.txt1
+
+dc:vt "da:C=anim.anim" loop=1
+
+dis2 dp:A3000_5.HAM8
+textsc ds:ami.txt1
+
+dis2 dp:AmiWrite1.iff
+textsc ds:amiw.txt1
+
+dis2 dp:FontDesigner
+textsc ds:fd.txt1
+
+dis2 dp:SuperBase4
+textsc ds:sb.txt1
+
+dis2 dp:phonepak2.iff
+textsc ds:pho.txt1
+
+dis2 dp:SoundStudio
+textsc ds:stud.txt1
+
+dis2 dp:BarsPipes
+textsc ds:bp.txt1
+
+dis2 dp:sportjournal
+textsc ds:sj.txt1
+
+dis2 dp:Trance6.HAM8
+textsc ds:tra.txt1
+
+dc:vt "da:C=anim.anim" loop=1
+
+dis2 dp:scala1.iff
+textsc ds:scala.txt1
+
+dis2 dp:AV
+textsc ds:av.txt1
+
+dis2 dp:z-palette.ham8
+textsc ds:tv.txt1
+
+dis2 dp:Imagemaster.ham8
+textsc ds:ima.txt1
+wait 10
+
+dis2 dp:Adorage_Effects_IFF
+textsc ds:ador.txt1
+
+dis2 dp:Ball.iff ; schwarz.brush
+textsc ds:aaboing.txt1
+run da:aaboing
+wait 20
+
+dis2 dp:A4000.ham8
+textsc ds:a4000.txt1
+textsc ds:a4000.txt2
+textsc ds:a4091.txt1
+
+dis2 dp:A4000T.3.HAM8
+textsc ds:a4000t.txt1
+wait 10
+
+dc:vt "da:C=anim.anim" loop=1
+
+dis2 dp:Robots3.Ham8
+textsc ds:rob.txt1
+
+dis2 dp:GTools5.iff
+textsc ds:gtools.txt1
+
+dis2 dp:dm2.iff
+textsc ds:dm2.txt1
+
+dis2 dp:BusMaster1.iff
+textsc ds:busm1.txt1
+
+dis2 dp:EII_Menü.iff
+textsc ds:euromen.txt1
+
+dis2 dp:Europa_Frankreich.iff
+textsc ds:eurofra.txt1
+
+dis2 dp:meteosat2.iff
+textsc ds:meteo.txt1
+
+dis2 dp:PG2.iff
+textsc ds:polygraph.txt1
+wait 3
+
+Linie8 80
+
+dis2 dp:z-logo.ham8
+textsc ds:commo.txt1
+
+dis2 dp:Credits
+wait 6
+
+skip start back
+
+; Stand 12.5.93, P. Kittel

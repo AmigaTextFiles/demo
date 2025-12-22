@@ -1,0 +1,50 @@
+ ---------------
+ | Scope V0.20 |
+ ---------------
+ coded by Smack/IFT in June 94
+ The Player 6.0A © 1992-94 Jarno Paananen
+
+
+Requirements:  -AGA chipset/68020+ CPU
+               -ca. 61K memory for the program + module buffer
+               -Kickstart: don't know, maybe it even runs on 1.3??
+               -music modules converted with 'The Player 6.0A'
+                and/or a parallel port sampler
+
+
+Features:  -100% hardware coding, disables multitasking but should
+            not destroy any system stuff (uses CIA by hardware access!)
+           -refuses to work on NTSC machines, coz 50Hz screen sync is needed
+           -makes use of some 68020+ instructions for a little speedup
+            (not really optimized...)
+           -NEW: utilizes AGA chipset for some 24 Bit background colors
+          P60A scope part:
+           -NEW: delta packed samples (4 or 8 Bit) supported
+           -NEW: path/filenames with spaces supported (just put between ")
+           -Quadrascope consists of 4 x 640 dots (BSET!), Total-scope
+            has 'only' 1280 dots (both on a 320 x 256 screen and ofcourse
+            updated 50 times per second)
+          External scope part:
+           -uses parallel port sampler for input, makes no output to the
+            sampler (maybe in order to initialize it) -> works fine with
+            my MasterSound (PT, Audiomaster compatible)
+           -sampling rate 16kHz, no playback available (too noisy ;-)
+           -scope consists of 2560 dots (320 'real' dots and 7 'extra' dots
+            for each 'real' one) on a 320 x 256 screen, 50Hz update rate
+
+
+Bugs:  -the display routine still ignores these Protracker commands:
+        E9 (retrig note), ED (note delay) and all finetune stuff
+       -still no check if the file is really a P60A module so make sure
+        you only load P60A mods (no split files supported!)
+       -no player controls, no music info, no file requester...
+
+
+Author:   (Smack/Infect)
+          Michael Henke
+          W-Borchert-Str.37
+          06126 Halle/Saale
+          Germany
+
+       contact me for talking about the nice things in life ;-)
+       please no silly swappers or boring lamers!

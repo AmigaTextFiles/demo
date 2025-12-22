@@ -1,0 +1,144 @@
+@{d 87EEFF}                                @{c 5176EE}Pêipojení 4 EIDE zaêízení
+                                ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+  Plánek  pêipojení  4  EIDE  zaêízení do jednoho Amiga1200/4000 IDE slotu. Samozêejmë bez
+záruky.  Asi  bude  potêeba  nëjaký  SW  k oùivení druhé vëtve - nejspíî IDEFix '97. Dejte
+vëdët, jak vám to funguje, nebo i nefunguje :*)
+
+                                 @{c 5176EE}Shaman@{c}
+
+------------------------------------------------------------------------------------------
+
+
+        IDE0                    HOST                    IDE1
+        (CN1)                   (CN0)                   (CN2)
+        -----                   -----                   -----
+
+       *RESET 1-----+--------1 *RESET 1--------+-----1 *RESET
+                    |                          |
+       *CS3FX 38----+          *CS3FX 38----+  +----38 *CS3FX
+@{d 87EEFF}                                            |
+       *CS1FX 37------------37 *CS1FX       +-------37 *CS1FX
+
+                                                 X--28  SPSYNC:CSEL
+
+                                                 X--34 *PDIAG
+
+                                                 X--39 *DASP
+
+                     |\|                    |/|
+        INTRQ 31-----+ +----31  INTRQ 31----+ +-----31  INTRQ
+                     |/|                    |\|
+
+
+
+
+
+
+@{c 5176EE}@{d 87EEFF}Notes:@{c}
+
+  - The diodes are there to prevent a device on e.g. IDE0 to see an interrupt
+    from a device on IDE1 (Why is this neccessary? If a device gives an
+    interrupt, the other device on the same chain sees it anyway).
+
+  - *CS3FX is always HIGH on IDE0 and IDE1 (except during reset), i.e. `N' in
+    the table below.
+
+  - if *CS3FX is HIGH (`N') on HOST, IDE1 is in a high impedance state (`NN').
+
+  - if *CS1FX is HIGH (`N') on HOST, IDE0 is in a high impedance state (`NN').
+
+  - in `normal' cases *CS1FX is LOW (`A') on HOST and *CS3FX is HIGH (`N') on
+    HOST, so only IDE0 is accessed.
+
+  - *CS3FX can no longer be made LOW on IDE0 or IDE1, so Alternate status/
+    Device control and Drive address (which wasn't used by the driver anyway)
+@{d 87EEFF}    can no longer be accessed. I noticed that the current driver never uses
+    Alternate status, but uses the normal Status (which does clear the
+    interrupt) instead.
+
+
++==================================-=========================-===========+
+|         Host I/O                 |                         | Drive I/O |
+|         connector                |                         | connector |
+|----------------------------------+-------------------------+-----------|
+| HOST RESET                     1 | -----  RESET-  -------->| 1         |
+|                                2 | -----  Ground  -------- | 2         |
+| HOST DATA BUS BIT 7            3 |<-----  DD7  ----------->| 3         |
+| HOST DATA BUS BIT 8            4 |<-----  DD8  ----------->| 4         |
+| HOST DATA BUS BIT 6            5 |<-----  DD6  ----------->| 5         |
+| HOST DATA BUS BIT 9            6 |<-----  DD9  ----------->| 6         |
+| HOST DATA BUS BIT 5            7 |<-----  DD5  ----------->| 7         |
+| HOST DATA BUS BIT 10           8 |<-----  DD10  ---------->| 8         |
+| HOST DATA BUS BIT 4            9 |<-----  DD4  ----------->| 9         |
+@{d 87EEFF}| HOST DATA BUS BIT 11          10 |<-----  DD11  ---------->| 10        |
+| HOST DATA BUS BIT 3           11 |<-----  DD3  ----------->| 11        |
+| HOST DATA BUS BIT 12          12 |<-----  DD12  ---------->| 12        |
+| HOST DATA BUS BIT 2           13 |<-----  DD2  ----------->| 13        |
+| HOST DATA BUS BIT 13          14 |<-----  DD13  ---------->| 14        |
+| HOST DATA BUS BIT 1           15 |<-----  DD1  ----------->| 15        |
+| HOST DATA BUS BIT 14          16 |<-----  DD14  ---------->| 16        |
+| HOST DATA BUS BIT 0           17 |<-----  DD0  ----------->| 17        |
+| HOST DATA BUS BIT 15          18 |<-----  DD15  ---------->| 18        |
+|                               19 | -----  Ground  -------- | 19        |
+|                               20 | -----  (keypin)  ------ | 20        |
+| DMA REQUEST                   21 |<-----  DMARQ  --------- | 21        |
+|                               22 | -----  Ground  -------- | 22        |
+| HOST I/O WRITE                23 | -----  DIOW-  --------->| 23        |
+|                               24 | -----  Ground  -------- | 24        |
+| HOST I/O READ                 25 | -----  DIOR-  --------->| 25        |
+|                               26 | -----  Ground  -------- | 26        |
+| I/O CHANNEL READY             27 |<-----  IORDY  --------- | 27        |
+@{d 87EEFF}| SPINDLE SYNC or CABLE SELECT  28 |*---- SPSYNC:CSEL  -----*| 28        |
+| DMA ACKNOWLEDGE               29 | -----  DMACK-  -------->| 29        |
+|                               30 | -----  Ground  -------- | 30        |
+| HOST INTERRUPT REQUEST        31 |<-----  INTRQ  --------- | 31        |
+| HOST 16 BIT I/O               32 |<-----  IOCS16-  ------- | 32        |
+| HOST ADDRESS BUS BIT 1        33 | -----  DA1  ----------->| 33        |
+| PASSED DIAGNOSTICS            34 |*-----  PDIAG-  --------*| 34        |
+| HOST ADDRESS BUS BIT 0        35 | -----  DAO  ----------->| 35        |
+| HOST ADDRESS BUS BIT 2        36 | -----  DA2  ----------->| 36        |
+| HOST CHIP SELECT 0            37 | -----  CS1FX-  -------->| 37        |
+| HOST CHIP SELECT 1            38 | -----  CS3FX-  -------->| 38        |
+| DRIVE ACTIVE/DRIVE 1 PRESENT  39 |<-----  DASP-  ---------*| 39        |
+|                               40 | -----  Ground  -------- | 40        |
+|------------------------------------------------------------------------|
+|   *Drive intercommunication signals                                    |
++========================================================================+
+
+
+@{d 87EEFF}+===============================-==========================================+
+|         Addresses             |                 Functions                |
+|-------------------------------+------------------------------------------|
+|      |      |     |     |     |    READ (DIOR-)     |   WRITE (DIOW-)    |
+|CS1FX-|CS3FX-| DA2 | DA1 | DA0 |------------------------------------------|
+|      |      |     |     |     |         Control block registers          |
+|------+------+-----+-----+-----+------------------------------------------|
+|  N   |  N   |  x  |  x  |  x  | Data bus high imped | Not used           |
+|  N   |  A   |  0  |  x  |  X  | Data bus high imped | Not used           |
+|  N   |  A   |  1  |  0  |  x  | Data bus high imped | Not used           |
+|  N   |  A   |  1  |  1  |  0  | Alternate status    | Device control     |
+|  N   |  A   |  1  |  1  |  1  | Drive address       | Not used           |
+|-------------------------------+------------------------------------------|
+|                               |        Command block registers           |
+|-------------------------------+------------------------------------------|
+|  A   |  N   |  0  |  0  |  0  | Data                | Data               |
+|  A   |  N   |  0  |  0  |  1  | Error register      | Features           |
+|  A   |  N   |  0  |  1  |  0  | Sector count        | Sector count       |
+@{d 87EFFF}|  A   |  N   |  0  |  1  |  1  | Sector number       | Sector number      |
+|  A   |  N   |  0  |  1  |  1  | * LBA bits  0- 7    | * LBA bits  0- 7   |
+|  A   |  N   |  1  |  0  |  0  | Cylinder low        | Cylinder low       |
+|  A   |  N   |  1  |  0  |  0  | * LBA bits  8-15    | * LBA bits  8-15   |
+|  A   |  N   |  1  |  0  |  1  | Cylinder high       | Cylinder high      |
+|  A   |  N   |  1  |  0  |  1  | * LBA bits 16-23    | * LBA bits 16-23   |
+|  A   |  N   |  1  |  1  |  0  | Drive/head          | Drive/head         |
+|  A   |  N   |  1  |  1  |  0  | * LBA bits 24-27    | * LBA bits 24-27   |
+|  A   |  N   |  1  |  1  |  1  | Status              | Command            |
+|  A   |  A   |  x  |  x  |  x  | Invalid address     | Invalid address    |
+|--------------------------------------------------------------------------|
+|                       * Mapping of registers in LBA mode                 |
++==========================================================================+
+
+@{c 5176EE}FYI, the ATA/IDE docs can be found on@{c}
+
+    @{c 5176EE}http://www.symbios.com/
+    ftp://www.symbios.com/@{c}

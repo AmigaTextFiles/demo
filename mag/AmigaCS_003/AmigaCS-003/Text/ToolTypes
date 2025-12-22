@@ -1,0 +1,486 @@
+@{d C2E4FF}  Jak  jistë  vîichni  vëdí, @{c BFA2EE}ToolTypes@{c} (çesky ToolTypy - nebo máte lepîí pêeklad?  :-)
+jsou  souçástí  systému  Amigy  jiù  od  jejích  zaçátkû,  bohuùel  dodnes  se  pêíliî
+nevyuùívají  k vëcem,  ke  kterým  byly  pûvodnë  urçeny.  Editaci ToolTypû uùivatelem
+zajiîtuje  pêímo  Workbench, obsluhu ToolTypû pro programátora zajiîtuje icon.library.
+Bohuùel  tato podpora je velmi omezená, coù bude asi dûvod, proç ToolTypy programátoêi
+dosud obcházeli.  Pêitom je vîe tak snadné, jak uvidíme pozdëji.
+
+
+  @{c BFA2EE}Nejprve si zrekapitulujme, k çemu se ToolTypy hodí:@{c}
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+1) @{i}pro nastavení nëkterých neobvyklých parametrû, které není potêeba pêíliî
+   çasto mënit@{ui}
+2) @{i}pro kompletní ukládání konfigurace aplikace@{ui}
+3) @{i}pro uloùení dalîích dat, jako je napê. bitmapa NewIcons ikony@{ui}
+
+  V  tomto  çlánku  se  hodlám  vënovat  pouze bodu 2), protoùe si myslím, ùe ukládání
+konfigurace do ToolTypû ikony je to nejlepîí êeîení z moùných.  Jaké jsou jeho výhody?
+
+  + konfiguraçní data se ukládají v textu, ne binárnë
+  + konfigurace je çitelná a pêehledná
+  + konfiguraci mûùe uùivatel snadno mënit z WorkBenche, nepotêebuje editor
+  + konfigurace zûstává kompatibilní mezi rûznými verzemi programu
+  + pêi pêesunu ikony programu ve WB se automaticky zkopíruje také konfigurace
+  + konfigurace není uloùena jinde na disku (S:, ENVARC:, DEVS:...)
+  + mûùe existovat více konfigurací programu v systému
+  + mûùe dokonce existovat i více konfigurací programu v jednom adresáêi!
+  + nedefinované poloùky jednoduîe dostanou svou defaultní hodnotu
+  + programování je jednoduché a pêehledné
+
+  A  co  @{c BFA2EE}nevýhody@{c}?  Jako jednu relativní nevýhodu vidím, ùe nëkteré programy mohou mít
+opravdu  velkou  konfiguraci  a  ta  se pak îpatnë edituje z WorkBenche.  Ovîem takové
+programy by mëly veîkeré nastavení provádët ze svého GUI a poloùky, které lze nastavit
+pouze  z ToolTypû  uloùit  hned  dopêedu a oddëlit je çarou.  Druhá relativní nevýhoda
+nastane,  pokud  byste  chtëli  smazat  nebo  okopírovat  celou  konfiguraci,  tak  ve
+standardním  WorkBenchi  neexistuje  na  tyto vëci funkce.  Nezoufejte: existuje patch
+@{c BFA2EE}SwazInfo@{c}, který vîechno toto umí.  Navíc existují specializované editory ToolTypû.
+
+  Pak  je  tu  jedna  nesporná  nevýhoda  -  pokud  má  program  bëùet  z  @{c BFA2EE}CD-ROM@{c}, tak
+pochopitelnë  nemûùe  zapisovat do svého adresáêe.  To lze snadno obejít  -  v takovém
+pêípadë  uloùíte  svojí  konfiguraci  také do ikony, ale ta ikona bude skrytë umístëna
+v ENVARC:/ENV:, pêípadnë jinde.
+
+  Pokud se program spouîtí z @{c BFA2EE}CLI@{c}, tak pêesto mûùe naçíst konfiguraci z ikony, pêípadnë
+pêebít nëkterá nastavení parametry z pêíkazové êadky.  Pochopitelnë pêi spuîtëní z CLI
+mûùe program nastavení v ikonë ignorovat.  Zde záleùí na uváùení programátora.
+
+                                        @{c BFA2EE}* * *@{c}
+
+  Takùe  k  obsluùným  funkcím.  Nejprve si nadefinujeme (nejlépe do vlastního modulu)
+obsluùné  funkce.  Jako interface mezi aplikací a modulem slouùí pouhé 2 funkce, jedna
+pro zápis ToolTypû - @{c BFA2EE}ApiWriteToolTypes()@{c}, druhá pro jejich çtení - @{c BFA2EE}ApiReadToolTypes()@{c}.
+V  hlaviçkovém souboru  modulu  nadefinujeme  prototypy  tëchto  funkcí  a také musíme
+nadefinovat @{c BFA2EE}ATT_#?@{c}  konstanty.
+
+/* --- @{c BFA2EE}ToolTypesSupport.h@{c} -------------------------------------------------- */
+
+#include <exec/types.h>
+#include <utility/tagitem.h>
+
+
+#define ATT_SINGLE  0xFFFF0010
+#define ATT_STRING  0xFFFF0020
+#define ATT_LONG    0xFFFF0030
+#define ATT_HEXA    0xFFFF0040
+#define ATT_BOOL    0xFFFF0050
+#define ATT_ARRAY   0xFFFF0060
+#define ATT_FONT    0xFFFF0070
+
+BOOL @{c BFA2EE}ApiReadToolTypes@{c} (UBYTE *programname, Tag tags, ...);
+/*
+ *  TAG ORDER
+ *  ¯¯¯¯¯¯¯¯¯
+ *     ATT_STRING, toolname, *string, default_string,
+ *     ATT_LONG,   toolname, *long,   default_value,
+ *     ATT_HEXA,   toolname, *ulong,  default_value,
+ *     ATT_BOOL,   toolname, *bool,   FALSE|TRUE,
+ *     ATT_ARRAY,  toolname, **long,  array_size,
+ *     ATT_FONT,   toolname, *string, *long,
+ *     ...
+ *     TAG_END
+ *
+ */
+
+BOOL @{c BFA2EE}ApiWriteToolTypes@{c} (UBYTE *programname, ULONG stack, Tag tags, ...);
+/*
+ *  TAG ORDER
+ *  ¯¯¯¯¯¯¯¯¯
+ *     ATT_SINGLE, toolname, 0,       0,
+ *     ATT_STRING, toolname, *string, 0,
+ *     ATT_LONG,   toolname, long,    0,
+ *     ATT_HEXA,   toolname, ulong,   0,
+ *     ATT_BOOL,   toolname, bool,    0,
+ *     ATT_ARRAY,  toolname, **long,  array_size,
+ *     ATT_FONT,   toolname, *string, long,
+ *     ...
+ *     TAG_END
+ *
+ */
+
+/* --- @{c BFA2EE}End of ToolTypesSupport.h@{c} ------------------------------------------- */
+
+
+
+
+  A  následuje vlastní implementace.  Funkce @{c BFA2EE}ApiScanStr()@{c}, @{c BFA2EE}ApiScanHexStr()@{c} a struktura
+@{c BFA2EE}ToolTagItem@{c}  jsou  lokální.   Externí  bázi  knihovny  IconBase  otevêete  z  hlavního
+programu.  Bázi exec.library (tzv. SysBase) není têeba otevírat.
+
+/* --- @{c BFA2EE}ToolTypesSupport.c@{c} -------------------------------------------------- */
+
+#include <string.h>
+
+#include <exec/types.h>
+
+#include <clib/exec_protos.h>
+#include <clib/icon_protos.h>
+#include <pragmas/exec_pragmas.h>
+#include <pragmas/icon_pragmas.h>
+
+extern struct Library  *IconBase;
+
+
+UBYTE *ApiScanStr (UBYTE *s, LONG *num)
+{
+	BOOL	neg = FALSE;
+	LONG	n;
+
+	if (*s == '-')
+	{
+		neg = TRUE;
+		s++;
+	}
+	n = 0;
+	while (*s && (*s != ',') && (*s != ' '))
+	{
+		if (*s>='0' && *s<='9')
+		{
+			n *= 10;
+			n += *s - '0';
+		}
+		s++;
+	}
+	if ((*s == ',') || (*s == ' '))  s++;
+	if (neg)  n = -n;
+	*num = n;
+	return (s);
+}
+
+
+UBYTE *ApiScanHexStr (UBYTE *s, ULONG *num)
+{
+	ULONG	n;
+
+	n = 0;
+	while (*s && (*s != ',') && (*s != ' '))
+	{
+		if (*s>='0' && *s<='9')
+		{
+			n = n << 4;
+			n += *s - '0';
+		}
+		if (*s>='A' && *s<='F')
+		{
+			n = n << 4;
+			n += *s - 'A' + 10;
+		}
+		if (*s>='a' && *s<='f')
+		{
+			n = n << 4;
+			n += *s - 'a' + 10;
+		}
+		s++;
+	}
+	if ((*s == ',') || (*s == ' '))  s++;
+	*num = n;
+	return (s);
+}
+
+
+struct ToolTagItem
+{
+	Tag    tti_Tag;
+	UBYTE *tti_Name;
+	LONG  *tti_Data;
+	LONG   tti_Extra;
+};
+
+
+/* --- @{c BFA2EE}ApiReadToolTypes()@{c} -------------------------------------------------- */
+
+BOOL ApiReadToolTypes (UBYTE *programname, Tag tags, ...)
+{
+	struct DiskObject  *icon;
+	struct ToolTagItem *tti;
+	UBYTE *dstr, *s;
+	BOOL  *bptr, success;
+
+	success = FALSE;
+	tti = (struct ToolTagItem *)&tags;
+	while (tti->tti_Tag)
+	{
+		switch (tti->tti_Tag)
+		{
+			case ATT_STRING:
+				strcpy((UBYTE *)tti->tti_Data, (UBYTE *)tti->tti_Extra);
+				break;
+			case ATT_LONG:
+			case ATT_HEXA:
+				*tti->tti_Data = tti->tti_Extra;
+				break;
+			case ATT_BOOL:
+				bptr = (BOOL *)tti->tti_Data;
+				*bptr = (BOOL)tti->tti_Extra;
+				break;
+		}
+		tti++;
+	}
+
+	if (icon = GetDiskObject(programname))
+	{
+		tti = (struct ToolTagItem *)&tags;
+		while (tti->tti_Tag)
+		{
+			if (s = FindToolType(icon->do_ToolTypes, tti->tti_Name))
+			{
+				dstr = (UBYTE *)tti->tti_Data;
+				switch (tti->tti_Tag)
+				{
+					case ATT_STRING:
+						strcpy(dstr, s);
+						break;
+					case ATT_LONG:
+						ApiScanStr(s, tti->tti_Data);
+						break;
+					case ATT_HEXA:
+						ApiScanHexStr(s, (ULONG *)tti->tti_Data);
+						break;
+					case ATT_BOOL:
+						bptr = (BOOL *)tti->tti_Data;
+						if (!strcmp(s, "ON"))   *bptr = TRUE;
+						if (!strcmp(s, "OFF"))  *bptr = FALSE;
+						if (!strcmp(s, "on"))   *bptr = TRUE;
+						if (!strcmp(s, "off"))  *bptr = FALSE;
+						if ((*s == 'Y') || (*s == 'y'))  *bptr = TRUE;
+						if ((*s == 'N') || (*s == 'n'))  *bptr = FALSE;
+						break;
+					case ATT_ARRAY:
+						while (tti->tti_Extra)
+						{
+							if (*s)
+							{
+								s = ApiScanStr(s, tti->tti_Data);
+							}
+							tti->tti_Data++;
+							tti->tti_Extra--;
+						}
+						break;
+					case ATT_FONT:
+						while (*s && (*s!='/'))
+						{
+							*dstr++ = *s++;
+						}
+						if (*s == '/')
+						{
+							s++;
+							ApiScanStr(s, (LONG *)tti->tti_Extra);
+						}
+						break;
+				} /* switch */
+			}
+			tti++;
+		}
+		FreeDiskObject(icon);
+		success = TRUE;
+	}
+	return (success);
+}
+
+
+/* --- @{c BFA2EE}ApiWriteToolTypes()@{c} ------------------------------------------------- */
+
+BOOL ApiWriteToolTypes (UBYTE *programname, ULONG stack, Tag tags, ...)
+{
+	struct DiskObject  *icon;
+	struct ToolTagItem *tti;
+	UBYTE **ttarray, **tta;
+	LONG  *lptr, items, i;
+	UBYTE *dest, *str, *ttname;
+	BOOL  success;
+
+	success = FALSE;
+	if (icon = GetDiskObject(programname))
+	{
+		tti = (struct ToolTagItem *)&tags;
+		items = 0;
+		while (tti->tti_Tag)
+		{
+			tti++;
+			items++;
+		}
+		ttarray = tta = AllocVec((items+1)*4, MEMF_CLEAR);
+		if (!tta)  break;
+		for (i=0; i<items; i++)
+		{
+			*tta = AllocVec(1024, MEMF_CLEAR);
+			tta++;
+		}
+		tti = (struct ToolTagItem *)&tags;
+		tta = ttarray;
+
+		while (tti->tti_Tag)
+		{
+			ttname = tti->tti_Name;
+			str = (UBYTE *)tti->tti_Data;
+			dest = *tta;
+
+			switch (tti->tti_Tag)
+			{
+				case ATT_SINGLE:
+					while (*ttname)  *dest++ = *ttname++;
+					break;
+				case ATT_STRING:
+					if (str && *str)
+					{
+						while (*ttname)  *dest++ = *ttname++;
+						*dest++ = '=';
+						strcpy(dest, str);
+					} else {
+						*dest++ = '(';
+						while (*ttname)  *dest++ = *ttname++;
+						*dest = ')';
+					}
+					break;
+				case ATT_LONG:
+					while (*ttname)  *dest++ = *ttname++;
+					sprintf(dest, "=%d", tti->tti_Data);
+					break;
+				case ATT_HEXA:
+					while (*ttname)  *dest++ = *ttname++;
+					sprintf(dest, "=%08X", tti->tti_Data);
+					break;
+				case ATT_BOOL:
+					while (*ttname)  *dest++ = *ttname++;
+					*dest++ = '=';
+					if ((BOOL)tti->tti_Data)
+						strcpy(dest, "YES");
+					else
+						strcpy(dest, "NO");
+					break;
+				case ATT_ARRAY:
+					lptr = tti->tti_Data;
+					while (*ttname)  *dest++ = *ttname++;
+					*dest++ = '=';
+					while (tti->tti_Extra)
+					{
+						sprintf(dest, "%d", *lptr);
+						while (*dest)  dest++;
+						lptr++;
+						tti->tti_Extra--;
+						if (tti->tti_Extra)  *dest++ = ',';
+					}
+					break;
+				case ATT_FONT:
+					while (*ttname)  *dest++ = *ttname++;
+					sprintf(dest, "=%s/%d", str, tti->tti_Extra);
+					break;
+			} /* switch */
+			tti++;
+			tta++;
+		}
+		icon->do_ToolTypes = ttarray;
+		icon->do_StackSize = stack;
+		if (PutDiskObject(programname, icon))
+			success = TRUE;
+
+		tta = ttarray;
+		for (i=0; i<items; i++)
+		{
+			FreeVec(*tta);
+			tta++;
+		}
+		FreeVec(ttarray);
+		FreeDiskObject(icon);
+	}
+	return (success);
+}
+
+/* --- @{c BFA2EE}End of ToolTypesSupport.c@{c} ------------------------------------------- */
+
+
+  A  koneçnë  pêíklad  za  vîechny vaîe aplikace.  Není to bezpodmíneçnë nutné, ale je
+sluînost definovat konstanty se jmény vaîich ToolTypû.  Pêi zápisu konfigurace je také
+moùné  uloùit do ikony vámi preferovanou velikost zásobníku.  V dneîní dobë doporuçuji
+8KB,  ne  defaultní 4KB.  @{c BFA2EE}ProgramName@{c} by správnë mëla být globální promëná, kterou vám
+vrátí  funkce  @{c BFA2EE}dos.library/GetProgramName()@{c}.   Pochopitelnë  mûùete  çíst  konfiguraci
+i z jiné ikony, neù ze které byl program spuîtën.
+
+/* --- @{c BFA2EE}MyApp.c@{c} ------------------------------------------------------------- */
+
+#include "ToolTypesSupport.h"
+
+#define DEFAULT_STACK  8196
+#define MAX_STRING     256
+
+[....]
+
+LONG   CFG_WinX, CFG_WinY, CFG_WinW, CFG_WinH;
+ULONG  CFG_ModeID;
+UBYTE  CFG_FontName[MAXFONTNAME];
+LONG   CFG_FontSize;
+
+UBYTE  CFG_PlayerName[MAX_STRING];
+BOOL   CFG_Switch;
+LONG   CFG_Score;
+
+
+/* --- @{c BFA2EE}Deklarace ToolTypû@{c} -------------------------------------------------- */
+
+static UBYTE  *TT_WINPOS  = "WINDOWPOSITION";
+static UBYTE  *TT_MODEID  = "MODEID";
+static UBYTE  *TT_FONT    = "GUIFONT";
+static UBYTE  *TT_LINE    = "======================================";
+static UBYTE  *TT_NAME    = "NAME";
+static UBYTE  *TT_SWITCH  = "SWITCH";
+static UBYTE  *TT_SCORE   = "SCORE";
+
+
+/* --- @{c BFA2EE}Uloùení konfigurace@{c} ------------------------------------------------- */
+
+BOOL SaveConfig (UBYTE *ProgramName)
+{
+	BOOL  success;
+
+	success = ApiWriteToolTypes(ProgramName, DEFAULT_STACK,
+		ATT_ARRAY,  TT_WINPOS, &CFG.WinX, 4,
+		ATT_HEXA,   TT_MODEID, CFG_ModeID, 0,
+		ATT_FONT,   TT_FONT,   CFG_FontName, CFG_FontSize,
+		ATT_SINGLE, TT_LINE,   0, 0,
+		ATT_STRING, TT_NAME,   CFG.PlayerName, 0,
+		ATT_BOOL,   TT_SWITCH, CFG.Switch, 0,
+		ATT_LONG,   TT_SCORE,  CFG.Score, 0,
+		TAG_END);
+	return(success);
+}
+
+
+/* --- @{c BFA2EE}Inicializace programu@{c} ----------------------------------------------- */
+
+BOOL Init (UBYTE *ProgramName)
+{
+	[... otevêení knihoven ...]
+
+	/* --- defaultní hodnoty velikosti okna --- */
+	CFG_WinX = CFG_WinY = 0;
+	CFG_WinW = 300;
+	CFG_WinH = 170;
+
+	/* --- defaultní font --- */
+	strcpy(CFG_FontName, "topaz.font");
+	CFG_FontSize = 8;
+
+	ApiReadToolTypes(ProgramName, DEFAULT_STACK,
+		ATT_ARRAY,  TT_WINPOS, &CFG.WinX, 4,
+		ATT_HEXA,   TT_MODEID, &CFG_ModeID, HIRES_KEY,
+		ATT_FONT,   TT_FONT,   &CFG_FontName, &CFG_FontSize,
+		ATT_STRING, TT_NAME,   &CFG.PlayerName, "Unnamed",
+		ATT_BOOL,   TT_SWITCH, &CFG.Switch, FALSE,
+		ATT_LONG,   TT_SCORE,  &CFG.Score, 0,
+		TAG_END);
+
+	[... otevêení obrazovky/oken ...]
+}
+
+
+/* --- @{c BFA2EE}End of MyApp.c@{c} ------------------------------------------------------ */
+
+
+                         @{c FFFFFF}Pêeji hodnë úspëchû v programování!@{c}
+
+                                        @{c 9BB8EE}ShAmaN@{c}
+
+
+    =============================================================================
+     "@{c 9BB8EE}Programming is like sex: One mistake and you have to support it for life.@{c}"
+                        - @{c 90ABDD}Michael Sinz, Commodore-Amiga, Inc.@{c}
+    =============================================================================

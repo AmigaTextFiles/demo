@@ -1,0 +1,53 @@
+@{d ECEEAC}                      @{c D3DD49}Inside Out - Nová generace poçítaçû Amiga?@{c}
+                      ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Projekt InsideOut znamená novou generaci poçítaçû Amiga s vyjímeçným výkonem, nízkou
+cenou   a velkými   moùnostmi  rozîíêení.   Hardwarová  karta  InsideOut  spolupracuje
+se @{c D3DD49}Siamese@{c}  softwarem.   Siamese  software  je k dispozici pro Windows 95 a Windows NT
+(Intel  a  Alpha  verze).   Karta  InsideOut  je jiù dokonçena, avîak zatím pouze jako
+testovací prototyp.
+
+  InsideOut  je  v podstatë  @{c D3DD49}Amiga na PCI kartë@{c}.  Obsahuje AGA çipset, obvody CIA, CPU
+68040/060 a floppy & IDE konektory.  Karta nemá sériové, paralelní rozhraní a port pro
+myî,  protoùe  tato  zaêízení  jsou dostupná pêes hostitelský poçítaç (PC nebo Alpha).
+Siamese zajiîïuje pêesuny dat mezi hostujícím poçítaçem a kartou InsideOut.
+
+  Díky InsideOut a Siamese lze mít systémy AmigaOS, Win95/NT a MacOS spuîtëné najednou
+a to na té samé obrazovce, pêiçemù se pouùívají spoleçnë ty samé ovladaçe, klávesnice,
+myî,  karty,  média a soubory.  Také lze mezi systémy pêenáîet data pomocí clipboardu.
+Protoùe  spousta práce se naloùí na stranu PC, aplikace na Amize bëùí rychleji, neù na
+bëùné Amize - çasto více neù dvakrát rychleji.
+
+
+                             @{$ InsideOut.png}   obrázek InsideOut PCI   @{$}
+
+
+  Siamese  zachytí  dûleùitá  volání AmigaOS a posílá je do fronty pêíkazû.  Volání se
+tak çasto vrátí jeîtë pêed dokonçením a provede se paralelnë na hostitelském poçítaçi.
+To  velmi  zrychlí  AmigaOS,  vçetnë nepotêebné CHIP RAM, která jiù není têeba ani pro
+zobrazování, ani pro zvuk.
+
+  Na  druhé  stranë  je také Siamese, které frontu pêíkazû z karty postupnë zpracovává
+a pêekládá  je na pêísluîná volání hostitelského systému.  Jasná výhoda je, ùe Siamese
+je naprosto nezávislé na grafické kartë, formátu disku, síïovém protokolu atd.  Vîe je
+záleùitostí hostitelského systému.  Tím pádem mûùete napê. díky Win95 pouùít prakticky
+@{c D3DD49}vîechny@{c}  v souçasnosti  vyrábëné  grafické  karty  bez  jediné  zmëny na stranë Amigy.
+Siamese  RTG  nabídne  automaticky  vîechny  grafické  reùimy takové grafické karty ve
+standardní databázi grafických reùimû.
+
+  Na  kartë  InsideOut  je  osazeno  2MB  pamëti  CHIP, ale ùádná FAST - tato pamëï je
+dynamicky  alokována na hostitelském poçítaçi.  Pêístup k pamëti je stejnë rychlý jako
+na  vëtîinë  Amig,  ale vëci jako DMA pêenosy z disku mohou být i rychlejîí.  Grafická
+a zvuková  data  se  tak  nemusí  zbyteçnë pêesouvat po PCI sbërnici mezi hostitelskou
+pamëtí a InsideOut kartou.
+
+  InsideOut PCI karta spoleçnë se Siamese software bude základním kamenem vývojáêského
+"@{c D3DD49}BRIDGE@{c}"  systému  AmigaOS  4.0  a pozdëji  zaruçí majitelûm nových Amig s AmigaOS 5.0
+plnou hardwarovou kompatibilitu s Classic Amigou.  Win95 vypadá jako volba ze které se
+zvedá ùaludek, ale Siamese Ltd. bude prodávat i pracovní stanice s Alpha procesorem na
+768MHz s WindowsNT a InsideOut PCI kartou, na které spustíte jak AmigaOS, tak MacOS.
+
+
+                                      - @{f 4AE7FF}ShAmaN@{f}@{f} -
+
+
+ @{c D3DD49} PS: já osobnë stejnë poçkám na BoXeRa... :-)))@{c}

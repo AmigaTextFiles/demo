@@ -1,0 +1,6 @@
+sdlmove:	hogwagen.c
+	ppc-amigaos-gcc `sdl-config --cflags --libs` -lm -W -lpthread hogwagen.c -o ../hogwagen -lSDL
+	ppc-amigaos-strip --strip-unneeded --remove-section .comment ../hogwagen
+
+clean:
+	rm sdlmove

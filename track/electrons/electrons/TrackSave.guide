@@ -1,0 +1,199 @@
+@DATABASE "TrackSave Release 1.0 documentation"
+
+@NODE MAIN "TrackSave Release 1.0 documentation"
+
+
+                            
+                            TRACKSAVE 1.0
+
+                    multi-purpose trackdisk writer
+
+                       © by Timm S. Müller 1994
+
+
+@{" Disclaimer " Link Disclaimer}
+@{" Introduction " Link Introduction}
+@{" Documentation " Link Documentation}
+@{" Author " Link Author}
+@ENDNODE
+
+@NODE Disclaimer "Disclaimer"
+
+                              Disclaimer
+                              ----------
+
+This  software  may be used and redistributed freely, as long as there
+are  no  changes  made  to  the  program,  its  source  code,  and its
+documentation.  The  author  makes  no  guarantee  of any kind for the
+reliability of the software described in this documentation.
+
+
+@ENDNODE
+
+@NODE Introduction "Introduction"
+
+                             Introduction
+                             ------------
+
+I  needed  a  program like TrackSave for programming trackloaded games
+and  demonstrations.  I  was very upset about the fact that I found no
+satisfying  way  to  automatically  install  the current version of my
+project  to  disk  by simply executing a batch file or ARexx script. I
+had  to  enter a program called AsmOne in order to load all data areas
+into  raw  memory, and then to write them to disk using the WT command
+one  after the other. That was a very nasty procedure, especially when
+changes of the disk segmentation became necessary. Another problem was
+that  I  always  had  to  assemble  the disk on a physical floppy disk
+drive.  It  would've been much more intelligent to fix it on a virtual
+floppy (such as RAD or FMS by Matt Dillon/Jim Cooper) and then to copy
+it  to  a  physical  disk  using a fully-featured disk copier (such as
+SuperDuper by Sebastiano Vigna).
+
+Using  TrackSave, I just need to execute a batch file or AREXX program
+for  installing  all  data associated with my project to a physical or
+virtual  disk.  As the name suggests, TrackSave writes tracks to disks
+using the trackdisk.device. In addition to that, it can handle devices
+similar  to  the  trackdisk.device, such as FMS or RAD. Don't expect a
+sophisticated  GUI or something mystical like that, for TrackSave is a
+simple  shell  tool. Last not least, TrackSave offers an exotic option
+which  artificially  lengthens  disk  archives   and   an   option for
+specifying an offset within your data file.
+
+@ENDNODE
+
+@NODE Documentation "Documentation"
+
+                            Documentation
+                            -------------
+
+
+@{" System requirements " Link System_requirements}
+@{" Shell usage " Link Shell_usage}
+@{" Examples " Link Examples}
+@ENDNODE
+
+@NODE System_requirements "System requirements"
+
+                         System requirements
+                         -------------------
+
+You need Kickstart 2.0 (V36) or higher to run TrackSave.
+
+
+@ENDNODE
+
+@NODE Shell_usage "Shell usage"
+
+                             Shell usage
+                             -----------
+
+Template:        TrackSave   FILE/A,U=UNIT/N,S=START/N,L=LEN/N,
+                             R=RANDOM/S,O=OFFSET/N,D=DEVICE
+                             
+
+FILE
+
+File to tracksave.
+
+
+UNIT (U)
+
+Drive  unit  number,  e.g. 2 for DF2: or FF2:, depending on the device
+you are using. Default is 0.
+         
+
+START (S)
+
+Starting track number, default is 0.
+
+
+LEN (L)
+
+Number of tracks to write. If you omit the LEN argument, the number of
+tracks  depends  on the file length. Keep in mind that START + LEN may
+not exceed 80 tracks if LEN is specified.
+
+
+RANDOM (R)
+
+If  the  RANDOM option is set and the file length does not fit exactly
+into  a multiple of tracks (11264 bytes), the surplus memory is filled
+up with random data instead of zeros. Keep in mind that disk archivers
+usually  can't gain a single byte out of random data. You can use this
+option  in order to lengthen disk archives which are the usual way for
+spreading  trackloaded  disks  in  bulletin  board systems ;-) Default
+setting is off.
+
+
+OFFSET (O)
+
+This  numeric argument enables you to define a byte offset within your
+data  file,  thus  allowing you to skip a given number of bytes before
+writing. Default is 0.
+
+
+DEVICE (D)
+
+This  argument  allows  you  to  specify   a   device   different from
+trackdisk.device.  It should be trackdisk-like, such as fmsdisk.device
+for floppy partitions or ramdrive.device for RAD. It is not adviced to
+use  devices  like  audio.device or stuff like that anyway. Default is
+trackdisk.device.
+
+
+
+@ENDNODE
+
+@NODE Examples "Examples"
+
+                               Examples
+                               --------
+
+TrackSave dh0:data.raw         
+
+tracksaves the file dh0:data.raw to DF0:, starting with track 0.
+
+
+TrackSave dh0:data.raw UNIT 2 LEN 50
+
+tracksaves  the  file  dh0:data.raw  to  DF2:,  starting with track 0,
+length  is  50  tracks.  If  data.raw  is  smaller than 50 tracks, the
+surplus  memory  is  filled  with  zeros  before   writing. Otherwise,
+data.raw is cut at byte offset 563200 (50*11264).
+
+
+TrackSave dh0:data.raw S=10 R D=ramdrive.device
+
+tracksaves  the  file dh0:data.raw to RAD:, starting with track 10. If
+data.raw  does  not fit exactly in a multiple of tracks (11264 bytes),
+surplus memory is filled with random data.
+
+
+TrackSave dh0:data.raw 2 d fmsdisk.device o 10000 l 40 s 10 r
+
+tracksaves  the  file  dh0:data.raw  starting  with  offset   10000 to
+fmsdisk-device  FF2:.  Length  is  40  tracks,  start  is track 10. If
+data.raw minus 10000 does not fit exactly in 450560 bytes (40 tracks),
+surplus  memory is filled with random data. If data.raw minus 10000 is
+greater than 40 tracks, it is cut at (its total) offset 460560.
+
+
+@ENDNODE
+
+@NODE Author "Author"
+
+                             Author
+                             ------
+
+Don't  hesitate  to contact the author if you have problems, ideas for
+enhancements, bug reports or something like that.
+
+
+                         Timm S. Müller
+                        Wehrdaer Weg 3/39
+                          35037 Marburg
+                          FR of Germany
+                        Tel. 06421-63828
+
+@ENDNODE
+

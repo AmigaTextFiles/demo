@@ -1,0 +1,329 @@
+;---------------------------------------------------------------------------
+
+;   * Subject: [stella] robbie.a65
+;   * From: jvmatthe@eos.ncsu.edu
+;   * Date: Sun, 13 Oct 1996 03:38:46 -0400 (EDT)
+
+;---------------------------------------------------------------------------
+
+;       INCLUDE 2600.A65
+
+        processor 6502
+
+VSync   EQU     $00
+VBlank	EQU	$01
+WSync	EQU	$02
+RSync	EQU	$03
+NuSiz0	EQU	$04
+NuSiz1	EQU	$05
+CoLuP0	EQU	$06
+CoLuP1	EQU	$07
+CoLuPf	EQU	$08
+CoLuBk	EQU	$09
+CtrlPf  EQU     $0A
+RefP0	EQU	$0B
+RefP1	EQU	$0C
+Pf0	EQU	$0D
+Pf1	EQU	$0E
+Pf2	EQU	$0F
+ResP0	EQU	$10
+ResP1	EQU	$11
+ResM0	EQU	$12
+ResM1	EQU	$13
+ResBl	EQU	$14
+AudC0	EQU	$15
+AudC1	EQU	$16
+AudF0	EQU	$17
+AudF1	EQU	$18
+AudV0	EQU	$19
+AudV1	EQU	$1A
+GrP0	EQU	$1B
+GrP1	EQU	$1C
+EnaM0	EQU	$1D
+EnaM1	EQU	$1E
+EnaBl	EQU	$1F
+HMP0	EQU	$20
+HMP1	EQU	$21
+HMM0	EQU	$22
+HMM1	EQU	$23
+HMBl	EQU	$24
+VDelP0	EQU	$25
+VDelP1	EQU	$26
+VDelBl	EQU	$27
+ResMP0	EQU	$28
+ResMP1	EQU	$29
+HMove	EQU	$2A
+HMClr	EQU	$2B
+CxClr	EQU	$2C
+
+CxM0P	EQU	$00
+CxM1P	EQU	$01
+CxP0FB	EQU	$02
+CxP1FB	EQU	$03
+CxM0FB	EQU	$04
+CxM1FB	EQU	$05
+CxBlPf	EQU	$06
+CxPPMM	EQU	$07
+Inpt0	EQU	$08
+Inpt1	EQU	$09
+Inpt2	EQU	$0A
+Inpt3	EQU	$0B
+Inpt4	EQU	$0C
+Inpt5	EQU	$0D
+
+SwchA	EQU	$280
+SwACnt	EQU	$281
+SwchB	EQU	$282
+SwBCnt	EQU	$283
+InTim	EQU	$284
+Tim1T	EQU	$294
+Tim8T	EQU	$295
+Tim64T	EQU	$296
+T1024T	EQU	$297
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+Temp0   =       $80
+Temp1   =       $81
+Temp2   =       $82
+Temp3   =       $83
+Temp4   =       $84
+
+MaxScr  EQU     $20 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        ORG     $1000
+
+Start:  SEI             ; Initialize the machine, set interrupt disable
+        CLD		; clear decimal mode
+        LDX     #$FF	; start X at $FF (255d)
+        TXS		; transfer it to the stack
+        INX		; set X to $00
+        TXA		; transfer it to the accumulator, A
+B1      STA     0,X     ; store $00 at 0+X
+        INX		; increment X
+        BNE     B1      ; if X is not zero yet, go back to @1
+			; the above loop zeros out $00 to $FF
+			; at this point X is $00
+	LDA	#$15	; 
+	STA	Temp1	;
+	LDA	#$00	;
+	STA	Temp0	; this sets up reference to Table
+	LDA	#$05	; number of screens per frame
+	STA	Temp2	;
+	LDA	#$30	; number of frames facing initial direction
+	STA	Temp4	; store it
+	LDA	#$08	; initial direction
+	STA	Temp3
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; 
+
+Top:    ; Start a new screen
+
+; ======================
+;        LDA     #$05
+        LDA     #$35
+; ======================
+        STA     Tim64T	; set timer for $05*$40 = $140 (320d) clocks
+
+        ; do overscan stuff here
+
+        LDA     #$00	; put $00 in A
+        STA     Pf0	; clear out first playfield section
+        STA     Pf1	; clear out second playfield section
+        STA     Pf2	; clear out third playfield section
+        STA     GrP0	; clear out player graphic 0
+        STA     GrP1	; clear out player graphic 1
+        STA     EnaM0	; clear out missile 0
+        STA     EnaM1	; clear out missile 1
+        STA     EnaBl	; clear out ball
+        STA     CoLuP0  ; set player 0 to black
+        STA     CoLuP1  ; set player 1 to black
+        STA     CoLuPf  ; set playfield to black
+        STA     CoLuBk  ; set background to black
+
+        ; wait for overscan to finish, then start blanking
+        
+B2      LDA     InTim   ; find current value of timer
+        BNE     B2      ; if timer not zero, wait
+			; when we get here, A will be $00
+        LDY     #$02    ; this is 10000010b
+        STY     WSync   ; wait for end of current line
+        STY     VBlank  ; start vertical, disable latches, dump orts
+			; this is from the 10000010b
+        STY     VSync   ; start vertical sync
+        STY     WSync	; send three lines while doing vertical sync
+        STY     WSync	;
+        STY     WSync	;
+        STA     VSync   ; end vertical sync
+; ======================
+;        LDA     #$05    ; put $05 in A
+        LDA     #$43    ; put $43 in A
+        STA     Tim64T  ; start vblank timer
+; ======================       
+; Setup the playfield graphics 
+
+	LDA	#$06	; color grey
+	STA	CoLuP0	; make robot grey
+        LDA     #$0E    ; color white
+        STA     CoLuBk  ; make the background white
+
+	JSR	Blank	; do blanking stuff
+        STA     WSync   ; one more line for good measure
+
+; Draw the screen
+	
+	LDA	Temp4	; get frames facing current direction
+	CMP	#$30	; is it $30?
+	BNE	DontTurn; if not, don't turn him
+	LDA	Temp3	; get current direction
+	EOR	#$FF	; NOT that value
+	STA	Temp3	; store new direction
+	STA	RefP0	; make player face other direction
+	LDA	#$00	; make A $00
+	STA	Temp4	; new numer of frames
+
+DontTurn
+	LDX	#$20	; get ready to do $20 (32d) blank lines
+Loop1	STA	WSync	; do one blank line
+	DEX		; decrement counter X
+	BNE	Loop1	; if X not $00 then do another line
+	
+	STA	WSync	; start at end of WSync so we know where to put 
+			; player graphic
+
+	LDX	#$05	; prepare to position player graphic 0
+Waitin	DEX		; killin' time
+	BNE	Waitin	; keep on killin' time
+
+	STA	ResP0	; start player 0 at this point in screen
+	
+	STA	WSync	; now next line
+	
+	LDY	#$00	; start at line 0 of current frame
+Draw	LDA	(Temp0),Y 
+			; indirect call to memory
+			; Y holds frame number of line and Temp1 and
+			; the following byte hold address that current
+			; frame data starts at
+	STA	GrP0	; store this line of data in player graphic 0 register
+	CPY	#$09	; are we on $09th line?
+	BNE	Onward	; if not go on to next line
+	LDA	#$00	; set A to $00
+	STA	CoLuP0	; and set player graphic 0 color to black
+Onward	STA	WSync	; done with this line
+	INY		; go to next line of graphics data
+	CPY	#$0E	; done with this frame?
+	BNE	Draw	; if not done, do another line
+			; note that last line of data effective cuts off 
+			; player graphic 0 since it is a "clear" line
+	
+	LDX	#$9E	; do rest of screen, $9E (154d) lines approx.
+Loop2	STA	WSync	; do a line
+	DEX		; count down
+	BNE	Loop2	; if not at zero, do another line
+	
+	DEC	Temp2	; decrement number of screens on this frame
+	BNE	NextScr ; if not zero, go to next screen
+	LDA	#$05	; set up to do 5 more frames
+	STA	Temp2	; and store it
+			; now get new frame info
+	LDA	Temp0	; get current frame address
+	ADC	#$0D	; add 14 lines to its address
+	CMP	#$38	; have we reached end of Table?
+	BNE	StoreFr	; if not, store new frame's address
+	LDA	#$00	; if so, start over with first frame
+StoreFr	STA	Temp0	; 
+
+NextScr	DEC	Temp4	; decrement number of frames remaining facing this
+			; direction
+	
+	JMP	Top	; done with this frame, go back to Top
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; 
+
+	ORG 	$1500	; start table at $1500
+
+Table:  .word      $7838   ; 00111000
+			; 01111000
+        .word      $1878   ; 01111000
+			; 00011000
+        .word      $FF7E   ; 01111110
+			; 11111111
+        .word      $99BD   ; 10111101
+			; 10011001
+        .word      $7618   ; 00011000
+			; 01110110
+        .word      $9429   ; 00101001
+			; 10010100
+        .word      $006E   ; 01101110
+			; 00000000
+        .word      $7838   ; 00111000
+			; 01111000
+        .word      $1878   ; 01111000
+			; 00011000
+        .word      $FF7E   ; 01111110
+			; 11111111
+        .word      $99BD   ; 10111101
+			; 10011001
+        .word      $3A18   ; 00011000
+			; 00111010
+        .word      $95A9   ; 10101001
+			; 10010101
+        .word      $005C   ; 01011100
+			; 00000000
+        .word      $7838   ; 00111000
+			; 01111000
+        .word      $1878   ; 01111000
+			; 00011000
+        .word      $FF7E   ; 01111110
+			; 11111111
+        .word      $99BD   ; 10111101
+			; 10011001
+        .word      $5C18   ; 00011000
+			; 01011100
+        .word      $95A9   ; 10101001
+			; 10010101
+        .word      $003A   ; 00111010
+			; 00000000
+        .word      $7838   ; 00111000
+			; 01111000
+        .word      $1878   ; 01111000
+			; 00011000
+        .word      $FF7E   ; 01111110
+			; 11111111
+        .word      $99BD   ; 10111101
+			; 10011001
+        .word      $6E18   ; 00011000
+			; 01101110
+        .word      $15A8   ; 10101000
+			; 00010101
+        .word      $0076   ; 01110110
+			; 00000000
+	
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; 
+
+
+Blank:  NOP             ; spacer
+B3      LDA     InTim   ; find out current status of timer
+        BNE     B3      ; if timer is zero, then done, otherwise check timer
+        STA     WSync   ; A is $00, kick out another line
+        STA     VBlank  ; blank off, disable latches, remove dump
+        RTS
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; 
+
+        ORG     $17FC   ; vectors for 2k cart
+        .word      Start   ; reset
+        .word      Start   ; IRQ
+
+
+        ORG     $1FFC   ; vectors for 4k cart
+        .word      Start   ; reset
+        .word      Start   ; IRQ
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; 
+
+;        END

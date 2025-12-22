@@ -1,0 +1,13 @@
+===============================================
+Short:    No longer non validated disks! 1.19
+Author:   thor@einstein.math.tu-berlin.de (Thomas Richter)
+Type:     disk/salv
+Version:  1.19
+Requires: OS 2.0
+===============================================
+Keeps disks valid from accidential resets by catching the reset 
+signal and writing the bitmap information first. Read the guide first, 
+or view a HTML version at
+http://www.math.tu-berlin.de/~thor/thor/index.html
+
+Thomas Richter

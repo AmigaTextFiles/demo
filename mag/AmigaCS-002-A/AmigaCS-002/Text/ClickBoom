@@ -1,0 +1,137 @@
+@{d 8ADAFF}                                @{c 14FFE2}Interview s ClickB00M
+                                @{c FFAD17}¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+Q: Povídá  se,  ùe  kód  enginu  pouùitý v demo verzi Quake Playeru není ten samý kód,
+   který  bude  pouùit  ve  finální  hêe.   Je to pravda, a jestliùe ano, pak v çem je
+   rozdíl?
+
+@{c 14FFE2}A: Jak  jsem  pochopil,  nëkdo  se na IRC vydával  za  programátora Quake a tvrdil, ùe
+   engine  v Quake  Playeru není koneçná verze.  To je ale sprostá leù.  To, co vidíte
+   v Quake  Playeru, je 99% toho co uvidíte ve finální verzi hry.  Samozêejmë, bylo od
+   té doby opraveno nëkolik vëcí, pêedevîím v kompatibilitë.@{c}
+
+
+Q: Tvrdíte,  ùe  na  vaîich  Amigách  dëlá Quake 16 FPS.  Mnoho lidí ale nemûùe dostat
+   více jak 10 FPS.  Nevíte, çím by to mohlo být?
+
+@{c 14FFE2}A: ClickB00M  nikdy nezveêejnil  informace  o rychlosti Quake.  Oçekáváme, ùe hráçi si
+   to  sami otestují.  Na naîí WWW stránce máme pouze tyto citáty z çasopisu CU Amiga,
+   týkající se jejich vlastních mëêení:@{c}
+   @{c 14FFE2}"I  bez  grafické  karty  lze  na rychlé Amize hrát Quake ve full screenu v rozumné
+    rychlosti - takové, ùe se nikdy neztratíte v akci..."
+   "Amiga  Quake  je  pravdëpodobnë  nejrychlejîí  port  Quake  na  svëtë.   Aby  tato
+    skuteçnost  lépe  vynikla,  je  potêeba  si  pêedstavit  PC  s  podobným grafickým
+    hardwarem,  které  potêebuje  pro  stejný výkon citelnë rychlejîí CPU.  Dle naîich
+    testû, Quake bëùí na 50MHz 68060 stejnë rychle jako na Cyrixu P150 a dokonce i AGA
+    verze  ve  320×200×8 beùí stejnë rychle jako 486DX4/100MHz s VLB grafickou kartou.
+    To je vynikající!"
+   "ClickB00M  umoùnil  hru  v 16 bitové hloubce barev, coù vypadá skvële.  Na to vîak
+    potêebujete  grafickou  kartu,  hra  je  vîak v tomto reùimu pomalejîí, neù ve 256
+    barvách."
+
+    Vîe co je uvedeno výîe je pravda, jediný relativní pojem je "rychlá Amiga" v první
+    vëtë.   Bohuùel,  je  to  individuální,  nëkdo  mûùe  za rychlou  Amigu  povaùovat
+    030/50MHz.  Avîak v naîich oçích rychlá Amiga znamená 060.
+    Abych  se  vrátil k vaîemu dotazu, o rychlosti 16 FPS jsem se zmínil na IRC.  A ta
+    platí  pro  060/66MHz  s  60ns  RAM,  Picasso  IV.   Je mnoho faktorû, které mohou@{c}
+    @{c 14FFE2}ovlivnit rychlost Quake.  Vyçerpávající informace naleznete na naîí WWW stránce.
+    @{c 14FFE2}Je  to  smutné,  ale  amigistûm  se dlouho tvrdilo, ùe 030 a 040 jsou velmi rychlé
+    procesory  a  vysoké  ceny napomáhaly této iluzi.  030 a 040 sice staçí pro bëùnou
+    práci,  ale  tëùké  úlohy,  mezi  nëù patêí  i  Quake,  ukazují,  ùe jsou dnes jiù
+    prehistorické  ve  srovnání  s  PowerPC a Intel procesory.  060 je sice rychlejîí,
+    nicménë poêád pomalejîí neù nejrychlejîí procesory na jiných platformách.
+
+    Varovali  jsme  hráçe,  ùe  Quake  je nejhladovëjîí hra na svëtë.  Vùdy mûùe bëùet
+    rychleji  a vypadat  lépe.  Roste spoleçnë s vaîím systémem a odmëñuje se za kaùdý
+    upgrade,  který  provedete.   Quake  bylo  tím,  co  táhlo PC k procesorûm Pentium
+    a rychlým 3D grafickým kartám a vëtîí pamëti.@{c}
+
+
+Q: Proç nemají grafické karty dramatický efekt, co se týçe nárûstu rychlosti?
+
+@{c 14FFE2}A: Quake  je  nejpokroçilejîí  3D  engine na svëtë a CPU stráví mnoho çasu výpoçtem 3D
+   svëta,  svëtel, stínû, 3D nepêátel atd.  Jakmile je scéna vypoçtena, její pêenesení
+   na  obrazovku jiù není obtíùný úkol a tak je AGA na tom velmi podobnë jako grafické
+   karty.   Ale  jakmile  se pouùije rychlejîí CPU, rozdíl mezi grafickou kartou a AGA@{c}
+  @{c 14FFE2} naroste,  stejnë jako pomër mezi çasem spotêebovaným výpoçtem a pêenesením scény na
+   obrazovku.@{c}
+
+
+Q: Jen pro potvrzení... plánujete PPC verzi hry, ùe? Zaçalo se na tom jiù pracovat?
+
+@{c 14FFE2}A: Ne, jeîtë nezaçaly práce na PPC verzi Quake.@{c}
+
+
+Q: Zaslechl jsem, ùe to  nevidíte  jako  nejùhavëjîí  úkol.  Ale není to právë PPC, ze
+   kterého by Quake tëùil nejvíce?
+
+@{c 14FFE2}A: Pêednë - Quake  PPC  není  naîí prioritou  çíslo 1.  Nëkteêí  uùivatelé si to mylnë
+   vysvëtlují,  ùe  naîí  nejvyîîí  prioritou je Myst PPC, ale ani to není pravda.  Za
+   souçasné situace jsou pro ClickB00M prioritou çíslo 1 dvë vëci:
+
+     1. podporovat hráçe Quake vytvoêením Amiga verzí QuakeWorldu a QSpy
+     2. pêinést nové skvëlé hry pro Amigu@{c}
+
+   @{c 14FFE2}Je  to  proto, ùe PowerPC není jeîtë zdaleka masovë rozîíêeno, takùe radîi strávíme
+   ças  prací  na  nových  projektech,  dokud  se  vëci  kolem PPC nevyêeîí.
+
+   Çasto  se  nás  uùivatelé  ptají, jestli Quake bude podporovat 3D karty, zvláîtë to
+   "3D" v CyberVision64/3D.  Jsme sice rádi, ùe si myslí, ùe to ClickB00M zvládne, ale
+   podpora  hardware  mûùe být aù teprve tehdy, kdy existuje systémové software.  A to
+   v souçasné  dobë  neexistuje.  To je ta çást, která nemá s hrami pêíliî spoleçného,
+   a kterou my nemûùeme napsat.  A nakonec potêebujem reálné karty a ne prospekty :)
+
+   Je nëkolik dûvodû, proç Quake a Myst dosud nemají PowerPC verze.  Prvním z nich je,
+   ùe  PowerPC karty mají zpoùdëní více jak pûl roku.  V dobë, kdy k nám dorazily, byl
+   Myst  dávno hotový.  Druhý dûvod je, ze krátce po uvedení PPC karet na trh vyvstala
+   válka  mezi  PowerUp  phase 5 a WarpUP Haage&Partner.  To není pro uùivatele pêíliî
+   dûleùité, ale pro vývojáêe, jako jsme my, to znamená sedët a çekat jak vîe dopadne.
+   Navíc  Amiga  Inc.  a  Amiga International  se  zatím definitivnë nerozhodly, zdali
+   PowerPC  bude  procesor  dalîích  generací  Amig.  V momentë, kdy  se rozhodnou pro
+   PowerPC, pêibyde dalîí kamínek do mozaiky.@{c}
+
+   @{c 14FFE2}Vîechny  tyto  problémy  vedou k pomalému akceptování PowerPC mezi amigisty.  Je to
+   velká  îkoda,  protoùe  PowerPC je cesta k budoucnosti.  Nejhorîí chyba je podvádët
+   uùivatele.   Od  nikoho nemûùete çekat, ùe upgraduje bez existujícího software, bez
+   oficiálního prohláîení mateêských firem.
+
+   Bohuùel  v této  situaci nemûùete çekat ani od vývojáêû, aby investovali hodnë çasu
+   a penëz  do vývoje PPC software  dokud se situace nevyjasní.  Navíc, po jistou dobu
+   si  musí programátoêi zvyknout na nový vývojový systém.  To je skoro, jako vytvoêit
+   kompletnë novou verzi programu, nezávisle na jeho druhu.@{c}
+
+
+Q: Jestli se vëci budou vyvíjet jako dosud, kdy oçekáváte PPC Quake?
+
+@{c 14FFE2}A: Ve  chvíli,  kdy budou çtenáêi çíst tyto êádky, se moùná uù situace  rapidnë  zmëní
+   a vývoj  tímto smërem jiù ubíhá.  Jako první krok musí Amiga Inc.  zvolit PPC.  Jiù
+   minulý rok, dávno pêed uvolnëním PPC karet jsme zaçali jednat s phase 5 o PPC verzi
+   Quake.   Naîe  myîlenka  byla,  aby  kaùdý nový majitel PowerPC karty dostal zdarma@{c}
+   @{c 14FFE2}plnou verzi Quake na CD zároveñ s kartou.  To by byl velice pádný argument ke koupi
+   PPC  karet,  coù  by v dûsledku znamenalo signál pro dalîí vývojáêe dát se na cestu
+   PowerPC.
+
+   Jestliùe  dosáhneme  dohody  s  phase 5, vloùíme veîkeré své úsilí do PPC, jak jsme
+   ostatnë plánovali jiù minulý rok.  Brzy dostaneme novëjîí informace...@{c}
+
+
+Q: Komerçní  'totální  konverze',  jako  je  Quake   Rally   údajnë  nepracuje s Quake
+   Playerem.  Bude chodit ve finální verzi?
+
+@{c 14FFE2}A: Quake Player je ponëkuð omezen a navíc  je  to betaverze, takùe je docela moùné, ùe
+   takové  sloùité  konverze  nepracují.   Dodejme,  ùe  *.pak  soubory çasto vyùadují
+   vîechny  textury  a  zvuky  z  plné  verze  Quake.   Pêirozenë, tyto soubory nejsou
+   pêiloùeny u Quake Playeru.  Ruçím vám za to, ùe Quake Rally, Malice a  dalîí  budou
+   s plnou verzí pracovat.@{c}
+
+
+Q: Budou k dispozici  nëjaké patche po vydání hry,  napê. optimalizace pro 68060, nebo
+   Permedia patch?
+
+@{c 14FFE2}A: I 100%  optimalizace  pro  060  by   nepêinesla   kýùený  výsledek,  takùe  je  to
+   nepravdëpodobné.   S  Permedií  je  to  podobné  jako  s CyberGraphX  a  Picasso96.
+   Pêedstavte  si,  ùe  ùádná z karet není na trhu a tyto grafické systémy neexistují.
+   Jakmile  bude  hardware (karta s  Permedií) a systémový software (jako CGFX a P96),
+   samozêejmë - budeme to podporovat.@{c}
+
+
+                           @{c FFAD17}[ShAmaN]  ufff... to byla fuîka@{c}@{c FFAD17}!@{c}

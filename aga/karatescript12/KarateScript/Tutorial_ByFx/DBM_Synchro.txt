@@ -1,0 +1,729 @@
+
+  Here is a small demo as an example of using 2 new features of
+ the dbm.fx module (that need the dbplayer.library to work.)
+ it uses the 7xx music command editable with the music tracker
+ digiboosterPro to synchronize some movements in real time inside the demo.
+ note that the "xx" stands for a value written in hexadecimal:
+ each x can have the value (0,1,2,3,4,6,7,8,9,a,b,c,d,e,f) where
+ a,b,c,d,e,f stands for 10,11,12,13,14,15, which means 16 differents
+ values can be put on each two x,which also means there are 256 values possible
+ for xx, form 0 (00) to 255 (ff). for example 740 mean a value of 64 for
+ karate because (4*16 + 0) = 64.
+ 748 effect would mean: (4*16 + 8) = 72. You got to know how to make
+ hexadecimal to decimal conversion for using these effects.
+ hexadecimal is used in digibooster and decimal in karate !
+-------------------------------------------------------------------------
+
+ The new effect "PlayScriptDBM" is useful to play a script accordingly
+ to the last 7xx value. It is very similar to "PlayScript", you got
+ to pass a script object and a value standing for the time running.
+ but it needs 2 other numbers: its the range where the script is affected:
+ If the 7xx value currently played
+ is between these 2 values, the script will start to play the
+ part which number is: (the first number - 7xx number)
+ by default, the part played is the first one in the script list.
+  If a 7xx number come back to a part already played, the part time
+    will continue from where it was stopped.
+  If 7xx change to a value outside of the range, the effect doesn't care
+  and continue on the last effect played.
+
+ Don't use the same script twice for 2 "PlayScriptDBM" effects !
+ you can use as many "PlayScriptDBM" effects as you want but they
+ must have a script each. Use also different value range for each
+ playscript.
+
+ Last thing: you must have a PlayDBM
+
+ It looks like:
+
+<Fx><Pa> PlayScriptDBM </Pa>
+        <Pa> backscript </Pa> the script to play
+        <pa> 2cte | 64 | 79  </pa>  (in hexa:  40 -> 4f)
+        <Pa>AFF|0|1</Pa> the time running.
+    </Fx>
+
+--------------------------------
+ And now some more interesting parameters:
+
+ <Pa> dbm7xxaft | flashboom|0|0|80</Pa>
+
+                  table, time offset, value added, 7xx used (0,255)
+
+ it's just like the "aft" parameter, which use 2D table
+ to make a curve in time. But a last
+ sub-parameter gives the 7xx number to care about:
+ in fact the time passed to it is kept to 0 until
+ the correct 7xx command is thrown. then the time goes on,
+ describing the curves defined with < ktable> objects.
+ once played, the value returned is the same as the last in the table.
+ (and when time is 0, its the same last value returned.)
+ 
+
+-------------------------------------------------
+and now the example script: it always play "mainpart"
+which plays itself 2 script as if they was layers.
+
+
+ let's construct some bitmap font:
+
+ image file, char width, whar height,number of char by line, list of character described:
+<BMFONT> exilefont2 | data/exilefont2.iff |
+                            24 |
+                            24 |
+                            10 | ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890+_*().,,:,-
+                             </bmfont>
+<BMFONT> exilefont1 | data/exilefont1.iff |
+                            16 |
+                            22 |
+                            16 | ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
+                             </bmfont>
+
+ let's construct some interesting texts:
+
+<ktext>txt1|digibooster</ktext>
+<ktext>txt2|music</ktext>
+<ktext>txt3|synchro</ktext>
+<ktext>txt4|example</ktext>
+<ktext>txt5|meanwhile somewhere else in congo</ktext>
+<ktext>txt6|
+this example showed+
+you how to         +
+synchronize some   +
+script and         +
+parameters with 7xx+
+effects in a dbm   +
+music module       +
+                   +
+ thx to exile for  +
+their old bm fonts +
+tx to nowee for its+
+pegasos and greets +
+   flies to the    +
+catalan amiga users+
+for the catcon party
+                   +
+no much times for  +
+other greetings    +
+ bye</ktext>
+    
+ let's get the .dbm music where the script will read 7xx effects:
+
+<kdbm> synchromusic  | data/synchrotest.DBM  </kdbm>
+
+
+ let's build some rectangle to make  a little demo:
+
+
+<KRECT> rec_all |0|0|1|1|   |0|0|1|1| </KRECT>
+
+<KRECT>    quad1   |0|0|1|0.5| rec_all
+                    |0|0|0.5|0.5| rec_all </KRECT>
+
+<KRECT>    quad2   |0.5|0|1|0.5| rec_all
+                    |0.5|0|1|0.5| rec_all </KRECT>
+
+
+---------------- chaining horiz:
+<KRECT>    qvert    |0|0|1|1| 
+                    |0|0|1|1| rec_all </KRECT>
+
+<KRECT>    qhoriz   |0|0|1|1| 
+                    |0|0|1|1| qvert </KRECT>
+
+
+---------------- chaining horiz:
+<KRECT>    qhoriz2  |0|0|1|1|
+                    |0|0|1|1| rec_all </KRECT>
+
+-------------------------------------------------
+<MAIN> mainscript |0|1</MAIN>              the main script to play...
+-------------------------------------
+<KIMG> texture256x256 | data/txt3.iff </KIMG>   let's create an image.
+<KIMG> txt4 | data/txt4.iff </KIMG>
+
+<KIMG> r5 | data/r5.iff </KIMG>
+
+<KIMG> decor | data/decor.iff </KIMG>
+
+<KCAM> cam_1 | 0|0|0|0|0|0|1  </KCAM>
+
+ some colortable to build image:
+
+<KCOLORTABLE> coltab2 | data/remaptable.iff |1|  0|  0|  0    </KCOLORTABLE>
+
+
+--------------------------------------------------
+<KSCRIPT><ID> mainscript </ID>
+        <PLAY> mainpart | 3700 | 0 | 1 </PLAY>
+</KSCRIPT>
+
+-------------------------------------------
+ 2 sub-scripts andled by playscriptdbm effects in mainpart:
+
+<KSCRIPT><ID> backscript </ID>
+
+        <PLAY> pa4 | 10000 | 0 | 1 </PLAY>
+        <PLAY> pa2 | 100 | 0 | 1 </PLAY>
+        <PLAY> pa3 | 100 | 0 | 1 </PLAY>
+
+        <PLAY> pa5 | 100 | 0 | 1 </PLAY>  ? unused
+        <PLAY> pa1 | 100 | 0 | 1 </PLAY>
+        <PLAY> pa3 | 100 | 0 | 1 </PLAY>
+
+        <PLAY> pa5 | 100 | 0 | 1 </PLAY>
+        <PLAY> pa2 | 100 | 0 | 1 </PLAY>
+        <PLAY> pa6 | 100 | 0 | 1 </PLAY>
+
+        <PLAY> pa1 | 300 | 0 | 1 </PLAY>
+
+</KSCRIPT>
+---------------------------------------------
+<KSCRIPT><ID> frontscript </ID>
+
+        <PLAY> pb1 | 100 | 0 | 1 </PLAY>
+        <PLAY> pb2 | 100 | 0 | 1 </PLAY>
+        <PLAY> pb3 | 100 | 0 | 1 </PLAY>
+        <PLAY> pb4 | 200 | 0 | 1 </PLAY>
+        <PLAY> pb5 | 35000 | 0 | 1 </PLAY>
+        <PLAY> pb6 | 100 | 0 | 1 </PLAY>
+
+        <PLAY> pnothing | 100 | 0 | 1 </PLAY>
+        <PLAY> pb4 | 200 | 0 | 1 </PLAY>
+
+</KSCRIPT>
+------------------------
+///<KPART>  <ID> mainpart  </ID>
+
+--- this is the root mainpart:
+we do the palette operations and we use 2 playscript.
+
+<ktable> flashboom | 0,0|25,1|4000,1   </ktable>
+        <Fx><Pa>BindPalette</Pa>  1st parameter is always the name of the effect.
+
+
+
+            <P a> dbm7xxboom  |0|1|4.4|1|flashboom|80</Pa> min,max,speed,final,table, 7xx number (0,255) 761 -> 0x61 hexa = (6*16 + 1)= 97
+
+        <Pa> dbm7xxaft | flashboom|0|0|80</Pa> table, time offset, value added, 7xx used (0,255)
+
+                                      the rate between 0->1
+                                      There's a state "A" of the palette
+                                      and the state "B". If this parameter
+                                      is 0, its state A. If 1, it's B,
+                                      and you move between a and B.
+
+                            The folowing parameters describes the
+                            possible state of "A" and "B", BY Color
+                            Composant Red, Green,Blue.
+
+            0,0,0 means for dark
+
+            <Pa>CTE|0</Pa>              type of fade:0,1,2,3
+            <Pa>CTE|255</Pa>            optional color 0->255 (0)
+            <Pa> texture256x256 </Pa>     palette where to fade ( "B" )
+            <Pa> texture256x256</Pa>            optional source Palette(2)
+
+            <Pa>CTE|0</Pa>              type of fade:0,1,2,3
+            <Pa>CTE|255</Pa>            optional color 0->255 (0)
+            <Pa>texture256x256</Pa>       Palette where to fade ( "B" )
+            <Pa>texture256x256</Pa>       optional source Palette(2)
+
+            <Pa>CTE|0</Pa>              type of fade:0,1,2,3
+            <Pa>CTE|255</Pa>            optional color 0->255 (0)
+            <Pa>texture256x256</Pa>       Palette where to fade ( "B" )
+            <Pa>texture256x256</Pa>       optional source Palette(2)
+        </Fx>
+
+
+    <fx><Pa> playdbm </pa><Pa> synchromusic </pa>  </fx>
+---------------------------
+<ktable> screentiltx1 | 0,0|5,-0.4 |15,0|20,-0.2  | 25,0  |4000,0   </ktable>
+<ktable> screentiltx2 | 0,1|5,1.4  |15,1|20,1.2   | 25,1  |4000,1   </ktable>
+
+   manage super rectangle
+          <Pa> dbm7xxaft | flashboom|0|0|80</Pa> table, time offset, value added, 7xx used (0,255)
+
+
+    <Fx><Pa> setrect </Pa>
+            <Pa> rec_all  </Pa>
+            <pa> 4cte|0|0|1|1 </pa>
+
+
+            <pa> dbm7xxaft| screentiltx1 |0|0| 81 </pa>  81 = (7 51)  =(5*16)+1
+            <pa> dbm7xxaft| screentiltx1 |0|0| 82 </pa>  82 = (7 52)  =(5*16)+2
+            <pa> dbm7xxaft| screentiltx2 |0|0| 81 </pa>
+            <pa> dbm7xxaft| screentiltx2 |0|0| 82 </pa>
+    </Fx>
+---------------------------
+   play demo 1
+ 
+ <Fx><Pa> playscriptdbm </Pa>
+        <Pa> backscript </Pa>
+        <pa> 2cte | 64 | 79  </pa>  hexa 40 -> 4f
+        <Pa>AFF|0|1</Pa>
+    </Fx>
+
+
+-----------------------------
+  play demo 2 over demo 1.
+
+    <Fx><Pa> playscriptdbm </Pa>
+        <Pa> frontscript </Pa>
+        <pa> 2cte | 50 | 57  </pa>   hexa-> 32 -> 39
+        <Pa>AFF|0|1</Pa>
+    </Fx>
+
+
+ that's all !!!
+
+///</KPART>
+--------------------------
+///<KPART>  <ID> pa1  </ID>
+
+    <Fx>
+        <Pa> Twirl </Pa>
+        <Pa> rec_all  </Pa>
+        <Pa> txt4 </Pa>
+
+        <Pa>SIN|0|0.5|0.25</Pa> ofsx
+        <Pa>COS|0|0.5|0.25</Pa> ofsY
+
+        <Pa>SIN|0|0.05|1</Pa> start angle
+        <Pa>CTE|0.2</Pa>    amp. angle
+        <Pa>sin|0|0.4|0.9</Pa>    freq angle
+
+        <Pa>CTE|0</Pa>         start dist.
+        <Pa>cte|0</Pa> amp.dist
+        <Pa>cte|0</Pa> freq dist
+
+        <Pa>CTE|0</Pa> mapping type
+    </Fx>
+
+///</KPART>
+------------------------
+///<KPART>  <ID> pa2  </ID>
+
+    <Fx><Pa> setrect </Pa>
+            <Pa> qhoriz2  </Pa>
+            <pa> 3cte|0|0|1  </pa>
+            <pa> aft| ecrhorizUp |0|0  </pa>
+            <pa> 4cte|0|0|1|1  </pa>
+    </Fx>
+    <Fx>
+        <Pa> FillRC </Pa>
+        <Pa> qhoriz2  </Pa>
+        <Pa> cte |0 </Pa>
+    </Fx>
+---------------
+    <Fx><Pa> setrect </Pa>
+            <Pa> qhoriz2  </Pa>
+            <pa> cte|0  </pa>
+            <pa> aft| ecrhorizUp |0|0  </pa>
+            <pa> cte|1  </pa>
+            <pa> aft| ecrhorizDown |0|0  </pa>
+            <pa> 4cte|0|0.2|2|0.8  </pa>
+    </Fx>
+
+
+   <Fx><Pa> Warper </Pa>
+            <Pa> qhoriz2  </Pa>              the rectangle where to draw (default)
+            <Pa> texture256x256 </Pa> the 256x256 texture to deform
+
+            <Pa>CTE|0.8</Pa>        a zoomx rate
+            <Pa>CTE|0.8</Pa>        a zoomy rate
+            <Pa>SIN|0|0.25|0.03</Pa> texture offset x
+            <Pa>COS|0|0.25|0.03</Pa> texture offset Y
+
+            <Pa>CTE|0.4</Pa>        amplitude of deformation
+            <Pa>CTE|0.2</Pa>        frequency of deformation
+            <Pa>SIN|0|0.2|2</Pa>    X offset of the deformation
+            <Pa>COS|0|0.3|2</Pa>    Y...
+
+            <Pa>CTE|0</Pa> mapping type
+    </Fx>
+
+    <Fx><Pa>RadialBlur</pa>
+        <Pa> qhoriz2  </Pa>     rectangle by default.
+        <Pa> coltab2 </Pa>              "persistence with decay" is very handy with radialblur.
+        <Pa> sin|0.5|0.4|0.2 </Pa>  X center of the radial blur.
+        <Pa> sin|0.5|0.3|0.2</Pa>   Y
+        <Pa>cte|0.92</Pa>           Width zooming strength [0,1]
+        <Pa>cte|0.92</Pa>           Height zooming strength [0,1]
+    </Fx>
+
+
+------------------------
+    <Fx><Pa> setrect </Pa>
+            <Pa> qhoriz2  </Pa>
+            <pa> cte|0  </pa>
+            <pa> aft| ecrhorizDown |0|0  </pa>
+            <pa> 2cte|1|1  </pa>
+
+            <pa> 4cte|0|0|1|1  </pa>
+    </Fx>
+    <Fx>
+      <Pa> FillRC </Pa>
+        <Pa> qhoriz2  </Pa>
+        <Pa> cte |0 </Pa>
+    </Fx>
+
+
+
+///</KPART>
+------------------------
+///<KPART>  <ID> pa3  </ID>
+
+  <Fx>
+        <Pa> Twirl </Pa>
+        <Pa> rec_all  </Pa>
+        <Pa> texture256x256 </Pa>
+
+        <Pa>SIN|0|0.5|0.25</Pa> ofsx
+        <Pa>COS|0|0.5|0.25</Pa> ofsY
+
+        <Pa>SIN|0|0.05|1</Pa> start angle
+        <Pa>CTE|0</Pa>    amp. angle
+        <Pa>CTE|0</Pa>    freq angle
+
+        <Pa>CTE|0</Pa>         start dist.
+        <Pa>SIN|0|0.3|0.5</Pa> amp.dist
+        <Pa>COS|0|0.1|32</Pa> freq dist
+
+        <Pa>CTE|0</Pa> mapping type
+    </Fx>
+
+///</KPART>
+------------------------
+///<KPART>  <ID> pa4  </ID>
+<ktable> ecrhorizUp| 0,0.2 |100,0.2  </ktable>
+<ktable> ecrhorizDown| 0,0.8 |100,0.8  </ktable>
+
+    <Fx><Pa> setrect </Pa>
+            <Pa> qhoriz2  </Pa>
+            <pa> 3cte|0|0|1  </pa>
+            <pa> aft| ecrhorizUp |0|0  </pa>
+            <pa> 4cte|0|0|1|1  </pa>   
+    </Fx>
+    <Fx>
+        <Pa> FillRC </Pa>
+        <Pa> qhoriz2  </Pa>
+        <Pa> cte |0 </Pa>
+    </Fx>
+---------------
+    <Fx><Pa> setrect </Pa>
+            <Pa> qhoriz2  </Pa>
+            <pa> cte|0  </pa>
+            <pa> aft| ecrhorizUp |0|0  </pa>
+            <pa> cte|1  </pa>
+            <pa> aft| ecrhorizDown |0|0  </pa>
+            <pa> 4cte|0|0.2|2|0.8  </pa>
+    </Fx>
+
+<ktable> scroldecor| 0,0 |400,-0.5  </ktable>
+
+
+ <Fx><Pa>SpritePlain</Pa><Pa> qhoriz2  </Pa><Pa> decor </Pa>
+  <pa> aft| scroldecor |0|0  </pa>
+  <Pa> cte| 0 </Pa>
+  <pa> aft| scroldecor |0|1  </pa>
+  <Pa> cte| 1 </Pa>
+    </Fx>
+
+------------------------
+    <Fx><Pa> setrect </Pa>
+            <Pa> qhoriz2  </Pa>
+            <pa> cte|0  </pa>
+            <pa> aft| ecrhorizDown |0|0  </pa>
+            <pa> 2cte|1|1  </pa>
+
+            <pa> 4cte|0|0|1|1  </pa>
+    </Fx>
+    <Fx>
+      <Pa> FillRC </Pa>
+        <Pa> qhoriz2  </Pa>
+        <Pa> cte |0 </Pa>
+    </Fx>
+
+
+///</KPART>
+
+------------------------
+///<KPART>  <ID> pa5  </ID>
+
+    <Fx>
+        <Pa> FillRC </Pa>
+        <Pa>   </Pa>
+        <Pa> cte |0 </Pa>
+    </Fx>
+
+    <Fx><Pa> SetCamCoord </Pa>
+            <Pa> cam_1 </Pa>
+            <Pa> cte |2.2</Pa>    x
+            <Pa> cte | 0 </Pa>        y
+            <Pa> afclip | -4 |0.02|0|100 </Pa> z
+            <Pa> 3cte |0|0|0</Pa>  a multiparameter setting angle o1,o2,o3 to 0
+
+            <Pa> CTE | 0.8 </Pa>  FOV (never set 0 or negative, mathematicaly impossible.)
+            </Fx>
+
+   <Fx><Pa> displaytextPlain </Pa>
+        <Pa></Pa>               the rectangle where to draw
+        <Pa> exilefont1 </Pa>         a bitmap font object from < BMFONT>
+        <Pa> txt5 </Pa>       a text object with < KTEXT>
+
+        <Pa> cte | 20 </Pa> number of char before return.
+        <Pa> cte | 400 </Pa> max number of char to draw.
+        <Pa> cte | 0 </Pa> char start offset
+         <Pa> 4cam| cam_1 |0.4|0.5|-1|0|4 </Pa>                                         parameters for 1st char.
+    </Fx>
+
+///</KPART>
+------------------------
+///<KPART>  <ID> pa6  </ID>
+
+    <Fx>
+        <Pa> FillRC </Pa>
+        <Pa>   </Pa>
+        <Pa> cte |0 </Pa>
+    </Fx>
+
+    <Fx><Pa> SetCamCoord </Pa>
+            <Pa> cam_1 </Pa>
+            <Pa> cte |2.2</Pa>    x
+            <Pa> afclip | -4 |0.02  | 0 | 900 </Pa> y
+            <Pa> cte | -2 </Pa>        z
+
+            <Pa> 3cte |0|0|0</Pa>  a multiparameter setting angle o1,o2,o3 to 0
+
+            <Pa> CTE | 0.8 </Pa>  FOV (never set 0 or negative, mathematicaly impossible.)
+            </Fx>
+
+   <Fx><Pa> displaytextPlain </Pa>
+        <Pa></Pa>               the rectangle where to draw
+        <Pa> exilefont1 </Pa>         a bitmap font object from < BMFONT>
+        <Pa> txt6 </Pa>       a text object with < KTEXT>
+
+        <Pa> cte | 21 </Pa> number of char before return.
+        <Pa> cte | 400 </Pa> max number of char to draw.
+        <Pa> cte | 0 </Pa> char start offset
+         <Pa> 4cam| cam_1 |0.3|0.45|-1|0|4 </Pa>                                         parameters for 1st char.
+    </Fx>
+
+///</KPART>
+------------------------
+///<KPART>  <ID> pb1  </ID>
+    <Fx><Pa> SetCamCoord </Pa>
+            <Pa> cam_1 </Pa>
+            <Pa> cte |1.0</Pa>    x
+            <Pa> cte | 0 </Pa>        y
+            <Pa> afclip | -4 | 0.3 | 0 | 15 </Pa>    z
+
+            <Pa> 3cte |0|0|0</Pa>  a multiparameter setting angle o1,o2,o3 to 0
+
+            <Pa> CTE | 0.8 </Pa>  FOV (never set 0 or negative, mathematicaly impossible.)
+            </Fx>
+
+    <Fx><Pa> DisplayText </Pa>
+        <Pa> rec_all  </Pa>               the rectangle where to draw
+        <Pa> exilefont2 </Pa>         a bitmap font object from < BMFONT>
+        <Pa> txt1 </Pa>       a text object with < KTEXT>
+
+        <Pa> cte | 18 </Pa> number of char before return.
+        <Pa> cte | 400 </Pa> max number of char to draw.
+        <Pa> cte | 0 </Pa> char start offset
+         <Pa> 4cam| cam_1 |0.4|0.5|-1|0|4 </Pa>                                         parameters for 1st char.
+    </Fx>
+///</KPART>
+///<KPART>  <ID> pb2  </ID>
+    <Fx><Pa> SetCamCoord </Pa>
+            <Pa> cam_1 </Pa>
+            <Pa> cte |0.02</Pa>    x
+            <Pa> cte | 0 </Pa>        y
+            <Pa> afclip | -4 | 0.3 | 0 | 15 </Pa>    z
+
+            <Pa> 3cte |0|0|0</Pa>  a multiparameter setting angle o1,o2,o3 to 0
+
+            <Pa> CTE | 0.8 </Pa>  FOV (never set 0 or negative, mathematicaly impossible.)
+            </Fx>
+
+    <Fx><Pa> DisplayText </Pa>
+        <Pa> rec_all </Pa>               the rectangle where to draw
+        <Pa> exilefont2 </Pa>         a bitmap font object from < BMFONT>
+        <Pa> txt2 </Pa>       a text object with < KTEXT>
+
+        <Pa> cte | 18 </Pa> number of char before return.
+        <Pa> cte | 400 </Pa> max number of char to draw.
+        <Pa> cte | 0 </Pa> char start offset
+         <Pa> 4cam| cam_1 |0.4|0.5|-1|0|4 </Pa>                                         parameters for 1st char.
+    </Fx>
+///</KPART>
+///<KPART>  <ID> pb3  </ID>
+    <Fx><Pa> SetCamCoord </Pa>
+            <Pa> cam_1 </Pa>
+            <Pa> cte |0.2</Pa>    x
+            <Pa> cte | 0 </Pa>        y
+            <Pa> afclip | -4 | 0.3 | 0 | 15 </Pa>    z
+
+            <Pa> 3cte |0|0|0</Pa>  a multiparameter setting angle o1,o2,o3 to 0
+
+            <Pa> CTE | 0.8 </Pa>  FOV (never set 0 or negative, mathematicaly impossible.)
+            </Fx>
+
+    <Fx><Pa> DisplayText </Pa>
+        <Pa></Pa>               the rectangle where to draw
+        <Pa> exilefont2 </Pa>         a bitmap font object from < BMFONT>
+        <Pa> txt3 </Pa>       a text object with < KTEXT>
+
+        <Pa> cte | 18 </Pa> number of char before return.
+        <Pa> cte | 400 </Pa> max number of char to draw.
+        <Pa> cte | 0 </Pa> char start offset
+         <Pa> 4cam| cam_1 |0.4|0.5|-1|0|4 </Pa>                                         parameters for 1st char.
+    </Fx>
+///</KPART>
+///<KPART>  <ID> pb4  </ID>
+    <Fx><Pa> SetCamCoord </Pa>
+            <Pa> cam_1 </Pa>
+            <Pa> cte |0.1</Pa>    x
+            <Pa> cte | 0 </Pa>        y
+            <Pa> afclip | -4 | 0.3 | 0 | 15 </Pa>    z
+
+            <Pa> 3cte |0|0|0</Pa>  a multiparameter setting angle o1,o2,o3 to 0
+
+            <Pa> CTE | 0.8 </Pa>  FOV (never set 0 or negative, mathematicaly impossible.)
+            </Fx>
+
+    <Fx><Pa> DisplayText </Pa>
+        <Pa></Pa>               the rectangle where to draw
+        <Pa> exilefont2 </Pa>         a bitmap font object from < BMFONT>
+        <Pa> txt4 </Pa>       a text object with < KTEXT>
+
+        <Pa> cte | 18 </Pa> number of char before return.
+        <Pa> cte | 400 </Pa> max number of char to draw.
+        <Pa> cte | 0 </Pa> char start offset
+         <Pa> 4cam| cam_1 |0.4|0.5|-1|0|4 </Pa>                                         parameters for 1st char.
+    </Fx>
+///</KPART>
+
+
+///<KPART>  <ID> pb5  </ID>
+<ktable> sprdown | 0,0 | 100,1  </ktable>
+<ktable> sprup | 0,1 | 100,0  </ktable>
+   <Fx><Pa> setrect </Pa>
+            <Pa> quad1  </Pa>
+            <pa> cte|0  </pa>
+            <pa> cte|0  </pa>
+            <pa> cte|1  </pa>
+            <pa> aft|sprdown |0|0  </pa>
+           <pa> 4cte|0|0|1|1  </pa>
+    </Fx>
+
+  <Fx><Pa>Sprite</Pa><Pa> quad1  </Pa><Pa> r5 </Pa>
+  <Pa> 4cte| 0|0.2|1|0.8 </Pa>
+    </Fx>
+
+  <Fx><Pa> setrect </Pa>
+            <Pa> quad1  </Pa>
+            <pa> cte|0  </pa>
+            <pa> aft|sprdown |0|0  </pa>
+            <pa> cte|1  </pa>
+            <pa> cte|1  </pa>
+
+<ktable> sprdown2 | 0,0 | 100,-3  </ktable>
+<ktable> sprdown3 | 0,4 | 100,1  </ktable>
+
+            <pa> cte|0  </pa>
+            <pa> aft|sprdown2 |0|0 </pa>
+            <pa> cte|1  </pa>
+            <pa> aft|sprdown3 |0|0  </pa>
+
+
+
+    </Fx>
+
+  <Fx><Pa>Sprite</Pa><Pa> quad1 </Pa><Pa> r5 </Pa>
+  <Pa> 4cte| 0|0.2|1|0.8 </Pa>
+    </Fx>
+  
+///</KPART>
+
+///<KPART>  <ID> pb6  </ID>
+
+<ktable> sprhoriz1| 0,0 |50,0| 100,0.5  </ktable>
+<ktable> sprhoriz2| 0,1 |50,1| 100,0.5  </ktable>
+
+   <Fx><Pa> setrect </Pa>
+            <Pa> qvert  </Pa>
+            <pa> cte|0  </pa>
+            <pa> cte|0  </pa>
+            <pa> 2cte|1|1  </pa>
+
+            <pa> cte|0  </pa>
+            <pa> aft| sprhoriz1 |0|0  </pa>
+            <pa> cte|1  </pa>
+            <pa> aft| sprhoriz2 |0|0  </pa>
+    </Fx>
+
+<ktable> sprleft | 0,0 | 100,0.5  </ktable>
+<ktable> sprright| 0,1 | 100,0.5  </ktable>
+
+
+----- left
+<ktable> sprleft2| 0,0 | 100,-1.5  </ktable>
+<ktable> sprleft3| 0,4 | 100,2.5 </ktable>
+
+
+  <Fx><Pa> setrect </Pa>
+            <Pa> qhoriz  </Pa>
+            <pa> 2cte|0|0  </pa>
+            <pa> aft| sprleft |0|0  </pa>
+            <pa> cte|1  </pa>
+
+            <pa> aft| sprleft2 |0|0  </pa>
+            <pa> cte|0 </pa>
+            <pa> aft| sprleft3 |0|0  </pa>
+            <pa> cte|1 </pa>
+    </Fx>
+
+ <Fx><Pa>Sprite</Pa><Pa> qhoriz  </Pa><Pa> r5 </Pa>
+  <Pa> 4cte| 0|0.2|1|0.8 </Pa>
+    </Fx>
+----- middle
+  <Fx><Pa> setrect </Pa>
+            <Pa> qhoriz  </Pa>
+            <pa> aft|sprleft |0|0  </pa>
+            <pa> cte|0  </pa>
+            <pa> aft|sprright |0|0  </pa>
+            <pa> cte|1  </pa>
+
+           <pa> 4cte|0|0|1|1  </pa>
+    </Fx>
+
+ <Fx><Pa>Sprite</Pa><Pa> qhoriz  </Pa><Pa> r5 </Pa>
+  <Pa> 4cte| 0|0.2|1|0.8 </Pa>
+    </Fx>
+
+---- right
+<ktable> sprleft4| 0,-3 | 100,-1.5  </ktable>
+<ktable> sprleft5| 0,1 | 100,2.5 </ktable>
+
+
+  <Fx><Pa> setrect </Pa>
+            <Pa> qhoriz  </Pa>
+            <pa> aft| sprright |0|0  </pa>
+            <pa> cte|0  </pa>
+            <pa> 2cte|1|1  </pa>
+
+            <pa> aft| sprleft4 |0|0  </pa>
+            <pa> cte|0 </pa>
+            <pa> aft| sprleft5 |0|0  </pa>
+            <pa> cte|1 </pa>
+    </Fx>
+
+ <Fx><Pa>Sprite</Pa><Pa> qhoriz  </Pa><Pa> r5 </Pa>
+  <Pa> 4cte| 0|0.2|1|0.8 </Pa>
+    </Fx>
+
+///</KPART>
+
+///<KPART>  <ID> pnothing  </ID>
+///</KPART>

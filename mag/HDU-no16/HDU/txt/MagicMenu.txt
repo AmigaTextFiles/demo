@@ -1,0 +1,61 @@
+===========================================
+MagicMenu 2.11
+===========================================
+
+Frequently asked questions
+===========================================
+MagicMenu and the preferences editor may not always do what 
+you expect them to. Here is a short list of such situations and an 
+explanation of what has happened:
+
+Cannot configure the multicolour menu colours
+The preferences program needs at least 24 colours to display the 
+settings page that controls the multicolour menu. As the operating 
+system will always allocate 11 colours for itself, this means you will 
+need to run the preferences program on a screen with at least 64 
+colours available. 
+
+The multicolour menu never shows up
+I always get the old 3D look menu For the multicolour menu to 
+work, MagicMenu needs to allocate the colours that make up its 
+display from the set the screen has to offer it is to open on. Not all 
+screens allow for this to work, as they may not have unallocated 
+pens to work with or a colour palette which already has the correct 
+colours in the right places. In these cases MagicMenu will fail to 
+get the colours it needs and step back to the old style 3D menu. 
+MagicMenu will also refuse to use the multicolour menu if the 
+screen to use is a low resolution screen.
+
+===========================================
+History
+===========================================
+MagicMenu versions 0.01 through 2.3 were developed by Martin 
+Korndörfer. With V2.4 development passed into the hands of Olaf 
+`Olsen' Barthel.
+
+MagicMenu 2.11 (beta)
+=====================
+- The preferences editor now opens a custom screen with 32 
+colours if it cannot get that many from the requested public screen.
+- When MagicMenu has taken control of the menus, window depth
+arrangement calls are no longer ignored, but delayed until the 
+menu closes. Actually, I would have to add a whole lot more 
+patches to make operation halfway safe, but for now I'm just 
+plastering patches onto routines which are somewhat likely to get 
+triggered while the menus are up.
+
+===========================================
+Authors
+===========================================
+Martin Korndörfer wrote the original MagicMenu program. He is no 
+longer involved in the development of the program. The 3D 
+multicolour menu artwork and design were created by Mario 
+Cattaneo. This documentation, the preferences editor and the 
+development work following MagicMenu 2.3 were done by Olaf 
+`Olsen' Barthel. 
+
+For feature requests or bug reports please contact 
+<olsen@sourcery.han.de>. As Martin is no longer involved in 
+development, this the only address you can refer to.
+
+For more info please consult documentation.

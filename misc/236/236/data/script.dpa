@@ -1,0 +1,128 @@
+DPA_Script
+
+#define RENDER_TO_TEXTURE 1
+#define GET_RENDER_TEXTURE 2
+#define SET_RENDER_TEXTURE 3
+
+
+SoundTrack
+{
+	SS_FileName "data/track.ogg"
+}
+
+
+Channel 0
+{
+
+	Scene "Intro"
+
+}
+
+
+
+Channel 1
+
+{
+	
+	Scene "Fl_Particles"
+	
+}
+
+
+Channel 2
+{
+	Scene "3ds_runi"
+}
+
+
+Channel 3
+
+{
+
+	Scene "LeviMorph"
+
+}
+
+Channel 5
+
+{
+
+	Scene "greetz"
+
+}
+
+
+Channel 6
+
+{
+
+	Scene "Zoom"
+
+}
+
+
+Options
+{
+	ShowFps true
+	EnableDebugConsole false 
+	EnableWideScreenFactor 15
+}
+
+SequenceTrack
+{
+	Lenght 130000
+	PlaySound true
+	Track
+	     {
+		    D_Time 0,21000
+ 
+		    { 
+
+					0
+
+		    }
+
+		    D_Time 21000,35000
+	            {
+
+					2
+
+		    }
+
+		    D_Time 35000,48000
+	            {
+
+					3
+
+		    }
+
+		    D_Time 48000,67000
+	            {
+
+					1
+
+		    }
+
+		    D_Time 67000,82000
+	            {
+
+					5
+
+		    }
+
+		    D_Time 82000,130000
+		    {
+		
+					6
+		
+		    }
+
+
+
+
+	      }
+}
+
+DPA_Script
+
+

@@ -1,0 +1,539 @@
+{
+  "actions": [
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 9480
+          },
+          {
+            "float_values": 0.8999999761581421,
+            "interpolation": "linear",
+            "time": 8200
+          },
+          {
+            "float_values": 0.20000000298023224,
+            "interpolation": "linear",
+            "time": 10000
+          },
+          {
+            "float_values": 0.8999999761581421,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "gt_scene_1"
+        }
+      ],
+      "loops": 1,
+      "name": "smoked_man_alpha",
+      "start_time": 0,
+      "type": "property_float"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": -25.653972,
+            "interpolation": "linear",
+            "time": 9380
+          },
+          {
+            "float_values": -31.192169,
+            "time": 20
+          },
+          {
+            "float_values": -34.38769,
+            "interpolation": "linear",
+            "time": 8780
+          },
+          {
+            "float_values": -34.387701,
+            "time": 20
+          },
+          {
+            "float_values": 68.38785,
+            "interpolation": "linear",
+            "time": 9480
+          },
+          {
+            "float_values": -31.683311,
+            "time": 20
+          },
+          {
+            "float_values": -16.04044,
+            "interpolation": "linear",
+            "time": 9800
+          },
+          {
+            "float_values": 17.757995,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "camera_1"
+        }
+      ],
+      "loops": 1,
+      "name": "camera_1Action",
+      "start_time": 0,
+      "type": "rotation_z"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.1762251,
+              0.33501586,
+              -0.28710961
+            ],
+            "interpolation": "linear",
+            "time": 9380
+          },
+          {
+            "float_values": [
+              0.20273724,
+              0.31854945,
+              -0.10897075
+            ],
+            "time": 20
+          },
+          {
+            "float_values": [
+              -0.10173151,
+              0.14699732,
+              -0.59406006
+            ],
+            "interpolation": "linear",
+            "time": 8780
+          },
+          {
+            "float_values": [
+              -0.01226492,
+              0.3163701,
+              0.82094526
+            ],
+            "time": 20
+          },
+          {
+            "float_values": [
+              -0.37475058,
+              0.21789184,
+              -1.46204174
+            ],
+            "interpolation": "linear",
+            "time": 9480
+          },
+          {
+            "float_values": [
+              0.05335228,
+              0.30796289,
+              1.09171319
+            ],
+            "time": 20
+          },
+          {
+            "float_values": [
+              0.13413575,
+              0.10013968,
+              -1.52175486
+            ],
+            "interpolation": "linear",
+            "time": 9800
+          },
+          {
+            "float_values": [
+              0.08157295,
+              0.36400765,
+              0.18699589
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "camera_1"
+        }
+      ],
+      "loops": 1,
+      "name": "camera_1Action",
+      "start_time": 0,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 20,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "p1_japanese_girl"
+        }
+      ],
+      "loops": 1,
+      "name": "p1_japanese_girlAction",
+      "start_time": 27680,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 20,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "p1_stone_1a"
+        }
+      ],
+      "loops": 1,
+      "name": "stone_1aAction",
+      "start_time": 27680,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 20,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "p1_stone_1b"
+        }
+      ],
+      "loops": 1,
+      "name": "p1_stone_1bAction",
+      "start_time": 27680,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 20,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "p1_stone_2"
+        }
+      ],
+      "loops": 1,
+      "name": "p1_stone_2Action",
+      "start_time": 27680,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 20,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "p1_tree_1"
+        }
+      ],
+      "loops": 1,
+      "name": "p1_tree_1Action",
+      "start_time": 27680,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "time": 0,
+            "uint8_values": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "p2_japanese_girl"
+        }
+      ],
+      "loops": 1,
+      "name": "p2_japanese_girlAction",
+      "start_time": 27680,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "time": 0,
+            "uint8_values": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "p2_stone_1b"
+        }
+      ],
+      "loops": 1,
+      "name": "p2_stone_1bAction",
+      "start_time": 27680,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "time": 0,
+            "uint8_values": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "p2_stone_2"
+        }
+      ],
+      "loops": 1,
+      "name": "p2_stone_2Action",
+      "start_time": 27680,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "time": 0,
+            "uint8_values": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "p2_tree_1"
+        }
+      ],
+      "loops": 1,
+      "name": "p2_tree_1Action",
+      "start_time": 27680,
+      "type": "hide"
+    }
+  ],
+  "cameras": [
+    {
+      "far_clip_plane": 100.0,
+      "fov_x": 67.580139,
+      "fov_y": 37.000002,
+      "hide": false,
+      "name": "camera_1",
+      "near_clip_plane": 0.1,
+      "position": [
+        0.1762251,
+        0.33501586,
+        -0.28710961
+      ],
+      "rotation": [
+        -10.000002,
+        0.0,
+        -25.653972
+      ]
+    }
+  ],
+  "enc_info": {
+    "data_type": "ENCSCN",
+    "date": "27 Dec 2022 20:37:01",
+    "version": "2.0"
+  },
+  "loops": 1,
+  "name": "gt_scene_1",
+  "objects": [
+    {
+      "mesh_name": "gt_ground",
+      "name": "ground",
+      "order": 0
+    },
+    {
+      "mesh_name": "gt_fog_gradient",
+      "name": "fog_gradient",
+      "order": 2,
+      "position": [
+        0.0,
+        0.0,
+        1.09170997
+      ],
+      "properties": {
+        "blending": "additive",
+        "depth_mask": 0,
+        "depth_test": 0
+      },
+      "tag": 10
+    },
+    {
+      "mesh_name": "gt_japanese_girl",
+      "name": "p1_japanese_girl",
+      "order": 20,
+      "position": [
+        0.16827917,
+        0.0,
+        -0.3929624
+      ],
+      "tag": 100
+    },
+    {
+      "mesh_name": "gt_stone_1a",
+      "name": "p1_stone_1a",
+      "order": 25,
+      "position": [
+        -0.22486532,
+        0.0,
+        -0.00883758
+      ],
+      "tag": 101
+    },
+    {
+      "mesh_name": "gt_stone_1b",
+      "name": "p1_stone_1b",
+      "order": 5,
+      "position": [
+        -0.26052168,
+        0.0,
+        -2.32677579
+      ],
+      "tag": 102
+    },
+    {
+      "mesh_name": "gt_stone_2",
+      "name": "p1_stone_2",
+      "order": 15,
+      "position": [
+        0.10243359,
+        0.0,
+        -1.13419247
+      ],
+      "tag": 103
+    },
+    {
+      "mesh_name": "gt_tree_1",
+      "name": "p1_tree_1",
+      "order": 10,
+      "position": [
+        -0.04475592,
+        0.0,
+        -1.75268769
+      ],
+      "tag": 104
+    },
+    {
+      "hide": true,
+      "mesh_name": "gt_japanese_girl",
+      "name": "p2_japanese_girl",
+      "order": 55,
+      "position": [
+        0.13435698,
+        0.0,
+        -1.67999101
+      ],
+      "tag": 105
+    },
+    {
+      "hide": true,
+      "mesh_name": "gt_stone_1b",
+      "name": "p2_stone_1b",
+      "order": 65,
+      "position": [
+        -0.14725611,
+        0.0,
+        -0.56857032
+      ],
+      "tag": 106
+    },
+    {
+      "hide": true,
+      "mesh_name": "gt_stone_2",
+      "name": "p2_stone_2",
+      "order": 50,
+      "position": [
+        -0.18070999,
+        0.0,
+        -2.42122126
+      ],
+      "tag": 107
+    },
+    {
+      "hide": true,
+      "mesh_name": "gt_tree_1",
+      "name": "p2_tree_1",
+      "order": 60,
+      "position": [
+        -0.17333014,
+        0.0,
+        -1.07361126
+      ],
+      "tag": 108
+    }
+  ],
+  "properties": {
+    "smoked_man_alpha": 0.0
+  },
+  "time": 37500
+}

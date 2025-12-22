@@ -1,0 +1,7 @@
+C:Assign >NIL: T: ram:
+Dreamland:Intro
+if WARN
+execute s:startup-noAGA
+else
+execute s:startup-AGA
+endif

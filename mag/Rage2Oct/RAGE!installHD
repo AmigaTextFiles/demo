@@ -1,0 +1,127 @@
+; $VER: RAGE!#02.install 1.0 (04/Oct/96)
+; Install Script for Rage! Issue 2
+;
+
+(COMPLETE 0)
+; Ask where to install RAGE!#02
+   (set @default-dest "Datas:")
+   (set dest1
+      (askdir
+         (prompt "Select the location to install the RAGE!#02 directory.")
+         (help "Choose a destination partition or directory"
+                 " to contain RAGE!#02. The Installer will"
+                 " create a directory called 'RAGE!#02' in the"
+                 " location directory you choose and then copy"
+                 " RAGE!#02's files to it."
+         (default @default-dest)
+         )
+      )
+   )
+  
+(set @default-dest (tackon dest1 "RAGE!#02"))
+
+(makedir @default-dest (safe) (infos))
+
+
+; Copying RAGE!#02 from directory.
+
+(complete 10)
+
+; Copying libs...
+
+(if (exists "libs")
+	(
+		(makedir ("%s/libs" @default-dest) (safe))
+		(set libsdest (tackon @default-dest "libs/"))
+		(copyfiles	(source "libs/")
+	                 	(dest libsdest)
+				(all))
+	)
+)
+
+
+; Copying fonts...
+
+(complete 20)
+
+(if (exists "fonts")
+	(
+		(makedir ("%s/fonts" @default-dest) (safe))
+		(set fontsdest (tackon @default-dest "fonts/"))
+		(copyfiles	(source "fonts/")
+				(dest fontsdest)
+                                (all))
+	)
+)
+
+
+(complete 30)
+
+(if (exists "Bonus")
+  ((makedir ("%s/Bonus" @default-dest) (safe) (infos))
+   (set Bonusdest (tackon @default-dest "Bonus/"))
+   (copyfiles (source "Bonus/")
+              (dest Bonusdest)
+              (all))))
+
+(complete 40)
+
+(if (exists "c")
+  ((makedir ("%s/c" @default-dest) (safe))
+   (set cdest (tackon @default-dest "c/"))
+   (copyfiles (source "c/")
+              (dest cdest)
+              (all))))
+
+(if (exists "devs")
+  ((makedir ("%s/devs" @default-dest) (safe))
+   (set devsdest (tackon @default-dest "devs/"))
+   (copyfiles (source "devs/")
+              (dest devsdest)
+              (all))))
+
+(if (exists "s")
+  ((makedir ("%s/s" @default-dest) (safe))
+   (set sdest (tackon @default-dest "s/"))
+   (copyfiles (source "s/")
+              (dest sdest)
+              (all))))
+
+(complete 60)
+   (copyfiles (source "RAGE!#02.exe")
+              (dest @default-dest))
+
+   (copyfiles (source "RAGE!#02")
+              (dest @default-dest)
+              (infos))
+
+   (copyfiles (source "RAGE!installHD")
+              (dest @default-dest)
+              (infos))
+
+   (copyfiles (source "RAGE!#02.readme")
+              (dest @default-dest))
+
+   (copyfiles (source "file_id.diz")
+              (dest @default-dest))
+
+(complete 80)
+(if (exists "Data")
+  (   (makedir ("%s/data" @default-dest) (safe))
+   (set datadest (tackon @default-dest "data/"))
+   (copyfiles (source "data/")
+              (dest datadest)
+              (all)))
+  ((makedir ("%s/data" @default-dest) (safe))
+   (set datadest (tackon @default-dest "data/"))
+   (copyfiles (source "Rage!2_b:data/")
+              (dest datadest)
+              (all))))
+
+
+
+; ensuite fichiers de donnees...
+
+
+; End of Installation Script.
+   (complete 100)

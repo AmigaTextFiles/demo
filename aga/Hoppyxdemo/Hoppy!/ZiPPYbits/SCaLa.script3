@@ -1,0 +1,58 @@
+V3.0
+
+MOUSE on
+FKEYS on
+INTERACTIVE on
+
+EVENT Technology
+BLANK 640 512 4 lace hires 0
+WIPE fade bycolor 0 speed 5
+TABS 100 200 300 400 500
+MARGINS on 32 607
+PALETTE 000 fff ccc aaa 888 666 444 000 c00 d60 fb0 080 58b 53c a2b f3b
+COLOR 1 7 7 7 7 7 1 7 0 1 2 3 5 4 1
+ATTRIBUTES remap center kerning
+STYLE 2 3 4 3 6 1 1 9 1 1 13 0 2 5 2 0 4 4 3
+TEXTWIPE bob southeast easeout speed 1
+BRUSH 160 135 "zippy:ZiPPYbits/siu"
+FONT 2001.font 8
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 9 1 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 6
+TEXT 30 30 ""
+FONT Ernest.font 30
+COLOR 7 15 7 0 0 7 7 7 0 7 0 0 0 0 7
+ATTRIBUTES edge remap kerning
+STYLE 0 3 4 3 6 1 1 25 4 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE bob east easeout speed 6
+TEXT 381 299 "Technology"
+PAUSE 1
+END
+
+EVENT psyco!
+ANIM "Zippy:zippybits/RasterFlash.Anim" 50 -1
+WIPE windmill speed 5
+TABS 100 200 300 400 500
+MARGINS on 32 607
+PALETTE 000 fff
+FONT Ernest.font 30
+COLOR 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 25 4 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 6
+TEXT 30 30 ""
+FONT Ernest.font 75
+COLOR 0 1 0 1 0 1 0 0 0 0 0 0 0 0 0
+ATTRIBUTES 3D shadow edge remap kerning
+STYLE 0 3 4 3 6 1 1 59 9 2 13 0 2 5 1 0 4 4 3
+TEXTWIPE bob east easeout speed 6
+TEXT 92 159 "Psycadelic"
+TEXTWIPE bob southeast easeout speed 6
+TEXTOUT 2
+TEXTWIPE bob east easeout speed 6
+TEXT 103 292 "Madness!"
+TEXTWIPE bob southeast easeout speed 6
+TEXTOUT 3
+PAUSE 3.120
+EXIT
+END

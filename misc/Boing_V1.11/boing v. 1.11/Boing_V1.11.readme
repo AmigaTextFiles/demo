@@ -1,0 +1,104 @@
+Short:            Boing, a small Boing anim for P 96 or CGFX  WB, UAE and NG
+Author:          JoachimA
+Uploader:       joachima56@yahoo.de 
+Version:        V 1.11
+Type:            pix/wb
+Architecture:  m68k - amigaos >= OS 3.5
+Replaces:      pix/wb/Boing_V1.10.lha
+Distribution:    free
+Kurz:             Boing, ein kleines Paket Boing Animationen für P96 oder CGFX WB, UAE und NG
+
+
+Freeware 
+
+Boing is a packet of small Boingball Anims for Amigas with GFX Card. an AGA Version
+follows with the next release with more anims and other motives.
+
+Advantages: 
+
+Real transparency on animations even on OS 3.5 and faster than animated gifs.
+Systemfriendly blitting on transparent window.
+
+Enhancements over the former 1.06 version:
+ 
++ You can choose between different anims
++ Sound available if you want.
++ Blinking can be turned off.                   
++ timeout can be set for one anim.
+
+You can set X and Y coordinates also blinking values.
+To exit the animation simply click on it once. 
+
+-----------------------------------------------------------------------
+Fixed a bug of the V 1.10 version, x, y errorchecking for the screen coordinates was not active.
+Now if the x or y values are bigger than the actual screen, boing appears in center of the screen!
+
+Sorry for that silly mistake. 
+-----------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------
+Tooltypes:
+-----------------------------------------------------------------------
+xpos:      x-position on screen 
+ypos:      y-position on screen
+
+blink:      negativ values result in faster blinking, positive values result in slower blinking. Default =-60
+             a value of "0" stops blinking
+
+vblank:   you can alter this value to get a faster or slower anim, default value=5
+             Useful values are between 3 and 7. Note, smaller values result in higher cpu load.
+
+anim:      Here you can choose between different anims, at the moment there are 4, put in 1,2,3 or 4.
+             Anim 1 is meant to be something special, simply wait for timeout and you will see.
+             Hope you enjoy this little thing. Therefore it takes a bit more on RAM than the other anims.   
+             Anim 2, 3 and 4 take about 2 MB Fastram, anim 1 takes about 6-7 MB. Anim 4 is same as
+             anim 1, except timeout and the additional animations of anim 1.
+ 
+sound:    Here you can turn on sound, setting "1" = Sound on, "0" = Sound off 
+             Note, you must have AHI installed for this. Only affects anim 1. If sound="0" no sound
+             will be loaded, set this off, if you have problems with sound or no AHI installed.   
+
+timeout:   Here you can set timeout in seconds, from 60 to 3600 sec., only for anim 1, the other anims
+              are not affected by this. Time is not precise at all and is in conjunction with the values putting
+              in vblank switch. 
+
+-----------------------------------------------------------------------
+----------------------------------------------------------------------- 
+Requirements:  GFX Card and fast CPU, recommended 040/060
+                      Os 3.5 minimum and 16 MB Fastram
+-----------------------------------------------------------------------
+Minumum Screenmode of 800x600 is recommended.
+
+following Screenmodes supported: 16 Bit PC, 24 Bit BGR, 32 Bit BGRA
+does not function on 8 bit, 16 Bit and 32 Bit ARGB
+
+Installation: really simpel, just put the content of the archive in the WBstartup drawer, then alter the
+                 tooltypes to your needs.
+
+Tested on A 1200 Tower, Blizzard 68060, Mediator LT4 on Voodoo 3 3000 ,
+other Systems not tested yet, but should run on most classic machines and UAE or NG.
+
+Developed with Amiblitz 3.5.
+
+
+-----------------------------------------------------------------------
+Bugs: Not really a bug. If you start boing and an open window covers the area where boing appears, 
+         then boing cuts out the background of the window instead of the WB Background. Nothing
+         serious can happen, because the blitting is on an transparent window. Only close the window
+         and close boing, then restart boing and everything is normal. No graphical trash is left behind
+         and the machine will not crash. 
+
+         If other really strange things occur, please report, if any.
+
+Have Fun,
+
+Joachim
+
+-----------------------------------------------------------------------
+disclaimer:
+-----------------------------------------------------------------------
+Using of this software is at your own risk. I am not responsible for any loss or damage of data.
+Only for private use. No selling, trading or else allowed.
+
+Copyright © JoachimA 2013/5  

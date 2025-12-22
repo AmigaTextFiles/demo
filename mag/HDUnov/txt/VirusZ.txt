@@ -1,0 +1,57 @@
+================================================
+      VirusZ-II version 1.39 ( 03.08 1997 )
+================================================
+
+Shareware
+VirusZ is shareware which means you are allowed to distribute
+it freely, but you have to pay a fee to the author if you use 
+VirusZ regularly.  Not paying your  fee  is  both immoral and illegal.  
+If you already have registered for any  former  releases, paying the
+fee again is optional.  Suggested donation is  US  $15  (DM  20) 
+or an equivalent amount in any other currency.  Please don't  
+send  coins (they can't be exchanged) or foreign cheques/money 
+orders as these cost me DM 15 (!!) and that's not worth it.
+
+The fact that you paid your shareware fee doesn't mean that you 
+are entitled to  receive  any  updates  or similar services from the 
+author.  If you want that  kind  of  support,  you additionally have to
+include a disk and enough money for postage.
+____________________________________
+Introduction
+
+First thing to mention is that VirusZ can be used as background 
+program that checks  memory  and inserted disks for viruses.  
+For this topic as for every other  specific  or  global  function,  
+VirusZ offers a quite huge amount of user-definable settings to 
+configure it as you like best. Then you have the possibility to start
+different check mechanisms for files, sectors, vectors and bootblocks.
+This is what you usually do whenever you received new software 
+from friends, PD-disks or from a BBS. Finally,  parts of VirusZ can be
+controlled via ARexx and thus enables the user to interact with it from
+programs like e.g. DirectoryOpus. VirusZ has been designed as a 
+100% clean commodity without any system hacks, it follows the Style
+Guide conventions and provides you with keyboard gadget activation, 
+great Reqtools requesters and many other useful features. What  
+VirusZ  does NOT offer is localization and font-sensitivity.  This has
+one  major reason:  One main purpose of VirusZ is and will be the 
+background facility. Supporting different fonts or languages increases
+the disk and memory  usage  quite  a lot, and that would make it 
+unusable for people with just 1 MB of free memory.
+__________________________________________
+Requirements
+- Kickstart 2.04 (or above)
+- MC68000 (or better)
+- commodities.library v37+
+- reqtools.library v38+
+- xfdmaster.library v37+
+- rexxsyslib.library v33+ (for ARexx features)
+_________________________________________
+Installation
+Copy all libraries from the 'Libs' drawer of the VirusZ package
+to the LIBS: drawer  of  your system disk.  You can use the 
+'Install Libs' script for the copy work.
+
+Now  you can either drag the VirusZ icon to your WBStartup 
+drawer or add the following line to your 'S:User-Startup' file:
+
+VirusZ [Options]

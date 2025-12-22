@@ -1,0 +1,113 @@
+ES                                                                         ES
+
+   NAME
+	ES -- EuroStars
+
+   SYNOPSIS
+	ES [MRS][XYZ] <value> [<value> ... ]
+	ES B
+	ES Q	(ARexx only)
+
+   DESCRIPTION
+	ES is a starfield program based on European code that has been
+	massively cleaned up and featurized.  As a result, it doesn't run
+	quite as smoothly on vanilla 68000-based systems, but it's less
+	likely to trash your system.
+
+	ES may be run from the command line or from the Workbench.  When
+	you're finished looking, click the left mouse button anywhere on the
+	starfield to exit.
+
+	ES lets you specify how the stars move and rotate.  This is done
+	from the command line or from the ARexx port.  For both, the
+	argument syntax is the same.
+
+   ARGUMENTS
+	The M, R, and S operators specify star movement, rotation, and spin
+	respectively.  Movement specifies how many world units the stars are
+	translated each frame.  Rotation specifies a static/initial rotation
+	angle.  Spin specifies the change in rotation for each frame.  The
+	X, Y, and Z specifiers indicate which axes the operators are to
+	apply.  Rotation angles are specified in "EuroHackerGrads."  There
+	are 2048 EHG to a full 360 degree circle.
+
+	The MRS operators must appear before the the XYZ specifiers, and
+	there may be no spaces between them.  Only one MRS operator may
+	appear before a given set of XYZ specifiers.  Following the MRSXYZ
+	command are the actual values to be used.
+
+	It's much easier to understand if you look at the examples.
+
+	In addition to the above, there are two additional arguments that
+	may be used:
+
+	B:	Operate as background server.
+		Ordinarily, ES will exit when you click on its screen.
+		However, if you want to do extensive ARexx operations
+		without user interference, this option may be specified,
+		causing ES to ignore all subsequent mouse events on its
+		screen.  Once backgrounded, ES cannot be un-backgrounded.
+		The only way to terminate a backgrounded ES is with the
+		following command:
+
+	Q:	Quit.
+		When sent as an ARexx command, ES will exit immediately.
+		This option on the CLI command line is meaningless; if
+		present, the entire command line is ignored.
+
+   AREXX
+	ES features an ARexx port.  The name of the port is EUROSTARS.
+	Commands sent to this port are exactly the same as those on the
+	command line.  Malformed commands are returned with RC set to
+	RC_ERROR (10).
+
+	Commands are cumulative; that is, a move command (for example)
+	remains in effect until reset by another move command for the same
+	axis.  Thus, an MX command followed later by an SX command does not
+	cancel the MX command.
+
+   EXAMPLES
+	ES mx 4
+		Move stars 4 units along X axis each frame.
+	ES sxyz 2 -4 6
+		For each frame, spin the X axis 2 EHG, the Y axis -4 EHG,
+		and the Z axis 6 EHG.
+	ES rx 512
+		Rotate X axis 512 EHG and keep it there.
+	ES rx -512 sx 2
+		Start X axis rotated at -512 EHG and add 2 EHG to it each
+		frame.
+	ES mxz 10 0 sxyz 2 2 2
+		Move 10 units along X, zero units along Z, and spin all axes
+		by two EHG each frame.
+	ES mxz sxyz 10 0 2 2 2
+		Identical to the above.
+	ES sxmxsymzsz 2 10 2 0 2
+		Again, identical to the above.
+
+	As you can see, the syntax is very flexible.
+
+   NOTES
+	Despite its nomenclature, the 'B' option does not fork ES into the
+	background; you must use the 'Run' command.
+
+	The coordinate system is right-handed, X axis horizontal, Y axis
+	vertical, Z axis perpendicular to the screen.  Positive rotations
+	are clockwise, and are in Z,Y,X order.
+
+	The default startup values are:
+	MX 0  MY 0  MZ 4   RX 0  RY 0  RZ 0   SX 0  SY 0  SZ 0
+
+   BUGS
+	Slow on a 68000.  Short of Disable()ing the system or reducing the
+	number of stars, this is unavoidable.
+
+	Malformed commands generate a diagnostic string to the CLI.  These
+	strings are not available to ARexx programs.  Sigh...
+
+   AUTHOR
+	Leo L. Schwab  --  New Technologies Group, Inc.
+	BIX:		ewhac
+	Portal:		ewhac
+	InterNet:	ewhac@ntg.com   ..or..   ewhac@well.sf.ca.us
+

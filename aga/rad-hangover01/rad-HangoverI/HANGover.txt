@@ -1,0 +1,227 @@
+
+                              ______________________|_
+                       _|____\\                     |
+                  bk!dzn|          hangover     i   |
+      |---/_____    ______    ______    ______  s   |
+      |  /      |---\___  |---\     |---\_____| s   |
+      | /       |     \|  |   /     |     \| _  u   |
+      |_____    |_____    |_____    |_____   `| e 1 |
+         `------'  `------'  `------'  `------'     |
+                         _____        __    ______    _______
+                    .---|__   |---\  /  |---\_____|---\    _/
+                    |    \/   |    \/   |     \___        |
+                    |_____    |_____    |_____   '|_____  |
+                       `------'  `------'  `------'  `----'
+                       _|_____________\\------------;-
+                        |
+
+
+
+WYMAGANIA: 68020+aga+trochë ramu (1.5mb?)
+           ¯¯¯¯¯ ¯¯¯ ¯¯¯¯¯¯¯¯¯¯¯
+
+JAK  ODPALIÊ:  dwu-kilk  na ikonë z wb'ka, lub wpisaê ôcieûkë dostëpu pliku
+uruchamialnego  -  nie  trzeba pierw wchodziê do jego katalogu... Wczeôniej
+musi  byê odpalony sterownik uûywanego panela (domyôlny panel jest w PAL'u,
+a  PAL jest standardowo w domyôle odpalony...). SetPatch nie jest wymagany,
+jednak  czasem  na  niektórych  maszynach po odpaleniu zina bez SetPatch'a,
+pozostaîe  ekrany  mogâ  chwilowo sië trochë pierdoliê, ale to nic... potem
+wszystko  wróci  do  normy.  Jeûeli  po  odpaleniu  zina na ekranie zamiast
+przycisków macie kaszanë, znaczy to, ûe nie starczyîo chipu... - jednak zin
+sië odpali (bez buttonów).
+
+
+
+
+
+PREFSY:
+
+	PANELFILE=<file>
+wskazuje  na plik zawierajâcy panel...  wpisujâc /:x, gdzie x oznacza numer od
+1 do 3, wybieramy panel 'wewnëtrzny'.  domyôlnie ustawione jest na /:1
+
+
+	TITLEITALIC=YES|NO
+jeôli  wîâczone,  nazwa  artka nad którâ jest mysz w menu bëdzie wyôwietlana w
+trybie pochyîym - domyôlnie tryb jest wyîâczony
+
+
+	NODISPLAYPANELS
+powoduje  ûe  nie  sâ  wczytywane i wyswietlane panele - ale wszystkie buttony
+tak...  uûyteczne jeûeli mamy naprawdë maîo ramu (nie koniecznie chip'u)
+
+
+	TITLESTATUS=<status>
+oznacza,  które  artki sâ przeczytane, które nie...  <status> jest zbudowany z
+pewnej  liczby  (decymalnej),  która  reprezentuje  16  artków...   po  slashu
+wystëpuje  kolejna  liczba  reprezentujâca  kolejne  16  artków,  itd.  liczba
+zbudowana  jest  w  ten  sposób, ûe kaûada para jej bitów reprezentuje jednego
+titla.  poniûej ustawienia pary bitów:
+ 00  artek nieprzeczytany
+ 01  artek otwarty, ale nie koniecznie przeczytany
+ 11  artek przeczytany...
+
+standardowo wszystkie artki sâ w trybie 00.  po wybraniu artka przechodzi on w
+tryb  01.  a kiedy próbujemy przejôê do nastëpnej strony artka, kiedy jestesmy
+juû na ostatniej stronie, ustawiany jest tryb 11.
+
+oto przykîadowe ustawienie: TITLESTATUS=3292725248/1073741824
+
+pierwsza liczba binarnie:
+ %11000100.01000011.00000000.00000000
+  ||||||   ||    ++---> artek nr 8 w trybie 11 - przeczytany
+  ||||||   ++---------> artek nr 5 w trybie 01 - otwarty
+  ||||++--------------> artek nr 3 w trybie 01 - otwarty
+  ||++----------------> artek nr 2 w trybie 00 - nieprzeczytany
+  ++------------------> artek nr 1 w trybie 11 - przeczytany
+
+druga liczba binarnie:
+ %01000000.00000000.00000000.00000000
+  ++------------------> artek nr 17 w trybie 01 - otwarty
+
+
+	FORCELARGEMODE
+powoduje,  ûe  kaûdy  tekst  wyôwietlany jest w trybie jedno-kolumnowym (czyli
+jedna rozkurwiajâco dupna kolumna - na caîâ szerokoôê)
+
+
+	DEFAULTFORMATMODE=x
+ustawia  domyôlny  tryb  formatowania  -  uûywany wtedy, kiedy w texcie nie ma
+ûadnej komëdy ustawiajâcej tryb formatowania...  przydatne chyba jedynie wtedy
+kiedy wczytujemy text zewnëtrzny...  x okreôla numer trybu:
+ 1  'Justowanie'
+ 2  Centrowanie
+ 3  Formatowanie do lewej strony
+ 4  Formatowanie do prawej strony
+ 5  Formatowanie zwykîe
+ 6  Tryb  specjalny,  tzw.   AZKEE  - dziaîa tak samo jak formatowanie zwykîe,
+poza  jednym  wyjâtkiem  - jeûeli jakaô linijka nie mieôci sië na ekranie, nie
+jest przenoszona do nastëpnej lini, tylko ucinana.  tryb ten powoduje ûe azkee
+nie jest w ogóle znieksztaîcane...
+
+
+	COLOR[x]=RR,GG,BB
+zmienia  kolor  textu.   jeôli  x  jest  wartoôciâ  1-9  zmieniamy  kolory dla
+dupereli,  jeûeli  x  jest  wartoôciâ  A-F  zmieniamy ustawienia kolorów zero.
+RR,GG,BB  - wartoôê koloru - moûe byê decymalnie, hexadecymalnie i chyba nawet
+binarnie...  wiëc dla kaûdego...
+
+
+	PLAYINGMODE=x
+domyôlny tryb odgrywania muzyki:
+ 1  wszystkie modki z listy pokolei
+ 2  modki wybierane z listy drogâ losowania
+ 3  jeden modek gra w kóîko...
+
+
+	AUTOPLAYMUSIC=<file>
+automatyczne  odgrywanie  muzyki,  czyli  po  odplaeniu zina muzyka wîâczy sië
+automatycznie...   <file>  okreôla  nazwë  moduîu,  lub play-listy (w formacie
+HippoPlayer'a)...   podajâc zamiast nazwy pliku /:x gdzie x to numer, odpalamy
+modek z wewnëtrznej listy o podanym numerze:
+ 1  Everything [XBall] - ten moduî jest w formacie dbm
+ 2  World of Tunes [Climber]
+ 3  Technology [Climber]
+ 4  Jump [Angus]
+
+podajâc  jako  numer  modka  wartoôê  0,  moduî  wewnëtrzny  zostanie  wybrany
+losowo...
+
+
+	EXECUTEx=<file>
+powoduje  uruchomienie  pliku  okreôîonego przez <file>.  moûna uruchomiê piëê
+róûnych programów podajâc jako x odpowidni numer (od 1 do 5).  przykîad
+
+ EXECUTE1=SetPatch >NIL:			;dla jaj odpalamy setpatch'a
+ EXECUTE2=SYS:Devs/Monitors/NTSC >NIL:		;jeôli tu jest NTSC, to start
+ EXECUTE3=SYS:Storage/Monitors/NTSC >NIL:	;albo sprawdzamy jescze tutaj
+
+
+	AUDIOFILTERCONTROL=x
+kotrola filtra dolnoprzepustowego kanaîów audio amigi. wartoôci dla x
+ 0  filtr kontrolowany przez moduî
+ 1  filtr zawsze wîâczony
+ 2  filtr zawsze wyîâczony
+
+
+	MSXREPLAYERPRIORITY=x
+priorytet playerki do moduîów... domyôlnie ustawiony na 5.
+
+
+	TOOLPRI=x
+priorytet programu... domyôlnie=0
+
+
+	BCMAINBACK=x
+x  jest  wartoôciâ od -100 do 100.  okreôla tzw.  BrightnessCorrection(tm) dla
+patternów  w  menu  artków.   oznacza  to  po  prostu  o  ile przyciemniê, lub
+rozjaôniê paletë kolorów.
+
+
+	BCARTBACK=x
+BrightnessCorrection dla patternów w artkach.
+
+
+	BCMAINTEXT=x
+BrightnessCorrection dla textu w MainMenu(tm).
+
+
+	BCARTTEXT=x
+BrightnessCorrection dla textu w artkach.
+
+
+	BCCLIPARTS=x
+BrightnessCorrection dla clipartów (zarówno w menu, jak i w artkach).
+
+
+	BCPANEL=x
+BrightnessCorrection dla paneli.
+
+
+	NOLIGHTING
+ta opcja powoduje, ûe gadûety nie bëdâ podôwietlane pod kursorem myszy...
+
+
+	YOURSMUSICPATH=<pathname>
+ustawia domyôlnâ ôcieûkë dostëpu w requesterze do wyboru modka.
+
+
+	SCREENFONT=name/size
+ustawia font ekranu, który bëdzie uûywany do wyôwietlania menu górnego oraz
+czëôci requesterów... np. SCREENFONT=topazpl.font/8
+
+
+	PBARFONT1/PBARFONT2/MENUFONT1/MENUFONT2/TEXTFONT1/TEXTFONT2/NAMEFONT1/NAMEFONT2
+powyûsze  tooltype'y  ustawiajâ  czcionki  dla  róûnych bzdur zina...  róûnica
+pomiëdzy,  np.   PBARFONT1  i  PBARFONT2  jest  taka, ûe pierwsze to definicja
+czcionki  dla  zina,  jeûeli  ekran  jest  w trybie 1x1 (czyli rozdzielka, np.
+640x512),  a drugie dla ekranów 2x1 (640x256).  tak wiëc:  PBARFONTx [czcionka
+dla  progress  barów], MENUFONTx [czcionka dla main-menu], TEXTFONTx [czcionka
+dla  artków],  NAMEFONTx  [czcionka  dla  nazwy  arta  w  arcie  - narazie nie
+supportowane].   Parametry  dla  tych  tooltype'ów  podajemy  tak  jak  dla tp
+SCREENFONT
+
+
+	NOTEXTSHADOW
+ustawia  ûe text artka nie ma domyôlnie cienia...  moûna takûe ofkoz zmieniê w
+menu 'prefs'
+
+
+	AUTOUPDATE
+text  zostanie  automatycznie  odôwieûony po wybraniu funkcji, które zmieniajâ
+wyglâd textu, np.  cieï, czcionka, etc...
+
+
+	AHIMODE=wartoôê
+ustawia tryb ahi do odgrywania dbm'ów pod ahi.  wartoôê oznacza tu modeid ahi,
+np.   $0002000C...  tryby te moûna wybadaê z requestera ahi otwierajâc poprzez
+menu requestera tzw.  property window.
+
+
+	AHIFREQ=wartoôê
+ustawia wartoôê rendrowania dla ahi (w hertzach)
+
+
+	NOFINDSAUTOKEYMODE
+powoduje,  ûe  jeûeli  w menu zostanie znaleziony podany artek (poprzez FIND),
+nie zostanie automatycznie uaktywniony tryb wyboru artka poprzez klawiaturë...

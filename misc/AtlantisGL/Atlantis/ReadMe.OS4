@@ -1,0 +1,39 @@
+OS4 port of the MOS port of Atlantis. (11/30/2007)
+
+Syntax:
+
+"Atlantis" or "Atlantis Width Height" or "Atlantis W H X Y"
+
+Example: "Atlantis 800 600 0 0"
+
+
+Keys:
+
+[Esc] = Quit
+[a] = Pause
+[s] = Resume
+[Space] = Step (advance by one frame when paused)
+
+
+Bugs:
+
+It's my first time porting an OpenGL application and I couldn't find a way
+to enable fullscreen mode.
+
+I added the options to set the window size and position to be able to fake
+fullscreen mode by using values like "1050 800 -10 -20" (on 1024x768 screen)
+but minigl or GLUT doesn't seem to allow creating a window larger than the
+screen size.
+
+If you start it from Workbench and leave it running long enough, the machine
+may freeze eventually. At least it happened to me once.
+
+
+The atlantis.c source file is reduced to what's needed to compile.
+(Essentially I removed the menu, text overlay, stats and fullscreen features)
+See the MOS version on Aminet for the original sources.
+
+It pales in comparison to the original linux screensaver but I hope you can
+enjoy it anyway :-)
+
+AlexC.

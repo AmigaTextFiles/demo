@@ -1,0 +1,299 @@
+                                         |_
+                                 /_________|
+                         ________\         |m4nkind _ _
+                  _ _____\        \--      |¯¯¯¯¯¯¯¯///
+ .::::    /|/¯¯:       |                            ¯ ¯¯|¯¯¯ ¯  :¯¯\|\    ::::.
+ :: °\   / |/¯¯   _____  [ Karate Demo-Script Fighter ]          ¯¯\| \   /° ::
+ `___'__/  /     /    /_____________________________________________\  \__`___'
+ / .____8 /____ /    /__    \ ____    \ ____    \          / ______/ \ 8____. \
+/ / :8/  / |: |/    /: |\.   \|: |\    \|: |\.   \___  ___/   __>___  \  \8: \ \
+\ \/ /__/  |  /   _/|  |_\    \  |/   _/|  |_\    \ |  |  \.        \  \__\ \/ /
+ \__/__/   |__\.   \|__| /    /__|\.   \|__| /    / |  |   \_\.     /   \__\__/
+ //|   | ======\____/===/____/=====\____/===/____/==|  |======\____/=== |   |\\
+ \\|   |            ___                             |                   |   |//
+  ¯| : |    _______/  / ________    |  |__________________________      | : |¯
+   |   |   / _____/\ / / ______/___ |  |         / ______/____    \     |   |
+   |   |  /   __> |¯¯|/  \__  ||: |_|  |___  ___/   __>___|: |\    \    |   |
+   |___|  \.   \  |  |\.   |  ||   _   |  |  |  \.        \  |/   _/    |___|
+    | |    \.  /  |__| \____  ||  | |__|  |  |   \_\.     /__|\.   \_    | |
+    `::' ===\_/============|__||  |=======|  |======\____/=====\____/== `::'
+                               |             |
+           _  __ _ ____|__                          _ __|____ _ __  _
+                         /________/--      |________\\\
+                                 /_________|bLa.2oo2¯ ¯
+                                 \         |_
+                                           |
+ Hello again adventurer of modern times,
+ I am proud to present you one of the most terrible karate capability:
+
+ KARATE's StartupScript .... sometimes called: The BOOT script.
+
+ Following these notes, you will find a very common karate exemple
+ with nothing new to your eyes, well, exept that there are a lot
+ of images and data created.
+
+ No, the aim of this tutorial is NOT in the script !! it is in the
+shell script that is aside, the one thrown with "iconx":
+ if you open this amigados script, you will find this command:
+
+ "Karate s=Tutorial_C/C05_StartupScript.txt b=data/bootscript1.txt w=320 h=240"
+
+ As we have seen before, karate is thrown with "w=" and "h=" that gives
+the resolution to view the demo, "s=", that indicates which
+script is to be played as a demo, and.... a new option: "b="
+
+     Karate ...   b=bootscript.txt ...
+
+ where bootscript.txt is ANOTHER karate demo script, in the EXACT
+ SAME form as any karate demoscript.
+
+if option "b=" is present, karate will -> FIRST <- Load bootscript.txt
+as a demo, with all its data. Once loaded successfully, KARATE will
+ -> THEN <- start loading the REAL demoscript given by classic option "s=".
+
+ BUT THE BOOTSCRIPT DEMO WILL BE PLAYED DURING THE TIME THE REAL DEMO IS LOADED.
+
+ Well, in fact, just one frame of the bootscript will be played each time
+ an object of the main script is created. All this has been done to
+ create fancy progressbars or per-centage display of the demo loading.
+ The bootscript frames are played "as if" the total boot times would
+ long 10 seconds (500 times unit.) it means at start, before
+ main script load, frame date0 of the bootscript is displayed.
+ later, when the main script is almost load, bootscript will be displayed
+ as if it was framedate 480...
+
+ Understand loading the bootscript takes its time too, so only use a few
+ images (and few music ? why not.) to create your boot scripts !!
+ Thought data like rectangles are quickly created !!
+
+ You can go and take a look to data/s_boot1.txt. you will see
+ a short karate script that take not much datas (to be quickly load.)
+ and that long 10 senconds (500 times unit.), representing a progressbar
+ moving up.
+
+ Note that option b is completely optional, you can set it or not.
+ if you don't a black screen will be opened while loading.
+
+  Again an important note: All data created with the boot script
+ are AVAILABLE from the general script. (you can reuse rectangles,
+ images from the bootscript.)
+
+-----------------------------------------------------------------
+<MAIN> mainscript |0|1</MAIN>              the main script to play...
+-------------------------------------
+<KIMG> texture256x256 | data/texture1.iff </KIMG>   let's create an image.
+                                                    Note this image must be 256x256.
+
+<KIMG> texture256x256_2 | data/texture2.iff </KIMG>
+<KIMG> speedy  | data/speedy.iff </KIMG>
+
+<KIMG> impacman | data/oldpac.iff </KIMG>       These one, used for sprites
+<KIMG> imghost  | data/ghost1.iff </KIMG>       can be any-sized.
+<KIMG> imghost2  | data/inky.iff </KIMG>
+<KIMG> imlightghost  | data/lightghost.iff </KIMG>
+
+<KIMG> kbla  | data/kbla.iff </KIMG>
+
+<KCAM> cam_1 | 0|0|0|0|0|0|1  </KCAM>
+
+<KCOLORTABLE> coltab1 | data/remaptable.iff |1|  0|  0|  0    </KCOLORTABLE>
+<KCOLORTABLE> coltab2 | data/remaptable.iff |2|  255|  255|  0    </KCOLORTABLE>
+
+<KRECT>    rec_all   |0|0|1|1|
+                    |0|0|1|1|  </KRECT>
+
+<KRECT>    quad1   |0|0|1|1| rec_all
+                    |0|0|1|1| rec_all </KRECT>
+
+<KRECT>    quad2   |0|0|1|1| rec_all
+                    |0|0|1|1| rec_all </KRECT>
+
+<KRECT>    quad2b   |0|0|1|1| quad2
+                    |0|0|1|1| quad2 </KRECT>
+
+--------------------------------------------------
+<KSCRIPT><ID> mainscript </ID>
+        <PLAY> part1 | 2100 | 0 | 1 </PLAY>
+</KSCRIPT>
+------------------------
+///<KPART>  <ID> part1  </ID>
+
+
+        <Fx><Pa>BindPalette</Pa>
+            <Pa>  bounce |0|200|1900|0|1</Pa>
+
+            <Pa>CTE|0</Pa>              type of fade:0,1,2,3
+            <Pa>CTE|128</Pa>            optional color 0->255 (0)
+            <Pa> texture256x256 </Pa>     palette where to fade ( "B" )
+            <Pa> texture256x256</Pa>            optional source Palette(2)
+
+            <Pa>CTE|0</Pa>              type of fade:0,1,2,3
+            <Pa>CTE|64</Pa>            optional color 0->255 (0)
+            <Pa>texture256x256</Pa>       Palette where to fade ( "B" )
+            <Pa>texture256x256</Pa>       optional source Palette(2)
+
+            <Pa>CTE|0</Pa>              type of fade:0,1,2,3
+            <Pa>CTE|64</Pa>            optional color 0->255 (0)
+            <Pa>texture256x256</Pa>       Palette where to fade ( "B" )
+            <Pa>texture256x256</Pa>       optional source Palette(2)
+        </Fx>
+
+    ------------------------
+    <Fx><Pa> SetRect  </Pa>
+        <Pa> quad1  </Pa>
+        <pa> bounce|900|1000|10000|0|1   </pa>
+        <pa> cte|0 </pa>
+        <pa> cte|1 </pa>
+        <pa> cte|1 </pa>
+
+        <pa> cte|0 </pa>
+        <pa> cte|0 </pa>
+        <pa> cte|1 </pa>
+        <pa> cte|1 </pa>
+
+    </Fx>
+    <Fx><Pa> PlayPart  </Pa>
+        <Pa> part1a  </Pa>
+        <pa> aff|0|1 </pa>
+    </Fx>
+    ------------------------
+    <Fx><Pa> SetRect  </Pa>
+        <Pa> quad2  </Pa>
+        <pa> bounce|700|800|10000|0.1|0 </pa>
+        <pa> bounce|600|700|10000|1|0 </pa>
+        <pa> bounce|700|800|10000|0.3|1  </pa>
+        <pa> cte|1 </pa>
+
+        <pa> cte|0 </pa>
+        <pa> cte|0 </pa>
+        <pa> cte|1 </pa>
+        <pa> cte|1 </pa>
+
+    </Fx>
+    <Fx><Pa> PlayPart  </Pa>
+        <Pa> part1b  </Pa>
+        <pa> aff|0|1 </pa>
+    </Fx>
+
+
+///</KPART>
+------------------------
+///<KPART>  <ID> part1a  </ID> scrool
+
+    ----- let's fake a scrooling with 2 sprites ------
+    <KTABLE> scrolmov | 0,0|25,-1  </KTABLE>
+    <Fx><Pa>SpritePlain</Pa>
+        <Pa> quad1 </Pa>
+        <Pa> speedy </Pa>
+        <Pa> aftmod | scrolmov |0|0  </Pa>
+        <pa> cte|0 </pa>
+        <Pa> aftmod | scrolmov |0|1  </Pa>
+        <pa> cte|1 </pa>
+    </Fx>
+    <Fx><Pa>SpritePlain</Pa>
+        <Pa> quad1  </Pa>
+        <Pa> speedy </Pa>
+        <Pa> aftmod | scrolmov |0|1  </Pa>
+        <pa> cte|0 </pa>
+        <Pa> aftmod | scrolmov |0|2  </Pa>
+        <pa> cte|1 </pa>
+    </Fx>
+
+    <Fx><Pa>Sprite</Pa>
+        <Pa> quad1  </Pa>
+        <Pa> impacman </Pa>
+        <Pa> bounce |150|200|650|1|0.3 </Pa>
+        <pa> cte|0.02</pa>
+        <Pa> bounce |170|220|630|1.75|0.7 </Pa>
+        <pa> cte|0.3 </pa>
+    </Fx>
+
+ <Fx><Pa> SetCamCoord </Pa>
+            <Pa> cam_1 </Pa>
+
+            <Pa> cte|0</Pa>    x
+            <Pa> cte| 0 </Pa>        y
+            <Pa> bounce |250|350|650| 0|-1</Pa>    z
+            <Pa> 3cte |0|0|0</Pa>  a multiparameter setting angle o1,o2,o3 to 0
+            <Pa> CTE | 1 </Pa>  FOV (never set 0 or negative, mathematicaly impossible.)
+            </Fx>
+
+    <Fx><Pa>SpriteLight</Pa>
+        <Pa>  quad1  </Pa>
+        <Pa> kbla </Pa>
+        <pa> 4cam|cam_1|1|0.5|0|0|0  </pa>
+
+        <P a> cte|0 </Pa>
+        <p a> cte|0.25 </pa>
+        <P a> cte|1 </Pa>
+        <p a> cte|0.75 </pa>
+        <Pa> coltab1 </Pa>
+        <Pa> cte|1 </Pa>
+    </Fx>
+
+///</KPART>
+------------------------
+///<KPART>  <ID> part1b  </ID>
+
+   <Fx><Pa> SetRect  </Pa>
+        <Pa> quad2b  </Pa>
+        <pa> cte|0 </pa>
+        <pa> cte|0 </pa>
+        <pa> cte|1 </pa>
+        <pa> cte|1 </pa>
+
+        <pa> cos|0|0.5|0.75 </pa>
+        <pa> sin|0|0.5|0.75 </pa>
+        <pa> cos|1|0.5|0.75</pa>
+        <pa> sin|1|0.5|0.75 </pa>
+
+    </Fx>
+
+    <Fx>
+        <Pa> Twirl </Pa>
+        <Pa> quad2b  </Pa>
+        <Pa> texture256x256_2 </Pa>
+
+        <Pa>SIN|0|1|0.25</Pa> ofsx
+        <Pa>COS|0|1|0.25</Pa> ofsY
+
+        <Pa>SIN|0|0.1|1</Pa> start angle
+        <Pa>CTE|0</Pa>    amp. angle
+        <Pa>CTE|0</Pa>    freq angle
+
+        <Pa>CTE|0</Pa>         start dist.
+        <Pa>SIN|0|0.6|0.5</Pa> amp.dist
+        <Pa>COS|0|0.2|32</Pa> freq dist
+
+        <Pa>CTE|0</Pa> mapping type
+    </Fx>
+
+
+    <Fx><Pa>Sprite</Pa>
+        <Pa> quad2  </Pa>
+        <Pa> imghost </Pa>
+        <Pa> bounce |900|950|1900|1|0.55 </Pa>
+        <pa> cte|0.02</pa>
+        <Pa> bounce |950|1000|1900|1.75|0.75 </Pa>
+        <pa> cte|0.3 </pa>
+    </Fx>
+
+    <Fx><Pa>Sprite</Pa>
+        <Pa> quad2  </Pa>
+        <Pa> imghost2 </Pa>
+        <Pa> bounce |900|950|1900|-0.5|0.25 </Pa>
+        <pa> cte|0.02</pa>
+        <Pa> bounce |950|1000|1900|0|0.45 </Pa>
+        <pa> cte|0.3 </pa>
+    </Fx>
+
+
+
+
+///</KPART>
+
+
+
+
+
+

@@ -1,0 +1,148 @@
+                            Want to code AHI ?
+                        by Kas1e (kas1e@yandex.ru)
+                         corrected by Selectanovel
+
+How ~many times ~have ~you ~heard ~that ~Paula ~is outdated, and ~in ~order ~to ~support
+all those new sound boards (including boards on mos/os4)~~~~you always need~~~~to~~~~use
+AHI? Howmany ~times ~did ~you ~want ~to use ~apps ~which ~works with ~sound at the
+same time? How many times did you blame ~the amiga ~stuff ~because of music col-
+-lisions ? ~And ~how ~many ~times, did ~you ~write ~a ~68k ~demo ~by ~system ~funcs ~and
+blamed os4/mos because ~your ~prod just ~didn't ~work, due ~to ~a ~lack of paula? You
+didn't ? It's not you I'm ~talking ~about? Well,~~~~~in this case,~~~~~this article is not for ~you
+:). If ~~these ~~kind ~~of ~~things ~~have ~~taken ~~place, ~~and ~~you ~~want ~~to ~~~write ~~a ~~system
+friendly app for amiga,~~~~which will works almost everythere,~~~~this article will help you
+a bit. 
+ 
+At ~first, ~~what ~is AHI ? AHI ~~~was ~~~written (~~and ~still ~is ~in ~development~~) ~~by ~~Martin
+'Leviticus' Blom and supports all of the Amiga-like OSes:~~~aos3.x,~~~~aos4.x,~~~~morphos,~~~and
+x86 emulators.~~~~Latest versions can always be~~~~~downloaded from Martin's page here:
+http://www.lysator.liu.se/~lcs/ahi.html or from aminet.
+ 
+The best ~answer to ~the 'what is AHI exactly' question, can ~be ~found in ~the docs
+(as always):
+----
+Ahi ~~is ~~~a ~~~new ~~~audio ~~subsystem, ~~designed ~~~to ~~~be ~~~flexible, ~~hardware ~~independent,
+expandable ~and ~future safe. It ~is ~designed ~with real-time ~applications in ~mind. ~It is
+designed~~~~to~~~~play modules and sound effects~~~~as~~~~effcient~~~~as~~~~possible,~~~taking advantage
+of modern DSP-based sound cards.
+ 
+The ~name ~AHI ~was ~chosen ~because ~the ~functions ~in ~the ~~system ~had ~to ~have ~a
+prefix, and the ~author couldn't ~come up ~with anything better than Audio Hardware
+Interface,~~~~~something that he has regretted ever ~since. The ~suggested ~pronunciation
+is "atchii", as in "God bless!".
+----
+In ~other ~words, all ~of ~this ~means, that ~if ~you write ~your app/demo/etc with using
+AHI, your app will work everywhere.
+ 
+Of ~course, ~if ~you ~are ~a ~skilled ~programmer ~and ~you ~have ~some ~time ~to ~read ~the
+docs ~in ~the ~AHI-DEV ~archive, ~this ~article ~basically ~will ~not ~be ~a ~big ~deal ~for you.
+But~~~~i~~~~hope,~~~~this little paper will give someone some motivation for ~using ahi in some
+demoscene prod, which today is necessary (ahi i mean) ~to ~keep ~some amiga spirit
+alive.~~~~In any case,~~I strongly recommend ~to ~read ~ahiusr.pdf from the ahi-usr ~archive,
+where Martin says~~~~it~~~~pretty clear and gives enough words about the situation with
+oudated hardware and an AHI solution.
+ 
+Yes, ~some ~~of ~~you ~~already ~~think ~~that ~~ahi ~~for ~classic ~~amiga ~will ~be ~very ~~slow ~~if
+compared with code which uses paula directly.~~~Well,~~~yes. For slower classic amigas
+(like a plain 1200 with old 68020 cpu) paula will win of course.~~~~~Paula will win with
+speed tests in any case, just due to the fact that lowlevel hardware programming
+always was faster over programming of some kind of subsystems.
+ 
+Let's ~~look ~~how ~~we ~~work ~~with ~~paula ~~directly~: ~First, ~we ~~can ~~use ~~assembler ~~and
+directly ~work ~with ~paula/cia ~by ~using ~CIA ~area (~$A00000-$BFFFFF~) ~for ~timing and
+by ~using ~chipset ~registers (~~$DF0000-$DFFFFF area, like AUDPTR, AUDLEN, AUDVOL
+and AUDPER for setuping data,~~~lenght,~~~volume and ~so on). As ~good ~example of this
+technique, ~we ~can ~refer ~to ~the ~following ~~kind ~of ~~module ~~code ~~players: A ~routine
+called NoiseTracker by Mahoney & Kaktus~~~-~~~HALLONSOFT 1989, Soundtracker routine
+by someones~ unknown, Protracker ~routine ~written ~by Tom ~"Outland" Bech and Ivar
+"Heatseeker" J. Olsen and tons of others, which can be found for example here:
+http://www.exotica.org.uk/source/replays/
+ 
+Of course,~~~~this is the fastest way for amiga classic~~~~-~~~~plain assembler and low-level
+hardware coding.~~~Just look at this piece of code.~~~I sometimes agree with those~~~~asm
+freaks, as it looks very elegant: 
+  
+°PROGDIR:data/clips/ahi1.raw°13°  
+Of course,~~~~it means that this kind~~~~~of~~~~code will work only on amiga classic,~~~~or~~~~under
+emulators.
+ 
+The ~second ~way ~with ~paula ~is ~a ~bit ~more ~'hi-level', ~if ~something ~like ~that ~can ~be
+said about some 15 year old way. This ~way is based on AOS stuff from kickstart.
+It's therefore of course well known:~~~~audio.device and cia.resource. If we look ~inside
+kickstart 3.1, we can see something like this:
+
+°PROGDIR:data/clips/ahi2.raw°7°  
+I talked to some guys on ~the ~utilitybase.~com ~forum about the differences between
+direct ~paula ~code ~and ~by ~using ~audio.~device ~and ~cia.~resource ~and ~I ~can say that
+these two ways are the same. Here is the answer from Hypex:
+----
+Most ~players ~just ~used ~audio.device to allocate the hardware, ~then threw it away
+when it ~came to ~playing ~the ~sounds. They ~appear ~friendly, ~because ~they ~use ~the
+OS ~to ~~allocate ~the ~~hardware, ~but ~~once ~~they ~~get ~~permission ~~they ~just ~~bang ~~the
+hardware.
+  
+The same applies for anything using the cia.resources,~~~~that just allows you~~~~~access,
+but to get the job done you must bang the hardware;~~~~~Usually in an interrupt. But,
+that one was widely known,~~~the cia resources didn't actually access the hardware
+for you, to enable a more OS friendly way.
+----
+In ~others ~words,~~~~the second way is ~a ~bit more 'friendly' for classic os and a well
+known ~examples ~~that ~~we ~can ~find ~for: '~P61 mod player' ~and ~'ptreplay.~~~library'. ~~But
+basically its the same.
+ 
+Boch ways will work very fast ~and do not wildly load CPU (if we work with mod
+data,~~~~which doesn't need~~~~to~~~~depack and play,~~~~because it's ready data~~~~~~for~~~~~paula),~~~~but
+they ~will ~work ~as I said before only on classic and emulators. Well, ~what ~in case
+with ahi? In case with ahi, we have 2 ways again :).
+
+The first ~way ~is ~the ~so ~called Function Interface (also known as 'low-level', but it
+means 'low-level' in terms of ahi code,~~~~not hardware coding of course).~~~~In this way
+you just ~use ~AHI functions like AHI_SetSound(), AHI_SetVol() and ~so ~on. In ~~reality,
+this way has one big problem:~~~~if you work with this way,~~~~you will not have mixing
+feature. I.e. ~your ~prod will ~lock ~ahi.device ~and ~while ~your ~prod is ~running, all other
+ahi~~~~~prods will not~~~~work.~~~~As for example,~~~~in~~~~case with dbmplayer library,~~~~which~~~~~works
+with ~low-level ~~ahi interface. The ~only~ advantage ~~of ~low-level ~coding~ as mentioned
+in ~the ~documentation ~is "low overhead ~and much ~more ~advanced ~control over ~the
+playing ~sounds". ~But, ~as ~~you ~~will ~see ~below, ~'overhead' ~does ~not ~have ~too ~much
+space beween low-level ~ahi coding and ~hi-level ~ahi coding (which we call the 2nd
+way). 
+  
+So, ~the ~second ~way ~is ~the ~so ~called ~Device ~Interface ('hi-level'). ~In ~this way ~you
+just use ahi.~~device as standard amiga device,~~and use CMD_WRITE for sending~~~~raw
+data to the AHI. It looks like this:
+
+°PROGDIR:data/clips/ahi3.raw°10°     
+With ~~hi-level ~~ahi ~~coding ~~you ~~~are ~~allowed ~~to ~~mix ~~sound, ~~there ~~are ~~no ~~'locks' ~~of
+ahi.~~device anymore and so~~~~on.~~~~For example, for mp3 playing,~~~~or for mod players,~~~~you
+just ~depack ~the ~data ~needed ~by ~the ~~CPU ~~and ~use ~this ~unpacked ~raw ~data with
+CMD_WRITE.
+
+You can get more info ~and ~examples on ~C/ASM from the AHI-DEV ~archive ~and, in
+case~~~~~with 'direct paula coding',~~~~from links,~~~~which~~~~I~~~~showed in beginning~~~~of~~~~this article.
+
+Now let's~~~~see~~~~how CPU loading will look like~~~~if~~~~we use~~~~~the module player over~~~~paula
+directly ~and ~over ~the ~low/hi-level ~ahi ~interfaces. Code ~is ~not ~the ~same of ~course,
+because for paula,~~~~we do ~not ~need ~any 'decoding' stuff from the ~CPU,~~~~but for ~AHI
+as~~~~I~~~said before,~~~we~~~~will decode mod stuff,~~~make~~~~it~~~~to 'raw' data and play~~~~it~~~~(basically
+it's ~only ~one ~problem ~which ~can ~arise ~for ~very ~old ~machines with ~slow ~cpus ~like
+030). ~Also ~~you ~~must ~keep ~in ~mind, ~that ~~the ~~code ~~can ~~be ~~stuck ~somewhere (for
+example unpacking parts in case with AHI),~~~~so,~~~~do not regard these tests~~~~as~~~~'totally
+true'. But I think these tests are more or less ok. 
+ 
+For ~the ~paula ~player ~I use ptreplay.~~library. For ~the ~low-level ~ahi ~player ~I use srcs
+by Ronald Hof, Timm S. Mueller and Per Johansson. And for the hi-level ahi player I
+use ptplay.~~library which was made by Ilkka ~Lehtoranta ~and ~is ~based on Timmi and
+Co's ~srcs :). ~The ~module ~for ~our ~~tests ~is ~of ~course ~the ~~same. ~I ~chose ~intro.~~mod
+from the Agonia game :). Accelerator for tests was my blizzard with 68060 ~on 66
+mhz (it's still alive!). In case with ahi, settings for both ways are 48000/16/s.
+
+°PROGDIR:data/clips/ahi4.raw°10°     
+As you can see, the paula code works very smoothly. Ahi causes a bit more load
+to the CPU,~~~~but in case with classic and full quality the cpu is not loaded~~~~by more
+than 50%. And ~of course, for aos4 / mos it will work very smooth/fast. Yes, best
+quality with ahi on a classic with 68030 cpu is pretty impossible. So,~~~~the choice ~is
+always left~~~~to you,~~~but I strongly recommend you~~~~to~~~~not using PAULA only anymore,
+if you want to do something for all old and new amiga users.~~~~~Just support both if
+you can.
+
+I hope this little article will help you with some basics :).¤

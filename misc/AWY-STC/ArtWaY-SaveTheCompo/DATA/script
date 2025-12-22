@@ -1,0 +1,462 @@
+<MAIN> myscript |0|1</MAIN>
+=====================================================================================
+<KDBM> DBMmusic | data/mus.bin  </KDBM>
+
+<KIMG> image | data/texture2.iff </KIMG>        
+<KIMG> texture2 | data/texture2.iff </KIMG>
+<KIMG> ArtWaY  | data/logo.iff </KIMG>
+<KIMG> texture3  | data/texture3.iff </KIMG>
+<KIMG> texture4  | data/texture4.iff </KIMG>
+<KIMG> text1 | data/text1.iff  </KIMG> 
+<KIMG> text2 | data/text2.iff  </KIMG> 
+<KIMG> text3 | data/text3.iff  </KIMG> 
+<KIMG> text4 | data/text4.iff  </KIMG> 
+<KIMG> text5 | data/text5.iff  </KIMG> 
+<KIMG> text6 | data/text6.iff  </KIMG> 
+<KIMG> kenny | data/End.iff  </KIMG>
+<KIMG> kenny2 | data/theEnd.iff  </KIMG> 
+
+<KCAM> cam_1 |0|0|0|0|0|0|1  </KCAM>
+
+<World3D> world1 </World3D> 
+<KCAM> the_camera |0|0|-3|0|0|0|0.5  </KCAM>       |0|0|-3|0|0|0|0.5 orig value
+<t3dFlat> texture0 | 42  </t3dFlat> 162old
+<t3dFlat> texture1 | 43  </t3dFlat> 172old
+<t3dFlat> texture2 | 44  </t3dFlat> 182old
+<t3dFlat> texture3 | 54  </t3dFlat> 
+<t3dFlat> texture4 | 55  </t3dFlat> 
+<t3dFlat> texture5 | 56  </t3dFlat> 
+<cube> cube | world1 |0|0|0|0|0|0|1|1|1 |texture3 |texture4 |texture5 |texture4 |texture5| texture3 </cube>
+<cube> cube2 | world1 |0|0|0|0|0|0|1|1|1 |texture0 |texture1 |texture2 |texture1 |texture2| texture0 </cube>
+<cube> cube3 | world1 |0|0|0|0|0|0|1|1|1 |texture3 |texture4 |texture5 |texture4 |texture5| texture3 </cube>
+<cube> cube4 | world1 |0|0|0|0|0|0|1|1|1 |texture0 |texture1 |texture2 |texture1 |texture2| texture0 </cube> 
+<cube> cube5 | world1 |0|0|0|0|0|0|1|1|1 |texture3 |texture4 |texture5 |texture4 |texture5| texture3 </cube>
+<cube> cube6 | world1 |0|0|0|0|0|0|1|1|1 |texture0 |texture1 |texture2 |texture1 |texture2| texture0 </cube> 
+<cube> cube7 | world1 |0|0|0|0|0|0|1|1|1 |texture0 |texture1 |texture2 |texture1 |texture2| texture0 </cube>
+
+<World3D> world2 </World3D>
+<KIMG> pipe | data/texture1.iff  </KIMG>
+<t3dmapping> t_house | pipe  </t3dmapping>
+<lwo3d> o_houses | world2 |0|0|0|0|0|0|1|1|1 | data/pipe.lwo |1| t_house </lwo3d>
+<KCAM> the_camera3 |0|-18|-18|0|0.1|0|0.95  </KCAM>
+
+<KCAM> cam4 |0|0|0|0|0|0|1  </KCAM> 
+
+<World3D> world3  </World3D>
+<KIMG> abstract | data/texture8.iff  </KIMG>
+<t3dmapping> t_alien | abstract  </t3dmapping>
+<lwo3d> o_alien | world3 |0|0|0|0|0|0|1|1|1 | data/abstract.lwo |1| t_alien </lwo3d>
+
+=======================================
+<KSCRIPT>                           
+    <ID> myscript </ID>
+    <PLAY> part1 | 200 | 0 | 1 </PLAY> 200
+    <PLAY> part2 | 200 | 200 | 1 </PLAY> 198|200
+    <PLAY> part3 | 200 | 400 | 1 </PLAY> 400|398
+    <PLAY> part4 | 400 | 0 | 1 </PLAY>
+    <PLAY> part5 | 400 | 00 | 1 </PLAY> l400l400
+    <PLAY> part6 | 800 | 00 | 1 </PLAY> 850|800
+    <PLAY> part7 |1000 |1650 | 1 </PLAY>
+    <PLAY> part8 |1000 |2650 | 1 </PLAY>
+    <PLAY> part9 |700 |3650 | 1 </PLAY> 800 old val
+    <PLAY> part9b |6000 |4350 | 1 </PLAY>  |10000 |4450 | 1 old value
+</KSCRIPT>
+=======================================
+
+<KPART>
+   <ID> part1 </ID>
+   <fx>
+    <Pa> PlayDBM</Pa>
+    <Pa> DBMmusic   </Pa>
+   </fx>
+
+   <Fx>
+    <Pa>setpalette</Pa>
+    <Pa> texture2 </Pa> 
+   </Fx>
+
+   <Fx><Pa> setcamcoord  </Pa>
+       <PA> cam_1 </Pa>
+       <PA> 2cte|0|0</Pa>
+       <PA> aff|0|4 </Pa>
+       <PA> aff|0|0.002 </Pa>  x
+       <PA> aff|0|0.000 </Pa>  y 
+       <PA> aff|0|0.002 </Pa>  z 
+       <PA> cte|0.3 </Pa>
+    </Fx>
+
+<Fx><Pa> Tunnel </Pa>
+       <Pa>  </Pa>
+       <Pa> texture2  </Pa>
+       <Pa> cam_1</Pa>   
+       <Pa>CTE|1</Pa>          
+       <Pa>CTE|0.5</Pa>         
+       <Pa>CTE|0</Pa>         
+       <Pa>CTE|0</Pa>          
+       <Pa>CTE|0</Pa>         
+      </Fx>
+    
+</KPART>
+
+=======================================
+
+<KPART>
+   <ID> part2 </ID>
+   <Fx>
+    <Pa>setpalette</Pa>
+    <Pa> texture2 </Pa> 
+   </Fx>
+   <Fx><Pa> setcamcoord  </Pa>
+       <PA> cam_1 </Pa>
+       <PA> 2cte|0|0</Pa>
+       <PA> aff|0|4 </Pa>
+       <PA> aff|0|0.002 </Pa>  x
+       <PA> aff|0|0.000 </Pa>  y 
+       <PA> aff|0|0.002 </Pa>  z 
+       <PA> cte|0.3 </Pa>
+    </Fx>
+<Fx><Pa> Tunnel </Pa>
+       <Pa>  </Pa>
+       <Pa> texture2  </Pa>
+       <Pa> cam_1</Pa>   
+       <Pa>CTE|1</Pa>          
+       <Pa>CTE|0.5</Pa>         
+       <Pa>CTE|1</Pa>         
+       <Pa>CTE|0</Pa>          
+       <Pa>CTE|2</Pa>         
+      </Fx>
+    <Fx><Pa> Sprite </Pa>
+        <Pa></Pa>
+        <Pa> ArtWaY   </Pa>
+        <Pa> 4cte|0.3|0.3|0.7|0.7 </Pa>
+    </Fx>
+    
+</KPART>
+
+=======================================
+
+<KPART>
+   <ID> part3 </ID>
+   <Fx>
+    <Pa>setpalette</Pa>
+    <Pa> texture2 </Pa> 
+   </Fx>
+   <Fx><Pa> setcamcoord  </Pa>
+       <PA> cam_1 </Pa>
+       <PA> 2cte|0|0</Pa>
+       <PA> aff|0|4 </Pa>
+       <PA> aff|0|0.002 </Pa>  x
+       <PA> aff|0|0.000 </Pa>  y 
+       <PA> aff|0|0.002 </Pa>  z 
+       <PA> cte|0.3 </Pa>
+    </Fx>
+   
+<Fx><Pa> Tunnel </Pa>
+       <Pa>  </Pa>
+       <Pa> texture2  </Pa>
+       <Pa> cam_1</Pa>   
+       <Pa>CTE|1</Pa>          
+       <Pa>CTE|0.5</Pa>         
+       <Pa>CTE|1</Pa>         
+       <Pa>CTE|0</Pa>          
+       <Pa>CTE|2</Pa>         
+      </Fx>
+    <Fx><Pa> Sprite </Pa>
+        <Pa></Pa>
+        <Pa> text1   </Pa>
+        <Pa> 4cte|0.1|0.05|0.9|0.15 </Pa>     4cte|0|0|1|0.2
+    </Fx>
+    
+</KPART>
+
+=======================================
+
+<KPART>
+  <ID> part4  </ID>
+    <Fx>
+        <Pa> Twirl </Pa>
+        <Pa></Pa>
+        <Pa> texture3 </Pa>
+        <Pa>SIN|0|0.5|0.25</Pa> 
+        <Pa>COS|0|0.5|0.25</Pa> 
+        <Pa>SIN|0|0.05|1</Pa>
+        <Pa>CTE|0</Pa>  
+        <Pa>CTE|0</Pa>  
+        <Pa>CTE|0</Pa>        
+        <Pa>SIN|0|0.3|0.5</Pa>
+        <Pa>COS|0|0.1|32</Pa> 
+
+        <Pa>CTE|0</Pa>
+    </Fx>
+
+    <Fx><Pa> Sprite </Pa>
+        <Pa></Pa>
+        <Pa> text2   </Pa>
+        <Pa> 4cte|0.4|0.8|1|1 </Pa>  4cte|0.3|0.8|1|1  |x1|x2|horni |y1|y2|dolni 0->1max.
+    </Fx>
+</KPART>
+
+=======================================
+
+<KPART>
+    <ID> part5 </ID>
+    <Fx><Pa>setpalette</Pa> 
+        <Pa> image </Pa>   
+    </Fx>
+    <Fx><Pa>fillrc</Pa>  
+        <Pa>  </Pa>   
+        <Pa> cte | 5 </Pa> 128old
+    </Fx>
+    <Fx><Pa> Set3DObject </Pa>      
+        <Pa>  cube </Pa>       
+        <Pa> 3cte |19.5|0.9|20  </Pa>    
+        <Pa> aff |0.2|0.003 </Pa>   
+        <Pa> aff |0.4|0.01</Pa>
+        <Pa> aff |0.6|0.02</Pa>
+        <Pa> 3cte|1|1|1 </Pa>       
+    </Fx>
+    <Fx><Pa> Set3DObject </Pa>      
+        <Pa>  cube2 </Pa>       
+        <Pa> 3cte |12.2|0.9|14  </Pa>   
+        <Pa> aff |0.2|0.003 </Pa>  
+        <Pa> aff |0.4|0.01</Pa>
+        <Pa> aff |0.6|0.02</Pa>
+        <Pa> 3cte|1|1|1 </Pa>       
+    </Fx>
+    <Fx><Pa> Set3DObject </Pa>      
+        <Pa>  cube3 </Pa>       
+        <Pa> 3cte |6.5|0.9|10  </Pa>    
+        <Pa> aff |0.2|0.003 </Pa>   
+        <Pa> aff |0.4|0.01</Pa>
+        <Pa> aff |0.6|0.02</Pa>
+        <Pa> 3cte|1|1|1 </Pa>       
+    </Fx>
+    <Fx><Pa> Set3DObject </Pa>      
+        <Pa>  cube4 </Pa>       
+        <Pa> 3cte |2|0.9|6  </Pa>     
+        <Pa> aff |0.2|0.003 </Pa> 
+        <Pa> aff |0.4|0.01</Pa>
+        <Pa> aff |0.6|0.02</Pa>
+        <Pa> 3cte|1|1|1 </Pa>       
+    </Fx>
+    <Fx><Pa> Set3DObject </Pa>      
+        <Pa>  cube5 </Pa>       
+        <Pa> 3cte |-1.2|0.9|3 </Pa>   
+        <Pa> aff |0.2|0.003 </Pa>   
+        <Pa> aff |0.4|0.01</Pa>
+        <Pa> aff |0.6|0.02</Pa>
+        <Pa> 3cte|1|1|1 </Pa>       
+    </Fx>
+    <Fx><Pa> Set3DObject </Pa>      big(7)
+        <Pa>  cube6 </Pa>       
+        <Pa> 3cte |-3.6|0.9|0.5  </Pa>     
+        <Pa> aff |0.2|0.003 </Pa>  
+        <Pa> aff |0.4|0.01</Pa>
+        <Pa> aff |0.6|0.02</Pa>
+        <Pa> 3cte|1|1|1 </Pa>       
+    </Fx>
+
+    <Fx><Pa> Set3DObject </Pa>      small(1)
+        <Pa>  cube7 </Pa>       
+        <Pa> 3cte |28|0.9|26  </Pa>     
+        <Pa> aff |0.2|0.003 </Pa>  
+        <Pa> aff |0.4|0.01</Pa>
+        <Pa> aff |0.6|0.02</Pa>
+        <Pa> 3cte|1|1|1 </Pa>       
+    </Fx>
+
+    <Fx><Pa> Sprite </Pa>
+        <Pa></Pa>
+        <Pa> text3   </Pa>
+        <Pa> 4cte|0.1|0.1|0.9|0.2 </Pa>
+    </Fx>
+
+
+       <Fx><Pa> Draw3DWorld </Pa>
+            <Pa>   </Pa>       
+            <Pa> world1 </Pa>      
+            <Pa> the_camera </Pa> 
+            <Pa> cte|0 </Pa>       
+            <Pa> cte|0.05 </Pa>   
+            <Pa> cte|50</Pa>      
+        </Fx>
+
+</KPART>
+
+====================================== 
+
+<KPART>
+    <ID> part6 </ID>
+      
+    
+    <Fx><Pa>fillrc</Pa>   
+        <Pa>   </Pa>
+        <Pa> cte | 245 </Pa>
+    </Fx>
+    <Fx><Pa> SetCamTarget </Pa>
+            <Pa> the_camera3 </Pa>
+
+            <Pa> sin|0|0.23|2.5 </Pa>    
+            <Pa> sin|0|0.25|1.5 </Pa>    
+            <Pa> cos|0|0.23|02.514 </Pa>
+            <Pa> 3cte |-1|-1|-1 </Pa>  
+
+            <Pa>cte|0 </Pa> 
+            <Pa> cte|0.45 </Pa> 
+            </Fx>
+
+    <Fx><Pa> Sprite </Pa>
+        <Pa></Pa>
+        <Pa> text4   </Pa>
+        <Pa> 4cte|0|0|1|0.2 </Pa>
+    </Fx>
+     <Fx><Pa> Draw3DWorld </Pa>
+           <Pa>   </Pa>
+           <Pa> world2 </Pa>
+           <Pa> the_camera3  </Pa>
+           <Pa> cte|0 </Pa>
+           <Pa> cte|0.75 </Pa>
+           <Pa> cte|200</Pa>
+     </Fx>
+
+
+</KPART>
+ 
+ 
+========================================
+
+
+<KPART>
+    <ID> part7 </ID>
+    <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> texture4 </Pa>   
+    </Fx>
+    <Fx><Pa> SetCamCoord </Pa>
+            <Pa> cam4 </Pa>
+            <Pa>sin|0|0.28|2</Pa>    
+            <Pa>sin|0|0.25|0.75</Pa>        
+            <Pa>sin|0|0.28|2</Pa>    
+            <Pa>sin|0|0.2|0.15</Pa>    
+            <Pa>sin|0|0.20|0.21</Pa>    
+            <Pa>sin|0|0.12|0.21</Pa>    
+            <Pa>CTE|0.7</Pa>       
+            </Fx>
+    <Fx><Pa> Ground </Pa>
+            <Pa> </Pa>         
+            <Pa> texture4 </Pa>      
+            <Pa> cam4 </Pa>    
+            <Pa>cte|1</Pa>          
+            <Pa>CTE|1</Pa>          
+            <Pa>CTE|0</Pa>          
+            <Pa>CTE|0</Pa>    
+            <Pa>CTE|0</Pa>         
+            </Fx>
+
+    <Fx><Pa> Sprite </Pa>
+        <Pa></Pa>
+        <Pa> text5   </Pa>
+        <Pa> 4cte|0.4|0.8|0.95|0.95 </Pa>
+    </Fx>
+
+</KPART>
+
+=======================================
+
+<KPART>
+    <ID> part8 </ID>
+           
+    
+    <Fx><Pa>fillrc</Pa>   
+        <Pa>   </Pa>
+        <Pa> cte | 2 </Pa>  245old
+    </Fx>
+    <Fx><Pa> SetCamTarget </Pa>
+            <Pa> the_camera3 </Pa>
+
+            <Pa> sin|0|0.33|2.5 </Pa>   
+            <Pa> sin|0|0.25|1.5 </Pa>    
+            <Pa> cos|0|0.23|03.514 </Pa>
+            <Pa> 3cte |-1|-1|-1 </Pa>  target
+
+            <Pa>cte|0 </Pa> angle rotation z axis
+            <Pa> cte|0.45 </Pa> 
+            </Fx>
+
+    <Fx><Pa> Sprite </Pa>
+        <Pa></Pa>
+        <Pa> text6   </Pa>
+        <Pa> 4cte|0.1|0.1|0.9|0.3 </Pa>
+    </Fx>
+     <Fx><Pa> Draw3DWorld </Pa>
+           <Pa>   </Pa>
+           <Pa> world3 </Pa>
+           <Pa> the_camera3  </Pa>
+           <Pa> cte|0 </Pa>
+           <Pa> cte|0.75 </Pa>
+           <Pa> cte|200</Pa>
+     </Fx>
+
+
+</KPART>
+
+======================================
+
+<KPART>
+  <ID> part9  </ID>
+    <Fx>
+        <Pa> Twirl </Pa>
+        <Pa></Pa>
+        <Pa> texture4 </Pa>
+        <Pa>SIN|0|0.25|0.25</Pa> 
+        <Pa>COS|0|0.25|0.25</Pa> 
+        <Pa>SIN|0|0.05|1</Pa>
+        <Pa>CTE|0</Pa>  
+        <Pa>CTE|0</Pa>  
+        <Pa>CTE|0</Pa>        
+        <Pa>SIN|0|0.3|0.5</Pa>
+        <Pa>COS|0|0.1|32</Pa> 
+
+        <Pa>CTE|0</Pa>
+    </Fx>
+
+    <Fx><Pa> Sprite </Pa>
+        <Pa></Pa>
+        <Pa> kenny   </Pa>
+        <Pa> 4cte|0|0|1|1 </Pa>
+    </Fx>
+</KPART>
+
+==============================================
+
+<KPART>
+  <ID> part9b  </ID>
+    <Fx>
+        <Pa> Twirl </Pa>
+        <Pa></Pa>
+        <Pa> texture4 </Pa>
+        <Pa>SIN|0|0.25|0.25</Pa> 
+        <Pa>COS|0|0.25|0.25</Pa> 
+        <Pa>SIN|0|0.05|1</Pa>
+        <Pa>CTE|0</Pa>  
+        <Pa>CTE|0</Pa>  
+        <Pa>CTE|0</Pa>        
+        <Pa>SIN|0|0.3|0.5</Pa>
+        <Pa>COS|0|0.1|32</Pa> 
+
+        <Pa>CTE|0</Pa>
+    </Fx>
+ 
+        <PA> StopDBM </PA>
+
+    <Fx><Pa> Sprite </Pa>
+        <Pa></Pa>
+        <Pa> kenny2   </Pa>
+        <Pa> 4cte|0|0|1|1 </Pa>
+    </Fx>
+</KPART>
+
+
+
+
+

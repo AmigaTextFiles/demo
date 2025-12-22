@@ -1,0 +1,186 @@
+
+-------------------------------------- Effect 'ScrollT3D'
+
+  With Effect 'ScrollT3d', you can specify an offset on UV coordinates,
+ for a given texture. It will only affect < t3dmapping> -like textures.
+ UV coordinates are the x,y 2D position of a 3d object's vertex on a texture.
+ All polygon drawn using that texture will see their texture moving.
+
+ Here we 'scroll' the texture of a texture-mapped cube.
+ the form of the effect is:
+
+    <Fx><Pa> ScrollT3d </Pa>
+        <Pa> texture name  </Pa>
+        <Pa> U offset </Pa>  the texture width is: [ 0 , 1 ]
+        <Pa> V offset </Pa>
+    </Fx>
+
+--------------------------------------  < t3dmapshade>
+
+ < t3dmapshade> is a texture constructor, then used to build 3d objects.
+ This one do a glowing transparent texture-mapping using a 64 color grey image.
+ It is similar to the 'SpriteLight' effect, and use the 256x64 part
+ of a colortable: (see B03_ColorBlending ) Have a look at txtshade.iff too.
+
+< t3dmapshade> TextureLabel | ImageObject | ColorTable Object  | Light rate [0,1] </t3dmapshade>
+
+ If the lightrate is 0, the texture is invisible.
+ if it is 0.5, it is half visible, and 1.0 is visible.
+ You can change the colortable used and this rate in real time
+ with 'SetT3DShade'.
+
+------------------------------------- Effect 'SetT3DShade'
+
+ change the glowing rate of a < t3dmapshade> in real time:
+
+    <Fx><Pa> SetT3DShade </Pa>
+        <Pa> texture name  </Pa>  useless if not created with < t3dmapshade>.
+        <Pa> colortable </Pa>      a colortable object: it gives the glowing color.
+        <Pa> glowing rate </Pa>   a number: 0: invisible , 1: visible
+    </Fx>
+
+-------------------------------------
+
+<kimg> i_GreyImage | data/txtshade.iff </kimg>
+<kimg> i_2 | data/logozaac.iff </kimg>
+
+<KColorTable> coltab_yellow| data/remaptable.iff |0|255|255|32 </KColorTable>
+<KColorTable> coltab_red   | data/remaptable.iff |1|255|0|0   </KColorTable>
+
+<t3dmapshade> tmapshade_red |i_GreyImage|coltab_red|1.0 </t3dmapshade>
+<t3dmapshade> tmapshade_yel |i_GreyImage|coltab_yellow|1.0 </t3dmapshade>
+
+<t3dmapping> tmap | i_2 </t3dmapping>
+
+
+<KCAM> the_camera |0|0|-3|0|0|0|0.5  </KCAM>
+<World3D> world1 </World3D>
+
+<cube> cubemap | world1 |0|0|0|0|0|0|1|1|1| tmap | tmap | tmap | tmap | tmap | tmap </cube>
+
+
+<MAIN> myscript |0|1</MAIN>
+
+<KSCRIPT>
+    <ID> myscript </ID>
+    <PLAY> part1 | 300 | 0 | 1 </PLAY>
+    <PLAY> part2 | 40000 | 0 | 1 </PLAY>
+</KSCRIPT>
+----------------------------------
+<KPART> <ID> part1 </ID>
+
+
+    <Fx><Pa>setpalette</Pa>  set the screen palette
+        <Pa> i_2 </Pa>   we have seen each image stands for a 256 color palette too.
+    </Fx>
+
+    <Fx><Pa>fillrc</Pa>  clear the screen background to color 24.
+        <Pa>  </Pa>   default screen rectangle.
+        <Pa> cte | 24 </Pa>
+    </Fx>
+
+    <Fx><Pa> ScrollT3d </Pa>
+        <Pa> tmap  </Pa>   texture used by 'cubemap'
+        <Pa> sin |0|0.1|2</Pa>
+        <Pa> sin |0|0.12|2</Pa>
+    </Fx>
+
+    <Fx><Pa> Set3DObject </Pa>      make the cube rotate all the time on the 3 axis:
+        <Pa> cubemap </Pa>        (note our_cube is attached to world1.)
+
+        <Pa> 3cte |0|0|0  </Pa>     set at position 0,0,0
+        <Pa> aff |-0.01|0.0014</Pa>   rotation: make angles follow affine curve.
+        <Pa> aff |0.1|0.001</Pa>
+        <Pa> aff |0.0|0.0009</Pa>
+
+        <Pa> 3cte|1|1|1 </Pa>       scale always set to 1,1,1.
+    </Fx>
+
+    <Fx><Pa> Draw3DWorld </Pa>
+        <Pa>   </Pa>        the rectangle where to draw (here: default)
+        <Pa> world1 </Pa>      the 3D world to draw !
+        <Pa> the_camera </Pa>  note camera postion is 0,0,-3, looking 0,0,0.
+        <Pa> cte|0 </Pa>       time march, may be used for some lightwave stuffs...
+        <Pa> cte|1 </Pa>    near-cut-plane distance to camera (must be >0)
+        <Pa> cte|200</Pa>       far-cut-plane distance to camera (must be >near)
+    </Fx>
+
+</KPART>
+----------------------------------
+<World3D> world2 </World3D>
+
+<sphere> redsphere | world2 |-2|-1|4|0|0|0|1|1|1|
+         16 | 10 | 1.5| 0|0.0|0.0|2|0.5|tmapshade_red|tmapshade_red|tmapshade_red|tmapshade_red</sphere>
+
+<tore> yeltore | world2 |0|0|5|0|0|0|1|1|1|
+        16 | 10 | 2|1 | 0|0.0|0.00|2|0.25 |tmapshade_yel|tmapshade_yel|tmapshade_yel|tmapshade_yel </tore>
+
+<KIMG> i_lightmapRed  | data/lightmapred.iff </kimg>
+<t3dFlatLightMap> tLightMapRed   | i_lightmapRed  </t3dFlatLightMap>
+<star3d> starBig2 | yeltore |0|0|0|0|0|0|1|1|1 |
+         4|2|1|0.5|0.1| tLightMapRed | tLightMapRed || tLightMapRed | tLightMapRed | </star3d>
+
+
+
+<KCAM> the_camera2 |0|0|-4|0|0|0|0.35  </KCAM>
+
+
+<KPART> <ID> part2 </ID>
+
+    <Fx><Pa>setpalette</Pa>
+        <Pa> i_2 </Pa>
+    </Fx>
+    <Fx><Pa>fillrc</Pa>
+        <Pa>  </Pa>
+        <Pa> cte | 0 </Pa>
+    </Fx>
+    --------------------------- change texture aspect:
+    <Fx><Pa> SetT3dShade </Pa>
+        <Pa> tmapshade_red  </Pa>
+        <Pa> coltab_red </Pa>
+        <Pa> sin |0.7|2|0.4</Pa>
+    </Fx>
+    <Fx><Pa> ScrollT3d </Pa>
+        <Pa> tmapshade_red  </Pa>
+        <Pa> sin |0.0|0.1|1</Pa>
+        <Pa> sin |0.0|0.14|0.5</Pa>
+    </Fx>
+    <Fx><Pa> ScrollT3d </Pa>
+        <Pa> tmapshade_yel  </Pa>
+        <Pa> cte |0 </Pa>
+        <Pa> sin |0.12|0.8|0.12</Pa>
+        
+    </Fx>
+    <Fx><Pa> Set3DObject </Pa>
+        <Pa> redsphere </Pa>
+
+        <Pa> 3cte |0|0|0  </Pa>
+        <Pa> aff |-0.01|0.005</Pa>
+        <Pa> aff |0.1|0.006</Pa>
+        <Pa> aff |0.0|0.004</Pa>
+        <Pa> 3cte|-2|-2|-2 </Pa>
+    </Fx>
+
+
+    <Fx><Pa> Set3DObject </Pa>
+        <Pa>yeltore </Pa>
+        <Pa> 3cte |0|0|0  </Pa>
+        <Pa> aff |0|0.003</Pa>
+        <Pa> aff |0|0.004</Pa>
+        <Pa> aff |0|0.002</Pa>
+        <Pa> 3cte|1|1|1 </Pa>
+    </Fx>
+
+
+    <Fx><Pa> Draw3DWorld </Pa>
+        <Pa>   </Pa>
+        <Pa> world2 </Pa>
+        <Pa> the_camera2 </Pa>
+        <Pa> cte|0 </Pa>
+        <Pa> cte|1 </Pa>
+        <Pa> cte|200</Pa>
+    </Fx>
+
+
+</KPART>
+----------------------------------

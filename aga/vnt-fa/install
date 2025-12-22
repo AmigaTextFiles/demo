@@ -1,0 +1,92 @@
+
+(set app-name "Fallen_Angels by Venture")
+
+(if(<(/(getversion)65536)39)
+(abort "Fallen Angels needs at least OS3.0\n"))
+(complete 0)
+
+(message
+	(cat	"\n\n\n\n\n\nWelcome to The Fallen_Angels Installation Script.\n"
+			"(c)1997 Venture. All rights reserved."
+	)
+)
+
+
+(copyfiles
+	(prompt	"Copying ros config file into ENV:")
+	(help		#copy)
+	(source	"env/ros.prefs")
+	(dest		"ENV:")
+	(nogauge)
+)
+
+(copyfiles
+	(prompt	"Copying keyfile")
+	(source	"l/fallen_angels.key")
+	(dest		"l:")
+	(nogauge)
+)
+
+(complete 10)
+
+(set rosv (/(getversion "libs:ros.library")65536))
+(set rosr (-(getversion "libs:ros.library")(* rosv 65536)))
+(set rosv2 (/(getversion "libs/ros.library")65536))
+(set rosr2 (-(getversion "libs/ros.library")(* rosv 65536)))
+
+(set upd
+	(askchoice(choices "Update" "Dont")
+		(default 0)
+		(help "ros.library is required by the demo.")
+		(prompt ("\nCurrently installed ros.library: \n\nVersion : %ld.%ld\nVersion to install : %ld.%ld\n" rosv rosr rosv2 rosr2))
+	)
+)
+(copylib
+	(prompt	"Copying ros.library.")
+	(source	"libs/ros.library")
+	(dest		"libs:")
+)
+
+(complete 20)
+
+(set direk
+	(askdir
+		(prompt "Please select a place where you want to install Fallen Angels.\nDrawer for it will be created there.")
+		(help "Just tell me where to put this production.")
+		(default "ram:")
+	)
+)
+
+(if
+	(not(exists(tackon direk "Fallen_Angels")))
+		(makedir(tackon direk "Fallen_Angels")
+	)
+)
+
+(set direk(tackon direk "Fallen_Angels"))
+
+(complete 30)
+
+(copyfiles
+	(prompt	"Copying demo files into " direk)
+	(source	"fallen_angels")
+	(dest		direk)
+)
+
+(complete 40)
+
+(copyfiles
+	(prompt	"Copying demo files into " direk)
+	(source	"fallen_angels.dat")
+	(dest		direk)
+)
+
+(complete 90)
+
+(copyfiles
+	(prompt	"Copying demo files into " direk)
+	(source	"fallen_angels.readme")
+	(dest		direk)
+)
+
+(complete 100)

@@ -1,0 +1,133 @@
+*****************************************************************************
+*                                                                           *
+*                    PUBLIC DOMAIN SOFTWARE LICENSE                         *
+*                                                                           *
+* The following program(s) and/or data file(s) are declared Public Domain.  *
+*                                                                           *
+* Provided the end user sticks to the following author's wishes, he or she  *
+* is authorized to use, copy, analyze and improve the items.                *
+*                                                                           *
+* Conditions of use:                                                        *
+* ------------------                                                        *
+*                                                                           *
+* 1) No part of this distribution will be omitted (incl. this README file)  *
+* 2) None of the Copyright texts will be modified.                          *
+* 3) None of the files should be stored and/or converted onto environment-  *
+*    ally damaging media. (paper listings, faxes, etc...)                   *
+*                                                                           *
+*                                                                           *
+* The Author,                                                               *
+*                                                                           *
+* Laurence Vanhelsuwé                                                       *
+*                                                                           *
+* Auroville 27/MAY/94                                                       *
+*                                                                           *
+*                                                                           *
+*****************************************************************************
+
+Program Title(s): Earth, Globe.C                       (C) L. Vanhelsuwé 1994
+
+Author:           Laurence Vanhelsuwé
+
+
+0. Short description:
+   ------------------
+
+   Earth    :  This program shows a real-time rotating Earth.
+               You can rotate and zoom in or out with at least one joystick
+               plugged in (2 are needed for full control).
+
+               The small executable gets its data from the file "3D.Globe"
+
+   Globe.C:    This is the C source to the program which converted a 2-D image
+               of the world into a 3-D image-wrapped-on-a-sphere.
+
+   EarthMap.IFF: Source picture to create the 3-D data using GLOBE.
+
+
+1. Requirements/Installation:
+   --------------------------
+
+   To see the animation you need the data file '3D.Globe' in the current
+   directory when Earth is run.
+
+   Globe.c and EarthMap.IFF are not needed.
+
+
+2. How to use it:
+   --------------
+
+   Simply install the program as outlined above.
+
+   Joystick #1 controls Y-rotation and ZOOM.
+   Joystick #2 controls X- and Z-rotation.
+
+   Press FIRE BUTTON #1 to quit !!
+
+   (Note that if, as usual, a mouse is plugged into port #1, then the program
+   will interpret mouse moves as joystick changes...).
+
+
+3. Internals:
+   ----------
+
+   Although the filename of the datafile is hard-coded to be '3D.Globe', the
+   contents of that file could easily be replaced by another 3-D model.
+
+   The format of the data file is ultra simple:
+
+   WORD 0    :  number of (x,y,z) triplets in this model.
+
+   WORD 1    :  X coordinate of point 0
+   WORD 2    :  Y coordinate of point 0
+   WORD 3    :  Z coordinate of point 0
+
+   WORD 4    :  X coordinate of point 1
+   WORD 5    :  Y coordinate of point 1
+   WORD 6    :  Z coordinate of point 1
+
+     :
+     :
+
+   WORD 3*n  :  X coordinate of point n
+   WORD 3*n+1:  Y coordinate of point n
+   WORD 3*n+2:  Z coordinate of point n
+
+   That's right: the model is just a collection of unrelated points in space.
+   A cloud of points !
+
+   Since this kind of representation is much faster to render than polygon-
+   (triangles in reality !)- based models, one can get quite stunning animations
+   out of this renderer.
+
+
+4. Limitations/Warnings:
+   ---------------------
+
+   No user-interface.
+   No command line options.
+
+**!! CRASH !!**
+
+   Don't ZOOM the model in such that any model edges go off-screen... the pixel
+   plotter doesn't clip and will scribble all over memory !!
+
+5. History:
+   --------
+
+   Very long. Started in 1987 when I did a wireframe animation of the Space Shuttle.
+   This code is a recent re-incarnation.
+
+6. Future:
+   -------
+
+   Dependent on user's feedback.
+
+
+7. Credits:
+   --------
+
+   Laurence Vanhelsuwé
+   Christinastraat 105
+   B-8400 Oostende
+   Belgium

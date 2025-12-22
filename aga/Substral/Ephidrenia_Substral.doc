@@ -1,0 +1,173 @@
+	 _________________________      ______
+	/             _________  /_____/    //          _________
+	\--------.   /        /\           //_________ /\        \
+	 ¯¯¯¯¯¯¯¯¯) /    ____/  \__         _         /  \   ___  \
+	   .-----' .)   /_______/ /_ vV____| |________\ __\  \ /  (.
+	  /        |    __/ _  /    /  \     |  __/  __/  /   \    |
+	 /_________|   /    \_/ _/ / °° \ ¯  |   \   _/     /      |
+		   |       __\ _\__\  º /____|____\_____\__/___/___|
+		   |_______/--`-----\__/-----^----'`------'       /
+	 EphidrenA  \       /      o/][\/°              \________/
+		     \_____/         / ¯/_  ._
+				    _\      '\
+					      \Danser som liksom
+					       danser i takt med
+					       musikk i bakgrunnen
+
+Ephidrena gave you Substral- The demo, at tp98.
+
+Demo requirements:
+------------------
+Who cares.. It worked on the partycomputer and also on my o3o and my friends
+o6o. Requires 8meg of ram and a bit of patience at the start if you don't
+have a o6o I think :D.
+
+
+In depth Credits. :D
+----------------------
+Code:
+- Most routines by Loaderror/Ephidrena
+- Goraud shaded gun by Accede/Contraz
+- Startup by Cyberstarr/Ephidrena
+- Player code by Jarno Paananen
+- C2P code by Scout/Tbl
+- Squareroot calculator by Romeo/Donut Fetish.
+
+Gfx
+----------------------
+- Substrallogo,textures,endscreen and Brightside picture by Cheetah/Ephidrena
+- Cybereyetexture by Loaderror
+- Eye-Picture original by Cheetah. Retouched and adapted for the effect by
+  Loaderror.
+- Star effect background texture by Loaderror/ephidrena
+- Arcane, Chriz and Pinocchio photographs taken by Leia/Apathy. Spooky
+modifications by Loaderror with antialiasing and retouching by Cheetah.
+- Ephidrena anim and Subgunnar-anims by Stoney/Ephidrena.
+- Credit-anims by Loaderror
+- All 3d objects by Loaderror.
+
+Music
+----------------------
+- Two tunes were made, the first which we didn't use because it didn't fit
+the atmosphere we wanted was mainly composed by Frequent with some
+additional modifications by Zixaq.
+- The demo tune was tracked by Zixaq with some additional mixing at the end
+of the tune by Frequent. Most samples by frequent or taken from
+internet-sources. Some screaming by Stoney;D
+
+--------------------------------------------------------------------------
+Technicals:
+----------
+All effects in 1x1 320x200 256colours using Scouts c2p except for the
+strange 3d tunnel and the wire-hand effect which were 1x2 320x128 and 1x1
+320x256 respectively.
+
+Most effects apart from the Eph-logo effect uses a shadetablesystem which
+mimics 256 colours with 64 shades each in a dark-to-light sorted 256 colour
+palette. This is what takes so long to calculate when the Substral-logo is
+shown.
+
+About the effects:
+--------------------
+Startanim:
+- 2 colours 122 frames.
+- Compressed with my own run-length-encoding system.
+- Blurred with texture in the back sliding across the screen to bring
+colour to the anim.
+
+Starfield:
+- 288 2x2 sized dots rotating in all 3 dimensions
+- Blurred with texture in the back sliding across the screen to bring
+colour to the effect.
+
+Eye in starfield:
+- Eye-picture crossfaded onto the screen using a somewhat uncorrect
+cross-fader routine i wrote for the "norsktoppen 3" intro. It uses only
+subtractions and additions and some comparing against the background. The
+effect isn't all that convincing but it's a useful routine anyway.
+
+Eye with goraud gun:
+- around 150 faces goraudshaded and placed in the intensity layer of the
+screen to give the transparent effect. Part of Accedes 3d world which is
+still in development.
+- chriz/apathy model crossfaded onto the screen using the same crappy
+crossfader as above.
+- the cybereye is a tablebased ball-routine done in realtime to make it Zoom
+out of the eye.
+
+Cybereye with ligth:
+- Just two sets of tables. The ball-table, and one which looks into the
+center of the ball and checks how bright the current pixel should be
+according to the balltextures orientation.
+- The ball-table uses word-offsets, but the lightcheck-table still uses
+longword offsets because the effect was originally planned for 320x256 use.
+I intend to change this in the future to make the effect somewhat faster on
+030.
+
+3D tunnel:
+- This is just a load of unfinished bollocks. There's probably something
+wrong in my rotation routine that makes the tunnel look the way it does.
+Still it looks kind of cool anyway:D The gridsize is 16x16 and the routine
+can still be optimised a lot. Perhaps in a later demo.
+
+Eph-logo:
+- Run-length-encoded logo with twin tables subtracted together in the background.
+
+Credits:
+- Animations:2 colors 300 frames.
+- 60 3d dots in the back all blurred and coloured.
+
+The Ball:
+-Same formula as the cybereye, but now in all it's glory with shading and
+zooming. Spent a lot of time making this effect run in realtime. You'll know
+if you've seen my other demos:D Perhaps the last time you'll se this effect
+coming from my code.
+- Wireframevector: 310 doublethickness lines blurred to make it glow.
+- Crossfaded transparent and spooky Pinocchio model. Who cares about naked
+ladies on top of effects when we can use our scenefriends. :D
+
+Brightside effect:
+- Picture by Cheetah/eph. The winner of the Kindergarden party this
+November.
+- Wire-hand: 302 lines blurred etc....
+- Crossfaded Arcane with real funny message...Although the only people
+laughing were the people in the back of the module:( "Boozing is a form of
+Substral travel" --> "Dreaming is a form of astral travel" . Get it :D
+Substral, by the way, is a liquid that makes the vegetables grow faster. In
+Ephidrena though, we like to think of it as the opposite of Astral.. While
+Astral is all pretty, colourful and nice. Substral is hell, noise and
+disturbed stuff. Yeahh!!
+
+Sub-anim and background..
+- Sub-anim: 323 frames in 2 colours. blurred etc..
+- The background is just another table with shade and nice stuff like that.
+- wire Nuclearsymbol: 102 blurred lines.
+
+Zooming-stars.
+- The starfield used as light for the ball. With a zoom routine put in for
+good measure.
+- 180 3d dots.
+- Didn't look quite as planned although it was cool on the o6o.
+
+End-screen:
+Yeah. See you all at the next party.
+
+--------------------------------------------------------------------------
+The best thing about this demo though, is that it's technically inferior
+when compared to say Thains demo, but it's the design and all the hours gone
+into music and graphics that secured it a position among the top five..
+cool. But perhaps next time I'll get into some heavy 3d-stuff too.
+
+The gracious greets from Loaderror
+-----------------------------------------------------------------------
+Apathy, Aztec/Sector7, Arcane/???, Contraz, Ephidrena,Donut Fetish,
+Mantra, Aurum(pc), Rectum Cauda(pc), Tbl, Antibyte/Scx, Austrian guy with
+no handle or group;D, VG-reporter, Gainx, Spaceballs, Iris, Soda/Darkage,
+Subgod/Light, Firestarter/instinct.. aagh kommer ikke på noe mer.
+
+btw. the music-compos on tp sucked dick.
+
+Old school sucks!
+
+Ephidrena -98
+

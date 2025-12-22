@@ -1,0 +1,104 @@
+                                      @{c 5CFFFB}Pêevodník 1.40@{c}
+                                      @{c 5CFFFB}¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+                     @{c 5CFFFB}SHAREWARE  ©1996-98 Jaroslav Pokorný, Ústí n.L.@{c}
+
+   Tento  program  je  nejdokonalejîí pêevodník pro konverzi textû mezi rûznými kódováními
+çeského  jazyka.   Podporuje  vîechny  hlavní çeské lokalizace (KOI8, E2, CZ).  Program se
+automaticky pêizpûsobí vaîí lokalizaci a kódování.
+
+ @{c 5CFFFB}K çemu Pêevodník slouùí a co vîechno umí?@{c}
+ @{c 5CFFFB}¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+  · pêevádí texty v tëchto kódováních: Amiga E2 (UTX E2), KOI8 (K8), Local Infinity (CZ),
+    Amiga PBX (PBX), Windows EE (CP1250), Kamenických (CP895), PC-Latin 2 (CP852),
+    ISO Latin 1 (8859.1), ISO Latin 2 (8859.2), Macintosh CE (MacCE) a kódování AMI
+    (od Tronika)
+
+  · pêímo pêevádí kódování v dokumentech programû WordWorth, FinalWriter, ProWrite,
+    Excellence a BDEditor
+
+  · pêevádí obsah clipboardu mezi rûznými kódováními
+
+  · umí pêevést dokumenty WordWorth, FinalWriter, ProWrite, Excellence, BDEditor,
+    IFF-FTXT, T602 a HTML do çistého textu (vçetnë zmëny kódování)
+
+  · text v libovolném kódování buð jen zbaví diakritiky, nebo ho pêevede do univerzální
+    7 bitové ASCII
+
+  · pêevádí jak po jednom souboru, tak hromadnë skupiny souborû (hromadnë jen
+    v registrované verzi)
+
+  · automaticky rozpoznávává kódování çeîtiny (volitelnë)
+
+  · pêevádí lokalizaçní katalogy mezi KOI8, E2, CZ a PBX
+
+  · zcela automaticky a inteligentnë konvertuje znaky CR/LF/EOF mezi platformami Amiga,
+    Unix, PC a Mac -> zapomeñte na CrossDOS!
+
+  · opravuje chybnë pêevedené soubory z hlediska znakû CR/LF
+
+  · umoùnuje prohlíùení souboru pêed i po pêevodu
+
+  · pêevádí lokalizaçní katalogy do textu a nazpátek
+
+  · z Pêevodníku lze pêímo vyvolat libovolný editor pro úpravy lokalizaçních katalogû
+
+  · texty lze pêevádët i z CLI (pouze v registrované verzi)
+
+  · univerzálnë konvertuje bitmapové fonty mezi vîemi kódováními çeského jazyka
+    (jen v registrované verzi)
+
+  · univerzálnë poçeîïuje originální vektorové Intellifonty pro kódování Amiga E2
+    (jen v registrované verzi)
+
+  · automaticky pêevádí vîechny novë nainstalované katalogy z KOI8/CZ do E2
+    a z E2/CZ do KOI8
+
+  · podporuje drag-n-drop, MagicWB, CyberGraphX, ikonifikaci, veêejné obrazovky,
+    rychlou nápovëdu, online nápovëdu...
+
+  · je rychlý, kritické rutiny jsou napsány v assembleru, program je optimalizován
+    pro CPU 68020 a vyîîí.
+
+  · konfigurace se ukládá to ToolTypû ikony, nicménë vëtîina ToolTypû se nastavuje
+    automaticky z programu
+
+  · obsahuje integrovaný registraçní formuláê - vaîe zadaná data budou pouùita ve vîech
+    dalîích produktech
+
+  · speciální verze 030/040/060 (jen pro zaregistrované uùivatele)
+
+
+
+
+ @{c 5CFFFB}Poùadavky programu Pêevodník na vaîi Amigu
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+   Program potêebuje minimální konfiguraci:
+     - systém verze 39 a vyîîí   (Release 3.x)
+     - CPU 68020 a vyîîí
+     - 1MB RAM
+
+   Navíc doporuçuji:
+     - externí knihovnu locale.library V39+ (souçást systému)
+     - externí knihovnu amigaguide.library V39+ (souçást systému)
+     - externí knihovnu asl.library V39+ (souçást systému)
+     - nainstalovaný MagicWB 2.0
+     - nëjakou Fast RAM
+
+
+
+
+
+                                          @{c 5CFFFB}Autor
+                                          ¯¯¯¯¯@{c}
+
+  E-MAIL:    @{c 5CFFFB}shaman@sun.ujep.cz@{c}
+  ¯¯¯¯¯¯
+  Adresa:    @{c 5CFFFB}Jaroslav Pokorný@{c}
+  ¯¯¯¯¯¯     @{c 5CFFFB}Kmochova 25@{c}
+             @{c 5CFFFB}Ústí nad Labem@{c}
+             @{c 5CFFFB}400 11@{c}
+
+  WWW:       @{c 5CFFFB}http://sun.ujep.cz/~pokorny@{c}
+  ¯¯¯
+             @{c 5CFFFB}Zde naleznete nejnovëjîí verze programu, stejnë
+             jako spoustu dalîích zajímavých vëcí.@{c}

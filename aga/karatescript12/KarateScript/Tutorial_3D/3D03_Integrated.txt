@@ -1,0 +1,235 @@
+
+  If you are used with karate, you already knows all those tricks
+  with rectangles and cameras.
+
+ This example is just to show how cool the 3d is integrated with all
+ these stuffs:
+  You can specify a rectangle where to draw with 'Draw3DWorld',
+  And you can move this rectangle on the screen with 'SetRect'.
+
+   One Rectangle is defined by its clipping (cutting) rectangle AND
+  its position rectangle (you can scroll and/or zoom horizontally.)
+  Clipping and position coordinates are independant,and rectangles
+  can be linked hierarchicaly, on a position tree and a clipping tree.
+   You can simulate a 3D movement for a rectangle using a '4cam' parameter.
+   See Tutorial C03 for a rectangle manipulation exemple.
+
+   You can also use movement tables defined with < ktable> and used with
+  parameters spl and aft (and splmod,aftmod) to make a camera ride,
+  with 'SetCamTarget' (camera direction looks another point) or
+  'SetCamCoord' (you give position and angles.)
+    See Tutorial D03 for a camera manipulation exemple.
+
+----------------------------------------------------
+ rectangles:
+
+<KRECT> rec_father  |0|0|1|1|
+                    |0|0|1|1|  </KRECT>
+
+<KRECT> rec_1 |0|0|1|1| rec_father
+              |0|0|1|1| rec_father </KRECT>
+<KRECT> rec_2 |0|0|1|1| rec_father
+              |0|0|1|1| rec_father </KRECT>
+
+<KRECT> rec_3a |0|0|1|0.25| rec_father
+              |0|0|1|1| rec_father </KRECT>
+
+<KRECT> rec_3b |0|0.75|1|1| rec_father
+              |0|0|1|1| rec_father </KRECT>
+
+ textures:
+<t3dFlat> t_0 | 0 </t3dFlat>
+<t3dFlat> texture0 | 16  </t3dFlat> some textures needed by the objects.
+<t3dFlat> texture1 | 17  </t3dFlat>
+<t3dFlat> texture2 | 18  </t3dFlat>
+
+<kimg> i_lightmapred | data/lightmapred.iff </kimg>
+<t3dflatlightmap> tflm | i_lightmapred  </t3dflatlightmap>
+<kimg> i_lightmapgrey | data/lightmapgrey.iff </kimg>
+<t3dflatlightmap> tflmg | i_lightmapgrey  </t3dflatlightmap>
+
+
+ 3d scenes:
+
+<World3D> world1 </World3D>
+<tore> tore1 | world1 |0|0|0|0|0|0|1|1|1| 4 | 3 | 1|0.25 | 0|0.0|0.00|1|1 |tflmg|tflmg|tflmg|tflmg </tore>
+                      (matrix),nbDivOut,nbDivIn,WidthOut,WidthIn,texture u1 v1 u2 v2,4 textures...
+<cube> cube1 | tore1  |0|0|0|0|0|0|-10|-10|-10 |tflm|tflm|tflm|tflm|tflm|tflm </cube>
+
+
+<World3D> world2 </World3D>
+<star3d> star2 | world2 |0|0|0|0|0|0|1|1|1 |5|2.0|1.0|0.5|0.25|tflm |tflm |t_0|tflm |tflm|t_0  </star3d>
+                (matrix),nbBranches,Ray1Width,Ray2Width,CenterOffset,CutWidth,
+                       textureSide1,textureSide1,textureCutSide1, (same side2)
+
+<World3D> world3</World3D>
+<sphere> sphere3 | world3 |0|0|0|0|0|0|-2|-2|-2| 6 | 8 | 1.25| 0|0.0|0.0|1.0|1.0 |tflm|tflmg|tflmg|tflm </sphere>
+                        (matrix),NbLatitude,NbLongitude,RayWidth,texturePref, UV rectangle,4 textures...
+ 
+------- objects constructions ----
+
+<MAIN> myscript |0|1</MAIN>
+<KCAM> WorldCamera    |0|0|-3|0|0|0|0.5 </KCAM>
+<KCAM> RectangleCamera|0|0|0|0|0|0|1 </KCAM>
+<KIMG> image | data/tv.iff </kimg>
+
+--------------------------------- script definition ----
+<KSCRIPT>
+    <ID> myscript </ID>
+    <PLAY> mypart | 40000 | 0 | 1 </PLAY>
+</KSCRIPT>
+
+<KPART>
+    <ID> mypart </ID>
+
+    <Fx><Pa>setpalette</Pa>
+        <Pa> i_lightmapred </Pa>   we have seen each image stands for a 256 color palette too.
+    </Fx>
+
+
+    <Fx><Pa>fillrc</Pa>  clear the background
+        <Pa>  </Pa>   default screen rectangle.
+        <Pa> cte | 63 </Pa>
+    </Fx>
+----------- move father rectangle:
+<KTABLE> mv_fx1 | 0,0 |800,0 |900,1 |1000,0|1200,0 |1400,-0.5 |1500,0 </KTABLE>
+<KTABLE> mv_fy1 | 0,0 |1000,0 |1100,1      |1200,0 |1400,-0.5 |1500,0 </KTABLE>
+<KTABLE> mv_fx2 | 0,1 |800,1 |900,0 |1000,1|1200,1 |1400,1.5 |1500,1 </KTABLE>
+<KTABLE> mv_fy2 | 0,1 |1000,1 |1100,0      |1200,1 |1400,1.5 |1500,1 </KTABLE>
+    <Fx><Pa> setrect </Pa>
+            <Pa> rec_father  </Pa>
+            <Pa> aftmod | mv_fx1 |0|0 </Pa>
+            <Pa> aftmod | mv_fy1 |0|0 </Pa>
+            <Pa> aftmod | mv_fx2 |0|0 </Pa>
+            <Pa> aftmod | mv_fy2 |0|0 </Pa>
+            <Pa> aftmod | mv_fx1 |0|0 </Pa>
+            <Pa> aftmod | mv_fy1 |0|0 </Pa>
+            <Pa> aftmod | mv_fx2 |0|0 </Pa>
+            <Pa> aftmod | mv_fy2 |0|0 </Pa>
+    </Fx>
+----------- move rec1:
+<KTABLE> mv_sx1 |0,-4.0|150,-4.0|300,1.25|400,1.25 |600,-0.5|1400,-0.5|1500,-3 </KTABLE>
+<KTABLE> mv_sy1 |0,-1.25|150,-1.25       |400,-1.25|600,0   |1500,0</KTABLE>
+<KTABLE> mv_sz1 |0,-3  |150,-3           |400,-3   |600,-1  |1500,-1 </KTABLE>
+
+<Fx><Pa>SetCamCoord</Pa><Pa>RectangleCamera</Pa>
+            <Pa> aftmod | mv_sx1 |0|0 </Pa>             x
+            <Pa> aftmod | mv_sy1 |0|0   </Pa>    y
+            <Pa> aftmod | mv_sz1 |0|0   </Pa>       z
+            <Pa> 4cte |0|0|0|1</Pa>  o1,o2,o3,fov
+            </Fx>
+    <Fx><Pa> setrect </Pa>
+            <Pa> rec_1  </Pa>
+            <Pa> 4cam|RectangleCamera|1|1|0|0|1  </Pa> clip rectangle
+            <Pa> 4cam|RectangleCamera|1|1|0|0|1  </Pa> pos rectangle
+    </Fx>
+----------- move rec2:
+<KTABLE> mv_sx2 | 0,2   |150,0   |400,0   |600,0.5|1400,0.5|1500,2 </KTABLE>
+<KTABLE> mv_sy2 | 0,0   |150,0   |400,0   |600,0  |1500,0 </KTABLE>
+<KTABLE> mv_sz2 | 0,-0.5|150,-0.5|400,-0.5|600,-1 |1500,-1 </KTABLE>
+
+<Fx><Pa>SetCamCoord</Pa><Pa>RectangleCamera</Pa>
+            <Pa> aftmod | mv_sx2 |0|0 </Pa>             x
+            <Pa> aftmod | mv_sy2 |0|0   </Pa>    y
+            <Pa> aftmod | mv_sz2 |0|0   </Pa>       z
+            <Pa> 4cte |0|0|0|1</Pa>  o1,o2,o3,fov
+            </Fx>
+    <Fx><Pa> setrect </Pa>
+            <Pa> rec_2  </Pa>
+            <Pa> 4cam|RectangleCamera|1|1|0|0|1  </Pa> clip rectangle
+            <Pa> 4cam|RectangleCamera|1|1|0|0|1  </Pa> pos rectangle
+    </Fx>
+----------- move rec3:
+<KTABLE> mv_sy3a | 0,0   |600,0|625,0.125 |700,0.2501 |1400,0.2501|1500,0 </KTABLE>
+<KTABLE> mv_sy3b | 0,1   |600,1|625,0.875 |700,0.75 |1400,0.75|1500,1 </KTABLE>
+
+    <Fx><Pa> setrect </Pa>
+            <Pa> rec_3a  </Pa>
+            <Pa> 3cte|0|0|1  </Pa> clip rectangle
+            <Pa> aftmod | mv_sy3a |0|0 </Pa>
+            <Pa> 4cte|0|0|1|1 </Pa> pos rectangle
+    </Fx>
+    <Fx><Pa> setrect </Pa>
+            <Pa> rec_3b  </Pa>
+            <Pa> cte |0</Pa>
+            <Pa> aftmod | mv_sy3b |0|0 </Pa>
+            <Pa> 2cte|1|1  </Pa> clip rectangle
+            <Pa> 4cte|0|0|1|1 </Pa> pos rectangle
+    </Fx>
+   
+------------------- move objects in their worlds:
+
+    <Fx><Pa> Set3DObject </Pa>  
+        <Pa> tore1 </Pa>        
+
+        <Pa> 3cte |0|0|0  </Pa>    
+
+        <Pa> aff |0.0|0.006 </Pa>
+        <Pa> aff |0.0|0.004</Pa>
+        <Pa> aff |0.0|0.003</Pa>
+
+        <Pa> 3cte|1|1|1 </Pa>     
+    </Fx>
+   <Fx><Pa> Set3DObject </Pa>
+        <Pa> star2 </Pa>
+
+        <Pa> 3cte |0|0|0  </Pa>
+
+        <Pa> aff |0.0|0.002</Pa>
+        <Pa> aff |0.0|0.00</Pa>
+        <Pa> cos |0.0|0.4|0.25</Pa>
+        <Pa> 3cte|1|1|1 </Pa>
+    </Fx>
+   <Fx><Pa> Set3DObject </Pa>
+        <Pa> sphere3 </Pa>
+
+        <Pa> 3cte |0|0|-1.25  </Pa>
+
+        <Pa> aff |0.0|0.0021</Pa>
+        <Pa> aff |0.0|0.0025</Pa>
+        <Pa> aff |0.0|0.0008</Pa>
+        <Pa> 3cte|-2|-2|-2 </Pa>
+    </Fx>
+-------------------- draw worlds:
+    
+    <Fx><Pa>fillrc</Pa>  clear sub-screen 2
+        <Pa> rec_2  </Pa>  
+        <Pa> cte | 23 </Pa>
+    </Fx>
+
+      <Fx><Pa> Draw3DWorld </Pa>
+            <Pa> rec_2  </Pa>
+            <Pa> world2 </Pa>
+            <Pa> WorldCamera </Pa>
+            <Pa> cte|0 </Pa>
+            <Pa> cte|0.25 </Pa>
+            <Pa> cte|20</Pa>
+        </Fx>
+      <Fx><Pa> Draw3DWorld </Pa>
+            <Pa> rec_1  </Pa>
+            <Pa> world1 </Pa>
+            <Pa> WorldCamera </Pa>
+            <Pa> cte|0 </Pa>   time
+            <Pa> cte|0.25 </Pa> clip near
+            <Pa> cte|20</Pa> clip far
+        </Fx>
+      <Fx><Pa> Draw3DWorld </Pa>
+            <Pa> rec_3a </Pa>
+            <Pa> world3 </Pa>
+            <Pa> WorldCamera </Pa>
+            <Pa> cte|0 </Pa>   time
+            <Pa> cte|0.25 </Pa> clip near
+            <Pa> cte|20</Pa> clip far
+        </Fx>
+      <Fx><Pa> Draw3DWorld </Pa>
+            <Pa> rec_3b </Pa>
+            <Pa> world3 </Pa>
+            <Pa> WorldCamera </Pa>
+            <Pa> cte|0 </Pa>   time
+            <Pa> cte|0.25 </Pa> clip near
+            <Pa> cte|20</Pa> clip far
+        </Fx>
+
+
+</KPART>
+

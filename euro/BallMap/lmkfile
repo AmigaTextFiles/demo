@@ -1,0 +1,15 @@
+RRT: RRT.o RRTasm.o RRTasminc.o MStars.o mod.o
+     BLINK FROM lib:cback.o RRT.o MStars.o RRTasm.o RRTasminc.o med_reloc.o med_modplayer.o mod.o LIBRARY lib:lc.lib lib:amiga.lib lib:lcm.lib TO RRT ND SC SD DEFINE __main=__tinymain
+
+RRT.o: RRT.c rrt.h
+     lc -b1 -ccit -v -O RRT.c
+
+RRTasm.o: RRTasm.asm
+     CASM -a RRTasm.asm -o RRTasm.o
+
+RRTasminc.o: RRTasminc.asm
+     CASM -a RRTasminc.asm -o RRTasminc.o
+
+MStars.o: MStars.asm
+     CASM -a MStars.asm -o MStars.o
+

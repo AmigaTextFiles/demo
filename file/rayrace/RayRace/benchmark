@@ -1,0 +1,13 @@
+echo Resolution 320x240 > result.txt
+echo Secne1: >> result.txt
+rayrace.exe fullscreen benchmark scene 1 >> result.txt
+echo Secne2: >> result.txt
+rayrace.exe fullscreen benchmark scene 2 >> result.txt
+echo Secne3: >> result.txt
+rayrace.exe fullscreen benchmark scene 3 >> result.txt
+echo Secne4: >> result.txt
+rayrace.exe fullscreen benchmark scene 4 >> result.txt
+echo Secne5: >> result.txt
+rayrace.exe fullscreen benchmark scene 5 >> result.txt
+
+type result.txt

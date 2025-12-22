@@ -1,0 +1,261 @@
+A Few Words About H.A.M.
+by Mike Levin
+Original source: The Blitter, Journal of the Philadelphia Amiga
+Users' Group. 3/92
+
+
+The problem with H.A.M. mode mostly lies in its name. I mean, who
+wants to work in a graphics mode named after pork? I prefer the more
+dignified expanded name, Hold-And-Modify. But, the 2 terms will be
+used synonymously in this article. The article assumes some basic
+experience with the Amiga Computer and graphics programs such as
+Deluxe Paint 4 or Digi-Paint 3. 
+
+I will resist the temptation to delve into a full-blown explanation
+of Hold-And-Modify. Instead, I will discuss why someone might choose
+working with it. But some explanation of this mysterious and under-
+utilized graphics mode is in order.
+
+Hold-And-Modify is a graphics mode. It is not necessarily a
+resolution. You might refer to a particular resolution as 640x400 or
+320x200. H.A.M. mode will expand your capabilities on a 320x200 or a
+230x400 resolution screen to be able to use any (or all) of the
+Amiga's 4096 colors on-screen simultaneously.
+
+Try not to be overwhelmed or confused with your choices of graphics
+resolutions and modes on the Amiga. It is quite imposing at first but
+after tackling a few projects, you will start to get a feel for which
+modes to use when and how they behave. I have done numerous
+professional projects recently and had to make some tough decisions.
+I have come out of it with a much higher regard for H.A.M. mode than
+I held previously.
+
+Certain features and draw-backs characterize each mode. You must make
+the decision which one is appropriate for your task. Further, an
+artist or designer can "bring" a great deal to the graphics mode.
+Once you have a command over it's properties and nuances, you can
+often transcend what you would imagine possible. How many times have
+you marvelled at a 32 color 320x200 image by Dave Johnson or Jim
+Sachs?
+
+Here, I will deal with H.A.M. mode in the 320x400 resolution. First,
+I'll tell you the things which scare most people away (in my
+experience). H.A.M. mode can seem strange and unpredictable. It's
+plagued with "fringing" problems where undesired colors appear along
+the right-most boundaries of graphic elements on your screen. You are
+limited to either the Amiga's lowest resolution (i.e. the largest
+pixels) or a resolution with pixels having the aspect ratio of bricks
+which is also is prone to flicker. This makes dealing with letters on
+the screen quite challenging. 
+
+The use of H.A.M. mode has largely been confined to the distribution
+and viewing of digitized pictures. It allows the lowest-end of Amigas
+to display often startling pictures. This was popularized by our old
+friends, NewTek with the Digi-View package. The first popular H.A.M.
+paint program was NewTek's Digi-Paint. The idea behind producing
+these startling picture files was to digitize in much more
+information than the computer could actually display, and have the
+software generate the best possible rendering of this information in
+H.A.M. mode.
+
+Well, the tools have gone FAR beyond that point. I have settled on 2
+decisive tools for working with Hold-And-Modify: Deluxe Paint 4 and
+DCTV. Deluxe Paint (DPaint) support is one of the best things to
+happen to H.A.M. mode. With all-due respect to the true pioneers of
+H.A.M. (NewTek), Deluxe Paint, in my opinion, has made H.A.M. usable.
+Some would argue that this is because I have never reached the level
+of expertise with Digi-Paint as I have with DPaint. Maybe this is
+true and you should take my opinion in that light.
+
+DCTV lets you work with large color palette images in a phenomenal
+painting environment without worrying about any of the H.A.M.
+limitations. With DCTV, you are working on a composite monitor with
+images which - although blurrier than on an RGB monitor or the
+Toaster's composite output - seem to defy resolution. You get the
+feeling of unbridled creative ability. When you are done working on
+the image, DCTV features very respective image processing/conversion
+software which will let you convert your DCTV work into Hold-And-
+Modify mode.
+
+This is where the all-important color palette must be considered.
+This is important because only your first 16 chosen colors can be
+used on your H.A.M. screen without fear of unusual "artifacting." All
+other colors on your H.A.M. screen will be derived from the first 16.
+It is usually good to have a maximum white and a maximum black in
+your color palette.
+
+If you already have a color palette, you will usually want to load it
+into the DCTV conversion software and use the "keep" option to keep
+those colors in the main palette. If you don't do this, there is a
+"Remap" feature of Deluxe Paint that can compensate.
+
+When you are working with H.A.M. mode, you are not dealing with
+precision. Compromise is the rule. You will sometimes just never get
+the exact color in the exact location which you want. H.A.M. mode can
+be considered a "painterly" environment where you are dealing with
+paint and brushes,and you just can't have the calculated exactness
+you might expect with computer graphics.
+
+Why would someone ever willingly choose to work in H.A.M. mode on the
+Amiga? Because you can use LOTS of colors! The images you create can
+pass for 24 bit images to the untrained eye - especially on a
+composite monitor. The files can each be well under 100 kilobytes for
+a full-screen color image. This is minuscule compared to the
+equivalent 24 bit image. That means quicker disk drive access times,
+less space used on the disk, less time on the phone downloading, and
+less memory required by the computer.
+
+It means that applications using lots of color images can still be
+distributed on a reasonable amount of floppy diskettes. It means that
+an Amiga-exclusive image library on CD-ROM can be increased over
+other platforms for the comparable images by a (minimum) factor of 4.
+This would yield roughly 5000 images on your standard CDTV disk.
+
+It means you can design graphics for the lowest common denominator of
+Amigas and you can be sure that your 4096 color image can show on the
+entire installed base of over 3 million computers. This is all
+because the Amiga with 6 bitplanes can simulate 12 bitplanes with a
+sacrifice of the horizontal resolution. 
+
+6 bitplanes should usually yield a maximum of 64 colors. The Amiga
+uses it to display 4096 colors! You can call H.A.M. mode a
+"discovered" graphics mode. Some of my conversations with the Amiga's
+founders indicated that they knew such a graphics mode was possible,
+but it was the developers who really established it. This is exactly
+the sort of thing which makes the Amiga such an exciting platform.
+
+I will often refer to "equivalent images." It includes full-screen
+color images displayed with other systems in 8 bit (and sometimes 24
+bit) mode. H.A.M. image files don't have the same usefulness as 24
+bit image files for single-frame-recording to film or video. But,
+wherever images are intended for direct viewing from the computer,
+the comparison of "equivalent" images is valid.
+
+From a designer's point of view (in developing applications such as
+kiosks and information retrieval systems), you can work with images
+on your Amiga development system and know that any Amiga delivery
+system you choose will be capable of displaying those images. It will
+look largely the same on the delivery system's monitor as on your's;
+no concern about graphics cards, no concern about size of monitor.
+Work on an A3000 Tower. Deliver on a CDTV! H.A.M. can often outshine
+more expensive alternatives, is available on the tiniest of Amigas,
+and can easily be displayed on television monitors.
+
+Since it's so easy to hook televisions to Amigas, you can always
+monitor how your images are going to look when displayed on TV
+monitors. There are no surprises. You will know when you are
+doing things which will create flicker and chroma-crawl. And, your
+choices for delivery system display devices are both inexpensive
+(normal televisions or RGB monitors) and broad. 
+
+Let's not forget animation! If all other arguments for H.A.M. mode
+fail, you can always pull out the fact that your average Amiga can
+animate 4096 color images at near 30 frames-per-second with none of
+that "tearing" and visible screen redraw other systems demonstrate
+when trying to animate equivalent images. 
+
+With H.A.M. mode and data compression, the Amiga can load seemingly
+prohibitive amounts of animation data into RAM or stream it off of a
+hard drive. Try animating 8 bit full-screen images at 30 fps on other
+systems. The solution is usually to frame-record to video, to cut a
+lasererdisc, and then to have the computer control the laserdisc!
+Yeah - really! The other option is to shrink the animation on the
+screen down to about postage-stamp size.
+
+There are few other ways than H.A.M. mode on the Amiga (on such
+inexpensive systems) to preview such things as 3D full-screen
+animation before rendering 24 bitplane files and single-frame-
+recording. How are you going to catch mistakes, get a feel for
+continuity, and the subtleties of movement? A H.A.M. mode 30 fps
+full-screen animated preview is unique to the Amiga. For some
+applications, this "preview" animation is good enough. You can play
+it directly off of the hard drive or record it real-time directly to
+video without frame-recording!
+
+Many of the H.A.M. related problems can be solved in the planning
+stages of a project. Choose your colors carefully (and for reasons).
+Decide exactly what your job is. Are you simply displaying digitized
+pictures or are you designing the main screen of a kiosk? Are you
+going to be doing image-compositing? Are you going to be using text
+on the screen?
+
+There are two methods for dealing with text on a H.A.M. screen. The
+methods can be used in conjunction. First, select your font
+carefully. Some programs such as DCTV Paint will adjust the font
+pixel ratio for appropriate appearance in H.A.M. mode. Deluxe Paint
+does not do this, so you might (for the sake of ease) want to choose
+a font which is normally "condensed" such as the CompuGraphic
+Triumvirate Condensed font. When displayed in H.A.M. mode, it will
+become expanded and will look like a different, but still correct
+font. 
+
+This method still does not solve the "jaggies" caused by low-
+resolution graphics. This makes text look unprofessional and leads us
+to the second method. You can draw everything much bigger than it is
+ultimately intended and then shrink it down with software that can
+antialias. This will smooth the text and integrate it into the
+background with little H.A.M. fringing. 
+
+To accomplish this in Deluxe Paint 4, you would switch to your spare
+screen, choose a big size typeface, type your text, cut it out as a
+brush with your background transparent, choose: brush/size/double
+vertical, turn antialias level to "high," switch back to your H.A.M.
+image screen, turn perspective on, hold the "Ctrl" key down, and move
+your mouse to get the appropriate size. You would then let go of the
+"Ctrl" key and stamp the brush down. 
+
+It may take several tries to get exactly the clarity you want. A good
+idea is to fix the background so that you can rapidly clear your
+unsuccessful attempts without the risk of accidentally changing your
+image. You may also want to outline your text brush with an
+additional color. You can do this by selecting that as your
+foreground color and selecting: Brush/Edge/Outline. This will work
+even when in perspective mode!
+
+If you know you are going to be using a lot of type and don't want to
+give each screen this kind of special attention, I recommend using
+the first method. You can design your screens to have a special place
+where text will always appear. You would choose one of your basic 16
+colors as the background color for this area and another of those
+colors for the text itself. This will avoid any H.A.M. fringing
+problems on the text. A 3rd color out of your basic 16 can also be
+used for text shadows or outlines.
+
+The new Art Department Professional from ASDG also has the ability to
+put text onto a H.A.M. image. This may be an option for people not
+able to develop the DPaint skills. Also, you may work with text on
+your image in DCTV mode before the conversion to Hold-And-Modify.
+This can often accomplish nicely antilaliased smooth fonts.
+Generally, try not to go much smaller than a 24 point font on a
+H.A.M. screen.
+
+When you load brushes into DPaint 4 while working in Hold-And-Modify
+mode, they will look incorrect. Fix this by going to the
+Colors/Brush/Remap option. Correct the aspect ratio of the brush
+(when needed) by going to the Brush/Size/Double Vertical option.
+Compositing images may be accomplished in this way.
+
+If you really want to be sold on H.A.M. mode, learn the new color
+range functions of Deluxe Paint 4. Try out some of the gradient fill
+options. Cut out some brushes on a H.A.M. screen, turn translucency
+on, and stamp the brushes down on top of other objects. Everything
+is, of course, much nicer on an accelerated machine.
+
+My latest project was demonstrated at the March Philadelphia Amiga
+Users' Group meeting. It consisted of 2 full-screen H.A.M. images
+(one of them color-cycled), 19 1/4 screen H.A.M. brushes, 4 sizable
+animations, and the extended use of animated text (and music, of
+course). It was authored and composited with SCALA. The entire
+application - images, animations and all - fit onto 2 floppy
+diskettes with room to spare. It was one of my most ambitious
+projects.
+
+I chose Hold-And-Modify mode early on in the project and was very
+happy with my decision. The project was the high-impact demonstration
+of Commodore®: The Marketing Plan which was published in the February
+issue of the Philadelphia Amiga Users' Group's newsletter, The
+Blitter. It is now made to install onto any Amiga with a hard drive.
+It is fully interactive, but when left unattended, it's default
+automated timing takes over. Even the highlighting of highly detailed
+buttons is handled in H.A.M. mode. It will make for excellent user
+group demo material when released. Keep an eye out for it.

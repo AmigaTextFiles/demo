@@ -1,0 +1,321 @@
+
+ Using the "PlayScript" Fx.
+
+ In the First Tutorials of karate, we have seen the karate
+ demo stand for One "main" script, which is a list
+ created with <KSCRIPT > of parts to be played a given amount of time.
+ these parts are objects created with <KPART >.
+
+ You could have notice it is possible to create one or more script objects,
+only the "main" will be played.
+  The special effect "PlayScript" have a simple form:
+
+
+   <Fx><Pa> PlayScript </Pa>
+        <Pa> Scriptnametoplay </Pa>
+        <Pa>AFF|0|1</Pa>
+    </Fx>
+
+ It is very similar to "playpart", except a script object is needed.
+ the second argument is the frame data, such a AFF|0|1 parameter will
+ provide the same date to the script that it was used in the part
+ where the playscript is thrown from.
+
+ Now with that effect, you can run 2 (or more) karate demo at
+ the same time, the one over the other :-).
+
+ a part played with a "playscript" can perfectly use another "playscript".
+ but you COULDN'T make a "vicious circle", with something like
+
+ -Script A playing part B playing script A
+ or:
+ -Part A playing part B playing Script of Part A,...
+
+ It would cause an infinite loop and would crash the amiga. so don't :-)
+
+
+  Try to only use setpalette OR bindpalette on "root" parts...
+ because it would execute the palette changing several times if you don't.
+    ->> THIS IS A COMMON ERROR<<-
+
+
+ For the example to come,
+ we have 3 scripts:
+ the main one, only consists of a part played a long time.
+
+this part call 2 playscript: the back script and the front script,
+one draw serie of effects to the back, and
+the other move sprites in the front. It is very convenient because
+the times playing of the 2 "layers" are completely independant.
+
+
+                     +-----backscript----pa1--pa2--pa3
+                     |
+ MAINscript-mainpart-+-----frontscript---pb1--------pb2-
+                                          |
+                                          +playpart
+
+
+                      2 scripts played at the same times.
+
+
+-------------------------------------------------
+<MAIN> mainscript |0|1</MAIN>              the main script to play...
+-------------------------------------
+<KIMG> texture256x256 | data/texture1.iff </KIMG>   let's create an image.
+                                                    Note this image must be 256x256.
+
+<KIMG> impacman | data/oldpac.iff </KIMG>       These one, used for sprites
+<KIMG> imghost  | data/ghost1.iff </KIMG>       can be any-sized.
+<KIMG> imghost2  | data/inky.iff </KIMG>
+
+<KCAM> cam_1 | 0|0|0|0|0|0|1  </KCAM>
+
+<KCOLORTABLE> coltab2 | data/remaptable.iff |1|  0|  0|  0    </KCOLORTABLE>
+
+
+--------------------------------------------------
+<KSCRIPT><ID> mainscript </ID>
+        <PLAY> mainpart | 2000 | 0 | 1 </PLAY>
+</KSCRIPT>
+
+-------------------------------------------
+<KSCRIPT><ID> backscript </ID>
+
+        <PLAY> pa1 | 100 | 0 | 1 </PLAY>
+        <PLAY> pa2 | 100 | 0 | 1 </PLAY>
+        <PLAY> pa3 | 100 | 0 | 1 </PLAY>
+
+        <PLAY> pa1 | 100 | 0 | 1 </PLAY>
+        <PLAY> pa2 | 100 | 0 | 1 </PLAY>
+        <PLAY> pa3 | 100 | 0 | 1 </PLAY>
+
+        <PLAY> pa1 | 100 | 0 | 1 </PLAY>
+        <PLAY> pa2 | 100 | 0 | 1 </PLAY>
+        <PLAY> pa3 | 100 | 0 | 1 </PLAY>
+
+        <PLAY> pa1 | 300 | 0 | 1 </PLAY>
+        <PLAY> pa2 | 300 | 0 | 1 </PLAY>
+        <PLAY> pa3 | 300 | 0 | 1 </PLAY>
+
+
+        <PLAY> pa1 | 3000 | 0 | 1 </PLAY>
+
+
+</KSCRIPT>
+---------------------------------------------
+<KSCRIPT><ID> frontscript </ID>
+
+        <PLAY> pb1 | 350 | 0 | 1 </PLAY>
+        <PLAY> pb2 | 100 | 0 | 1 </PLAY>
+        <PLAY> pb2 | 100 | 100 | -1 </PLAY>   hihihi.
+        <PLAY> pb2 | 200 | 0 | 2 </PLAY>
+        <PLAY> pb2 | 400 | 200 | -0.5 </PLAY>
+        <PLAY> pb1 | 35000 | 0 | 0.5 </PLAY> slower
+
+</KSCRIPT>
+------------------------
+///<KPART>  <ID> mainpart  </ID>
+
+--- this is the root mainpart:
+we do the palette operations and we use 2 playscript.
+
+
+        <Fx><Pa>BindPalette</Pa>  1st parameter is always the name of the effect.
+
+            <Pa>  bounce |0|300|1700|0|1</Pa> the rate between 0->1
+                                      There's a state "A" of the palette
+                                      and the state "B". If this parameter
+                                      is 0, its state A. If 1, it's B,
+                                      and you move between a and B.
+
+                            The folowing parameters describes the
+                            possible state of "A" and "B", BY Color
+                            Composant Red, Green,Blue.
+
+            0,0,0 means for dark
+
+            <Pa>CTE|0</Pa>              type of fade:0,1,2,3
+            <Pa>CTE|0</Pa>            optional color 0->255 (0)
+            <Pa> texture256x256 </Pa>     palette where to fade ( "B" )
+            <Pa> texture256x256</Pa>            optional source Palette(2)
+
+            <Pa>CTE|0</Pa>              type of fade:0,1,2,3
+            <Pa>CTE|0</Pa>            optional color 0->255 (0)
+            <Pa>texture256x256</Pa>       Palette where to fade ( "B" )
+            <Pa>texture256x256</Pa>       optional source Palette(2)
+
+            <Pa>CTE|0</Pa>              type of fade:0,1,2,3
+            <Pa>CTE|0</Pa>            optional color 0->255 (0)
+            <Pa>texture256x256</Pa>       Palette where to fade ( "B" )
+            <Pa>texture256x256</Pa>       optional source Palette(2)
+        </Fx>
+
+---------------------------
+   play demo 1
+
+ <Fx><Pa> PlayScript </Pa>
+        <Pa> backscript </Pa>
+        <Pa>AFF|0|1</Pa>
+    </Fx>
+ 
+-----------------------------
+  play demo 2 over demo 1.
+
+ <Fx><Pa> PlayScript </Pa>
+        <Pa> frontscript </Pa>
+        <Pa>AFF|0|1</Pa>
+    </Fx>
+
+ that's all !!!
+
+///</KPART>
+-------------------------- we always need this macro (used in pb1)
+///<KPART> <ID> MACRO_DancingSprites  </ID>
+
+
+ <Fx><Pa>SetCamCoord</Pa><Pa>cam_1</Pa>         a mini pacman will "follow"
+            <Pa> sin |0 | 0.45| 1 </Pa>    x   the big one (after) with a
+            <Pa> cos | 0.25 | 1.2 | 0.25</Pa>    y   one second offset
+            <Pa> cte | 0 </Pa>    z
+            <Pa> 4cte |0|0|0|1</Pa>
+            </Fx>
+   <Fx><Pa>Sprite</Pa><Pa></Pa><Pa> impacman </Pa><Pa> 4cam| cam_1 |0.5|0.5|0|0|2 </Pa>
+    </Fx>
+
+ <Fx><Pa>SetCamCoord</Pa><Pa>cam_1</Pa>         a mini pacman will "follow"
+            <Pa> sin |0 | 0.35 | 1 </Pa>    x   the big one (after) with a
+            <Pa> cos | 0.25 | -1.2 | 0.25</Pa>    y   one second offset
+            <Pa> cte | 0 </Pa>    z
+            <Pa> 4cte |0|0|0|1</Pa>
+            </Fx>
+   <Fx><Pa>Sprite</Pa><Pa></Pa><Pa> imghost </Pa><Pa> 4cam| cam_1 |0.5|0.5|0|0|2 </Pa>
+    </Fx>
+
+ <Fx><Pa>SetCamCoord</Pa><Pa>cam_1</Pa>         a mini pacman will "follow"
+            <Pa> sint |0 | 0.35 | 1 |100</Pa>    x   the big one (after) with a
+            <Pa> cos | 0.25 | 1.1 | 0.25</Pa>    y   one second offset
+            <Pa> cte | 0 </Pa>    z
+            <Pa> 4cte |0|0|0|1</Pa>
+            </Fx>
+   <Fx><Pa>Sprite</Pa><Pa></Pa><Pa> imghost2 </Pa><Pa> 4cam| cam_1 |0.5|0.5|0|0|2 </Pa>
+    </Fx>
+
+ <Fx><Pa>SetCamCoord</Pa><Pa>cam_1</Pa>         a mini pacman will "follow"
+            <Pa> sin |0 | -0.35 | 1 </Pa>    x   the big one (after) with a
+            <Pa> cos | 0.25 | 1 | 0.25</Pa>    y   one second offset
+            <Pa> cte | 0 </Pa>    z
+            <Pa> 4cte |0|0|0|1</Pa>
+            </Fx>
+   <Fx><Pa>Sprite</Pa><Pa></Pa><Pa> impacman </Pa><Pa> 4cam| cam_1 |-0.5|0.6|0|0|2 </Pa>
+    </Fx>
+
+
+///</KPART>
+--------------------------
+///<KPART>  <ID> pa1  </ID>
+
+    <Fx>
+        <Pa> Twirl </Pa>
+        <Pa></Pa>
+        <Pa> texture256x256 </Pa>
+
+        <Pa>SIN|0|0.5|0.25</Pa> ofsx
+        <Pa>COS|0|0.5|0.25</Pa> ofsY
+
+        <Pa>SIN|0|0.05|1</Pa> start angle
+        <Pa>CTE|0.2</Pa>    amp. angle
+        <Pa>sin|0|0.4|0.9</Pa>    freq angle
+
+        <Pa>CTE|0</Pa>         start dist.
+        <Pa>cte|0</Pa> amp.dist
+        <Pa>cte|0</Pa> freq dist
+
+        <Pa>CTE|0</Pa> mapping type
+    </Fx>
+
+///</KPART>
+------------------------
+///<KPART>  <ID> pa2  </ID>
+ 
+   <Fx><Pa> Warper </Pa>
+            <Pa> </Pa>              the rectangle where to draw (default)
+            <Pa> texture256x256 </Pa> the 256x256 texture to deform
+
+            <Pa>CTE|0.8</Pa>        a zoomx rate
+            <Pa>CTE|0.8</Pa>        a zoomy rate
+            <Pa>SIN|0|0.25|0.03</Pa> texture offset x
+            <Pa>COS|0|0.25|0.03</Pa> texture offset Y
+
+            <Pa>CTE|0.4</Pa>        amplitude of deformation
+            <Pa>CTE|0.2</Pa>        frequency of deformation
+            <Pa>SIN|0|0.2|2</Pa>    X offset of the deformation
+            <Pa>COS|0|0.3|2</Pa>    Y...
+
+            <Pa>CTE|0</Pa> mapping type
+    </Fx>
+
+    <Fx><Pa>RadialBlur</pa>
+        <Pa>  </Pa>     rectangle by default.
+        <Pa> coltab2 </Pa>              "persistence with decay" is very handy with radialblur.
+        <Pa> sin|0.5|0.4|0.2 </Pa>  X center of the radial blur.
+        <Pa> sin|0.5|0.3|0.2</Pa>   Y
+        <Pa>cte|0.92</Pa>           Width zooming strength [0,1]
+        <Pa>cte|0.92</Pa>           Height zooming strength [0,1]
+    </Fx>
+
+
+///</KPART>
+------------------------
+///<KPART>  <ID> pa3  </ID>
+
+  <Fx>
+        <Pa> Twirl </Pa>
+        <Pa></Pa>
+        <Pa> texture256x256 </Pa>
+
+        <Pa>SIN|0|0.5|0.25</Pa> ofsx
+        <Pa>COS|0|0.5|0.25</Pa> ofsY
+
+        <Pa>SIN|0|0.05|1</Pa> start angle
+        <Pa>CTE|0</Pa>    amp. angle
+        <Pa>CTE|0</Pa>    freq angle
+
+        <Pa>CTE|0</Pa>         start dist.
+        <Pa>SIN|0|0.3|0.5</Pa> amp.dist
+        <Pa>COS|0|0.1|32</Pa> freq dist
+
+        <Pa>CTE|0</Pa> mapping type
+    </Fx>
+
+///</KPART>
+------------------------
+///<KPART>  <ID> pb1  </ID>
+
+        try to find what is stupid in such a part :-)
+
+        <fx><Pa> playpart  </PA><Pa> MACRO_DancingSprites  </Pa>
+            <Pa> aff|0|1  </Pa>
+        </Fx>
+
+///</KPART>
+------------------------
+///<KPART>  <ID> pb2  </ID>
+
+    just move paky up to down.
+
+    <Fx><Pa>sprite</Pa>
+        <Pa></Pa>
+        <Pa>impacman</Pa>
+        <Pa> cte |0.25 </Pa>
+        <Pa> aff |-0.5|0.01 </Pa>
+        <Pa> cte | 0.75 </Pa>
+        <Pa> aff | 0 |0.01 </Pa>
+    </fx>
+
+
+///</KPART>
+------------------------
+
+
+

@@ -1,0 +1,271 @@
+Storm Shell Project (0013)
+Settings (Start)
+C/C++ Environment
+"StormC:Include"
+Includepath (End)
+0 "" 200
+0 "objects"
+C/C++ Preprozessor
+0 "STORMPRAGMAS" ""
+0 "_INLINE_INCLUDES" ""
+Defines (End)
+1 1 1
+C/C++ Options
+0 1 1 1 1 1 2 0 0 0 0 2 0 0 0
+C/C++ Optimizer
+3
+C/C++ Warnings
+1 1 1 1 1 1 0 1
+Assembler
+0 ""
+0 "CON://640/200/Storm Assembler/AUTO/WAIT/SCREEN StormScreen"
+0 0
+0 1 60 0 1 0 0 20 0
+Sets (End)
+0 1 0 0 0 2 1 0 0
+1 1 1 1 0 0 0 0 0
+1 0
+0 0 0 0 0
+Linker
+0 0 "PROGDIR:startup.o" 0 0 1 0 1 0 0
+"StormC:Lib" 0 "StormC:Lib/logfile" 0 0 0
+0 "_WizardSurface"
+0 0 50 0 50 0 50 0 0
+0 0 0 0 0 0 0 0
+Run
+40 "" "" "" 0
+""
+
+1 "CON://200/150/Storm Console/AUTO/WAIT/SCREEN StormScreen" "RAM:Output" "RAM:Input"
+0 0
+0 0 0 "" ""
+Settings (End)
+File
+1 "main.c"
+"main.c"
+"Övrigt:Programmering/Projekt/Radiation/startup.h"
+"Övrigt:Programmering/Projekt/Radiation/demo.h"
+Storm Shell Project (Dependencies)
+"main.o" "main.debug"
+""
+"main.o" "main.debug"
+File
+1 "startup.c"
+"startup.c"
+"Övrigt:Programmering/Projekt/Radiation/startup.h"
+Storm Shell Project (Dependencies)
+"startup.o" "startup.debug"
+""
+"startup.o" "startup.debug"
+File
+1 "sound.c"
+"sound.c"
+"Övrigt:Programmering/Projekt/Radiation/libproto.h"
+"Övrigt:Programmering/Projekt/Radiation/proplayer.h"
+"Övrigt:Programmering/Projekt/Radiation/sound.h"
+"Övrigt:Programmering/Projekt/Radiation/startup.h"
+Storm Shell Project (Dependencies)
+"sound.o" "sound.debug"
+""
+"sound.o" "sound.debug"
+File
+1 "demo.c"
+"demo.c"
+"Övrigt:Programmering/Projekt/Radiation/startup.h"
+"Övrigt:Programmering/Projekt/Radiation/sound.h"
+"Övrigt:Programmering/Projekt/Radiation/demo.h"
+"Övrigt:Programmering/Projekt/Radiation/palette.h"
+"Övrigt:Programmering/Projekt/Radiation/picture.h"
+"Övrigt:Programmering/Projekt/Radiation/c2p.h"
+"Övrigt:Programmering/Projekt/Radiation/timer.h"
+"Övrigt:Programmering/Projekt/Radiation/dbuff.h"
+"Övrigt:Programmering/Projekt/Radiation/turbocpy.h"
+"Övrigt:Programmering/Projekt/Radiation/mouse.h"
+"Övrigt:Programmering/Projekt/Radiation/tunnel.h"
+Storm Shell Project (Dependencies)
+"demo.o" "demo.debug"
+""
+"demo.o" "demo.debug"
+File
+1 "palette.c"
+"palette.c"
+"Övrigt:Programmering/Projekt/Radiation/palette.h"
+"Övrigt:Programmering/Projekt/Radiation/startup.h"
+Storm Shell Project (Dependencies)
+"palette.o" "palette.debug"
+""
+"palette.o" "palette.debug"
+File
+1 "picture.c"
+"picture.c"
+"Övrigt:Programmering/Projekt/Radiation/picture.h"
+"Övrigt:Programmering/Projekt/Radiation/startup.h"
+Storm Shell Project (Dependencies)
+"picture.o" "picture.debug"
+""
+"picture.o" "picture.debug"
+File
+1 "timer.c"
+"timer.c"
+"Övrigt:Programmering/Projekt/Radiation/timer.h"
+Storm Shell Project (Dependencies)
+"timer.o" "timer.debug"
+""
+"timer.o" "timer.debug"
+File
+1 "dbuff.c"
+"dbuff.c"
+"Övrigt:Programmering/Projekt/Radiation/startup.h"
+Storm Shell Project (Dependencies)
+"dbuff.o" "dbuff.debug"
+""
+"dbuff.o" "dbuff.debug"
+Section
+1 1 100
+File
+2 "startup.h"
+"startup.h"
+Storm Shell Project (Dependencies)
+"" ""
+""
+File
+2 "c2p.h"
+"c2p.h"
+Storm Shell Project (Dependencies)
+"" ""
+""
+File
+2 "sound.h"
+"sound.h"
+Storm Shell Project (Dependencies)
+"" ""
+""
+File
+2 "libproto.h"
+"libproto.h"
+Storm Shell Project (Dependencies)
+"" ""
+""
+File
+2 "proplayer.h"
+"proplayer.h"
+Storm Shell Project (Dependencies)
+"" ""
+""
+File
+2 "demo.h"
+"demo.h"
+Storm Shell Project (Dependencies)
+"" ""
+""
+File
+2 "palette.h"
+"palette.h"
+Storm Shell Project (Dependencies)
+"" ""
+""
+File
+2 "picture.h"
+"picture.h"
+Storm Shell Project (Dependencies)
+"" ""
+""
+File
+2 "timer.h"
+"timer.h"
+Storm Shell Project (Dependencies)
+"" ""
+""
+File
+2 "dbuff.h"
+"dbuff.h"
+Storm Shell Project (Dependencies)
+"" ""
+""
+File
+2 "turbocpy.h"
+"turbocpy.h"
+Storm Shell Project (Dependencies)
+"" ""
+""
+File
+2 "mouse.h"
+"mouse.h"
+Storm Shell Project (Dependencies)
+"" ""
+""
+File
+2 "fire.h"
+"fire.h"
+Storm Shell Project (Dependencies)
+"" ""
+""
+File
+2 "tunnel.h"
+"tunnel.h"
+Storm Shell Project (Dependencies)
+"" ""
+""
+Section
+2 1 95
+File
+12 "c2p.asm"
+"c2p.asm"
+Storm Shell Project (Dependencies)
+"c2p.o" ""
+""
+"c2p.o"
+File
+12 "turbocpy.asm"
+"turbocpy.asm"
+Storm Shell Project (Dependencies)
+"turbocpy.o" ""
+""
+"turbocpy.o"
+File
+12 "mouse.asm"
+"mouse.asm"
+Storm Shell Project (Dependencies)
+"mouse.o" ""
+""
+"mouse.o"
+File
+12 "fire.asm"
+"fire.asm"
+Storm Shell Project (Dependencies)
+"fire.o" ""
+""
+"fire.o"
+File
+12 "tunnel.asm"
+"tunnel.asm"
+Storm Shell Project (Dependencies)
+"tunnel.o" ""
+""
+"tunnel.o"
+Section
+12 1 90
+File
+10 "Radiation"
+"Radiation"
+Storm Shell Project (Dependencies)
+"" ""
+""
+"Radiation.link"
+Section
+10 0 40
+File
+5 "storm.lib"
+"storm.lib"
+Storm Shell Project (Dependencies)
+"" ""
+""
+File
+5 "amiga.lib"
+"amiga.lib"
+Storm Shell Project (Dependencies)
+"" ""
+""
+Section
+5 0 -50
+Storm Shell Project (End)

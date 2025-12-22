@@ -1,0 +1,49 @@
+Short:        Oldschool AGA-Copperdemo w/ new effects
+Uploader:     dissident.68k@web.de (dissident)
+Author:       dissident.68k@web.de (dissident)
+Type:         demo/aga
+Required:     MC68020+, AGA-chipset, OS 3.0+, 1.5 MB CHIPMEM, needs HD
+Version:      1.3
+Architecture: m68k-amigaos >= 3.0.0
+Distribution: Aminet
+Kurz:         AGA-Copperdemo der alten Schule mit neuen Effekten
+
+
+An oldschool system friendly Copperdemo for AGA-machines which shows new
+stunning effects never seen this way before.
+
+Coding/Graphics/Composing: Dissident
+
+
+Copper-rulez-AGAin 1.3 released 27/09/2015
+
+- 3rd Bufix: Now the system clock is refreshed without using the RTC. As a
+             consequence the demo also works on MiST without a RTC.
+             (Thanks for your MiST support kolla!)
+
+
+Copper-rulez-AGAin 1.2 released 3/9/2015
+
+- 2nd Bugfix: Allocated memory for timer IO-request-structure had a wrong size
+
+
+Copper-rulez-AGAin 1.1 released 31/8/2015
+
+- Bugfix: Now the system-clock is refreshed after the demo is finished
+
+
+Copper-rulez-AGAin 1.0 released 16/5/2015
+
+- supports MC68020-MC68060
+- minimum memory requirement: 1.5 MB CHIPMEM
+- FASTMEM is not needed but supported if available
+- Harddisk is needed
+- WB-Start is supported by an own icon
+- Demo returns to system
+- Tested on the following configurations:
+  * real A1200:   OS3.0, 2 MB CHIP,  0 MB FAST, MC68020, HD
+  * real A1200:   OS3.0, 2 MB CHIP,  4 MB FAST, MC68030, HD
+  * real A1200:   OS3.5, 2 MB CHIP, 64 MB FAST, MC68060, HD
+  * WinUAE A1200: OS3.5, 2 MB CHIP,  0 MB FAST, MC68020, HD
+  * WinUAE A1200: OS3.5, 2 MB CHIP, 64 MB FAST, MC68040, HD
+  * MiST:         OS3.9, 2 MB CHIP, 24 MB FAST, 1.5 MB SLOW, MC68020, HD

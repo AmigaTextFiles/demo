@@ -1,0 +1,224 @@
+<HTML>
+<HEAD>
+<TITLE></TITLE></HEAD>
+<BODY BACKGROUND="..\bgnd.jpg" BGCOLOR="#000000" TEXT="#FFFFFF">
+<CENTER>
+<table border=0><TR><TD>
+<pre>
+
+<font color =#4C4C88><CENTER><FONT SIZE=7><B>Article Formats</CENTER></FONT></B>
+
+
+
+
+
+
+<font color =#7C4C64><CENTER><FONT SIZE=5><B>Text file, with many fine examples!</CENTER></FONT></B>
+
+
+
+<font color =#884C4C>                               by Kei of Crn
+<font color =#FFFFFF>
+It  makes  life a lot easier for us editors if there's not much to edit.
+You  also  get your articles to look the way you want them.  However, we
+don't  mind  editing  your text submissions but just in case you want to
+cheer me up..
+
+<font color =#884C4C><CENTER><FONT SIZE=5><B>Plain ASCII Please!</CENTER></FONT></B>
+
+
+<font color =#FFFFFF>
+Use  a  text editor that doesn't use all those control codes.  Make sure
+you  hit  RETURN a lot as well if you don't have word-wrap as lines that
+are too long are hard to format.  We recommend Cygnus Editor Pro but any
+editor like Ed that come with ADOS is ok.
+
+
+The  width  of  the  articles  is  set  to 72 characters and the text is
+indented  by  four  spaces.   This means that if you format your text so
+that  it  is  72  characters  wide it will appear centred on the screen.
+Lines  longer  than  72 chars WILL be displayed and will wrap around the
+screen  on  a  graphical basis, so that text that comes in from the left
+after  wrapping  will  be  one  pixel  lower  than  that  on the line it
+originated from.
+
+Either  set  CygnusEd  to a 72-character width (Shift+Amiga+"6") and set
+word  wrap to ON (Amiga+"6") or tap the spacebar 71 times, followed by a
+character  to  act as a marker, and don't go beyond this marker when you
+type your text.
+<font color =#884C4C>
+<CENTER><FONT SIZE=5><B>Big Text!</CENTER></FONT></B>
+
+
+<font color =#FFFFFF>
+Big  Text  is  a  single  phrase  that  you  want to appear in the above
+24-point  font.   Because  it is a 24-point font it takes three lines of
+the  normal  text to display, so you should leave at least 2 empty lines
+after  it.   To  display a string in Big Text you simply preface it with
+the  control string "|1-" and ensure that the "|" character is the first
+character on that line.  For example:  The string:
+
+                       |1-This is Big Text
+
+when placed up against the left-hand edge of the screen, will produce:
+<font color =#884C4C>
+<CENTER><FONT SIZE=5><B>This is Big Text</CENTER></FONT></B>
+
+
+<font color =#FFFFFF>
+and two blank lines are left after it so that the big text doesn't over-
+write any subsequent lines of ASCII.
+<font color =#884C4C>
+<CENTER><FONT SIZE=7><B>Big Big Text!</CENTER></FONT></B>
+
+
+
+
+
+
+
+<font color =#FFFFFF>
+Big  Big Text is another single phrase, as above, but it is displayed in
+a  stonking 60-point font for super-emphasis.  As it's 60-point it needs
+6 empty lines after it to ensure it doesn't overwrite anything else, and
+if  you  want  to  display descender characters (g, j, p, q, y) then you
+should leave 7 blank lined after it.
+
+Again,  the  display code is similar to the Big Text, you simply preface
+your  string  with "|2-" and it's all done automatically, so for example
+the line:
+
+                               |2-Blimey!
+
+when placed up against the left-hand border of your file, will produce:
+<font color =#884C4C>
+<CENTER><FONT SIZE=7><B>Blimey!</CENTER></FONT></B>
+1-
+2-
+3-
+4-
+5-
+6-
+7-
+<font color =#FFFFFF>
+and  in  this  case  7  extra lines are required as there's a "y" in the
+string,  taking up another line.  In both of these bigger-text examples,
+no  small  (normal?)  type can be on the same line that the bigger stuff
+starts on, it'll be included in the big text string, however you CAN put
+normal  ascii  on  the subsequent lines if you take care that they don't
+overap the main text, illustrated by the numbers 1 to 7 above.
+<font color =#884C4C>
+<CENTER><FONT SIZE=5><B>Clip Art:</CENTER></FONT></B>
+
+
+<font color =#FFFFFF>
+Since  we  were  not  sent  any clipart, there isn't any this issue.  We
+should of created some ourselves but we were too busy booz..  working on
+coding  stuff.   So send us some cool clipart for the next issue!  Don't
+send  anything  over  4  colours though as Amida's not sure about how to
+handle  more  than  4  colour  clipart,  but  he's  working on it.  
+<font color =#884C4C>
+<CENTER><FONT SIZE=5><B>Headers:</CENTER></FONT></B>
+
+
+<font color =#FFFFFF>
+The  main  menu is seperated by what we call "headers".  These are small
+IFF  files  containing a 2-colour image that we load in to the main code
+as  data  and  specify  to the engine via the configuration file for the
+main  menu.   These  can easily be changed each issue so we figured we'd
+give  you  gfx guys out there a chance to see what you can come up with.
+The  main  menu  is seperated into topics which you can get a list of by
+looking  in  your BONUS drawer on disk 2.  There should be a file called
+"---ArticleCodes---"  which lists these header names.  There should also
+be  a  file  called "Template.IFF".  Load this into your favourite paint
+package  and  using colour 1 and 0 in the top area, draw your design and
+send it to us!
+<font color =#884C4C>
+<CENTER><FONT SIZE=5><B>Colour!!</CENTER></FONT></B>
+
+
+<font color =#FFFFFF>
+This is a new addition into the article text, every line in your article
+can  have  it's own colour assigned to it.  By default your article text
+will  be  displayed in white, but you can change the current line colour
+at  any point by inserting a standard 2-Byte RGB value into the start of
+the  line.   These values are used by all paint programs, such as Deluxe
+Paint  and  Personal Paint, and so you can find nice colour combinations
+beforehand by playing with these packages.
+
+As  before with the large text codes, these sequences must appear at the
+start  of  the line where you want the colour change to take effect, the
+codes go in the format $RGB where R=Red, G=Green and B=Blue, all colours
+having  standard  values  from  0  to F.  Note that full green *must* be
+requested with $0F0 and *NOT* $F0, which would be logical.
+<font color =#884C4C>
+<CENTER><FONT SIZE=5><B>What's first then?</CENTER></FONT></B>
+
+
+<font color =#FFFFFF>
+Here's  how  you should produce your articles, this is the easiest order
+for less-experienced people.
+
+
+    1&gt;  Main body of text, type your article, leave titles and subtitles
+        as  normal  text for now, don't worry about spacing.  Format the
+        text to 72 columns, and split it into paragraphs where required.
+
+    2&gt;  Go to each title or subtitle in turn, and insert either "|1-" or
+        "|2-" (do not include quotes) at the left-hand border to use the
+        larger  fonts.  If  you have used font 1 then ensure there are 2
+        blank  lines AFTER the one starting "|1-", if you have used font
+        2 then ensure there are 7 blank lines (8 if you have used either
+        q,y,p or j in lower case) AFTER the  one starting "|2-".  Ensure
+        there are no spaces between the "-" and the start of your title.
+
+    3&gt;  Change  the colour at the START of any line by inserting the hex
+        value for it at the left border.  It DOES NOT MATTER if a colour
+        code pushes the width of your text beyond 72 colums.
+
+
+If  using  CygnusEd, load in your text file, press SHIFT+AMIGA+6 and set
+the  right  border  to  72.   Insert your title size codes and go to the
+author  name  line  and  press  AMIGA+\ this will centre the line.  Also
+usefull  for  poems.   Then  move  down  to  the first character of your
+article  text  and hold down AMIGA+f and your article will be formatted!
+You can then add colour codes to suit the tone of your article!
+
+<font color =#884C4C>
+<CENTER><FONT SIZE=5><B>The Word Article Tester...</CENTER></FONT></B>
+
+
+<font color =#FFFFFF>
+The Word Article Tester (TWAT :) can be found on disk 2, you should copy
+it  to  your  C:   directory  (on  your hard drive, non-HD owners should
+SERIOUSLY  think  about  getting  one!) and run it from the CLI.  Simply
+load any .txt article file via the gaudy green requester and you can see
+what  the  file will look like in the magazine.  $aff The keypresses for
+TWAT are as follows:
+
+    C/Up    -   Scroll upwards through the text
+    C/Down  -   Scroll downwards through the text
+    Sh+C/Up -   Scroll quickly upwards through the text
+    Sh+C/Up -   Scroll quickly downwards through the text
+    Esc     -   load another file view the requester
+    F1-F8   -   Speed set to 1-8 pixels per frame
+    F10     -   Quit
+
+<font color =#FFFFFF>TWAT  will search the Ram Disk for a file called "TWAT.loadme" which
+should  contain  the  full name (including path) of the file you want to
+pre-load, so you can use it via Directory Opus by creating a MENU entry:
+
+            AmigaDOS    C:Echo &gt;RAM:TWAT.loadme {f}
+            AmigaDOS    C:TWAT
+
+Carnage  are currently using a modified version of TWAT which allows you
+to  edit  articles  and  test  them while TWAT is still running.  We are
+considering  making  some more changes to it and releasing it as V4 in a
+future edition of The WORD.
+
+End
+</PRE>
+</TD></TR></TABLE>
+</CENTRE>
+</BODY>
+</HTML>

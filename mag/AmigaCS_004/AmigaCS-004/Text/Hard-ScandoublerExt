@@ -1,0 +1,86 @@
+@{xoffset 21}@{d B2FF7D}¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+@{xstep 292}@{font ACS-Title.font 18}Externí scandoubler okem laika@{font}
+@{xstep 400}@{c A6FFF8}@{i}AGASlayer^DREAM TEK@{ui}@{c}@{ystep -5}
+
+
+ @{xstep 9}@{font ACS-Title.font 18}P@{font}oslední dobou  më uù nebavilo çumët poêád do TV, kdyù jsem chtël pracovat na
+poçítaçi.   Uù  jsem  mël  také  dost  blbých poznámek od chcíplíçkaêû, kteêí mi
+závidí  klidný ùivot s OSem.  Jeden po prozkoumání moji AMIGy mi êekl:  ªMáî moc
+nudný  ùivot,  poêið si Wokna, budeî mít sqëlou paêbu :-)º.  Tak jsem se rozhodl
+koupit  monitor  k mojí  milované  AMIze.   Jelikoù  chci pouùívat monitor i oçi
+troîku  déle,  odmítl  jsem monitory od @{c 4FEE23}Commodore@{c}, které umí zobrazit pouze PAL.
+Jelikoù je dosti tëùké sehnat @{c 4FEE23}Microvitec@{c} a to jeîtë @{c 4FEE23}15"@{c} monitor, rozhodl jsem se
+pro jiné êeîení.
+
+  Tím  je @{b} @{c 4FEE23}Scandoubler@{c}@{ub}.   Je  to takové maliçké zaêízení, které umí zdvojnásobit
+frekvenci,  která  vychází  z  AMIgy a proto mûùeme potom skrze tohoto pêístroje
+pêipojit  jakýkoliv  pécé  monitor.  Scandoubler byl kdysi urçen pouze pro A3000
+a A4000,  ale  teð  se vyrábí i pro A1200.  Na trhu soutëùí dvë firmy:  @{c 4FEE23}Micronik@{c}
+a @{c 4FEE23}Elbox@{c}.   Jako vùdy zase @{f C5FFEE}vítëzí Elbox@{f} (napê.  jako u towerû).  Vyrábëjí se jako
+externí  nebo  interní.   Já  jsem  se  rozhodl pro Scandoubler ve verzí externí
+a navíc  jako Scandoubler s FlickerFixerem.  Ten umí totiù laicky êeçeno pêevést
+blikající  obrazovku  do neblikající (interlace do non-interlace).  Po objednání
+tohoto Scandoubleru jsem po dvou dnech jel pro nëj.  To je rychlost, co?
+
+  Co jsem hezkého dostal v pêepoçtu za @{c 4FEE23}4500@{c} Kç?  Tvrdý, typický Elboxovský obal,
+v  nëm  jednostránkový  manuál,  záruçní  list a malou krabiçku rozmërû 95×55 mm
+tlustou  20  mm.   Asi Scandoubler :).  Hezká barva, která ladí s AMIgou.  Vstup
+pro  VGA konektor od monitoru na jedné stranë a na druhé výstup pro pêipojení do
+AMIGy  do  portu VIDEO.  @{i}Instalaci zvládné kaùdý lamer, jako já :)@{ui}.  Na krabiçce
+jsou  dvë  diody.   Zelená  svítí,  kdyù  právë  funguje  FlickerFixer a çervená
+znázorñuje, ùe nyní Scandoubler nezdvojuje výstupní signál z AMIgy.  Zezadu jsou
+jeîtë  malé  jumpery  pro  rûzná  nastavování  a  maliçký @{c 4FEE23}îroubeçek@{c} pro regulací
+obrazu.  Takto asi vypadá Scandoubler.
+
+  A  co  nám  hezkého êíkají v manuálu?  Po podëkování za zakoupení jsou napsané
+technické  parametry a pak je napsána instalace zaêízení.  Pak je vypsáno, co se
+dëje,  kdyù  svítí  nebo nesvítí ta çi ona dioda a funkce jumperu.  Nakonec jsou
+vypsané   dûleùité  upozornëní  a  výhody  Scandoubleru  a  moùnost  upgrade  na
+@{f AEFFAE}Scandoubler  s  FlickerFixerem@{f},  pokud  máte  ho  bez  nëj.   Takùe  nëco  k tëm
+upozornëním:
+
+@{c 9DEEBE}- v módu SuperHires je zobrazován jen kaùdý druhý pixel
+- nëkteré módy monitor nezobrazí dobêe (Super72, DblNTSC, DblPAL)
+- módy Euro72 a Multiscan bez nainstalování programu VGAonly
+  také nezobrazí dobêe.@{c}
+
+  Z  vlastní  zkuîeností  jsem  zjistil,  ùe vîechny módy kromë @{i}Super72@{ui} zobrazil
+perfektnë.   Úplnë  na  konci  návodu jsou vypsány výhody Scandoubleru.  Jsou to
+tyto:
+
+@{c 9DEEBE}- zobrazování vîech módû 15kHz s frekvencí 31kHz /bez blikání obrazovky/
+- zobrazování ve vîech programech pracujících v módu 15kHz s interlacem
+- borderblank je çerný
+- zrychlení  AGA  çipû.  Napêíklad, pokud chceî obrazovku 640×512 s 256 barvami,@{c}
+  @{c 9DEEBE}musíî zvolit mód Multiscan.  Ale tak se ChipRAM zmenîuje aù do 0,6MB/s (mëêeno
+  BusTest  0.09),  potom  je  pomalé  pêekreslování obrazovky.  S FlickerFixerem
+  mûùeî  pouùít na tom samém rozliîení (640×512) mód PAL s Interlacem, ale pásmo
+  práce chip-pamëti bude opët 3-4 MB/s.@{c}
+
+  @{i}FlickerFixer@{ui}  opravdu  funguje  jak  má, vîechny blíkající módy jsou nahrazeny
+neblikavými.   Je  to  opravdu výhodnëjîí, neù patchovat obrazovky.  Ùádné chyby
+jsem  nenaîel.   Vîechny  módy jsou ostré, kvalitní, bez nëjakých problémû.  Ale
+kaùdá výhoda musí mít i nevýhodu.  Nalezl jsem pouze tyto:
+
+@{c 9DEEBE}- neù  zaçnu  pracovat,  musím tak asi 5 minut poçkat, neù se Scandoubler troîku
+  zahêeje.   Nëkdy bliká troîku obraz (hlavnë v PALu je to dosti znatelné) jindy
+  je  obraz  troîku  tmavý,  ale za chvilku se to spraví.  O tom problému se ale
+  zmiñují v manuálu.@{c}
+
+@{c 9DEEBE}- Scandoubler  se  zahêívá.   Pêi delîí práci je to dotykovë dosti znatelné, ale
+  nespalíî se :).  Uù ho pouùívám asi z 2 mësíce a poêád funguje dobêe@{c}
+
+
+  Na  víc problémû jsem zatím nenarazil, ale upozorñuju, ùe jsem pouze laik a ne
+profík  na  takovou  techniku.   Jedinë  mûùu  ocenit opët dobêe odvedenou práci
+odborníkû  z  @{c 9DEEBE}ELBOXu@{c} - narozdíl od @{f AEFFAE}Prase5@{f} poêád makají, nic neslibují, ale pêímo
+dávají  do  obchodû nové výrobky.  Po nëkolika turbokartách a super @{c 9DEEBE}FAST-ATA-IDE@{c}
+êadiçi je to dalîí výborné zaêízení.
+
+  Nezbývá  neù  vîem,  kteêí  mají  jeîtë TV, nebo pouùívají staré commodorovské
+monitory  poradit,  aï  nevahájí  se  zakoupením tohoto pêístroje, k tomu nëjaký
+monitor,  nejlépe  15"  nebo  17".   Já sám pouùívám Scandoubler s monitorem 15"
+ViewPoint  a @{i}jsem  naprosto  spokojen@{ui}.  Ani to menîí zdrùení (neù se zahêeje) mi
+nevadí.   Pouùívám  rozliîení  Euro72.   V  Javosoftu  ho  prodávájí  za @{c 9DEEBE}5140@{c} Kç
+a myslím,  ùe k tomu dávají i çeský manuál.  @{c 9DEEBE}@{i}Pokud ne, není problém mi napsat na
+mail, ja Vám ochotnë poradím nebo nëco z polîtiny pêeloùím.@{c}@{ui}

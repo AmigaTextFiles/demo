@@ -1,0 +1,211 @@
+<HTML>
+<HEAD>
+<TITLE></TITLE></HEAD>
+<BODY BACKGROUND="..\bgnd.jpg" BGCOLOR="#000000" TEXT="#FFFFFF">
+<CENTER>
+<table border=0><TR><TD>
+<pre>
+
+<font color =#884C4C><CENTER><FONT SIZE=5><B>US Robotics</CENTER></FONT></B>
+
+
+<font color =#F4F4F4><CENTER><FONT SIZE=5><B>33.6/56.6 WinModem</CENTER></FONT></B>
+
+
+
+<font color =#704C4C>                            Reviewed by D!ck
+<font color =#4C4CDC>
+  Item : Internal, software-based ISA modem card.
+  Price: 94.00 inc VAT, no delivery.
+  From : Output Computers, Grimsby.
+         (01472 311777)
+  Warr : 5-yr USR Warranty
+
+Everyone  knows US Robotics, they are second only to Hayes when it comes
+to  modems of quality, and if you've had anything to do with modems just
+recently  then  you'll  have  heard  of  x2 technology, a protocol being
+pushed by USR to facilitate internet downloading at 56.6 kilobaud, twice
+the speed of 28.8 modems in common use today.
+
+Four  of the USR models can be upgraded to x2, but only two of these can
+be done via software, the Sportster Flash and the Sportster Winmodem.  I
+visited Output Computer Repairs in Grimsby with the intention of getting
+some  info  on  the  AMD  K6  processor  - another story - and noticed a
+WinModem  sat  on the shelf.  A few enquiries to the price and it turned
+out that I could get it for much the same price as mail order would cost
+with Delivery on top.
+
+A  detailed  technical  discussion  followed  regarding  CPU  drain  and
+upgradability,  the  WinModem  differs  from the Sportster Flash and all
+other external modems because the sending and compression is not done by
+chips on the card, but by software, which means your processor will have
+extra  work to do.  The general concensus was that my P133 would have no
+trouble  at  all,  certainly  Output  have  sold several and never had a
+complaint yet.
+
+I  parted with my wad of cash and took the modem home, a squint into the
+box  while  on  the bus revealed a pile of literature, several CDs and -
+phew!   -  a  modem-to-phone  cable, not all manufacturers include these
+with  their  modems,  I was feeling down, as one does when large sums of
+money  have just passed away, and so was in no mood to spend another two
+quid on a cable.
+
+I  got  home  and emptied the box, and found that a lot of the stuff was
+CDs  and junk mail for internet services, so I could ignore them, though
+people  looking  to  join  up  could  do a lot worse than use the Virgin
+Internet Trial CD included with the modem.
+
+<CENTER><FONT SIZE=5><B>How d'you fit it then?</CENTER></FONT></B>
+
+
+
+First  of  all,  uninstall  any  other modems you might have, remove all
+settings  and software and physically remove the modem and pack it away.
+I got shut of Sacko's Psion Surfer - hurrah!  - pile of poo that it is.
+
+As  it's  an  internal  modem  it's  going to take up an interrupt, so I
+disabled  COM2,  where  my  old  modem was, and used that for the modem,
+you'll  find the software sets itself up quite nicely so there's no need
+to panic, but I turned off COM2 in my BIOS before proceeding.
+
+Next, unplug everything and open up your PC, it's a good idea to have it
+plugged  into  the  mains  (but  switched  OFF at the socket) to prevent
+electrostatic discharges building up.  Find a vacant ISA slot and remove
+the cover from the back of the machine.
+
+Here's  where  your  first  problem might arise:  The modem card is very
+long  and overran the end of my ISA slots by a good half inch or so.  On
+the  first  slot  I  tried  it  in  this  meant that the end of the card
+wouldn't  go  in because the CPU fan was in the way - doh!  I then tried
+the  next  slot  down,  and  found  that  the  CD-Audio  connector on my
+soundcard  protruded  out  too  far  towards  the neighbouring slot, and
+pushed hard against the modem card - double doh!!
+
+In  the  end  I  simply bent the CD-Audio connector out of the way, this
+meant  it  jutted  out less and while it still touches the modem card, I
+can  at  least  get  the  card in and it's only touching the big plastic
+housing on the modem anyway.
+
+If you've disabled COM2 you might like to pysically remove the port from
+your  machine  like  it  did.   You  won't be using it for anything else
+anyway, not even null-modem games (get a network card!).
+
+Right, it's in (phew!), plug everything back in (but leave the cover off
+just  in case) and switch it all on.  The machine boots up as per usual,
+only  now the Plus &amp; Pray BIOS detects *two* cards, network and - hurrah
+-  US Robotics 33,600 Winmodem!  So far so good!  Windows 95 detects new
+hardware  and automatically starts searching for the drivers for it, all
+standard  stuff, and less than 10 minutes after switching it on I've got
+it set up and working, the installation is just superb.
+
+<CENTER><FONT SIZE=5><B>And?</CENTER></FONT></B>
+
+
+
+So  what's  it  like?   My  mail program is none-standard and so the old
+Psion  didn't  like  it  AT  ALL, but the USR just whips my mail off the
+server like there's no tomorrow, this thing is fast!
+
+I  tried it on the internet, and again, it rips the code down that phone
+line,  twice  out  of  four attempts I got on at full 33,600.  At my old
+place,  and  using  a  normal  Sportster, we'd never got on above 28,800
+before, the WinModem is *much* faster.
+
+As  for the CPU worries, there are none, nothing has happened to make me
+wonder  if  getting  a  software  modem  was a wise decision, it has all
+performed  perfectly, even calls to the local BBS connect at 33,600 with
+no  hassles,  it's all working as you'd expect from a company such as US
+Robotics.   I'm  in  the habit of running two or three browsers at once,
+plus Notepad, and I've had no trouble whatsoever.
+
+<CENTER><FONT SIZE=5><B>The x2 Upgrade</CENTER></FONT></B>
+
+
+
+At the time of writing the x2 upgrade is not available for this modem, I
+keep  visiting the UK site (you need the version for the UK phone system
+you see) at www.usr.co.uk but so far the patch is not there, just a nice
+picture  of  my  modem  card  and  the text "upgrade coming soon".  Both
+Phil!97  and  Video  have upgraded the Sportster Flash to x2 and tell me
+the  procedure is relatively painless, and I see no reason why upgrading
+this one should be any different.
+
+Half  the  time  though,  you will not get on at 55,600 anyway.  When we
+tried  the  Sportster  Flash  at  my  house the fastest we got on at was
+around  45,000  but  this  is still much faster than your normal 33,600.
+Pictures  and  thumbnails  appear  much  quicker,  pages come down a lot
+quicker, everything is much better all round.
+
+Note that x2 is only a one-way system, you can still only send at 33,600
+but  you  download at the faster rate.  This is because the modem is not
+equipped  to  send  at  these  speeds,  to  do  so you must be connected
+directly  to  the  digital  phone network.  This is what is happening at
+your ISP's switching station.  Pipex, who we tested the modem with, have
+set  up a dedicated x2 number for you to dial:  0645 336576, just change
+your dial-up connection and that's it.
+
+<CENTER><FONT SIZE=5><B>All in all then...</CENTER></FONT></B>
+
+
+
+What  a  modem,  it's great, and when he x2 upgrade becomes available it
+promises to be even better.  You can get it mail order for much the same
+price  as I did, I simply bought it from Output because I was there, and
+they've always helped with problems, they're just down the road too.
+
+    Value: 9/10 - Good price for what you get, 33,600 modems
+                  still cost around this amount and they're
+                  not all upgradable.
+
+    Installation: 8/10 - The card is a bit long and you might
+                         have to choose your slot with care. 
+
+    Ease of use: 10/10 - Just like any other modem, piece of
+                         cake really!
+
+    Speed: 10/10 - Or rather, it will be when it's upgraded!
+
+    Features: 10/10 - Does everything, voicemail, fax, data,
+                      you even get a dinky little microphone
+                      for the voice software, it's so cool.
+
+    Support: 10/10 - BBS and web support, E-Mail, plenty of
+                     free internet offers, 5-yr warranty, can
+                     you think of anything else you'd need?
+
+<CENTER><FONT SIZE=5><B>Overall 10/10</CENTER></FONT></B>
+
+
+I really cannot see any reason why you should buy any other modem!
+
+D!ck
+
+
+          .-------------------------------------------------.
+          |  E-Mail: Dick@emarkt.com / UIN (ICQ): 1809384   |
+          |-------------------------------------------------|
+          | Visit D!ck's webpages, the D!crosoft Dimension, |
+          | http://www.geocities.com/SiliconValley/Bay/2020 |
+          | and Bodyshop Central: http://www.qcs.co.uk/bsc/ |
+          |-------------------------------------------------|
+          |  P133, 40Mb, 1Gb, 512vx, Nec4x4, 33.6   (@^@)   |
+          `---------------------------------------oOO(_)OOo-'
+
+<font color =#FFFF88>
+[I'd  like to hear from anyone with x2 modems about how it is performing
+on  downloads.   With the current state of the UK's analogue connections
+it  is  not  possible  to get anywhere near 56k/s on download unless you
+have  a  dedicated ISDN/T1/T2/T3 line to your house.  You are looking at
+46.6k at the most or 53k if a fibre optic connnection.  At present I get
+107k/s  but  only at uni.  I'll have access to the above lines in my new
+job  so  expect  some  performance tests from me in future issues of The
+Word.  Kei]
+
+
+<font color =#4C4CDC>
+end
+</PRE>
+</TD></TR></TABLE>
+</CENTRE>
+</BODY>
+</HTML>

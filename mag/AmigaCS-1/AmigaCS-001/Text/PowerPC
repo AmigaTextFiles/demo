@@ -1,0 +1,36 @@
+@{d FAFF75} @{c FFFA14} Rád  bych  poopravil  çi doplnil nëkteré informace uvedené v çlánku "PowerPC vstupuje na
+scénu"  vydaném  v  AR  32.  Samozêejmë chápu, ùe dëlat recenzi bez vlastní karty je velmi
+obtíùné a nëjaká chyba se vùdy vloudí.@{c}
+
+1)  PowerPC  604e  procesor  není  velký asi jako 68060, je to ménë neù polovina velikosti
+68060.  Je  tedy o dost menîí neù vëtráçek na nëm pêipevnëný, který ho celý zakrývá. Stará
+êada  PPC  604e  (pouùitá v CyberStormechPPC) vyrábëná pro frekvence 180/200/225/233MHz má
+velikost  kêemíkového  plátku 148 mm² a ztrátový výkon 14.5W. Nová êada PPC 604e (vyrábëná
+od  jara 1997 modernëjîí technologií 0.25 mikronu) bëùící na frekvencích 250/300/350MHz má
+dokonce  velikost  neuvëêitelných  47  mm²  a ztrátový výkon 6.8W. Procesor 604e na 350MHz
+vykoná  629  miliónû  instrukcí  za  sekundu  (MIPS). phase5 tedy opët zaspala dobu a její
+turbokarty opët pouùívají zastaralé procesory - a to vûbec nehovoêím o jeîtë novëjîích PPC
+740/750,  se  kterými  Motorola  hodlá  pêekonat  hranici 500MHz a 1000MIPS. Jediná reakce
+pracovníkû phase5 na tyto nové procesory byla, ùe se budou muset CyberStormyPPC pêedëlat a
+ùe o tom pêemýîlejí, stejnë jako o podpoêe pamëïových modulû DIMM.
+
+2)  V  guide  dokumentaci  se  nehovoêí  o  nëjakých  nových  add-on PPC 603e modulech pro
+CyberStorm  MKII,  které phase5 zatajila. Jedná se o první vývojáêské karty, které dostali
+@{d FAFF75}klíçoví  vývojáêi  na  podzim  roku  1996.  S jejich sériovou výrobou se nikdy nepoçítalo;
+jejich výkon byl i tak relativnë malý.
+
+3)  PPC  nativní  CyberGraphX V3 nemá prakticky ùádný smysl. Rychlost grafických funkcí je
+závislá  takêka  výhradnë  na grafickém çipu a na rychlosti pêístupu k videopamëti. Jak se
+vyjádêil  Frank  Mariak  (hlavní  vývojáê  CyberGraphX)  -  "Nelze  çekat  rychleji...". V
+aktuálních verzích CyberGraphX je sice cgxsystem.library urçená pro PPC, nejedná se vîak o
+optimalizovanou verzi. Jediná odliînost je ve volání funkcí pro alokaci pamëti.
+
+4) Çekání na PPC nativní Kickstart od phase5 je zbyteçné. Êeîení, které phase5 zvolila ani
+nic  takového  neumoùñuje; phase5 ostatnë ani nevlastní licenci na AmigaOS a jeho zdrojové
+kódy.  "Kickstart"  je  v tomto pêípadë ppc.library. phase5 tímto êeîením pouze smëêuje ke
+svému  dlouhodobému  cíli  -  ABOXu. O AmigaOS jí v podstatë vûbec nejde; proto zvolila co
+nejuniverzálnëjîí êeîení.
+
+5)  Data  mezi  dvëma procesory (060/PPC) nelze pêenáîet pomocí interní cache. ppc.library
+vîak umoùñuje výmënu dat mezi procesory pêes pamëï bez zbyteçného vyprazdñování cache.
+                                         @{c FFFA14}Shaman@{c}

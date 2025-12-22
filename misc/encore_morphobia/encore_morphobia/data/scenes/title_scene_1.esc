@@ -1,0 +1,5088 @@
+{
+  "actions": [
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "int32_values": 0,
+            "time": 19720
+          },
+          {
+            "int32_values": 1,
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "title_scene_1"
+        }
+      ],
+      "loops": 1,
+      "name": "start_butterflies",
+      "start_time": 0,
+      "type": "property_int32"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 40,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "hand_left"
+        }
+      ],
+      "loops": 1,
+      "name": "hand_leftAction",
+      "start_time": 1200,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 440
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "hand_left"
+        }
+      ],
+      "loops": 1,
+      "name": "pinch",
+      "start_time": 280,
+      "type": "mesh_shape"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -1.726921,
+              1.051641,
+              -1.958136
+            ],
+            "interpolation": "linear",
+            "time": 200
+          },
+          {
+            "float_values": [
+              -1.416126,
+              1.051641,
+              -1.958136
+            ],
+            "interpolation": "linear",
+            "time": 1000
+          },
+          {
+            "float_values": [
+              -1.689286,
+              -0.616079,
+              -5.804494
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "hand_left"
+        }
+      ],
+      "loops": 1,
+      "name": "hand_leftAction",
+      "start_time": 0,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -91.308045
+            ],
+            "interpolation": "linear",
+            "time": 1000
+          },
+          {
+            "float_values": [
+              -58.866341,
+              49.24705,
+              -51.392741
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "hand_left"
+        }
+      ],
+      "loops": 1,
+      "name": "hand_leftAction",
+      "start_time": 200,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 7200,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "butterfly_6"
+        }
+      ],
+      "loops": 1,
+      "name": "butterfly_6Action",
+      "start_time": 16880,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              33.956097,
+              2.416884,
+              -7.46964
+            ],
+            "interpolation": "linear",
+            "time": 3520
+          },
+          {
+            "float_values": [
+              35.042858,
+              3.359981,
+              -6.816518
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "butterfly_6"
+        }
+      ],
+      "loops": 1,
+      "name": "butterfly_6Action",
+      "start_time": 19800,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -16.824658,
+              -15.957904,
+              -4.026943
+            ],
+            "interpolation": "linear",
+            "time": 3520
+          },
+          {
+            "float_values": [
+              -45.638938,
+              -25.134299,
+              -15.240548
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "butterfly_6"
+        }
+      ],
+      "loops": 1,
+      "name": "butterfly_6Action",
+      "start_time": 19800,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 7200,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "butterfly_5"
+        }
+      ],
+      "loops": 1,
+      "name": "butterfly_5Action",
+      "start_time": 16880,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              32.115456,
+              2.198663,
+              -7.154512
+            ],
+            "interpolation": "linear",
+            "time": 2960
+          },
+          {
+            "float_values": [
+              34.416367,
+              3.55653,
+              -7.190579
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "butterfly_5"
+        }
+      ],
+      "loops": 1,
+      "name": "butterfly_5Action",
+      "start_time": 19800,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -55.146548,
+              25.602163,
+              -21.819963
+            ],
+            "interpolation": "linear",
+            "time": 2960
+          },
+          {
+            "float_values": [
+              -47.076334,
+              -10.475544,
+              -23.410139
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "butterfly_5"
+        }
+      ],
+      "loops": 1,
+      "name": "butterfly_5Action",
+      "start_time": 19800,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 7200,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "butterfly_4"
+        }
+      ],
+      "loops": 1,
+      "name": "butterfly_4Action",
+      "start_time": 16880,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              32.912712,
+              2.030546,
+              -6.891825
+            ],
+            "interpolation": "linear",
+            "time": 1880
+          },
+          {
+            "float_values": [
+              31.446533,
+              1.272361,
+              -6.544103
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "butterfly_4"
+        }
+      ],
+      "loops": 1,
+      "name": "butterfly_4Action",
+      "start_time": 19800,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -34.200325,
+              -83.488121,
+              -22.106087
+            ],
+            "interpolation": "linear",
+            "time": 1880
+          },
+          {
+            "float_values": [
+              -38.2804,
+              -5.137795,
+              -21.816488
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "butterfly_4"
+        }
+      ],
+      "loops": 1,
+      "name": "butterfly_4Action",
+      "start_time": 19800,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 7200,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "butterfly_3"
+        }
+      ],
+      "loops": 1,
+      "name": "butterfly_3Action",
+      "start_time": 16880,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              32.449604,
+              1.569757,
+              -7.669117
+            ],
+            "interpolation": "linear",
+            "time": 1760
+          },
+          {
+            "float_values": [
+              31.105757,
+              0.472944,
+              -7.241848
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "butterfly_3"
+        }
+      ],
+      "loops": 1,
+      "name": "butterfly_3Action",
+      "start_time": 19720,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -22.7607,
+              -57.482503,
+              -6.093262
+            ],
+            "interpolation": "linear",
+            "time": 1760
+          },
+          {
+            "float_values": [
+              -39.181851,
+              -5.880906,
+              -15.700038
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "butterfly_3"
+        }
+      ],
+      "loops": 1,
+      "name": "butterfly_3Action",
+      "start_time": 19720,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 7200,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "butterfly_2"
+        }
+      ],
+      "loops": 1,
+      "name": "butterfly_2Action",
+      "start_time": 16880,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              33.258003,
+              1.68606,
+              -7.424763
+            ],
+            "interpolation": "linear",
+            "time": 2560
+          },
+          {
+            "float_values": [
+              32.393295,
+              0.758052,
+              -6.729856
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "butterfly_2"
+        }
+      ],
+      "loops": 1,
+      "name": "butterfly_2Action",
+      "start_time": 19800,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -10.081404,
+              -20.0963,
+              -16.075974
+            ],
+            "interpolation": "linear",
+            "time": 2560
+          },
+          {
+            "float_values": [
+              -63.187029,
+              127.64961,
+              -7.389997
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "butterfly_2"
+        }
+      ],
+      "loops": 1,
+      "name": "butterfly_2Action",
+      "start_time": 19800,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -2.811324,
+              1.364988,
+              -5.585468
+            ],
+            "interpolation": "linear",
+            "time": 2000
+          },
+          {
+            "float_values": [
+              3.00964,
+              1.041769,
+              -5.617231
+            ],
+            "interpolation": "linear",
+            "time": 4000
+          },
+          {
+            "float_values": [
+              9.562595,
+              0.642928,
+              -5.680756
+            ],
+            "interpolation": "linear",
+            "time": 10040
+          },
+          {
+            "float_values": [
+              25.689165,
+              0.647349,
+              -6.671241
+            ],
+            "interpolation": "linear",
+            "time": 3840
+          },
+          {
+            "float_values": [
+              32.158028,
+              0.712641,
+              -5.442189
+            ],
+            "interpolation": "linear",
+            "time": 4560
+          },
+          {
+            "float_values": [
+              38.001991,
+              0.5485,
+              -5.618635
+            ],
+            "interpolation": "linear",
+            "time": 4520
+          },
+          {
+            "float_values": [
+              49.785706,
+              0.73032,
+              -5.793534
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "butterfly_1"
+        }
+      ],
+      "loops": 1,
+      "name": "butterfly_1Action",
+      "start_time": 0,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -42.530888,
+              -90.000003,
+              -0.0,
+              -42.530888,
+              -90.000003,
+              -0.0,
+              -42.530888,
+              -90.000003,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 2000
+          },
+          {
+            "float_values": [
+              -58.08455,
+              -87.048466,
+              -26.7417,
+              -58.08455,
+              -88.047531,
+              -26.7417,
+              -58.08455,
+              -82.412796,
+              -26.7417
+            ],
+            "interpolation": "bezier",
+            "time": 9280
+          },
+          {
+            "float_values": [
+              -47.729444,
+              -76.995978,
+              -18.823964,
+              -47.729444,
+              -76.995978,
+              -18.823964,
+              -47.729444,
+              -76.995978,
+              -18.823964
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "butterfly_1"
+        }
+      ],
+      "loops": 1,
+      "name": "butterfly_1Action",
+      "start_time": 0,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.113012,
+              -1.500653,
+              -16.027016
+            ],
+            "interpolation": "linear",
+            "time": 30000
+          },
+          {
+            "float_values": [
+              48.449169,
+              2.28125,
+              -16.027016,
+              48.449169,
+              2.28125,
+              -16.027016,
+              48.449169,
+              2.28125,
+              -16.027016
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "encore_logo_outline"
+        }
+      ],
+      "loops": 1,
+      "name": "encore_logo_outlineAction.001",
+      "start_time": 0,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 11920,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_27_outline"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_27_outlineAction",
+      "start_time": 14600,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 8640,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_28_outline"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_28_outlineAction",
+      "start_time": 17800,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 0,
+            "uint8_values": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_26_outline"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_26_outlineAction",
+      "start_time": 16960,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 7680,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_23_outline"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_23_outlineAction",
+      "start_time": 15520,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 10920,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_24_outline"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_24_outlineAction",
+      "start_time": 11920,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 9640,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_25_outline"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_25_outlineAction",
+      "start_time": 11800,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 10400,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_20_outline"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_20_outlineAction",
+      "start_time": 9280,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 9400,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_21_outline"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_21_outlineAction",
+      "start_time": 9240,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 11720,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_19_outline"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_19_outlineAction",
+      "start_time": 8120,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 10800,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_17_outline"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_17_outlineAction",
+      "start_time": 7160,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 8760,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_18_outline"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_18_outlineAction",
+      "start_time": 7880,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 9960,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_16_outline"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_16_outlineAction",
+      "start_time": 6360,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 11320,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_15_outline"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_15_outlineAction",
+      "start_time": 4840,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 9240,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_14_outline"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_14_outlineAction",
+      "start_time": 5200,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 8880,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_10_outline"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_10_outlineAction",
+      "start_time": 1840,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 7880,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_7_outline"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_7_outlineAction",
+      "start_time": 0,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 11160,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_12_outline"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_12_outlineAction",
+      "start_time": 2120,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 10360,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_13_outline"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_13_outlineAction",
+      "start_time": 1160,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 10560,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_9_outline"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_9_outlineAction",
+      "start_time": 0,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 9480,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_22_outline"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_22_outlineAction",
+      "start_time": 0,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 4320,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_4_outline"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_4_outlineAction",
+      "start_time": 0,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 6760,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_2_outline"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_2_outlineAction",
+      "start_time": 0,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 6720,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_8_outline"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_8_outlineAction",
+      "start_time": 0,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 4320,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_6_outline"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_6_outlineAction",
+      "start_time": 0,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 3760,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_5_outline"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_5_outlineAction",
+      "start_time": 0,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 3640,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_3_outline"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_3_outlineAction",
+      "start_time": 0,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 5560,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_1_outline"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_1_outlineAction.001",
+      "start_time": 0,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 13320,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_11_outline"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_11_outlineAction",
+      "start_time": 0,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 8640,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_28"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_28Action",
+      "start_time": 17800,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 11920,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_27"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_27Action",
+      "start_time": 14600,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 0,
+            "uint8_values": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_26"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_26Action",
+      "start_time": 16960,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 28.507229,
+            "interpolation": "linear",
+            "time": 1000
+          },
+          {
+            "float_values": 34.667084,
+            "interpolation": "linear",
+            "time": 240
+          },
+          {
+            "float_values": 36.145451,
+            "interpolation": "linear",
+            "time": 240
+          },
+          {
+            "float_values": 37.623817,
+            "interpolation": "linear",
+            "time": 1480
+          },
+          {
+            "float_values": 46.740406,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "stone_2"
+        }
+      ],
+      "loops": 1,
+      "name": "stone_2Action",
+      "start_time": 22720,
+      "type": "position_x"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": -16.013966,
+            "interpolation": "linear",
+            "time": 1000
+          },
+          {
+            "float_values": -10.603843,
+            "interpolation": "linear",
+            "time": 240
+          },
+          {
+            "float_values": -9.305413,
+            "interpolation": "linear",
+            "time": 240
+          },
+          {
+            "float_values": -8.006984,
+            "interpolation": "linear",
+            "time": 1480
+          },
+          {
+            "float_values": -0.0,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "stone_2"
+        }
+      ],
+      "loops": 1,
+      "name": "stone_2Action",
+      "start_time": 22720,
+      "type": "position_z"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.392411,
+              0.392411,
+              0.392411
+            ],
+            "interpolation": "bezier",
+            "time": 1000
+          },
+          {
+            "float_values": [
+              0.392411,
+              0.392411,
+              0.392411
+            ],
+            "interpolation": "bezier",
+            "time": 240
+          },
+          {
+            "float_values": [
+              0.822292,
+              0.822292,
+              0.822292
+            ],
+            "interpolation": "bezier",
+            "time": 240
+          },
+          {
+            "float_values": [
+              0.392411,
+              0.392411,
+              0.392411
+            ],
+            "interpolation": "bezier",
+            "time": 1480
+          },
+          {
+            "float_values": [
+              0.412186,
+              0.412186,
+              0.412186
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "stone_2"
+        }
+      ],
+      "loops": 1,
+      "name": "stone_2Action",
+      "start_time": 22720,
+      "type": "position_y"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "bezier",
+            "time": 2960
+          },
+          {
+            "float_values": [
+              800.000004,
+              800.000004,
+              800.000004
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "stone_2"
+        }
+      ],
+      "loops": 1,
+      "name": "stone_2Action",
+      "start_time": 22720,
+      "type": "rotation_x"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 2960,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "stone_2"
+        }
+      ],
+      "loops": 1,
+      "name": "stone_2Action",
+      "start_time": 22680,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.0,
+              -0.0,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 2960
+          },
+          {
+            "float_values": [
+              -500.000009,
+              -500.000009,
+              -500.000009
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "stone_2"
+        }
+      ],
+      "loops": 1,
+      "name": "stone_2Action",
+      "start_time": 22720,
+      "type": "rotation_z"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "bezier",
+            "time": 5360
+          },
+          {
+            "float_values": [
+              1400.000048,
+              1400.000048,
+              1400.000048
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "stone_3"
+        }
+      ],
+      "loops": 1,
+      "name": "stone_3Action.001",
+      "start_time": 14720,
+      "type": "rotation_x"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 5360,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "stone_3"
+        }
+      ],
+      "loops": 1,
+      "name": "stone_3Action.001",
+      "start_time": 14680,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              32.314602,
+              0.21,
+              -15.855765
+            ],
+            "interpolation": "linear",
+            "time": 2640
+          },
+          {
+            "float_values": [
+              30.291309,
+              0.21,
+              -8.046209
+            ],
+            "interpolation": "linear",
+            "time": 200
+          },
+          {
+            "float_values": [
+              30.138027,
+              0.403769,
+              -7.454576
+            ],
+            "interpolation": "linear",
+            "time": 240
+          },
+          {
+            "float_values": [
+              29.95409,
+              0.21,
+              -6.744617
+            ],
+            "interpolation": "linear",
+            "time": 2280
+          },
+          {
+            "float_values": [
+              28.206701,
+              0.24,
+              -0.0
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "stone_3"
+        }
+      ],
+      "loops": 1,
+      "name": "stone_3Action.001",
+      "start_time": 14720,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "bezier",
+            "time": 4200
+          },
+          {
+            "float_values": [
+              1299.999959,
+              1299.999959,
+              1299.999959
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "stone_1"
+        }
+      ],
+      "loops": 1,
+      "name": "stone_1Action",
+      "start_time": 18560,
+      "type": "rotation_x"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 4200,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "stone_1"
+        }
+      ],
+      "loops": 1,
+      "name": "stone_1Action",
+      "start_time": 18520,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              38.323738,
+              0.38,
+              -15.539048
+            ],
+            "interpolation": "linear",
+            "time": 1440
+          },
+          {
+            "float_values": [
+              36.632763,
+              0.38,
+              -10.112587
+            ],
+            "interpolation": "linear",
+            "time": 200
+          },
+          {
+            "float_values": [
+              36.397903,
+              0.655813,
+              -9.358912
+            ],
+            "interpolation": "linear",
+            "time": 200
+          },
+          {
+            "float_values": [
+              36.163044,
+              0.38,
+              -8.605236
+            ],
+            "interpolation": "linear",
+            "time": 2360
+          },
+          {
+            "float_values": [
+              33.391724,
+              0.38,
+              0.288129
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "stone_1"
+        }
+      ],
+      "loops": 1,
+      "name": "stone_1Action",
+      "start_time": 18560,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 9640,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_25"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_25Action",
+      "start_time": 11800,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 10920,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_24"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_24Action",
+      "start_time": 11920,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 7200,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "tree_1"
+        }
+      ],
+      "loops": 1,
+      "name": "tree_1Action",
+      "start_time": 16880,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 7680,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_23"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_23Action",
+      "start_time": 15520,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 5680,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wind_turbine_stand_11"
+        }
+      ],
+      "loops": 1,
+      "name": "wind_turbine_stand_11Action",
+      "start_time": 10680,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": -0.0,
+            "interpolation": "linear",
+            "time": 6880
+          },
+          {
+            "float_values": -410.0,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wind_turbine_rotor_11"
+        }
+      ],
+      "loops": 1,
+      "name": "wind_turbine_rotor_11Action",
+      "start_time": 9840,
+      "type": "rotation_z"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 5680,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wind_turbine_rotor_11"
+        }
+      ],
+      "loops": 1,
+      "name": "wind_turbine_rotor_11Action",
+      "start_time": 10680,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 7200,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wind_turbine_stand_10"
+        }
+      ],
+      "loops": 1,
+      "name": "wind_turbine_stand_10Action",
+      "start_time": 9200,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": -0.0,
+            "interpolation": "linear",
+            "time": 7760
+          },
+          {
+            "float_values": -449.999992,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wind_turbine_rotor_10"
+        }
+      ],
+      "loops": 1,
+      "name": "wind_turbine_rotor_10Action",
+      "start_time": 8960,
+      "type": "rotation_z"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 7200,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wind_turbine_rotor_10"
+        }
+      ],
+      "loops": 1,
+      "name": "wind_turbine_rotor_10Action",
+      "start_time": 9200,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 7920,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wind_turbine_stand_9"
+        }
+      ],
+      "loops": 1,
+      "name": "wind_turbine_stand_9Action",
+      "start_time": 4120,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": -0.0,
+            "interpolation": "linear",
+            "time": 8160
+          },
+          {
+            "float_values": -540.000001,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wind_turbine_rotor_9"
+        }
+      ],
+      "loops": 1,
+      "name": "wind_turbine_rotor_9Action",
+      "start_time": 4320,
+      "type": "rotation_z"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 7920,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wind_turbine_rotor_9"
+        }
+      ],
+      "loops": 1,
+      "name": "wind_turbine_rotor_9Action",
+      "start_time": 4120,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 9000,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wind_turbine_stand_8"
+        }
+      ],
+      "loops": 1,
+      "name": "wind_turbine_stand_8Action",
+      "start_time": 4480,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": -0.0,
+            "interpolation": "linear",
+            "time": 9360
+          },
+          {
+            "float_values": -480.000013,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wind_turbine_rotor_8"
+        }
+      ],
+      "loops": 1,
+      "name": "wind_turbine_rotor_8Action",
+      "start_time": 4320,
+      "type": "rotation_z"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 9000,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wind_turbine_rotor_8"
+        }
+      ],
+      "loops": 1,
+      "name": "wind_turbine_rotor_8Action",
+      "start_time": 4480,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 8720,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wind_turbine_stand_7"
+        }
+      ],
+      "loops": 1,
+      "name": "wind_turbine_stand_7Action",
+      "start_time": 11040,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": -0.0,
+            "interpolation": "linear",
+            "time": 9200
+          },
+          {
+            "float_values": -575.000022,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wind_turbine_rotor_7"
+        }
+      ],
+      "loops": 1,
+      "name": "wind_turbine_rotor_7Action",
+      "start_time": 10720,
+      "type": "rotation_z"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 8720,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wind_turbine_rotor_7"
+        }
+      ],
+      "loops": 1,
+      "name": "wind_turbine_rotor_7Action",
+      "start_time": 11040,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 7520,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wind_turbine_stand_6"
+        }
+      ],
+      "loops": 1,
+      "name": "wind_turbine_stand_6Action",
+      "start_time": 10160,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": -0.0,
+            "interpolation": "linear",
+            "time": 8080
+          },
+          {
+            "float_values": -504.999981,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wind_turbine_rotor_6"
+        }
+      ],
+      "loops": 1,
+      "name": "wind_turbine_rotor_6Action",
+      "start_time": 9960,
+      "type": "rotation_z"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 7520,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wind_turbine_rotor_6"
+        }
+      ],
+      "loops": 1,
+      "name": "wind_turbine_rotor_6Action",
+      "start_time": 10160,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 4560,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wind_turbine_stand_5"
+        }
+      ],
+      "loops": 1,
+      "name": "wind_turbine_stand_5Action",
+      "start_time": 9160,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": -0.0,
+            "interpolation": "linear",
+            "time": 4880
+          },
+          {
+            "float_values": -380.000006,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wind_turbine_rotor_5"
+        }
+      ],
+      "loops": 1,
+      "name": "wind_turbine_rotor_5Action",
+      "start_time": 9200,
+      "type": "rotation_z"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 4560,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wind_turbine_rotor_5"
+        }
+      ],
+      "loops": 1,
+      "name": "wind_turbine_rotor_5Action",
+      "start_time": 9160,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 8200,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wind_turbine_stand_4"
+        }
+      ],
+      "loops": 1,
+      "name": "wind_turbine_stand_4Action",
+      "start_time": 6160,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": -0.0,
+            "interpolation": "linear",
+            "time": 8640
+          },
+          {
+            "float_values": -449.999992,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wind_turbine_rotor_4"
+        }
+      ],
+      "loops": 1,
+      "name": "wind_turbine_rotor_4Action",
+      "start_time": 6000,
+      "type": "rotation_z"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 8200,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wind_turbine_rotor_4"
+        }
+      ],
+      "loops": 1,
+      "name": "wind_turbine_rotor_4Action",
+      "start_time": 6160,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 7560,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wind_turbine_stand_3"
+        }
+      ],
+      "loops": 1,
+      "name": "wind_turbine_stand_3Action",
+      "start_time": 7440,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": -0.0,
+            "interpolation": "linear",
+            "time": 8600
+          },
+          {
+            "float_values": -370.000008,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wind_turbine_rotor_3"
+        }
+      ],
+      "loops": 1,
+      "name": "wind_turbine_rotor_3Action",
+      "start_time": 7040,
+      "type": "rotation_z"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 7560,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wind_turbine_rotor_3"
+        }
+      ],
+      "loops": 1,
+      "name": "wind_turbine_rotor_3Action",
+      "start_time": 7440,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 8840,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wind_turbine_stand_2"
+        }
+      ],
+      "loops": 1,
+      "name": "wind_turbine_stand_2Action",
+      "start_time": 7880,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": -0.0,
+            "interpolation": "linear",
+            "time": 9320
+          },
+          {
+            "float_values": -500.000009,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wind_turbine_rotor_2"
+        }
+      ],
+      "loops": 1,
+      "name": "wind_turbine_rotor_2Action",
+      "start_time": 7800,
+      "type": "rotation_z"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 8840,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wind_turbine_rotor_2"
+        }
+      ],
+      "loops": 1,
+      "name": "wind_turbine_rotor_2Action",
+      "start_time": 7880,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": -0.0,
+            "interpolation": "linear",
+            "time": 6920
+          },
+          {
+            "float_values": -460.000017,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wind_turbine_rotor_1"
+        }
+      ],
+      "loops": 1,
+      "name": "wind_turbine_rotor_1Action",
+      "start_time": 6720,
+      "type": "rotation_z"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 6640,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wind_turbine_rotor_1"
+        }
+      ],
+      "loops": 1,
+      "name": "wind_turbine_rotor_1Action",
+      "start_time": 6840,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 6640,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wind_turbine_stand_1"
+        }
+      ],
+      "loops": 1,
+      "name": "wind_turbine_stand_1Action",
+      "start_time": 6840,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 9400,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_21"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_21Action",
+      "start_time": 9240,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 10400,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_20"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_20Action",
+      "start_time": 9280,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 11720,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_19"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_19Action",
+      "start_time": 8120,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 8760,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_18"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_18Action",
+      "start_time": 7880,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 10800,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_17"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_17Action",
+      "start_time": 7160,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 9960,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_16"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_16Action",
+      "start_time": 6360,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 11320,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_15"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_15Action",
+      "start_time": 4840,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 9240,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_14"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_14Action",
+      "start_time": 5200,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 10360,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_13"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_13Action",
+      "start_time": 1160,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 11160,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_12"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_12Action",
+      "start_time": 2120,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 13320,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_11"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_11Action",
+      "start_time": 0,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 8880,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_10"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_10Action",
+      "start_time": 1840,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 10560,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_9"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_9Action",
+      "start_time": 0,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 6720,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_8"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_8Action",
+      "start_time": 0,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 7880,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_7"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_7Action",
+      "start_time": 0,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 9480,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_22"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_22Action",
+      "start_time": 0,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 5560,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_1"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_1Action.001",
+      "start_time": 0,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 6760,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_2"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_2Action",
+      "start_time": 0,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 3640,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_3"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_3Action",
+      "start_time": 0,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 4320,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_4"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_4Action",
+      "start_time": 0,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 3760,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_5"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_5Action",
+      "start_time": 0,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 4320,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mountain_6"
+        }
+      ],
+      "loops": 1,
+      "name": "mountain_6Action",
+      "start_time": 0,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 7120,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mushroom_8"
+        }
+      ],
+      "loops": 1,
+      "name": "mushroom_8Action",
+      "start_time": 13680,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 6800,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mushroom_6"
+        }
+      ],
+      "loops": 1,
+      "name": "mushroom_6Action",
+      "start_time": 14520,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 6960,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mushroom_7"
+        }
+      ],
+      "loops": 1,
+      "name": "mushroom_7Action",
+      "start_time": 13240,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 5520,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mushroom_2"
+        }
+      ],
+      "loops": 1,
+      "name": "mushroom_2Action",
+      "start_time": 15120,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 5040,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mushroom_1"
+        }
+      ],
+      "loops": 1,
+      "name": "mushroom_1Action",
+      "start_time": 14880,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 6120,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mushroom_5"
+        }
+      ],
+      "loops": 1,
+      "name": "mushroom_5Action",
+      "start_time": 15320,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 6320,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mushroom_4"
+        }
+      ],
+      "loops": 1,
+      "name": "mushroom_4Action",
+      "start_time": 13160,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 5880,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mushroom_3"
+        }
+      ],
+      "loops": 1,
+      "name": "mushroom_3Action",
+      "start_time": 13960,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.051164,
+              1.291025,
+              -0.0
+            ],
+            "interpolation": "linear",
+            "time": 30000
+          },
+          {
+            "float_values": [
+              48.466927,
+              1.291025,
+              -0.0
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "camera_1"
+        }
+      ],
+      "loops": 1,
+      "name": "camera_1Action",
+      "start_time": 0,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.113012,
+              -1.500653,
+              -16.027
+            ],
+            "interpolation": "linear",
+            "time": 30000
+          },
+          {
+            "float_values": [
+              48.449169,
+              2.28125,
+              -16.027,
+              48.449169,
+              2.28125,
+              -16.027,
+              48.449169,
+              2.28125,
+              -16.027
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "encore_logo"
+        }
+      ],
+      "loops": 1,
+      "name": "encore_logoAction.001",
+      "start_time": 0,
+      "type": "position_xyz"
+    }
+  ],
+  "cameras": [
+    {
+      "far_clip_plane": 100.0,
+      "fov_x": 49.134342,
+      "fov_y": 28.841546,
+      "hide": false,
+      "name": "camera_1",
+      "near_clip_plane": 0.1,
+      "position": [
+        -0.051164,
+        1.291025,
+        -0.0
+      ],
+      "rotation": [
+        3e-06,
+        0.0,
+        -0.0
+      ]
+    }
+  ],
+  "enc_info": {
+    "data_type": "ENCSCN",
+    "date": "18 Jul 2020 00:22:05",
+    "version": "2.0"
+  },
+  "loops": 1,
+  "name": "title_scene_1",
+  "objects": [
+    {
+      "material": {
+        "diffuse_color_rgba": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "specular_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "ti_hand",
+      "name": "hand_left",
+      "order": 99,
+      "position": [
+        -1.726921,
+        1.051641,
+        -1.958136
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        -91.308045
+      ]
+    },
+    {
+      "hide": true,
+      "name": "butterfly_6",
+      "position": [
+        33.956097,
+        2.416884,
+        -7.46964
+      ],
+      "rotation": [
+        -16.824658,
+        -15.957904,
+        -4.026943
+      ]
+    },
+    {
+      "hide": true,
+      "name": "butterfly_5",
+      "position": [
+        32.115456,
+        2.198663,
+        -7.154512
+      ],
+      "rotation": [
+        -55.146548,
+        25.602163,
+        -21.819963
+      ]
+    },
+    {
+      "hide": true,
+      "name": "butterfly_4",
+      "position": [
+        32.912712,
+        2.030546,
+        -6.891825
+      ],
+      "rotation": [
+        -34.200325,
+        -83.488121,
+        -22.106087
+      ]
+    },
+    {
+      "hide": true,
+      "name": "butterfly_3",
+      "position": [
+        32.449604,
+        1.569757,
+        -7.669117
+      ],
+      "rotation": [
+        -22.7607,
+        -57.482503,
+        -6.093262
+      ]
+    },
+    {
+      "hide": true,
+      "name": "butterfly_2",
+      "position": [
+        33.258003,
+        1.68606,
+        -7.424763
+      ],
+      "rotation": [
+        -10.081404,
+        -20.0963,
+        -16.075974
+      ]
+    },
+    {
+      "mesh_name": "ti_butterfly_1_wing_right",
+      "name": "butterfly_1_wing_right",
+      "position": [
+        1e-06,
+        1.5,
+        -20.293293
+      ]
+    },
+    {
+      "name": "butterfly_1",
+      "position": [
+        -2.811324,
+        1.364988,
+        -5.585468
+      ],
+      "rotation": [
+        -42.530888,
+        -90.000003,
+        -0.0
+      ]
+    },
+    {
+      "mesh_name": "ti_encore_logo_outline",
+      "name": "encore_logo_outline",
+      "position": [
+        -0.113012,
+        -1.500653,
+        -16.027016
+      ]
+    },
+    {
+      "mesh_name": "ti_background_1",
+      "name": "background_1"
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_mountain_12_outline",
+      "name": "mountain_27_outline",
+      "position": [
+        33.700066,
+        0.0,
+        -12.577621
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_mountain_21_outline",
+      "name": "mountain_28_outline",
+      "position": [
+        36.168877,
+        0.0,
+        -9.284166
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_mountain_14_outline",
+      "name": "mountain_26_outline",
+      "position": [
+        36.809498,
+        0.0,
+        -14.29503
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_mountain_23_outline",
+      "name": "mountain_23_outline",
+      "position": [
+        31.182751,
+        0.0,
+        -7.414311
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_mountain_24_outline",
+      "name": "mountain_24_outline",
+      "position": [
+        28.47921,
+        0.0,
+        -11.513414
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_mountain_25_outline",
+      "name": "mountain_25_outline",
+      "position": [
+        26.761871,
+        0.0,
+        -9.891825
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_mountain_20_outline",
+      "name": "mountain_20_outline",
+      "position": [
+        23.678682,
+        0.0,
+        -11.478676
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_mountain_21_outline",
+      "name": "mountain_21_outline",
+      "position": [
+        22.997578,
+        0.0,
+        -10.035462
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_mountain_19_outline",
+      "name": "mountain_19_outline",
+      "position": [
+        22.573528,
+        0.0,
+        -13.550547
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_mountain_17_outline",
+      "name": "mountain_17_outline",
+      "position": [
+        20.473167,
+        0.0,
+        -12.950224
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_mountain_18_outline",
+      "name": "mountain_18_outline",
+      "position": [
+        19.836319,
+        -0.00507,
+        -9.206762
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_mountain_16_outline",
+      "name": "mountain_16_outline",
+      "position": [
+        18.342276,
+        0.0,
+        -10.930653
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_mountain_15_outline",
+      "name": "mountain_15_outline",
+      "position": [
+        16.797512,
+        0.0,
+        -12.691798
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_mountain_14_outline",
+      "name": "mountain_14_outline",
+      "position": [
+        15.182893,
+        0.0,
+        -10.171366
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_mountain_10_outline",
+      "name": "mountain_10_outline",
+      "position": [
+        10.12857,
+        -0.009634,
+        -9.469036
+      ]
+    },
+    {
+      "mesh_name": "ti_mountain_7_outline",
+      "name": "mountain_7_outline",
+      "position": [
+        4.734904,
+        0.0,
+        -8.895448
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_mountain_12_outline",
+      "name": "mountain_12_outline",
+      "position": [
+        12.571495,
+        0.0,
+        -11.196896
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_mountain_13_outline",
+      "name": "mountain_13_outline",
+      "position": [
+        10.837047,
+        0.0,
+        -11.892654
+      ]
+    },
+    {
+      "mesh_name": "ti_mountain_9_outline",
+      "name": "mountain_9_outline",
+      "position": [
+        7.547597,
+        0.0,
+        -10.323037
+      ]
+    },
+    {
+      "mesh_name": "ti_mountain_22_outline",
+      "name": "mountain_22_outline",
+      "position": [
+        5.496198,
+        0.0,
+        -12.889081
+      ]
+    },
+    {
+      "mesh_name": "ti_mountain_4_outline",
+      "name": "mountain_4_outline",
+      "position": [
+        -0.783848,
+        0.0,
+        -9.238292
+      ]
+    },
+    {
+      "mesh_name": "ti_mountain_2_outline",
+      "name": "mountain_2_outline",
+      "position": [
+        2.083073,
+        0.0,
+        -11.565494
+      ]
+    },
+    {
+      "mesh_name": "ti_mountain_8_outline",
+      "name": "mountain_8_outline",
+      "position": [
+        2.980579,
+        0.0,
+        -9.696468
+      ]
+    },
+    {
+      "mesh_name": "ti_mountain_6_outline",
+      "name": "mountain_6_outline",
+      "position": [
+        0.0,
+        0.0,
+        -10.0
+      ]
+    },
+    {
+      "mesh_name": "ti_mountain_5_outline",
+      "name": "mountain_5_outline",
+      "position": [
+        -1.589324,
+        0.0,
+        -9.753079
+      ]
+    },
+    {
+      "mesh_name": "ti_mountain_3_outline",
+      "name": "mountain_3_outline",
+      "position": [
+        -3.08024,
+        0.0,
+        -10.841475
+      ]
+    },
+    {
+      "mesh_name": "ti_mountain_1_outline",
+      "name": "mountain_1_outline",
+      "position": [
+        -0.987028,
+        0.0,
+        -13.586305
+      ]
+    },
+    {
+      "mesh_name": "ti_mountain_11_outline",
+      "name": "mountain_11_outline",
+      "position": [
+        9.898911,
+        0.0,
+        -14.255323
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_mountain_21",
+      "name": "mountain_28",
+      "position": [
+        36.168877,
+        0.0,
+        -9.284166
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_mountain_12",
+      "name": "mountain_27",
+      "position": [
+        33.700066,
+        0.0,
+        -12.577621
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_mountain_14",
+      "name": "mountain_26",
+      "position": [
+        36.809498,
+        0.0,
+        -14.29503
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_stone_2",
+      "name": "stone_2",
+      "position": [
+        28.507229,
+        0.392411,
+        -16.013966
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_stone_3",
+      "name": "stone_3",
+      "position": [
+        32.314602,
+        0.21,
+        -15.855765
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_stone_1",
+      "name": "stone_1",
+      "position": [
+        38.323738,
+        0.38,
+        -15.539048
+      ]
+    },
+    {
+      "mesh_name": "ti_background_2",
+      "name": "background_2",
+      "position": [
+        0.0,
+        0.0,
+        0.212374
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_mountain_25",
+      "name": "mountain_25",
+      "position": [
+        26.761871,
+        0.0,
+        -9.891825
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_mountain_24",
+      "name": "mountain_24",
+      "position": [
+        28.47921,
+        0.0,
+        -11.513414
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_tree_1",
+      "name": "tree_1",
+      "position": [
+        32.836494,
+        0.0,
+        -7.687607
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_mountain_23",
+      "name": "mountain_23",
+      "position": [
+        31.182751,
+        0.0,
+        -7.414311
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_wind_turbine_stand_1",
+      "name": "wind_turbine_stand_11",
+      "position": [
+        21.566849,
+        0.0,
+        -7.634512
+      ],
+      "rotation": [
+        0.0,
+        45.000001,
+        -0.0
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_wind_turbine_rotor_1",
+      "name": "wind_turbine_rotor_11",
+      "position": [
+        21.566849,
+        2.0,
+        -7.634511
+      ],
+      "rotation": [
+        0.0,
+        45.000001,
+        -0.0
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_wind_turbine_stand_1",
+      "name": "wind_turbine_stand_10",
+      "position": [
+        20.20838,
+        0.0,
+        -9.861832
+      ],
+      "rotation": [
+        0.0,
+        45.000001,
+        -0.0
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_wind_turbine_rotor_1",
+      "name": "wind_turbine_rotor_10",
+      "position": [
+        20.20838,
+        2.0,
+        -9.861831
+      ],
+      "rotation": [
+        0.0,
+        45.000001,
+        -0.0
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_wind_turbine_stand_1",
+      "name": "wind_turbine_stand_9",
+      "position": [
+        12.759486,
+        0.0,
+        -10.566003
+      ],
+      "rotation": [
+        0.0,
+        45.000001,
+        -0.0
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_wind_turbine_rotor_1",
+      "name": "wind_turbine_rotor_9",
+      "position": [
+        12.759486,
+        2.0,
+        -10.566002
+      ],
+      "rotation": [
+        0.0,
+        45.000001,
+        -0.0
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_wind_turbine_stand_1",
+      "name": "wind_turbine_stand_8",
+      "position": [
+        14.115213,
+        0.0,
+        -12.691793
+      ],
+      "rotation": [
+        0.0,
+        45.000001,
+        -0.0
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_wind_turbine_rotor_1",
+      "name": "wind_turbine_rotor_8",
+      "position": [
+        14.115213,
+        2.0,
+        -12.691792
+      ],
+      "rotation": [
+        0.0,
+        45.000001,
+        -0.0
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_wind_turbine_stand_1",
+      "name": "wind_turbine_stand_7",
+      "position": [
+        24.57959,
+        0.0,
+        -12.34708
+      ],
+      "rotation": [
+        0.0,
+        45.000001,
+        -0.0
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_wind_turbine_rotor_1",
+      "name": "wind_turbine_rotor_7",
+      "position": [
+        24.57959,
+        2.0,
+        -12.347079
+      ],
+      "rotation": [
+        0.0,
+        45.000001,
+        -0.0
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_wind_turbine_stand_1",
+      "name": "wind_turbine_stand_6",
+      "position": [
+        22.184855,
+        0.0,
+        -10.691141
+      ],
+      "rotation": [
+        0.0,
+        45.000001,
+        -0.0
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_wind_turbine_rotor_1",
+      "name": "wind_turbine_rotor_6",
+      "position": [
+        22.184855,
+        2.0,
+        -10.69114
+      ],
+      "rotation": [
+        0.0,
+        45.000001,
+        -0.0
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_wind_turbine_stand_1",
+      "name": "wind_turbine_stand_5",
+      "position": [
+        18.246017,
+        0.0,
+        -5.224361
+      ],
+      "rotation": [
+        0.0,
+        45.000001,
+        -0.0
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_wind_turbine_rotor_1",
+      "name": "wind_turbine_rotor_5",
+      "position": [
+        18.246017,
+        2.0,
+        -5.22436
+      ],
+      "rotation": [
+        0.0,
+        45.000001,
+        -0.0
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_wind_turbine_stand_1",
+      "name": "wind_turbine_stand_4",
+      "position": [
+        16.252161,
+        0.0,
+        -11.446124
+      ],
+      "rotation": [
+        0.0,
+        45.000001,
+        -0.0
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_wind_turbine_rotor_1",
+      "name": "wind_turbine_rotor_4",
+      "position": [
+        16.252161,
+        2.0,
+        -11.446123
+      ],
+      "rotation": [
+        0.0,
+        45.000001,
+        -0.0
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_wind_turbine_stand_1",
+      "name": "wind_turbine_stand_3",
+      "position": [
+        17.859877,
+        0.0,
+        -10.612356
+      ],
+      "rotation": [
+        0.0,
+        45.000001,
+        -0.0
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_wind_turbine_rotor_1",
+      "name": "wind_turbine_rotor_3",
+      "position": [
+        17.859877,
+        2.0,
+        -10.612355
+      ],
+      "rotation": [
+        0.0,
+        45.000001,
+        -0.0
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_wind_turbine_stand_1",
+      "name": "wind_turbine_stand_2",
+      "position": [
+        19.652697,
+        0.0,
+        -12.625171
+      ],
+      "rotation": [
+        0.0,
+        45.000001,
+        -0.0
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_wind_turbine_rotor_1",
+      "name": "wind_turbine_rotor_2",
+      "position": [
+        19.652697,
+        2.0,
+        -12.62517
+      ],
+      "rotation": [
+        0.0,
+        45.000001,
+        -0.0
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_wind_turbine_rotor_1",
+      "name": "wind_turbine_rotor_1",
+      "position": [
+        15.960342,
+        2.0,
+        -8.69469
+      ],
+      "rotation": [
+        0.0,
+        45.000001,
+        -0.0
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_wind_turbine_stand_1",
+      "name": "wind_turbine_stand_1",
+      "position": [
+        15.960342,
+        0.0,
+        -8.694691
+      ],
+      "rotation": [
+        0.0,
+        45.000001,
+        -0.0
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_mountain_21",
+      "name": "mountain_21",
+      "position": [
+        22.997578,
+        0.0,
+        -10.035462
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_mountain_20",
+      "name": "mountain_20",
+      "position": [
+        23.678682,
+        0.0,
+        -11.478676
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_mountain_19",
+      "name": "mountain_19",
+      "position": [
+        22.573528,
+        0.0,
+        -13.550547
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_mountain_18",
+      "name": "mountain_18",
+      "position": [
+        19.836319,
+        0.0,
+        -9.206762
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_mountain_17",
+      "name": "mountain_17",
+      "position": [
+        20.473167,
+        0.0,
+        -12.950224
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_mountain_16",
+      "name": "mountain_16",
+      "position": [
+        18.342276,
+        0.0,
+        -10.930653
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_mountain_15",
+      "name": "mountain_15",
+      "position": [
+        16.797512,
+        0.0,
+        -12.691798
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_mountain_14",
+      "name": "mountain_14",
+      "position": [
+        15.182893,
+        0.0,
+        -10.171366
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_mountain_13",
+      "name": "mountain_13",
+      "position": [
+        10.837047,
+        0.0,
+        -11.892654
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_mountain_12",
+      "name": "mountain_12",
+      "position": [
+        12.571495,
+        0.0,
+        -11.196896
+      ]
+    },
+    {
+      "mesh_name": "ti_mountain_11",
+      "name": "mountain_11",
+      "position": [
+        9.898911,
+        0.0,
+        -14.255323
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_mountain_10",
+      "name": "mountain_10",
+      "position": [
+        10.12857,
+        0.0,
+        -9.469036
+      ]
+    },
+    {
+      "mesh_name": "ti_mountain_9",
+      "name": "mountain_9",
+      "position": [
+        7.547597,
+        0.0,
+        -10.323037
+      ]
+    },
+    {
+      "mesh_name": "ti_mountain_8",
+      "name": "mountain_8",
+      "position": [
+        2.980579,
+        0.0,
+        -9.696468
+      ]
+    },
+    {
+      "mesh_name": "ti_mountain_7",
+      "name": "mountain_7",
+      "position": [
+        4.734904,
+        0.0,
+        -8.895448
+      ]
+    },
+    {
+      "mesh_name": "ti_mountain_22",
+      "name": "mountain_22",
+      "position": [
+        5.496198,
+        0.0,
+        -12.889081
+      ]
+    },
+    {
+      "mesh_name": "ti_mountain_1",
+      "name": "mountain_1",
+      "position": [
+        -0.987028,
+        0.0,
+        -13.586305
+      ]
+    },
+    {
+      "mesh_name": "ti_mountain_2",
+      "name": "mountain_2",
+      "position": [
+        2.083073,
+        0.0,
+        -11.565494
+      ]
+    },
+    {
+      "mesh_name": "ti_mountain_3",
+      "name": "mountain_3",
+      "position": [
+        -3.08024,
+        0.0,
+        -10.841475
+      ]
+    },
+    {
+      "mesh_name": "ti_mountain_4",
+      "name": "mountain_4",
+      "position": [
+        -0.783848,
+        0.0,
+        -9.238292
+      ]
+    },
+    {
+      "mesh_name": "ti_mountain_5",
+      "name": "mountain_5",
+      "position": [
+        -1.589324,
+        0.0,
+        -9.753079
+      ]
+    },
+    {
+      "mesh_name": "ti_mountain_6",
+      "name": "mountain_6",
+      "position": [
+        0.0,
+        0.0,
+        -10.0
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_mushroom_8",
+      "name": "mushroom_8",
+      "position": [
+        27.973736,
+        -0.0,
+        -10.729991
+      ],
+      "rotation": [
+        0.0,
+        -44.8688,
+        0.0
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_mushroom_6",
+      "name": "mushroom_6",
+      "position": [
+        28.914738,
+        0.671154,
+        -9.975757
+      ],
+      "rotation": [
+        0.0,
+        31.717018,
+        0.0
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_mushroom_7",
+      "name": "mushroom_7",
+      "position": [
+        27.114557,
+        -0.0,
+        -10.341379
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_mushroom_2",
+      "name": "mushroom_2",
+      "position": [
+        29.003075,
+        0.369084,
+        -7.869226
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_mushroom_1",
+      "name": "mushroom_1",
+      "position": [
+        28.181421,
+        0.970598,
+        -6.840158
+      ],
+      "rotation": [
+        0.0,
+        -115.333441,
+        0.0
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_mushroom_5",
+      "name": "mushroom_5",
+      "position": [
+        29.758003,
+        0.907749,
+        -8.954709
+      ],
+      "rotation": [
+        0.0,
+        103.985334,
+        0.0
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_mushroom_4",
+      "name": "mushroom_4",
+      "position": [
+        26.343586,
+        -0.0,
+        -9.255613
+      ],
+      "rotation": [
+        0.0,
+        -149.510163,
+        0.0
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ti_mushroom_3",
+      "name": "mushroom_3",
+      "position": [
+        27.371113,
+        0.584071,
+        -8.332143
+      ],
+      "rotation": [
+        0.0,
+        -57.604695,
+        0.0
+      ]
+    },
+    {
+      "mesh_name": "ti_encore_logo",
+      "name": "encore_logo",
+      "position": [
+        -0.113012,
+        -1.500653,
+        -16.027
+      ]
+    },
+    {
+      "mesh_name": "ti_butterfly_1_trunk",
+      "name": "butterfly_1_trunk",
+      "position": [
+        1e-06,
+        1.5,
+        -20.293293
+      ]
+    },
+    {
+      "mesh_name": "ti_butterfly_1_wing_left",
+      "name": "butterfly_1_wing_left",
+      "position": [
+        1e-06,
+        1.5,
+        -20.293293
+      ]
+    }
+  ],
+  "properties": {
+    "start_butterflies": 0
+  },
+  "time": 28960
+}

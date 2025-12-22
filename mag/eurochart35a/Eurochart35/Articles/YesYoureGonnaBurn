@@ -1,0 +1,218 @@
+»CL9:--------------------------------------
+       »CL8:»BIG: Squirrel CDR package
+»SML:      »BIG:review for A1200 + SCSI
+»CL9:»SML:--------------------------------------
+
+»CL5:            By Bucko/Depth
+
+»CL0:It was not long ago that CD writing,
+especially on the Amiga, was reserved
+for those with copious amounts of
+money and patience. Early CD-Writing
+software for the Amiga consisted of a
+few thrown together utilities from
+Commodore and both media and drives
+were expensive. However, as time moved
+on things started to change, drives
+came down in price, and Asimware gave
+us the first really usable piece of
+CD-Writing software in the shape of
+MasterISO, and it was now that things
+began to get interesting.  The demands
+that CD burning places on any system
+are high, unlike hard or floppy disks,
+recordable CD's require a continuous
+stream of data to be written to them.
+What this means is that you can't
+interrupt the writing process and copy
+a few files now, then add a few later.
+Standard recordable CD's can only be
+written to once, and those experienced
+in CD burning will tell you that you
+should always use an image file that
+has been written to your hard disk.
+This is a much safer method of writing
+CD's and results in a lot less
+'costers' (unusable CD's). However
+bear in mind that CD image files can
+take up to 700mb on your hard disk.
+You will also need a hefty chunk of
+free fast ram (about 4MB at least) for
+a buffer as a safety margin for hard
+disk read error. A SCSI interface is
+also essential, and for some reason a
+standard squirrel doesn't seem to be
+up to the job. Upgrade it to a surfer,
+however, and you're ready to burn.
+
+      »PIC:Judas2.iff»
+
+
+
+
+
+
+
+
+
+
+
+
+If you meet those hardware
+requirements you can now go out and
+purchase from the innovative Hisoft, a
+2x write 6x read CD-Burner for use
+with your SCSI equipped A1200. The
+asking price for said unit is a mere
+£429.95. What's more it even supports
+the new re-writable media, but more on
+that later. The drive is shipped with
+the MakeCD CD-Writing software, now in
+it's 3rd revision, MakeCD is getting
+better all of the time. Although it
+may seem daunting to some, MakeCD is a
+powerful piece of kit, it features
+online help throughout and now even
+ships with a manual which does a
+reasonable job of explaining the
+basics of the package. Although it is
+not the user friendliest piece of
+software a reasonably competent Amiga
+user can be up and burning CD's within
+minutes of installing MakeCD to their
+hard Drive. MakeCD supports two types
+of writing to CD's, Track at once and
+disk at once. Track at once will write
+one track, be it audio or data at once
+to the CD, this should be adequate for
+most people's needs. Disk at once is
+an optional extra and costs £20, with
+this feature you are granted the power
+to exactly change the timing of the
+tracks on your CD. And if anybody was
+wondering, yes this does make MakeCD
+an ideal package for 'backing up' your
+console games, but the less said about
+that the better.
+
+So the software is good, what about
+the hardware? The drive shipped with
+the bundle is a Ricoh 26000, it
+performed writing and re-writing
+operations without any faults when
+used with the squirrel and a 4MB
+buffer. However, there is a fault with
+this drive that may put many people
+off. Reading audio tracks from CD's
+with the Ricoh is a no-goer. A problem
+with the drives firmware means that
+any audio tracks you read with the
+device will have background crackling,
+the effect is somewhat like having a
+bowl of rice crispies while listening
+to your music. The problem is curable,
+simply upgrade the firmware, although
+doing so will mean that you have to
+swallow your pride and connect the
+device to a PC since Ricoh themselves
+do not support the Amiga. If you have
+another CD rom drive connected to the
+Amiga you may be able to use that to
+read audio, not all drives are capable
+of this however (particularly older
+models). In tests a 24 speed ATAPI
+drive was used and this performed
+faultlessly.
+  »PIC:Wade1.iff»
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+So is it sounding good so far? There
+are a few things you should bear in
+mind before taking the plunge. If you
+are using a squirrel to connect the
+drive you will be pushing the device
+to its absolute limit. You can forget
+about doing anything else with your
+computer while making your CD's, the
+squirrel will mercilessly hog every
+single ounce of computing power from
+your Amiga. Also if you are going to
+be writing a lot of Audio data be
+advised that the squirrel can only
+manage to write audio data at single
+speed, so be prepared to wait around
+for a while. If you use a different
+SCSI controller you can of course
+ignore all these limitations and even
+feel free to invest in a faster four
+speed cd writer. The squirrel,
+however, cannot cope with the 4 speed
+CD burners.
+
+You may remember that I said the
+Ricoh supports re-writable CD's.
+However this is of limited use at the
+moment. Re-writables cost around 10-15
+pounds each and all the limitations of
+conventional CD writing applies to
+them. In a nutshell don't expect to be
+having an extra 650mb of random access
+storage space, at least not until
+someone comes up with some 'packet
+writing' software for the Amiga.
+Another thing you should remember
+about the new re-writable cd's is that
+they cannot be read in a lot of CD
+drives. Any older devices produced
+before the invention of the
+re-writable will certainly not
+recognise the disks. Their potential
+as a backup medium is limited also
+since it is not possible to write
+directly to the hard disk without
+creating an image file first. So if
+you wanted to create a backup of a
+400MB hard disk partition onto a CD
+you would need an additional empty
+400MB of hard disk space to store the
+image file. This may not, however, be
+the case with faster SCSI controllers,
+but it is with the squirrel.
+
+Despite the faults the Ricoh has
+proved a useful addition to my Amiga
+set-up, the shelves of floppy disks
+are now gone and in their place is a
+single compact disk, a much more
+elegant solution. My friend and I have
+recently put some of our Amiga music
+modules onto compact disk, using
+Octamed and MakeCD the process is easy
+and the end result can be enjoyed (or
+hated!) by almost anyone. The only
+real problem is the squirrel, it
+really does exhibit its weaknesses
+when performing CD writing operations.
+If you can tolerate the faults then,
+like me, you should find this package
+an ideal investment for your CD
+burning needs. If your pockets are
+deeper, or you have a different SCSI
+controller from the squirrel, it may
+be more advisable to purchase MakeCD
+software separately from Hisoft and
+invest in a compatible 4 speed writer.
+The choice is yours but whatever you
+choose, happy burning.

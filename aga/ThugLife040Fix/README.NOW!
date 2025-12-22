@@ -1,0 +1,24 @@
+
+- How to run the demo on '040/'060 based systems...
+
+	1. Boot without startup-sequence
+	2. CPU CACHE
+	3. Thug_Life.040
+
+- Do NOT run Setpatch! If you do so you will enable CopyBack mode -> demo
+will crash.
+
+- Some comments for coders...
+
+	The guys play around happily with the CACR register (the demo runs
+in supervisor mode) and therefore it doesn't work on '040, so I just
+replaced those CACR accesses by a CPUSHA BC and it magically works. Easy
+eh? And of course once you do so the demo won't run again on '030.
+
+
+Yours sincerelly,
+                 Flynn/Capsule
+
+
+P.S: Send any comment to C950158@zipi.fi.upm.es
+

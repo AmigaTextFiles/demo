@@ -1,0 +1,525 @@
+»CL8:»SML:--------------------------------------
+»CL9:»BIG:How to overclock CyberVision64/3D
+»CL8:»SML:--------------------------------------
+
+»CL4:            by Troda/Pegas
+
+»CL0:The Cybervision64/3D (henceforth to be
+referred to as the CV3D in this
+article), is a Zorro II/III compatible
+video card which is based on the ViRGE
+chip which was designed for PCI
+applications. There was also a VLBUS
+version, which would be much faster
+when writing, however, unfortunately,
+it would only be suitable for Zorro
+III usage. Likewise, the earlier CV64
+was ZIII only as it used the VLBUS
+Trio64 chip. The CV64 also had an
+inbuilt monitor switcher which did not
+scandouble the native Amiga
+screenmodes, unlike the CV3D which had
+provision for an optional scandoubler,
+using the Amiga's video slot. Since
+the CV64 used the VLBUS-based Trio64
+chip, it is twice as fast when
+comparing writing speed into gfx
+memory when compared to the newer CV3D
+as there was no requirement for a PCI
+to ZorroIII bridge and it's consequent
+overheads. This is because the VLBUS
+is nearly the same as ZorroIII and is
+asynchronous, like Zorro III. PCI uses
+a synchronous design and as a result,
+the CV64 was the fastest Amiga Zorro
+graphics card available in regards to
+writing to video memory, however it
+lacks such features as PIP, 3D
+hardware rendering and scandoubler as
+is found on the CV3D. Note that the
+PicassoIV is also much faster that the
+»CL0:CV3D and it also contains a
+flickerfixer.
+
+»PIC:Atomic.320x128»
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Although the CV3D was officially
+fitted with the ViRGE chip, there was
+a later version of the ViRGE chip,
+which may have found it's way into
+some of the later CV3D cards. This was
+the ViRGE DX chip, which will be
+examined in more detail later in this
+article. The information on the DX
+chip is currently incomplete since I
+am lacking some official information
+from Phase5. If anyone out there has a
+CV3D with a ViRGE DX chip, please
+contact me.
+
+
+
+
+
+
+
+»CL9:    Video Memory and overclocking
+»CL8:--------------------------------------
+»CL0:Overclocking the CV3D basically
+involves changing some environment
+variables since video memory clock
+speed is programmable. The main
+limiting factor here is your video
+memory speed. The CV3D is normally
+supplied with 70nS memory, which will
+allow a modest amount of overclocking.
+Much more can be obtained if the video
+memory on the CV3D is replaced with
+faster chips. I replaced my original
+70nS chips with 25nS chips, however,
+40 or 45nS chips are still more than
+fast enough because the ViRGE chip
+can't work reliably at the maximum
+speed appropriate to 25nS memory. In
+any case, just about anything that is
+faster than 70nS will be worthwhile.
+The chips you need are standard
+512KBx4 video DRAMs, as used on pC
+video cards. These RAMs could be taken
+from a ViRGE-based video card, in
+which case you could be sure that they
+will work. EDO RAM should also be OK,
+although I did not test them. I don't
+expect any speed advantage from using
+EDO as the memory controller and
+interface in the card will need to be
+modified to gain the improvements, and
+these modifications would be out of
+the scope for this simple hack. The
+RAMs will need to be changed by an
+electronics technician, as they are
+surface mount and hard to remove
+without damaging the PCB. My memory
+chips were taken from an Eagle Power
+3D card which contains a ViRGE DX
+chip. Note that all figures quoted in
+»CL0:this text will assume the memory has
+been replaced. Naturally, you won't be
+able to overclock as much if you are
+using the standard 70nS memory. Many
+people have reported diferent maximum
+clock speeds, but around 70MHz is the
+most you can expect with the standard
+70nS RAMs, if you are lucky!
+
+
+
+           »PIC:128x51»
+
+
+
+
+
+
+
+
+»CL9:    Overclocking with CyberGraphX
+»CL8:--------------------------------------
+»CL0:Memory clock speed is set by a
+tooltype in the CyberGraphX monitor
+(found in devs/monitors). Note there
+may be variations in this name
+depending on which version of
+CyberGraphX you are running. If you
+find that this doesn't work, because
+you are using an old CyberGraphX v3,
+then try to update it or contact me.
+All you have to do is either edit or
+add MEMCLOCK=77 to the tooltypes. If
+you have not changed your memory, the
+maximum value you can use will be
+about 70. The default value is 55. If
+you use too high a value, your screen
+will be corrupt the next time you
+boot. While you are editing the
+tooltypes, I suggest you also add
+»CL0:ADVANCEDCLK=YES as well. This will
+give you greater flexibility in
+editing your screenmodes later, and
+will help you get the most out of your
+overclocking. Once you have saved it,
+reboot. You will now find that
+blitting operations such as scrolling,
+filling, blit bitmap etc.. are now
+faster. You can also now edit your
+screenmodes for higher refresh rates
+to reduce flicker. For example, with
+MEMCLOCK=77, you will now be able to
+get 1024x768 24-bit noninterlaced at
+69Hz without the "digital noise" which
+happens when anything is moving on the
+screen. This is because faster memory
+allows the internal DAC in the chip to
+work faster, providing higher
+resolutions. Finally, avoid the
+temptation to set the MEMCLOCK too
+high - you will get a severely corrupt
+screen, making it difficult to see for
+the purposes of correcting it! Go
+little by little, when corruption
+appears, back off a bit and test
+thoroughly, over a period of several
+hours. If you have gone too high (such
+as 99MHz!), and you can't correct the
+clock setting because of screen
+corruption or crashing, try booting
+without the Startup-sequence and type
+"LoadWB". This will allow you to boot
+your system using the standard Amiga
+display, and you can then edit the
+tooltype to a more sensible value.
+Note that there is little risk of
+damaging the card, as it is inactive
+at this time.
+
+
+»CL9:  Overclocking with P96 (Picasso 96)
+»CL8:--------------------------------------
+»CL0:As in CyberGraphX, you will need to
+add or change a couple of tooltypes.
+these are: MemoryClock=77 and
+OverClock=YES. At the moment, however,
+the maximum allowable value for
+MemoryClock is 75. Hopefully, Tobias,
+the author of P96 may be convinced to
+increase it in future. It is possible
+to change this maximum limit by using
+FileX (version 2.0b5, available from
+Aminet). Open the P96 file in
+Libs:Picasso96 S3VIRGE.chip and search
+for the hex equivalent of 75000000
+(047868c0). Replace this value with
+the new maximum limit you desire, eg:
+- 99000000 for 99MHz. That is 05e69ec0
+in hex. Disable String search option
+in the Filex 2.0 Search/Replace
+requester before you start editing. If
+you are using an OLD version of p96,
+replace only the first value. Save and
+reboot. Now you will be able to set
+your MemoryClock up to a maximum of
+99. Don't forget, as in the
+CyberGraphx case, if you haven't
+changed your RAM, the maximum
+allowable will only be about 70Mhz.
+You may find that using P96 you will
+end with a slightly lower clock
+(1-2MHz) than CyberGraphX. This is
+because P96 uses a chip function
+called "occlusion" which prevents
+visual overdrawing windows and menus
+by PIP window. (when these are
+correctly opened through the P96 API)
+
+
+
+»CL9:               Testing
+»CL8:--------------------------------------
+»CL0:Once you have selected the values that
+you like, and your system has been
+working OK for several hours, select a
+screenmode that uses the highest
+possible bandwidth (the highest pixel
+clock setting), and open a PIP window
+on it. Drag it around. Try resizing
+it, making it alternately small and
+large, narrow and wide. There should
+be no corruption on the screen during
+these movements. If there is you will
+need to back off a bit on your new
+pixelclock settings. A good example of
+a PIP screen is Megademo/Artwork (best
+to adjust the window for the smallest
+possible width and the biggest
+possible height - this will ensure the
+most rigorous conditions for this test).
+
+
+
+ »PIC:GreenEye96x105»   »CL1:           David Myers hint:
+»CL0:               Another test (for
+               CyberGraphX users), if
+               you have set up your WB
+               with opaque move (from
+               MCP), you can open up
+               the test pattern in the
+               CGraphX mode program
+               (in prefs) and drag
+               around the settings
+               requester. You can do
+               it for each screenmode
+               you are setting up.
+
+
+
+
+»CL9:            ViRGE DX Chip
+»CL8:--------------------------------------
+»CL0:A further improvement can be obtained
+by also replacing the ViRGE chip to
+the later DX version. I tried this and
+ran into a few problems. 8-bit
+screenmodes were corrupt (see attached
+picture). There were also problems
+with displaying PIP images, though my
+PIP tests were also using 8-bit
+background screenmodes. I think that
+these problems are possibly caused by
+differences in the way the DX chip
+reads/stores palette information,
+since the first 16 colours are OK,
+then the next 16 are trashed, then the
+16 after that are OK, and so on....
+Tobias Abt (the author of P96) has
+said that if he can get hold of a card
+with a DX chip, he will be able to
+update P96 to support it. People who
+have CV3D cards with DX chips fitted
+by Phase5 report that there are no
+problems with 8-bit screenmodes,
+although they have found that PIP does
+not work at all. It seems that there
+are some differences with the boards.
+If you have one, I would like to find
+out what they are.
+
+The DX chip (I had it tested and
+working in the CV3D) promises to
+provide much faster 3D rendering. In
+addition, there is a 30% speedup at
+any given clock speed compared to the
+older ViRGE chip and finally, it is
+possible to clock the DX chip at
+higher frequencies - such as 99MHz.
+For example, at 99MHz, using an 8-bit
+800x600 screen at 100Hz, I was able to
+»CL0:scroll it at up to 252fps! (that is
+normal PicassoIV speed, BTW) But at              »PIC:EC38.160x145»
+99MHz are there some small gfx errors
+- chip can't handle that clock
+realiably. However, backing off a
+little to 92Mhz provides correct
+operation, and is still much faster
+than 77Mhz, which I am using now.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+»CL9:Benchmarks
+»CL8:-------------------------------------------------------------------------------
+»CL4:p96speed 1.2, a1200 Micronik Z2, CV3D
+800x600x8bit 100Hz refresh memory clock 77Mhz
+
+»CL6:                               cgx 4.1 p96 1.44b4      cgx 4.1 p96 1.44b4
+                               55 MHz      55 Mhz      77 Mhz      77 Mhz
+
+»CL5:RectFill()................ »CL6:  1760 op/s»CL5:   1640 op/s»CL6:   2396 op/s»CL5:   2868 op/s
+»CL5:RectFill() Pattern........»CL6:    283 op/s»CL5:   1606 op/s»CL6:    273 op/s»CL5:   2765 op/s
+»CL5:WritePixel()..............»CL6: 250293 op/s»CL5: 118549 op/s»CL6: 244927 op/s»CL5: 118879 op/s
+»CL5:WriteChunkyPixels().......»CL6:    168 op/s»CL5:    207 op/s»CL6:    168 op/s»CL5:    207 op/s
+»CL5:WritePixelArray8()........»CL6:    205 op/s»CL5:    206 op/s»CL6:    204 op/s»CL5:    206 op/s
+»CL5:WritePixelLine8().........»CL6:  12317 op/s»CL5:  11678 op/s»CL6:  10916 op/s»CL5:  11743 op/s
+»CL5:DrawEllipse().............»CL6:   5340 op/s»CL5:   5170 op/s»CL6:   5145 op/s»CL5:   5190 op/s
+»CL5:DrawCircle()..............»CL6:   5567 op/s»CL5:   5423 op/s»CL6:   5173 op/s»CL5:   5517 op/s
+»CL5:Draw()....................»CL6:   8036 op/s»CL5:   9178 op/s»CL6:   8385 op/s»CL5:  10984 op/s
+»CL5:Draw() Hor/Ver............»CL6:   9953 op/s»CL5:  15156 op/s»CL6:   8718 op/s»CL5:  17013 op/s
+»CL5:ScrollRaster() X..........»CL6:    112 op/s»CL5:    102 op/s»CL6:    175 op/s»CL5:    182 op/s
+»CL5:ScrollRaster() Y..........»CL6:    110 op/s»CL5:     99 op/s»CL6:    172 op/s»CL5:    180 op/s
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+»CL5:PutText()................. »CL6:  4789 op/s»CL5:   5265 op/s»CL6:   4194 op/s»CL5:   5278 op/s
+»CL5:BlitBitMap().............. »CL6:  4740 op/s»CL5:   5523 op/s»CL6:   4945 op/s»CL5:   7460 op/s
+»CL5:BlitBitMapRastPort()...... »CL6:  4192 op/s»CL5:   4843 op/s»CL6:   4089 op/s»CL5:   6205 op/s
+»CL5:BitMapScale()............. »CL6:    29 op/s»CL5:     46 op/s»CL6:     30 op/s»CL5:     47 op/s
+»CL5:OpenWindow().............. »CL6:    92 op/s»CL5:    116 op/s»CL6:     88 op/s»CL5:    118 op/s
+»CL5:MoveWindow().............. »CL6:   518 op/s»CL5:    477 op/s»CL6:    545 op/s»CL5:    529 op/s
+»CL5:SizeWindow().............. »CL6:   133 op/s»CL5:    169 op/s»CL6:    127 op/s»CL5:    154 op/s
+»CL5:CON-Output................ »CL6:   154 op/s»CL5:    160 op/s»CL6:    213 op/s»CL5:    248 op/s
+»CL5:ScreenToFront()........... »CL6:    50 op/s»CL5:     60 op/s»CL6:     50 op/s»CL5:     60 op/s
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+»CL0:Note that blitter routines (important
+for scrolling) are sped up by 1.8x. At
+99MHz, using a DX chip, the speed up
+is 2.5x. Amazing, eh? Also note that
+blitter operations are faster using
+P96 ie: BitMapBlit etc... Of course,
+things that rely on Zorro bus speed,
+such as writing tests are not affected
+by memory clock. Tests shown here are
+with Zorro II. Dropping refresh down
+to 75Hz should provide a further
+increase in speed, however, I prefer
+100Hz. Keep that in mind if you get
+faster results than me, the you are
+using a lower refresh rate. Note that
+I am using 100Hz refresh for all my
+RTG software settings.
+
+
+»CL9:          What RTG software?
+»CL8:--------------------------------------
+»CL0:I had been using CGX for many years,
+and I decided to try P96, as I was
+unhappy with the bugs I had in CGX. I
+was amazed with the results.
+Everything seems to be about twice as
+fast! Booting is faster, menus are
+much faster (for example in CeD they
+are about 10x faster). Moving windows
+is faster. WB backdrops are textured
+much faster, scrolling... etc. This
+appears to be because P96 makes
+extensive use of the blitter whereas
+CGX uses fast-RAM for the parts of the
+screen that are under windows. This is
+of great value in a ZII machine like
+mine because access to the blitter is
+far faster compared to going through
+the ZII bus to get to fast RAM. I
+suspect using the blitter in this case
+is almost 30x faster. Using the
+onboard blitter would still be faster
+when using ZIII. This is still true in
+the case of cards using faster custom
+buses such as the Phase5 CVPPC and
+Bvision. In this case, using the
+blitter in the Permedia2 chip should
+be about 10x faster than accessing
+Fast RAM. Other advantages I found
+using P96 are: - no more PIP
+overwriting menus, windows etc. - P96
+uses the occlusion feature of ViRGE
+here. Graphics bugs I had before
+(centering and cleaning hi/tru color
+screens) are also not evident in P96.
+P96 can open 24bit screens, CGX only
+32bit (+alpha). There virtually is no
+difference, but ViRGE can do texturing
+only in 24bit, not in 32 bit, so when
+Warp3D adds support for that,
+then...!! =) (15bit & dither sucks!)
+Also many programs need 24bit (R8G8B8)
+instead of 32bit (ARGB) mode... (at
+least some betas... and mostly from
+PicassoIV owners) It is also possible
+to create a 160*120 pixel screen with
+P96, unlike CGX, which won't allow you
+to set a low enough pixel clock to to
+avoid having your vertical refresh
+over 120Hz 9or simply over what your
+monitor can handle =). Also P96 will
+have in future the possibility of
+opening an 8bit PIP on CV3D, as
+promised by the author. You can see
+the comparisons in the benchmarks
+above, so I think P96 is very much
+worth a try, if you have a supported
+GFX card like PicassoIV, PicassoII,
+CV3D, CV64 or Retina or... =)
+Unfortunately, there is currently no
+support for the CVPPC and the BVision.
+
+For more information, contact me at:
+»CL4:Pavel Narozny, troda@cbnet.cz 

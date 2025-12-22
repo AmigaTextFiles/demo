@@ -1,0 +1,7 @@
+.
+; Amiga Positive strikes back! #16
+if NOT EXISTS env:amigapositive/ap16.prefs
+ ap-prefs
+endif
+;AP16.exe
+engine.exe

@@ -1,0 +1,155 @@
+                    How to do easy and good dithering of
+                               true-color data
+                         by kas1e (kas1e@yandex.ru)
+                          corrected by Selectanovel
+
+Nowadays, there ~are ~not so ~many ~amiga-coders ~who ~want ~to ~deal ~with warp3d/
+opengl coding, and their motivations look like "3d is not amiga",~~"not many ppls have
+3d ~gfx ~cards (or ~any ~kind ~of ~gfx ~cards)" and ~so ~on. I'm not going ~to ~issue such
+polemics~~~~~about~~~~it,~~~~because~~~~we~~~~all~~~~have our opinions about~~~~~all things.~~~~But~~~~~some~~~~~words
+have to be said.
+
+I hope we~~~~all can agree that it basically does~~~~not~~~~matter which platform was used,
+if ~the ~finished prod is cool after all. Just ~look at ~Planet ~Potion, demos ~from MAWI,
+from Encore,~~etc. All of them - are warp3d/opengl coded, and all of this stuff ~looks
+very ~good ~(maybe ~only ~for ~me, ~so ~I ~can ~be ~wrong ~of ~course). And I ~do not talk
+about demos on PC,~~~where there is not~~~~so much good 3d hardware stuff,~~~~but good
+prods~~~on PC also~~~have~~~their place~~(like from Kewlers, Farbrauch,~~~~Andromeda~~~~Software
+and so on).
+
+In ~this ~article ~i ~want ~to ~say ~some ~words ~about ~some problems (which of course
+will come up with any kind of coding)~~and easy solutions on stage while you work
+with hi-rez data for your warp3d/opengl (for example) stuff on amiga.
+
+Let's ~start ~~with ~~classification ~~of ~~gfx ~hardware ~which ~we ~have ~on ~old ~~and ~new
+amigas ~in ~~most ~~cases: ~~voodoo3 ~~(classic, ~~a1, ~pegasos), ~radeon ~~(a1, ~~pegasos) ~~and
+old boards like bvisison/cvision for classics.
+
+First ~one ~(voodoo3) ~is ~very ~common ~in ~the ~amiga ~world today. It has full warp3d
+support, it ~works ~on ~any ~amiga ~hardware ~with pci interface, and it ~was ~seen ~as
+a ~pretty ~~cool ~gfx ~~card ~all ~~over ~the ~~world ~some ~~years ~ago. I ~just ~~remember ~~the
+game PayBack on my BPPC with mediator/voodoo3.~~~Today this game still looks good
+But voodoo cards are not produced anymore. Voodoo failed. Why? I ~think ~there ~is
+only one answer here (or maybe two,~~~or more) and it is a topic of this article,~~~too.
+
+The ~answer ~is: ~Voodoo3 ~can ~work ~only ~with a ~16bit textures data maximum. And
+maybe a second one: voodoo3 can ~only produce 256 x 256 textures ~maximum. ~It's
+not ~~so ~~problematic, ~~but, ~~for ~~example, ~~on ~~~permedia2, ~~we ~~can ~~do ~~~textures ~~up ~~to
+2048x2048 of size.
+
+What ~does ~this mean? It ~means that you ~can't ~produce ~any ~resolution ~more than
+16 bit ~of depth ~on ~the ~voodoo3 chipset. That is, no ~true ~32 bit data, ~no ~full 8 bit
+true ~~alpha ~~channel ~(possible, ~~but ~~with ~~some ~~tricks), ~~and ~~you ~~_must_ ~work ~~with
+pretty unstandard modes of textures if you do not want ugly artefacts.
+
+Of course, all ~over the ~world (PC ~of course basically), this ~kind ~of ~gfx ~board ~has
+died out, in fact to make place for more and more ~progressive ~stuff, which ~wants
+more ~features ~provided ~by ~the ~chipset. Of ~course ~it ~can ~be ~blamed ~by ~someone,
+like why don't you suckers use software rendering in fact~~~~of~~~~2,~~3 or 4ghz of CPU's
+But ~this ~is ~a ~topic ~for ~another ~article, and ~if ~you ~want, you ~can ~write an article
+like "why lazy sluckers don't use software rendering on PC".
+
+But.~~~~For amiga,~~~~as always,~~~~it happenes recently:~~~~If we have 'something' - it's~~~~already
+good ~by ~default. And ~if ~we ~have~ something almost really good - it's 100% enough
+already.~~~~So,~~~~for a not so big quanity of 3d prods it does not matter~~~~to~~~be~~~~restricted
+to ~~this ~~one ~~bad ~~feature ~~with ~~16bit ~~textures ~on ~~voodoo3, which ~can ~~be ~~avoided
+pretty easy (but ~reqests ~some skills..). I want to add,~~~that radeon/b(c)vision do not
+have this problem.. So.. let's take a look at 2 pictures:
+
+°PROGDIR:data/clips/voodoo3_crop.raw°10°  
+What ~can ~you ~see ~here ? ~Here ~is ~one ~'original' ~24 ~bit picture (left one), and the
+same picture,~~~~~but produced for us by the voodoo3 chipset with some kind of easy
+method of 'dithering' (called 'we crop unusable bytes' :) )
+
+But ~stop, we ~need to ~say some ~words ~about 'dithering' ~first. ~Some ~of us ~do ~not
+know what ~dithering ~is ~(pretty ~impossible ~for ~amiga coders ~these ~days ~(who ~are
+skilled already), but if you don't, plz read this one: 
+http://www.~efg2.~com/Lab/Library/ImageProcessing/DHALF.~TXT
+ 
+It's ~a ~~very ~~good ~~tutorial ~which ~can ~~give ~~you ~~all ~~information ~about ~~dithering. ~~The
+tutorial is pretty old. ~The ~original ~was ~called ~a 'dither.~txt' and was written in 1989
+(!). ~This ~one ~is ~a ~bit ~updated ~dither.~txt ~from ~1991. ~But ~all ~things ~have ~their ~~place
+today, and it is one big ~BASE~ of work with graphics dithering. In two words (just
+copy+paste from google.com):
+-----
+Dithering, ~also ~called ~Halftoning ~or ~Color Reduction, is the ~process ~of ~rendering an
+image on a display device with fewer colors than are in the image. The number of
+different ~colors in an image or on a device is used called it's Color Resolution.~~~~~The
+term 'resolution' ~means ~'fineness' ~and ~is ~used ~to ~describe ~the ~level ~of ~detail ~in ~a
+digitally ~sampled ~signal. It ~is used ~most ~often in referring to the ~Spatial Resolution,
+which is the basic sampling rate for a digitized image.
+-----
+In other words,~~~~if you want to decriase~~~~the depth of an image and do~~~~not want~~~~to
+loose too much quality - dithering is your choice. Dithering methods can be ~splitted
+into two big techniques: 
+ 
+   1. pattern/ordered, clustered dot, angle, line art.
+   2. floyd-steinberg, average, in some of ways 'random'
+ 
+The ~First ~method ~is ~not ~so ~good ~for pictures. It's ~more ~for ~printing stuff. But the
+second way is ok. One~~~~of~~~~the powerfull and lovely method for textures~~~~~and photos
+is ~~the ~~Floyd-Steinberg ~method. ~~If ~~you ~~are ~~interested ~~in ~~seeing ~~how ~examples ~of
+other ~~methods ~~look ~like, ~you ~~can ~~go ~~to ~~google.com, ~and ~~search ~~for ~~"methods ~of
+dithering".
+
+Well, ~let's ~get ~back ~to ~voodoo3. ~On ~amiga ~it's ~only ~one ~gfx ~board ~which ~can ~do
+up ~to ~16bit ~textures only. B(C)vision and Radeons can easily produce up ~to ~32bits
+textures. And ~what ~happenes ~if ~you ~just ~upload ~32bit texture to the memory and
+draw ~it ~by ~the ~voodoo3 ~warp3d ~driver ? ~The ~~warp3d ~~driver ~just ~drops ~left ~bits,
+and we get: Ugly artefacts and an ugly image. Basically I am not skilled enough to
+understand who drop the bits,~~~~warp3d itself,~~~~or the chip of voodoo3~~~~(I do not have
+sources of warp3d drivers, and it ~is ~pretty ~hard ~to ~talk~ with ~some ~of ~the devels
+about it). But ~a ~fact ~is: We have ugly stuff on screen. For me it ~was ~a bit of a 
+'shock'~~~~while~~~~I'm looking~~~~at this ugliest and thinking~~~~'how could Kiero make~~~~~his demos
+which work on voodoo3/bvision'?
+
+After ~some ~~chats ~with ~a ~man ~by ~the ~~nickname ~of ~'~~~Karlos~~~~' ~~and ~some ~help ~from
+developers ~of ~warp3d ~drivers, ~I ~caught ~the ~problem with '16bit ~only ~textures' ~that
+exists ~~here. ~So, ~~if ~~you ~~want ~~to ~~support ~a ~~voodoo3 ~without ~any 'crap ~artefacts'
+at ~pretty ~good ~quality, ~you ~must ~use ~warp3d/mgl ~texture ~modes like ~RGB565 ~and
+ARGB1555.~~~~And sadly to say~~~~-~~~~nothing more.~~~The only way to solve this problem is..
+yes, dithering. By ~floyd-steinberg ~algo, you ~can get ~an almost IDENTICAL 16bit data
+result, from a 24bit original. Just look at these pictures:
+
+°PROGDIR:data/clips/yascher.raw°12°   
+         1.Original            2.Voodoo3 crop bits          3.Floyd dithering
+
+Of ~course, you ~can't ~see ~full ~difference ~here, because the ~diskmag engine already
+uses only 16bit ~data ~and ~~do ~~some ~~dithreing ~~with ~~original. ~But ~~you ~~can ~~see ~~that
+original and floyd dithering almost the same. Also you can check the jpgs in bonus
+if you want to compare them more pedanticly.
+
+But this is not the end of the article. The topic was called 'how ~to ~do easy/good
+dithering'. So, I can talk/think about 2 ways:
+
+  1. Write dithering algo from 0, and use it in your prod. 
+     +  you just can use jpgs and dither them on load stage, so you ~will have
+        a small size of production.~~~~That's like,~~~as i think,~~~all normal warp3d demos
+        do it.
+     -  needs some skills of coding 
+
+  2. Somehow dithering your stuff from 24 bit to the 16bit ~raw ~data ~and ~use ~the
+     raw data itself.
+     +  I found an easy solution for it on the amiga with the help of Karlos.
+     -  pretty big size of your production, if compared to jpgs.
+
+The ~first ~way ~is ~really ~preferable ~i ~~think. If ~you ~do ~not ~know ~~how ~it ~must ~looks
+like, you can read articles on the web (not so many, but ~they ~can ~be ~found), talk
+with ~skilled coders and  read GEMS books (5 parts of a good book about working
+with gfx data).
+
+I can say more about the second one,~~because I~~~~use it. It's based~~~~on~~~~cybergraphics,
+WarpDT and some system functions. So, what do you have to do:
+
+In ~~WarpDT ~~prefs ~~you ~~just ~~set ~~'floyd-steinberg', ~~full ~~qaulity, ~~turn ~~off ~~all ~~unusable
+stuff ~and ~switch ~your ~WB sreenmode into 16bit resolution. Done that, you write a
+programm which opens ~a ~window ~on ~the screen by datatypes ~and draw your ~24
+bit image into it. WarpDT will ~automatically ~do ~Floyd-St. Dithering ~for ~you, ~and ~you
+will have a good picture on the sreen.~~~~After that,you just ~grab ~it ~from ~the ~screen
+into ~the ~raw ~buffer ~and ~save ~it ~as ~result ~~file. ~You ~~will ~~have ~~true ~RGB565 ~~data
+then. In reality, of course, it's lame, and you must to write your own realisation.
+
+Also, I do not ~know ~very~ much amiga gfx prods. Maybe something like AdPRO can
+do ~good ~dithering ~and ~save~ ~data ~as ~raw, ~I ~don't ~know. ~But ~I ~think ~(I ~hope) ~that
+this little trick will be interesting for someone anyway.. Well, at this moment it's all.
+If someone is interest in talking about it: feel free to contact me.¤

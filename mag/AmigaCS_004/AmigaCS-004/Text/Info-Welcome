@@ -1,0 +1,89 @@
+@{xoffset 21}@{d A6FFFF}
+@{p acs004.png 0 0}
+@{slidepalette 72 38 4 4 6 35 56 143}
+
+
+   @{xstep 1}@{font ACS-Title.font 18}V@{font}ítáme vás u dalîího vydání diskmagu @{c FFFFFF}AmigaCS@{c}. Jak jste jiù urçitë postêehli,
+doznalo oproti pêedchozímu têetímu çíslu podstatných zmën.  Naîím prvotním cílem
+bylo  dále  zvednout  kvalitu  diskmagu,  jak  na  úrovni designu, tak na úrovni
+obsahu.  Zdali se nám to podaêilo budete moci za chvíli sami posoudit...
+
+   Pêedevîím  nás  upêímnë tëîí váî zájem a máme radost, ùe vám není osud tohoto
+diskmagu  a potaùmo çeské amiga-scény lhostejný.  Náî dík tedy patêí vîem, kteêí
+pêispëli svým dílem a vëêíme, ùe tato spolupráce bude i nadále pokraçovat.
+
+   Pêípravë  çtvrtého  çísla  jsme  vënovali zdaleka nejvíce çasu (@{i}je také zatím
+nejrozsáhlejîí@{ui}),  proto  se jeho vydání proti pûvodním plánûm opozdilo.  Je vîak
+têeba  upozornit,  ùe  @{c FFFFFF}AmigaCS@{c}  nemá  pevnë  stanovené  pravidelné termíny; naîí
+prioritou je a bude pêedevîím kvalita.  Nechceme nic uspëchat.
+
+@{p acs004.png 0 0}
+
+
+
+   Ohlédnu-li  se  za  uplynulým  rokem  1998,  ve  kterém se nám podaêilo vydat
+@{i}çtyêi@{ui} çísla  ACS,  z nichù kaùdé dalîí pêekonalo minulé, uvëdomuji si, ùe nadále
+bude çím dál tëùîí zvedat laïku výî a výî.  Pochopitelnë - neustále bude spousta
+vëcí,  které  se  dají  zlepîovat  (napê.   do  dalîího  çísla chystáme vlastní,
+podstatnë  rychlejîí,  PNG  dekodér  obrázkû  a  také  koneçnë  podporu HiColoru
+a TrueColoru).   Jedna  vëc  je  ale  naprosto  zásadní,  a tou je potêeba stále
+zvyîovat úroveñ çlánkû, coù je výzva i pro kaùdého z vás.
+
+
+   @{c FFFFFF}Co jsme pro vás v tomto çísle pêipravili?@{c}
+   ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+   Pêedevîím  je  to nové rozvrùení rubrik.  Vîechny rubriky jsou nyní pêístupné
+ze  základní  obrazovky.   Oproti  minulému  çíslu pêibyla nová rubrika 'Scene',
+
+
+@{p acs004.png 0 0}
+
+
+která  si klade za cíl informovat o událostech týkající se (pêedevîím, i kdyù ne
+bezvýhradnë) çeské a zahraniçní amigistické scény.
+
+   Pochopitelnë  naleznete  i staré  známé  rubriky  a v nich spousty zajímavých
+çlánkû,  rozhovorû, názorû i polemik.  Za zmínku také stojí rozîíêená podrubrika
+pro  programátory a kodery, v jejímù rámci budou vycházet seriály o programování
+v assembleru (@{i}pro zaçáteçníky@{ui}) a o postupech, jakým zpûsobem se vytváêejí efekty
+v demech (@{i}pro zkuîenëjîí@{ui}).
+
+   Také  nemohu  zapomenout  na seriál o Imagine, který bude mít na starosti náî
+çerstvý redaktor @{c FFFFFF}Fractal@{c}, který spolu s @{c FFFFFF}Chroustem@{c} napsal do nejrûznëjîích rubrik
+pomërnë  dost  çlánkû.   Inspiraci,  jak vyplnit vaîe volné chvíle mûùe pêivodit
+také herní rubrika pod vedením redaktora Láhveho.
+
+
+@{p acs004.png 0 0}
+
+
+   Dalîím  krokem  bylo  vypuîtëní kontroverzní rubriky @{c FFFFFF}'Drsñárny'@{c}.  Ohlasy byly
+sice  jak nadîené, tak odsuzující, ale hlavním dûvodem byl malý poçet pêíspëvkû.
+Moùná,  ùe  by stálo za to uváùit oùivení diskmagu @{c FFFFFF}'Hlen'@{c} ústecké skupiny Degens
+na bázi ACS-Engine, který se mël na tato témata pêímo specializovat.  ;)
+
+   Legenda  çeské scény, skupina Vectors zahájila opët svou çinnost.  Její první
+poçin  po  dlouhé  odmlce  je intro @{c FFFFFF}'Quickly'@{c}, které je jako @{i}extra-bonus@{ui} pêidáno
+k tomuto diskmagu.
+
+   Pokud  jde o technické novinky prohlíùecího programu, tak první z nich je, ùe
+obrazovka  ACS je nyní legální veêejná obrazovka (název:  @{c FFFFFF}AmigaCS_4@{c}).  Mûùete si
+tedy napê. vyvolat @{sys SYS:Tools/Calculator PUBSCREEN AmigaCS_4}kalkulaçku@{sys}.
+
+
+@{p acs004.png 0 0}
+@{p huhulak.png 80 120}
+
+
+   Dalîí  zásadní  novinkou  je  moùnost  zmëny palety barev kdekoliv v diskmagu
+podle  toho,  jak  to  vyhovuje  vaîemu  monitoru çi televizi.  Zkuste stisknout
+klávesu  '@{c FFFD57}T@{c}'.   Vedle  pár  drobností  v ovládání  a nëkolika opravených chyb je
+koneçnë moùné pouùívat @{i}libovolné@{ui} fonty v @{i}libovolném@{ui} formátování.@{ystep 8}
+                      
+      
+      
+                                @{i}@{font ACS-Title.font 18}Krásné Vánoce a îtastný nový rok 1999@{font}@{ui}
+        
+                                   @{c FFF78F}v@{c}@{ystep 1}@{c FFF8A6}á@{c}@{ystep 1}@{c F5FFB3}m@{c}@{ystep 1} @{c E3FFBD}v@{c}@{ystep -1}@{c CDFFBD}î@{c}@{ystep -1}@{c AEFFB9}e@{c}@{ystep -1}@{c A3FFC9}m@{c} @{ystep -1}@{c 9EFFDA}i@{c} @{ystep -1}@{c 91FFE7}A@{c}@{ystep -1}@{c 8AFFF3}m@{c}@{ystep -1}@{c 8AF8FF}i@{c}@{c 85E7FF}z@{c}@{ystep 1}@{c 8AD8FF}e@{c} @{ystep 1}@{c 9CC6FF}p@{c}@{ystep 1}@{c B0B7FF}ê@{c}@{ystep 1}@{c D1BAFF}e@{c}@{ystep 1}@{c EFB3FF}j@{c}@{ystep 1}@{c FFAEF4}e@{c} @{c FFAEDF}z@{c}@{ystep -1}@{c FFA8C4}a@{c} @{ystep -1}@{c FF99A3}r@{c}@{ystep -1}@{c FF918A}e@{c}@{ystep -1}@{c FF9B7F}d@{c}@{ystep -1}@{c FF9366}a@{c}@{ystep -1}@{c FF834C}k@{c}@{c FF7930}c@{c}@{ystep 1}@{c FF8419}i@{c} @{ystep 1}@{c FFA91E}A@{c}@{ystep 1}@{c FFCB1E}m@{c}@{ystep 1}@{c FDFF0F}i@{c}@{ystep 1}@{c D8FF11}g@{c}@{ystep 1}@{c B4FF19}a@{c}@{c 8DFF23}C@{c}@{c 6CFF1E}S@{c}
+         
+                                                  @{i}Shaman/Abort@{ui}@{font}

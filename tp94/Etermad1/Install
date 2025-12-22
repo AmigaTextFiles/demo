@@ -1,0 +1,52 @@
+.key test/s,full/s
+.bra [
+.ket ]
+
+echo "*Ec*N                   Eternal Madness Installation*N"
+
+lab nameloop
+  echo "Type the name of the partition to install to. (Example: 'Work:')"
+  echo "A directory 'Eternal Madness' will be created, 5 meg workspace is needed."
+  echo "(Q to quit) ? " noline
+  set >NIL: target ?
+  if "$target" EQ "Q"
+      skip exit
+  endif
+
+  if "`echo $target len 1`" NOT EQ ":"
+    set target $target:
+  endif
+
+  assign >NIL: exists "${Target}"
+  if warn
+    echo "Error: partition does not exist.*N"
+    skip back nameloop
+  endif
+
+lab partok
+
+assign Target: "${Target}"
+
+  makedir "Target:Eternal Madness" 
+  cd "Target:Eternal Madness" 
+  copy "Eternal Madness Disk 1:c/copy" ram:
+  ram:copy "Eternal Madness Disk 1:c/join" ram:
+  ram:copy "Eternal Madness Disk 1:c/lha" ram:
+  ram:copy "Eternal Madness Disk 1:c/delete" ram:
+  
+  ram:copy "Eternal Madness Disk 1:Data/Eternal Madness#?" "Target:"
+  ram:copy "Eternal Madness Disk 1:em.2" "Target:Eternal Madness/" 
+  ram:copy "Eternal Madness Disk 2:em.1" "Target:Eternal Madness/" 
+  ram:join em.1 em.2 to em.lha
+  ram:delete em.1
+  ram:delete em.2
+  ram:lha x em.lha
+  ram:delete em.lha
+  
+  ram:delete ram:copy
+  ram:delete ram:join
+  ram:delete ram:lha
+  ram:delete ram:delete
+  
+lab exit
+  echo "*N Finished"

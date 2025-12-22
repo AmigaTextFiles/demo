@@ -1,0 +1,3 @@
+Create a directory called libs put playsid.lirary in it...
+The libs directory should be in the same directory as the demo.
+If you do this you should be able to hear the cool sid at the end.

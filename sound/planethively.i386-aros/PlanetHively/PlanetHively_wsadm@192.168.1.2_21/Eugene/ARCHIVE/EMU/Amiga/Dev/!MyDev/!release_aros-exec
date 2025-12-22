@@ -1,0 +1,40 @@
+; $VER: Planet Hively demo 0.2 by Peter Gordon
+; https://github.com/pete-gordon/planet-hively
+; AROS ported by aGGreSSor/CPU
+
+FailAt 120
+Version >NIL:
+
+Echo "*E[>1m"      ; back colour
+Echo "*E[32m"      ; ink colour
+Echo "*E[41m"      ; paper colour
+Echo "*E[0;0H*E[J" ; clear screen
+Echo "  _____________________________________________"
+Echo " |              Press these keys:              |"
+Echo " |                                             |"
+Echo " |  Enter/f - toggle window/screen (default)   |"
+Echo " |                                             |"
+Echo " |           Up/Down - change volume           |"
+Echo " |                  p - pause                  |"
+Echo " |                                             |"
+Echo " |    Click the left flower petals for info    |"
+Echo " |    Click the petals of the right flower     |"
+Echo " |              to change the music            |"
+Echo " |                                             |"
+Echo " |       Escape or click on Sun for quit       |"
+Echo " |                                             |"
+Echo " |  Kill all butterflies by clicking on them!  |"
+Echo " \_____________________________________________/"
+Echo "  _____________________________________________"
+Echo " |     AROS compiled by aGGreSSor (c) 2o21     |"
+Echo " \_____________________________________________/"
+
+SetENV Res `RequestChoice Title "Planet Hively" BODY "Choose a your resolution" Gadgets "800x600|1024x768"`
+
+If $Res EQ 1
+   800x600
+Else
+   1024x768
+EndIf
+
+Quit 0

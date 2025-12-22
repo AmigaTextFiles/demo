@@ -1,0 +1,164 @@
+
+
+				SimCasey v0.0
+
+			a stupid program written by
+			       Jim Allenspach
+	      N© 1993. This program is in the public domain.
+
+SUMMARY
+	SimCasey is a small program that simulates a "long-distance
+dedication", as made popular by the syndicated radio show American Top 40,
+delivered by AT40 host Casey Kasem. Casey tends to repeat himself a lot,
+like any professional DJ will, and most of what he says is quite odd. Leave
+him alone, and he'll spout off for hours. (And possibly drive you nuts.)
+
+
+PROGRAM SPECS
+	This program was compiled using the SAS C compiler, under Workbench
+1.3 (it should be compatible with 2.0'ers). The machine used was an Amiga
+1000 with 2 meg of RAM.
+	A quick note about memory: this program reads in a 300+K sound
+file, and allocates a hefty 100K of chip memory for playing the sample (as
+per the double-buffering examples in Amiga literature). It would be a Good
+Thing if you ran this program on a machine that had at least 2 meg; it
+hasn't been tested on anything less. You have been warned...
+
+
+BACKGROUND
+
+	"COPYRIGHT INFRINGEMENT IS YOUR BEST ENTERTAINMENT VALUE"
+					- Negativland
+
+	The California-based band Negativland released a single in the
+summer of 1991. Titled "U2", it was based on the supergroup's song "I Still
+Haven't Found What I'm Looking For", and made use of samples taken from not
+just U2 stuff, but from a tape of out-takes of Casey Kasem recording
+American Top 40.
+	About two weeks after the single was released, Negativland and its
+label, SST Records, were hit with a very large law suit by U2's label,
+Island Records. Island contended that the planned market "flooding" of this
+single, coinciding with the release of a U2 album (nowadays a difficult
+thing to avoid), would "tarnish" U2's reputation and image. (???)
+	As a result of this legal action, the single was recalled, and all
+copies of the single (or at least all the ones that were recalled) were
+destroyed. Apparently, Island didn't want *anyone* hearing this record.
+	Once Casey Kasem got wind of the single, he made it known (through
+his lawyers) that he absolutely forbids the record to be released, since it
+includes ill-gotten samples from his AT40 program. Right now, he stands as
+the main barrier between the single and the listening public. (Though there
+are ways to surmount these obstacles; see below.)
+	This program is an outgrowth from some sampler work I did with the
+single in 1992. It is in the public domain, so you can do whatever you want
+with it (if anything). All I ask is that if you pass the program to someone
+else, keep the three files together in the same package.
+
+	[ Summer 1993 update: Well, U2's reputation hasn't been marred in
+the slightest by the "U2" single. They're still selling tons of records,
+Casey Kasem is still alive & well, and SST continues to crank out lots of
+music. Negativland, however, is still suffering, although they've been
+aided enough to release a new album, "FREE". Like most lawsuits about
+nothing much, the earth did not crack, the heavens were not rent asunder.
+Heck, TEC Tones (Negativland's main distributor) has even been selling the 
+"U2" single in its mail-order business. Has anything really changed? ]
+
+
+THE FILES INCLUDED
+
+	Simcasey	-- the SimCasey program
+	Casey.raw	-- the raw sample file used by the program
+	Simcasey.doc	-- this file
+
+	Please keep these three files in the archive, if you decide to give
+this program to someone else.
+
+
+USING THE PROGRAM
+	Place the files SimCasey and Casey.raw in the same directory
+somewhere. From the CLI, type the command
+
+	SIMCASEY
+
+and press Return. If all goes well, a largish window will appear on the
+screen, and the sample file will be loaded. (Please note that this will
+take some time, since the file being loaded is 362,136 bytes long! In an
+informal test, it took about 12 seconds to load in the file when both
+program and sample were on the RAM: drive.)
+	After the sample is loaded, Casey will begin a long-distance
+dedication. When you get tired of him, click on the close gadget on the
+window, and the program will abort.
+
+	If you'd like to hear the full sample, complete and intact, there
+is a provision in the code for playing it. Type the command
+
+	SIMCASEY CASEY
+
+and press Return. The program will load the sample, play it, then quit.
+
+
+VERSION HISTORY
+	01/17/93 Version 0.0 (beta test version) created.
+	02/01/93 Some new Casey stuff added, and the doc file is updated
+with some new info.
+	07/27/93 New updated info in this file.
+
+
+ONE WAY TO HEAR THE "U2" SINGLE
+	Even though the Entertainment-Military Establishment has suppressed
+the single, there is a way for you to hear the record in question.
+	The Copyright Violation Squad, a division of the Aggressive School
+of Cultural Workers, is making available tape copies of the "U2" single. To
+obtain a copy, send $7.00 *in cash only* to:
+
+	CVS
+	2103 Harrison NW
+	 suite 2101
+	Olympia, WA  98502-2607
+
+	Any profits will be donated anonymously to Negativland for their
+legal defense fund.
+	"U2" is also available from the Iowa chapter of the CVS, along with
+John Oswald's "Plunderphonic" and "Rubaiyat" works. Send a C-100 tape for
+all three, along with a self-addressed, sufficiently stamped return mailer 
+(and an optional $1 donation) to:
+
+	YAWN
+	PO box 227
+	Iowa City, IA 52244
+
+
+BIBLIOGRAPHY
+
+"The Letter U And The Numeral 2" -- Seeland Records (SEELAND 008)
+	This is a booklet/CD package being marketed by Negativland's own
+record label, Seeland Records. It contains all legal information pertinent
+to the "U2" mess. Your local Cool Record Store[tm] should be able to
+order a copy for you. [ Aha! SST has sued Negativland for publishing this
+booklet, because it contains SST press releases and other publicly-known
+info. Negativland promises to re-release the booklet in an updated version,
+when and if they get permission to. ]
+
+"Hit Men" -- Frederic Dannen
+	This book is a serious look at the corporate record industry: how
+it started, how it got corrupted, and how it creates hits. Dannen's tales
+of the far-reaching power of record execs, their independent promoters that
+ultimately force singles on (or off) the charts, and the ties between the
+industry and organized crime make for very interesting reading for any fan
+of rock music.
+
+	Those interested in Negativland can order all of their releases 
+except, of course, "U2") from Negativmailorderland, their mail-order
+service. For information, write to:
+
+	Negativmailorderland
+	PO box 1477
+	Hoboken, NJ  07030
+
+
+THE AUTHOR
+	jima@acca.nmsu.edu (Jim Allenspach)
+	He's just this guy, you know?
+
+jma (01/17/93)
+
+N©!

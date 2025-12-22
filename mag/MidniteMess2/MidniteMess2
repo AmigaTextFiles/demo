@@ -1,0 +1,15 @@
+; Midnite Mess Startup-File v1.0 © by Fleg/TDD
+; (Kick 3.0 only!!)
+
+
+
+
+
+Echo "*N     Loading Midnite Mess..."
+FailAt 50
+Assign >NIL: MM: ""
+Assign DEVS: MM:MidniteMess/System/
+Assign >NIL: "Midnite Mess #2 Disk A:" MM:
+Assign >NIL: "Midnite Mess #2 Disk B:" MM:
+MM:MM
+Assign DEVS: SYS:Devs/

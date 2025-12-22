@@ -1,0 +1,69 @@
+Short:    dA JoRMaS: MonoMeno #70
+Author:   jormas@da.jormas.com (dA JoRMaS)
+Uploader: vesuri@da.jormas.com (Vesuri/dA JoRMaS)
+Type:     demo/sound
+Requires: Any Amiga with 0.5Mb Chip Mem + 0.5Mb Other Mem
+
+		 sTZ!.___  ____  ______ _______ ____ _____
+		 ____|   \_\   \_\__   \\      \\__ \\   /__
+		 \   |   _/     \  /  _/.  \/  /  _  \____  \
+		  \______|______/__\____|__/  /___\___//____/
+		 .------------------------/___\---------- - -
+		 |  dA JoRMaS phuk it up with MonoMeno #70
+                 |68000 · OCS/ECS/AGA · 0.5Mb Chip/0.5Mb Fast
+                 `------------------------------------------>
+                                (04.Jan.2001)
+
+MonoMeno #70 does not support gfx cards. On OCS and ECS machines it always
+runs in a PAL mode. The default behaviour on AGA machines is to run in a
+PAL mode if the current screenmode is PAL, NTSC, or a gfx card mode and in
+a VGA mode if the current screenmode is not PAL, NTSC, nor a gfx card
+mode. This default behaviour can be changed using the VGA tooltype or
+command line argument. Please note that the VGA mode is NOT available if
+SetPatch has not been run!
+
+There are two tooltypes / command line arguments:
+
+JRm-MM70.eXE ?
+LOOP/S,VGA/S:
+
+LOOP: The intro loops until the user clicks the left mousebutton.
+ VGA: The intro runs in a · VGA mode IF the current screenmode is PAL, NTSC,
+                            or a gfx card mode
+                          · PAL mode IF the current screenmode is not PAL,
+                            NTSC, nor a gfx card mode
+
+The VGA tooltype / command line argument has no effect on OCS and ECS
+machines.
+
+----------------------------------------------------------------------------
+: Code                        Vesuri :: Modulename             Gettin' Wet :
+: Graphics           PiirakkaMunalla :: Modulelength                322098 :
+: Music                         Naks :: Playtime                     5"46' :
+: Style                       Techno :: BPM                            140 :
+----------------------------------------------------------------------------
+
+----------------------------------------------------------------------------
+:                            dA JoRMaS in the net                          :
+----------------------------------------------------------------------------
+: dA JoRMaS Home Page                               http://www.jormas.com/ :
+: dA JoRMaS E-Mail                                    jormas@da.jormas.com :
+: dA JoRMaS Productions              any Aminet site, demo/sound directory :
+: dA JoRMaS Modules                  any Aminet site, mods/jorma directory :
+----------------------------------------------------------------------------
+
+----------------------------------------------------------------------------
+:                           dA JoRMaS' Boards:                             :
+----------------------------------------------------------------------------
+: Status : Boardname            : Nodes : Sysop      : IP address          :
+----------------------------------------------------------------------------
+: WHQ    : Juju                 :   n   : wREC       : fINDiT!             :
+: FinHQ  : Dying Degree         : down! : Carnifex   : down!               :
+: PHQ    : dAsECT!              :   1   : mADbART    : varies              :
+: GHQ    : Los Endos            :   4   : Exon       : varies              :
+: SwHQ   : Dial Hard            :   5   : Fury       : varies              :
+: NHQ    : Genetic Waste        :   1   : Magz       : varies              :
+: UKHQ   : Permanent Vacation   :   n   : Mic Flair  : varies              :
+: DHQ    : Atmosphere           :   n   : Delite     :                     :
+: HkiHQ    Bermuda Triangle     :   1   : Kurpitza   :                     :
+----------------------------------------------------------------------------

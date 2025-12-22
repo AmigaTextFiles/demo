@@ -1,0 +1,9 @@
+assign nc: "" add
+assign devs: nc:devs/ add
+assign system: nc:system/ add
+assign s: nc:s/ add
+assign c: nc:c/ add
+assign libs: nc:libs/ add
+System/SetMap nc
+c:more message 
+newshell window=con:0/0//256/FederalShell/CLOSE

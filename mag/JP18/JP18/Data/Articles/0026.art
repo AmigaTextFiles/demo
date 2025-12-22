@@ -1,0 +1,148 @@
+!Making of The Cure
+Ghandy
+82
+
+µF2The Making of "The Cure" by RETREAM
+µF1by Lars "Ghandy" Sobiraj of Nukleus
+
+µC1µF0µJLActually, it always goes exactly the other way around. Usually, at some point, people from the demoscene start to get involved in the creation of games. With RETREAM it was completely different. Someone who creates games for the Amiga and C64 as a hobby suddenly enriched the demoscene with his first own production. 
+
+Not only that. He won the most important demo party in Norway, the Solskogen. And not to forget, he did the graphics, delivered the music and programming all by himself. Most likely you've never heard of RETREAM. And most probably it will stay with this one demo in the long run.µF1
+
+µC0The Cure is a political statementµC1
+
+µJLµF1By the way: The title has to be taken literally. It has nothing to do with Robert Smiths popular gothic and wave band "The Cure". As the title already reveals, the demo "The Cure" is a political statement. The author used his demo as a sort of transport method to transmit his message to his audience. 
+
+When I saw it the first time I thought: "What the fuck is happening?" Is this eventually a continuation of "Smoke Bomb" from Ozone, which is more than 20 years old!? Geographically, I'm not so wrong. Smoke Bomb comes from Spaniards, the founder of RETREAT lives and works in Italy. But let's let him speak for himself.
+
+µI2601
+
+µC0RETREAM consists of only one personµC1
+
+µC6Ghandy: How comes that someone from a bunch of people being involved into producing games for the Amiga began to code a demo?
+
+µC7saimo: I hope you don't mind if I first correct a common misconception: RETREAM is not a bunch of people, it's just me.
+
+Also, I hope you don't mind if, to answer your question, I paste here a part of the README that comes with the demo: the reason is that there is no shorter explanation, and I wouldn't be able to put it in better words anyway - and yes, that helps saving some energies (to produce other Amiga stuff, of course)!
+
+At the end of 2017 I derived the graphics engine at the core of the demo from another engine of mine. Since then, I have been occasionally tinkering with it while trying to come up with a game that would make use of it, but I failed: the engine was too stressful for the eyes and unsuitable for small/medium-sized graphical elements; it was clearly more suited for a demo (in fact, some people proposed to make a production of that kind with it), but I kept on ruling that out because I prefer making games.
+
+Until, one day, what was happening around the world changed my mind: I just had to say something - and that could be rather effectively and relatively quickly done with a demo. In the past, I had already tried through a book, but since I'm Mr. Nobody my message reached only very few people. With a demo I could reach somebody else - very few people again, but still some more people.
+
+Therefore, although part of my motivation was to make use of the engine, to have fun doing so, and to give the Amigans a little something to enjoy, the demo's main purpose is to say something.
+
+
+µC6Ghandy: What's the connection between these two scenes? Is there any? Are retro gamers interested into the demo scene at all?
+
+µC7saimo: Regarding the first question, honestly I can't really say, as I'm not really connected to them (sometimes I post in Amiga forums, but that happens mostly when I present a production of mine - basically that's all there is to it). So, I'll just go for some theorethical thoughts: I'd say that there's a connection if/when demo coders make games and/or techniques used in demos are used in games and/or demos influence games - and everything vice versa, of course. But maybe there are other kinds of connections that I can't even think of.
+
+As for the second question, from what I see in the forums, for sure there are people interested in both games and demos.
+
+
+µC6Ghandy: Why did you choose Solskogen as the place to release "The Cure"? Are you all or Saimo coming from Norway? Or what was the reason?
+
+µC7saimo: After the demo was done, I checked out the upcoming parties and looked at those which had had a decent number of productions in the last years. I would have liked to participate to the major ones like Evoke or Assembly and/or to a live party, but they were too far in the future (which clashed with the urge of spreading the message carried by the demo) and the COVID was forcing all parties to go online. Eventually, Solskogen looked like the best candidate, so I went for it - and hey, there were even some attendees at the party place, which was quite nice.
+
+By the way, I'm from Italy.
+
+
+µC0The f*cking Corona is constantly and everywhere present
+
+
+µC6Ghandy: Did the party people treat you with open arms?
+
+µC7saimo: I wasn't physically at the party, so all my interactions boiled down to the few and short messages I exchanged with the organizers to join the compo. Nevertheless, I have a nice little story that allows me to give a positive answer to your question: initially I asked the organizers if I could submit the demo as an out-of-compo entry because, a few months earlier, I had put on SoundCloud a different version of the music as a standalone track (which was mostly listened to by a few friends), but they told me that it wasn't an issue rule-wise and welcomed the demo with arms wide open.
+
+
+µC0"I had never heard of Smoke Bomb before..."
+
+
+µC6Ghandy: The comments at YouTube are quite positive, but some people at Pouet complained about the political statements of "The cure". What's the story behind this demo? It it a sort of sequel of Ozones "Smoke Bomb" from 1999?
+
+µC7saimo: My apologies to Ozone: I had never heard of Smoke Bomb before - but now I've watched it, and I've found it utterly cool!
+Regarding the background story, well, you already know the answer now.
+
+
+µC6Ghandy: Sure. Do you think demos should contain a message?
+
+µC7saimo: If they do, it's a plus. It's an additional element which has an own value and also increases the overall production value because it requires more planning, more design, more effort also for the other aspects of the demo. I guess that holds true for all forms of art. For example, let's think of a poem written according to strict metrics: one thing is to come up with random or loosely connected words that comply with the metrics, and quite another is choosing words that comply with the metrics and, at the same time, express a coherent and possibly complex message.
+
+
+µC6Ghandy: I'm no coder, but what sort of effects did you use? How are they called, how do they work?
+
+µC7saimo: A proper answer would require an overly long paper, so please excuse me if I'll try to keep it short. Regarding the names of the effects, I'll use quite generic definitions (mostly as found in the code), as I don't know if there are established names out there (or even if/how those effects are done by others).
+
+µC0DOT-MATRIX ENGINE
+µC7It's the core of the graphics engine. It's an almost-native chunky engine, in the sense the dots are chunky (i.e. each dot corresponds to a byte in a matrix of dots), but no chunky-to-planar conversion is needed. It allows 4 colors + background color.
+
+µC0SOLID DOT-MAPS
+µC7The engine takes the source dots wherever they are (each source dot can be anywhere in memory) and puts them in the right destination place according to a freely-definable map.
+
+µC0OVERLAY DOT-MAPS
+µC7Like the solid ones, but they also allow transparent dots, which optionally can also go through solid dot-maps.
+The distortion, tunnel, scrolltext and sun corona effects (and maybe others I can't think of now) are all based on the dot-maps.
+
+µC0DOTS-SHAPES
+µC7The images are stored as dots coordinates instead of bitmaps. The engine handles each dot separately, so it can perform the morphing, scaling, explosion and bouncing effects. The images until the tube effect are made of 4130 dots each (the following ones are made of slightly less dots).
+
+µC0PICTURES/TEXTURES
+µC7They come in a few custom formats, chosen according to the context (for example, in some places textures need to be encoded in a particular way to allow transparent dots).
+
+µC0HORIZONTAL SCALING OF LINES
+µC7I guess the name says it all already. Used for the rolling vertical stripes, the tube and the wobbling of the finale.
+
+µC0ROTZOOM ROUTINES
+µC7They do what the name says: they rotate and zoom textures. They are adaptions of a more general routine I wrote originally at the beginning of 2000.
+
+µC08-BIT PROGRESSIVE FLASHES/FADES
+µC7Although there are only 4 non-background colors, the dots are faded in/out in 8-bit precision (this is particularly visible when the Death picture fades out). It's based on an alternative use of the solid dot-maps: basically, to perform a fade step, it's enough shift just 256 bytes.
+
+µC0ANIMATIONS
+µC7Simple sequences of run-length-encoded 2-bit-packed chunky images.
+
+µC0MUSIC PLAYBACK
+µC7The engine is an adaption of the one I made for SkillGrid.
+Technical details:
+* the music lasts 5 minutes and 23.2 seconds, and uses 12 tracks (clean rhythm guitar, overdrive rhythm guitar, clean arpeggio guitar, solo guitar, keyboards, bass guitar and drums taking all the remaining tracks);
+* the original data is 48 kHz, 16 bit, stereo;
+* the data is downsampled to 28867 Hz, 8-bit;
+* the raw data amounts to (5*60 + 23.2) * 28867 * 2 = 18659628 bytes;
+* the data is compressed with a custom lossless method (delta-based, Huffman-like - no rocket science) that brings it to 10902907 bytes (5429340 left + 5473567 right);
+* the data is decompressed in real time;
+* on my 68030-equipped Amiga, decompressing takes about 42 rasterlines, i.e. about 14% of a frame time.
+
+µC0WAVEFORM VISUALIZATION
+µC7The waveform shown at the bottom of the screen when speech plays, the sun corona and the wobbling of the finale graphics are all based on the reading of the values in the audio buffers being played.
+
+µC0SCRIPT
+µC7The effects are driven by a script that consists in a structured mix of code and data.
+
+µC0AUDIO-VIDEO SYNCHRONIZATION
+µC7Given that the music is not a tracker module, everything is synchronized manually: I manually pinpointed (with sample-level precision, although the demo runs at 50 fps, so the final precision is in 50ths of second) the spots in the waveform where the music does something particular (a snare beat, a guitar bend, and so on) and then I wrote the timings in the script that drives all the effects; each and every visual change is synchronized with the music, so there are tens of timings.
+
+
+µC0The creator of "The Cure" loves full control
+
+
+µC6Ghandy: Saimo, only one person, did it all? Music, code and design? Really? How comes?
+
+µC7saimo: Because I love that. Because I want to control each and every aspect of my creations. Because my perfectionism (which doesn't mean that what I do is perfect - actually, it's quite the opposite) makes me extremely demanding, probably more than others would be willing to accept. 
+
+Because I'm a solitary person. Because, maybe, I'm simply a terrible person.
+
+However, I must admit I've given some thoughts to having somebody else handle the graphics (and perhaps the audio department) of my next game(s): with somebody better than me, it's possible to produce better stuff, not to mention that I'd be able to focus more on design and code, and that getting the game done should take less time (although I dread the thought of the time and energies taken by managing the team). Hmm... oh, well, it's not something for the near future anyway.
+
+
+µC6Ghandy: I hope this is the start but not the end of your demoscene career.
+
+µC7saimo: I'll be honest: I don't plan to make other demos - my heart is into making games, and I have way too many projects for the Amiga and the Commodore 64 already. But who knows what the future will bring...
+
+µC0Our Scene urgently needs fresh blood
+
+µC7saimo: Thanks for the opportunity you gave me and bye!
+
+µC6Ghandy: You're welcome! 
+
+It would be a real pity if you would stop already as announced. I think the Scene urgently needs fresh blood, we also need more variety in terms of content. 
+
+Saimo. Thanks a lot for replying my questions and all the best for you!

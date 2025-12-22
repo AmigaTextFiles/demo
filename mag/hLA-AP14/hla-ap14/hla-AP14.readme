@@ -1,0 +1,89 @@
+Short:    Amiga Positive no.14, diskmagazine mostly in czech
+Author:   Horizontal Lamerz
+Uploader: lubor.slama@worldonline.cz (Bolda/hLA)
+Type:     demo/mag
+
+ 14TH ISSUE OF FREEWARE CZECH DISKMAGAZINE!
+
+ + co bych to popisoval, vsak tusite co je uvnitr
+ + potrebujete:
+  * AmigaOS 3.0+, 020, AGA a tak 600 kB volny chipky nebo CGFX nebo Picasso
+  * naistalovanej PNG datatyp pro obrazky
+
+                      _________________________________________
+  _ ___ ____ ______   \                          ___________   \  √…slo 14
+     _____________ \   \   _______________      /  _______  \   \
+    /    _______  \ \___\  )_____________(     /   )_____(   \   \
+   /    )______(   \       _______________    /    ______     \   \
+  /     ______      \      \             /   /     \    /   :: \   \
+ /  ::  \    /       \      \           /___/_______\_ /    ::  \   \
+/___::___\  /         \______\_____    /!lhv         //    ----  \   \_____
+    ::     /           \           \   \            //            \    __ _
+    ::    /             \           \   \          //______________\    _ __
+    ::   /_______________\           \ __\        /________ ::
+    ::            /                   \           \       / ::
+    ::           /       \     /       \           \__   /  ::  b y
+    ::          /         \___/         \           \   /
+    ::         /___________\ /___________\             / h o r i z o n t a l
+    ::                                \               /
+    ::  [ - - P O S I T I V E - - ]    \_____________/    l  a  m  e  r  z
+    ::
+    ``::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Cus bus Ikarus!
+
+Prave se vam na hadr dostalo (po dlouhe dobe cekani) 14. cislo diskmagu
+AMIGA Positive, ktery vam prinasi skupina Horizontal Lamerz. Nebudu se
+zde rozepisovat detailne, co v jeho obsahu naleznete a co ne. To si zjistete
+sami. Jedine, co vam tady povim, je:
+
+  a) Jak to nainstalovat:
+    - rozbalit nekam na hadr
+    - zkopirovat vse potrebne (cili, to co vam chybi) z adresaru "fonts" a
+      "libs" (font kopirovat nemusite, jen pokud by byly problemy!)
+    - a to je vse (doufam :-))
+
+  b) Jak to spustit:
+    - bud z ikony ("AP14") nebo z cli
+    - po spusteni by se mel engine zeptat na screen mod - vyberte takovej,
+      kterej zobrazi rozliseni min. 640x256 a 256 barev (s mensim rozlisenim
+      neuvidite vsechno, ze :-)). Melo by to chodit i v 16, 24, 32 bitovych
+      rozlisenich, alespon pod WinUAE to tak bylo...
+    - popis ovladani ziskate kliknutim na tlacitko "i" po prave strane
+
+  c) Ze za nic nerucime:
+    - pokud by vam pouzivani tohoto programu cokoliv poskodilo, znicilo,
+      smazalo ci zpusobilo jakouko-li jinou ujmu, my za to nemuzeme,
+      po nas nic nechtejte a my vam taky nic nedame!
+      TENTO PROGRAM POUZIVATE NA VLASTNI RIZIKO!
+
+  d) Mozne problemy:
+    - nedostatek CHIP RAM: engine sam moc chipky nepotrebuje, ale moduly
+      se prehravaji prave z chip. Je mozne, ze pokud nebudete mit vice
+      nez cca 512KB chip volne, ze mag nespustite.
+    - datatypy: engine vyuziva pro nacitani obrazku datatypy. Meli by jste
+      mit urcite PNG, IFF datatypy radne nainstalovane.
+    - multiview: meli by jste ho mit nekde v ceste, Jinak neuvidite obrazky.
+    - cokoliv jineho: napiste mi, zkusim se na to podivat, diky
+      (mailto: lubor.slama@worldonline.cz)
+
+
+Jak to funguje:
+
+Engine sam se schovava v souboru "AP14". Po spusteni hleda nejdrive
+"scrmode.cfg" v aktualnim adresari, ve kterem ma ulozen screen mod, ktery
+ma pouzivat. Pokud ho nenajde, zepta se vas na nej a zapise si ho.
+(A uz se znovu nebude ptat. teda pokud mu "scrmode.cfg" nesmazete...)
+Pak otevira "data.pk", coz je soubor obsahujici clanky, grafiku, moduly atd.
+Pokud ho nenajde, konci. Taktez skonci, pokud nenajde font. Adresar
+"data" obsahuje obrazky zabrazovane prez multiviev - ne ze by je engine
+sam neumel zobrazit, ale lenost je lenost, ze... :-)
+Obcas si engine dela v "RAM:" ruzne docasne soubory, nedeste se.
+
+Tak a to je vse. Mejte se jak nejlip umite.
+
+                                                                     ENIF
+
+PS: Pokud vas neco vytoci (nebo potesi), napiste nam!
+

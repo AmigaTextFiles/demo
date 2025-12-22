@@ -1,0 +1,89 @@
+@{d FFEBFD}
+  Tí,  ço  majú  prístup  na  Inet,  si  uù  asi  dávno  vîimli,  ùe A\box projekt bol
+pozastavený  (PowerUP  dostal  prioritu,  a  zároveñ  je  zdrojom  financií  pre vývoj
+pre\boxu),  priçom  Wolf  Dietrich oznámil, ùe A\box projekt bol prehodnotený a v jeho
+vývoji  by  sa  malo  pokraçovaï  po  úspeînom ukonçení pre\box projektu  (tj. po jeho
+uvedení na trh).
+
+  V  poslednom  çase  premýîãam  nad  A\box  projektom çoraz viac  (resp. o problémoch
+súvisiacich  s jeho UMA koncepciou, o ktorej si mnohí myslia, ùe je základom klasickej
+Amiga architektúry - je to len ðalîí mýtus),  a to najmä po zhliadnutí  jeho struçných
+a dosï zrevidovaných îpecifikácií (na webe Phase5).
+
+
+@{c FF97D5}Vo Phase5 asi koneçne pochopili, ùe@{c}
+
+-> maximum 1,6 GB/s prenosovej rýchlosti zbernice je pre UMA architektúru málo (hlavne
+   vzhãadom na x koprocesorových jednotiek a la DLRP, Blitter, FAME, ...)
+
+   Pre porovnanie:  "O2"  (jediná  UMA  architektúra  od  Silicon Graphics) je typický
+                    low-end,  a  okrem toho postráda grafický hardware tak typický pre
+                    ostatné silikony;  peak performance 2 GB/s
+                    (tých  400 MB/s  rozdielu  staçí  na  1280x1024x24 @ 100Hz display
+                     fetch, takùe to je _podstatný_ rozdiel)
+
+
+-> radikálne  zvýîiï  priepustnosï  zbernice  pre procesor(y).  S AltiVec technológiou
+   absolútna  nutnosï,  ale  aj  predtým  boli  nároky  procesorov  IMHO podhodnotené.
+   (napr. pri dvojmonitorovom móde  by ãahko mohla nastaï  saturácia zbernice  podobne
+    ako u AGA architektúry pri SuperHires Lace alebo VGA módoch)
+
+   Preto  zvaùujú  vyuùitie  pamäïových  technológií typu SDRAM II (DDR), SLDRAM alebo
+   technológie  firmy  RamBus, Inc. -  tj. RDRAM.  Hlavne  posledná alternatíva je tá,
+   na  ktorú  som  zo  strany  Phase5  çakal  uù  dávnejîie.  Totiù  s pomocou  RamBus
+   technológie  sa  dá dosiahnuï rýchlosï aù 6.4 GB/s na 64-bitovej zbernici, ço síce
+   nerieîi principiálny problém UMA architektúry, ale A\boxu to môùe výrazne pomôcï.
+   [
+    Tým  principiálnym problémom UMA architektúry je optimalizácia pamäïovej zbernice
+    pre  CPU  a  video  fetch,  ço  sú  dve odliîné poùiadavky,  ktoré vedú jedine ku
+    kompromisu na úkor grafického i CPU výkonu.  Príkladom môùe byï Amiga A1200 - len
+    pridaní fastky sa CPU výkon zvýîi 2-krát!  Základná myîlienka je teda jednoduchá.
+    "Dve zbernice sú rýchlejîie ako jedna."
+    Koãko zberníc má kaùdá Amiga?  Aspoñ dve: Chip zbernica a CPU zbernica  (Fast RAM
+    zbernica).  Je to veãmi podobné otázke, çi je rýchlejîí jeden procesor alebo dva.
+   ]
+
+
+   EDO         66 Mhz      66 MB/s    |          SLDRAM      400 Mhz     400 MB/s
+   SDRAM      125 Mhz     125 MB/s    |    Direct RDRAM      800 Mhz     1,6 GB/s  **
+   SDRAM II   200 Mhz     200 MB/s    |
+
+   ** platí pre jeden 16-bit kanál **
+   ** îtyri kanály dávajú 64-bit zbernicu s priepustnosïou 6,4 GB/s **
+
+
+@{d FFEBFD}   Dôleùité  je  to,  ùe  táto  technológia sa koneçne stáva îirîie akceptovanou.  Jej
+   priamym  konkurentom  bude  SDRAM  II  (a  moùno  aj SLDRAM), ale oba konkurenti sú
+   výkonnostne aj koncepçne dosï pozadu.
+
+   RDRAM  pamäïové  moduly  (RIMM)  vyzerajú podobne ako SIMM moduly a majú byï lacné.
+   Naviac,  spoloçnosï  RamBus,  Inc.  uù  dávnejîie  svoju  technológiu  zlicencovala
+   Intelu,  oçakávaný  nástup RDRAM  má byï v roku 1999, v Európe pravdepodobnejîie aù
+   v roku 2000.
+
+   Technológiu  RamBus  vyuùíva  "Destination"  systém  od  Gateway-u,  ale  i konzola
+   Nintendo  64.   Ço  zaráùa  viac  (aspoñ  mña) je fakt, ùe svojho çasu pripravovaný
+   systém od Amiga Technologies (ESCOM) mal vyuùívaï práve RamBus technológiu (ale nie
+   v  spojení s UMA koncepciou) a jadro PowerPC procesoru.  Je zaujímavé,  ùe na tomto
+   projekte spolu s Phase5 pracoval i Dave Haynie.  Preço sa teda Phase5 rozhoduje pre
+   RamBus aù teraz?!
+
+   Zároveñ  sa dá oçakávaï, ùe hlavná pamäï ("Fast RAM") ðalîej Amiga generácie (OS5.0
+   platforma) bude typu RDRAM, pretoùe aj Gateway, ktorý by mal nové Amigy vyrábaï, uù
+   má s technológiou RamBus skúsenosti (spomínaný "Destination" systém).
+
+
+-> "hardwired"  3D grafika je nutnosï!   Ich integrovaný univerzálny RISC procesor by
+   v çasoch 3Dfx bol zúfalo málo.
+
+   Preto  sa  rozhodli,  ùe  budú  licencovaï  hotový  VHDL design od zatiaã neznámeho
+   popredného  výrobcu  3D  çipov  a  integrujú  ho  priamo  do systémového kontroléru
+   CAIPIRINHA.
+
+___
+
+  Cieãom bolo iba naçrtnúï niekoãko základných problémov týkajúcich sa projektu A\box.
+Osobne  dúfam,  ùe sa raz bude naozaj predávaï,  ale pri Phase5 si nemôùete byï nikdy
+istý...
+
+ @{i} O A\boxe, pre\boxe, HOMBRE a UMA architektúre oveãa viac v ðalîom ACS.@{ui}

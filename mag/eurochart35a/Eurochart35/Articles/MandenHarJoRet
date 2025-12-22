@@ -1,0 +1,700 @@
+»CL9:»SML:--------------------------------------
+        »CL8:»BIG:Some words for coders
+»CL9:»SML:--------------------------------------
+
+»CL5:          By Troda of PEGAS
+
+»CL0:Hello, I am a Czech Amiga user and I
+want to make some suggestions about 
+coding demos. I invested a lot of
+money to make demos run smoother on my
+machine, but, it seems that
+unfortunately lots of coders do not
+know how to  make their routines work
+well on 040+. And that is too bad, I
+think, since the goal has to be a
+smooth effect - and of course that the
+effect should run even better on
+faster hardware. I do not think, that
+it is necessary  to make effects run
+fast on poor hardware, like 030/040. I
+think that everything needs to be
+optimized to work the best on the
+fastest of hardware - absolutely no
+matter what it looks like on old, slow
+and boring cpus, like 030. A large
+part of the Amiga's problem is that
+most programmers tend to forget new,
+fast hardware. Let's face it: Today
+Amiga is far behind, and why?  Why
+should a platform which has such a
+great OS have that great problems as
+Amiga has? Why is Mac in a much better
+position - and its OS is far worse
+than AmigaOS? It's simple - Mac has
+GOOD applications. As you may know,
+users not buing computers for its OS,
+or its hardware. Who cares if the
+computer is running using 68k, PPC or
+MIPS r10000, or x86? No one. People
+are buying computers for utlizing
+software. Yes, eventually it is
+necessary to use the OS, but mostly
+just for running applications. Mac
+opened my eyes. It doesn't matter that
+it IS slower than pC, (I am talking
+604e/200 here) - there are lots of
+reasons why it is much more useful
+than a pC. It is user-friendly and has
+great  applications. That is all. I
+work as a graphician and DTP worker,
+and when I  work on pC, I prefer
+MacIIci (030&882/25...). Yes, is about
+10 times slower than my pC, but I
+recommend you to try Quark 3.31 on pC
+and Mac. Difference is is so big, that
+I can never work on pC. Only quality
+applications could help Amiga. And
+help much more than any PPC would.
+Eventually PPC running PowerUp (WarpUp
+rulez!) can only kill Amiga...
+Why do I write this introduction?
+Because demos are applications too,
+and it is too bad, when some have
+those very simple bugs. Quality of
+software needs to change. And nearly
+all coders seem to forget lots of
+simple things: First of all, lots of
+demos crash when I try to run them
+from icon. I know why, they do not
+have the correct startupcode which can
+also handle to be executed from the
+Workbench. I think that it is
+necessary that demos be executed from
+icon, because this is the most wide
+used way to run programs. I do not
+have any DOS-box, that need ASCII
+"GUI" to run programs. Also, when
+talking about DOS-box'es, it is
+necessary to say that Amiga filenames
+do not need .exe-extensions. Again, my
+Amiga is NOT a DOS-box and I honestly
+don't want to see these extensions on
+it. Yes, it is easy to rename the
+file, but still, it is awful. But then
+who knows what file is executable then
+(when talking multifile demos)? The
+one, that has an icon, of course. And
+if not, you can use "!" as first
+character of the name of the
+executable file - that way it will
+always appear on top of the fileslist
+- thereby easily found when files are
+sorted by name.
+
+Let's continue. Do not crunch nothing.
+There are a lot of reasons, so I will
+mention only a few. When you finally
+crunch your demo with lzx or lha, the
+size of the archive will be smaller,
+when all files are decrunched - and
+that is the goal, right? When
+executing crunched file, it also needs
+more memory to run - and usually
+fragment memory, corrupt it, etc...
+Okay, Titanics Cruncher does not need
+more memory, but lots of decrunch
+routines have strange problems with
+040+ cpu's (Crunchmania, etc.). Ok,
+and when intro need to be crunched (40
+or 64k)? Then use Stonecracker for the
+competition, or just show that STC
+crunches the file below limit and
+spread the decrunched version, please.
+Lots of intros crash on 040+ only due
+to the decrunching routine. 
+
+Anyway, I see a lot of doc files which
+have a weird default tool, such as
+more, ppmore, etc. Please do not write
+anything else in the default tool than
+a simple MultiView. Do not specify
+path - since users can have this tool
+at different locations than the c:
+assign. And Amiga knows that Path is
+in your startup-sequence. Do not
+specify it!
+
+Okay, back to demos. After
+double-clicking on the icon, the demo
+should (hopefully) run. Okay, but lots
+of programmers seem to forget, that it
+should be possible to quit any time by
+pressing LMB. If that is not the
+problem add this. Unfortunately it
+seems that immediately is not too good
+after all, since when you quit so
+quickly, this lmb click is interpreted
+by the OS as well and because the user
+usually move the mouse when touching
+it - the OS seems to think that it is
+time to drag and drop the icon and
+then what happens is that I end up
+moving the demo into any of the opened
+windows. One time my friend even ended
+up copying my Work: to my Public:. It
+would be good if the coder would fade
+it (quickly) and clear the input
+buffer for preventing the
+aforementioned situation. Also, I
+think that it is good if scroll is
+paused by RMB as standard - some guys
+not follow this. Standard UI (User
+Interface) is a very good Mac OS idea,
+so why not follow it?
+
+Also RMB press can be used for various
+indications while routine running,
+such as system overload, etc. (take a
+look at the old demo Friday at Eight
+by PolkaB. - unfortunately music
+requires reset VBR...).
+Another thing is that lots of people
+seem to think that assigning is
+necessary. This is a stupid joke. For
+example, Mac OS do not have anything
+like this, and work. Also, I have
+never seen a pC demo, which requires
+assigning. (pC demos on my 64MB ram
+says that "Program is too big to be
+fit into memory."). Programmers, stop
+joking and start using the DOS
+function GetProgramDir(), that tell
+you where you are, so that "progdir:"
+can be used instead of those silly
+assigns. I avoid demos, that require
+assign. It is simply too lame, I
+think. 
+
+About the number of files: Some demos
+(Closer, Dim...) have a huge amount of
+files. This is simply horrible. It is
+easy to use a DOS library function to
+access files joined into one big data
+file. I tend to like one-files demos
+(memory are so cheap right now...),
+but for some reasons, such as fixing
+the demo to work on higher
+configurations, it is good to have an
+executable file alone. Only, when
+writing "lump" file access (in big
+data file), do not use any hack -
+please use 100% OS functions, since
+lot of people have bigger block size
+(I have 4k - much faster deleting
+(about 100x :) ), but I know people
+that have 32k block, not 0.5k!).
+
+Okay, let us talk about coding again.
+Demos should be tested under
+Enforcer/Cyberguard, and should not
+have any bugs that could crash the OS
+after this test. I recommend using 060
+for developing, because on a 060
+Cyberguard does NOT slow-down (nor 1%
+:) ). Anyway, using a combination of
+Suschi, Seqtracker and Mugwall will
+show you the disassembled code around
+this particular enforcer hit (of
+course this hit is not allowed!) and
+thereby show at which line in the
+source code the bug is. This makes
+debugging a really funny game. I
+advice you to check the most widely
+used Player 6.1A replay code first,
+because that is the one that produces
+the most enforcer hits - is not
+because p61 is a lame replayer, it is
+simply because that a lot of coders
+write their own starting chaos into
+the p61 routine - and, most terribly,
+the startup-routines widely used are
+pretty bugfilled. Be warned.
+
+Another warning is necessary when it
+comes to opening the screen. Use OS!
+No matter that hacks like "move.w
+#32,$dff1dc" will work with most
+systems, but not with all screens.
+Although this hack really turns pal
+on, it does not tell OS, that there is
+going to be a new screen and it is
+necessary to switch it to front. That
+is necesary for graphics cards and
+scandoublers - othervise most users
+will only see a frozen mouse and their
+wb screen, such as in ThugLife and
+lots of other demos. So, please use
+OS. This can give you all the
+necessary allocations, etc. Only,
+please do not forget, that on graphics
+cards it is possible to display
+bitmaps from fast mem - so you MUST
+specify chip-ram, otherwise user see
+only the lowering amount of
+chip-memory... 
+
+CGX's option planes is set to fastmem
+and CGX is the most widely used rtg
+controling for graphics card today.
+Hmmm. I prefer p96, is MUCH better.
+Now, the aforementioned should be
+basic knowledge about how to make the
+program work, now some stuff about
+supporting p96/cgx and AHI. Today it
+is NOT a good idea to write hardware
+hacks to get all possible speed by
+direct hardware hitting. Yes, AHI is
+sure slower tham the Player6.1A code,
+but AHI gives support for sound cards,
+AHI gives you more channels, high
+mixing rate and so on. And remember,
+AHI runs even faster on KS3.1 with a
+soundcard. Yes, it does eat some cpu
+power, but really not that much on
+060. I tried Everything Dies, that has
+AHI and p96/cgx support and I measured
+this for your informaation: On Paula
+8bit mono mode and 4kHz mixing rate
+the sound is of course terrible, so I
+tried Paula 14bit stereo calibrated
+and 28kHz mixing rate and difference
+is less than 0.5fps!!! Who can say
+that AHI is slow? I use AHI 4.180, 060
+version and concerning the second
+example, the great DigiBoosterPro 2.18
+can play simultanously in 16bit play
+mode (in contrast to 8bit default
+mode, that is used for benchmark
+testing...), with mixing rate 44.1kHz
+at Fast Paula 14bit stereo calibrated
+utilizing ALL 128 channels!!! Ok,
+scopes are only redrawn about twice
+per pattern and scrolling is redrawn
+about 6 times per track. And the mouse
+is slow. But it works!!
+
+Ok, AHI and p96/cgx are good ideas.
+Yes, graphic cards does not allow you
+a lot of cpu-free tricks (Hi
+Peskanov!), but they are very fast in
+putting chunky datas on screen as well
+as doing high resolution, true colour
+screenmodes and so... And hardware
+supported OS functions speed up very
+notably, for example ScrollVPort() can
+scroll a low-res screen 960 times per
+second (960fps!!!) and in 800*600*8bit
+still at 101 fps on my poor CV3D, Z2
+and running cgx (CV3D is slower than
+PicassoIV and cgx is a tad slower for
+some functions, such as writing...).
+Double buffering is also possible,
+when opening a screen of double
+vertical size (320*240 resolution,
+320*480 screen size) and use
+ScrollVPort() to move it up and down
+pretty quickly.
+
+This way is faster than
+ChangeScreenBuffer(), that requires a
+blitting image. But please use 240,
+not 200 lines, othervise pixel aspect
+aren't close to 1*1 and a sphere would
+look like an elipse... When you are
+talking about that speed-booster ways,
+do not forgot, that routine running
+45-48 fps are so jerky - is necesary
+on fast HW to start thinking about
+max. fps (like XTR, TestamentII...).
+Because all users can have different
+refresh rates set up (that is not pC
+:) ), and it's a thing to have in mind
+as well. When is a routine running
+smoothly??? When the framerate is
+dividable with the screen update
+speed. For PAL this is pretty simple:
+50fps is great, 25 is still good, but
+corners of textures are on screen
+twice. 17fps (every third frame) and
+lower are usable, but, the only way to
+make this work well is to allow the
+user to select his/her preferable
+frame rate by division of the real
+screen update rate.
+
+1 is every one frame, 2 every second,
+etc. Some games have directly set up
+this, which is too bad (for example
+Gloom - max. 25fps). Do not forgot
+this, when thinking about smooth,
+double buffered movement. Often it is
+better running at 25fps, because
+reaching 50fps is possible only on
+060/66+ :) . Before you think that it
+is not possible to reach that, follow
+my how-to code and see eg. the great
+Muscles/Impulse on 030 and on
+060/66+++ and your mind will be
+changed. Guaranteed :). Now what
+instructions are forever strictly
+forbidden:
+
+Unimplemented integer instructions in
+68060. Do not use any of following,
+not even for initializing. Causes trap
+and emulation. This can decrease
+performace to about 5-10% basic A1200.
+Be warned.
+
+
+DIVU.L<EA>,Dr:Dq
+DIVS.L<EA>,Dr:Dq
+MULU.L<EA>,Dr:Dq
+MULS.L<EA>,Dr:Dq
+MOVEPDx,(d16,Ay)
+MOVEP(d16,Ay),Dx
+CHK2<EA>,Rn
+CMP2<EA>,Rn
+CAS2Dc1:Dc2,Du1:Du2,(Rn1):(Rn2)
+CASDc,Du,<EA>
+
+Unimplemented FPU instructions in
+68060. So, 060 FPU is fastest one.
+
+FACOS FASIN FATAN
+FATANH FCOS FCOSH
+FETOX FETOXM1 FGETEXP
+FGETMAN FLOG10 FLOGN
+FLOGNP1 FMOVECR FSIN
+FSINCOS FSINH FTAN
+FTANH FTENTOX FTWOTOX
+FLOG2 FMOD FREM
+FSCALE FTRAPcc FDBcc
+FScc
+FMOVEM.X (dynamic register list)
+FMOVEM.L #immediate of 2 or 3 ctl regs
+F<OP>.X  #immediate,FPn
+F<OP>.P  #immediate,FPn
+
+Following instructions -
+fmul.s fp0,fp1
+move.l d0,d2
+move.l d1,d3
+move.l d2,d4
+add.l  d5,d6
+add.l  d0,d1 - executes in 3 cycles !!!
+
+On 060 seems that is not important, if
+you are using registers or memory for
+storing operands. Of course registers
+are faster, but in Andry testing are
+no difference - cache seems to work
+pretty good. Anyway, nop takes nine
+cycles, and divu/fdivu need 37 clocks.
+But integral divu have multiple exit
+points, coz, depending of divider can
+take only 9 cycles. In 060 manual
+seems to be bug - instruction tas is
+not emulated on 060, tas2 is. Okay,
+back to nop. That are also usable for
+synchronizing pipeline, because
+cleaning it.
+Please replace every possible 
+"dbra dx,loop" with
+"subq.l #1,dx; bpl.w loop".
+dbra and similar ones (all dbxx)
+cause pipeline clearing - executing
+every instructions in pipeline.
+Drasticaly speed up in loops (more
+dbxx). Arrange instructions that, as
+can using pipeline - two following
+integer and one FPU instruction is
+able to execute in one cycle, when
+first FPU one overleap these two
+following. Move16. Because of
+copy-back mode of 040 is here new
+move16 instruction. Using move.l cause
+(on 040+) halving writing performace
+(when writing large block), because
+copy-back mode forces cache to read
+first and after write it. Move.l is
+usable for small writing to cache and
+chip-ram. Do not use move16 for
+writing to chip-ram. When you are
+really need 64bit precision for your
+calculations, is necesary to use these
+way:
+
+
+
+For 020/030/040:
+Mul_040 muls.l   d1,d1:d0
+                      ;64-bit multiply
+        move.w   d1,d0
+        swap     d0
+            rts
+
+For 060+:
+Mul_060 fmove.l d0,fp0
+        fmul.l  d1,fp0
+        fmul.s #0.0000152587890625,fp0
+                      ;d0 * d1 / 65536
+        fmove.l fp0,d0
+        rts
+
+Same can be done for divu too. At
+least, for rendering/texturing or
+simply for routines which are writing
+data to buffer (chunky :) it is a good
+idea to change the cache mode for this
+buffer, to prevent cache overflow by
+data, which is only going to be
+written (but Andry reach good speed-up
+also with routines that need backward
+reading for some data). You can get
+your routine about 3 times faster as
+DrawColumn() on ADoom. For examples,
+have a look at ADoomsrc.lha and
+amiga_mmu.s. This help notably on 040+
+cpu. And the fastest code on the
+fastest cpu is the goal!
+
+Talking about fast code is good, but
+on 040+ all 020/030 c2p perform
+horrible, so it is necessary to use
+better ones - seems that the best is
+the Aki c2p for ADoom
+(c2p8_040_amlaukka.s) which reaches
+85fps on CSMKII 060/60, while all the
+"fastest" ones for 020/030 only reach
+half the speed. 
+Back to main principles. I advice you
+to code for 040+ only, since using
+parallel FPU operation helps speed
+notably and also routines can be
+cleaner and more reliable. I do not
+think that it is a big problem that
+some users do not have 040+. When you
+start coding for 040+, these people
+upgrade, because it is good for Amiga.
+Make users upgrade! When more users
+buy accelerators (preferably 66MHz 060
+Apollo :) ), these will be cheaper -
+and again more users will buy it. So,
+please help with starting this up as
+the same seems to be the case on pC
+resulting in fast & cheap hardware. 
+
+When users read that 060/66 or 75MHz
+is recommended and 040+ is necessary,
+the buy it soon, or leave Amiga - and
+this seems to be good too, because
+users that only has a plain a1200 only
+help Amiga when they upgrade or sell
+it, since the next user will be more
+intelligent and buy an accelerator
+card - hopefully with 060. Really, it
+is time to change. It is time for
+040+. Do it, please. 
+
+At last. Everything has bugs. That is
+normal, especially for demos, finished
+in real hurry at the party place (late
+night)...
+
+Yes, okay, deadline. But why not
+return later and relase a fixed
+production??? That seems to be a big
+Amiga problem - nothing seems to be
+finished - result? No good software,
+no fixes, no support, no friendly
+talking, no friendship, no Amiga - or
+you are able to change this? I cannot
+understand, what are these (bugged and
+unfixed productions) good for? Why do
+you people waste that much time for
+nothing? When you invest a lot of time
+to make a demo, why not use an
+additional couple of hours (which is
+nothing compared to the time used for
+making the demo) and release a fixed
+version? Yes, some good coders made
+it, my respect for them (Azure,
+Powdihacker...), but the majority does
+not.
+
+Why didn't Dr. Jekyll or Mr. Hyde from
+Andromeda fix the great Nexus7, which
+refuses to work on 060? Why doesn't
+Jamie/Bomb fix Thug Life? I wanna see
+these pulse Gouraud objects running at
+full frame rate (Nexus7), I wanna see
+Thug Life on a scandoubler and running
+smoothly on my 060. I also think that
+these "problems" with high-end HW
+forced a lot of users not to buy it.
+And that is not all. Many stupid, lame
+people at the Amiga magazines reported
+"incompatibility" of 060!!! What a
+joke! Because of bad coding hacks
+(such as playing with supervisor and
+ssp and ccr register (Hi Jamie!) )
+that may can speed up code on damm old
+and slow 030 based machines about max.
+10% was marked as 060
+"incompatible"!!! Where the hell did
+these people come from? Look how Mac
+applications differs in contrast, no
+matter that 060 was never implemented
+on real Macs, which do not have any
+emulated instructions (any running
+faster than Amiga native...). Why?
+Because Mac programmers seem to follow
+Motorola recommendations about
+programming and future plans - and as
+a fact, support the fastest
+hardware... Or what can I think of
+Amiga applications, when under
+ShapeShifter I can replay two QT
+movies (320*240*HIcolor) at full speed
+(because it is about 15fps only) and
+with audio mixing, all with windows,
+slow Mac OS, etc. And here it is still
+possible to speed up, since when I
+fastforward this movie (frame to
+frame, no skip!), it is notably faster
+than 15fps - and on the Amiga side of
+my machine? Only ONE movie, in ram,
+greyscale, no sound and - 9fps. Who
+can tell me, what is wrong? Autors of
+tested programs just say that "24bit
+mode are fastest..." - not on my Z2
+though, "Z2 is very slow..." - OK, but
+Mac can do TWO movies (MMU refresh
+always at full width...), "on my
+604e/200 I can replay movie with small
+cpu load..." - yes, better C compiler
+help, but what is the point of porting
+that slow software to PPC? Seems that
+people think that it is a good idea to
+slow down PPC. People, what can you
+say about the fact that the fastest
+Amiga doom-clone is Doom? Doom,
+recompiled with slow C compilers (Oky,
+some major time wasting routines are
+100% asm...) compilers. Why, for
+example, isn't Breathless faster, when
+it's made in 100% asm? And the engine
+is simpler that Doom one! ADoom 1.2
+can do 23.5 fps on my machine and more
+than 35 fps on faster hardware, and
+Breathless can only manage about 10-12
+fps... It seems that something MUST be
+wrong. It seems that the quality of
+Amiga software need to IMPROVE a lot.
+By the way, why do demo coders not
+relase the source code for their
+productions? Why isn't the source code
+spread around WITH the demo (as
+standard)? Why? Because when routine
+is available to the public, it is very
+probable, that someone will find a
+faster solution - and that a demo runs
+fast is a goal, right? And if anyone
+not find faster solution, do not cry.
+I am nearly sure that the relase of
+the code will help other coders not as
+good as you, and help making better,
+cleaner and faster demos and games. I
+am sure that when lot of coders relase
+their routines, for example for
+texturing, then only the fastest and
+bestworking one will survive, as
+always, when lots of things are
+relased. BTW, take a look at ADoom -
+it has CLEAN texturing rays, yes?
+Okay, and then look at any other Amiga
+engine. What can you see, for example,
+in AB3DII ? Terrible... Trapped?
+Terrible. Breathless? Nearly clean
+ones, but something is wrong. Why use
+a bugged one, when there are faster
+and cleaner ones around? I think that
+it is wasting time, that nearly all
+coders has to write their own routine
+for texturing. Wasn't it better is the
+sources were publicly available?
+
+When you are thinking that the
+demoscene as a rule is based on
+comparing coding skills, OK, you are
+right. And if you are thinking that
+when all coders using same texturing -
+the scene is practically lost? Not
+really. The speed of the code is only
+a small fraction of how to make a
+great demo. Also design, graphics and
+music are important things. Anyway,
+when routines are available, I am sure
+that the coders will be searching for
+new things to do. And, of course,
+these new things will be be faster and
+better (when sources are available)
+and here there is still room for
+improvement and new ideas. Releasing
+sources will not kill the demo scene -
+it will help it a lot.
+Or take a look at pC. It's awful, oky,
+but lot's of sources (for example
+Future Crew...) are available, to make
+demomaking easier and more programmers
+do it - pC scene grow very fast, first
+and foremost because of this great
+idea. And the Amiga scene is getting
+smaller and smaller, and will later
+die. Everything dies. Also, the Amiga
+will die sometime. But this time seems
+to be very close for all of us, as
+things are going today.
+
+
+I'm very sorry, if some of my opinions
+look bad, unfriendly or depressive,
+or, worse, pC like. I can and will not
+have any DOS-box and will never buy
+it, that is reality.
+I still and forever having Amiga, no
+matter if I soon buy BoXer to raise
+68k power (Z3, fast bus, 75MHz 060,
+faster chip-ram writing (c2p) ). I
+like my Amiga so much, but I cannot
+close my eyes to the way things are
+going now.
+Again I am sorry, that this article is
+so critical to us. You can blame me:
+(reactions and more basic 060 code
+know-how is always welcome) at my
+e-mail addy "troda@cbnet.cz". I would
+love to read your reactions and also,
+perhaps I can help you with most
+problems concerning how to make your
+code work well.
+
+Regards, guys.
+
+Demoscene newer die, or are after
+death?
+
+Pavel Narozny, Troda of PEGAS,
+troda@cbnet.cz

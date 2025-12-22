@@ -1,0 +1,61 @@
+»CL8:»SML:--------------------------------------
+          »CL9:»BIG:Memory Copy
+»CL8:»SML:--------------------------------------
+
+»CL0:If you examine a copy function running
+on 040/060 you will see a really
+undesired cache effect.
+
+On a, let's say 020 CPU, you read a
+long and store it without any trouble.
+These are 2 memory acceses.
+
+But on 040/060, where you have cache
+line the following happens:
+
+»CL1:-» You read a long, "»CL4:move.l (A0)+,D0»".
+  The cache can't provide the long
+  without filling the whole cache
+  line, so it will. That's OK, because
+  all those longs will be used on a
+  sequential copy.
+»CL1:-» You write the long "»CL4:move.l
+  D0,(A1)+»". Now there is the problem.
+  The cache needs to read the memory
+  line corresponding to A1. Then it
+  will change the long pointed by A1,
+  and the line will remain there until
+  the datacache is filled and need to
+  store some line to make space.
+
+»CL0:As you can see, that's really 3 memory
+accesses instead of 2. Also, if we
+kill datacache, we will loose the fast
+burst transferings! So we can't win
+this way. Motorola provided "move16"
+instruction to speed memory copys. It
+copies a full cache line, so it
+doesn't have to read the destination,
+as it will totally rewritten.
+
+»CL4:move16 (A0)+,(A1)+ »CL5:;Fast Copy 16 bytes
+                   ;from A0 to A1
+
+»CL0:Needless to say, A0 and A1 should be
+16 byte aligned adresses.
+
+As I explained, move16 is avalaible on
+040/060. This means that use of it on
+030 will result in exceptions. If you
+want to use it, you should first
+detect the CPU, and use move16 only in
+040 or superior. »CL7:(quite recommended
+instruction... Troda)»
+
+Also, you can call the memory copy
+function provided by the OS; allegedly
+it's very fast, and makes use of the
+best routine for every CPU. This is
+what they say, don't quote me for
+that, I have not tried to trace it to
+see what it makes.

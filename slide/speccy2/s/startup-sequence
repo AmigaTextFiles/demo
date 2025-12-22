@@ -1,0 +1,11 @@
+;PopoCop 1997
+cls
+big
+makedir RAM:Env
+assign > NIL: Env: RAM:Env
+run > NIL: cliplay mod.FindMeBaby
+ppshow > NIL: df0:fifteen nomouse
+ppshow > NIL: df0:Cover nomouse
+ppshow > NIL: df0:#?.dat nomouse
+muchmore readme!.text
+cliplay

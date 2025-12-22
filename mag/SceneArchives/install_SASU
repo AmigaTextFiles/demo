@@ -1,0 +1,134 @@
+(complete 0)
+
+(set VAR_LANGUAGE (getenv "Language"))
+
+; English strings, used as standard
+
+(set TXT_INTRO        "\nSASU will now be installed.\n\nIf you do not like this program, just remove its drawer to deinstall.\n")
+(set TXT_PATH         "In which directory shall the program directory be created?")
+(set TXT_PATH_HELP    "\nAn own directory named "SASU" will be created in the given directory.\nYou can remove this directory later to deinstall SASU.\n")
+(set TXT_MAIN         "Copying Program files ...")
+(set TXT_MAIN_HELP    "\nAll the files that are needed are copied.\n")
+(set TXT_FILE_DOC     ":Scene.txt")
+
+; Supported languages
+
+(
+ if (= VAR_LANGUAGE "deutsch") (
+  (set TXT_INTRO        "\nSASU wird nun installiert.\n\nWenn Ihnen dieses Programm nicht gefällt, löschen sie zur Deinstallation einfach das Verzeichnis.\n")
+  (set TXT_PATH         "In welchem Verzeichnis  soll das Programmverzeichnis angelegt werden?")
+  (set TXT_PATH_HELP    "\nEin eigenes Verzeichnis mit dem Namen "SASU" wird im angegebenen Verzeichnis erzeugt.\nSie können dieses Verzeichnis später zur Deinstallation von SASU löschen.\n")
+  (set TXT_MAIN         "Kopiere Programmdateien ...")
+  (set TXT_MAIN_HELP    "\nAlle nötigen Dateien werden kopiert.\n")
+  (set TXT_FILE_DOC     ":scene.txt")
+ )
+)
+(
+ if (= VAR_LANGUAGE "español") (
+  (set TXT_INTRO        "\nSe va ha instalar SASU.\n\nSi no le gusta este programa, borre el cajón para desinstalarlo.\n")
+  (set TXT_PATH         "¿En dónde desea crear el cajón 'SASU'?")
+  (set TXT_PATH_HELP    "\nSe creará un cajón llamado 'SASU' en la ubicación indicada.\nSi desea, más tarde, desinstalar 'SASU', borre este cajón.\n")
+  (set TXT_MAIN         "Copiando ficheros...")
+  (set TXT_MAIN_HELP    "\nSe han copiado todos los ficheros necesarios.\n")
+  (set TXT_FILE_DOC     ":scene.txt")
+ )
+)
+(
+ if (= VAR_LANGUAGE "italiano") (
+  (set TXT_INTRO        "\nSASU ora sta per essere installato.\n\nSe non ti piace questo programma, rimuovi il suo cassetto per deinstallarlo.\n")
+  (set TXT_PATH         "In quale directory deve essere creata la directory del programma?")
+  (set TXT_PATH_HELP    "\nUna directory chiamata "SASU" sarà creata.\nTu puoi rimuovere questa directory più tardi per deinstallare SASU.\n")
+  (set TXT_MAIN         "Sto copiando i file ...")
+  (set TXT_MAIN_HELP    "\nTutti i file che erano necessari sono stati copiati.\n")
+  (set TXT_FILE_DOC     ":scene.txt")
+ )
+)
+
+(complete 10)
+
+(message TXT_INTRO)
+
+; Get the directory to install to
+
+(complete 20)
+
+(
+ set VAR_DEST(
+   askdir (prompt  TXT_PATH)
+          (help    TXT_PATH_HELP)
+          (default @default-dest)
+  )
+)
+(set VAR_DEST (tackon VAR_DEST "SASU"))
+(set @default-dest VAR_DEST)
+
+(complete 40)
+
+; And now copy all the files
+
+(
+ copyfiles (prompt TXT_MAIN)
+           (source "Scene")
+           (dest   VAR_DEST)
+)
+(
+ copyfiles (prompt TXT_MAIN)
+           (source "Scene.data1")
+           (dest   VAR_DEST)
+)
+(
+ copyfiles (prompt TXT_MAIN)
+           (source "Scene.data2")
+           (dest   VAR_DEST)
+)
+(
+ copyfiles (prompt TXT_MAIN)
+           (source "Disklist-Group Sorted.gde")
+           (dest   VAR_DEST)
+)
+(
+ copyfiles (prompt TXT_MAIN)
+           (source "Disklist-Group X-Ref.gde")
+           (dest   VAR_DEST)
+)
+(
+ copyfiles (prompt TXT_MAIN)
+           (source "Disklist-Item Sorted.gde")
+           (dest   VAR_DEST)
+)
+
+(
+ copyfiles (prompt TXT_MAIN)
+           (source "Disklist-Group Sorted.gde.info")
+           (dest   VAR_DEST)
+)
+(
+ copyfiles (prompt TXT_MAIN)
+           (source "Disklist-Group X-Ref.gde.info")
+           (dest   VAR_DEST)
+)
+(
+ copyfiles (prompt TXT_MAIN)
+           (source "Disklist-Item Sorted.gde.info")
+           (dest   VAR_DEST)
+)
+
+(complete 80)
+
+; Don't forget the correct documentation
+
+(
+ copyfiles (source TXT_FILE_DOC)
+           (dest   VAR_DEST)
+           (infos)
+)
+
+; And copy the icon for the drawer
+
+(
+ copyfiles (source "Scene.info")
+           (dest   VAR_DEST)
+)
+
+
+(complete 100)

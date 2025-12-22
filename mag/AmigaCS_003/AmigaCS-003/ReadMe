@@ -1,0 +1,69 @@
+/**************************************************************************
+ *                                                                        *
+ *                  DiskMag AmigaCS #003   29.08.1998                     *
+ *                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                     *
+ *                                                                        *
+ *   Redakce:   Jaroslav Pokorny  -  ShAmaN/Abort  (code, layout, txt)    *
+ *              Jaromir Rozmara - JR/Abort  (gfx, music, txt)             *
+ *              Marek Hron - Wolf/Abort  (music, txt)                     *
+ *              Radek Hrdlicka - Lahve/HLA  (game)                        *
+ *              Petr Skala - Schizzy/Abort  (txt)                         *
+ *              Miloslav Petr - Ya/Abort  (game)                          *
+ *              Andrej -DNA- Bunta  (txt)                                 *
+ *                                                                        *
+ **************************************************************************/
+
+
+  DiskMag   je   plne  systemovy,  proto  chodi  perfektne  pod  CyberGraphX
+(nadefinujte  si  v CGXMode  rezim 640x256x8).  DiskMag pouziva pro veskerou
+grafiku  systemove  datatypy,  proto muze pouzivat libovolny format grafiky.
+Avsak  z duvodu  znacne  uspory  mista  a kvalitniho  ditheringu  byl vybran
+moderni  format  PNG,  proto je potreba nainstalovat prilozeny PNG datatype.
+(radeji nepozivejte akPNG.datatypy z Aminetu - jsou plne chyb!).
+
+
+  Pozadavky diskmagu:
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  - Amiga s CPU 68020 a vyssim
+  - AGA grafika nebo CyberGraphX kompatibilni graficka karta
+  - AmigaOS 3.0 a vyssi
+  - nainstalovany PNG datatype (prilozen v archivu)
+  - max. 3 MB volneho mista na harddisku
+
+  Pametove naroky
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  · na AGA bez FASTky :  volnych 1.6 MB CHIP
+  · na AGA s FASTkou  :  volnych 1.0 MB CHIP a cca. 1 MB FAST
+  · pod CyberGraphX   :  volnych cca. 2 MB FAST
+
+  Instalace PNG datatypu:
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  - jednoduse rozbalte archiv 'png-datatype.lha' z adresare 'Extras'
+    na vas systemovy disk (tj. do adresaru 'SYS:Classes/DataTypes'
+    a 'SYS:Devs/DataTypes') a restartujte Amigu.
+    [png.datatype 43.3 (16.12.95) - ©1995 Cloanto Italia srl.]
+
+  Zname chyby
+  ¯¯¯¯¯¯¯¯¯¯¯
+  - zavirani WB sice muze usetrit nejakou CHIPku, ale tato funkce nepracuje
+    se vsemi patchi (MCP) a utilitami korektne; neni to chyba diskmagu!
+  - pri ikonifikaci se pamatuje posledni pozice jen do urcite hloubky
+    vnoreni (zato se vsak pri ikonifikaci uvolnuje veskera alokovana pamet
+    a CHIPka - krome app-ikony, kterou lze ale vypnout).
+  - pokud se vam do vyberu screenmode/hudby vykresluje pattern, tak se
+    jedna o znamou chybu systemu 3.0 (gadtools.library V39). Ve verzi 40
+    gadtools.library (AmigaOS 3.1) je chyba opravena. V pripade, ze vam
+    tato chyba hodne vadi, prejmenujte v adresari Gfx/ soubory BackFill#?.
+  - FastIPrefs zpusobuje problemy s paternem v LISTVIEW gadgetach
+    (naprava: smazat FastIPrefs, smazat vse ENVARC:Sys, nastavit
+     preference znovs preferencnimi programy z WB 3.x)
+
+___________________________________________________________________________
+
+                              Kontaktni adresy
+                              ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+
+                         E-MAIL:  shaman@area93.cz
+               WWW:  http://sun.ujep.cz/~pokorny/amigacs.html
+
+___________________________________________________________________________

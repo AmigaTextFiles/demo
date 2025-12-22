@@ -1,0 +1,43 @@
+FistPig
+
+- An Amiga 4k intro released at Assembly 2003
+
+Loaderror / Ephidrena  -  Sound engine and music
+Slummy / Spaceballs  -  Visual effects
+
+..nothing in this intro looks like it was supposed to...
+..Slummy won't release anything on Amiga for quite a while now...
+
+--------------------------------------------------------------------------
+This 4k features:
+-----------------
+
+Full 3d-engine with X&Y-clipping, truecolor additive stencilmapping and a
+"point at"-camerasystem with rubberband physics.
+
+Hyperbolic glow-filter (medium precision)
+
+Texturegenerator producing 3 monotone and 3 dualblended textures. Giving a
+total of 6 256*256 pixels truecolor 18-bit textures, amounting to a total
+size of 1.5 megabytes.
+
+Two simple 3d object/scene-generators.
+
+
+Sound engine:
+- Infinite polyfonism
+- Overdrive
+- Drum Synth with 65536 possible sounds
+- Tunable lowpass filtered delay/feedback
+- One-pole IIR lowpass filter
+- Additive and fm synthesis
+- variable frequency phaser/flanger/doubler
+- convolution effects
+- 3 waveforms: sine, square, saw.
+- 8 track sequencer with looping to save space.
+- Multilayered portamento effects
+- Resonance
+If the song was rendered to disk rather than realtime mixed in hardware, the
+total filesize would amount to 92 megabytes of raw sampledata.
+
+

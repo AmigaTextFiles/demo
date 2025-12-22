@@ -1,0 +1,131 @@
+LWSC
+1
+
+FirstFrame 1
+LastFrame 60
+FrameStep 1
+PreviewFirstFrame 1
+PreviewLastFrame 200
+PreviewFrameStep 1
+FramesPerSecond 30.000000
+
+LoadObject E:/a-madwizards/!d_212/lwo/bingo/1.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+LoadObject E:/a-madwizards/!d_212/lwo/bingo/2.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+LoadObject E:/a-madwizards/!d_212/lwo/bingo/3.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+LoadObject E:/a-madwizards/!d_212/lwo/bingo/4.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+AmbientColor 255 255 255
+AmbIntensity 0.250000
+
+AddLight
+LightName Light
+ShowLight 1 7
+LightMotion (unnamed)
+  9
+  1
+  -2 2 -2 45 35 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LightColor 255 255 255
+LgtIntensity 1.000000
+LightType 0
+ShadowType 1
+
+ShowCamera 1 7
+CameraMotion (unnamed)
+  9
+  9
+  -809.7709 475.9089 -1466.447 -13.06363 26.48182 12.46364 1 1 1
+  0 0 0 0 0
+  -736.803 222.8271 -979.319 -29.20001 4.5 -7.699997 1 1 1
+  44 0 0 0 0
+  -1111.444 -487.2729 59.98082 5.39999 -27.80001 -25.9 1 1 1
+  82 0 0 0 0
+  -682.3621 -182.2729 1305.127 91.99995 -13 -21.89999 1 1 1
+  114 0 0 0 0
+  -319.4601 -108.1894 1352.211 97.13019 -12.12324 -21.66303 1 1 1
+  127 0 0 0 0
+  153.2822 -46.0729 1339.085 91.99995 -13 -21.89999 1 1 1
+  141 0 0 0 0
+  389.7492 -14.2073 1312.953 112.2513 -3.806519 -16.39802 1 1 1
+  153 0 0 0 0
+  714.5423 105.0271 1265.103 150.5999 13.2 -6.299989 1 1 1
+  171 0 0 0 0
+  1042.824 361.9271 1186.77 170.6 18.3 37.70001 1 1 1
+  200 0 0 0 0
+EndBehavior 1
+ZoomFactor 3.200000
+Resolution 1
+PixelAspectRatio 2
+SegmentMemory 2200000
+Antialiasing 0
+AdaptiveSampling 1
+AdaptiveThreshold 16
+FilmSize 2
+FieldRendering 0
+MotionBlur 0
+DepthOfField 0
+
+SolidBackdrop 1
+BackdropColor 0 0 0
+ZenithColor 0 40 80
+SkyColor 120 180 240
+GroundColor 50 40 30
+NadirColor 100 80 60
+FogType 0
+DitherIntensity 1
+AnimatedDither 0
+
+RenderMode 2
+RayTraceEffects 0
+ClipRayColors 0
+DataOverlayLabel  
+FullSceneParamEval 0
+
+ViewMode 5
+ViewAimpoint 0.000000 0.000000 0.000000
+ViewDirection 0.300197 -0.314159 0.000000
+ViewZoomFactor 4.000000
+GridNumber 40
+GridSize 10.000000
+ShowMotionPath 1
+ShowBGImage 0
+ShowFogRadius 0
+ShowRedraw 0
+ShowSafeAreas 0
+ShowFieldChart 0

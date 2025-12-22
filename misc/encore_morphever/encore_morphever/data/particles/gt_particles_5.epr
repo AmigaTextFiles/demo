@@ -1,0 +1,91 @@
+{
+	"enc_info": {
+		"data_type": "ENCPAR",
+		"version": "2.0"
+	},
+	"max_num_particles": 500,
+	"num_create_particles": 1,
+	"sorting_type": false,
+	"shape_type": "plane_billboard",
+	"life_time": 1.4,
+	"particles_per_sec": 40,
+	"update_freq": 30,
+	"spread": 0.15,
+	"locked_position_axis": false,
+	"texture_frames_matrix": [
+		3, 1
+	],
+	"texture_file_name": "gt_particles_5_tex_alpha",
+	"layer_1": {
+    	"disabled": false,
+    	"depth_mask": false,
+    	"depth_test": false,
+		"blending": "multiply",
+		"color_keys_rgba": [
+    		0.0, 0.0, 0.0, 0.15,
+    		0.0, 0.0, 0.0, 0.3,
+    		0.0, 0.0, 0.0, 0.0
+		],
+		"color_key_times": [
+			0,
+			0.8,
+			1.4
+		],
+		"size_keys": [
+			0.08,
+			0.25,
+			0.55
+		],
+		"size_key_times": [
+			0,
+			0.8,
+			1.4
+		],
+		"texture_keys": [
+			0, 
+			1, 
+			2
+		],
+		"texture_key_times": [
+			0,
+			0.4,
+			0.8
+		]
+	},
+	"layer_2": {
+    	"disabled": false,
+    	"depth_mask": false,
+    	"depth_test": false,
+		"blending": "alpha",
+		"color_keys_rgba": [
+    		0.5, 0.5, 0.5, 0.25,
+    		0.5, 0.5, 0.5, 0.5,
+    		0.5, 0.5, 0.5, 0.0
+		],
+		"color_key_times": [
+			0,
+			0.8,
+			1.4
+		],
+		"size_keys": [
+			0.08,
+			0.25,
+			0.55
+		],
+		"size_key_times": [
+			0,
+			0.8,
+			1.4
+		],
+		"texture_keys": [
+			0, 
+			1, 
+			2
+		],
+		"texture_key_times": [
+			0,
+			0.4,
+			0.8
+		]
+	}
+}

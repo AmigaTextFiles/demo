@@ -1,0 +1,174 @@
+{
+	"hierarchy":	[{
+			"node":	"ROOT",
+			"objids":	[],
+			"matrix":	[1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1],
+			"children":	[{
+					"node":	"Light",
+					"objids":	[],
+					"matrix":	[-0.290865, 0.566393, 0.771101, 2.07625, -0.0551891, 0.794672, -0.604525, 5.90386, -0.955171, -0.218391, -0.199883, -1.00545, 0, 0, 0, 1],
+					"children":	[]
+				}, {
+					"node":	"Camera",
+					"objids":	[],
+					"matrix":	[-0.699275, -0.710388, -0.0797728, -16.5475, -0.0001086, 0.111699, -0.993742, 2.74603, 0.714853, -0.69489, -0.0781853, -16.1409, 0, 0, 0, 1],
+					"children":	[]
+				}, {
+					"node":	"Text_antialiased",
+					"objids":	[0],
+					"matrix":	[0.559806, 0.811179, -0.169135, 0.318758, -0.174756, -0.0839473, -0.981027, -0.474434, -0.809986, 0.578742, 0.0947641, -0.576554, 0, 0, 0, 1],
+					"children":	[]
+				}, {
+					"node":	"Text.001",
+					"objids":	[1],
+					"matrix":	[0.559806, 0.811179, -0.169135, 0.318758, -0.174756, -0.0839473, -0.981027, -0.474434, -0.809986, 0.578742, 0.0947641, -0.576554, 0, 0, 0, 1],
+					"children":	[]
+				}, {
+					"node":	"Text.002",
+					"objids":	[2],
+					"matrix":	[0.559806, 0.811179, -0.169135, 0.318758, -0.174756, -0.0839473, -0.981027, -0.474434, -0.809986, 0.578742, 0.0947641, -0.576554, 0, 0, 0, 1],
+					"children":	[]
+				}, {
+					"node":	"overlay",
+					"objids":	[3],
+					"matrix":	[1, 0, 0, 1.3583, 0, 1, 0, 0.496926, 0, 0, 1, -0.629439, 0, 0, 0, 1],
+					"children":	[]
+				}, {
+					"node":	"Text.003",
+					"objids":	[4],
+					"matrix":	[0.559806, 0.811179, -0.169135, 0.318758, -0.174756, -0.0839473, -0.981027, -0.474434, -0.809986, 0.578742, 0.0947641, -0.576554, 0, 0, 0, 1],
+					"children":	[]
+				}, {
+					"node":	"Text.004",
+					"objids":	[5],
+					"matrix":	[0.559806, 0.811179, -0.169135, 0.318758, -0.174756, -0.0839473, -0.981027, -0.474434, -0.809986, 0.578742, 0.0947641, -0.576554, 0, 0, 0, 1],
+					"children":	[]
+				}]
+		}],
+	"clear_color":	[0.0375, 0.0665, 0.102, 1],
+	"needs_sort":	"yes",
+	"objects":	[{
+			"name":	"Text_antialiased_0_0",
+			"file":	"data/waterflex.scn/Text_antialiased_0_0.rmsh",
+			"objid":	0,
+			"morphid":	0,
+			"matid":	0
+		}, {
+			"name":	"Text.001_1_0",
+			"file":	"data/waterflex.scn/Text.001_1_0.rmsh",
+			"objid":	1,
+			"morphid":	0,
+			"matid":	1
+		}, {
+			"name":	"Text.004_2_0",
+			"file":	"data/waterflex.scn/Text.004_2_0.rmsh",
+			"objid":	2,
+			"morphid":	0,
+			"matid":	2
+		}, {
+			"name":	"overlay_3_0",
+			"file":	"data/waterflex.scn/overlay_3_0.rmsh",
+			"objid":	3,
+			"morphid":	0,
+			"matid":	3
+		}, {
+			"name":	"Text.002_4_0",
+			"file":	"data/waterflex.scn/Text.002_4_0.rmsh",
+			"objid":	4,
+			"morphid":	0,
+			"matid":	4
+		}, {
+			"name":	"Text.003_5_0",
+			"file":	"data/waterflex.scn/Text.003_5_0.rmsh",
+			"objid":	5,
+			"morphid":	0,
+			"matid":	5
+		}],
+	"animations":	[],
+	"materials":	[{
+			"matid":	0,
+			"diffuse":	"data/waterflex.scn/jupiterenv2.pcx",
+			"emissive":	"none",
+			"normalmap":	"none",
+			"antialiased":	"yes",
+			"metallic":	1,
+			"color":	[1, 1, 1, 1]
+		}, {
+			"matid":	1,
+			"diffuse":	"none",
+			"p_tex":	["data/waterflex.scn/001_11_bub04.pcx", "data/waterflex.scn/002_11_bub04.pcx", "data/waterflex.scn/003_11_bub04.pcx", "data/waterflex.scn/004_11_bub04.pcx", "data/waterflex.scn/005_11_bub04.pcx", "data/waterflex.scn/006_11_bub04.pcx", "data/waterflex.scn/007_11_bub04.pcx", "data/waterflex.scn/008_11_bub04.pcx", "data/waterflex.scn/009_11_bub04.pcx", "data/waterflex.scn/010_11_bub04.pcx", "data/waterflex.scn/011_11_bub04.pcx", "data/waterflex.scn/012_11_bub04.pcx", "data/waterflex.scn/013_11_bub04.pcx", "data/waterflex.scn/014_11_bub04.pcx", "data/waterflex.scn/015_11_bub04.pcx", "data/waterflex.scn/016_11_bub04.pcx", "data/waterflex.scn/017_11_bub04.pcx", "data/waterflex.scn/018_11_bub04.pcx", "data/waterflex.scn/019_11_bub04.pcx", "data/waterflex.scn/020_11_bub04.pcx", "data/waterflex.scn/021_11_bub04.pcx", "data/waterflex.scn/022_11_bub04.pcx", "data/waterflex.scn/023_11_bub04.pcx", "data/waterflex.scn/024_11_bub04.pcx", "data/waterflex.scn/025_11_bub04.pcx", "data/waterflex.scn/026_11_bub04.pcx", "data/waterflex.scn/027_11_bub04.pcx", "data/waterflex.scn/028_11_bub04.pcx", "data/waterflex.scn/029_11_bub04.pcx", "data/waterflex.scn/030_11_bub04.pcx", "data/waterflex.scn/031_11_bub04.pcx", "data/waterflex.scn/032_11_bub04.pcx", "data/waterflex.scn/033_11_bub04.pcx", "data/waterflex.scn/034_11_bub04.pcx", "data/waterflex.scn/035_11_bub04.pcx", "data/waterflex.scn/036_11_bub04.pcx", "data/waterflex.scn/037_11_bub04.pcx", "data/waterflex.scn/038_11_bub04.pcx", "data/waterflex.scn/039_11_bub04.pcx", "data/waterflex.scn/040_11_bub04.pcx", "data/waterflex.scn/041_11_bub04.pcx", "data/waterflex.scn/042_11_bub04.pcx", "data/waterflex.scn/043_11_bub04.pcx", "data/waterflex.scn/044_11_bub04.pcx", "data/waterflex.scn/045_11_bub04.pcx", "data/waterflex.scn/046_11_bub04.pcx", "data/waterflex.scn/047_11_bub04.pcx", "data/waterflex.scn/048_11_bub04.pcx", "data/waterflex.scn/049_11_bub04.pcx", "data/waterflex.scn/050_11_bub04.pcx", "data/waterflex.scn/051_11_bub04.pcx", "data/waterflex.scn/052_11_bub04.pcx", "data/waterflex.scn/053_11_bub04.pcx", "data/waterflex.scn/054_11_bub04.pcx", "data/waterflex.scn/055_11_bub04.pcx", "data/waterflex.scn/056_11_bub04.pcx", "data/waterflex.scn/057_11_bub04.pcx", "data/waterflex.scn/058_11_bub04.pcx", "data/waterflex.scn/059_11_bub04.pcx", "data/waterflex.scn/060_11_bub04.pcx", "data/waterflex.scn/061_11_bub04.pcx", "data/waterflex.scn/062_11_bub04.pcx", "data/waterflex.scn/063_11_bub04.pcx", "data/waterflex.scn/064_11_bub04.pcx"],
+			"shadetable":	"data/waterflex.scn/bub04.sht",
+			"normalmap":	"data/waterflex.scn/turb256x256.pgm",
+			"antialiased":	"no",
+			"p_number":	93,
+			"p_velocity":	0,
+			"p_wind":	[0, 0.015, 0],
+			"p_friction":	0.95,
+			"p_lifetime":	750,
+			"p_min_lifetime":	5,
+			"p_turbulence":	0.5,
+			"p_size_min":	128,
+			"p_size_max":	256,
+			"color":	[1, 1, 1, 1]
+		}, {
+			"matid":	2,
+			"diffuse":	"none",
+			"p_tex":	["data/waterflex.scn/001_5_bub12.pcx", "data/waterflex.scn/002_5_bub12.pcx", "data/waterflex.scn/003_5_bub12.pcx", "data/waterflex.scn/004_5_bub12.pcx", "data/waterflex.scn/005_5_bub12.pcx", "data/waterflex.scn/006_5_bub12.pcx", "data/waterflex.scn/007_5_bub12.pcx", "data/waterflex.scn/008_5_bub12.pcx", "data/waterflex.scn/009_5_bub12.pcx", "data/waterflex.scn/010_5_bub12.pcx", "data/waterflex.scn/011_5_bub12.pcx", "data/waterflex.scn/012_5_bub12.pcx", "data/waterflex.scn/013_5_bub12.pcx", "data/waterflex.scn/014_5_bub12.pcx", "data/waterflex.scn/015_5_bub12.pcx", "data/waterflex.scn/016_5_bub12.pcx", "data/waterflex.scn/017_5_bub12.pcx", "data/waterflex.scn/018_5_bub12.pcx", "data/waterflex.scn/019_5_bub12.pcx", "data/waterflex.scn/020_5_bub12.pcx", "data/waterflex.scn/021_5_bub12.pcx", "data/waterflex.scn/022_5_bub12.pcx", "data/waterflex.scn/023_5_bub12.pcx", "data/waterflex.scn/024_5_bub12.pcx", "data/waterflex.scn/025_5_bub12.pcx", "data/waterflex.scn/026_5_bub12.pcx", "data/waterflex.scn/027_5_bub12.pcx", "data/waterflex.scn/028_5_bub12.pcx", "data/waterflex.scn/029_5_bub12.pcx", "data/waterflex.scn/030_5_bub12.pcx", "data/waterflex.scn/031_5_bub12.pcx", "data/waterflex.scn/032_5_bub12.pcx", "data/waterflex.scn/033_5_bub12.pcx", "data/waterflex.scn/034_5_bub12.pcx", "data/waterflex.scn/035_5_bub12.pcx", "data/waterflex.scn/036_5_bub12.pcx", "data/waterflex.scn/037_5_bub12.pcx", "data/waterflex.scn/038_5_bub12.pcx", "data/waterflex.scn/039_5_bub12.pcx", "data/waterflex.scn/040_5_bub12.pcx", "data/waterflex.scn/041_5_bub12.pcx", "data/waterflex.scn/042_5_bub12.pcx", "data/waterflex.scn/043_5_bub12.pcx", "data/waterflex.scn/044_5_bub12.pcx", "data/waterflex.scn/045_5_bub12.pcx", "data/waterflex.scn/046_5_bub12.pcx", "data/waterflex.scn/047_5_bub12.pcx", "data/waterflex.scn/048_5_bub12.pcx", "data/waterflex.scn/049_5_bub12.pcx", "data/waterflex.scn/050_5_bub12.pcx", "data/waterflex.scn/051_5_bub12.pcx", "data/waterflex.scn/052_5_bub12.pcx", "data/waterflex.scn/053_5_bub12.pcx", "data/waterflex.scn/054_5_bub12.pcx", "data/waterflex.scn/055_5_bub12.pcx", "data/waterflex.scn/056_5_bub12.pcx", "data/waterflex.scn/057_5_bub12.pcx", "data/waterflex.scn/058_5_bub12.pcx", "data/waterflex.scn/059_5_bub12.pcx", "data/waterflex.scn/060_5_bub12.pcx", "data/waterflex.scn/061_5_bub12.pcx", "data/waterflex.scn/062_5_bub12.pcx", "data/waterflex.scn/063_5_bub12.pcx", "data/waterflex.scn/064_5_bub12.pcx"],
+			"shadetable":	"data/waterflex.scn/bub12.sht",
+			"normalmap":	"data/waterflex.scn/turb256x256.pgm",
+			"antialiased":	"no",
+			"p_number":	25,
+			"p_velocity":	0,
+			"p_wind":	[0, 0.015, 0],
+			"p_friction":	0.95,
+			"p_lifetime":	750,
+			"p_min_lifetime":	5,
+			"p_turbulence":	0.5,
+			"p_size_min":	64,
+			"p_size_max":	127,
+			"color":	[1, 1, 1, 1]
+		}, {
+			"matid":	3,
+			"overlay":	"data/waterflex.scn/martini_320.pcx",
+			"shadetable":	"data/waterflex.scn/martini_320.sht",
+			"emissive":	"none",
+			"normalmap":	"none",
+			"antialiased":	"no",
+			"metallic":	0,
+			"color":	[1, 1, 1, 1]
+		}, {
+			"matid":	4,
+			"diffuse":	"none",
+			"p_tex":	["data/waterflex.scn/001_35_bub12.pcx", "data/waterflex.scn/002_35_bub12.pcx", "data/waterflex.scn/003_35_bub12.pcx", "data/waterflex.scn/004_35_bub12.pcx", "data/waterflex.scn/005_35_bub12.pcx", "data/waterflex.scn/006_35_bub12.pcx", "data/waterflex.scn/007_35_bub12.pcx", "data/waterflex.scn/008_35_bub12.pcx", "data/waterflex.scn/009_35_bub12.pcx", "data/waterflex.scn/010_35_bub12.pcx", "data/waterflex.scn/011_35_bub12.pcx", "data/waterflex.scn/012_35_bub12.pcx", "data/waterflex.scn/013_35_bub12.pcx", "data/waterflex.scn/014_35_bub12.pcx", "data/waterflex.scn/015_35_bub12.pcx", "data/waterflex.scn/016_35_bub12.pcx", "data/waterflex.scn/017_35_bub12.pcx", "data/waterflex.scn/018_35_bub12.pcx", "data/waterflex.scn/019_35_bub12.pcx", "data/waterflex.scn/020_35_bub12.pcx", "data/waterflex.scn/021_35_bub12.pcx", "data/waterflex.scn/022_35_bub12.pcx", "data/waterflex.scn/023_35_bub12.pcx", "data/waterflex.scn/024_35_bub12.pcx", "data/waterflex.scn/025_35_bub12.pcx", "data/waterflex.scn/026_35_bub12.pcx", "data/waterflex.scn/027_35_bub12.pcx", "data/waterflex.scn/028_35_bub12.pcx", "data/waterflex.scn/029_35_bub12.pcx", "data/waterflex.scn/030_35_bub12.pcx", "data/waterflex.scn/031_35_bub12.pcx", "data/waterflex.scn/032_35_bub12.pcx", "data/waterflex.scn/033_35_bub12.pcx", "data/waterflex.scn/034_35_bub12.pcx", "data/waterflex.scn/035_35_bub12.pcx", "data/waterflex.scn/036_35_bub12.pcx", "data/waterflex.scn/037_35_bub12.pcx", "data/waterflex.scn/038_35_bub12.pcx", "data/waterflex.scn/039_35_bub12.pcx", "data/waterflex.scn/040_35_bub12.pcx", "data/waterflex.scn/041_35_bub12.pcx", "data/waterflex.scn/042_35_bub12.pcx", "data/waterflex.scn/043_35_bub12.pcx", "data/waterflex.scn/044_35_bub12.pcx", "data/waterflex.scn/045_35_bub12.pcx", "data/waterflex.scn/046_35_bub12.pcx", "data/waterflex.scn/047_35_bub12.pcx", "data/waterflex.scn/048_35_bub12.pcx", "data/waterflex.scn/049_35_bub12.pcx", "data/waterflex.scn/050_35_bub12.pcx", "data/waterflex.scn/051_35_bub12.pcx", "data/waterflex.scn/052_35_bub12.pcx", "data/waterflex.scn/053_35_bub12.pcx", "data/waterflex.scn/054_35_bub12.pcx", "data/waterflex.scn/055_35_bub12.pcx", "data/waterflex.scn/056_35_bub12.pcx", "data/waterflex.scn/057_35_bub12.pcx", "data/waterflex.scn/058_35_bub12.pcx", "data/waterflex.scn/059_35_bub12.pcx", "data/waterflex.scn/060_35_bub12.pcx", "data/waterflex.scn/061_35_bub12.pcx", "data/waterflex.scn/062_35_bub12.pcx", "data/waterflex.scn/063_35_bub12.pcx", "data/waterflex.scn/064_35_bub12.pcx"],
+			"shadetable":	"data/waterflex.scn/bub12.sht",
+			"normalmap":	"data/waterflex.scn/turb256x256.pgm",
+			"antialiased":	"no",
+			"p_number":	25,
+			"p_velocity":	0,
+			"p_wind":	[0, 0.015, 0],
+			"p_friction":	0.95,
+			"p_lifetime":	750,
+			"p_min_lifetime":	5,
+			"p_turbulence":	0.5,
+			"p_size_min":	64,
+			"p_size_max":	127,
+			"color":	[1, 1, 1, 1]
+		}, {
+			"matid":	5,
+			"diffuse":	"none",
+			"p_tex":	["data/waterflex.scn/001_14_bub04.pcx", "data/waterflex.scn/002_14_bub04.pcx", "data/waterflex.scn/003_14_bub04.pcx", "data/waterflex.scn/004_14_bub04.pcx", "data/waterflex.scn/005_14_bub04.pcx", "data/waterflex.scn/006_14_bub04.pcx", "data/waterflex.scn/007_14_bub04.pcx", "data/waterflex.scn/008_14_bub04.pcx", "data/waterflex.scn/009_14_bub04.pcx", "data/waterflex.scn/010_14_bub04.pcx", "data/waterflex.scn/011_14_bub04.pcx", "data/waterflex.scn/012_14_bub04.pcx", "data/waterflex.scn/013_14_bub04.pcx", "data/waterflex.scn/014_14_bub04.pcx", "data/waterflex.scn/015_14_bub04.pcx", "data/waterflex.scn/016_14_bub04.pcx", "data/waterflex.scn/017_14_bub04.pcx", "data/waterflex.scn/018_14_bub04.pcx", "data/waterflex.scn/019_14_bub04.pcx", "data/waterflex.scn/020_14_bub04.pcx", "data/waterflex.scn/021_14_bub04.pcx", "data/waterflex.scn/022_14_bub04.pcx", "data/waterflex.scn/023_14_bub04.pcx", "data/waterflex.scn/024_14_bub04.pcx", "data/waterflex.scn/025_14_bub04.pcx", "data/waterflex.scn/026_14_bub04.pcx", "data/waterflex.scn/027_14_bub04.pcx", "data/waterflex.scn/028_14_bub04.pcx", "data/waterflex.scn/029_14_bub04.pcx", "data/waterflex.scn/030_14_bub04.pcx", "data/waterflex.scn/031_14_bub04.pcx", "data/waterflex.scn/032_14_bub04.pcx", "data/waterflex.scn/033_14_bub04.pcx", "data/waterflex.scn/034_14_bub04.pcx", "data/waterflex.scn/035_14_bub04.pcx", "data/waterflex.scn/036_14_bub04.pcx", "data/waterflex.scn/037_14_bub04.pcx", "data/waterflex.scn/038_14_bub04.pcx", "data/waterflex.scn/039_14_bub04.pcx", "data/waterflex.scn/040_14_bub04.pcx", "data/waterflex.scn/041_14_bub04.pcx", "data/waterflex.scn/042_14_bub04.pcx", "data/waterflex.scn/043_14_bub04.pcx", "data/waterflex.scn/044_14_bub04.pcx", "data/waterflex.scn/045_14_bub04.pcx", "data/waterflex.scn/046_14_bub04.pcx", "data/waterflex.scn/047_14_bub04.pcx", "data/waterflex.scn/048_14_bub04.pcx", "data/waterflex.scn/049_14_bub04.pcx", "data/waterflex.scn/050_14_bub04.pcx", "data/waterflex.scn/051_14_bub04.pcx", "data/waterflex.scn/052_14_bub04.pcx", "data/waterflex.scn/053_14_bub04.pcx", "data/waterflex.scn/054_14_bub04.pcx", "data/waterflex.scn/055_14_bub04.pcx", "data/waterflex.scn/056_14_bub04.pcx", "data/waterflex.scn/057_14_bub04.pcx", "data/waterflex.scn/058_14_bub04.pcx", "data/waterflex.scn/059_14_bub04.pcx", "data/waterflex.scn/060_14_bub04.pcx", "data/waterflex.scn/061_14_bub04.pcx", "data/waterflex.scn/062_14_bub04.pcx", "data/waterflex.scn/063_14_bub04.pcx", "data/waterflex.scn/064_14_bub04.pcx"],
+			"shadetable":	"data/waterflex.scn/bub04.sht",
+			"normalmap":	"data/waterflex.scn/turb256x256.pgm",
+			"antialiased":	"no",
+			"p_number":	187,
+			"p_velocity":	0,
+			"p_wind":	[0, 0.015, 0],
+			"p_friction":	0.95,
+			"p_lifetime":	750,
+			"p_min_lifetime":	5,
+			"p_turbulence":	0.5,
+			"p_size_min":	128,
+			"p_size_max":	256,
+			"color":	[1, 1, 1, 1]
+		}]
+} 

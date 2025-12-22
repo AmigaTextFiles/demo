@@ -1,0 +1,4 @@
+Due to the fact that the cruncher we've used (CrunchMania) isn't all that
+cache-friendly, the crunched version of the intro will crash on 040- and
+060-cpu's with caches enabled, but it will work perfectly on the
+compomachine (a500 with 68000) and other low-grade cpu's (020 and 030).

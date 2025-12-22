@@ -1,0 +1,528 @@
+{
+  "actions": [
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "int32_values": 1,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "la_scene_0"
+        }
+      ],
+      "loops": 1,
+      "name": "start_scene",
+      "start_time": 12708,
+      "type": "property_int32"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 15208,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "pencil_shadow"
+        }
+      ],
+      "loops": 1,
+      "name": "pencil_shadowAction",
+      "start_time": 0,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              2.648418,
+              7.923355,
+              14.635847,
+              2.648418,
+              7.923355,
+              14.635847,
+              2.648418,
+              7.923355,
+              14.635847
+            ],
+            "interpolation": "bezier",
+            "time": 4375
+          },
+          {
+            "float_values": [
+              -10.853984,
+              9.027551,
+              8.880249
+            ],
+            "time": 42
+          },
+          {
+            "float_values": [
+              -1.161948,
+              1.999958,
+              5.323334,
+              -1.282529,
+              1.986856,
+              5.323334,
+              -0.727631,
+              2.792301,
+              5.323334
+            ],
+            "interpolation": "bezier",
+            "time": 6666
+          },
+          {
+            "float_values": [
+              4.904766,
+              2.790005,
+              8.538504
+            ],
+            "time": 42
+          },
+          {
+            "float_values": [
+              -0.33655,
+              11.132298,
+              12.470767,
+              -0.331374,
+              11.132298,
+              12.589967,
+              -0.342031,
+              11.132298,
+              12.277159
+            ],
+            "interpolation": "bezier",
+            "time": 3417
+          },
+          {
+            "float_values": [
+              -0.132241,
+              11.240966,
+              -1.504261,
+              -0.132241,
+              11.240966,
+              -1.504261,
+              -0.132241,
+              11.240966,
+              -1.504261
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "camera_1"
+        }
+      ],
+      "loops": 1,
+      "name": "camera_1Action.002",
+      "start_time": 0,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -39.999996,
+              0.0,
+              -0.0,
+              -39.999996,
+              0.0,
+              -0.0,
+              -39.999996,
+              0.0,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 4375
+          },
+          {
+            "float_values": [
+              -39.999996,
+              -71.022711,
+              -0.0
+            ],
+            "time": 42
+          },
+          {
+            "float_values": [
+              -45.887264,
+              -14.925034,
+              -0.0,
+              -44.7245,
+              -15.119711,
+              -0.0,
+              -51.701094,
+              -14.146884,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 6666
+          },
+          {
+            "float_values": [
+              -56.983129,
+              -4.041969,
+              -0.0
+            ],
+            "time": 42
+          },
+          {
+            "float_values": [
+              -56.983129,
+              -25.680763,
+              -0.0,
+              -56.47583,
+              -25.680763,
+              -0.0,
+              -57.534287,
+              -25.680763,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 3417
+          },
+          {
+            "float_values": [
+              -90.0,
+              0.0,
+              -0.0,
+              -90.0,
+              0.0,
+              -0.0,
+              -90.0,
+              0.0,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "camera_1"
+        }
+      ],
+      "loops": 1,
+      "name": "camera_1Action.002",
+      "start_time": 0,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 15208,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "pencil"
+        }
+      ],
+      "loops": 1,
+      "name": "pencilAction",
+      "start_time": 0,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 15208,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "gumka"
+        }
+      ],
+      "loops": 1,
+      "name": "gumkaAction",
+      "start_time": 0,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 15208,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "blaszka"
+        }
+      ],
+      "loops": 1,
+      "name": "blaszkaAction",
+      "start_time": 0,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 15208,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "napis_4"
+        }
+      ],
+      "loops": 1,
+      "name": "napis_4Action",
+      "start_time": 0,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 15208,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "napis_3"
+        }
+      ],
+      "loops": 1,
+      "name": "napis_3Action",
+      "start_time": 0,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 15208,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "napis_2"
+        }
+      ],
+      "loops": 1,
+      "name": "napis_2Action",
+      "start_time": 0,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 15208,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "napis_1"
+        }
+      ],
+      "loops": 1,
+      "name": "napis_1Action",
+      "start_time": 0,
+      "type": "hide"
+    }
+  ],
+  "cameras": [
+    {
+      "far_clip_plane": 100.0,
+      "fov_x": 49.134342,
+      "fov_y": 28.841546,
+      "hide": false,
+      "name": "camera_1",
+      "near_clip_plane": 0.1,
+      "position": [
+        2.648418,
+        7.923355,
+        14.635847
+      ],
+      "rotation": [
+        -39.999996,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "enc_info": {
+    "data_type": "ENCSCN",
+    "date": "29 Mar 2020 20:24:24",
+    "version": "2.0"
+  },
+  "loops": 1,
+  "name": "la_scene_0",
+  "objects": [
+    {
+      "mesh_name": "la0_pencil_shadow",
+      "name": "pencil_shadow",
+      "position": [
+        2.459821,
+        0.01,
+        5.583096
+      ],
+      "rotation": [
+        0.0,
+        60.000002,
+        -0.0
+      ]
+    },
+    {
+      "mesh_name": "la0_bazgroly",
+      "name": "bazgroly",
+      "position": [
+        -3.382691,
+        0.01,
+        5.491682
+      ]
+    },
+    {
+      "mesh_name": "la0_paper",
+      "name": "paper"
+    },
+    {
+      "mesh_name": "la0_pencil",
+      "name": "pencil",
+      "position": [
+        3.176743,
+        0.300626,
+        5.957057
+      ],
+      "rotation": [
+        -90.000003,
+        60.000002,
+        0.0
+      ],
+      "scale": [
+        0.7,
+        0.7,
+        0.7
+      ]
+    },
+    {
+      "mesh_name": "la0_gumka",
+      "name": "gumka",
+      "position": [
+        0.0,
+        -3.747029,
+        -0.0
+      ],
+      "scale": [
+        0.9187,
+        0.9187,
+        0.9187
+      ]
+    },
+    {
+      "mesh_name": "la0_blaszka",
+      "name": "blaszka",
+      "position": [
+        0.0,
+        -3.079525,
+        -0.0
+      ]
+    },
+    {
+      "mesh_name": "la0_napis_4",
+      "name": "napis_4",
+      "position": [
+        0.0,
+        3.14543,
+        -0.0
+      ]
+    },
+    {
+      "mesh_name": "la0_napis_3",
+      "name": "napis_3",
+      "position": [
+        0.0,
+        1.4394,
+        -0.0
+      ]
+    },
+    {
+      "mesh_name": "la0_napis_2",
+      "name": "napis_2",
+      "position": [
+        0.0,
+        -0.405171,
+        -0.0
+      ]
+    },
+    {
+      "mesh_name": "la0_napis_1",
+      "name": "napis_1",
+      "position": [
+        0.0,
+        -1.797547,
+        -0.0
+      ]
+    }
+  ],
+  "properties": {
+    "start_scene": 1
+  },
+  "time": 43750
+}

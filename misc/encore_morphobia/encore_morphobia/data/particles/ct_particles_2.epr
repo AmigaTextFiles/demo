@@ -1,0 +1,40 @@
+{
+  "enc_info": {
+    "data_type": "ENCPAR",
+    "version": "2.0"
+  },
+  "max_num_particles": 300,
+  "num_create_particles": 1,
+  "sorting_type": "camera_distance_z",
+  "shape_type": "plane_xy",
+  "life_time": 0.7,
+  "particles_per_sec": 4,
+  "update_freq": 30,
+  "spread": 0.7,
+  "locked_position_axis": false,
+  "texture_frames_matrix": [1, 1],
+  "texture_file_name": "ct_particles_2_tex_alpha",
+  "layer_1": {
+    "blending": "alpha",
+    "color_keys_rgba": [
+      0.0, 0.0, 0.0, 0.65,
+      0.1, 0.1, 0.1, 0.0
+    ],
+    "color_key_times": [
+      0.0,
+      0.7
+    ],
+    "size_keys": [
+      0.05,
+      0.6,
+      0.1
+    ],
+    "size_key_times": [
+      0.0,
+      0.2,
+      0.7
+    ],
+    "texture_keys": [0],
+    "texture_key_times": [0]
+  }
+}

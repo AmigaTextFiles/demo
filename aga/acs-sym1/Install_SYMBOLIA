@@ -1,0 +1,77 @@
+;$VER:(Lame) Installation Script for Symbolia
+
+
+ECHO Symbolia HD Install
+ECHO ""
+ECHO "This version has been re-written as Aminet no longer"
+ECHO "accept DMS files :(   Anyway, it requires both files ACS-SYMB_1.EXE and"
+ECHO "ACS-SYMB_2.EXE to be in the same directory as this install program."
+ECHO "It will then join the two parts together and overwrite them with a file"
+ECHO "called ACS-SYMB.EXE. This is the main demo program."
+ECHO ""
+ECHO "(Although you MUST have 2MB Chip and some FAST to RUN it!)"
+ECHO ""
+ECHO "And I'm sorry about this crappy Installation script... It was the most"
+ECHO "compact way of doing it I could find, and I'm NOT a programmer anyway!"
+ECHO "It's compact, it works, so quit complaining! Heheheheh....."
+ECHO ""
+ECHO "                                                           Rastan/ACS 1996"
+ECHO ""
+ASK "Are you SURE you want to install this COOL demo?"
+
+IF WARN
+ECHO ""
+ECHO "Ho Hum..."
+ECHO ""
+
+ECHO "Please select a directory to install SYMBOLIA to.. Only select RAM if you"
+ECHO "have LOADS of it (Like about 8MB heheh)...."
+
+REQUESTFILE TITLE "Please install this cool demo to:" DRAWERSONLY >ENV:choirep
+
+ECHO ""
+ECHO ""
+ECHO "Ok... Just so you know, this prog will copy the split Symbolia data to"
+ECHO $choirep
+ECHO ""
+ECHO "And then it will join the two parts to create ACS-SYMB.EXE. It will"
+ECHO "also delete the two data sections, to save you HD space..."
+echo ""
+echo "Copying files...."
+copy acs-symb.exe.1 $choirep
+copy acs-symb.exe.2 $choirep
+copy splice $choirep
+copy SYMBOLIA_ICON $choirep
+
+echo "deleting old files"
+delete acs-symb.exe.1
+delete acs-symb.exe.2
+delete splice
+delete SYMBOLIA_ICON
+delete install_symbolia#?.#?
+delete symbolia#?.#?
+CD $choirep
+ECHO ""
+ECHO "Please wait while I join the two sections togther...."
+rename symbolia_icon ACS-SYMB.exe.info
+splice acs-symb.exe. -j -m
+rename acs-symb.exe. acs-symb.exe
+delete acs-symb.exe.1
+delete acs-symb.exe.2
+delete run
+delete splice
+DELETE ENV:choirep ALL QUIET
+ELSE
+SKIP End_Of_Script
+ENDIF
+
+LAB End_Of_Script
+ECHO ""
+ECHO ""
+ECHO "Installation complete"
+ECHO ""
+ECHO ""
+ECHO "To run the demo, either double-click the icon or"
+ECHO "type "[DIRECTORY]:ACS_SYMB.EXE"
+ECHO ""
+ECHO "Enjoy!!"

@@ -1,0 +1,53 @@
+discnew.font,8
+«s6=166,227,181»
+«s7=191,206,254»
+«»
+«c2»«ac»BACK TO SCHOOL«»
+«»
+«c1»By Krabob/Mankind«»
+«»
+«as»«c6»A quick help for those coders who still don't know how to use the OS.«»
+«»
+«c7»If there are some Asm coders that don't even know how a ".library" shared
+library works,
+(I know there are:I was one for a long time.) I'd like to say them that it's
+easy and clear to use: I can tell you quicly that:«»
+«»
+each ".library" in LIBS: and in the roms, contains «c6»many system functions.
+«c7»To use a library, you must open it at the start , end close it before you quit
+your program.«»
+«»
+to open a library, you must only know its name and the minimal number
+version needed.
+the opening give you the "base" of it: The pointer where it begins.
+Keep it. Then put it in a6.
+By knowing the «c6»"offset" «c7»of a function in a library, you can throw a function
+with jsr (JumpSubRoutine) you can pass parameters in and out, with the
+registers designed by the function. (see the library autodoc for the description!)
+the files in the directory "include:" contains all the offset needed, and also
+macro and system tags, which make the «c6»source very clear.
+«c7»that example shut all screens: (and reset aga register too.)«»
+«»
+«al»        «c6»include "include:graphics/graphics_lib.i"    «»
+        ...«»
+  move.l  Gfxbase,a6«»
+  ;get graphics.library Base previously opened.«»
+  move.l  #0,a0«»
+  ;parameter=0.«» 
+  jsr     _LVOLoadView(a6)«»
+  ; what jammie should do at start :-)«»
+  ;Throw graphics.library/Loadview«»
+«as»«»       
+«c7»The exec.library is the first opened library at hard boot, and can't be closed:
+you can get its base from the absolute 4bytes address "4.l" (execbase)
+it contains the «c6»functions to open and close other libraries.«»
+«»
+«c7»A last thing:
+Some documentation named the «c6»"Autodocs" «c7»contains the list of all function 
+of all standard library. A .library should always come with its ".i" too.
+Ahhh... the best is always to get a code example and make it work.«»
+«»
+«c6»Please notice that this article actually was written for D.I.S.C. #11, but
+due to some mistakes we forget to include it. Apologize to Krabob!«»
+«»  
+«e»

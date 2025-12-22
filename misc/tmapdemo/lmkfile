@@ -1,0 +1,53 @@
+OFILES=demomain.o ChunkyToPlanar.o fakefb.o sincos.o text.o ylrfill.o polyfill.o \
+		joystick.o movement.o 3d.o 3dclip.o tmaps.o
+
+AFILES=demomain.asm ChunkyToPlanar.asm fakefb.asm sincos.asm text.asm ylrfill.asm \
+		polyfill.asm joystick.asm movement.asm 3d.asm 3dclip.asm tmaps.asm
+
+INCFILES=profile.i demo.i palette.i lightingtable.i 64k.i intens.i 3d.i kingtut.i fish.i wolves.i mandrill.i
+
+CUTILS=make64k.c getpal.c dumpchunky.c makeltable.c
+
+OTHERFILES=tmapdemo.readme tmapdemo lmkfile
+
+LINKEROPTS=swidth 25 noalvs smallcode map gamedemo.map fhlsx
+ASMOPTS=OPTIMON 0xfdc00000 ADDSYM INCDIR include:
+ASSEMBLER=hx68
+
+.asm.o:
+	$(ASSEMBLER) from $*.asm to $*.o $(ASMOPTS)
+
+tmapdemo : $(OFILES)
+	blink from $(OFILES) to tmapdemo lib lib:amiga.lib
+
+arc:
+	lha a tmapdemo.lha $(INCFILES)
+	lha a tmapdemo.lha $(AFILES)
+	lha a tmapdemo.lha $(OTHERFILES)
+	lha a tmapdemo.lha $(CUTILS)
+
+demomain.obj : demomain.asm	profile.i	demo.i	palette.i
+
+ChunkyToPlanar.obj : ChunkyToPlanar.asm	profile.i	demo.i
+
+fakefb.obj : fakefb.asm	profile.i	demo.i	lightingtable.i	64k.i
+
+sincos.obj : sincos.asm	profile.i	demo.i
+
+text.obj : text.asm	profile.i	demo.i
+
+ylrfill.obj : ylrfill.asm	profile.i	demo.i
+
+polyfill.obj : polyfill.asm	profile.i	demo.i
+
+joystick.obj : joystick.asm	profile.i	demo.i	
+
+movement.obj : movement.asm	profile.i	demo.i
+
+3d.obj : 3d.asm	profile.i	demo.i	intens.i
+
+3dclip.obj : 3dclip.asm	profile.i	demo.i	3d.i
+
+tmaps.obj : tmaps.asm	profile.i	demo.i	kingtut.i	fish.i	wolves.i	mandrill.i
+
+

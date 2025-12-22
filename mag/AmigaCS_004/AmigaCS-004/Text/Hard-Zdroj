@@ -1,0 +1,71 @@
+@{xoffset 21}@{d 96FF73}¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+@{xstep 334}@{font ACS-Title.font 18}Pêipojení 200W PC zdroje@{font}
+@{xstep 420}@{c A6FFF8}@{i}YA a Shaman/Abort@{ui}@{c}@{ystep -8}
+
+
+  @{font ACS-Title.font 18}@{c C2EE00}V@{font} AR ç.11@{c} byl çlánek o napájení @{font ACS-Normal.font 8}Amigy@{font}, avîak nebylo v nëm nic o pêedëlání @{c C2EE00}PC@{c}
+zdroje  tak,  aby  z  toho po pêestavbë nevznikl akorát tak @{f EFFF00}poùár@{f}.  No a protoùe
+naîemu  îéfredaktorovi  chodily  od  vás maily s prosbami o tento çlánek, tak mu
+nakonec  nezbylo  nic  jiného  neù  zadat  jeho napsání pouze odborníkovi v této
+problematice  na slovo vzatého, kterým jsem totiù YA.  Ne, ùe bych mël v oblasti
+hardware  vëtîí zkuîenosti neù @{c C2EE00}SHAMAN@{c}, ale zrovna v této mám zkuîeností dostatek
+a to vlastních (@{i}uù jsem pár zdrojû pêedëlal@{ui}).
+
+  No  nic, blbostí jsem uù napsal dost a tak se radëji vrátím k zadanému tématu.
+Nëkde  tady  kolem  by  se  mël  válet malý @{pict Trafo.png}náçrtek napájecího konektoru@{pict} a z nëj
+vycházejících  drátû.   Ovîem  nyní  pêíjde  zmëna  oproti çlánku v AR.  V druhé
+polovinë  náçrtku  totiù  najdete  ty  samé dráty jako na prvním, ovîem s dalîím
+barevným  oznaçením.   To  druhé  znamená jak jsou dráty se stejným napëtím jako
+v Amize  barevnë  oznaçeny  v @{c C2EE00}PC@{c} zdroji.  Je pochopitelnë myîlena barva izolace.
+Podle  tëchto  dvou obrázkû by mël být kaùdý z vás schopen pochopit, ùe pêedëlat
+@{c C2EE00}PC@{c}  zdroj není nic tëùkého ani pro toho, kdo nic podobného nikdy nedëlal.  Staçí
+se  jen  podívat na mé nepovedené náçrtky, rozebrat obë trafa a napájet dráty na
+desku @{c C2EE00}PC@{c} zdroje tak, jak sobë napëïovë a barvou izolace odpovídají.
+
+  Aù  dáte  @{c C2EE00}PC@{c}  trafo  dohromady,  @{b}@{c C2EE00}nikdy@{c}@{ub} jej rovnou nezapojujte do Amigy.  Mohli
+byste  totiù  o  ni  pêijít!   Je  nejlepîí  nejprve  promëêit napájecí konektor
+voltmetrem.   Pokud  nëkdo  nepochopil  jak  má dráty napájet, je to s ním hodnë
+îpatný, ale pro nëj je na mém náçrtku napsáno znovu a pêehlednë barvové oznaçení
+drátû.
+
+          Hodnë zdaru pêi bastlení vám pêeje redakce ACS a hlavnë @{c C2EE00}Ya.@{c}
+
+
+                      @{f EFFF00}  Shamanûv velice dûleùitý dodatek
+                        ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{f}
+     Podle tohoto návodu by to sice fungovalo, ale radîi to zapojte takto:
+    @{c C2EE00}1.@{c} napëtí -5V Amiga @{c C2EE00}NEPOTÊEBUJE@{c} - @{f EFFF00}nezapojujte ho@{f}!!!
+
+    @{c C2EE00}2.@{c} çísla pinû jsou na A500/A600/A1200 konektoru jinak a to takto:
+       (barvy u starých zdrojû mûùou být jinak - radîi je sami promëête!)
+           ___________    ___________
+          /           |  |           \
+          |            ¯¯            |
+          |  [@{c DF7543}#@{c}] 3            [@{c 777777}#@{c}] 4  |       @{c C2EE00}1@{c}  ...  +5V  [@{c EE3940}çervená@{c}]
+          |                          |
+          |                          |       @{c C2EE00}2@{c}  ...  SHIELD  [@{c E7EEEE}bílá@{c}]
+          |                          |
+          |           [@{c F6FF00}#@{c}] 5          |       @{c C2EE00}3@{c}  ...  +12V  [@{c DF7543}hnëdá@{c}]
+          |                          |
+          |                          |       @{c C2EE00}4@{c}  ...  GND, zem  [@{c 777777}çerná@{c}]
+          |                          |
+          |   [@{c E7EEEE}#@{c}] 2           [@{c EE3940}#@{c}] 1  |       @{c C2EE00}5@{c}  ...  -12V  [@{c F6FF00}ùlutá@{c}]
+          |                          |
+          \_________________________/
+
+    @{c FFE52E}3.@{c} pin 2 (SHIELD) je spojen s plechem okolo konektoru a slouùí ke
+       stínëní kabelu.  Mûùete ho pêipojit na zem (GND) PC zdroje.
+       V Amize je tento signál internë propojen se zemí (GND) po
+       line filteru (cívka).
+
+    @{c FFE52E}4.@{c} Barvy PC-zdroje jsou snad správnë. Bílou (-5V) vîak nezapojujte!
+
+    @{c FFE52E}5.@{c} Takùe správné zapojení je:
+
+       @{c FFE52E}     Signál           PC zdroj          Amiga Power kabel
+         ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+            @{c E7EEEE}+5V              çervená                çervená
+            SHIELD           çerná                  bílá
+            +12V             ùlutá                  hnëdá
+            GND              çerná                  çerná
+            -12V             modrá                  ùlutá@{c}

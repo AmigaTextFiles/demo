@@ -1,0 +1,592 @@
+This patch upgrades the Directory Opus 5 Magellan version 5.61 sold
+by GPSoftware and related distributors in 1997. There are two versions
+of Opus 5.61 : onr sold at the WoA show and one sold by GPSoftware after
+june 6th 1997. This partch will upgrade either version.
+ 
+[1mDirectory Opus 5 Magellan version 5.62 release notes 18th July 1997
+[22m
+
+
+ 
+[1mChanges to Opus Magellan manual for version 5.62
+[22m
+
+     The release of Opus Magellan at the World of Amiga show in London
+     on May 17/18th was greeted with  enthusiasm by  Opus users. Since
+     then  development  has  continued  and from user feedback we have
+     added some new features and squashed a couple of small bugs. 
+
+     We released  Opus Magellan  5.61 on  June 6th  1997. This current
+     release of  version 5.62  completes all  known bug  fixes for the
+     Magellan version and adds some new changes and features suggested
+     by users.
+
+
+ 
+[1mThe following changes have been made for 5.61 to 5.62 upgrade:-
+[22m
+
+
+     .    The   
+[1mIcon   Information
+[22m   requester   now   supports  image
+          replacement by dropping NewIcons onto it.
+
+     .    The 
+[1mIconInfo command
+[22m  is  now  asynchronous  from  name mode
+          listers. It  also has a new WAIT parameter (like Show, Read,
+          etc) so you can force it to be synchronous again.
+
+     .    
+[1mIconInfo
+[22m now  has a  'Strip Original  Image' function, which
+          will remove  the old-style image from a NewIcon (and replace
+          it with a single pixel). Please test!
+
+     .    Copy  to  clipboard  in  the  
+[1mtext  viewer
+[22m  now  copies tabs
+          correctly.
+
+     .    The  
+[1mDisk  Removed  Script
+[22m  is now executed correctly when a
+          disk is removed even if there  is  a  lister  open  for that
+          disk.
+
+     .    When  an  icon  image  is changed and updated on-screen, the
+          mask  is  now  automatically  regenerated.  This  fixes  the
+          problem  of  icons  not  being properly transparent when the
+          imagery is replaced or the border is turned  off through the
+          IconInfo requester.
+
+     .    
+[1mDevice  list/Diskchange
+[22m  routines  modified  again  to fix a
+          potential  problem   which   could   cause   anomalous  disk
+          inserted/removal scripts, etc.
+
+     .    Added  
+[1mNEWER/S
+[22m  parameter  to  
+[1mCopy command
+[22m - similar to the
+          UPDATE/S switch except will only copy  files that  either do
+          not exist  or which have a later datestamp than the existing
+          file. Very useful for  recursive copying  of directories for
+          backup purposes.
+
+     .    The 
+[1mCloseButtons command
+[22m can now close Start Menus, with the
+          use of the START/S switch. The name you provide is  the name
+          of the 'menu' as set in the first column in the menu editor.
+          You can also use the ALL/S switch to close all Start Menus.
+
+     .    '
+[1mNew Drawer' in a name-mode
+[22m lister  popup menu  was ghosted.
+          Now available again.
+
+     .    
+[1mChanges to Start Menus
+[22m
+
+               Added support for 
+[1mimages in Start Menus
+[22m. The image file
+               is set  from the  function editor  when configuring the
+               Start Menu  (sorry, there is no preview available). You
+               can use  IFF  images  or  icons;  two-frame  images are
+               supported.   The   images   are   remapped  and  scaled
+               automatically. You should only pick small (say < 20x20)
+               images to use for this.
+
+               Hotkeys assign to Start Menu functions now work.
+
+               The  
+[1mStart  Menu  control  menu
+[22m  now has extra features
+               including:-
+
+                    
+[1mChange Font: 
+[22mYou can now  select  the  font  to be
+                    used by a Start Menu
+
+                    
+[1mChange Label Font:
+[22m Set the font for a Start Menu's
+                    label independently of the menu font.
+
+                    
+[1mScale Images:
+[22m  This allows  you to  turn off image
+                    scaling.  Images  will  be  rendered in their full
+                    size, and the size of the menu items will be based
+                    on the size of the largest image.
+
+
+                    
+[1mDrag Bar:
+[22m Select from Left, Right or Off.
+
+                    
+[1mBorder:
+[22m   Toggle on/off
+
+          In the Start Menu editor, dragging an item from the sub-item
+          column to the item column now works properly.
+
+     .    Added '
+[1mKey Finder
+[22m' to 
+[1mmain Opus menu
+[22m. This is a feature that
+          allows  you  to  find  where  you  have  used a given hotkey
+          sequence including global Hotkeys.
+
+     .    Added 'Help!' to 
+[1mmain Opus menu
+[22m.
+
+
+     .    In the 
+[1mtext viewer
+[22m, you could  press qualifiers  such as alt
+          or control  and P  as well as just P by itself if you wanted
+          to print the file. Not any more.
+
+     .    If you Snapshot a file in  icon mode  (view all  icons) that
+          did not have an icon previously, the name mode buffer is now
+          updated to reflect the new icon.
+
+     .    There was an intermittent  problem when  switching from name
+          mode  to  icon  mode.  If  the lister resized because of the
+          change, there was a possibility (race condition) that one or
+          more icons  would be  drawn twice,  overlapping. This should
+          now  be  fixed  but  because  the  problem  was  so  hard to
+          reproduce it is difficult to be certain.
+
+     .    The problem with the keyboard mode selection arrow not being
+          removed when  deleting files  was only  partially fixed. The
+          problem   still    existed   in   some   circumstances   for
+          simple-refresh windows. Hopefully it is now gone for good. 
+
+     .    
+[1mBad disk icons
+[22m  with  labels  like  DH0:BUSY,  etc,  are now
+          placed correctly  (the text of the label was able to overlap
+          other icons before).
+
+     .    If you hold down left shift and left  alt together  when you
+          drop one  icon onto another, the 
+[1mimagery from the first icon
+[22m
+          
+[1mwill be copied automatically
+[22m to the second.
+
+     .    If you dropped a program  with  a  NewIcon  directly  onto a
+          button  bank  (in  edit  mode),  the  NewIcon  would  not be
+          remapped and so the button would appear blank until you went
+          into the button editor.
+
+     .    The  '
+[1mShow  All
+[22m'  option  in  the  lister  menu is no longer
+          disabled in name mode; selecting it automatically shifts the
+          lister into icon mode.
+
+     .    If you  double-clicked a  tool in a show-all-files icon mode
+          lister, and the tool didn't have a real icon, Opus would run
+          it  in  AmigaDOS  mode,  bringing  up  the  Execute  Command
+          requester. This was fine, except that it wouldn't  CD to the
+          correct directory, and so wouldn't actually find the file to
+          run. Fixed.
+
+     .    When loading  an environment,  listers are  now opened after
+          buttons and  start menus, instead of before. This is to stop
+          the Start Menu windows appearing over the top of listers.
+
+     .    If you created a command  icon  using  {f}  (or  similar, eg
+          AmigaDOS    echo  {f}) and  then dropped  a file onto it, it
+          would cause a crash.
+
+     .    
+[1mLister Formatting
+[22m reworked. Hopefully  you will  think it is
+          now more logical.
+
+          a)   If the  
+[1mPadlock gadget
+[22m is ON, the format is NOT changed
+               when a new directory is read into the lister, else
+
+          b)   If the existing directory  is rescanned,  the format is
+               NOT changed, else
+
+          c)   If  a  format  is  saved  for the path being read, that
+               format is used, else
+
+          d)   The format in the lister is NOT changed when a new path
+               is read into it, however
+
+          e)   If the  '
+[1mInherit
+[22m' flag  is NOT set then the Space Gauge
+               flag from the default lister format settings is used.
+
+          The '
+[1mInherit
+[22m' flag now  ONLY  affects  whether  or  not sub-
+          directories  inherit  the  Space  Gauge  setting  from their
+          parent.
+
+     .    Added '
+[1mlister set <handle>  default
+[22m' arexx  command. This is
+          an  easy  way  to  set  a  lister  back  to the default list
+          format(as defined in the environment).
+
+     .    Made some changes to finally kill  the 
+[1mcyclic  backdrop menu
+[22m
+          
+[1mbug
+[22m. (Hopefully!)
+
+     .    Right Amiga-C  now works  in 
+[1micon  mode
+[22m to copy the names of
+          selected files to the clipboard.
+
+     .    Under some locales, the  
+[1mDatestamp function
+[22m  did not display
+          the current  date/time string correctly (there were too many
+          spaces separating the strings and the end of the time string
+          was truncated).
+
+     .    Opus  now   updates  the  dopus/dopus  
+[1menvironment  variable
+[22m
+          whenever one of the  menu items  (file filter, defpubscreen,
+          etc)  is   changed,  instead  of  just  when  you  save  the
+          environment.
+
+     .    The use  of  
+[1msoft  links
+[22m  (as  opposed  to  hard  links) was
+          causing  mungwall  hits  when  more  than 2 or so soft links
+          appeared in the one directory.
+
+     .    Flushing the  DOpus5.library  from  memory  (eg,  with 
+[1mavail
+[22m
+          
+[1mflush or  flushlibs
+[22m from  loadwb -debug) could cause a crash
+          and/or memory corruption. Fixed.
+
+
+     
+[1mChanges to FTP module
+[22m:-
+
+     .    Added capability to DnD to Dirs (site->local only!)
+
+     .    Fixed problem with abort on PUTs  not aborting  the complete
+          list of files.
+
+     .    Fixed problem  with site-site  transfers and failure of PORT
+          command due to unsupported PASV commands on many NT boxes.
+
+     .    Removed  calls  for  getservbyport  since  not  supported by
+          TermiteTCP. (come on, why not guys;-( )
+
+     .    Fixed problem with resume on multiple selected files where a
+          file did not exist in the dest.
+
+        =======================================================
+
+
+ 
+[1mChanges made to Opus Magellan for 5.6 to 5.61 upgrade.
+[22m
+
+
+     .    The 
+[1mlister free  space  gauge
+[22m
+[3m
+[23m  is  now  configured  from the
+          Lister  Format   editor.  The  default  setting  is  set  in
+          Environment/Lister Defaults, and can be configured and saved
+          on a per-lister basis using the popup editor.
+
+          The  advantage  of  this  system  is  that it truly lets you
+          configure which listers you want  the  gauge  to  appear for
+          (eg, if  you only  want it  on the root directory of certain
+          devices, turn it off in the  default lister  format and then
+          turn it on for those directories).
+
+     .    A new  '
+[1mInherit
+[22m' option in the 
+[1mLister Format editor
+[22m controls
+          whether or not sub-directories will inherit  the space guage
+          from their parent.
+
+     .    
+[1mDrag and  drop into  a sub-directory  in name  mode has been
+[22m
+          
+[1mimplemented.
+[22m
+[4m
+[24m Moving the mouse  when  dragging  files  over a
+          directory in a lister (either the same lister or a different
+          one) will highlight the directory name;  if you  release the
+          files over  that directory, the defined filetype action will
+          use that sub-directory as  the destination  path rather than
+          the path of the lister itself.
+
+          For ARexx  users, the  "drop" message  now contains the full
+          destination path in Arg5. You can  compare this  against the
+          path  of  the  destination  lister  (handle  in Arg1) to see
+          whether the drop was into a sub-directory or not.
+
+          Note that this is not yet  implemented when  dragging icons,
+          only files/directories from a name-mode lister.
+
+          OpusFTP now  also supports  this function  from a remote FTP
+          directory to a local dir, but  it  is  NOT  supported  on or
+          between remote FTP directories.
+
+          You  can  enable  or  disable  this  feature  with  the  new
+          Environment/Lister option  '
+[1mDrag Into  Sub-Directories
+[22m'.  If
+          you  have  it  switched  off  you  can always 
+[3m
+[1mactivate it by
+[22m
+[23m
+          
+[1m
+[3mholding down the shift key while dragging
+[22m.
+[23m
+
+          Dropping onto sub-directories  is  disabled  by  default for
+          custom handlers.  You need  to add  the '
+[1msubdrop
+[22m' keyword to
+          the '
+[1mlister set handler
+[22m'  command  to  enable  dropping into
+          sub-directories  for  your  handler.  Note that the user may
+          still have sub-dropping turned off in the environment.
+
+     .    Added 
+[1mMOVEWHENSAME switch to Copy and  CopyAs
+[22m
+[3m
+[23m commands. When
+          specified, this  switch changes  the Copy  function into the
+          Move function when the source and destination paths are both
+          on the  same disk. This emulates the behaviour when dragging
+          and dropping icons; within  the  same  disk,  the  files are
+          moved,  when  dropped  on  a  different  disk  the files are
+          copied.
+
+     .    Opus did not recognise that the  
+[1mDONOTWAIT tooltype
+[22m
+[3m
+[23m  was not
+          set on  objects in the WBStartup drawer, and always returned
+          immediately. Opus now behaves  properly if  DONOTWAIT is not
+          present, by  waiting for  about 5 seconds for the program to
+          return, and then displaying a requester.
+
+     .    If you set the 
+[1mdopus/HidePadlock environment  variable
+[22m
+[3m
+[23m to 1,
+          the padlock titlebar gadget will not be added to listers.
+
+     .    
+[1mNew Icon  Clock module
+[22m
+[1m
+[22m which always has an icon border, even
+          if borders are turned off in the environment.
+
+     .    Moved the icon label font settings into 
+[1mIcon Display
+[22m section
+          (was Icon  Colours). Added  '
+[3m
+[1mRemove Opus  Icon Positions
+[23m
+[22m' to
+          Environment/Icon  Settings.   Theoretically,   setting  this
+          option along  with the  '
+[3m
+[1mUse Workbench  Icon Positions
+[23m
+[22m' flag
+          enables you to move an Opus-ised system back  to a Workbench
+          position system without having to resnapshot all your icons.
+
+     .    With the  'Remove...' flag  set, Opus will use the Opus icon
+          position set in the icons if there is one. When  the icon is
+          snapshotted,  the  Opus  position  will  be removed, and the
+          Workbench position will be  saved.  Next  time  the  icon is
+          read, it's the Workbench position that will be used.
+
+     .    The 
+[1mScanDir
+[22m  command (and  the equivalent ARexx command) now
+          recognises ftp:// and launches the FTP module automatically.
+          Previously, ftp://  was only  recognised if  you typed it in
+          manually in the path field.
+
+     .    Clipping filenames from a lister to  the clipboard  now uses
+          the   volume   name   rather   than   the  device  name  (eg
+          Workbench:C/Info rather than DH0:C/Info)
+
+     .    Added 
+[1madditional filetype actions
+[22m  to  the  filetype editor.
+          There are  6 new  User actions  (along with User1-4 making a
+          total  of  10),  and  qualified  double-click  and drag&drop
+          actions. The filetype editor window has grown to accommodate
+          these.
+
+          The  new  User  actions  are  accessed  via  a  generic User
+          command, which  takes a number as a parameter. This was done
+          to avoid having to add 6 new commands. For example,
+
+               Command  User 5
+
+          instead of:
+
+               Command  User5
+
+          Note that User1,  User2,  User3  and  User4  still  work for
+          compatibility.
+
+          You can  now also  have filetype actions defined for control
+          and alt drag&drop, and  double-click (shift  is already used
+          by  Opus).  The  DoubleClick and DragNDrop internal commands
+          have new templates:
+
+               DoubleClick ALT/S,CTRL=CONTROL/S,NAME/F
+               DragNDrop ALT/S,CTRL=CONTROL/S,NAME/F
+
+     .    The  terms  GUI,  Icon,  Image  and   Exact  Precision  were
+          confusing some  people, so  they have  been relabelled to be
+          more descriptive  (this  is  in  the 
+[1mEnvironment/Backgrounds
+[22m
+          section).
+
+
+     .    At the request of Neil from CU-Amiga, the 
+[1mLoadDB
+[22m command now
+          supports the NEWPATH switch of the  LoadWB command.  If Opus
+          is  already  running  and  you  execute "LoadDB NEWPATH" (or
+          LoadWB NEWPATH if running as WBR), Opus will not try  to run
+          again but instead will update its copy of the path list with
+          the path in the current shell.
+
+          LoadDB is smart enough to pass  the NEWPATH  command through
+          to the  original LoadWB command if Workbench is also running
+          (or running instead of Opus).
+
+     .    Lister refresh routines rewritten in so as to  eliminate the
+          occasional problem  of icons and text overwriting the window
+          borders when you resize listers.
+
+     .    The bug that caused bad disk icons to not disappear when the
+          disk was ejected has been fixed.
+
+     .    The  
+[1mF5  key
+[22m  can  now  be  overridden  by user settings (by
+          default it causes a refresh of the desktop)
+
+     .    You can run  two  copies  of  Opus  again,  but  the warning
+          message is scarier!
+
+     .    There was  a small  problem with the 'Filter Icons' setting;
+          if set for a  directory or  as the  default format,  and you
+          opened a  lister in  icon mode  (eg by double-clicking on an
+          icon), no icons would appear. If  you then  switched to name
+          mode and back to icon mode, the icons would be read. Fixed.
+
+     .    The  
+[1mIcon  Information
+[22m  requester  wasn't  saving  the  icon
+          properly if you dropped a new icon in  to replace  the image
+          (caused by NewIcons actually) Fixed.
+
+     .    Fixed  a  bug  that  caused  {Ql}  to  stop  working in some
+          situations, eg if the  User4 command  was called  from ARexx
+          with a  full pathname instead of just a filename (Frederic's
+          Show&Edit script)
+
+     .    If you dragged a directory to another lister or the desktop,
+          and the  directory was  moved (because of filetype settings,
+          etc), it  would generate  an 'object  in use'  error and not
+          completely remove the directory from the source. Fixed.
+
+     .    Arg5 of  the 'dropfrom'  message did not contain the correct
+          path if the user  dropped  into  a  sub-directory;  only the
+          'drop' message worked. Fixed.
+
+     .    The 
+[1mGetSizes
+[22m
+[3m
+[23m  command now works from the filetype popup menu
+          on directories.
+
+     .    Renaming a link in a lister now works correctly.
+
+     .    The "drop" message  sent  when  files  were  dropped  into a
+          lister with a custom handler did not, in some cases, contain
+          the  source  lister  handle  in  Arg3  as  the  Opus  manual
+          indicated. Fixed.
+
+     .    The scroll  bars were not being updated when you switched an
+          icon mode lister out of 'show all files' mode. Fixed.
+
+
+ 
+[1mSupport and Contact:
+[22m
+
+     For other details, please contact us  via  our  WWW  pages  or by
+     email.
+
+     We maintain  a couple of Opus mailing lists. Details of these can
+     be obtained from the WWW pages.
+
+
+ __
+ Dr Greg Perry, July 18th 1997
+ GPSoftware, PO Box 570 , ASHGROVE AUSTRALIA 4060
+ Phone/Fax +61 7 33661402
+ MailTo:  greg@gpsoft.com.au
+ WEB:     www.gpsoft.com.au
+
+ or MailTo:zzgperry@mailbox.uq.oz.au
+    

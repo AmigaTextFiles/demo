@@ -1,0 +1,24 @@
+
+Klide is a line art demo for the Commodore Amiga, and represents
+my entry to the Badge Killer Demo Contest 2.  Klide is freely
+distributable.
+
+Klide should run on any current production model Amiga (500,1000,2000,
+2500) with at least 512K memory, and may be run by making the Klide
+drawer the current directory and either clicking on the Klide icon
+or entering Klide from the CLI/Shell.
+ 
+***  Double click the Left Mouse Button to terminate Klide.      ***
+***  Single click the Left Mouse Button to advance sequence.     ***
+***  Otherwise, Klide will automatically cycle through sequence. ***
+
+If Klide is unable to obtain the memory resources that it needs, it
+simply exits with a warning status code of 5.
+
+Klide uses line mode blitter code developed by the author which is
+capable of rendering short vectors at a rate up to 15,000 lines/second.
+Klide was created using JForth and assembler for the Amiga by Delta
+Research.
+
+
+Jerry Kallaus

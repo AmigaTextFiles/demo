@@ -1,0 +1,23 @@
+
+If you have "NEWWPA8" installed, please remove it and use
+the included BlazeWCP instead, as it is a better choice!
+Don't forget to remove the line;
+
+C:NewWPA8
+
+from your startup-sequence!
+
+How to install BlazeWCP;
+
+It should aready be in your C: directory, if you have installed 
+the EP, otherwize you can copy it by hand.
+You will find it in the EP-Archive in "ep-install/c/"
+
+Then copy BlazeWCP to your C directory and add C:BlazeWCP to your
+startup-sequence AFTER SetPatch BUT BEFORE any gfxcard support
+software like P96 or cybergfx.
+
+NOTE: This patch is useless if you have a GFXCard, but it will 
+      speedup gfx output quite a bit under AGA!
+
+That's it! Happy musicdisking!

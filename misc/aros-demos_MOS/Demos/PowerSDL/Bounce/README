@@ -1,0 +1,44 @@
+$Log: README,v $
+Revision 1.2  2003/07/28 20:19:17  bryan
+SDL Bouncing Ball Simulation
+
+Revision 1.1  2003/07/28 20:13:56  bryan
+Initial revision
+
+Revision 1.3  2003/07/28 20:11:54  bryan
+SDL Bouncing Ball simulation
+
+Revision 1.2  2003/07/28 20:09:29  bryan
+*** empty log message ***
+
+
+To install: type make.
+  (You may have to edit Makefile depending on where your SDL library is.)
+
+To run: type ./main (windowed) or
+             ./main -f (fullscreen)
+
+Controls:
+  to drop the ball, place the mouse pointer at the location from which you 
+  wish the ball to begin its descent. (The mouse pointer location determines
+  the ball sprite's upper left-most coordinate.)
+
+Keyboard:
+  b   = toggle background render on/off
+  c   = print to stderr number of objects in list (not counting head)	
+  p   = toggle palette switching on/off
+  q   = exit the program
+  ESC = same as q
+
+Comments:
+  Happier with the math, though still not using mass nor momentum.
+
+To do:
+  Add x axis functionality. Deal with momentum mathematically instead of 
+  kludging.
+
+(I apologize about the lengthy RCS log headers, I actually just learned RCS while writing this
+ so you may imagine how such a thing could happen...)
+
+Enjoy!
+~Bryan C. Peirce

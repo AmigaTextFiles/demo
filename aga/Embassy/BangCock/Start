@@ -1,0 +1,6 @@
+c:setpatch
+c:speedychip
+rename libs:cgxsystem.library libs:cgxsystem.library_00000
+assign env: ram:
+cd joo:.motorola/demo/embassy
+bangcock

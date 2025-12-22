@@ -1,0 +1,58 @@
+; The Scene Guide is © 1995/1996 Nico Barbat (Dire/Eremation)
+; TSG_Install V1.01 (30-Jan-96)
+
+echo "*N"
+echo "                  *E[1m*E[34mTHE SCENE GUIDE*E[0m"
+echo "                 *E[34mIssue 2/3 in 1996*N"
+echo "          *E[31mby Nico Barbat (Dire/Eremation)*N*N"
+echo " The Scene 2/96 will be installed in its own directory"
+echo " on your harddisk. If you want this directory to be in"
+echo " another location  on your harddisk,  then simply move"
+echo " the complete drawer to that place.*N"
+
+makedir sys:TheScene296
+echo "Creating directory TheScene296 on your hd-partition system!*N"
+
+echo "*E[33m  Installing:"
+
+echo "*E[34m                ... The Scene Guide (main-file)"
+copy >NIL: TheSceneGuide.guide sys:TheScene296/TheSceneGuide.guide
+copy >NIL: TheSceneGuide.guide.info sys:TheScene296/TheSceneGuide.guide.info
+
+echo "                ... data-files"
+copy >NIL: TSG_Data1 sys:TheScene296/TSG_Data1
+copy >NIL: TSG_Data2 sys:TheScene296/TSG_Data2
+
+echo "                ... graphics"
+copy >NIL: TSG_Advert.iff sys:TheScene296/TSG_Advert.iff
+copy >NIL: TSG_Title.iff sys:TheScene296/TSG_Title.iff
+
+echo "                ... sounds"
+copy >NIL: TSG_Module1.mod sys:TheScene296/TSG_Module1.mod
+copy >NIL: TSG_Module2.mod sys:TheScene296/TSG_Module2.mod
+
+echo "                ... commands"
+copy >NIL: c/ppshow sys:c/ppshow
+copy >NIL: c/more sys:c/more
+copy >NIL: c/noiseplayer sys:c/noiseplayer
+
+echo "                ... Adverts"
+copy >NIL: TSG_Adverts sys:TheScene296/TSG_Adverts all
+
+echo "                ... other needed files.*n"
+copy >NIL: AGuide.lha sys:TheScene296/AGuide.lha
+copy >NIL: ReadMe sys:TheScene296/ReadMe
+copy >NIL: ReadMe.info sys:TheScene296/ReadMe.info
+copy >NIL: file_id.diz sys:TheScene296/file_id.diz
+copy >NIL: TSG_Install sys:TheScene296/TSG_Install
+copy >NIL: TSG_Install.info sys:TheScene296/TSG_Install.info
+copy >NIL: TSG_adverts.info sys:TheScene296/TSG_Adverts.info
+copy >NIL: TSG_adverts.info sys:TheScene296.info
+
+echo "*E[33m Installation finnished succesfully.*N"
+
+echo "*E[31m Please do only spread the original LHA-package, not"
+echo " only these single files. Otherwise <The Scene 2/96>"
+echo " will not work completely (no joke!) ...*N"
+echo "   Signed, *E[3m*E[32mNico Barbat (Dire/Eremation)*E[0m"
+wait 5 secs

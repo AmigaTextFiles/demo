@@ -1,0 +1,116 @@
+; 
+; Generic Script to install ShowTime from Disks
+; Usefull for Swappers
+;
+; By The Lawnmover Man / Darkage (29th June 1998)
+;
+
+(complete 0)
+
+(set @default-dest "SYS:")
+
+(message "Welcome to the Installer of ShowTime\n"
+         "by Darkage.\n\n"
+         "This installer was coded in a couple of minutes\n"
+         "by The Lawnmover Man/Darkage.\n"
+)
+
+
+(set dest1 "")
+
+(set dir1 (askdir
+		(prompt "Choose destination Drive\nA directory called ShowTime will be created.")
+		(default @default-dest)
+		(help   "No help\n"
+		)
+	   )
+)
+
+(set dest1 (tackon dir1 "ShowTime"))
+(set @default-dest dest1)
+
+;Creamos el directorio
+(if dest1
+    (makedir dest1 (infos))
+)
+
+; Disk 1
+
+(working "Installing ShowTime...")
+
+(copyfiles (source "ShowTime#11-1:DKG_ST11.003")
+           (dest dest1)
+)
+(complete 15)
+
+; Disk 2
+
+(askdisk (dest "ShowTime#11-2")
+         (prompt "Please, insert ShowTime Disk 2 in any drive.")
+         (help "No help available.")
+         (assigns)
+)
+
+(working "Installing ShowTime...")
+
+(copyfiles (source "ShowTime#11-2:DKG_ST11.000")
+           (dest dest1)
+)
+(complete 30)
+
+; Disk 3
+
+(askdisk (dest "ShowTime#11-3")
+         (prompt "Please, insert ShowTime Disk 3 in any drive.")
+         (help "No help available.")
+         (assigns)
+)
+
+(working "Installing ShowTime...")
+
+(copyfiles (source "ShowTime#11-3:DKG_ST11.001")
+           (dest dest1)
+)
+(complete 45)
+
+; Disk 4
+
+(askdisk (dest "ShowTime#11-4")
+         (prompt "Please, insert ShowTime Disk 4 in any drive.")
+         (help "No help available.")
+         (assigns)
+)
+
+(working "Installing ShowTime...")
+
+(copyfiles (source "ShowTime#11-4:DKG_ST11.002")
+           (dest dest1)
+)
+(complete 60)
+
+(working "Putting all the data together...")
+
+(run ("join %s/DKG_ST11.000 %s/DKG_ST11.001 %s/DKG_ST11.002 %s/DKG_ST11.003 to %s/DKG_ST11.lha" dest1 dest1 dest1 dest1 dest1)
+)
+(complete 80)
+
+(working "Uncompressing...")
+
+(run ("lha x %s/DKG_ST11.lha %s/" dest1 dest1)
+)
+(complete 90)
+
+(working "Deleting unused data...")
+
+(run ("delete %s/DKG_ST11.0#? %s/DKG_ST11.lha" dest1 dest1)
+)
+(complete 100)
+
+(message "ShowTime Installed on HardDisk...\n\n"
+         "Enjoy and don't hesitate to contact\n"
+         "with us for anything relating the scene\n"
+         "\n\n"
+         "Kaosmaster: kaos@atmedia.it\n"
+         "Modem: granata@mail.caribusiness.it\n"
+         "The Lawnmover Man: jreyes@freenet.hut.fi\n"
+)

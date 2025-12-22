@@ -1,0 +1,97 @@
+Short:        What Might Have Been demo for DSP3210 chips
+Uploader:     Wrangler491@gmail.com
+Author:       wrangler491_at_gmail_dot_com
+Type:         demo/aga
+Architecture: m68k-amigaos >= 3.0
+Version:      1.07
+Replaces:     1.06
+Distribution: Aminet
+Kurz:         What Might Have Been demo fuer DSP3210-Chips
+
+
+This is a demo for the AA3000 and AA3000+ Amigas equipped with fully working
+DSP3210 chips (see notes below).  This is the extended version produced for 
+Kickstart 01 in Nottingham in July 2023, with the addition of window mode in
+August 2023
+
+Created with VBCC, ASM3210 and ELF2EXEM68K
+
+Copyright Wrangler 2023-25
+
+Uses C2P code courtesy of Kalms
+
+v1.07+ support DSPmeter in conjunction with Thomas Rapp's Newmeter.  You will
+need to run in a window though to see the meters!
+
+Usage:
+------
+De-archive to a suitable location and from the Shell:
+
+WMHB.exe
+or
+WMHB.exe -window
+
+Window mode requires P96 and a screen depth of at least 15 bits.
+You do not need any other files for the demo to run.
+
+Note that if you also have ptreplay.library (from Aminet) and a mod file named
+music.mod in the same drawer as the executable then the mod will play during
+the demo.  Otherwise, silence and maybe a few extra FPS!
+
+In my video on YouTube of the original version of the demo, I was using the
+mode "After the Fight" by Boray, available on Aminet.
+
+Notes on getting the demo to run:
+---------------------------------
+This demo will stress your DSP much more than any other code for the DSP that
+is available right now, specifically the DSP <-> FastRAM interface.  
+
+In order to get it to work properly, your DSP support logic must be set up 
+right and you may also need to remove or adjust your accelerator if you are 
+using one.  If you don't do this, the demo may only run for a few seconds, or
+not at all and you will get gurus or just your music mod playing.
+
+Start by trying the demo on the onboard 68030 and check that works first
+before seeing if it works with your accelerator too.  The demo was designed 
+for an unexpanded AA3000+.
+
+Support logic:
+The choice of the four DSP logic chips (U122-124 and U701) is a dark art.  At
+the time of writing it's not clear there is a perfect combination that works 
+for everyone.  Certainly, using faster chips doesn't guarantee better results.
+
+I am using the following chips and the demo runs faultlessly even with an 060
+accelerator running at 100 MHz:
+
+U122 and U124 are ATF22V10C-5JX
+U123 is ATF22V10C10JU-PH
+U701 is ATF16V8B15JU-PH
+
+The firmware for these chips is on my git here:
+https://github.com/Wrangler491/AA3000-DSP
+
+These are modified versions of the firmware in the Haynie archive.  (The
+firmware for U123 is used from that archive without any changes.)
+
+If that doesn't work, then you could try forcing the demo to run from either
+the onboard FastRAM or even ChipRAM by using changemempri, which is available
+from Aminet, although you will take a performance hit.
+
+If you can't get the demo to run on the onboard 68030 with these chips and
+firmware then you are going to have to experiment with different logic chips.
+It is NOT the fault of the demo code.
+
+Accelerators:
+Once you add an accelerator to the mix, things get even harder.  The demo 
+works well with accelerators and will show a step up in FPS from using a
+68060 at 50 MHz.  At 100 MHz the demo will be even faster but not twice as 
+fast because it becomes limited by the speed for the DSP.
+
+In testing with a BFG9060 card, it became clear that in some set ups, cooling
+of the BFG's own logic and RAM was a big factor on stability.  This may or 
+may not apply to other accelerators too.  So adding heatsinks and fans to the
+accelerator's own chips may help.
+
+Wrangler June 2025
+
+ 

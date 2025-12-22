@@ -1,0 +1,159 @@
+short:    VISIBLE WORLD - an raytraced Zoltan`s slideshow by Mawi & Venus Art
+uploader: Azzaro/Mawi (zorka19@puma.tu.koszalin.pl)
+author:   Bj.Sebo/VenusArt (bjsebo@delta.ii.tuniv.szczecin.pl)
+type:     demo/slide
+requires: AGA, FastRAM, AHI, XPK
+
+
+                     .: ..........:.
+                      ..:         :
+                      : ._____ _  :
+                   ___:_|  _ _    :  ____     ______ _____
+          _._____ _\  _ | /  /____:__\_ /_____\    /_\___/_ _____._
+          \|      \    \_/    _      _.  _   _/\_   _     /      |/
+          ¯|_____ /_____|_____\______\|__\____/\____\_____\ _____|¯
+           «------nM$!:           :------------------------------»
+                      :         ..:..   [÷] ·M· ·A· ·W· ·I· [÷]
+                     .:.........::: :
+                      ·         :...:.. .
+                                    :
+                                    · w e   l i k e   t o   s c o r e !
+
+
+                        MAd WIzards MULTIMEDIA feat.
+                     Venus Art virtual beauty experience
+                        presents an slideshow by the
+
+
+           conqueror of 3rd place at intel outside3 and gravity`97
+                conqueror of 2nd position at staszic party 3
+          winner of intel outside 4, astrosyn`97 and rush hours`97
+                      in raytraced graphics competition
+
+                             Zoltan/Mawi+amnesty
+
+
+
+                                called simply
+
+        -[  v  i  s  i   b  l  e     w  o  r  l  d     1  0  0  %  ]-
+
+                   fullfilled by traces and visual madness
+              the most expectated polish production of the year
+                       17 moths of hard computer work
+                             now on your screen!
+
+
+
+                             -[ c r e d i t s ]-
+
+            executive producer.................. bjsebo/venus art
+            3D Technology & 3D programming ........ noe/venus art
+            artistic 3d visuals .......................... zoltan
+            2d visuals ........................... jacko & azzaro
+            ambient multichannel atmosphere ........ dave/haujobb
+            textures .................. adobe photoshop & friends
+            design & art-directing ....................... azzaro
+
+
+
+                     -[ f r o m   t h e   a u t h o r ]-
+                             p o l e s   o n l y
+
+      Zoltan  z  tej  strony.   Jako ûe jestem autorem wszystkich rayów
+      zamieszczonych  w  tym  slideshowie, chciaîbym napisaê o tym parë
+      sîów.  Z zaîoûenia slideshow miaî wyjôê prawie póîtora roku temu,
+      lecz  termin  jego  wydania wciâû sië odsuwaî z przyczyn ode mnie
+      nie   zaleûnych.   W  ciâgu  tego  roku  mój  konfig  bardzo  sië
+      powiëkszyî,   co   takûe   mam   nadziejë  daîo  sië  zauwaûyê  w
+      produkcjach.   W  czasie  poczâtków  mojej zabawy z raytracingiem
+      dysponowaîem  bardzo sîabâ konfiguracjâ - 020 i 4MB ramu.  Juû na
+      takim  konfigu  powstaîy  moje  pierwsze prace - TIKAL, CONFUSED,
+      DESERT  TOWN,  DRAKKAR (w kolejnoôci jak powstawaîy), wiëc jakoôê
+      tych rayów jest prawdë mówiâc - sîaba, szczególnie jeôli chodzi o
+      antyaliasing, lecz takûe sîaba jest jakoôê obiektów i textur gdyû
+      z  przyczyn technicznych nie mogîem sobie pozwoliê na ich mnogoôê
+      i róúnorodnoôê w scenach.  W tych poczâtkowych scenach nie mogîem
+      zastosowaê  wiëkszego  antyaliasingu, gdyû czas renderingu raya i
+      tak  byî niesamowicie dîugi - stâd ich sîaba jakoôê.  Zresztâ sam
+      MaxonCinema, na którym byîy robione te pierwsze raye byî w wersji
+      2.1  i  nie  oferowaî  zbyt  wyrafinowanch  metod  antyaliasingu.
+      Nastëpne  sceny  -  TAUBE,  CLOSE  ENCOUNTER 3, INVASION, FROZEN,
+      INSECTOID (takûe w kolejnoôci jak powstawaîy) byîy renderowane na
+      lepszym  konfigu  -  040/25,  8MB fast.  Oczywiôcie w tych rayach
+      zostaî  juû  uûyty  antyaliasing metodâ kantex8, lecz i ta metoda
+      nie  daje  dobrych  rezultatów.   Natomiast moja ostatnio scena -
+      "UNDERWATER  PRESSURE" zostaîa wyrenderowana na 060/60, 16MB fast
+      w  MaxonieCinema  4.0.   Dopiero  na takim konfigu moûna byîo sië
+      pokusiê   o  wyrenderowanie  obrazka  w  nieco  lepszej  metodzie
+      antyaliasingu  -  immer.  Jako ciekawostkë podam fakt, ûe scena z
+      nurkiem  renderowaîa  sië  przeszîo...   20  godzin.   Oczywiôcie
+      mógîbym jeszcze raz przerenderowaê wszystkie sceny na 060/50, ale
+      wiëkszoôê  z  nich  byîa  wystawiana  na  róûnych  parties  i nie
+      chciaîbym,  aby  po  scenie  krâûyîy  róûne  wersje  tego  samego
+      raytracingu.   Wszystkie  prace,  które  sâ  zamieszczone  w  tym
+      slideashowie  powstawaîy  od koïca 1995 roku (TIKAL) do listopada
+      1997  ("UNDERWATER  PRESSURE").   Na  koniec  chciaîbym pozdrowiê
+         wszystkich moich kumpli na scenie jak i po za niâ!  See YA!
+
+
+
+               -[ t e c h n i c a l   i n f o r m a t i o n ]-
+
+      This  slideshow requires AGA chipset, as well as some fast memory
+      to  run.To  get  best  visual  effects  you  should have at least
+                               MC68040/40Mhz.
+
+      It  should  run  on  PAL  without  any problems,to get it work on
+      dblpal simply add '-dblpal' parametter (MWI-VW.EXE -dblpal).  You
+      should  also  have  some  software  installed on you Amiga to run
+      thise piece of soft:
+        - AHI in version at least 4.0
+        - XPKmaster.library version 2.0
+        - xpkRAKE.library v 1.7
+
+      These products are copyrighted by their authors. Thanks for doing
+      that kind of Amiga-Software!
+
+      All  3D  code  routines  are  based on VirtuaArt 3D Library v1.1,
+      which  is  a  realtime  graphics library developed by Noe with my
+      (BJSebo)  little  help.   CGFX  users  will be disapointed - this
+           productions does not support graphics cards - sorry...
+
+          VirtuaArt 3D Library is Copyrighted 1997-98 by Venus Art.
+                            All rights reserved.
+
+
+
+
+                    -[ k a o t i k   g r e e t i n g s ]-
+
+         floppy venus-art nah-kolor anadune appendix venture haujobb
+         limited-edition honoo scum absurd the-black-lotus instinct
+      phase-truce genetic phuture303 redbullz agony spawn dinx-project
+        void gods darkage picco crazy drivers t13n!  sector5 suspend
+       apathy rave-network-overscan teklords high-voltage embora taski
+       thefect dual-crew-shining digital freezers sadist whelpz strobe
+           subspace nemesis-ng!  scoopex spaceballs amnesty pulse
+                               and you, too...
+
+
+                          b e   p r o d u c t i v e.
+
+
+
+                   -[ f o r   s t a y i n g   t u n e d ]-
+
+                    zorka19@puma.tu.koszalin.pl (azzaro)
+               bjsebo@delta.ii.tuniv.szczecin.pl (bj.sebo/vad)
+
+
+
+
+
+
+               we hope you enjoy it because it`s worth of it!
+                                 [c] 2000-2
+
+                  Rush Hours Party 2 - Czestochowa, Poland
+                              April 25-26, 1998

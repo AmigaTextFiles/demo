@@ -1,0 +1,218 @@
+--------  the < lwo3d> 3d object constructor
+
+ Some culture:
+ Lightwave 3D is a commercial 3d object and scene modeler from NewTek:
+ ( http://www.newtek.com/products/lightwave/ )
+ It was supported on amiga till version 5.5, and exists on MacOs and windows
+ which version now are > 7.x. The Description of the Lightwave object
+ file format are freely released by newtek.
+
+ Lightwave use 2 main file format: the '.lwo' file that can describe one
+ or more 3d objects,and the '.lws' that descibe a whole cinematic
+ (movements) of a scene.
+
+  Since version 6.x, .lwo format has changed and is far more powerful,
+ but '.lwo' name was kept.(IFF tags LWOB and LWO2 makes the difference.)
+ Anyway, you don't care. It goes like:
+
+  < lwo3d>  label | father | (9 parameters:position:rotations,scale)|
+                 filePathAndName | LayerNumber | Texture | (Other optional Texture)...
+  </lwo3d>
+
+  So it is very simple to load lightwave objects in karate. you specify a file,
+ and a LayerNumber: '.lwo' can contains more than one object (each is a 'layer').
+ You choose it with this number, If you don't know what to put as LayerNumber,
+ set '1'. If you create many objects from the same file with different layers,
+ the loading will only happen once.
+
+  < lwo3d> only support convex polygons (triangle,most quads,..) no nurbs
+  supported yet. (use shift+t under lightwave editor to make an object triangle-only)
+
+ < lwo3d> doesn't creates texture itself for the moment, but all textures are
+ 'known' already. So,you must provide at least ONE OR MORE texture already
+ created at the end of the constructor.
+ If your .lwo need one texture, it will fit it.
+ If your .lwo need more than one texture, and you just provide one,
+   this one will fit every polygons.
+ If the .lwo use 4 textures, and you provide 4, your 4 textures will be used instead.
+ (note: if .lwo need 4 text, and you provide 2, it will use: 1,2,1,2.)
+
+ < lwo3d> read the UV coordinates (even vertex-discontinuous ones), so you can use
+ that features with texture mapping,as done in the exemples.
+ 
+------------------- Now let's construct some worlds:
+
+ <World3D> world1 </World3D>
+ <World3D> world2 </World3D>
+ <World3D> world3 </World3D>
+ <World3D> world4 </World3D>
+
+------------------- Some rectangles:
+
+ the hierarchy is only set for clipping, not position ;-)
+then by moving the father clipping, we show one or other rectangle.
+
+<KRECT> rec_father  |0|0|1|1|
+                    |0|0|1|1|  </KRECT>
+
+<KRECT> rec_house |0.5|0|1|0.5| rec_father
+              |0|0|1|1|  </KRECT>
+
+  <KRECT> rec_house_a |0|0|1|0.6| rec_house
+              |0|0|1|1|  </KRECT>
+  <KRECT> rec_house_b |0|0.6|1|1| rec_house
+              |0|0|1|1|  </KRECT>
+
+
+<KRECT> rec_logo1 |0|0.5|1|1| rec_father
+              |0|0|1|1|  </KRECT>
+
+<KRECT> rec_logo2 |0|0|0.5|0.5| rec_father
+              |0|0|1|1|  </KRECT>
+
+
+------------------ Let's construct some textures:
+
+<kimg> logoMkdTexture1 | data/logofront0000.iff </kimg>
+<t3dmapping> t_logo1 | logoMkdTexture1  </t3dmapping>
+
+
+<KIMG> logoMkdTexture2 | data/logo3bake0000.iff </KIMG>
+<t3dmapping> t_logo2 | logoMkdTexture2  </t3dmapping>
+
+<KIMG> housetexture | data/housebake.iff </KIMG>
+<t3dmapping> t_house | housetexture  </t3dmapping>
+
+<KIMG> i_lightmapRed  | data/lightmapred.iff </kimg>
+
+-------------------- let's construct some 3d objects:
+
+<lwo3d> o_logo3d | world1 |0|0|0|0|0|0|1|1|1 | data/logomkd.lwo |1 | t_logo1   </lwo3d>
+
+<lwo3d> o_logo3d2 | world2 |0|0|0|0|0|0|2|2|2 | data/logomkd.lwo |2| t_logo2   </lwo3d>
+
+<lwo3d> o_houses | world3 |0|0|0|0|0|0|1|1|1 | data/houses.lwo |1| t_house </lwo3d>
+
+
+
+
+
+--------------------------------- other constructions ----
+
+<MAIN> mainscript |0|1</MAIN>
+<KCAM> the_camera |0|-4|-4|0|0.1|0|0.25  </KCAM>
+<KCAM> cam2 |0|0|-1|0|0|0|0.4  </KCAM>
+
+<KSCRIPT>
+    <ID> mainscript </ID>
+    <PLAY> mainpart | 40000 | 0 | 1</PLAY>
+</KSCRIPT>
+ 
+--------------------------------------------------------------------
+<KPART>
+    <ID> mainpart </ID>
+    note: no use to clear the background, the room cube do so.
+
+    <Fx><Pa>setpalette</Pa>		set the screen palette
+        <Pa> i_lightmapRed </Pa>
+    </Fx>
+---------------------------- move rectangles for chaining.
+<KTABLE> mr_x1 | 0,-1.01|300,-1|450,-1.01|1500,-1.01|1700,0   |2100,0   |2300,0   |2500,0 </KTABLE>
+<KTABLE> mr_y1 | 0,-1.01|300,-1|450,0   | 1500,0    |1700,0   |2100,0   |2300,0   |2500,-1 </KTABLE>
+<KTABLE> mr_x2 | 0,1.01 |300,1 |450,1.01| 1500,1.01 |1700,2.01|2100,2.01|2300,2.01|2500,2.01 </KTABLE>
+<KTABLE> mr_y2 | 0,1.01 |300,1 |450,2.01| 1500,2.01 |1700,2.01|2100,2.01|2300,2.01|2500,1.01 </KTABLE>
+    <Fx><Pa> setrect </Pa>
+            <Pa> rec_father </Pa>
+            <Pa> aftmod | mr_x1 |0|0 </Pa>
+            <Pa> aftmod | mr_y1 |0|0 </Pa>
+            <Pa> aftmod | mr_x2 |0|0 </Pa>
+            <Pa> aftmod | mr_y2 |0|0 </Pa>
+            <Pa> 4cte|0|0|1|1  </Pa> pos rectangle
+    </Fx>
+---------------------------- draw logo1
+    <Fx><Pa>fillrc</Pa> clear the background
+        <Pa> rec_logo1  </Pa>
+        <Pa> cte | 73 </Pa>
+    </Fx>
+    <Fx><Pa> SetCamTarget </Pa>
+            <Pa> the_camera </Pa>
+
+            <Pa> sin|0|0.23|2.5 </Pa>    x camera
+            <Pa> sin|0|0.45|1.5 </Pa>    y
+            <P a> cte|-20 </Pa>    z
+            <Pa> cos|0|0.23|2.5 </Pa>
+            <Pa> 3cte |0|-1|0 </Pa>  target
+
+            <Pa>cte|0 </Pa> angle rotation z axis
+            <Pa> cte|0.4 </Pa> fov
+            </Fx>
+<KTABLE> logbounce | 0,1|5,2|20,1 |100,1 </KTABLE>
+
+    <Fx><Pa> Set3DObject </Pa>   make the plane turn around...
+    	    <Pa> o_logo3d  </Pa>
+    	    <Pa> 3cte|0|0|0</pa> position
+    	    <Pa> 3cte|0|0|0</Pa> rot.
+    	    <Pa> cte|1 </Pa> scale
+            <Pa> aftmod | logbounce |0|0 </Pa>
+            <Pa> cte|1 </Pa> scale
+    </Fx>
+
+
+     <Fx><Pa> Draw3DWorld </Pa>
+           <Pa> rec_logo1  </Pa>
+           <Pa> world1 </Pa>
+           <Pa> the_camera  </Pa>
+           <Pa> cte|0 </Pa>
+           <Pa> cte|0.25 </Pa>
+           <Pa> cte|200</Pa>
+     </Fx>
+
+---------------------------- draw logo2
+    <Fx><Pa>fillrc</Pa> clear the background
+        <Pa> rec_logo2  </Pa>
+        <Pa> cte | 20 </Pa>
+    </Fx>
+     <Fx><Pa> Draw3DWorld </Pa>
+           <Pa> rec_logo2  </Pa>
+           <Pa> world2</Pa>
+           <Pa> the_camera  </Pa>
+           <Pa> cte|0 </Pa>
+           <Pa> cte|0.25 </Pa>
+           <Pa> cte|200</Pa>
+     </Fx>
+
+
+---------------------------- draw houses world:
+    <Fx><Pa>fillrc</Pa> clear the background
+        <Pa> rec_house_a  </Pa>
+        <Pa> cte | 18 </Pa>
+    </Fx>
+    <Fx><Pa>fillrc</Pa> clear the background
+        <Pa> rec_house_b  </Pa>
+        <Pa> cte | 19 </Pa>
+    </Fx>
+    <Fx><Pa> SetCamTarget </Pa>
+            <Pa> the_camera </Pa>
+
+            <Pa> sin|0|0.1|14 </Pa>    x camera
+            <Pa> sin|-6|0.3|1.5 </Pa>    y
+            <P a> cte|-20 </Pa>    z
+            <Pa> cos|0|0.1|14 </Pa>
+            <Pa> 3cte |0|-1|0 </Pa>  target
+
+            <Pa>cte|0 </Pa> angle rotation z axis
+            <Pa> cte|0.8 </Pa> fov
+            </Fx>
+
+     <Fx><Pa> Draw3DWorld </Pa>
+           <Pa> rec_house  </Pa>
+           <Pa> world3 </Pa>
+           <Pa> the_camera  </Pa>
+           <Pa> cte|0 </Pa>
+           <Pa> cte|0.75 </Pa>
+           <Pa> cte|200</Pa>
+     </Fx>
+
+
+</KPART>
+ 

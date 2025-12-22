@@ -1,0 +1,72 @@
+V3.0
+
+MOUSE on
+FKEYS on
+
+EVENT Journey.Anim
+ANIM "zippy:ZiPPYbits/SCaLa/Journey.Anim" 17 -1
+WIPE rollodex north speed 5
+TABS 100 200 300 400 500
+MARGINS on 32 607
+PALETTE 000 aaa f00 ff0
+FONT FUTURAB.font 31 32
+COLOR 3 0 0 0 0 0 3 0 0 3 3 3 3 3 3
+ATTRIBUTES remap center kerning
+STYLE 0 3 4 3 6 1 1 29 3 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 319 144 ""
+COLOR 3 2 0 2 0 0 3 0 0 3 3 3 3 3 3
+ATTRIBUTES edge remap kerning
+TEXT 166 135 "THE"
+COLOR 3 0 0 2 0 0 3 0 0 3 3 3 3 3 3
+ATTRIBUTES kerning
+TEXT 169 173 "       HOPPY"
+TEXT 166 203 "                     X"
+TEXT 166 237 "                        DEMO"
+FONT times.font 10 18
+STYLE 0 3 4 3 6 1 1 15 3 1 13 0 2 5 1 0 4 4 3
+TEXT 419 288 "By Gareth Murfin..."
+PAUSE 4.800
+END
+
+EVENT "GazSting Enterprises"
+BLANK 1280 512 4 lace superhires 0
+WIPE lowflipcoin speed 10
+TABS 200 400 600 800 1000
+MARGINS on 64 1215
+PALETTE 000 fff ccc aaa 888 666 444 000 c00 d60 fb0 080 58b 53c a2b f3b
+FONT Ernest.font 26 45
+COLOR 8 7 7 7 7 0 8 7 0 8 8 9 6 9 8
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 36 6 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE ants speed 2
+TEXT 412 158 "GazSting Enterprises"
+FONT FUTURAB.font 31 32
+COLOR 1 7 7 7 7 0 1 7 0 1 2 3 5 4 1
+STYLE 0 3 4 3 6 1 1 29 3 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 1102 199 ""
+TEXTWIPE bob east easeout speed 6
+TEXT 24 115 "THIS IS THE SECOND MEGADEMO RELEASE FROM"
+TEXTWIPE dump speed 1
+TEXT 478 217 ""
+TEXTWIPE bob east easeout speed 6
+TEXT 704 221 "EXCEPT THIS TIME IT USES..."
+PAUSE 4.800
+END
+
+EVENT "Except this demo uses"
+ANIM "zippy:ZiPPYbits/SCaLa/!Bang.anim" 20 2
+WIPE rollodex north speed 5
+TABS 100 200 300 400 500
+MARGINS on 32 607
+PALETTE 204 fa0 fec e00
+FONT FUTURAB.font 31 32
+COLOR 1 3 0 1 0 0 1 0 0 1 1 1 1 1 1
+ATTRIBUTES edge remap kerning
+STYLE 0 3 4 3 6 1 1 29 3 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 6 90 ""
+PAUSE 4.800
+EXIT
+END

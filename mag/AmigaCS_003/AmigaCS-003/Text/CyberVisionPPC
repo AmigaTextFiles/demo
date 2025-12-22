@@ -1,0 +1,234 @@
+@{d AEECFF}                                   @{c C0FF33}CyberVision PPC@{c}
+                                   @{c C0FF33}¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+  Phase  5  koneçnë zaçala v pûli çervence 1998 prodávat tolik oçekávané nové grafické
+karty  CyberVision  PPC  zaloùené na grafickém procesoru Permedia 2 a urçené k PowerPC
+akcelerátorûm  CyberStorm PPC.  Karty BlizzardVision PPC pro akcelerátory Blizzard PPC
+mají být v prodeji do konce srpna.
+
+  @{c FFFF66}Balení obsahuje:@{c}
+  @{c FFFF66}¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+  · vlastní grafickou kartu
+  · dvë diskety s CyberGraphX V3 (r70a), ovladaçem CV-PPC a flash-updaty
+  · manuál
+  · kartiçku s videovýstupem
+
+
+  Jako  vîechny  výrobky  phase5  i  tato karta vypadá velice profesionálnë.  Pêekvapí
+svými nezvykle malými rozmëry a jednoduchostí.  Prakticky obsahuje jen çip Permedia 2,
+8MB pamëti SGRAM a speciální zákaznický çip.   Výstup z karty je zajiîtën 10ti ùilovým
+ kabelem  zakonçeným  na  konci  malým  tiîtëným spojem, který
+ obsahuje   standardní  15ti  pinový  VGA  konektor  a 3pinový   @{p CV-PPC.png 453 0}
+ miniDIN pro volitelné LCD brýle.
+
+   Kartu  by  mëlo být moùno  zapojit dvëma  rûznými zpûsoby -
+ v úhlu 90° k pûvodní desce  akcelerátoru a paralelnë k desce.
+ Proto se karta vyrábí ve dvou provedeních - pro desktop A4000
+ a pro A3000T/A4000T (viz prázdná prokovení na obrázku karty).
+ Tëùko   êíct,   proç  phase5   neudëlala   kartu  univerzálnë
+ a neosadila oba konektory - asi z dûvodu niùîí ceny.
+
+   První  disketa  obsahuje  nové  updaty  pamëti flash.  Tyto
+ updaty jsou nezbytné, protoùe karta obsahuje nepêíliî funkçní
+ firmware.   Druhý disk obsahuje mírnë modifikovaný RTG systém
+ CyberGraphX  V3.   Jedná se o release 70a s pêidaným driverem
+ monitoru  CVisionPPC.   Jak  je  u  phase5 (zlo)zvykem, první
+ prodávané   verze   jejich   firmwaru   jsou  víceménë  poêád
+ betaverze.    Aktuální   driver   zdaleka  nevyuùívá  vîechny
+moùnosti  grafického çipu - to se ale çasem urçitë zlepîí (stejnë jako u CV/3D).  Také
+po 3D podpoêe zatím není ani vidu, ani slechu.
+
+  Asi   nejvëtîím  nedostatkem  karty  je  skuteçnost,  ùe  neumoùñuje  pêipojit  (ani
+neobsahuje!)  scandoubler ani pêepínaç monitorû.  Tak jste odkázáni çistë na systémové
+programy  -  zapomeñte na PAL, vëtîinu dem a vîechny starîí hry!  Moùná si êeknete, ùe
+to  není  zas  takový problém, ale co bootmenu?  A co kdyù se pêeruîí startup-sequence
+a vyskoçí na vás CLI v PALu?  Uvidíte jen tmu na vaîem monitoru!  Výrobce vîak na toto
+pamatuje a slibuje, ùe bude pracovat na vylepîení firmware ve flashram, aby bylo moùno
+otevêít  minimálnë  bootmenu  na grafické kartë (to by më váùnë zajímalo, jak ten hack
+udëlají - pozn.ShAmaN).   Êeîení  mûùe  být  mechanické (sniùuje kvalitu obrazu), nebo
+elektronické  pêepínání  videovýstupû (drahá záleùitost vzhledem k îíêce pásma karty -
+230MHz).  Nejvýhodnëjîí se proto jeví vlastnit 2 monitory (nebo monitor a TV ;-).
+
+  Co  se  týçe  kvality  obrazu,  tak  ta naplñuje vîechna oçekávání.  Obraz je velice
+ostrý,  barevný  a çistý.  Urçitë mnohem lepîí neù CV64/3D.  Kompatibilita karty je na
+velice  sluîné  úrovni - pracují vîechny programy co chodily na CV64/3D (mimo 3D dem).
+Rychlost  je  na  první  verzi  ovladaçe  solidní  - dalîí optimalizace jistë kartë na
+rychlosti  pêidají.   Také  na  podpoêe  nových  3D funkcí çipu Permedia 2 se neúnavnë
+pracuje.   Nakonec  uvedeme  srovnání  s A4000/060/CV64-3D, 800×600 ve vîech hloubkách
+barev  (program  SysSpeed).   Z testu  je patrno, ùe nová karta je rychlejîí pêedevîím
+v HiColor  a  TrueColor  reùimech  (SGRAM).   Také  vyplñování ploch a kreslení çar je
+rychlejîí neù u Virge.
+
+                                  | @{c FFFF66}CV-PPC@{c}  | @{c FFFF66}CV643D@{c}  ||
+                    +-------------+---------+---------++---------+
+                    |  @{c FFFF66}Intuition@{c}    @{c FFFF66}Operace/s@{c}         ||  @{c FFFF66}index@{c}  |
+                    +-------------+---------+---------++---------+
+                    | OpenWin16   |  25     |  34     ||  0.74   |
+                    +-------------+---------+---------++---------+
+                    | OpenWin256  |  24     |  33     ||  0.73   |
+                    +-------------+---------+---------++---------+
+                    | OpenWinHi   |  24     |  22     ||  1.09   |
+                    +-------------+---------+---------++---------+
+                    | OpenWinTru  |  24     |  22     ||  1.09   |
+                    +-------------+---------+---------++---------+
+                    | WinLayer16  |  33     |  34     ||  0.97   |
+                    +-------------+---------+---------++---------+
+                    | WinLayer256 |  29     |  32     ||  0.91   |
+                    +-------------+---------+---------++---------+
+                    | WinLayerHi  |  24     |  22     ||  1.09   |
+                    +-------------+---------+---------++---------+
+                    | WinLayerTru |  16     |  15     ||  1.07   |
+                    +-------------+---------+---------++---------+
+                    | SizeWin16   |  91     |  175    ||  0.52   |
+                    +-------------+---------+---------++---------+
+                    | SizeWin256  |  107    |  173    ||  0.62   |
+                    +-------------+---------+---------++---------+
+                    | SizeWinHi   |  97     |  128    ||  0.76   |
+                    +-------------+---------+---------++---------+
+                    | SizeWinTru  |  101    |  125    ||  0.81   |
+                    +-------------+---------+---------++---------+
+                    | MoveWin16   |  223    |  394    ||  0.57   |
+                    +-------------+---------+---------++---------+
+                    | MoveWin256  |  232    |  362    ||  0.64   |
+                    +-------------+---------+---------++---------+
+                    | MoveWinHi   |  233    |  208    ||  1.12   |
+                    +-------------+---------+---------++---------+
+                    | MoveWinTru  |  189    |  120    ||  1.58   |
+                    +-------------+---------+---------++---------+
+                    | ConOutP16   |  115    |  207    ||  0.56   |
+                    +-------------+---------+---------++---------+
+                    | ConOutP256  |  116    |  206    ||  0.56   |
+                    +-------------+---------+---------++---------+
+                    | ConOutPHi   |  73     |  71     ||  1.03   |
+                    +-------------+---------+---------++---------+
+                    | ConOutPTru  |  60     |  42     ||  1.43   |
+                    +-------------+---------+---------++---------+
+                    | OpenScr16   |  10     |  10     ||  1.00   |
+                    +-------------+---------+---------++---------+
+                    | OpenScr256  |  8      |  8      ||  1.00   |
+                    +-------------+---------+---------++---------+
+                    | OpenScrHi   |  6      |  6      ||  1.00   |
+                    +-------------+---------+---------++---------+
+                    | OpenScrTru  |  4      |  4      ||  1.00   |
+                    +-------------+---------+---------++---------+
+                    | SwapScr16   |  50     |  69     ||  0.72   |
+                    +-------------+---------+---------++---------+
+                    | SwapScr256  |  50     |  69     ||  0.72   |
+                    +-------------+---------+---------++---------+
+                    | SwapScrHi   |  50     |  69     ||  0.72   |
+                    +-------------+---------+---------++---------+
+                    | SwapScrTru  |  50     |  69     ||  0.72   |
+                    +-------------+---------+---------++---------+
+
+                                  | @{c FFFF66}CV-PPC@{c}  | @{c FFFF66}CV643D@{c}  ||
+                    +-------------+---------+---------++---------+
+                    |  @{c FFFF66}Grafika@{c}       @{c FFFF66}Operace/s@{c}                   |
+                    +-------------+---------+---------++---------+
+                    | ScrollX_16  |  152    |  249    ||  0.61   |
+                    +-------------+---------+---------++---------+
+                    | ScrollX_256 |  152    |  249    ||  0.61   |
+                    +-------------+---------+---------++---------+
+                    | ScrollX_Hi  |  133    |  89     ||  1.49   |
+                    +-------------+---------+---------++---------+
+                    | ScrollX_Tru |  88     |  36     ||  2.44   |
+                    +-------------+---------+---------++---------+
+                    | ScrollY_16  |  137    |  251    ||  0.55   |
+                    +-------------+---------+---------++---------+
+                    | ScrollY_256 |  137    |  251    ||  0.55   |
+                    +-------------+---------+---------++---------+
+                    | ScrollY_Hi  |  106    |  88     ||  1.20   |
+                    +-------------+---------+---------++---------+
+                    | ScrollY_Tru |  66     |  33     ||  2.00   |
+                    +-------------+---------+---------++---------+
+                    | PrintTxt16  |  5344   |  7436   ||  0.72   |
+                    +-------------+---------+---------++---------+
+                    | PrintTxt256 |  5341   |  7527   ||  0.71   |
+                    +-------------+---------+---------++---------+
+                    | PrintTxtHi  |  5193   |  6463   ||  0.80   |
+                    +-------------+---------+---------++---------+
+                    | PrintTxtTru |  5223   |  4860   ||  1.07   |
+                    +-------------+---------+---------++---------+
+                    | RectFill16  |  15495  |  10350  ||  1.50   |
+                    +-------------+---------+---------++---------+
+                    | RectFill256 |  15489  |  10352  ||  1.50   |
+                    +-------------+---------+---------++---------+
+                    | RectFillHi  |  13987  |  5420   ||  2.58   |
+                    +-------------+---------+---------++---------+
+                    | RectFillTru |  11822  |  2837   ||  4.17   |
+                    +-------------+---------+---------++---------+
+                    | DrwElpse16  |  19742  |  17679  ||  1.12   |
+                    +-------------+---------+---------++---------+
+                    | DrwElpse256 |  19739  |  17678  ||  1.12   |
+                    +-------------+---------+---------++---------+
+                    | DrwElpseHi  |  1922   |  1931   ||  1.00   |
+                    +-------------+---------+---------++---------+
+                    | DrwElpseTru |  2095   |  2119   ||  0.99   |
+                    +-------------+---------+---------++---------+
+                    | DrwCircle16 |  19232  |  17030  ||  1.13   |
+                    +-------------+---------+---------++---------+
+                    | DrCircle256 |  19232  |  17030  ||  1.13   |
+                    +-------------+---------+---------++---------+
+                    | DrwCircleHi |  17721  |  16279  ||  1.09   |
+                    +-------------+---------+---------++---------+
+                    | DrCircleTru |  14054  |  13723  ||  1.02   |
+                    +-------------+---------+---------++---------+
+                    | WrtPixel16  |  141371 |  153509 ||  0.92   |
+                    +-------------+---------+---------++---------+
+                    | WrtPixel256 |  141358 |  153508 ||  0.92   |
+                    +-------------+---------+---------++---------+
+                    | WrtPixelHi  |  121431 |  125600 ||  0.97   |
+                    +-------------+---------+---------++---------+
+                    | WrtPixelTru |  122931 |  126701 ||  0.97   |
+                    +-------------+---------+---------++---------+
+                    | HorLines16  |  20325  |  17508  ||  1.16   |
+                    +-------------+---------+---------++---------+
+                    | HorLines256 |  20308  |  17494  ||  1.16   |
+                    +-------------+---------+---------++---------+
+                    | HorLinesHi  |  19685  |  13955  ||  1.41   |
+                    +-------------+---------+---------++---------+
+                    | HorLinesTru |  19884  |  11820  ||  1.68   |
+                    +-------------+---------+---------++---------+
+                    | VerLines16  |  9723   |  6930   ||  1.40   |
+                    +-------------+---------+---------++---------+
+                    | VerLines256 |  9726   |  6931   ||  1.40   |
+                    +-------------+---------+---------++---------+
+                    | VerLinesHi  |  6878   |  5967   ||  1.15   |
+                    +-------------+---------+---------++---------+
+                    | VerLinesTru |  5461   |  4946   ||  1.10   |
+                    +-------------+---------+---------++---------+
+                    | DiaLines16  |  12977  |  4893   ||  2.65   |
+                    +-------------+---------+---------++---------+
+                    | DiaLines256 |  12968  |  4892   ||  2.65   |
+                    +-------------+---------+---------++---------+
+                    | DiaLinesHi  |  3509   |  3792   ||  0.93   |
+                    +-------------+---------+---------++---------+
+                    | DiaLinesTru |  2417   |  2841   ||  0.85   |
+                    +-------------+---------+---------++---------+
+                    | AreaElps16  |  192    |  273    ||  0.70   |
+                    +-------------+---------+---------++---------+
+                    | AreaElps256 |  192    |  273    ||  0.70   |
+                    +-------------+---------+---------++---------+
+                    | AreaElpsHi  |  192    |  272    ||  0.71   |
+                    +-------------+---------+---------++---------+
+                    | AreaElpsTru |  191    |  257    ||  0.74   |
+                    +-------------+---------+---------++---------+
+                    | AreaCir16   |  172    |  255    ||  0.67   |
+                    +-------------+---------+---------++---------+
+                    | AreaCir256  |  172    |  255    ||  0.67   |
+                    +-------------+---------+---------++---------+
+                    | AreaCirHi   |  172    |  255    ||  0.67   |
+                    +-------------+---------+---------++---------+
+                    | AreaCirTru  |  171    |  235    ||  0.73   |
+                    +-------------+---------+---------++---------+
+                    | AreaFill16  |  13942  |  9455   ||  1.47   |
+                    +-------------+---------+---------++---------+
+                    | AreaFill256 |  13949  |  9451   ||  1.48   |
+                    +-------------+---------+---------++---------+
+                    | AreaFillHi  |  12351  |  6705   ||  1.84   |
+                    +-------------+---------+---------++---------+
+                    | AreaFillTru |  10639  |  4118   ||  2.58   |
+                    +-------------+---------+---------++---------+
+
+             @{i}@{c FFFF66}PS: Jiù se objevila novëjîí betaverze ovladaçe se znatelným
+                    nárûstem výkonu (2-10ti násobným oproti CV64)!@{c}@{ui}
+
+                                   @{c FFFF66}Pêeloùil: ShAmaN@{c}

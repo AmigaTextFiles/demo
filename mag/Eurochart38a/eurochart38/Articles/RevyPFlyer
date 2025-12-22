@@ -1,0 +1,200 @@
+»CL8:»SML:--------------------------------------
+  »CL9:»BIG:Review - »SML:Power Flyer A1200 E-IDE 
+             Controller
+»CL8:--------------------------------------
+
+»CL4:               by Bucko
+
+»CL0:While Amiga Technologies continue to
+plug away at the new Amiga standard
+(we hope), innovative third party
+developers keep coming out with great
+new upgrades for the classic range.
+The Power Flyer from Power computing
+is one such innovation, it brings
+Enhanced IDE to the Amiga A1200,
+along with support for hard drives
+over 4gb and an extra IDE port, the
+Power flyer promises full plug and
+play compatibility and transfer rates
+as high as 16.6mb/sec. Tempted yet?
+The asking price is around £50gbp
+which is reasonable considering the
+small market for Amiga goods these days.
+
+»PIC:Atomic.320x128»
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+»CL0:The Power flyer ships in an innocent
+looking white cardboard box with a
+single floppy disk and a photocopied
+manual. Installation of the board is
+tricky to say the least, and is not
+helped by the fact that most boards
+will not fit without modifications to
+the under side of the unit. To
+install a power flyer you need to
+remove your kickstart ROMs and mount
+the power flyers PCB directly into
+the sockets underneath them. The ROMs
+are then positioned on sockets on the
+power flyer. A further clip is placed
+on top of the Gayle chip and a wire
+is attached to one of the pins on the
+now disabled IDE interface on the
+motherboard. This wire will allow the
+hard drive activity LED to activate,
+but because the manual is so poorly
+photocopied it is practically
+impossible to identify the correct
+pin. The board tested would not fit
+onto the motherboard without having
+the solder trimmed on the underside
+of the card, Power computing now
+supply a kit to raise the board a
+little to avoid possible problems
+like this and also to ease the
+installation of clock port
+peripherals.
+
+
+
+
+
+
+
+
+
+Once you have negotiated the
+difficult installation and connected
+your hard drive and any other IDE
+devices you are ready to power on.
+The board comes with just one driver
+diskette and because the board
+replaces the original scsi.device
+(the IDE device with the wrong name)
+the only thing that needs to be
+installed is one line in the startup
+sequence to activate the fast CD-ROM
+driver and an optional prefs program.
+My Power Flyer incorrectly identified
+my hard drive as PIO 3 which resulted
+in some nasty read/write errors,
+after correcting the problem in the
+installation everything worked fine,
+but this problem should never really
+have occurred and could have caused a
+less experienced user to loose their
+entire hard drive.
+
+Traditionally reviews of products
+like this carry some silly benchmarks
+to back up or otherwise the claims
+that the manufacturers of the product
+make with regard to its performance.
+Personally I am far too lazy to take
+any benchmarks, and I think that what
+you really want to know is does it
+make a notable difference to hard
+drive performance? The answer is yes,
+but a reserved yes. Powering on with
+a power flyer will see your workbench
+loading much quicker and copying
+files is greatly speeded up. Problems
+such as poor speed when searching
+directories with many small files and
+also the deletion of large files such
+as ISO images are not solved. This is
+because the problem lies not with the
+poor performance of the IDE
+controller, but with the archaic
+`fast` file system.
+
+
+
+     »PIC:DarthVader160x80»
+
+
+
+
+
+
+
+
+
+
+
+
+»CL0:Help is at hand however, in the shape
+of Professional Filing System II from
+Great Effects Developments. I really
+cannot recommend this software enough
+for owners of the Power Flyer, you
+certainly will not feel the full
+benefit of the controller unless this
+is installed. PFS 2 offers speeds
+that are at least as fast as, if not
+faster than the infamous FAT 32 on
+the PC, without the ridiculous 16kb
+cluster size. Owners of E-IDE Amiga
+disk controllers should consider a
+copy of PFS2 as essential as a copy
+of Turboprint is for your Amiga
+printer. This does of course make the
+asking price even higher, but then
+you would not even be considering
+this card unless you were a real
+Amiga nut just like myself.
+»CL0:Aside from hard drives, the power
+flyer supports any Atapi/E-IDE
+compliant device. So far the only
+other device I have tried is my
+CD-ROM drive, which now ISO`s a disk
+at full speed rather than the abysmal
+4x speed MakeCD was originally
+reporting. Those who use IDE burners
+report some problems when burning in
+that the power flyer is somewhat CPU
+hungry, this did not seem the case
+with any of the devices tested on
+this unit, but is worth bearing in
+mind if Amiga CD creation is what you
+desire.
+
+
+
+
+
+In summation I can recommend this
+card to anyone who wants to get more
+speed out of his or her A1200 IDE
+controller. Amiga hardware is
+expensive but if you are fanatical
+enough to go through with the
+financial outlay and the somewhat
+tricky installation of both the Power
+Flyer and PFS 2 software then you
+will not be disappointed. If you
+regularly burn CDs on your Amiga then
+this card is something of a must buy,
+combined with PFS 2 the speed
+increase is fantastic when dealing
+with large ISO images and it also
+makes ISO image creation on the fly a
+possibility.
+
+»CL9:Overall »CL7:8 »CL8:out of 10
+»CL0:- Good product but hard to install. 

@@ -1,0 +1,121 @@
+<HTML>
+<HEAD>
+<TITLE>TW16</TITLE></HEAD>
+<BODY BACKGROUND="..\bgnd.jpg" BGCOLOR="#000000" TEXT="#FFFFFF">
+<CENTER>
+<table border=0><TR><TD>
+<pre>
+
+<font color =#94647C>Atapi/IDE Cd Drive 
+
+<font color =#884C4C>        by john/indi
+
+
+
+<font color =#7C4C64>** WARNING **
+
+This  is  a  hardware  hack  for  the  1200.   No responsibility will be
+accepted for any prangs resulting from use of this information.
+
+If in doubt, buy the interface, it's only thirty quid.
+
+
+
+<font color =#FFFF88>I've  been  reading a lot lately in Amiga magazines about the dangers of
+fitting an IDE CD drive to the 1200 without adding a buffered interface.
+Read on and form your own opinion.......
+
+About  18 months ago when the atapi software first made an appearance it
+was  being  sold  as a ridiculously expensive package along with various
+buffers,  CD drives etc.  It prompted a mate of mine to try a bit of DIY
+to get a CD drive fitted on the cheap and heres the result.
+
+This assumes you already have a 3.5 hard drive fitted.....
+
+
+Get down to your local computer shop/fair and buy the following.
+
+ One 3-way 3.5 IDE ribbon cable ( about £3 )
+ One PC power supply unit ( about £5 )
+ One cheap IDE CD drive ( prices from £30 - see below )
+
+Notes on CD drive types....
+
+From  personal  experience  anything faster than 6 speed should be OK as
+these all conform to the atapi standard.  Some quad speeds are also safe
+i.e  Mitsumi  400 and Mitsumi 410.  Some older drives will also work but
+it is NOT recommended to try them.
+
+Now for the tricky bit..
+
+
+Take the hard drive ribbon cable out of your 1200 and ( gulp!  ) cut the
+3.5  connector  off.   Do the same at one end of the 3-way IDE cable and
+then  make off and solder through all the 40 cables making sure that all
+the joints are properly insulated.  Always keep the coloured edge of the
+ribbon  (  usually pink ) to the same side.  When complete test out each
+cable  with a multi meter to make sure all the connections are sound and
+in the right order.  Also check for short circuits to other cables.
+
+See ATAPI_CABLE.IFF for more info.
+
+
+
+<font color =#4C704C>    3.5 40 way            3.5 40 way
+        _                     _          2.5 44 way
+       | |-------------------| |             _ 
+       | |-------------------| |------------| |
+       | |-------------------| |------------| |
+       | |-------------------| |------------| |
+       | |-------------------| |------------| |
+       | |-------------------| |------------| |
+       | |-------------------| |------------| |
+       | |-------------------| |------------| |
+       | |-------------------| |------------|_|
+       |_|-------------------|_|
+                                            Connect to
+    Connect to            Connect to      internal IDE port
+     CD drive              hard drive
+
+        Your finished cable should look like this
+
+
+
+<font color =#FFFF88>General  opinion  is that the shorter the cable the less likely it is to
+cause  any  problems,  the  one that I have connected just now is 2 feet
+long  and is working OK.  Best keep it as short as practical though, i.e
+between the IDE port and your hard drive.
+  
+
+Fit  the  cable  and your hard drive back into the amiga and then decide
+where  you want the ribbon to emerge from the casing.  Use a sharp craft
+knife  and  cut  a slot out of the casing for the cable, there is a nice
+thin lip on the bottom half of the casing which is easy to cut.
+
+
+Fit  your  CD  drive  and  connect  the  PC power supply to it, note the
+rounded  corners  at  one  edge.   Make  sure  the  CD  is  set to SLAVE
+operation.   Fire up and run the atapi installer, the CD drive should be
+mounted as unit 1.
+
+If  you  can  get  hold of an old 5.25 external floppy drive it makes an
+ideal case, same fixings and internal PSU.
+                                                                            
+                                                                                
+As  of writing this I know of 6 other people running this set up with no
+problems  reported.   Most  of  these  use their computers for 2-3 hours
+daily so it seems a safe enough bet.
+<br>
+<center><img src="04atapih.gif" height=239 width=303 alt=diagram></center>
+<br>
+<font color =#FFFF4C>[A  friend  of  mine had an ATAPI CDROM fitted to his A1200 a while back
+for  about  35quid  except he had the whole lot fitted into a PC desktop
+casing so I've seen it working.  Kei]
+
+
+end
+</PRE>
+</TD></TR></TABLE>
+</CENTRE>
+</BODY>
+</HTML>

@@ -1,0 +1,37 @@
+Short:    Picture viewer for OS 3.0+. V39.15
+Author:   cmh@lls.se (Magnus Holmgren)
+Version:  39.15
+Requires: OS 3.0
+
+Visage is an IFF ILBM/JPeg/PNG/Datatypes viewer 
+for the AmigaOS version 3.0 and higher. Main features
+include:
+
+* Supports AA (AGA), ECS, RTG, PCHG, SHAM and CLUT. ;)
+
+* Can display "deep" pictures in all formats on ECS Amigas, rendered
+   in HAM, "normal" color or grayscale.
+
+* Can scale "rendered" pictures to fit the screen.
+
+* Extensive monitor support. Uses a BestModeID()-like function to
+   find a suitable mode (if needed).
+
+* Any native Amiga screen mode can be specified with text! No numbers
+   needed. But you can use numbers, if you so wish. Or a requester.
+
+* Simple promotion of pictures to any installed monitor. No hardcoded
+   command line options for this. There is even a monitor requester.
+
+* Several slideshow options, including a random mode, making Visage
+   ideal for use with screen blankers as an external module.
+
+It's free!
+
+Installation notes:
+
+If you wish to start the installer from the Shell, please use 
+the provided ShellInstall script. It sets the parameters correctly.
+
+Also, note that the automatic language selection doesn't 
+completely work with all versions of the Installer.

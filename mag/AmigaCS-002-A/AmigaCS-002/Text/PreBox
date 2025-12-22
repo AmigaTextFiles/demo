@@ -1,0 +1,77 @@
+@{d 6EE2FF}                            @{c 57FFC1}pre\box?  Dalîí box od phase5?@{c}
+                            @{c 6E8EFF}¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+                                  Tak  si  na  nás zase phase5 nëco vymyslela.  Dlouho
+                                  oçekávaný  projekt  ABox  opët  odsunula na pozdëjîí
+                                  termín (pokolikáte, uù?).  Místo toho vîak hoîi z p5
+                                  koupili  licenci na @{c 57FFC1}AmigaOS 3.1@{c}, který chtejí pouùít
+                                  v  novém projektu  pre\box.  pre\box  má  být Amiga,
+                                  zaloùená  na @{c 57FFC1}4 procesorech @{f 00FFFF}PowerPC G3@{c}@{f} (tedy tëch, co
+                                  zadupaly  svým výkonem  i  nejrychlejîí  PentiumII).
+                                  Informace,   ùe  Amigy  budou  mít  4  procesory  G3
+                                  vzbudila  znaçný   zájem, a dokonce  i  zdëîení,  na
+                                  konferencích  uùivatelû  Macintosh.  Zdá se tedy, ùe
+                                  phase5    nastoupila    správný   smër...    Zdëîení
+                                  ªjableçnéhoº  národa  vîak bylo motivováno fámou, ùe
+                                  taková  Amiga  jiù existuje a brzy se bude prodávat.
+                                  Jak vîichni známe p5 a její sliby, nemusí se bát, ùe
+                                  by je Amiga brzo pêeválcovala... @{p ABox.iff 10 22}
+
+                                 @{c 57FFC1}Specifikace pre\boxu@{c}
+                                 ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  - ATX motherboard (tj. softwarovë vypínatelný)
+  - rychlé SDRAM pamëti, bëùící na 100MHz
+  - @{f FF10FF}4 PowerPC@{f} procesory na speciální procesorové kartë
+  - inline nebo backside cache (dle typu PPC procesoru)
+  - bude moùnost pouùít i levné PPC603e/PPC750 (G3)
+  - integrovaný 3D grafický subsystém s 8MB VRAM
+  - speciální slot pro Voodoo2 3D akcelerátor (propojený s interním gfx çipem)
+  - 66MHz PCI 2.1 (teoretická pêenosová rychlost 264MB/s)
+  - budou pracovat i starîi 33MHz PCI karty
+  - stereo zvuk v CD kvalitë, vçetnë podpory syntézy
+  - zabudovaný Ultra-Wide SCSI II êadiç
+  - zabudovaný rychlý 100Mbit ethernet
+  - rychlé paralelní a sériové porty
+  - EIDE êadiç a USB sbërnice
+  - distribuované výpoçty po síti (díky PowerUP software)
+
+  Zatím  není  rozhodnuto,  zdali  bude  na desce patice pro 68K procesor.  Zvaùuje se
+softwarová  emulace  68K  -  to by také eliminovalo problémy s cache mezi rûznými typy
+procesorû...   pre\box  je  naplánován  jiù na závër roku 1998.  Zde jsou informativní
+ceny,  zaloùené  na  souçasných  cenách  PowerPC  procesorû.   Ceny jsou vçetnë daní z
+pêidané  hodnoty, ATX minitoweru, myîi, klávesnice, Amiga OS 3.1, PowerUP systému; ale
+@{b}bez@{ub} pamëti, harddisku a CD-ROM a monitoru.
+
+  pre\box @{c 57FFC1}604/800@{c} se çtyêmi PPC604e-200 MHz CPU (G2)
+  DM 3.995,- / US$ 1995.00 / UK£ 1495.00 / 76000 Kç s DPH
+
+  pre\box @{c 57FFC1}604/1000@{c} se çtyêmi PPC604r-250 MHz CPU (G3)
+  DM 4.995,- / US$ 2495.00 / UK£ 1895.00 / 95000 Kç s DPH
+
+  pre\box @{c 57FFC1}604/1200@{c} se çtyêmi PPC604r-300 MHz CPU (G3)
+  DM 6.995,- / US$ 3395.00 / UK£ 2595.00 / 133000 Kç s DPH
+
+  pre\box @{c 57FFC1}750/1200@{c} se çtyêmi PPC750-300 MHz CPU (G3), 1 MByte backside cache
+  DM 8.995,- / US$ 4495.00 / UK£ 3395.00 / 171000 Kç s DPH  @{p PPC.iff 440 58}
+  Docela  pálka,  ùe?   Snad  ceny  PPC procesorû spadnou do konce roku (phase5 = spíî
+konce pêíîtího roku :-) dolû...
+
+  ALE!   Uvëdomte si, ùe G3 procesor na 300MHz má výkon 10.1 @{l PowerG3}bytemarkû@{l} (obecný integer
+test  urçený pro objektivní srovnávání výkonu rûzných procesorû), zatímco PentiumII na
+333MHz má výkon ubohých 4.64 bytemarku!  Kdyù si výkon vynásobíte çtyêmi G3 procesory,
+dostanete  cca.   40  bytemarkû,  coù  je  takêka  10×  více,  neù nejlepîí PentiumII!
+PentiumII na 333MHz také není zrovna levná záleùitost.  V souçasné dobë stojí 23 000,-
+Kç vçetnë DPH a to je samotný procesor!  V takovém pêípadë jsou ceny pre\boxu více neù
+pêijatelné; za PC s pêibliùným výkonem byste museli zaplatit minimálnë 250 000,- Kç...
+
+  Jak  vidno,  phase5 se orientuje na high-end trh.  Distribuované výpoçty na nëkolika
+pre\boxech  po  síti a Internetu mûùou být velkým lákadlem pro bohaté firmy.  Zde bude
+záleùet  hlavnë  na  software,  zdali  se  p5  podaêí pêesvëdçit NewTek, aby LightWave
+pêepracoval pro pre\box.  Dle mého názoru je ale chyba, ùe nepoçítají s low-end trhem.
+Staçily  by  2  levné procesory 603e/300MHz, jeden z nich by pêitom mohl být speciálnë
+urçen  pro  emulaci  68K (603e/300 zvládne emulovat 68060/80MHz).  Potom by se cena za
+nejniùîí konfiguraci pohybovala okolo 35 tisíc Kç.
+
+Pozn:  @{c 57FFC1}Motorola dëlá G3 procesory i na frekvencích 350MHz (od jara 1997) a brzy
+       pêibyde do rodiny i 400MHz çlen.@{c}
+
+                                        Shaman

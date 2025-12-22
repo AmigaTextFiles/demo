@@ -1,0 +1,17 @@
+@{d DFFFBF}@{xoffset 21}¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+@{xstep 210}@{font ACS-Title.font 18}@{c 82FF83}Upêesnëní çlánku@{c} @{c 6EE4FF}"Budoucí kompatibilita"@{c}@{font}
+@{xstep 445}@{i}@{c 6EE4FF}Shaman/Abort@{ui}@{c}@{ystep -8}
+
+
+
+@{c 9BFF91}  @{xstep 2}@{font ACS-Title.font 18}P@{font}rotoùe se  vyskytlo pár dotazû k @{c}@{c 5CA2FF}çlánku v minulém ACS, jak je moùné otevírat@{c}
+@{c 9BFF91}"exec.library" bez pêístupu k longw@{c}@{c 5CA2FF}ordu na adrese 4, je zde toto doplnëní.  Byla@{c}
+@{c 8FFFB2}êeç  o pêenositelnosti  zdrojových@{c}  @{c 68E2FF}kódû,  coù  se  vûbec  netýká pêekladaçû ani@{c}
+@{c 8FFFB2}binární  kompatibility.   Na  budo@{c}@{c 68E2FF}ucích  systémech  nemusí  báze  knihovny vûbec@{c}
+@{c 8FFFB2}reprezentovat  nëjakou  adresu v p@{c}@{c 75FFE2}amëti, tabulky skokû budou také vyêeîeny úplnë@{c}
+@{c 87FFE4}jinak.   Samozêejmë,  ùe  dnes  je@{c}  @{c 75FFE2}potêeba minimálnë jednou pêeçíst longword na@{c}
+@{c 87FFE4}adrese 0x00000004.  Nicménë i dnes@{c} @{c 85FFB6}je výhodné 'keîovat' SysBasi ve FAST RAM, aby@{c}
+@{c 87FFE4}se  omezily  opakované  pêístupy@{c}  @{c 85FFB6}k CHIP RAM (adresa 4).  Dalîí výhodou je vëtîí@{c}
+@{c 68E4FF}rychlost  se  spuîtëným  Enforcerem,@{c}  @{c 82FF83}který  blokuje  pêístup  k  nulové stránce@{c}
+@{c 68E4FF}s vyjímkou  çtení  longwordu  z adre@{c}@{c 82FF83}sy  4  (ta  vyjímka pak zpomaluje pêi kaùdém@{c}
+@{c 5CA2FF}volání funkce z exec.library).@{c}

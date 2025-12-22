@@ -1,0 +1,248 @@
+@{d DFFFBF}@{xoffset 0}@{c 26FFFF}¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+@{xstep 235}@{font ACS-Title.font 18}@{c 26FFFF}Zaçátky programování v assembleru (1.díl)@{font}@{c}
+@{xstep 432}@{i}@{c 2674FF}Martin Heneî - Sampl@{ui}@{c}@{ystep -8}
+
+
+
+ @{c 1EA7FF}Ob@{c}@{c 19C2FF}sa@{c}@{c 21E5FF}h 1.@{c} @{c 19C2FF}dí@{c}@{c 1EA7FF}lu@{c}
+@{c 1EA7FF} --@{c}@{c 19C2FF}--@{c}@{c 21E5FF}-----@{c}@{c 19C2FF}--@{c}@{c 1EA7FF}---@{c}
+
+@{c 19F6FF} 1/@{c}@{c 26AAFF} Základy@{c}
+   @{c AC19FF} @{c 19F6FF}1.1/@{c} @{c 26AAFF} Assembler@{c}
+   @{c AC19FF} @{c 19F6FF}1.2/@{c}  @{c 26AAFF}Návëîtí@{c}
+   @{c 19F6FF} 1.3/@{c} @{c 26AAFF} Program layout@{c}
+   @{c AC19FF} @{c 19F6FF}1.4/@{c}  @{c 26AAFF}Délka operací@{c}
+  @{c AC19FF} @{c 19F6FF} 1.5/@{c} @{c 26AAFF} Pseudo Op kódy@{c}
+  @{c AC19FF}  @{c 19F6FF}1.6/@{c} @{c 26AAFF} Çíselná základna@{c}
+ 
+
+@{c 21F6FF}  1. Úvod@{c}
+@{c 21FFF8}  -------@{c}
+
+@{c 57ABFF}  Pêemýîlím jak zaçít, ale jediné co më napadá je jen ... HRRR DO TOHO!!!
+
+  Mimochodem  nejsem  tak  dobrý  pisálek, ale vîe co budu psát se budu snaùit aby vîe
+pochopil  i  laik, a tak më nekamaneujte za zbyteçné komentáêe.  Jinak hned na zaçátku
+upozornuji, ùe pêípadné dotazy odpovím @{c 21FFCE}(henes@mendelu.cz)@{c}
+
+  @{c 4F94FF}Dalîí  upozornëní:   vîe  bude  psáno pro@{c} @{c 1EFFC2}MC6800@{c 17FFDB}0@{c}@{c 5CA2FF}, na disku by mëly být dodány i dva
+archívy pro rozdíly mezi @{c 21FFCE}MC680x0@{c} @{c 4F94FF}a optimalizaçní tabulky@{c 5CA2FF}.@{c}
+
+
+@{c 21F6FF}  1.1 Assembler@{c}
+@{c 21FFF8}  -------------@{c}
+
+@{c 57ABFF}  Jazyk  v  kterém  zaçneme programovat se nazývá Assembler.  @{c 1EFFC2}MC68000@{c} @{c 5CA2FF}nerozumí tomu co
+budete psát v naîem jazykové formë, takùe musíme assembler pêevést do strojového kódu,@{c}
+@{c 57ABFF}kterému  uù  procesor  porozumí.   Strojový kód je dlouhý êetëzec samých @{c 21FFCE}0@{c} @{c 4F94FF}a@{c} @{c 21FFCE}1@{c}@{c 4F94FF}, a psát
+v samých@{c}  @{c 21FFCE}0@{c}  @{c 4F94FF}a@{c} @{c 21FFCE}1@{c} @{c 4F94FF}by byla noçní mûra snad kaùdého programátora.  Vyîîí jazyky jako jsou@{c}
+@{c 21FFCE}Basic,  Pascal  a  C@{c}  @{c 4F94FF}podobnë,  ale  s tou nevýhodou, ùe nevíte jakej kód vám kompiler
+vygeneruje.    Tudíù@{c}   @{c 19FFC4}Assembler@{c}  @{c 5CA2FF}má  tu  výhodu  ùe  u  optimalizací  kódu@{c}  @{c 19FFC4}Assembler@{c}
+@{c 5CA2FF}bezkonkurençnë vede.  A samozêejmostí je také velikost pêeloùeného prográmku.@{c}
+
+
+@{c 21F6FF}  1.2 Návëîtí@{c}
+@{c 21FFF8}  -----------@{c}
+
+@{c 57ABFF}  Návëîtí je jméno, kterému naîí volbou pêiêadíme adresu v pamëti.  Proç ?  Protoùe je
+jednoduîîí  si  pamatovat  návëîtí jako  je main_header, neù si pamatovat adresu napê.
+@{c 19FFC4}$1EF1480C@{c}  @{c 5CA2FF}kde  se  main_header  nalézá (doufám, ùe më dáte za pravdu :) ).@{c}  @{c 21FFCE}68000@{c} @{c 5CA2FF}ale@{c}
+@{c 5CA2FF}nerozpozná  naîe  návëîtí,  dále  musí leùet na adrese, která je SUDÁ a@{c} @{c 21FFAF}assembler@{c} @{c 5CA2FF}poté@{c}
+@{c 5CA2FF}zkonvertuje  naîe  návëîtí  na  naîi  poùadovanou  adresu.  Jsou rûzné druhy kompilerû
+a kaùdé  mají  rûzné  omezení,  proto  doporuçuji si pêeçíst manuál k vaîemu kompileru@{c}
+@{c 21FFAF}(assembleru)@{c}@{c 21FFAF}.@{c}  @{c 5CA2FF} Doporuçuji  ale  vîe psát malými písmeny.  Návëîtí je pokaùdé umístëno
+vlevo na  êádku,  a teprve potom mûùeme psát program.  Teprve pozdëji budete zjiîïovat@{c}
+@{c 5996FF}jak jsou návëîí velice dûleùitou pomûckou.@{c}
+
+@{c 5996FF}Napê.:@{c}
+           @{c 5996FF} ...@{c}
+@{c 21FFAF}main_header: move.w  $dff006,$dff180@{c}
+            @{c 5996FF} ...@{c}
+
+
+@{c 21F6FF}  1.3 Program Layout@{c}
+@{c 21FFF8}  ------------------@{c}
+
+@{c 5996FF}  Cesta  jak  psát programy je dodrùovat urçité zásady.  Diagram dole ukazuje rozdílná
+pole na obrazovce.@{c}
+
+@{c 5996FF} @{c}@{c 5996FF}|@{c}  @{c 21FFAF}návëîtí@{c} @{c 5996FF}|@{c}  @{c 21FFAF} instrukce@{c}  @{c 5996FF} @{c}@{c 5996FF}|@{c}     @{c 21FFAF} operand@{c}        @{c 5996FF}|@{c}  @{c 21FFAF}komentáê@{c}  @{c 5996FF}|@{c}
+@{c 5996FF} |@{c}          @{c 5996FF}|@{c}               @{c 5996FF}|@{c}     @{c 21FFAF}zdroj,cíl@{c}       @{c 5996FF}|@{c}            @{c 5996FF}|@{c}
+@{c 5996FF} @{c 5996FF}|@{c}          @{c 5996FF}|@{c}               @{c 5996FF}|@{c}                     @{c 5996FF}|@{c}            @{c 5996FF}|@{c}
+@{c 5996FF} |          |               |                     |            |@{c}
+
+@{c 21F6FF}  @{u}Zásady které musíte dodrùovat@{uu}:@{c}
+
+@{c 21FFF8} 1/@{c}@{c 57ABFF} Kaùdé navëîtí musí zaçínat na nejblíùe poloùeném místë z leva@{c}
+ @{c 21FFF8}2/@{c} @{c 57ABFF}A nejménë jednou mezerou ( nebo TAB ) musíte kaùdé pole oddëlit@{c}
+@{c 21FFF8} 3/@{c} @{c 57ABFF}Pole návëîtí a komentáêe mûùe leùet vlevo@{c}
+ @{c 21FFF8}4/@{c}@{c 57ABFF} Prázdný êádek je pêípustný ( @{c 1CFFBA}assembler@{c} @{c 5C90FF}jej ignoruje )@{c}
+@{c 21FFF8} 5/@{c}@{c 57ABFF} Kaùdý êádek zaçínající s ; je ignorován a za tento znak mûùete zaçít@{c}
+  @{c 57ABFF}  komentovat êádek@{c}
+
+
+@{c 21F6FF}  1.4 Délka operace@{c}
+@{c 21FFF8}  -----------------@{c}
+
+@{c 57ABFF}  @{c 547AFF}Protoùe@{c}  @{c 1CFFBA}MC68000@{c}  @{c 547AFF}mûùe  pracovat  zároveñ  aù  se  çtyêmi  byty,  a  proto  mame  ke@{c}
+@{c 547AFF}specifikování  velikost  dat  se  kterými  budeme pracovat.  Mûùeme zvolit k pracování@{c}
+@{c 547AFF}s daty byte,@{c} @{c 1CFFBA}word@{c} @{c 547AFF}( 2 byty ), nebo@{c} @{c 1CFFBA}long word@{c} @{c 547AFF}( 4 byty ).  Musíme udat délku vyùadující@{c}
+@{c 547AFF}následující  instrukcí  buðto  jako  .b  .w nebo .l pro@{c} @{c 1CFFBA}byte@{c}@{c 1CFFBA}, word a long word.@{c}  @{c 547AFF}POZOR@{c}
+@{c 57ABFF}upozornëní:   @{c 1CFFC9}68000@{c}  @{c 599CFF}mûùe  puze  pêistupovat  na@{c} @{c 1CFFC9}word a long word@{c} @{c 599CFF}data z SUDÉ pamëïové@{c}
+@{c 599CFF}adresy.   Jestliùe  definujete seznam z poloùek v pamëti musíte pouùít assemblerovskou@{c}
+@{c 599CFF}instrukci@{c}  @{c 1CFFC9}EVEN@{c} @{c 599CFF} k  zabezpeçení,  ùe data budou vùdy zaçínat na sudé adrese.  Jestliùe@{c}
+@{c 599CFF}budete  pêistupovat  n@{c 599CFF}a@{c} @{c 19FFBF} word  nebo  Long Word@{c} @{c 599CFF}data na liché adrese, velice rychle Vás@{c}
+@{c 599CFF}navîtíví  pêítel@{c}  @{c 1CFFC9}Guru.@{c}   @{c 599CFF}Takùe pozor!  PAMATUJTE NA TO!!!  Je to çasto vyskytující se@{c}
+@{c 599CFF}chyba.@{c}
+
+@{c 1CFFC9}  MSB nejvýîe poloùený bit vlevo - bytu, wordu nebo long wordu
+  LSB nejvýîe poloùeny bit vpravo@{c}
+
+
+@{c 599CFF}  BYTE :                                                  x x x x x x x x@{c}
+@{c 599CFF}                                                          |             |@{c}
+                                                       @{c 1CFFC9} MSB@{c}           @{c 1CFFC9}LSB@{c}
+ 
+@{c 599CFF}  WORD :                                  x x x x x x x x x x x x x x x x@{c}
+@{c 599CFF}                                          |                             |@{c}
+                                       @{c 1CFFC9} MSB @{c}                         @{c 1CFFC9} LSB@{c}
+
+@{c 5CB0FF}  LONG
+  WORD :  x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x
+          |                                                             |@{c}
+        @{c 19FFBF} MSB @{c}                                                          @{c 19FFBF}LSB@{c}
+ 
+
+ @{c 19FFBF}  x je jeden bit  ( 1 nebo 0 )@{c}
+ 
+ @{c 19FFBF}  LSB je Least Significant Bit(nejníùe poloùený bit)@{c}
+
+@{c 19FFBF}   MSB je Most Significant Bit(nejvýîe poloùený bit)@{c}
+
+
+@{c 5CB0FF}  Jestliùe  nespecifikujete  délku  s  .b  .w  nebo  .l  , tak vëtîina assemblerû bude
+imlicitnë povaùovat, ùe jste definovali délku jako word ( .w - 16bit).@{c}
+ 
+
+@{c 21F6FF}  1.5 Pseudo Op-kódy@{c}
+@{c 21FFF8}  --------------------@{c}
+ 
+@{c 23FFD3}  Co ???@{c}
+  
+@{c 57ABFF}  Ùádnou  paniku,  nyní  vás  seznámím  s  tëmito  pêíkazy.  Pseudo operaçní kódy jsou
+'instrukce' do asembleru.  Mezi tyto op kódy, které nás nejvíce zajímají patêí hlavnë,
+@{c 23FFD3}EQU a DC.@{c}
+
+@{c 57ABFF}  @{c 23FFD3}EQU@{c}  @{c 5986FF}-  Tato  instrukce  volá  asembler  k  pêiêazení  hodnoty(promënné).   Toto  je
+nejpouùívanëjîí  pro  definování  vaîí  konstanty ve vaîich programech a také dëlá váî
+zdrojový kód çitelnëjîí a více pêehledný.@{c}
+ 
+  @{c 23FFD3}   eg   delka   equ   20@{c}
+
+@{c 57ABFF}  Tato  instrukce  asembleru slouùí k nahraùení vîech výskytû promënné delka za 20 (@{c 23FFD3}tj@{c}
+@{c 23FFD3}move.w  #delka,d0  -> move.w #20,d0@{c}@{c 5986FF}).  Je také moùné pouùít = místo@{c} @{c 23FFD3}EQU@{c}@{c 5986FF}, takùe to mûùe
+vypadat napsané i takto:@{c}
+
+@{c 1EFFC2}          delka    =    20
+ 
+  Vëtîina asemblerû umi také pouùití jednoduché aritmetiky v EQU(=)
+ 
+     eg   delka   equ   20
+          sirka     =    15+2*3
+          plocha    =    length*width
+
+  Jakmile  hodnota  která  byla  pêiêazená na návëîtí kdekoliv ve vaîem programu, není
+moùné ji mënit.@{c}
+ 
+@{c 57ABFF}  DC  -  Tato  instrukce  nauçí  asembler  nastavit  kaùdý  byte, word, nebo long word
+z pamëti  na çást v programu, který ukáùe na nastavenou hodnotu.  Jestliùe chcete tuto
+pamëï  k  uloùení  vaîich promënných v programu, mëli byste pêed dané pêiêazení napsat
+návëîtí.   Hodnota  mûùe  být  také  vloùena do pole, které je uloùené nëkde v pamëti.
+K popsaní tohoto slouùí tyto dva malé pêíklady:@{c}
+
+  @{c 1EFFC2}   vek:     dc.b  25        ; reservuje 1 byte a uloùí do nëj 25
+     vyska:   dc.w  237       ; reservuje 1 word a uloùí do nëj 237@{c}
+ 
+@{c 57ABFF}  Jestliùe  máte  pêiêazenou  hodnotu  na  tomto  návëîtí  pouùitím EQU, mûùete pouùít
+k nastavení v pamëti danou promënnou.@{c}
+ 
+    @{c 1EFFC2} delka     equ      20+15@{c}
+ 
+  @{c 1EFFC2}   mist_delka  dc.w     delka@{c}
+ 
+@{c 57ABFF}  Mûùete také pouùít to stejné, ale s pomocí jednoduché aritmetiky a s pomocí EQU:@{c}
+
+   @{c 1EFFC2}  delka      equ      20+15
+     sirka      =       delka-5*2@{c}
+ 
+ 
+   @{c 1EFFC2}  mist_velikost   dc.w     delka*sirka@{c}
+ 
+
+@{c 57ABFF}  Konstantë  délka  pêiêadí  hodnotu  @{c 1EFFC2}35@{c}@{c 549AFF},  k  promënné  delka  je pêiêazena hodnota@{c} @{c 1EFFC2}25@{c}
+@{c 549AFF}a v pamëti  na  adrese  kde  se  nachází  návëîtí  mist_velikost  je  uloùena  hodnota@{c}
+@{c 1EFFC2}875((word)@{c} @{c 549AFF}...  pouùil jsem moji starou dobrou kalkulaçku)).@{c}
+
+@{c 57ABFF}  DC  mûùe  pracovat  také se stringy a proto se také çasto pouùívá pro uloùení vaîeho
+textu  do  pamëti.   Assembler  si vÁî @{c 1EFFC2}ASCII@{c} @{c 549AFF}text pêeloùí z@{c} @{c 1EFFC2}ASCII@{c} @{c 549AFF}do@{c} @{c 1EFFC2}HEX(BIN)@{c}@{c 549AFF} soustavy@{c}
+@{c 549AFF}a uloùí  ve forme kódu pro daný znak.  DC pêíkaz slouùí také k uloùení vaîeho textu do
+vaîeho  asm  kódu  a v stringu(êetëzeci) bude pêeloùen kaùdý znak do posloupnosti bytû@{c}
+@{c 549AFF}obsahující@{c} @{c 1EFFC2}ASCII@{c} @{c 549AFF}kódy (jestliùe jeîtë nevíte co to@{c} @{c 1EFFC2}ASCII@{c}@{c 549AFF} kódy jsou, seùeñte si tabulku@{c}
+@{c 1EFFC2}ASCII@{c}  @{c 549AFF}kódû  z  rûzných  pêíruçek  pro programatory napê.@{c}  @{c 1EFFC2}C, Pascal@{c}@{c 549AFF}, atd.  .  Nebo na@{c}
+@{c 549AFF}konci  tohoto  serálu  bude  uvedena  k  dodatcím  o tomto seriálu).  Nyní se podíváme
+napêíklad definování neîeho textového êetëzce.@{c}
+
+   @{c 1EFFC2}  my_name      dc.b     'Jan Novak'@{c}
+ 
+@{c 57ABFF}  Toto  vymezí  v pamëti 9 bytû, do kterého se uloùí êetëzec @{c 1EFFC2}ASCII@{c} @{c 549AFF}znakû (i s mezerou)
+naîeho jména.@{c}
+@{c 57ABFF}  Mûùete také inicialiovat po sobë následující pamëïové lokace s jednim DC
+pêíkazem, které oddëluje hodnoty çárkou   @{c}
+ 
+  @{c 1EFFC2}   xy_coord      dc.w      10,20@{c}
+ 
+@{c 1EFFC2}  Toto inicializuje dva wordy zaçínající na adrese navëîtí xy_coord.@{c}
+ 
+
+@{c 21F6FF}  1.6 Çíselné soustavy@{c}
+@{c 21FFF8}  ----------------------@{c}
+ 
+@{c 57ABFF}  Zatím  ve  vîech  pêíkladech,  které  jsem  uvádël,  jsem  pouùíval stale desitkovou
+soustavu.   Ale  vîechny  assemblery  nevyùadují  jen  desítkovou soustavu, ale mûùeme
+pouùít   i   jiných   soustav.    Napêíklad   mûùeme   pouùít  k  vloùení  çísla  jako
+HEX(îestnástková  soustava)  nebo  binární  (  dvojková soustava).  K rozliîení tëchto
+soustav  se pouùívá symbolû.  Pokud chceme pouùít HEXa soustavu, musíme pêed dané HEXa
+çíslo  pêidat znak @{c 28FFC4}$@{c} @{c 5494FF}a k pouùití BINárního çísla se symbolem@{c} @{c 28FFC4}%@{c}@{c 5494FF}.  Následující têi linky
+definujou stejnou délku, ale v odliîných çíselných soustavách)@{c}
+ 
+@{c 17FFBC} length     dc.w     $14
+ 
+ length     dc.w     20
+ 
+ length     dc.w     %10100@{c}
+ 
+@{c 5E96FF}  Takùe  k  pouùití  jakékoliv  çíselné soustavy je çistë na Vás, kterou se rozhodnete
+dëlat.@{c}
+
+@{c 5E96FF}  !!!!   Pozor na Speciální symboly@{c} @{c 17FFBC}$@{c}@{c 5E96FF},@{c}@{c 17FFBC}%@{c} @{c 5E96FF}, pokud na nëj zapomente çíslo bude povaùováno
+imlicitnë jako dekadické (pokud teda nepouùijete HEXa A..F :) )@{c}
+
+ @{c 5E96FF} Pokud  neznáte  jeîtë  tyto  soustavy, radîi se je nauçte.  Protoùe jen s desítkovou
+soustavou nevystaçíte).@{c}
+
+
+
+
+
+@{c 57ABFF}  Zkuste to nëjak tohle vîechno zaùít a pêíîtë se jiù vrhneme do toho nejdûleùitëjîího
+a  to  do  INSTRUKCÍ.   Jejich  seznam  naleznete  uù v tomto çísle AmigaCS v adresáêi
+Extras.@{c}
+
+
+                                @{c 21F6FF}    Martin  Henes
+                                    SampL di Brno@{c}
+
+
+@{c 57ABFF}  Neruçím  za  své  gramatické  chyby,  sorry ale ve spëchu nikdy nic bez chyby nejde.
+Pokud  budete  mít nëjaké navrhy o dalîím vývoji, nebo k jednotlivým dílûm.  Mûùete më
+poslat mail na <henes@mendelu.cz>. Rád bych jeîtë podëkoval M.Meanymu, JOFA a Petrex.@{c}

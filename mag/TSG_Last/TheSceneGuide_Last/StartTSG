@@ -1,0 +1,11 @@
+echo "                Dire/Eremation  presents"
+echo "              The Scene Guide - Last issue"
+echo "                  (Parties: 1988-1998)"
+echo "    You need Multiview in your sys:utilities directory"
+echo " and ppmore, ppshow and noiseplayer in your c: directory!!"
+echo "         Exit the picture with right mouse-button."
+echo "         Stop the music with Control + Left Amiga."
+wait 4
+noiseplayer -p4 TSG_Module1.mod
+ppshow TSG_Title.iff
+SYS:utilities/multiview TSG.guide

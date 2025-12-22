@@ -1,0 +1,25 @@
+
+rotdemo history
+
+rot3d.lha (released 4/11/94) -- code for rot3d finished 3/93
+   * Full height walls (no reflections)
+   * Walls may be composed of pieces of other walls for may combinations
+   * Animated walls
+   * Stretching at corners fixed (mostly :)
+   * 40% faster (spent on full height walls)
+   * Variable light dimming
+   * Multitasks, frees all memory, no enforcer hits :)
+
+rot2.lha (4/2/92)
+   * reflections done with cpu, not copper to allow objects
+   * program is 30% faster
+   * fps speed test
+   * 5th bitplane flickering fixed
+   * doors and secret doors
+   * resolution switching modes
+   * walls off both end of screen don't get stuck anymore
+   * compiles on SAS and AZTEC, runs on A4k
+
+rot.lha (1/92)
+   * standard wolf-3d like demo
+

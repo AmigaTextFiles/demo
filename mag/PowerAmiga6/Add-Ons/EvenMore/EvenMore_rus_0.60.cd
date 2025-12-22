@@ -1,0 +1,763 @@
+#language english
+#version 0
+;
+; EvenMore.catalog
+; Translator: name (email)
+;
+; The first line of the text is the string ID.
+; The third line beginning with a ; is the
+; english text to translate. The line above this
+; is where you write the translation.
+; Do not include the ; at the beginning when
+; translating.
+;
+; Please make sure you keep the case of the
+; letters and spacing the same as the original
+; as it is important.
+;
+; Also make sure you include formatting symbols,
+; like \n, %s, etc.
+;
+; In cases where a _ preceeds a letter, make the
+; _ preceed the same letter in the translation as
+; the original, as these are for keypresses.
+; For example, if _ preceeds C in the english, and
+; if there is a C anywhere in the translation, put _
+; in front of the C in the translation, wherever
+; it may be. If the letter C doesn't exist in the
+; translation, leave _ out.
+;
+; Where it says ;Spaces needed, this is just a
+; comment to remind you that there are important
+; spaces after the text that need to be kept.
+; When writing the translation, do not translate
+; the comment, but make sure your textviewer saves
+; the same number of spaces after the original text
+; as in your translation.
+; For example, in BED, you would turn off the setting
+; to strip EOL blanks when saving.
+;
+MSG_HELP (//)
+УПРАВЛЕНИЕ ПРОГРАММОЙ:\n\
+            UP - Вверх на строку\n\
+          DOWN - Вниз на строку\n\
+          LEFT - Влево на столбец\n\
+         RIGHT - Вправо на столбец\n\n\
+    SHIFT + UP - Вверх на страницу\n\
+  SHIFT + DOWN - Вниз на страницу\n\
+  SHIFT + LEFT - Сдвиг страницы влево\n\
+ SHIFT + RIGHT - Сдвиг страницы вправо\n\n\
+   T, ALT + UP - Начало текста\n\
+ B, ALT + DOWN - Конец текста\n\
+    ALT + LEFT - Текст влево\n\
+   ALT + RIGHT - Текст вправо\n\n\
+     CTRL + UP - Просмотр последнего файла\n\
+   CTRL + DOWN - Просмотр следующего файла\n\n\
+Вы также можете использовать цифровое поле\n\
+или работать мышью.\n\n\
+ДРУГИЕ КЛАВИШИ:\n\
+             F - Задать условия поиска\n\
+SHIFT + RET, L - Переход на предыдущее совпадение\n\
+        RET, N - Переход на следующее совпадение\n\n\
+             C - Закрыть файл\n\
+             O - Открыть файл\n\
+             R - Перезагрузка файла\n\
+             E - Вызов редактора\n\
+             P - Печать документа\n\
+             I - Отчет\n\n\
+             G - Переход на строку\n\
+             Q - Диспетчер документов\n\
+             S - Переход на экран\n\n\
+    LMB + DRAG - Выделение текста\n\
+    RAMIGA + C - Копировать текст в буфер обмена\n\
+          HELP - Справка (триггер)\n\
+   SHIFT + ESC - Иконизация\n\
+           ESC - Выход\n\000
+;
+;
+;
+MSG_ERR (//)
+Не удалось %s
+MSG_ERR_UNKN (//)
+поиск причины ошибки
+MSG_ERR_ADOS (//)
+захватить DOS-объект
+MSG_ERR_APIC (//)
+создать AppIcon
+MSG_ERR_APMN (//)
+создать элемент AppMenu
+MSG_ERR_APWN (//)
+создать AppWindow
+MSG_ERR_ASIG (//)
+определить событие
+MSG_ERR_CBWR (//)
+записать в буфер обмена
+MSG_ERR_CTXT (//)
+создать контекст
+MSG_ERR_DEV (//)
+открыть устройство
+MSG_ERR_EXAM (//)
+прочесть файл
+MSG_ERR_FIXF (//)
+открыть шрифт фиксированной ширины
+MSG_ERR_FONT (//)
+открыть шрифт
+MSG_ERR_IMG (//)
+показать изображения
+MSG_ERR_IORQ (//)
+создать I/O запрос
+MSG_ERR_LIB (//)
+открыть библиотеку
+MSG_ERR_MEM (//)
+получить память
+MSG_ERR_MEMFILE (//)
+под файловый буфер
+MSG_ERR_MENU (//)
+создать меню
+MSG_ERR_NEW (//)
+выделить память
+MSG_ERR_OPEN (//)
+открыть файл
+MSG_ERR_OUT (//)
+записать файл
+MSG_ERR_PORT (//)
+создать порт сообщений
+MSG_ERR_PREF1 (//)
+Настройки старой версии не подходят
+MSG_ERR_PREF2 (//)
+Настройте EvenMore заново
+MSG_ERR_PUBS (//)
+захватить общий экран
+MSG_ERR_READ (//)
+прочесть файл
+MSG_ERR_SCRL (//)
+захватить список экранов
+MSG_ERR_SCRN (//)
+открыть экран
+MSG_ERR_WIN (//)
+открыть окно
+MSG_ERR_XPK (//)
+использовать XPK-компрессию:
+MSG_ERR_XPKMEM (//)
+Не удалось захватить память
+MSG_ERR_GUI (//)
+создать EasyGUI
+MSG_ERR_GT (//)
+открыть gadtools.library
+MSG_ERR_BIGG (//)
+создать EasyGUI. Интерфейс слишком велик
+MSG_ERR_EGUI (//)
+создать EasyGUI. Ошибка компоновки
+MSG_ERR_DCLV (//)
+создать поле listview
+MSG_ERR_UTIL (//)
+открыть utility.library
+MSG_ERR_CPDE (//)
+создать строку patternStringF
+MSG_ERR_FONTREQ (//)
+для выбора шрифта
+MSG_ERR_SCREENMODEREQ (//)
+для выбора видеорежима
+MSG_ERR_FILEREQ (//)
+для файлового запроса
+;
+;
+;
+MSG_TITLE_HELP (//)
+Помощь
+MSG_TITLE_SEARCHING (//)
+Поиск
+MSG_TITLE_OPENFILE (//)
+Открыть файл
+MSG_TITLE_SAVEFILE (//)
+Сохранить файл
+MSG_TITLE_ADDFILE (//)
+Добавить файл
+MSG_TITLE_LOADSETTINGS (//)
+Загрузить настройки
+MSG_TITLE_SAVESETTINGS (//)
+Сохранить настройки
+MSG_TITLE_SELECTFILE (//)
+Выбор файла
+MSG_TITLE_SELECTICON (//)
+Выбор иконки
+MSG_TITLE_SELECTDIR (//)
+Выбор директории
+MSG_TITLE_CHANGEPALETTE (//)
+Редактор палитры
+MSG_TITLE_SELECTFONT (//)
+Выбор шрифта
+MSG_TITLE_SELECTSCREENMODE (//)
+Выбор видеорежима
+MSG_TITLE_PRINT (//)
+Печать
+MSG_TITLE_ERR (//)
+Ошибка
+MSG_TITLE_SELECTITEM (//)
+Выбор объекта
+MSG_TITLE_SEARCH (//)
+Поиск
+MSG_TITLE_EXECUTE (//)
+Выбор команды
+MSG_TITLE_INFORMATION (//)
+Отчет
+MSG_TITLE_SETTINGS (//)
+Настройки
+MSG_TITLE_GOTOLINE (//)
+Переход
+MSG_TITLE_GOTOPAGE (//)
+Переход
+MSG_TITLE_GOTOPERCENT (//)
+Переход
+MSG_TITLE_QUIT (//)
+Выход
+;
+;
+;
+MSG_PRINT_PROCEED (//)
+Распечатать документ?
+MSG_PRINT_CANCELED (//)
+Прерывание печати
+;
+;
+;
+MSG_INFO_CLOSEFILE (//)
+Закрыть файл
+MSG_INFO_OPENFILE (//)
+Открыть файл
+MSG_INFO_REOPENFILE (//)
+Перегрузить файл
+MSG_INFO_QUICKLOADLIST (//)
+Диспетчер документов
+MSG_INFO_SAVEFILE (//)
+Сохранить файл
+MSG_INFO_EDITFILE (//)
+Вызвать редактор
+MSG_INFO_PRINTFILE (//)
+Печать
+MSG_INFO_INFORMATION (//)
+Отчет
+MSG_INFO_SEARCHSETTINGS (//)
+Условия поиска
+MSG_INFO_FINDLAST (//)
+Совпадение назад
+MSG_INFO_FINDNEXT (//)
+Совпадение вперед
+MSG_INFO_FINDOCCURANCE (//)
+Число совпадений
+MSG_INFO_CHANGESETTINGS (//)
+Редактор настроек
+;
+;
+;
+MSG_MENU_PROJECT (//)
+EvenMore
+MSG_MENU_CLOSEFILE (//)
+Закрыть
+MSG_MENU_CLOSEALL (//)
+Закрыть все
+MSG_MENU_OPENFILE (//)
+Открыть...
+MSG_MENU_REOPENFILE (//)
+Перечесть
+MSG_MENU_QUICKLOAD (//)
+Диспетчер
+MSG_MENU_QUICKLOADLIST (//)
+Список
+MSG_MENU_QUICKLOADADD (//)
+Добавить
+MSG_MENU_SAVEFILE (//)
+Сохранить...
+MSG_MENU_SAVEFILEXPK (//)
+Сохранить... (XPK)
+MSG_MENU_EDITFILE (//)
+Редактировать
+MSG_MENU_PRINTFILE (//)
+Распечатать
+MSG_MENU_INFORMATION (//)
+Отчет...
+MSG_MENU_HELP (//)
+Справка
+MSG_MENU_ICONIFY (//)
+Иконизация
+MSG_MENU_MENUFY (//)
+Режим меню
+MSG_MENU_QUIT (//)
+Выход
+MSG_MENU_VIEW (//)
+Переход
+MSG_MENU_GOTOLINE (//)
+На строку...
+MSG_MENU_GOTOPAGE (//)
+На страницу...
+MSG_MENU_GOTOPERCENT (//)
+По проценту...
+MSG_MENU_TOPOFFILE (//)
+В начало документа
+MSG_MENU_PAGEUP (//)
+Вверх на страницу
+MSG_MENU_PAGEDOWN (//)
+Вниз на страницу
+MSG_MENU_BOTTOMOFFILE (//)
+В конец документа
+MSG_MENU_BOOKMARKSTORE (//)
+Поставить закладку
+MSG_MENU_BOOKMARK1 (//)
+Закладка 1
+MSG_MENU_BOOKMARK2 (//)
+Закладка 2
+MSG_MENU_BOOKMARK3 (//)
+Закладка 3
+MSG_MENU_BOOKMARK4 (//)
+Закладка 4
+MSG_MENU_BOOKMARK5 (//)
+Закладка 5
+MSG_MENU_BOOKMARKRECALL (//)
+На закладку
+MSG_MENU_MARKTEXT (//)
+Выделение текста
+MSG_MENU_SEARCH (//)
+Поиск
+MSG_MENU_FINDMATCH (//)
+Задать условия...
+MSG_MENU_FINDLAST (//)
+Совпадение назад
+MSG_MENU_FINDNEXT (//)
+Совпадение вперед
+MSG_MENU_FINDOCCURANCE (//)
+Число совпадений
+MSG_MENU_EXECUTE (//)
+DOS
+MSG_MENU_EXECUTE2 (//)
+Исполнить...
+MSG_MENU_SHELL (//)
+Командная строка...
+MSG_MENU_SETTINGS (//)
+Настройки
+MSG_MENU_GOTOSCREEN (//)
+Переход на экран...
+MSG_MENU_GUIPRESETS (//)
+Стиль интерфейса
+MSG_MENU_RANDOM (//)
+Случайный
+MSG_MENU_PLAIN (//)
+Обыкновенный
+MSG_MENU_PLASTIC (//)
+Пластичный
+MSG_MENU_SELECT (//)
+Выбор...
+MSG_MENU_CHANGESETTINGS (//)
+Редактор настроек...
+MSG_MENU_LOADSETTINGS (//)
+Загрузить...
+MSG_MENU_LOADDEFSETTINGS (//)
+Восстановить
+MSG_MENU_SAVESETTINGS (//)
+Сохранить
+MSG_MENU_SAVESETTINGSAS (//)
+Сохранить как...
+MSG_MENU_SAVEDEFSETTINGS (//)
+Установить по умолчанию
+MSG_MENU_HISTORY (//)
+Документы
+;
+;
+;
+MSG_PROGWIN_LOADINGFILE (//)
+Загружается %s: %s
+MSG_PROGWIN_PARSINGLINES (//)
+Построчный анализ
+MSG_PROGWIN_SAVINGFILE (//)
+Сохраняется %s: %s
+MSG_PROGWIN_FINDINGOCCURANCE (//)
+Найдено совпадений в: %s
+MSG_PROGWIN_FILESTATS (//)
+Статистический анализ
+;
+;
+;
+MSG_GUI_LIST_GO (//)
+Перейти
+MSG_GUI_LIST_READLIST (//)
+_Обновить
+MSG_GUI_LIST_ADD (//)
+Доб_авить
+MSG_GUI_LIST_REMOVE (//)
+У_далить
+MSG_GUI_LIST_COPY (//)
+Ду_бликат
+MSG_GUI_LIST_UP (//)
+_Вверх
+MSG_GUI_LIST_DOWN (//)
+В_низ
+MSG_GUI_LIST_OPEN (//)
+Открыть
+;
+;
+;
+MSG_GUI_SEARCH_SETTINGS (//)
+Условия поиска
+MSG_GUI_SEARCH_RESULTS (//)
+Найденные файлы
+MSG_GUI_SEARCH_STRING (//)
+_Образец
+MSG_GUI_SEARCH_CASESENSITIVE (//)
+_Регистр
+MSG_GUI_SEARCH_PATTERN (//)
+_Маска
+MSG_GUI_SEARCH_WORD (//)
+_Целиком
+MSG_GUI_SEARCH_RECURSIVE (//)
+Р_екурсивно
+MSG_GUI_SEARCH_NEXT (//)
+_Вперед
+MSG_GUI_SEARCH_LAST (//)
+_Назад
+MSG_GUI_SEARCH_OCCURANCE (//)
+_Число совпадений
+MSG_GUI_SEARCH_DIR (//)
+Путь поиска
+MSG_GUI_SEARCH_FILEPATT (//)
+Маска файла
+MSG_GUI_SEARCH_SCAN (//)
+Искать файл
+MSG_GUI_SEARCH_STOP (//)
+_Стоп
+;
+;
+;
+MSG_GUI_OK (//)
+OK
+MSG_GUI_CANCEL (//)
+Отмена
+MSG_GUI_NONE (//)
+Нет
+;
+;
+;
+MSG_GUI_SEARCH_STRINGFOUND (//)
+Образец '%s' найден %ld
+MSG_GUI_SEARCH_STRINGNOTFOUND (//)
+Образец '%s' не был найден
+MSG_GUI_SEARCH_INDOCUMENT (//)
+в этом документе
+MSG_GUI_SEARCH_TIMESINDOCUMENT (//)
+раз в этом документе
+;
+;
+;
+MSG_GUI_EXECUTE_EXECUTE (//)
+Команда
+MSG_GUI_EXECUTE_BUTTONEXECUTE (//)
+Выполнить
+;
+;
+;
+MSG_GUI_INFO_ABOUT (//)
+Версия
+MSG_GUI_INFO_AUTHOR (//)
+Автор
+MSG_GUI_INFO_FILE (//)
+Статистика
+MSG_GUI_INFO_PLUGINS (//)
+Расширения
+MSG_GUI_INFO_COPYRIGHT (//)
+Copyright ©1996-2002, Chris Perver
+MSG_GUI_INFO_RIGHTS (//)
+Все права сохранены
+MSG_GUI_INFO_CONTACT (//)
+Координаты автора:
+MSG_GUI_INFO_HELP1 (//)
+Этой программы могло бы не быть
+MSG_GUI_INFO_HELP2 (//)
+без помоши следующих людей:
+MSG_GUI_INFO_BETATESTERS (//)
+  Beta-тестирование:
+MSG_GUI_INFO_MODULES (//)
+  Отдельные модули:
+MSG_GUI_INFO_PUBSCREEN (//)
+Экран
+MSG_GUI_INFO_AREXXPORT (//)
+Порт
+MSG_GUI_INFO_NAME (//)
+Имя
+MSG_GUI_INFO_SIZE (//)
+Размер
+MSG_GUI_INFO_WORDS (//)
+Слов
+MSG_GUI_INFO_CHARS (//)
+Символов
+MSG_GUI_INFO_PRINT (//)
+Обычных
+MSG_GUI_INFO_NONPRINT (//)
+Управляющих
+MSG_GUI_INFO_SPACE (//)
+Пробелов
+MSG_GUI_INFO_BACKSPACE (//)
+Забоев
+MSG_GUI_INFO_UCASE (//)
+Заглавных
+MSG_GUI_INFO_LCASE (//)
+Прописных
+MSG_GUI_INFO_TOTAL (//)
+Итого
+MSG_GUI_INFO_DIGITS (//)
+Цифр
+MSG_GUI_INFO_ESC (//)
+ESC
+MSG_GUI_INFO_CR (//)
+CR
+MSG_GUI_INFO_TAB (//)
+Tab
+MSG_GUI_INFO_NOFILEOPEN (//)
+Нет открытых документов
+;
+;
+;
+MSG_GUI_PREF_TABAPPITEM (//)
+Приложение
+MSG_GUI_PREF_TABCOMPRESSION (//)
+XPK (Компрессия документа)
+MSG_GUI_PREF_TABFILE (//)
+Документ
+MSG_GUI_PREF_TABGADGETS (//)
+Меню
+MSG_GUI_PREF_TABGUI (//)
+GUI
+MSG_GUI_PREF_TABPATHS (//)
+Редактор
+MSG_GUI_PREF_TABPRINTER (//)
+Принтерr
+MSG_GUI_PREF_TABSCREEN (//)
+Экран
+MSG_GUI_PREF_TABTEXT (//)
+Текст
+MSG_GUI_PREF_TABWINDOW (//)
+Окно
+MSG_GUI_PREF_ICONCLOSE (//)
+Закрытие
+MSG_GUI_PREF_ICONOPEN (//)
+Открытие
+MSG_GUI_PREF_ICONREOPEN (//)
+Перезагрузка
+MSG_GUI_PREF_ICONQUICKLOAD (//)
+Быстрая загрузка
+MSG_GUI_PREF_ICONSAVE (//)
+Сохранение
+MSG_GUI_PREF_ICONEDITOR (//)
+Редактор
+MSG_GUI_PREF_ICONPRINT (//)
+Печать
+MSG_GUI_PREF_ICONINFO (//)
+Отчет
+MSG_GUI_PREF_ICONSEARCH (//)
+Поиск
+MSG_GUI_PREF_ICONLAST (//)
+Назад
+MSG_GUI_PREF_ICONNEXT (//)
+Вперед
+MSG_GUI_PREF_ICONOCCURANCE (//)
+Совпадений
+MSG_GUI_PREF_ICONPREFS (//)
+Настройки
+MSG_GUI_PREF_PENTEXT (//)
+Текст (Тон)
+MSG_GUI_PREF_PENTEXTBG (//)
+Текст (Фон)
+MSG_GUI_PREF_PENBORDER (//)
+Разделители (Тон)
+MSG_GUI_PREF_PENGADGETS (//)
+Иконки (Фон)
+MSG_GUI_PREF_PENLIGHT (//)
+Рамки (Светлый тон)
+MSG_GUI_PREF_PENDARK (//)
+Рамки (Темный тон)
+MSG_GUI_PREF_BRDBORDER (//)
+Элементы
+MSG_GUI_PREF_BRDGADGETS (//)
+Иконки
+MSG_GUI_PREF_BRDTEXT (//)
+Текст
+MSG_GUI_PREF_BRDINFOBAR (//)
+Статистика
+MSG_GUI_PREF_BRDPROGRESSBAR (//)
+Визуализация
+MSG_GUI_PREF_BRDFILESTR (//)
+Файловая строка
+MSG_GUI_PREF_BRDSTYLE (//)
+Стиль
+MSG_GUI_PREF_BRDRECESS (//)
+Вдавливание
+MSG_GUI_PREF_BRDLIGHT (//)
+Подсветка
+MSG_GUI_PREF_FILETYPES (//)
+Распознование
+MSG_GUI_PREF_LOAD (//)
+Загрузить...
+MSG_GUI_PREF_SAVEAS (//)
+Сохранить _как...
+MSG_GUI_PREF_SAVE (//)
+_Сохранить
+MSG_GUI_PREF_POSITION (//)
+Положение
+MSG_GUI_PREF_SELECTICONSET (//)
+Иконки
+MSG_GUI_PREF_OPEN (//)
+Открытие
+MSG_GUI_PREF_WINDOW (//)
+Режим окна
+MSG_GUI_PREF_ICONIFY (//)
+Режим иконки
+MSG_GUI_PREF_MENUFY (//)
+Режим меню
+MSG_GUI_PREF_CLOSE (//)
+Закрытие
+MSG_GUI_PREF_QUIT (//)
+Выход
+MSG_GUI_PREF_CONFIRMQUIT (//)
+Подтверждение выхода
+MSG_GUI_PREF_MULTIPLECOPIES (//)
+Разрешить копии
+MSG_GUI_PREF_XPKMETHOD (//)
+Доступные методы
+MSG_GUI_PREF_XPKEFFICIENCY (//)
+Эффективность компрессии          
+MSG_GUI_PREF_FILEPATT (//)
+Маска файла
+MSG_GUI_PREF_COMMAND (//)
+Команда
+MSG_GUI_PREF_USEFILETYPES (//)
+Распознование
+MSG_GUI_PREF_TOP (//)
+Сверху
+MSG_GUI_PREF_BOTTOM (//)
+Снизу
+MSG_GUI_PREF_ICONPATHS (//)
+Иконки
+MSG_GUI_PREF_BORDEROFFSET (//)
+Отступ от рамки     
+MSG_GUI_PREF_GADGETOFFSET (//)
+Отступ от иконки    
+MSG_GUI_PREF_DITHER (//)
+  Сглаживание
+MSG_GUI_PREF_HALF (//)
+Полутона
+MSG_GUI_PREF_STRIPE (//)
+Полосы
+MSG_GUI_PREF_TEXT (//)
+Текст
+MSG_GUI_PREF_BOX (//)
+Простой
+MSG_GUI_PREF_BEVEL (//)
+Выпуклый
+MSG_GUI_PREF_SBEVEL (//)
+Выпуклый округлый
+MSG_GUI_PREF_SBEVELH (//)
+Вдавленный округлый
+MSG_GUI_PREF_EMBOSS (//)
+Рельефный
+MSG_GUI_PREF_RIDGE (//)
+Вдавленный
+MSG_GUI_PREF_WRIDGE (//)
+Вдавленный угловатый
+MSG_GUI_PREF_SRIDGE (//)
+Вдавленный широкий
+MSG_GUI_PREF_GADGETS (//)
+Иконки
+MSG_GUI_PREF_PENS (//)
+Цвета элементов
+MSG_GUI_PREF_SHOWGUI (//)
+Тестировать
+MSG_GUI_PREF_DEFAULT (//)
+По умолчанию
+MSG_GUI_PREF_EDITOR (//)
+Редактор
+MSG_GUI_PREF_LMARGIN (//)
+Левый отступ
+MSG_GUI_PREF_RMARGIN (//)
+Правый отступ
+MSG_GUI_PREF_PITCH (//)
+Плотность
+MSG_GUI_PREF_FINE (//)
+Изрядная (15-17 cpi)
+MSG_GUI_PREF_ELITE (//)
+Обычная (12 cpi)
+MSG_GUI_PREF_PICA (//)
+Цицеро (10 cpi)
+MSG_GUI_PREF_SPACING (//)
+Интервалы
+MSG_GUI_PREF_6LPI (//)
+6 LPI
+MSG_GUI_PREF_8LPI (//)
+8 LPI
+MSG_GUI_PREF_BOLD (//)
+Жирный          
+MSG_GUI_PREF_ITAL (//)
+Курсив          
+MSG_GUI_PREF_FORMFEED (//)
+Прогон страницы 
+MSG_GUI_PREF_PROP (//)
+Пропорциональная печать
+MSG_GUI_PREF_NLQ (//)
+Качественная печать (NLQ)
+MSG_GUI_PREF_RESET (//)
+Сброс принтера
+MSG_GUI_PREF_ASLFILEREQ (//)
+Разрешить ASL запросы
+MSG_GUI_PREF_MODE (//)
+Видеорежим
+MSG_GUI_PREF_NAME (//)
+Имя экрана
+MSG_GUI_PREF_PALETTE (//)
+Палитра
+MSG_GUI_PREF_USECUSTOMSCREEN (//)
+Собственный экран  
+MSG_GUI_PREF_FONT (//)
+Шрифт
+MSG_GUI_PREF_LEADING (//)
+Интервал     
+MSG_GUI_PREF_TAB (//)
+Табуляция    
+MSG_GUI_PREF_PAGEOVERLAP (//)
+Откат       
+MSG_GUI_PREF_WHEELMOUSESCROLL (//)
+Чувствительность
+MSG_GUI_PREF_SMOOTHSCROLL (//)
+Равномерный просмотр
+MSG_GUI_PREF_INFOBAR (//)
+Статистика
+MSG_GUI_PREF_SCROLLERS (//)
+Линейки
+MSG_GUI_PREF_RIGHT (//)
+Только вертикальная
+MSG_GUI_PREF_BOTH (//)
+Вертикальная и горизонтальная
+MSG_GUI_PREF_BORDERLESS (//)
+Часть рамки окна
+MSG_GUI_PREF_3DWINTITLE (//)
+Объемный заголовок окна
+;
+;
+;
+MSG_GUI_NUMBER_MIN (//)
+От
+MSG_GUI_NUMBER_MAX (//)
+До
+;
+;
+;
+MSG_GUI_GOTO_LINE (//)
+Введите номер строки
+MSG_GUI_GOTO_PAGE (//)
+Введите номер страницы
+MSG_GUI_GOTO_PERCENT (//)
+Ведите процент текста
+MSG_GUI_GOTO_2 (//)
+для осуществления перехода
+;
+;
+;
+MSG_GUI_QUIT_1 (//)
+Вы действительно хотите
+MSG_GUI_QUIT_2 (//)
+закрыть это приложение?

@@ -1,0 +1,35 @@
+@{d FFA8A8}@{xoffset 35}@{c 00FF63}¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+@{xstep 193}@{font ACS-Title.font 18}@{c 11FF81}Boot Horor, aneb jak zlikvidovat Amigu?@{font}@{c}
+@{xstep 425}@{i}@{c 11FF95}Shaman/Abort@{ui}@{c}@{ystep -8}
+
+
+@{c 42FF86}  @{xstep 2}@{font ACS-Title.font 18}J@{font}@{xstep 1}e to  velice  prosté  -  staçí  jen efektnë vyuùít jednoho u BUGû ROMky.
+Pokud to chcete vyzkouîet, tak se psychicky pêipravte, ùe pêijdete o vîechna
+data  (pochopitelnë,  vîe  se  dá dokonale opravit, ale asi se dost zapotíte
+:-).   Správné  odpovëdi  pro  vyêeîení  tohoto  kvízu  posílejte  na adresu
+redakce, pêíîtë je uveêejníme i s vaîema nadávkama ;-).@{c}
+
+@{c 28FF4C}  Jen  pro  informaci:   já jsem se po lehkém infarktu vzpamatoval a do 10ti
+minut  se  z tý  prekérní  situace dostal, ale to jsem mël velikánskou kliku
+a málem jsem to pustil do kalhot...  :^)@{c}
+
+
+@{c 17FF6C}  Takùe zazálohujte harddisk a hurá do toho!@{c}
+
+
+
+@{c 17FF6C}Otevêete @{sys !C:NewShell}shell@{sys} a zadávejte postupnë pêíkazy:@{c}
+@{font ACS-Normal.font 8}
+@{c 1CFFA2}		makedir sys:0@{c}
+@{c 1CFFC9}		cd sys:0@{c}
+@{c 1CFFA2}		makedir 0@{c}
+@{c 1CFFC9}		cd 0@{c}
+@{c 1CFFA2}		makedir 640@{c}
+@{c 1CFFC9}		cd 640@{c}
+@{c 1CFFA2}		makedir 200@{c}
+@{c 1CFFC9}		cd 200@{c}
+@{c 19FF84}		echo "" >AmigaDOS NOLINE@{c}
+@{c 19FF84}		relabel sys: con:@{c}
+@{c FF3037}		reboot@{c}
+@{font}
+@{c 17FF6C}...po rebootu se budete hodnë divit ... asi jako nikdy :-)))@{c}

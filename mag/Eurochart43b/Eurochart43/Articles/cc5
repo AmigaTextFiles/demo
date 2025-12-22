@@ -1,0 +1,468 @@
+»CL1:»SML:--------------------------------------------------------------------------------
+»CL0:»BIG:                                                LITTLE MAGICAL CREATURES
+»CL1:»SML:--------------------------------------------------------------------------------
+  »CL5:                               by Dr. Doom/IRIS»CL1:
+
+Some  people may think of »CL0:sprites»CL1: as a
+»CL0:relic»CL1:  left  over  from  the »CL0:C64 »CL1:times
+that  is  better left unused in todays
+demos.   And  perhaps  they  are.  But
+what  surprises me is that most people
+who  don't  use  sprites  know next to
+nothing about them.
+
+Taking  very  little »CL0:DMA time»CL1:, sprites
+can   be   used  to  display  »CL0:clipart»CL1:,
+»CL0:animations»CL1:  and  »CL0:text»CL1:  on  top  of  or
+behind   the   playfield,   and   this
+independently    of    the    »CL0:bitplane»CL1:
+pointers,  »CL0:scroll»CL1:  values and »CL0:modulos»CL1:.
+Sprites  can  be  moved one »CL0:pixel»CL1: at a
+
+
+
+
+
+time,   which  makes  them  ideal  for
+things   like   »CL0:scrollers»CL1:;   a  planar
+scroller would have to be shifted, and
+a chunky one is hard or impossible (at
+the  very  least  problematic) to move
+every   frame.    Since   sprites  are
+entirely  independent  of the bitplane
+data  (unless you want them behind the
+playfield(s)),  they  will  appear  in
+whatever  resolution  you specify even
+on  a »CL0:doublescan»CL1: (1x2 or 2x2) display.
+They  may  also  be  placed  on  a »CL0:HAM»CL1:
+screen  without  interfering  with the
+image.    Another  advantage  is  that
+sprites  can be »CL0:clipped»CL1: to the display
+window   automatically,  whereas  bobs
+(chunky  ones  included)  have  to  be
+clipped  by  the  »CL0:CPU»CL1: or »CL0:blitter»CL1:.  And
+finally,  sprites can be placed in the
+»CL0:border  area»CL1:  unlike bitplane data, so
+if  you  want  a  little  logo  in the
+border,  for  instance,  you  can  use
+sprites  and avoid the extra DMA usage
+of a larger »CL0:display window»CL1:.
+
+The  Amiga  has 8 sprite »CL0:channels »CL1:that
+can  be  reused any number of times on
+the  screen.  So the only actual limit
+on  the  number of sprites is that you
+may  only  have  »CL0:8»CL1: on each »CL0:rasterline»CL1:,
+and  even that might somehow be worked
+around.  As for »CL0:depth»CL1:, each sprite has
+»CL0:3  colours»CL1:,  but  you  can combine two
+sprites to create one »CL0:15-colour»CL1: sprite
+if you want.
+»CL1:--------------------------------------
+»CL0:   DIFFERENCES BETWEEN OCS AND AGA
+»CL1:--------------------------------------
+
+Worth  noting  from  the start is that
+»CL0:AGA»CL1:  introduced  a  few »CL0:changes»CL1: to the
+sprite  hardware.   OCS  only supports
+sprite  »CL0:widths»CL1:  of »CL0:16»CL1:, and the sprites
+get    their   »CL0:palettes »CL1:  from   fixed
+positions in the palette table.  Also,
+sprites  may  only  be  »CL0:lowres»CL1: and can
+only  be moved in increments of »CL0:lowres
+pixels»CL1:.   AGA  lets you use sprites as
+wide   as   »CL0:32»CL1:   or   »CL0:64»CL1:  pixels,  the
+horizontal  resolution can be adjusted
+to  »CL0:hires»CL1:  or »CL0:super-hires»CL1:, and sprites
+can   be   moved   in   increments  of
+super-hires  pixels  (1/4  of a lowres
+pixel) if desired.
+
+
+»CL1:--------------------------------------------------------------------------------
+»CL0:                               SETTING UP SPRITES
+»CL1:--------------------------------------------------------------------------------
+
+Many  people  are  afraid  of sprites and the hardware associated with them, but
+it's really no big deal.  There are two ways to set up sprites.  I'll look first
+at  simple  »CL0:OCS»CL1:  sprites  with  »CL0:4»CL1: colours and a width of »CL0:16»CL1: pixels, set up using
+»CL0:control words»CL1: in the sprite data.
+
+For this you need a couple of things.  First of all, sprite »CL0:DMA»CL1: must be enabled,
+of  course.   Secondly,  you  need  to  write to the »CL0:sprite pointers»CL1:.  This must
+happen  every  frame, because the sprite hardware uses these registers as »CL0:memory
+indices»CL1:  and changes them as it reads data from memory (a recurring theme on the
+Amiga).  IOW copperlist entries are a good way to write sprite pointers.
+
+Lastly,  the sprite must be defined somewhere in »CL0:chip»CL1: memory.  The first word of
+the  sprite  »CL0:structure»CL1:  is called »CL0:SPRxPOS»CL1: (for reasons we'll get to shortly) and
+goes something like this:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+»CL0:    bits 15- 8»CL1: : bits »CL0:7-0»CL1: of the »CL0:vertical »CL0:start»CL1: position
+»CL0:    bits  7- 0»CL1: : bits »CL0:10-3»CL1: of the »CL0:horizontal »CL0:start»CL1: position
+
+This  seems fairly convenient, but just you wait and see what a brilliant scheme
+Commodore could come up with for the second control word, »CL0:SPRxCTL»CL1:.  Yeech...  :)
+
+»CL0:    bits 15- 8 »CL1:: bits »CL0:7-0»CL1: of the »CL0:vertical stop»CL1: position
+»CL0:    bit      7 »CL1:: attach flag (more about this later)
+»CL0:    bit      6 »CL1:: bit »CL0:9»CL1: of the »CL0:vertical start»CL1: position (AGA only)
+»CL0:    bit      5 »CL1:: bit »CL0:9»CL1: of the »CL0:vertical stop»CL1: position (AGA only)
+»CL0:    bits  4- 3 »CL1:: bits »CL0:1-0»CL1: of the »CL0:horizontal start»CL1: position (AGA only)
+»CL0:    bit      2 »CL1:: bit »CL0:8»CL1: of the »CL0:vertical start»CL1: position
+»CL0:    bit      1 »CL1:: bit »CL0:8»CL1: of the »CL0:vertical stop»CL1: position
+»CL0:    bit      0 »CL1:: bit »CL0:2»CL1: of the »CL0:horizontal start»CL1: position
+
+This seems horribly confusing, but the only tricky part, really, is that someone
+at  Commodore decided the hardware developers would enjoy receiving the register
+specifications  in  the  form  of  a jigsaw puzzle.  The hardware people in turn
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+»CL1:hadn't  a clue anything was out of place and went right ahead playing with their
+lasers.   Nothing will stop a true »CL0:Amiga»CL1: coder, though, so let's say we can live
+with 10-20 instructions of bit reordering in each of our sprite routines. Ehe.
+
+With  this  representation  of  the horizontal position, you could say that it's
+measured  in  »CL0:super-hires»CL1:  pixels, and that bits »CL0:1-0»CL1: are fixed to »CL0:zero»CL1: values on
+OCS machines.
+
+(You normally wouldn't use bit »CL0:9»CL1: of the vertical start and stop positions, since
+it's  for  screens  taller  than »CL0:512 pixels»CL1:, such as the bizarre hires AGA modes
+(»CL0:UHRES»CL1: and whatever other »CL0:evil»CL1: resolutions they invented).)
+
+Following the »CL0:control words»CL1: is the sprite »CL0:image»CL1:, which consists of »CL0:two
+words»CL1: per rasterline that combine to form »CL0:16»CL1: pixels in the same manner as
+»CL0:bitplanes»CL1:. The sprite image can be considered as two »CL0:interleaved bitplanes»CL1:
+with a width of »CL0:one word»CL1:. This is an example sprite structure:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+»CL3:                dc.w    $4250,$4301»CL2:             ; control words
+              »CL3:  dc.w    $0151,$1261     »CL2:        ; picture
+    »CL3:            dc.w    $1522,$0012          »CL2:   ; not a real one though :)
+         »CL3:       dc.w    0,0
+
+»CL1:The  two  zero-words  at  the  end  tell  the sprite hardware to stop doing more
+sprites  with this sprite channel.  You could write another set of control words
+there and make a chain of sprite definitions this way, all using the same sprite
+channel.   Using  the  »CL0:copper»CL1: offers a more flexible way, though, which I'll get
+into eventually.  :)
+
+Now  for  the  colours.   With  the  »CL0:default»CL1:  setup (which is fixed on OCS), the
+sprites  get  their  colours  from  palette  registers  »CL0:16-31»CL1:  according  to the
+following scheme:
+
+    cols »CL0:17-19»CL1: : sprites »CL0:0»CL1: and »CL0:1»CL1:
+    cols »CL0:21-23»CL1: : sprites »CL0:2»CL1: and »CL0:3»CL1:
+    cols »CL0:25-27»CL1: : sprites »CL0:4»CL1: and »CL0:5»CL1:
+    cols »CL0:29-31»CL1: : sprites »CL0:6»CL1: and »CL0:7»CL1:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Colours  »CL0:16,20,24 and 28»CL1: are not used,
+since  sprite pixels of »CL0:%00»CL1: define the
+sprite's transparent area.
+
+This is all you need to know to create
+as  many  as  »CL0:8»CL1:  sprites and move them
+about  the  screen.   To easier create
+sprites,  you can use conversion tools
+such as »CL0:PicCon»CL1: which has an image save
+format particularly for sprite data.
+
+»CL1:--------------------------------------
+»CL0:   THE SECOND WAY TO CREATE SPRITES
+»CL1:--------------------------------------
+
+A   sprite   can  be  defined  without
+»CL0:control words»CL1: in the sprite structure.
+You   can   write  the  control  words
+directly  to  the  sprite control word
+registers  instead  (addresses »CL0:$140»CL1: to
+»CL0:$17E»CL1:)   after   setting   the   sprite
+pointers.   This  can  be done while a
+sprite  is being displayed, so you can
+»CL0:shear»CL1:  or  »CL0:bend»CL1: the sprite by changing
+its  horizontal  position from e.g.  a
+copperlist.
+
+There is a complication though, and to
+understand    this,    you   need   to
+understand  how  »CL0:sprite DMA»CL1: works.  At
+the   beginning  of  each  frame,  the
+sprite   hardware  reads  the  »CL0:control
+structures»CL1: at all the specified sprite
+»CL0:addresses»CL1: and fills its registers with
+this   information.   Then,  for  each
+»CL0:rasterline»CL1:    within    the   sprite's
+vertical  area, the hardware reads the
+image  data  for  that  line before it
+starts to display anything at all.
+
+Now,  if  you  write  to  the sprite's
+»CL0:control word registers»CL1: after its »CL0:image
+data  registers»CL1:  have been filled, but
+before the data is displayed, the data
+»CL0:isn't»CL1:  displayed  and that line of the
+sprite vanishes.  I don't know whether
+this is because the data registers are
+cleared  when  you  access the control
+word, or if the sprite hardware treats
+it  as a »CL0:DMA read»CL1: of the »CL0:control words»CL1:
+(normally  the  sprite isn't displayed
+before  the line following the control
+word read).
+
+This  all  makes  no difference if you
+set  the  registers  at the top of the
+»CL0:window»CL1: before  anything  is displayed.
+But   if   you   change   a   sprite's
+»CL0:horizontal  position»CL1:  at the »CL0:beginning»CL1:
+of  each line, the sprite will »CL0:vanish»CL1:,
+since  the sprite is disabled on every
+line.   So you have to do it »CL0:after»CL1: the
+sprite  is displayed on each line, ie.
+wait  for  a position far to the right
+on   the   previous  line,  but  still
+leaving  you  enough  »CL0:copper  time»CL1:  to
+update  the  registers you want before
+the  next two words of sprite »CL0:data»CL1: are
+fetched.   This imposes some limits on
+where   you   can  change  a  sprite's
+position  and where you can place that
+sprite.
+
+I  recommend  you  read  the  »CL0:hardware
+reference»CL1:  if  you're  having  trouble
+with  sprites not appearing, since the
+above  explanation  of  »CL0:sprite  DMA»CL1: is
+grossly oversimplified, and might just
+be  downright »CL0:incorrect»CL1:.  I'm too lazy
+to doublecheck this at the moment.  :)
+Anyway,  this is not really a »CL0:tutorial»CL1:
+as such, so nevermind.
+
+»CL1:--------------------------------------
+»CL0:          ATTACHED SPRITES
+»CL1:--------------------------------------
+
+»CL0:3»CL1: colours  aren't  always  enough,  so
+Commodore  were  nice  enough to grant
+you  »CL0:15»CL1:  colours for each sprite.  The
+downside  is that it takes »CL0:two sprites»CL1:
+to  make  up  »CL0:one»CL1:  15-colour   sprite.
+Anyway, here's how you do it.  :)
+
+Bit  »CL0:7»CL1:  of  the second control word is
+the  »CL0:attach»CL1:  bit  (only  valid for odd
+sprites »CL0:1»CL1:, »CL0:3»CL1:, »CL0:5»CL1: and »CL0:7»CL1:).  When this bit
+is   »CL0:set»CL1:,   the  image  data  for  the
+corresponding  sprite  is  appended to
+the  previous  sprite  so  you  get  »CL0:4»CL1:
+bitplanes  for  the  combined  sprite.
+The two sprites must be located at the
+»CL0:same  position»CL1:  and have the»CL0: same size»CL1:
+(if  not,  the  two  sets if bitplanes
+will   be  displaced,  which  is  only
+desirable  sometimes).   When a sprite
+is  composed  of two attached sprites,
+it    always    uses   colours   »CL0:17»CL1:-»CL0:31»CL1:
+regardless  of  its number, and colour
+»CL0:16»CL1:  (colour  »CL0:0»CL1:  in sprite pixel terms)
+yields a »CL0:transparent pixel»CL1:.
+
+»CL0:PicCon»CL1:  (and possibly other conversion
+tools)   is   able  to  save  attached
+sprites  and  spare you the trouble of
+splitting  a  16-colour image into two
+sprites.  A nice utility, really.
+
+
+
+»CL1:--------------------------------------
+»CL0:              AGA FEATURES
+»CL1:--------------------------------------
+
+The  »CL0:AGA»CL1:  chipset  adds  the  register
+»CL0:BPLCON4 ($10C)»CL1:, which despite its name
+deals   with  »CL0:sprite»CL1:  settings  (among
+other  things).   The  lower »CL0:8»CL1: bits of
+this  word  contain  the  two  sets of
+»CL0:high-order  colour  table address»CL1: bits
+for odd and even sprites.
+
+»CL0:  bits 15- 8»CL1: : bitplane related
+»CL0:  bits  7- 4»CL1: : colour table address
+               for »CL0:even»CL1: sprites
+»CL0:  bits  3- 0»CL1: : colour table address
+               for »CL0:odd»CL1: sprites
+
+The  two  addresses  both default to a
+value  of »CL0:1»CL1:, which is the fixed offset
+on  an »CL0:OCS Amiga»CL1:.  This means that the
+reads to the »CL0:colour table»CL1: performed by
+the  »CL0:sprite hardware»CL1: are prefixed with
+the  bits »CL0:0001»CL1:, causing the sprites to
+use  colours  »CL0:16-31»CL1:.  But if you want,
+you could, for instance, place all the
+sprite  colours  at  the  end  of  the
+colour   table  by  writing  »CL0:$00FF»CL1:  to
+»CL0:BPLCON4»CL1:.
+
+»CL0:BPLCON4»CL1:   may   ofcourse   be  changed
+»CL0:mid-frame»CL1:, allowing sprites to use the
+entire »CL0:256-colour»CL1: palette.
+
+As  mentioned,  the  »CL0:Original Chip Set»CL1:
+gives   all  sprites  a  width  of  »CL0:16»CL1:
+pixels.   With AGA, you're able to set
+a  size of »CL0:32»CL1: or »CL0:64»CL1: pixels.  Note that
+changing the sprite size or resolution
+affects »CL0:all»CL1: 8 sprites at once.
+
+To  make the sprites 32 bits wide, set
+bit  »CL0:2»CL1:  of  »CL0:FMODE ($DFF1FC)»CL1:.  Bit »CL0:3»CL1: of
+the  same register makes them twice as
+wide  again.   With wider sprites, the
+sprite  »CL0:image  data »CL1:looks different of
+course; it then uses »CL0:32 »CL1:or »CL0:64»CL1: bits for
+each  sprite  plane line, where normal
+»CL0:OCS»CL1:  sprites  would  only use »CL0:16»CL1: bits.
+(»CL0:PicCon»CL1:  is  also able to save 32- and
+64-bit   wide  sprites  to  make  this
+easier for you.) You can see from this
+that  you  can actually fill an entire
+rasterline     with     sprite    data
+(8*64=512),  which  is  a  good way to
+create  backdrops.   You  can  have  a
+backdrop  of   »CL0:maximum  overscan»CL1:  size
+and  render  your  effect  in  a  much
+smaller   display    window,    making
+everything seem faster than it is. :)
+
+Bits  »CL0:7-6»CL1: of »CL0:BPLCON3 ($106) »CL1:make out a
+two-bit  value  which  determines  the
+»CL0:sprite resolution»CL1: mode.  A value of »CL0:00»CL1:
+sets  the  default mode in which»CL0: LORES»CL1:
+or »CL0: HIRES»CL1:  bitplane modes both produce
+»CL0:lowres»CL1:  sprites  and  »CL0:SHRES»CL1: mode gives
+»CL0:hires»CL1:   sprites.    »CL0:01»CL1:  makes  sprites
+unconditionally   »CL0:lowres»CL1:,  »CL0:10»CL1:  is  the
+»CL0:force-hires»CL1:   mode,   and   »CL0:11»CL1:  yields
+»CL0:superhires»CL1: sprites always.
+
+And  lastly,  to  disable  the  »CL0:border
+clipping»CL1:  of  sprites,  set  bit  »CL0:1»CL1: in
+»CL0:BPLCON3»CL1:   (needs   »CL0:ECSENA»CL1:  (bit  »CL0:0»CL1:  of
+»CL0:BPLCON0»CL1: at »CL0:$100»CL1:) to be enabled first).
+This  lets you put sprites outside the
+»CL0:display   window»CL1:.    This  is  an  »CL0:ECS»CL1:
+feature,    really.     Hmm..    well,
+nevermind.
+
+
+
+
+
+»CL1:--------------------------------------
+     »CL0:      MERRY CHRISTMAS
+»CL1:--------------------------------------
+
+For  more  information  on  sprites or
+just a more thorough explanation, read
+the  »CL0:Hardware  Reference»CL1:  and  the »CL0:AGA
+Register  Guide»CL1:.   Or  find my address
+somewhere  and  ask  me.   Or wait for
+another  article.   Or  summin.   I am
+custard.
+
+
+
+
+
+
+
+
+
+
+
+      »PIC:darklight-ec4.iff»

@@ -1,0 +1,85 @@
+@{d A1FFFD}
+@{c D8FFBA}Pekr: Ço je to "real-time" OS?@{c}
+
+Dave: I  keð  to  väçîina  ãudí  nechápe,  "realtime"  v  podstate  znamená  "formálne
+      predvídateãný".   Napríklad,  môùem  presne  odhadnúï  dobu,  ktorá  uplynie  od
+      poùiadavky  na  preruîenie  do vykonania servisnej (obsluùnej) rutiny preruîenia
+      alebo  bude  kritický task beùaï urçitý ças?  Ak systém takto funguje jedenkrát,
+      môùem oçakávaï, ùe bude tak isto fungovaï znova a znova?
+
+      V  prísne  realtime systéme çasï îpecifikácií operaçného systému zahèña latençné
+      çasy   pre   vîetky   typy   takýchto  záleùitostí.   Tieto  nie  sú  v  AmigaOS
+      îpecifikované,  ale  pri  splnení niektorých podmienok by mohli byï.  Podmienkou
+      realtime  OSu  nie  je  nevyhnutne rýchlejîia doba odozvy ako v ne-realtime OSe,
+      musí  byï  vîak  definovaná.   Hoci  vo  vîeobecnosti RT operaçné systémy mávajú
+      rýchlejîie  reakcie ako ne-RT systémy, je to jednoducho preto, lebo sa v systéme
+      rátalo s myîlienkou realtime reakcií.
+      ____
+
+      AmigaOS  nie  je  dokonalý  RTOS.  Od RT operaçných systémov sa oçakáva niekoãko
+      málo  dôleùitých  detailov,  ktoré  by  AmigaOS  spãñaï  mohol, ale v súçasnosti
+      nespãña.   V  oblasti  beùných  AmigaOS  aplikácií  a  dokonca  i v priemyselnom
+      nasadení,  je  rozdiel  çasto nepostrehnuteãný.  Oficiálnym stanoviskom Amiga SW
+      skupiny  vùdy  bolo,  ùe  AmigaOS povaùujú za "takmer realtime-ový".  To znamená
+      (kvôli nedostatku lepîích slov), ùe ako RTOS sa bude chovaï väçîinu çasu.
+      ____
+
+      V  hocijakom  systéme  s  virtuálnou  pamäïou  je  nutné udrùaï realtime tasky
+      a príbuzné dáta v pamäti, aby sa zaruçili latençné doby.
+
+
+@{c D8FFBA}Pekr: Je  "Exec"  ako  termín zhodný s tým, ço sa nazýva kernel?  Alebo má Exec oproti
+      kernelu rozîírenú funkçnosï?@{c}
+
+Dave: AmigaOS  sa  povaùuje  za  mikrokernelový  OS,  pretoùe  väçîina funkcií systému
+      (device  drivery, grafika, file systém, atð.) beùí na úrovni user-mode threadov,
+      oddelene  od kernelu.  Vo väçîine implementácií je dneîný Linux dobrým príkladom
+      "monolitického"  alebo "makrokernelového" systému.  Pri takomto prístupe sú také
+      veci  ako  device drivery,  file systémy, atð. skompilované ako súçasï samotného
+      kernelu.
+
+      V  skutoçnosti,  diskusie  o  mikrokerneloch  vznikli  viac-menej  ako  kontrast
+      k  UNIXu,  ktorý neumoùñoval thready na úrovni kernelu ("kernel space threads").
+      (V súçasnosti Linux ako taký nie je realtime OS).  Zmyslom kernel space threadov
+      je  efektívnosï  --  low level I/O  môùe pracovaï a reagovaï  na volania kernelu
+      bez nutnosti prepínania kontextu, ço sa síce netýka AmigaOSu, ale urçite kaùdého
+      chráneného operaçného systému.
+
+      [ Dospievam  k  presvedçeniu, ùe by bolo omnoho výhodnejîie  písaï o technických
+      veciach  priamo  v  angliçtine - pri písaní çlánkov by som uîetril asi 50 aù 70%
+      (dosï!) çasu, ktoré inak strávim prekladaním podkladov (a hlavne ich îtylizáciou
+      do slovençiny) a zvyîok, myslím, v pohode zvládam písaï priamo v angliçtine.
+      Aj  tak,  uù dávno sa technické veci mali publikovaï len v angliçtine...  Preço?
+      Mám  silný  pocit,  ùe tak ako naîe krajiny nestíhajú na vyspelý svet technicky,
+      nestíha ani náî jazyk pomenúvaï stále novîie a novîie pojmy.  Moùno to niektorým
+      z  vás,  ço anglicky nevedia, pripadá byï drsné, ale keð sa zaujímate o poçítaçe
+      vîeobecne (ço asi áno, keð çítate tento diskmag), je to _absolútna_ nutnosï.
+      A  výhody?   Viac  çlánkov,  viac  informácií  a moùno i vyîîia periodicita ACS
+      (a viac çasu pre mña ;)  Shaman?  Comments, anyone? - pozn. DNA ]
+
+
+@{c D8FFBA}Pekr: Oçakávaî, ùe v Amiga, Inc. napíîu svoj vlastný OS 5.0 kernel (Exec),
+      aby zachovali realtime OS alebo ostanú pri OS 4.0 kerneli?@{c}
+
+      Bez  Execu,  by viac ako urçite museli prepísaï celý AmigaOS.  Moùno aj prepíîu,
+      ale neoçakávam, ùe ho uvidím uù v Novembri.  Na trhu je mnoùstvo RTOSov, väçîina
+      z  nich  je urçená pre embedded systémy  ako napr. QNX, OS-9, VxWorks, atð.  Nie
+      je  dôvod, preço by nemohli napísaï vylepîený Exec alebo dokonca next-generation
+      Exec,  a preço by nemohli zachovaï jeho realtime charakter.  Vlastne, tak ako by
+      bolo  hlúpe  vydaï  AmigaOS  s  tými istými chybami ako v 1985  [napr. chýbajúci
+      resource  tracking!?  - pozn. DNA],  tak isto by bolo hlúpe vymeniï  tieto chyby
+      za chyby UNIXu [Linuxu] alebo Windows.
+
+
+@{c D8FFBA}Pekr: "In Czech Republic, where BEER is the best ..." :-))@{c}
+
+Dave: It certainly is good there! That's where Budvar (Budweiser) comes from!
+
+Dave Haynie  | In Germany, where BEER comes from
+VP Technology| PIOS Computer AG | haynie@pios.de
+
+____
+
+
+@{i}S Daveom sa rozprával Petr Krenùelok (Pekr).@{ui}
+

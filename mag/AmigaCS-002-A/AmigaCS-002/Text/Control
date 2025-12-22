@@ -1,0 +1,41 @@
+@{d FFFFFF}                                    @{c 00FFEF}Ovládání Diskmagu@{c}
+                                   @{c 00FFEF}¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+  @{c FFF414}LEVÉ TLAÇÍTKO MYÎI@{c}     - výbër z nabídky; posun v textu vpêed
+  @{c FFF414}PRAVÉ TLAÇITKO MYÎI@{c}    - návrat na pêedchozí nabídku; posun textu vzad
+  @{c FFF414}ESCAPE@{c}                 - návrat na pêedchozí nabídku; ukonçení diskmagu
+  @{c FFF414}ÎIPKA VLEVO@{c}            - posun v textu vzad; posun v menu vzad
+  @{c FFF414}ÎIPKA NAHORU@{c}           - návrat na pêedchozí nabídku
+  @{c FFF414}ÎIPKA VPRAVO@{c}           - posun v textu vpêed; posun v menu vpêed
+  @{c FFF414}SHIFT + ÎIPKA VLEVO@{c}    - skok na první stranu textu
+  @{c FFF414}SHIFT + ÎIPKA VPRAVO@{c}   - skok na poslední stranu textu
+  @{c FFF414}BACKSPACE@{c}              - posun v textu vzad (jako More)
+  @{c FFF414}SPACE@{c}                  - posun v textu vpêed (jako More)
+  @{c FFF414}TAB@{c}                    - posun v menu vpêed
+  @{c FFF414}LEVÝ SHIFT@{c}             - posun v menu vzad
+  @{c FFF414}ENTER@{c}                  - volba vybrané poloùky menu; posun textu vpêed
+  @{c FFF414}M@{c}                      - vypnutí/zapnutí hudby
+  @{c FFF414}C@{c}                      - uloùení çlánku do clipboardu v kódování E2
+  @{c FFF414}Q@{c}                      - okamùité ukonçení diskmagu (lze i signálem BREAK)
+  @{c FFF414}+@{c}                      - zvýîení hlasitosti hudby
+  @{c FFF414}-@{c}                      - sníùení hlasitosti hudby
+  @{c FFF414}1-9,0@{c}                  - pêechod rovnou na stránku 1-9,10
+  @{c FFF414}SHIFT+1-9,0@{c}            - pêechod rovnou na stránku 11-19,20
+  @{c FFF414}F1-F9@{c}                  - pêímé otevêení rubrik v hlavní nabídce
+  @{c FFF414}i,h,s,n,g,a,k,o@{c}        - pêímé otevêení rubrik v hlavní nabídce
+
+                                         @{c 00FFEF}ToolTypy@{c}
+                                         @{c 00FFEF}¯¯¯¯¯¯¯¯@{c}
+  @{c FFF414}MODEID@{c}            - reùim obrazovky (pokud není zadán, otevêe se requester)
+  @{c FFF414}TEXTPATH@{c}          - cesta k textûm diskmagu (obvykle PROGDIR:Text)
+  @{c FFF414}GFXPATH@{c}           - cesta ke grafice diskmagu (obvykle PROGDIR:Gfx)
+  @{c FFF414}MENUPATH@{c}          - cesta k nabídkám diskmagu (obvykle PROGDIR:Menu)
+  @{c FFF414}PICTPATH@{c}          - cesta k obrázkûm diskmagu (obvykle PROGDIR:Pics)
+  @{c FFF414}MUSICPATH@{c}         - cesta k modulûm diskmagu (obvykle PROGDIR:Music)
+  @{c FFF414}SOUNDPATH@{c}         - cesta ke zvukûm diskmagu (obvykle PROGDIR:Sfx)
+  @{c FFF414}MUSIC@{c}             - trvale zapíná (YES) nebo vypíná (NO) hudbu v diskmagu
+  @{c FFF414}FASTPLAY@{c}          - zapíná (YES) nebo vypíná (NO) pêehrávání hudby z FastRAM
+  @{c FFF414}SOUND@{c}             - trvale zapíná (YES) nebo vypíná (NO) zvuky v diskmagu
+  @{c FFF414}VOLUME@{c}            - nastavení hlasitosti samplû 0-100
+  @{c FFF414}ANIM@{c}              - zapíná (YES) nebo vypíná (NO) animaci v panelu
+  @{c FFF414}PRIORITY@{c}          - nastavení priority programu (-5 aù +5), doporuçuji 1
+  @{c FFF414}DELAY@{c}             - prodleva pêi kreslení (hodí se pro CGFX)

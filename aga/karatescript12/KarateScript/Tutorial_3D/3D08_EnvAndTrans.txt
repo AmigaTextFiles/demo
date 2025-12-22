@@ -1,0 +1,180 @@
+-------------------- < t3dEnvMap> texture constructor
+
+ You can build Environment-mapping textures with karate:
+
+< t3dEnvMap> label | 256x256 ImageLabel  </t3dEnvMap>
+
+ The 256x256 pixel sized image 'ImageLabel' must represent a sphere
+reflecting its environment. It can work with a chrome sphere image, but any
+sphere image would give something. (same technic as flatlightmap)
+ Then, Polygon using this texture will 'reflect' the same way.
+ Look the exemple image and you'll understand.
+
+ Note it uses some kind of texture mapping, but not using UV coords.
+
+------------------- about transparencies
+
+ for constructors < t3dmapping>, < t3dFlatLightMap> and < t3dFlat>,
+ you can add as a 3rd parameter a colortable.
+ ( you can build a colortable with < kColorTable> or < computeColorTable>.)
+ The rendering of these textures will then become 50% transparent or
+ additive, depnding of the type of '256c x 256c' operation of the colortable
+ (see tutorial B03_ColorBlending)
+
+<KColorTable> coltab1 | data/remaptable.iff |0|255|255|255    </KCOLORTABLE>
+<KColorTable> coltab2 | data/remaptable.iff |1|0|0|0    </KCOLORTABLE>
+ 
+------------------- worlds:
+
+ <World3D> world1 </World3D>
+ <World3D> world2 </World3D>
+
+
+------------------ Let's construct some textures:
+
+<kimg> image256x256 | data/texture2.iff </kimg>
+<t3dEnvMap> tEnvMap0 | image256x256  </t3dEnvMap>
+
+<t3dmapping> t_map0 | image256x256 | coltab1  </t3dmapping>
+<t3dmapping> t_map1 | image256x256 | coltab2  </t3dmapping>
+
+
+<KIMG> i_lightmapRed  | data/lightmapred.iff </kimg>
+<t3dFlatLightMap> tLightMapRed   | i_lightmapRed  </t3dFlatLightMap>
+<t3dFlatLightMap> tLightMapRedTr   | i_lightmapRed | coltab1 </t3dFlatLightMap>
+-------------------- let's construct some 3d objects:
+ <World3D> world </World3D>
+<star3d> starBig1 | world2 |0|0|0|0|0|0|1|1|1 |
+         5|0.75|0.25|0.2|0.1| tLightMapRed | tLightMapRed || tLightMapRed | tLightMapRed | </star3d>
+<star3d> starBig2 | world2 |0|0|0|0|0|0|1|1|1 |
+         3|0.75|0.25|0.2|0.1| tLightMapRed | tLightMapRed || tLightMapRed | tLightMapRed | </star3d>
+
+
+
+<sphere> spheremap | starBig1 |0|0|0|0|0|0|1|1|1|
+         5 | 6 | 1.0| 0|0.0|0.0|1|1|t_map0 |t_map0|t_map0|t_map0</sphere>
+
+<sphere> spheremap3 | starBig2 |0|0|0|0|0|0|1|1|1|
+         5 | 6 | 1.0| 0|0.0|0.0|1|1|t_map1 |t_map1|t_map1|t_map1</sphere>
+
+
+<tore> toreenv | world2 |0|0|5|0|0|0|1|1|1|
+        6 | 6 | 0.65|0.3 | 0|0.0|0.00|1|1 |tEnvMap0|tEnvMap0|tEnvMap0|tEnvMap0 </tore>
+
+<sphere> sphere2 | toreenv |0|0|0|0|0|0|1|1|1|
+         4 |6 | 1.6| 0|0.0|0.0|1|1|tLightMapRedTr |tLightMapRedTr|tLightMapRedTr|tLightMapRedTr</sphere>
+
+<lwo3d> boy | world1 |0|0|0|0|0|0|1|1|1 | data/boyLWOB.lwo |1 | tEnvMap0  </lwo3d>
+
+
+
+-------------------------------- other constructions ----
+
+<MAIN> mainscript |0|1</MAIN>
+<KCAM> the_camera |0|0|-3|0|0|0|0.6  </KCAM>
+
+<KSCRIPT>
+    <ID> mainscript </ID>
+    <PLAY> part1 | 600 | 0 | 1</PLAY>
+    <PLAY> part2 | 1100 | 0 | 1</PLAY>
+</KSCRIPT>
+ 
+--------------------------------------------------------------------
+<KPART>
+    <ID> part1 </ID>
+    note: no use to clear the background, the room cube do so.
+
+    <Fx><Pa>setpalette</Pa>     set the screen palette
+        <Pa> i_lightmapRed </Pa>
+    </Fx>
+
+    <Fx><Pa>fillrc</Pa> clear the background
+        <Pa>   </Pa>
+        <Pa> cte | 0 </Pa>
+    </Fx>
+
+<KTABLE> mvb_x1 | 0,-6 |150,0 |400,0| 600,6 </KTABLE>
+    <Fx><Pa> Set3DObject </Pa>   make the plane turn around...
+            <Pa> boy  </Pa>
+            <Pa> aft| mvb_x1 |0|0</PA>
+            <Pa> 2cte|0|0|0</pa> position
+            <Pa> aff|0|0.006</Pa> rot.
+            <Pa> aff|0|0.00-7</Pa> rot.
+            <Pa> aff|0|0.0055</Pa> rot.
+            <Pa> 3cte|0.75|0.75|0.75 </Pa> scale
+    </Fx>
+
+    <Fx><Pa> Draw3DWorld </Pa>
+           <Pa>   </Pa>
+           <Pa> world1 </Pa>
+           <Pa> the_camera  </Pa>
+           <Pa> cte|0 </Pa>
+           <Pa> cte|0.25 </Pa>
+           <Pa> cte|200</Pa>
+     </Fx>
+
+</KPART>
+
+--------------------------------------------------------------------
+<KPART>
+    <ID> part2 </ID>
+    note: no use to clear the background, the room cube do so.
+
+    <Fx><Pa>setpalette</Pa>     set the screen palette
+        <Pa> i_lightmapRed </Pa>
+    </Fx>
+
+    <Fx><Pa>fillrc</Pa> clear the background
+        <Pa>   </Pa>
+        <Pa> cte | 0 </Pa>
+    </Fx>
+
+<KTABLE> mvb2_x1 | 0,6 |150,0 |800,0| 1000,-6 </KTABLE>
+
+    <Fx><Pa> Set3DObject </Pa>   make the plane turn around...
+            <Pa> starBig1  </Pa>
+            <Pa> sin|-2|0.81|0.5</pa>
+            <Pa> aft| mvb2_x1 |-100|0</PA>
+            <Pa> cte|1</pa>
+            <Pa> aff|0|-0.006</Pa> rot.
+            <Pa> aff|0|0.00-7</Pa> rot.
+            <Pa> aff|0|0.005</Pa> rot.
+            <Pa> 3cte|0.75|0.75|0.75 </Pa> scale
+    </Fx>
+
+   <Fx><Pa> Set3DObject </Pa>   make the plane turn around...
+            <Pa> starBig2  </Pa>
+            <Pa> sin|2|0.65|0.5</pa>
+            <Pa> aft| mvb2_x1 |-50|0</PA>
+            <Pa> cte|1</pa>
+            <Pa> aff|0|-0.006</Pa> rot.
+            <Pa> aff|0|0.00-7</Pa> rot.
+            <Pa> aff|0|0.005</Pa> rot.
+            <Pa> 3cte|0.75|0.75|0.75 </Pa> scale
+    </Fx>
+
+
+    <Fx><Pa> Set3DObject </Pa>   make the plane turn around...
+            <Pa> toreenv  </Pa>
+            <Pa> sin|0|0.7|0.5</pa>
+            <Pa> aft| mvb2_x1 |0|0</PA>
+            <Pa> cte|0</pa>
+            <Pa> aff|0|-0.006</Pa> rot.
+            <Pa> aff|0|0.00-7</Pa> rot.
+            <Pa> aff|0|0.005</Pa> rot.
+            <Pa> 3cte|0.75|0.75|0.75 </Pa> scale
+    </Fx>
+
+
+
+    <Fx><Pa> Draw3DWorld </Pa>
+           <Pa>   </Pa>
+           <Pa> world2 </Pa>
+           <Pa> the_camera  </Pa>
+           <Pa> cte|0 </Pa>
+           <Pa> cte|0.25 </Pa>
+           <Pa> cte|200</Pa>
+     </Fx>
+
+</KPART>
+

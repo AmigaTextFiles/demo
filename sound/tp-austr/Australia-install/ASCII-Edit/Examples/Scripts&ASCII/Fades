@@ -1,0 +1,85 @@
+;Fade in...
+
+SETFONT topaz 8
+
+IF NOT Exists C:SetRGB
+  ECHO "First you must install the SetRGB tool!"
+  WAIT 2
+  ENDCLI
+ENDIF
+IF NOT Exists Fade.ASCII
+  ECHO "Can't open the Fade.ASCII file!"
+  WAIt 2
+  ENDCLI
+ENDIF
+
+COPY C:SetRGB RAM:
+COPY Fade.ASCII RAM:
+
+RAM:
+SetRGB >NIL: RESET
+SetRGB >NIL: 4,9,9,9 9,9,9 9,9,9 9,9,9
+
+TYPE Fade.ASCII
+
+;fade in colour 4 to 7 one by one...
+C:
+SetRGB >NIL: 4,8,8,8
+SetRGB >NIL: 4,7,7,7
+SetRGB >NIL: 4,6,6,6
+SetRGB >NIL: 4,5,5,5
+SetRGB >NIL: 4,4,4,4
+SetRGB >NIL: 4,3,3,3
+SetRGB >NIL: 4,2,2,2
+SetRGB >NIL: 4,1,1,1
+SetRGB >NIL: 4,0,0,0
+
+SetRGB >NIL: 5,8,8,8
+SetRGB >NIL: 5,7,7,7
+SetRGB >NIL: 5,6,6,6
+SetRGB >NIL: 5,5,5,5
+SetRGB >NIL: 5,4,4,4
+SetRGB >NIL: 5,3,3,3
+SetRGB >NIL: 5,2,2,2
+SetRGB >NIL: 5,1,1,1
+SetRGB >NIL: 5,0,0,0
+
+SetRGB >NIL: 6,8,8,8
+SetRGB >NIL: 6,7,7,7
+SetRGB >NIL: 6,6,6,6
+SetRGB >NIL: 6,5,5,5
+SetRGB >NIL: 6,4,4,4
+SetRGB >NIL: 6,3,3,3
+SetRGB >NIL: 6,2,2,2
+SetRGB >NIL: 6,1,1,1
+SetRGB >NIL: 6,0,0,0
+
+SetRGB >NIL: 7,8,8,8
+SetRGB >NIL: 7,7,7,7
+SetRGB >NIL: 7,6,6,6
+SetRGB >NIL: 7,5,5,5
+SetRGB >NIL: 7,4,4,4
+SetRGB >NIL: 7,3,3,3
+SetRGB >NIL: 7,2,2,2
+SetRGB >NIL: 7,1,1,1
+SetRGB >NIL: 7,0,0,0
+
+WAIT 3
+
+;Fade out all colours at ones...
+SetRGB >NIL: 4,1,1,1 1,1,1 1,1,1 1,1,1
+SetRGB >NIL: 4,2,2,2 2,2,2 2,2,2 2,2,2
+SetRGB >NIL: 4,3,3,3 3,3,3 3,3,3 3,3,3
+SetRGB >NIL: 4,4,4,4 4,4,4 4,4,4 4,4,4
+SetRGB >NIL: 4,5,5,5 5,5,5 5,5,5 5,5,5
+SetRGB >NIL: 4,6,6,6 6,6,6 6,6,6 6,6,6
+SetRGB >NIL: 4,7,7,7 7,7,7 7,7,7 7,7,7
+SetRGB >NIL: 4,8,8,8 8,8,8 8,8,8 8,8,8
+SetRGB >NIL: 4,9,9,9 9,9,9 9,9,9 9,9,9
+
+WAIT 3
+ECHO "*ec"
+SetRGB >NIL: RESET
+
+DELETE >NIL: RAM:Fade.ASCII
+DELETE >NIL: RAM:SetRGB

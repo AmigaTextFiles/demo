@@ -1,0 +1,135 @@
+
+
+       _______   _______   _______ ,æ¤'   ____ ___   ____      _______ _
+      /   ___/_ /  ___  \ /  __    ¾¾,   |    |   \ / ___|___ /  ____/// /
+    _/   |   .:Y   \_  .:Y  /     .`¾¾x, |    |  .:Y  \    .:Y  ____|____
+  .-\.   |     |    |    |  \_____/  °¾¾ð     |    |   \     |  \      ./-.
+  |:.\\        |____|____|____|       `¾¾ _________|_________|        //.:|
+  `---\________|_------------------- .¾¾' ------------------_|________/---'
+               :                    `°'                      :         lm!
+		
+			 Is proud to present
+		
+			      PHASE ONE
+		     (we didn't choose the name)
+
+
+Requirements: 68020 & 8 Mb
+
+Tested on:
+- A1200 Blizzard 030
+- A1200 Blizzard 060
+- A1200 BlizzardPPC 603+
+- A4000 CyberStorm PPC
+
+If you have problems running the demo on CyberStorm, try booting with
+no startup-sequence. This demo run Setpatch automatically if not
+runned before.
+Created for 030/50.
+Optimal configuration: Cyberstorm 060 or Blizzard 060. Please use
+latest 060.library for best chip memory performance.
+Please, keep in mind that general performance on BlizzardPPC 040 is
+MUCH lower than blizzard 030 due to bad memory speed and forced
+burstmode.
+Phase One has a bug in the second part; reset is recommended after
+running it for secure WB working!
+
+For those interested, some comments on the code:
+
+- The tunnel effect is a 320x200x256 1x1 raycasting running in one
+frame on 030@50 (still incomplete). The lightning has a resolution of
+1x8 (chip access sucks), but the result is still ok, don't you think
+so?  Both the texturemapping and the lightning are in planar. It's a
+real pity that a lot of coders work almost exclusively in chunky
+forgetting planar modes :-(
+
+- The cluster looks pathetic :-( Sorry. It was just to test a fast
+rotation method with no muls. We failed to make it look nice...
+
+- The doughnut... Reflex rulez! Mathematica rulez! C=64 lives forever!
+
+- The first effect of the second part is a 2D hypersphere projection
+(4D sphere) rotating in all 4 axis with a 'metaball' or 'metabob' in
+each vert.  The main idea was doing an envmapped hypersphere, but the
+thing got too complex (lots of polys and brain overflow when trying to
+figure out the face connections... Not enough IQ, sorry). If you want
+to try it we're willing to see one! :-) There's an hypercube example
+in an old NGC intro (space pig, i believe) if you want to see more 4D
+stuff...
+
+- The rotozoom is 320x192x16 and runs in 1 frame on 030@50. Not
+intended as a record, but shows how to do self-modifying code in a
+safe way.
+
+- Don't throw crappy effects to the trashcan... Just put a waste of
+time meter in your demo and use it ;-) (this relates to the zooming
+and rotating fragmented shit).
+
+- The sand part is a real time effect. No anims on this demo :).
+The sand function runs on vertical blanking to keep motion constant
+on every CPU. A lolly-pop to the first one guessing what the fuck
+this effect is.
+
+- The 3d engine: Sucks.
+
+- The hires+laced effect is 704x400 and uses a special c2p that skips
+zeroes when dumping to chip. The chunky buffer is scrambled and the
+whole code is a nightmare. Believe it or not, there're only 3
+bitplanes (that's, bplcon0=$b205) active on the whole screen. Much more
+complex than you could think at first sight.
+
+That's all about the code.
+
+
+Special thanks fly to:
+
+Humphrey: You can finally rest now. The nightmare is over. And we
+really hope your dreams are not full of textures! :-)
+
+Alvin/TLOTB: Thanks for the cool 3d world!
+
+Leunam: Forgive all the inconveniences...
+
+Made/Bomb - Cyclone/Abyss - Danny/TBL: Really cool gfx! Thanx!
+
+Dvize/LED: Sorry for changing the palette and the res... Hope you
+don't mind!
+
+Drareg & Skid/O3: You know why :-)
+
+Alain Malek: Some horrible bugs were killed thanks to HRT-Mon! Thanks,
+and keep making cool soft!
+
+And to all those who keep the Amiga scene alive!
+
+Personal greetings from Dr. Slump fly to:
+
+MaM, Wasi & Mijac: It's been a long time since last mail...
+
+
+No thanks to:
+
+BGIII & Wintel for fooling the whole (not yet :-) world. Will Z80 take
+over the world???
+
+Aznar and his "España va bien!" for bringing back slavery to Spain.
+
+TVE for beeing Aznar's puppet.
+
+Spice Bitches (and their Spanish counterparts) for beeing sooooooooo
+pathetic.
+
+Radio Amistad for fooling simple-minded people with their religious
+crap.
+
+MetallicA for reloading the shit (Good Old Times (tm) rulez!)
+
+Fresones Rebeldes for lowering Spain's average IQ.
+
+Leticia Sabater for imposing a stupid vocabulary to new generations.
+
+
+
+Phew! Enough.
+
+	Peskanov & Dr. Slump

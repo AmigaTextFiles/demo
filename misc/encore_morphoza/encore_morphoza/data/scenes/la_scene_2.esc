@@ -1,0 +1,521 @@
+{
+  "actions": [
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "int32_values": 0,
+            "time": 4167
+          },
+          {
+            "int32_values": 1,
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "la_scene_2"
+        }
+      ],
+      "loops": 1,
+      "name": "scene_hide",
+      "start_time": 0,
+      "type": "property_int32"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 1042
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 2083
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 1042
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "la_scene_2"
+        }
+      ],
+      "loops": 1,
+      "name": "scene_color",
+      "start_time": 0,
+      "type": "property_float"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "int32_values": 0,
+            "time": 3125
+          },
+          {
+            "int32_values": 1,
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "la_scene_2"
+        }
+      ],
+      "loops": 1,
+      "name": "start_scene",
+      "start_time": 0,
+      "type": "property_int32"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 4167
+          },
+          {
+            "float_values": 540.000001,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "flower"
+        }
+      ],
+      "loops": 1,
+      "name": "flowerAction",
+      "start_time": 0,
+      "type": "rotation_y"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              9.315643,
+              5.152346,
+              0.0,
+              9.315643,
+              5.152346,
+              0.0,
+              9.315643,
+              5.152346
+            ],
+            "interpolation": "bezier",
+            "time": 4167
+          },
+          {
+            "float_values": [
+              0.160502,
+              6.912065,
+              10.405078,
+              0.160502,
+              6.912065,
+              10.405078,
+              0.160502,
+              6.912065,
+              10.405078
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "camera_1"
+        }
+      ],
+      "loops": 1,
+      "name": "camera_1Action.002",
+      "start_time": 0,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -41.904198,
+              0.0,
+              -0.0,
+              -41.904198,
+              0.0,
+              -0.0,
+              -41.904198,
+              0.0,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 4167
+          },
+          {
+            "float_values": [
+              -21.450589,
+              0.0,
+              0.0,
+              -21.450589,
+              0.0,
+              0.0,
+              -21.450589,
+              0.0,
+              0.0
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "camera_1"
+        }
+      ],
+      "loops": 1,
+      "name": "camera_1Action.002",
+      "start_time": 0,
+      "type": "rotation_xyz"
+    }
+  ],
+  "cameras": [
+    {
+      "far_clip_plane": 100.0,
+      "fov_x": 49.134342,
+      "fov_y": 28.841546,
+      "hide": false,
+      "name": "camera_1",
+      "near_clip_plane": 0.1,
+      "position": [
+        0.0,
+        9.315643,
+        5.152346
+      ],
+      "rotation": [
+        -41.904198,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "enc_info": {
+    "data_type": "ENCSCN",
+    "date": "29 Mar 2020 20:25:04",
+    "version": "2.0"
+  },
+  "loops": 1,
+  "name": "la_scene_2",
+  "objects": [
+    {
+      "mesh_name": "la2_flower",
+      "name": "flower"
+    },
+    {
+      "mesh_name": "la2_flower_1_center_1",
+      "name": "flower_1_center_1",
+      "position": [
+        0.0,
+        4.758078,
+        -0.0
+      ],
+      "properties": {
+        "angle_z": 90.0,
+        "num_lines": 15,
+        "shape_object": 1
+      }
+    },
+    {
+      "mesh_name": "la2_flower_1_center_2",
+      "name": "flower_1_center_2",
+      "position": [
+        0.0,
+        4.758078,
+        -0.0
+      ],
+      "properties": {
+        "angle_x": 90.0,
+        "num_lines": 15,
+        "shape_object": 1
+      }
+    },
+    {
+      "mesh_name": "la2_flower_1_flake_1",
+      "name": "flower_1_flake_1",
+      "position": [
+        0.0,
+        4.758078,
+        -0.0
+      ],
+      "properties": {
+        "num_lines": 50,
+        "shape_object": 1
+      },
+      "rotation": [
+        270.000001,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "mesh_name": "la2_flower_1_flake_2",
+      "name": "flower_1_flake_2",
+      "position": [
+        0.0,
+        4.758078,
+        -0.0
+      ],
+      "properties": {
+        "num_lines": 50,
+        "shape_object": 1
+      },
+      "rotation": [
+        270.000001,
+        90.000003,
+        0.0
+      ]
+    },
+    {
+      "mesh_name": "la2_flower_1_flake_3",
+      "name": "flower_1_flake_3",
+      "position": [
+        0.0,
+        4.758078,
+        -0.0
+      ],
+      "properties": {
+        "num_lines": 50,
+        "shape_object": 1
+      },
+      "rotation": [
+        270.000001,
+        180.000019,
+        0.0
+      ]
+    },
+    {
+      "mesh_name": "la2_flower_1_flake_4",
+      "name": "flower_1_flake_4",
+      "position": [
+        0.0,
+        4.758078,
+        -0.0
+      ],
+      "properties": {
+        "num_lines": 50,
+        "shape_object": 1
+      },
+      "rotation": [
+        270.000001,
+        270.000001,
+        -0.0
+      ]
+    },
+    {
+      "mesh_name": "la2_flower_1_flake_5",
+      "name": "flower_1_flake_5",
+      "position": [
+        0.0,
+        4.758078,
+        -0.0
+      ],
+      "properties": {
+        "num_lines": 50,
+        "shape_object": 1
+      },
+      "rotation": [
+        270.000001,
+        45.000001,
+        0.0
+      ]
+    },
+    {
+      "mesh_name": "la2_flower_1_flake_6",
+      "name": "flower_1_flake_6",
+      "position": [
+        0.0,
+        4.758078,
+        -0.0
+      ],
+      "properties": {
+        "num_lines": 50,
+        "shape_object": 1
+      },
+      "rotation": [
+        270.000001,
+        135.0,
+        0.0
+      ]
+    },
+    {
+      "mesh_name": "la2_flower_1_flake_7",
+      "name": "flower_1_flake_7",
+      "position": [
+        0.0,
+        4.758078,
+        -0.0
+      ],
+      "properties": {
+        "num_lines": 50,
+        "shape_object": 1
+      },
+      "rotation": [
+        270.000001,
+        225.000023,
+        -0.0
+      ]
+    },
+    {
+      "mesh_name": "la2_flower_1_flake_8",
+      "name": "flower_1_flake_8",
+      "position": [
+        0.0,
+        4.758078,
+        -0.0
+      ],
+      "properties": {
+        "num_lines": 50,
+        "shape_object": 1
+      },
+      "rotation": [
+        270.000001,
+        -45.000005,
+        -0.0
+      ]
+    },
+    {
+      "mesh_name": "la2_flower_1_leaf_1",
+      "name": "flower_1_leaf_1",
+      "position": [
+        0.0,
+        3.335863,
+        -0.0
+      ],
+      "properties": {
+        "num_lines": 40,
+        "shape_object": 1
+      },
+      "rotation": [
+        270.000001,
+        34.215761,
+        0.0
+      ]
+    },
+    {
+      "mesh_name": "la2_flower_1_leaf_2",
+      "name": "flower_1_leaf_2",
+      "position": [
+        0.0,
+        2.477932,
+        -0.0
+      ],
+      "properties": {
+        "num_lines": 40,
+        "shape_object": 1
+      },
+      "rotation": [
+        270.000001,
+        -62.908044,
+        0.0
+      ]
+    },
+    {
+      "mesh_name": "la2_flower_1_leaf_3",
+      "name": "flower_1_leaf_3",
+      "position": [
+        0.0,
+        1.713076,
+        -0.0
+      ],
+      "properties": {
+        "num_lines": 40,
+        "shape_object": 1
+      },
+      "rotation": [
+        270.000001,
+        -185.666904,
+        -0.0
+      ]
+    },
+    {
+      "mesh_name": "la2_flower_1_stalk_1",
+      "name": "flower_1_stalk_1",
+      "position": [
+        0.0,
+        4.413426,
+        -0.0
+      ],
+      "properties": {
+        "num_lines": 45,
+        "rnd_xz": 0.0,
+        "shape_object": 1
+      }
+    },
+    {
+      "mesh_name": "la2_flower_1_stalk_2",
+      "name": "flower_1_stalk_2",
+      "position": [
+        0.0,
+        3.602406,
+        -0.0
+      ],
+      "properties": {
+        "num_lines": 65,
+        "rnd_xz": 0.0,
+        "shape_object": 1
+      }
+    },
+    {
+      "mesh_name": "la2_flower_1_stalk_3",
+      "name": "flower_1_stalk_3",
+      "position": [
+        0.0,
+        2.403635,
+        -0.0
+      ],
+      "properties": {
+        "num_lines": 80,
+        "rnd_xz": 0.0,
+        "shape_object": 1
+      }
+    },
+    {
+      "mesh_name": "la2_flower_1_stalk_4",
+      "name": "flower_1_stalk_4",
+      "position": [
+        0.0,
+        1.079706,
+        -0.0
+      ],
+      "properties": {
+        "num_lines": 80,
+        "rnd_xz": 0.0,
+        "shape_object": 1
+      }
+    }
+  ],
+  "properties": {
+    "scene_color": 0.0,
+    "scene_hide": 0,
+    "start_scene": 0
+  },
+  "time": 4167
+}

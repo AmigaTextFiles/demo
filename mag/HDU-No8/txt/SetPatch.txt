@@ -1,0 +1,25 @@
+================================================
+workbench/c/setpatch
+================================================
+
+Patch for mathieeesingbas.library Mul/Div FPU handling.
+Patch for the OS copyright. 
+
+Patch for WritePixelLine8() trashing the source.
+Froze 43.4.
+Fixed V39 ScreenQuiet patch.
+Froze 43.5.
+Added BOOL CheckIO() patch to help WB and others
+Froze 43.6.
+
+Make a copy of your old SetPatch before testing the V43 
+SetPatch. The V43 SetPatch should work well with any OS >= 
+V37. Please send in a short report if it WORKS WELL, too!
+
+The CheckSetPatch.c code fragment may help some software 
+developers to internally turn off workarounds for OS bugs 
+conditionally. *NOTE* : prior to the December 1997 release of 
+this archive, the CheckSetPatch.c function had a bug in the 
+version check.
+
+Heinz Wrobel

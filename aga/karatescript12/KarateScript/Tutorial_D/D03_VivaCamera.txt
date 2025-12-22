@@ -1,0 +1,197 @@
+
+ Are you ready to feel the powerness of the karate engine ? :-)
+
+ as ALL drawn effects, 3D or not, can be piloted with a camera in karate,
+why couldn't we have a little fun ?
+
+ Here we pilot a camera with <KTABLE >s and the parameter "aftmod"
+ (see tut B05.) Then a ground-ceiling is displayed using
+ command "ground". Then , sprites are set over all that, but
+ using the same camera , and even a whole sub-rectangle
+ is there in the space with another recursive-effect in it.
+
+ Very interesting for chainings effect !
+
+
+ All this giving the feeling of a consistant space.
+ note the o1-axeZ rotation doesn't affect the "4cam" rectangles.
+ (rectangles can't rotate this way.)
+ despite that, everything is mathematically correct.
+
+
+--------------------------------------------------------------------
+<MAIN> myscript |0|1</MAIN>              the main script to play...
+
+<KIMG> texture256x256 | data/texture1.iff </KIMG>
+<KIMG> texture256x256_2 | data/texture2.iff </KIMG>   let's create an image.
+                                                    Note this image must be 256x256.
+<KIMG> impacman | data/oldpac.iff </KIMG>       These one, used for sprites
+<KIMG> imghost  | data/ghost1.iff </KIMG>       can be any-sized.
+<KIMG> imghost2  | data/inky.iff </KIMG>
+
+<KIMG> halo | data/halo.iff </KIMG>
+
+
+
+<KCAM> cam_1 |0|0|0|0|0|0|1  </KCAM> camera (x,y,z,o1,o2,o3,FOV)
+
+<KCOLORTABLE> coltab1 | data/remaptable.iff |0|255|255|255    </KCOLORTABLE>
+
+ our sub-rectangle:
+
+<KRECT> rec3d   |0|0|1|1|  |0|0|1|1| </KRECT>
+
+--------------------------------------------------
+<KSCRIPT>                           let's write a script to play.
+
+
+    <ID> myscript </ID>
+
+    <PLAY> mypart | 10000 | 0 | 1 </PLAY>
+
+</KSCRIPT>
+--------------------------------------------------------
+<KPART>
+
+    <ID> mypart </ID>
+
+    <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> texture256x256_2 </Pa>   we have seen each image stands for a 256 color palette too.
+    </Fx>
+
+ Let us write a complete camera motion:
+
+<KTABLE> cam_x | 0,0 | 200,0   |300,2.2|400,0  |500,-2.2|550,-1   |700,-3 |900,0|1200,0</KTABLE>
+<KTABLE> cam_y | 0,-0.5 | 200,0|300,0|400,0  |500,0     |550,0.8 |700,-0.8|900,0|1200,0</KTABLE>
+<KTABLE> cam_z | 0,0 | 200,3   |300,4|400,5.5|500,4     |550,3.5 |700,3   |900,0|1200,0</KTABLE>
+
+<KTABLE> cam_tx | 0,0 | 200,0 |550,0 |700,0   |900,0|1200,0</KTABLE>
+<KTABLE> cam_ty | 0,0 | 200,0 |550,0 |700,0.2 |900,0|1200,0</KTABLE>
+<KTABLE> cam_tz | 0,4 | 200,4 |550,4 |700,-1  |900,-1|1200,-1</KTABLE>
+
+<KTABLE> cam_o1 | 0,0 |300,0 | 400,-0.2|600,0.2 | 700,0 |900,0 |1200,0</KTABLE>
+
+    <Fx><Pa> SetCamTarget </Pa>
+            <Pa> cam_1 </Pa>
+
+            <Pa> aftmod | cam_x |0|0 </Pa>    x camera
+            <Pa> aftmod | cam_y |0|0 </Pa>        y camera
+            <Pa> aftmod | cam_z |0|0 </Pa>    z camera
+
+            <Pa> aftmod | cam_tx |0|0  </Pa>    x target
+            <Pa> aftmod | cam_ty |0|0  </Pa>    y target
+            <Pa> aftmod | cam_tz |0|0  </Pa>    z target
+
+            <Pa> aftmod | cam_o1 |0|0  </Pa>  angle rotation axe z
+            <Pa> aftmod | cam_fov |0|0 </Pa>       fov
+            </Fx>
+<KTABLE> cam_fov | 0,1 | 200,0.4 |700,0.4 |900,1|1200,1</KTABLE>
+
+
+    <Fx><Pa> Ground </Pa>
+            <Pa> </Pa>          rectangle where to draw.
+            <Pa> texture256x256_2 </Pa>      256x256 image to deform.
+            <Pa> cam_1 </Pa>     camera
+
+            <Pa>cte|1</Pa>          ceiling dist.
+            <Pa>CTE|1</Pa>          floor dist
+
+            <Pa>CTE|0</Pa>          ?
+            <Pa>CTE|0</Pa>          ?
+            <Pa>CTE|0</Pa>          mapping type: 0= normal
+            </Fx>
+
+------ let's draw another 2d effect in a 3d env rec !! -------
+
+    <fx><pa> setrect  </pa>
+        <pa> rec3d </pa>
+        <Pa> 4cam| cam_1 |1|1|0|0|-1 </Pa>
+        <Pa> 4cam| cam_1 |1|1|0|0|-1 </Pa>
+    </fx>
+    <Fx><Pa> Warper </Pa>
+            <Pa> rec3d </Pa>              the rectangle where to draw
+            <Pa> texture256x256 </Pa> the 256x256 texture to deform
+
+            <Pa>CTE|0.8</Pa>        a zoomx rate
+            <Pa>CTE|0.8</Pa>        a zoomy rate
+            <Pa>SIN|0|0.5|0.03</Pa> texture offset x
+            <Pa>COS|0|0.5|0.03</Pa> texture offset Y
+
+            <Pa>CTE|0.6</Pa>        amplitude of deformation
+            <Pa>CTE|0.2</Pa>        frequency of deformation
+            <Pa>SIN|0|0.4|2</Pa>    X offset of the deformation
+            <Pa>COS|0|0.6|2</Pa>    Y...
+
+            <Pa>CTE|0</Pa> mapping type
+    </Fx>
+
+   
+---- let's add lens flares !!! ----
+
+    <Fx><Pa> PlayPart  </Pa><Pa> drawHalo_part </Pa><Pa>aff|0|1</Pa></Fx>
+
+---- + 1 sprite :-) at the corner ---------
+      ( never forget to be smart !!! )
+
+    <Fx><Pa> Sprite </Pa>
+        <Pa></Pa>
+        <Pa> imghost   </Pa>
+        <Pa> 4cte|0|0|0.15|0.15 </Pa>
+    </Fx>
+
+
+
+</KPART>
+--------------------------------------------------------
+///<KPART><ID> drawHalo_part </ID>
+
+
+   <Fx><Pa> SpriteLight </Pa>
+        <Pa></Pa>
+        <Pa> halo </Pa>
+        <Pa> 4cam| cam_1 |1|1|-1|0|4 </Pa>
+        <Pa> coltab1   </Pa>                    colortable
+        <Pa> cte | 1 </Pa>                        transparency rate.
+    </Fx>
+
+   <Fx><Pa> SpriteLight </Pa>
+        <Pa></Pa>
+        <Pa> halo </Pa>
+        <Pa> 4cam| cam_1 |1|1|1|0|4 </Pa>
+        <Pa> coltab1   </Pa>                    colortable
+        <Pa> cte | 1 </Pa>                        transparency rate.
+    </Fx>
+
+
+   <Fx><Pa> SpriteLight </Pa>
+        <Pa></Pa>
+        <Pa> halo </Pa>
+        <Pa> 4cam| cam_1 |1|1|0|-0.7|4 </Pa>
+        <Pa> coltab1   </Pa>                    colortable
+        <Pa> cte | 1 </Pa>                        transparency rate.
+    </Fx>
+
+   <Fx><Pa> SpriteLight </Pa>
+        <Pa></Pa>
+        <Pa> halo </Pa>
+        <Pa> 4cam| cam_1 |1|1|0|0.7|4 </Pa>
+        <Pa> coltab1   </Pa>                    colortable
+        <Pa> cte | 1 </Pa>                        transparency rate.
+    </Fx>
+
+ behind
+
+   <Fx><Pa> SpriteLight </Pa>
+        <Pa></Pa>
+        <Pa> halo </Pa>
+        <Pa> 4cam| cam_1 |1|1|0|0|5 </Pa>
+        <Pa> coltab1   </Pa>                    colortable
+        <Pa> cte | 1 </Pa>                        transparency rate.
+    </Fx>
+
+
+///</KPART>
+--------------------------------------------------------
+
+

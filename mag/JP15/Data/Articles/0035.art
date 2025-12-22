@@ -1,0 +1,96 @@
+!compatible
+demo coding
+61
+µJCµF2µC0compatible demo-coding
+by kas1e@yandex.ru
+
+µJEµC1µF1Well, it's me again. Not tired with me still ?:) If not, that's good. If yes, better try to read this article at some other day. What we talk about here? We'll talk about compatible demo-coding under Amiga OS and Morphos for all Amigas (and amiga like) hardware: classic/a1/pegasos/.
+
+First, I' like to say: Stop this stupid little war. Don't act as kiddies. All kind of software/hardware is interesting. a1/os4 - is good, pegasos/mos - is good, too. Classic miggies with aos3/4/mos are very good, as well! There's no need to split up the little Amiga scene in tons of parts. Okay, it has already done by hardware dealer, but coders! Don't be fools and don't follow their way, please! :)
+
+So. What is a demo ? (again this phrase!) But I mean what is it from coders side ? It is coding of:
+
+1. music (playing, timing, etc.)
+2. graphics (rendering, unpacking, etc.)
+
+µI0214
+
+Also joining all parts to one and do some coder things like synchro, design, optimizing.
+ 
+Let's look on the Amiga situation today. What do we have? We have old classic Amiga hardware such as a1200, a4000 (I do not talk about esc machines) with 68k/ppc cards and gfx boards. New age hardware: Amiga one (and some unreleased clones) and some hardware versions of pegasos machines, also with full 'transparently' 68k emulation (jit and kind of) and ppc with gfx boards.
+
+But, I'd like to say that the emulation of a classical Amiga mostly ends on full 68k emulation only. For example os4 can't emulate 'transparently' paula/ciaa, and it is not possible for example to use ptreplay.library (which uses the ciaa.resource).
+
+I knowingly didn't talk about uae/winuae. because they are just 'external' programs for emulating classic Amigas. But what in case you'd like to use a classic Amiga with warp3d support? 
+
+Yes, it is possible to add warp3d emulation to uae of course (for winuae for example it is already here, and called QuarkTex, but is so buggy, still). But, if you write WOS applications (for classic, but for the warpos ppc kernel) ? So, all of these questions just move uae to trash when speaking of Amiga demo-coding today. Also the problem with 'external' emulators gets us away from aga coding.
+
+Well, what we need ? Full compatible music players of modules or mp3. It is the minimum what we need here, which which will work on classic/a1/peg. Also, full compatible render libraries (or our codes) for unpacking/etc. of pictures, textures, sprites, etc. So, here is my humble opinion about it:
+
+
+µC0---music
+
+µC1Of course it must work by using AHI. it MUST work over AHI. If you write stuff which work by AHI, it will work on any Amiga machine today. What we can use for it ?
+
+1. dbplayer.library. It can be found on Aminet as 'dbplayer.lha'. This library works fine with AHI, and can play digibooster modules. In this case it is no problem to convert protracker modules into dbm's. Just open the pt module into digibooster and save them as dbm.
+I didn't try to use this library on pegasos, only on a1/a1200. So, here could occur problems, by try it out yourself of coure. The usage of the dbmplayer.library looks pretty easy:
+   
+1. Open dbplayer.library and we have DBPlayerBase.
+2. open db module and read to buffer.
+3. DBM_StartModule();
+   blablabla
+4. DBM_StopModule(); 
+
+
+Looks very simple, right?
+
+
+2. Ptplay. This, what I use. Ptplay this is not a library, it's just a source from http://www.neoscientists.org/~tmueller/ptplay/ which we must rewrite a bit for normal usage and adding to your stuff. Yes, it is not as easy as a library, but it works on classic/a1/peg. I am using it already and tested it of course.
+
+Ptplay does look not so simple as ptreplay, but Timm S. Mueller told me that is can be like ptreplay:
+µC0  ptmod = pt_init(modbuf, buflen, mixfreq);
+  while (!finished)
+   {
+     pt_render(ptmod, buffer_left, buffer_right, bytes_per_sample,
+     num_samples, 1, 16, 2);  /* no oversample, 16 bit, stereo */
+     playaudio(buffer_left, buffer_right, num_samples);
+   }
+     pt_free(ptmod);
+
+µC1But as I said, this isn`t as hard like that :)
+
+(thanks to Timm S. Mueller )
+  
+
+3. Mpega.library for mp3 playing. Here we have to do a bit more work and you must create a code for mp3 unpacking over mpega.library and play this raw data over ahi. Here we go:
+ 
+1. open mpega.library and we have MPEGABase
+2. filled right mpega structs (look at mpega docs)
+3. set up ahi (ahi request, open ahi device)
+4. create 'decode' part of mp3 over mpega (MPEGA_decode_frame() );
+5. send raw data buffer of decode frame to ahi (plaing)
+6. loop (5) while mp3 didn't end.
+
+(thanks to Brian Donahue)
+
+Also, I want to add some sentences about music. In a good case it may look like this: For classic Amigas we use ptreplay.library (over ciaa.resource), for aos4/mos create an ahi version over ptplay or dbplayer. Ptreplay.library using look like dbm library, and has some good effects like 'fade in/out' of the module:
+
+1. Open ptreplay.library and we have PTReplayBase.
+2. Open pt module file and read to buffer.
+3. PTPlay() , PTFade(), PTStop(), etc. 
+
+
+µC0---graphics
+
+µC1Graphics. So, here is a question: What you want to use ? If you do not want to use hardware acceleration (warp3d), you may just use CGX/P96 fuctions, like WritePixelArray or something (p96/cgx also supported by classic/a1/peg). For example, aminet provides jpeg.library, which is realy easy to use to unpack of jpg pics, and with WritePixelArray you can easily work with it. Take a look here:
+          
+1. we open jpeg.library and have JpegBase
+2. we open cybergprahics.library and have CyberGfxBase
+3. load jpeg to buffer and when jpeg.library calls AllocJPEGDecompress, AllocBufferFromJPEG, DecompressJPEG just decompress jpeg to raw data. (it works fast with righ flags)
+4. by WritePixelArray (for example) just draw uncompressed data to our (already opened in code, I just missed to mentionit) screen or window
+
+But! Mention please that this will be VERY slow. I mean decompressing is fast, but the WritePixelArray function SUCKS HARD TIME! You can blame me again, but I said, that warp3d (or minigl) is the best solution for this situation. I could speak about warp3d here, but the best way would be. Just read my articles 'warp3d dancing' and watch my examples :)
+
+Also, for graphics you can use render.library, guigfx.library. It works on all machines, but it SUCKS. It is damn slow, and does not provide using fast work with hi-resolution data. (for example take a look on new 7days polish emag, all is very good, but scrolling, fade, and speed drawring of some part of data is SLOW. Of course it will work fast on pegasos/a1, but we talk about FULL speed and a good compartiblity over all Amiga machines. So. these are my 10 cents, my opinion. Maybe it was interesting for someone, too.
+
+Also, if you have some updates or corrections towards this text, write me mail, I am very interested in this sort of stuff ;-) Cu all! Kas1e

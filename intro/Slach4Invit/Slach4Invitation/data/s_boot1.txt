@@ -1,0 +1,68 @@
+<MAIN> bootscript1  |0|1  </MAIN>
+
+<KSCRIPT><ID> bootscript1 </ID>
+    <PLAY> bootpart1 |500  |0|1  </PLAY>
+</KSCRIPT>
+
+<KRECT> redim   |0.2|0.2|0.8|0.8|  |0.2|0.2|0.8|0.8|     </KRECT>
+
+<KRECT> red   |0|0.4|1|0.6| redim |0|0|1|1| redim    </KRECT>
+<KRECT> black |0.01| 0.41 | 0.99 | 0.59 | redim    |0|0|1|1| redim </KRECT>
+<KRECT> progbar  |0.02|0.42|0.98 | 0.58 | redim   |0|0|1|1| redim    </KRECT>
+
+
+<KIMG>  imch1  |data/littlechild1.iff   </KIMG>
+<KIMG>  imch2  |data/littlechild2.iff   </KIMG>
+
+<KPART>
+        <ID>    bootpart1 </ID>
+
+        <Fx>
+            <Pa>SetPalette</Pa>
+            <Pa> imch1 </Pa>
+        </Fx>
+
+    <Fx><Pa>FillRC</Pa>
+        <Pa> red </Pa>
+        <Pa>CTE|32</Pa>
+    </Fx>
+
+    <Fx><Pa>FillRC</Pa>
+        <Pa> black </Pa>
+        <Pa>CTE|0</Pa>
+    </Fx>
+
+<ktable> from0to100 | 0,0.02 | 500,0.98 </ktable>
+
+    <Fx><Pa>SetRect</Pa>
+            <Pa> progbar </Pa>
+            <Pa>CTE|0.02</Pa>
+            <Pa>CTE|0.42</Pa>
+            <Pa>AFT| from0to100 | 0 | 0 </Pa>
+            <Pa>CTE|0.58</Pa>
+
+            <Pa>4CTE|0|0|1|1</Pa>
+    </Fx>
+
+
+    <Fx><Pa>FillRC</Pa>
+        <Pa> progbar </Pa>
+        <Pa>CTE|20</Pa>
+    </Fx>
+
+    <Fx><Pa>sprite</Pa>
+        <Pa>  </Pa>
+        <Pa> imch1 </Pa>
+        <Pa>4CTE|0|0.38|0.2|0.56</Pa>
+    </Fx>
+
+    <Fx><Pa>sprite</Pa>
+        <Pa>  </Pa>
+        <Pa> imch2 </Pa>
+        <Pa>4CTE|0.85|0.38|1|0.56</Pa>
+    </Fx>
+
+
+</KPART>
+
+

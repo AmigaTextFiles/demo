@@ -1,0 +1,205 @@
+
+ Welcome in the Second part of the Karate 3D plugin tutorial.
+Now this engine implements some more complex texture rendering.
+
+ You will learn about 2 new textures constructors in this tutorial,
+ and some effects to use them:
+
+----------------------------------------- < t3dgoureau>
+< t3dgoureau> label |
+    64 pix width grey 64 color lightning | colortable | transparency rate </t3dgoureau>
+
+
+ Goureau was the name of an engeneer that invented a way to draw the light
+ shading on polygons. Anyway, run this example to see what it looks like.
+
+ For the moment, karate doesn't manage light source objects: so, a trick
+ is used to fake a lighting environment in the 3d world:
+ It is drawn on a bitmap image, representing a lit sphere.
+This image must be a 64x64 pixel bitmap, with a grey shade using colors 0-63.
+ look the example: data/lightmapgrey64.iff .
+
+ It is quite tricky to use images to describe a light environment,
+ but you can then imagine some tricks with texture rendering.
+
+< t3dgoureau> then uses a colortable as parameter, to make a transparent
+colorshade with the colors behind. The color of the light is defined by the
+second part of the colortable. In this example, "coltab1" define the light color
+as (255,255,255), it means white. You can define a red light or anything.
+
+ The last parameter is the rate of the transparency, from 0.0 to 1.0.
+ after texture construction, you can change this transparency rate in real time,
+ using effect "SetT3dShade" like in the frame part.
+
+ -------------------------------------- < t3dmapgoureau>
+
+ The other goureau rendering in karate is  < t3dmapgoureau> :
+
+ < t3dmapgoureau> label |
+    256 pixel texture | 64 pix width grey 64 color lightning | colortable  </t3dmapgoureau>
+
+ it is the basically the same as < t3dmapping>, a simple texture mapping
+ using a 256 pixel texture,  plus a goureau shade using a light bitmap the same
+ way as < t3dgoureau>, and a colortable to mix the color of the texture with the
+ lightning.
+
+ Actually, the colotable system has been extended for this rendering.
+ Like before, colortable constructors parameters end with:
+
+ - the palette-to-palette mix description (0=50%tranparency, 1=additive, 2=multiplied)
+ - the palette-to-light-fade description: Red, green, blue components (0,255)
+
+ now it can be extended by 3 other parameters:
+ - the palette-to-dark-fade description: Red, green, blue components (0,255)
+
+ If this 3 parameters are set, it creates a fade down used by the texture.
+ if they are not defined, normal colors are used for dark colors.
+
+ You will see colortable "coltab2" extends the fade table to a black (0|0|0) color.
+then "coltab2" is used by  < t3dmapgoureau> as colortable. Try to change these values!
+
+ ---------------------------------------
+
+<KCOLORTABLE> coltab1 | data/remaptable.iff |0|  255|  255|255 </KCOLORTABLE>
+<KCOLORTABLE> coltab2 | data/remaptable.iff |1|  255|  255|255|0|0|0 </KCOLORTABLE>
+
+
+<kimg> i_logo | data/logozaac.iff </kimg>
+<kimg> i_texture256x256 | data/txt4.iff </kimg>
+
+ the image that stands for the light source:
+<kimg> i_lightmapGrey | data/lightmapgrey64.iff </kimg>
+
+<t3dgoureau> t_GoureauShade |i_lightmapGrey | coltab1 | 1.0 </t3dgoureau>
+
+<t3dmapgoureau> t_mapGoureau | i_texture256x256 |i_lightmapGrey | coltab2 </t3dmapgoureau>
+
+
+<KCAM> the_camera |0|0|-3|0|0|0|0.5  </KCAM> camera (position: x,y,z rotation: o1,o2,o3, FOV focale length. )
+
+<World3D> world1 </World3D>
+<World3D> world2 </World3D>
+
+<tore> o_Gtore1 | world1 |0|0|0|0|0|0|1|1|1|
+        12 | 8 | 1.2 | 0.6 | 0|0.0|0.00|1|1 |t_GoureauShade|t_GoureauShade|t_GoureauShade|t_GoureauShade </tore>
+<tore> o_Gtore2 | world2 |0|0|0|0|0|0|1|1|1|
+        12 | 8 | 1.2 | 0.6 | 0|0.0|0.00|1|1 |t_mapGoureau|t_mapGoureau|t_mapGoureau|t_mapGoureau </tore>
+
+ trick to optimise the karate sprite by clipping a rendering rectangle:
+<KRECT> rec_sprite  |0|0.3|1|0.6|
+                    |0|0|1|1|  </KRECT>
+
+ we will do a nice scrolling rectangle to pass from world1 drawing
+ to world 2 drawing:
+
+<KRECT> rec_w |0|0|1|1| |0|0|1|1|  </KRECT>
+
+<Main> myscript |0|1</Main>
+
+<KScript>
+    <Id> myscript </Id>
+    <Play> mypart | 1950 | 0 | 1 </Play>
+</KScript>
+
+
+<KPART>
+    <ID> mypart </ID>
+
+
+    <Fx><Pa>setpalette</Pa>  set the screen palette
+        <Pa> i_logo </Pa>
+    </Fx>
+
+
+    <Fx><Pa>fillrc</Pa>  clear the screen background
+        <Pa>  </Pa>
+        <Pa> cte | 24 </Pa>
+    </Fx>
+
+   <Fx><Pa>Sprite</Pa> draw the logo
+        <Pa> rec_sprite </Pa>
+        <Pa> i_logo </Pa>
+        <Pa> 4cte |0.1|0.1|0.9|0.9 </Pa>
+    </Fx>
+
+   <Fx><Pa> SetT3dShade </Pa>  Change texture's transparency rate:
+        <Pa> t_GoureauShade </Pa>
+        <Pa> coltab1 </Pa>
+        <Pa> afclip|0|0.006|0|200.0 </Pa>
+    </Fx>
+
+
+    'Set3DObject' provide a way to modify an object position, rotations,
+    and scale applied to the object. The new values override the ones defined
+    in the object's constructor.
+
+   <Fx><Pa> Set3DObject </Pa>      make the cube rotate all the time on the 3 axis:
+        <Pa> o_Gtore1 </Pa>        (note our_cube is attached to world1.)
+
+        <Pa> 3cte |0|0|0  </Pa>     set at position 0,0,0
+
+        <Pa> aff |0.4|0.006 </Pa>   rotation: make angles follow affine curve.
+        <Pa> aff |0|0.011</Pa>
+        <Pa> aff |0.8|0.00</Pa>
+
+        <Pa> 3cte|1|1|1 </Pa>       scale always set to 1,1,1.
+    </Fx>
+
+    scrol the rectangles:
+<ktable> screenscrol |0,1|300,1|500,0.4|600,0.6|700,0|2000,0 </ktable>
+   <Fx><Pa> setrect </Pa>
+            <Pa> rec_w  </Pa>
+            <Pa> 2cte|0|0 </Pa> clip rectangle
+            <Pa> aft | screenscrol |0|0 </Pa>
+            <Pa> cte|1 </Pa>
+            <Pa> 4cte|0|0|1|1 </Pa> pos rectangle
+
+    </Fx>
+
+
+    'Draw3DWorld' is the effect that draw the world:
+
+      <Fx><Pa> Draw3DWorld </Pa>
+            <Pa> rec_w  </Pa>        the rectangle where to draw (here: default)
+            <Pa> world1 </Pa>      the 3D world to draw !
+            <Pa> the_camera </Pa>  note camera postion is 0,0,-3, looking 0,0,0.
+            <Pa> cte|0 </Pa>       time march, may be used for some lightwave stuffs...
+            <Pa> cte|0.25 </Pa>    near-cut-plane distance to camera (must be >0)
+            <Pa> cte|20</Pa>       far-cut-plane distance to camera (must be >near)
+        </Fx>
+
+ <ktable> tore_zoom_in |0,0|1600,0|2000,-5 </ktable>
+  <Fx><Pa> Set3DObject </Pa>      make the cube rotate all the time on the 3 axis:
+        <Pa> o_Gtore2 </Pa>        (note our_cube is attached to world1.)
+
+        <Pa> 2cte |0|0|0  </Pa>     set at position 0,0,0
+        <Pa> aft |tore_zoom_in|0|0  </Pa>
+        <Pa> aff |0.4|0.006 </Pa>   rotation: make angles follow affine curve.
+        <Pa> aff |0|0.011</Pa>
+        <Pa> aff |0.8|0.00</Pa>
+
+        <Pa> 3cte|1|1|1 </Pa>       scale always set to 1,1,1.
+    </Fx>
+
+  <Fx><Pa> setrect </Pa>
+            <Pa> rec_w  </Pa>
+            <Pa> aft | screenscrol |0|0 </Pa>
+            <Pa> cte|0</Pa>
+            <Pa> 2cte|1|1 </Pa> clip rectangle
+            <Pa> 4cte|0|0|1|1 </Pa> pos rectangle
+
+    </Fx>
+    'Draw3DWorld' is the effect that draw the world:
+
+      <Fx><Pa> Draw3DWorld </Pa>
+            <Pa> rec_w  </Pa>        the rectangle where to draw (here: default)
+            <Pa> world2 </Pa>      the 3D world to draw !
+            <Pa> the_camera </Pa>  note camera postion is 0,0,-3, looking 0,0,0.
+            <Pa> cte|0 </Pa>       time march, may be used for some lightwave stuffs...
+            <Pa> cte|0.25 </Pa>    near-cut-plane distance to camera (must be >0)
+            <Pa> cte|20</Pa>       far-cut-plane distance to camera (must be >near)
+        </Fx>
+     
+</KPART>
+
+

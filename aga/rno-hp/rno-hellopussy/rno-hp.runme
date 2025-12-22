@@ -1,0 +1,6 @@
+setpatch quiet
+assign env: exists >nil:
+if warn
+	assign env: ram:
+endif
+rno-hp

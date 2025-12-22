@@ -1,0 +1,202 @@
+; sorry for the scruffiness of this loader. i just wrote a DOS file
+; reader, then bolted on a prewritten demo-startup, then hacked it to
+; get all the regs right before entry.
+
+_LVOOldOpenLibrary=-408
+_LVOSupervisor=-30
+_LVOAllocMem=-198
+_LVOFreeMem=-210
+_LVOOpen=-30
+_LVOClose=-36
+_LVORead=-42
+_LVODelay=-198
+
+_custom	EQU	$DFF000
+intreqr	EQU	$1E
+dmacon	EQU	$96
+intreq	EQU	$9C
+
+LIB_VERSION	EQU	$14
+MEMF_PUBLIC	EQU	1
+MEMF_CHIP	EQU	2
+MODE_OLDFILE	equ	1004
+
+demo_size	equ	$71800
+music_size	equ	$31A00
+
+	move.l	4.w,a6
+	lea	dosname(pc),a1
+	jsr	_LVOOldOpenLibrary(a6)
+	tst.l	d0
+	beq	exit
+	move.l	d0,a5
+
+	move.l	#demo_size,d0
+	move.l	#MEMF_PUBLIC,d1
+	jsr	_LVOAllocMem(a6)	; alloc mem for demo
+	move.l	d0,d7
+	beq	exit
+	move.l	d0,demo_mem
+
+	exg.l	a5,a6
+	lea	demoname(pc),a0
+	move.l	a0,d1
+	move.l	#MODE_OLDFILE,d2
+	jsr	_LVOOpen(a6)
+	move.l	d0,d6
+	beq	free_demo
+	move.l	d0,d1
+	move.l	d7,d2
+	move.l	#demo_size,d3
+	jsr	_LVORead(a6)
+	move.l	d0,d5
+	move.l	d6,d1
+	jsr	_LVOClose(a6)
+	cmp.l	#demo_size-3000,d5
+	blt	free_demo
+
+	exg.l	a5,a6
+	move.l	#music_size,d0
+	move.l	#MEMF_PUBLIC!MEMF_CHIP,d1
+	jsr	_LVOAllocMem(a6)	; alloc mem for demo
+	move.l	d0,d7
+	beq	free_demo
+	move.l	d0,mus_mem
+
+	lea	musicname(pc),a0
+	move.l	a0,d1
+	move.l	#MODE_OLDFILE,d2
+	exg.l	a5,a6
+	jsr	_LVOOpen(a6)
+	move.l	d0,d6
+	beq	free_music
+	move.l	d0,d1
+	move.l	d7,d2
+	move.l	#music_size,d3
+	jsr	_LVORead(a6)
+	move.l	d0,d5
+	move.l	d6,d1
+	jsr	_LVOClose(a6)
+	cmp.l	#music_size-3000,d5
+	blt	free_music
+
+	move.l	#60,d1
+	jsr	_LVODelay(a6)
+
+	exg	a5,a6
+	move.l	demo_mem,a0
+	bsr	relocate
+	lea	demo_addr(pc),a0
+	move.l	a1,(a0)
+	move.l	mus_mem,a0
+	bsr	relocate
+	move.l	a1,a5
+
+	jsr	-132(a6) ; _LVOForbid
+	move.l	#1024,d0
+	moveq.l	#1,d1
+	jsr	-198(a6) ; _LVOAllocMem
+	tst.l	d0
+	beq.s	nomem
+	move.l	d0,-(sp)
+	move.l	d0,a4
+	move.l	#0,a6
+	move.l	#255,d0
+savevbr	move.l	(a6)+,(a4)+
+	dbra	d0,savevbr
+	lea	$dff000,a4
+	lea	tempcop(pc),a0
+	move.l	a0,$80(a4)
+	move.w	#$7fff,d0
+	move.w	$1c(a4),-(sp)
+	or.w	#$c000,(sp)
+	move.w	2(a4),-(sp)
+	or.w	#$8200,(sp)
+	movem.l	d0-d7/a0-a6,-(sp)
+	bsr	mainbit
+	movem.l	(sp)+,d0-d7/a0-a6
+	move.w	d0,$96(a4)
+	move.w	(sp)+,$96(a4)
+	move.w	d0,$9a(a4)
+	move.w	(sp)+,$9a(a4)
+	move.l	(sp),a4
+	move.l	#0,a6
+	move.l	#255,d0
+unsave	move.l	(a4)+,(a6)+
+	dbra	d0,unsave
+	move.l	4.w,a6
+	move.l	(sp)+,a1
+	move.l	#1024,d0
+	jsr	-210(a6) ; _LVOFreeMem
+nomem	lea	gfxname(pc),a1
+	jsr	-408(a6) ; _LVOOldOpenLibrary
+	move.l	d0,a1
+	move.l	$26(a1),$dff080
+	jsr	-414(a6) ; _LVOCloseLibrary
+	jsr	-138(a6) ; _LVOPermit
+	clr.l	d0
+	rts
+gfxname	dc.b 'graphics.library',0
+ even
+tempcop dc.l $1000200,$1800000,-2
+
+free_music
+	move.l	4.w,a6
+	move.l	mus_mem,a1
+	move.l	#music_size,d0
+	jsr	_LVOFreeMem(a6)
+
+free_demo
+	move.l	4.w,a6
+	move.l	demo_mem,a1
+	move.l	#demo_size,d0
+	jsr	_LVOFreeMem(a6)
+
+exit	clr.l	d0
+	rts
+
+mainbit	move.w	#%0000000111000000,_custom+dmacon
+	moveq.l	#9,d7
+loop	move.w	#%0000000000100000,_custom+intreq
+waitvbl	btst	#5,_custom+intreqr+1
+	beq.s	waitvbl
+	dbra	d7,loop
+	clr.w	$80
+	move.l	a5,a1
+	lea	mus_mem(pc),a2
+	move.l	a1,(a2)
+	add.l	#$0001A510,(a2)
+	jsr	(a1)	; start music
+	move.l	demo_addr,a0
+	move.w	#$8080,_custom+dmacon
+	lea	table(pc),a1
+	move.l	mus_mem,a2
+	jmp	(a0)
+ 
+relocate
+	lea	28(a0),a0	; returns a1 = start addr
+	move.l	(a0)+,d7
+	add.l	d7,d7
+	add.l	d7,d7
+	move.l	a0,a1
+	move.l	a0,d6
+	lea	4(a0,d7.l),a0
+	move.l	(a0)+,d7
+	subq.l	#1,d7
+	bmi.s	norelocs
+	addq.w	#4,a0
+nxtreloc	move.l	(a0)+,d0
+	add.l	d6,0(a1,d0.l)
+	dbra	d7,nxtreloc
+norelocs	addq.w	#8,a0
+	rts	
+ 
+demo_mem	dc.l	0
+demo_addr	dc.l	0
+mus_mem	dc.l	0
+table	dc.w	2,4,8,18,22,24,28,31,35,39,40,49,51,60,0,0
+dosname	dc.b	'dos.library',0
+demoname	dc.b	'main',0
+musicname	dc.b	'music',0
+
+

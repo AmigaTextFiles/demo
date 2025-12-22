@@ -1,0 +1,179 @@
+
+                                    MASH
+                   Another LZRW based compression algorithm
+                        Version 1.98 (30 Mar 1995)
+                      Copyright 1994 Zdenek Kabelac
+
+                                License/Disclaimer
+                                ------------------
+              xpkMASH is (C) Copyright 1994 by Zdenek Kabelac.
+
+    This package may be freely distributed, as long as it is kept in its
+ original, complete, and unmodified form.  It may not be distributed by itself
+ or in a commercial package of any kind without my written permission.
+
+
+
+                                 Instalation
+ 				 -----------
+
+     Make sure the directory libs:compressors does exist and then just copy
+ xpkMASH.library to libs:compressors.  You also need to have the XPK package
+ installed, it is available from several sources including Fish disks.
+ Now you have two versions to choose from - select the version you'd like to 
+ use (don't forget to install that processor first :-) and rename it to
+ xpkMASH.library.
+
+
+ 				 Description
+ 				 -----------
+
+     xpkMASH is an XPK compression sublibrary whose main purpose is to
+ decrunch fast and have an excellent crunch factor.  The sublib is using
+ LZ77 compression and a special method to write matches...  MASH now
+ normally uses 256KB for its tables, but reduces the size of the
+ hashtable if memory is scarce.  (it could crunch even with 64KB+4KB)
+ Compressing with a small hashtable naturally is very very slow.
+ Default chunk size is 64KB.  The compressor uses lazy match evaluation
+ which slowed it down quite a bit.
+
+   This sublibrary has several modes:
+
+         Mode          Strings to be searched
+        ------        ------------------------
+          0-09		1     ;high speed - but low CF
+	 10-19          2
+         20-29          4
+	 30-39          8     ;good for most executables
+         40-49         16
+	 50-59         32
+	 60-69         64
+         70-79        128     ;this should be used for text files
+         80-89        256
+         90-99        512
+        100          1024     ;the best, the slowest
+
+ The second column is showing, how many matches should be compared
+ - the more searched strings - the better results you will get.
+ formula is simple 2^(MODE/10).
+ MODE 70 is now runing as fast as NUKE on my A1200
+ and if you want to use some higher modes - you will get result better
+ for only a few bytes, but slowdown will be very noticeable.
+ (But for crunching I'm always using the best mode anyway :-))
+
+              !!! The source for this version is not released !!!
+    if you want to see it anyway, drop me an e-mail and I will send you it.
+
+ I still want to do some improvements. Probably even change format of stored
+ data to reach better decrunch speed and possibly use some more MC68020
+ instructions in this case. You don't have to worry, this library will also
+ decrunch old format. Send me an e-mail what you'd like to see in newer
+ version of this library. But this newer format will always need
+ 256KB of memory so it could be a problem for some people.
+ If you think this library is worth some money, you could send them
+ It will speed up development :-)
+
+ Here is a small benchmark list for those bechmarks' lovers :-)
+
+ Evaluated on a A3000/30/25 with 2MB ChipMem and 4MB SCRAM [standard
+ XPK benchmark system] by XBench using AmigaVision [594712 bytes]
+
+ Packer      UComp   Comp    CF     CTime    CSpd     UTime    USpd 
+ 68020
+ mash.100   594712 313612 47.3%     27.86   21346      1.42  418811
+ mash.30    594712 322012 45.9%      7.10   83762      1.45  410146
+ mash.0     594712 332360 44.2%      5.58  106579      1.49  399135
+
+ Packer      UComp   Comp    CF     CTime    CSpd     UTime    USpd
+ 68000
+ mash.100   594712 313612 47.3%     27.96   21270      1.47  404565
+ mash.30    594712 322012 45.9%      7.18   82828      1.50  396474
+ mash.0     594712 332360 44.2%      5.65  105258      1.54  386176
+
+ I hope you like this :-) 
+
+ Slower mode of packing has the speed of version 1.26 
+ (it's activated when is not possible to allocate 256KB of RAM for large buffer)
+
+             UComp   Comp    CF      Time    KB/s
+
+ mash.100   594712 313908 47.3%     65.42    9090
+ mash.000   594712 332652 44.1%      8.59   69233
+
+                           "Thank you"s must go to:
+                           ------------------------
+ Urban Dominik Müller	<umueller@amiga.icu.net.ch>
+   for XPK standart. (Try to responce my e-mails sometimes :-))
+
+ Christian von Roques <roques@ipd.info.uni-karlsruhe.de>
+   for correcting some parts of this document file,
+   and also for releasing his source, so I could use some parts
+   of it in my library (xpk interface).
+
+ Karsten Dageförde <dagefoer@ibr.cs.tu-bs.de>
+   for making benchmarks and other cooperation
+
+ more people should be in this list - authors of Zip, Lha, Arj, ...
+ but I would have to make some deep research for them.
+
+ 				   History
+ V0.5   Many errors, the biggest problem was bad writing of bits string.
+
+ V0.7   Most of errors has been debuged
+
+ V0.8   Last byte has not been saved
+
+ V0.9   On the first look normaly working version of the sublibrary with
+        fixed hash table - size 64KB
+
+ V1.0   The big improvement in memory allocating
+        memory is allocated before each chunk compresion and deallocated
+        after this chunk is compressed (usefull if you have installed
+        statram.device)
+
+ V1.01  Hash size was increased from 64KB to 128KB (16 bits)
+
+ V1.05  Hash is allocated dynamicaly - when is large memory free - large hash
+        is used. Starting with 128KB, 64KB, 32KB, .... ,512 bytes
+
+ V1.15  Seems to work perfectly for me
+
+ First public release:
+
+ V1.16  I suppose last bug has been removed - value of register D4
+        was not saved on return. Also most of long word instruction has
+        been rewritten to word oriented instructions (useful for MC68000)
+
+ V1.26  Several speed up improvements - decompression goes about 50 kB faster
+
+ Unreleased
+
+ V1.30  New crunch mode - uses 256KB of memory for its buffers
+
+ V1.40  Removed checking of two bytes in match
+        its not needed when two byte hash is used
+
+ V1.53  Removed zero length write when chunk is uncrunchable
+        Diavolo is a little bit odd and uses this value for DIVS
+        even when its not valid -> caused GURU
+
+ V1.61  Removed bsr call from scaning rutine.
+
+ Released
+
+ V1.77  Prepared for release - there is still many things to improve,
+        but it has already very good speed. So I'm releasing this
+        version.
+
+ V1.98  Well many new checks have been added to prevent so deep scan
+        when better match cann't be found. Even a little bit better
+        alghorithm was used for lazy_eval -> better CF.
+
+                                 Contact Address
+                                 ---------------
+
+       What is worth doing is worth                   Zdenek Kabelac      
+   the trouble of asking somebody to do.                Policna 135      //
+      WWW  : http://www.muni.cz/~kabi/          75701 Valasske Mezirici //
+     E-Mail: kabi@informatics.muni.cz                  Czech Republic \X/
+ 

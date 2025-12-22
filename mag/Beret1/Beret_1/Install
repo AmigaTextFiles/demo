@@ -1,0 +1,120 @@
+;BERET #1 Install script by LoPeZ/sECTOr5
+(welcome)
+
+(user 2)
+
+(message "\nJeûeli jesteô pewien, ûe chcesz zainstalowaê\n\n\nBERET #1\n\n\ntO\n\nwciônij\n\nKONTYNUUJ")
+
+(set drawerdest1
+
+  (askdir
+
+     (prompt "Wskaû katalog, do którego mam zainstalowaê BERET #1")
+
+     (help "Katalog BERET_1 zostanie automatycznie utworzony.")
+
+     (default "RAM:")
+  )
+)
+
+(set drawerdest2
+
+       (tackon drawerdest1 "Beret_1")
+
+)
+
+(makedir drawerdest2 (infos))
+
+(makedir
+
+        (tackon drawerdest2 "C")
+)
+
+
+(copyfiles  (source "BERET_1") (dest drawerdest2) (infos))
+
+
+(copyfiles  (source "BERET_1.DATA") (dest drawerdest2))
+
+
+(set arts (exists "BERET_1.ARTS"))
+
+
+(if (= arts "1")
+
+
+    (copyfiles  (source "BERET_1.ARTS") (dest drawerdest2))
+
+
+    (copyfiles  (source "BERET_1_D2:BERET_1.ARTS") (dest drawerdest2))
+
+)
+
+(copyfiles  (source "C/GetModeID") (dest (tackon drawerdest2 "C")))
+
+
+(copyfiles  (source "Install") (dest drawerdest2) (infos))
+
+(set votka (exists "· fILLING vOTE ·/ b!charts-.txt.pp"))
+
+
+(if (= votka "1")
+
+
+    (copyfiles  (source "· fILLING vOTE ·/ b!charts-.txt.pp") (dest drawerdest2))
+
+    (
+        (set votka1 (exists " b!charts-.txt.pp"))
+
+
+        (if (= votka1 "1")
+
+
+        (copyfiles  (source " b!charts-.txt.pp") (dest drawerdest2))
+
+        )
+
+    )
+
+)
+
+(set getscreen
+
+        (askbool
+
+           (prompt "Czy mam otworzyê okno do wyboru paramerów ekranu maga?")
+
+           (help "Jeûeli wybierzesz TAK, to otworzy sië okno w którym bëdziesz mógî wybraê typ ekranu na jakim chcesz pracowaê. Opcja ta jest szczególnie przydatna posiadaczom karty graficznej lub monitora wyôwietlajâcego obraz w czëstotliwoôci poziomej wiëkszej niû 15 kHz.  Pamiëtaj tylko, ûe BERET #1 otwiera ekran w rozdzielczoôci 640x256. Jeûeli wybierzesz NIE zostanie ustawiony tryb PAL:HIRES NOLACE.")
+
+           (choices "TAK" "NIE")
+
+           (default 0)
+        )
+)
+
+(if
+   (= getscreen "1")
+
+(
+   (run "C/GetModeID")
+
+   (set teksttooltype (getenv "Beret.prefs"))
+)
+
+   (set teksttooltype "$29000")
+
+)
+
+
+   (tooltype
+
+        (dest (tackon drawerdest2 "Beret_1"))
+
+        (setstack 4096)
+
+        (settooltype "MODE_MAG" teksttooltype)
+
+   )
+
+
+(exit "Instalacja magazynu BERET #1 przebiegîa bezbîëdnie.\n\n Aby uruchomiê zina kliknij na ikonce BERET_1")

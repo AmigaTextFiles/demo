@@ -1,0 +1,79 @@
+@{font ACS-Normal.font 16} TOP SECRET Microsoft(c) Code
+ Project: Chicago(tm)
+ Projected release-date: Summer 1998
+@{font}
+@{c 1EFF3C}           #include "win31.h"
+           #include "win95.h"
+           #include "oldstuff.h"
+           #include "billrulz.h"
+           #include "evenmore.h"
+           #define INSTALL = HARD@{c}
+
+           char @{c D2D215}make_prog_look_big[1600000];@{c}
+
+@{c CDCA16}           void main()
+           {@{c}
+               while(@{c CDCA16}!@{c}@{c D2D215}CRASHED@{c})
+               {
+
+
+@{c D2D215}                   display_copyright_message();
+                   display_bill_rules_message();
+                   do_nothing_loop();@{c}
+
+                   if (@{c D2D215}first_time_installation@{c})
+                   {
+@{c D2D215}                       make_50_megabyte_swapfile();
+                       do_nothing_loop();
+                       totally_screw_up_HPFS_file_system();
+                       search_and_destroy_the_rest_of_OS/2();
+                       hang_system();@{c}
+                   }
+
+@{c D2D215}                   write_something(anything);
+                   display_copyright_message();
+                   do_nothing_loop();
+                   do_some_stuff();@{c}
+
+                   if (@{c D2D215}still_not_crashed@{c})
+                   {
+@{c D2D215}                       display_copyright_message();
+                       do_nothing_loop();
+                       basically_run_windows_3.1();
+                       do_nothing_loop();
+                       do_nothing_loop();@{c}
+                   }
+               }
+
+               if (@{c D2D215}detect_cache()@{c})
+@{c D2D215}                   disable_cache();@{c}
+
+               if (@{c D2D215}fast_cpu()@{c})
+               {
+@{c D2D215}                   set_wait_states(lots);
+                   set_mouse(speed, very_slow);@{c}
+@{c D2D215}                   set_mouse(action, jumpy);
+                   set_mouse(reaction, sometimes);@{c}
+               }
+
+@{c 8F8F8F}               /* printf("Welcome to Windows 3.11"); */
+               /* printf("Welcome to Windows 95"); */@{c}
+
+@{c D2D215}               printf("Welcome to Windows 98");@{c}
+
+               if (@{c D2D215}system_ok()@{c})
+ @{c D2D215}                   crash(to_dos_prompt);@{c}
+               else
+@{c D2D215}                   system_memory = open("a:\swp0001.swp", O_CREATE);@{c}
+
+               while(@{c D2D215}something@{c})
+               {
+@{c D2D215}                   sleep(5);
+                   get_user_input();@{c}
+@{c D2D215}                   sleep(5);
+                   act_on_user_input();
+                   sleep(5);@{c}
+               }
+
+@{c D2D215}               create_general_protection_fault();@{c}
+@{c CDCA16}           }@{c}

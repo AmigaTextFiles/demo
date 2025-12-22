@@ -1,0 +1,9 @@
+; $VER 3LE Installer v1.01b Internal Alpha - (C) Three Little Elks 1997
+echo "3LE Installer v1.01b Internal Alpha - (C) Three Little Elks 1997"
+echo ""
+echo "Now installing The Tale of Sir Henry into a directory of our choice..."
+echo ""
+echo "PLEASE WAIT...."
+join 1 2 as 3LE-TheTale.exe
+echo "The Tale of Sir Henry can be found!"
+delete 1 2

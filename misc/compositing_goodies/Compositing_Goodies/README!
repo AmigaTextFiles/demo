@@ -1,0 +1,48 @@
+README for the Compositing Goodies
+----------------------------------
+
+These two little programs where just some test programs I did during the development
+of the AmigaOS 4.1 Compositing engine. They where meant to be eventually turned into more
+useful projects (Lens is still supposed to be turned into a commodity), but since 
+I currently lack the time for that, I decided to put them up for download so that 4.1
+users have something to play ;-)
+
+Note that both ScreenThumb and Lens function on non-Compositing screens as well.
+
+ScreenThumb:
+------------
+
+ScreenThumb, as its name implies, displays a thumbnail representation of your Workbench.
+The command line template is 
+
+WIDTH/N,HEIGHT/N,DELAY/N
+
+WIDTH and HEIGHT specify the size of the thumbnail. DELAY is the number of milliseconds 
+between updates. For smoother updates, try something like 50 or 10, but be aware that 
+this raises CPU load.
+
+Note that overlays are not displayed in the thumbnail (i.e. videos). If you want that, 
+you need to disable usage of video overlays (for example the NOPIP option in DvPlayer.
+
+Lens:
+-----
+
+Lens has no command line options. It will open a small window. In order to use it
+(remember this ought to be a commodity really), you need to activate the window 
+and press (and hold) the right mouse button. This will zoom the screen in on the 
+mouse pointer. Move the mouse around to move the magnified area. The preview in the lower
+right corner shows where you are currently located. The mouse wheel can be used to increase
+or decrese the magnification. Releasing the right mouse button will zoom back out to normal.
+
+Note that you cannot use the mouse pointer during the operation. I will fix that in the 
+commodity version.
+
+That's it really... Nothing uber-fancy, but it hints at some of the possibilities 
+of the compositing engine.
+
+Copyright:
+----------
+
+These programs are Copyright (C) 2008 by Hans-Joerg Frieden. 
+All rights reserved. 
+Standard disclaimer applies.

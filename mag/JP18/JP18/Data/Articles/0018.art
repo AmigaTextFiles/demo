@@ -1,0 +1,77 @@
+!Anaglyph 3D
+Ghandy
+52
+
+µF2Anaglyph 3D: demos in the third dimension
+
+µF1by Lars "Ghandy" Sobiraj / Nukleus
+
+µC1µF0µJLThe Anaglyph 3D method has been used in the demoscene for about 30 years. But the actual procedure behind it is much older. 
+
+We took a look at the technology and wanted to find out from the programmer µC6Doc K. of Moods PlateauµC1, what he finds so appealing about it. 
+
+If the method is so exciting, why is it so rarely used for demos and intros? We took a closer look.
+µJLµF1The actual anaglyph process is far more than 100 years older than the demoscene itself. Wilhelm Rollmann from Leipzig developed it already in 1853. 
+
+A color anaglyph is a stereogram. In this case the partial pictures are not shown next to each other, but they are overlaid. The method was so popular in the last 50 years because it is so inexpensive. In the beginning the 3D glasses contained the red filter in front of the left eye, the green filter in front of the right eye. 
+
+The glasses became really popular in the 1970s, when youth magazines like µC7Yps µC1or µC7FROESI µC1(known in the GDR) more often printed three-dimensional representations for one lens in red and one in cyan. From time to time, these comic magazines also included such cardboard glasses. Today's cinemas use a completely different technique, by the way, using so-called polarizing filter glasses.
+
+µF0µC5How does it all work?
+
+µF1µC1The two human eyes have a fixed distance from each other permanently. Each eye therefore perceives the environment from a slightly different perspective. 
+
+The brain then assembles the two three-dimensional impressions of the eyes into a single 3D image. In the analglyph process, the red glass (left) only allows red color tones to pass through, all others are filtered. 
+
+µI1801 
+
+The right lens in cyan (between blue and green) only allows shades of cyan, green and blue to pass. The same object is displayed in different colours, depending on left or right, the brain then assembles the image three-dimensionally. Coder have the double work, because every area has to be displayed twice. So for each eye once.
+
+µC5 Historical aspects of Anaglyph 3D µC1
+
+The first productions known in the demoscene appear in the records [1] in 1990, when the group µC6Exit µC1has won the Theatre and Network Party with their 3D demo "µC7Quo VadisµC1" [2]. Closely followed by the "µC73D Demo Third DimensionµC1" of the much better known group µC7CryptoburnersµC1. After that, productions created with the anaglyph technique appeared only sporadically. Only the Party µC0Deadline µC1in Berlin arranges a 3D competition every year. 
+
+This may be the reason why µC7Pouet µC1did not create a separate category for 3D demos. Such productions can be found mixed with other works in "Alternative Demo", this can mean nothing and everything. Only the online database µC7Demozoo µC1has opened a category for this [1], where 26 3D productions have been immortalized. Among them a Javascript demo, a 3D picture, videos and intros or demos on various computer platforms. Unsurprisingly the most used platform is Windows, followed by Amiga OCS/ECS demos. 
+
+The hardware of Windows PCs should have the least problems with the technology. After all, powerful graphics cards are standard here. The GPU just has to display each scene twice from a slightly different perspective. With the Amiga, the hardware of the device itself helps.
+
+According to µC7Doc K.µC1 from the group µC7Moods PlateauµC1, the coding is quite easy with the help of bitplanes. Here, too, every image has to be displayed twice. But the result is calculated automatically by a clever choice of the color palette. But you have to calculate the mixed colors in case of overlapping. The Amiga draws the images on the different bitplanes, the resulting mixed color is then more or less automatically created. 
+
+It gets complicated with the small computer KC 85/4 from the GDR (former eastern part of Germany). Here a special screen mode is used, which is not a standard mode. While the color palette cannot be changed anymore, the conversion works similar to the Amiga using bitplanes. Because of the palette, the KC 85/4 is rather coincidentally suitable for the Anaglyph 3D technology with the two colors red and cyan. 
+
+µC0What attracts coders to the topic anaglyph?µC1
+
+We talked extensively with Doc K. from Moods Plateau, who has created several 3D productions himself. In his opinion, it is a bigger challenge for programmers until three-dimensional demos actually work. In addition, the impressions create more aha effects and can better inspire the audience. 
+
+For him, the somewhat more complicated implementation is interesting because you don't have to deal with it every day. He likes to remember his childhood days when he looked at 3D pictures in comic books. The whole thing reminds him a little bit of the fascination for Lego bricks that still fascinates some adults today. 
+
+But the technology behind it is interesting for other reasons as well: On a completely flat canvas, the technology suddenly creates something three-dimensional. The spatial dimension is an additional aspect that is simply not present in other competitions. 
+
+µC0Why are there no more of them?µC1
+
+In principle, the technology behind it is old hat. Demosceners, on the other hand, often have the desire to be at the pulse of time. But there are also purely organizational reasons against it. At demo parties, all participants would either have to bring their own glasses or be given the opportunity to buy 3D glasses at the party. 
+
+µI1802
+
+Without additional hardware, the effect is completely absent. 
+
+The Deadline Party has specialized in this technique. Developers will be sent 3D glasses in advance. They also receive a card with a motivating slogan. If you don't know assembler etc., you can still buy the glasses on the internet or elsewhere.
+
+µI1803
+
+µC0Conclusion µC1
+
+The works from 2018 and 2019 are all from the "Three-Dee competition" of the Deadline (deadline.untergrund.net). 
+
+Conclusion: If the organizers of more parties would take the trouble to sell the 3D glasses and hold a 3D competition every year, there would of course be many more such productions. Even if the Anaglyph 3d technology is still a niche, the technology used is very juicy. 
+
+If you are interested in a deeper insight because of this article, you only have to enter "Anaglyphglasses buy" in the search engine of your choice and you will get a list of all available anaglyph glasses on eBay, Amazon & Co. Glasses from just under µC01.60 EUR µC1per piece. The purchase costs are therefore more than manageable. And if the few demos are not enough for you, there are countless 3D images on the web that you can view for free. 
+
+If you use a search engine, you'll find what you're looking for right away and can spend hours looking at them if you like. Have fun!
+
+The promised links:
+
+[1] demozoo.org/productions/tagged/
+anaglyph-3d
+
+[2] demozoo.org/productions/49049

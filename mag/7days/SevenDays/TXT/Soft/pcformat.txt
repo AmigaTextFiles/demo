@@ -1,0 +1,200 @@
+O formatowaniu zatwardzia³ych dysków amigowych...
+
+
+
+Z teoretycznego punktu widzenia przygotowanie dysku twardego (a równieû
+i  dyskietki)  do  wspó³pracy  z  pecetem  jak  i Amig± wygl±da tak samo.
+Sprowadza siê ono do  ustawienia  wielko¶ci  partycji,  wielko¶ci  bloku,
+przeplotu  (i  paru  jeszcze  innych  drobnostek), doboru systemu obs³ugi
+plików,  za³adowania  programu  startowego  oraz  (zwykle  po  restarcie)
+sformatowania  partycji.  Na  Amidze  wszystkie  czynno¶ci,  za wyj±tkiem
+ostatniej, wykonuje HDToolsBox (ewentualnie HDInstallTools.  Formatowanie
+przeprowadza  siê po resecie komputera na juû zamontowanych partycjach. W
+przypadku peceta z MS_DOS/Windows wszyskie opisane operacje  przeprowadza
+siê wklepuj±c odpowiednie rozkazy w konsoli (zwykle wpisujemy fdisk, a po
+resecie format. Znacznie lepiej sprawa wygl±da na Linuxie (zw³aszcza  gdy
+mamy  zainstalowane  XWindow),  bo  linuxowe programy takie jak fdisk czy
+diskdruid (taka rozbudowana wersja  HDToolsBoxa)  naprawdê  pozwalaj±  na
+wiele  (szczególnie ten pierwszy). Wspomniany wyûej fdisk (ca³y czas mowa
+o programie linuxowym) pracuje tylko i wy³±cznie  w  trybie  tekstowym  -
+st±d  teû  konieczne  jest  odpalenie  go z konsoli, z tym ûe istniej± na
+niego nak³adki graficzne (osobi¶cie spotka³em sie  z  nak³adk±  w  formie
+strony  WWW). Natomiast diskdruid to feria barw i kolorów -co jest jednak
+zwi±zane ze wspomnianym juû XWindow. Wróæmy jednak do MS-DOS/Windows.  Tu
+nêdzn± namiastk± odpowiednika HDToolsBoxa jest program fdisk.exe. Ogólnie
+jest kiepski i do  dupy  z  tym,  ûe  powinien  znajdowaæ  siê  w  kaûdym
+MS-DOS/Windows. Znacznie wygodniejszy i bardziej kolorowy jest komercyjny
+Partition Magic. Wiêcej programów nie znam. Przejdúmy zatem do czynów.
+
+
+Za³óûmy  na  pocz±tek  tak±  sytuacjê.  Mamy oto peceta z wingroz± 95/98
+(maj± one wbudowy MS-DOS  w  wersji  7+)  i  chcemy  w  nim  zainstalowaæ
+sformatowany  amigowski  dysk  twardy. Montujemy wiêc (sprzêtowo) naszego
+twardziela w pececie (zwykle jako Primary Slave lub Seconary Master  albo
+Seconary Slave i uruchamiamy go. Po za³adowaniu wingrozy odpalamy konsolê
+(przycisk    Start->Tryb    MS-DOS    lub    w    wersji    spowolnionej:
+Start->Zamknij->Tryb  MS-DOS).  Maj±c  przed oczyma cudnej urody migaj±cy
+znak zachêty wklepujemy fdisk i naciskamy enter.  Jeûeli  takowy  program
+istnieje  (i znajduje siê w odpowiednim miejscu) to pojawi siê na czarnym
+ekranie krótki tekst informacyjny (zwykle po polsku, pod warunkiem, ûe  i
+wingroza  jest  w polskiej wersji jêzykowej) oraz pytanie, czy program ma
+w³±czyæ obs³ugê duûych dysków twardych. Po pacniêciu entera wskoczymy  do
+menu.  Wybieramy 5 (+ enter) i powinni¶my zobaczyæ listê sk³adaj±c± siê z
+co najmniej dwóch dysków twardych, w tym teû naszego  (zwykle  o  numerze
+2), którego wybieramy (cyfra + enter). Tu uwaga: dysk twardy rozpoznajemy
+po rozmiarze. Pomy³ka grozi  kompletnym  zniszczeniem  danych!  Nastêpnie
+zobaczymy  nowe  menu,  w którym wybieramy najpierw 4, by upewniæ siê, ûe
+wybrali¶my odpowiedni dysk twardy (je¶li ukaûe siê podzia³ partycji dysku
+bêdzie to oznaczaæ, ûe wybrali¶my nieodpowiedni dysk - nasz nie moûe mieæ
+jeszcze ûadnych partycji!). Je¶li wszysko jest OK, to klikamy na 1,  znów
+1  i  je¶li chcemy stworzyæ tylko jedn± partycjê to potwierdzamy pytanie,
+odczekujemy d³uûsz± chwilê i wychodzimy z programu naciskaj±c ESC.  Je¶li
+nie,  to  wybieramy  odpowiedú  przecz±c±  i  okre¶lamy rozmiar pierwszej
+partycji, by nastêpnie znów siê pojawiæ w znanym juû nam menu i wybraæ 1,
+a  nastêpnie  2  co  pozwoli  nam na utworzenie partycji rozszerzonej. Na
+partycji rozszerzonej moûna, a w³a¶ciwie to nawet trzeba stworzyæ kolejne
+partycje   (menu->1->3),   poniewaû   sama   partycja   rozszerzona  jest
+niewidoczna dla uûytkownika. Gdy  skoïczyli¶my  nasz±  szalon±  produkcjê
+partycji,  to  wychodzimy z programu. Odpowiednie poprawki powinny zostaæ
+wprowadzone automatycznie. Na koniec naleûy wykonaæ reset.
+
+
+Tu  ma³e  wyja¶nienie.  Ca³e  to zamieszanie z partycjami podstawowymi i
+rozszerzonymi wynika z faktu,  ûe  pierwsze  pecety  w  ogóle  nie  mia³y
+moûliwo¶ci  podzielenia  dysku  na  partycje. Dopiero MS-DOS w wersji 3.3
+wprowadzi³ to nowum z tym, ûe  pozwala³  on  na  stworzenie  TYLKO  DWÓCH
+partycji.  Po  jakim¶  czasie, gdy pojemno¶æ dysków twardych by³a na tyle
+duûa, ûe system obs³ugi plików MS-DOS-a nie by³ w stanie  obs³uûyæ  ca³ej
+ich   powierzchni,  koniecznosci±  sta³o  siê  nagminne  partycjonowanie.
+Wówczas  "fachowcy"  z  microsoftu  raczyli  zauwaûyæ   ow±   niedoróbkê.
+Niestety,  za  póúno  by³o juû zmieniaæ strukturê pierwszej partycji tak,
+aby moûliwe sta³o siê utworzenie np. piêciu partycji, gdyû utracono by  w
+ten  sposób  zgodno¶æ  programow±  w dó³. Postanowiono wiêc zmieniæ nieco
+strukturê partycji rozszerzonej. W efekcie partycja rozszerzona sta³a siê
+wydmuszk±, wewn±trz której znajduj± siê juû konkretne partycje.
+
+
+
+Po  resecie  znów  l±dujemy  w  konsoli  tekstowej,  w której wpisujemy:
+"FORMAT X:",  gdzie  X  to  litera  oznaczaj±ca  partycjê,  któr±  chcemy
+sformatowaæ.  Po  czym  ja  poznaæ? To proste! Wystarczy wpisywaæ kolejno
+"C:", a nastêpnie "DIR", "D:" oraz  "DIR",  "E:"  i  "DIR"  itd.,  aû  do
+momentu, gdy zamiast listy plików i katalogów zobaczymy komunikat b³êdu z
+opcjami  "FAIL,  "ABORT"  i  "RETRY"  (ewentualnie  w   polskiej   wersji
+jêzykowej). Gdy juû znajdziemy nasz± ¶wieûutk± partycjê, to przystêpujemy
+do jej formatowania. Je¶li uwaûamy,  ûe  mamy  szybki  komputer,  to  nie
+zaszkodzi  dodanie  do  polecenia "FORMAT X:" opcji: "/C", która uaktywni
+weryfikacjê.  Formatowanie  przeprowadzamy  oczywi¶cie   dla   wszystkich
+partycji,  które potraktowane poleceniem "DIR" wywal± komunikat z b³êdem.
+I to by³oby na tyle.
+
+
+
+Co do uwag, to warto zauwaûyæ, ûe MS-DOS w wersji 5.x i 6.x (o starszych
+natychmiast zapomnij!) zawiera fdiska, który automatycznie ³aduje na dysk
+twardy FAT16 (przestarza³y i niesamowicie awaryjne, ale za to do¶æ szybki
+system obs³ugi plików), za¶ 7+ (jest wbudowany do wingrozy, nie wystêpuje
+w innej postaci - nie myliæ z FreeDOS-em!) ma fdiska z FAT16 (Windows 95)
+lub  FAT32  (Windows  95 OSR 2 oraz 98). Ten drugi FAT jest powolniejszy,
+ale za to lepiej gospodaruje wolnym miejscem i jest odrobinê odporniejszy
+na awarie.
+
+
+Uûycie microsoftowych poleceï fdisk i format jest moûliwe na Amidze  pod
+emulatorem  PCx lub PC-Task. Oba emulatory umoûliwiaj± dostêp do partycji
+(zarówno rzeczywistych jak i plikopartycji) z poziomu Amigi.  Prócz  tego
+do  odczytu  dysków  pecetowych ¶wietnie nadaje siê dosmount (najlepiej w
+wersji wyûszej niû  1.0  z  tym,  ûe  obs³uguje  tylko  FAT16),  CrossDOS
+(najlepiej w wersji 7.1 z tym, ûe równieû jest ograniczony do FAT16), MSD
+95 (obs³uguje zarówno FAT16 jak i FAT32, brak  mu  jednak  opcji  zapisu)
+oraz  FAT95  (obs³uguje  równieû  FAT16  i  FAT32  z  tym,  ûe  zarówno z
+moûliwo¶ci± odczytu jak i zapisu).
+
+
+Skoncentrujê  siê  na opisie FAT95, gdyû jest to najlepsze: najszybsze i
+najmniej k³opotliwe, rozwi±zanie, jakie do tej pory widzia³em,  dotycz±ce
+odwiecznego problemu pod tytu³em: jak odczytaæ dane z peceta. Cóû to wiêc
+za cudo?! Ano bardzo niepozorne. Archiwum po rozpakowaniu zajmuje  bowiem
+nieca³e  90  kB,  z  czego wiêkszo¶æ to róûne teksty, skrypty itp. Miêsko
+stanowi zaledwie 19 KB. Ca³o¶æ dzieli siê na  dwie  cz±¶ci:  angielsk±  i
+niemieck±.  Moûemy  skorzystaæ  ze skryptu instalacyjnego (bêdziemy mieli
+wówczas dostêp tylko  do  dyskietek  pecetowych  720  kB),  b±dú  dokonaæ
+instalacji sami (co pozwoli nam na dostêp do zawarto¶ci dysków twardych),
+która wcale nie  jest  trudna,  gdyû  sprowadza  siê  do  skopiowania  do
+urz±dzenia  L:  pliku  fat95  i  stworzenia  skryptu  (wraz  z  ikonk±) i
+umieszczenia go w urz±dzeniu DEVS:DOSDrivers z  tym,  ûe  wówczas  system
+operacyjny  bêdzie  przy kaûdym starcie próbowa³ zainstalowaæ ów dysk. By
+siê tak nie dzia³o wystarczy ikonkê wraz ze  skryptem  przenie¶æ  w  inne
+miejsce i odpalaæ rêcznie (a w³asciwie to mysznie, bo za pomoc± myszki!).
+Pierwsza czê¶æ instalacji wydaje siê chyba do¶æ jasna. Pozostaje pytanie:
+jaki znowu skrypt?! Ano tekstowy, taki, jaki widzicie poniûej:
+
+
+FileSystem = L:fat95
+
+/*Flags = 1*/
+
+Surfaces = 1
+
+BlocksPerTrack = 1
+
+/*Reserved = 0*/
+
+/*PreAlloc = 0*/
+
+/*Interleave = 0*/
+
+LowCyl = 0
+
+HighCyl = 1
+
+Buffers = 500
+
+BufMemType = 1
+
+MaxTransfer = 0x00ffffff
+
+Mask = 0x7ffffffe
+
+DosType = 0x46415401
+
+GlobVec = -1
+
+StackSize = 8192
+
+Mount = 1
+
+Priority = 10
+
+Device = scsi.device
+
+Unit = 2
+
+Activate = 1
+
+
+Ûeby  ca³o¶æ zadzia³a³a poprawnie trzeba dorzuciæ ikonkê (o takiej samej
+nazwie jak± ma skrypt) typu PROJECT, w której wype³niamy dwa pola. W polu
+program  wpisujemy:  "C:Mount",  za¶ w ToolType'ach: "DEVICE=scsi.device"
+(chyba, ûe u ciebie dysk jest obs³ugiwany  przez  innego  device'a)  oraz
+"UNIT=2"  (cyfra  jak±  tu wpiszesz zaleûy od tego, jak pod³±czony jest u
+ciebie pecetowy dysk: MASTER, SLAVE, PRIMARY,  SECONARY).  Po  dwukrotnym
+klikniêciu  na  ikonkê  (lub  restarcie)  powinien  zostaæ  zainstalowany
+pecetowy dysk.
+
+
+Jeûeli  pojawi³yby  siê  jakie¶  problemy z transferem danych, to naleûy
+wówczas  w  powyûszym  skrypcie  zmieniæ  parametr  MaxTransfer.  Jak  to
+zrobiæ?!  Odpalamy  HDToolBoxa  (b±dú  co¶ innego, podobnego). W zak³adce
+Partition Drive w³±czamy Advanced Options i po klikniêciu odczytujemy  ów
+parametr i wpisujemy go do skryptu.
+
+
+I jeszcze jedno. Jak pewnie zauwaûyli¶cie niektóre linie w  skrypcie  s±
+obstawione symbolami: "/*" i "*/", przez co znaki znajduj±ce siê pomiêdzy
+nimi staj± siê nieistotnym (z punktu widzenia komputera)  komentarzem.  W
+ramach  optymalizacji  moûecie  z  czystym  sumieniem  wywaliæ owe linie.
+Zawsze to kilka dodatkowych bajtów na dysku twardym...
+
+
+Gucio [7d+lM]

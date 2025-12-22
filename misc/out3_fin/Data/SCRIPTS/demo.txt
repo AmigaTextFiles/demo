@@ -1,0 +1,56 @@
+
+<MAIN> megademo | 0 | 1 </MAIN> name | time offset | time playing rate (1/50)
+
+<KSCRIPT>
+  <ID> megademo </ID>
+  <PLAY> ClearScreen | 25 | 0 | 1 </PLAY>
+  <PLAY> Part1 | 475 | 0 | 1 </PLAY> name | playing time | time offset | playing rate
+  <PLAY> Part2 | 474 | 0 | 1 </PLAY>
+  <PLAY> Part3 | 250 | 0 | 1 </PLAY>
+  <PLAY> Part4 | 550 | 0 | 1 </PLAY>
+  <PLAY> Part5 | 400 | 0 | 1 </PLAY>
+  <PLAY> Part6 | 290 | 0 | 1 </PLAY>
+  <PLAY> Part7 | 290 | 0 | 1 </PLAY>
+  <PLAY> Part8 | 450 | 0 | 1 </PLAY>
+  <PLAY> Part9 | 450 | 0 | 1 </PLAY>
+  <PLAY> Part10 | 400 | 0 | 1 </PLAY>
+  <PLAY> Part11 | 400 | 0 | 1 </PLAY>
+  <PLAY> Part12 | 1200 | 0 | 1 </PLAY>
+  <PLAY> PartX | 400 | 0 | 1 </PLAY>
+</KSCRIPT>
+
+<KDBM> dbmmusic | data/spiral.dbm </KDBM>
+<KRECT> mainscreen | 0 | 0.20 | 1 | 0.80 |  | 0 | 0 | 1 | 1 | </KRECT>
+
+<INCLUDE>data/scripts/images.txt</INCLUDE>
+
+<KPART>
+  <ID> ClearScreen </ID>
+  <Fx><Pa> FillRc </Pa><Pa></Pa><Pa>cte| 0 </Pa></Fx>
+</KPART>
+
+<INCLUDE>data/scripts/part1.txt</INCLUDE>
+
+<INCLUDE>data/scripts/part2.txt</INCLUDE>
+
+<INCLUDE>data/scripts/part3.txt</INCLUDE>
+
+<INCLUDE>data/scripts/part4.txt</INCLUDE>
+
+<INCLUDE>data/scripts/part5.txt</INCLUDE>
+
+<INCLUDE>data/scripts/part6.txt</INCLUDE>
+
+<INCLUDE>data/scripts/part7.txt</INCLUDE>
+
+<INCLUDE>data/scripts/part8.txt</INCLUDE>
+
+<INCLUDE>data/scripts/part9.txt</INCLUDE>
+
+<INCLUDE>data/scripts/part10.txt</INCLUDE>
+
+<INCLUDE>data/scripts/part11.txt</INCLUDE>
+
+<INCLUDE>data/scripts/part12.txt</INCLUDE>
+
+<INCLUDE>data/scripts/partx.txt</INCLUDE>

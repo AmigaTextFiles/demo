@@ -1,0 +1,504 @@
+»CL9:--------------------------------------
+»CL8:        »BIG:Coders Course part III»
+»CL9:--------------------------------------
+
+»CL4:           By Cytron/Depth
+
+»CL0:I'm sure that the 'newborn' coders
+'attending' this course would find
+great pleasure in actually displaying
+something on the screen.
+
+The reason why this quite important
+aspect of coding has not been taken up
+until now are simply that it is hard
+to immediately understand - I didn't
+want to scare you!
+
+Anyway, let's take a peep at what
+really makes the amiga unique (or what
+MADE it unique! :~( ):
+The Coprocessor aka the Copper.
+
+As I just mentioned, the copper is not
+that easy to understand. One has to
+know a bit about digital design and
+principles to really grab what's going
+on in that chip! I'll try to explain
+how it works for the coder:
+
+1. You make a copperlist.
+2. You tell the copper where in the
+   memory, you put the list.
+3. The copper does the rest! :-) :
+
+- The copper is in control of the
+  electron beam on the monitor. This
+  is being done every time the screen
+  is refreshed, meaning 50 times a
+  second (when running a PAL
+  screenmode, which is far the most
+  common screenmode in demos).
+- In the copperlist it has been
+  defined, where the output should be
+  taken from (eg. where your picture
+  lies in the memory). All graphic to
+  be reached by the copper has to be
+  in chipmemory.
+
+Before I let you take a look at the
+copperlist, I'd like you to know, that
+one doesn't need to know from day one
+what all the different instrutions in
+the copperlist do. You tend to find
+out along the way.
+
+A typical small copperlist could look
+like this:
+
+»CL2:    section copper,data_c
+Copper:
+    dc.w    $008e,$2c81
+    dc.w    $0090,$2cc1
+    dc.w    $0092,$0038
+    dc.w    $0094,$00b0
+    dc.w    $01fc,$0003
+    dc.w    $0100,$1200
+    dc.w    $0102,$0000
+    dc.w    $0104,$0000
+    dc.w    $0108,$0000
+    dc.w    $010a,$0000
+    dc.w    $0106,$0000
+    dc.w    $0180,$0000
+    dc.w    $0182,$0fff
+    dc.w    $0106,$0200
+    dc.w    $0180,$0000
+    dc.w    $0182,$0fff
+    dc.w    $00e0,$0000
+    dc.w    $00e2,$0000
+    dc.w    $ffff,$fffe
+», quite interesting! :-)
+Note that the copperlist is in chip
+memory. If it isn't, it won't work.
+(Hehe - did I forget that some times
+as a newbie to coding - hehe!!)
+
+This will display a 320 pixels wide,
+256 pixels high, lowres PAL screen
+with black background and some white
+pixels some places.
+
+I've typed it this way to show that
+the copper parses the list like this:
+»CL2:
+    lea     SystemOffset,a6
+    move.w  #$2c81,$008e(a6)
+    move.w  #$2cc1,$0090(a6)
+                .
+                .
+    move.w  #$0000,$00e2(a6)
+    [End CopperList]
+», in all AGA-chipset amigas, the
+systemoffset is $dff000
+
+You should note that all adresses
+except $ffff are even. If the copper
+meets an 'odd adress', it will stop
+parsing it as an adress, but will
+instead WAIT for the beam on the
+screen to pass a given position. Yes -
+I know that it sounds wild that a chip
+inside your amiga can react on the
+electron beam on your screen - and
+this is only one of the few things
+that are quite unique about these
+customchips from the 80'es!
+Anyway - let's take a look at what the
+instructions really mean!
+I'm not that good at remembering it
+myself, but I can always use AsmOnes
+feature =R 
+eg typing
+»CL2:=R 8e»
+gives the following output
+»CL2:
+ 08E   W  A  D       Display window
+                     start (upper left
+                     vert-hor pos).:
+
+ DIWSTRT - Display window start (upper
+           left vert-hor pos)
+ DIWSTOP - Display window stop (lower
+           right vert-hor pos)
+
+         These registers control the
+         display window size and
+         position, by locating the
+         upper left and lower right
+         corners.
+
+
+BIT# 15141312111009080706050403020100
+USE  V7V6V5V4V3V2V1V0H9H8H7H6H5H4H3H2
+
+         DIWSTRT is vertically
+         restricted to the upper 2/3
+         of the display
+         (V8=0),and horizontally
+         restricted to the left 3/4 of
+         the display (H8=0).
+
+   Note: See DIWHIGH for
+         exceptions
+»
+This info comes from a file called
+»CL1:REGSDATA» , that should be in your
+S-directory. Get It!!
+
+
+
+
+Anyway the output text from =R 8e
+really tells us everything we need to
+know about 'adress' $8e in the copper.
+It defines the upper left corner of
+the screen.
+In my example I've chosen to have an
+upper left corner in $2c,$81 = 44,129
+In the same manner I define my lower
+right corner to be $2c,$c1 = 44,193
+hehe... This is of course not quite
+true. Due to the settings of the other
+registers the copper adds 256,256 to
+the lower rigth corner, so we get a
+screen that is 256 pixels high, and
+320 pixels wide! The default lowres.
+
+The next two lines:
+»CL2:    dc.w    $0092,$0038
+    dc.w    $0094,$00b0
+    dc.w    $01fc,$0003
+»Is datafetchmoderegisters. To be
+honest, I have problems with these
+registers every time, I have to set
+them. This setting used here should be
+fine in most cases, though.
+
+»CL2:    dc.w    $0100,$1200»
+
+This instruction tells the copper
+about the bitplanes to point at. More
+about bitplanes later. Our setting
+will give us only one bitplane (two
+colors) onto the screen. A =R 100 will
+reveal that a lot of options are
+available with the $0100 register.
+Check them out!
+
+»CL2:    dc.w    $0102,$0000
+    dc.w    $0104,$0000»
+
+Register $0102 and $0104 controls
+various things regarding sprites,
+bitplanes, etc. When working straight,
+like in this case, they should be set
+to 0.
+
+»CL2:    dc.w    $0108,$0000
+    dc.w    $010a,$0000»
+
+These two registers define modulo for
+the displayed planes. Every time the
+electrombeam has reached the end of a
+line, it will autumatically add these
+values to the imagepointer. Therefore
+these are of course set to 0. We will
+later look at some smart ways to use
+these registers!
+
+
+
+»CL2:    dc.w    $0106,$0000
+    dc.w    $0180,$0000
+    dc.w    $0182,$0fff
+    dc.w    $0106,$0200
+    dc.w    $0180,$0000
+    dc.w    $0182,$0fff»
+
+This is the color-definitions.
+Normally we look at colors in 24-bit
+format. I usually have the palletes in
+»CL1:00RRGGBB - format», an entire longword
+for each color. This is a very common
+»CL1:standard - HTML» uses the same.
+Black=$00000000, White=$00FFFFFF.
+The copper, however sees upon colors
+in a different way. This is due to the
+historical fact, that the amiga once
+had only 0RGB, colors, giving us 4.096
+different colors instead of
+16.777.216. Anyway, the AGA-format is
+0RGB in a most significant register,
+and 0RGB in a least significant
+register.
+The color                    $00123456
+should be written as         $0 1 3 5
+and                          $ 0 2 4 6
+There is only 32 colorregisters in the
+copper, $0180 to $01be. When having
+more than 32 colors, one has to select
+which colorbank to write to. This is
+being controlled in the $0106register.
+More of that later. $0106 is also in
+control of determining most/least
+significant palletevalues. The
+explanation for the pallete:
+
+
+
+
+
+»CL2: dc.w $0106,$0000 ; Select colorbank 0
+                    (Color 0 to 31)
+                    Most significant
+                    palletevalues
+ dc.w $0180,$0000 ; Col 0 is $000-0-0-
+ dc.w $0182,$0fff ; Col 1 is $00f-f-f-
+ dc.w $0106,$0200 ; Select colorbank 0
+                    (Color 0 to 31)
+                    Least significant
+                    palletevalues
+ dc.w $0180,$0000 ; Col 0 is $00000000
+ dc.w $0182,$0fff ; Col 1 is $00ffffff
+
+ dc.w $00e0,$0000
+ dc.w $00e2,$0000
+»
+
+
+
+
+This is the planepointers. We have
+currently told the copper to display
+what is on adress $00000000.
+In your initial startup, you will have
+to set these registers. We will do
+that in a minute.
+
+»CL2: dc.w $ffff,$fffe»
+
+This tells the copper to wait for the
+electronbeam to be on the 255th line,
+the 256+255th pixel. This wiil never
+happen (The window stops at $2cc1).
+The copper will therefore not read
+further down in the list, but will
+restart again, when the electrom beam
+starts the next vertical blanking of
+the screen.
+
+
+»CL1:Now - let's display a picture.»
+
+To do this, we need some startup-code
+in order to be able to return to the
+system.
+The old copperlist and DMA-setting has
+to be saved, and the new DMA-setting
+- display on, has to be written to the
+corresponding registers.
+
+This is not sufficent for all
+situations. I therefore included the
+startupcode, I always use myself,
+Blueberry/Efreet's Startup/code.
+I've used a little modified
+version of the last program, I made
+(the one with the circle). I simply
+plot this circle to the screen. As
+always, if you're having trouble
+figuring out the source, just
+»CL0:singestepdebug it. There are some
+problems with singlestep after having
+told the system to use another copper.
+However, the problem is only that
+you're not able to see the picture (as
+you have to be in the assembler to
+debug. of course!)
+Also the jsr KillSystem can have nasty
+effects, so when debugging and
+watching registers, skip this line
+(Amiga+K - don't execute instruction)
+Pixelplotting involves a little
+knowledge about bits/bytes. Every byte
+displayed on the screen, consist of
+eigth bits. So you have to manipulate
+a little bit with the X-position in
+order to get the rigth byte.
+Also note, that I don't MOVE the byte
+with the pixel onto the screen.
+Instead, I OR it. Try to see what
+happens, if it's MOVEd instead. Then
+you should be able to see why..
+
+   »PIC:Jud1.iff»
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+»CL2:        section code,code
+
+Circle:
+        jsr     KillSystem       ; Shut Down System
+
+        lea     Picture,a0
+        lea     CopPic,a1
+        move.l  a0,d0
+        move.w  d0,6(a1)         ; Move the pointer to
+        swap    d0               ; the picture into
+        move.w  d0,2(a1)         ; the copperlist
+
+        lea     $dff000,a6        ; Systemoffset
+        move.w  #%1000001110000000,$96(a6)      ; Turn on display
+        move.l  #Copper,$80(a6)                 ; Tell the copper,
+                                                ; where to get copperlist
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                ; CalculatePoints
+        lea     SineTable,a0    ; Sine
+        lea     64*2(a0),a1     ; Cosine
+        lea     Picture,a2
+
+        move.w  #256-1,d7
+.loop   move.w  (a0,d7.w*2),d0  ; Y
+        add.w   #256/2,d0       ; Center on screen
+        mulu.w  #320/8,d0       ; Times the length of each line
+
+        move.w  (a1,d7.w*2),d1  ; X
+        add.w   #320/2,d1       ; Center on screen
+        move.w  d1,d2
+        lsr.w   #3,d1           ; Divide by 8
+        add.w   d1,d0
+        and.w   #7,d2           ; Get the pixelposition in the byte
+        move.b  #%10000000,d3   ; Shift this 'pixel' 
+        lsr.b   d2,d3           ; This is the right pixel
+        or.b    d3,(a2,d0.w)    ; Place on screen
+        dbf     d7,.loop
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+»CL2:.mouse  btst     #6,$bfe001     ; Wait for the left mousebutton
+        bne.b   .mouse          ; to be clicked
+
+        jsr     GreetSystem     ; Return to system
+        rts                     ; exit program
+
+        section various_data,data
+
+SineTable:   ds.w   256+64
+             auto    cs\SineTable\0\360+90\256+64\$3f\0\w1\ny
+
+         section picture,data_c
+
+Picture:    ds.b  320/8*256
+
+         section OtherPeoplesCode,code
+
+         INCLUDE Eurochart34:Sources/StartUp.S
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         section copper,data_c
+Copper: dc.w    $008e,$2c81
+        dc.w    $0090,$2cc1
+        dc.w    $0092,$0038
+        dc.w    $0094,$00b0
+	dc.w	$01fc,$0003
+CopPic: dc.w    $00e0,$0000
+        dc.w    $00e2,$0000
+        dc.w    $0100,$1200
+        dc.w    $0102,$0000
+        dc.w    $0104,$0000
+        dc.w    $0108,$0000
+        dc.w    $010a,$0000
+        dc.w    $0106,$0000
+        dc.w    $0180,$0000
+        dc.w    $0182,$0fff
+        dc.w    $0106,$0200
+        dc.w    $0180,$0000
+        dc.w    $0182,$0fff
+        dc.w    $ffff,$fffe
+»CL0:This was quite a program.
+Once again I instruct you to read this
+a couple of times. It really isn't all
+that hard as it seems! 

@@ -1,0 +1,9 @@
+if exists s:Demo
+   execute work:demo/s/InitDemo
+   execute Demoscript
+     else
+   echo "*N*N You can start the demo with the Shell command DemoStart.*N"
+   wait 3
+   endif
+
+

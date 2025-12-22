@@ -1,0 +1,34 @@
+
+<MAIN> myscript |0|1</MAIN>
+
+<KIMG> myimage | data/realeyez.iff </KIMG>
+
+
+<KSCRIPT>
+    <ID> myscript </ID>
+    <PLAY> mypart | 99999 | 0 | 1 </PLAY>
+
+</KSCRIPT>
+
+
+<KPART>
+
+    <ID> mypart  </ID>
+
+    <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> myimage </Pa>
+    </Fx>
+
+    <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> myimage </Pa>
+        <Pa> cte | 0.0 </pa>
+        <Pa> cte | 0.0 </pa>
+        <Pa> cte | 1.0 </pa>
+        <Pa> cte | 1.0 </pa>
+
+    </Fx>
+
+</KPART>

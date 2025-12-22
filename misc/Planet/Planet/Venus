@@ -1,0 +1,9 @@
+; Planet Venus
+stack 300000
+copy >NIL: env:mesa/noclamp ram:
+copy >NIL: env:glut/force_fs ram:
+setenv mesa/noclamp 0
+setenv glut/force_fs 0
+Planet data/Venus.bmp
+copy >NIL: ram:force_fs env:glut
+copy >NIL: ram:noclamp env:mesa

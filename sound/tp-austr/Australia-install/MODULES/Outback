@@ -1,0 +1,10 @@
+IF VAL $playing EQ 3
+  SP STOP
+  SETENV playing 0
+ELSE
+  IF VAL $playing GT 0
+    SP STOP
+  ENDIF
+  SETENV playing 3
+  SP "Mod.Outback" NOWINDOW
+ENDIF

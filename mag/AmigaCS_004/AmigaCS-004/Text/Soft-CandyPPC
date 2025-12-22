@@ -1,0 +1,86 @@
+@{d DFFFBF}@{xoffset 21}   ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+@{xstep 416}@{font ACS-Title.font 18}Candy PPC@{font}
+@{xstep 386}@{c A6FFF8}@{i}Fractal/StillTeam@{ui}@{c}@{ystep -8}
+
+
+
+       @{xstep 1}@{font ACS-Title.font 18}V@{font} recenzi  na  PPC  (nëkde v tomto çísle) jste se mohli od Chrousta
+     dozvëdët  zmínku  o existenci  nenápadného  prográmku  s názvem Candy.
+     Není  vûbec  sloùitý  a tak ani recenze na nëj nebude pêíliî obsáhlá -
+     bylo  by  to zbyteçné mrhání místem.  Nebude to ùádný podrobný návod -
+     pouze  popis  nabízených  funkcí.  Podrobný návod samozêejmë naleznete
+     v pêiloùeném guide.
+
+
+       Program Vás pêivítá jen jedním okýnkem 320×256 (zatím).  Je zde vîak
+     moùno pozapínat spoustu nastavovadlotáhlotlaçítek @{c A6D1FF}(viz. @{pict CandySnap.png} snap @{pict} )@{c}.
+
+
+V základë lze provádët toto:
+
+@{c A6D1FF}BARVA OBJEKTU@{c}
+ 
+lze nastavit:
+- fyzickou barvu objektu
+- barvu lesku
+- barvu vlastního stínu
++ volba Normal/Metal povrchu
+
+@{c A6D1FF}BARVA POZADÍ@{c}
+
+- totéù, jako u objektu s jednou volbou navíc - vypnuté pozadí
+
+@{c A6D1FF}SVËTLO@{c}
+
+- x a y souêadnice + vzdálenost od objektu
+- smër svëtla (realtime sphere)
+
+@{c A6D1FF}BEVEL@{c}
+
+- îíêka rantlu
+- hloubka rantlu
+- vyhlazování
+- horní a dolní tvar rantlu - kêivka
+- CARVE - inverzní osvëtlení
+
+
+@{c A6D1FF}STÍN@{c}
+
+- rozmaz
+- intenzita
+- barva
+- vzdálenost (resp. simulovaná výîka nad pozadím)
+- zámek pro svëtlo (závislost na úhlu osvitu)
+
+@{c A6D1FF}GLOW@{c}
+
+- velikost
+- intenzita
+- barva vnitêku
+- barva okrajû
+- falloff
+- on/off diffuse
+
+
+@{c A6D1FF}NOISE BUMP@{c}
+
+- x a y velikost bumpového patternu
+- hloubka bump efektu
+- relativní zdvih çi pokles minima vûçi maximu
+- výbër typu bumpu
+- inverze
+
+  S  tëmito  funkcemi  se  dá  dosáhnout  neçekaných efektû a zejména tvûrci www
+grafiky  toto uvítají jako obrovské urychlení rutinní práce.  A jeîtë jeden hint
+na  závër:   Pokud  se  pozornë  podíváte  do  adresáêe  Candy, objevíte adresáê
+patterns.   Není  to  nic jiného neù 256gray výîková mapa.  A není to nic jiného
+neù  RAW  256×256.   Tedy  není  problém udëlat si bump pattern dle svého gusta.
+Bohuùel  program  neumí  patterny  pêidávat.  Tedy ten svûj nový pojmenujte jako
+jeden  z dodávaných (ten si pochopitelnë schovejte) a máte tu grafické udëlátko,
+radost  pohledët.   Nakonec  jsem  pro  ukázku  jsem  udëlal  vzor,  abyste mëli
+pêedstavu, o çem mluvím:
+
+
+
+
+           @{p CandyClip1.png 80 108}      @{p CandyClip2.png 320 111}

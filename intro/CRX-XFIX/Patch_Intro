@@ -1,0 +1,6 @@
+if exists CRX-XMAS.exe
+ gpatch CRX-XMAS.exe CRX-XMAS.pch CRX-XMAS_fix.exe
+ protect CRX-XMAS_fix.exe RWED
+else
+ echo "The file CRX-XMAS.exe is not in this directory... "
+endif

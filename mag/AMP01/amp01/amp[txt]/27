@@ -1,0 +1,302 @@
+A1000 again........KAOS
+
+           - A1000 again -
+
+   Commodore  Buisness  Machine  (CBM)
+produkowaî  komputery  od  roku  1977.
+Commodore PET byî jednym z  pierwszych
+konkurentów Apple'a. Na przeîomie  lat
+1970/80 popularnoôê zdobyîy  komputery
+biurowe serii 8000 i 4000. Przez wiele
+lat    sprzedawany     byî     VIC-20,
+bezpoôredni  rywal  pierwszych  modeli
+Sinclaira   (Spectrum).    Najwiëkszym
+szlagierem  firmy   byî   niewâtpliwie
+model C64, w wielu  krajach  ogîoszony
+komputerem domowym lat 1983/84.  Duûe,
+jak  na  komputer  domowy,  moûliwoôci
+sprzëtu,   niska   cena    i    bogate
+oprogramowanie byîy magnesem dla wielu
+nabywców. Nastëpne modele Commodore  -
+- Plus4, C16, C116, C264  nie znalazîy
+zbyt wielu nabywców, gîownie z  powodu
+ich niezgodnoôci z C64. Dopiero w 1985
+roku   rozpoczëto    sprzedaû    C128,
+bëdâcego   kontynuacjâ   linii    C64.
+Commodore  nie   ograniczaî   sië   do
+produkcji komputerów domowych. Od 1984
+roku   firma   przyîâczyîa   sië    do
+producentów  IBM  PC.  Commodore  PC10
+(20,  30)  odpowiadaîy  PC/XT  i  byîy
+znacznie  taïsze  od   oryginaîu.   Po
+odejôciu energicznego dyrektora, Jacka
+Tramiela,  firma  popadîa  w   kîopoty
+finansowe,    które     jednak     nie
+przeszkodziîy   jej    w    wykupieniu
+przedsiëbiorstwa  Amiga  Comp.  i  jej
+produktu - nowego modelu komputera.
+Od 1985 roku sprzedawany byî  komputer
+osobisty wyznaczajâcy nowy  puîap  dla
+sprzëtu tej klasy - Amiga 1000.
+
+   W   artykule   tym   nie   bëdziemy
+zajmowaê sië C64, z  przyczyn  kaûdemu
+znanych, ale zajrzymy do wnëtrza Amigi
+1000, opiszë  tu  takûe  parë  procków
+Motoroli.
+
+   Konstrukcja  Amigi  1000  stanowiîa
+skok   jakoôciowy   w   stosunku    do
+ówczeônie  produkowanych   komputerów.
+
+åa1000
+
+Amiga  1000   zostaîa   uznana   przez
+fachowe pisma za komputer  roku  1986,
+o      moûliwoôciach      (szczególnie
+graficznych)     dostëpnych      tylko
+w  systemach  wielokrotnie  droûszych.
+Byîa  (jest)   16-bitowym   komputerem
+wielozadaniowym, w którym wykorzystano
+nowe       techniki        komunikacji
+z uûytkownikiem.
+W doôê pîaskiej obudowie  umieszczono,
+oprócz pîyty gîównej,  takûe  zasilacz
+i stacjë dysków. Obudowa spoczywaîa na
+nóûkach,   dziëki   czemu    doîâczonâ
+klawiaturë   moûna   podczas    przerw
+umieôciê  pod  niâ.  Zîâcza   urzâdzeï
+zewnëtrznych  umieszczono  na   tylnej
+i  bocznej  ôciance,  szyny  komputera
+i   podstawowe    sygnaîy    sterujâce
+wyprowadzono na zîâcze znajdujâce  sië
+z przodu obudowy.
+Klawiatura    jest    doîâczana     do
+odpowiedniego    gniazda    z     tyîu
+komputera.    Dziewiëêdziesiât    doôê
+niskich     klawiszy      pogrupowano,
+wyróûniajâc     dziesiëê      klawiszy
+funkcyjnych,    klawisze    numeryczne
+i  sterujâce   kursorem.   Zastosowane
+rozwiâzania techniczne  wykorzystywaîy
+najnowoczeôniejsze           koncepcje
+i   technologie.   Myôlâ    przewodniâ
+konstruktorów     byîo      odciâûenie
+procesora gîównego  z  wszelkich  prac
+zwiâzanych z obsîugâ  ekranu,  pamiëci
+i   innych   urzâdzeï    zewnëtrznych.
+Zastosowano szybki (jak na owe  czasy)
+procesor       Motoroli       MC68000.
+Przetwarzaniem      i      sterowaniem
+przepîywem   danych   zajmowaîy    sië
+dodatkowe,   specjalizowane    ukîady,
+zrealizowane   w   technologii   VLSI,
+nazwane Daphne, Agnus  i  Portia.  Aby
+przyôpieszyê    komunikacjë     miëdzy
+elementami   systemu    a    pamiëciâ,
+przesîanie  danych  byîo   realizowane
+gîównie  przez  16-bitowe  kanaîy  DMA
+(byîo ich aû 25!).
+Ukîad  Daphne  zajmowaî  sië   obrazem
+(OCS). Steruje jego kolorem,  animacjâ
+obiektów  zdefiniowanych  na  ekranie,
+sprite'ami  (8  sztuk)  oraz   trybami
+pracy       wewnëtrznego        ukîadu
+wyôwietlajâcego.
+Ukîad  Agnus  ma  za  zadanie  szybkie
+przesyîanie  bitów  miëdzy   obszarami
+pamiëci i ich modyfikacjâ  (przetwarza
+okoîo  1  mln  bitów/s).  Ukîad   taki
+(bit-blitter)   umoûliwiaî   niezwykle
+szybkie przetwarzanie obrazu,  np.jego
+modyfikowanie,    zmiany    zawartoôci
+okien, kreôlenie figur  i  linii  itd.
+Agnus  steruje  równieû   przesyîaniem
+danych z buforów pamiëci zewnëtrznych,
+moûe  teû   nadzorowaê   pracë   pióra
+ôwietlnego.
+Z  kolei  ukîad   Portia   to   przede
+wszystkim niezwykîej jakoôci generator
+dúwiëku - pierwszy seryjnie  montowany
+w  komputerach  osobistych  syntezator
+stereo.  Dúwiëk  jest  tworzony  na  4
+niezaleûnych      kanaîach      (pasmo
+200...7000  Hz).  Portia  zawiera  teû
+ukîad sterowania przerwaniami.
+Wspomniane  czynnoôci  sâ   wykonywane
+przy minimalnej  ingerencji  procesora
+gîównego, co pozwalaîo na  równoczesnâ
+realizacjë wielu programów  uûytkowych
+oraz szybkâ pracë komputera. Np.  przy
+pracy w jëzyku Basic szybkoôê byîa  na
+poziomie IBM AT (podczas gdy  IBM  byî
+3-krotnie droûszy od Amigi).
+Amiga 1000 standardowo wyposaûona byîa
+w 256 KB pamiëci  RAM.  Nawet  jak  na
+tamte czasy byîo to za  maîo.  Moûliwe
+byîo rozszerzenie pamiëci do  512  KB,
+co jednak nadal wydawaîo sië  za  maîo
+do zapewnienia pracy  wielozadaniowej.
+Wykorzystujâc dodatkowe  ukîady  moûna
+byîo znacznie zwiëkszyê  pamiëê  do  2
+MB, ale  byîo  to  rozwiâzanie  bardzo
+kosztowne. A1000 nie jest  w  zasadzie
+wyposaûona  w  pamiëê  staîâ.   System
+operacyjny   nie   zostaî   w    peîni
+przetestowany    i    dlatego     jego
+podstawowe  procedury  îadowane   byîy
+z  dysku  po  wîâczeniu  zasilania  do
+dodatkowego   obszaru   pamiëci    RAM
+o wielkoôci 256 KB. Pamiëê  ta  jednak
+byîa zastrzeûona i programy nie  mogîy
+wpisywaê do niej ûadnych informacji.
+Jeôli chodzi o  pamiëci  masowe  A1000
+posiadaîa stacjë dysków elastycznych 3
+1/2  cala   o   pojemnoôci   800   KB.
+Dodatkowo  moûna  byîo   podîâczyê   3
+napëdy,  w  tym  takûe  5  1/4-calowe,
+twardziela o (magicznej) pojemnoôci 20
+MB.
+O  moûliwoôciach   tworzenia   grafiki
+i dúwiëku w tym systemie moûna napisaê
+oddzielny  artykuî.  Poprzestaïmy   na
+informacjach o moûliwoôci  generowania
+kolorowego obrazu (16 kolorów z palety
+4096)  przy  rozdzielczoôci   640*400.
+Specjalny  tryb  pracy  ukîadu  Daphne
+(hold & modify) pozwala na równoczesne
+wyôwietlenie  na  ekranie   wszystkich
+moûliwych kolorów. Przewidziano  takûe
+moûliwoôci zarejestrowania  w  pamiëci
+i przetwarzanie  obrazu  TV.  Animacja
+sprite'ów i innych obiektów  uîatwiaîa
+tworzenie  gier.  Amiga  ta  nie  byîa
+przystosowana      do       wspóîpracy
+z urzâdzeniami muzycznymi (brak zîâcza
+MIDI), ale jej wîasne ukîady  tworzyîy
+dúwiek nie gorszy od nich.
+
+   Charakterystyka najpopularniejszych
+procesorów Motoroli:
+
+68000
+
+   W   1979   roku   firma    Motorola
+wprowadziîa na rynek  najlepszy  ukîad
+16-bitowy  -  MC68000.  Procesor   ten
+zostaî najpierw  zastosowany  w  kilku
+modelach komputerów wyûszej klasy, np.
+Macintosh, Apple Lisa. Stosowany takûe
+w takich maszynkach jak Atari 160  ST,
+Sinclair QL, Atari  Jaguar.  68000  ma
+32-bitowe   rejestry,    operuje    na
+32-bitowych   sîowach,    ma    jednak
+16-bitowâ    organizacjë    wewnëtrznâ
+i szynë danych, a 32-bitowe rozkazy sâ
+wykonywane w dwóch ratach (okreôla sië
+go jako 16/32 bity).
+
+Oto jego gîówne cechy:
+
+- 61 instrukcji (jest ich ponad  1000,
+jeôli  uwzglëdniê  argumenty  i  tryby
+adresowania)
+
+- 6 trybów  adresowania  -  moûliwoôci
+adresowania   znacznie   wiëksze   niû
+w konkurencyjnym 8086
+
+- osiem 32-bitowych rejestrów  danych,
+dziesiëê     32-bitowych     rejestrów
+adresowych
+
+- bardzo wygodne  instrukcje  przesîaï
+oraz  arytmetyczne  (w  tym   mnoûenie
+i dzielenie 32-bitowych sîów)
+
+- moûliwoôê wykonywania instrukcji  na
+dowolnych danych  -  bajtach,  sîowach
+dwu i czterobajtowych
+
+- przestrzeï  adresowa  16  MB  (szyna
+adresowa ma 24 bity,  jednak  wewnâtrz
+procesora    moûna     operowaê     na
+32-bitowych adresach)
+
+-   czëstotliwoôê   zegara   8    MHz;
+produkowano sië takûe szybsze  wersje,
+nawet 25 MHz
+
+Jako  ciekawostkë  moûna   podaê,   ûe
+procesor ten skîada sië z ponad  68000
+tranzystorów i zawiera  3  artmometry,
+które pracujâ równolegle. MC68000 jest
+takûe pierwszym procesorem o  napiëciu
++5V.
+
+68008
+
+   Wzorem   firmy   Intel   opracowano
+wersjë  procesora  68000  z   8-bitowâ
+szynâ danych -  MC  68008.  Jednak  ze
+wzglëdu  na  brak  kolejki  instrukcji
+oczekujâcych wykonania dziaîa znacznie
+wolniej niû 68000.  Zostaî  on  jednak
+wykorzystany w komputerze Sonclair QL.
+
+68010
+
+   MC 68010 wykonuje wszystkie rozkazy
+procesora    68000.    Ma    dodatkowo
+moûliwoôci   gospodarowania   pamiëciâ
+wirtualnâ o wielkoôci 16 MB (zastëpuje
+68000  a   takûe   ukîad   zarzâdzania
+pamiëciâ MC68451).  W  procesorze  tym
+usprawniono instrukcje  pëtli,  ma  on
+takûe kolejkë instrukcji  oczekujâcych
+wykonania. Ukîad  ten  ze  wzglëdu  na
+cenë   zostaî   wykorzystany   jedynie
+w droûszych komputerach np. SUN-2.
+
+68020
+
+   MC 68020 jest  32-bitowym  ukîadem,
+moûe   jednak   wykonywaê    wszystkie
+rozkazy innych  procesorów  z  rodziny
+68000.    Zbiór    rejestrów    zostaî
+rozszerzony    o    grupë    rejestrów
+systemowych.    68020    ma    kolejkë
+instrukcji do wykonania o dîugoôci 256
+bajtów,  zorganizowanâ   jako   cache.
+Machanizm  obsîugi  tej  pamiëci  jest
+bardzo    sprawny.     Powoduje     to
+przyôpieszenie jego pracy. MC68020  ma
+programowanâ  szerokoôê  szyny  danych
+(moûe ona mieê 8, 16 lub 32-bity).
+
+RISC
+
+   Wspóîczesne   procesory    wykonujâ
+coraz bardziej zîoûone rozkazy.  Cenâ,
+jakâ przychodzi za to  zapîaciê,  jest
+bardzo skomplikowany ukîad  sterowania
+oraz dîugi czas wykonywania  rozkazów.
+W procesorach typu RISC rozkazów  jest
+mniej i  sâ  one  bardzo  proste.  Kod
+rozkazu jest zapisywany w  pojedyïczym
+sîowie, niekiedy jedno  sîowo  zawiera
+kod   kilku   rozkazów.   Rozkazy   sâ
+zazwyczaj wykonywane  w  jednym  cyklu
+pracy procesora, nastëpny  rozkaz  zaô
+jest  pobierany  z  pamiëci  w  czasie
+wykonywania  poprzedniego.  W  efekcie
+procesory     te     majâ     prostszâ
+konstrukcjë,  pracujâ  jednak   bardzo
+szybko. Na przykîad, prosty ukîad  ARM
+firmy Acorn  zbudowany  jest  z  tylko
+25000 tranzystorów ma moc obliczeniowâ
+porównywalnâ z  bardzo  skomplikowanym
+procesorem 68020  zawierajâcym  200000
+tranzystorów.
+
+    Kaos/Deputy+Elite Illusion 2k

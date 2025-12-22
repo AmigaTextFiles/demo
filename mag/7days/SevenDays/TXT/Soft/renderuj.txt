@@ -1,0 +1,86 @@
+"Renderuj mi, mamo"
+
+
+DigiBoosterowy mixer do niedawna, wedle mojej oceny, posiada³ w
+zasadzie tylko jedno zastosowanie - renderowanie do sampla jako jeden z
+procesów powstawania empetrójki. Jednak ca³kiem nie tak dawno odkry³em jego
+inne zastosowania. Moûe wielu z was juû wpad³o na podobne pomys³y, moûe
+innym wydadz± siê ma³o uûyteczne. Wed³ug mnie jednak s± na tyle ciekawe,
+iû warto o nich napisaæ choæby parê s³ów.
+
+
+Pierwsze takie zastosowanie mixera okry³em z okazji pisania
+dwudziestoparêkana³owego modka z dsp. Moja czterdziestka, chociaû z 40 Mhz
+(wow! :) i koprochem, nie dawa³a sobie rady - zamiast jakiej¶ tam muzyki
+mog³em chwilami us³yszeæ jedynie: bzzz wzzz grr wrzrzrz bzzzt prlut.
+Powiedzia³em sobie jednak, ûe mogê choæ trochê zniwelowaæ ten gówniany
+efekt bez konieczno¶ci wy³±czania dsp.
+
+
+W modku wystêpowa³y partie, które np. grane by³y przez trzy oddzielne
+sample - wszystkie one gra³y to samo, w tej samej tonacji. Pomy¶la³em: po
+co tak ma byæ, skoro to wszystko moûe zagraæ jeden instrument. Zmiksowa³em
+wiêc trzy w jeden i, powiem szczerze, efekt by³ zadawalaj±cy. Mamy zatem
+prosty sposób na poprawienie jako¶ci odtwarzanego w czasie rzeczywistym
+dbm'a. W³a¶ciciele szybszych kart mog± rzecz jasna mieæ to g³êboko w dupie.
+Równieû je¶li efektem koïcowym ma byæ mp3, to nie ma sensu kombinowaæ.
+My¶lê, ûe warto pomy¶leæ o tym rozwi±zaniu w przypadku kompozycji
+rozbudowanych pod wzglêdem ilo¶ci kana³ów.
+
+
+Kolejne ciekawe zastosowanie renderingu szlifowa³em, gdy planowa³em
+komponowany utwór wys³aæ do redakcji ¶.p. "Taboo". Chcia³em jako¶ zmniejszyæ
+objêto¶æ zbyt duûych sampli. Moûna to oczywi¶cie zrobiæ w DigiBoosterowym
+samplerze funkcj± Resample/Octave down. Wszyscy jednak wiemy, ûe w
+wiêkszo¶ci wypadków koïczy siê to spadkiem jako¶ci sampla. I eureka! Biorê
+sampel, biorê czysty pattern, albo track (resztê wy³±czam) wpisujê C-8 i
+renderujê do aiff'a! Trzeba troszkê, metod± prób i b³êdów, pokombinowaæ z
+boostem. Moûna zwiêkszyæ teû czêstotliwo¶æ miksowania, wtedy jednak
+zaleca³bym miksowaæ z nuty G-8, a dostrajanie zapewne takûe nas nie ominie.
+Otrzymujemy w efekcie wysoki dúwiêk na którym gramy niskimi oktawami i
+wszystko powinno byæ ok.
+
+
+Tutaj teû moûe trochê spa¶æ jako¶æ sampla, ale mniej niû poprzez
+Resample. Ten trick moûe przydaæ siê, gdy musimy zmie¶ciæ siê w okre¶lonej
+objêto¶ci (np. do produkcji, czy na compo), a wychodzimy poza ni±. Wtedy
+miksujemy, obniûany w ca³ym utworze dany instrument o ile¶ tam oktaw i po
+k³opocie. No, chyba, ûe wcze¶niej zagra³e¶ oktaw± 1, czy 2 - moûe wynikn±æ
+problem :).
+
+
+Analogiczna sytuacja w stosunku do powyûszego wystêpuje, gdy zamiast
+zmniejszenia objêto¶ci potrzebujemy zwiêkszyæ g³o¶no¶æ próbki. Gdy jest np.
+bardzo cicha i chcemy podg³o¶niæ j± kilkakrotnie, opcja Volume w DBPro
+dorzuci nam pewn± ilo¶æ bonusowych trzasków. Teraz moûemy ustawiæ boost w
+Mixerze na ok. 2000 i heja! Podobny efekt da puszczenie tejûe próbki na
+kilku kana³ach i zmiksowanie przy niewielkim boo¶cie (je¶li ta warto¶æ
+bêdzie zbyt duûa równieû pojawi± siê trzaski). Je¶li kto¶ chce, to moûe
+postêpowaæ podobnie, jak we wcze¶niejszym przypadku i zmieniæ równieû
+czêstotliwo¶æ, ale naleûy kaûdy przypadek rozpatrzeæ indywidualnie. Zreszt±,
+ty juû bêdziesz wiedzieæ (i s³yszeæ) jak to wszystko tam poustawiaæ.
+
+
+Ostatni wa³ek jaki moûna wykrêciæ za pomoc± miksera jest, my¶lê,
+najbardziej interesuj±cy. Ciekaw jestem ile macie na twardzielach starych,
+nieuûywanych sampli (chêtnie takie przyjmê! :). Teraz mog± one rozb³ysn±æ
+nowym ¶wiat³em! Wystarczy po³±czyæ np. 2 lub 3 próbki w jedn±, by uzyskaæ
+nowe, zaskakuj±ce brzmienie. Je¶li masz dwa ¶rednie snary, to z ich
+po³±czenia moûe wyj¶æ jeden fajny. Dobre brzmienia daje ³±czenie basów,
+choæ po wygenerowaniu jest pewien problem z ustawieniem niepykaj±cej pêtli.
+Teraz ogranicza Ciê jedynie wyobraúnia! Moûesz ³±czyæ ze sob± hihaty,
+stringi, stringi z brasami, czy padami. Tu jest naprawdê duûo moûliwo¶ci.
+Wystarczy odpowiednio dobraæ sk³adniki, ich proporcje (g³o¶no¶æ, znaczy siê)
+i dobra zupka gotowa! Uwaûaj tylko, ûeby nie przesoliæ. (No coû, nie bêdê
+ukrywa³, ûe metoda ta pozwoli nam ponadto na zatuszowanie wyrypanego
+sampla...).
+
+
+Mam nadziejê, ûe komu¶ przyda siê cokolwiek z tego, co wyûej
+nakre¶li³em. Zarazem gor±co zachêcam do podzielenia siê podobnymi
+"odkryciami" innych DigiBoosterowców, THXowców itd. Fuck U.
+
+
+KAM_/IND.
+11/03/2003
+karpath@wp.pl

@@ -1,0 +1,287 @@
+{
+  "actions": [
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": -36.389967,
+            "interpolation": "linear",
+            "time": 18300
+          },
+          {
+            "float_values": 83.652107,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "camera_1"
+        }
+      ],
+      "loops": 1,
+      "name": "camera_1_action",
+      "start_time": 0,
+      "type": "rotation_z"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              1.09412003
+            ],
+            "interpolation": "linear",
+            "time": 18300
+          },
+          {
+            "float_values": [
+              -0.14263315,
+              -0.47442663,
+              6.60503864
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "camera_1"
+        }
+      ],
+      "loops": 1,
+      "name": "camera_1_action",
+      "start_time": 0,
+      "type": "position_xyz"
+    }
+  ],
+  "cameras": [
+    {
+      "far_clip_plane": 100.0,
+      "fov_x": 54.362152,
+      "fov_y": 28.800001,
+      "hide": false,
+      "name": "camera_1",
+      "near_clip_plane": 0.1,
+      "position": [
+        0.0,
+        0.0,
+        1.09412003
+      ],
+      "rotation": [
+        3e-06,
+        0.0,
+        -36.389967
+      ]
+    }
+  ],
+  "enc_info": {
+    "data_type": "ENCSCN",
+    "date": "30 Nov 2022 17:54:26",
+    "version": "2.0"
+  },
+  "loops": 1,
+  "name": "sm_scene_1",
+  "objects": [
+    {
+      "mesh_name": "sm_sleeping_man",
+      "name": "sleeping_man"
+    },
+    {
+      "material": {
+        "diffuse_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "sm_smoke_1",
+      "name": "smoke_1",
+      "position": [
+        -0.15853006,
+        -0.57630545,
+        0.68598402
+      ],
+      "properties": {
+        "blending": "additive",
+        "depth_mask": 0,
+        "depth_test": 0
+      },
+      "tag": 50
+    },
+    {
+      "material": {
+        "diffuse_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "sm_smoke_1",
+      "name": "smoke_2",
+      "position": [
+        -0.15853006,
+        -0.57630545,
+        1.22652996
+      ],
+      "properties": {
+        "blending": "additive",
+        "depth_mask": 0,
+        "depth_test": 0
+      },
+      "rotation": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "tag": 51
+    },
+    {
+      "material": {
+        "diffuse_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "sm_smoke_1",
+      "name": "smoke_3",
+      "position": [
+        -0.15853006,
+        -0.57630545,
+        1.77652991
+      ],
+      "properties": {
+        "blending": "additive",
+        "depth_mask": 0,
+        "depth_test": 0
+      },
+      "rotation": [
+        0.0,
+        0.0,
+        19.999999
+      ],
+      "tag": 52
+    },
+    {
+      "material": {
+        "diffuse_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "sm_smoke_1",
+      "name": "smoke_4",
+      "position": [
+        -0.15853006,
+        -0.57630545,
+        2.32652974
+      ],
+      "properties": {
+        "blending": "additive",
+        "depth_mask": 0,
+        "depth_test": 0
+      },
+      "rotation": [
+        0.0,
+        0.0,
+        30.000001
+      ],
+      "tag": 53
+    },
+    {
+      "material": {
+        "diffuse_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "sm_smoke_1",
+      "name": "smoke_5",
+      "position": [
+        -0.15853006,
+        -0.57630545,
+        2.87652946
+      ],
+      "properties": {
+        "blending": "additive",
+        "depth_mask": 0,
+        "depth_test": 0
+      },
+      "rotation": [
+        0.0,
+        0.0,
+        39.999999
+      ],
+      "tag": 54
+    },
+    {
+      "material": {
+        "diffuse_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "sm_smoke_1",
+      "name": "smoke_6",
+      "position": [
+        -0.15853006,
+        -0.57630545,
+        3.42652917
+      ],
+      "properties": {
+        "blending": "additive",
+        "depth_mask": 0,
+        "depth_test": 0
+      },
+      "rotation": [
+        0.0,
+        0.0,
+        50.0
+      ],
+      "tag": 55
+    },
+    {
+      "material": {
+        "diffuse_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "sm_smoke_1",
+      "name": "smoke_7",
+      "position": [
+        -0.15853006,
+        -0.57630545,
+        3.97652912
+      ],
+      "properties": {
+        "blending": "additive",
+        "depth_mask": 0,
+        "depth_test": 0
+      },
+      "rotation": [
+        0.0,
+        0.0,
+        60.000002
+      ],
+      "tag": 56
+    }
+  ],
+  "time": 18300
+}

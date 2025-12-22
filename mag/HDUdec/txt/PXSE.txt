@@ -1,0 +1,51 @@
+===========================================
+HD Installer for Project-X Special Edition V3.0
+Author: jffabre@ensica.fr (Jean-François Fabre)
+===========================================
+Project-X is ©1993 Team17 Software.
+
+-- PROJECT-X SPECIAL EDITION Hard Disk Installer --
+
+This installer requires the ORIGINAL disks from Project-X 
+SE 93 (there are 3). It should NOT work for cracked versions
+or the first release of Project-X.
+
+The HD-Patched game will need at least 2Mb of memory 
+(LOWMEM).
+
+FEATURES:
+- Runs fully from HD/RAM
+- Installer script provided
+- Uses JOTDStartup (JST) not included
+- Full use of fast memory
+- You can access all the 5 levels at once.
+  The choice is not limited to levels 1,2,3.
+- Now runs on a standard A1200/NoFast.
+- A TRAINER tooltype allows you to get infinite lives.
+- Load/Save Hi-Scores now work with hard drive. No need for floppy
+- F10 key allows you to quit the game from the main menu.
+
+BUGS:
+There are some annoying bugs I did not succeed to remove yet:
+- You have to load the high scores by the LOAD SCORES option. 
+This is not done at startup.
+- Do NOT use a copyback disk cache on your games partition. 
+This could be harmful if you reboot the computer before you 
+quit the game, if you use the SAVE SCORES option (disk 
+buffers not updated). Anyway, if you are afraid, you can still 
+use floppies to save your games if you set the NOOSSWAP
+tooltype/argument. Sometimes the game asks for disk 2 or 
+disk 3, or refuses to work without the NOOSSWAP tooltype. 
+In that case, switch off and on your amiga and it will work again
+(a Blizzard 12x0 problem ?, anyway I'm not sure it still occurs 
+with this version) - The install part has some problems with disk 
+1 sometimes. You'll get an error message. If so, just reboot and
+try again. I don't know why this happen, but anyway, once
+installed, you won't have to worry anymore.
+
+CHEAT MODE:
+To skip levels during the game press and hold down the right
+mouse button and then hit the [Escape] key, the screen will then
+turn black. Now with your finger still on the right mouse 
+button press the [Return] key and you will be warped to 
+the next level.

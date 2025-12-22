@@ -1,0 +1,286 @@
+<html>
+<BODY BGCOLOR="#223344" TEXT=WHITE>
+<CENTER>
+<TABLE WIDTH=600>
+<TD>
+<CENTER>
+<FONT SIZE=5>D!ck's Guide to</FONT><BR>
+<FONT SIZE=7>Basic HTML</FONT><BR>
+Written by, er... D!ck!
+</CENTER>
+
+<TABLE>
+ <TD VALIGN=TOP>Lesson 01:</TD>
+ <TD VALIGN=TOP>
+  Introduction<BR>
+  Creating a document<BR>
+  Text formatting<BR>
+  Text styles<BR>
+ </TD>
+</TABLE>
+<P>
+HTML, or HyperText Markup Language, is a form of scripting that's used
+to create Internet Web Pages.  You do not need any special software to
+create HTML, just a browser to be able to view it properly.  This is a
+guide to help you get started, it will cover the basics of HTML and a
+few of the more advanced features, and hopefully will help you create
+your own pages quickly and easily.
+<P>
+<CENTER><FONT SIZE=5>How it Works</FONT></CENTER>
+<P>
+HTML files are read into the browser program, and built up rather like
+structured drawing.  Granted there you don't get the vast range of
+commands that are available in a Structured Drawing package, but then
+you wouldn't normally type those in yourself.
+<P>
+HTML documents are ASCII files that are written in a certain way, a
+file is processed based on what it contains, and this is done as a list
+of TAGS.
+<P>
+There are two types of TAG: those which enclose and area; and those
+that do not.  The start and end of a HTML document are defined using
+the HTML and End-HTML Tags, the end tag is simply the start tag with
+the "/" character in front of it, and all tags are surrounded with
+angular ("&lt;" and "&gt;") brackets, or the "greater than" and "less than"
+symbols.
+<P>
+<CENTER><FONT SIZE=5>Getting started</FONT></CENTER>
+<P>
+Your first tag, then, is &lt;HTML&gt; and it's corresponding end tag of
+&lt;/HTML&gt;, which will define your HTML document.  Create a new text file
+and write them in as follows.
+<P>
+&lt;HTML&gt;<BR>
+&lt;/HTML&gt;<BR>
+<P>
+Congratulations, you have just written a HTML document!  now that was
+not so hard was it?  OK, so it doesn't actually DO anything, but it is
+a HTML document, nonetheless.
+<P>
+Your HTML document will usually consist of two parts, a header and a
+body text, not suprisingly these use the &lt;HEAD&gt; and &lt;BODY&gt; tags, and
+because something has to go between them they have corresponding end
+tags.
+<P>
+A word here on enclosing tags.  It is always a good idea to ensure
+you have closed your tag correctly before you actually put anything
+in it, so that you don't forget.
+<P>
+In the above example we have closed the HTML tag already, and because
+both the HEAD and the BODY are parts of the document, they need to go
+inside the HTML tag, but they are not part of each other, so we end
+up with:
+<P>
+&lt;HTML&gt;<BR>
+ &lt;HEAD&gt;<BR>
+ &lt;/HEAD&gt;<BR>
+ &lt;BODY&gt;<BR>
+ &lt;/BODY&gt;<BR>
+&lt;/HTML&gt;<BR>
+<P>
+Note that it is perfectly valid to put all of the tags on the same line
+of the document, it just isn't very readable!  For this reason we take
+the programmers convention and indent related lines to the same degree,
+thus &lt;HEAD&gt; and &lt;/HEAD&gt; are indented to the same amount because they
+are related.  This has absolutely no effect on the output of the file,
+you could write the above as...
+<P>
+<CENTER>&lt;HTML&gt;&lt;HEAD&gt;&lt;/HEAD&gt;&lt;BODY&gt;&lt;/BODY&gt;&lt;/HTML&gt;</CENTER>
+<P>
+...and it would do exactly the same thing, however it is generally only
+advisable to put tags on the same line when there is very little between
+them, just to keep things clear.
+<P>
+You do not need a HEAD area to create a working document, but it is the
+part of the file that tells the browser and the user about it, so it's
+not a bad idea to invest 30 seconds knocking one up!
+<P>
+The main thing you'll stick in here is the Title of the document, this
+is a string of text that will be displayed at the top of your browser
+and stored in your bookmark area whenever you create one.  As it is a
+string, it has to be closed in an area and - you guessed it - it has
+to have an end tag...
+<P>
+&lt;HTML&gt;<BR>
+<P>
+ &lt;HEAD&gt;<BR>
+  &lt;TITLE&gt;My First HTML Document&lt;/TITLE&gt;<BR>
+ &lt;/HEAD&gt;<BR>
+<P>
+ &lt;BODY&gt;<BR>
+ &lt;/BODY&gt;<BR>
+<P>
+&lt;/HTML&gt;<BR>
+<P>
+...you'll notice that I have started to space things out a bit too, so
+that you can see where the &lt;HEAD&gt; and &lt;BODY&gt; areas start and end.  The
+addition of lines for this purpose will also have no effect on your
+document because seperate lines are not dispayed in this way, to get a
+line of text one the screen, we have to put it in the main &lt;BODY&gt; of
+our document.
+<P>
+<CENTER><FONT SIZE=5>The BODY area.</FONT></CENTER>
+<P>
+Anything you put in the BODY area - unless it is simply a remark for
+yourself - will be displayed on the page when you view it in your web
+browser.
+<P>
+The &lt;BODY&gt; tag itself also takes a few parameters if you want to use
+them.  In all cases of enclosing tags, it is always the opening tag
+that takes params, never the closing tag.
+<P>
+<CENTER>BGCOLOR="#rrggbb"</CENTER>
+<P>
+This is possibly the most popular param in the BODY tag, it simply sets
+the background colour of the page to a 24-bit value that we are all
+familiar with, so:
+<P>
+  <CENTER>&lt;BODY BGCOLOR="#ffffff"&gt;</CENTER>
+<P>
+will produce a document with a white background.  This is all very nice
+unless your text colour is white too, in which case you can change it
+using:
+<P>
+  <CENTER>TEXT="#rrggbb"</CENTER>
+<P>
+Which will set the colour of text (although not links) throughout the
+document.  Some browsers, especially on the PC, allow you to substitute
+words like BLACK, WHITE, GREEN etc for the RGB values in these two
+commands, but as there will always be a browser somewhere that doesn't
+permit this, it's a good idea to stick to numeric values.
+<P>
+  <CENTER>BACKGROUND="{filename}"</CENTER>
+<P>
+Allows you to specify an image file that will be used for the back-
+ground of the displayed document, if it is too small to cover the 
+entire page them it will be tesselated like wallpaper, so it's a
+good idea to pick a textture that will wrap properly, and to refrain
+from using logos that will tile when people use larger resolutions.
+Replace {filename} with your file, eg:
+<P>
+ <CENTER>&lt;BODY BACKGROUND="water.gif"&gt;</CENTER>
+<P>
+You can combine parameters in any order, it makes no difference
+whatsoever, and it means that:
+<P>
+  <CENTER>&lt;BODY TEXT="#ffffff" BACKGROUND="water.gif" BGCOLOR="#223344"&gt;</CENTER>
+<P>
+will do the same as:
+<P>
+  <CENTER>&lt;BODY BGCOLOR="#223344" BACKGROUND="water.gif" TEXT="#ffffff"&gt;</CENTER>
+<P>
+To tell the truth, there is little point in setting a BGCOLOR and a
+BACKGROUND, because the background image will overwrite the colour
+anyway.  On some browsers, however, BGCOLOR also determines which
+colour is used for transparent backgrounds, so it might be worth
+keeping this in mind.
+<P>
+<CENTER><FONT SIZE=5>Displaying Text.</FONT></CENTER>
+<P>
+So you've typed in all the text that you want to display in your new web
+page, launched your browser and loaded it in, only to find that there's
+one massive block of text on the screen.  Because of the differences
+between machines, it is not enough to press your Return key to get the
+text onto another line, a document that reads
+<P>
+ &lt;BODY&gt;<BR>
+  This is line one<BR>
+  This is line two<BR>
+ &lt;/BODY&gt;<BR>
+<P>
+Will simply display
+<P>
+ This is line one This is line two
+<P>
+on the screen.  To seperate the two we have to use the first single tag,
+the line break, or &lt;BR&gt;.  This is the same as forcing a return, but it
+can be used anywhere in a document, even to seperate graphical images,
+so the above BODY area should be re-written:
+<P>
+ &lt;BODY&gt;<BR>
+  This is line one&lt;BR&gt;<BR>
+  This is line two<BR>
+ &lt;/BODY&gt;<BR>
+<P>
+Obviously the line break does not enclose an area, and as such does not
+have a corresponding end tag, there is no such thing as &lt;/BR&gt; !
+<P>
+Similarly, you can define areas of text as Paragraphs by inserting a
+Paragraph break, or &lt;P&gt;.  Because these are meant to represent blocks
+of text, it's generally more readable to put them between the blocks,
+though obviously it makes no difference, it's simply more readable.
+<P>
+Replacing &lt;BR&gt; with &lt;P&gt; in the above example produces much the same but
+with one small difference:  There is now a blank line between the two
+lines of text, because the second line is defined as a new paragraph.
+Additionally, I would put the &lt;P&gt; on it's own line between the two.
+I have seen the &lt;/P&gt; tag in use as well, to define the end of a para-
+graph, but personally I have never used it.
+<P>
+<CENTER><FONT SIZE=5>Different styles</FONT></CENTER>
+<P>
+OK, so you've got your big blocks of text on the screen and you've read
+through them and decided that there are some words that you want to
+underline, some that you want bold, and some that you want to appear in
+stonking great text instead of that same size all the time.
+<P>
+To change the style of an area you can use:
+<P>
+   &lt;B&gt; ... &lt;/B&gt; to emBOLDen an area,<BR>
+   &lt;I&gt; ... &lt;/I&gt; to put it into ITALICS, or<BR>
+   &lt;U&gt; ... &lt;/U&gt; to UNDERLINE it.<BR>
+<P>
+These have end tags, that means they apply to the area between them.
+Simply choose the area you want to change and insert the relevent tags.
+<P>
+Note that none of the above three tags are affected by the &lt;BR&gt; or &lt;P&gt;
+methods of seperating, if your text goes over one of these it won't be
+switched off half way through, handy sometimes, worth remembering on
+other occasions.
+<P>
+You can also make an area a different size of text.  By default the
+font size used (not the same as the size defined in the actual font
+files by any means) is 3, but it can range from 1 up to 7, allowing
+you to use different sizes wherever you want them.
+<P>
+Again, this tag controls an area, and it's quite simply:
+<P>
+  &lt;FONT&gt; ... &lt;/FONT&gt;
+<P>
+&lt;FONT&gt; takes several parameters as well, like &lt;BODY&gt;, these are:
+<P>
+   SIZE={0-7}
+<P>
+In Amiga browsers these are defined in the setting somewhere unless
+proper true-type fonts are used, on the PC they are all automatic.
+<P>
+   FACE="{fontname}[,{fontname}][,{fontname}]"
+<P>
+The FACE parameter of the &lt;FONT&gt; tag lets you make three attempts at
+finding a font on the host machine, if the first is not found then it
+looks for the second, if the second is not found then it looks for the
+third.
+<P>
+   COLOR="#rrggbb"
+<P>
+The text colour can be changed from the default by using this parameter
+to set a temporary rendering colour, again it is in the standard RGB
+format, and again, some browsers recognise keywords like BLACK, WHITE,
+YELLOW etc.<P>
+<CENTER>
+=================<BR>
+End of lesson 01!<BR>
+=================<BR>
+</CENTER>
+<P>
+If you'd like to influence the way this course runs you can E-Mail any
+questions to me at <A HREF="MAILTO:Dick@emarkt.com">Dick@emarkt.com</A> 
+and I will try to gear the course
+more towards the things that people are asking.  Failing that, you can
+write to the normal submissions address and ask for your queries to be
+forwarded on to me by E-Mail.
+<P>
+<FONT SIZE=5>D!ck</FONT>
+</TD></TABLE></CENTER>
+</BODY>
+</html>

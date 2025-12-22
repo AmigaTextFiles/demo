@@ -1,0 +1,177 @@
+; $VER: Installation de Néophyte
+;
+;       Installer script pour  Néophyte N°3.
+;
+;(C) ??/05/97  Code Mom
+;
+;
+
+(complete 0)
+
+(set #welcome           (cat "Bienvenue dans l'installation de Néophyte N°3\n\n\n\nOn va (essayer) d'installer Néophyte\nsur votre disque dur\n\n\n\n\n\n© 1997 Néophyte"))
+
+(message #welcome)
+(welcome)
+
+
+(complete 4)
+
+
+(set DEST-DIR
+  (askdir
+    (prompt "Bon, on l'installe où Néophyte ?\nOn va créer un répertoire Néophyte...")
+    (help " On choisie un répertoire où l'on va créer le rép. Néophyte")
+    (default "RAM:")
+    (disk)
+  )
+)
+
+(
+      (makedir (tackon DEST-DIR "Néophyte") (infos))
+ ;     (set DEST-DIR (tackon DEST-DIR "Néophyte"))
+)
+
+;
+;  -------------------------
+;           Images
+;  -------------------------
+;
+
+  (
+      (makedir (tackon DEST-DIR "Néophyte/Images"))
+      (set DEST2 (tackon DEST-DIR "Néophyte/Images"))
+)
+
+
+(copyfiles
+   (all)
+   (help @copyfiles-help)
+   (source "Images/")
+   (dest DEST2)
+)
+
+(complete 62)
+
+
+(set #welcome           (cat "\n\n\n\nEt Non, ce n'est pas encore terminé\n\n\n\nBon, on continue ?\nou on s'arrête ??\n\n\n\n\n\n"))
+    
+(message #welcome)
+(welcome)
+
+;
+;  -------------------------
+;           Musiques
+;  -------------------------
+;
+  (
+      (makedir (tackon DEST-DIR "Néophyte/Musiques"))
+      (set DEST3 (tackon DEST-DIR "Néophyte/Musiques"))
+)
+
+
+(copyfiles
+   (all)
+   (help @copyfiles-help)
+   (source "Musiques/")
+   (dest DEST3)
+)
+
+;(complete 71)
+
+
+;(set #welcome           (cat "\n\nAh... une p'tite pause ça fait du bien...\n\n\n\nBon c'est bon, on peut reprendre !\nIl reste encore 29%\n\n\n\n"))
+
+;(message #welcome)
+;(welcome)
+
+;
+;  -------------------------
+;           Fonts
+;  -------------------------
+;
+  (
+      (makedir (tackon DEST-DIR "Néophyte/Fonts"))
+      (set DEST4 (tackon DEST-DIR "Néophyte/Fonts"))
+)
+
+
+(copyfiles
+   (all)
+   (help @copyfiles-help)
+   (source "Fonts/")
+   (dest DEST4)
+)
+
+(complete 84)
+ 
+;
+;  -------------------------
+;       Tirroir info
+;  -------------------------
+
+;(copyfiles
+;   (infos)
+;  (help @copyfiles-help)
+;   (source "Def_Drawer.info")
+;   (dest DEST-DIR)
+;)
+
+(complete 85)
+
+;
+;  -------------------------
+;           Fanz
+;  -------------------------
+
+  (
+      (makedir (tackon DEST-DIR "Néophyte"))
+      (set DEST-DIR (tackon DEST-DIR "Néophyte"))
+)
+
+
+(copyfiles
+   (infos)
+   (help @copyfiles-help)
+   (source "--")
+   (dest DEST-DIR)
+)
+
+(complete 97)
+
+(copyfiles
+   (prompt "MedPlayer.library")
+   (help "Non rien...")
+   (source "Libs/MedPlayer.library")
+   (dest "Libs:")
+
+)
+
+(complete 99)
+
+
+(set #welcome           (cat "\n\n\n\nOh !   Oh ! Encore 1%\nMais c'est quoi ??\n\n\n\n\n\n\n\n\n\n"))
+
+(message #welcome)
+(welcome)
+
+
+(complete 100)
+
+
+(message
+  (cat
+    "\n"
+    "Et voila, c'est terminé.\n"
+    " Ah... C'était plutôt facile. Non?\n\n"
+    "Néophyte: \n\n\n"
+    "    (Mom)                      (Beb)    \n"
+    "Moreno Olivier             Angiono Bertrand\n"
+    "10 rue Jean Amigoni        28 rue des Bonnais\n"
+    "38120 St Egrève            38120 St Egrève\n"
+    ""
+  )
+)
+
+
+
+

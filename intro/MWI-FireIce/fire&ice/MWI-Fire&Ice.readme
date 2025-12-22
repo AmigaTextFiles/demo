@@ -1,0 +1,61 @@
+short:    FIRE AND ICE - Mawi`s intro from Gravity`97
+uploader: azzaro/mawi (zorka19@puma.tu.koszalin.pl)
+author:   mawi
+type:     demo/intro
+requires: any amiga with aga chipset
+
+                                   _ _______________
+                                 __\\\   .       _ /___
+                                |       O  +     \/   (_
+                    ____.       |     ________     ____ :......
+              ___  /    |   ____ _ ___\      (_.  _\  /_      :
+            __\  \/     |__\\ _  (_)   \       |__) __ (___   :
+            )    \/     ·     (_   _    \      ¦   _\/_   (   :
+            \_   /           __/   \    /\         \/\/  _/   :
+             /__/    .O ._____|     \___/\_______________\    :
+                \_______|     |______\                  ......:
+                        $Ð!/dGs .       m   A   w   i  _|
+                                |                      \_
+                                |___________/\         _|
+                                           /__________(
+
+
+                         a 4kB intro by StarLighT/Mawi
+                            released on Gravity '97
+                    Don't spread it without this text file !
+
+        Starlight  on  line...  At first I would like to say that this little
+one  is  my second production in assembler, so don't blame me for it...  Some
+words  'bout  this  small  intro:  this little one is generated randomly each
+time  you  start  it, so it will never be the same!  (:^)) It could be easily
+made  much  faster,  buth then it would be too fast to see the beauty of this
+nice  efx...   It uses the VBlank interrupt to delay itself, but I was forced
+to  make two versions of it (due to lack of code-space):  4kb.Fire&Ice is for
+Amigas  with  at  least  020  &  Fast,  it has much longer delaying loop, and
+4kb.Fire&Ice.low  is  for  all cpu's, although it could be too fast on better
+processors...   And  this  intro  has one most important feature - it has the
+best  system  on/off  routine  I could think of.  I've tested it with many WB
+programs  (i.e.   FileMaster,  CeD and Hippoplayer running at the same time).
+It preserves all (I think) important system vectors I know (i.e.  DMA, audio,
+interrupts...).   So if it bugs - don't panic, wait until the end, press left
+mouse button and You're in system again !
+
+WARNING !
+a)  The Vector Base Register (VBR) MUST BE SET TO 0 before running this intro
+!  The best way to ensure this is a clean bootup (Without Startup-Sequence).
+
+b)  On  my  030  there was no need of disabling caches (InstCache & DataCache
+with  Burst)  knows  what  it'll  be  like on 040 or 060...  Although no self
+modifying code was used, Murphy isn't sleeping...  #8^)
+
+Notka  do organizerów:  Do compo przeznaczona jest wersja "4kb.Fire&Ice", ale
+proszë  o  spreadowanie  obydwu  wersji  dostarczonych  na  dysku razem z tym
+plikiem tekstowym.  THX!
+
+This intro has been tested on:
+
+* A500 0.5 MB Chip 0.5 MB SlowFast
+* A1200 MC68EC020 2.0 MB Chip
+* A1200 MC68030/40Mhz FPU 68882/40Mhz 2Mb Chip 8Mb Fast, MMU
+* A1200 MC68030/33Mhz FPU 68882/33Mhz 2MB Chip 8Mb Fast, MMU
+

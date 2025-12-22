@@ -1,0 +1,13 @@
+
+	XDEF	_MouseButton
+	section	code,code
+
+_MouseButton:
+	btst	#6,$bfe001
+	beq	yes
+	moveq	#0,d0
+	bra	mexit
+yes:	
+	moveq	#1,d0
+mexit:
+	rts

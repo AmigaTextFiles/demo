@@ -1,0 +1,24 @@
+Short:    040 enhancer for ThemePark AGA
+Author:   Gareth Murfin ( gazy@globalnet.co.uk )
+
+INFO : This is a patch for ThemePark  which will get the most out
+of an A1200/4000 fitted  with an 040 and FPU or simply just an 040. 
+It uses all Icaches & Dcaches available to make the game run as 
+fast as possible. It was designed with an Apollo 1240/25 in  mind
+but Im sure it  will work with many other setups which include an
+040 CPU.
+
+INSTALLATION : Simply copy the file go040 and CPU into the dir 
+you have ThemePark  installed in  and reboot. Hold down both mouse
+buttons, and select boot with no startup sequence. Now cd your way 
+to the dir with go040 in, example, for me its ->
+
+cd A500:ThemePark/TP/
+
+Then Type go040 and simply wait. ThemePark should load up into 
+glorious SuperFast 040 mode. The music might be a bit dodgy 
+(faster) and the pointer strange (bug?) but it should work perfectly
+normally & around 2000% faster than it would on a stock A1200 ;).
+Files are in the Prg/ThemePark040 directory.
+
+Tested on A1200Tg 040/25/25 +18meg Ram + 2xCD, 520Hd......

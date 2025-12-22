@@ -1,0 +1,1859 @@
+
+; Schitzophrenic - Karatepills #2 demo V0.96
+; Yes.. I know you're 1337 H4XX0R, but this is MY script
+; so GTFO!
+
+<MAIN> karatepills2 |0|1</MAIN>    
+
+<KCAM> cam_1 |0|0|0|0|0|0|1</KCAM>
+<KCAM> cam_2 |0|0|0|0|0|0|1</KCAM>
+<KCAM> cam_3 |0|0|0|0|0|0|1</KCAM>
+<KCAM> cam_4 |0|0|0|0|0|0|1</KCAM>
+<KCAM> the_camera2 |0|-4|-4|0|0.1|0|0.25  </KCAM>
+<KCAM> cam2 |0|0|-1|0|0|0|0.4  </KCAM>
+
+<KCAM> the_camera |0|0|-3|0|0|0|0.5  </KCAM> camera (pos: x,y,z rotation: o1,o2,o3,...)
+<World3D> world1 </World3D> empty world.
+<World3D> world2 </World3D> 
+<World3D> world3 </World3D> 
+<World3D> world4 </World3D>
+
+<KDBM> DBMmusic | data/recycled.DBM </KDBM>
+
+<kimg> check | data/checktxt.iff </kimg>
+
+<t3denvmap> tenvmap0 | check </t3denvmap>
+<t3dmapping> texture0 | check </t3dmapping>
+
+<cube> cube  | world1 |0|0|0|0|0|0|1|1|1 |texture0|texture0|texture0|texture0|texture0|texture0 </cube>
+<cube> cube2 | world1 |0|0|0|0|0|0|1|1|1 |texture0|texture0|texture0|texture0|texture0|texture0 </cube>
+<cube> cube3 | world1 |0|0|0|0|0|0|1|1|1 |texture0|texture0|texture0|texture0|texture0|texture0 </cube>
+<cube> cubeA | world2 |0|0|0|0|0|0|1|1|1 |texture0|texture0|texture0|texture0|texture0|texture0 </cube>
+<cube> cubeB | world2 |0|0|0|0|0|0|1|1|1 |texture0|texture0|texture0|texture0|texture0|texture0 </cube>
+<cube> cubeC | world3 |0|0|0|0|0|0|1|1|1 |texture0|texture0|texture0|texture0|texture0|texture0 </cube>
+<KIMG> image | data/checktxt.iff </kimg> image to set the screen palette.
+
+<KRECT>    rec_all   |0|0|1|1|
+                    |0|0|1|1|  </KRECT>
+
+<KRECT>    quad1   |0|0|1|1| rec_all
+                    |0|0|1|1| rec_all </KRECT>
+
+<t3dEnvMap> t_logo1 | image </t3dEnvMap>
+
+<BMFONT> bmft | data/font.iff | 17 | 31 | 10 | abcdefghijklmnopqrstuvwxyz./</bmfont>
+
+<KRECT> kc1 | 0|0|0|0||0|0|0|0|  </KRECT>
+<KRECT> kc2 | 0|0|0|0||0|0|0|0|  </KRECT>
+
+<lwo3d> smiley | world4 |0|0|0|0|0|0|1|1|1 | data/skithead.lwo | 1 | t_logo1 </lwo3d>
+
+<KIMG> kp2logo | data/kp2.iff </KIMG>
+<KIMG> sarah | data/sarahmice.iff </KIMG>
+<KIMG> heart | data/alexheart.iff </KIMG>
+<KIMG> alexa | data/alexandra2.iff </KIMG>
+<KIMG> G1-3 | data/g1-3.iff </KIMG>
+<KIMG> G4-6 | data/g4-6.iff </KIMG>
+<KIMG> G7-9 | data/g7-9.iff </KIMG>
+<KIMG> G10-12 | data/g10-12.iff </KIMG>
+<KIMG> G13-14 | data/g13-14.iff </KIMG>
+<KIMG> G15 | data/g15.iff </KIMG>
+<KIMG> G100 | data/g100.iff </KIMG>
+<KIMG> lasitxt | data/lasi.iff </KIMG>
+<KIMG> lasprite1 | data/lasprt1.iff </KIMG>
+<KIMG> lasprite2 | data/lasprt2.iff </KIMG>
+<KIMG> lasprite3 | data/lasprt3.iff </KIMG>
+<KIMG> lasprite4 | data/lasprt4.iff </KIMG>
+<KIMG> lasprite5 | data/lasprt5.iff </KIMG>
+<KIMG> imfont | data/font.iff </KIMG>
+<KIMG> babetxt | data/babetxt.iff </KIMG>   256x256.
+<KIMG> babe1 | data/babe1.iff </KIMG>
+<KIMG> babe2 | data/babe2.iff </KIMG>
+<KIMG> babe3 | data/babe3.iff </KIMG>
+<KIMG> checktaus | data/checktaus.iff </KIMG>
+<KIMG> pil  | data/pil1.iff </KIMG>
+<KIMG> pil2 | data/pil2.iff </KIMG>
+<KIMG> pil3 | data/pil3.iff </KIMG>
+<KIMG> pilutxt | data/pilstxt.iff </KIMG>
+<KIMG> kicker | data/natasha.iff </KIMG>
+<KIMG> kicker2 | data/natasha2.iff </KIMG>
+
+---------------------------------------------> cut here <----------------
+<KSCRIPT>
+
+    <ID> karatepills2 </ID>
+    <PLAY> musa |5|0|1 </PLAY>
+    <PLAY> lasit0 |350|0|1 </PLAY>
+    <PLAY> lasit1 |30|0|1 </PLAY>
+    <PLAY> lasit2 |30|0|1 </PLAY>
+    <PLAY> lasit3 |30|0|1 </PLAY>
+    <PLAY> lasit4 |160|0|1 </PLAY>
+    <PLAY> lasit5 |295|0|1 </PLAY>
+    <PLAY> beibsi0 |325|0|1 </PLAY>
+    <PLAY> beibsi  |90|0|1 </PLAY>
+    <PLAY> beibsi2 |90|0|1 </PLAY>
+    <PLAY> beibsi3 |90|0|1 </PLAY>
+    <PLAY> beibsi2 |90|0|1 </PLAY>
+    <PLAY> beibsi  | 90|0|1 </PLAY>
+    <PLAY> beibsi2 | 90|0|1 </PLAY>
+    <PLAY> beibsi3 | 90|0|1 </PLAY>
+    <PLAY> beibsi2 | 90|0|1 </PLAY>
+    <PLAY> kick | 170|0|1 </PLAY>
+    <PLAY> kick2 | 200|0|1 </PLAY>
+    <PLAY> pilua  |180|0|1 </PLAY>
+    <PLAY> pilua  |180|0|1 </PLAY>
+    <PLAY> pilua  |180|0|1 </PLAY>
+    <PLAY> pilua  |160|0|1 </PLAY>
+    <PLAY> logo |330|0|1 </PLAY>
+    <PLAY> Greetz1 |170|0|1 </PLAY>
+    <PLAY> Greetz2 |180|0|1 </PLAY>
+    <PLAY> Greetz3 |180|0|1 </PLAY>
+    <PLAY> Greetz4 |180|0|1 </PLAY>
+    <PLAY> Greetz5 |180|0|1 </PLAY>
+    <PLAY> Greetz100 |145|0|1 </PLAY>
+    <PLAY> Greetz6 |145|0|1 </PLAY>
+    <PLAY> skrolli|1280|0|1 </PLAY>
+    <PLAY> smg |360|0|1 </PLAY>
+    <PLAY> cubes  |90|0|1 </PLAY>
+    <PLAY> cubes2 |90|0|1 </PLAY>
+    <PLAY> cubes3 |490|0|1 </PLAY>
+    <PLAY> cubes2 |23|0|1 </PLAY>
+    <PLAY> cubes  |22|0|1 </PLAY>
+    <PLAY> valahdys |10|0|1 </PLAY>
+    <PLAY> 3dhymy |330|0|1 </PLAY>
+    <PLAY> 3dhymy |330|0|-1 </PLAY>
+    <PLAY> 3dhymyfade |220|0|1 </PLAY>
+    <PLAY> stopmusa |50|0|1 </PLAY>
+
+</KSCRIPT>
+--------------------------------------------------------------------------
+<KPART> 
+	<ID> musa </ID>
+
+	<Fx><Pa> PlayDBM  </Pa>
+	    <Pa> DBMmusic </Pa>
+	</Fx>
+</KPART>
+-----------------------------------------------------------------
+<KPART>
+	<ID> logo </ID>
+
+        <Fx><Pa>BindPalette</Pa>
+
+            <Pa> bounce |0|160|190|0|1</Pa> the rate between 0->1
+
+            <Pa>CTE|1</Pa>              type of fade:0,1,2,3
+            <Pa>CTE|0</Pa>            optional color 0->255 (0)
+            <Pa> kp2logo </Pa>     palette where to fade ( "B" )
+            <Pa> kp2logo </Pa>            optional source Palette(2)
+
+            <Pa>CTE|1</Pa>              type of fade:0,1,2,3
+            <Pa>CTE|0</Pa>            optional color 0->255 (0)
+            <Pa> kp2logo </Pa>       Palette where to fade ( "B" )
+            <Pa> kp2logo </Pa>       optional source Palette(2)
+
+            <Pa>CTE|1</Pa>              type of fade:0,1,2,3
+            <Pa>CTE|0</Pa>            optional color 0->255 (0)
+            <Pa> kp2logo </Pa>       Palette where to fade ( "B" )
+            <Pa> kp2logo </Pa>       optional source Palette(2)
+        </Fx>
+
+    <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> kp2logo </Pa>
+        <Pa> cte | 0.0 </pa>
+        <Pa> cte | 0.0 </pa>
+        <Pa> cte | 1.0 </pa>
+        <Pa> cte | 1.0 </pa>
+    </Fx>
+
+</KPART>
+----------------------------------------------------------------------
+<KPART>
+	<ID> smg </ID>
+
+    <Fx><Pa>fillrc</Pa>  clear the screen background to color 0
+        <Pa> </Pa>   default screen rectangle.
+        <Pa> cte | 0 </Pa>
+    </Fx>
+
+        <Fx><Pa>BindPalette</Pa>  1st is always the name of the effect.
+
+            <Pa> bounce |0|100|200|0|1</Pa> the rate between 0->1
+
+            <Pa>CTE|0</Pa>              type of fade:0,1,2,3
+            <Pa>CTE|0</Pa>            optional color 0->255 (0)
+            <Pa> sarah </Pa>     palette where to fade ( "B" )
+            <Pa> sarah </Pa>            optional source Palette(2)
+
+            <Pa>CTE|0</Pa>              type of fade:0,1,2,3
+            <Pa>CTE|0</Pa>            optional color 0->255 (0)
+            <Pa> sarah </Pa>       Palette where to fade ( "B" )
+            <Pa> sarah </Pa>       optional source Palette(2)
+
+            <Pa>CTE|0</Pa>              type of fade:0,1,2,3
+            <Pa>CTE|0</Pa>            optional color 0->255 (0)
+            <Pa> sarah </Pa>       Palette where to fade ( "B" )
+            <Pa> sarah </Pa>       optional source Palette(2)
+        </Fx>
+
+    <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> sarah </Pa>
+        <Pa> cte | 0.0 </pa>
+        <Pa> cte | 0.0 </pa>
+        <Pa> cte | 1.0 </pa>
+        <Pa> cte | 1.0 </pa>
+    </Fx>
+
+</KPART>
+----------------------------------------------------------------------
+<KPART>
+	<ID> valahdys </ID>
+
+    <Fx><Pa>fillrc</Pa>  clear the screen background to color 0
+        <Pa> </Pa>   default screen rectangle.
+        <Pa> cte | 0 </Pa>
+    </Fx>
+
+        <Fx><Pa>BindPalette</Pa>
+            <Pa> bounce |0|5|10|0|1</Pa> the rate between 0->1
+
+            <Pa>CTE|1</Pa>              type of fade:0,1,2,3
+            <Pa>CTE|255</Pa>            optional color 0->255 (0)
+            <Pa> check </Pa>     palette where to fade ( "B" )
+            <Pa> check </Pa>            optional source Palette(2)
+
+            <Pa>CTE|1</Pa>              type of fade:0,1,2,3
+            <Pa>CTE|255</Pa>            optional color 0->255 (0)
+            <Pa> check </Pa>       Palette where to fade ( "B" )
+            <Pa> check </Pa>       optional source Palette(2)
+
+            <Pa>CTE|1</Pa>              type of fade:0,1,2,3
+            <Pa>CTE|255</Pa>            optional color 0->255 (0)
+            <Pa> check </Pa>       Palette where to fade ( "B" )
+            <Pa> check </Pa>       optional source Palette(2)
+        </Fx>
+
+</KPART>
+------------------------------------------------------------------------
+<KPART>
+    <ID> cubes </ID>
+
+    <Fx><Pa>setpalette</Pa>
+        <Pa> checktaus </Pa> 
+    </Fx>
+
+    <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> checktaus </Pa>
+        <Pa> cte | 0.0 </pa>
+        <Pa> cte | 0.0 </pa>
+        <Pa> cte | 1.0 </pa>
+        <Pa> cte | 1.0 </pa>
+    </Fx>
+
+    <Fx><Pa> Set3DObject </Pa>
+        <Pa> cubeC </Pa>
+        <Pa> 3cte |0|0|0  </Pa>     set at position 0,0,0 x,y,z?
+        <Pa> aff |0.4|0.006 </Pa>   rotation
+        <Pa> aff |0.6|0.01</Pa>
+        <Pa> aff |0.8|0.00</Pa>
+        <Pa> 3cte|1|1|1 </Pa>       scale always set to 1,1,1.
+    </Fx>
+
+      <Fx><Pa> Draw3DWorld </Pa>
+            <Pa>   </Pa>        the rectangle where to draw (here: default)
+            <Pa> world3 </Pa>      the 3D world to draw !
+            <Pa> the_camera </Pa>  note camera postion is 0,0,-3, looking 0,0,0.
+            <Pa> cte|0 </Pa>       time march, may be used for some lightwave stuffs...
+            <Pa> cte|0.25 </Pa>    near-cut-plane distance to camera (must be >0)
+            <Pa> cte|20</Pa>       far-cut-plane distance to camera (must be >near)
+        </Fx>
+
+</KPART>
+------------------------------------------------------------------------
+<KPART>
+    <ID> cubes2 </ID>
+
+    <Fx><Pa>setpalette</Pa>
+        <Pa> image </Pa>
+    </Fx>
+
+    <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> checktaus </Pa>
+        <Pa> cte | 0.0 </pa>
+        <Pa> cte | 0.0 </pa>
+        <Pa> cte | 1.0 </pa>
+        <Pa> cte | 1.0 </pa>
+    </Fx>
+
+    <Fx><Pa> Set3DObject </Pa> 
+        <Pa> cubeA </Pa>
+        <Pa> 3cte |-2|0|0  </Pa>     set at position 0,0,0 x,y,z?
+        <Pa> aff |0.4|0.006 </Pa>   rotation: make angles follow affine curve.
+        <Pa> aff |0.6|0.01</Pa>
+        <Pa> aff |0.8|0.00</Pa>
+
+        <Pa> 3cte|0.5|0.5|0.5 </Pa>       scale always set to 1,1,1.
+    </Fx>
+
+    <Fx><Pa> Set3DObject </Pa>      make the cube rotate all the time on the 3 axis:
+        <Pa> cubeB </Pa>        (note cube is attached to world1.)
+
+        <Pa> 3cte |0|0|0  </Pa>     set at position 0,0,0
+        <Pa> aff |0.4|0.006 </Pa>   rotation: make angles follow affine curve.
+        <Pa> aff |0.6|0.01</Pa>
+        <Pa> aff |0.8|0.00</Pa>
+
+        <Pa> 3cte|1|1|1 </Pa>       scale always set to 1,1,1.
+    </Fx>
+
+      <Fx><Pa> Draw3DWorld </Pa>
+            <Pa>   </Pa>        the rectangle where to draw (here: default)
+            <Pa> world2 </Pa>      the 3D world to draw !
+            <Pa> the_camera </Pa>  note camera postion is 0,0,-3, looking 0,0,0.
+            <Pa> cte|0 </Pa>       time march, may be used for some lightwave stuffs...
+            <Pa> cte|0.25 </Pa>    near-cut-plane distance to camera (must be >0)
+            <Pa> cte|20</Pa>       far-cut-plane distance to camera (must be >near)
+        </Fx>
+
+</KPART>
+------------------------------------------------------------------------
+<KPART>
+    <ID> cubes3 </ID>
+
+    <Fx><Pa>setpalette</Pa>
+        <Pa> image </Pa>
+    </Fx>
+
+    <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> checktaus </Pa>
+        <Pa> cte | 0.0 </pa>
+        <Pa> cte | 0.0 </pa>
+        <Pa> cte | 1.0 </pa>
+        <Pa> cte | 1.0 </pa>
+    </Fx>
+
+    <Fx><Pa> Set3DObject </Pa>      make the cube rotate all the time on the 3 axis:
+        <Pa>  cube </Pa>        (note cube is attached to world1.)
+
+        <Pa> 3cte |-2|0|0  </Pa>     set at position 0,0,0 x,y,z?
+
+        <Pa> aff |0.4|0.006 </Pa>   rotation: make angles follow affine curve.
+        <Pa> aff |0.6|0.01</Pa>
+        <Pa> aff |0.8|0.00</Pa>
+
+        <Pa> 3cte|0.5|0.5|0.5 </Pa>       scale always set to 1,1,1.
+    </Fx>
+
+    <Fx><Pa> Set3DObject </Pa>      make the cube rotate all the time on the 3 axis:
+        <Pa>  cube2 </Pa>        (note cube is attached to world1.)
+
+        <Pa> 3cte |0|0|0  </Pa>     set at position 0,0,0
+
+        <Pa> aff |0.4|0.006 </Pa>   rotation: make angles follow affine curve.
+        <Pa> aff |0.6|0.01</Pa>
+        <Pa> aff |0.8|0.00</Pa>
+
+        <Pa> 3cte|1|1|1 </Pa>       scale always set to 1,1,1.
+    </Fx>
+
+    <Fx><Pa> Set3DObject </Pa>      make the cube rotate all the time on the 3 axis:
+        <Pa>  cube3 </Pa>        (note cube is attached to world1.)
+
+        <Pa> 3cte |2|0|0  </Pa>     set at position 0,0,0
+
+        <Pa> aff |0.4|0.006 </Pa>   rotation: make angles follow affine curve.
+        <Pa> aff |0.6|0.01</Pa>
+        <Pa> aff |0.8|0.00</Pa>
+
+        <Pa> 3cte|0.5|0.5|0.5 </Pa>       scale always set to 1,1,1.
+    </Fx>
+
+      <Fx><Pa> Draw3DWorld </Pa>
+            <Pa>   </Pa>        the rectangle where to draw (here: default)
+            <Pa> world1 </Pa>      the 3D world to draw !
+            <Pa> the_camera </Pa>  note camera postion is 0,0,-3, looking 0,0,0.
+            <Pa> cte|0 </Pa>       time march, may be used for some lightwave stuffs...
+            <Pa> cte|0.25 </Pa>    near-cut-plane distance to camera (must be >0)
+            <Pa> cte|20</Pa>       far-cut-plane distance to camera (must be >near)
+        </Fx>
+
+</KPART>
+----------------------------------------------------------------------
+<KPART>	<ID> Greetz1 </ID>
+
+    <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> alexa </Pa>
+    </Fx>
+
+    <Fx><Pa>fillrc</Pa> clear the background
+	<Pa> </Pa>
+        <Pa> cte | 0 </Pa>
+    </Fx>
+
+    <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> alexa </Pa>
+        <Pa> cte | 0.0 </pa>
+        <Pa> cte | 0.0 </pa>
+        <Pa> cte | 1.0 </pa>
+        <Pa> cte | 1.0 </pa>
+
+    </Fx>
+
+ <Fx>
+	<Pa>setpalette</Pa>
+	<Pa> heart </Pa>
+ </Fx>
+
+   <Fx>	<pa> setcamcoord </pa>
+	<pa> cam_1 </pa>
+	<pa> cos |0|0|0.02</pa>   jotain|jotain|x-akseli
+	<pa> cte|0</pa>
+	<pa> sin |0|2|0.5</pa>  jotain|vauhti|zoom
+	<pa> 3cte |0|0|0</pa>
+	<pa> cte | 0.5 </pa>
+   </Fx>
+
+   <Fx>	<pa> setcamcoord </pa>
+	<pa> cam_2 </pa>
+	<pa> cos |0|0|0.8</pa>   jotain|jotain|x-akseli
+	<pa> cte|0</pa>
+	<pa> sin |0|3|0.3</pa>  jotain|vauhti|zoom
+	<pa> 3cte |0|0|0</pa>
+	<pa> cte | 0.5 </pa>
+   </Fx>
+
+   <Fx>	<pa> setcamcoord </pa>
+	<pa> cam_3 </pa>
+	<pa> cos |0|0|-1.6</pa>   jotain|jotain|x-akseli
+	<pa> cte|0</pa>
+	<pa> sin |0|3.2|0.3</pa>  jotain|vauhti|zoom
+	<pa> 3cte |0|0|0</pa>
+	<pa> cte | 0.5 </pa>
+   </Fx>
+
+
+    <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> alexa </Pa>
+        <Pa> cte | 0.0 </pa>
+        <Pa> cte | 0.0 </pa>
+        <Pa> cte | 1.0 </pa>
+        <Pa> cte | 1.0 </pa>
+    </Fx>
+
+   <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> heart </Pa>
+        <Pa> 4cam| cam_1 |0.8|1.6|0.5|0.3|2 </Pa> koko|koko|Y|etaisyys
+    </Fx>
+
+   <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> heart </Pa>
+        <Pa> 4cam| cam_2 |0.8|1.6|0.5|0|3 </Pa>
+    </Fx>
+   <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> heart </Pa>
+        <Pa> 4cam| cam_3 |0.8|1.6|0.5|1.3|3 </Pa>
+    </Fx>
+
+    <Fx>
+	<Pa>Sprite</Pa>
+	<Pa></Pa>
+	<Pa> G1-3 </Pa>
+        <Pa> rnd | 0.4 | 0.41 </pa> x1
+	<Pa> rnd | 0 | 0.01 </Pa> y1
+        <Pa> rnd | 0.84 | 0.85 </pa> x2
+	<Pa> rnd | 0.35 | 0.351 </Pa> y2 ???
+
+    </Fx>
+
+</KPART>
+-------------------------------------------------------------------------
+<KPART>	<ID> Greetz2 </ID>
+
+    <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> alexa </Pa>
+    </Fx>
+
+    <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> alexa </Pa>
+        <Pa> cte | 0.0 </pa>
+        <Pa> cte | 0.0 </pa>
+        <Pa> cte | 1.0 </pa>
+        <Pa> cte | 1.0 </pa>
+    </Fx>
+
+    <Fx>
+	<Pa>setpalette</Pa>
+	<Pa> heart </Pa>
+    </Fx>
+
+   <Fx>	<pa> setcamcoord </pa>
+	<pa> cam_1 </pa>
+	<pa> cos |0|0|0.02</pa>   jotain|jotain|x-akseli
+	<pa> cte|0</pa>
+	<pa> sin |0|2|0.5</pa>  jotain|vauhti|zoom
+	<pa> 3cte |0|0|0</pa>
+	<pa> cte | 0.5 </pa>
+   </Fx>
+
+   <Fx>	<pa> setcamcoord </pa>
+	<pa> cam_2 </pa>
+	<pa> cos |0|0|0.8</pa>   jotain|jotain|x-akseli
+	<pa> cte|0</pa>
+	<pa> sin |0|3|0.3</pa>  jotain|vauhti|zoom
+	<pa> 3cte |0|0|0</pa>
+	<pa> cte | 0.5 </pa>
+   </Fx>
+
+   <Fx>	<pa> setcamcoord </pa>
+	<pa> cam_3 </pa>
+	<pa> cos |0|0|-1.6</pa>   jotain|jotain|x-akseli
+	<pa> cte|0</pa>
+	<pa> sin |0|3.2|0.3</pa>  jotain|vauhti|zoom
+	<pa> 3cte |0|0|0</pa>
+	<pa> cte | 0.5 </pa>
+   </Fx>
+
+
+    <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> alexa </Pa>
+        <Pa> cte | 0.0 </pa>
+        <Pa> cte | 0.0 </pa>
+        <Pa> cte | 1.0 </pa>
+        <Pa> cte | 1.0 </pa>
+    </Fx>
+
+   <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> heart </Pa>
+        <Pa> 4cam| cam_1 |0.8|1.6|0.5|0.3|2 </Pa> koko|koko|Y|etaisyys
+    </Fx>
+
+   <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> heart </Pa>
+        <Pa> 4cam| cam_2 |0.8|1.6|0.5|0|3 </Pa>
+    </Fx>
+   <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> heart </Pa>
+        <Pa> 4cam| cam_3 |0.8|1.6|0.5|1.3|3 </Pa>
+    </Fx>
+
+    <Fx>
+	<Pa>Sprite</Pa>
+	<Pa></Pa>
+	<Pa> G4-6 </Pa>
+        <Pa> rnd | 0.4 | 0.41 </pa> x1
+	<Pa> rnd | 0 | 0.01 </Pa> y1
+        <Pa> rnd | 0.84 | 0.85 </pa> x2
+	<Pa> rnd | 0.35 | 0.351 </Pa> y2 ???
+
+    </Fx>
+
+</KPART>
+-------------------------------------------------------------------------
+<KPART>	<ID> Greetz3 </ID>
+
+    <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> alexa </Pa>
+    </Fx>
+
+    <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> alexa </Pa>
+        <Pa> cte | 0.0 </pa>
+        <Pa> cte | 0.0 </pa>
+        <Pa> cte | 1.0 </pa>
+        <Pa> cte | 1.0 </pa>
+    </Fx>
+
+ <Fx>
+	<Pa>setpalette</Pa>
+	<Pa> heart </Pa>
+ </Fx>
+
+   <Fx>	<pa> setcamcoord </pa>
+	<pa> cam_1 </pa>
+	<pa> cos |0|0|0.02</pa>   jotain|jotain|x-akseli
+	<pa> cte|0</pa>
+	<pa> sin |0|2|0.5</pa>  jotain|vauhti|zoom
+	<pa> 3cte |0|0|0</pa>
+	<pa> cte | 0.5 </pa>
+   </Fx>
+
+   <Fx>	<pa> setcamcoord </pa>
+	<pa> cam_2 </pa>
+	<pa> cos |0|0|0.8</pa>   jotain|jotain|x-akseli
+	<pa> cte|0</pa>
+	<pa> sin |0|3|0.3</pa>  jotain|vauhti|zoom
+	<pa> 3cte |0|0|0</pa>
+	<pa> cte | 0.5 </pa>
+   </Fx>
+
+   <Fx>	<pa> setcamcoord </pa>
+	<pa> cam_3 </pa>
+	<pa> cos |0|0|-1.6</pa>   jotain|jotain|x-akseli
+	<pa> cte|0</pa>
+	<pa> sin |0|3.2|0.3</pa>  jotain|vauhti|zoom
+	<pa> 3cte |0|0|0</pa>
+	<pa> cte | 0.5 </pa>
+   </Fx>
+
+
+    <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> alexa </Pa>
+        <Pa> cte | 0.0 </pa>
+        <Pa> cte | 0.0 </pa>
+        <Pa> cte | 1.0 </pa>
+        <Pa> cte | 1.0 </pa>
+    </Fx>
+
+   <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> heart </Pa>
+        <Pa> 4cam| cam_1 |0.8|1.6|0.5|0.3|2 </Pa> koko|koko|Y|etaisyys
+    </Fx>
+
+   <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> heart </Pa>
+        <Pa> 4cam| cam_2 |0.8|1.6|0.5|0|3 </Pa>
+    </Fx>
+   <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> heart </Pa>
+        <Pa> 4cam| cam_3 |0.8|1.6|0.5|1.3|3 </Pa>
+    </Fx>
+
+    <Fx>
+	<Pa>Sprite</Pa>
+	<Pa></Pa>
+	<Pa> G7-9 </Pa>
+        <Pa> rnd | 0.4 | 0.41 </pa> x1
+	<Pa> rnd | 0 | 0.01 </Pa> y1
+        <Pa> rnd | 0.84 | 0.85 </pa> x2
+	<Pa> rnd | 0.35 | 0.351 </Pa> y2 ???
+
+    </Fx>
+
+</KPART>
+-------------------------------------------------------------------------
+<KPART>	<ID> Greetz4 </ID>
+
+    <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> alexa </Pa>
+    </Fx>
+
+    <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> alexa </Pa>
+        <Pa> cte | 0.0 </pa>
+        <Pa> cte | 0.0 </pa>
+        <Pa> cte | 1.0 </pa>
+        <Pa> cte | 1.0 </pa>
+
+    </Fx>
+
+ <Fx>
+	<Pa>setpalette</Pa>
+	<Pa> heart </Pa>
+ </Fx>
+
+   <Fx>	<pa> setcamcoord </pa>
+	<pa> cam_1 </pa>
+	<pa> cos |0|0|0.02</pa>   jotain|jotain|x-akseli
+	<pa> cte|0</pa>
+	<pa> sin |0|2|0.5</pa>  jotain|vauhti|zoom
+	<pa> 3cte |0|0|0</pa>
+	<pa> cte | 0.5 </pa>
+   </Fx>
+
+   <Fx>	<pa> setcamcoord </pa>
+	<pa> cam_2 </pa>
+	<pa> cos |0|0|0.8</pa>   jotain|jotain|x-akseli
+	<pa> cte|0</pa>
+	<pa> sin |0|3|0.3</pa>  jotain|vauhti|zoom
+	<pa> 3cte |0|0|0</pa>
+	<pa> cte | 0.5 </pa>
+   </Fx>
+
+   <Fx>	<pa> setcamcoord </pa>
+	<pa> cam_3 </pa>
+	<pa> cos |0|0|-1.6</pa>   jotain|jotain|x-akseli
+	<pa> cte|0</pa>
+	<pa> sin |0|3.2|0.3</pa>  jotain|vauhti|zoom
+	<pa> 3cte |0|0|0</pa>
+	<pa> cte | 0.5 </pa>
+   </Fx>
+
+
+    <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> alexa </Pa>
+        <Pa> cte | 0.0 </pa>
+        <Pa> cte | 0.0 </pa>
+        <Pa> cte | 1.0 </pa>
+        <Pa> cte | 1.0 </pa>
+    </Fx>
+
+   <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> heart </Pa>
+        <Pa> 4cam| cam_1 |0.8|1.6|0.5|0.3|2 </Pa> koko|koko|Y|etaisyys
+    </Fx>
+
+   <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> heart </Pa>
+        <Pa> 4cam| cam_2 |0.8|1.6|0.5|0|3 </Pa>
+    </Fx>
+   <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> heart </Pa>
+        <Pa> 4cam| cam_3 |0.8|1.6|0.5|1.3|3 </Pa>
+    </Fx>
+
+    <Fx>
+	<Pa>Sprite</Pa>
+	<Pa></Pa>
+	<Pa> G10-12 </Pa>
+        <Pa> rnd | 0.4 | 0.41 </pa> x1
+	<Pa> rnd | 0 | 0.01 </Pa> y1
+        <Pa> rnd | 0.84 | 0.85 </pa> x2
+	<Pa> rnd | 0.35 | 0.351 </Pa> y2 ???
+
+    </Fx>
+
+</KPART>
+-------------------------------------------------------------------------
+<KPART>	<ID> Greetz5 </ID>
+
+    <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> alexa </Pa>
+    </Fx>
+
+    <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> alexa </Pa>
+        <Pa> cte | 0.0 </pa>
+        <Pa> cte | 0.0 </pa>
+        <Pa> cte | 1.0 </pa>
+        <Pa> cte | 1.0 </pa>
+
+    </Fx>
+
+ <Fx>
+	<Pa>setpalette</Pa>
+	<Pa> heart </Pa>
+ </Fx>
+
+   <Fx>	<pa> setcamcoord </pa>
+	<pa> cam_1 </pa>
+	<pa> cos |0|0|0.02</pa>   jotain|jotain|x-akseli
+	<pa> cte|0</pa>
+	<pa> sin |0|2|0.5</pa>  jotain|vauhti|zoom
+	<pa> 3cte |0|0|0</pa>
+	<pa> cte | 0.5 </pa>
+   </Fx>
+
+   <Fx>	<pa> setcamcoord </pa>
+	<pa> cam_2 </pa>
+	<pa> cos |0|0|0.8</pa>   jotain|jotain|x-akseli
+	<pa> cte|0</pa>
+	<pa> sin |0|3|0.3</pa>  jotain|vauhti|zoom
+	<pa> 3cte |0|0|0</pa>
+	<pa> cte | 0.5 </pa>
+   </Fx>
+
+   <Fx>	<pa> setcamcoord </pa>
+	<pa> cam_3 </pa>
+	<pa> cos |0|0|-1.6</pa>   jotain|jotain|x-akseli
+	<pa> cte|0</pa>
+	<pa> sin |0|3.2|0.3</pa>  jotain|vauhti|zoom
+	<pa> 3cte |0|0|0</pa>
+	<pa> cte | 0.5 </pa>
+   </Fx>
+
+
+    <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> alexa </Pa>
+        <Pa> cte | 0.0 </pa>
+        <Pa> cte | 0.0 </pa>
+        <Pa> cte | 1.0 </pa>
+        <Pa> cte | 1.0 </pa>
+    </Fx>
+
+   <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> heart </Pa>
+        <Pa> 4cam| cam_1 |0.8|1.6|0.5|0.3|2 </Pa> koko|koko|Y|etaisyys
+    </Fx>
+
+   <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> heart </Pa>
+        <Pa> 4cam| cam_2 |0.8|1.6|0.5|0|3 </Pa>
+    </Fx>
+   <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> heart </Pa>
+        <Pa> 4cam| cam_3 |0.8|1.6|0.5|1.3|3 </Pa>
+    </Fx>
+
+    <Fx>
+	<Pa>Sprite</Pa>
+	<Pa></Pa>
+	<Pa> G13-14 </Pa>
+        <Pa> rnd | 0.4 | 0.41 </pa> x1
+	<Pa> rnd | 0 | 0.01 </Pa> y1
+        <Pa> rnd | 0.84 | 0.85 </pa> x2
+	<Pa> rnd | 0.35 | 0.351 </Pa> y2 ???
+    </Fx>
+
+</KPART>
+-------------------------------------------------------------------------
+<KPART>	<ID> Greetz6 </ID>
+
+    <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> alexa </Pa>
+    </Fx>
+
+    <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> alexa </Pa>
+        <Pa> cte | 0.0 </pa>
+        <Pa> cte | 0.0 </pa>
+        <Pa> cte | 1.0 </pa>
+        <Pa> cte | 1.0 </pa>
+    </Fx>
+
+ <Fx>
+	<Pa>setpalette</Pa>
+	<Pa> heart </Pa>
+ </Fx>
+
+   <Fx>	<pa> setcamcoord </pa>
+	<pa> cam_1 </pa>
+	<pa> cos |0|0|0.02</pa>   jotain|jotain|x-akseli
+	<pa> cte|0</pa>
+	<pa> sin |0|2|0.5</pa>  jotain|vauhti|zoom
+	<pa> 3cte |0|0|0</pa>
+	<pa> cte | 0.5 </pa>
+   </Fx>
+
+   <Fx>	<pa> setcamcoord </pa>
+	<pa> cam_2 </pa>
+	<pa> cos |0|0|0.8</pa>   jotain|jotain|x-akseli
+	<pa> cte|0</pa>
+	<pa> sin |0|3|0.3</pa>  jotain|vauhti|zoom
+	<pa> 3cte |0|0|0</pa>
+	<pa> cte | 0.5 </pa>
+   </Fx>
+
+   <Fx>	<pa> setcamcoord </pa>
+	<pa> cam_3 </pa>
+	<pa> cos |0|0|-1.6</pa>   jotain|jotain|x-akseli
+	<pa> cte|0</pa>
+	<pa> sin |0|3.2|0.3</pa>  jotain|vauhti|zoom
+	<pa> 3cte |0|0|0</pa>
+	<pa> cte | 0.5 </pa>
+   </Fx>
+
+
+    <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> alexa </Pa>
+        <Pa> cte | 0.0 </pa>
+        <Pa> cte | 0.0 </pa>
+        <Pa> cte | 1.0 </pa>
+        <Pa> cte | 1.0 </pa>
+    </Fx>
+
+   <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> heart </Pa>
+        <Pa> 4cam| cam_1 |0.8|1.6|0.5|0.3|2 </Pa> koko|koko|Y|etaisyys
+    </Fx>
+
+   <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> heart </Pa>
+        <Pa> 4cam| cam_2 |0.8|1.6|0.5|0|3 </Pa>
+    </Fx>
+
+   <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> heart </Pa>
+        <Pa> 4cam| cam_3 |0.8|1.6|0.5|1.3|3 </Pa>
+    </Fx>
+
+    <Fx>
+	<Pa>Sprite</Pa>
+	<Pa></Pa>
+	<Pa> G15 </Pa>
+        <Pa> rnd | 0.5 | 0.51 </pa> x1
+	<Pa> rnd | 0 | 0.01 </Pa> y1
+        <Pa> rnd | 0.80 | 0.81 </pa> x2
+	<Pa> rnd | 0.34 | 0.341 </Pa> y2 ???
+    </Fx>
+
+</KPART>
+-------------------------------------------------------------------------
+<KPART>	<ID> Greetz100 </ID>
+
+    <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> alexa </Pa>
+    </Fx>
+
+    <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> alexa </Pa>
+        <Pa> cte | 0.0 </pa>
+        <Pa> cte | 0.0 </pa>
+        <Pa> cte | 1.0 </pa>
+        <Pa> cte | 1.0 </pa>
+
+    </Fx>
+
+ <Fx>
+	<Pa>setpalette</Pa>
+	<Pa> heart </Pa>
+ </Fx>
+
+   <Fx>	<pa> setcamcoord </pa>
+	<pa> cam_1 </pa>
+	<pa> cos |0|0|0.02</pa>   jotain|jotain|x-akseli
+	<pa> cte|0</pa>
+	<pa> sin |0|2|0.5</pa>  jotain|vauhti|zoom
+	<pa> 3cte |0|0|0</pa>
+	<pa> cte | 0.5 </pa>
+   </Fx>
+
+   <Fx>	<pa> setcamcoord </pa>
+	<pa> cam_2 </pa>
+	<pa> cos |0|0|0.8</pa>   jotain|jotain|x-akseli
+	<pa> cte|0</pa>
+	<pa> sin |0|3|0.3</pa>  jotain|vauhti|zoom
+	<pa> 3cte |0|0|0</pa>
+	<pa> cte | 0.5 </pa>
+   </Fx>
+
+   <Fx>	<pa> setcamcoord </pa>
+	<pa> cam_3 </pa>
+	<pa> cos |0|0|-1.6</pa>   jotain|jotain|x-akseli
+	<pa> cte|0</pa>
+	<pa> sin |0|3.2|0.3</pa>  jotain|vauhti|zoom
+	<pa> 3cte |0|0|0</pa>
+	<pa> cte | 0.5 </pa>
+   </Fx>
+
+    <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> alexa </Pa>
+        <Pa> cte | 0.0 </pa>
+        <Pa> cte | 0.0 </pa>
+        <Pa> cte | 1.0 </pa>
+        <Pa> cte | 1.0 </pa>
+    </Fx>
+
+   <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> heart </Pa>
+        <Pa> 4cam| cam_1 |0.8|1.6|0.5|0.3|2 </Pa> koko|koko|Y|etaisyys
+    </Fx>
+
+   <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> heart </Pa>
+        <Pa> 4cam| cam_2 |0.8|1.6|0.5|0|3 </Pa>
+    </Fx>
+   <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> heart </Pa>
+        <Pa> 4cam| cam_3 |0.8|1.6|0.5|1.3|3 </Pa>
+    </Fx>
+
+    <Fx>
+	<Pa>Sprite</Pa>
+	<Pa></Pa>
+	<Pa> G100 </Pa>
+        <Pa> rnd | 0.5 | 0.51 </pa> x1
+	<Pa> rnd | 0 | 0.01 </Pa> y1
+        <Pa> rnd | 0.84 | 0.85 </pa> x2
+	<Pa> rnd | 0.35 | 0.351 </Pa> y2 ???
+    </Fx>
+
+</KPART>
+-------------------------------------------------------------------------
+<KPART>  <ID> lasit0  </ID>
+
+        <Fx><Pa>BindPalette</Pa>
+
+            <Pa> bounce |0|350|550|0|1</Pa> the rate between 0->1
+
+            <Pa>CTE|0</Pa>              type of fade:0,1,2,3
+            <Pa>CTE|0</Pa>            optional color 0->255 (0)
+            <Pa> lasitxt </Pa>     palette where to fade ( "B" )
+            <Pa> lasitxt </Pa>            optional source Palette(2)
+
+            <Pa>CTE|0</Pa>              type of fade:0,1,2,3
+            <Pa>CTE|0</Pa>            optional color 0->255 (0)
+            <Pa> lasitxt </Pa>       Palette where to fade ( "B" )
+            <Pa> lasitxt </Pa>       optional source Palette(2)
+
+            <Pa>CTE|0</Pa>              type of fade:0,1,2,3
+            <Pa>CTE|0</Pa>            optional color 0->255 (0)
+            <Pa> lasitxt </Pa>       Palette where to fade ( "B" )
+            <Pa> lasitxt </Pa>       optional source Palette(2)
+        </Fx>
+
+    <KTABLE> scrolmov0 | 0,0|25,-1  </KTABLE>
+    <Fx><Pa>SpritePlain</Pa>
+        <Pa> quad1 </Pa>
+        <Pa> lasitxt </Pa>
+        <Pa> aftmod | scrolmov0 |0|0  </Pa>
+        <pa> cte|0 </pa>
+        <Pa> aftmod | scrolmov0 |0|1  </Pa>
+        <pa> cte|1 </pa>
+    </Fx>
+
+    <Fx><Pa>SpritePlain</Pa>
+        <Pa> quad1  </Pa>
+        <Pa> lasitxt </Pa>
+        <Pa> aftmod | scrolmov0 |0|1  </Pa>
+        <pa> cte|0 </pa>
+        <Pa> aftmod | scrolmov0 |0|2  </Pa>
+        <pa> cte|1 </pa>
+    </Fx>
+
+</KPART>
+-------------------------------------------------------------------------
+<KPART>  <ID> lasit1  </ID>
+
+    <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> lasitxt </Pa>
+    </Fx>
+
+    <KTABLE> scrolmov | 0,0|25,-1  </KTABLE>
+    <Fx><Pa>SpritePlain</Pa>
+        <Pa> quad1 </Pa>
+        <Pa> lasitxt </Pa>
+        <Pa> aftmod | scrolmov |0|0  </Pa>
+        <pa> cte|0 </pa>
+        <Pa> aftmod | scrolmov |0|1  </Pa>
+        <pa> cte|1 </pa>
+    </Fx>
+
+    <Fx><Pa>SpritePlain</Pa>
+        <Pa> quad1  </Pa>
+        <Pa> lasitxt </Pa>
+        <Pa> aftmod | scrolmov |0|1  </Pa>
+        <pa> cte|0 </pa>
+        <Pa> aftmod | scrolmov |0|2  </Pa>
+        <pa> cte|1 </pa>
+    </Fx>
+
+    <Fx>
+	<Pa>Sprite</Pa>
+	<Pa></Pa>
+	<Pa> lasprite1 </Pa>
+        <Pa> cte | 0.0 </pa>
+        <Pa> cte | 0.0 </pa>
+        <Pa> cte | 1.0 </pa>
+        <Pa> cte | 1.0 </pa>
+
+    </Fx>
+
+</KPART>
+-------------------------------------------------------------------------
+<KPART>  <ID> lasit2  </ID>
+
+    <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> lasitxt </Pa>
+    </Fx>
+
+    <KTABLE> scrolmov2 | 0,0|25,-1  </KTABLE>
+    <Fx><Pa>SpritePlain</Pa>
+        <Pa> quad1 </Pa>
+        <Pa> lasitxt </Pa>
+        <Pa> aftmod | scrolmov2 |0|0  </Pa>
+        <pa> cte|0 </pa>
+        <Pa> aftmod | scrolmov2 |0|1  </Pa>
+        <pa> cte|1 </pa>
+    </Fx>
+
+    <Fx><Pa>SpritePlain</Pa>
+        <Pa> quad1  </Pa>
+        <Pa> lasitxt </Pa>
+        <Pa> aftmod | scrolmov2 |0|1  </Pa>
+        <pa> cte|0 </pa>
+        <Pa> aftmod | scrolmov2 |0|2  </Pa>
+        <pa> cte|1 </pa>
+    </Fx>
+
+    <Fx>
+	<Pa>Sprite</Pa>
+	<Pa></Pa>
+	<Pa> lasprite2 </Pa>
+        <Pa> cte | 0.0 </pa>
+        <Pa> cte | 0.0 </pa>
+        <Pa> cte | 1.0 </pa>
+        <Pa> cte | 1.0 </pa>
+
+    </Fx>
+
+</KPART>
+-------------------------------------------------------------------------
+<KPART>  <ID> lasit3  </ID>
+
+    <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> lasitxt </Pa>
+    </Fx>
+
+    <KTABLE> scrolmov3 | 0,0|25,-1  </KTABLE>
+    <Fx><Pa>SpritePlain</Pa>
+        <Pa> quad1 </Pa>
+        <Pa> lasitxt </Pa>
+        <Pa> aftmod | scrolmov3 |0|0  </Pa>
+        <pa> cte|0 </pa>
+        <Pa> aftmod | scrolmov3 |0|1  </Pa>
+        <pa> cte|1 </pa>
+    </Fx>
+
+    <Fx><Pa>SpritePlain</Pa>
+        <Pa> quad1  </Pa>
+        <Pa> lasitxt </Pa>
+        <Pa> aftmod | scrolmov3 |0|1  </Pa>
+        <pa> cte|0 </pa>
+        <Pa> aftmod | scrolmov3 |0|2  </Pa>
+        <pa> cte|1 </pa>
+    </Fx>
+
+    <Fx>
+	<Pa>Sprite</Pa>
+	<Pa></Pa>
+	<Pa> lasprite3 </Pa>
+        <Pa> cte | 0.0 </pa>
+        <Pa> cte | 0.0 </pa>
+        <Pa> cte | 1.0 </pa>
+        <Pa> cte | 1.0 </pa>
+    </Fx>
+
+</KPART>
+-------------------------------------------------------------------------
+<KPART>  <ID> lasit4  </ID>
+
+    <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> lasitxt </Pa>
+    </Fx>
+
+    <KTABLE> scrolmov4 | 0,0|25,-1  </KTABLE>
+    <Fx><Pa>SpritePlain</Pa>
+        <Pa> quad1 </Pa>
+        <Pa> lasitxt </Pa>
+        <Pa> aftmod | scrolmov4 |0|0  </Pa>
+        <pa> cte|0 </pa>
+        <Pa> aftmod | scrolmov4 |0|1  </Pa>
+        <pa> cte|1 </pa>
+    </Fx>
+
+    <Fx><Pa>SpritePlain</Pa>
+        <Pa> quad1  </Pa>
+        <Pa> lasitxt </Pa>
+        <Pa> aftmod | scrolmov4 |0|1  </Pa>
+        <pa> cte|0 </pa>
+        <Pa> aftmod | scrolmov4 |0|2  </Pa>
+        <pa> cte|1 </pa>
+    </Fx>
+
+    <Fx>
+	<Pa>Sprite</Pa>
+	<Pa></Pa>
+	<Pa> lasprite4 </Pa>
+        <Pa> cte | 0.0 </pa>
+        <Pa> cte | 0.0 </pa>
+        <Pa> cte | 1.0 </pa>
+        <Pa> cte | 1.0 </pa>
+    </Fx>
+
+</KPART>
+-------------------------------------------------------------------------
+<KPART>  <ID> lasit5  </ID>
+
+    <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> lasitxt </Pa>
+    </Fx>
+
+    <KTABLE> scrolmov5 | 0,0|25,-1  </KTABLE>
+    <Fx><Pa>SpritePlain</Pa>
+        <Pa> quad1 </Pa>
+        <Pa> lasitxt </Pa>
+        <Pa> aftmod | scrolmov5 |0|0  </Pa>
+        <pa> cte|0 </pa>
+        <Pa> aftmod | scrolmov5 |0|1  </Pa>
+        <pa> cte|1 </pa>
+    </Fx>
+
+    <Fx><Pa>SpritePlain</Pa>
+        <Pa> quad1  </Pa>
+        <Pa> lasitxt </Pa>
+        <Pa> aftmod | scrolmov5 |0|1  </Pa>
+        <pa> cte|0 </pa>
+        <Pa> aftmod | scrolmov5 |0|2  </Pa>
+        <pa> cte|1 </pa>
+    </Fx>
+
+    <Fx>
+	<Pa>Sprite</Pa>
+	<Pa></Pa>
+	<Pa> lasprite5 </Pa>
+        <Pa> cte | 0.0 </pa>
+        <Pa> cte | 0.0 </pa>
+        <Pa> cte | 1.0 </pa>
+        <Pa> cte | 1.0 </pa>
+    </Fx>
+
+</KPART>
+----------------------------------------------------------------------------
+<KPART><ID> Skrolli  </ID>
+
+    <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> imfont </Pa>
+    </Fx>
+
+<Fx><Pa> SetRect </Pa>
+        <Pa> kc1  </Pa>
+        <Pa>bounce  |0|120|1300|1|0  </Pa>
+        <Pa>cte|0</Pa>
+        <Pa>2cte|1|1</Pa> x2,y2
+        <Pa> 4cte |0|0|1|1 </Pa>
+</Fx>
+
+<Fx><Pa> fillrc  </Pa><Pa> kc1 </Pa> <Pa>cte|4</Pa></Fx>
+
+<Fx><Pa> SetRect </Pa>
+        <Pa> kc1  </Pa>
+        <Pa>2cte|0|0</Pa>
+        <Pa>bounce  |0|120|1300|1|0  </Pa>
+        <Pa>cte|1</Pa>
+        <Pa> 4cte |0|0|1|1 </Pa>
+</Fx>
+
+<Fx><Pa> fillrc  </Pa><Pa> kc1 </Pa> <Pa>cte|0</Pa></Fx>
+
+<KTEXT> ttext1 |
++  schitzo  +
+   phrenic  +
+            +
+ karatepills+
+  part two  +
+            +
+ script by  +
+   maissi   +
+            +
+  music by  +
+mice of zenon+
+            +
+graphics by +
+baarimikko  +
+            +</KTEXT>
+
+   <Fx><Pa> DisplayText </Pa>
+        <Pa></Pa>               the rectangle where to draw
+        <Pa> bmft </Pa>         a bitmap font object from < BMFONT>
+        <Pa> ttext1 </Pa>       a text object with <KTEXT >
+
+        <Pa> cte | 14 </Pa> number of char before return.
+        <Pa> cte | 300 </Pa> max number of char to draw.
+        <Pa> cte | 0 </Pa> char start offset
+
+        <Pa> cte |0.0625 </Pa>                X1 Y1 X2 Y2 of 1st caracter.
+        <Pa> aff |1.5      |-0.0025 </Pa>
+        <Pa> cte |0.125  </Pa>
+        <Pa> aff |1.625  |-0.0025 </Pa>
+    </Fx>
+
+</KPART>
+--------------------------------------------------------------------------
+<KPART>
+
+    <ID> beibsi0 </ID>
+
+    <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> babetxt </Pa>   a 256 color palette.
+    </Fx>
+
+    <Fx>
+        <Pa> warper </Pa>
+        <Pa></Pa>
+        <Pa> babetxt </Pa>
+
+            <Pa>CTE|0.6</Pa>        a zoomx rate
+            <Pa>CTE|0.6</Pa>        a zoomy rate
+            <Pa>SIN|0|0.5|0.03</Pa> texture offset x
+            <Pa>COS|0|0.5|0.03</Pa> texture offset Y
+
+            <Pa>CTE|0.4</Pa>        amplitude of deformation
+            <Pa>CTE|0.3</Pa>        frequency of deformation
+            <Pa>SIN|0|0.4|2</Pa>    X offset of the deformation
+            <Pa>COS|0|0.6|2</Pa>    Y...
+
+            <Pa>CTE|0</Pa> mapping type
+   </Fx>
+  
+</KPART>
+----------------------------------------------------------------------
+<KPART>
+
+    <ID> beibsi </ID>
+
+    <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> babetxt </Pa>   a 256 color palette.
+    </Fx>
+
+    <Fx>
+        <Pa> warper </Pa>
+        <Pa></Pa>
+        <Pa> babetxt </Pa>
+
+            <Pa>CTE|0.6</Pa>        a zoomx rate
+            <Pa>CTE|0.6</Pa>        a zoomy rate
+            <Pa>SIN|0|0.5|0.03</Pa> texture offset x
+            <Pa>COS|0|0.5|0.03</Pa> texture offset Y
+
+            <Pa>CTE|0.4</Pa>        amplitude of deformation
+            <Pa>CTE|0.3</Pa>        frequency of deformation
+            <Pa>SIN|0|0.4|2</Pa>    X offset of the deformation
+            <Pa>COS|0|0.6|2</Pa>    Y...
+
+            <Pa>CTE|0</Pa> mapping type
+   </Fx>
+
+
+    <Fx><Pa> Sprite </Pa>
+        <Pa></Pa>
+        <Pa> babe1  </Pa>
+        <Pa> 4cte|0|0|1|1 </Pa>
+    </Fx>
+    
+</KPART>
+------------------------------------------------------------------
+<KPART>
+
+    <ID> beibsi2  </ID>
+
+    <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> babetxt </Pa>   a 256 color palette.
+    </Fx>
+
+    <Fx>
+        <Pa> warper </Pa>
+        <Pa></Pa>
+        <Pa> babetxt </Pa>
+
+            <Pa>CTE|0.6</Pa>        a zoomx rate
+            <Pa>CTE|0.5</Pa>        a zoomy rate
+            <Pa>SIN|0|0.5|0.03</Pa> texture offset x
+            <Pa>COS|0|0.5|0.03</Pa> texture offset Y
+
+            <Pa>CTE|0.4</Pa>        amplitude of deformation
+            <Pa>CTE|0.2</Pa>        frequency of deformation
+            <Pa>SIN|0|0.4|2</Pa>    X offset of the deformation
+            <Pa>COS|0|0.6|2</Pa>    Y...
+
+            <Pa>CTE|0</Pa> mapping type
+   </Fx>
+
+
+    <Fx><Pa> Sprite </Pa>
+        <Pa></Pa>
+        <Pa> babe2  </Pa>
+        <Pa> 4cte|0|0|1|1 </Pa>
+    </Fx>
+    
+</KPART>
+------------------------------------------------------------------
+<KPART>
+
+    <ID> beibsi3  </ID>
+
+    <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> babetxt </Pa>   a 256 color palette.
+    </Fx>
+
+    <Fx>
+        <Pa> warper </Pa>
+        <Pa></Pa>
+        <Pa> babetxt </Pa>
+
+            <Pa>CTE|0.7</Pa>        a zoomx rate
+            <Pa>CTE|0.7</Pa>        a zoomy rate
+            <Pa>SIN|0|0.5|0.03</Pa> texture offset x
+            <Pa>COS|0|0.5|0.03</Pa> texture offset Y
+
+            <Pa>CTE|0.6</Pa>        amplitude of deformation
+            <Pa>CTE|0.4</Pa>        frequency of deformation
+            <Pa>SIN|0|0.4|2</Pa>    X offset of the deformation
+            <Pa>COS|0|0.6|2</Pa>    Y...
+
+            <Pa>CTE|0</Pa> mapping type
+   </Fx>
+
+
+    <Fx><Pa> Sprite </Pa>
+        <Pa></Pa>
+        <Pa> babe3  </Pa>
+        <Pa> 4cte|0|0|1|1 </Pa>
+    </Fx>
+    
+</KPART>
+---------------------------------------------------------------------
+<KPART>	<ID> pilua </ID>
+
+        <Fx><Pa>BindPalette</Pa>  1st is always the name of the effect.
+
+            <Pa> bounce |0|20|650|0|1</Pa> the rate between 0->1
+
+            <Pa>CTE|0</Pa>              type of fade:0,1,2,3
+            <Pa>CTE|255</Pa>            optional color 0->255 (0)
+            <Pa> pilutxt </Pa>     palette where to fade ( "B" )
+            <Pa> pilutxt </Pa>            optional source Palette(2)
+
+            <Pa>CTE|0</Pa>              type of fade:0,1,2,3
+            <Pa>CTE|255</Pa>            optional color 0->255 (0)
+            <Pa> pilutxt </Pa>       Palette where to fade ( "B" )
+            <Pa> pilutxt </Pa>       optional source Palette(2)
+
+            <Pa>CTE|0</Pa>              type of fade:0,1,2,3
+            <Pa>CTE|255</Pa>            optional color 0->255 (0)
+            <Pa> pilutxt </Pa>       Palette where to fade ( "B" )
+            <Pa> pilutxt </Pa>       optional source Palette(2)
+        </Fx>
+
+    <Fx>
+        <Pa> Twirl </Pa>
+        <Pa></Pa>
+        <Pa> pilutxt </Pa>
+
+        <Pa>SIN|0|1|0.25</Pa> ofsx
+        <Pa>COS|0|1|0.25</Pa> ofsY
+
+        <Pa>SIN|0|0.1|1</Pa> start angle
+        <Pa>CTE|0</Pa>    amp. angle
+        <Pa>CTE|0</Pa>    freq angle
+
+        <Pa>CTE|0</Pa>         start dist.
+        <Pa>SIN|0|0.6|0.5</Pa> amp.dist
+        <Pa>COS|0|0.2|32</Pa> freq dist
+
+        <Pa>CTE|0</Pa> mapping type
+    </Fx>
+
+   <Fx>	<pa> setcamcoord </pa>
+	<pa> cam_1 </pa>
+	
+        <Pa> sin | 0.25 | 0.7 | 0.5</pa>  X
+        <Pa> sin | 0 | 0.7 | 0.5</pa>  Y
+	<pa> sin |0 | 3 |1.4 </pa>    	  Z  jotain|vauhti|zoom
+
+	<pa> 3cte |0|0|0</pa>
+
+	<pa> cte | 0.5 </pa>
+   </Fx>
+
+   <Fx>	<pa> setcamcoord </pa>
+	<pa> cam_2 </pa>
+	
+        <Pa> sin | 0.25 | 0.7 | 0.5</pa>  X
+        <Pa> sin | 0 | 0.7 | 0.5</pa>  Y
+	<pa> sin |0 | 2 |1.6 </pa>    	  Z  jotain|vauhti|zoom
+
+	<pa> 3cte |0|0|0</pa>
+
+	<pa> cte | 0.5 </pa>
+   </Fx>
+
+   <Fx>	<pa> setcamcoord </pa>
+	<pa> cam_3 </pa>
+        <Pa> sin | 0.25 | 0.7 | 0.5</pa>  X
+        <Pa> sin | 0 | 0.7 | 0.5</pa>  Y
+	<pa> sin |0 | 4 |1 </pa>    	  Z  jotain|vauhti|zoom
+	<pa> 3cte |0|0|0</pa>
+
+	<pa> cte | 0.5 </pa>
+   </Fx>
+
+   <Fx>	<pa> setcamcoord </pa>
+	<pa> cam_4 </pa>
+        <Pa> sin | 0.22 | 0.62 | 0.45</pa>  X
+        <Pa> sin | -1.5 | 1.8 | 0.9</pa>  Y
+	<pa> sin |0 | 3.5 |1 </pa>    	  Z  jotain|vauhti|zoom
+	<pa> 3cte |0|0|0</pa>
+	<pa> cte | 0.5 </pa>
+   </Fx>
+
+   <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> pil2 </Pa>
+        <Pa> 4cam| cam_1 |1|1|1|0|4 </Pa>  z=4,far away in front cam
+    </Fx>
+
+   <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> pil3 </Pa>
+        <Pa> 4cam| cam_2 |1|1|0|-1|4 </Pa>  z=4,far away in front cam
+   </Fx>
+
+   <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> pil </Pa>
+        <Pa> 4cam| cam_4 |1|1|0|-1|4 </Pa>  z=4,far away in front cam
+    </Fx>
+
+
+   <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> pil2 </Pa>
+        <Pa> 4cam| cam_3 |1|1|-1|-0.5|4 </Pa>  z=4,far away in front cam
+    </Fx>
+
+
+   <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> pil2 </Pa>
+        <Pa> cos | 0.4 | 0.7 | 0.4</pa>
+        <Pa> sin | 0.4 | 0.7 | 0.4</pa>
+        <Pa> cos | 0.6 | 0.7 | 0.4</pa>
+        <Pa> sin | 0.6 | 0.7 | 0.4</pa>
+    </Fx>
+
+   <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> pil3 </Pa>
+        <Pa> cos | 0.4 | 0.7 | -0.4</pa>
+        <Pa> sin | 0.4 | 0.7 | -0.4</pa>
+        <Pa> cos | 0.6 | 0.7 | -0.4</pa>
+        <Pa> sin | 0.6 | 0.7 | -0.4</pa>
+
+    </Fx>
+
+   <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> pil </Pa>
+        <Pa> cos | 0.4 | 0.7 | -0.4</pa>
+        <Pa> sin | 0.4 | 0.7 | 0.4</pa>
+        <Pa> cos | 0.6 | 0.7 | -0.4</pa>
+        <Pa> sin | 0.6 | 0.7 | 0.4</pa>
+    </Fx>
+
+   <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> pil2 </Pa>
+        <Pa> cos | 0.4 | 0.7 | 0.4</pa>
+        <Pa> sin | 0.4 | 0.7 | -0.4</pa>
+        <Pa> cos | 0.6 | 0.7 | 0.4</pa>
+        <Pa> sin | 0.6 | 0.7 | -0.4</pa>
+
+    </Fx>
+
+</KPART>
+-----------------------------------------------------------------------
+<KPART>
+	<ID> stopmusa </ID>
+	<Fx><Pa> StopDBM </Pa></Fx>
+
+    <Fx><Pa>fillrc</Pa>  clear the screen background to color 0
+        <Pa> </Pa>   default screen rectangle.
+        <Pa> cte | 0 </Pa>
+    </Fx>
+
+</KPART>
+----------------------------------------------------------------------
+<KPART>
+	<ID> 3dhymy </ID>
+
+	<Fx><Pa>setpalette</Pa>
+    	<Pa> image </Pa>
+	</Fx>
+
+    <Fx><Pa>fillrc</Pa> clear the background
+        <Pa> rec_logo1  </Pa>
+        <Pa> cte | 73 </Pa>
+    </Fx>
+
+    <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> checktaus </Pa>
+        <Pa> cte | 0.0 </pa>
+        <Pa> cte | 0.0 </pa>
+        <Pa> cte | 1.0 </pa>
+        <Pa> cte | 1.0 </pa>
+    </Fx>
+
+    <Fx><Pa> SetCamTarget </Pa>
+            <Pa> the_camera2 </Pa>
+
+            <Pa> sin|0|0.23|2.5 </Pa>    x camera
+            <Pa> sin|0|0.45|1.5 </Pa>    y
+            <P a> cte|-20 </Pa>    z
+            <Pa> cos|0|0.23|2.5 </Pa>
+            <Pa> 3cte |0|-1|0 </Pa>  target
+
+            <Pa>cte|0 </Pa> angle rotation z axis
+            <Pa> cte|0.4 </Pa> fov
+            </Fx>
+
+<KTABLE> logbounce | 0,1|5,2|20,1 |100,1 </KTABLE>
+
+    <Fx><Pa> Set3DObject </Pa>   make the plane turn around...
+    	    <Pa> smiley  </Pa>
+    	    <Pa> 3cte|0|0|0</pa> position
+    	    <Pa> 3cte|0|0|0</Pa> rot.
+    	    <Pa> cte|1 </Pa> scale
+            <Pa> aftmod | logbounce |0|0 </Pa>
+            <Pa> cte|1 </Pa> scale
+    </Fx>
+
+     <Fx><Pa> Draw3DWorld </Pa>
+           <Pa> rec_logo1  </Pa>
+           <Pa> world4 </Pa>
+           <Pa> the_camera2 </Pa>
+           <Pa> cte|0 </Pa>
+           <Pa> cte|0.25 </Pa>
+           <Pa> cte|200</Pa>
+     </Fx>
+
+</KPART>
+---------------------------------------------------------------------
+<KPART>
+
+    <ID> kick </ID>
+
+        <Fx><Pa>BindPalette</Pa>
+
+            <Pa> bounce |0|100|200|0|1</Pa> the rate between 0->1
+
+            <Pa>CTE|1</Pa>              type of fade:0,1,2,3
+            <Pa>CTE|255</Pa>            optional color 0->255 (0)
+            <Pa> check </Pa>     palette where to fade ( "B" )
+            <Pa> check </Pa>            optional source Palette(2)
+
+            <Pa>CTE|1</Pa>              type of fade:0,1,2,3
+            <Pa>CTE|255</Pa>            optional color 0->255 (0)
+            <Pa> check </Pa>       Palette where to fade ( "B" )
+            <Pa> check </Pa>       optional source Palette(2)
+
+            <Pa>CTE|1</Pa>              type of fade:0,1,2,3
+            <Pa>CTE|255</Pa>            optional color 0->255 (0)
+            <Pa> check </Pa>       Palette where to fade ( "B" )
+            <Pa> check </Pa>       optional source Palette(2)
+        </Fx>
+
+    <Fx>
+        <Pa> Twirl </Pa>
+        <Pa></Pa>
+        <Pa> check </Pa>
+
+        <Pa>SIN|0|1|0.2</Pa> ofsx
+        <Pa>COS|0|1|0.2</Pa> ofsY
+
+        <Pa>SIN|0|0.1|1</Pa> start angle
+        <Pa>CTE|0</Pa>    amp. angle
+        <Pa>CTE|0</Pa>    freq angle
+
+        <Pa>CTE|0</Pa>         start dist.
+        <Pa>SIN|0|0.3|0.3</Pa> amp.dist
+        <Pa>COS|0|0|32</Pa> freq dist
+
+        <Pa>CTE|0</Pa> mapping type
+    </Fx>
+
+    <Fx><Pa> Sprite </Pa>
+        <Pa></Pa>
+        <Pa> kicker   </Pa>
+        <Pa> bounce|70|150|300|10|0  </Pa> y | x?
+        <Pa> cte |0  </PA>
+        <Pa> bounce|50|120|800|0|1 </Pa> aika1|aika2|x-sijainti|y-leveys
+        <Pa> cte |1  </PA> x-leveys
+
+</KPART>
+--------------------------------------------------------------------
+<KPART>
+
+    <ID> kick2  </ID>
+
+    <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> check </Pa>   a 256 color palette.
+    </Fx>
+
+    <Fx>
+        <Pa> Twirl </Pa>
+        <Pa></Pa>
+        <Pa> check </Pa>
+
+        <Pa>SIN|0|1|0.2</Pa> ofsx
+        <Pa>COS|0|1|0.2</Pa> ofsY
+
+        <Pa>SIN|0|0.1|1</Pa> start angle
+        <Pa>CTE|0</Pa>    amp. angle
+        <Pa>CTE|0</Pa>    freq angle
+
+        <Pa>CTE|0</Pa>         start dist.
+        <Pa>SIN|0|0.3|0.3</Pa> amp.dist
+        <Pa>COS|0|0|32</Pa> freq dist
+
+        <Pa>CTE|0</Pa> mapping type
+    </Fx>
+
+    <Fx><Pa> Sprite </Pa>
+        <Pa></Pa>
+        <Pa> kicker2  </Pa>
+        <Pa> 4cte|0|0|1|1 </Pa>
+    </Fx>
+    
+</KPART>
+--------------------------------------------------------------------
+<KPART>
+    <ID> 3dhymyfade </ID>
+
+    <Fx><Pa>fillrc</Pa> clear the background
+        <Pa> rec_logo1  </Pa>
+        <Pa> cte | 0 </Pa>
+    </Fx>
+
+        <Fx><Pa>BindPalette</Pa>
+
+            <Pa> bounce |0|80|130|0|1</Pa> the rate between 0->1
+
+            <Pa>CTE|0</Pa>              type of fade:0,1,2,3
+            <Pa>CTE|0</Pa>            optional color 0->255 (0)
+            <Pa> check </Pa>     palette where to fade ( "B" )
+            <Pa> check </Pa>            optional source Palette(2)
+
+            <Pa>CTE|0</Pa>              type of fade:0,1,2,3
+            <Pa>CTE|0</Pa>            optional color 0->255 (0)
+            <Pa> check </Pa>       Palette where to fade ( "B" )
+            <Pa> check </Pa>       optional source Palette(2)
+
+            <Pa>CTE|0</Pa>              type of fade:0,1,2,3
+            <Pa>CTE|0</Pa>            optional color 0->255 (0)
+            <Pa> check </Pa>       Palette where to fade ( "B" )
+            <Pa> check </Pa>       optional source Palette(2)
+        </Fx>
+
+    <Fx><Pa> SetCamTarget </Pa>
+            <Pa> the_camera </Pa>
+
+            <Pa> sin|0|0.23|2.5 </Pa>    x camera
+            <Pa> sin|0|0.45|1.5 </Pa>    y
+            <P a> cte|-20 </Pa>    z
+            <Pa> cos|0|0.23|2.5 </Pa>
+            <Pa> 3cte |0|-1|0 </Pa>  target
+
+            <Pa>cte|0 </Pa> angle rotation z axis
+            <Pa> cte|0.4 </Pa> fov
+            </Fx>
+
+<KTABLE> logbounce2 | 0,1|5,2|20,1 |100,1 </KTABLE>
+
+    <Fx><Pa> Set3DObject </Pa>   make the plane turn around...
+    	    <Pa> smiley  </Pa>
+    	    <Pa> 3cte|0|0|0</pa> position
+    	    <Pa> 3cte|0|0|0</Pa> rot.
+    	    <Pa> cte|1 </Pa> scale
+            <Pa> aftmod | logbounce2 |0|0 </Pa>
+            <Pa> cte|1 </Pa> scale
+    </Fx>
+
+     <Fx><Pa> Draw3DWorld </Pa>
+           <Pa> rec_logo1  </Pa>
+           <Pa> world4 </Pa>
+           <Pa> the_camera  </Pa>
+           <Pa> cte|0 </Pa>
+           <Pa> cte|0.25 </Pa>
+           <Pa> cte|200</Pa>
+     </Fx>
+
+</KPART>
+---------------------------------------------------------------------------

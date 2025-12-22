@@ -1,0 +1,40 @@
+===========================================
+Quick Time (QT) version 1.2
+===========================================
+A QuickTime player for fast Amigas
+===========================================
+©1996 Marcus Comstedt <marcus@lysator.liu.se>
+Freely distributable
+===========================================
+
+==========
+Overview
+==========
+QT is a QuickTime movie player for the Amiga. I wrote this 
+program because I wanted something CPU-intense to run on my 
+68060, so it's main purpose is to eat computrons, the fact that it 
+also plays movies rather nicely is just a side effect. 
+
+The requirements for running qt are:
+* 68020 CPU or better
+* AmigaOS 3.0 or better
+* AGA and/or CyberGraphX
+* lots of memory
+
+Depending on the actual movie, and the replay mode selected, an 
+020 may very well be a tad under specced... QuickTime animation 
+formats currently supported are: 
+
+* RLE
+* Cinepak
+* Road Pizza
+* JPEG
+
+Just for the record, here are it's advantages over xanim:
+* It is smaller
+* It is faster
+* It supports 24bit graphics cards
+* It has better sound handling
+* It has a really neat HAM8 mode (if your CPU is fast enough :)
+
+For further infos please consult documentation.

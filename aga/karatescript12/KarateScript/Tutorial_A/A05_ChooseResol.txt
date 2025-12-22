@@ -1,0 +1,342 @@
+
+
+ this script is the A05_ChooseResol.txt exemple.
+everything is the same as A04_ script exemple, only this comment change !!
+
+ Let's just explain how resolution and pixel size work in KARATE:
+despite the fact the scripit is the same, when you throw the
+A05_ChooseResol icon, a screen requester appear. you can choose any
+8bit (256 colors) screens with ANY resolution, it is not the case with the
+A04_MakingAScript demo, which always start with a 320x240 screen without
+asking.
+
+what's the difference ?
+
+In the commandline script "A04_MakingAScript" (no .txt) you can find:
+
+/
+Karate s=Tutorial_A/A04_MakingAScript.txt w=320 h=240
+
+whereas in A05_ChooseResol you have:
+
+/
+Karate s=Tutorial_A/A05_ChooseResol.txt
+
+Note: this scripts are amigaDOS script launch as a project with tool to use
+"iconX", (which is a very convenient amiga-way to throw dos scripts with icons.)
+
+ So you see the amigados command "karate" have some options !!!
+ In all karate tutorials scripts, a screen with resolution 320 width pixel
+ by 240 Height pixels (pixels= picture element, the little squares you know ?)
+ is asked with the option w=320 h=240.
+ If at least the option "w" is not present, a special "ASL" screen requester
+ asks for any 8bit screen.
+
+ this is very powerful and handy for the amiga by these times where differents
+video drivers share the place: Yes ! it will work on any AGA, Cybergraphics
+or Picasso screen drivers. (note Picasso emulates CGX.)
+
+ Note for AGA users: Special "chunky to planar" algorithm was implemented
+ the way it has the best speed possible for a given resolution.
+ note again, if you're disapointed by the slow down of karate on slow 680X0
+ that the new OS3.5 AGA 320x128 screens are specially supported.
+ resolution 320x128, 320x200, 320x240, and 320x256 have special C2P
+ algorithm signed by the great amiga-scene-saviours, I named Mickael Kalms
+ (applause, he did a great job)
+
+ note for CGX/Picasso users: if you select however-weird 1024x800 resolutions,
+ your tiny 68060 or even tiny-tiny 68040 25Mhz, it will work.
+
+ One BIG question stayed in suspend:
+
+ IF the resolution can change, how can I work graphically with karate ?
+ well, you can, you must have noticed parameters (<Pa> cte | 0.5 </Pa>)
+ are always using float numbers (for the coders: they are int<<16)
+ it means when you have a "320x240" screens, the coordinates are on a scale
+ "1,1"
+ It means the coordinates of the up-left corner are 0.0,0.0 and the down-right
+ corner is 1.0,1.0. The center of the screen is 0.5,0.5 !!!
+
+ The aspect ratio of your effects will not change with the resolution.
+
+ All this means for you: you can fix the resolution of your KARATE demo
+by giving "w" and "h" options to the command (or icon tooltypes AS SOON),
+ or let the user choose its screen !!
+
+ Note that the coordinates scale from 0.0 to 1.0 can accept negative and
+ >1.0 values, the effects will be clipped.
+ Note again that these coordinates are scaled using a "rectangle" as origin.
+"rectangles" are a bit more complicated to understand (see further tutorials)
+ note the default rectangle is the "whole screen".
+
+<MAIN> myscript |0|1</MAIN>
+
+<KIMG> impacman | data/oldpac.iff </KIMG>
+<KIMG> imghost  | data/ghost1.iff </KIMG>
+<KIMG> imghost2  | data/inky.iff </KIMG>
+ to understand the way all the effect are used,
+ see the A03 script.
+
+ you can here see how parameters sin,cos,sint,cost and bounce are used !
+
+
+ note: the /// comment are a convenience when using Golded as text editor.
+
+-----------------------------------------------------------------------
+///<KPART>        <ID> mypart1 </ID>
+          
+
+ oldpacman is at the center,
+ 4 ghosts make circles.
+
+
+    <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> impacman </Pa>
+    </Fx>
+
+    <Fx><Pa> FillRC</Pa>
+        <Pa></Pa>
+        <Pa> cte | 134  </Pa>
+    </Fx>
+
+ here we can see a silly using of the parameter "sin" and "cos"
+the formula used for <Pa> sin | aa|bb|cc </Pa>  is:
+
+ sin = aa + sin( time*bb  )*cc
+
+ you can manage to make circles with that, but you can use to:
+ <Pa> sint | aa|bb|cc|dd </Pa>
+
+ the parameter dd is a time offset in 1/50 seconds...
+the formula is:
+sint =  aa + sin( (time + dd)*bb  )*cc
+see mypart2 for a use of "sint".
+
+    <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> impacman </Pa>
+        <Pa> sin | 0.25 | 0.3 | 0.05 </pa>
+        <Pa> cte | 0.25  </pa>
+        <Pa> sin | 0.75 | 0.3 | 0.05 </pa>
+        <Pa> cte | 0.75  </pa>
+    </Fx>
+
+   <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> imghost </Pa>
+        <Pa> cos | 0.4 | 0.7 | 0.4</pa>
+        <Pa> sin | 0.4 | 0.7 | 0.4</pa>
+        <Pa> cos | 0.6 | 0.7 | 0.4</pa>
+        <Pa> sin | 0.6 | 0.7 | 0.4</pa>
+
+    </Fx>
+
+   <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> imghost </Pa>
+        <Pa> cos | 0.4 | 0.7 | -0.4</pa>
+        <Pa> sin | 0.4 | 0.7 | -0.4</pa>
+        <Pa> cos | 0.6 | 0.7 | -0.4</pa>
+        <Pa> sin | 0.6 | 0.7 | -0.4</pa>
+
+    </Fx>
+
+   <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> imghost </Pa>
+        <Pa> sin | 0.4 | 0.7 | -0.4</pa>
+        <Pa> cos | 0.4 | 0.7 | 0.4</pa>
+        <Pa> sin | 0.6 | 0.7 | -0.4</pa>
+        <Pa> cos | 0.6 | 0.7 | 0.4</pa>
+
+    </Fx>
+
+   <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> imghost </Pa>
+        <Pa> sin | 0.4 | 0.7 | 0.4</pa>
+        <Pa> cos | 0.4 | 0.7 | -0.4</pa>
+        <Pa> sin | 0.6 | 0.7 | 0.4</pa>
+        <Pa> cos | 0.6 | 0.7 | -0.4</pa>
+
+    </Fx>
+
+</KPART>
+///
+-----------------------------------------------------------------------
+///<KPART>       <ID> mypart2 </ID>
+
+ oldpacman do strange sines movements,
+ ghosts come for a visit.
+
+    <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> impacman </Pa>
+    </Fx>
+
+    <Fx><Pa> FillRC</Pa>
+        <Pa></Pa>
+        <Pa> cte | 2  </Pa>
+    </Fx>
+
+    <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> impacman </Pa>
+        <Pa> sin | 0.5 | 0.8 | 0.25 </pa>
+        <Pa> cos | 0.8 | 0.8 | 0.25  </pa>
+        <Pa> sin | 0.5 | 0.8 | -0.25 </pa>
+        <Pa> cos | 0.8 | 0.8 | -0.25 </pa>
+    </Fx>
+
+   <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> imghost </Pa>
+        <Pa> cos | 0.4 | 0.7 | 0.4</pa>
+        <Pa> sin | 0.4 | 0.7 | 0.4</pa>
+        <Pa> cos | 0.6 | 0.7 | 0.4</pa>
+        <Pa> sin | 0.6 | 0.7 | 0.4</pa>
+
+    </Fx>
+
+  <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> imghost </Pa>
+        <Pa> cost | 0.4 | 0.7 | 0.4|50</pa> 1 second later
+        <Pa> sint | 0.4 | 0.7 | 0.4|50</pa>
+        <Pa> cost | 0.6 | 0.7 | 0.4|50</pa>
+        <Pa> sint | 0.6 | 0.7 | 0.4|50</pa>
+
+    </Fx>
+----------------------------------------------------------
+---------   yellow ghost come to say hello          ------
+
+    <Fx>
+        <Pa>Sprite</Pa>                              yellow ghost jumpin
+        <Pa></Pa>
+        <Pa> imghost2 </Pa>
+
+
+        <Pa> bounce|200|250|300|-0.25|0  </Pa>
+        <Pa> cte |0.1  </PA>
+        <Pa> bounce|200|250|300|0|0.25 </Pa>
+        <Pa> cte |0.46  </PA>
+    </Fx>
+
+ the bounce parameter is really handy cause it describe a movement using
+ 2 parts of a "parabole", to describe a sort of jump.
+ the model is:
+
+ <Pa> bounce| time0 | time1 | time2 | val1 | val2 </Pa>
+
+ before time0 the value is val1.
+ between time0 and time1, the value "jump" to val2.
+ then it stays to val2 between time1 and time2.
+ after time2, it jump back to val1.
+
+ note that if time1 is equal to time2, you obtain a perfect parabole.
+
+
+
+
+</KPART>
+///
+-----------------------------------------------------------------------
+///<KPART>       <ID> mypart3 </ID>
+
+
+     a pacman come from the right and jump !!
+    a ghost come from the left and jump too !!
+
+    <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> impacman </Pa>
+    </Fx>
+
+    <Fx><Pa> FillRC</Pa>
+        <Pa></Pa>
+        <Pa> cte | 240  </Pa>
+    </Fx>
+
+    <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> impacman </Pa>                 old pac jumpin' !
+
+        <Pa> aff| 0 |0.0015 </pa>
+        <Pa> bounce|150|250|360|0.65|0.05  </Pa>
+        <Pa> aff| 0.25|0.0015 </pa>
+        <Pa> bounce|170|250|360|0.95|0.25 </Pa>
+    </Fx>
+
+
+    <Fx>
+        <Pa>Sprite</Pa>                              yellow ghost jumpin
+        <Pa></Pa>
+        <Pa> imghost2 </Pa>
+
+        <Pa> aff| 1 |-0.0015 </pa>
+        <Pa> bounce|150|250|360|0.65|0.15  </Pa>
+        <Pa> aff| 0.8|-0.0015 </pa>
+        <Pa> bounce|170|250|360|0.95|0.45 </Pa>
+    </Fx>
+
+   <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>                           green ghost up the screen
+        <Pa> imghost </Pa>
+        <Pa> sin | 0.4 | 0.7 | 0.4</pa>
+        <Pa> cte | 0.0.01 </pa>
+        <Pa> sin | 0.6 | 0.7 | 0.4</pa>
+        <Pa> cte | 0.25 </pa>
+
+    </Fx>
+
+
+</KPART>
+///
+
+-----------------------------------------------------------------------
+
+<KSCRIPT>
+    <ID> myscript </ID>
+
+    <PLAY> mypart1 | 200 | 0   | 1 </PLAY>      played 4 seconds
+
+    <PLAY> mypart2 | 400 | 0   | 1 </PLAY>       played 8 seconds
+
+
+    <PLAY> mypart3 | 600 | 50   | 1 </PLAY>     part 3,  12 seconds !!!
+
+    <PLAY> mypart1 | 200 | 200   | -1 </PLAY>    played 4 seonds reversed !!!
+   <PLAY> mypart1 | 50 | 0   | 4 </PLAY>
+    <PLAY> mypart1 | 50 | 50   | -4 </PLAY>
+
+    <PLAY> mypart3 | 50 | 200   | 4 </PLAY>
+    <PLAY> mypart3 | 50 | 400   | -4 </PLAY>
+    <PLAY> mypart3 | 100 | 200   | 4 </PLAY>
+
+    <PLAY> mypart3 | 100 | 600   | -8 </PLAY>
+
+
+   <PLAY> mypart1 | 100 | 50   | 0.5 </PLAY>
+    <PLAY> mypart1 | 100 | 100   | 2 </PLAY>
+   <PLAY> mypart1 | 100 | 150   | -0.5 </PLAY>
+    <PLAY> mypart1 | 100 | 200   | 1 </PLAY>
+
+
+    <PLAY> mypart2 | 50 | 0   | 1 </PLAY>
+
+
+    <PLAY> mypart1 | 500  | 0 | 1 </PLAY>
+
+</KSCRIPT>
+

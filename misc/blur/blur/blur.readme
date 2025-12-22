@@ -1,0 +1,40 @@
+Short:    blur demo in window (PPC/MOS)
+Uploader: karibu@gmx.net (Christian Rosentreter)
+Author:   karibu@gmx.net (Christian Rosentreter)
+Type:     demo/intro
+Requres:  MorphOS 1.x
+
+
+oldscool: blur,1.0______________________________________________
+
+(c)2003 tokai - christian rosentreter.
+freely redistributable.
+
+
+
+archive_content_
+
+    blur.mos     - executable for MorphOS, PowerPC
+    blur.readme  - this file
+
+
+
+description_
+
+    just a small fun test thing which I've wrote to try
+    out some stuff (and to learn some things too :) ).
+    
+    special thanks to ultragelb for help with timerstuff! :)
+
+    -- tokai
+
+
+known bugs_
+
+    Speeds up if another window is moved over the blur
+    window. it's a harmless logic bug, but I'm too lazy to
+    remove it. ;)
+
+
+EOF_____________________________________________________________
+    

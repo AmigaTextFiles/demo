@@ -1,0 +1,43 @@
+Short:        Minimig demo
+Author:       mscarano@libero.it (Massimiliano Scarano)
+Uploader:     mscarano libero it (Massimiliano Scarano)
+Type:         demo/intro
+Version:      1.0 20160208
+Architecture: m68k-amigaos
+Distribution: Aminet
+
+  (c) 2015-2016   Massimiliano Scarano   mscarano@libero.it
+  Support my projects for Amiga with a PayPal donation thanks.
+  PayPal donate to mscarano@libero.it
+
+
+
+  This demo is to welcome my Minimig V1.1 designed by Dennis van Weeren
+  and commercially manufactured by ACube Systems.
+  It shows how to make direct programming of the Commodore Amiga hardware using C language.
+  It consists of the following "old-school" effects:
+  - 2D stars
+  - copper gradients
+  - font text scroller
+  Compiled with SAS/C 6.58 and Includes release 40.13 (AmigaOS 3.1).
+  Source code supplied for educational purpose only.
+
+
+
+  Both .exe and .adf supplied.
+  It should work on any PAL Amiga, with a Motorola 68000 cpu and OCS chipset,
+  and whatever OS (Kickstart + Workbench) version.
+  Tested OK:
+  - Amiga Forever 2013 (WinUAE)
+  - Mimimig OCS, 68SEC000 / normal, 512 KB Chip, 512 KB Fast, Kickstart 1.3
+  - Minimig ECS, 68SEC000 / turbo, 1 MB Chip, 512 KB Fast, Kickstart 1.3
+
+
+
+  Notes:
+  - My Minimig configuration:
+    Bootloader   BYQ100413
+    FPGA core    FYQ100818
+    ARM Firmware AYQ100818
+  - No optimizer options used, the demo should run at constant full frame rate (50 Hz).
+  - Commodore Includes 40.13 were distributed with SAS/C 6.51.

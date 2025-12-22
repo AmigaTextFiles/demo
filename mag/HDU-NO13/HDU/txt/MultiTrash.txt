@@ -1,0 +1,40 @@
+==============================================
+MultiTrash v1.0
+==============================================
+
+Introduction
+Q. OK, what is this?
+A. A Workbench Appicon Trashcan.
+
+Q. But why? The Workbench already has a trashcan!
+A. Yes, but the Workbench trashcan is limited.  It will only hold files 
+from it's own disk.  If you have several HD partitions, you would 
+need to have a trashcan for each one.  And they can't be left out on 
+the Workbench, to say nothing of the hassel of periodically cleaning
+each one out.
+
+Q. OK, I see your point. But there are already several of these 
+"Global Appicon Trashcan" programs. Why another? 
+A. Because I couldn't find one that had all the features I wanted. So 
+I wrote my own.
+
+Q. OK, what's yours do that the other ones don't?
+A. First, you get 2 trashcan appicons. One for deleting files, as 
+usual. And a second for simply removing the icons, but leaving the 
+files alone. Second, you can specify a list of file extensions to be 
+removed along with the "dragged" files.  For example, if your text 
+editor saves a backup of your text files, with the extension  
+".backup". You can set MultiTrash to delete these automatically too, 
+so when you drag a file called "My text" onto the Appicon, it will 
+also remove the "My text.backup" file. Third, you get a visual 
+indication when the file is deleted. (a skull and bones image 
+appears briefly to show that the file is being deleted). Fourth, you 
+can set it to send deleted files to your SYS:trashcan directory if you 
+wish. Yes, all files from any partition or disk will all go to the same 
+place.  And yes, if you just remove the icons from files or drawers, 
+they will go there too. Fifth, you can have a saftey requester appear 
+before anything is deleted in case of mistakes. Sixth, you can have 
+a sound sample played when deleting. Yes, you can have a 
+different one for file deletion and icon removal. And last, ALL of 
+these features are completely optional. As far as I know, none of 
+the other Global Trashcans have all these features.

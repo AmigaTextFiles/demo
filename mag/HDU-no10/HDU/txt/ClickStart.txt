@@ -1,0 +1,76 @@
+==============================================
+ClickStart And all in this package
+==============================================
+
+ClickStart and the other files included in this package can be used 
+by anyone who wants to. There should be two directories with 
+these files :
+
+BootFiles/
+Startup-Sequence
+RenamedFile.info
+RebootStart
+
+and Devs/
+Min-Mountlist
+
+In the root there should be three files:
+ClickStart
+Clickstart.doc
+ClickStart.info
+
+*********
+What is it?
+*********
+ClickStart is an AmigaDOS script that make you choose if you like 
+to run the demo or restart your computer. If you have enough 
+memory, the demo will be loaded right away. If you have to little 
+chip mem, it rebootstarts the demo. 
+
+*********
+How to install?
+*********
+1.Make sure you have these commands on your your AMIGA
+SYS:C/
+RequestChoice (Included in OS 3.x)
+RequestFile
+ED
+Reset
+CPU
+
+SYS:Devs/ or SYS:Storage/Dosdrivers
+Pipe Mountlist
+
+SYS:L/
+Pipe-handler
+
+(I have not used any third party commands in this script...)
+
+2. Copy ALL files/dirs included in this archive into the "main" 
+directory of the demo you want to be Clickstarted.	 
+3. When you Start the program for the first time it will ask for a file 
+to execute. This could be a script or a executable file. The script 
+will find the filetype for you. If you choose a script it will rename 
+this script to ReqBootFile and there will be made another script 
+with an icon called RenamedFile if you have selected wrong script 
+or it seemed to be a datafile. What you do is double click the 
+RenamedFile icon and the file will recover to the original.
+4. When you have selected the requested file you will be asked 
+about the minimum ammount of chip memory that the demo 
+requires. If you select the "Other" button the program ED will 
+popup on your screen. Then you just type in the amount of 
+memory in BYTES and push "Esc" and "x" button. 
+
+If you use the script, and likes/dislikes it, feel free to write to me 
+and tell me what you think of it. Is it good or is it not worth the work 
+you had to unarchive it ? Comments, Suggestions, Threatnings 
+and other nice things should be sent to the following adress :
+
+Snail Mail:      
+Nils-Erik Reklev Skilnand
+Adalsveien 17B
+3185 Horten
+Skoppum
+NORWAY
+
+E-Mail: Smurfepastill@hotmail.com

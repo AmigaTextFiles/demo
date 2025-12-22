@@ -1,0 +1,41 @@
+dnl Process this file with autoconf to produce a configure script.
+AC_INIT(README)
+
+dnl Setup for automake
+AM_INIT_AUTOMAKE(optimum, 1.0)
+
+dnl Check for tools
+
+AC_PROG_CC
+AC_PROG_RANLIB
+
+dnl Check for SDL
+SDL_VERSION=1.0.1
+AM_PATH_SDL($SDL_VERSION,
+            :,
+	    AC_MSG_ERROR([*** SDL version $SDL_VERSION not found!])
+)
+CFLAGS="$CFLAGS $SDL_CFLAGS"
+LIBS="$LIBS $SDL_LIBS"
+
+dnl Add the utils include path
+CFLAGS="$CFLAGS -I\$(top_srcdir)/utils"
+
+# Finally create all the generated files
+AC_OUTPUT([
+utils/Makefile
+bitore/Makefile
+blob/Makefile
+bump/Makefile
+dawafire/Makefile
+difference/Makefile
+flamme/Makefile
+flares/Makefile
+flashouillis/Makefile
+ftunnel/Makefile
+galaxy/Makefile
+infplane/Makefile
+rotozoom/Makefile
+tunnel/Makefile
+Makefile
+])

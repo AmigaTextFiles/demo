@@ -1,0 +1,347 @@
+!How To Do Sound...
+Scicco/Scarab
+51
+µJCµF0µC1- --- --------------------- --- -
+How to do Sound in 4k
+- --- ------------------------- --- -
+
+µC7a tutorial by Scicco of Scarab
+µF1µJEµC2
+
+
+µC2Yes, sure, 4k has become a more attractive method to show your coding skills. But nowadays, if you want to code a nice 4k you need to know more than just how to set up a chunky2planar converter and two or three table effects. One of the most important thing a decent 4k needs to have is cool music. Even if the music itself can be done by the musician, you need a sample generator and replay code. And of course the tune should be in a very small format, too. This article will try to bring you more knowledge in coding sound stuff and give you the ability to build on that suggestions your own sound system in little space.
+
+µC2If you are not into sound code yet you might think that it is very hard to do a very good sound engine in that little space and it will take ages to develop any useful stuff. Well, yes, it needs some time to do a very good 4k sound engine, but it is not that hard to do a sound engine which should be good enough to do at least some good music with it. And if you have no experience in doing sound code this article should also give you some impressions how to start.
+
+µC2Actually there are so many ways to get sound played in 4k. I tried out three complete different ways to play music and four ways to calculate samples and I was satisfied with each way. I dont think that there is a perfect way a replayer or a sample generator should work. So the ideas and suggestions I write here are just ONE way how to make it. You`ll always find a smarter way in doing sounds or playing tunes. The primary aim is to get you INTO that stuff, not to show the best and smallest way in doing music in 4k. Additionally there is always your fantasy which actually is the best method to reach your aim. Because of low space you sometimes just need some crazy ideas. But now let`s start...
+
+
+µC8We Need Some Samples
+
+µC2First of all you need samples to play music, that`s clear. And as a 4k is too small to store the samples in they have to be calculated by code, that`s clear, too. :)
+
+µC2There are many different kinds of samples which you can calculate: hihats, base drums, snares, piano tones etc. As said before there are many ways to calculate the samples. You can code a master routine with many parameters which is able to calculate all samples you need or you can code several routines for different kind of samples. Actually I tried both and found out that it pretty depends on the music you want to do which method is finally smaller. But usually you should try to develop a master routine which is able to work with some parameters to get completely different results.
+
+µC2Anyway, I will show you how the most important sample types are done and what the trick with it is. Of course, your final ruling super master routine should be able to do quite more than shown here.
+
+µC2To check out the samples you calculate without having replay code ready I propose you to save the binary data you calculated and load it as a raw sample into your favorite tracker program (Protracker, Octamet, Digibooster etc). There you should also be able to look at the sample you did which sometimes helps a lot.
+
+µC2The sample routines I wrote here do not make use of the FPU. Using the FPU there are even more ways to calculate samples because of more mathematical functions you can use and a higher accuracy. But we now concentrate on the more simple way.
+
+
+µC8Simple Tones
+
+µC2We start with the simplest way to generate some tones. You might know that all the sounds we hear are based on waves. Digital sample data is just a two dimensional picture of the waves we hear. So we start with a very simple kind of tone by just using a sine to be played.
+
+µC2Imagine a routine reading out your sine wave data and building the sample out of it. We wont use any frequency code nor amplitude manipulation. We just copy the sine data to make it a sample.
+
+µC2I use a sine table with 256 values for 360 degrees, 8.8 resolution (so one value is one word) having $100 as highest and -$100 or $ff00 as lowest value
+
+
+µC1        lea     samplebuffer(pc),a0     ; read sample buffer address
+µC1        lea     sinetable(pc),a1         ; read sine table address
+µC1        moveq   #20,d0                  ; number of waves to render
+µC1.calcWaves
+µC1        moveq   #0,d1                   ; start in sine at offset 0
+µC1.copyWave
+µC1        move.w  (a1,d1.w*2),d2          ; read sine value
+µC1        cmp.w   #127,d2                 ; check for top clipping
+µC1        ble.b   .clipTopDone
+µC1        moveq   #127,d2
+µC1.clipTopDone
+µC1        cmp.w   #-128,d2                ; check for bottom clipping
+µC1        bge.b   .clipBottomDone
+µC1        moveq   #-128,d2
+µC1.clipBottomDone
+µC1        move.b  d2,(a0)+                ; store sample byte
+µC1        addq.b  #1,d1                   ; step to next sine value
+µC1        bcc.b   .copyWave               ; no overflow? so there are more sine values
+µC1        dbf     d0,.calcWaves
+
+µC1samplebuffer
+µC1        dcb.b   30000,0                 ; should be enough space for now
+
+µC2So the code above is quite simple. It just reads the sine wave data, clips it down to byte size and stores it in the sample buffer. A big part of the samples amplitude is clipped now, because the values in the sine table were too big to fit in a singed byte.
+
+µC2To manipulate the tone we will now add some code to change the amplitude of the sample, e.g. to half volume (assuming 256 = 100% volume, 128 = 50% of the volume).
+
+
+µC1        lea     samplebuffer(pc),a0     ; read sample buffer address
+µC1        lea     sinetable(pc),a1        ; read sine table address
+µC1        moveq   #20,d0                  ; number of waves to render
+µC1        move.w  #128,d3                 ; the volume (50%)
+µC1.calcWaves
+µC1        moveq   #0,d1                   ; start in sine at offset 0
+µC1.copyWave
+µC1        move.w  (a1,d1.w*2),d2          ; read sine value
+µC1        muls.w  d3,d2                   ; multiply by volume
+µC1        lsr.l   #8,d2                   ; 8.8 * 8.8 = 16.16, so shift back to 8.8
+µC1        .. (clipping code, see above) ..
+µC1        move.b  d2,(a0)+                ; store sample byte
+µC1        addq.b  #1,d1                   ; step to next sine value
+µC1        bcc.b   .copyWave               ; no overflow? so there are more sine values
+µC1        dbf     d0,.calcWaves
+
+
+µC2So you see the routine has just changed in three lines but has volume support now. You can change the volume of #128 after each wave to have a simple volume slide. Just insert a subq.w #6,d3 before the last dbf command and listen what happens.
+
+µC2Now let`s add the frequency a.k.a. pitch to make different tones. Therefor we have to step through the sine table faster or slower. So we need to interpolate the offset to the table values. The code will change now a bit more than before but the main concept will stay.
+
+
+
+µC1        lea     samplebuffer(pc),a0     ; read sample buffer address
+µC1        lea     sinetable(pc),a1        ; read sine table address
+µC1        moveq   #20,d0                  ; number of waves to render
+µC1        move.w  #128,d3                 ; the volume (50%)
+µC1        moveq   #40,d4                  ; number of bytes per wave = frequency       
+µC1.calcWaves
+µC1        moveq   #0,d1                   ; start in sine at offset 0 (value is 24.8)
+µC1        moveq   #1,d5
+µC1        swap    d5                      ; this trick gets us 256<<8 to d5 as 24.8
+µC1        divu.l  d4,d5                   ; gives the step width (24.8)
+µC1        move.w  d4,d6                   ; the loop counter
+µC1.copyWave
+µC1        ror.l   #8,d1                   ; roll it down to ignore the .8 of the 24.8
+µC1        move.w  (a1,d1.w*2),d2          ; read sine value
+µC1        rol.l   #8,d1                   ; roll it back to 24.8
+µC1        add.l   d5,d1                   ; interpolate to the next sine table entry
+µC1        muls.w  d3,d2                   ; multiply by volume
+µC1        lsr.l   #8,d2                   ; 8.8 * 8.8 = 16.16, so shift back to 8.8
+µC1        .. (clipping code, see above) ..
+µC1        move.b  d2,(a0)+                ; store sample byte
+µC1        subq.w  #1,d6                   ; subtract from width
+µC1        bne.b   .copyWave
+µC1        dbf     d0,.calcWaves
+µC2We have just added some lines of code to interpolate the position in the sine table and have now the possibility to generate different pitches. Of course you can change the frequency here after every wave loop, too. And this gives us the possibility to get to the next kind of sample, the base drum.
+
+
+
+µC8Wham - The Base Drum
+
+µC2Actually with the code from the previous sample you should be able to generate a normal base drum. You just have to know how a base drum is build. A base drum starts with a very high frequency and usually very loud. After only three, four or five waves it reduces the frequency very fast, also the volume decreases. Having only 10 waves could be enough for a base drum. Play around with the code from above and use high values for the start volume and the frequency. Then reduce it very fast after each wave.
+
+µC2Good start values can 10 waves to render with start volume = 400% (256*4) and 10 bytes per wave. Then add 150 to the frequency (d4) and subtract 100 from the volume (d3) after each wave loop.
+
+
+
+µC8Tsch - The Hihat
+
+
+µC2To be true: the hihat is the easiest sample to generate. You know why? Well, actually its just noise. You can generate hihats by collecting random bytes or by using a distortion value for each sample byte written. There are even more ways to create distorted waves.
+
+µC2Anyway you can perform volume code on a hihat to adapt it to the other samples. I think it is quite easy to generate controlled noise data, so I will step further now. :)
+
+
+
+µC8Snares?
+
+
+µC2Snare samples are calculated as easy as hihats. You just need two samples, a hihat and a base drum. Now you just have to combine the samples by adding the sample buffer together. A different way may be the normal base drum calculation and performing some distortion on it, but not too much to let the base drum characteristic still look through. This is a good example of how many ways there are to calculate samples.
+
+µC8I Want 303, Filters and More!
+
+µC2Yes, all this is possible in 4k. But hey, remember that I said that this article is about to get you started with 4k sound code. Anyway you may contact me for further things or maybe Ill find the time to write another article in the future with these topics, but not yet. :)
+
+
+
+µC8OK, I Have Samples Now. How Can I Play Them?
+
+
+µC2Here you also have multiple ways how to play your data. Assume that your musician (or you by yourself? :) did some music in a tracker program like ProTracker. Then you must think about the technique how the module could be play. The most common methods may be:
+
+µC2- building a kind of very small tracker player or
+
+µC2- calculating a complete stream of the song. 
+
+
+
+µC8Module Data
+
+µC2Playing samples is not all. You have to think about how to store the module data, independent of the method you choose for playing. One way is to create a small pattern creator routine which I will focus on in the next lines. The idea behind this is to create different small patterns. When playing the song you just combine the patterns, for instance you have a base drum pattern and a hihat pattern and you combine it to make a beat out of it.
+
+
+µC6To visualize it:
+µC6
+µC6   Pattern A       Pattern B       Combination
+µC6
+µC601 Base Drum       ----            Base Drum
+µC602 ----            ----            ----
+µC603 ----            HiHat           HiHat
+µC604 ----            ----            ----
+µC605 Base Drum       ----            Base Drum
+µC606 ----            ----            ----
+µC607 ----            HiHat           HiHat
+µC608 ----            ----            ----
+
+
+µC2Yes, this beat sucks, but it is just a sample. :)
+
+µC2Anyway, you can make different kind of patterns and just combine them in your replayer or use it in your stream render code. A size optimized way to store this information may be a byte with its bits set for each play entry and the sample number to play here. Assume that the base drum is sample 1, the hihat sample 2. The data for the previous block may look like this:
+
+
+µC1        dc.b    1,%10001000
+µC1        dc.b    2,%00100010
+
+
+µC2So these four bytes will hold all information you need to generate that simple pattern. Of course it gets more complex if you want to store the note to be played at each entry or even more information, but the system stays the same. But this is just one way how to do it, as mentioned many times before. To give you a short hint on how to get the information of a bit is set or not you can use the lsl.b #1,dx or lsr.b #1,dx commands and then check the overflow register for a branch (bcc.b/w, bcs.b/w) or a byte set (scc.b, scs.b). And of course there is the btst command for direct bit testing.
+
+µC2When all patterns are ready you need a playlist (a.k.a. sequence) to make use of the patterns in the right way, but I think a playlist is quite easy, eh? Just store the information which pattern should be played when.
+
+
+
+µC8Stream Generator or Realtime Player?
+
+µC2This decision depends on what you want to have. A realtime replayer has advantages like more easy sync possibilities but it may be not as fast as a stream player. But a stream needs much more memory and a realtime player usually does not. I figured out that the stream player is smaller than the realtime player and you can mix more than four channels into a stream which is not that easy in small space if your replayer works in realtime. You can of course mix both kind of replay systems and calculate stream parts and mix them in realtime, it depends on what you want.
+
+µC2The work which must be done is actually the same, its just the decision of doing it before or while the intro is running:
+
+µC2- read the pattern data to know when to play which sample with which note and
+
+µC2- insert the sample into the stream or play it through the hardware channels
+
+µC8Replayer Code?
+
+µC2Well, actually a replayer is not build of heavy code lines. You just have to know which data to play and fill the hardware registers. As the stream replayer is easier I will concentrate on this kind of replay technique.
+
+µC2A stream player can make a big advantage out of the hardware and how it works: whenever you start to play audio data the DMA copies all audio register values to internal registers. That means, after telling the Amiga which bytes have to be played you can change the audio registers without any problems. After Paula has played all the data it starts again with making a copy of the actual content of the audio registers and then plays the sound specified in the registers now. So you see, if you use double buffering you can start playing a buffer by setting up the audio data once and then just set the new buffers playing data. As soon as an audio interrupt occurs and Paula starts with the second buffer, just calculate and set the playing data for the first buffer again and so on.
+
+µC2Now you need some code to fill that chip data all the time (you wont have 8 MB of stream sound data in your chip memory, dont you? ;) ) and to set up the audio registers. You can of course call it from your VBI or you use the audio interrupt for your timing, because as said before it occurs as soon as the actual buffer has been played completely. Both is possible and has nearly the same code size. If you use your VBI and call the replay code every vertical blank interrupt you should really know how many bytes got played during one frame to avoid interruption in the stream. The number of bytes played in one frame depends on the note you play the stream in. Anyway I strongly suggest you to use the audio interrupt because it gets called after the bytes have been played and this makes it much easier. You can do all your timing code in this interrupt so that you dont need a VBI anymore.
+
+µC2The following code shows a very simple stream player code which will be called whenever the audio interrupt occurs. In this example the number of bytes to be played with one buffer is always 1000.
+
+
+µC1Play_Stream:
+µC1        movem.l d0-a6,-(sp)             ; save all registers
+µC1        lea     ActChipBuffer(pc),a1    ; address of chip buffer ID (0 or –1)
+µC1        move.w  (a1),d0                 ; read buffer ID
+µC1        not.w   (a1)                    ; swap buffers (0 -> -1 or +1 -> 0)
+µC1        move.l  -4(a1,d0.w*4),a1        ; reads the address of the chip buffer
+µC1                                        ; the –4 points us to the middle of the
+µC1                                        ; chip buffer addresses and d0 gives us
+µC1                                        ; now buffer 2 (offset d0=0*4=0) or
+µC1                                        ; buffer 1 (offset d0=+1*4=-4)
+µC1
+µC1        move.l  a1,a2                   ; make copy of target buffer
+µC1
+µC1        move.w  #1000,d1                ; size to be played
+µC1        lea     StreamPosition(pc),a0   ; address of stream position
+µC1        move.w  (a0),d0                 ; get position in the stream
+µC1        addq.w  #1,(a0)+                ; step further in stream by increasing pos
+µC1        mulu.w  d1,d0                   ; real offset ( pos * playlength per buffer)
+µC1
+µC1        lea     stream(pc),a0           ; the streams address
+µC1                                        ; if you are smart you put StreamPosition
+µC1                                        ; directly before stream and you can
+µC1                                        ; completely skip this command
+µC1
+µC1        add.l   d0,a0                   ; set stream position by adding offset
+µC1
+µC1        lsr.w   #2,d1                   ; as we copy long words we decrease counter
+µC1.copyToChip
+µC1        move.l  (a0)+,(a1)+             ; copy stream to chip
+µC1        dbf     d1,.copyToChip
+µC1
+µC1        lea     $dff0a0,a0              ; gets address of channelA data
+µC1        moveq   #4,d0                   ; loop counter for four channels
+µC1.setChannel
+µC1        move.l  a2,(a0)+                ; sets the address of data to be played
+µC1        move.w  #1000/2,(a0)+           ; size of sample (divided by 2 because
+µC1                                        ; the DMA needs the number of WORDS
+µC1                                        ; to play)
+µC1        move.w  #124,(a0)+              ; the frequency to play, this is
+µC1                                        ; about 28.8 khz
+µC1        move.w  #$40,(a0)+              ; the volume of the sample ($40 = full)
+µC1        addq.w  #6,a0                   ; step to next channel
+µC1        subq.w  #1,d0                   ; decrease loop counter
+µC1        bne.b   .setChannel
+µC1
+µC1        lea     $dff09c,a0
+µC1        move.w  #%11110000000,(a0)      ; accept all audio interrupts
+µC1        move.w  #%11110000000,(a0)      ; accept them again (A4000 bug)
+µC1
+µC1        movem.l (sp)+,d0-a6             ; restore all register values
+µC1        rts     ; rte if you have changed the interrupt vectors directly
+µC1                ; rts if you choosed the system calls to set up audio interrupt
+
+
+
+µC1ChipBuffers:
+µC1        dc.l    Buffer1_in_ChipMem      ; pointer to chipbuffer 1
+µC1        dc.l    Buffer2_in_ChipMem      ; pointer to chipbuffer 2
+µC1ActChipBuffer:                          ; keep this directly after the ChipBuffers
+µC1        dc.w    0                       ; number of act buffer (can be 0 or -1)
+µC1
+µC1StreamPosition:
+µC1        dc.w    0                       ; position in the stream
+µC1
+µC1; chip memory follows...
+µC1        SECTION chip,BSS_C
+µC1
+µC1Buffer1_in_ChipMem:
+µC1        ds.b    5000                    ; chip buffer 1
+µC1Buffer2_in_ChipMem:
+µC1        ds.b    5000                    ; chip buffer 2 (double buffering!)
+
+
+µC2Actually that`s it. First you manage your double buffering and copy the data to play to the chip buffer. Then you have to set the new audio registers with the new data address. As said the next time the interrupt occurs the Amiga starts to play the music buffer which you have just set into the register. And while its playing your routine runs the next time to fill the next buffer and so on.
+
+µC2And by the way: I really suggest you do calculate a word sized stream, not byte sized as seen in the sample code. The advantage is that you can just mix all your 8 bit samples into the word sized buffer without needing to clip for each sample. This gives you more sound quality in the final stream. But dont forget that you`ll need the clipping code inside the replayer then.
+
+µC2To give you the very rest to do your first sound code here is the code to set up an audio interrupt by system calls and to remove it again at the end of the intro:
+
+
+µC1InitAudio:
+µC1        lea     AudIntStruct(pc),a1     ; load the structures address
+µC1        lea     Play_Stream(pc),a0      ; address of the interrupt routine
+µC1        addq.b  #2,8(a1)                ; set interrupt type (assumed that the
+µC1                                        ; AudIntStruct memory is zeroed)
+µC1        move.l  a0,18(a1)               ; set routines address into the structure
+µC1        bsr.b   SetAudInt               ; enables the new interrupt
+µC1        bsr.b   Play_Stream             ; plays the first stream data
+µC1        lea     $dff096,a6
+µC1        move.w  #$820f,(a6)             ; enable audio DMA for all four channels
+µC1        move.w  #%1100000010000000,$9a-$96(a6) ; enable interrupt for AUD0
+µC1        rts
+
+µC1ExitAudio:
+µC1        lea     $dff096,a6              ; DMA control registers
+µC1        move.w  #%1111,(a6)             ; disable all audio channels
+µC1        move.w  #%11110000000,$9a-$96(a6) ; disable all audio interrupts
+µC1        sub.l   a1,a1                   ; set 0 as new AudIntStruct,
+µC1                                        ; this removes all audio interrupts,
+µC1                                        ; also if there has been one before
+µC1        ;bsr.b   SetAudInt              ; the bsr.b and the rts has been removed
+µC1        ;rts                            ; as the SetAudInt routine follows directly
+µC1
+µC1SetAudInt:
+µC1        moveq   #7,d0                   ; flag to set interrupt for AUD0
+µC1        move.l  $4.w,a6                 ; read exec base
+µC1        jmp     -162(a6)                ; set interrupt, use jmp to spare a rts
+µC1
+µC1AudIntStruct:
+µC1        dcb.b   30,0                    ; space for the AudIntStruct
+µC1
+
+µC8That`s it?
+
+µC2Yes, that`s it. Calculate your samples, mix your patterns or use your pattern data to render the samples directly to your stream. Set up the audio interrupt, fill the audio registers  and call your stream player at every interrupt. Dont forget to stop the audio DMA at the end and yes, that`s it. :)
+
+µC2If you make use of above shown sample code you would call it like this:
+
+
+µC1Main:
+µC1        bsr     CalcSamples             ; calculate your samples
+µC1        bsr     CalcStream              ; your stream generation code, e.g. places
+µC1                                        ; the samples into the stream
+µC1        bsr     InitAudio               ; init the audio stuff
+µC1.loop
+µC1        btst    #6,$bfe001              ; maybe a mouseclick controlled loop?
+µC1        bne.b   .loop
+µC1        bsr     ExitAudio               ; and finish the audio
+µC1        rts
+
+µC2But if you still have any questions left you can ask me, and Ill try to answer. Drop me a mail at scicco@scarab-amiga.com for further questions. And if you got it I would be really interested to see your results...well, let`s say to "hear" your results. ;)
+
+µC2Happy coding! µC2scicco/Scarab
+
+(you can find the article without any special chars in the bonus directory)

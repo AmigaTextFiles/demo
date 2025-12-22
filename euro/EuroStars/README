@@ -1,0 +1,28 @@
+        Well, it's been a long while, but I finally got a Round Tuit.
+Here's my latest display hack.
+
+        ES (EuroStars) is a starfield program, with the added gimmick of
+being able to move and spin at any rate on all three axes.  It is based on
+some European code which I massively cleaned up and made system-friendly.
+Then I mildly optimized some of the critical paths.  Then I added better
+argument parsing.  Then I went mad and added an ARexx port.  It is written
+in 100% assembly code (SAS assembler) and source is provided.
+
+        I can't take all the credit for this one.  I'd like to express my
+thanks to an unknown EuroHacker who wrote the original code on which this is
+based (giving me knowledge that I much wanted), and to Greg Cunningham
+(author of BaudBandit) for uploading it to Portal, from whence I downloaded,
+disassembled, and studied it.
+
+        I'd also like to express a note of thanks to all the good
+EuroHackers everywhere, whose visually and technically stunning work have
+always impressed me, and inspired me to follow in their footsteps in ways I
+cannot express :-).
+
+        I hope you like it.
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+Leo L. Schwab -- The Guy in The Cape            	ewhac@ntg.com
+ \_ -_          Recumbent Bikes:		..or..  ewhac@well.sf.ca.us
+O----^o       The Only Way To Fly.		       (pronounced "EH-wack")
+         "Because you never know who might want to sit in your lap."

@@ -1,0 +1,546 @@
+<NAME " PowerPC">                            <B>PowerPC Software</B>
+
+Здесь  мы  дадим  список  практически  всего имеющегося программного обеспечения
+написанного для Amiga c процессорами PowerPC.  Программы разбиты по группам, для
+определения предназначения программы.  Также для простоты понимания список будет
+оформлен ввиде таблицы:
+
+<B>Name</B> - название программы
+
+<B>System </B>  -   система   под   которую   написана   данная  программа.   Это  либо
+PowerUP(ppc.library), либо WarpOS(PowerPC.libary).  PUP - PowerUP, WOS - WarpUP
+ К  сожалению  здесь  не  приводится  список  софта под бурно развивающийся клон
+AmigaOS - <I>MorphOS</I>.
+
+Type - более подробное описание этой программы
+
+<B>Status</B>   -  это  т.н.   "ценовая"  характеристика  программы,  т.е.   программа
+комерческая  (commercial),  свободнодоступная  (free)  или Shareware.  Возможные
+сокращения здесь:  Sharew.  - Shareware, comm.  - commercial, Gift.  - Giftware,
+Mail - программа распростроняется по E-Mail.
+
+<B>Sourse</B> - адрес в интернете где можно скачать данную программу или заказать её,
+если она коммерческая.
+ Если путь указан вот таким способом: gfx/edit/... это значит, что программа
+распологается на аминете: ftp.wustl.edu/pub/aminet
+
+<I> В тексте возможны переносы, следите внимательнее за правильным вводом ссылок.</I>
+
+Amiga PowerPC Software: <B>Graphics</B>
+
+Name		System	Type		Status	Source
+----		------	----		------	------
+AkJFIF		PUP,WOS JFIF-datatype 	Share 	www.ar-kleinert.de
+AkLJPG 		PUP 	Datatype JPEG	free 	www.ar-kleinert.de
+akMPEG4 	PUP 	MPEG-player 	Share 	www.ar-kleinert.de
+AkPNG		PUP,WOS PNG-datatype 	Share 	www.ar-kleinert.de
+AkTIFF		PUP,WOS TIFF-datatype 	Share 	www.ar-kleinert.de
+AMP		WOS 	Videoplayer 	free 	www.amidog.com/amp/
+Apdf_ppc	PUP 	PDF-viewer 	free 	gfx/show/Apdfppc.lha
+Group Effect
+PPC Effects 	WOS 	module for the 
+			gfx soft	comm.	www.haage-partner.com
+GroupStudio 	PUP 	Graphics manag. comm. 	www.titancomputer.de
+Benoit 		PUP 	Fractal-gen. 	free 	studserver.uni-dortmund.de/
+						~su0583/
+Candy Factory
+ Pro 		PUP 	Grafic software comm. 	www.titancomputer.de
+CandyPPC 	PUP 	webgraphics 	free 	gfx/edit/candyPPC.lha
+chunkyppc 	WOS 	library 	free 	gfx/board/chunkyppc.lha
+CreateMPEG 	PUP 	MPEG-1-video 	free 	studserver.uni-dortmund.de/
+						~su0583/
+CyberGraphX
+-libraries	PUP 	Video system	free 	www.vgr.com/v3/
+Cybermand 	WOS 	Mandelbrot	free 	www.haage-pGroupner.com/
+						wu_form.htm
+Doggy 		WOS 	LightWave-viewer
+					free 	gfx/3d/doggy.lha
+Elastic Dreams 	PUP 	morphing 	comm. 	www.titancomputer.de
+Fantastic
+ Dreams 	PUP 	morphing 	comm. 	www.titancomputer.de
+Frogger 	PUP 	MPEG-player 	free 	gfx/show/Frogger.lha
+fx Paint 	PUP,WOS Imageprocessing comm. 	www.innovative-web.de
+IFX_Antique 	PUP 	plugin ImageFX 	free 	gfx/misc/IFX_Antique.lha
+ifx_jpeg 	PUP 	loader ImageFX 	Gift. 	gfx/ifx/ifx_jpeg.lha
+Image2Icon	WOS 	converter 	free 	http://www.stephan-rupprecht.de
+Imagine 	WOS 	Raytracer 	comm. 	www.cadtech.demon.co.uk
+Irit70PPC 	PUP 	Modell-creation free 	gfx/3d/irit#?
+IsisPPC 	PUP 	MPEG-player 	free 	studserver.uni-dortmund.de/
+						~su0583/
+jpeg tools 	PUP 	IJG-JPEG-tools 	free 	studserver.uni-dortmund.de/
+						~su0583/
+JPEG-Box 	PUP 	converter 	Share 	gfx/conv/JPEG-Box.lha
+jpeg2ps 	PUP 	converter 	free 	gfx/conv/jpeg2ps.lha
+jpegoptim 	PUP 	JPEG-optimiser 	free 	www.ph-cip.uni-koeln.de/~jakob/
+JPEGWOS 	WOS 	Image converter free 	gfx/con/JPEGWOS.lha
+LW Show 	PUP 	LW-objectviewer free 	www.vgr.com/lwshow
+ME 		PUP 	Mandelbrot	free 	gfx/misc/ME.lha
+monzoom 3D 	PUP	Raytracer 	comm. 	www.oberland.com
+MooVId 		PUP,WOS Video player	Share 	www.dfmk.hu/~torokl
+mpegPPC 	WOS 	MPEG-de/encoder free 	gfx/conv/mpegPPC.lha
+mpegvdt206 	PUP 	Datatype 	free 	util/dtype/mpegvdt#?
+mpeg2decode 	PUP 	MPEG2-player 	free 	gfx/show/mpeg2decode.lha
+mpeg2decodeWOS 	WOS 	MPEG2-player  	free 	gfx/show/mpeg2decodeWOS.lha
+mpeg2enc 	WOS 	videoencoder 	Card. 	www.baud.de/video/mpeg2enc.html
+NetPBM 		PUP,WOS GFX convertion  free 	www.kolumbus.fi/jami.laakkonen/
+						ppc/
+PCD_Manager 	PUP 	PCD-converter 	Share 	gfx/conv/PCD_Manager.lha
+PictureManager 	PUP 	Pic. management comm. 	www.irseesoft.com
+Plane 		PUP 	Fractal-gen. 	free 	studserver.uni-dortmund.de/
+						~su0583/
+PNG-Box 	PUP 	All to PNG 	Share 	gfx/conv/PNG-Box.lha
+POVRay3 	PUP 	Raytracer 	free 	www.ph-cip.uni-koeln.de/
+						~jakob/
+PowerView 	PUP 	JPEG-viewer 	free 	www.mds.mdh.se/~adb94fwk/
+PPaint Library 	PUP 	For PPaint 7 	free 	biz/cloan/PBlit_PPC.lha
+PPCjpeg 	WOS 	JPEG viewer 	free 	gfx/show/PPCjpeg.lha
+PPCLimbo 	PUP 	Fractal 	free 	gfx/conv/PPCLimbo.lha
+PPCLimboCWOS 	WOS 	Fractal		free 	gfx/conv/PPCLimboCWOS.lha
+PPCtbl_lwc.lha 	PUP 	Lightwave-conv. free 	dev/src/PPCtbl_lwc.lha
+pview3D 	PUP 	3D-obj.-viewer	Share 	gfx/3d/pview3D.lha
+pvrgjpeg 	PUP 	JPEG-library	free 	gfx/misc/pvrgjpeg.lha
+QBist 		PUP 	Create abstract free 	studserver.uni-dortmund.de/
+						~su0583/
+QMap 		PUP 	Quake-level 	free 	gfx/aga/QMap.lha
+qmapWOS 	WOS 	Quake-level 	free 	gfx/aga/qmapWOS.lha
+raylabwos 	WOS 	Raytracer 	free 	gfx/3d/raylabwos.lha
+raystorm_ppc 	WOS 	Raytracer 	Share 	gfx/3d/raystorm_ppc.lha
+Ripley 		PUP 	MPEG-videoplay  free 	gfx/show/ripley.lha
+rippleWOS 	WOS 	Waterw.-effect  free 	gfx/misc/rippleWOS.lha
+rtgmaster.library 
+		WOS 	RTG-package	free 	gfx/board/rtgmaster_user.lha
+RTGoesWOS 	WOS 	C2P for rtg 	free 	gfx/board/RTGoesWOS.lha
+sfwjpg 		PUP 	SFW to JFIF	free 	gfx/conv/sfwjpg.lha
+Show 		PUP 	CGX imageviewer free 	gfx/show/Show.lha
+sKulpt		WOS 	Raytracer 	comm.	http://cdbssoftware.net/english/
+						skulpt.html
+SManPPC 	PUP 	Mandelbrot-soft free 	gfx/fract/smanppc#?
+SManWOS 	WOS 	Mandelbrot-soft free 	gfx/fract/SManWOS#?
+SoftCinema 	PUP 	AVI/QT player 	Share 	jota.tuniv.szczecin.pl/~bjsebo/
+						SC/SoftCinema.lha
+splitmpgPPC 	PUP 	MPEG-splitter 	free 	gfx/misc/splitmpgPPC.lha
+splitmpgWOS 	WOS 	MPEG-splitter 	free 	gfx/misc/splitmpgWOS.lha
+Stanford MPEG
+ codec 		PUP,WOS MPEG-Video 	free 	www.kolumbus.fi/jami.laakkonen/
+						ppc/
+StormMesa 	WOS 	OpenGL port 	free 	www.haage-partner.com
+SuperViewIV 	PUP 	Grafics package Share 	gfx/misc/SvIV#?
+Tornado3D 	PUP 	Raytracer 	comm. 	www.tornado3d.com
+UltraConvert 	PUP 	Pic/Anim-conv. 	comm. 	innovative.in-tec.de/uconv
+V 		PUP 	Pictureviewer 	free 	www.multimania.com/allenbra/
+						amiga/
+Vflash 		PUP 	for Voyager 	free 	http://v3.vapor.com
+Viewtool 	PUP 	JPEG-viewer 	free 	gfx/show/Viewtool.lha
+vmpeg 		WOS 	MPEG-decoder 	free 	gfx/show/vmpeg.lha
+Warp3D 		WOS 	3D-system	free 	www.haage-partner.com
+WarpBMP-
+Datatype 	WOS 	Datatype 	free 	http://www.nanunanu.org/~Oliver/
+WarpGIF dt.	WOS 	datatype 	free 	http://www.soft-ware.de/dalmanac
+WarpJPG dt 	WOS 	datatype 	free 	util/dtype/WarpJPEGdt.lha
+WarpPNG dt 	WOS 	PNG-datatype 	free 	util/dtype/WarpPNGdt.lha
+WarpBMP-Dt	WOS     BMP-Datatype	free	http://www.nanunanu.org/~Oliver/
+WarpViewAGA 	WOS 	Pic. viewer AGA Gift. 	gfx/show/WarpViewAGA.lha
+WarpViewPPC 	WOS 	Pic. viewer 	Gift	gfx/show/WarpViewPPC.lha
+Wildfire 	PUP 	Anim. software	comm. 	Demo: biz/demo/wildfire7#?
+YAV 		PUP,WOS Picture viewer 	free 	gfx/show/yav#?
+
+Amiga PowerPC Software:<B> Games</B>
+
+Name 		System 	Type 		Status Source
+ADescentPPC 	WOS 	3D-shoot'em'up 	free 	game/shoot/ADescentPPC.lha
+ADescentPPCW3D 	WOS 	3D-shoot'em'up  free	game/shoot/ADescentPPCW3D.lha
+ADescentPPC 	PUP 	3D-shoot'em'up 	free 	www.ph-cip.uni-koeln.de/~jakob/
+Adom_PPC 	PUP	Role-playing 	free 	game/role/Adom_PPC.lha
+ADoomPPC 	PUP 	Doom-engine 	free	game/shoot/ADoomPPC#?
+AmiHeretic 	WOS 	3D-action game 	free	game/shoot/AmiHeretic.lha
+AngbandPPC 	PUP	Roleplaying 	free	game/role/AngbandPPC.lha
+athrust 	WOS 	Port of XThrust free	game/shoot/athrust.lha
+awinquake 	PUP 	WinQuake 	free	game/shoot/awinquake#?
+crystalPPC.lha 	WOS 	3D-engine 	free	game/demo/crystalPPC.lha
+crystupd.lha 	WOS 	Update 		free	game/demo/crystupd.lha
+Eat the Whistle PUP 	Action-soccer 	comm. 	game/patch/ETW#?
+Eerth 2140	WOS 	Strategy(RTS) 	comm.	http://www.epic-interactive.com
+GLTron 		WOS 	3 D Game 	free	http://www.kolumbus.fi/
+						jami.laakkonen/ppc/
+HellShot 	WOS 	Action-game 	free	game/2play/HellShotWOS.lha
+Heretic 	PUP 	3D-Actiongame 	free	game/shoot/Heretic.lha
+Heretic II 	WOS 	3D Action Adv.	comm.	http://www.hyperion-software.de
+Poing2 		PUP 	Poing-Game	free	game/misc/poing2.lha
+QuakePPC 	PUP/WOS Quake-port 	free 	devnull.owl.de/~frank/quake.html
+Quake World PPC PUP/WOS QuakeWorld-port free	devnull.owl.de/~frank/quake.html
+sg2ishi 	WOS/PUP SmartGo2IshiGo	free 	game/misc/sg2ishi.lha
+Space 		WOS 	shoot'em'up	free	game/shoot/space#?
+VAxen 		PUP 	3D-actiongHexen	free	game/shoot/VAxen.lha
+VDoomPPC 	PUP 	Doom-engine 	free	game/shoot/VDoomPPC.lha
+VoxelRaceWOS 	WOS 	Voxel-racegame	free	game/misc/VoxelRaceWOS.lha
+WarpHexen 	WOS 	3D-action game	free	game/shoot/WarpHexen.lha
+WarpQuake 	WOS 	Quake-port	free	game/shoot/WarpQuake#?
+WipeOut 2097 	WOS 	3D-racegame 	comm.	www.schatztruhe.de
+WolfPac 	PUP 	3D-pacman 	Share	game/misc/WolfPac#?
+WolfPacWOS 	WOS 	3D-pacman 	Share	game/misc/WolfPacWOS.lha
+XFire2PV 	WOS 	Shoot'em'Up	free	game/actio/XFire2PV.lha
+ZangbandPPC 	PUP 	Roleplaying 	free	game/role/ZangbandPPC.lha
+ZhaDoom 	WOS 	Doom-engine	free	game/shoot/ZhaDoomPPC.lha
+
+Amiga PowerPC Software: <B>Demos</B>
+
+Name 		System 	Type 	Status 	Source
+CdBS_DSoaB 	WOS 	Scene	free	demo/euro/CdBS_DSoaB.lha
+CdBS-Enclume	WOS 	Scene	free	demo/euro/CdBS-Enclume.lha
+DiamondPPC 	PUP	Scene	free	demo/aga/DiamondPPC.lha
+EGrouphTribe
+Media 		WOS 	Sound	free	demo/sound/ETM.lha
+GenderBender 	PUP 	Scene	free	demo/aga/GenderBender_F.lha
+hla-salvation	WOS 	Scene	free	demo/aga/hla-salvation.lha
+InsideDeluxe 	PUP 	Scene	free	demo/intro/InsideDeluxe.lha
+kng-flow 	WOS 	intro	free	demo/intro/kng-flow.lha
+mega4PPC 	PUP 	Scene	free	demo/mega/mega4PPC.lha
+mkd_pgs 	WOS 	Scene	free	demo/aga/mkd_pgs.lha
+MWI-Absolon 	PUP 	Scene	free	demo/aga/MWI-Absolon#?
+NCE-VEND 	WOS 	Scene	free	demo/aga/NCE-VEND.lha
+SM_Bounce_PPC 	WOS 	GL-demo	free	biz/haage/SM_Bounce_PPC.lha
+SM_Morph3D_PPC 	WOS 	GL-demo free	biz/haage/SM_Morph3D_PPC.lha
+SM_Olympic_PPC 	WOS 	GL-demo free	biz/haage/SM_Olympic_PPC.lha
+SM_Wave_PPC 	WOS 	GL-demo free	biz/haage/SM_Wave_PPC.lha
+ukx_luminance 	WOS 	Scene	free	demo/aga/ukx_luminance.lha
+VAEDiesPPC_WOS 	WOS 	Scene	free	demo/aga/VAEDiesPPC_WOS.lha
+VAGhostPPC_WOS 	WOS 	Scene	free	demo/aga/VAGhostPPC_WOS.lha
+VA_EDiesPPC 	PUP 	Scene	free	demo/aga/VA_EDiesPPC.lha
+VA_Field 	PUP 	Scene	free	demo/aga/VA_Field.lha
+VA_GhostPPC 	PUP 	Scene	free	demo/aga/VA_GhostPPC.lha
+VA_OffShore 	PUP 	Scene	free	demo/aga/VA_OffShore.lha
+VA_PPCDemosFix 	PUP 	Bugfix	free 	emo/aga/VA_PPCDemosFix.lha
+
+Amiga PowerPC Software:<B> Sounds</B>
+
+Name 		System 	Type 		Status 	Source
+8hz-mp3 	PUP 	MP3-encoder 	free	studserver.uni-dortmund.de/
+						~su0583/
+AHI-PPC 	PUP,WOS Soundhardware	free	www.lysator.liu.se/~lcs/
+						ahi_ppc.html
+AmigaAMP 	PUP,WOS MPEG-player 	free 	mus/play/AmigaAMP11.lha
+AmiSOX3.3PPC 	PUP 	Sound-converter free 	mus/edit/AmiSOX3.3PPC.lha
+Audio Evolution PUP 	Effects for AEE free	www.wentzler.limit.nl
+DaBeast303	WOS 	Realtime Roland free	http://tex.mankind.fr/products/
+						DaBeast
+DigiBoosterPro 	PUP 	Multitracker 	share 	mus/edit/DBPro#?
+EncodeWOS 	WOS 	MPEG1/2 encoder free 	mus/misc/EncodeWOS.lha
+FlutterPlugin 	PUP 	Plugin for AMP 	free	mus/play/FlutterPlugin.lha
+Lame 		PUP 	MP3-encoder 	free	mus/misc/lame.lha
+Lamer 		WOS 	MP3-encoder 	free	www.kolumbus.fi/jami.laakkonen/
+						ppc/
+Lamer (twoports)PUP 	MP3-encoder 	free	linux.tc3net.com/cstar/lame/
+						index.html
+med2xm 		PUP 	Conv. MED to XM free	mus/misc/med2xm.lha
+mpega-WarpUP 	WOS 	MP3-decoder	gift	util/libs/mpega-WarpUP.lha
+mpega_library 	PUP 	MP3-decoder	gift	util/libs/mpega_library.lha
+mpeginoutPPC 	PUP 	MPEG-de/encoder	free	mus/misc/mpeginoutPPC.lha
+mpg123 		PUP 	MPEG-player 	free	www.ph-cip.uni-koeln.de/~jakob/
+MusicIn 	PUP 	MPEG1/2 encoder free	studserver.uni-dortmund.de/
+						~su0583/
+NcodeR 		PUP,WOS MP3 encoder	comm.	www.titancomputer.de
+ParallaxPlugin 	PUP 	Plugin for AMP	free	mus/play/ParallaxPlugin.lha
+Pegase 		WOS 	MPEG-encoder 	E-Mail	perso.pacwan.fr/kakace/pegase/
+PPCMpegPlayerG 	PUP 	MPEG-player	free	mus/play/PPCMpegPlayerG.lha
+PreludeAMP 	PUP 	MP3-player 	free 	mus/play/preludeamp#?
+ProStationAudio PUP 	Audio software 	comm.	www.audiolabs.it
+RAPlay 		PUP,WOS RealAudio-play.	free 	csc.smsu.edu/~strauser/RA.html
+Samplitude Opus PUP 	Soundediting 	comm.	www.act-net.com
+Sid4Amiga 	WOS 	Player for SID	free	mus/play/Sid4Amiga.lha
+timidity 	PUP 	MIDI2WAV conv. 	free	www.ph-cip.uni-koeln.de/~jakob/
+vocoder-ppc 	PUP,WOS Vocoder		free	mus/misc/vocoder-ppc.lha
+WarpAMP 	WOS 	MPEG-player(AHI)free	mus/play/WarpAMP.lha
+wavedt41	WOS 	wave-datatype 	free	http://www.stephan-rupprecht.de
+WaveTracer DS 	WOS 	Soundediting	comm.	mus/edit/WTDemoWOS.lha
+
+Amiga PowerPC Software: <B>OS / Emulation</B> (эмуляторы и операционные системы)
+
+Name 		System 	Type 		Status	Source
+AmigaVGBPPC 	PUP 	Gameboy		free 	misc/emu/AmigaVGBPPC.lha
+AmiGenerator 	PUP 	Sega 		free	misc/emu/AmiGenerator.lha
+AtariPPC 	WOS 	AtariXL		free 	misc/emu/AtariPPC.lha
+DarcNES 	WOS 	Multi-console	free 	www.amidog.com/darcnes/
+flamingo 	WOS 	Commodore-Plus	Gift	misc/emu/flamingo.lha
+Frodo 		WOS 	C64-emulator 	free 	www.amidog.com/emu/
+FPSE 		WOS 	Playstation	free	http://www.amidog.com/emu/fpse
+FrodoPPC 	WOS 	C64-emulator 	free 	misc/emu/FrodoPPC.lha
+FrodoPPCPUP 	PUP 	C64-emulator 	free 	misc/emu/FrodoPPCPUP.lha
+GBE 		WOS 	Gameboy-Color 	free 	misc/emu/GBE.lha
+Handy 		WOS 	Atari-Lynx	free 	misc/emu/Handy.lha
+Linux 		PUP 	Linux-port 	free 	sunsite.auc.dk/ftp/pub/os/linux/
+						apus/
+M.A.M.E 	PUP 	Arcade-games	free 	misc/emu/mameppc.lha
+MasterGear 	PUP 	MS-/Gamegear 	free 	studserver.uni-dortmund.de/
+						~su0583/
+MESS 		PUP 	Multi-console 	free	www.stud.ntnu.no/~matsha/
+						messppc.lha
+Nostalgia 	WOS 	Multi-emulation free 	misc/emu/Nostalgia.lha
+pcemu 		PUP 	8086-PC		free 	misc/emu/pcemu#?
+ppclibemu 	WOS 	Em. ppc.library free	devnull.owl.de/~frank/
+SavagePPC 	WOS 	Videodriver SS 	Share	misc/emu/SavagePPC.lha
+snes9x-wos 	WOS 	SNES-emulator 	free 	misc/emu/snes9x-wos.lha
+SOPE 		WOS 	SonyPlaystation	free 	www.amidog.com/emu/sope
+SPCRecordPPC 	PUP 	SNES-soundchips free	misc/emu/SPCRecordPPC.lha
+TrueReality 	WOS 	Nintendo64	free 	www.amidog.com/n64/
+UAE 		PUP 	Amiga(!)-emul.	free 	www.ph-cip.uni-koeln.de/~jakob/
+V2600PPC 	WOS 	Atari2600	free 	misc/emu/V2600PPC.lha
+vgbppc 		PUP 	Gameboy-emul. 	free 	misc/emu/vgbppc.lha
+vgbwos 		WOS 	Gameboy-emul. 	free 	misc/emu/vgbwos.lha
+vMac 		PUP 	Macintosh-Plus	free 	misc/emu/vMac_bin.lha bzw./
+						vMac_src.lha
+warpsnes 	WOS 	SNES-emulator 	free 	misc/emu/warpsnes.lha
+WarpMAME 	WOS 	Arcade-games	free	www.powerup.com.au/~cward/
+
+Amiga PowerPC Software: <B>Packer / Decoder</B>
+
+Name 		System	Type 		Status 	Source
+Aaf 		WOS,PUP Unpacker Apple	free	misc/emu/Aaf.lha
+AmiGNUtar 	PUP 	GNUtar-port 	free	util/arc/AmiGNUtar.lha
+arcPPC		PUP 	ARC-(un-)packer free	util/arc/arcPPC.lha
+base64 		PUP 	Base64-de/encod free	util/arc/base64.lha
+base64WOS 	WOS 	Base64-de/encod free	util/arc/base64WOS.lha
+Boo-Utils 	WOS,PUP MakeBoo, DeBoo	free	util/cli/Boo-Utils.lha
+bzip 		PUP 	Bzip-packer 	free	studserver.uni-dortmund.de/
+						~su0583/
+bzip2 		PUP 	Bzip2-Packer 	free	studserver.uni-dortmund.de/
+						~su0583/
+bzip2PPC 	PUP,WOS Bzip2-packer	free	util/arc/bzip2PPC.lha
+codegroup 	PUP 	de-/encoder	free	util/arc/codegroup.lha
+codegroupWOS 	WOS 	de-/encoder	free	util/arc/codegrWOS.lha
+DeMimePPC 	PUP 	Mime-decoder 	free	util/arc/DeMimePPC.lha
+DeMimeWOS 	WOS 	Mime-decoder 	free	util/arc/DeMimeWOS.lha
+GGUUcode 	PUP 	UU-de-/encoder	free	util/arc/GGUUcode.lha
+gguuwos 	WOS 	UU-de-/encoder	free	util/arc/gguuwos.lha
+gsmPPC 		PUP 	Speach-compres	free	util/pack/gsmPPC.lha
+gzip 		PUP 	GNU-Zip-packer	free	studserver.uni-dortmund.de/
+						~su0583/
+gzip 		WOS	GNU-Zip-packer	free	www.kolumbus.fi/jami.laakkonen/
+						ppc/
+gzipPPC 	PUP	GZIP-archive	free	util/pack/gzipPPC.lha
+LhA 		PUP	LhA-Port	free	ftp.phase5.de/pub/ppc/
+						lha_ppc.lha
+Mac-Unsea 	WOS,PUP Mac-SEA-dearch.	free	misc/emu/Mac-Unsea#?
+mcvertPPC 	PUP 	Conv.for Mac 	free	util/arc/mcvertPPC.lha
+mcvertWOS 	WOS 	Conv.for Mac	free	util/arc/mcvertWOS.lha
+mime64 		PUP 	Mime-de/encoder free	util/arc/mime64.lha
+mime64WOS 	WOS 	Mime-de/encoder free	util/arc/mime64WOS.lha
+mpackPPC 	PUP 	Mime-de/encoder free	util/arc/mpackPPC.lha
+mpackWOS 	WOS 	Mime-de/encoder free	util/arc/mpackWOS.lha
+PPCDeTar	PUP 	DeTAR-port	free	util/arc/PPCDeTar.lha
+PPCDeTarWOS 	WOS 	DeTAR-port	free	util/arc/PPCDeTarWOS.lha
+PPCGNUtar 	PUP 	GNUtar-port	free	util/arc/PPCGNUtar#?
+PPCUnACE 	PUP 	UnACE-port	free	util/arc/PPCUnACE.lha
+PPCUnACEWOS 	WOS 	UnACE-port	free	util/arc/PPCUnACEWOS.lha
+PPCUnArj 	PUP 	ARJ-dearchiver	free	util/arc/PPCUnArj#?
+PPCUnArjWOS 	WOS 	ARJ-dearchiver	free	util/arc/PPCUnArjWOS.lha
+PPCunlzx 	PUP 	LZX-decruncher	free	util/arc/PPCunlzx.lha
+PPCUnTGZ 	PUP 	UnTGZ-port	free	util/arc/PPCUnTGZ.lha
+PPCUnTGZWOS 	WOS 	UnTGZ-port	free	util/arc/PPCUnTGZWOS.lha
+PPCuucoders 	PUP 	UU-de-/encoder	free	comm/mail/PPCuucoders.lha
+PPCUUWOS 	WOS 	UU-de-/encoder	free	util/arc/PPCUUWOS.lha
+PPCxDMS 	PUP 	DMS-entpacker	free	util/arc/PPCxDMS.lha
+PPCxDMSWOS 	WOS 	DMS-entpacker	free	util/arc/PPCxDMSWOS.lha
+ppunpackPPC 	PUP 	Power'Un'Packer free	util/arc/ppunpackPPC.lha
+PPUnpackWOS 	WOS 	Power'Un'Packer free	util/arc/PPUnpackWOS.lha
+stego 		PUP 	Stego-en/decod. free	util/crypt/stego.lha
+unlzx 		PUP 	LZX-decruncher	free	util/pack/unlzx.lha
+UnLZX2 		WOS,PUP LZX-inarchiver	free	util/arc/UnLZX2.lha
+UnLzxWOS 	WOS 	LZX-decruncher	free	util/arc/UnLzxWOS.lha
+Unpit 		WOS,PUP PackIt-decrunch.free	misc/emu/Unpit.lha
+UnRAR 		PUP 	RAR-decruncher	free	util/arc/PPCUnRAR.lha
+unrarWOS 	WOS 	RAR-decruncher	free	util/arc/unrarWOS.lha
+UnSharPPC 	PUP 	SHAR-decruncher free	util/arc/UnSharPPC.lha
+UnSharWOS 	WOS 	SHAR-decruncher free	util/arc/UnSharWOS.lha
+xbinPPC 	PUP 	Decoder BinHex	free	util/arc/xbinPPC.lha
+xbinWOS 	WOS 	Decoder BinHex	free	util/arc/xbinWOS.lha
+XelasoftCrunch 	PUP 	De-packer .XSA	free	util/arc/XelasoftCrunch.lha
+xpkGZIP-WOS 	WOS	XpkGZIP-module  free	http://www.rzuser.uni-heidelberg
+						.de/~astegema
+xpkbZIP.library PUP	XPK-Library	free	studserver.uni-dortmund.de/
+						~su0583/
+yacoder 	PUP	Substitute 	free	util/arc/yacoder.lha
+ZipPPC 		PUP	ZIP and UnZIP 	free	util/arc/ZipPPC.lha
+zlib-library	WOS	ZLib (gzip)	free	util/libs/zlib-library.lha
+ZooPPC 		PUP	Zoo-(de-)packer free	util/arc/ZooPPC.lha
+
+Amiga PowerPC Software: <B>Programming</B>
+
+AsyncIOP	PUP	asyncio.library
+			for PPC		free	dev/c/AsyncIOPPCdev.lha
+asyncioppc	WOS	asyncio.library
+			 for PPC-WarpOS	free	http://www.soft-ware.de/dalmanac
+awin		PUP	API for RTG
+			-chunky-display	free	dev/c/awin.lha
+BarflyDisk2_00	PUP	Software for assembler-
+			programmers	Share.	dev/asm/BarflyDisk2_00.lha
+clibpdf		WOS	PDF-Writer-linker-library
+			for StormC 	free	dev/c/clibpdf.lha
+crcPPC		PUP	CRC-tools	free	dev/c/crcPPC.lha
+crcWOS		WOS	CRC-tools	free	dev/c/crcWOS.lha
+EGCS		PUP,WOS	C/C++-compiler	free	user.cs.tu-berlin.de/~paladin/
+EGCSWOSAlib	WOS	Amiga.lib for
+			EGCS-WarpUp	free	dev/c/EGCSWOSAlib.lha
+EGCS-WARPUP-Ad	WOS	Installationhelp 
+			for EGCS WarpUP	free	dev/c/EGCS-WarpUP-Ad.lha
+measureconpup	PUP	Measuring of context
+			-switches	free	dev/c/measureconpup.lha
+measureconwos	WOS	Measuring of context
+			-switches	free	dev/c/measureconwos.lha
+MPEGAPPC	PUP	mpega.library for PPC
+					free	dev/c/MPEGAPPCdev.lha
+noe_ppc_c2p	PUP	Chunky-to-planar
+			-converter 	free	dev/asm/noe_ppc_c2p.lha
+OO2C		PUP,WOS Precompiler Oberon 
+			to ANSI-C	free	computer.freepage.de/tauchmann/
+						devel.html
+pasm		PUP,WOS portable PPC-assembler
+					free	devnull.owl.de/~frank/pasm.html
+pdflib		PUP	PDF-library and tools 
+					free	text/misc/pdflib.lha
+PMM		PUP,WOS	Project-Make-manager
+			for vbcc	free	dev/c/PMM.lha
+ppc.library	PUP	PPC-Systemsoft	free	ftp://ftp.phase5.de/pub/phase5/
+						ppc/
+PPC680x0	WOS	Assembler-converter
+			68k to PPC	comm.	dev/asm/PPC680x0.lha
+ppcasmpk	PUP	PPC-emulator and 
+			-disassembler	free	dev/asm/ppcasmpk#?
+PPCbwb		PUP	Basic-interpreter
+					free	dev/lang/PPCbwb#?
+PPCcforth	PUP	Forth-interpreter
+					free	dev/lang/PPCcforth.lha
+ppcEdev		PUP	Module for E-coders
+					free	dev/e/ppcEdev.lha
+ppcmathlib	WOS	Math-library for
+			StormC		free	dev/c/ppcmathlib.lha
+PPCsiod		PUP	Scheme-interpreter
+					free	dev/lang/PPCsiod.lha
+PPCSmallEiffel	PUP	GNUSmall Eiffel	free	dev/lang/PPCSmallEiffel.lha
+PPCsmalltalk	PUP	Smalltalk-port	free	dev/lang/PPCsmalltalk.lha
+PPCtinyprolog	PUP	Prolog-interpr.	free	dev/lang/PPCtinyprolog.lha
+PPC_in_E	PUP 	includes for AmigaE
+					free	dev/e/PPC_in_E.lha
+rtgmaster.library 
+		WOS	RTG-package	free	gfx/board/rtgmaster_dev.lha
+SAS/C-Patches	PUP	PPC-patches for the 
+			C-compiler	free	www.warped.com/~stevek/
+Stormamiga.lib	WOS	Linkerlibrary for StormC
+			and SAS/C	share.	http://www.CyberdyneSystems.de
+StormC		WOS	C/C++-compiler	comm.	www.haage-partner.com
+StormPowerASM	WOS	Assembler	comm.	www.haage-partner.com
+ucb_logoPPC	PUP	Logo-port	free	dev/lang/ucb_logoPPC.lha
+vbcc		PUP	ANSI-C-compiler free	dev/c/vbccppc#?
+vbcc		WOS	ANSI-C-compiler free	dev/c/vbccwos#?
+vlink		WOS,PUP portable linker free	devnull.owl.de/~frank/vlink.html
+WarpUp		WOS	PPC-systemsoft	free	www.haage-pGroupner.com
+Wild		WOS	Mod 3D-library	free	dev/misc/Wild#?
+wosdb		WOS	basic WOS-debugger
+					free	dev/debug/wosdb.lha
+z88dk		WOS	Z80-C-compiler	free	dev/cross/z88dk#?
+ZLibWOS		WOS	Compression-softfree	dev/src/ZlibWOS.lha
+
+Amiga PowerPC Software: <B>Misc</B>
+
+Name 		System	Type 		Status 	Source
+Amiga Writer 	WOS 	Wordprocessing 	comm.	http://www.haage-partner.com
+ASuperLottoPPC 	PUP 	for Italians	share	misc/misc/ASuperLottoPPC.lha
+BurnIt 		PUP 	CD-burning soft	comm.	www.titancomputer.de/burnit/
+CDCat 		PUP 	CD-catalogsoft. share	www.amigaworld.com/support/cdcat
+Cybermagic 	WOS 	Screensaver 	free 	util/blank/Cybermagic.lha
+DigitalAlmanac3 WOS	Astronomic soft comm.	http://www.soft-ware.de/dalmanac
+fx Scan 	PUP/WOS Scannersoftware comm.	www.innovative-web.de
+ixemul.library 	PUP 	library Unix em	free	www.ph-cip.uni-koeln.de/~jakob/
+Orbit 		WOS 	Space combat 	free	http://home.t-online.de/LucyG/
+PasTeX_PPC 	PUP 	PasTeX-update 	free	text/tex/PasTeX_PPC.lha
+RC5 		PUP 	Clients for RC5	free	distributed.amiga.org
+Scan Quix 	WOS 	Scannersoftware comm.	www.rbm.de
+StarDate 	PUP/WOS Startime clock 	free	util/cli/StarDate.lha
+Tottogol2PPC 	PUP 	for Italians 	share	util/misc/Tottogol2PPC.lha
+TurboPrint Prof.PUP	Printersoftware comm.	www.irseesoft.com
+VHI Studio 	WOS/PUP Work of images 	comm	http://www.innovative-web.de/
+						index.html
+X-DVE 		WOS	Video-titling	comm.	www.haage-pGroupner.com
+
+Amiga PowerPC Software: <B>Tools</B>
+
+Name 		System 	Type 		Status	Source
+Alt2Koi8 	PUP,WOS Conv. ALT-KOI8	free 	text/misc/Alt2Koi8.lha
+2b_TKSearch 	PUP 	find word text	free	util/cli/2b_TKSearch.lha
+ADFLibPPC 	PUP 	ADFLib, UnADF	free	disk/misc/ADFLibPPC.lha
+AFinch 		WOS 	Benchmark-test	free	util/moni/afinch.lha
+AFlops 		WOS 	Benchmark-test	free	util/moni/aflops.lha
+B2G 		PUP,WOS Big5 to GuoBiao free	text/misc/B2G.lha
+Big5-CNS	PUP,WOS Big5 to CNS	free	text/misc/Big5-CNS.lha
+Bytemark 	PUP 	Benchmark-test	free	util/moni/ByteMark#?
+ChngPPCTaskPri 	PUP 	Change priority free	util/cli/ChngPPCTaskPri.lha
+Cybermap 	PUP 	Kickstart-map.	free	searsh in: biz/p5/68060#?
+Cyrillic2Latin 	PUP,WOS Kyr. 2 Latin	free	text/misc/Cyrillic2Latin.lha
+DeTar 		WOS 	DeTar for Amiga free	util/arc/DeTar.lha
+DhrystonePPC 	PUP 	Benchmark-test	free	util/moni/DhrystonePPC.lha
+DictSqueeze 	PUP,WOS Tool for lists	free 	text/misc/DictSqueeze.lha
+dirdiver 	WOS 	Filesearch	mail	util/dir/dirdiver.lha
+ElfChekWos 	WOS 	WarpUP checker	free	dev/c/ElfCheckWos.lha
+Esplit 		PUP,WOS Splits files	free	text/misc/Esplit.lha
+EsplitX 	PUP,WOS Splits files	free	text/misc/EsplitX.lha
+ExpandDict 	PUP,WOS Tool for lists	free	text/misc/ExpandDict.lha
+Gateway-5 	PUP,WOS BBS-software	free	comm/bbs/G5#?
+GatewayTools 	PUP,WOS Various CLI	free	util/cli/GatewayTools.lha
+GB-Folding 	PUP,WOS in GuoBiao	free	text/misc/GB-Folding.lha
+GB2PinYin 	PUP,WOS Big5/GB2PinYin	free	text/misc/GB2PinYin.lha
+GBDetect 	PUP,WOS accelerated GB	free	text/misc/GBdetect.lha
+HanZiPlus 	PUP,WOS ZiPLUS-util	free	text/misc/HanZiPlus.lha
+hscPPC 		PUP 	HTML-creation	free	text/hyper/hscPPC.lha
+HZ-Utils 	PUP,WOS conversiontools free	text/misc/HZ-Utils.lha
+JChar 		PUP,WOS Creates jaз.	free	text/misc/JChar.lha
+JGrep 		PUP,WOS Japanese GREP	free	text/misc/JGrep.lha
+KDFilt 		PUP,WOS Filter for KDic free	text/misc/KDFilt.lha
+KickCopyPPC 	PUP 	Kickstart2file	free	util/sys/KickCopyPPC.lha
+Koi2Alt 	PUP,WOS Conv. KOI82ALT	free	text/misc/Koi2Alt.lha
+Latin2Cyrillic  PUP,WOS Latin2Kyrillic	free	text/misc/Latin2Cyrillic.lha
+LiveCam 	WOS 	Use Live Cam`s	free 	com/misc/LiveCam.lha
+LS-SPD5P 	PUP 	Benchmark-test	free	util/misc/LS-SPD5P.lha
+Lucas 		PUP 	LucasLehmer-testfree	misc/math/Lucas.lha
+Man2RTFppc 	PUP 	Man2RTF conv.	free	text/misc/Man2RTFppc.lha
+Map-GuoBiao 	PUP,WOS ASCII-to-GuoBiao
+			-converter	free	text/misc/Map-GuoBiao.lha
+MCread 		PUP,WOS MacWrite/TeachText 
+			to ASCII-converter 
+					free	text/misc/MCread.lha
+Mpage 		PUP 	for PostScript-
+			printers	free	text/misc/mpage.lha
+MWRescue 	PUP,WOS Salvages damaged
+			 MacWrite-files free	text/misc/MWRescue.lha
+NBench 		PUP 	Benchmark-test 	free 	studserver.uni-dortmund.de/
+						~su0583/
+OglBench 	WOS 	OpenGL/Mesa-
+			benchmark test	free	gfx/3d/OglBench.lha
+PowerSearch 	PUP 	AminetCD-
+			Searchutility	free	disk/cdrom/PowerSearch.lha
+PPCnroff	PUP 	nroff-formatter free	text/misc/PPCnroff.lha
+PPCTool 	PUP 	for PUP-KGroups free	studserver.uni-dortmund.de/
+						~su0583/
+PPCtroepfel 	PUP 	Calculation of
+			Pi and e 	free	misc/sci/PPCtroepfel.lha
+ProfilePPC 	WOS 	Evaluation of 
+			PUP-programs	free	dev/misc/ProfilePPC.lha
+R2Tex 		PUP,WOS ROI8-to-AMS-TEX
+			-converter 	free	text/misc/R2Tex.lha
+RecoverJis 	PUP,WOS Recovering of 
+			JIS-files	free	text/misc/RecoverJis.lha
+RM4mat 		PUP,WOS Removes GuoBiao
+			-format		free	text/misc/RM4mat.lha
+SetFastAvec 	PUP 	for speedincrease 
+					free	www.vgr.com/ppc/setfastavec.lha
+SetMemMode 	PUP 	60ns-mode etc. 
+			for PUP-KGroups free	www.vgr.com/ppc/setmemmode.lha
+SIP 		PUP 	Systemmonitor 	card.	util/moni/SIP.lha
+sploinerppc 	PUP,WOS Split&Join
+			-program	free	misc/unix/sploinerppc.lha
+SysSpeed 	WOS 	Test program	free	util/moni/sspeed#?
+VersCheck 	PUP,WOS Versionscompare free	util/cli/VersCheck.lha
+Vpdf 		PUP 	pdf-viewer for
+			 Voyager	free	http://v.3.vapor.com
+warpvers06 	PUP 	Report WarpOS/3D/Mesa
+					 free	util/misc/warpvers06.lha
+
+Andy Parfenov aka Levitator

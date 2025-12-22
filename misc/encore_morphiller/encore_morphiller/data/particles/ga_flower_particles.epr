@@ -1,0 +1,43 @@
+{
+	"enc_info": {
+		"data_type": "ENCPAR",
+		"version": "2.0"
+	},
+	"max_num_particles": 400,
+	"num_create_particles": 1,
+	"sorting_type": false,
+	"shape_type": "plane_billboard",
+	"life_time": 7.0,
+	"particles_per_sec": 52,
+	"update_freq": 60,
+	"spread": 0.22,
+	"locked_position_axis": false,
+	"texture_frames_matrix": [
+		1, 1
+	],
+	"texture_file_name": "ga_flower_particles_tex",
+	"layer_1": {
+    	"disabled": false,
+    	"depth_mask": false,
+    	"depth_test": true,
+		"blending": "additive",
+		"color_keys_rgba": [
+    		0.3, 0.3, 0.3, 1.0
+		],
+		"color_key_times": [
+			0.0
+		],
+		"size_keys": [
+			0.07
+		],
+		"size_key_times": [
+			0
+		],
+		"texture_keys": [
+			0
+		],
+		"texture_key_times": [
+			0
+		]
+	}
+}

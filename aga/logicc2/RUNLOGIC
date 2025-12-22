@@ -1,0 +1,15 @@
+;
+;  A script used to run LOGIC on a4000 with WARP.
+;
+;  Enables all caches we could think of :).  The demo itself does
+;  NOT modify cache flags, so if you have an 'exotic' turbocard,
+;  feel free to experiment.
+;
+;  NOTE!  The file "MUTANTTI.LIB" =MUST= be renamed to "mutantti.library"
+;  (remember the case) beforehand.
+;
+
+Cpu >NIL: INSTCACHE INSTBURST DATACACHE DATABURST COPYBACK
+Assign >NIL: LOGIC: ""
+Assign >NIL: LIBS: "" ADD
+LOGIC.EXE

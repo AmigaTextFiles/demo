@@ -1,0 +1,47 @@
+Last minute comments...
+In this archive you can find both executable and source
+code of this very little intro.
+First..dont blame me if file lenght doesnt exactly match
+512 bytes, cause it's 6 kbytes actually :-)
+All intro code is 512 bytes long except (naturally)
+startup and chunky to planar code.
+I provided source code for all that ones want to learn
+something about 68k assembly coding.
+Remember that in no way this intro was speed-otpmized,
+btw inner drawing loop it's 'fast' on 060 much more
+than on 030/040 cause I used ror stuff instead classical
+(with addx) texture mapping algo.
+You can find in this source some pretty (at least for me)
+routines like:
+
+Congruential Random Generator		(by Azure)
+Sin/Cos Table Generator
+Non-Linear Tileable Texture Generator
+Simple Raytracer
+Fast Int Sqrt Extractor			(by an unknown Archimedes coder)
+Grid Texture Mapper (Lattice Expander)
+
+Keep in mind that actually I squeezed this code at 504 bytes
+using a shorter and faster Lattice expander.
+
+I wish to thank all the following people:
+
+Joseph,Surfing,Case,Modem,Azure,Scout,Moro,UgolONE,Wiz and
+all the #amigaita and #amycoders folks.
+Special greetings to all RamJam boys that I just left :-(
+
+If you want contact me please send e-mail to marcos@guest.net
+
+
+nAo
+
+
+
+
+
+
+
+
+
+
+

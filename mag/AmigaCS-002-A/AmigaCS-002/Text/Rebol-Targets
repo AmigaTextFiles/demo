@@ -1,0 +1,54 @@
+@{d 82EE5F}                            @{c D8FFCA}Carl Sassenrath: Ciele REBOLu@{c}
+                            ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Cielom  vyvoja  REBOLu  je vniest rovnovahu medzi nasledujuce zakladne ciele.  Tieto
+ciele  viedli stadium navrhu a implementacie, a nadalej budu sluzit ako vychodisko pre
+buduce vylepsenia a rozsirenia.
+
+                                    @{c D8FFCA}Produktivnost@{c}
+
+  Len  s  niekolkymi  riadkami  REBOLu  musi  byt  uzivatel schopny vykreslit obrazok,
+prehrat  zvukovu  vzorku,  zobrazit  text, vstupit do databazy, nahrat subor zo siete,
+atd.   Programy  sa  musia  dat  jednoducho vytvarat (bez zvlastnych znakov, zlozitych
+include-suborov, specialnych definicii) a lahko modifikovat.
+
+                                      @{c D8FFCA}Sudrznost@{c}
+
+  Syntax jazyka, ale i gramatika musia byt minimalne a konzistentne az do takej miery,
+ze  vacsina  novych  uzivatelov  by  sa mala stat v REBOLe produktivnou uz po strucnom
+uvode.
+                                     @{c D8FFCA}Kompaktnost@{c}
+
+  REBOL  musi  byt  dostatocne  maly, aby mohol bezat na mnohych roznorodych systemoch
+zahrnujuc osobne pocitace, sietove servery, set-top boxy, laptopy, telefony, tlaciarne
+a  systemy  pre  specialne  ucely  (embedded systemy).  Nahratie REBOLu z Internetu by
+nemalo trvat dlhsie ako 30 sekund s 28.8Kb modemom.
+
+                                       @{c D8FFCA}Ucinnost@{c}
+
+  Vyrazove   prostriedky   REBOLu   musia   vyniknut   nad   tradicnymi  skriptovacimi
+a programovacimi  jazykmi.   REBOL  by mal umoznovat vzajomne kombinovanie kodu a dat,
+aby uzivatel mohol vytvarat datami riadene "dialekty" alebo "subjazyky".
+
+                                    @{c D8FFCA}Prenositelnost@{c}
+
+  Programy  napisane  v  REBOLe  musia  byt  chranene od odlisnosti roznych operacnych
+systemov,  co  dovoluje,  aby  programy  boli distribuovane po sieti bez vplyvu na ich
+kompatibilitu.
+                                      @{c D8FFCA}Otvorenost@{c}
+
+  REBOL  skripty  budu  distribuovane vo forme zdrojoveho kodu (text).  Toto bol kluc,
+ktory  priviedol  World  Wide  Web k okamzitemu uspechu.  Dovoluje ucit sa zo sirokeho
+spektra  prikladov vytvorenych inymi a uzivatelom poskytuje moznost zlepsit vlastnosti
+programu, opravit v nom chyby a preverit kod proti virusom.
+
+                                       @{c D8FFCA}Rychlost@{c}
+            
+  V  dnesnej  dobe  by  ste  nemali  cakat na svoj pocitac.  REBOL programy priemernej
+velkosti by sa mali nahrat ("prelozit") a vykonavat rychlo.
+
+
+                            @{c D8FFCA}Dalsie informacie najdete na 
+                                    WWW.REBOL.COM@{c} 
+
+                    @{c D8FFCA} REBOL je ochranna znamka Carla Sassenratha.
+                             Pêeloùil: Andrej 'DNA' bunta@{c}

@@ -1,0 +1,124 @@
+   Amiga - Demo 93
+
+This is a 5-disk dealer demo for the Amiga 1200 and 4000.
+It especially features the AGA chips. Therefore:
+
+**********************************************************************
+*                                                                    *
+* This demo ONLY runs on AGA Amigas, like A1200 and A4000.           *
+* The Amiga MUST have a harddisk.                                    *
+* On this harddisk, the complete OS 3.0 MUST be installed.           *
+* You MUST use a multiscan monitor, e.g. Commodore 1950, 1960, 1942, *
+* else the demo would suffer from extreme flicker (interlace!).      *
+*                                                                    *
+**********************************************************************
+
+This demo is also easily adaptable to your individual needs and
+languages.
+
+All control scripts and texts are found in ADemo93.1:work/s
+on the first disk.
+This first disk also contains a set of monitor files and
+preferences settings files, as well as a certain version of c:IPrefs.
+These files will overwrite the files on the HD, but their previous
+versions will be saved to an extra directory before, so nothing gets lost.
+Further this first disk contains an anim and a pic directory (under
+ADemo93.1:work) with some files.
+This first disk is formatted with OFS.
+All the other disks are formatted with FFS to gain more capacity, and
+they only carry pic files, without any subdirectories.
+
+The whole demo consists of a normal AmigaDOS script file named Demoscript.
+Following programs are used and provided:
+Display   AGA-capable image viewer by Carolyn Scheppner
+dis2      A wrapper around Display to bring up a new picture and
+          when this is ready, delete the previously displayed one(s),
+          by Dr. Peter Kittel.
+textsc    A program that takes a plain text file as argument and
+          displays this text at the bottom of the screen character
+          for character in an upwards scrolling screen, by Dr. Peter Kittel.
+          An at sign (@) in the text file is considered as an end mark.
+          TABs are recognized, use e.g. MicroEmacs to create text
+          files with TABs.
+          A fixed, rather big font is used, so you have to check that
+          the text is not too wide.
+VT (ViewTek)  A PD image and animation viewer, used here for the anims,
+          by Thomas Krehbiel.
+
+
+How to make your own demo
+
+1. Select among the current pic files those that you want to keep,
+   delete the rest.
+2. Delete accompanying text files in ADemo93.1:work/s. Delete the
+   lines in ADemo93.1:work/s/Demoscript that deal with these files.
+3. Select new images, put them on some of the disks, put appropriate
+   text files in ADemo93.1:work/s, update the file Demoscript.
+   Anims would belong into ADemo93.1:work/anim. If they are too big,
+   you would have to do some major rearrangement of the install script
+   and the distribution of the files to the various disks.
+4. If necessary, translate text files in ADemo93.1:work/s. Translate
+   all files, including the Install.2 and Demo01 scripts. Set the
+   s protection bit for Demo01 and copy this to ADemo93.1:sys/s,
+   with the set s bit (copy ... clone).
+5. In ADemo93.1:work/pic, you find pic files for the necessary credits.
+   One, Credits, is the german version, the other, CLogo, is the same
+   background that you should use to create a similar credits screen
+   in your language.
+6. There are two script files installed in the s: directory, demo01
+   and demostart. The first one lets you switch on an off the automatic
+   start of the demo in user-startup, the latter one allows you to
+   start the demo from a Shell. You may choose to add icons to these
+   scripts (using IconX) and perhaps place them somewhere where they
+   are easily accessible. But there are also counter arguments: When
+   this demo runs unattended in a shop, you wouldn't want to make it
+   too easy for a kid to access such controls and perhaps manipulate
+   or delete the demo or other stuff on the computer...
+
+
+Special remarks for IFF ILBM files
+
+Some IFF files cause a jumpy display. When they are displayed alone,
+the screen is set to a certain width. As soon as the upscrolling
+screen of textsc appears, the screen switches to some other display
+mode with differing width. This produces an ugly jump of the display
+and can't get solved by ModePromotion.
+There are several things to be considered to calm this down:
+- We must have a certain set of Monitor files, preferences settings,
+  and c:IPrefs version. This is covered by the first install disk
+  (ADemo93.1:), the files on it and the Install.2 script.
+- The IFF file must not have set a certain bit in its CAMG chunk.
+  ATTENTION: If you are not familiar with a hex editor and the
+  IFF storage rules, DO NOT do this yourself! Find someone in the know.
+  First step: Load the image in DPaint(AGA), and save it again.
+  This serves to set other bits straight.
+  Second step: Invoke a tool like NewZap3.0 to hex-edit the file.
+  (Or use the provided ARexx program CAMG.rexx. It does this for you.)
+  Find the CAMG chunk. Here displayed like with   type xxx hex:
+
+  0090: 43414D47 00000004 00039024 424F4459    CAMG.......$BODY
+       >    name      len     ^   <
+  00B0: 00000000 00000000 00000000 00004341    ..............CA
+                                      >
+  00C0: 4D470000 00040002 9000424F 44590000    MG........BODY..
+        name      len     ^   <
+  The important bit is 0x1000 of the lower significant word of the
+  CAMG chunk. Typically, after saving such a file from DPaint, you
+  find a 9xxx entry here. Change this in the hex editor to 8xxx:
+
+  0090: 43414D47 00000004 00038024 424F4459    CAMG.......$BODY
+       >    name      len     ^   <
+  00B0: 00000000 00000000 00000000 00004341    ..............CA
+                                      >
+  00C0: 4D470000 00040002 8000424F 44590000    MG........BODY..
+        name      len     ^   <
+
+
+Finally, have fun and give the world some nice impression of the
+Amiga's capabilities. If you have nice stuff, feel free to send
+it to me. It should be easily integratable in such a sort of
+DOS script driven demo.
+
+Dr. Peter Kittel, CBM Frankfurt, Germany, July 1993
+email: peterk@cbmger.de.so.commodore.com
+

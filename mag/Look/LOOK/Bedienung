@@ -1,0 +1,877 @@
+@LB0
+Look-Bedienung
+
+
+
+                            Look Version 2.0
+
+                  Copyright © 1992-1992 by André Voget
+
+
+FRAGEN zur Look-Bedienung bitte schriftlich und  mit  einem  ausreichend
+frankierten Rückumschlag richten an:
+
+              André Voget, Sonnenblick 16, 56428 Dernbach
+
+
+                       Inhalt: 1 Starten von Look
+                               2 Allgemeine Bedienung
+                               3 Fehlermeldungen in Look
+                               4 Magazin-Erstellung
+                               5 Befehls-Übersicht
+                               6 Sonstiges
+
+
+
+* 1 STARTEN VON LOOK
+
+* 1.1 Starten über die Shell (oder Startup-Sequence)
+
+Das Format sieht so aus:
+
+Look FILENAME/A,SCRIPT/S,BITPLANES/N,PICTURE,KONFIG
+
+Wird Look ohne einen Textnamen aufgerufen, öffnet sich ein Filerequester
+(sofern die asl.library oder die reqtools.library vorhanden  ist,  sonst
+ein  kleines  Fenster mit Stringgadget) und der Textname kann ausgewählt
+werden. Wird ein Textname angegeben, können vier  weitere  Optionen  auf
+Wunsch mitangegeben werden:
+
+"SCRIPT": Der Text soll als Scriptdatei (als Magazin) angezeigt  werden.
+"PICTURE": Vor  dem  Textanzeigen  soll  noch  das  angegebene  IFF-Bild
+           angezeigt werden (nützlich bei Magazinen als Titelbild).
+"BITPLANES": Look soll mit der angegebenen  Anzahl  Bitplanes  gestartet
+             werden.  Bei  der  Angabe von "2" wird Look mit vier Farben
+             (Voreinstellung), bei "3" mit acht Farben  und bei  "4" mit
+             16 Farben erscheinen.
+"KONFIG": Hier wird der Name der Konfigdatei angegeben, sonst versucht
+          Look sie unter "S:Look.Config" zu laden.
+
+Beispiele:
+
+Look df0:doks/LiesMich
+    Look zeigt den Text "df0:doks/LiesMich" an.
+Look df0:s/Look.script SCRIPT
+    Look zeigt den Text "df0:s/Look.script" als Scriptdatei an.
+Look s:Untermenue SCRIPT PICTURE Bild.iff BITPLANES 3
+    Look zeigt den Text  "s:Untermenue"  als Scriptdatei an. Vorher wird
+    aber  noch  das  Bild  "Pics:Bild.iff" angezeigt. Look wird mit acht
+    Farben gestartet.
+Look ram:text KONFIG devs:Look-Konfig
+    Look  zeigt  den Text "ram:text" an und lädt die Konfigurationsdatei
+    unter dem Namen "devs:Look-Konfig".
+
+
+* 1.2 Starten von der Workbench
+
+Look wird durch zweimaliges Anklicken des Icons  gestartet.  Wenn  keine
+ToolTypes  eingetragen  sind, dann öffnet Look einen Filerequester. Look
+kann einen Text auch anzeigen, wenn der Text  ein  Project-Icon  besitzt
+und als "Default Tool" Look eingetragen ist (so wie dieser Text).
+
+Folgende ToolTypes sind möglich:
+
+TYPE=SCRIPT: Look zeigt die Datei als Scriptdatei (als Magazin) an.
+PICTURE=name: Vor dem Textanzeigen wird das  angegebene  Iff-Bild  ange­
+              zeigt.
+BITPLANES=x: Look öffnet seinen Screen mit  der  angegebenen  Anzahl  an
+             Bitplanes (2: 4 Farben, 3: 8 Farben, 4: 16 Farben).
+KONFIG=name: Unter diesem Namen soll Look die Konfigdatei suchen.
+
+
+* 2 Allgemeine Bedienung
+
+Look  kann  mit der Maus oder mit der Tastatur bedient werden. Sämtliche
+Maus- und Tastaturkommandos sind auf den Hilfe-Seiten in Look  beschrie­
+ben.  Eine Erklärung spare ich mir hier. Die Hilfe-Seiten können mit der
+<Help>-Taste in Look aufgerufen werden.
+
+Begriffsdefinitionen:
+"Inhaltsverzeichnis" wird das Menü genannt, in  dem  man  mehrere  Texte
+auswählen  kann,  die  Look  dann  anzeigt.  Die  zugehörige Datei heißt
+"Scriptdatei", die aus sogenannten Scriptbefehlen besteht.
+"Einzel-Text" ist eine einzige Datei, die Look anzeigen kann. Dies  kann
+ein beliebiger Text sein.
+Die  Textanzeige  wird "Textmodus" genannt, wenn man mit Hilfe der Maus­
+tasten vor-und zurückblättern kann.  Dieser  Modus  ist  voreingestellt.
+Durch  die  Taste <m> kann man in den "Zeilenmodus" schalten, in dem man
+den Text mit Hilfe der Maustasten scrollen kann!
+
+Iconify:
+Look gibt sämtliche Ressourcen frei und öffnet ein kleines  Fenster  auf
+der  Workbench.  Wenn  man  dieses Fenster aktiviert und dann die rechte
+Maustaste drückt, gelangt man zurück. Bei  der  Einzeltext-Anzeige  wird
+mit  OS 2.0 oder höher versucht, ein AppIcon zu erstellen. Dies funktio­
+niert nur, wenn die Workbench geladen wurde. Um nun einen Text zu laden,
+wird ein Text-Icon einfach auf das AppIcon gezogen. Ein Doppelklick  auf
+das AppIcon kehrt zurück.
+
+Lupenfunktion (nur im Textmodus), Taste <v>:
+Es  wird  zuerst  die  obere Hälfte des Textes vergrößert und nach einem
+Tastendruck oder  Mausklick  die  untere  Hälfte.  Nach  einem  weiteren
+Tastendruck  oder Mausklick wird das Bild wie gewohnt dargestellt. Diese
+Funktion ist für Nicht-Monitor-Besitzer gedacht.
+
+Suchen (schaltet automatisch in den Zeilenmodus):
+Wenn man die Taste <s> drückt, erscheint der Suchrequester.  Im  String­
+gadget  trägt man ein Wort ein, nach dem gesucht werden soll. Dabei wird
+vom Textanfang gesucht. Mit der Taste <n> kann man von  der  Stelle,  an
+der  das  Wort  zuletzt gefunden wurde, weitersuchen. Ob dabei die Groß-
+und Kleinschreibung beachtet werden soll, kann  man  im  Konfigurations­
+fenster einstellen, das mit der Taste <k> aufgerufen wird (s.u.).
+
+Ein Bild wird angezeigt:
+Wenn  ein  Bild angezeigt wird, dann blättert man mit der linken Mausta­
+ste einen Text vor und mit der rechten Maustaste einen Text zurück.  Mit
+der <Esc>-oder <q>-Taste gelangt man automatisch in das Inhaltsverzeich­
+nis  zurück.  Vor-und  Zurückblättern  funktioniert auch mit <Space> und
+<Backspace>. Mit <d> oder <PrtSc> kann das Bild ausgedruckt werden.
+
+Drucken:
+Ein Ausdruck kann von Texten oder Bildern gemacht werden, aber nicht vom
+Inhaltsverzeichnis. Dazu wird auf jeden Fall die Datei  "L:Port-Handler"
+gebraucht  und  "DEVS:Printer-Device" oder "DEVS:Parallel.Device", sowie
+einen gültigen Druckertreiber. Zum Drucken drückt man die Taste <d> oder
+<PrtSc> auf dem Ziffernblock. Es  öffnet  sich  ein  Filerequester,  der
+"PRT:"  voreingestellt  hat.  Drückt man nun auf [Drucken] wird der Text
+gedruckt, wird aber ein korrekter  Dosname  eingegeben,  dann  speichert
+Look diesen Text ungepackt ab!
+
+Farbrequester:
+Ist die "reqtools.library" vorhanden, dann erscheint dessen  Farbreques­
+ter.  Ansonsten  benutzt Look einen eigenen: Mit "Voreinstellung" stellt
+man die Farben ein, die Look beim Starten  hatte  oder  -  wenn  sie  im
+Scriptfile  geändert wurden - diese Farben. Mit "Zurück" verläßt man den
+Farbrequester, ohne daß eine Änderung übernommen wird. Mit  "Okay"  wird
+die Farbänderung übernommen.
+
+Filerequester:
+Die Bedienung erfährst Du im Commodore-Bedienungshandbuch. :-|
+Es  wird versucht, den "asl.library"-Filerequester zu benutzen. Ist die­
+ser nicht vorhanden, versucht Look den  von  der  "reqtools.library"  zu
+öffnen. Schlägt auch dies fehl, öffnet sich ein kleines Fenster mit ein­
+em Stringgadget.
+
+Konfigurationsfenster:
+Im Konfigfenster kann man seine persönlichen Look-Werte einstellen. Über
+das  Gadget  [Speichern]  wird  die Konfigdatei gespeichert und über das
+Gadget [Laden] wird sie unter dem Dateinamen "S:Look.Config" geladen. Da
+die Konfigdatei beim Start automatisch eingeladen wird, besitzt man  im­
+mer seine persönlichen Lieblingseinstellungen :-)
+» [Textmodus/Zeilenmodus]: wechselt in den entsprechenden Modus
+» [Blendeffekte an/aus]: schaltet die Blendeffekte im Textmodus an/aus
+» [Load-While-Reading an/aus]: Wenn es eingeschaltet ist, wird der näch­
+  ste Text schon geladen und im Speicher gehalten.
+» [Busy-Wait-Mauszeiger an/aus]: schaltet den OS2-Uhrenmauszeiger an/aus
+» [Text  vor/zurück  erlauben/verbieten]:  Wenn  es  verboten wird, dann
+  springt  Look nach dem Lesen eines Textes direkt in das Inhaltsverzei­
+  chnis zurück, ansonsten wird der nächste Text angezeigt.
+» [Suchen mit/ohne Groß-/Kleinschreibung]: Entscheidet, ob  beim  Suchen
+  auf die Groß- und Kleinschreibung geachtet werden soll.
+» [Requester an/aus]: Dieses Gadget bestimmt, ob die  Sicherheitsreques­
+  ter ("Look wirklich beenden?" oder "Ist der Drucker bereit?") erschei­
+  nen sollen oder nicht.
+» [Drucken: mit/ohne Befehle]:  Entscheidet,  ob  auch evtl. vorkommende
+  Textbefehle mit gedruckt werden sollen.
+» [Tab-Größe:]: Hier gibt man die Anzahl von Leerzeichen  an,  die  Look
+  bei einem TAB einfügen soll (Voreinstellung: acht Zeichen).
+» [Taskpriorität]: Mit diesem Gadget bestimmt man die Priorität von Look
+  gegenüber  anderen  Programmen.  Der  Wert  sollte zwischen  -5 und +5
+  liegen.
+
+
+* 3 Fehlermeldungen in Look
+
+In jedem Programm können einmal Fehler auftreten. Man muß allerdings die
+Fehler vom Benutzer und die Fehler von Look  unterscheiden.  Die  Fehler
+werden  in  einem  System-Requester angezeigt. Bei zuwenig Speicher wird
+dieser Requester in einen (harmlosen) Alert verwandelt.
+
+Es folgt eine Übersicht der möglichen Fehlermeldungen und die Gründe für
+die Meldung...
+
+» "Scriptdatei wurde nicht gefunden!"
+Look konnte kein Inhaltsverzeichnis erzeugen,  weil  es  das  Scriptfile
+nicht  gefunden  hat. Diese Fehlermeldung kann auch vorkommen, wenn Look
+versucht hat, ein Untermenü zu laden.
+
+» "Scriptdatei konnte nicht geladen werden!"
+Look hat diese Datei zwar gefunden, sie konnte aber nicht  geladen  wer­
+den,  weil  zuwenig Speicher frei war oder weil ein anderes Programm auf
+diese Datei zugegriffen hat.
+
+» "Zeile yy: unbekannter Scriptbefehl »xx«!"
+Look konnte kein Inhaltsverzeichnis erzeugen, weil  es  in  der  Script­
+datei  einen  Befehl  gefunden hat, den es nicht kennt. Jede Zeile einer
+Scriptdatei muß mit einem "@" beginnen! Die Buchstaben, die  Look  stör­
+ten, sind in <xx> angegeben, und zwar in der Zeile <yy>.
+
+» "Die Datei ist kein Scriptdatei!"
+Es  ist  sehr  absturzgefährdend, eine normale Textdatei als Scriptdatei
+anzeigen zu lassen, so daß Look die ersten  Zeichen  prüft,  ob  es  ein
+Scriptbefehl  ist.  Anscheinend  war  bei dieser Datei das erste Zeichen
+kein "@"!
+
+» "Drucken ist fehlgeschlagen!"
+Look konnte einen Text nicht ausdrucken. Eventuell benutzt  ein  anderes
+Programm  den Drucker oder der Drucker war nicht bereit, einen Text aus­
+zudrucken (Papiermangel, nicht eingeschaltet, offline usw.).
+
+» "Fehler-Nr. <x> bei Bildausdruck!"
+Dafür gibt es zahlreiche Möglichkeiten (in Klammern  ist  der  jeweilige
+<x>-Wert  angegeben:  (1)  Druckvorgang  wurde unterbrochen, (2) der an­
+geschlossene Drucker unterstützt keine Grafik, (3) unter  Kick  1.1  und
+Kick  1.2  kann  man keine invertierten HAM-Bilder ausgeben, (4) fehler­
+hafte Druckgröße, (5) zu große Druckgröße gewählt unter  Kick  1.1  oder
+Kick  1.2, (6) nicht genug Speicher für interne Variablen, (7) es konnte
+vom Druckertreiber nicht genug Speicher  für  den  Druckbuffer  angelegt
+werden, (-1) Ursache nicht feststellbar.
+
+» "`diskfont.library` ist nicht verfügbar!"
+Es  wurde  mit  dem Befehl "OZ" versucht, einen Zeichensatz von Diskette
+zu laden. Leider war die "diskfont.library" beim Programmstart nicht  im
+"libs:"-Verzeichnis...!
+
+» "Konnte Datei nicht entpacken!"
+Die  PowerPacker-Library  hatte  zuwenig  Speicher,  um einen Text/Bild/
+Brush zu entpacken. Oder es war beim Programmstart  keine  "powerpacker-
+library" im "libs:"- Verzeichnis vorhanden...
+
+» "Die Datei ist keine IFF-Datei!"
+Es fehlte die IFF-Kennung "FORM" in der Datei.
+
+» "Die Datei ist keine IFF-ILBM-Datei!"
+Die  Datei  ist zwar eine IFF-Datei, aber nicht für Bilder! Es wurde die
+Kennung "ILBM" nicht gefunden.
+
+» "Die Datei ist kürzer als 12 Bytes!"
+Das kann beim besten Willen kein IFF-Bild/Brush sein!
+
+» "Dos-Fehler-Nummer: <nnn>!"
+Beim Laden eines Textes oder eines Brushes trat ein Fehler auf. Es  han­
+delte  sich  um den Dos-Fehler mit der Nummer <nnn>. Die Art des Fehlers
+kann  man  im  Dos-Handbuch  nachlesen.
+
+» "Konnte Font in Register <n> nicht setzen!"
+Das liegt daran, daß das angegebene Register "n" keinen  Font  enthalten
+hat oder daß "n" außerhalb des erlaubten Bereiches von 0-9 liegt.
+
+» "Der xxxx.font konnte nicht geöffnet werden!"
+Da  hat  wohl jemand vergessen, den "xxxx.font" ins "fonts:"-Verzeichnis
+zu kopieren, oder ein  "assign"  aufzurufen.  Ist  die  Magazin-Diskette
+nicht  bootfähig,  dann  sollte  der Mag-Herausgeber ein Assign-Icon er­
+stellt haben!
+
+» "Spaltenanzahl außerhalb des erlaubten Bereiches!"
+Es wurde der Befehl "SP" benutzt, leider  mit  falschem  Parameter.  Die
+Spaltenanzahl  muß  größer  als  0  und kleiner als 4 sein. Es sind also
+eine, zwei oder drei Spalten erlaubt.
+
+» "Zuviele oder zuwenige Parameter bei @SF!"
+Mit den voreingestellten vier Farben benötigt  Look  bei  diesem  Befehl
+12 Hexadezimalzahlen (siehe Erklärung zu diesem Befehl). Bei acht Farben
+genau 24 und bei 16 Farben genau 48 Hexadezimalzahlen.
+
+» "Das Brush paßt nicht auf die Seite!"
+Für  diese  Meldung  kann es zwei Gründe geben: das Brush ist größer als
+640x230 Pixel oder es war zu groß, um nicht abgeschnitten zu werden.
+
+» "Konnte Konfigurationsdatei nicht laden!"
+Entweder hat Look die Konfigdatei unter dem Namen "S:Look.Config"  nicht
+gefunden  oder  es hat ein "Assign" auf "S:" gefehlt oder es hatte nicht
+die richtige Länge (Abhilfe: mit Look nochmal  die  Konfigdatei  abspei­
+chern)  oder es war zuwenig Speicher zur Verfügung oder es gab einen Le­
+sefehler auf Diskette ;-) Den Namen  der  Konfigurationsdatei  kann  man
+auch als CLI-Option oder als ToolType eingeben.
+
+» "Konnte Konfigurationsdatei nicht speichern!"
+Entweder ist die Diskette voll oder sie hat einen Fehler oder  das  Ver­
+zeichnis "S:" war nicht vorhanden!
+
+» "Nicht genügend Speicher für Zeilenmodus!"
+» "Nicht genügend Speicher vorhanden!"
+» "Nicht genug Speicher für Bild!"
+Bei  allen  drei  Fehlermeldungen  war  nicht genügend zusammenhängender
+Speicher zur Verfügung. Am besten beendet man andere Programme, die  ne­
+ben Look laufen.
+
+Look startet nicht:
+Daß  Look nicht gestartet werden kann, kann an folgenden Gründen liegen:
+a) der System-Font konnte nicht angefordert werden (das darf nie passie­
+ren), b) Screen oder ein Fenster konnte  nicht  geöffnet  werden  (Chip-
+Speicher-Mangel).
+
+Look öffnet einen Interlace-Screen:
+Jau, den gibt es (vorerst?) immer im NTSC-Modus.
+
+
+* 4 Magazin-Erstellung
+
+* 4.1 Ach, äh... was ist überhaupt eine Scriptdatei?
+
+Ein  Magazin kann aus verschiedenen Texten, Brushes, Programmen und Bil­
+dern bestehen. Das ganze wird zu einem Menü  zusammengefaßt,  das  soge­
+nannte  Inhaltsverzeichnis.  Look  benötigt  eine Datei, in der Informa­
+tionen über das Aussehen dieses  Inhaltsverzeichnisses  angegeben  sind,
+z.B.  um  welche  Texte es sich handelt und wo sie zu finden sind. Diese
+Datei mußt Du mit einem Editor selbst schreiben.
+
+Diese Datei enthält nur Scriptbefehle. Anhand dieser Befehle  kann  Look
+ein  Inhaltsverzeichnis erstellen, das sogar über mehrere Bildschirmsei­
+ten gehen darf. In jeder Zeile der Datei  muß  und  darf  auch  nur  EIN
+Scriptbefehl  stehen.  Jede  Zeile MUSS mit einem Scriptbefehl beginnen,
+auch die allererste!
+
+Man darf Fonts  (Zeichensätze)  benutzen,  man  kann  die  Inhaltsseiten
+ein-,  zwei-oder dreispaltig anzeigen lassen und vieles, vieles mehr. Um
+diese Funktionen zu aktivieren, benötigt man  die  Scriptbefehle.  Jeder
+Befehl  beginnt mit einem "@" (<Alt> und <2> drücken). Für die Scriptda­
+tei gelten  nur  die  Scriptbefehle!  Textbefehle  und  Escape-Sequenzen
+dürfen nicht genutzt werden!
+
+Die  einzelnen  Scriptbefehlen sind in der Befehls-Übersicht (Kapitel 5)
+ausführlich erklärt. Siehe Dir bitte mal einige Magazine  an,  die  Look
+benutzen  (ein  Magazin  kannst Du auch bei mir gegen Diskette und fran­
+kierten Rückumschlag bekommen). Außerdem gilt: Probieren geht über  Stu­
+dieren! Wenn Du auch nach ausführlichem Lesen der Anleitung Probleme mit
+dem  Erstellen  eines  Diskettenmagazines hast, kannst Du mich anschrei­
+ben (Rückporto nicht vergessen!) oder bei SEHR dringenden  Problemen  ab
+18 Uhr anrufen.
+
+* 4.2 Hinweise zur Magazin-Erstellung
+
+» Schnelleres Anzeigen von Brushes:
+Ist die Magazin-Diskette bootfähig, dann sollten  die  wichtigsten  oder
+alle  Brushes in die Ram-Disk kopiert werden. Das Scriptfile sollte ent­
+sprechend geändert werden, damit die Brushes aus  der  Ram-Disk  geladen
+werden.  Dies  ist  vor  allem zu empfehlen, wenn Brushes im Inhaltsver­
+zeichnis benutzt werden. Allerdings sollte man das Magazin auch  darauf­
+hin testen, ob es trotz der Brushes mit nur 512 KB läuft.
+
+» Korrekte Pfadnamen verwenden!
+Ein  Magazin sollte so aufgebaut sein, daß es auch ohne Probleme von der
+Workbench startbar ist. Darum sollten die Pfadnamen  im  Scriptfile  nie
+mit  ":Texte/TollerText"  angegeben  werden, sondern mit "Diskettenname:
+Texte/TollerText".
+
+* 4.3 Einige Hilfen und Hinweise zur Erstausgabe
+
+Um ein Magazin erstellen zu können, muß man sich mit der  Bedienung  des
+Amigas  und  vor  allen Dingen der Shellbefehle gut auskennen. Wer damit
+Schwierigkeiten hat, dem kann ich leider nicht helfen!
+Ist das Magazin fertig, sollte  man  es  auf  verschiedenen  Amigas  bei
+Freunden  testen.  Auf  jeden Fall sollte ein Test für Kickstart 1.3 und
+OS2.0 gemacht werden.
+Wenn die Erstausgabe fertiggestellt ist, solltest  Du  SPÄTESTENS  jetzt
+die 20 DM Sharewaregebühr an mich schicken. Dies ist ein "MUSS" und kei­
+ne freiwillige Leistung, ansonsten ist "Look" auf dem Magazin eine Raub­
+kopie!!  Wenn Du das nicht wußtest, solltest Du besser nochmal die Datei
+"Kopierbestimmungen" lesen, denn Unwissenheit schützt nicht vor  Strafe!
+Sobald  ich die Erstausgabe und die Sharewaregebühr bekommen habe, wirst
+Du bei mir registriert. Bitte gebe dazu auch unbedingt die  Bezugsquelle
+und  den  Preis  (der  5 DM nicht übersteigen darf) Deines Magazines an.
+Noch ein kleiner Tip: Mit mehreren Leuten macht  die  Magazin-Erstellung
+doppelt  so  viel Spaß und man trägt die Last des Texte-Schreibens nicht
+allein...!
+
+* 4.4 Beispiel für eine Scriptdatei
+
+@LZ
+@SF777000FFF57A
+@TA2
+@SP2
+@LZ
+@OZ136broadway.font
+@ZS1
+@ST2
+@KO23Amiga-Fruit :-) - ein neues Diskettenmagazin!
+@ST0
+@LZ
+@ZS0
+@BR-01-01SYS:Pics/Fruit.pp
+@LZ
+@TA0
+@TE21Die Freßecke|SYS:Texte/Freßecke
+@TE21Hardware-Erweiterung: Ziffernblock für A600|SYS:Texte/Hardware
+@TE21Wo man billig Hardware kaufen kann|SYS:Texte/Versteckte_Werbung
+@TE21Drucker-Vergleichstest|SYS:Texte/Druckertest
+@ICSYS:Pics/HaendlerBrush|@TESYS:Texte/Haendlertest
+@LZ
+@BI23Die ersten Bilder von Turrican XV|SYS:Pics/TurricanXV
+@BI23Portrait vom Chefredakteur :-)|SYS:Pics/Ich
+@LZ
+@TA2
+@SC31Untermenü: Leserbriefe|SYS:s/Leser.Script
+@SC31Software im Kurztest|SYS:s/Software.Script
+@LZ
+@TA0
+@KO21P.S. Die nächste Ausgabe erscheint übermorgen!
+
+
+* 5 Befehls-Übersicht
+
+Kommen wir nun zum interessantesten Teil von Look: die Text- und Script-
+befehle. Mit ihnen kann man Programme starten, Bilder und Brushes laden,
+Fonts laden und anzeigen u.v.m.! Jeder Textbefehl beginnt mit einem  "@"
+(<Alt>  +  <2>),  gefolgt von zwei Buchstaben. Dahinter stehen ein, zwei
+oder mehrere Parameter. Am besten sieht man  sich  mal  einen  Beispiel­
+text  an.  Bitte  beachte,  daß hinter jedem Befehl ein <Return>-Zeichen
+folgen muß! Wenn als Parameter "n" angegeben ist,  dann  darf  auch  nur
+ein(e)  Buchstabe/Zahl  folgen, bei "nn" _müssen_ zwei Buchstaben/Zahlen
+folgen!
+Nochmal, damit es auch jedem klar wird: Textbefehle können nur in Texten
+und Scriptbefehle nur in Scriptdateien verwendet werden!
+
+01. BI: "Bild laden"-Rechteck im Inhaltsverzeichnis
+02. BL: IFF-Bild laden und anzeigen (auch gepackte Bilder)
+03. BR: IFF-Brushes laden und anzeigen (auch gepackte Brushes)
+04. CO: Textfarben ändern
+05. DI: Direkt in den Inhalt zurück oder nicht
+06. EX: Programme starten (Execute)
+07. IC: "Icons", um Texte/Bilder/Programme/Untermenüs anzuzeigen
+08. KO: Kommentarzeilen
+09. LB: Textbefehle ausschalten
+10. LZ: Leerzeile
+11. NS: Aktuelle Seite beenden (Nächste Seite)
+12. OZ: Oeffne Zeichensatz
+13. PP: Programm-Parameter ändern
+14. PR: Programm ausführen
+15. SA: Schatten ein-und ausschalten
+16. SC: Scriptfile laden (Untermenü)
+17. SF: Screenfarben ändern
+18. SP: Neue Spaltenanzahl
+19. ST: Schriftstil ändern
+20. TA: Textausrichtung
+21. TB: Tabulator-Größe setzen
+22. TE: "Anklickzeilen" (Textzeilen)
+23. UB: Überschrift ändern
+24. ZS: Setze Zeichensatz (ihn für aktuell erklären)
+25. ZZ: Zeilenvorschub setzen
+
+
+01. BI: "Bild laden"-Rechteck im Inhaltsverzeichnis
+
+Art:       Scriptbefehl
+Format:    @BIvhKommentar|Pfadname
+Beispiel:  @BI23Bilder-Galerie Teil 1|SYS:Pics/Pic1
+Erklärung: Wie gewohnt, trägt man in "v" und "h" die  gewünschten  Farb­
+nummern  ein.  Es  wird  das in "Pfadname" stehende Bild geladen. Dieses
+Bild darf auch mit dem PowerPacker gepackt worden sein.
+
+02. BL: IFF-Bild laden und anzeigen (auch gepackte Bilder)
+
+Art:       Textbefehl
+Format:    @BLpfadname
+Beispiel:  @BLSys:Bilder/Moerderpic
+Erklärung: Mit Look kann man auch IFF-Bilder  laden.  Dazu  muß  einfach
+der  Pfadnamen  hinter dem Befehl angegeben werden. Die Bilder können in
+einem beliebigen Format  gemalt  worden  sein,  weil  Look  einen  neuen
+Screen für das Bild öffnet.
+
+03. BR: IFF-Brushes laden und anzeigen (auch gepackte Brushes)
+
+Art:       Textbefehl und Scriptbefehl
+Format:    @BRxxxyyyPfadname
+Beispiel:  @BR-01-01Sys:Logos/Moerder.IFF
+Erklärung: IFF-Brushes können ebenfalls angezeigt werden. Dazu kann  man
+die absoluten x-und y-Koordinaten in "xxx" und "yyy" angeben. Weil diese
+Art von Positionierung ziemlich umständlich ist, kann man für "xxx" auch
+folgende  Werte  angeben: "-01": Brush wird in die Mitte gesetzt, "-02":
+Brush wird linksbündig gesetzt, "-03": Brush wird rechtsbündig  gesetzt.
+Wenn  man für "yyy" den Wert "-01" angibt, dann wird der Brush unter dem
+vorangegangenen Text gesetzt. Bei "-02" kann man das  Brush  überschrei­
+ben  und  damit z.B. Formatsatz erzeugen. Der Brush sollte im Normalfall
+so viele Farben wieder Look-Screen besitzen und nicht größer als maximal
+640x230 Punkte sein. Wenn ein Brush  mehr  Farben  als  der  Look-Screen
+besitzt, wird die Anzahl der Farben entsprechend reduziert. Die Positio­
+nierung beachtet den Mehrspaltenmodus nur im Inhaltsverzeichnis.
+
+04. CO: Textfarben ändern
+
+Art:       Textbefehl und Scriptbefehl
+Format:    @COvh
+Beispiel:  @CO31
+Erklärung: Dieser Befehl ist ein sehr wichtiger. Mit ihm  kann  man  die
+Vorder- und Hintergrundfarbe eines Textes setzen. Das Beispiel setzt die
+dritte  Farbe des Look-Screens für den Vordergrund und die erste für den
+Hintergrund. Die Werte für <v> und <h> dürfen von "0"  bis  "3"  liegen.
+Da  der Schatten voreingestellt angestellt ist, geben Werte für <h>, die
+größer als 0 sind, einen Schatten in dieser Farbe. Wird der Schatten mit
+dem Befehl "SA" (siehe dort) ausgeschaltet, dann wird  der  Text  inver­
+tiert  mit  der  Hintergrundfarbe.  Voreingestellt  ist übrigens "CO10",
+d.h., ein Text wird mit Farbe 1 geschrieben und es erscheint kein Schat­
+ten. Wenn der Look-Screen 16 Farben besitzt, müssen für "v" und "h"  He­
+xadezimalzahlen  angegeben  werden, also z.B. "@CO8A" (A=10, B=11, C=12,
+D=13, E=14, F=15).
+
+05. DI: Direkt in den Inhalt zurück oder nicht
+
+Art:       Scriptbefehl
+Format:    @DIx
+Beispiel:  @DI1
+Erklärung: Mit diesem Befehl kann man angeben, ob man nach Auswahl eines
+Textes direkt in das Inhaltsverzeichnis zurückspringt  oder  nicht.  Das
+ist  vorteilhaft,  wenn man in einem Unterverzeichnis-Script fünf Bilder
+hintereinander angegeben hat und man will dem  Benutzer  nicht  zumuten,
+alle  fünf Bilder hintereinander angucken zu müssen. Dann setzt man die­
+sen Befehl mit dem Parameter "1" ein und Look springt nach Auswahl eines
+Textes/Bildes/Programms direkt in das  Inhaltsverzeichnis  zurück.  Wenn
+man für "x" "0" angibt, kann man Texte wieder nacheinander lesen.
+
+06. EX: Programme starten (Execute)
+
+Art:       Textbefehl (entsprechender Scriptbefehl siehe "PR")
+Format:    @EXipfadname
+Beispiel:  @EXirun disk:medplayer disk:modules/song
+Erklärung: Mit dem "@EX"-Befehl  werden  Programme  gestartet,  z.B.  um
+Songs  oder  Sounds  abzuspielen oder PD-Programme vorzustellen. Für "i"
+können verschiedene Werte eingesetzt werden. Bei "1"  wird  ein  kleines
+Dos-Fenster  geöffnet  und die Ausgaben des Programmes werden auf dieses
+Fenster umgeleitet (nur wenn das Programm nicht mit "run" gestartet wur­
+de). Bei "2" erscheint ein Sicherheitsrequester,  der  anfragt,  ob  das
+Programm  wirklich  gestartet  werden  soll. Bei "4" wird der Workbench-
+Screen beim Programmstart nach vorne geschaltet und bei Beendigung  wird
+der Look-Screen nach vorne geholt. Diese drei Werte kann man auch belie­
+big  addieren, um zwei oder drei Eigenschaften gleichzeitig zu erhalten.
+Soll Look nicht auf die Beendigung des Programmes warten, muß  das  Pro­
+gramm mit "run gestartet werden (wie im Beispiel).
+
+07. IC: "Icons", um Texte/Bilder/Programme/Untermenüs anzuzeigen
+
+Art:       Scriptbefehl
+Format:    @ICxxxyyyPfadname1|@XXPfadname2
+Beispiele: @IC-01-01Mag:Brushes/Pic|@TEMag:Text/MeinText
+           @IC100023:Bilder/Bild1|@BI:Bilder/Bild2
+           @IC-01156Disk:Brush|@SCDisk:s/Untermenue
+           @IC-03-02Look:c/Programmbrush|@PRLook:c/MuchMore
+Erklärung: Puuh! Das Format sieht schwieriger aus, als es ist; laß´ dich
+nicht  abschrecken, denn dieser Befehl kann sehr viel! Es wird ein Brush
+dargestellt, der angeklickt werden kann. Wird er  angeklickt,  kann  ein
+Text  geladen,  ein  Bild  angezeigt, ein Untermenü dargestellt oder ein
+Programm gestartet werden! Für "xxx" und "yyy" gibt man  die  Format-An­
+weisung  für  das  Brush an (siehe "BR"-Textbefehl), "Pfadname1" ist der
+komplette Pfadname für das Brush. Nach  dem  Trennungsstrich  "|"  folgt
+wieder  ein  Befehl, und zwar "TE", "BI", "SC" oder "PR", je nach Wunsch
+(Text, Bild, Script oder Programm). "Pfadname2" gibt den  Pfadnamen  für
+das  "Objekt"  an.  Im  ersten  Beispiel  wird ein Text mit dem Pfadname
+"Mag:Text/MeinText"  angezeigt,  wenn  das  Brush  mit  dem    Pfadnamen
+"Mag:Brushes/Pic" angeklickt wird.
+
+08. KO: Kommentarzeilen
+
+Art:       Scriptbefehl
+Format:    @KOvh
+Beispiel:  @KOvhDies ist ein Kommentar
+Erklärung: Um im Inhaltsverzeichnis eine Zeile darzustellen, die  nichts
+bewirken  soll,  also  nur einen Text auf den Bildschirm bringt, muß man
+diesen Befehl benutzen. Der Kommentar darf nicht länger als  80  Zeichen
+im  Einspaltenmodus lang sein. Die Textausrichtung (linksbündig, rechts­
+bündig, zentriert) kann mit dem Befehl "@TA" geändert  werden.  "v"  be­
+schreibt die Vordergrundfarbnummer (0-3) und "h" die Hintergrundfarbnum­
+mer (0-3). Voreingestellt Werte sind "2" für den Vordergrund und "1" für
+den Hintergrund.
+
+09. LB: Textbefehle ausschalten
+
+Art:       Textbefehl
+Format:    @LBn
+Beispiel:  @LB0    (schaltet Look-Befehle aus)
+Erklärung: Dieser Befehl wurde nötig, um auch die Anleitung zu Look  mit
+Look anzeigen zu lassen :-) Wird für "n" der Wert 0 gewählt, dann werden
+die Befehle abgeschaltet. Mit dem Wert "1" werden sie wieder eingeschal­
+tet.  Dies passiert automatisch, wenn ein neuer Text geladen wird. Wich­
+tig: Dieser Befehl sollte nur in Ausnahmefällen benutzt werden,  da  der
+Zeilenmodus  diesen nicht erkennen kann!! Look erkennt aber zu 100 %, ob
+es sich um ein einzelnes "@" oder um einen Look-Befehl handelt!
+
+10. LZ: Leerzeile
+
+Art:       Scriptbefehl
+Format:    @LZ
+Beispiel:  @LZ
+Erklärung: Dieser Befehl erzeugt eine Leerzeile auf dem  Bildschirm.  Da
+jede  Zeile  in der Scriptdatei mit "@" beginnen muß, ist dies nicht mit
+einem <Return> machbar! Die Höhe der Leerzeile hängt von dem verwendeten
+Zeichensatz ab.
+
+11. NS: Aktuelle Seite beenden (Nächste Seite)
+
+Art:       Textbefehl und Scriptbefehl
+Format:    @NS
+Beispiel:  @NS
+Erklärung: Mit diesem Befehl, der keine  Parameter  benötigt,  kann  die
+aktuelle Seite für beendet erklärt und eingeblendet werden. Wenn Du z.B.
+auf  einer Seite nur drei Zeilen ausgeben willst, mußt Du nicht mühselig
+die restlichen Zeilen bis zur nächsten Seite mit  Leerzeilen  ausfüllen,
+sondern  es reicht, wenn Du diesen Befehl benutzt. Wenn Du mehrere Spal­
+ten benutzt, dann beachte bitte, daß dieser Befehl nur eine  Spalte  für
+beendet  erklärt. Dieser Befehl sollte _unbedingt_ vor jedem "SP"-Befehl
+aufgerufen werden!
+
+12. OZ: Oeffne Zeichensatz
+
+Art:       Textbefehl und Scriptbefehl
+Format:    @OZnyyFontname
+Beispiel:  @OZ108ruby.font
+Erklärung: In Look kann man beliebig viele Fonts in einem  Text  verwen­
+den. Jeder Font besitzt eine Nummer, die von 1-9 reichen darf. Die Größe
+wird  in  "yy"  angegeben, und muß immer zweistellig sein. Wird ein Font
+mit einer Nummer geladen, die schon existierte, dann wird der alte  Font
+aus dem Speicher gelöscht, so daß man beliebig viele Fonts in einem Text
+benutzen  kann.  Um den Font auch benutzen zu können, muß er mit dem Be­
+fehl "@ZS" zum aktuellen Font erklärt werden. In  einem  Magazin  reicht
+es, wenn die Fonts im Inhaltsverzeichnis geöffnet werden. Die Texte kön­
+nen dann automatisch mit "@ZS" auf die Fonts zugreifen. Die Fonts werden
+auch bei einem Iconify nicht aus dem Speicher gelöscht.
+
+13. PP: Programm-Parameter ändern
+
+Art:       Scriptbefehl
+Format:    @PPn
+Beispiel:  @PP2
+Erklärung: Mit dem "PR"-Scriptbefehl kann  man  Programme  starten,  nur
+leider  kann  man keinen Parameter angeben, _wie_ das Programm gestartet
+werden soll. Das kann man nun mit diesem Befehl erreichen. Er sollte vor
+der ersten "PR"-Anweisung stehen. Die Werte für <n> sind beim "EX"-Text­
+befehl erklärt. Look nimmt immer den letzten "PP"-Befehl im  Script  für
+den Aufruf von Programmen!
+
+14. PR: Programm ausführen
+
+Art:       Scriptbefehl
+Format:    @PRvhKommentar|Pfadname
+Beispiel:  @PR31Viruskiller|run Magazin:VirusChecker15.4
+Erklärung: Die Parameter sind zuerst die Vorder-  und  Hintergrundfarbe,
+dann der Text, der im Menü erscheinen soll, dann ein "|"  und  dann  der
+komplette  Programmaufruf.  Eigenschaften für den Programmaufruf erzielt
+man mit dem "PP"-Befehl (siehe dort).
+
+15. SA: Schatten ein-und ausschalten
+
+Art:       Textbefehl und Scriptbefehl
+Format:    @SAx
+Beispiel:  @SA0    (schaltet den Schatten aus)
+Erklärung:  Jeder  Text  in  Look wird mit einem Schatten versehen. Dies
+kann aber störend wirken, wenn mit Ansi-Codes eine Grafik angezeigt wer­
+den soll. Deshalb läßt sich der Schatten auch  wieder  ausschalten,  und
+zwar mit dem Befehl "@SA0". Mit "@SA1" wird er wieder eingeschaltet.
+
+16. SC: Scriptfile laden (Untermenü)
+
+Art:       Scriptbefehl
+Format:    @SCvhKommentar|Pfadname
+Beispiel:  @SC12Die C-Programmierer-Ecke|S:C.Script
+Erklärung: Look kann beliebig viele  Untermenüs  verwalten.  Dieser  Be-
+fehl  stellt  im  Inhaltsverzeichnis eine Zeile dar mit dem Text, der in
+"Kommentar" angeführt ist und mit den Farben "vh". Wenn diese Zeile  an­
+geklickt  wird,  wird  eine weitere Scriptdatei mit dem Namen "Pfadname"
+geladen. Ein Untermenü darf weitere Untermenüs enthalten,  die  wiederum
+Untermenüs  enthalten können usw. Die Verschachtelungstiefe darf theore­
+tisch unendlich sein, wenn soviel Platz auf der Diskette  zur  Verfügung
+stände  :^)  Um von einem Untermenü in ein höhergelegenes Menü zu gelan­
+gen, muß der  Herausgeber  des  Diskettenmagazins  daran  denken,  einen
+"@SC"-Befehl in das Untermenü zu schreiben, der dann das höher geordnete
+Menü beim Anklicken lädt!
+
+17. SF: Screenfarben ändern
+
+Art:       Textbefehl und Scriptbefehl
+Format:    @SFrgbrgbrgbrgb (bei vier Farben)
+           @SFrgbrgbrgbrgbrgbrgbrgbrgb (bei acht Farben)
+           @SFrgbrgbrgbrgbrgbrgbrgbrgbrgbrgbrgbrgbrgbrgbrgbrgb
+           (bei 16 Farben)
+Beispiel:  @SF777000FFF249
+Erklärung: Dieser Befehl dient dazu, die  Screenfarben  zu  ändern.  Das
+sollte  aber nur dem Diskettenmagazin-Herausgeber vorbehalten sein. Nach
+dem Befehl "@SF" gibt man Farbwerte an, die in hexadezimaler  Form  vor­
+liegen  müssen.  Im  o.a. Beispiel bekommt die Farbe 0 den Wert $777,die
+Farbe 1 $000, die Farbe 2 $FFF und die Farbe 3 $249. Wird Look mit  mehr
+als vier Farben gestartet, dann muß man auch entsprechend mehr Farbwerte
+angeben.  Gibt  man für einen Farbwert "---" an, dann bleibt diese Farbe
+unverändert.  Meine  Vorschläge  sind:  "487111EEEC97",  "477000EEEA87",
+"777000FFFBB9" und "776FFF00035D". Probier's einfach mal aus!
+
+18. SP: Neue Spaltenanzahl
+
+Art:       Textbefehl und Scriptbefehl
+Format:    @SPn
+Beispiel:  @SP2
+Erklärung: Look kann eine bis drei Spalten pro Seite verwalten. Die  An­
+zahl  der Spalten gibt man in "n" an. Voreingestellt ist die Anzahl "1",
+es wird also die volle Seite ausgenutzt. Bei einem Text,  der  z.B.  den
+Zweispaltenmodus  benutzt,  darf  die Zeilenlänge 38 Buchstaben bei ein­
+em Font mit der Größe 8 nicht überschreiten. Im  Dreispaltenmodus  soll­
+ten  25  Zeichen nicht überschritten werden, im Einspaltenmodus (vorein­
+gestellt) können selbstverständlich die vollen 80 Zeichen  benutzt  wer­
+den.  Es  ist zu beachten, daß die Spaltenmodi auf einer Seite nicht ge­
+mischt werden sollten. Look überprüft dies nicht. Zur Sicherheit  sollte
+man unbedingt zuvor den "@NS"-Befehl benutzen (sihe dort).
+
+19. ST: Schriftstil ändern
+
+Art:       Textbefehl und Scriptbefehl
+Format:    @STn
+Beispiel:  @ST3  (unterstrichen und fett)
+Erklärung: Mit diesem Befehl kann man für  den  nachfolgenden  Text  den
+Schriftstil  ändern. Dabei kann man für <n> folgende Werte einsetzen: 1:
+unterstrichen, 2: fett, 4: kursiv. Diese Werte kann man  auch  kombinie­
+ren,  z.B. ergibt "5" einen unterstrichenen und kursiven Text. Probier´s
+mal aus!
+
+20. TA: Textausrichtung
+
+Art:       Scriptbefehl
+Format:    @TAn
+Beispiel:  @TA2
+Erklärung: Man  kann  eine  Zeile  im  Inhaltsverzeichnis   linksbündig,
+rechtsbündig  oder zentriert darstellen. Dies kann der Übersicht dienen,
+wenn man z.B. Textzeilen linksbündig, Kommentare zentriert und Untermen­
+üs rechtsbündig erscheinen läßt. Der Parameter "n" darf  drei  verschie­
+dene  Werte  annehmen: "0" für linksbündig, "1" für rechtsbündig und "2"
+für zentriert. Diese Einstellung gilt dann  solange,  bis  ein  weiterer
+"@TA"-Befehl folgt. Dieser Befehl beachtet auch den gerade eingestellten
+Spaltenmodus.
+
+21. TB: Tabulator-Größe setzen
+
+Art:       Textbefehl
+Format:    @TBnn
+Beispiel:  @TB08
+Erklärung: Mit diesem Befehl kann man die Tabulator-Größe  ändern  (vor­
+eingestellt sind acht Leerzeichen). Um einen Text auf den eigenen Editor
+anzupassen, muß man nur wissen, wieviele Leerzeichen der Editor ausgibt,
+wenn man die <Tab>-Taste drückt. Der Parameter "nn" muß immer zwei Stel­
+len besitzen, und darf Werte zwischen 2 bis 79 annehmen.
+
+22. TE: "Anklickzeilen" (Textzeilen)
+
+Art:       Scriptbefehl
+Format:    @TEvhKommentar|Pfadname
+Beispiel:  @TE21Szenen-Bericht|SYS:Texte/Szene
+Erklärung: Dieser Befehl stellt eine sogenannte "Anklickzeile" dar. Wenn
+man  diese  Zeile  nachher im Inhaltsverzeichnis anklickt, wird der ent­
+sprechende Text geladen. "vh" steht wieder für  die  Farbnummern  (siehe
+auch  "KO"-Befehl). Danach folgt ein bis zu 80 Zeichen langer Kommentar,
+der Texteintrag, gefolgt von einem senkrechten Strich "|"  (<Shift>  und
+<\> drücken), gefolgt von dem Pfadnamen.
+
+23. UB: Überschrift ändern
+
+Art:       Textbefehl
+Format:    @UBtitel
+Beispiel:  @UBFishvorstellung: AmigaLibDisk 756
+Erklärung: Man kann den Screentitel mit diesem Befehl ändern.  Der  Text
+darf  höchstens  78  Zeichen  enthalten und muß mit einem <Return> abge­
+schlossen sein. Dieser Befehl dient dazu, einen Text übersichtlicher  zu
+machen,  denn  z.B.  bei  PD-Serien-Vorstellungen könnte auf jeder neuen
+Seite eine Diskette vorgestellt  werden  mit  der  entsprechenden  Über­
+schrift  (siehe  Beispiel).  Nach dem ein neuer Text geladen wurde, wird
+die Überschrift automatisch geändert und der Pfadname wird eingetragen.
+
+24. ZS: Setze Zeichensatz (ihn für aktuell erklären)
+
+Art:       Textbefehl und Scriptbefehl
+Format:    @ZSn
+Beispiel:  @ZS1
+Erklärung: Mit diesem Befehl kann man einen Font,  der  mit  dem  Befehl
+"@OZ" geöffnet wurde, auch benutzen! :-) Dabei ist "0" immer der System­
+zeichensatz  (Topaz-8).  "n" darf zwischen "0" und "9" liegen, dabei ist
+"0" immer der Systemzeichensatz Topaz in der Größe 8.
+
+25. ZZ: Zeilenvorschub setzen
+
+Art:       Textbefehl
+Format:    @ZZnn
+Beispiel:  @ZZ10
+Erklärung: Wenn man ein Brush darstellt, bemerkt man besonders bei mehr­
+spaltigen Texten, daß die Zeilen in den verschiedenen Spalten nicht mehr
+genau gegenüber stehen. Mit diesem Befehl kann man  nun  den  Zeilenvor­
+schub  neu  setzen.  Er  ist normalerweise auf Fontgröße plus zwei Pixel
+festgesetzt, z.B. Topaz-8-Font besitzt  einen  Zeilenvorschub  von  zehn
+Pixel. Für "nn" kann man den neuen Vorschub angeben; der Wert "-1" rech­
+net ihn nach der obigen Formel für den aktuellen Font aus. Übrigens kann
+man  mit  diesem Befehl auch neue Effekte kreieren, wenn man den Zeilen­
+vorschub kleiner als die Fontgröße stellt, z.B. "02".Der  Parameter  muß
+immer zwei Stellen besitzen.
+
+
+* 6 Textanzeige
+
+Eins muß klargestellt werden: Look kann beliebige ASCII-Dateien darstel­
+len.  Man  muß  wirklich keine Textbefehle kennen. Aber durch sie können
+Texte ansprechender gestaltet werden, z.B. durch  Zwei-Spalten-Formatie­
+rung, große Überschriften und vieles, vieles mehr.
+
+* 6.1 Escape-Sequenzen
+
+Look versteht auch sogenannte Escape-Sequenzen, die von einigen Editoren
+unterstützt werden. Damit kann man Texte unterstreichen, fett schreiben,
+kursiv  anzeigen, andere Farben einstellen und vieles mehr. Diese Attri­
+bute können selbstverständlich addiert werden.
+
+Folgende Escape-Sequenzen kann Look verstehen:
+ a) ESC[0m              normal character set    normale Schriftart
+ b) ESC[3m              italics on              kursiv an
+ c) ESC[23m             italics off             kursiv aus
+ d) ESC[4m              underline on            unterstrichen an
+ e) ESC[24m             underline off           unterstrichen aus
+ f) ESC[1m              boldface on             fett an
+ g) ESC[22m             boldface off            fett aus
+ h) ESC[30m-[37m        set foreground color    Vordergrundfarbe setzen
+ i) ESC[40m-[47m        set background color    Hintergrundfarbe setzen
+
+Man  kann  diese  Sequenzen  auch  kombinieren.  Zum  Beispiel    ergibt
+ESC[3;33;42m eine kursive Schriftart mit Farbe 3 für den Vordergrund und
+Farbe  2 für den Hintergrund. ESC[1;4m setzt die Schriftart auf fett und
+unterstrichen. ESC[0m stellt die  normale  Schriftart  wieder  ein.  Für
+"ESC" muß man bei manchen Editoren die <Esc>-Taste drücken. Look erkennt
+eine  Escape-Sequenz,  wenn im Text die ASCII-Codes "27" oder "155" auf­
+tauchen. Achtung: Bei "27" muß ein "[" folgen, bei "155" darf es nicht!
+
+
+* 7 Sonstiges
+
+* 7.1 Fehler oder Einschränkungen in Look
+
+Look  wird  natürlich  ausgiebig getestet, bevor es veröffentlicht wird.
+Allerdings ist kein Programm 100% fehlerfrei, deshalb wäre es nett, wenn
+Du mir schreiben würdest, wenn Du  einen  Fehler  entdeckst.  Am  besten
+gleich den Text, das Brush oder die Scriptdatei mitschicken, bei dem der
+Fehler auftritt oder die Gurunummer aufschreiben o.ä.
+Bekannter  Fehler  im  Moment: Look zeigt manchmal Brushes nicht korrekt
+an. Dieser Fehler läßt sich aber beheben, wenn das Brush mit einer Brei­
+te, die durch 16 teilbar ist, abgespeichert wird. Dieser Fehler soll  in
+der nächsten Version behoben sein!
+Look besitzt auch einige Einschränkungen, die aber bei näherer  Betrach­
+tung gar keine sind:
+- Es können maximal 50 Seiten _pro_ Script angezeigt werden.
+- Jede Scriptseite darf maximal 256 Anklickzeilen besitzen.
+- Es können maximal 400 Anklickzeilen _pro_ Script definiert werden (wem
+  das nicht reicht, der soll Untermenüs verwenden).
+- Look kann höchstens 500 Textmodus-Seiten _pro_ Text zurückblättern.
+
+* 7.2 Schnellerer Bildschirmaufbau von Texten:
+
+Um Texte (noch :-) schneller darzustellen, sollte Textbeschleuniger ver­
+wenden. Hier eine kleine (sicher unvollständige) Auswahl:
+(1) "TemboTopaz" (auf Fred Fish 396, Freeware)
+(2) "TurboTopaz" (auf Fred Fish 396, Freeware)
+(3) "SysFont" (auf diversen PD-Disks)
+Diese  Textbeschleuniger  können  auch den Topaz-Font durch einen neuen,
+ebenfalls acht  Pixel  großen  Font  ersetzen.  Dieser  darf  allerdings
+nicht  proportional  sein.  Ich  kann jedem Magazin nur empfehlen, einen
+Textbeschleuniger einzusetzen, auch  wenn  Look  in  Assembler  program­
+miert  wurde!  Die  Text()-Routine  des  Betriebssystems  ist  unter 1.x
+ziemlich lahm!
+
+* 7.3 Magazine, die bereits Look benutzen
+
+Tja,  "leider"  sind es zu viele geworden, um sie hier noch aufzuzählen.
+Eine vollständige Liste erhälst Du gegen einen  ausreichend  frankierten
+Rückumschlag  (Diskette ist nicht nötig). Dort sind alle Magazine aufge­
+zählt, mit Herausgeber, Bezugsadresse und Erscheinungsweise.
+
+
+
+Thanx for RTFM ;^)
+                                                             André Voget

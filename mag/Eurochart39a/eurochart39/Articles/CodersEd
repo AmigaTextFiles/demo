@@ -1,0 +1,46 @@
+»CL8:»SML:--------------------------------------
+   »CL9:»BIG:Coder's Corner Editorial
+»CL8:»SML:--------------------------------------
+
+»CL4:           by Cytron/Depth
+
+»CL0:Being one of the fools who has turned
+his mind into more of an »CL1:MFC»
+programmer's than the pure (and
+extremely beautiful, compared to the
+Intel's) »CL1:MC680x0» instructions, I've
+not found the time to write articles
+myself. We have, however, been so
+fortunate to have received a long long
+article from »CL1:Peskanov»/»CL1:Capsule» with
+additional comments by »CL1:Troda»/»CL1:Pegas».
+The article features everything, you
+have ever wanted to know to get
+familiar with the cache of the Amiga
+processors. My knowledge of caches
+were more or less up to date - but I
+learned a lot of interesting aspects
+by reading the article. To make the
+article a little bit friendlier to
+read - I've splitted it up. Further,
+all comments from »CL1:Troda» (and me) are
+in a very »CL7:discrete color», and all
+coding examples have »CL4:their own color
+»CL5:- as has their comments.
+»CL0:Enjoy reading! And now, I'll give the
+word to »CL1:Peskanov» himself:  
+
+»CL8:Those nasty Cache issues 
+»CL9:------------------------
+
+»CL0:Hello there! This article will try to
+show off some of the inner workings of
+the Data & Code caches as defined by
+the Harvard architecture, which is
+used by the 68k and PPC CPU series
+amongst many others. 
+
+Don't panic! What I'm going to try to
+explain is how the caches work, how
+they affect your code and how to deal
+with them when nescessary!

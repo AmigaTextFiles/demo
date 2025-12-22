@@ -1,0 +1,680 @@
+»CL9:»SML:--------------------------------------
+    »CL8:»BIG:In the Beginning was CAOS
+»CL9:»SML:--------------------------------------
+
+           »CL4:by Andy Finkel 
+
+»CL9:Copyright(C); 1988 by Andy Finkel,
+Commodore-Amiga.Inc.
+
+
+»CL0:The very first issue of Amiga
+Transactor - spun off from the
+original Transactor - featured an
+article by Andy Finkel, then the
+Software Manager at Commodore-Amiga.
+Fortunately, the article survived,
+although Amiga Transactor didn't. It's
+interesting to contrast the state of
+AmigaDOS then and now, especially in
+comparison to the CAOS specs. Thanks
+to Andy - and an intrepid Amiga owner
+who typed in the text and sent it to
+Andy - ViewPort is able to reprint
+that article in its entirety. So set
+the WayBack machine for 1988, and read
+on...
+
+As most of you know, AmigaDOS was not
+the first choice for the top-level
+OS/DOS on the Amiga computer. What we
+now call AmigaDOS was really the
+backup DOS, based on an already
+existing OS known as Tripos (developed
+at the University of Cambridge
+Computer Laboratory by the TRIPOS
+Research Group, and converted with
+amazing speed by Metacomco's Dr. Tim
+King and his band of programmers).
+When the original, intended,
+designed-for-the-Amiga DOS failed to
+»CL0:materialize (in what would no doubt be
+an interesting story in itself), the
+Amiga was launched with AmigaDOS, and
+the rest is history, so to speak.
+
+Once in a while, someone suggests that
+the original DOS be written according
+to the original specs. This was even
+proposed by some members of the Amiga
+team, but Amiga management decided
+that it wouldn't be possible to
+complete the DOS and still launch the
+Amiga on time, especially since the
+software guys had already given up
+weekends at home. And going home. And
+sleeping.
+
+We're left with a big question .. what
+would the Amiga have been like if we
+could have used the original DOS? What
+would the character of the Amiga have
+been? Would life have then been
+perfect?
+
+There's really no way of knowing, of
+course. But if I stopped here, this
+would be a really short article,
+right? So why not take a quick look at
+the specs, and maybe do a little
+comparison with AmigaDOS...
+
+Because these questions greatly
+interest developers for some reason, a
+small mention of CAOS on USENET
+brought a flurry of electronic mail,
+all asking for more detail (all right,
+they wanted the specifications). So I
+decided to write this - it seemed like
+more fun than the article I was
+working on ("A Guide to DOSBase", or
+»CL0:"Why is this library different from
+other libraries?") so I'll save that
+for another time. Ideally this article
+should have been written by one of the
+Amiga people who spec'd CAOS
+(primarily Carl Sassenrath who also
+wrote Exec) way back in the dim
+reaches of time (1984). However, as
+they've been quiet about it all this
+time, and I have played with the
+prototype (do you know what a pain a
+Sage can be to set up?) it's time.
+Anyway, the specs are from the CAOS
+draft document.
+
+CAOS stands for the Commodore Amiga
+Operating System. Its purpose was
+(good place to quote from the draft
+specifications here)
+
+»CL7:"It is a small, full-bodied operating
+system, functioning on a small (but
+great) machine bound for the consumer
+market-place. Its primary purpose is
+not to provide a sophisticated
+software development environment -
+rather is provides a foundation for
+pleasant and useful application
+programs. This is not to say that it
+neglects the programmer's needs.
+Externally it is meant for end users;
+internally, however, it is designed to
+support the complex demands of most
+applications. It provides extra rich
+functionality for an operating system
+of its class. 
+
+
+
+
+»CL0:The goals of CAOS are:
+
+
+  »CL1:-»CL0: functionality usability (easy to
+    use at both outer and inner
+    interfaces)
+  »CL1:-»CL0: programability (interactive batch
+    language, rich set of programmer
+    functions)
+  »CL1:-»CL0: extensibility (modular and
+    extensible)
+  »CL1:-»CL0: reliability performance
+  »CL1:-»CL0: size (reasonably compact)
+  »CL1:-»CL0: maintainability
+
+
+
+
+
+
+»CL8:CAOS was always meant to be built on
+top of Exec (in much the same way that
+AmigaDOS is built on top of Exec).
+Exec would provide the low level
+services. It would initialize the
+hardware, bring the system software
+up, handle interrupts and exceptions,
+do the low-level device control (like
+the trackdisk.device), provide system
+error-handling, supply the low-level
+timing routines and semaphores,
+provide some useful utility functions,
+and handle the basic multitasking.
+
+This sounds familiar, right? Yes, it's
+true. AmigaDOS depends on Exec for the
+same functions.
+
+
+
+»CL8:What would CAOS itself have given? How
+about multiprocessing, a file system,
+memory management, and commands?
+Basically, the same things that
+AmigaDOS gives us - not surprisingly,
+as AmigaDOS had to step into the shoes
+of CAOS. Both CAOS and AmigaDOS have
+their own special strengths, though.
+For instance, CAOS also did memory
+management to a greater extent than
+AmigaDOS, and would have had resource
+tracking.
+
+There are three (well, at least three)
+general interesting areas to look at
+about CAOS: Multiprocessing, the File
+System and Memory Management. And then
+there's also the projected commands
+(for fooling around with files and
+similar operations.)
+»CL0:We might as well start with the easy
+ones ... multiprocessing and memory
+management. You may wonder why
+multiprocessing is one of the simple
+ones. It's because multiprocessing (at
+least in general outline) is much the
+same as multiprocessing under
+AmigaDOS.
+
+
+
+    »PIC:Budgie-euro3.iff»
+
+
+
+
+
+
+
+
+»CL0:CAOS processes are built around Exec
+tasks. CAOS depends heavily on the
+Exec data structures and control
+primitives for multiprocessing (sound
+familiar?) A CAOS Process structure is
+built on top of an Exec Task
+structure. Exec handles the context
+switching, inter-task communication,
+synchronization, queuing, and mutual
+exclusion. As with AmigaDOS, only
+Processes can talk to the file
+system.
+The CAOS Process structure contains
+(along with the Task structure)
+information about its stack, the
+program data, resource tracking, and
+exception code. (Once again, except
+for the `resource tracking' area, it
+sounds much like the AmigaDOS process
+information, right?)
+The resource tracking is a key
+difference. CAOS was intended to keep
+a linked list containing blocks of
+resources used by the process - file
+control blocks, I/O blocks, message
+ports, libraries, memory usage, shared
+data, overlays and so on. (This part
+of CAOS lagged behind the rest; which
+may explain why we don't have even a
+semblance of it now.)
+
+»CL8:Processes run in user mode, using a
+single (user mode style) stack. Except
+for context switches, which run in
+supervisor mode (using the supervisor
+stack) and of course interrupts,
+everything was going to stick to user
+mode. OS system routines are well
+behaved (they don't mess with the
+stack) and use well defined amounts of
+stack space (they don't allocate large
+areas for local variables or recurse).
+Now, that's a big difference. AmigaDOS
+makes extensive use of the stack for
+its operations. Oh well.
+
+There are three ways to create a
+process: create it from scratch,
+allocating new data structures and
+code; clone it from the parent
+process, making new data structures,
+but sharing the parent's code; or
+chain it from the parent, and replace
+it.
+
+
+
+
+
+
+»CL8:The general description of process
+creation is:
+
+»CL7:1)»CL8: Allocate the process structure
+»CL7:2)»CL8: Allocate the stack
+»CL7:3)»CL8: Open standard in, out, and error
+»CL7:4)»CL8: Load the code and make it ready to
+   execute (relocate it)
+»CL7:5)»CL8: Load static data
+»CL7:6)»CL8: Translate the package file (if one
+   exists), and create a package
+   control block
+»CL7:7)»CL8: Pre-load the package file
+»CL7:8)»CL8: Initialize exception vectors
+»CL7:9)»CL8: Add the task to Exec's task list
+   (with AddTask), which puts it on
+   the queue to run
+
+
+
+»CL0:I mentioned the package files in the
+above list. What exactly are they?
+Simply this: a package file is a
+method used to describe the load and
+run time memory environment for an
+application by giving the user a way
+of binding application program and
+data files in an easy to manage form.
+This is something we lost when we went
+to AmigaDOS, and it's something I
+think we should look at putting in.
+
+Another important task (sorry) that
+CAOS was intended to perform was
+memory management. Looking at the
+current OS one may note that Exec has
+a rich set of primitives for dealing
+with memory. CAOS added some
+additional functionality that AmigaDOS
+doesn't have (and some that it does).
+CAOS basically provided well-managed
+regions of memory. Within this region
+of memory, the CAOS memory manager
+would reign supreme (somewhat like
+grabbing a portion of memory with the
+Exec AllocEntry call). CAOS would then
+manage the memory within that
+sub-region, allocating sections for
+code, data, program stack, and so on.
+Obviously, fragmentation could set in.
+Since scatter-loading was not (at the
+time of the spec I'm using) part of
+the CAOS design, the CAOS memory
+manager needed a way to cope with
+fragmentation. If a sub-region became
+fragmented, CAOS would attempt to
+perform a compaction and garbage
+collection of regions. First, it would
+delete sub-regions as volunteer
+overlay candidates. If this failed to
+»CL0:regain enough memory, sub-regions with
+no users (libraries and devices with
+accessor counts of zero, for instance)
+would be deleted. If this failed, a
+special entry point would be called
+for relocatable and unloadable
+subregions. If this failed, the user
+would be treated to a Guru (or an out
+of memory requester)
+
+
+When a program needed to manage memory
+within the CAOS-allocated subregions,
+the program would think of memory in
+terms of segments. Segments could be
+marked as relocatable or fixed,
+permanent or reusable.
+
+
+
+The CAOS memory manager would attempt
+to compact relocatable segments and
+delete reusable segments when memory
+got tight. Non-relocatable segments
+would be kept together at either the
+top or bottom of a region, to avoid
+catastrophic failure of the
+relocation/compaction algorithm of the
+memory manager.
+
+
+
+Segments also could undergo a crude
+form of swapping: they could be read
+in from or written out to a
+preallocated disk file.
+
+
+
+
+»CL0:Believe it or not, the AmigaDOS
+SegList gives almost as much
+functionality. Except for the
+relocation type of segment and the
+associated memory manager, you can
+pretty much play these same games with
+SegLists.
+
+»CL8:Now we get to the hard stuff - the
+file system. This is the area that
+should differ most from AmigaDOS.
+Providing a file system is the most
+important goal of a disk operating
+system.
+
+CAOS used a file concept just like
+AmigaDOS - a file being an abstract
+data object, with a set of access
+methods, that appears to the user to
+be a consistent data stream regardless
+of its underlying storage form. Many,
+many computer systems have happened on
+this concept.
+
+CAOS supported four types of files:
+ordinary files, directory files, image
+files, and special files.
+
+An ordinary file is used for data
+storage. The data can be anything -
+ASCII, binary, whatever. There is no
+system-imposed structure on the
+contents of an ordinary file.
+
+Ordinary files are typed as well, to
+aid CAOS and the user in understanding
+the files' content. An ordinary file
+might be typed as containing special
+graphic information, text, program
+code or program data, for instance. In
+»CL8:the case of an ordinary file of text
+type, the only limit imposed is that
+no text line shall be longer than 512
+bytes.
+
+A directory is a file used to map file
+names to actual data. They are treated
+differently from ordinary files in
+that there is a system-imposed
+structure for their contents, and they
+are protected against overwriting. A
+directory may contain the name of
+another directory file, and so on - a
+tree file system is supported.
+
+Image files provide a symbolic method
+of binding to system internal data
+objects. CAOS would use these files to
+give file system-style access to
+internal system objects like
+libraries, devices, interrupt chains,
+etc. This would have allowed a
+standard high-level method of dealing
+with these low-level objects. The file
+system would have acted as a symbolic
+address space.
+
+Image files were considered an
+`option' - special pseudo-device files
+might have been used instead. I really
+like the concept, though. It's one of
+the clever things I wish we had with
+the current DOS. (Fortunately, I think
+I've got a way to retro-fit this onto
+AmigaDOS.)
+
+
+
+
+
+»CL8:Special files are treated just like
+ordinary files, but don't generally
+represent an interface to a storage
+device. They are used to provide
+standard access to I/O devices.
+
+CAOS allows file names of up to 30
+characters. A path can be specified
+using the `/' character. Both absolute
+(from the volume root) and relative
+(to the current directory) paths are
+supported. The reserved file name `:'
+refers to the current directory. The
+reserved file name `..' refers to the
+parent of the specified or current
+directory. A path (including file
+name) couldn't be longer than 255
+characters.
+
+
+CAOS supports both hard and soft
+links. A hard link is just a pointer
+to the internal data structure of a
+file (actually, a directory under CAOS
+would be an array of hard links). A
+soft link references a file by using
+the file name and doing text
+substitution. (For example, if the
+file system was asked by a user
+program to Open a file called
+"library", which was actually a soft
+link to "/exec/lib/library", the file
+system should substitute the name
+"/exec/lib/library" before doing the
+Open.)
+
+
+
+
+
+»CL8:CAOS maintained useful file
+information, like a description field
+(up to 255 characters of information
+for reference purposes), creation
+time, update time, link count,
+permissions (read, write, execute,
+locked), type (directory, printable,
+non-printable, and so on), user ID,
+size, and blocks allocated to the
+file. Image and special files might
+not maintain all of the information;
+defaults - you know, lies - are
+returned when an application program
+interrogates the file system about one
+of these files.
+
+Files may be opened for read, write,
+or append operations. Block and
+character operation may be supported.
+You can also seek to any particular
+byte in an ordinary file. Image and
+special files disallow this, though.
+    »PIC:Encore»
+
+
+
+
+
+
+
+
+
+
+
+
+System directories, like / (the root),
+/dev, and /Exec are special
+directories where the system generally
+keeps its special files, image files
+and so on.
+»CL0:Let's go right to the proposed limits
+on the CAOS file system (always a
+popular means of comparison). Maximum
+file size is one megabyte; maximum
+name size is 30 characters. Maximum
+path size (including name) is 255
+characters (but may have been
+increased to 512 with enough demand).
+Maximum number of files would have
+been one quarter of the number of
+blocks (about 440 on a floppy);
+maximum number of open files would
+have been 16 per process, and the
+maximum length of softlink text
+substitution would have been the same
+length as a path.
+
+
+
+
+There are three types of file
+operations: high level (safe, simple)
+file access, low-level file
+operations, which work directly on the
+file control block (the higher level
+functions devolve into calls on these
+low level routines), and
+support/maintenance operations (i.e.
+utilities). Naturally, all file
+functions are called through the CAOS
+library interface.
+
+Descriptor-based file operations are
+the easiest means to access the file
+system. You Open a file using a name
+(and path), and in return get a
+descriptor, which you use for all
+subsequent file operations.
+
+
+»CL0:The functions are Open, Close, Read,
+Write, Seek, EOF (test for EOF), Size
+(return the size of the file in
+bytes), Truncate (I miss this one),
+Update (write out all dirty buffers to
+the device associated with the file),
+Name (return a pointer to the file
+name), Options, Lock (prevent
+simultaneous access), Unlock (unlock a
+previously Locked file), LastError,
+and Control (miscellaneous file access
+control).
+
+The high-level file access methods
+described above are based on a lower
+level file control block access
+method. Functions using the file
+control block are: MapFile (go from a
+descriptor to a control block),
+OpenFile (given a name, return a file
+control block), CloseFile, ReadFile,
+WriteFile, and Update.
+
+By the way, it was considered possible
+that the low-level access to files
+would be removed if all operations
+were possible using high level calls.
+
+Essentially the programs would be
+quite similar to the ones we have now
+(except, of course, Unix-like syntax
+would have been used). We'd have Link,
+SoftLink, Remove, Rename, FileInfo,
+SearchDir, CurrentDir, ChangeDir,
+MakeDir, and so on.
+
+
+
+
+
+»CL0:As with AmigaDOS, CAOS supports
+volumes to logically map disks,
+partitions, devices, file networks,
+and structured memory. Volumes can be
+accessed when they are online. Disk
+and network volumes go online once
+their volume ID structure has been
+read and verified. (For floppy disks,
+this happens automatically when the
+disk is inserted.) When access to a
+volume is ended, the volume becomes
+either absent, offline, or critical
+(as in, You Must Replace Volume...)
+    »PIC:EC224x56x64»
+
+
+
+
+
+
+CAOS maintains volume identification
+information, like name (up to 40
+characters), description, time stamp
+and write protection status. By using
+the "special" type of file, it is
+possible to get direct access to a
+volume. In the case of a floppy, the
+special file would give the same type
+of access (but in a file-system
+standard manner) as if the
+trackdisk.device were used directly.
+
+This then is a quick overview of CAOS.
+Let's say it was available now ...
+What would we have gained? Personally,
+I think the main thing would have been
+a much more integrated system. From
+these specs you can see that AmigaDOS
+is really as powerful as CAOS was
+intended to be. The problem is that
+AmigaDOS is different from the rest of
+the Operating System. CAOS would have
+used the same type of data structures
+as the OS, the same type of stack, the
+same languages (C and assembler), and
+would have made understanding the
+system easier.
+»CL9:--------------------------------------
+    »PIC:Darklight.+EC_13.iff»
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+»CL8:This article was found in the online
+magazine ViewPort, Oct 1993 issue.
+
+Carl Sassenrath made the following
+comment about CAOS at the AmiWest IRC
+conference:
+
+CAOS was contracted out, for the most
+part, to a company that felt Unix was
+a better choice and didn't buy into my
+design. They became history when they
+started using their Sun development
+systems for other projects, not the
+Amiga higher level OS functions. 

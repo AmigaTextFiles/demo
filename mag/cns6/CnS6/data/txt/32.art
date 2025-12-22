@@ -1,0 +1,120 @@
+At  breakpoint`05  the  AMiGA musicians had it again.
+
+The  problem  that  the  tracked competition was held
+using  the  modplug  player on pc. If you never tried
+running  a  dbm with modplug i can say that it sounds
+terrible  because   modplug   uses   some   kind   of
+×031manipulated  XM-Player×   routine    æ07æ
+for the dbm play.  I think thats 
+also  a  reason why  at the last 
+years parties  seldom or never a 
+musician with  dbm wins a compe- 
+tition  or  at  least  pass  the 
+preselection. That's sad because
+so no one from the pc side knows
+the  ruling  AMiGA  multichannel
+tracker  format. There simply exists no decent player
+library.  Even  on  amiga using the dbpro.lib the dsp
+effects cant be played correct. ×008This problem is known
+for  a  long  time  but  nothing  happens.×   In   the
+breakpoint  forum we started a thread concerning this
+and  a discussion starts. ×008We told the orgaz that it's
+unfair  for  Digiboosterpro users but they told us we
+should  convert  the  dbm's  to  xm.×  But xm does not
+support two effect command lines or dsp for example -
+also  all effect parameters had to be converted then.
+It seems all compo-orgaz think dbm suxxx. We tryed to
+solve  the problem and finish discussion and prepared
+a  pre-installed  AMiGAOS for WiNUAE to deliver it to
+the  compo-organizers.  It also includes a kickrom, a
+configuration  and  a step by step description how to
+get it work. ×031Ryg× (compo orga) installed it and it was
+easy  for  him starting         the   digiboosterpro 
+and play a module. He æ13æ            said  he  will try 
+to convince the other             music-compo  orgaz 
+that they switch                  during the compo
+between WiNUAE   and              Windows - its easy 
+by using ALT+TAB keys             at the PC. After 
+the party  ×031Ryg× wrote             in the  forum that:
+                     
+                     
+×008"All  .DBM's  were  recorded  using  Digibooster  Pro
+running  on  WinUAE.  So,  no, the reason they didn't
+make  it  through  the  preselection  was not Modplug
+player."×
+
+So,  for  me  it  seems  that  the tunes are not that
+stunning  ;D  Anyway,  thats  another  problem ;D The
+digibooster  code  is  now  owned  by   APC   &   TCP
+(http://www.apc-tcp.de/indexe.html)  and if its right
+what rumours say the asm code is already converted to
+c.  At 27th april 2004 a Beta-Demoversion for AmigaOS
+and  MorphOS  was released but it was slow and buggy.
+If   you   are   intrested   try
+http://digiboosterpro.de/indexe.html.  At  the  forum
+you  can  specify  your wishlist for a new version of
+Digiboosterpro.  There  are  already lots of wishes -
+but  if they can come true is very uncertain I think.
+Actually  I  have  no  sollution  for  the   replayer
+problem... we tryed to ask ×031Peter Kunath×, developer of
+×031Deliplayer×  (now  on  pc  -  http://delitracker.com/)
+thats   his   reply:
+
+×008"The  DBPro  player uses a modified XM replay because
+DBPro should be (at least theoretically) more or less
+XM  compatible. We've made some changes to the replay
+so that some DBPro specialities are handled properly.
+It  is  unlikely that we implement the DSP effects in
+the  near  future  (on  the Amiga the DSP effects are
+part of AHI, and not of the DBPro player). Concerning
+the other bugs you mentioned: if you can provide some
+mods  where  the bug(s) clearly shows up. Please also
+tell  us  at  which   playing   position   (time   in
+minutes/seconds)  and  on which channel (if possible)
+the  bug occours and we will try to fix the problem."×
+
+Maybe  this  will  help  to  fix some bugs but i dont
+think  that  we  get  a  working   replayer   routine
+afterwards.  If  you  also  want   to   support   the
+developers of digibooster and a replayer routine just
+do  a  lot of good dbms for the scene compos and fead
+the  forum  at  ×031www.digiboosterpro.de× with your ideas
+and  contacts.  Never  stop buggin the compo orgaz to
+use  winuae+amigaos+digiboosterpro  for  dbm  replay!
+                       æ36æ
+
+
+
+
+
+
+
+
+
+
+
+
+At least here are inoffical news  sent to me at the 
+end of April  2005 by  Dennis Lohr  aka  ×031PSYRIA× from 
+www.digiboosterpro.de :  "The target is to get every-
+thing out of the 68K digiboosterpro engine.  A lot of 
+bugs should be fixed and maybe we can add some new 
+features. Later we want to go PPC native. Means for 
+AMiGA OS4 and MORPHOS."  æ40æ
+
+
+
+
+
+
+
+
+
+
+
+
+                          ×031BP orgaz, March 2005×
+
+
+This sounds good to me but as always we have to see
+if the promised development will come true.

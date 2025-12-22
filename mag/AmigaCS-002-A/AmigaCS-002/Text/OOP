@@ -1,0 +1,44 @@
+@{d FFE3DC}                            @{c EE8A7E}Vztah Carla Sassenratha k OOP@{c}
+                            ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Objektovo-orientovane  programovanie  sa  nie  vzdy  vyplati.   Nepochopte  ma  zle.
+Objektovo-orientovanym  programovanim  (@{c EE8A7E}OOP@{c})  sa  zaoberam  uz  od roku 1982, kedy som
+v Hewlett  Packard  zacal  s  prenosom  Smalltalku  (slavny  Xerox  PARC OOP jazyk) na
+prototyp   malej   pracovnej   stanice   zo   Stanfordskej  univerzity  nazvanej  "Sun
+Workstation".   Nadchlo ma to!  V priebehu nasledujucich rokov som sa OOP venoval este
+intenzivnejsie,  implementoval  som  niekolko experimentalnych objektovo-orientovanych
+jazykov,  precital  som  mnoho  odbornych  dokumentov, navstevoval som konferencie ako
+"OOPSLA" zucastnujuc sa aktualnych diskusii, atd.  Koncepcia OOP sa mi zdala byt velmi
+uzitocnou a navrh Amiga OS kernelu tu ma taktiez svoje korene.
+
+  Akokolvek,  OOP  som  miloval  aj  nenavidel.   Pri  malych  projektoch  (ktorymi sa
+zaoberame  najcastejsie)  OOP  casto sposobi, ze samotny proces programovania sa stane
+zlozitejsim  a  tazsie  pochopitelnym.   Niekedy je tym dovodom to, ze programatori sa
+zacnu  viac zaujimat o detaily a techniky OOP ako o riesenie povodneho problemu, co je
+hlavnym  ucelom  programovania!   Vysledkom  casto  je,  ze  program sa nakoniec stane
+"pomotanym" a bude vyzadovat ovela viac dokumentacie na vysvetlenie vsetkych pouzitych
+technik a fines.  Nanestastie, toto sa deje az prilis casto.
+
+  Hlavnym  argumentom  v prospech OOP je fakt, ze dovoluje abstrahovat, izolovat stavy
+(hodnoty)  a  spravanie  (funkcie)  objektov.  Podstatne je, ze nemusite poznat vsetky
+pravidla  pouzivania  objektov.   Mozte  ich povazovat za "abstraktne".  Avsak toto je
+dost  idealisticka  filozofia.   Nikdy sa neosvedcila tak, ako bolo povodne zamyslane.
+Ani  priroda  ani ludia nie su uplne dokonali.  OOP programy casto koncia prespikovane
+zvlastnymi podmienkami a mimoriadnymi vynimkami, ktore sa na zaciatku neocakavali.
+
+  Ano,  @{c EE8A7E}REBOL@{c}  umoznuje  OOP.   Ale  doporucuje  sa  dobre si premysliet, ci je naozaj
+nevyhnutne.   Napriklad,  ak  je  vasim cielom vytvorit adresar osob, s OOP budete iba
+stracat  cas  a  navyse  sa  cela  vec  zbytocne  skomplikuje.  Ale ak chcete vytvorit
+jedinecne  graficke  uzivatelske  rozhranie,  OOP bude prinosom, pretoze umoznuje, aby
+detaily zostali pocas prilezitostneho pouzivania skryte.
+
+  Najlepsie  by bolo povazovat OOP za nastroj, rovnako ako za nastroj povazujete bloky
+a  funkcie.   OOP  nie  je vsemocnou technologiou, ktora vyriesi kazdy problem.  Prave
+naopak,  mali  by  ste  sa  snazit,  aby veci zostali co najjednoduchsie.  Doprajte si
+moznost  a  cas  dozvediet  sa  co  najviac  o  probleme, ktory sa usilujete vyriesit.
+Prepiste  a  vylepsite  vas  program  aspon  styri  az patkrat, ked nie viac - vzdy ho
+o nieco  zjednoduste.   Toto  je  sposob  ako napisat dobry program.  Modelujte ho ako
+sochu.   Uvidite,  nie je to ziadny zazrak ani technologia z rise divov.  Len vy a vas
+zdravy rozum.
+
+                                   @{c EE8A7E}Carl Sassenrath
+                                   - pêeloùil DNA -@{c}

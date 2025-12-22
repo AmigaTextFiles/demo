@@ -1,0 +1,40 @@
+Short:        Voxel-style landscape SDL effect (with sources)
+Author:       dash@xdr.com (Andrea Griffini), Morphos port by Fabrizio "Lanch" Bartoloni
+Uploader:     lanch@tiscali.it (Fabrizio Bartoloni)
+Type:         demo/intro
+Version:      1.0
+Architecture: ppc-morphos;
+
+Voxel-style landscape rendering by Andrea Griffini
+
+Move around the landscape using the arrow keys.
+ 
+Landscape rendering
+  
+   Ok.. i know that voxel is something else... but a lot of people is using
+   the name "voxel" to mean this kind of rendering tecnique.
+   I wrote this to explain the basic idea behind the rendering of newvox4;
+   newvox4 is very badly written (it's named 4 because is the fourth of
+   a sequel of experiments) and is coded in pascal + asm.
+   Since i got a few request of an explanation i decided to write the kernel
+   of the rendering in C hoping that this will be easier to understand.
+   This implements only the base landscape (no sky or floating ball) and
+   with keyboard only support but i think you can get the idea of how I
+   implemented those other things.
+  
+   I'm releasing this code to the public domain for free... and as it's
+   probably really obvious there's no warranty of any kind on it.
+   You can do whatever you want with this source; however a credit in any
+   program that uses part of this code would be really appreciated :)
+  
+   Any comment is welcome :)
+  
+                                    Andrea "6502" Griffini, programmer
+                                           agriff@ix.netcom.com
+                                        http://vv.val.net/~agriffini
+
+                                        
+Note from porting author: I remember having seen this effect already ported
+ inside an archive called SDL-demos.lha with several SDL effects taken from
+ the demo section of www.libsdl.org but this one is provided with sources,
+  readme, has smaller executable and is linked against latest PowerSDL.

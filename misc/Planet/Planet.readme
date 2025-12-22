@@ -1,0 +1,81 @@
+Short:    Realtime rendered planets using StormMesa
+Author:   walternn@rupert.informatik.uni-stuttgart.de (Norman Walter)
+Uploader: walternn@rupert.informatik.uni-stuttgart.de (Norman Walter)
+Version:  1.0
+Type:     dev/src
+Requires: StormMesa
+
+Realtime rendered planets: Venus, Earth and Mars (Bouns: Amiga Boing Ball).
+C source code included.
+
+Requirements:
+-------------
+
+The executable included in this archive requires 68030 cpu and 68881 fpu or better.
+A 68060 or PowerPC CPU and a fast 3D-accelerator is highly recommended.
+You will also need StormMesa and Warp3D (available from Aminet).
+
+Testet on Amiga 4000/060 with CyberVision64/3D,
+AmigaOS 3.5, CyberGraphX 3, Warp3D 3.
+
+
+Usage:
+-----
+
+Doubleclick one of the icons or start the program from CLI:
+
+ Planet <Texturefile>
+
+for example
+
+ Planet data/Earth.bmp
+
+You can also use your own textures.
+Only 24 Bit uncompressed Windows BMP files supported.
+Minimum size for textures is 64 x 64 pixels.
+
+
+Books on C programming and OpenGL:
+----------------------------------
+
+Brian W. Kernighan, Dennis M. Ritchie:
+The C Programming Language
+
+Andrew Koenig: 
+C Traps and Pitfalls
+
+Robert Sedgewick:
+Algorithms in C
+
+Mason Woo, Jackie Neider, Tom David, Dave Shriner, Tom Davis:
+OpenGL 1.2 Programming Guide
+
+Renate Kempf and Chris Frazier:
+OpenGL Reference Manual
+
+Mark Kilgar:
+The OpenGL Utility Toolkit (GLUT) Programming Interface API
+
+Kevin Hawkins, Dave Astle:
+OpenGL Game Programming
+
+
+World Wide Web:
+---------------
+
+http://www.norman-interactive.com (my Homepage)
+
+http://www.informatik.uni-stuttgart.de (University Stuttgart, Dept. of Computer Science)
+
+http://www.ninemoons.com (GeekGadgets)
+
+http://www.haage-partner.com (Haage & Partner Homepage)
+
+http://www.sgi.com (Silicon Graphics - Inventor of OpenGL)
+
+http://www.OpenGL.org (OpenGL Homepage)
+
+http://www.gamedev.net (GameDev.net)
+
+http://nehe.gamedev.net (NeHe Productions)
+

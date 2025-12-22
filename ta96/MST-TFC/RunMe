@@ -1,0 +1,9 @@
+
+; If demo runs slow, check cache and mem setups ... Save enough continious
+; fast mem to run all effects with maximum speed ... (or BUY 060-CARD !)
+; Also with 040 machines, try copyback and data burst !
+; Databurst slows on my 030-50 ...
+
+setpatch >NIL:
+cpu instcache instburst datacache copyback >NIL:
+Traffic

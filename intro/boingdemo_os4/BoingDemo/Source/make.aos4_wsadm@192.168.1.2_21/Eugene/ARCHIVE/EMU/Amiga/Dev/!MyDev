@@ -1,0 +1,5 @@
+#!/bin/bash
+
+###  -lfreetype2
+
+ppc-amigaos-gcc -o ../BoingDemo ./boing.c ./scrollText.c ./sprite.c -mcrt=newlib -I/usr/local/amiga/ppc-amigaos/SDK/local/newlib/include/SDL -I/usr/local/amiga/ppc-amigaos/SDK/local/newlib/lib -lSDL_ttf -lSDL_mixer -lSDL_image -lSDL_draw -lSDL -ltiff -ljpeg -lmikmod -lwebp -lpng16 -lfreetype -lz -lm -lamiga

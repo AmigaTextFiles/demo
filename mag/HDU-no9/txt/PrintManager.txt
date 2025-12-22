@@ -1,0 +1,35 @@
+===============================================
+Short:    Printmanager for AmigaOS3 (39.5)
+Author:   Stephan Rupprecht
+Requires: AmigaOS3 or better
+===============================================
+
+PrintManager v39 is a so called printer-spooler, it intercepts all 
+printer. device calls to the parallel-/serial.device and saves the 
+printer specific raw data to a file. This way, programs sending data 
+to the printer don't have to wait for the slow printer to continue. 
+PrintManager also gives you some control over the data send to the 
+printer. You can even print files directly from inside PrintManager 
+using the datatypes-system. 
+
+FEATURES
+* caches only printer.device calls
+* can cache all calls to parallel-/serial.device
+* allows to exclude certain tasks from spooling
+* nice gui which works with proportional fonts 
+* files can be printed from inside Printmanager (uses datatypes.lib)
+* works with datatypes.library v45 (v45 recommend, not required!)
+* own FAST parallel.device (registered version only)
+* localized
+* after reset/crash unfinished printings are recovered
+* delayed printing
+* print count function
+ 
+REQUIREMENTS
+any Amiga (compatible) computer with at least AmigaOS3.0 and     
+( of course )  a printer.
+ 
+NOTE
+Although this program is based on Printmanager 2.0 by Nicola 
+Salmoria,  no part of the Printmanager v39 code has been taken 
+from Nicolas version (it is a complete new program)!

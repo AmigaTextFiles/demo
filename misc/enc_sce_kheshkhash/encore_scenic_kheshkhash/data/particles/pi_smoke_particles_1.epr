@@ -1,0 +1,51 @@
+{
+    "enc_info": {
+        "data_type": "ENCPAR",
+        "version": "2.0"
+    },
+    "max_num_particles": 100,
+    "num_create_particles": 1,
+    "sorting_type": "disabled",
+    "shape_type": "plane_billboard",
+    "life_time": 4.0,
+    "particles_per_sec": 9,
+    "update_freq": 60,
+    "spread": 0.052,
+    "locked_position_axis": false,
+    "texture_frames_matrix": [
+        1, 1
+    ],
+    "texture_file_name": "pi_smoke_particles_1_tex",
+    "layer_1": {
+        "blending": "additive",
+        "depth_mask": false,
+        "color_keys_gray": [
+            0.005,
+            0.09,
+            0.45,
+            0
+        ],
+        "color_key_times": [
+            0,
+            0.8,
+            1.5,
+            4.0
+        ],
+        "size_keys": [
+            0.01,
+            0.07,
+            0.54
+        ],
+        "size_key_times": [
+            0,
+            0.8,
+            4.0
+        ],
+        "texture_keys": [
+            0
+        ],
+        "texture_key_times": [
+            0
+        ]
+    }
+}

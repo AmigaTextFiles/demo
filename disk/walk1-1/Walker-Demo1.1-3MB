@@ -1,0 +1,68 @@
+echo "Please wait."
+COPY Walker1:VT to RAM:
+COPY C:COPY RAM:
+COPY C:DELETE RAM:
+copy Walker1:splash0.pic to ram:
+copy Walker1:splash1.pic to ram:
+copy Walker1:imlogo1.anim to ram:
+copy Walker1:walk1.anim to ram:
+copy Walker1:walk2.anim to ram:
+copy Walker2:walk0.anim to ram:
+copy Walker2:walk3.anim to ram:
+RUN >NIL: Walker2:AMFMPLAY Walker2:mod.starwars
+RAM:VT >NIL: DELAY 10 Walker1:splash0.pic
+RAM:VT >NIL: DELAY 10 Walker1:splash1.pic
+RAM:VT >NIL: CONT FPS 20 PAL LOOP 1 ram:imlogo1.anim
+RAM:VT >NIL: CONT FPS 20 PAL LOOP 1 ram:walk0.anim
+RAM:VT >NIL: CONT FPS 20 PAL LOOP 1 ram:walk1.anim
+RAM:VT >NIL: CONT FPS 20 PAL LOOP 1 ram:walk2.anim
+RAM:VT >NIL: CONT FPS 20 PAL LOOP 1 ram:walk3.anim
+RAM:VT >NIL: DELAY 10 Walker1:splash0.pic
+RAM:VT >NIL: DELAY 10 Walker1:splash1.pic
+RAM:VT >NIL: CONT FPS 20 PAL LOOP 1 ram:imlogo1.anim
+RAM:VT >NIL: CONT FPS 20 PAL LOOP 1 ram:walk0.anim
+RAM:VT >NIL: CONT FPS 20 PAL LOOP 1 ram:walk1.anim
+RAM:VT >NIL: CONT FPS 20 PAL LOOP 1 ram:walk2.anim
+RAM:VT >NIL: CONT FPS 20 PAL LOOP 1 ram:walk4.anim
+RAM:VT >NIL: DELAY 10 Walker1:splash0.pic
+RAM:VT >NIL: DELAY 10 Walker1:splash1.pic
+RAM:VT >NIL: CONT FPS 20 PAL LOOP 1 ram:imlogo1.anim
+RAM:VT >NIL: CONT FPS 20 PAL LOOP 1 ram:walk0.anim
+RAM:VT >NIL: CONT FPS 20 PAL LOOP 1 ram:walk1.anim
+RAM:VT >NIL: CONT FPS 20 PAL LOOP 1 ram:walk2.anim
+RAM:VT >NIL: CONT FPS 20 PAL LOOP 1 ram:walk4.anim
+RAM:VT >NIL: DELAY 10 Walker1:splash0.pic
+RAM:VT >NIL: DELAY 10 Walker1:splash1.pic
+RAM:VT >NIL: CONT FPS 20 PAL LOOP 1 ram:imlogo1.anim
+RAM:VT >NIL: CONT FPS 20 PAL LOOP 1 ram:walk0.anim
+RAM:VT >NIL: CONT FPS 20 PAL LOOP 1 ram:walk1.anim
+RAM:VT >NIL: CONT FPS 20 PAL LOOP 1 ram:walk2.anim
+RAM:VT >NIL: CONT FPS 20 PAL LOOP 1 ram:walk4.anim
+RAM:VT >NIL: DELAY 10 Walker1:splash0.pic
+RAM:VT >NIL: DELAY 10 Walker1:splash1.pic
+RAM:VT >NIL: CONT FPS 20 PAL LOOP 1 ram:imlogo1.anim
+RAM:VT >NIL: CONT FPS 20 PAL LOOP 1 ram:walk0.anim
+RAM:VT >NIL: CONT FPS 20 PAL LOOP 1 ram:walk1.anim
+RAM:VT >NIL: CONT FPS 20 PAL LOOP 1 ram:walk2.anim
+RAM:VT >NIL: CONT FPS 20 PAL LOOP 1 ram:walk4.anim
+RAM:VT >NIL: DELAY 10 Walker1:splash0.pic
+RAM:VT >NIL: DELAY 10 Walker1:splash1.pic
+RAM:VT >NIL: CONT FPS 20 PAL LOOP 1 ram:imlogo1.anim
+RAM:VT >NIL: CONT FPS 20 PAL LOOP 1 ram:walk0.anim
+RAM:VT >NIL: CONT FPS 20 PAL LOOP 1 ram:walk1.anim
+RAM:VT >NIL: CONT FPS 20 PAL LOOP 1 ram:walk2.anim
+RAM:VT >NIL: CONT FPS 20 PAL LOOP 1 ram:walk4.anim
+RAM:VT >NIL: DELAY 10 Walker1:splash0.pic
+RAM:VT >NIL: DELAY 10 Walker1:splash1.pic
+RAM:VT >NIL: CONT FPS 20 PAL LOOP 1 ram:imlogo1.anim
+RAM:VT >NIL: CONT FPS 20 PAL LOOP 1 ram:walk0.anim
+RAM:VT >NIL: CONT FPS 20 PAL LOOP 1 ram:walk1.anim
+RAM:VT >NIL: CONT FPS 20 PAL LOOP 1 ram:walk2.anim
+RAM:VT >NIL: CONT FPS 20 PAL LOOP 1 ram:walk4.anim
+
+
+
+
+
+
+

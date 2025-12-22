@@ -1,0 +1,35 @@
+@{d DFFFBF}@{xoffset 21}¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+@{xstep 370}@{font ACS-Title.font 18}B o o t   P r o g r e s s@{font}
+@{xstep 420}@{c A6FFF8}@{i}Chroust/StillTeam@{ui}@{c}@{ystep -8}
+@{p BootProgress.png 10 57}
+@{xoffset 320}
+@{c 82FF9F}   @{font ACS-Title.font 18}B@{font}oot Progress@{c}   @{c DB94FF}je   relativnë  nový@{c}
+@{c 82FF9F}prográmek,  který@{c} @{c DB94FF}se, pokud vím (mohu se@{c}
+@{c 66FFD3}samozêejmë    mýl@{c}@{c FFA3FA}it),    objevil   letos@{c}
+@{c 66FFD3}v kvëtnu  na  Ami@{c}@{c FFA3FA}netu ç. 25  v  adresáêi@{c}
+@{c 68D0FF}util/boot.  Jedná@{c} @{c FFABC9}se o utilitku, s jejíù@{c}
+@{c 68D0FF}pomocí   zobrazít@{c}@{c FFBAAB}e  pêi  bootu  poçítaçe@{c}
+@{c 94ADFF}nëjaký  ten  ILBM@{c}  @{c FFBAAB}obrázek a ukrátíte si@{c}
+@{c 94ADFF}tak   onu  nepêíj@{c}@{c FFDB9E}emnou  dobu  çekání  na@{c}
+@{c B5A1FF}systém.   Êíkáte @{c} @{c FFDB9E}si asi, ùe to není nic@{c}
+@{c B5A1FF}nového.   Takovýc@{c}@{c FEFF87}h  vëcí  existuje pêece@{c}
+@{c DB94FF}spousta (AWS, Boo@{c}@{c FEFF87}tScreen, RainBoot ...),@{c}
+@{c DB94FF}ale   tento   se@{c}  @{c CCFF85}nëçím  liîí  od  dêíve@{c}
+@{c DB94FF}jmenovaných, a to@{c} @{c CCFF85}progress-barem.@{c}
+@{xoffset 42}
+@{c 57FFB6}  Jedná  se o onu známou vodorovnou çáru, ukazující v programech, kolik je
+hotovo.   Totéù  se  Vám  teð zobrazuje pêi bootování, samozêejmë preciznë@{c}
+@{c 5CFFFD}vpraveno  do  pêíjemného  obrázku.   Jak to vlastnë funguje ?  Napíîete si
+nëkam  na  zaçátek  Vaîí  startup-sequence  pêíkaz  BootProgress, cestu ke@{c}
+@{c 91BEFF}zvolenému  obrázku  (autor dodává s programem hned çtyêi a dalîí si mûùete
+nakreslit  sami)  doplníte nëkolik parametrû, jako na kterých souêadnicích
+se  má  tento  bar zobrazovat, jakou barvou a hlavnë - v kolika stepech má@{c}
+@{c BAABFF}narûstat.   Potom  si  na  rûzná  místa v startup-sequenci umístíte pêíkaz
+BumpProgress   (vùdy  po  nëjaké  akci,  napê.   pêimountování  DosDrajvû)
+a spoçítáte  si,  kolikrát  jste  tento pêíkaz pouùili.  A to je právë ten@{c}
+@{c FFBFFE}poçet  stepû.   Pêi  bootu  poçítaçe  se  výslednë stane asi toto:  Pêíkaz
+BootProgress  zobrazí  zvolený  obrázek  a zatímco  poçítaç  projíùdí  dál
+startovaçku,  BootProgress  çeká.   V okamùiku kdy narazí na BumpProgress,@{c}
+@{c FFCCC2}posune ukazatel o jeden step.  Takhle to probíhá aù do posledního "Bumpu",
+uzavêe   obrázek,  následuje  LoadWB  a je  nabootováno.   Nic  sloùitého,@{c}
+@{c FFE0AB}ptákovinka na pár bajtû, ale moc hezká ptákovinka.@{c}

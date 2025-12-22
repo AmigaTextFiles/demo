@@ -1,0 +1,46 @@
+@{d ABCBFF}  Dne 25.çervna 1998 oznámila firma @{c B8FFFF}Access Innovation Ltd.@{c} pêipravovaný AA çipset nové
+generace,   nazvaný   jednoduîe  @{c B8FFFF}AA+@{c}.   Nový  çipset  nabídne  velký  výkon,  moùnosti
+i moderní integraci.
+
+  Çipset  bude zaloùen na úplnë novém 32bitovém jádêe, které bude emulovat 16bitové AA
+registry.   32bitové hardwarové jádro pouùije moderní techniky pêístupu k pamëti a tím
+dosáhne  @{c B8FFFF}20ti násobné îíêky pásma@{c} oproti originální CHIP RAM.  Výsledný efekt bude, ùe
+DMA pêístup k videopamëti zabere mnohem ménë çasu a o to více zbude çasu pro procesor.
+Proto  bude  moùné  pouùít  dokonce  @{c B8FFFF}UMA@{c}  architekturu  (Unified Memory Architecture),
+tj. Amigu  dostateçnë  výkonnou i bez FAST RAM.  Nový Blitter bude plnë 32bitový, jeho
+16bitové  operace  budou  hardwarovë  pêekládány do 32bitových.  Blitter bude pouùívat
+'burst memory access', celkovë bude aù 20× výkonnëjîí neù originální AA Blitter.
+
+
+   @{c B8FFFF}VLASTNOSTI@{c}
+   ¯¯¯¯¯¯¯¯¯¯
+  @{c B8FFFF}·@{c} interface pro procesory 68020, 68030, 68040, 68060, ColdFire a PowerPC
+  @{c B8FFFF}·@{c} dekodér adresování pro ROM, RAM, RTC (obvod hodin)
+  @{c B8FFFF}·@{c} DRAM êadiç pro SIMMy a DIMMy
+  @{c B8FFFF}·@{c} integrovaný PCI bus êadiç
+  @{c B8FFFF}·@{c} maximální hardwarová AA (AGA) kompatibilita
+  @{c B8FFFF}·@{c} podpora 'chunky' zobrazovacích reùimû
+  @{c B8FFFF}·@{c} plná kompatibilita s AmigaOS 3.1 (chunky podpora pomocí CyberGraphX a Picasso96)
+  @{c B8FFFF}·@{c} nová rozliîení aù do 1024×768×16bitû (HiColor - 65536 barev)
+  @{c B8FFFF}·@{c} 16ti-bitový zvuk
+  @{c B8FFFF}·@{c} UMA architektura pro low-end systémy
+  @{c B8FFFF}·@{c} Blitter aù 20× rychlejîí
+  @{c B8FFFF}·@{c} podpora pro high-density floppy mechaniky
+  @{c B8FFFF}·@{c} integrované obvody CIA (volitelnë s externím buferováním)
+  @{c B8FFFF}·@{c} nový DMA engine
+  @{c B8FFFF}·@{c} interface pro SuperIO chip (levné seriové, paralelní, UDMA IDE a USB rozhraní)
+
+  Pochopitelnë,  dalîí  moùnosti jako FireWire, modemy, podporu sítí lze implementovat
+pomocí PCI karet.
+
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+
+
+
+ @{c B8FFFF} Pëkný,  ne?   Bohuùel  není  uvedeno  datum  uvedení.   Pravdëpodobnë aù v roce 1999
+spoleçnë s novým typem motherboardu BoXeR+.  Co si budem povídat - toto uù tu mëlo být
+dávno :-(((  Zorro-bus asi nebude podporována (stejnë v dobë uvedení bude pasé).@{c}
+
+
+
+                                      - @{c B8FFFF}ShAmaN@{c} -

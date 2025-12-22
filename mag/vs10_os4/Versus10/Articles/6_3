@@ -1,0 +1,11 @@
+[bkg=bg.pbm][h1]SCA: Comeback by accident
+by STI\SCA
+
+My return to the Amiga scene was by accident :)
+
+In the past decades I was just running sca.ch and uploading my old C64 and Amiga disks with all the SCA demos and cracks, along with some mag scans that mention SCA.
+
+A couple years ago Smith the Software-Pope and I were interviewed by a historian of the university of Zurich regarding the SCA days, and we gave him all our swap letters --> https://files.scene.org/browse/resources/gotpapers/swapletters/swiss_cracking_association/ (to facilitate that I wrote an online PDF converter for old Amiga Textcraft and Wordperfect files --> https://www.sca.ch/amiga/textconverter - but still no Amiga programming)
+
+About two years ago I was contacted by a guy who said a friend of his had purchased an Amiga 1200 and some disks from an office clearance sale in Japan. Most of the disks didn't boot and the guy found out that they were infected with the SCA virus. He's not a coder, so he asked me if I could maybe fix the disks and find out what they contain. He sent me the disks, one of them was particularly interesting because it used a custom track format, and of course the first 1024 bytes of the loader were overwritten by the SCA virus. This activated my cracker instincts (and I felt a little guilty ;-), so I tried to figure out what was on that disk and how to boot it. Together with my friend Depeche of Spreadpoint we managed to write a loader (the format was quite straightforward) and to run the code. Since that time I was hooked, I resurrected my Amiga environment, and did some coding exercises such as these 256 byte demos ...
+

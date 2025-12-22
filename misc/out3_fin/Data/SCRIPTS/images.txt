@@ -1,0 +1,21 @@
+
+---------- resources ---------
+<KIMG> text1 | data/part1/text1.iff </KIMG>
+<KIMG> text2 | data/part2/text2.iff </KIMG>
+<KIMG> logo1 | data/part3/logo.iff </KIMG>
+<KIMG> texture1 | data/part3/texture1.iff </KIMG>
+
+<KIMG> pic1 | data/part3/pic1.iff </KIMG>
+
+<KIMG> 256128pal1 | data/part1/ctable1.iff </KIMG>
+<computecolortable> table1 | 256128pal1 |0|255|255|255 </computecolortable>
+
+<KIMG> ctable2 | data/part3/ctable2.iff </KIMG>
+<computecolortable> table2 | ctable2 |0|255|255|255 </computecolortable>
+
+
+
+
+
+
+

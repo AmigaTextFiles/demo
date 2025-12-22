@@ -1,0 +1,98 @@
+<world3d> world_lights2  </world3d>
+
+<KIMG> texture15 | data/part4/texture2.iff </KIMG>
+<t3dEnvMap> tmapenv15 | texture15 </t3dEnvMap>
+
+<KIMG> mapblue5 | data/part5/lightmapblue.iff </kimg>
+<t3dFlatLightMap> tmapblue5 | mapblue5 </t3dFlatLightMap>
+
+<lwo3d> hren1 | world_lights2 | 0|0|0|0|0|0|1|1|1| data/part10/hren1.lwo | 1 | tmapblue5</lwo3d>
+
+<KCAM> camera10 |0|0|-140|0|0|0|0.3  </KCAM>
+
+<KPART>
+    <ID> Part10 </ID>
+
+  <Fx>
+      <Pa>BindPalette</Pa>
+      <Pa> aft | paltab3 | 0 | 0 </Pa>
+      <Pa>CTE|0</Pa>              type of fade:0,1,2,3
+      <Pa>CTE|255</Pa>            optional color 0->255 (0)
+      <Pa>mapblue</Pa>     palette where to fade ( "B" )
+      <Pa>mapblue</Pa>            optional source Palette(2)
+      <Pa>CTE|0</Pa>              type of fade:0,1,2,3
+      <Pa>CTE|255</Pa>            optional color 0->255 (0)
+      <Pa>mapblue</Pa>       Palette where to fade ( "B" )
+      <Pa>mapblue</Pa>       optional source Palette(2)
+      <Pa>CTE|0</Pa>              type of fade:0,1,2,3
+      <Pa>CTE|255</Pa>            optional color 0->255 (0)
+      <Pa>mapblue</Pa>       Palette where to fade ( "B" )
+      <Pa>mapblue</Pa>       optional source Palette(2)
+  </Fx>
+
+
+    <Fx>
+        <Pa> Twirl </Pa>                some normal twirl on the background.
+        <Pa>mainscreen</Pa>
+        <Pa> warp1 </Pa>
+
+        <Pa>SIN|0.5|1|0.15</Pa> ofsx
+        <Pa>COS|0.5|1|0.45</Pa> ofsY
+
+        <Pa>SIN|0|0.1|1</Pa> start angle
+        <Pa>CTE|0</Pa>    amp. angle
+        <Pa>CTE|0</Pa>    freq angle
+
+        <Pa>CTE|0</Pa>         start dist.
+        <Pa>SIN|-1|0.6|0.05</Pa> amp.dist
+        <Pa>COS|0|0.2|10</Pa> freq dist
+
+        <Pa>CTE|0</Pa> mapping type
+
+    </Fx>
+
+
+    <Fx><Pa> Set3DObject </Pa>  make the tore rotate all the time on the 3 axis:
+        <Pa> hren1 </Pa>
+        <Pa> cte |0  </Pa>
+        <Pa> bounce |0|100|1500|8|0  </Pa>
+        <Pa> cte |0  </Pa>
+        <Pa> aff |-0.01|0.005</Pa>
+        <Pa> aff |0.1|0.006</Pa>
+        <Pa> aff |0.0|0.007</Pa>
+
+        <Pa> 3cte|1|1|1 </Pa>  scale
+    </Fx>
+
+    <Fx><Pa> Draw3DWorld </Pa>
+        <Pa> mainscreen </Pa>
+        <Pa> world_lights2 </Pa>
+        <Pa> camera10 </Pa>
+        <Pa> cte|0 </Pa>
+        <Pa> cte|1 </Pa>
+        <Pa> cte|200</Pa>
+    </Fx>
+
+  <Fx>
+      <Pa> radialblur </Pa>
+      <Pa> mainscreen </Pa>        rectangle where to make radialblur
+      <Pa> table3 </Pa>       the color remap table to apply color operation
+      <Pa> cte | 0.5 </Pa>      X center of radial zoom according to position
+      <Pa> cte | 0.5 </Pa>      Y center of radial zoom according to position
+      <Pa> cte | 0.95 </Pa>      X rate of zoom. please >0
+      <Pa> cte | 0.95 </Pa>      Y rate of zoom. please >0
+  </Fx>
+
+   <Fx><Pa> SpriteTable </Pa>
+        <Pa>mainscreen</Pa>
+        <Pa> topnoise </Pa>
+        <Pa> cte | 0 </Pa>
+        <Pa> cte | 0.2 </Pa>
+        <Pa> cte | 1 </Pa>
+        <Pa> cte | 0.8 </Pa>
+        <Pa> table3 </Pa>  50% transpa
+    </Fx>
+
+
+
+</KPART>

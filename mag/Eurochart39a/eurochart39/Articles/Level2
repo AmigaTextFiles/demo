@@ -1,0 +1,82 @@
+»CL8:»SML:--------------------------------------
+              »CL9:»BIG:Level 2
+»CL8:»SML:--------------------------------------
+
+»CL0:I remenber L2 caches (Level 2 caches)
+being introduced into the consumer
+market with 386 PeeCees. While
+Motorola packed their 020s and 030s
+with cool internal caches, Intel just
+released crappy 286 and 386 CPUs
+uncached. Hence, clone makers had to
+come with a solution to improve 386
+speed and face the market.
+Later, when 486 was introduced (which
+finally had internal caches like in
+68k), L2 caches were still used as
+they were far larger than internal
+ones and boosted speed strongly in
+many tasks.
+
+L2 caches are external caches that are
+placed in the memory bus between the
+CPU and the main memory. Their
+function is the same as the ones I
+described before, except that they are
+physically seperated from the CPU and
+they are unified caches; that is, they
+cover every CPU access, no matter if
+it's code or data.
+
+Although Motorola supports external
+caches correctly since 030, no
+implementation were ever made on Amiga
+(at least to my knowledge). »CL7:(Wrong,
+AddSpeed for 68000 (!) give us 16kB of
+L2... maybe someone still has it
+somewhere... ;)  ... Troda)»
+
+On Macintosh, it's usual to find L2
+since the use of 040s. »CL7:(but even oldie
+MacIIci has a L2 cahce slot (030&882)
+and its performace is boosted very
+rapidly when L2 is present... Troda)»
+
+Those caches, although not as fast as
+internal ones, are very important
+accellerators of the computer. Think
+about it: We had important speed
+trouble with the rotozoom on 040/060,
+as the texture was much larger than
+the data cache. With a 256k L2 cache,
+that problem would have been minimum.
+Certainly, speed would have been
+better in angle 0 than in angle 90,
+but the difference wouldn't been that
+extreme!
+A nowadays L2 cache is 512/1024 KB
+large.
+»CL7:(not only that, 2048 KB are also
+here... and if you read about BURST,
+imagine speed-up, because the DIMMs
+only need 60nS for first access, but
+can burst later at 7nS, so just
+imagine speed-up when L2 does every
+acces in 7nS (even this first one) -
+this is:
+DRAMs (we have now)           
+     - 1x 60 + 3x 60 = 240 nS one read
+DIMMs (BoXeR will...)         
+     - 1x 60 + 3x  7 =  81 nS one read
+L2 cache (wanna be in BoXeR+) 
+     - 1x  7 + 3x  7 =  28 nS one read
+Don't wanna L2....? ... Troda)»
+
+Measure the memory you are using for
+any effect, you will realize it's not
+much more. The chunky buffer, textures
+and tables would probably fit into the
+L2 cache easily doubling the speed of
+the effect. »CL7:(sometimes even more, on
+030 in MacIIci I sometimes got more
+that 4x... Troda)

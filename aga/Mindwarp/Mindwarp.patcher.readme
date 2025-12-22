@@ -1,0 +1,40 @@
+From sysop@sterbbs.nl Wed Jun 16 18:40:02 1993
+From: sysop@sterbbs.nl (Bert Rozenberg)
+Newsgroups: alt.sys.amiga.demos
+Subject: hoi2aga fine, but on 4000/30? (was Re: hoi2aga.l
+Date: Mon, 14 Jun 93 20:56:30 GMT
+X-Maildoor: MajroMAIL V1.61
+
+>I had no trouble uudecoding and un-lha'ing this file, but it
+> didn't seem
+>to run properly on a 4000/30.  After double-clicking the icon,
+> the screen went
+>black, the music began and kept going but nothing appeared on
+> the screen?
+>THe .displayme file says it was tested on a 4000/40 and a 1200
+> so I can't
+>see how it wouldn't work on a 4000/30. Any similar experiences/solutions??
+>
+
+Talked to one of the programmers today. Seems Mindwarp *NEEDS* fastram,
+so it won't run on a standard-straight-out-of-the-box A1200 either.
+He also gave me a little patch-program, so the demo will run on
+any AGA machine.
+
+Bert
+
+begin 644 mindpatc
+M```#\P`````````!``````````````$R```#Z0```3)30&<``3(,$``_9P`!(
+
+[...]
+
+-&AH:&AH:&AH:&AH:&AH:-
+``
+end
+
+ Netherlands     |  10 V.32bis lines on rotary   |
+| Internet Mail and 200 newsgroups | Major BBS v6.11 * 18 CD-ROM's |
+|       Call +31 1880 40035        | * QWK * CHAT * GAMES * MORE * |
+--------------------------------------------------------------------
+
+

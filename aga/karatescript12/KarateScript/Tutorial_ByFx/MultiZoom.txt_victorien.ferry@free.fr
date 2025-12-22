@@ -1,0 +1,71 @@
+
+The <Fx><Pa> MultiZoom </pa>... </Fx> effect
+
+  It displays a given number of sprites zooming
+ in circles on the screen, with no use of camera
+ nor any objects but rectangle and image.
+ It has a lot of parameters, they are explained in the
+ code below, after the parameters.
+ 
+ note there are 2 sorts of X and Y (horizontal and vertical)
+ offsets: one apply in 3D, before the perpective pojection,
+ and the other in 2D, after the projection. (same thing as
+ if you move the position rectangle in fact.)
+
+The <Fx><Pa> MultiZoomLight </pa>... </Fx> effect
+
+  same as MultiZoom exept that it displays transparent
+  sprites using one 64 color fade image (like SpriteLight).
+  there are 2 more parameters:
+  one for the colortable to use, and one float for giving
+  a rate of transprency (like spriteLight).
+ 
+-------------------------------------------------
+<MAIN> myscript |0|1</MAIN>              the main script to play...
+
+<KIMG> impacman | data/oldpac.iff </KIMG>       These one, used for sprites
+--------------------------------------------------
+<KSCRIPT>                           let's write a script to play.
+
+    <ID> myscript </ID>
+    <PLAY> part1 | 200000 | 0 | 1 </PLAY>
+  
+</KSCRIPT>
+------------------------
+///<KPART>  <ID> part1  </ID>
+
+    <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> impacman </Pa>   we have seen each image stands for a 256 color palette too.
+    </Fx>
+
+    <Fx><Pa> FillRC</Pa> <Pa></Pa> <Pa>cte| 4</Pa>  </Fx> all screen to color
+
+  <Fx>
+        <Pa> MultiZoom </Pa>
+        <Pa>   </Pa>
+        <Pa> impacman </Pa>
+
+        <pa> cte| 48  </pa>                 Number of particle.
+        <pa> cte| 0.5  </pa>  center X offset 2d   center = 0.5
+        <pa> cte| 0.5  </pa>  center Y offset 2d  center = 0.5
+
+        <pa> cte| 12.0  </pa>        z distance away
+        <pa> cte| 0.7  </pa>        z nearest distance
+
+
+        <pa> sin| 0 | 1.01 | 0.5 </pa>       offset X in 3d
+        <pa> sin| 0 | 1.01 | 0.5 </pa>       offset Y in 3d
+
+        <pa> cte| 0.6  </pa>        focale length FOV. (1 default.)
+        <pa> cte| 0.4  </pa>        sprite sizerateX. si fov=1 and  z=1 fit all screen.
+        <pa> cte| 0.4  </pa>        sprite sizerateY. si fov=1 and z=1 fit all screen.
+
+        <pa> aff| 0|0.05  </pa>        Z depth speed value ( use a aff, not a constant.)
+        <pa> cte| 0.8  </pa>       ray value of the circle.
+
+        <pa> 2cte| 0 | 0 </pa>    wind x, wind y, a force that move the particle use some 0.0005 values.
+        <pa> aff| 0|0.005  </pa>       rotation offset
+    </Fx>
+
+///</KPART>

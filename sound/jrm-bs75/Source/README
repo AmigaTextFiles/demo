@@ -1,0 +1,56 @@
+License
+=======
+This work is licensed under the Creative Commons Attribution-ShareAlike 4.0
+International License. To view a copy of this license, visit
+http://creativecommons.org/licenses/by-sa/4.0/ or send a letter to
+Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+
+Building the source code
+========================
+- SAS C 6.5x is required.
+- To build, run 'smake'.
+- To clean the build directory, run 'smake clean'.
+
+General
+=======
+- Conversion of data files to object files can be done for example using
+  the Bin2Hunk tool (http://aminet.net/package/dev/misc/Bin2Hunk).
+    - To convert the data, run 'Bin2Hunk data.raw data.o NAME _name HUNK data',
+      modifying the data name, hunk name and memory type as necessary.
+
+Graphics
+========
+- The graphics other than the opponent bikes and roadside objects are RAW
+  files converted to object files.
+    - These graphics can be converted to RAW files using any RAW converter.
+- The opponent bike and roadside object graphics are RAW files bundled into
+  blitter object bundles.
+    - The format of these are defined by the BobBundleHeader and BobHeader
+      structures.
+    - After these structures the bundle contains RAW image data.
+    - The bundles are converted into BitmapObject classes by the BitmapObject
+      constructor.
+    - The bundles can be generated using the provided BobBundleGenerator tool.
+        - The tool requires Qt to build.
+        - To build the tool, run 'qmake' and 'make'.
+        - To convert the graphics, run
+          './BobBundleGenerator image.png image.bobbundle'.
+- The provided ImageRipper tool can be used to find images from ROM dump files.
+    - The tool requires Qt to build.
+    - To build the tool, run 'qmake' and 'make'.
+    - To run the tool, run './ImageRipper rom1.bin rom2.bin'.
+        - The second argument is optional. If provided, bytes from the provided
+          files are interleaved with each other.
+        - Use the offset selector to choose the byte offset to show image data
+          from.
+        - Use the bits per pixel selector to choose bits per pixel. Only 1, 2,
+          4 and 8 produce valid results.
+        - Use the width, height and modulo selectors until the expected image
+          is visible.
+        - Type an output filename (output.png) and choose Save from the File
+          menu to save the image.
+
+Sound
+=====
+- The sound is a MOD file converted to TrackerPacker v3.1 format and then to
+  two object files.

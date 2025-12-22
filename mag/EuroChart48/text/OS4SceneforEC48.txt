@@ -1,0 +1,82 @@
+ecnew.font,8
+«»
+«ac»«c1»
+Working demos and Issues under OS4«»
+«»
+«c3»By Varthall / Up Rough«»
+«»«as»«c2»
+June has witnessed the release of a new update for the pre-release version of 
+AmigaOS 4, bringing in new functionalities and fixing some bugs. But what is the 
+situation regarding the demo scene on this platform, you might ask?«»
+«»
+It is well known that the first demo for AmigaOS 4 was Zero by Universe, which 
+uses only a software render for all the 3d stuff. This demo used to work on OS4 
+since the first pre-release came out last year, but it doesn't anymore under the 
+latest Update 3 since there have been changes in the video drivers. Luckily a 
+workaround exists! For owners of a Radeon card like myself it is enough to 
+rename the file ATIRadeon.chip inside the SYS:Kickstart drawer to, say, 
+ATIRadeon.backup then to copy the older ATIRadeon.chip from Update 1, and then 
+reboot the system. This workaround might apply to Voodoo users too. Don't forget 
+to rename the newer driver back again when you're not watching the demo
+anymore!«»
+«»
+Regarding native stuff for OS4, in the past months a bunch of SDL demos from Fit 
+have been ported to our system, thanks to the high degree of portability allowed 
+by the SDL library. While we are waiting for new productions, thanks to the 
+Update 3 we can now run some of the WarpOS ones! Personally I've never run any 
+PPC demo, since I've never owned a PPC accelerator, so I've been curious to know 
+if I'd finally be able to see at least some of them. Firbodi and Toaks on the 
+amigaworld.net forums have tested many WarpOS demos. The result is that at least 
+on AmigaOne the compatibility depends on the hardware used, as was also the case 
+with the PowerUp equipped classic machines. With a Voodoo card, most MadWizards, 
+Mankind demos as well as others from Encore, Nah Kolor and Amnesty are reported 
+to work.«»
+«»
+Since I have a Radeon 9200, the working list got shorter, this is what I've 
+managed to run so far, with some advices on how to make them work:«»
+«»
+«c4»Universe - No Sync
+«c2»«»
+To make the sound work, I had to change the AHI modeid argument for my soundcard 
+in the demo launch batchfile, as described in the readme, in my case it was -
+I0x00340002 for my Soundblaster PCI 128. A 640x480x16 screenmode must be 
+available, as it runs in fullscreen mode. It runs fast and smooth, and it exits 
+cleanly, the only problem is the pointer which is visible and corrupted during 
+the demo, you have to move it to one of the borders to hide it.«»
+«»
+«c4»Universe - No Sync is Back!
+«c2»«»
+Had to change the AHI modeid as in the previous Universe demo. Here the 
+Workbench's pointer is visible, too, but at least it's not corrupted :). The 
+demo ends with a guru, it's possible to kill the program but the screen remains 
+open, and it can't be killed with KillWinGUI since it doesn't get
+listed.«»
+«»
+«c4»Mankind - Pro Gear Spec, Violent Dumb, Deathtrial«»
+«c2»«»
+These demos open a configuration window before starting; the video must be set 
+to "Workbench window", since 15bit screens apparently can't be set under 
+Picasso96Mode, and audio must be set to "Ask AHI requester". Audio seems to work  
+only with Emu10kx compatible cards, using the latest version (6) of both the 
+driver and AHI, as it was reported by Firbodi. With the SB128 driver the sound 
+output is garbled, possibly since there's still no version 6 of the driver.
+These compatibility issues are common to all the programs using the 68k 
+dbplayer.library.«»
+«»
+«c4»Artwork - Megademo IV«»
+«c2»«»
+Similar problems as with the Mankind demos, video working ok but no
+sound.«»
+«»
+There is still a bunch of demos reported to work (with the correct settings 
+and/or datatypes), but I haven't tested them yet.«»
+«»
+What about the future of the OS4 scene? Nowadays it has made its first, very 
+early steps, it's still uncertain if it will grow up to become a mature scene. 
+There are news of some projects going on; only time will tell whether this new 
+incarnation of the Amiga OS will find its way in the heart of the scene groups. 
+I really wish that this happens, the new OS would deserve it!«»
+«»
+(Thanks to Firbodi and Toaks for the compatibility list)«»
+«»
+«e»

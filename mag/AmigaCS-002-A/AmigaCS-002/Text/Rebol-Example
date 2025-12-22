@@ -1,0 +1,88 @@
+@{d 5EEE4C}                                 @{c C2FF8F}Ukazka REBOL "kodu"@{c}
+                                 ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  @{c C2FF8F}Vsetko  pred  hlavickou REBOL [] sa ignoruje, co umoznuje spojit REBOL a HTML kod do
+jedneho celku...  Asi takto:@{c}
+
+<HTML>
+<HEAD>
+   <TITLE>Ciele REBOLu</TITLE>
+</HEAD>
+
+<P><TABLE BORDER=0 CELLPADDING=0>
+   <TR>
+      <TD VALIGN=top WIDTH=140>
+         <P><A HREF="http://www.rebol.com"><IMG
+         SRC="images/rebol01.jpg" ALT="LOGO" WIDTH=108 HEIGHT=72
+         BORDER=0 ALIGN=bottom></A></P>
+         
+         <P>&nbsp;</P>
+         
+         <P><TABLE BORDER=0 WIDTH=140>
+            <TR>
+               <TD WIDTH=140>
+                  <P>
+               </TD></TR>
+</BODY>
+</HTML>
+
+ @{c C2FF8F}...Tu moze byt dalsi pokec...@{c}
+
+REBOL [
+    Title:   "More Lines"
+    Author:  "Carl Sassenrath"
+    Date:    5-Nov-1997
+    File:    %more.r
+    Purpose: {
+        A very simple program to display a text file.
+        Hit return to page through the file, or you
+        can type:
+            q - to quit
+            b - go back to previous page
+            h - go to first page
+            t - go to last page
+    }
+    Comment: {
+        In the Alpha implementation of REBOL uses
+        buffered input... so it does not respond to
+        a single character.  You need to press enter
+        each time. This will change in the future.
+    }
+]
+
+pagelen: 24  ; lines per page
+
+more: make function! [file] [
+    local [text]
+
+    ;---Load file as a BLOCK of strings (lines):
+    text: load/lines file
+
+    ;---While we've got lines::
+    while [not tail? text] [
+
+        ;---Print a page of text:
+        loop pagelen [
+            if tail? text [break]
+            print first text
+            text: next text 
+        ]
+
+        ;---Prompt for command (ENTER will continue):
+        print [file "line" index? text "?"]
+        do select [
+            "q" [break]
+            "h" [text: head text]
+            "t" [text: skip tail text (- pagelen)]
+            "b" [text: skip text (pagelen * -2)]
+        ] input
+    ]
+]
+
+.
+.
+.
+@{c C2FF8F}....a tu moze text pokracovat....@{c}
+.
+.
+
+                                       - @{c C2FF8F}DNA@{c} -

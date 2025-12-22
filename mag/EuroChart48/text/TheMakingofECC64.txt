@@ -1,0 +1,142 @@
+ecnew.font,8
+«»
+«c1»«ac»
+THE MAKING OF THE C64 EC«»
+«»
+(or how I spend my time when I should be working)«»
+«»
+«c3»By Xeron of IRIS?«»
+«c2»«»«as»
+I was at work. I was bored. I was browsing Pouet.net. Someone posted a query 
+about raster interrupts on the C64, and it piqued my interest.«»
+«»
+I used to own a C64 back in the day, and I really liked it. I really got into 
+programming in C64 BASIC, as rubbish as it is. I got my programming tips from 
+Zzap! 64 and Commodore Format. I have disks full of pointless BASIC programs 
+that don't really do very much.«»
+«»
+I never got very far at programming with the C64, though. The games were always 
+a distraction, and machine code remained a mystery to me. I soon upgraded to the 
+Amiga and learnt to code on that. In the years since then, I have actually 
+learnt various flavours of assembly, including 6502. About 2 years ago, I 
+knocked up a cable that let me use my 1541 drive from my Amiga. I started trying 
+out C64 assembly programming in Turbo Assembler and found it fun. But I never 
+released anything... I'm brilliant at starting projects, not so good at 
+finishing them.«»
+«»
+So anyway... there I was at work, bored, and browsing Pouet.net. It occurred to 
+me that I hadn't done any C64 programming in a long time. I made a development 
+environment on my work PC, consisting of Editplus, DASM and VICE, and wrote 
+quite a nice sine-modulated circle effect thing that looked pretty cool. It was, 
+however, a purely character based effect. I wanted to re-learn bitmapped C64 
+graphics (I say re-learn, because I did write a crappy etch-a-sketch program in 
+turbo assembler a while ago to figure out the C64s odd bitmap format).«»
+«»
+"I know", I thought, "I'll write a proportional font routine". It seemed like a 
+good way to get to grips with C64 bitmap graphic programming. It also wasn't as 
+difficult as I thought it would be; by the end of the afternoon I had a routine 
+that printed text in two columns on the screen, and most of that was spent 
+making the font directly in the source-code.«»
+«»
+It looked a bit like a diskmag. I didn't actually think it would get used for a 
+diskmag, though at this point it was purely a programming exercise. I then 
+thought it would be fun to turn the top and bottom borders off, and make some 
+sort of panel with sprites.«»
+«»
+A bit of googling reveals that removing the top and bottom borders is pretty 
+trivial, and a while later I had some icons in the lower border. I thought a 
+logo might look quite good in the upper border. Since I already had a double 
+raster interrupt for the border removal, multiplexing the sprites between the 
+upper and lower borders was simply a matter of adding the code to set up the 
+sprites into the interrupt routine.«»
+«»
+At this point the engine could display text in a prop font, and each paragraph 
+could be coloured independently. I had some icons in the bottom border and a 
+logo at the top.«»
+«»
+At this point, it was starting to look pretty cool. I decided to write a WYSIWYG 
+article editor to make it easier to create test data. I fired up Dev-CPP and 
+started making an SDL-based program to do just that. After a bit of bodging, the 
+article editor was displaying data the same way it appeared in the C64 mag 
+engine.«»
+«»
+The next thing to do was to add support for articles loaded in from disk, rather 
+than hard coded into the executable. This was pretty easy; the C64 KERNAL 
+routines are fairly straightforward. I made a disk icon for the bottom border, 
+and had it light up when the disk was being accessed.«»
+«»
+I then added support for each article to have a background. This was simply a 
+40x25 resolution colour-map which is stored in a run-length compressed form with 
+the article file.«»
+«»
+Then... disaster! I discovered I didn't have true drive emulation turned on in 
+VICE, and was quite happily using the KERNAL load routine to read my articles 
+while the border was turned off. Upon activating true drive emulation, it 
+revealed that you can't load from disk while you have a raster interrupt active! 
+It just didn't work.«»
+«»
+To solve this, I just turned off the raster interrupt when loading from disk. 
+Instead of lighting a disk icon, I printed "Loading..." on the screen. It 
+worked... but... well... it just didn't look as slick.«»
+«»
+As I continued to work on the engine, this annoyed me more and more. I posted up 
+a question on Pouet about loading while IRQs were active, and was pointed 
+towards the CSDB forum. I repeated my question there and was pointed to an IRQ 
+loader routine. After a bit of hacking, I got it working! And so.. the disk icon 
+was BACK!«»
+«»
+I sent a preview off to Darkhawk to see what he thought of this thing. I didn't 
+really expect it would get used, but I was quite pleased with it so I thought 
+I'd show it to him. Darkhawk responded enthusiastically, and said he'd often 
+thought about how it would be cool to get Eurochart out on other platforms such 
+as the C64.«»
+«»
+This was quite a motivating response, and I soon got back to work. The next 
+thing I added was the ability to link articles from an index article, and the 
+ability to ask the user to insert the relevant disk when an article file wasn't 
+found.«»
+«»
+From very early on, I had in the back of my mind the idea that it shouldn't be 
+*TOO* hard to add support for inline monochrome clipart images, but I never 
+actually got down to implementing it simply because I thought it might be tricky 
+to patch into my (somewhat spaghettified) layout engine, but I felt it was 
+something really needed, so I finally sat down and started work.«»
+«»
+I had two ideas for how images would be stored. One way was to store the images 
+separately on disk, and put a code into the article data to load them in. This 
+means that you only need to have one copy of an image on disk and it could be 
+used in many articles, or many times in one article from the same
+source.«»
+«»
+The other idea was just to dump the image data inline with the article. I chose 
+the latter method, because the images were likely to be small anyway, and the 
+only ones likely to be re-used within articles would be small ones like 
+separator bars. Also, if two articles needed the same image, but were on 
+different disks, you'd still need two copies of the image anyway.«»
+«»
+I added image support into the article editor first. I made it so you could 
+import a monochrome windows .BMP file directly into the article at the cursor 
+position. This proved to be a lot trickier than I thought. The first attempt 
+simply bombed out when you imported the image. Then, I got garbage. Turns out 
+that I'd misunderstood the BMP image format specs... I found a different 
+description on another webpage that made more sense and finally got an image to 
+load properly, albeit upside down. It turns out that monochrome BMPs are stored 
+bottom to top... obviously.«»
+«»
+Just decoding the image was only half the battle. I hadn't written the editor 
+with upgradeability in mind, and there were all sorts of gotchas related to 
+having raw image data inline with the text. Actually the editor is a big nasty 
+hack i'd knocked up quickly to get the job done... it took quite a bit of 
+bodging before it happily let me edit articles containing images without 
+corrupting the data, or crashing. Even now, if I move past an image, and hit 
+backspace, I can delete into the image data and "draw" by typing characters into 
+it... which is actually quite good fun so I doubt I'll fix it.«»
+«»
+After that, I wasn't looking forward to adding the related routines to the C64 
+engine, but it went surprisingly smoothly. I'd stored the inline graphics in 
+pretty much the format the C64 used them, so it was just a case of figuring out 
+the X and Y position to display the image from the layout routine, and dumping 
+it to the screen. Jobs a good 'un, as they say in the south west of
+England.«»
+«»
+«e»

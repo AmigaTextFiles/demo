@@ -1,0 +1,234 @@
+V1.1
+
+EVENT "GARETH MURFIN"
+PICTURE "zippy:zippybits/eyeback.iff"
+WIPE windmill speed 5
+CYCLE on
+TABS 100 200 300 400 500 -1 -1 -1 -1 -1
+MARGINS on 32 607
+GRID off 6 6
+WORDWRAP on
+PALETTE 000 000 fff 888 f00 d50 ff0 080
+FONT "Ernest.font" 45
+COLOR 6 4 6 2 3 0 0
+ATTRIBUTES edge remap center
+STYLE 0 3 4 3 6 2 1 35 5 1 20 0 0 0
+TEXTWIPE bob northeast speed 2
+TEXT 141 21 "GARETH MURFIN"
+FONT "Scala.font" 11
+STYLE 0 3 4 3 6 2 1 9 2 1 20 0 0 0
+TEXTWIPE bob northwest speed 10
+TEXT 309 57 "OF"
+FONT "Ernest.font" 45
+COLOR 7 6 6 2 3 0 0
+STYLE 0 3 4 3 6 2 1 35 5 1 20 0 0 0
+TEXTWIPE bob southeast speed 2
+TEXT 227 80 "GazSting"
+FONT "EricaItal.font" 15
+STYLE 0 3 4 3 6 2 1 11 2 1 20 0 0 0
+TEXTWIPE bob west speed 6
+TEXT 263 116 "ENTERPRISES"
+FONT "Ernest.font" 45
+COLOR 6 4 6 2 3 0 0
+STYLE 0 3 4 3 6 2 1 35 5 1 20 0 0 0
+TEXTWIPE bob north speed 6
+TEXT 210 166 "PRESENTS"
+FONT "EricaItal.font" 15
+COLOR 7 6 6 2 3 0 0
+STYLE 0 3 4 3 6 2 1 11 2 1 20 0 0 0
+TEXTWIPE bob west speed 6
+TEXT 304 148 ""
+PAUSE "THe Hoppy-X-DEMo" 2
+END
+
+EVENT "AND NOW...."
+PICTURE "zippy:ZiPPYbits/eyeback.iff"
+WIPE spot speed 5
+TABS 100 200 300 400 500 -1 -1 -1 -1 -1
+MARGINS on 32 607
+GRID off 6 6
+WORDWRAP on
+PALETTE 000 000 fff 888 f6f d50 eb0 080
+FONT "Ernest.font" 45
+COLOR 4 2 1 2 3 0 0
+ATTRIBUTES edge remap
+STYLE 0 3 4 3 6 2 1 35 5 1 20 0 0 0
+TEXTWIPE bob west speed 10
+TEXT 30 77 "AND NOW...."
+FONT "times.font" 24
+COLOR 2 4 1 2 3 0 0
+STYLE 0 3 4 3 6 2 1 19 3 1 20 0 0 0
+TEXTWIPE bob east speed 10
+TEXT 79 123 "FOR A TASTE OF THINGS TO COME..."
+FONT "Ernest.font" 15
+COLOR 1 4 1 2 3 0 0
+STYLE 0 3 4 3 6 2 1 11 2 1 20 0 0 0
+TEXTWIPE brick speed 10
+TEXT 582 7 "GM97"
+PAUSE "GazSting Enterprises..." 1
+END
+
+EVENT "AND NOW"
+PICTURE "zippy:ZiPPYbits/train!"
+WIPE escalator speed 5
+TABS 100 200 300 400 500 -1 -1 -1 -1 -1
+MARGINS on 32 607
+GRID off 6 6
+WORDWRAP on
+PALETTE 111 ba9 544 787 965 978 a86 433
+FONT "Ernest.font" 45
+COLOR 0 3 7 2 3 0 0
+ATTRIBUTES edge remap
+STYLE 0 3 4 3 6 2 1 35 5 1 20 0 0 0
+TEXTWIPE bob southeast speed 10
+TEXT 93 86 "AND NOW" pause 1
+FONT "Ernest.font" 15
+STYLE 0 3 4 3 6 2 1 24 4 1 20 0 0 0
+TEXTWIPE bob northwest speed 10
+TEXT 160 127 "FOR SOMETHING COMPLETLY DIFFERENT"
+TEXTWIPE wipe speed 10
+TEXT 316 108 ". . . . . . ."
+TEXTWIPE bob east speed 5
+TEXT 153 139 "----------------------------------------------------------------"
+TEXTWIPE wipe speed 10
+TEXT 77 182 ""
+PAUSE END 2
+END
+
+EVENT "THe Hoppy-X-DEMo"
+PICTURE "zippy:zippybits/eyeback.iff"
+WIPE diakon speed 5
+TABS 100 200 300 400 500 -1 -1 -1 -1 -1
+MARGINS on 32 607
+GRID off 6 6
+WORDWRAP on
+PALETTE 000 000 fff 888 f00 d50 ff0 080
+FONT "Ernest.font" 45
+COLOR 6 4 1 2 3 0 0
+ATTRIBUTES edge remap center
+STYLE 0 3 4 3 6 2 1 35 5 1 20 0 0 0
+TEXTWIPE bob west speed 10
+TEXT 111 91 "THe Hoppy-X-DEMo"
+FONT "Ernest.font" 15
+ATTRIBUTES edge remap
+STYLE 0 3 4 3 6 2 1 11 2 1 20 0 0 0
+TEXTWIPE windmill speed 10
+TEXT 487 126 "GM97"
+FONT "Ernest.font" 45
+STYLE 0 3 4 3 6 2 1 47 7 2 20 0 0 0
+TEXTWIPE bob west speed 10
+TEXT 36 160 ""
+FONT "TermISO80.font" 8
+COLOR 6 4 4 2 3 0 0
+ATTRIBUTES remap
+STYLE 0 3 4 3 6 2 1 7 1 1 20 0 0 0
+TEXTWIPE bob east speed 10
+TEXT 46 190 ""
+PAUSE "PROGRAMMING AND CODING" 3
+END
+
+EVENT "GazSting Enterprises..."
+PICTURE "zippy:ZiPPYbits/Dawn_of_the_dead"
+WIPE newscrollout south speed 5
+TABS 100 200 300 400 500 -1 -1 -1 -1 -1
+MARGINS on 32 607
+GRID off 6 6
+WORDWRAP on
+PALETTE 000 fff ff0 f00 088 333 000 000
+FONT "Ernest.font" 45
+COLOR 3 0 6 2 3 0 0
+ATTRIBUTES edge remap
+STYLE 0 3 4 3 6 2 1 35 5 1 20 0 0 0
+TEXTWIPE spiral speed 3
+TEXT 97 120 "GazSting Enterprises..." pause 1
+PAUSE "GazSting Enterprises" 2
+END
+
+EVENT "GazSting Enterprises"
+PICTURE "zippy:ZiPPYbits/Day_of_the_dead"
+WIPE derreck south speed 5
+TABS 100 200 300 400 500 -1 -1 -1 -1 -1
+MARGINS on 32 607
+GRID off 6 6
+WORDWRAP on
+PALETTE 000 444 fff ff0 333 048 0ff 208
+FONT "Ernest.font" 45
+COLOR 3 0 4 2 3 0 0
+ATTRIBUTES edge remap
+STYLE 0 3 4 3 6 2 1 35 5 1 20 0 0 0
+TEXTWIPE backgammon speed 3
+TEXT 110 122 "GazSting Enterprises" pause 1
+PAUSE "GazSting Enterprises.1" 2
+END
+
+EVENT "PROGRAMMING AND CODING"
+PICTURE "zippy:ZiPPYbits/eyeback2.iff"
+WIPE fade bycolor 0 speed 5
+TABS 100 200 300 400 500 -1 -1 -1 -1 -1
+MARGINS on 32 607
+GRID off 6 6
+WORDWRAP on
+PALETTE 000 466 223 888 b94 bbb fe9 fff
+FONT "Scala.font" 11
+COLOR 7 2 2 2 3 0 0
+ATTRIBUTES remap
+STYLE 0 3 4 3 6 2 1 9 2 1 20 0 0 0
+TEXTWIPE bob west speed 10
+TEXT 159 31 "PROGRAMMING AND CODING" pause 2
+FONT "topaz.font" 8
+STYLE 0 3 4 3 6 2 1 12 2 1 20 0 0 0
+TEXTWIPE dump speed 5
+TEXT 154 56 ""
+FONT "Scala.font" 11
+STYLE 0 3 4 3 6 2 1 9 2 1 20 0 0 0
+TEXTWIPE bob west speed 10
+TEXT 158 80 "SOUND AND SFX"
+FONT "topaz.font" 8
+STYLE 0 3 4 3 6 2 1 12 2 1 20 0 0 0
+TEXTWIPE dump speed 5
+TEXT 154 96 ""
+TEXT 154 116 ""
+FONT "Scala.font" 11
+STYLE 0 3 4 3 6 2 1 9 2 1 20 0 0 0
+TEXTWIPE bob west speed 10
+TEXT 159 132 "PLAY TESTING"
+FONT "topaz.font" 8
+STYLE 0 3 4 3 6 2 1 12 2 1 20 0 0 0
+TEXTWIPE dump speed 5
+TEXT 154 156 ""
+FONT "Scala.font" 11
+STYLE 0 3 4 3 6 2 1 9 2 1 20 0 0 0
+TEXTWIPE bob west speed 10
+TEXT 160 178 "DIRECTOR AND CONCEPTS"
+FONT "topaz.font" 8
+STYLE 0 3 4 3 6 2 1 12 2 1 20 0 0 0
+TEXTWIPE dump speed 5
+TEXT 203 114 ""
+FONT "times.font" 24
+COLOR 0 6 5 2 3 0 0
+ATTRIBUTES edge remap
+STYLE 0 3 4 3 6 2 1 19 3 1 20 0 0 0
+TEXTWIPE bob east speed 10
+TEXT 158 51 "GARETH MURFIN"
+TEXT 159 98 "GARETH MURFIN"
+TEXT 159 150 "GARETH MURFIN"
+TEXT 160 194 "GARETH MURFIN"
+PAUSE "AND NOW...." 2
+END
+
+EVENT "GazSting Enterprises.1"
+PICTURE "zippy:ZiPPYbits/Night_of_the_dead"
+WIPE derreck south speed 5
+TABS 100 200 300 400 500 -1 -1 -1 -1 -1
+MARGINS on 32 607
+GRID off 6 6
+WORDWRAP on
+PALETTE 000 fff 08f f00 333 000 008 000
+FONT "Ernest.font" 45
+COLOR 3 5 5 2 3 0 0
+ATTRIBUTES edge remap
+STYLE 0 3 4 3 6 2 1 35 5 1 20 0 0 0
+TEXTWIPE pokabal speed 1
+TEXT 100 82 "GazSting Enterprises" pause 1
+PAUSE "AND NOW" 2
+END

@@ -1,0 +1,70 @@
+              ___________________________________ ____________
+ -------------\  ___  /\  ___  /\  ____/\  ___  /-\  ____/\  /------------
+ -------------/ /--/ /-/ /--/ /-/ /__---/ /--/ /--/_/___--/ /-------------
+ ------------/ //\/ /-/ //\/ /-/ //__\-/ //\/ /--/___  /-/ /--------------
+ -----------/ /-\  /-/ //\__/-/ /-----/ /-\  /------/ /-/ /---------------
+ ----------/ /--/ /-/ /-\ \--/ /___--/ /--/ /-_____/ /-/ /----------------
+ ----------\/---\/--\/---\/--\_____\-\/---\/--\_____/--\/-----------------
+
+      B E Y O N D   T H E   F R O N T I E R   -   I S S U E   F I V E
+
+                           (Last Minute Notes!)
+
+                              by zYLAX / A51
+
+Okay,  time to do the last minute bit again and tell ya all what went wrong
+in the last few seconds of compiling the mag.
+
+Well, nothing too serious this time.  The text in the intro is a bit messed
+up  as  I  had to send the ASCII text down to Slade in order to compile it.
+Unfortunately the text became a little unjustified but there was no time to
+get it fixed.
+
+Also  the  RAM  Installer and the Hard Drive Installer MAY not work as I've
+had  to  move  files  and  directories  around  the three diskz in order to
+squeeze everything in.
+
+PLEASE  NOTE:   The RAM Installer will ONLY copy the TXTDATA directory from
+disk  two into RAM:  BTF still needs the disk to access the articles in the
+GFXDATA directory.  None of the articles on disk three are installed.
+
+As there may be a chance that the HD Installer may fail (Sorry but I hadn't
+enough time to get it tested!), here's a few guidelines for installing BTF5
+manually onto your hard drive.
+
+ 1) Firstly you must ensure that all files from the system directories on
+    on the disk are also present in your hard drive's system drawers
+    (e.g. DEVS, LIBS. etc.) Most of these are standard but you may not
+    already have the CRM.Library.
+
+ 2) You only need to create two directories for articles on your hard
+    drive.  These are TXTDATA and GFXDATA. Then simply copy all the files
+    from the relevant TXTDATA and GFXDATA directories on each of the three
+    BTF5 disks.
+
+ 3) Ensure that the following files are included in the same directory:
+               BFMAG5.EXE                        DMC.CONFIG
+    ...And copy over the DATA directory (and it's contents).
+
+ 4) Finally, add the following assigns to your user-startup:
+            assign Beyond>The<Frontier5(DISK-1):  Work:BTF5....etc?
+            assign Beyond>The<Frontier5(DISK-2):  Work:BTF5....etc?
+            assign Beyond>The<Frontier5(DISK-3):  Work:BTF5....etc?
+
+If  you  are  attempting  to run BTF5 on a 1MB machine and are experiencing
+problems,  try disabling all non-essential devices (disk drives, CD drives,
+HD partitions.  etc.).  Also turn off the muzik once you have loaded up the
+mag.
+
+The  HD  Installer  can  be  found on disk three, and any sourcecode can be
+located in the SAUCE directory on disk two.
+
+OKAY, THAT'S ALL!
+
+Enjoy DiZ!
+
+C yA l8R!
+
+zYLAX/A51
+
+

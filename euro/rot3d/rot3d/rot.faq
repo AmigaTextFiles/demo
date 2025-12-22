@@ -1,0 +1,122 @@
+4-11-94
+rot2=PONG.  rot3d.   :)
+
+
+QUICK PLUG:
+   We also wrote an excellent PIM called On The Ball, a commercial
+Calendar/ Addressbook/NotePad/Todolist program.  By the time you read this
+there should be English, French, and German native packages available.  If
+you have the means, I highly recommend you pick one up.
+
+
+ROT3D REQUIREMENTS:
+ * Fast computer
+ * Math co-processor
+ * Fast Ram, 32 bit arch
+ * An A3000 and A4000 work great!
+ * See below for possibilities of no-math versions.
+ * 1.5Meg RAM (oops! :)
+
+
+CONTROLS:
+ * Mouse in center of view window = stand still.
+ * Distance from mouse to center of view window= speed of rotation or
+    running.
+ * q = quit
+ * , = Dim light
+ * . = Increase light
+ * y = Auto rotate clockwise
+ * Y = Auto rotate counter-clockwise
+ * Numeric keypad controls movement
+ * SPACEBAR = open doors/secret doors  (there are 2)
+ * l = Switch to always LORES mode
+ * h = Switch to always HIRES mode (good for fast computers)
+ * a = Auto-switch between LORES & HIRES when running and walking.
+ * Right mouse = freeze/unfreeze
+
+
+SOURCECODE AVAILABLE:
+    It compiles under Aztec and should compile under SAS with _very_ little
+ work since it just compiled under SAS a little while ago.  Anyone may use
+ the source for any purpose, just send us a copy of anything you release.
+ The source will be posted to Aminet:dev/misc/rot3dsrc.lha  (approx 150k).
+ It is very easy to create your own dungeons and graphics for this demo,
+ once you get it to compile.
+
+
+FUTURE WORK:
+    Our original intent was to develop rot into a Wolf3d like PD game.
+ We received many offers for help, but most fell through, and now we don't
+ have time to work on the engine any more.  This will definately be the
+ last rot engine we release.
+    We are always happy to talk about the engine, possibilities for
+ speedups, etc.  If you decide to use our souce and need a little help with
+ modifying it, contact one of the authors.  We may even be coerced to do a
+ little work if we see a possible speedup or easy cool new feature.  We
+ will also definately help to do a no-math version, see below...  Also, if
+ we would love to talk to other authors who are writing their own routines.
+
+
+NO MATH CHIP:
+    The current version is compiled using the math chip to do the floating
+ point calculations.  We tried to substitute our FP math with INT math
+ twice, but both times, the result was a little slower and choppy (not
+ enough precision).  We would really like to see someone take our
+ sourcecode and make a rot3d_no_math version and email us.  We don't have
+ any experience and I'm sure there are plenty of people who could do this
+ quite easily.  There is only 1 file you would need to change in the source
+ package: rot.c, and if you already have some experience with this sort of
+ thing, then you may be able to do it in asm in an hour or two.  With our
+ variable size screen, the no_math verison would allow the other 80% of the
+ amigas to see rot3d at a decent speed!  If you are interested in this,
+ PLEASE email us.
+
+
+QUICK ENGINE OVERVIEW:
+    The reason why Amiga tmapping demos are inferior to IBM ones (Wolf3d,
+ DOOM, etc) is because the IBM has chunky graphics and the Amiga is planar.
+ For each pixel on the IBM, you can move the whole pixel with one
+ instruction.  On the Amiga, for each pixel, you have to do several logical
+ operations to get the pixel from the appropriate byte in each plane, then
+ several more operations to put it back.  There is an inherent ~8 times
+ slowdown on the Amiga in the heart of the engine.
+    One way to counter this is to pre-convert all your data into
+ chunky-like format.  This is what rot does, but it is still slow in
+ comparison to the IBM. Each of 10 bitmaps (256 X 128 X 4) is preconverted
+ into a data file. Then, in real time, columns from the bitmaps are chosen
+ and shrunk to the appropriate height onto the screen.  There is no true
+ texturemapping or rotating bitmaps.
+    The lighting is done by indexing the chunky texture into a light table
+ to get the light-adjusted setting.  For another 32-64k of ram, you add
+ tables to get cool effects like: always-bright areas, always-dark areas,
+ glowing areas, etc with no slowdown.
+
+
+OTHER TEXTURE MAPPING PROGRAMS:
+ * rot, rot2, rot3d :)
+ * tmapdemo (Aminet), By Chris Greene at Commodore.
+ * Amber Moon (commercial game)
+ * Legends of Valor (commercial game)
+ * wolf_3d -- Aminet:dev/misc (See Peter McGavin's speedup patch)
+ * Illusions demo  (?? name)
+ * Cube-O-Matic (very old demo)
+ * There are probably a few other eurodemos I forgot to mention.
+ * I have seen half a dozen other wolf-like programs that were never released
+   as far as I know, and were mostly very slow.
+
+
+AUTHORS:
+  School: (through 3/95?)
+	Jason Freund				Gabe Dalbec
+    413-B Poplar Place			1150 East 8th Street #410
+    Birmingham, AL 35209		Tuscon, AZ 85719
+    205-802-7345				602-770-9561
+  Permanent:
+	690 Erie Dr.				789 Butterfly Road
+	Sunnyvale, CA 94087 USA		Quincy, CA  95971  USA
+	408-732-0421				916-281-6600
+  Email:
+    freund@cis.uab.edu			dalbec@cs.arizona.edu
+
+  Major Contributor: Chris Hames (Author of PC-Task!)
+

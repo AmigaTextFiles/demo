@@ -1,0 +1,81 @@
+LODGE AGA Experience Demo
+-------------------------
+
+This is the first demo I made. It draws some figures on your screen and
+cycles the 128 used colors. Of course you need AGA graphics to run this demo.
+This demo runs in full speed on an Amiga 1200 with 2 Mb of FAST-ram.
+
+Press the left mouse button to exit the demo.
+
+If you have any suggestions, how to improve this demo, or you have found a
+bug. Write to me at the following adress :
+
+	Ronald Roemeling
+	Graaf Edzardstraat 46
+	9902 HV
+	Appingedam
+	Holland
+	e-mail: rcflipp@dds.nl
+
+The demo itself is PD, so you don't have to send me any money for this
+program. (Unless you definitely want to)
+
+VALKYR 1995.
+
+V1.1 - What's new ?
+
+- After receiving feedback trough e-mail (thank  ya all) I got right to work
+  to present an improved version of the demo...
+- Effect 5 (Pixel raster) has been improved. It does not destroy the
+  background anymore and is much faster as before.
+- I made the color cycle routine slightly faster.
+- The edge line effect has been made faster.
+- Improved the parallax effect. It does a realtime flip-Y and starts at
+  the bottom or at the top of the screen.
+- The selection of a new effect has been made slightly faster.
+- Removed a test at the check left mouse button procedure.
+- The color cycle routine starts now almost inmediately.
+- A new effect has been added : The invertor. It places a raster over the
+  screen which inverts the colors.
+- The web-effect is now much faster.
+- Precalculation of cosinus table at initialisation.
+- Added the luxaflex effect as a variation of the pixelize effect.
+- Lodge Logo effect has been added: Draws an inverted Lodge logo. To make
+  the precalculation section more interesting.
+- Several hotkeys have been added :
+
+	F1  - Lores screen
+	F2  - Hires screen
+	F3  - SuperHires screen
+	F4  - No interlace
+	F5  - Interlace
+	TAB - Change colors
+
+- Watch out !!! To quit the demo you must now press the right mouse button !!
+- The sliding screen at the start has been removed.
+- Color cycling routine has slightly been improved, some precalculation has
+  been used.
+- Removed a small bug in the web effect. The first selected color was the
+  last in the color range and not the first.
+- The web effect can draw the color ranges in two directions.
+- Several hotkeys have been added :
+
+	F6  - Slow color cycling
+	F7  - Average color cycling
+	F8  - Normal color cycling
+	F9  - Fast color cycling
+	F10 - Incredible color cycling
+
+- Removed the second screen at the intro. There is now a window at the end
+  of the demo. Use the left mouse button or time out to leave this window.
+- Removed color 0 from the cycle range.
+- Added color 0 flash
+- Removed some small bugs. Cubes, Circles and the paralax effect are being
+  drawn on the whole screen.
+- The original TBL (The Black Lodge) logo was replaced by the (temporary) 
+  logo with the   new name of our group: Lodge. This was done because of 
+  the fact that there already is a Swedish group called TBL (The Black Lotus) which 
+  was established long before our group. They asked us if we would change the 
+  abreviation. We're no name thiefs, so we changed the whole name.
+
+The next version... Will be even better (we hope)...

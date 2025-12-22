@@ -1,0 +1,123 @@
+@{xoffset 21}@{d FFEF63}¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+@{xstep 182}@{font ACS-Title.font 18}Schizzyho emulaçní okénko: 8bitové ATARI@{font}
+@{xstep 440}@{c A6FFF8}@{i}Schizzy/Abort@{ui}@{c}@{ystep -8}
+
+
+
+  @{xstep 0}@{font ACS-Title.font 18}V@{font} minulém  çísle  ACS  jsem  se  detailnë  zabýval  emulací îestnáctibitových
+poçítaçû firmy Atari, dnes se vrhneme na ty osmibitové.  Je jich celá êada (@{c EDFF94}400,
+800,  1200XL,  600XL,  800XL,  65XE,  130XE  a  800XE@{c}),  víceménë  se liîí pouze
+velikostí  osazené  pamëti  (od  16  po  128  kB)  a  souborem zákaznických çipû
+(@{c EDFF94}CTIA/GTIA,  POKEY,  ANTIC@{c}).   Vîechny  jsou  postaveny na procesoru MosTek 6502
+firmy  MOS  Technology  (ve  vylepîených  XL/XE verzích se pouùíval pokroçilejîí
+model  6502C)  tikajícím  na  frekvenci  @{c EDFF94}1.79@{c} MHz.  Pêipomínám, ùe stejný CPU se
+montoval do poçítaçû C64 a starých Apple II.  Designerem celé architektury, IMHO
+na   osmibiïák   vskutku  výborné,  byl  amigistûm  známý  Jay  Miner  (koncepci
+programovatelných  zákaznických  çipû uplatnil pozdëji v Amize).  Pêiznám se, ùe
+k tëmto  poçítaçûm  mám  sentimentálná  vztah,  protoùe  jsem dlouhou dobu jedno
+takové @{i}chrastítko@{ui} (800XE) vlastnil ;-)
+
+  Tak,  a  teð  k  emulacím  tëchto  kompû  na  Amize.  Podobnë jako na Atari ST
+existují  emulátory  -  alespoñ  ty  seriózní  -  jenom dva.  Zaçnu od konce tím
+novëjîím,  a  to  z  toho  prostého  dûvodu,  ùe  jsem  otestoval pouze jeho 0.1
+betaverzi,   která  mi  jednoduîe  nefunguje.   Tento  emulátor  spáchala  firma
+@{c EDFF94}Microcode@{c}  (konkrétnë @{i}Joe a Mike Fentonovi@{ui} - ùe by pêíbuzní?  ;-) známëjîí jiným
+emulátorem  @{c EDFF94}Fusion@{c}.  Ponëkud nepatêiçnë ho nazvala@{c EDFF94} ACE - Atari Console Emulátor@{c};
+nejenùe to není ùádné eso, navíc se mi to plete s kompilátorem AmigaBasicu.
+
+  Po  jeho  spuîtëní  na  vás  nejdêíve  vyskoçí  @{pict Atari-ACE.png}okénko  preferencí@{pict}.  Mûùete si
+nastavit  haldu  voleb,  jako  têeba  typ emulovaného kompu (@{c EDFF94}400/800/XL/XE@{c}), CPU
+(@{c EDFF94}6502/6502C@{c}),  rychlost  emulace  (@{c EDFF94}normální/akcelerovaná@{c}), joysticky a také druh
+ROMky.  Tady ACE nabízí dvë moùnosti:  ROMku emulovat nebo naçíst originální ROM
+ze souboru.  Pokud chcete pouùít originální ROMku, nezbývá vám nic jiného neù si
+ji  vycucnout  z nëjakého "real" Atari stroje anebo si sehnat emulátor Atari pro
+PC,  který se jmenuje XFormer verze 2.5 - u nëj je ROM pêibalena (jedná se o têi
+soubory:   @{c EDFF94}ATARIBAS.ROM, ATARIXL.ROM a ATARIOSB.ROM@{c}).  Nastavení voleb si mûùete
+gadgetem Configuration uloùit na disk a gadgetem Start emulátor spustit.
+
+  Uçinil  jsem  tak.   No,  a - jak jinak - nastaly problémy.  Pêestoùe jsem mël
+nastavenou  volbu @{i}Emulovat ROM@{ui}, emulátor neustále protestoval chybovým hláîením:
+ROM  soubor nebyl nalezen.  Nastavil jsem mu tedy, aby naçítal originální ROM ze
+souboru.   Jiný otravný requestr:  ROM soubor má îpatný formát.  Vrtal jsem snad
+do  vîech  moùných variant nastavení ale rozjet emulaci se mi prostë nepodaêilo.
+Êekl jsem si, ùe to bude od Microcode nejspíî nëjaké funware a vybodl se na to.
+
+  Druhým emulátorem osmibitových Atari - historicky starîím - je produkt jistého
+@{c EDFF94}Davida  Firtha@{c}.   Nazval  ho  docela prostë @{b}@{c EDFF94}Atari Emulator@{c}@{ub}, dospël k verzi 0.6 a
+nevypadá  to, ùe by chtël ve vývoji dále pokraçovat.  Tento emulátor je zajímavý
+tím,  ùe ho autor koncipoval jako generický (@{c EDFF94}@{i}pûvodnë byl psán pro Unix - hi PeKr
+! @{ui}  ;-@{c})  a  jeho  zdrojový kód v Céçku uvolnil k veêejnému pouùití.  Nevýhoda je
+zêejmá  -  není  optimalizován pro hostitelský poçítaç.  Na to se nejspíî nemohl
+dívat  autorûv  bratr  Stephen a trochu to pro Amigu pêekopal, bohuùel nedoplnil
+jednu dûleùitou vëc, a tou je zvuk.  Generická verze musela být asi dost údësná,
+protoùe  i  pêes  optimalizaci  to je @{c EDFF94}*velmi*@{c} pomalá emulace, dokonce i na Amize
+s 68030/50.
+  I  tento  emulátor vyùaduje pro svûj bëh originální ROM v souborech.  Zpûsoby,
+jak  ji  získat  jsem  popsal  výîe u @{c EDFF94}ACE@{c}.  Instalace má nëkolik záludných míst:
+adresáê,  do  kterého program kopírujete, se musí nacházet v nejvyîîí (koêenové)
+ûrovni  disku  a  musí  se  jmenovat  Atari800;  soubory  s ROM se musí nacházet
+v podadresáêi Object, na který musí ukazovat assign Object:  (tato skuteçnost je
+v  dokumentaci taktnë zamlçena).  Dále budete potêebovat @{b}ixemul.library@{ub}, nejlépe
+vyhovuje  verze  45.1,  se  starîími nebo naopak novëjîími se emulátor s oblibou
+zhroutí.   Spouîtët  se  dá  jenom  ze  @{c EDFF94}Shellu/CLI@{c}  a  je mu moùno zadat nëkolik
+parametrû, kterými ovlivníte typ emulace.  Vybrat si mûùete mezi modely 800 nebo
+800XL  (volba  130XE  není  v  amigovském  klonu moùná, respektive zadat ji sice
+mûùete ale stejnë se bude emulovat XL).
+
+  Dalîí  volbou  si  lze  vybrat mezi @{c EDFF94}OCS/ECS/AGA@{c} çipy a barevným displejem nebo
+paletou  îedi.  Velkou výhodou emulátoru je to, ùe dokáùe naçíst disketové image
+ve formátech XFD a ATR.  Neumí jenom komprimovaný disketový formát @{c EDFF94}DCM@{c}, coù není
+zas  takový  problém  -  na  Aminetu se povaluje utilitka @{c EDFF94}DCM2ATR@{c}, která vám DCM
+image  zkonvertuje  právë do ATR.  Uùiteçná je taky jiná utilitka IMU, která umí
+pracovat  s  XFD/ATR  soubory  pêímo  z AmigaDOSu; mûùete si virtuální "disketu"
+v Shellu  zformátovat, kopírovat do ní soubory a naopak si z ní soubory vybírat,
+soubory na disketë mazat atd.
+
+  Pokud  odklepnete  pêíkazovou  êádku  s  parametry, program se vás pro jistotu
+jeîtë jednou zeptá na váî çipset a také na to, zda poùadujete spustit emulaci na
+vlastní  obrazovce  nebo  v okénku WorkBenche (pêed tím dûraznë varuju!  - pokud
+ovîem nechcete, aby se vám vaîe maîina prakticky zastavila :).
+
+  Cvaknëte  na  OK.   Nejprve  se  objeví  @{pict Atari-Credit.png}okénko@{pict}  s  nezbytným  kopyrajtem, pak
+obrazovka  zçerná  a  chvíli  se  zdánlivë  nic  nedëje.   Za pár vteêin se poté
+dostanete  do  MemoPadu  (@{c EDFF94}400/800@{c})  nebo  pêímo  do  Basicu (@{c EDFF94}XL/XE@{c}).  Program má
+roletové  menu,  z  kterého  lze ovládat disketové mechaniky 1-8 (insert/eject),
+navolit  bootovací  disketu, naçíst cartridge (kde ovîem sehnat takové cartridge
+zkovertované  do souboru, opravdu netuîím), vybrat kontrolér (knipl/paddle) nebo
+simulovat stisk nëkteré systémové klávesy, pêípadnë poçítaç resetovat.
+
+  Jak jsem jiù poznamenal, je emulace velmi pomalá, pêesto vîak celkem stabilní.
+Výjimeçnë spadne s hláîením Obsolete function calling, ale to má na svëdomí dost
+chybová  ixemul.library.   Programy, jako têeba @{pict Atari-DOS.png}DOS 2.5@{pict} fungují celkem obstojnë;
+dokonce jsem rozjel i nëkterá klasická atarácká dema:@{ystep 4}
+  - @{pict Atari-ADemo.png} Atari demo @{pict}@{ystep 2}
+  - @{pict Atari-Earth.png} Earth      @{pict}@{ystep 2}
+  - @{pict Atari-Balls.png} Balls      @{pict}@{ystep 2}
+@{ystep -3}
+  U  modelû  XL/XE  si  mûùete  otestovat "hardware" v @{pict Atari-Self.png}Self Testu@{pict}, do kterého se
+dostanete basicovským pêíkazem BYE.
+
+  Pokud  máte  pêístup  k  @{c EDFF94}Internetu@{c},  mûùete  si  stáhnout velké mnoùství volnë
+îiêitelného    softu    z    FTP    archivu    (hlavní    atari    8bit    site)
+@{c FFDD0C}ftp://atari.archive.umich.edu/atari/8bit@{c}.   Emulátor  Atari800  je  pêístupný na
+Aminetu    v    @{c FFDD0C}misc/emu/atari800.lha@{c}.     Diskusím    se    vënuje    newsgroup
+@{c FFDD0C}comp.sys.atari.8bit@{c}.
+
+  Kolem osmibitových Atari jeîtë stále funguje poçetná (a aktivní) komunita; lze
+se  z  nich  pêipojit  i  na  InterNet, pár nadîencû se snaùí implementovat unix
+(projekt ANIX (osmibitový unix?  to tady jeîtë nebylo...)).
+
+
+
+  That's  all  folks.   Pokud  bude  jeîtë  nëjaké  pêíîtë, sejdeme se u emulace
+poçítaçû  CPC.
+
+                                                    - @{c EDFF94}Schizzy@{c} -
+
+
+P.S.   @{i}Pokud  nëkdo  çetl mûj pêedchozí çlánek a postrádal tam popis, jak rozjet
+       v Chameleonovi  více  instancí,  je  zde hint:  musíte cvaknout do tolika
+       gadgetû  oznaçených  ST  1 aù 8 v hlavním oknë preferencí, kolik instancí
+       chcete rozjet a kaùdé pêidëlit pamëï gadgetem v sekci Options.  Velký dík
+       za  tuto  radu  patêí  CronoSovi  (tak  to  dopadá,  kdyù si nëkdo smázne
+       originální manuál ;)).@{ui}

@@ -1,0 +1,67 @@
+[bkg=bg.pbm][h1]TM2: making of
+by greippi
+
+
+The demo Modulo#2 from Revision 2024 is one of the very few demos that uses artificial intelligence (AI) for an Amiga production. In this case they tried to use it for generating the graphics, which wasn't easy at all. We recently talked to Greippi, the creator of this project.
+
+Ghandy: How did you come up with the idea for this demo? What did you want to achieve with it?
+
+Greippi: Last year, somewhere in November I was reading a comic book album Secret Wars (Marvel 1984). After such legendary demos as "Batman Rises" and "Blood Sugar Rises", I wanted to give Amiga scene one more super hero. This time the character would not be based on any existing brand. And how to achieve this? Just by prompting? I had high hopes. I wanted to give text to image AI a try. Such services have now been around for a few years now and I didn't know much about them.
+
+Result was this caricature of a super hero. Now we have Toxic Modulo, alias Hans Bliderman in red and white checkered suit. Normally he works at a hamburger restaurant. He got his super power when he was fetching chips from the basement as a child. A radioactive blitter chip bit him and soon after his father disappeared. Toxic Modulo's powers include ability to fly and cause "modulations" through the space. The computerized circuitry appears to be really responsive to these impulses.
+
+I wanted to include as many Amiga references into the story as possible. At the same time I wanted to tell an average superhero story in 60's style with high moral values, rather typical plot and traditional "happy ending".
+
+Toxic Modulo 1 has only 10 images. It was released at GERP 2024 party. Due to lack of time I simply archived the IFF-files, included a description text and released it on the wild compo. I scored jumbo place in the competition and thought that the way how the images were displayed was not very optimal. Orgas had to manually display the images one after another. This was all my fault. On top of that, there was no sound.
+
+Then Bifat contacted me. It was a great moment of mutual understanding. We needed to make some sort of a sequel to Toxic Modulo. I hadn't heard about Bifat's high resolution display mode. A mode which uses up nearly all DMA time in order to make the best out of OCS graphics. In the worst cases, CPU has one third of it's normal clock cycles left. This is where the super efficient packing algorithm from Christopher Jam comes into play. Apparently unpacking code was written in C and it was too slow. Krill took the challenge to hand optimize the whole unpacking algorithm in assembly language.
+
+We chose to release TM2 at Revision. This meant quite tight schedule, and the process was demanding yet rather steady. About 100h of artwork was spent during the 3-4 months. Most of it was using the GIMP. And let me remind you, demo making should be about having fun. At Revision 2023 I tried to finish my Amiga intro (HOPE) at the party. It was nightmarish hell because I had a wrong attitude and insufficient schedule.
+
+I once came into a conclusion that egoism is a common problem and a questionable resource among us. I had not seen a story with similar setup: Europe is on the prink of getting rid of egoism. This is obviously a statement for harmony and solidarity through the European Union, all nations. There's a picture of Earth on the first page. AI gave a few options. After choosing the image, I noticed that European Union countries were brightly lit, but Ukraine was dark. I felt obliged to change that.
+
+Marvel worlds have multiverses and very odd characters. The start needed to have a minimal amount of "divine creatures" in order to create some background mythology. Okay, I came up with The Phoenix Lady and Jay Miner as a Cosmic Titan in space. Hardest part was to make up a "convincing" antagonist (Schizoid Master). I guess the reference could be Kronos from the Greece mythology.
+
+Ghandy: Which AI did you use for the images? Were you satisfied with the results?
+
+Greippi: I did try Stable Diffusion, but this open source text-to-image AI is still under development phase. I chose a commercial one, which I don't want to press flat publicly. It's rather expensive service in my opinion. This is why I decided to use only the preview images of size about 700x700 pixels. I needed to screen capture every image strip and crop them separately on GIMP. I had no extra features available such as "Character Consistency" or automatic clearing or extension of the image. So I largely fell in a pit of manual lab.
+
+Other issue was that this very AI service does not seem to generate violent imagery. This makes the fighting scenes harder to prompt. The giant robots became the only possible "enemy units". My guess is that according to the AI's moral it's okay to destroy robots instead of human-like characters.
+
+Along the way of about 300-400 prompts, I did bump into one strange oddity. I needed a jukebox which shouts out loud "Destroy your Amiga!". On the 4 image suggestions the last one had an obvious yet very strange pornographic features in it's narrative. I suppose the provider had put a lot of efforts to keep sexual content out from the low-priced license. Perhaps it had been a bad day at the AI training club because such content had slipped through. Oh yes, back in the day, there once was this one song... "Internet is for porn".
+
+Third observation. There was a "change" in AI's mind after about 2 months of prompting previews and not really downloading anything. The service started to give only two quality images out of four. Latter two were too messy for any purpose. I suppose I had exceeded certain CPU/GPU usage limit and the enthusiasm level of the AI had fallen a step or two. What kind of mentality does this feature relate to? In larger scale, if AI spreads like hell, it could be used in mass manipulation also on a very subtle level.
+
+
+Ghandy: Why haven't you clearly labeled that the pictures are not pixeled by hand?
+
+Greippi: If the viewer really thinks that some super skilled visual artist is going to publish his 35 digital art pieces in an OCS Amiga demo without stating on each image that he himself hand painted it all, then the viewer should perhaps rethink also some other aspects of making art in 2020's.
+
+My skills might have been enough for creating this visual novel by hand. It would have taken at least two weeks per picture. This means full time work of GIMP:ing and probably drinking due to "artist's anguish". Like said somewhere, demo making should be kept fun. Any human process has stressful aspects, but why damage yourself for a hobby?
+I thought it's obvious that AI is present in TM-series. The TM1 actually has a text file, which states this. On the sequel we must have underestimated it's importance. I had a slide text in mind: "AI mosaic" but forgot all about it. I personally didn't even know AI is such a hated image source.
+
+If the AI is actually based on human/resource abuse, it should be in The Big News and we should stop using it. What I would suggest is to gather more evidence of AI - companies exploiting the existing data and people. After the movement is big enough, I'd go for The Big News and demand redistribution plan for the revenue which the AI is producing. This money could be going to help people in poverty or anything for global good. Education perhaps.
+And think of this: I demand credit as well! I bring you first hand experiences of using AI as an art creation tool. Is it any good? First impression is, that my method to play with the AI was relatively slow. Prompting was the fun part simply because the AI suggests so obscure and irrelevant variety of images, both in style and content. Fixing the images was rather dull. There is several version of each image and about 10 intermediate steps when composing a full page. This is manual lab, no AI to whom yap about. Many pictures are a composition of several sources and you need to maintain certain kind of artistic integrity. I kept things interesting by supposing that I am a pioneering artist who needs to explore new available medias. However, not all experiments give (good) results.
+
+A yet another good question: From where does the visual information around us originate? AI is now a new source of images, because it hides all references. This could be considered as a theft of collective imagery. Then again, you can't pinpoint the source directly or proof anything solid. I actually purposefully selected some images according to their "familiar looks". There are many rather obvious sources, but the machine is cunning. It changes things just enough in order to keep the copyrights "free".
+
+Along the way AI gathers all the prompts and images it has generated. Aren't the "photos found from internet" a legal source? How many of you have downloaded an image from internet and altered it a bit in order to fade out some legal yagiti-yag jargon? Or does everything have to come from the good old Amiga Deluxe Paint III? And what about using a cross-compiler in an old-skool demo productions? They're also fake, because you don't program from with-in the original platform. It seems we're all using super powers of some sort.
+
+Ghandy: What do you think about the epic flame war at Pouet. Or did you expect it from the start?
+
+Greippi: The reason why TM2 is getting this much very divided attention remains a mystery. We scored 8th place in the competition. That is not really successful and we were not expecting much. After all, we're talking about a slow-paced slide show in a demo compo.
+
+I've noticed that some of the trolling persons have quite short patience in reading. Usually the first few lines of the victim post is already enough to make some exaggerated accusations. With subject as complex as this, trolling requires some talent.
+We also stated that the story will be continued. Due to these on-going flaming and smearing campaigns, the saga obviously needs to continue in a form or another. I also sense that some people got jealous to us for getting a lot of attention with such a "cheap AI trick". Odd. I don't think we really deserved this much attention. Now we're just obliged to tell our opinion about AI in the demoscene. We are already rather defensive and mainly out from "public" discussion. Our fan-mail email address is there for a purpose. Please contact us, if you have something in mind.
+
+Meanwhile, perhaps the TM Haters' Club should make up more good points against other experimenting AI-artists out there. My own opinion about AI has mixed feelings, but these are not because of the negative feedback. I haven't changed my opinion. I'm still not fully convinced that AI is good enough for creating a visual novel. It is quick and "cheap", but not all is there. It has same weakness as digital artists: The original is just a file on a hard drive. No paper original. Secondly, you will end up fixing the AI images manually in order to improve the story flow. Real art has more edge and personal attachment than these "nearly perfect" illustrations. Then again, personal attachment has also a potentially negative angle.
+
+What come to the credits... I don't feel that the TM2 images are really my own. I have only created a bound to them. I'm probably the only person who has watched these images alone for many hours. I have given something to them, unified them, but still they feel more like edited fantasy-art-photos than my own art. Artwork editing might have been the most precise credit for me. Then again, without my visual creativity nothing would have showed up.
+
+Authors have sometimes this thing called "writer's block". Artists have their own blocks. Perhaps a little prompting with AI might give some inspiration for a blocked visual artist. It could serve as a little private art therapy session. Here I can see some potential. AI generated images and art therapy. Go and explore these possibilities and give some outcome of the results. Please, don't make me too jealous if you're having great success!
+
+It's a next level subject if the AI providers are actually exploiting the existing people and killing digital artists as a profession. I am forced to believe that the latter one is happening right now. Other issue is the AI-teaching camps with cheapest possible lab. These are real issues. This is where Toxic Modulo gets really bitter. And on whose side is he?
+
+- - - 
+post note vS-staff:
+this article was requested by Ghandy. So a bit surprised when we saw it on demozoo with him uncredited for the questoins. later as a making of. Thats why this is published here again.

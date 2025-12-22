@@ -1,0 +1,64 @@
+!Interviewing Alfred Faust
+Psychreator
+12µJEµF1µC5Psychreator:µC1 You develop Bars N' Pipes for three different platforms, Amiga 68k, Amiga PPC with OS4 and MorphOS. What is the main difference between the 3 versions?
+
+µC5Alfred:µC1 Like you know, the AMIGA has additional chips onboard, which are working together with the CPU, called custom-chips. These custom chips are not available on the PEGASOS (MorphOS) and AmigaOne - microA1 (OS4). So I had to write all internal routines again, which are using the custom chips. Or I had to adapt them.
+One of the most important thing: The "timer-heart-beat-generator" of BarsnPipes on the AMIGA is using the PAULA-chip. For OS4 and also for MorphOS I've written new timer routines. BarsnPipes is one of the rare programs on AMIGA, which have a drag&drop function since its first release. This function is using the so called "Blitter". I have also written it again. On MorphOS I made a toolset for a special USB-MIDI-Interface first. On OS4, USB-MIDI is integrated into the onboard MIDI system (camd.library). USB-MIDI in BarsnPipes OS4 has almost no limits regarding the useable number of MIDI-channels.
+The MorphOS version of BnP is (AFAIK) not used by anyone. There was one person, who had contacted me, but not again since then. The OS4 version is used by some friends, especially Lyle Hazelwood, who had made the OS4-version of the camd.library and the USB-MIDI drivers.
+
+µC5Psychreator:µC1 Is it difficult to develop such a big Software for 3 totally different types of systems, and how do you handle the code to develope it for 68k and PPC?
+
+µC5Alfred:µC1 It is difficult. On the classic AMIGA it was already hard sometimes to find bugs or errors, but on the other two systems, developing tools is not so comfortable, like on the classic AMIGA OS. The API (Application Programming Interface) for MorphOS is equal to the AMIGA. So the port of BarsnPipes to MorphOS was the  easiest, because major parts of the source code could be used (compiled) without any alteration. On OS4 the API is somewhat different, so the port was not very easy. All 160 source-code files had to be reworked. Aside from the above declared differences, on OS4, I had to rewrite the plugin-programming-interface (called "Rules for Tools") for BnP completely. This also resulted in a "New Rules For Tools". Sometimes I stopped my work on BnP, because an important work-tool was not available for OS4. I searched around for the source-code of a well known tool from the AMIGA OS. Than I ported it to OS4. This was for example the case with FileX, the best hexadecimal-editor for AMIGA.
+
+µC5Psychreator:µC1 What are the latest improvments on Bars N' Pipes and what can we expect for the future of Bars N' Pipes?
+
+µC5Alfred:µC1 Because I mostly worked for OS4 in the past, BnP for the classic AMIGA was not further developed much in the last year. It seems to me, that OS4 has the best chances of becoming the AMIGA OS of the future. New hardware for OS4 will be available soon. Because of that, I decided that I'll focus my efforts on the OS4 version of BarsnPipes. The speed of the system makes it possible also to write timecritical solutions. Nevertheless I read all messages of the BarsnPipes News-groups. If there are problems with the classic version, I try to help as much as I can. Last week I added a command to the AREXX accessory of BarsnPipes, because a user had wished so. The AMIGA OS version of BarsnPipes has the highest amount of tools and accessories and so the best functionality. My handicap at the moment is that the mainboard of my main AMIGA (A1200 68040/40 - towered with ZorroII - Gfx-card - Soundcard - MultiIO-card) is broken. So I can only work on my desktop A1200, which has a defective serial-port... no MIDI possible. As I am already retired, I have not got very much money available. So I don't know, when I will be able to repair my main AMIGA.
+
+µC5Psychreator:µC1 Would it be possible to enrich Bars N'Pipes with sofware synth and sample support along with audio recording and mastering tools like in the named MAC or PC music sequencers?
+
+µC5Alfred:µC1 On the classic AMIGA-OS this is not possible because of missing CPU-power. The hardware of the classic AMIGA is not further developed. So we must say (unfortunately) that those dreams can't become reality. On OS4 David Wentzler had written his AudioEvolution, which is such an Audio Recording and Mastering tool. He also made a version for classic AMIGAs, but this version has its limits by the system.
+
+µC5Psychreator:µC1 If I would be a MIDI and music newbee, would you have an advice for me how I could start doing music with Bars N' Pipes? What do I need for it?.
+
+µC5Alfred:µC1 BarsnPipes is best used with external MIDI-equipment. This can be a Keyboard or Synthesizer with MIDI-connectors. Otherwise, you have to enter the notes in the editor of BarsnPipes. But this is not very funny for making real music. BarsnPipes has a so called "Internal Sound Kit", which in a somewhat limited range is able to use the internal sound cababilities of the AMIGA for playback, but merely as a makeshift. You need a MIDI-Interface, to connect the Keyboard/Synthesizer to the computer. Unfortunately MIDI-Interfaces for the classic AMIGAs are not built anymore. You can get one second-hand, or build it your own, if you familiar with selfmade electronics. You can ask me for a connection diagram.
+
+µC5Psychreator:µC1 Bars N' Pipes for OS4 also supports MIDI via USB, with a Maximum of 2048 channels? How does this work, what do I need for it and what is the advantage compared to oldskool MIDI devices via serial bus?
+
+µC5Alfred:µC1 Not only 2048 ... 4096!!! Like I already said, MIDI can control 16 channels. But if there are more MIDI-devices connected to the computer, and there is a system available which can handle each device separatly, the number of useable MIDI-channels is increased by 16 for each MIDI-device. There are USB-MIDI-Interfaces on the market with 16 independend MIDI-lines (multi-port), which can handle 16 MIDI devices independently - 16x16 = 256 independent MIDI-channels or instruments. The MIDI-system on OS4 is additionally able to handle up to 16 different USB-MIDI-Interfaces (multi-device). That is: 16X16X16 = 4096 independent MIDI-channels - theoretically. Nobody is using such an amount of different instruments. That only means that after all there are practically no limits. Like you may know, USB is - compared to the normal serial - a very fast transmission protocol (USB2 up to 480 MBit/sec). On the normal serial transmission, the serial port is the device which defines the transmission speed. So the MIDI-transmision speed is always 31,25 kBit/sec. In USB-MIDI the MIDI-Interface is the device, which defines the transmission speed(MIDI: 31,25 KB/s). The transmission TO the USB-MIDI-Interface is extremly fast. So the data can be transmitted almost without a delay, to the USB-MIDI-Interface. The processing time inside the USB-MIDI interface is also extremly fast. That is: The time, to push the data to the depending output, is very short. There the data is buffered and sent out at MIDI-speed. This results in a very low latency time, also if a multiline (multiport) MIDI-Interface is used. This is the most important difference, and the most important argument against the MIDI-transmission over the "normal" serial port.
+
+µC5Psychreator:µC1 You also make music using MIDI. Do you have any preferred kinds of music, synth gear and sound sources?
+
+µC5Alfred:µC1 I came from the "classic" music section. As I said, I'm a studied church musician. So I prefer especially organ- and piano-music, but also orchestral kind of music. I was born in Thuringia - in the former "German Democratic Republic" (the only true word here is "German"). It was a real existing communist dictatorship. Life as a church musician was very hard. Nevertheless I had a small youth-band. We made a special kind of gospel music. After the GDR crashed, some really friendly people in Hessen behind the former border made me a big present: a DX11 - synthesizer. This fine device was my MIDI-equipment for a longer period. Later I purchased a DB-50XG card (a small extension board for Waveblaster-soundcards), and made an adapter for it to use it as an excellent XG-sound MIDI-device (my DX11 was broken in the past year, unrepairable, like the special synthesizer repair centre told me, after they had checked it :-(). 
+Unfortunately I have not enough time to make much music, but it's always big fun to me to work with my "coded baby" to make music. :-D
+
+µC5Psychreator:µC1 How do you like the Amiga tracker and music scene today? Did you ever get in contact to VIP in the music scene who use Amiga computers for their buisness?
+
+µC5Alfred:µC1 I know, in the Demo-scene mostly tracker-programs are used. BarsnPipes is NOT a tracker. Trackers work in a different way. They play samples in a different way. BarsnPipes doesn't handle samples, but if you have an external sampler with MIDI, you can use BarsnPipes to make good music. As I'm working on BarsnPipes, I'm not very familiar with trackers. In my very early computer-user time, I started some attempts with MED and ProTracker. But they were not very useable for "my" musical intentions, as I rather prefer the classical music style. And I know, for the demoscene BarsnPipes may not be very handy to produce music in that style. Maybe some day someone will write a tracker-plugin for BarsnPipes. But this wouldn't work like a well-known AMIGA tracker. It would be MIDI-oriented.
+A very famous musician (in his own country) is Susumu Hirasawa from Japan. He received a very important "culture award" from the gouvernment of his country. In nearly all of his musical-projects he is using BarsnPipes. His site: http:// s-hirasawa.com/e/ is worth a look at. He is a very diligent and creative musician.
+
+µC5Psychreator:µC1 For those people who are interested now In Bars N' Pipes, where can I find the main homepage of the software, does a mailinglist or similar exist for it?
+
+µC5Alfred:µC1 You can find ALL (!) available programs (including the programs they made in the "music machines" project for Windows95) from Blue Ribbon Inc. at my site:
+
+www.alfred-j-faust.de
+
+The material-pool in the Download-section has grown a lot in the past years. Because of that, you should scroll down patiently. If you want to start from scratch, first of all, download the 2 original Bars&Pipes 2.5b Pro archives. Decrunch them to 2 Floppy-Disks, and install them to HD. This installation contains the basic tools and accessories that are also useable in my BarsnPipes New. It is possible to create a Floppy Disk Set for Bars&Pipes but it's not very recommended. If you can understand German language, you can read/download my own Bars&Pipes manual. Otherwise you find the original english Bars&Pipes 2.5b Pro manual online at:
+
+www.fromwithin.com/
+liquidmidi/docs.shtml
+
+There is a newsgroup especially for Bars&Pipes users at
+
+groups.yahoo.com
+
+called: barsnpipes
+
+There you can contact all important barnspipes users around the world, also the "father" of BarsnPipes, the senior-chief of the Blue Ribbon Inc.: Todor Fay. Note: Blue Ribbon Inc. left Microsoft again in 2002, and founded a new own company, which only produces musical software: New Blue Inc:
+
+www.newblueinc.com
+
+To me it is the best software-company for musical-oriented software worldwide (the most spreaded software must not be the best at all).
+
+µC5Psychreator:µC1 Thank you for this Interview, and good luck for the future. Time for greetings!
+
+µC5Alfred:µC1 I want to give again my big thank to Todor Fay and his wife Melissa Jordan Gray. Without their efforts, Bars&Pipes would not exist. AND without their BIG gift - the source of Bars&Pipes - a further development would not be possible. And thanks again, that I am allowed to work with this extremely valuable material, as if it was my own. I want to give my thank you's to all friends, who have been very patient with me in the last years when I worked on BarsnPipes. I'll do my best to continue the work as long as I have the power for it.

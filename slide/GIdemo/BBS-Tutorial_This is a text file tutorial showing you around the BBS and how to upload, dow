@@ -1,0 +1,367 @@
+USING THE GI BBS - AMIGA TUTORIAL
+
+Your first log on is over. From now on you will immediately see the system
+screens telling you where the files are located. The first session can be 
+trying on your patience. We will try to make this a pleasant and profitable 
+experience for you!  First take the time to read our tutorial and then make
+your first download the Term3.4 program.  Our tutorial explains our BBS and
+modem procedures to follow in most term programs but none matches the Term
+3.4 program as far as configurabillity or ease of use.  It offers the most
+user friendly set up and offers the novice to advanced modem user the 
+advantage of settings up their own custom configuration. We will get you
+started with the most basic settings now and as you learn you will be able
+to customize to your tastes.  
+
+Follow the tutorial one step at a time for all settings and you should be 
+properly set up for telecommunications to anywhere.
+
+TERMINAL SETTINGS: Go to the WORKBENCH and open the Prefs drawer.  Open the
+serial preferences.  The settings should be:
+
+	Handshaking RTS/CTS
+	Parity  None
+	Bits/Char 8
+	Stop Bits 1
+	Baud Rate (Depends on your modem speed) 2400 should be set to 2400,
+		14.4 can be set to 31,250 (High speed modems have transfer 
+		protocols that can send information using compression at
+		speeds faster than what the modem is rated for. 
+
+Term3.4 settings: Set all the parameters listed below one pull down menu
+at a time and you will be setting up Term3.4 to be extremely easy to 
+upload and download with.  These settings make all the location assignments
+for uploads, downloads and text capture automatic so that all you need do
+is keep hitting the return bar to activate the necessary sequences for 
+uploads & downloads. When you are ready to quit Term3.4, saving your buffer
+text capture is as easy as pulling down the save buffer menu and saving by 
+naming the text.  
+	
+	SETTINGS PULL DOWN MENU:
+
+*Serial: settings should be the same as Workbench prefs.
+
+		Duplex: Full
+
+		Serial Device: Select the driver Icon to select from the
+		drivers within the DEVS directory.  Internal modems use
+		their driver which is shipped with the modem software. 
+		Place the modem driver into the DEVS directory if you
+		haven't already done this.  Example would be modem0.device.
+		This indicates an internal modem within a slot.   External
+		modems use the Serial.device which indicates the serial
+		port of the Amiga. 
+
+*Screem settings:
+
+		Select your display mode: which can be high res, high res 
+		interlace, low res etc. I use the High Res mode. 
+
+		Colour: 2,4,8,16 colors - We recommend 8 color ANSI which
+		duplicates the CNET output. 
+
+		Blinking (OFF)
+
+*Capture Settings:
+
+		Text buff. file path - select where you wish to save the 
+		capture buffer text file contents.  Anything you do on line
+		is captured to the buffer automatically and you can save the
+		entire session for later review by saving the buffer as a 
+		text file to some location.  This will be the default path
+		where all buffer captures will be saved to so select a 
+		harddrive partition or drawer rather than a ram location. 
+
+		Max. text buff.size - set to 0. This will allocate ram as
+		needed to write to the capture buffer.  This will give you
+		unlimited capture size so you won't accidentally lose any
+		of your session.  Many programs can limit the amount of ram
+		used for the capture buffer, and this would automatically 
+		cut your text file and overwrite the first parts if you did
+		exceed the buffer size limits.  By setting to 0 you have 
+		no physical buffer limits other than how much ram is on
+		your system.
+
+		Text buff.enabled - place check in box.
+	
+		Text buff.file path - select the harddrive partition and 
+		drawer location you wish to save your file to at the end
+		of your term session.  This is the automatic file path
+		location you are assigning for the capture buffer text. 
+ 
+*Path Settings":
+
+		Configuration Storage Dir - select a location to save a file
+		named config with all the preference settings for the term
+		program.  Term, on bootup, uses this config file to set
+	  	everything for communication to the serial or internal port.
+		Save this config file within the TERM drawer with all other
+		term associated files. EX: Dh0:Term/config, Work:Term/config
+
+		Default binary upload path - select the location you wish
+			to place all upload files. EX: DH0:, Work:, DH1:
+ 
+		Default binary download - select the location you wish 
+			to save all downloaded data. EX: DH0:, Work:, DH1:
+
+			Both of these areas should contain enough space to
+		        accept your files without filling up and aborting 
+			your transfer.  Select a hard drive partition with
+			space.
+
+*File Transfer Library Preferences:
+
+		Binary Upload Library - xprzmodem .library
+
+		Binary Download Library - xprzmodem.library
+			
+		The xprzmodem library comes with the term program and 
+			should be placed into the libs directory of 
+			workbench.  This is the default transfer protocol
+			for CNET and Term3.4.  
+
+Everything else not mentioned works fine in the default mode so if I didn't
+mention it, don't play with it until you have more experience with the 
+program.
+
+WHERE NOW?  Log onto the system.
+
+The prompt (Main:) is the highest level. This is where all activity starts
+from. To get back to the main prompt at any time, use the "q" character. A 
+word of caution, if you hit the "q" too many times, it will back you off the 
+system and cut your call off.  Remember "q" will move you back towards the 
+main prompt (or first screen).
+
+WHERE ARE THE FILES?
+
+The files are located in the sub-directories Gfiles & Uploads. The main 
+screen will bring up a prompt which looks like the following.
+
+(Base, Feedback, Gfiles, Off, Pfiles, STatus, Time, Uploads, ?=Menu) 
+___________________________________________________________________________
+
+Base (b) is currently empty.
+
+Feedback (f) Is to leave messages for the SysOp, ask questions, or 
+make suggestions) 
+___________________________________________________________________________
+
+Gfiles (g) contains all the text files, tutorials, and the order form. 
+ 
+	1. BackupProgram.txt 			
+	2. ExtractRunFiles.Txt 		  	
+	3. FreeOffer 		  	
+	4. GIElectonicOrder Form 		  	
+	5. GIReadMe 		  	
+	6. Tips&Tricks 			
+	7. BBS-Tutorial
+
+To read the text files, type the number of the file and hit return. The 
+text file will read to the screen. Use your capture buffer to copy all of 
+the text for future reading of the file off line. On Term3.4 the capture 
+buffer is always on so you will capture all the text screens you see while 
+on line. 
+
+After you get off the BBS line and before you close the Term3.4 program, 
+select the Buffer pull down menu, save Buffer as: name the captured text 
+and the directory location you want it. 
+
+It  will write the entire session as an ASCII file to be read later. Use a 
+text editor like EdWord to read the file. This is an excellent way to read 
+file names and numbers for future downloading.  The next time you will be 
+able to go to areas of interest quickly and without getting lost. This works
+for any BBS!
+____________________________________________________________________________ 
+
+Off (o) Logs you off the system. Constantly pressing "q" will do the same 
+thing.
+
+Pfiles (p) Currently not used.
+
+STatus (st) Text screen containing information concerning your account.
+
+Time (t) Gives you the time. 
+___________________________________________________________________________
+_
+Uploads (u) This area contains all the programs, text files, tutorials,
+		picture upload area, & sample pictures.
+
+
+ 	1. PUO (Picture Uploads Only)	2. (Dir) Utilities 	
+	3. Text Files & Tutorials	4. Sample Pictures
+
+Type 1,2,3 or 4 to gain access to these areas. 
+___________________________________________________________________________
+
+1. PUO - To upload your picture files to Graphic Impressions 
+
+Your prompt will say (1) Picture Uploads Only>
+
+To Upload files type the letter "u" at the prompt
+
+In Term3.4 continue to hit return through all the questions, approx 
+8, and a window will pop up to select Text or Binary transfer. Select
+Binary and hit return.  You will then see a requestor screen asking what
+files to upload and what location they are in.  Select your files and 
+location path of the files and hit return.  The transfer will commence. 
+At the end of each transfer you will need to give a short description of
+each file.  I recommend your name and a number in sequence.  After the
+description hit return and .s and return again to save the description to
+the file.  This is a text editor you are writing in and .s will save the
+information you typed in and return you to the next upload. To save time
+you can lha the entire bundle of files as one larger lha (compressed) file,
+then transfer the larger lha file.  You only have to name one file rather
+than a whole group of files one at a time. 
+
+PICTURE UPLOADING:
+
+Locate all of your files into a drawer on your hard drive with the
+Electronic Order Form TOTALLY FILLED OUT. This order form must accompany 
+your upload for us to process your order.  It contains all necessary
+information about you with billing/shipping instructions. We have taken
+great pains to make this system work smoothly and the order form is a
+necessity to completing your order on time.  
+
+Speed of the actual transfer will vary with the speed of your modem, the
+standards you support and  the level of the line noise on the telephone
+line. Our system will adjust for the linenoise, decreasing for heavy noise
+and increasing when the noise level is low. Most modems do not have this
+capability. They reduce their transfer rates and stay at the slower speeds
+to guarantee good transfers. 
+
+Transfers can take place any time of the day or night since our BBS is on
+24 hours a day. If when you are on line and need help type, "c" for the chat
+mode and see if the SysOp is available to assist you.
+
+To exit PUO and move towards the main screen type the letter "q" 
+__________________________________________________________________________
+
+2. (Dir) Utilities - To gain access to all BBS shareware
+
+Type 1 for Amiga Utilities or 2 for MS_Dos Utilities
+
+	1. Amiga Utilities	2. MS-Dos Utilities 
+
+Your prompt will say 1. Amiga Utilities>
+
+This directory contains the listed shareware programs: 
+			 		
+	1.   ABackUp4.01 (HDbackup Program with 2.0 user interface) 
+	2.   AIBB6.0 (System Performance Check) 		
+	3.   ArchiveInt (Archiving program with 2.0 user interface) 
+	4.   Bars&Tone (Sample Color bars/1000 hz tone) 		
+	5.   DirWork1.62 (Directory Utility 2.0 user interface) 
+	6.   DrawMap4.1 (Draws maps-countries/states/etc.) 		
+	7.   EdWord 2.2 (Text editor with 2.0 user interface) 		
+	8.   FindIt (Search utility with 2.0 User interface) 		
+	9.   FontViewer (Views all fonts in directory-2.0 interface.) 	
+	10.  GIDemo (Self running demo using TVShow) 		
+	11.  TurboImploder (Crunches executable programs to decrease 
+		the size on hard drive)  		
+	12.  InTime (Places a counter/frame number on video scenes 
+		as a reference number for editing) 		
+	13.  lha (Compression program for file storage or modem transfers)
+	14.  Lhasfx (Creates self extracting lha files called .run files. 
+		Many of our programs are in this format) 		
+	15.  MuchMore (Improved reader utility for C or Utilities 	
+		drawers, reads text files.) 		
+	16.  SnoopDos (Diagnostic tool to show all dos commands and 
+		any failures) 		
+	17.  SysInfo (System performance monitor and comparison) 
+	18.  Term3.4-030 (Terminal program for accelerated machines) 
+	19.  Term3.4 (Same program for unaccelerated machines) 		
+	20.  ViewTek2.0 (Picture viewer does GIF, Jpeg, IFF etc.) 
+	21.  BBSTutorial (Text file explaining how to use BBS)
+	22.  PNET (Parallel Network to connect multiple Amigas)
+
+Most of these programs work with the 1.3 operating system but you will not 
+be able to use certain features of the 2.04, 2.1 or 3.0 operating systems. 
+Go get OS2.1, it offers you many slick interface options and refinements
+to make using your programs more effortless and productive. 
+
+To view the list of files in this directory use the letter "s". It will scan
+all files in the directory. If a file has an extended explanation you can 
+type "r" and the file number to read it on screen.  Example "r6". The larger 
+readme files contain more in-depth information that could not fit in the 
+five line explanation.  
+
+To download any of these files, record the number of the file while you are 
+scanning the entire list.  When you come to the end of the list the main  
+prompt will reappear. Type the letter "d" and the number of the file.  You 
+can do multiple downloads by typing "d1, d2, d3" etc. This will download the
+entire group of files selected. 
+
+Just hit return until the transfer window opens.  You need not answer any
+of the questions if all of the settings in the tutorial are set right.  Your
+files will be written to your default binary download path location. 
+
+2. MS-Dos Utilities:
+
+Contains a smaller number of files and readmes until I can get more support 
+for the Dos Side. Additions I would like are picture viewers and practical
+utilities like we use on the Amiga. If you have any send them up. 
+
+To exit Amiga or MS-Dos Utilities and move towards the main screen type
+the letter "q"
+ ____________________________________________________________________________
+
+3. Text Files and Tutorials- Gains access to all text files & tutorials
+
+Your prompt will display: (3)Text Files and Tutorials>
+
+To scan all files in this sub type the letter "s" and all text files with
+5 line descriptions will write to screen.  Hit the space bar for more.
+
+Using the letter "r" and the number of the file will allow you to read the
+extended text file for more detailed information if it exists for that file.
+
+You may download any of these files using the same procedures as downloading
+the shareware programs in the Amiga Utillities section listed above. 
+
+TIP: Use the capture buffer since it is on all the time in term and read all
+text screens as fast as you can hit the space bar.  All text will be 
+written to the buffer which you can save and read later. 
+
+To exit Text Files and Tutorials and move back towards the main screen
+type the letter "q"
+
+____________________________________________________________________________
+
+4. Sample Pictures - Gains access to any picture samples
+
+Your prompt will display:  Sample Pictures>
+
+Sample pictures, slide and negative templates for designing graphics and
+showing safe areas to draw in.
+
+You may download any of these files using the same procedures as downloading
+the shareware programs in the Amiga Utilities section listed above. 
+
+To exit Sample Pictures and move back to the main screen type the letter"q"
+
+____________________________________________________________________________
+
+ HELP:
+
+?=Menu (Will display several screens showing you the commands available for 
+you to use within the system to upload, alter your information, leave 
+feedback, download, chat with SysOp etc.  These commands are used by more 
+advanced terminal users to alter files. 
+
+ABOUT THE BBS:
+
+Our system uses CNET Zmodem for uploads and downloads. We are currently 
+running CNET 2.63 for our BBS on a USRobotics 14.4 Courier HST dual standard 
+Modem. Our modem will seek the best speed for the line conditions and seek 
+the highest speed your modem can send. 
+
+
+PURPOSE OF THE BBS:
+
+We wish to support our customers and offer another way to speed up the 
+process of creating slides & negatives from Amiga files. The files on 
+line for downloading are items we feel are equal to commercial software and 
+will help you be more productive. 
+
+If you have comments about our service, ways we can improve the service, or 
+about files we do not have, please leave us feedback. 
+

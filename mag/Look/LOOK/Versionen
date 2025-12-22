@@ -1,0 +1,162 @@
+
+           » Übersicht über veröffentlichte Look-Versionen «
+
+
+Letzte Änderung: 7. August 1993
+
+
+LOOK V0.6 bis V1.17d
+   - Anfang Februar bis 29.Juli 1992
+   - Erste Versionen veröffentlicht.
+   - Sprache: Gfa-Basic V3.52d mit Compiler.
+
+LOOK V1.2
+   - 29. August 1992
+   - Look in ASSEMBLER neugeschrieben.
+   - Etwa 40 % kürzerer Code.
+   - Viel schnellere Bild/Brush/Text-Anzeige.
+   - CAMG-Chunk bei Bildern wird unterstützt.
+   - Titelleiste-Anzeige-Fehler behoben.
+   - Fehlermeldungen werden nun im System-Requester angezeigt. Kann bei
+     zuwenig Speicher durch einen Alert ersetzt werden.
+   - OS2-Busy-Mauszeiger eingebaut (Danke an Gerd Frank).
+   - Speicherverbrauch (besonders Chipmem) viel geringer.
+   - TAB´s wurden nicht korrekt erkannt. Behoben.
+   - Voreingestellte TAB-Größe jetzt 8 Zeichen.
+   - Bei der Bildanzeige kann man nun mit <Esc> oder <q> direkt in
+     das Inhaltsverzeichnis springen.
+   - Viele kleinere Fehler behoben.
+
+LOOK V1.3
+   - 26. September 1992
+   - Zurückblättern drastisch beschleunigt. Beachtet aber trotzdem
+     noch Brushes, Mehrspaltenmodus, Fonts usw.
+   - Hardcopy bei Bildern mit der Taste <d> oder <PrtSc>.
+   - Farbrequester mit der Taste <f>.
+   - Mit <h> gelangt man jederzeit ins HAUPTmenü.
+   - Sicherheitsrequester beim Beenden, Programm starten und Drucken.
+
+LOOK V1.4
+   - 4. Oktober 1992
+   - "Load-While-Reading": während ein Text angezeigt wird, wird der
+     nächste schon geladen, so daß es keine Verzögerungen mehr beim
+     Vorblättern gibt.
+   - "Hilfe" ausgebaut.
+   - Fehler beim Anzeigen von Interlace und HAM entfernt.
+
+LOOK V1.5
+   - 15. November 1992
+   - Zeilenmodus eingebaut (etwa wie in PPMore). Mit der Taste <m>
+     kann man zwischen dem Zeilenmodus und dem Textmodus umschalten.
+   - Suchfunktion im Zeilenmodus eingebaut (Tasten <s> und <n>).
+   - Fehler bei "Load-While-Reading" entfernt: PowerPacker-Texte wurden
+     nicht erkannt.
+   - Fehler bei "Textende" entfernt.
+   - Brushes werden nicht mehr abgeschnitten, wenn sie nicht auf die
+     Seite passen, sondern kommen auf die nächste Seite.
+   - Einige Fehler bei der Brushdarstellung behoben.
+   - Fehler bei "UB"-und "SF"-Textbefehl behoben.
+   - Im NTSC-Modus wird nun ein HiRes-Screen geöffnet.
+
+LOOK V1.52
+   - 22. November 1992
+   - Ansi im Zeilenmodus möglich.
+   - <g>ehe-zu-Zeile-Funktion (im Zeilenmodus).
+   - Farbrequester-Bug behoben.
+   - Bug bei der Prozent-Anzeige entfernt.
+   - Wenn ein Text im Zeilenmodus nicht gefunden wurde, konnte Look
+     abstürzen: behoben.
+
+LOOK V1.6
+   - 17. Januar 1993
+   - Brushes können  nun  auch  im Inhaltsverzeichnis angeklickt werden,
+     um  Texte  zu laden, Bilder darzustellen, Programme zu starten oder
+     Untermenüs anzuzeigen
+   - Neuer Script-und Textbefehl "ZZ".
+   - Zeilenmodus ignoriert nun Textbefehle und erkennt Tabulatoren.
+   - Fehler bei Darstellung von großen Fonts entfernt.
+   - Drucken führte zum Absturz. Behoben.
+   - Textende konnte sich aufhängen. Beseitigt.
+   - Bilder konnten in x-Richtung falsch positioniert werden. Behoben.
+   - Hilfe-Seiten kann man jetzt auch zurückblättern.
+
+LOOK V1.7
+   - 21. Februar 1993
+   - Viel schnelleres Vor-und Zurückblättern im Inhaltsverzeichnis.
+   - Default-Tool sowie ToolTypes-Unterstützung.
+   - Filerequester, wenn Datei nicht gefunden, ab OS2+ der System-File-
+     requester, unter Kick 1.x der von "reqtools.library", sonst
+     Stringgadget
+   - Getrennte Gadgetleisten für Script/Inhalt, Script/Text und
+     Einzeltext
+   - Kleinere Bugs entfernt.
+
+LOOK V1.8
+   - 3. April 1993
+   - Zwei Textbefehle ("CO","ST") und ein Scriptbefehl ("ST"), um die
+     Farben und den Schriftstil zu ändern
+   - Neuer Scriptbefehl "PP" (siehe Datei "Scriptbefehle")
+   - Per Cursortasten kann man nun im Inhaltsverzeichnis Texte aus-
+     wählen, <Return> lädt dann den Text!
+   - Cursor im Inhaltsverzeichnis flackert nicht mehr!
+   - Konfigurationswindow mit <F1> (ersetzt das alte Info-Window), um
+     Look nach persönl. Bedürfnissen zu konfigurieren
+   - Im Inhaltsverzeichnis kann nun auch an den Textanfang/Textende
+     mit den bekannten Tasten geblättert werden.
+   - Filerequester-Auswahl komfortabler
+   - Es sind nun 23 Zeilen Text bei Topaz-8 möglich.
+   - TABs werden endlich richtig erweitert.
+   - Neue Blendeffekte.
+   - Einige "liebgewonnene" Bugs entfernt :-)
+
+LOOK V1.9
+   - 16. Mai 1993
+   - Look  unterstützt nun  bis zu 16 Farben. Gewünschte Bitplane-Anzahl
+     kann mit dem neuen ToolType "BITPLANES=x" eingestellt werden.Außer-
+     dem wurde der Farbrequester und der "SF"-Befehl auf 16 Farben er-
+     weitert.
+   - Look kann  nun beim  Starten  ein Titelbild anzeigen. Der komplette
+     Pfadname wird im ToolType "PICTURE=pfadname" angegeben.
+   - Etwa doppelt so schnelles Zeilenscrolling.
+   - Look "merkt" sich nun die zuletzt gezeigte Inhaltsseite.
+   - Fünf Fehler bei der Einzeltext-Anzeige behoben. Look merkt sich
+     außerdem jetzt ein eingestelltes Verzeichnis.
+   - Fehler bei der Cursor-Anwahl im Inhalt behoben.
+   - Man kann beim Drucken einstellen, ob die Textbefehle mitgedruckt
+     werden sollen und welches Device benutzt wird.
+   - Konfigurationsfenster erweitert (Requester an/aus und alle Drucker-
+     optionen).
+   - Neuer Scriptbefehl "DI", zum direkten Rücksprung in das Inhaltsver-
+     zeichnis, nachdem ein Text oder Bild angezeigt wurde.
+   - Zwanzig neue Blendeffekte, die die alten ersetzen.
+   - Look konnte Brushes, die kleiner als 64x40 sind, nicht anzeigen.
+   - "Suchen" zeigte manchmal die falsche Position an.
+   - Brushes wurden manchmal nicht korrekt positioniert.
+   - Und viele weitere Fehler behoben.
+
+LOOK V2.0
+   - 7. August 1993
+   - Das Iconify-Window ist nun bei der Einzeltext-Anzeige ein AppIcon
+     (nur mit OS 2.0 und höher) (Alle Icons von Jörg Herz! Danke!)
+   - Ein Ausdruck kann nun beliebig umgeleitet werden. So kann man nun
+     auch Texte ungepackt speichern!
+   - CLI-Aufruf wurde geändert und erweitert: "?", "SCRIPT","BITPLANES",
+     "PICTURE","KONFIG" (siehe Anleitung)
+   - Es wird der Farbrequester von der "reqtools.library" benutzt, wenn
+     er vorhanden ist, sonst ein eigener.
+   - Look konnte nach einem Iconify abstürzen. Behoben.
+   - Textbefehle führen nun keinen Zeilenvorschub mehr aus.
+   - Pfeiltasten auf dem Ziffernblock werden nun auch unterstützt.
+   - Harmloser Bug beim Hochscrollen behoben.
+   - Fast alle Fenster besitzen nun ein Schließgadget.
+   - Fünf neue Blendeffekte sind hinzugekommen.
+   - Dokumentation vollständig überarbeitet.
+   - Bilder kann man jetzt mit <Esc> oder <q> wirklich verlassen :-)
+   - Fehler beim Textbefehl "CO" konnte auf 68000er-Rechnern zum Absturz
+     führen.
+   - Weitere Fehler bei den Befehlen "UB", "ST" und "SA" behoben.
+   - Fünf Fehler bei der Ansi-Anzeige behoben.
+   - Über dreißig (!) weitere Bugs behoben!!
+   - Viele kleinere Detailänderungen vorgenommen.
+   - Sharewarebedingung geändert!
+

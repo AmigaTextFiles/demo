@@ -1,0 +1,97 @@
+B) Available Developper Software
+================================
+
+Note: The views in develop.txt are not the views of Haage&Partner (who are more...
+diplomatic... like me), they are my own views. H&P has a more - gentle way to
+indicate it, but if you are reading between the lines, they probably mean the same.
+
+There are multiple Developper Packages available, but not all are useful at all for us.
+In this chapter you have to learn of what is commonly known as the "PPC Kernel War",
+before i show you the available software.
+
+As Phase 5 put out PowerUP, they included a software that was - bluntly spoken - BAD.
+The thing was instable running (crashing) and very inefficient. Also, they let go a lot
+of traditional Amiga Features. Their Software did not even know PPC Shared Libraries.
+Asked about this they said "a future Amiga PPC OS won't include Shared Libraries
+anyways". Their idea at that time was to present the Amiga-Community finally the
+Unix System "A\BOX" as the "successor of the Amiga", and they wanted to move the
+OS-Software to this direction. It has to be said, that Unix is usable a VERY stable
+and efficient operating system, much opposed to phase 5s Amiga-Unix-Mix. AFAIK P5
+dropped the "goal Unix" now, but that does not make their approach more sensible...
+Phase 5s software has nearly nothing anymore to do with the Amiga as we know it.
+
+At this point Haage&Partner put out the WarpOS Kernel from Sam Jordan, which is a
+replacement for Phase 5s PPC Kernel ppc.library. The problem is, ppc.library programs
+do not run on WarpOS (and WarpOS application not on ppc.library). If you want to
+"exchange Kernels", you have to reboot (At least, if you want to run a ppc.library
+program after a WarpOS Program, the other way round works, though).
+
+So you should choose your developper Software careful, so that you choose one that
+is compatible with your favourite PPC Kernel. I don't try to hide, that i clearly
+favorize WarpOS. WarpOS is just the much more Amiga-oriented solution, and also
+the more stable and more efficient one. And i am an Amiga-Fan at first rate, before
+favorizing specific firms. Some people claim, i would favorize Haage&Partner, but
+this is not the real truth. I used to favorize Phase 5 at the time PowerUP was
+released. Just the facts led me to exchanging sides...
+
+WarpOS is available at ftp://ftp.haage-partner.com/WarpUP for download.
+
+Some arguments pro-WarpOS (none of this is possible on ppc.library):
+
+- Dynamic Scheduling
+- PPC Shared Libraries
+- Mixed Binaries (with Global Variable Sharing)
+- Memory Protection (yes, finally on Amiga !!!)
+- Fat Binaries
+- very fast 68k/PPC Switching (much faster than on Phase 5s software)
+- runs 100% stable, no crashes
+- Two versions, one of them runs parallel to Phase 5s software (but is much
+  slower, as it uses Phase 5s software internally) and one "true WarpOS"
+- Control of BAT registers of the PPC and other lowlevel stuff
+- Uses Amiga Executables, not Unix Executables, like Phase 5s software does
+- PPC Executables can be directly started, without external loader
+- Kernel runs completely independent to Exec (this will be interesting,
+  as soon as someone creates a 68k Emulation, then Amigas without 68k
+  would be possible)
+- PPC Native Port of OpenGL is available (100% complete port, not a half-complete
+  port, like CyberGL) on H&Ps ftp-Site
+- With the latest version (V14) WarpOS-applications can even be started without
+  reset, if a program using Phase 5s software was started before
+- Quake (well, isn't that a nice Kernel Feature? Well, H&P showed off a WarpOS
+  port of Quake at some computer shows... they can't sell it, out of obvious
+  reasons, they only used it to show-off their Kernel and C Compiler... but
+  it ran really nice... i really hope Clickboom will publish this version...)
+
+Well, so we need Developper-Tools for WarpOS. The only ones that meet this condition are:
+
+- StormC PPC (Commercial C Compiler from Haage&Partner)
+- (The soon to be released Freeware C Compiler from Frank Wille)
+- StormPowerASM (Very good commercial Assembler by Sam Jordan, WarpOS was written with it)
+- pASM (Freeware PPC Assembler from Frank Wille)
+
+SAS/C PPC and GnuC PPC do not help, they are only for Phase 5s software...
+
+It also has to be mentioned, that StormC PPC is the only available PPC C Compiler that
+has "automatic Contextswitches" a thing absolutely required to do easy 68k/PPC parallel
+developpement.
+
+Well, one of the "Pro's" of StormC is, that you - as these docs will show you - don't
+need to know THAT much about the PPC when starting to code for it. Actually the code
+is VERY portable. Your code can even compile parallel on 68k and PPC, a thing that never
+will be true for ppc.library...
+
+It has to be once more clarified: Even if the situation ("Kernel War") is *bad*, WarpOS
+is the Amiga-like way of handling the PPC... and also the more efficient and stable
+way of handling things... it is the hope, though, that Amiga International will finish
+this "Kernel War" in the future.
+
+This documentation pack is only of any use for you, if you - like me - chose the WarpOS
+route. Things are handled COMPLETELY DIFFERENT for the other PPC Software, so if you
+want to do software for ppc.library, you can just delete ppcpack.lha, it will be of
+no use for you, then...
+
+It has also be noted, that the PPC ASM Part in these docs is specifically for the
+StormPowerASM. I don't know the GNU Syntax that pASM uses, but if anyone does a
+"pASM Version" of ppctut.guide, please contact me. Also note that ppctut.guide does
+not yet explain how to use "indirect data".
+

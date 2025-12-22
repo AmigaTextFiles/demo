@@ -1,0 +1,20 @@
+V3.0
+
+MOUSE on
+FKEYS on
+
+EVENT 00_Intro.ANIM8L
+SOUND play "Ram:SFX/Intro.mod" volume 64 pan 0 period 350 loops 1
+ANIM "Tulou-Chrome:Ani/00_Intro.ANI" 25 1 disk
+END
+
+EVENT IntroEND256.iff
+PICTURE "RAM:Pic/IntroEND256.iff"
+END
+
+EVENT Black.iff.1
+SOUND stop fade 2
+PICTURE "RAM:Pic/Black.iff"
+WIPE fade bycolor 0 speed 5
+PAUSE 2
+END

@@ -1,0 +1,13 @@
+assign io: ""
+cd io:
+c/assign devs: io:devs/ add
+c/assign system: io:system/ add
+c/assign s: io:s/ add
+c/assign c: io:c/ add
+c/assign libs: io:libs/ add
+System/SetMap io
+
+newshell window=con:0/0//256/FederalShell_-_Press_HELP_for_Choice/CLOSE
+
+c/more message
+

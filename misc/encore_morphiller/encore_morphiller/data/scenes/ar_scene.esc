@@ -1,0 +1,299 @@
+{
+  "actions": [
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 0.006000000052154064,
+            "interpolation": "linear",
+            "time": 600
+          },
+          {
+            "float_values": 0.017999999225139618,
+            "interpolation": "linear",
+            "time": 720
+          },
+          {
+            "float_values": 0.05000000074505806,
+            "interpolation": "linear",
+            "time": 12800
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "Scene"
+        }
+      ],
+      "loops": 1,
+      "name": "num_released_arrows",
+      "start_time": 400,
+      "type": "property_float"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -15.1601181,
+              6.35733509,
+              21.90358734
+            ],
+            "interpolation": "linear",
+            "time": 7380
+          },
+          {
+            "float_values": [
+              -0.46696568,
+              18.25863647,
+              19.91003036
+            ],
+            "time": 20
+          },
+          {
+            "float_values": [
+              8.42126656,
+              2.18592739,
+              -12.35689735
+            ],
+            "interpolation": "linear",
+            "time": 2600
+          },
+          {
+            "float_values": [
+              -6.4659524,
+              1.88879204,
+              -13.05780983
+            ],
+            "time": 20
+          },
+          {
+            "float_values": [
+              18.20369911,
+              8.81627941,
+              0.88816261
+            ],
+            "interpolation": "linear",
+            "time": 2580
+          },
+          {
+            "float_values": [
+              12.87527084,
+              5.46332312,
+              -14.8384552
+            ],
+            "time": 20
+          },
+          {
+            "float_values": [
+              -4.8e-07,
+              6.20567703,
+              23.00351715
+            ],
+            "interpolation": "linear",
+            "time": 2380
+          },
+          {
+            "float_values": [
+              -4.8e-07,
+              30.84726524,
+              -7.2e-07
+            ],
+            "interpolation": "linear",
+            "time": 4300
+          },
+          {
+            "float_values": [
+              0.0,
+              39.90281677,
+              -0.0
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "camera_1"
+        }
+      ],
+      "loops": 1,
+      "name": "camera_1Action",
+      "start_time": 0,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -10.000002,
+              -33.426321,
+              -0.0
+            ],
+            "interpolation": "linear",
+            "time": 7380
+          },
+          {
+            "float_values": [
+              -46.443737,
+              0.0,
+              -0.0
+            ],
+            "time": 20
+          },
+          {
+            "float_values": [
+              -7.276608,
+              -203.814033,
+              -0.0
+            ],
+            "interpolation": "linear",
+            "time": 2600
+          },
+          {
+            "float_values": [
+              -7.276608,
+              -147.398911,
+              -0.0
+            ],
+            "time": 20
+          },
+          {
+            "float_values": [
+              -31.792042,
+              -271.694407,
+              -0.0
+            ],
+            "interpolation": "linear",
+            "time": 2580
+          },
+          {
+            "float_values": [
+              -20.39206,
+              -223.196812,
+              -0.0
+            ],
+            "time": 20
+          },
+          {
+            "float_values": [
+              -15.998172,
+              0.0,
+              -0.0
+            ],
+            "interpolation": "linear",
+            "time": 2380
+          },
+          {
+            "float_values": [
+              -90.0,
+              0.0,
+              -0.0
+            ],
+            "interpolation": "linear",
+            "time": 4300
+          },
+          {
+            "float_values": [
+              -90.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "camera_1"
+        }
+      ],
+      "loops": 1,
+      "name": "camera_1Action",
+      "start_time": 0,
+      "type": "rotation_xyz"
+    }
+  ],
+  "cameras": [
+    {
+      "far_clip_plane": 80.0,
+      "fov_x": 49.069203,
+      "fov_y": 28.800001,
+      "hide": false,
+      "name": "camera_1",
+      "near_clip_plane": 0.1,
+      "position": [
+        -15.1601181,
+        6.35733509,
+        21.90358734
+      ],
+      "rotation": [
+        -10.000002,
+        -33.426321,
+        -0.0
+      ]
+    }
+  ],
+  "enc_info": {
+    "data_type": "ENCSCN",
+    "date": "22 Jun 2023 23:06:38",
+    "version": "2.0"
+  },
+  "loops": 1,
+  "name": "Scene",
+  "objects": [
+    {
+      "mesh_name": "ar_arrow",
+      "name": "arrow",
+      "properties": {
+        "face_visibility": "front_back"
+      },
+      "tag": 11
+    },
+    {
+      "mesh_name": "ar_model",
+      "name": "model",
+      "properties": {
+        "face_visibility": "front_back"
+      },
+      "tag": 10
+    },
+    {
+      "mesh_name": "ar_arrow_cut",
+      "name": "arrow_cut",
+      "position": [
+        0.0,
+        0.0,
+        -0.58978832
+      ],
+      "tag": 12
+    },
+    {
+      "mesh_name": "ar_floor_1",
+      "name": "floor_1"
+    },
+    {
+      "mesh_name": "ar_cover_1",
+      "name": "cover_1",
+      "order": 50,
+      "properties": {
+        "blending": "multiply",
+        "depth_mask": 0,
+        "depth_test": 0
+      },
+      "tag": 20
+    }
+  ],
+  "properties": {
+    "num_released_arrows": 0.006000000052154064
+  },
+  "time": 19300
+}

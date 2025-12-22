@@ -1,0 +1,14 @@
+[bkg=bg.pbm][h1]The AmigaOS 4 engine
+by Menthos
+
+To be honest, not much have been done to the OS4 engine since it was first used for an AmigaOS 4 version of the Versus chartmag.
+
+Graphics rendering is done by the Warp3D graphics library and the stand alone music player is a custom player based on SDL_Mixer with a message port for Amiga programs to control what to play and start/stop the music.
+
+The engine handles graphical menu button locations and keyboard shortcuts through a configuration textfile and inside the articles there are a few tags that can be inserted for different kind of behaviour such as background image, headlines, links and text color to name a few.
+
+It does its job but there were features that I had planned that never got implemented (and probably won't). It was fun working with the engine, but other things always got higher priority. Maybe one day I will take it up again working on it or creating something new. Who knows.
+
+I hope you will enjoy Versus 10 on AmigaOS 4! See you around!
+
+//Menthos

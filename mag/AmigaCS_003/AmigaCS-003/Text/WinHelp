@@ -1,0 +1,71 @@
+@{d C5FFC9}@{c 8FFF8A}Q: Výkon grafické karty je zoufalý!@{c}
+A: Zkuste   zkontrolovat,   zda   nemáte   v  poçítaçi  jednorychlostní  CD-ROM.   Jde
+o potvrzenou chybu ve Windows 95.
+
+@{c 8FFF8A}Q: Windows 95 vytváêí port pro neexistující myî.@{c}
+A: Stejná  chyba se projevuje u Windows NT.  Zpravidla je zpûsobena podporou PS/2 myîí
+a  pouùitím  bëùné sériové myîi v témù okamùiku.  Plug and Play ve Windows 95 si totiù
+myslí,  ùe  je nutné zprovoznit i PS/2 port myîi a tím dojde k vytvoêení dvojité sady.
+Odstranëní  duplicitní  poloùky  zpravidla  pomûùe,  ale  nëkdy  v budoucnu mûùe dojít
+k novému vytvoêení duplicity.  To je nevýhoda Plug and Play technologie.
+
+@{c 8FFF8A}Q: Více sbërnic SCSI v poçítaçi vede k problémûm.@{c}
+A: Ve Windows 95 je chyba v ovladaçích SCSI, které chybnë urçují identifikaci sbërnice
+SCSI tam, kde je sbërnic více.
+
+@{c 8FFF8A}Q: Co dëlat, kdyù se nezobrazuje spoêiç obrazovky?@{c}
+A: Spusïte Windows 95 pro standardní profil, aktivujte zde spoêiç, a potom bude spoêiç
+pro uùivatele pravdëpodobnë fungovat bez problémû.
+@{c 8FFF8A}Q: Problémy s modemem a grafickou kartu s çipem S3@{c}
+A: Buðte  varováni  pêedem.   Pokud  budete pouùívat kartu S3 nebo 8514 a k tomu modem
+zapojený  na  COM4,  budou obë zaêízení v permanentním konfliktu a doplácet na to bude
+pouze modem.  Êeîení je jediné v pêesunu modemu na jiný port.
+
+
+@{c 8FFF8A}Q: CD-ROM funguje, audio nikoliv@{c}
+A: Pravdëpodobnë jde o pêíliî starý firmware CD-ROM.  Mûùe chybët dosový ovladaç, nebo
+mûùe  být  chyba  v  nastavení  hlasitosti, nebo chybí audio kablík mezi CD mechanikou
+a zvukovou kartou.
+
+
+@{c 8FFF8A}Q: Zmëna ikony pro Tento poçítaç@{c}
+A: Jednoduîe pouùijte program REGEDIT.EXE pro nalezení:
+"HKEY_CLASSES_ROOT\CLSID\{20D4FE0-3AEA-1069-A2D8-08002B30309D}\DefaultIcon"  a  zmëñte
+výchozí  (Default)  hodnotu na jméno_souboru,nn, kde jméno_souboru je kompletní urçení
+souboru obsahujícího ikony a nn je poêadové çíslo ikony (poçínaje).
+
+@{c 8FFF8A}Q: Obnovení zmizelých ikonek@{c}
+A: Pokud  se  vám  povedlo,  ùe  zmizely  ikony  Koî, Doruçená poîta çi cokoli dalîího
+systémového,  je  zde snadná pomoc.  Otevêete WINDOWS\INF, najdëte SHELL.INF, kliknëte
+pravým tlaçítkem a zvolte Install.  Po novém startu Windows by mëli být ikony zpët.
+
+@{c 8FFF8A}Q: Proç se kurzory nezobrazují jako animované?@{c}
+A: Pravdëpodobnë nepouùíváte 32bitový pêístup k disku. Zapnëte si jej.
+
+@{c 8FFF8A}Q: Jak urychlit animace?@{c}
+A: Urychlení  je  moùné  jenom pro animované otevírání nebo zavírání oken, pokud ovîem
+nesnáîíte   papírky  pêelétávající  mezi  dvëma  místy  pêi  kaùdém  kopírování,  máte
+pravdëpodobnë  smûlu.   Tato  zcela  zbyteçnë  zdrùující  çinnost  je neodstranitelná.
+Urychlení je moùné pomocí REGEDIT.EXE.
+
+@{c 8FFF8A}Q: Mnoho písem, ale ùádné nepracuje.@{c}
+A: Pokud  máte  ve  sloùce  WINDOWS\FONTS mnoho souborû s fonty (majícími pêíponu.FON)
+a v ùádném  z  textových programû je nemûùete pouùívat, postaçí zpravidla nainstalovat
+jakoukoliv  tiskárnu  podporující  písma  TrueType  (jakýkoliv  HP  LasetJet  postaçí)
+Programy  pro  Windows 95 se totiù pêi zobrazování pouùitelných fontû êídí schopnostmi
+ovladaçe tiskárny nastavené pro tisk!
+
+
+______________________________________________________________________________________
+
+                                   @{c 8FFF8A}Toto není FAKE!!!@{c}
+             Pêekopírováno z obrazovky IBrowse - vçetnë pravopisných chyb!
+                                           
+                        @{c 8FFF8A}Taky si myslíte, ùe W95 jsou za trest?@{c}
+
+
+@{p WinSuck.png 50 110}
+@{p WinSuck.png 450 110}
+
+
+                                      - @{c 8FFF8A}ShAmaN@{c} -

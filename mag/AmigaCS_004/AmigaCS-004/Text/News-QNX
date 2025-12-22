@@ -1,0 +1,98 @@
+@{xoffset 21}@{d FFFEB0}¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+@{xstep 400}@{font ACS-Title.font 18}QNX - demodisk@{font}
+@{xstep 445}@{c A6FFF8}@{i}Shaman/Abort@{ui}@{c}@{ystep -8}
+
+
+
+    @{font ACS-Title.font 18}I@{font}hned po  oznámení  partnera,  od kterého AInc. licencuje kernel (jádro) pro
+nový  @{b}@{c FFE16B}AmigaOS  5.0@{c}@{ub},  jsem  zavítal  na internetovou stránku této kanadské firmy.
+Oznámení  o partnerství  s AInc. zde  ùádné  nebylo  (objevilo  se  zhruba aù po
+týdnu), takùe jsem hledal dalîí informace.  Do oka mi padla @{c FFE16B}demoverze QNX disku@{c},
+která  na  jediné  @{c FFE16B}1.44MB@{c}  disketë  slibovala  instalaci systému @{c FFE16B}QNX@{c} vçetnë @{c FFE16B}GUI@{c},
+pêipojení na @{c FFE16B}internet@{c}, @{c FFE16B}WWW@{c} prohlíùeç s @{c FFE16B}Javascriptem@{c} a nëkolik utilitek.
+
+   Popravdë êeçeno jsem tomu moc @{f FFF733}nevëêil@{f}, ale pêesto jsem se rozhodl to okamùitë
+vyzkouîet.  Za nëjakou chvíli byl archiv na disku mého pracovního PC.  Instalace
+probíhá tak, ùe se nejprve na volnou disketu pêekopíruje celý staùený soubor (de
+facto  se  jedná o image HD diskety), poté se nabootoje PC z diskety.  Minimální
+poùadavky  dema  jsou:   @{i}386,  8MB  RAM,  FDD,  doporuçen  modem@{ui}.  Harddisk není
+potêeba,  vîe  jede  z  diskety,  resp.   ram-disku.  Po nakopírování diskety do
+pamëti vlastním zavadëçem se po nëkolika sekundách (@{i}na tom samém poçítaçi to W95
+trvá pêes pûl hodiny!@{ui}) spustila 'instalace' systému.  QNX si bëhem nëkolika málo
+sekund   'oîahal'   hardware   a správnë   detekoval  mûj  systém  (@{i}P160/64MB/S3
+Virge/Ethernet  3COM/myî/modem  US  Robotics  56k@{ui}).   Po  odklepnutí  copyrightu
+a  licençního ujednání nabëhlo ihned GUI (tedy ùádná pêíkazová êádka UNIXu - QNX
+je  v podstatë  unixový  systém  zaloùený  na  posixovém  jádêe;  ostatnë @{c FFE16B}QNX@{c} má
+znamenat "@{c FFE16B}Q@{c}uick u@{c FFE16B}N@{c}i@{c FFE16B}X@{c}").
+
+   GUI  zajiîïuje  43kB  knihovna  @{c FFE16B}photon.library@{c},  která  mûùe mít (naîtëstí :)
+naprosto  libovolný  vzhled.  V mém pêípadë se jednalo o @{c FFE16B}vzhled Win95@{c} (asi proto
+byly  na  www  stránce  QNX  rûzné verze pro rûzné systémy, pêestoùe ona disketa
+ùádné   Windows   ke svému   chodu  naprosto  @{c FFE16B}nepotêebuje@{c}).   GUI  bylo  správnë
+@{b}windowsácky   úchylný@{ub}   (@{i}tlaçítko  START,  pruh  úloh,  rozbalovací  menu  místo
+zavírací gadgety  okna, neplastická a îpatnë ovladatelná îoupátka, pêepnutí okna
+do  popêedí  pêi  naklepnutí...@{ui}),  ale  coù  -  prý  to  bude  první vëc, kterou
+AInc. zmëní k obrazu svému.
+
+   Vënujme  se  teð  vëcem,  které  byly s QNX pêedinstalovány.  Jako první jsem
+zkusil  editor  (@{i}nëco  jako  Write z Windows 3.1 :-@{ui}) a jednoduché vektorové demo
+bëùící v oknë.  Dále zde byl primitivní souborový manager (@{i}i ten z pOS byl lepîí@{ui}
+;-),  který  odhalil  naplno  skuteçnost,  ùe  QNX  má  i adresáêovou  strukturu
+pêevzatou  z Unixu.   Hlavní pêekvapení vîak pêiîlo, kdyù jsem spustil betaverzi
+www  browseru  nazvaného  @{c FFE16B}Voyager@{c}  (@{i}nemá  nic spoleçného s Voyagerem na Amize!@{ui}).
+Pravda,  nastavování  a nabídky  byly  silnë  zjednoduîené,  proto  nelze  tento
+prohlíùeç  srovnávat  ani  napê. s AWebem  -  ale  umí  alespoñ  @{c FFE16B}JavaScript@{c}, coù
+demonstrovala jednoduchá pêedinstalovaná hra.
+
+  Dalîí  pêíjemné  pêekvapení  se  dostavilo pêi @{b}konfiguraci internetu@{ub} - staçilo
+zadat jméno, heslo, telefonní çíslo a IP adresu DNS serveru (v Miami na Amize se
+nemusí  zadávat)  a internet byl zprovoznën bëhem chvilky.  Testoval jsem systém
+a jeho  taskování  po  dobu  2  hodin,  nëkolik  vektorových  dem  se ani jednou
+nezaseklo.  Dokonce @{c FFE16B}Voyager nespadnul@{c} ani na stránce @{c FFE16B}www.microsoft.cz@{c}, jako jeho
+"@{c FFE16B}kolega@{c}"  MSIE4 na stejném poçítaçi ;-))).  Ukonçení QNX bylo také bez problému.
+Nakonec  jeîtë  uvedu  perliçku - reùimy obrazovky îly za chodu pêepínat.  Na té
+samé grafické kartë, na které w95 pêi sebemenîí zmënë restartují...
+
+  Jaký  jsem tedy mël z QNX pocit?  Pokud pominu hnusné GUI, tak v zásadë dobrý.
+Sice  reakce  systému  nebyly  tak sviùné na jaké jsem zvyklý z @{c FFE16B}Amigy/060@{c} (navíc
+i @{c FFE16B}IBrowse@{c}  je  o  dost  rychlejîí neù @{c FFE16B}Voyager@{c}), ale na upocené @{c FFE16B}Pentium 160@{c} je to
+sluîný  výsledek.   Sympatická  a  v dneîním  svëtë ojedinëlá je snaha o takovou
+miniaturizaci systému.  Amiga sice to samé zvládne s 512kB ROM a 4MB RAM - v tom
+je  QNX-demo  jen o nëco nároçnëjîí, ale samotné jádro QNX si má údajnë vystaçit
+uù se 100kB ROM.
+
+  ---
+
+   Nakonec  nebude  od  vëci  povëdët,  co  pêedvádëli  zástupci @{c FFE16B} @{i}QNX na výstavë
+Computer   98@{c}@{ui}.   Amigisté  ohláîené  partnerství  s QNX  zpoçátku  brali  velice
+rezervovanë;  na  konci  vîak  vëtîina  z nich  byla pêesvëdçena, ùe je to dobrá
+volba,  pêestoùe  spíîe oçekávali vëtîí a známëjîí spoleçnost.  @{c FFE16B}Prezident QNX@{c} si
+hned  v úvodu  naklonil publikum sdëlením, ùe jeho prvním domácím poçítaçem byla
+A1000  a ùe  dosud  16  vývojáêû  jeho firmy vlastní @{c FFE16B}Amigu@{c}.  Také uvedl, ùe díky
+AInc. má teð ve své kanceláêi skvrny od kafe, protoùe kdyù oznámil spolupráci na
+AmigaOS  svým  zamëstnancûm  a optal  se jich, kdo vîechno má Amigu, tak nëkteêí
+amigisté právë stáli u kávovaru a @{i}radostí@{ui} ho zapomnëli vypnout ;-).
+
+   Takùe  QNX dëlali v podstatë amigisté, kteêí Amigu znají, mají ji rádi a jsou
+nadîeni  spoluprací  s AInc.   Pêipoçteme-li @{b}nelichotivá@{ub} slova prezidenta QNX na
+adresu  Microsoftu,  je  to urçitë vynikající zpráva.  V Amigách bude pouùit QNX
+mikrokernel   "@{c FFE16B}@{i}Neutrino@{ui}@{c}",   který   je   extrémnë   modulární  -  mûùe  pracovat
+v settop-boxech  i v pracovních  stanicích.   Architektura  QNX  je  také velice
+stabilní a kompaktní.  Je pêímo urçena pro aplikace, které @{c FFE16B}NESMÍ@{c} spadnout!
+
+   GUI  knihovna  "@{c FFE16B}Photon@{c}"  je velice univerzální - je to první micro-GUI.  Okna
+mohou  být  ovládána  nejenom klasicky "zepêedu", ale i v 3D prostoru.  Asistent
+QNX  pêedvádël  pêehazování  oken  z jednoho  poçítaçe na druhý (bez viditelného
+zpoùdëní)  pomocí specializovaného tlaçítka  v rámu  okna.  GUI je také naprosto
+nezávislé  na  ovládání,  coù  se  demonstrovalo  kompletním  ovládáním  prvního
+poçítaçe z druhého a naopak.  QNX hravë dovoluje distribuovat (rozdëlit) výpoçty
+na mnoho rûzných poçítaçû v síti (výhodné napê. pro raytrace).
+
+
+   Nejzajímavëjîí  çástí  prezentace  byla bezesporu pêekompilovaná hra @{c FFE16B}Doom pro
+QNX@{c}.  Doom pochopitelnë bezproblémovë bëùel v oknë, se kterým se mohlo v reálném
+çase  bez jediného  îkubnutí  hýbat.   Na tom by nebylo nic zajímavého.  Vëci se
+zaçaly dít teprve poté, co asistent pêesunul okno çásteçnë mimo obrazovku.  Çást
+okna,  která  zmizela  na  pravé  stranë  obrazovky prvního poçítaçe se okamùitë
+@{i}objevovala@{ui}  na levé  stranë  obrazovky  druhého poçítaçe.  A to vîe bez jediného
+zaváhání!  Tak tomu se êíká @{c FFE16B}Real-Time Operating System@{c} (RTOS).

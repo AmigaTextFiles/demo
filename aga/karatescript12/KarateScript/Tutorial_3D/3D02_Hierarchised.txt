@@ -1,0 +1,112 @@
+
+  In the previous exemple, we have seen each 3D Objects ('ob3d')
+ constructors need a label, and then the world where to attach the object.
+
+  In fact, you can give a world3d OR another ob3d already built before
+ to this second parameter: then the object is attached UNDER this object,
+ and it creates a hierarchy. Look:
+
+
+
+<t3dFlat> texture0 | 16  </t3dFlat> some textures needed by the objects.
+<t3dFlat> texture1 | 17  </t3dFlat>
+<t3dFlat> texture2 | 18  </t3dFlat>
+
+<t3dFlat> ta0 | 22  </t3dFlat> another colors...
+<t3dFlat> ta1 | 23  </t3dFlat>
+<t3dFlat> ta2 | 24  </t3dFlat>
+
+
+<World3D> world1 </World3D>  create an empty world.
+
+<cube> our_cube | world1    |0|0|0|0|0|0|1|1|1 |texture0 |texture1 |texture2 |texture1 |texture2| texture0 </cube>
+<cube> cube2    | our_cube  |3|0|0|0|0|0|1|1|1 |ta0 |ta1 |ta2 |ta1 |ta2| ta0 </cube>
+<cube> cube4    | cube2     |0|3|0|0|0|0|0.3|0.3|0.3 |texture0 |texture1 |texture2 |texture1 |texture2| texture0 </cube>
+<cube> cube3    | our_cube  |-3|0|0|0|0|0|1|1|1 |texture0 |texture1 |texture2 |texture1 |texture2| texture0 </cube>
+
+ It gives this hierarchy:
+
+ world1+
+       |
+       our_cube+
+               |
+               cube2+
+               |    |
+               |    cube4
+               |
+               cube3
+
+
+   When you  attach an Object to a world or another object, you specify in fact
+  to which spacial origin the object will depend on:
+ It means the position of cube2 will be relative to the center of 'our_cube',
+ not the world1 origin. Now, if you move 'our_cube', all sub-object attached
+ to it will move. This way, all positions, rotations, and scale are applied
+ down to all sub-objects.
+
+ In the part, we only rotate our_cube and cube2, but everything
+ rotates.
+
+
+------- objects constructions ----
+
+<MAIN> myscript |0|1</MAIN>
+
+<KCAM> the_camera |0|-2|-4|0|0.15|0|0.5 </KCAM>
+ 
+<KIMG> image | data/tv.iff </kimg>
+
+--------------------------------- script definition ----
+<KSCRIPT>
+    <ID> myscript </ID>
+    <PLAY> mypart | 40000 | 0 | 1 </PLAY>
+</KSCRIPT>
+
+<KPART>
+    <ID> mypart </ID>
+
+    <Fx><Pa>setpalette</Pa>
+        <Pa> image </Pa>   we have seen each image stands for a 256 color palette too.
+    </Fx>
+
+
+    <Fx><Pa>fillrc</Pa>  clear the screen background to color 0.
+        <Pa>  </Pa>   default screen rectangle.
+        <Pa> cte | 30 </Pa>
+    </Fx>
+
+    <Fx><Pa> Set3DObject </Pa>---------------  rotate our_cube
+        <Pa>  our_cube </Pa>
+
+        <Pa> 3cte |0|0|0  </Pa> position
+
+        <Pa> cte |0</Pa>        rotations
+        <Pa> cte |0</Pa>
+        <Pa> aff |0|0.006</Pa>
+
+        <Pa> 3cte|1|1|1 </Pa>   scales
+    </Fx>
+
+   <Fx><Pa> Set3DObject </Pa>---------------rotate cube2
+        <Pa>  cube2 </Pa>
+
+        <Pa> 3cte |3|0|0  </Pa> position
+
+        <Pa> cte |0</Pa>     rotation
+        <Pa> aff |0|-0.006</Pa>
+        <Pa> cte |0|0.00</Pa>
+
+        <Pa> 3cte|1|1|1 </Pa> scale
+    </Fx>
+
+      <Fx><Pa> Draw3DWorld </Pa>---------- draw all
+            <Pa>   </Pa>
+            <Pa> world1 </Pa>
+            <Pa> the_camera </Pa>
+            <Pa> cte|0 </Pa>
+            <Pa> cte|0.25 </Pa>
+            <Pa> cte|20</Pa>
+        </Fx>
+
+</KPART>
+

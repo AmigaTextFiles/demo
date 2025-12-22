@@ -1,0 +1,109 @@
+
+                  _____  _____________  ____   ____________
+                 /)    \/)            \/)   \ /)           \
+                //\     \\_______      \\    \/\    _______/_sr/prc
+        _______ /  \     \  _____)     / \    \ \            \ _______
+       /\       \   \     \/\         /__ \    \ \________    \       \
+      /  \_______\   \     \ \           \ \    \/ /           \ ______\
+      \  /\       \   \     \ \    \\     \ \    \/\            \       \
+       \/  \_______\   \_____\ \___/ \____/  \____\ \___________/________\
+        \  /        \  /     / /  /  /   /\  /    / /          /         /
+         \/__________\/_____/\/__/ \/___/  \/____/\/__________/_________/
+
+
+                               P r e s e n t s
+
+
+                          /-------------------\
+                                  - I-Surf -
+                               \-------------------/
+
+This is our contribution to the Amiga democompetition at The Party 9
+in Aars, Denmark...
+
+
+                                CODING:
+
+Engine for Particlestar, Smokin' & Volumelighted box by Hastur
+Everything else by TrickTrax
+
+                                MUSIC:
+All by Nutman
+
+                                GFX:
+
+IRIS-Logo and Multiply by Unreal
+Drew Barrymore by Judas
+Embryo by Matarazzo
+Background babes + dominologo & dominotextures by Bandy
+Browsergfx and anim + some textures by Thrym
+Creditlogos, objects & scenes by Ransom
+
+                          \-------------------/
+
+Well, nuttin' much to say. Pretty easy to put it together, no bigger problems
+with compatibility and such. No crashes, no nuttin'. First time actually that
+it was so problemfree to do a demo. A few comments on some effects:
+
+DOMINO:
+An old routine, could be faster with some precalc, but everything is
+calced realtime. Upper half of the screen is lowres 64 colors and lower part
+is hireslace 256 colors. There are 1984 points and 2976 faces when the logo is
+zoomed out, not including the grid.
+
+DISKOBALL:
+Andromeda rules :) Now with different colors for each lightray.
+
+LIGHTSOURCED TWISTER:
+Nothing  fake  here,  even though it would probably be easier.  The twister is
+round and the lightintensity is x-y-z calculated for each pixel.
+
+VOXELWORM:
+As most people know it is impossible to do a voxeltwister in 'real' 3D. I
+almost got it :)
+
+VOXELTUNNEL:
+Wondered   why   nobody   did   it   this  way  before.   The  camera  is  not
+freedirectional, but can swing around quite a bit.
+
+VOLUMELIGHT & VOLUMELIGHTED BOX:
+The  color  of the light changes 1/4 of the colorvalue of the pixels it passes
+through. In the box, it also ignores grey pixels, making these almost
+'impassable' (have to continue though in case it should meet a coloured
+pixel).
+
+Well, nuff of this.
+
+Final note: This can be packed with the cruncher of your choise if you have
+more than 16MB ram. It will NOT be able to unpack on 16MB as onefile. No time
+to do a loaderversion instead. It works and follows the rules.
+
+-TrickTrax
+
+                          /-------------------\
+
+CONTACT TRiCKTRAX: (Comments on the demo welcome here.)
+                martin@coolchat.dk      (Tricktrax)
+
+
+
+CONTACT IRIS:   darkhawk@gmx.net        (Darkhawk)
+
+           We are currently looking for more talented graphicians.
+               If you consider joining please contact Darkhawk
+                          via email or via snailmail
+
+                               Christian Hviid
+                               Læssøegade 78 I
+                                5230 Odense M
+                                   Denmark
+
+                  You should also try to visit our homepage
+
+                     http://www.irishq.dk
+
+                            \-------------------/
+
+
+                            released december 1999
+

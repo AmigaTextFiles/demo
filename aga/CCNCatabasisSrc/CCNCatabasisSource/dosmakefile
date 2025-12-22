@@ -1,0 +1,43 @@
+; this is an amiga shell makefile equivalent.
+; but it will re-assemble all files each times
+; contrary to make that will just reassemble what was
+; modified last...
+; just type "execute dosmakefile"
+
+IF NOT EXISTS obj
+makedir obj
+EndIF
+
+; assemble all files to linkable objects...
+
+phxass M=68020 I=include,src FROM src/startupWithShuntAGA.s TO obj/startupWithShuntAGA.o
+phxass M=68020 I=include,src FROM src/demo.s TO obj/demo.o
+phxass M=68020 I=include,src FROM src/copperCompiler.s TO obj/copperCompiler.o
+phxass M=68020 I=include,src FROM src/tripleBuffer.s TO obj/tripleBuffer.o
+phxass M=68020 I=include,src FROM src/spriteTools.s TO obj/spriteTools.o
+phxass M=68020 I=include,src FROM src/DatLoader.s TO obj/DatLoader.o
+phxass M=68020 I=include,src FROM src/p61Link.s TO obj/p61Link.o
+phxass M=68020 I=include,src FROM src/c2p1x1_8_16b_68k_bm.s TO obj/c2p1x1_8_16b_68k_bm.o
+phxass M=68020 I=include,src FROM src/fxStart.s TO obj/fxStart.o
+phxass M=68020 I=include,src FROM src/fxLoad.s TO obj/fxLoad.o
+phxass M=68020 I=include,src FROM src/fxLoadGo.s TO obj/fxLoadGo.o
+phxass M=68020 I=include,src FROM src/fxDual3D.s TO obj/fxDual3D.o
+phxass M=68020 I=include,src FROM src/fx3D_ext1.s TO obj/fx3D_ext1.o
+phxass M=68020 I=include,src FROM src/fx3D_ext2.s TO obj/fx3D_ext2.o
+phxass M=68020 I=include,src FROM src/fx3D_ext3.s TO obj/fx3D_ext3.o
+phxass M=68020 I=include,src FROM src/fxRidgedNoise.s TO obj/fxRidgedNoise.o
+phxass M=68020 I=include,src FROM src/fxDualLisa.s TO obj/fxDualLisa.o
+phxass M=68020 I=include,src FROM src/fxTitle.s TO obj/fxTitle.o
+phxass M=68020 I=include,src FROM src/bob.s TO obj/bob.o
+phxass M=68020 I=include,src FROM src/moves.s TO obj/moves.o
+phxass M=68020 I=include,src FROM src/k3d.s TO obj/k3d.o
+phxass M=68020 I=include,src FROM src/k2d.s TO obj/k2d.o
+phxass M=68020 I=include,src FROM src/inmem.s TO obj/inmem.o
+phxass M=68020 I=include,src FROM src/blitGrid.s TO obj/blitGrid.o
+
+; link all object files to executables...
+blink FROM obj/startupWithShuntAGA.o obj/demo.o obj/inmem.o obj/fxStart.o obj/fxLoad.o obj/fxLoadGo.o obj/fxDual3D.o obj/fx3D_ext1.o obj/fx3D_ext2.o obj/fx3D_ext3.o obj/fxRidgedNoise.o obj/fxDualLisa.o obj/fxTitle.o obj/blitGrid.o obj/copperCompiler.o obj/tripleBuffer.o obj/spriteTools.o obj/DatLoader.o obj/p61Link.o obj/c2p1x1_8_16b_68k_bm.o obj/bob.o obj/moves.o obj/k3d.o obj/k2d.o cobj/GifToBm.o TO Catabasis.exe sc nd
+
+; copy executable icon
+Copy res/Catabasis.exe.info Catabasis.exe.info
+

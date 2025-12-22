@@ -1,0 +1,6 @@
+sdlmove: main.c
+	i386-aros-gcc -lm -w main.c -o ../jylam -lSDL
+	i386-aros-strip --strip-unneeded --remove-section .comment ../jylam
+
+clean:
+	rm sdlmove

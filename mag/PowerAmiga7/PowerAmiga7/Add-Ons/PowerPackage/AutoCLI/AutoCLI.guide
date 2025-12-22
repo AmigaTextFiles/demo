@@ -1,0 +1,628 @@
+@database "AutoCLI.guide"
+@author "Vitaliy Chepeleff"
+@remark "$VER: AutoCLI Guide 0.91 (10 Октябрь 2000)"
+@remark "Created with GoldED 6.2 (9.10.99)"
+
+@node INTROE "Introduction"
+
+    Long, long ago, when the Directory Opus was only of version of 4.12, and I
+ was  barely  went on Amiga, I was very lazy to tyme in the archive name, when
+ creating it, and that's why I invented the new method, which allows to create
+ archives with the only one mouseclick. Time passed, DOpus changed on my eyes,
+ and became of the 5-th version, and  here  my  already  calmed  lazyness  was
+ seriously  shocked.  The  point  is  that  the  creators of this masterpiece,
+ probably haven't thought about the guys like me. Though all  my  attempts  of
+ converting configs of AutoLHA(LZX) failed. The cause was very simple -somehow
+ the mask {Ou} became not working at all.( It is not working now too ).  After
+ the  long  "fight" with my lazyness this program was created, which, I think,
+ will help you to pack anything easier. However this is not the only thing  it
+ can do.
+
+@endnode
+@node INSTALE "Installation"
+
+    Simply copy the program the executable AutoCLI to your favourite path  and
+ then copy the file AutoCLI.config to the same directory, or to the s:.
+
+@endnode
+@node SYSREQE "System requirements"
+
+                                @{b}Computer Amiga@{ub}
+                                  CPU 68000
+                                 Some memory
+                                    OS 2.0
+
+                 The program was written on A1200/A1230/16Mb
+                            It was also tested on:
+                                A1200/A1240/16M
+                                 CD32/SX1/8M
+
+@endnode
+@node AUTORE "Autor"
+
+    If you have any new ideas, or you found some  bugs  (  little,  of  course
+ :-)), or you simply want to write me a letter you can find me here:
+
+                 394016, Tulskaya street 16, Voronezh, Russia
+                               to Nasonov Roman
+
+                                or by FidoNet:
+                               2:5025/400.10
+                              To: Roman Nasonov
+
+        It's a pity, but I don't have any internet E-Mail address :-(
+
+        I hope that you'd like my first programm, and you'll use it.
+
+                                @{b}(c) Zetter'00@{ub}
+
+                             All Rights Recerved
+
+@endnode
+@node DISTRIBE "Distribution"
+
+    This programm is freely istributed if no changes are made into the packets
+integrity.  You  must  not  modify or somehow else change the contents of this
+package without written permission of the author.
+    This  program  is  provided  'as-is'.   Author   is   not   carrying   any
+responsibility  for  any  damages  caused by this programm. You are using this
+programm at your own risk. Author doesn't give any guarantees  of  working  of
+this programm on your machine.
+    AutoCLI is mailware. That means that if you like this programm you  should
+simply  write  me a letter. I understand that any money demands in our country
+is absurd, so you can at least support the beginner programmer  (I.e.  me)  by
+your  letters.  It  is  very  good  to  know  that  my work is not useless for
+somebody.
+
+                        @{b} The complete set of contents
+@{ub}
+         AutoCLI                  - executable file
+         AutoClI.doc              - documentation
+         autocli.config           - configuration file
+         Examples/packers.buttons - the example of using with DOpus 5
+         Examples/gfxcon.buttons  - the example of using with DOpus 5
+         Examples/Dopus4exm.CFG   - the example of using with DOpus 4
+
+@endnode
+@node FEATURE "Features"
+
+                        100% Asembler coded in Devpac
+                          Fully multitasking support
+            Used simply fully configurable text configuration file
+                          Support different options
+                            Small size (about 3K)
+            Installation contain samples for Dopus 4 and Magellan2
+
+@endnode
+@node DESCRE "Description"
+
+    This programm is intended for comfortable  frequent  excution  of  AmigaOS
+ commands.  In  particular  it  can be used for automated packing/depacking of
+ archives with the possibility to pack different files into different archives
+ and for executing programms which could understand only one file as parameter
+ multiple times.
+    Let's examine usage of this  programm,  for  instance,  to  pack  the  LHA
+ archives.  For  example,  we  have  the directory dir1 with the file1, file2,
+ file3 files in it. Let's  also  set  the  string  'LHApk'  in  the  'Command'
+ requester  (look  Preferences chapter) and enable the switch Autoname ( it is
+ oligatory  for  packing  ).  Let's  enter  the  directory  dir1,  mark  files
+ file1-file3, then execute AutoCLI. The result will be a file dir1.lha located
+ in the directory dir1 and containing marked files in it. Now  let's  set  the
+ switch 'Single' and execute AutoCLI for another time. In this case the result
+ will be three files: file1.lha, file2.lha and file3.lha. I.e. every of  three
+ marked  files  is  placed  into  different  archive.  Now let's mark only the
+ directory name (dir1). Now the result will be the file dir1.lha  but  in  the
+ same subdirectory our directory located. Let's now move our files to any root
+ directory. For example RAM: and remove the 'Single' switch. We will  have  an
+ archive  ram.lha as a result in this case. This is only the brief description
+ of possibilities of this programm. The other switches and  options  are  very
+ simple  to  understand  while  using. But you must be very attentive with the
+ 'Autoname'  option.  It  is  usually  not  used  with  conjunction  with  not
+ archiving.
+
+@endnode
+@node DETAILE "Some Details"
+
+AutoCLI tested with next external programs :
+
+-LHA  1.48, 1.42 (2.1 does not work)
+-LZX  1.21 (for use 1.20 need some changes in configuration file)
+-ZIP  2.3
+-HA   0.999
+-BZIP 0.1pl2
+-GfxCon020 v1.8b, v1.8c
+-arec 1.0
+
+On another versions normal work not guarantee. If you use another programms or
+version  of  archivers,  please  send  to  @{"autor" link autore} thear names and versions with
+bugreports to insert in this list.
+
+@endnode
+@node DETAILR "Некоторые тонкости"
+
+AutoCLI протестирована со следующими внешними программами:
+
+-LHA  1.48, 1.42 (2.1 не работает)
+-LZX  1.21 (для использования 1.20 нужно слегка поправить файл конфигурации)
+-ZIP  2.3
+-HA   0.999
+-BZIP 0.1pl2
+-GfxCon020 v1.8b, v1.8c
+-arec 1.0
+
+На других версиях нормальная работа не гарантируется. Если  вы  используете  с
+AutoCLI другие программы или версии архиваторов, просьба присылать их названия
+и версии @{"автору" link autorr} с замечаниями по работоспособности,  для  включения  в  данный
+список.
+
+@endnode
+@node USAGEE "Usage"
+
+ This programm is working only from CLI. There is no any filerequesters in it.
+
+@endnode
+@node OPTIONE "Options"
+
+   @{b}C=Command/K@{ub}  Name  of  the command to launch.  Look in the settings chapter
+                for more information.
+   @{b}S=Single/S@{ub}   Switch, making AutoCLI using mode 'one file to one archive'.If
+                the  file  has any icons,  they will be placed into  the  same
+                archive.  ( See option IconsOFF ).  In  other words the chosen
+                programm  will be  launched for so many times,  the amount  of
+                marked files is. If it is not entered AutoCLI enters mode 'all
+                files into one archive', i.e.  'Command' will be launched once
+                with all filenames as argumets.
+   @{b}A=Autoname/S@{ub} The switch  enabling the automated name choosing.  Understands
+                the switch 'Single/Normal' changing the algorithm of  choosing
+                the names. Must be entered before the list of filenames.
+   @{b}D=Delete/S@{ub}   The switch enabling the automated delete source files.
+                Deleting not warranty on files/dirs which protected by lock.
+   @{b}K=Ask/S@{ub}      The switch enabling requester on delete source files.
+   @{b}R=Reverse/S@{ub}  The  commandline for the most of the programms  is:  <command>
+                <arguments> <file1>   ...   <fileN>,  but some of them require
+                the list of files to be typed before the arguments:  <command>
+                <file1>   ...   <fileN>  <arguments>.  Such a mode is  enabled
+                with the hel of this switch.
+   @{b}I=IconsOFF@{ub}   If this switch is present AutiCLI ignores all .info files. You
+                should not  use this option while archiving,  because no  icon
+                files will be included into archive in this case.
+   @{b}F=FullName@{ub}   If this switch is  present,  AutoCLI  runs  in  special  mode:
+                Single  plus  _FULL_NAME_  Autoname.  For  example:  <command>
+                <arguments> <FULL_NAME> <FULL_NAME>. This switch is useful for
+                'arec'.
+   @{b}PRI/N@{ub}        The priority for the task to be run. [-127...5]
+   @{b}Stack/N@{ub}      Stack for the task to be run. [0...99998]
+   @{b}Files/M@{ub}      List of filenames transferred to the programm to be run.
+
+   The switches @{b}Autoname@{ub}, @{b}Single@{ub}, @{b}Reverse@{ub}, @{b}IconsOFF@{ub}, @{b}Delete@{ub}, @{b}FullName@{ub} and  @{b}Ask@{ub}
+could also be placed in the configuration file, harly setting the working mode
+for any variation of the launching command. In that case the options  selector
+works  like  the  logical  'OR',  i.e.  option is marked set if it presents in
+commandline, config file or both.
+
+   Setting  the  stack  might be done also by the two ways:  first - typing in
+the commandline the optin 'Stack/N' with parameter, second - setting the stack
+amount  in  the config file (see preferences).  Besides the first method has a
+priority  over  the  second,  i.e.   if  the  stack  amount  is  typed  in the
+commandline, then only this value will be used.
+
+     @{b}Some remarks of using the programms like Directory Opus with AutoCLI@{ub}
+
+   Most  programms,  archivers  in  particular,  makes  their  output into the
+current  directory.   Thus when launching the archiver you should set the flag
+'CD source', otherwise the result of packing/depacking might be unknown.
+   There is another peculiarity of launching the program from  DOpus  5.  The
+point  is  that  DOpus  limits  the  length  of  the  launching command by the
+parameter Max CLL in preferences/CLI launching. So, if this parameter  is  set
+to  a  very big number, then there are problems with startig archiving the big
+amount of files. The problem is that appear  icon  names,  usually  hidden  in
+dopus listers, therefore lenght of command line become bigger then the maximum
+allowed. I redused it to the amount of 384, and  everything  became  OK.
+
+@endnode
+@node EXAMPLE "Examples"
+
+;AutoCli Congiguration File Version 1.5
+;this is comment
+\\\\LHA  c:lha ;command name, path
+\\pk:a  -r  a  ;variation, AutoCLI option, command options
+\\un: x ;variation, command options
+\\\\gfxcon:25000 work:gfx/converters/gfxcon/gfxcon ;command name, stack, path
+\\8g:sir gif 256;variation, AutoCLI options, command options
+\\4g:sir gif 16 ;variation, AutoCLI options, command options
+;etc
+
+@endnode
+@node PREFERENE "Preferenses"
+
+   The program AutoCLI works with the config file located in the s: catalogue,
+or  in  the  same  directory the main program is.  If you master the format of
+this  file,  you  will  be  able  to  create  your own types of automated file
+processing.
+
+                                @{b}Common format:@{ub}
+; - comment
+\\\\<command without mode>[:<stack>]<space><path to command>
+\\<variation(2 symbols)>:[a][s][i][r][d][k]<space><options for command>
+   Common  format  of  configuration  file  is  ierarchial  with  2  levels of
+iteration.   There  are  the  symbolic  names  of  launching commands (without
+variations) and full paths to the executables launching by this command on the
+first level.  There are variations, options for current variation of executing
+command  (including  working  modes  of  AutoCLI) on the second one.  Comments
+could  be  placed  at  the  end  of  any  line  and  must be started with ';'.
+(semicolon)
+
+   Name of the  command  (WITHOUT  VARIATION)  must  be  started  from  double
+backlsash  ('\\\\'),  after it goes non-abligatory parameter Stack, in decimal
+form, separated from the commandname with colon. then goes the space  and  the
+full path to the executable file.
+
+   Two symbols of variation, started from backslash ('\\'), are placed on  the
+new  line. After it must goes the colon and AutoCLI options for this variaton.
+Options must stay without any spaces between them. Then must  stay  the  space
+and  options  for  launching command for this variation after it. They will be
+typed in as the arguments for the launched programm. Full commandline  AutoCLI
+option  'C=Command/K' must look like LHApk, where LHA is commandname and pk is
+it's variation. Same names of variations for different commands are allowed.
+
+    @{"Example" link example}
+
+@endnode
+@node FUTUREE "Future plans"
+
+  If you have any ideas you shold write to me. All your  suggestions  will  be
+examined.
+
+@endnode
+@node BUGSE "Known bugs"
+
+   Progarmm traces the existance of the icons of files of the list, but in the
+case  when  file  name  or  directory  name ends on .info.  this file could be
+removed  from  the list.  If you don't want this, then do not use this program
+on such a files.
+   If  there  is  no  main  file in the list, ten the corresponding .info file
+would be deleted from the list.  This bug will be removed in next version.
+   AutoCLI,  or to be more exact.  most of archivers doesn't support filenames
+with  the  symbols '*','#','(','[' etc.  in them.  It's a pity, but nothing is
+doing  to  change  this.   If it will annoy me hardly, i'll do the in-programm
+renaming of such files.
+
+@endnode
+
+@node THANKSE "Thanks"
+
+I want to thank next peoples for help:
+
+- Vladimir Berezenko for english translation documentation files.
+- Vitaliy Chepeleff for fine beta testing and converting this documentation to
+guide format.
+- Denis Sotchenko for help Amiga OS programming.
+- AmiS for miscellaneous help and advices.
+- Levitator for give e-mail service.
+
+
+@endnode
+@node HISTORYE "History"
+
+      0.8  First working realization
+      0.83 The double symbol variations are invented, the config file format
+changed, documentation supplemented.
+      0.84  (15-Dec-99) Fixed bug with small letters in command options. Fixed
+bug with lock parent directory
+      0.85 (16-Dec-99) Adding Delete option
+      0.86 (16-Dec-99) Test version
+      0.9  (29-Dec-99) Adding Ask option, some bugs fixed.
+      0.91 (10-Oct-00) Adding FullName option.
+
+@endnode
+@node INTROR "Введение"
+
+        Давным   давно,   когда  Directory  Opus  еще  имел  версию  4.12,  а  я
+только-только  пересел  на  Амигу, мне было страшно лень набирать имя архива при
+его  создании,  и  поэтому был придуман метод, позволяющий паковать архивы всего
+лишь  одним нажатием мышки.  Летело время, DOpus менялся на глазах, и вот он уже
+5-й.  И тут мою успокоившуюся было лень ждали серьезные потрясения.  Дело в том,
+что  создатели  сего  шедевра  наверно  не  подумали о таких как я и все попытки
+перенести конфиги с AutoLHA(LZX) завершались неудачей.  Причина оказалась проста
+-  почему-то  напрочь  отказывался работать шаблон {Ou} (впрочем, он и сейчас не
+работает) Ну и после долгой продолжительной борьбы с одолевающей ленью появилась
+эта  программка,которая,  как  я надеюсь, поможет Вам упаковать все быстро и без
+особых хлопот.  Впрочем на этом ее возможности не ограничиваются.
+
+@endnode
+@node INSTALR "Инсталляция"
+
+        Просто  скопируйте файл AutoCli в Ваш любимый каталог, а также поместите
+файл AutoCli.config в него-же или в директорию S:
+
+@endnode
+@node REQUR "Системные требования"
+
+                               @{b}Компьютер Amiga@{ub}
+                               Процессор 68000
+                                Немного памяти
+                                    OS 2.0
+
+                    Программа написана на A1200/A1230/16Mb
+                          А также протестирована на:
+                                A1200/A1240/16M
+                                 CD32/SX1/8M
+
+@endnode
+@node AUTORR "Авторство"
+
+      Если у вас есть какие-то новые идеи, или вы нашли в этой программе
+маленькую ошибку :-) или вы хотите просто написать мне письмо, Вы можете найти
+                               меня по адресу:
+
+                              394016 г. Воронеж
+                             ул. Тульская, д. 16
+                               Роману Насонову
+
+                               или по FIDOnet:
+                               2:5025/400.10
+                              To: Roman Nasonov
+
+                    к сожалению @mail адреса у меня нет :(
+
+     Я надеюсь, что моя первая программа Вам понравилась, и Вы станете ею
+                                пользоваться.
+
+                                @{b}(С) Zetter'00@{ub}
+
+                             All Rights Recerved
+
+@endnode
+@node DISTRIBR "Условия распространения"
+
+    Эта   программа  может  распространяться  свободно  при  условии  сохранения
+целостности  комплекта  поставки.   Вы  не  должны модифицировать или каким-либо
+другим  образом  изменять  содержимое  этого  архива  без письменного разрешения
+автора.
+    Эта  программа  поставляется  "КАК ЕСТЬ".  Автор не несет ответственности за
+любые   повреждения,   случившиеся   из-за  использования  этой  программы.   Вы
+предупреждены  и  исполизуете эту программу на свой риск.  Автор не дает никаких
+гарантий работоспособности этой программы на Вашей машине.
+    Эта программа распространяется на условиях mailware. Это значит, что если
+Вам понравилась эта программа, просто пошлите мне письмо.
+
+
+                    @{b}  Комплект поставки
+@{ub}
+        AutoCLI                  -исполняемый файл
+        AutoClI.doc              -документация
+        autocli.config           -файл конфигурации
+        Examples/packers.buttons -пример использования для Dopus 5
+        Examples/gfxcon.buttons  -пример использования для Dopus 5
+        Examples/Dopus4exm.CFG   -пример использования для Dopus 4
+@endnode
+@node FEATURER "Особенности"
+
+                       Написано полностью на ассемблере
+                       Полная поддержка многозадачности
+            Возможность полного конфигурирования в текстовом файле
+                          Поддержка различных опций
+                         Небольшой размер (около 3K)
+           В комплект входят примеры работы для Opus4 и MagellanII
+
+@endnode
+@node DESCRR "Краткое описание"
+
+        Данная  программа  предназначена  для  удобного  множественного  запуска
+сходных  команд  AmigaDOS.   В  частности, ее можно использовать для организации
+автоматической  упаковки/распаковки архивов,с возможностью режима "каждый файл в
+свой  архив",  а  также для запуска программ, допускающих только один аргумент в
+режиме списка файлов.
+        Давайте рассмотрим порядок работы с  программой  на  примере  упаковки
+архиватором  LHA.  Пусть  имеется директория dir1, а в ней файлы file1,file2 и
+file3. Укажем в опции Command строку 'lhapk'  см.  Preferences.  Укажем  также
+опцию Autoname (для архивации последняя обязательна). Войдем в директорию dir1
+и отметив файлы file1-file3, запустим AutoCli. В результате в  директории  dir
+появился  еще  один  файл  под именем dir1.lha, содержащий в себе file1-file3.
+Установим опцию Single и снова запустим AutoCli. На этот раз  появились  файлы
+file1.lha,  file2.lha  и  file3.lha,  т.е.  каждый файл уложили в персональный
+архив. Попробуем теперь отметить только директорию dir1,  в  результате  опять
+получили dir1.lha, но уже не внутри dir1, а рядом с ней. Перенесем теперь наши
+file1-file3 в какую-либо корневую  директорию,  скажем  RAM:  и  снова  уберем
+Single  .  В  результате,  имя  полученного  архива будет RAM.lha, но он будет
+содержать все 3 файла. Вот и все тонкости, остается только напомнить, что надо
+быть внимательнее с опцией Autoname, в операциях не связанных с архивацией она
+обычно не нужна.
+
+@endnode
+@node USAGER "Использование"
+
+        Программа работает ТОЛЬКО из CLI. Файл-реквестеры отсутствуют.
+    
+@endnode
+@node EXAMPLR "Пример конфигурации"
+
+;AutoCli Congiguration File Version 1.5
+;this is comment
+\\\\LHA  c:lha ;command name, path
+\\pk:a  -r  a  ;variation, AutoCLI option, command options
+\\un: x ;variation, command options
+\\\\gfxcon:25000 work:gfx/converters/gfxcon/gfxcon ;command name, stack, path
+\\8g:sir gif 256;variation, AutoCLI options, command options
+\\4g:sir gif 16 ;variation, AutoCLI options, command options
+;etc
+
+@endnode
+@node PREFERENR "Настройки программы"
+
+        Программа  AutoCli  работает  с  файлом  конфигурации,  расположенным  в
+каталоге S:  или рядом с самой программой AutoCli.  Изучив формат этого файла Вы
+можете создавать собственные виды автоматической обработки файлов:
+
+Общий формат:
+;comment
+\\\\<имя команды без вариации>[:<stack>]<пробел><путь к исполняемому файлу>
+\\<вариация(2 символа)>:[a][s][i][r][d][k]<пробел><опции команды>
+      Общий  формат конфигурационного файла подчиняется иеархической структуре с
+двумя   уровнями   вложенности.    На  первом  расположены  символические  имена
+вызываемых  команд  (без  указания вариации) и полные пути к исполняемым файлам,
+вызываемым  данной  командой.  На втором уровне (вариаций) расположены опции для
+вызова  команды (включая режимы работы autocli).  Комментарии могут быть в конце
+любой строки и начинаются со знака ";" (точка с запятой)
+      Двумя   обратными  косыми  чертами  ('\\\\')  предваряется  имя  команды  БЕЗ
+ВАРИАЦИИ,  далее  следует  необязательный  параметр  stack,  в  десятичном виде,
+отделяемый от имени команды двоеточием, затем через пробел следует полный путь к
+вызываемому файлу
+      На   новой   строке   обратной   косой  чертой  предваряются  два  символа
+(обязательно  2!)  вариации  вызываемой  команды,  далее,  через двоеточие могут
+стоять  опции  AutoCLI,  которые  будут  относиться к этой вариации.  Опции идут
+подряд  без  пробела.   Через  пробел  идут  опции вызываемой команды для данной
+вариации,  они будут поставлены в поле аргументов вызываемого файла.  Полный вид
+опции  autocli  C=Command/K включает в себя имя команды плюс вариация, например:
+LHApk (где 'LHA' это имя команды, а 'pk' - вариация) в конечном итоге примет вид
+C:LHA  -r a.  Вариация должна состоять из двух символов.  Допускаются одинаковые
+имена вариаций, относящиеся к разным командам.
+
+    @{"Пример:" link examplr}
+
+@endnode
+@node FUTURER "Планы на будущее"
+
+   Eсли у Вас есть какие-либо идеи (в разумных пределах,конечно),  можете  мне
+написать.  Все  Ваши  предложения  будут  обязательно  рассмотрены и приняты к
+сведению.
+
+@endnode
+@node BUGSR "Известные ошибки"
+
+        Программа  сама  отслеживает наличие иконок у файлов переданного списка,
+но  в  случае,  если  имя файла или диретории заканчивается на .info , этот файл
+может  пропасть  из  списка.   Методы  устранения  -  не пользоваться AutoCli на
+файлах/директориях, чьи имена кончаются на .info
+      В  случае, если в список файлов попадет .info файл без основного файла, то
+эта  иконка  будет  потеряна  из  списка  файлов.   Баг  будет убран в следующих
+версиях.
+      AutoCli,  вернее большинство архиваторов и других программ не поддерживают
+работу с файлами, в именах которых встречаются символы '*','#','(','[' и т.д.  В
+частности  LHA и LZX не запакуют такие файлы.  К сожалению, никаких мер по этому
+поводу  не  предпринимается.  Если сильно достанет,сделаю насильную переименовку
+таких файлов.
+
+@endnode
+@node HISTORYR "Немного истории"
+
+
+      0.8 (14-Nov-99) Первая работающая реализация
+      0.83  (21-Nov-99)  Введены  двухсимвольные  вариации, изменен формат файла
+конфигурации, дополнена документация
+      0.84  (15-Dec-99)  Исправлена  ошибка  маленьких  букв в опциях вызываемых
+файлов,  что  вызывало  некорректную  работу  некоторых архиваторов.  Исправлена
+ошибка lock'a вышестоящей директории при использовании autoname
+      0.85 (16-Dec-99) Введена опция Delete
+      0.86 (16-Dec-99) Тестовая версия
+      0.9  (29-Dec-99) Добавлена опция Ask, убраны некоторые глюки.
+      0.91 (10-Oct-00) Добавлена опция FullName
+
+@endnode
+@node OPTIONR "Опции"
+
+        @{b}C=Command/K@{ub}  Имя  команды  для  запуска.  Подробее см.  в описании файла
+конфигурации
+        @{b}S=Single/S@{ub}  Переключатель, задающий режим раздельного размещения файлов.
+Иначе  можно  назвать  "каждый файл в свой архив", причем иконка файла (если она
+есть)  помещается  в  тот  же  список, что и файл (также см.  IconsOFF).  Говоря
+другими  словами,  запускаемая  программа  (Command) будет запущена столько раз,
+сколько  файлов  было  в списке, имея аргументом всякий раз лишь один файл.  При
+отсутствии  включается режим "все файлы в один архив", т.е.  Command запускается
+лишь один раз и ему передается весь список файлов
+        @{b}A=Autoname/S@{ub}  Режим  вставки  автоматического  имени.   Используется при
+AutoLHA(LZX).   Понимает  ключи Single и Normal, меняя алгоритм получения имени.
+Вставляется перед [списком] файлов.
+        @{b}D=Delete/S@{ub}  Режим удаления исходных файлов после обработки.  Удаление не
+гарантируется на проассигненных файлах и директориях
+        @{b}K=Ask/S  @{ub} Режим  запроса  удаления  исходных  файлов  после обработки.
+Выдает реквестер
+        @{b}R=Reverse/S@{ub}  Для  большинства  программ  командная  строка  имеет  вид :
+<command>  <arguments>  <file1>  ...   <fileN>,  но  некоторые программы требуют
+наличия  списка  файлов  перед  аргументами  :   <command>  <file1> ...  <fileN>
+<arguments>.  Это и делает ключ Reverse
+        @{b}I=ICONSOFF/S@{ub}  Переключатель,  при  наличии  которого  из  списка  файлов
+исключаются  все .info файлы.  Не использавать для архивации, поскольку при этом
+Вы не досчитаетесь в архиве всех иконок
+        @{b}F=FullName/S@{ub} Переключатель, при наличии которого AutoCLI  запускается  в
+специальном  режиме:  Single  плюс  Autoname  с  полным  именем файла. Например:
+<command> <arguments> <ПОЛНОЕ_ИМЯ> <ПОЛНОЕ_ИМЯ>. Этот переключатель используется
+для работы с программой 'arec'.
+        @{b}PRI/N@{ub}  Установка  приоритета  для  запускаемой задачи.  Почему-то авторы
+OPus5 убрали приоритет из Function Editor'а, как, впрочем, и
+        @{b}Stack/N@{ub} Установка стека для запускаемой задачи.
+        @{b}Files/M@{ub} Список файлов, передаваемый программе.
+
+   Переключатели @{b}Autoname@{ub}, @{b}Single@{ub}, @{b}Reverse@{ub}, @{b}IconsOFF@{ub},  @{b}FullName@{ub},  @{b}Delete@{ub}  и  @{b}Ask@{ub}
+могут  также располагаться в файле конфигурации, жестко задавая режим работы для
+каждой строки файла конфигурации. В таком  случае  селектор  опций  работает  по
+принципу  'логического и', т.е. опция считается включенной, если она есть либо в
+аргументах autocli, либо в файле конфигурации, либо в обоих местах одновременно.
+Задание  стека  также  может  выполняться  двумя  способами:  первый -указание в
+командной строке опции Stack/N, а второй - указание стека в файле  конфигурации,
+(см.  Preferences)  причем  первый  способ имеет приоритет над вторым, т.е. если
+стек указан в командной строке, то именно это значение и будет использовано.
+
+         @{b}  Использование Directory Opus совместно с AutoCLI
+@{ub}
+ При использовании программ типа Directory Opus для  вызова
+упаковщиков   через   AutoCLI  желательно  включать  флаг  'CD  Source'  иначе
+результирующий файл улетит в текущую директорию, которая обычно бывает  совсем
+не там, где надо.
+
+    Существует еще одна особенность запуска программ из Dopus5.  Дело  в  том,
+что   Dopus  ограничивает  длину  вызываемой  команды  параметром  Max  CLL  в
+установках CLI Launching. Так вот, если  этот  параметр  слишком  большой,  то
+начинаются  проблемы  с  запуском  на  архивацию  большого  количества файлов.
+Проблема состоит в том, что обычно в листере включен  фильтр  иконок,  но  при
+передаче  списка  файлов  архиватору  в  него включаются также все иконки, что
+увеличивает длину строки сверх допустимых пределов Я уменьшил его  до  384,  и
+все стало на свои места.
+
+@endnode
+@node THANKR "Благодарности"
+
+Я хочу сказать спасибо следующим людям за помощь в создании этой программы:
+
+- Владимиру Березенко за перевод на английский язык этой документации.
+- Виталию Чепелеву за прекрасное тестирование и конверсию документации в формат
+guide.
+- Денису Сотченко за помощь в программировании Амига ОС.
+- AmiS'у за различную помощь и советы.
+- Levitator'у за предоставление доступа к электронной почте.
+
+
+@endnode
+
+
+
+@node MAIN "Welcome"
+
+                               @{fg shine}@{b}AutoCLI v0.91@{ub}@{fg text}
+          **********************************************************
+          @{fg shine}Multi-automatic      starter     for     cli      programs@{fg text}
+          **********************************************************
+                     @{fg shine}(C)Zetter'2000 Voronezh, Russia@{fg text}
+                     *******************************
+
+            @{"Введение              " link intror}        @{"Introduction       " link introe}
+            @{"Инсталляция           " link instalr}        @{"Installation       " link instale}
+            @{"Системные требования  " link requr}        @{"System Requirements" link sysreqe}
+            @{"Автор                 " link autorr}        @{"Author             " link autore}
+            @{"Распространение       " link distribr}        @{"Distribution       " link distribe}
+            @{"Краткая характеристика" link featurer}        @{"Features           " link feature}
+            @{"Назначение            " link descrr}        @{"Description        " link descre}
+            @{"Использование         " link usager}        @{"Usage              " link usagee}
+            @{"Аргументы             " link optionr}        @{"Options            " link optione}
+            @{"Настройки             " link preferenr}        @{"Preferences        " link preferene}
+            @{"Планы на будущее      " link futurer}        @{"Future plans       " link futuree}
+            @{"Некоторые тонкости    " link Detailr}        @{"Some Details       " link Detaile}
+            @{"Известные ошибки      " link bugsr}        @{"Bug Reports        " link bugse}
+            @{"Благодарности         " link Thankr}        @{"Thanks             " link Thankse}
+            @{"История               " link historyr}        @{"History            " link historye}
+
+               @{b}Воронеж 2000                   Voronezh 2000@{ub}
+
+                      @{b}-------=====##@@@##=====-------@{ub}
+
+@endnode

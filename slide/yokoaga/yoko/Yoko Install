@@ -1,0 +1,18 @@
+
+echo "Installing the stuff..."
+wait 2
+if exists sys:libs/inovamusic.library
+echo "inovamusic.library is already there!"
+wait 3
+else
+copy ram:Yoko/libs/inovamusic.library to sys:libs/
+endif
+if exists sys:c/mouseop
+echo "mouseop is already there!"
+wait 3
+else
+copy ram:Yoko/c/mouseop to sys:c/
+endif
+echo "fini"
+
+

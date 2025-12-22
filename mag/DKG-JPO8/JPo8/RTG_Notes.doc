@@ -1,0 +1,63 @@
+
+                    Notes for RTG users
+                    ===================
+
+Jurassic  Pack is optimized for a 640x256 display and looks
+slightly  strange  in other modes.  It has been tested on a
+Cybervision 64/3D under Picasso96.  If you want to create a
+640x256 mode for your Picasso96 based display, it is really
+very easy.
+
+It  should also be possible to create such a mode for CGFX,
+but  as  I  don't use it, the details are not included here
+(anyone?)
+
+Although Jurassic Pack will work happily with either AGA or
+RTG,  on  slower CPUs it is a lot faster to use AGA.  On my
+030/25, page rendering is noticeably much faster under AGA.
+An 040 or 060 should in theory be able to make up for this,
+as the speed loss is the CPU doing the work of the blitter.
+
+Note  that  the  taller  the screen is, the slower Jurassic
+Pack
+will be.  1280x1024 is painfully slow on the 030/25, but it
+all looks too small anyway :)
+
+
+                       Disclaimer
+                       ==========
+
+
+You can break your  monitor by  playing with Picasso96Mode.
+You follow the actions described in this document  ENTIRELY
+AT YOUR  OWN RISK!  This worked  100% for  the author,  and
+should work fine with all MODERN SVGA monitors.  The author
+takes  no responsibility  for any  consequences of  the use
+or misuse of this information.
+
+By  following these  instructions,  you are agreeing  to be
+bound by the above statement.
+
+
+
+         How to go about creating a 640x256 mode
+         =======================================
+
+1. Load up Picasso96Mode
+2. Make sure the correct GFX card is highlighted
+3. Click on the "New Item" icon,  and drag&drop it over the
+   resolutions (it should say "New Resolution")
+4. Go to the width and height boxes and change it to  640 x
+   256. Give it a new name if you like.
+5. Click on the  "New Item" icon, and drag&drop it over the
+   modes  (it should say "New ModeInfo")
+6. Click on  "Edit" and use the  cursors to centralize  the
+   new mode (use your monitor controls also)
+7. If the mode is  flickery, try upping the clock speed. If
+   the screen goes black and/or your monitor emits  a  high
+   pitched  whine, PRESS ESC IMMEDIATELY!
+8. Click Save, then reboot
+9. Configure Jurassic Pack to use your new mode
+
+Easy huh?
+Any questions: mrtickle@amiga4k.ndo.co.uk

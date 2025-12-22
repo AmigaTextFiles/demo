@@ -1,0 +1,52 @@
+@{xoffset 21}@{d C299FF}¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+@{xstep 350}@{font ACS-Title.font 18}@{c 00FFFB}Jak chytit v pouîti lva?@{c}@{font}
+@{xstep 470}@{i}@{c A368FF}MarioFB@{ui}@{c}@{ystep -8}
+
+
+@{c 00FFFB}1. Geometrické êeîení@{c}
+
+	Sestrojme v pouîti klec tvaru válce!
+
+	1. pêípad: Lev je v kleci.
+	Êeîení je triviální!
+
+	2. pêípad: Lev je mimo klec.
+	Postavíme  se  do klece a invertujeme její stëny.  Takto se my ocitneme mimo
+klec  a  následnë  lev  zûstane  v kleci.  @{c 00FFFB}POZOR!@{c}  V tomto pêípadë bezpodmíneçnë
+dáváme  pozor  na  to,  aby  jsme  nestáli  ve stêedu klece, nebo jinak zmizneme
+v nekoneçnu.
+
+@{c 00FFFB}2. Êeîení pomocí promítání@{c}
+
+	Zaveðme zjednoduîující pêedpoklad, ùe pouîï je rovina.  Rovinu promítneme do
+jedné  pêímky  procházející  klecí.   Potom  pêímku do jednoho, v kleci leùícího
+bodu.  Takto se lev dostane do klece.
+
+
+@{c 00FFFB}3. Topologický zpûsob@{c}
+
+	Z   topologického   hlediska   mûùeme   lva  vzít  jako  obruç  (  torus  ).
+Transformujeme  pouîï do çtyêrozmërného prostoru.  Naskýtá se moùnost na takovou
+deformaci, pêi které se v prûbëhu îpatné transformace lev zamotá v trojrozmërném
+prostoru.  Tehdy je úplnë bezmocný.
+
+@{c 00FFFB}4. Newtonûv zpûsob@{c}
+
+	Klec  a  lev  se v dûsledku gravitace pêitahují.  Têení zanedbáme.  Takto se
+lev dêív nebo pozdëji ocitne v kleci.
+
+
+@{c 00FFFB}5. Metoda pravdëpodobnostnë-statistická@{c}
+
+	K  této  metodë  je  potêeba Laplaceûv okruh, nëkolik kostek a Gaussûv zvon.
+Vozíc  se  po  pouîti na Laplaceovë okruhu, házíme po lvovi kostky.  Kdyù nás uù
+zuêivý  zaçne  pronásledovat,  pokryjeme ho kêivkou Gaussového rozdëlení.  Tímto
+P(lev je chycený)=1.
+
+
+@{c 00FFFB}6. Heisenbergûv zpûsob@{c}
+
+	Poloha  a  rychlost  pohybujícího  se lva se nedá urçit souçasnë.  Proto lev
+pohybující  se  v  pouîti  nemûùe zaujmout místo s fyzikálním smyslem, takùe lov
+nepêichází  do úvahy.  V dûsledku toho se lov lvû omezuje na jedince, které jsou
+v klidu.  Odchyt lva v klidu ponecháme na úsilí çtenáêe.

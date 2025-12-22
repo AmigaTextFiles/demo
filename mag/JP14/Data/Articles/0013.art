@@ -1,0 +1,135 @@
+!Krabob on line
+Ghandy
+41
+µJCµF0- --- ---------------------------- --- -
+Interview with Krabob of Mankind
+- --- -------------------------------- --- -
+µF1
+
+µI0065
+µJEµC0Hey Krabob! Please tell the dear JP readers who you are!?
+
+
+µC2Oh my god... I am such a strange person. I'm nicknamed Krabob, which actually mean nothing but is a kind of contraction from "Killer Bob", a character of the twin peaks series by David Lynch.
+
+µC2I am also Vic Ferry, a Rockn'roll star, and I am 29 year old. My hobbies vary from drinking cocktails on the mediterranean seaside, to drinking cocktails on the ocean sea side, even in Winter.
+
+It happens that I build robots from time to time (µC6 http://www.guru-meditation.net/main.php3?POTW=15µC2 ) and things like that.
+µC0It's been a long time ago since we chatted about you demo "Scraps of beings". What has changed for you and the group Mankind in the meantime? 
+
+
+µC2A lot of things have changed. The PC-side of the group was completely rebuilt, we have a very powerful coder nicknamed µC1ExelµC2, who is a close friend of µC7ZaacµC2 and worked with him in a game company in Paris. He coded a serial of PC software 64kb, and the scene.org nominated "Grafikal Jihad" demo.
+
+µC2Most members now got a job, I work in the simulation industry in Toulouse in the South of France, a job close to a video game job, but far more strange. Did you know some people needed a simulator simulating a simulator ?
+
+µC7Zaac µC2is now a star in the video game industry, he left his game company and moved to Spain recently. µC1Exel µC2moved to Japan but is still active. We also got a bunch of more or less active sceners here, able to produce on Amiga: µC4"Bla" µC2is a very helpful guy, he did most of the ascii logo of the "wall" you can see on our website. He's also our main musician at the moment.
+
+µC4Bla µC2is very inconspicuous, but he is actually leading the french scene, which is quite lazy this times on all platform. He's also doing half of the job in "division zero" and two other groups I don't remember the name ! There is also µC5"Gwen"µC2, formerly known as µC6"Grenat"µC2. He is doing some graphics from time to time. (He designed the Amiga demo "happy road" last year, mainly in one night.)
+
+µC7"Redshift"µC2 is actually my brother, and is a physic teacher now. He had some astrophysic diplomas, and experiments some effects on linux that I try to integrate in some demos. (last times he worked for the group was aerial, 1995, and scream thy last scream, 1997). µC1TexµC2, who was our main musician in the past and is now our webmaster, got married recently. He want to do some music again he said.
+
+µC2In Paris, he is currently meeting old sceners like Crown, Doh,... 
+
+µC0ToadyµC2, another mkd musician... just disapeared long ago now. From now on, we really want to improve our skills in the group, by doing more experimental effects about physics and mathematics.
+
+
+µC2We did a lot of quick productions this last years, now we want to do less and better. The demoscene needs to be refreshed. We have currently a PC intro and an Amiga demo in the process, but it is growing slowly. We work with a mailing list and our webiste sometimes.
+
+
+
+
+µC0What about the Fighter demotool? For whom did you do it and is it capable to do? Is it compareable with things like the good old Red Sector DemoMaker on Amiga, Moppis' Demopaja or Farbrauschs' Werkzeug on PC??
+
+
+µC2The idea behind karate went to me around 2002: I had a lot of demo sources on my harddrive, for 680x0 and PowerPC. As people asked me some intros quite often, and as I was about to stop 680x0 code myself, I was disapointed by the fact that most of these routines weren`t able to be re-usable.
+
+µC2At the same time, the 68000 demoscene was really getting into a gap: there was less and less productions.I realized hundredth of demogroup coded demo engines from the 1997-2002 period, with the same kind of effects, the same kind of optimizations, but each one on his own.
+
+µC2An enormous work was actually done in fact, if we look from a "community" point of view.
+
+µC2And so, after all this years, what was left? Most AGA demo from 1998 can't even be seen on a 68060 CGX Amiga, most can't be emulated on new PowerPC hardwares. And I knew a lot of Amiga users in France, that would have work for demos, but had no clue about coding.
+
+µC2So I decided to build an engine that would be able to define an Amiga demo in the more open way possible. There is actually no interface. The reason for it is: no time to code an interface ( I need to drink cocktails on the seaside).
+
+µC2There is only a commandline tool, which read a text file, which looks like HTML (or XML if you know XML). The engine actually builds objects described in the file...and then "play" the "main script" object. There is some object-though behind: for example, no asm effect code stands in the tool itself: they are into the plugins (.Fx files).
+
+µC2The plugins defines the types of class you use to create objects in the file. There is some kinds of devkit on the karate page to create new ".fx".
+
+µC2Thus, "karate fighter" doesn't look at all like µC7DemopajaµC2 or µC6Werkzeug µC2(which, yes, are better tools to my mind from a user point of view), but is actually very close to some modern language like REBOL (done by the same guy that did amigaOS). Karate defines an "interface" that allows complex effects to be used easily.
+
+µC2It is open enough to allow any kind of chaining between effects. I don't want to go further in describing karate, because I can easily write pages and pages. Actually, something like 10 or 12 demos have been done with it, plus some strange Fx like the robot or one that allows to do the VJ. The french demo group "µC0Pure LamersµC2" actually did a complete interface for karate, using MUIRexx on pegasos. (they had a complete demo production chain now, including lightwave5.5 running emulated.). They did a quite good demo for bp05 that was disqualified because they used a png icon to throw it (didn't work on the a4000 used at bp.). arrg.
+
+µC2So my advice is: you have an Amiga ? Download karate. Click on the examples. You were searching for a new Mankind demo? Actually the examples in karate were themselves a lot of work and are worth to watch at.
+
+
+µI0066
+µC0For which system do you plan to code in the future - classic Amigas, PPC or for the Amiga One?
+
+µC2I will support karate68k when needed, but I am currently working on AmigaOS4... and PC in fact. I like the scene we have today, on PC and Amiga. Really. When I see a MFX or Kewlers demo, I'm just too happy: the scene had evolved just the way I wanted it to evolve, It is incredibly interesting to participate to all this.
+
+
+
+µC0I saw at the Breakpoint that you own an Amiga One on your own. Maybe you want to share your experiences with this piece of hardware with us.
+
+µC2Actually I own a pegasos+morphos since 2 years, and an AmigaOne+os4 since two months. How crazy I am, I paid for the both. I swear I will not buy Amiga hardware for years now. They have a lot of common points, but they have differents kernels.
+
+µC2AmigaOS4 was late until recently, now they are more or less at the same points in term of functionnalities. There are some GCC SDK for each, it is very very handy. It allows to rebuild amiga68k applications to native PowerPC ones. But the big question is: how will the systems evolve, in term of memory protections and all that stuffs. Actually, the technical aspect is not so that important when you compare the both, not only because they look the same, but because evolutions are mainly a matter of time and ressource used to code those evolutions.
+
+
+µC0What should one buy? An Amiga One or a Pegasus board??
+
+µC2ah ah... An amigaOne. Definitively. Because of AmigaOS4. Now, look the products: they look the same but they are made by two differents teams. There is some kind of war between, which is fun because there is no money to gain behind that.
+
+µC2Here in France it really got very violent, some people got completely schizophrenic about this affair. The fact is, µC7Genesi/Thendic µC2was in Paris around 2002, and lots of trolling was done to promote morphos around this date by people who was actually paid for doing it, and claim os4 will never exist because µC5Hyperion µC2is incompetent. At the times, all was about technical arguments, and legitimacy of being the new amigaOS. Currently, it is only and only a fight for the power (you know, there is Aros, too).
+
+µC2On french Amiga website amigaimpact, you can read things like: "amigaOS4 is immoral" for a reason or another, because the morphos community just spend their times chatting between them and agreeing with each other a lot. Also, a lot of people claiming they "choosed morphos" actually got a free pegasos and choosed nothing. µC4Bill BuckµC2 is very rich, he offers pegasos to everyone asks. At the time, I actually bought one to support the morphos effort. But the money of the pegasos were never used for morphos.
+
+µC2So... for the rest, see the D.Gerber page at http://www.morphos.net/ about what Bill Buck can do. Some people involved in the amigaOne also received some death menace by mail. Actually, when you buy a pegasos, all the money go to bplan and Bill Buck, and zero euros to the morphos team. When you buy an amigaOne, you will see on your bill that 100 euros are for OS4 and OS4 only. Actually, OS4 had 5 regulars which job is to code OS4, while it just became clear that morphos will never be sold as a product, because distributing money to developper would be impossible.
+
+µC2Also, µC7Ralph SchmidtµC2, who is the mos kernel developper, claimed he doesn't care anymore of the pegasos version, because of disagreements with µC6Stephan StuntzµC2 (MUI), who left the team.
+µC2But these stories are not really interesting. OS4 is. It really looks professional when you discover it for the first time. It is an OS3.9 evolution, and I mean, everything has evolved. There are details everywhere, a native special USB stack and TCP/IP integrated in the system.
+
+µC2At the moment (May 2005) the only missing features are a 3d API and warpos emulation. But I'm in touch with some official betatesters: It already works and will feature in an update soon.
+
+
+
+µC0Maybe you can tell us some facts generally about the french Scene if there's any anymore!!? What happened to all the people who have been so active in your country in the meantime?? Did you hear what's Made of Bomb or Ra of Sanity is doing or f.e. the guys from Limited Edition etc.!??
+
+µC2ah ah... you want some scoop ?
+
+µC0Why not!? hehe
+
+
+µC2I've heard the Mankind demo group seems to be active, incredible isn't it?
+
+µC3Jamie of SkarlaµC2 recently annouced a 68060 Skarla demo will be released next year, (I read it in the TBL's Ocean Machine Pouet.net thread)! I don't have news from ra since 1996. µC0Moby/Sanity µC2is always doing .mod for the video game industry. There was a warp3d Amiga group named "µC5cdbsµC2" active around in 2000, now they work with "one vision" (a former Amiga fanzine editor) in a gameboy game company in Lyon.
+
+µC2Universe (with its coder µC7CrisotµC2) is preparing an amigaOne demo... I have not so much news from the "old" french scene. There is "µC5Pure LamersµC2" and the group "µC6WoodtowerµC2", who are doing karate stuffs from time to time. Yes, it is quite unactive.
+
+µC2Ah! I've meet the whole "µC0OzoneµC2" spanish group at the last Barcelona party, the team that made "Smoke Bomb" and "Fetish". I haven't seen them for SIX years! They couldn't believe I was still releasing Amiga demos and was really, really happy with "what you say". So they have a mobile phone game company in Barcelona.
+
+µI0067 µJCµC6from left to right: Ham/Software Failure and Krabob/Mankind
+
+
+µJEµC0What do you think - how's the current status of the Amiga Demoscene?
+
+µC2It is strange. It is evolving. You know, all we need is to do good demos. Sure it is hard.
+
+µC0What are your future plans?
+
+µC2brrrr... coding a new 64kb engine from the beginning, which would work on PC and amigaOne.
+
+
+
+µC0Anybody you wish to greet at the end?
+
+
+µC2All active Amiga sceners. All active pc sceners. scene.org for the scene award. I think it is great. The µC0BreakpointµC205 organization. The µC3Wipe µC2group who manages demoscene tv.
+
+µC4EphidrenaµC2, µC5FaktoryµC2, µC6RnoµC2, µC7Moods Plateau, µC0Ken PerlinµC2 (You know Ken Perlin?) The waitress at my favorite restaurant.
+
+µC2They are so bimbo and fun. I like bimbo girls. bimbo girls. seaside. cocktails. surf.
+
+
+
+µC1In that case, happy bimbo-talking, cocktails drinking, surfing and enjoying your sparetime!

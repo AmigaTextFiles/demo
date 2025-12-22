@@ -1,0 +1,68 @@
+                           #include <math.h>
+                     #include /*entry*/ <stdlib.h>
+                #include /*for #demoscene */ <string.h>
+            #define /* 4k src size */ PI 3.141592653589793f
+         #include /*compo*/ "SDL.h" /* http://iki.fi/jetro/ */
+       /**** code by tonic - composition of notes by tense ****/
+      int w=320,h=240;Uint8 *K;int*lt;int t;typedef float F;F C(F
+     x,F a,F b){return x<a?a:(x>b?b:x);}F B(F x,F a,F b){return C(
+    (x-a)/(b-a),0,1);}int*R,*P,r=256,s=0,Ll,Dl;Uint8*I;char L[]="q"
+    "...............................EEHGHJHGAAHGHJHGCCJHJLJHEHGHJH"
+   "GDEELJJJHHEEJHHHGGCCJHHHGGEEDEEEGGE.EGJHGEA.AHJLHGC.CJLJHGEHGHJ"
+   "LHGE.xxx.x.xv.vt.v.s.vvv.v.vt.ts.t.",D[]="qqxqqxqxmmtmmtmtoovoo"
+   "vovllsllsls",Q='a';void/*for(a=0;a*/A(void*_,Uint8*x,int p){_=_;
+  #define N(a,m)/*120)+256)&255)*256+u*80*/if(m!='.'){n=m-(m>=Q?Q+24\
+  :'A')+a;r=(F)sin((0.1/*cow*pow*wow-6e0+0xC0FFEE*/*pow(2,n/12.))*s);
+  #define T(t) /*mod(r*10,4);v+=C(r*/t[(s>>11)%t##l]/*p,x,y;;Uint32*/
+  while(p-=2){char l=T(L),b=T(D);F v=0,r,w=(2048-(s&2047))/2048.f;int
+ n;N(12,l)r=r<0.5?r*r:1;v+=r;}N(0,b)r=(F)fmod(r*10,4);v+=C(r,-1,1)*w;}
+ {static int o=0,f=0;n=s>>12;if(n!=o)f=0;f+=400;r=(F)(sin((1e4f-(s&((1
+ <<12)-1)))*f*1e-8)*(1-B((F)f,0,2e6-5e5)));;;v+=r<0?-0.8f:0.8f;o=n;}*(
+ Sint16*)x=(Sint16)(v*10813.f);x+=2;;++s;}}int main(){int a,b,o,p,x,y;
+ Uint8*v;SDL_Surface*s;SDL_Event e;SDL_AudioSpec m={11025,AUDIO_S16,1,
+0,4096,0,0,A,NULL};SDL_Color c[0x100];;/**/;Ll=strlen(L);;Dl=strlen(D);
+SDL_Init(SDL_INIT_AUDIO|SDL_INIT_VIDEO);s=SDL_SetVideoMode(w,h,8,00);p=
+s->pitch>>02;SDL_OpenAudio(&m,NULL);{F z,d,u,v;K=(Uint8*)malloc(1<<18);
+#define Y(m) for(/*00.f:6400.f;z=(F)sqrt(fabs(d-u*u-v***/o=y=0;y<m;++y)
+#define X(m) for(x=0;/*Y(256)X(256){u=x-128.f;v=y-128.f;d*/x<m;++x,++o)
+Y(256)X(256){u=x-128.f;v=y-128.f;d=(F)sqrt(u*u+v*v);z=(F)((1-B(d,0,128)
+)*fabs(sin(atan2(u,v)*6))+(1-B(d,0,25)));K[o]=(Uint8)C(z*255+((x*x*x*y)
+&31),0,255);}lt=malloc(307200);p=0;for(b=0;b<h;b++)for(a=0;a<w;a++){u=a
+-160.f;v=b-120.f;d=u*u+v*v>5625?4900.f:6400.f;z=(F)sqrt(fabs(d-u*u-v*v)
+ );if(!z)z=1e-9f;lt[p++]=(int)(((int)((v*80/z+120)+256)&255)*256+u*80/
+ z+160);}}{F W=(w-1)/2e0f,H=(h-1)/2e0f,m=(F)sqrt(W*W+H*H);R=calloc(w*h
+ ,4);P=malloc(1<<18);I=malloc(1<<18);for(a=0,y=0;y<h;++y){for(x=0;x<w;
+ ++x){F cx=x-W,cy=y-H,n=(F)atan2(cy,cx),d=(F)sqrt(cx*cx+cy*cy);R[a++]=
+ (int)(r*((n+PI)/(2*PI)+(int)(d*r/m)));}}for(a=0,y=0;y<r;++y){for(x=0;
+  x<r/*=0;x=(int)(cos(t*1e-4)*1e3);x+=&sin;y=(int)(sin(t*9e--*/;++x){
+  #define G(f,p)(F)/*r(a=0;a<256;++a){c[a].r=(Uint8)(a*(s*/(f(n)*d+p)
+   F n=2*PI*x/r-PI,d=y*m/r,u=G(cos,W),v=G(sin,H);while(u<0||v<0||u>=
+   w||v>=h){--d;u=G(cos,W);;;;v=G(sin,H);}P[a++]=(int)v*w+(int)u;}}}
+   SDL_PauseAudio(0);/*.oo.*/while(!SDL_PollEvent(&e)||e.type!=2){t=
+    SDL_GetTicks();SDL_LockSurface(s);v=s->pixels;{Uint8*s;x=y=p=0;
+    x=(int)(cos(t*1e-4)*1e3);y=(int)(sin(t*9e-5)*1e3);o=y*256+x;s=v
+     ;for(b=0;b<h;b++)for(a=0;a<w;a++)*s++=*(K+((o+lt[p++])&65535)
+      );}{Uint8 l[256];Y(r)X(r)I[o]=v[P[o]];Y(r){int a=0;for(x=r-
+       16;x<r;++x)a+=I[o+x];X(r){a+=I[o+x];a-=I[o--+((x-16)&(r-1
+         ))];l[x]=(Uint8)(a/16);}X(r)I[o]=l[x];}Y(h)X(w)v[o]=I
+            [R[o]];}SDL_UnlockSurface(s);for(a=0;a<256;++a)
+                #define SdLsC SDL_SetColors /**lolli**/
+                     #define SFL SDL_Flip /*pop!*/
+                           {c[a].r=(Uint8)(a
+                               *(sin(t*
+                               1e-3)*1*
+                               0.2+0.8)
+                               );c[a].g
+                               =(Uint8)
+                               (a*(sin(
+                               t*8e-4)*
+                               0.2+0.8)
+                               );c[a].b
+                               =(Uint8)
+                               (a*(sin(
+                               t*9e-4)*
+                               0.2+0.8)
+                               );}SdLsC
+                               (s,c,00,
+                               256);SFL
+                               (s);;;}}

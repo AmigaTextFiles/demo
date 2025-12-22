@@ -1,0 +1,53 @@
+RayRace Realtime Raytracing Engine demo for AmigaOS4
+By Chip / Kangooroo & Cobra (Stephen Fellner)
+==============================================================
+
+This is the OS4 port of my Realtime Raytracer engine which were used in
+this small intro: http://www.pouet.net/prod.php?which=2557
+
+The engine were made in 100% PPC assembly and highly optimized for PPC603e
+processors.
+
+usage: execute it :)
+
+Controls:
+Use the mouse for control the camera around the scene.
+Select different scenes with 1,2,3,4,5 keys.
+Exit with ESC.
+
+Options:
+BENCHMARK  - Measure 200 frames rendering time/framerate
+FULLSCREEN - Show the scene on fullscreen
+SCENE      - Select starting scene (useful with BENCHMARK)
+WIDTH      - Set the width of the scene
+HEIGHT     - Set the height of the scene
+
+NOTE: Width+Height should be specified together!
+
+
+BUGS:
+Dunno... is there any? :)
+
+FUTURE:
+Noo! I'll not add anything to this engine. This project has stuck. I made it
+just for fun! Why? Because it is only optimized for PPC603 and adding any new
+feature is a really big hack. I would rewrite the whole engine instead of
+hacking more into this project. Sorry...
+
+THANKS:
+Special thanks goes to Stephen Fellener (Cobra) for helping a lot to make this
+engine available for you!
+Also thanks for Almos Rajnai (Rachy) for helping to port my pasm code to GAS. ;)
+Big thanks to Hyperion Ent. & all OS4 developers to make my favourite operating system
+running on G3+G4 processors. ;)
+
+DISTRIBUTION:
+Freeware
+
+History:
+V1.0  2004.07.25 Initial version
+V1.1  2004.09.01 Some optimalisations
+V1.11 2004.09.02 Fixed scene 5
+Enjoy!
+
+Chip...

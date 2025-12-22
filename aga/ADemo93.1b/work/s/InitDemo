@@ -1,0 +1,22 @@
+if not exists ram:t
+  makedir ram:t
+  endif
+assign t:  ram:t
+assign >nil: env: exists
+if warn
+  makedir ram:env
+  assign env: ram:env
+  makedir env:sys
+  endif
+assign dc: work:demo/c
+assign da: work:demo/anim
+assign dp: work:demo/pic
+assign ds: work:demo/s
+path dc: add
+resident sys:c/status
+resident sys:c/break
+copy da:boing#? ram: quiet
+cd ram:
+copy dc:#? "" quiet
+copy ds:DemoScript "" quiet
+delete >nil: vt

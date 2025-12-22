@@ -1,0 +1,140 @@
+;
+; $VER: ZERO GRAVITY installer 1.0 (08.11.96)
+;
+; Copyright © 1995 Venus Art
+;
+
+;****************************************************************************
+
+(set @default-dest "")
+
+(complete 0)
+
+(welcome)
+
+(message "\nZERO GRAVITY\n\n"
+        "Copyright © 1996 Venus Art\n"
+	"All Rights Reserved.\n\n"
+        "-----====================-----\n"
+        "Code:   Noe, B.J.Sebo\n"
+        "Music:  Timer\n"
+        "Gfx:    Neuromancer\n"
+        "3D Gfx: Madbart\n"
+        "-----====================-----\n\n"
+        "This demo is contribution to Gravity Party"
+)
+
+(message 
+	     	       "\n COMERCIAL BREAK! \n\n"
+    "`-------------' tHe  sECt `-------------'\n"
+    "                   \/                 \n"
+    "sYSOp: MadBart/aPx Open mon-fri 22.00-13.00\n"
+    "cO-sYSOp: vIp/aPx  Open weekend 22.00-10.00\n"
+    "                                           \n"
+    " node #1  +48 091 879493\n"
+    "[---------------------------------------]\n"
+    " 2400-19200 bps \n"
+    "[---------------------------------------]\n"
+    "APPENDIX WHQ · VENUS ART PHQ · OLD BULLS HQ\n"
+    "OZONE FREE HQ · ANADUNE PHQ · VENTURE PHQ\n\n"
+)
+
+;****************************************************************************
+
+(procedure GetZGDisk
+  (set ZG_disk
+    (askdir
+      (prompt "   Select a directory for ZeroGravity drawer:"
+	      "\nDrawer Will be automagically created for Ya\n"
+      )
+      (help "\n\n   Complete instalation requires about\n"
+            "               3.2 Meg free disk space.")
+      (default "Demo:")
+    )
+  )
+)
+
+(GetZGDisk)
+
+(until (> (getdiskspace ZG_disk) 3200000)
+  (
+    (message "\n\n\nRequired about 3.2 Meg free disk space\n")
+    (GetZGDisk)
+  )
+)
+
+(set ZG_drawer (tackon ZG_disk "ZeroGravity"))
+(set ZG_Data   (tackon ZG_disk "ZeroGravity/DATA"))
+(set ZG_Compr  (tackon ZG_disk "ZeroGravity/compressors"))
+
+(makedir ZG_drawer)
+(makedir ZG_Data)
+(makedir ZG_Compr)
+
+(copyfiles
+  (source "VAD_ZeroGravity.exe")
+  (dest ZG_drawer)
+  (infos)
+)
+
+(copyfiles
+  (source "VAD_ZeroGravity.readme")
+  (dest ZG_drawer)
+  (infos)
+)
+
+(copyfiles
+  (source "xpkmaster.library")
+  (dest ZG_drawer)
+  (infos)
+)
+
+(copyfiles
+  (source "xpkRAKE.library")
+  (dest ZG_Compr)
+  (infos)
+)
+
+(complete 15)
+
+(copyfiles (all)
+  (source "ZG_1:DATA/")
+  (dest ZG_Data)
+  (infos)
+)
+
+(complete 35)
+
+(copyfiles (all)
+  (source "ZG_2:")
+  (dest ZG_Data)
+  (infos)
+)
+
+(complete 55)
+
+(copyfiles (all)
+  (source "ZG_3:")
+  (dest ZG_Data)
+  (infos)
+)
+
+(complete 75)
+
+(run (cat "Join >NIL: "
+          (tackon ZG_Data "48.001")
+          " \"ZG_4:48.002\" "
+          "AS="
+          (tackon ZG_Data "48"))
+)
+
+(run (cat "Delete >NIL: "
+          (tackon ZG_Data "48.001"))
+)
+
+(complete 100)
+
+(exit (cat "ZeroGravity The Demo exist in " ZG_drawer " drawer\n\n"
+           "To start demo run file VAD_ZeroGravity.exe\n"
+           "or click icon!\n")
+)

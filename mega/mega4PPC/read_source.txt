@@ -1,0 +1,41 @@
+
+
+This are the MS-DOS and BeOS sources of Megademo IV. 
+Dont expect too much. The whole demo was written from 
+scratch in just a few days. 
+
+You can use this source as a base for ports to other
+platforms. 
+
+The following sources have to be implemented on your system:
+
+g_null.c	Graphics output
+i_null.c	Keyboard input 
+l_null.c	timer (l_null.c is using the standard ansi-c 
+		timer, which is too inaccurate)
+s_null.c	sound (has to play an 8 bit signed sample at 11025khz)
+
+sys_null.c 	might have to be adapted for your system, but it should compile	
+		out-of-the-box.
+	
+The other sources should not be touched. Please renamed the sources to
+x_<your system>.c when you implement system specific functions.
+
+In case your ported the demo to a new platform, plase mail the exe to
+one of the authors. Mailing your sourcecode additions wouldnt be that
+bad, too.
+
+Otherwhise feel free to do with the source whatever you want. If you 
+want to release something based on it, notification of the authors 
+would be nice.
+
+sourcecode:
+
+(c) 1998 "Azure"  Tim Boescke      (azure@gmx.net)
+(c) 1998 "Tron"   Bastian Zuehlke  (ii7327@fh-wedel.de)
+
+script: (script.c)
+
+(c) 1998 "Fiver2" Thomas Mahlke    (t_mahlke@vcc.de)
+
+

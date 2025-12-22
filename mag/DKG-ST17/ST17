@@ -1,0 +1,13 @@
+RequestChoice >env:choice "Showtime 17" "Choose the part you want to load" "Magazine" "Gallery" "Intro"
+
+IF $choice EQ 1
+ST17-Mag.exe
+ENDIF
+
+IF $choice EQ 2
+ST17-Gallery.exe
+ENDIF
+
+IF $choice EQ 0
+ST17-Intro.exe
+ENDIF

@@ -1,0 +1,1403 @@
+{
+  "actions": [
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "bezier",
+            "time": 1820
+          },
+          {
+            "float_values": [
+              1.7000000476837158,
+              1.7000000476837158,
+              1.7000000476837158
+            ],
+            "interpolation": "bezier",
+            "time": 1220
+          },
+          {
+            "float_values": [
+              1.2999999523162842,
+              1.2999999523162842,
+              1.2999999523162842
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "Scene"
+        }
+      ],
+      "loops": 1,
+      "name": "layer_scale_x",
+      "start_time": 14040,
+      "type": "property_float"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "bezier",
+            "time": 4120
+          },
+          {
+            "float_values": [
+              1440.00004,
+              764.134571,
+              1854.515478
+            ],
+            "interpolation": "bezier",
+            "time": 2540
+          },
+          {
+            "float_values": [
+              2239.999989,
+              2239.999989,
+              2239.999989
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "lady"
+        }
+      ],
+      "loops": 1,
+      "name": "CylinderAction",
+      "start_time": 7880,
+      "type": "rotation_y"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "time": 9000,
+            "uint8_values": 0
+          },
+          {
+            "time": 20,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "lady"
+        }
+      ],
+      "loops": 1,
+      "name": "CylinderAction",
+      "start_time": 5720,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              -0.75716388,
+              -0.53134829,
+              0.0,
+              -0.75716388,
+              -0.53134829,
+              0.0,
+              -0.75716388,
+              -0.53134829
+            ],
+            "interpolation": "bezier",
+            "time": 2140
+          },
+          {
+            "float_values": [
+              0.0,
+              -0.75716388,
+              0.1789047,
+              0.0,
+              -0.75716388,
+              0.1789047,
+              0.0,
+              -0.75716388,
+              0.1789047
+            ],
+            "interpolation": "bezier",
+            "time": 4120
+          },
+          {
+            "float_values": [
+              0.0,
+              -0.75716388,
+              0.1789047,
+              0.0,
+              -0.75716388,
+              0.1789047,
+              0.0,
+              -0.75716388,
+              0.1789047
+            ],
+            "interpolation": "bezier",
+            "time": 2740
+          },
+          {
+            "float_values": [
+              0.0,
+              -0.75716388,
+              -0.38704735,
+              0.0,
+              -0.75716388,
+              -0.38704735,
+              0.0,
+              -0.75716388,
+              -0.38704735
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "lady"
+        }
+      ],
+      "loops": 1,
+      "name": "CylinderAction",
+      "start_time": 5740,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.35323879,
+              -0.35354239,
+              -0.33748183
+            ],
+            "interpolation": "bezier",
+            "time": 820
+          },
+          {
+            "float_values": [
+              0.14454091,
+              0.07984305,
+              0.17222208
+            ],
+            "interpolation": "bezier",
+            "time": 360
+          },
+          {
+            "float_values": [
+              0.1704015,
+              0.1704015,
+              0.1704015
+            ],
+            "interpolation": "bezier",
+            "time": 3080
+          },
+          {
+            "float_values": [
+              0.14454101,
+              0.17040145,
+              0.13630846
+            ],
+            "interpolation": "bezier",
+            "time": 960
+          },
+          {
+            "float_values": [
+              -0.34194034,
+              -0.34194034,
+              -0.34194034
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "face"
+        }
+      ],
+      "loops": 1,
+      "name": "faceAction",
+      "start_time": 14760,
+      "type": "position_z"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "bezier",
+            "time": 360
+          },
+          {
+            "float_values": [
+              -15.0,
+              -15.0,
+              -15.0
+            ],
+            "interpolation": "bezier",
+            "time": 680
+          },
+          {
+            "float_values": [
+              15.0,
+              15.0,
+              15.0
+            ],
+            "interpolation": "bezier",
+            "time": 680
+          },
+          {
+            "float_values": [
+              -15.0,
+              -15.0,
+              -15.0
+            ],
+            "interpolation": "bezier",
+            "time": 680
+          },
+          {
+            "float_values": [
+              15.0,
+              15.0,
+              15.0
+            ],
+            "interpolation": "bezier",
+            "time": 680
+          },
+          {
+            "float_values": [
+              -15.0,
+              -15.0,
+              -15.0
+            ],
+            "interpolation": "bezier",
+            "time": 680
+          },
+          {
+            "float_values": [
+              15.0,
+              15.0,
+              15.0
+            ],
+            "interpolation": "bezier",
+            "time": 640
+          },
+          {
+            "float_values": [
+              -15.0,
+              -15.0,
+              -15.0
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "face"
+        }
+      ],
+      "loops": 1,
+      "name": "faceAction",
+      "start_time": 15580,
+      "type": "rotation_y"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "time": 5240,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "face"
+        }
+      ],
+      "loops": 1,
+      "name": "faceAction",
+      "start_time": 14740,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 1.19210911,
+            "interpolation": "linear",
+            "time": 5400
+          },
+          {
+            "float_values": -0.9594152,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "cover"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction",
+      "start_time": 540,
+      "type": "position_y"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 20,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "cover"
+        }
+      ],
+      "loops": 1,
+      "name": "PlaneAction",
+      "start_time": 5940,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 20,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "pencil"
+        }
+      ],
+      "loops": 1,
+      "name": "ls_pencilAction",
+      "start_time": 6100,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              2.26984668,
+              -0.39215338,
+              0.89362687,
+              2.26984668,
+              -0.39215338,
+              0.89362687,
+              2.26984668,
+              -0.39215338,
+              0.89362687
+            ],
+            "interpolation": "bezier",
+            "time": 540
+          },
+          {
+            "float_values": [
+              -0.50065821,
+              1.14419055,
+              0.36000001,
+              -0.50065821,
+              1.14419055,
+              0.36000001,
+              -0.50065821,
+              1.14419055,
+              0.36000001
+            ],
+            "interpolation": "bezier",
+            "time": 160
+          },
+          {
+            "float_values": [
+              0.51169825,
+              1.09271479,
+              0.36000001,
+              0.51169825,
+              1.11665154,
+              0.36000001,
+              0.51169825,
+              1.07170963,
+              0.36000001
+            ],
+            "interpolation": "bezier",
+            "time": 160
+          },
+          {
+            "float_values": [
+              -0.51438516,
+              1.02751219,
+              0.36000001,
+              -0.51438516,
+              1.04844344,
+              0.36000001,
+              -0.51438516,
+              1.00863397,
+              0.36000001
+            ],
+            "interpolation": "bezier",
+            "time": 160
+          },
+          {
+            "float_values": [
+              0.49453959,
+              0.9623096,
+              0.36000001,
+              0.49453959,
+              0.98505282,
+              0.36000001,
+              0.49453959,
+              0.94122785,
+              0.36000001
+            ],
+            "interpolation": "bezier",
+            "time": 160
+          },
+          {
+            "float_values": [
+              -0.51781696,
+              0.89367533,
+              0.36000001,
+              -0.51781696,
+              0.91560793,
+              0.36000001,
+              -0.51781696,
+              0.87278134,
+              0.36000001
+            ],
+            "interpolation": "bezier",
+            "time": 160
+          },
+          {
+            "float_values": [
+              0.5425837,
+              0.83190435,
+              0.36000001,
+              0.5425837,
+              0.85183585,
+              0.36000001,
+              0.5425837,
+              0.8189649,
+              0.36000001
+            ],
+            "interpolation": "bezier",
+            "time": 100
+          },
+          {
+            "float_values": [
+              -0.50752181,
+              0.79072374,
+              0.36000001,
+              -0.50752181,
+              0.80531818,
+              0.36000001,
+              -0.50752181,
+              0.76058269,
+              0.36000001
+            ],
+            "interpolation": "bezier",
+            "time": 160
+          },
+          {
+            "float_values": [
+              0.5219934,
+              0.72208941,
+              0.36000001,
+              0.5219934,
+              0.74402469,
+              0.36000001,
+              0.5219934,
+              0.69321352,
+              0.36000001
+            ],
+            "interpolation": "bezier",
+            "time": 160
+          },
+          {
+            "float_values": [
+              -0.50065821,
+              0.66031849,
+              0.36000001,
+              -0.50065821,
+              0.68109107,
+              0.36000001,
+              -0.50065821,
+              0.6321997,
+              0.36000001
+            ],
+            "interpolation": "bezier",
+            "time": 160
+          },
+          {
+            "float_values": [
+              0.52885687,
+              0.59511584,
+              0.36000001,
+              0.52885687,
+              0.61706382,
+              0.36000001,
+              0.52885687,
+              0.56456202,
+              0.36000001
+            ],
+            "interpolation": "bezier",
+            "time": 160
+          },
+          {
+            "float_values": [
+              -0.52124864,
+              0.52991325,
+              0.36000001,
+              -0.52124864,
+              0.55175394,
+              0.36000001,
+              -0.52124864,
+              0.49864101,
+              0.36000001
+            ],
+            "interpolation": "bezier",
+            "time": 180
+          },
+          {
+            "float_values": [
+              0.50826657,
+              0.46471059,
+              0.36000001,
+              0.50826657,
+              0.48580503,
+              0.36000001,
+              0.50826657,
+              0.45011324,
+              0.36000001
+            ],
+            "interpolation": "bezier",
+            "time": 160
+          },
+          {
+            "float_values": [
+              -0.50065821,
+              0.40293971,
+              0.36000001,
+              -0.50065821,
+              0.42369491,
+              0.36000001,
+              -0.50065821,
+              0.38816658,
+              0.36000001
+            ],
+            "interpolation": "bezier",
+            "time": 160
+          },
+          {
+            "float_values": [
+              0.51856172,
+              0.33773708,
+              0.36000001,
+              0.51856172,
+              0.36059529,
+              0.36000001,
+              0.51856172,
+              0.32100418,
+              0.36000001
+            ],
+            "interpolation": "bezier",
+            "time": 160
+          },
+          {
+            "float_values": [
+              -0.51095349,
+              0.26910275,
+              0.36000001,
+              -0.51095349,
+              0.29075173,
+              0.36000001,
+              -0.51095349,
+              0.25280616,
+              0.36000001
+            ],
+            "interpolation": "bezier",
+            "time": 160
+          },
+          {
+            "float_values": [
+              0.5219934,
+              0.20733184,
+              0.36000001,
+              0.5219934,
+              0.22828293,
+              0.36000001,
+              0.5219934,
+              0.19111562,
+              0.36000001
+            ],
+            "interpolation": "bezier",
+            "time": 160
+          },
+          {
+            "float_values": [
+              -0.50409001,
+              0.14212923,
+              0.36000001,
+              -0.50409001,
+              0.1636495,
+              0.36000001,
+              -0.50409001,
+              0.12500434,
+              0.36000001
+            ],
+            "interpolation": "bezier",
+            "time": 160
+          },
+          {
+            "float_values": [
+              0.54601544,
+              0.0769266,
+              0.36000001,
+              0.54601544,
+              0.10029972,
+              0.36000001,
+              0.54601544,
+              0.05780607,
+              0.36000001
+            ],
+            "interpolation": "bezier",
+            "time": 160
+          },
+          {
+            "float_values": [
+              -0.50752181,
+              0.00486054,
+              0.36000001,
+              -0.50752181,
+              0.02711656,
+              0.36000001,
+              -0.50752181,
+              -0.01385498,
+              0.36000001
+            ],
+            "interpolation": "bezier",
+            "time": 160
+          },
+          {
+            "float_values": [
+              0.52885675,
+              -0.05347865,
+              0.36000001,
+              0.52885675,
+              -0.03547054,
+              0.36000001,
+              0.52885675,
+              -0.06904403,
+              0.36000001
+            ],
+            "interpolation": "bezier",
+            "time": 160
+          },
+          {
+            "float_values": [
+              -0.50752181,
+              -0.11181784,
+              0.36000001,
+              -0.50752181,
+              -0.08942791,
+              0.36000001,
+              -0.50752181,
+              -0.13170901,
+              0.36000001
+            ],
+            "interpolation": "bezier",
+            "time": 160
+          },
+          {
+            "float_values": [
+              0.52542508,
+              -0.18388391,
+              0.36000001,
+              0.52542508,
+              -0.16104648,
+              0.36000001,
+              0.52542508,
+              -0.20473622,
+              0.36000001
+            ],
+            "interpolation": "bezier",
+            "time": 160
+          },
+          {
+            "float_values": [
+              -0.51095349,
+              -0.24565481,
+              0.36000001,
+              -0.51095349,
+              -0.22555752,
+              0.36000001,
+              -0.51095349,
+              -0.26451424,
+              0.36000001
+            ],
+            "interpolation": "bezier",
+            "time": 160
+          },
+          {
+            "float_values": [
+              0.53228855,
+              -0.31085745,
+              0.36000001,
+              0.53228855,
+              -0.28711039,
+              0.36000001,
+              0.53228855,
+              -0.33375928,
+              0.36000001
+            ],
+            "interpolation": "bezier",
+            "time": 160
+          },
+          {
+            "float_values": [
+              -0.51095349,
+              -0.38292354,
+              0.36000001,
+              -0.51095349,
+              -0.36074036,
+              0.36000001,
+              -0.51095349,
+              -0.40490973,
+              0.36000001
+            ],
+            "interpolation": "bezier",
+            "time": 160
+          },
+          {
+            "float_values": [
+              0.53228855,
+              -0.44126269,
+              0.36000001,
+              0.53228855,
+              -0.42333722,
+              0.36000001,
+              0.53228855,
+              -0.45952111,
+              0.36000001
+            ],
+            "interpolation": "bezier",
+            "time": 160
+          },
+          {
+            "float_values": [
+              -0.52468032,
+              -0.49960187,
+              0.36000001,
+              -0.52468032,
+              -0.47680876,
+              0.36000001,
+              -0.52468032,
+              -0.52346152,
+              0.36000001
+            ],
+            "interpolation": "bezier",
+            "time": 160
+          },
+          {
+            "float_values": [
+              0.5254252,
+              -0.57166791,
+              0.36000001,
+              0.5254252,
+              -0.5503608,
+              0.36000001,
+              0.5254252,
+              -0.59459031,
+              0.36000001
+            ],
+            "interpolation": "bezier",
+            "time": 160
+          },
+          {
+            "float_values": [
+              -0.50752157,
+              -0.62657541,
+              0.36000001,
+              -0.50752157,
+              -0.6076237,
+              0.36000001,
+              -0.50752157,
+              -0.64752954,
+              0.36000001
+            ],
+            "interpolation": "bezier",
+            "time": 160
+          },
+          {
+            "float_values": [
+              0.52885687,
+              -0.691778,
+              0.36000001,
+              0.52885687,
+              -0.66878206,
+              0.36000001,
+              0.52885687,
+              -0.71791023,
+              0.36000001
+            ],
+            "interpolation": "bezier",
+            "time": 160
+          },
+          {
+            "float_values": [
+              -0.51095349,
+              -0.76041234,
+              0.36000001,
+              -0.51095349,
+              -0.7375111,
+              0.36000001,
+              -0.51095349,
+              -0.78716117,
+              0.36000001
+            ],
+            "interpolation": "bezier",
+            "time": 160
+          },
+          {
+            "float_values": [
+              0.52542508,
+              -0.82904667,
+              0.36000001,
+              0.52542508,
+              -0.80637902,
+              0.36000001,
+              0.52542508,
+              -0.85626185,
+              0.36000001
+            ],
+            "interpolation": "bezier",
+            "time": 160
+          },
+          {
+            "float_values": [
+              -0.51438516,
+              -0.89424932,
+              0.36000001,
+              -0.51438516,
+              -0.87398416,
+              0.36000001,
+              -0.51438516,
+              -0.9192605,
+              0.36000001
+            ],
+            "interpolation": "bezier",
+            "time": 160
+          },
+          {
+            "float_values": [
+              0.53228843,
+              -0.93886161,
+              0.36000001,
+              0.53228843,
+              -0.93277484,
+              0.36000001,
+              0.53228843,
+              -0.9465847,
+              0.36000001
+            ],
+            "interpolation": "bezier",
+            "time": 160
+          },
+          {
+            "float_values": [
+              -0.51438516,
+              -0.99376911,
+              0.36000001,
+              -0.26307172,
+              -0.93886161,
+              0.36000001,
+              -0.84145123,
+              -1.06539011,
+              0.36000001
+            ],
+            "interpolation": "bezier",
+            "time": 160
+          },
+          {
+            "float_values": [
+              -0.76569897,
+              -1.26931429,
+              0.69932628,
+              -0.76569897,
+              -1.26931429,
+              0.69932628,
+              -0.76569897,
+              -1.26931429,
+              0.69932628
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "pencil"
+        }
+      ],
+      "loops": 1,
+      "name": "ls_pencilAction",
+      "start_time": 0,
+      "type": "position_xyz"
+    }
+  ],
+  "cameras": [
+    {
+      "far_clip_plane": 80.0,
+      "fov_x": 49.069203,
+      "fov_y": 28.800001,
+      "hide": false,
+      "name": "camera_1",
+      "near_clip_plane": 0.1,
+      "position": [
+        0.0,
+        0.0,
+        4.74793053
+      ],
+      "rotation": [
+        3e-06,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "enc_info": {
+    "data_type": "ENCSCN",
+    "date": "29 Jun 2023 19:30:53",
+    "version": "2.0"
+  },
+  "loops": 1,
+  "name": "Scene",
+  "objects": [
+    {
+      "material": {
+        "diffuse_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "ls_layer_1",
+      "name": "layer_1",
+      "order": 1,
+      "position": [
+        0.0,
+        0.5,
+        -0.0
+      ],
+      "properties": {
+        "blending": "multiply",
+        "depth_mask": 0,
+        "face_visibility": "front_back"
+      },
+      "tag": 100
+    },
+    {
+      "material": {
+        "diffuse_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "ls_layer_3",
+      "name": "layer_3",
+      "order": 2,
+      "position": [
+        0.0,
+        0.5,
+        0.07
+      ],
+      "properties": {
+        "blending": "multiply",
+        "depth_mask": 0,
+        "face_visibility": "front_back"
+      },
+      "tag": 102
+    },
+    {
+      "material": {
+        "diffuse_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "ls_layer_5",
+      "name": "layer_5",
+      "order": 3,
+      "position": [
+        0.0,
+        0.5,
+        0.14
+      ],
+      "properties": {
+        "blending": "multiply",
+        "depth_mask": 0,
+        "face_visibility": "front_back"
+      },
+      "tag": 104
+    },
+    {
+      "material": {
+        "diffuse_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "ls_layer_7",
+      "name": "layer_7",
+      "order": 4,
+      "position": [
+        0.0,
+        0.5,
+        0.20999998
+      ],
+      "properties": {
+        "blending": "multiply",
+        "depth_mask": 0,
+        "face_visibility": "front_back"
+      },
+      "tag": 106
+    },
+    {
+      "material": {
+        "diffuse_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "ls_layer_2",
+      "name": "layer_2",
+      "order": 1,
+      "position": [
+        0.0,
+        -0.5,
+        -0.0
+      ],
+      "properties": {
+        "blending": "multiply",
+        "depth_mask": 0,
+        "face_visibility": "front_back"
+      },
+      "tag": 101
+    },
+    {
+      "material": {
+        "diffuse_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "ls_layer_4",
+      "name": "layer_4",
+      "order": 2,
+      "position": [
+        0.0,
+        -0.5,
+        0.07
+      ],
+      "properties": {
+        "blending": "multiply",
+        "depth_mask": 0,
+        "face_visibility": "front_back"
+      },
+      "tag": 103
+    },
+    {
+      "material": {
+        "diffuse_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "ls_layer_6",
+      "name": "layer_6",
+      "order": 3,
+      "position": [
+        0.0,
+        -0.5,
+        0.14
+      ],
+      "properties": {
+        "blending": "multiply",
+        "depth_mask": 0,
+        "face_visibility": "front_back"
+      },
+      "tag": 105
+    },
+    {
+      "material": {
+        "diffuse_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "ls_layer_8",
+      "name": "layer_8",
+      "order": 4,
+      "position": [
+        0.0,
+        -0.5,
+        0.20999998
+      ],
+      "properties": {
+        "blending": "multiply",
+        "depth_mask": 0,
+        "face_visibility": "front_back"
+      },
+      "tag": 107
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.8,
+          0.8,
+          0.8,
+          1.0
+        ]
+      },
+      "mesh_name": "ls_lady",
+      "name": "lady",
+      "position": [
+        0.0,
+        -0.75716388,
+        -0.53134829
+      ]
+    },
+    {
+      "material": {
+        "diffuse_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "ls_layer_9",
+      "name": "layer_9",
+      "order": 5,
+      "position": [
+        0.0,
+        0.5,
+        0.28
+      ],
+      "properties": {
+        "blending": "multiply",
+        "depth_mask": 0,
+        "face_visibility": "front_back"
+      },
+      "tag": 108
+    },
+    {
+      "material": {
+        "diffuse_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "ls_layer_10",
+      "name": "layer_10",
+      "order": 5,
+      "position": [
+        0.0,
+        -0.5,
+        0.28
+      ],
+      "properties": {
+        "blending": "multiply",
+        "depth_mask": 0,
+        "face_visibility": "front_back"
+      },
+      "tag": 109
+    },
+    {
+      "material": {
+        "diffuse_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "ls_layer_11",
+      "name": "layer_11",
+      "order": 6,
+      "position": [
+        0.0,
+        0.5,
+        0.34999999
+      ],
+      "properties": {
+        "blending": "multiply",
+        "depth_mask": 0,
+        "face_visibility": "front_back"
+      },
+      "tag": 110
+    },
+    {
+      "material": {
+        "diffuse_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "ls_layer_12",
+      "name": "layer_12",
+      "order": 6,
+      "position": [
+        0.0,
+        -0.5,
+        0.34999999
+      ],
+      "properties": {
+        "blending": "multiply",
+        "depth_mask": 0,
+        "face_visibility": "front_back"
+      },
+      "tag": 111
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.8,
+          0.8,
+          0.8,
+          1.0
+        ]
+      },
+      "mesh_name": "ls_face",
+      "name": "face",
+      "position": [
+        0.0,
+        0.0,
+        -0.35323879
+      ]
+    },
+    {
+      "material": {
+        "diffuse_color_rgba": [
+          0.8,
+          0.8,
+          0.8,
+          1.0
+        ]
+      },
+      "mesh_name": "ls_cover",
+      "name": "cover",
+      "position": [
+        0.0,
+        1.19210911,
+        0.36000001
+      ]
+    },
+    {
+      "mesh_name": "ls_pencil",
+      "name": "pencil",
+      "order": 20,
+      "position": [
+        2.26984668,
+        -0.39215338,
+        0.89362687
+      ],
+      "rotation": [
+        -59.738207,
+        14.360311,
+        26.625239
+      ],
+      "scale": [
+        0.23376,
+        0.23376,
+        0.23376
+      ]
+    }
+  ],
+  "properties": {
+    "layer_scale_x": 1.0
+  },
+  "time": 20000
+}

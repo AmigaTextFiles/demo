@@ -1,0 +1,80 @@
+DPA_Script
+
+#define RENDER_TO_TEXTURE 1
+#define GET_RENDER_TEXTURE 2
+#define SET_RENDER_TEXTURE 3
+
+
+SoundTrack
+{
+	SS_FileName "data/track.ogg"
+}
+
+Channel 0
+
+{
+
+	Scene "LeviMorph"
+
+}
+
+
+Channel 1
+
+{
+	
+	Scene "Fl_Particles"
+	
+	Event { E_TimeLabel 12000 E_Message 4 }
+	
+	Event { E_TimeLabel 10000 E_Message 3 }
+
+	Event { E_TimeLabel 8000 E_Message 2 }
+
+	Event { E_TimeLabel 7000 E_Message 1 }
+
+}
+
+Channel 2
+
+{
+
+	Scene "Test3dsScene"
+
+}
+
+
+Options
+{
+	ShowFps true
+	EnableDebugConsole true 
+	EnableWideScreenFactor 15
+}
+
+SequenceTrack
+{
+	Lenght 40000
+	PlaySound false
+	Track
+	     {
+		    D_Time 0,22000
+ 
+		    { 
+
+			 		2
+
+		    }
+
+		    D_Time 22000,40000
+	            {
+
+			 		0
+
+		    }
+
+
+	      }
+}
+
+DPA_Script
+

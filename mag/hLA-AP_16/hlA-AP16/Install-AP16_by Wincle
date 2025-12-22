@@ -1,0 +1,106 @@
+; $VER: installer Amiga Positive Mag by Wincle/VRT v1.0 (14.3 2000)
+
+(
+
+(set @pretend 0)
+
+(procedure testcomp
+  (set procesor (database "cpu"))
+(set frek (database "vblank"))
+(set chip (database "graphics-mem"))
+(set total (database "total-mem"))
+)
+
+(procedure getcurrentversion name
+  ( (set vernum (getversion name ))
+    (set ver (/ vernum 65536))
+    (set rev (- vernum (* ver 65536)))
+  )
+)
+
+
+(procedure askbonus
+(
+
+(testcomp)
+
+    (set bonus
+        (askchoice
+            (prompt "\n Procesor:  " procesor "        VBlank:   " frek "    \n Chip RAM:  " chip "     Fast RAM:  " (- total chip) "\n\nDo you wanna install the Bonus files ?\n")
+
+            (help (cat "\n\n  Fuck the best we are the rest\n\n")
+            )
+            (choices "No, I do" "Yes!, I do")
+            (default 0)
+        )
+     )
+)
+)
+
+
+
+(message "Amiga Positive Mag \n\nIssue #16  \n\nInstaller\n install and read\n\n© Horizontal  Lamerz 2002")
+
+(if (exists "envarc:amigapositive/")=0 (makedir "envarc:AmigaPositive"))
+
+    (testcomp)
+    (askbonus)
+
+ (
+   (set @default-dest
+    (askdir (prompt "Select the directory to install Amiga Positive")
+            (help @askdir-help)
+            (default @default-dest)
+    )
+   )
+    (makedir (tackon @default-dest "hLA-AP15") (infos) )
+    (set @default-dest (tackon @default-dest "hLA-AP15"))
+    (copyfiles (source "AP16") (dest @default-dest))
+    (copyfiles (source "engine.exe") (dest @default-dest))
+    (copyfiles (source "data.pk") (dest @default-dest))
+    (copyfiles (source "ap-prefs") (dest @default-dest))
+
+
+    (copyfiles (source "fonts/")
+               (prompt "\nCopying fonts  fonts:...")
+               (help ":)")
+               (dest "fonts:")
+               (ALL)
+               (confirm 1)
+               ( delopts "askuser" )
+               ( safe )
+    )
+
+
+  (copylib
+      (prompt "\nCopying dbplayer.library to LIBS:...")
+      (help @copylib-help)
+      (source "libs/dbplayer.library")
+      (dest "LIBS:")
+      (confirm 1)
+      (optional "nofail")
+      (delopts "askuser")
+    )
+
+    (makedir (tackon @default-dest "pix"))
+    (copyfiles  (source "pix/")
+                (dest (tackon @default-dest "pix"))
+                (ALL)
+     )
+
+    (if bonus  ((makedir (tackon @default-dest "bonus") (infos) )
+                 (copyfiles (source "bonus/") 
+                            (dest (tackon @default-dest "bonus"))
+                            (ALL)
+                 )
+               )
+    )
+
+    (copyfiles (source "icons/ap-prefs.info") (dest @default-dest) (newname "ap-prefs.info"))
+    (copyfiles (source "icons/ap16.info") (dest @default-dest) (newname "ap16.info"))
+    (copyfiles (source "icons/bonus.info") (dest @default-dest) (newname "Bonus.info"))
+
+
+(exit "\n\n\n?????????????" (quiet))
+
+))

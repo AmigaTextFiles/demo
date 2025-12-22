@@ -1,0 +1,103 @@
+; This is an example config file for
+; $VER: PS3M 3.12ß / 20.09.1995
+; by Jarno Paananen
+
+; These are my own settings for my A500 + FAST and 68010
+; Feel free to modify!
+
+
+; These are comments and they must be on seperate lines
+; All strings are case-insensitive and amount of spaces is not essential,
+; but they make things c l e a r e r
+
+
+; This first section describes the default settings that are
+; used if no other settings are found in this file
+
+[Defaults]
+
+; Default mixing rate (useless as there are separate channel settings,
+; but anyway)
+
+Rate = 16000
+
+; Default volume boost (also useless)
+Boost = 0
+
+; Default playing mode
+;(surround, stereo, mono, real surround or 14-bit stereo)
+Mode = Real Surround
+
+
+; Default system state (on or off)
+System = on
+
+; Default module directory
+
+Directory = xm:
+
+; Mixing buffer size
+; 0 = 4kB, 1 = 8 kB, 2 = 16 kB, 3 = 32 kB, default is 16kB.
+; Smaller buffer gives faster response, but decreases the "backup"
+; buffer possibly causing more "skipping".
+
+; I've used 32kB recently due to the XM-support and my A500...
+
+bufferSize = 3
+
+
+; This toggles the startup banner (This program is made by the
+; incredible and ever so wonderful and so on... ;)
+
+Banner = off
+
+; This line defines the font PS3M uses in format name.size.
+Font = siesta.8
+
+
+; This section describes the default settings for each number of channels
+; Format is: number of channels = r[mixing rate] v[volume boost] m[mode]
+; All are optional and if missing, the default is used.
+
+; Yes! You can now also specify default playing modes for specific
+; number of channels... (is it of some use, is another question...)
+
+; An example:
+; 17 = r10000 v4 m2
+
+; The mode numbers are the same as with command line options, ie.
+; 0 = Surround
+; 1 = Stereo
+; 2 = Mono
+; 3 = Real surround
+; 4 = 14-bit stereo
+
+[Channels]
+
+1 = r28000 v0
+2 = r28000 v0
+3 = r25000 v0
+4 = r23000 v0
+5 = r20000 v1
+6 = r19000 v1
+7 = r18000 v1
+8 = r15000 v1
+9 = r13500 v2
+10 = r13000 v2
+11 = r12000 v3
+12 = r12000 v3
+13 = r11000 v3
+14 = r11000 v3
+15 = r10000 v4
+16 = r9000 v4
+
+
+; This section describes settings for specific tunes
+; The format is same as above, also playing mode.
+
+[Tunes]
+s3m.2nd_pm = r17000 v1
+mod.welcome = r28000 v0 m2
+mod.toblerone = r26000 v0
+mod.Banana boat = r28000 v0
+seraph.xm = r14000 v2 m2

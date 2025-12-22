@@ -1,0 +1,939 @@
+{
+    "enc_info": {
+        "data_type": "ENCTHM",
+        "version": "1.0"
+    },
+    "version": "1.3",
+    "date": "26 Mar 2023 21:22:00",
+    "theme_name": "default",
+    "font_set": "DefaultFontSet",
+    "theme_fonts": {
+        "proportional_small": {
+            "font_height": "<=20pt",
+            "font_attributes": ["proportional"]
+        },
+        "proportional_medium": {
+            "font_height": "<=24pt",
+            "font_attributes": ["proportional"]
+        },
+        "proportional_big": {
+            "font_height": "<=32pt",
+            "font_attributes": ["proportional"]
+        },
+        "monospace_small": {
+            "font_height": "<=20pt",
+            "font_attributes": ["monospace"]
+        },
+        "monospace_medium": {
+            "font_height": "<=29pt",
+            "font_attributes": ["monospace"]
+        },
+        "monospace_big": {
+            "font_height": "<=32pt",
+            "font_attributes": ["monospace"]
+        }
+    },
+    "style_main_background": {
+        "state_normal": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "877588FF"
+            }
+        }
+    },
+    "style_label_text": {
+        "state_normal": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "FFFFFFFF"
+            },
+            "interline": 0,
+            "kerning": 0,
+            "scale_xy": [
+                1,
+                1
+            ],
+            "outline": false,
+            "shadow": false
+        },
+        "state_marked": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "FFF93FFF"
+            },
+            "interline": 0,
+            "kerning": 0,
+            "scale_xy": [
+                1,
+                1
+            ],
+            "outline": false,
+            "shadow": false
+        }
+    },
+    "style_image_background": {
+        "state_normal": null,
+        "state_disabled": null,
+        "state_pressed": null
+    },
+    "style_image": {
+        "state_normal": null,
+        "state_disabled": null,
+        "state_pressed": null
+    },
+    "style_button_background": {
+        "state_normal": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "366175FF"
+            }
+        },
+        "state_disabled": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "3661757F"
+            }
+        },
+        "state_pressed": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "2B4B5AFF"
+            }
+        },
+        "state_marked": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "347B9BFF"
+            }
+        }
+    },
+    "style_button_text": {
+        "state_normal": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "FFFFFFFF"
+            },
+            "interline": 0,
+            "kerning": 0,
+            "scale_xy": [
+                1,
+                1
+            ],
+            "outline": false,
+            "shadow": false
+        },
+        "state_disabled": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "FFFFFF7F"
+            },
+            "interline": 0,
+            "kerning": 0,
+            "scale_xy": [
+                1,
+                1
+            ],
+            "outline": false,
+            "shadow": false
+        },
+        "state_pressed": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "FFF93FFF"
+            },
+            "interline": 0,
+            "kerning": 0,
+            "scale_xy": [
+                1,
+                1
+            ],
+            "outline": false,
+            "shadow": false
+        },
+        "state_marked": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "FDFA79FF"
+            },
+            "interline": 0,
+            "kerning": 0,
+            "scale_xy": [
+                1,
+                1
+            ],
+            "outline": false,
+            "shadow": false
+        }
+    },
+    "style_edittext_background": {
+        "state_normal": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "6C5F55FF"
+            }
+        },
+        "state_disabled": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "6C5F557F"
+            }
+        },
+        "state_pressed": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "554A41FF"
+            }
+        },
+        "state_marked": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "CFCAC7FF"
+            }
+        }
+    },
+    "style_edittext_text": {
+        "state_normal": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "FFFFFFFF"
+            },
+            "interline": 0,
+            "kerning": 0,
+            "scale_xy": [
+                1,
+                1
+            ],
+            "outline": false,
+            "shadow": false
+        },
+        "state_disabled": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "FFFFFF7F"
+            },
+            "interline": 0,
+            "kerning": 0,
+            "scale_xy": [
+                1,
+                1
+            ],
+            "outline": false,
+            "shadow": false
+        },
+        "state_pressed": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "FFF93FFF"
+            },
+            "interline": 0,
+            "kerning": 0,
+            "scale_xy": [
+                1,
+                1
+            ],
+            "outline": false,
+            "shadow": false
+        },
+        "state_marked": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "544941FF"
+            },
+            "interline": 0,
+            "kerning": 0,
+            "scale_xy": [
+                1,
+                1
+            ],
+            "outline": false,
+            "shadow": false
+        }
+    },
+    "style_dialog_background": {
+        "state_normal": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "9B8D9CFF"
+            }
+        }
+    },
+    "style_dialog_message_text": {
+        "state_normal": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "FFFFFFFF"
+            },
+            "interline": 0,
+            "kerning": 0,
+            "scale_xy": [
+                1,
+                1
+            ],
+            "outline": false,
+            "shadow": false
+        }
+    },
+    "style_dialog_button_background": {
+        "state_normal": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "366175FF"
+            }
+        },
+        "state_disabled": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "3661757F"
+            }
+        },
+        "state_pressed": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "2B4B5AFF"
+            }
+        },
+        "state_marked": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "347B9BFF"
+            }
+        }
+    },
+    "style_dialog_button_text": {
+        "state_normal": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "FFFFFFFF"
+            },
+            "interline": 0,
+            "kerning": 0,
+            "scale_xy": [
+                1,
+                1
+            ],
+            "outline": false,
+            "shadow": false
+        },
+        "state_disabled": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "FFFFFF7F"
+            },
+            "interline": 0,
+            "kerning": 0,
+            "scale_xy": [
+                1,
+                1
+            ],
+            "outline": false,
+            "shadow": false
+        },
+        "state_pressed": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "FFF93FFF"
+            },
+            "interline": 0,
+            "kerning": 0,
+            "scale_xy": [
+                1,
+                1
+            ],
+            "outline": false,
+            "shadow": false
+        },
+        "state_marked": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "FDFA79FF"
+            },
+            "interline": 0,
+            "kerning": 0,
+            "scale_xy": [
+                1,
+                1
+            ],
+            "outline": false,
+            "shadow": false
+        }
+    },
+    "style_inputdialog_edittext_background": {
+        "state_normal": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "6C5F55FF"
+            }
+        },
+        "state_disabled": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "6C5F557F"
+            }
+        },
+        "state_pressed": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "554A41FF"
+            }
+        },
+        "state_marked": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "CFCAC7FF"
+            }
+        }
+    },
+    "style_inputdialog_edittext_text": {
+        "state_normal": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "FFFFFFFF"
+            },
+            "interline": 0,
+            "kerning": 0,
+            "scale_xy": [
+                1,
+                1
+            ],
+            "outline": false,
+            "shadow": false
+        },
+        "state_disabled": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "FFFFFF7F"
+            },
+            "interline": 0,
+            "kerning": 0,
+            "scale_xy": [
+                1,
+                1
+            ],
+            "outline": false,
+            "shadow": false
+        },
+        "state_pressed": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "FFF93FFF"
+            },
+            "interline": 0,
+            "kerning": 0,
+            "scale_xy": [
+                1,
+                1
+            ],
+            "outline": false,
+            "shadow": false
+        },
+        "state_marked": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "544941FF"
+            },
+            "interline": 0,
+            "kerning": 0,
+            "scale_xy": [
+                1,
+                1
+            ],
+            "outline": false,
+            "shadow": false
+        }
+    },
+    "style_checkbox_text": {
+        "unchecked": {
+            "state_normal": {
+                "fill_mode": "flat_color",
+                "flat_color": {
+                    "color_1": "FFFFFFFF"
+                },
+                "interline": 0,
+                "kerning": 0,
+                "scale_xy": [
+                    1,
+                    1
+                ],
+                "outline": false,
+                "shadow": false
+            },
+            "state_disabled": {
+                "fill_mode": "flat_color",
+                "flat_color": {
+                    "color_1": "FFFFFF7F"
+                },
+                "interline": 0,
+                "kerning": 0,
+                "scale_xy": [
+                    1,
+                    1
+                ],
+                "outline": false,
+                "shadow": false
+            },
+            "state_pressed": {
+                "fill_mode": "flat_color",
+                "flat_color": {
+                    "color_1": "FFF93FFF"
+                },
+                "interline": 0,
+                "kerning": 0,
+                "scale_xy": [
+                    1,
+                    1
+                ],
+                "outline": false,
+                "shadow": false
+            },
+            "state_marked": {
+                "fill_mode": "flat_color",
+                "flat_color": {
+                    "color_1": "FDFA79FF"
+                },
+                "interline": 0,
+                "kerning": 0,
+                "scale_xy": [
+                    1,
+                    1
+                ],
+                "outline": false,
+                "shadow": false
+            }
+        },
+        "checked": {
+            "state_normal": {
+                "fill_mode": "flat_color",
+                "flat_color": {
+                    "color_1": "FFFFFFFF"
+                },
+                "interline": 0,
+                "kerning": 0,
+                "scale_xy": [
+                    1,
+                    1
+                ],
+                "outline": false,
+                "shadow": false
+            },
+            "state_disabled": {
+                "fill_mode": "flat_color",
+                "flat_color": {
+                    "color_1": "FFFFFF7F"
+                },
+                "interline": 0,
+                "kerning": 0,
+                "scale_xy": [
+                    1,
+                    1
+                ],
+                "outline": false,
+                "shadow": false
+            },
+            "state_pressed": {
+                "fill_mode": "flat_color",
+                "flat_color": {
+                    "color_1": "FFF93FFF"
+                },
+                "interline": 0,
+                "kerning": 0,
+                "scale_xy": [
+                    1,
+                    1
+                ],
+                "outline": false,
+                "shadow": false
+            },
+            "state_marked": {
+                "fill_mode": "flat_color",
+                "flat_color": {
+                    "color_1": "FDFA79FF"
+                },
+                "interline": 0,
+                "kerning": 0,
+                "scale_xy": [
+                    1,
+                    1
+                ],
+                "outline": false,
+                "shadow": false
+            }
+        }
+    },
+    "style_checkbox_image": {
+        "unchecked": {
+            "state_normal": {
+                "fill_mode": "flat_color",
+                "flat_color": {
+                    "color_1": "FFFFFFFF"
+                },
+                "interline": 0,
+                "kerning": 0,
+                "scale_xy": [
+                    1,
+                    1
+                ],
+                "outline": false,
+                "shadow": false
+            },
+            "state_disabled": {
+                "fill_mode": "flat_color",
+                "flat_color": {
+                    "color_1": "FFFFFF7F"
+                },
+                "interline": 0,
+                "kerning": 0,
+                "scale_xy": [
+                    1,
+                    1
+                ],
+                "outline": false,
+                "shadow": false
+            },
+            "state_pressed": {
+                "fill_mode": "flat_color",
+                "flat_color": {
+                    "color_1": "FFF93FFF"
+                },
+                "interline": 0,
+                "kerning": 0,
+                "scale_xy": [
+                    1,
+                    1
+                ],
+                "outline": false,
+                "shadow": false
+            },
+            "state_marked": {
+                "fill_mode": "flat_color",
+                "flat_color": {
+                    "color_1": "FDFA79FF"
+                },
+                "interline": 0,
+                "kerning": 0,
+                "scale_xy": [
+                    1,
+                    1
+                ],
+                "outline": false,
+                "shadow": false
+            }
+        },
+        "checked": {
+            "state_normal": {
+                "fill_mode": "flat_color",
+                "flat_color": {
+                    "color_1": "FFFFFFFF"
+                },
+                "interline": 0,
+                "kerning": 0,
+                "scale_xy": [
+                    1,
+                    1
+                ],
+                "outline": false,
+                "shadow": false
+            },
+            "state_disabled": {
+                "fill_mode": "flat_color",
+                "flat_color": {
+                    "color_1": "FFFFFF7F"
+                },
+                "interline": 0,
+                "kerning": 0,
+                "scale_xy": [
+                    1,
+                    1
+                ],
+                "outline": false,
+                "shadow": false
+            },
+            "state_pressed": {
+                "fill_mode": "flat_color",
+                "flat_color": {
+                    "color_1": "FFF93FFF"
+                },
+                "interline": 0,
+                "kerning": 0,
+                "scale_xy": [
+                    1,
+                    1
+                ],
+                "outline": false,
+                "shadow": false
+            },
+            "state_marked": {
+                "fill_mode": "flat_color",
+                "flat_color": {
+                    "color_1": "FDFA79FF"
+                },
+                "interline": 0,
+                "kerning": 0,
+                "scale_xy": [
+                    1,
+                    1
+                ],
+                "outline": false,
+                "shadow": false
+            }
+        }
+    },
+    "checkbox_image": {
+        "unchecked": {
+            "vector_image": "default_checkbox_unchecked_image"
+        },
+        "checked": {
+            "vector_image": "default_checkbox_checked_image"
+        }
+    },
+    "style_cycle_button_background": {
+        "state_normal": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "366175FF"
+            }
+        },
+        "state_disabled": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "3661757F"
+            }
+        },
+        "state_pressed": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "2B4B5AFF"
+            }
+        },
+        "state_marked": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "347B9BFF"
+            }
+        }
+    },
+    "style_cycle_button_text": {
+        "state_normal": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "FFFFFFFF"
+            },
+            "interline": 0,
+            "kerning": 0,
+            "scale_xy": [
+                1,
+                1
+            ],
+            "outline": false,
+            "shadow": false
+        },
+        "state_disabled": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "FFFFFF7F"
+            },
+            "interline": 0,
+            "kerning": 0,
+            "scale_xy": [
+                1,
+                1
+            ],
+            "outline": false,
+            "shadow": false
+        },
+        "state_pressed": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "FFF93FFF"
+            },
+            "interline": 0,
+            "kerning": 0,
+            "scale_xy": [
+                1,
+                1
+            ],
+            "outline": false,
+            "shadow": false
+        },
+        "state_marked": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "FDFA79FF"
+            },
+            "interline": 0,
+            "kerning": 0,
+            "scale_xy": [
+                1,
+                1
+            ],
+            "outline": false,
+            "shadow": false
+        }
+    },
+    "style_cycle_button_image": {
+        "state_normal": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "FFFFFFFF"
+            },
+            "interline": 0,
+            "kerning": 0,
+            "scale_xy": [
+                1,
+                1
+            ],
+            "outline": false,
+            "shadow": false
+        },
+        "state_disabled": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "FFFFFF7F"
+            },
+            "interline": 0,
+            "kerning": 0,
+            "scale_xy": [
+                1,
+                1
+            ],
+            "outline": false,
+            "shadow": false
+        },
+        "state_pressed": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "FFF93FFF"
+            },
+            "interline": 0,
+            "kerning": 0,
+            "scale_xy": [
+                1,
+                1
+            ],
+            "outline": false,
+            "shadow": false
+        },
+        "state_marked": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "FDFA79FF"
+            },
+            "interline": 0,
+            "kerning": 0,
+            "scale_xy": [
+                1,
+                1
+            ],
+            "outline": false,
+            "shadow": false
+        }
+    },
+    "cycle_button_image": {
+        "vector_image": "default_cycle_button_image"
+    },
+    "style_slider_handler": {
+        "state_normal": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "366175FF"
+            }
+        },
+        "state_disabled": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "3661757F"
+            }
+        },
+        "state_pressed": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "2B4B5AFF"
+            }
+        },
+        "state_marked": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "347B9BFF"
+            }
+        }
+    },
+    "style_slider_background": {
+        "state_normal": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "877588FF"
+            }
+        },
+        "state_disabled": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "877588FF"
+            }
+        }
+    },
+    "style_commandline_background": {
+        "state_normal": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "254455FF"
+            }
+        }
+    },
+    "style_commandline_input_field_background": {
+        "state_normal": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "FFFFFF20"
+            }
+        }
+    },
+    "style_commandline_input_field_text": {
+        "state_normal": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "FFFFAAFF"
+            }
+        }
+    },
+    "style_commandline_slider": {
+        "state_normal": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "366175FF"
+            }
+        },
+        "state_disabled": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "3661757F"
+            }
+        },
+        "state_pressed": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "568195FF"
+            }
+        },
+        "state_marked": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "347B9BFF"
+            }
+        }
+    },
+    "style_commandline_text": {
+        "state_normal": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "FFFFFFFF"
+            }
+        }
+    },
+    "style_commandline_command_text": {
+        "state_normal": {
+            "fill_mode": "flat_color",
+            "flat_color": {
+                "color_1": "88BBFFFF"
+            }
+        }
+    }
+}

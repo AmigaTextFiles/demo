@@ -1,0 +1,58 @@
+»CL8:»SML:--------------------------------------
+»CL9:»BIG:Care about Cache'n'MMU hacking
+»CL8:»SML:--------------------------------------
+
+»CL0:Today, the Amiga is one of the VERY
+»CL1:FEW» computers that does not benefit
+from L2; but this can change any day,
+so I would like to make a warning.
+From time to time, some coders make
+noise about marking memory pages as
+non cached for increasing speed on
+several routines. For example, the H&P
+voxel demo has an option to mark
+chunky buffer as non-cached (MMU
+option). This way, speed is increased
+on 040/060.
+Also, directly killing datacache can
+improve performance on specific
+routines.
+
+Now, here comes the warning:
+Use of non cached memory WILL limit
+performance on future computers. Yes,
+if you intend to use (better let say
+abuse) this technique everywhere, you
+will find that:
+»CL1:a)» if you handled caches/MMU
+   improperly it will crash at any
+   trivial CPU change.
+»CL1:b)» if you handled caches/MMU
+   correctly, memory will be used
+   uncached no matter of cache sizes.
+   If you buy an accelerator/computer
+   with L2, or bigger internal caches,
+   you will realize that maybe the
+   whole chunky buffer (just an
+   example) fits the cache!
+
+Then, your demos/games will not get
+even nearly the speed them could get,
+because you disabled caching. (Hey
+Troda, I'm sure you wouldn't like
+that! ;) »CL7:(sure, I will kill you for
+disabled cache in PhaseOne tunnel...
+Troda ;)»
+
+The best thing is, maybe, avoid
+cache/MMU touch, and just making your
+algorithms having cache behaviour in
+mind. Or, if you want to make your
+effect the fastest possible, detect
+the HW configuration through the OS
+and proceed according to this info (I
+followed this way in many effects of
+my production, especially in »CL1:Phase One»
+/»CL1: Capsule»). Or just leaving all
+cache/MMU handling as an option to the
+user. Ugly but useful.

@@ -1,0 +1,88 @@
+@{c 5E71FF}@{xoffset 0}¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+@{xstep 328}@{font ACS-Title.font 18}PowerUP vs. WarpUP - a note@{font}
+@{xstep 495}@{c A6FFF8}@{i}Pavel Çíùek@{ui}@{c}@{ystep -8}
+
+
+@{c 6691FF}  @{xstep 1}@{font ACS-Title.font 18}A@{xstep 1}@{font}çkoli jsem  se zatím nijak neangaùoval v diskuzi týkající se soupeêení tëchto dvou
+softwarových  systémû  pro  PowerPC  karty,  zkuîenosti  z  poslední doby më vîak nutí
+alespoñ ke krátkému komentáêi.@{c}
+
+@{c 6691FF}  Mnoho  lidí  tvrdí,  ùe@{c}  @{c 5CC3FF}WarpUP  (Haage&Partner)@{c} @{c 6691FF} je  jednoznaçnë  lepîí neù@{c} @{c 5CC3FF}PowerUP@{c}
+@{c 5CC3FF}software  (Phase5).@{c}  @{c 6691FF} Nic  není  çernobílé,  ani  tento pêípad není výjimkou.  Zatímco@{c}
+@{c 5CC3FF}WarpUP@{c}  @{c 6691FF}nabízí  lepîí  koncepci abstrakce od hardwaru jako takového a nabízí vëci jako@{c}
+@{c 6691FF}ochranu  pamëti @{c}@{c 54F6FF} (PowerUP  je ale údajnë pro ochranu pamëti pêipraven... pozn.Shaman),@{c}
+@{c 5CC3FF}PowerUP@{c} @{c 6691FF} vítëzí  spíîe  v  drobnostech,  které  se projeví pêedevîím pêi práci s jiným@{c}
+@{c 6691FF}kompilátorem neù je@{c} @{c 5CC3FF}StormC @{c}@{c 6691FF}(napê. funkce pro pêístup k systémovým strukturám bez cache@{c}
+@{c 6691FF}efektû,  podpora  64  bitové  aritmetiky).@{c}  @{c 5CC3FF} PowerUP@{c} @{c 6691FF}softwaru je nutno pêiçíst k dobru@{c}
+@{c 6691FF}i to,  ùe  poskytuje funkce zcela analogické k jádru operaçního systému (a tedy snazîí@{c}
+@{c 6691FF}úpravu  stávajícího  kódu  na@{c} @{c 5CC3FF} PPC@{c}@{c 6691FF}), a také, ùe více (?) nutí programátory pêevést své@{c}
+@{c 6691FF}produkty  na@{c}  @{c 5CC3FF}PowerPC@{c} @{c 6691FF}kompletnë (i kdyù lidi jsou vynalézaví a vùdy to nëjak obejdou).@{c}
+@{c 6691FF}[také  bych  êekl,  ùe  programy pro@{c}@{c 5CC3FF} PowerUP@{c} @{c 6691FF}pûjdou pêenést na nový@{c} @{c 5CC3FF}AmigaOS 5.0@{c} @{c 6691FF}mnohem@{c}
+@{c 6691FF}lépe  a rychleji,  neù@{c} @{c 5CC3FF} WarpUP/StormC@{c} @{c 6691FF}programy - pêedevîím proto, ùe nutí programátory@{c}
+@{c 6691FF}kvalitnë  modularizovat  kód  nezávisle  na pêekladaçi a CPU... pozn.Shaman].  Nicménë@{c}
+@{c 6691FF}hlavní  spor  byl  /  je  veden  o @{c}@{c 54F6FF}rychlost pêepínání mezi procesory@{c} @{c 6691FF}(napê. pêi volání@{c}
+@{c 6691FF}systémových  funkcí).  A k tomu se bude vztahovat i mûj komentáê - je opravdu rychlost@{c}
+@{c 6691FF}pêepínání z jednoho procesoru tak dûleùitá pro výkon@{c}@{c 5CC3FF} PPC@{c} @{c 6691FF}programû?@{c}
+
+@{c 6691FF}  Zajisté ano.  Ale v jistém smyslu není nutnë tím nejpodstatnëjîím...  Ale popoêádku:@{c}
+@{c 6691FF}koneçnë  jsem  si nainstaloval freeware kompilátor@{c} @{c 5CC3FF}vbcc pro WarpOS@{c} @{c 6691FF}a u nëj jsem nalezl@{c}
+@{c 6691FF}prográmek pro testování rychlosti pêepínání mezi procesory.  Test spoçívá v tom, ùe se@{c}
+@{c 6691FF}otevêe  okno  a  pokreslí  se - bod po bodu se volá funkce pro nastavení barvy a zápis@{c}
+@{c 6691FF}bodu  do  okna@{c}  @{c 54F6FF}(celkem  asi  20000  volání  systému). @{c}  @{c 6691FF}Nu  a tak jsem nelenil (velmi@{c}
+@{c 6691FF}neobvyklé!   ;-))  a  zkompiloval  jsem  ho  pro@{c}  @{c 5CC3FF}WarpOS.@{c}   @{c 6691FF}(Pozn.:   jedná se vlastnë@{c}
+@{c 6691FF}o analogii  PixelOManie  dodávané @{c}@{c 5CC3FF}s WarpOS).@{c}  @{c 6691FF}Totéù jsem pak udëlal s pomocí@{c} @{c 5CC3FF}SAS/C@{c} @{c 6691FF}pro@{c}
+@{c 5CC3FF}PowerUP@{c}.   @{c 6691FF}A výsledek?@{c}  @{c 5CC3FF}Pod WarpOS@{c} @{c 6691FF}se stihlo@{c} @{c 54F6FF}1000 pêepnutí za sekundu, pod PowerUP jen@{c}
+@{c 54F6FF}750. @{c} @{c 6691FF} Aù  potud  vîe  odpovídá  tomu,  co se çlovëk dozvídal z rûzných médií (alespoñ@{c}
+@{c 6691FF}pomërem výsledkû).@{c}
+
+@{c 6691FF}  Jenùe  ouha,  po  krátkém  zamyîlení jsem si uvëdomil, ùe to nejhorîí pro výkon není
+@{c 6691FF}samotné@{c}  @{c 54F6FF}pêepnutí  mezi  procesory,@{c} @{c 6691FF} ale to, ùe dochází ke kompletnímu @{c}@{c 54F6FF}vyçiîtëní cache@{c}
+@{c 54F6FF}pamëtí (myslím, ùe i instrukçních).@{c} @{c 6691FF} A to je pêi pomalosti pêístupu do pamëti problém.@{c}
+@{c 6691FF}Tak jsem odstranil kompletní çiîtëní cache pêi volání zmínëných dvou funkcí a nahradil@{c}
+@{c 6691FF}je  pouze@{c} @{c 54F6FF}vyçiîtëním datové cache@{c}@{c 6691FF} pro oblast odpovídající pêísluîné struktuêe RastPort@{c}
+@{c 54F6FF}(ùádný  sluîný programátor by stejnë nepouùíval PPC pro çtení Intuiton bitmap).@{c} @{c 6691FF} To se@{c}
+@{c 6691FF}mi ovîem povedlo jen pro@{c} @{c 5CC3FF}PowerUP@{c}@{c 5CC3FF},@{c} @{c 6691FF}protoùe pro@{c} @{c 5CC3FF}WarpUP@{c} @{c 6691FF}je k dispozici pouze zkompilovaná@{c}
+@{c 54F6FF}amiga.lib  (výhodou SAS/C je to, ùe má volání systému z PPC êeîen pomocí inline funkcí
+a  lze  je  tedy  snadno  modifikovat)@{c}@{c 54F6FF}.@{c}   @{c 6691FF}Tato drobná úprava zpûsobila, ùe program pro@{c}
+@{c 5CC3FF}PowerUP@{c} @{c 6691FF}vykáza@{c}@{c 6691FF}l@{c} @{c 54F6FF}3000@{c} @{c 6691FF}pêepnutí za sekundu, tedy têikrát více neù standardnë pro@{c} @{c 5CC3FF}WarpOS!@{c}
+
+@{c 6691FF}  Samozêejmë,  ùe toto nelze aplikovat na libovolnou systémovou funkci, ale ukazuje to@{c}
+@{c 6691FF}opët  na  jeden  spoleçný  ukazatel@{c} @{c 6691FF} PowerPC  karet na Amize -@{c} @{c 54F6FF}problémovým faktorem je
+pêístup  do pamëti.@{c}  @{c 6691FF}Dûsledkem je to, ùe "sluîné" chování vûçi interní cachi procesoru@{c}
+@{c 6691FF}ze  strany  programátora mûùe pomoci více, neù zmëna systémového softwaru pro ovládání@{c}
+@{c 6691FF}PowerPC.@{c}
+
+                                    @{c 6691FF}    * * *@{c}
+
+
+@{c 6691FF}  Nedá mi to se nepodëlit o dalîí nové zkuîenosti týkající se@{c} @{c 51E0FF}PowerPC.@{c 6691FF} @{c}@{c 669BFF} Nëkteré z nich
+jsou v podstatë zêejmé, ale stejnë je uùiteçné je zveêejnit.@{c}
+
+
+@{c 2377FF}1) Pamëti 70 ns versus 60 ns.  To, ùe rychlejîí pamëï pêidá na výkonu je zêejmé.  Ménë
+   zêejmé je, ùe na BlizzardPPC je zrychlení pêi zmënë ze 70ns na 60ns SIMMy minimálnë
+   30%.   To je ovëêeno nejenom testy, ale i rychlostí v PowerPC verzi BD Editoru.  To
+   jen  potvrzuje  výsledky pêedchozí diskuse na téma, kde ta bota tlaçí aneb co brzdí
+   výkon nejvíce.@{c}
+
+@{c 238FFF}2) CyberGraphics  pro  AGA+PPC.   Açkoliv  se  zdálo,  ùe  se  jedná  jen  o zajiîtëní
+   kompatibility  pro  ty,  kteêí  grafickou  kartu nevlastní (jako já, díky pomalosti
+   Phase5), není to tak úplnë pravda.@{c}
+
+
+
+@{c 1C9FFF}   a) CyberGraphics  obrazovky  lze  vyuùít napêíklad pro chunky zápis, který odstraní
+      "blikání"  pêi  scrolování  (vyzkouîeno  v  GoldEdu)  aniù  by doîlo k výraznému
+      zpomalení zobrazování.@{c}
+
+@{c 11B7FF}   b) Dále  je  instalací CyberGraphics umoùnëno mít bitmapy ve FastRAM (jasné a velmi
+      významné).@{c}
+
+@{c 19D8FF}   c) CyberGraphics  patrnë  optimalizuje  çi  zjednoduîuje  práci  s regiony grafické
+      knihovny  a/nebo  vrstvami  (nevím  pêesnë):   protoùe  kdyù  napêíklad je v BDE
+      otevêeno  hodnë  smart  refresh  oken, tak se otevírani menu a nových oken stává
+      pomalejîí  a pomalejîí.   Na  CyberGraphics obrazovce vîak k ùádnému zpomalování
+      nedochází.@{c}
+
+@{i}@{c 638AFF}Pozn Shaman:@{ui} za d) bych dodal, ùe CyberGraphX datatypy V43 jsou podstatnë kvalitnëjîí,
+             neù standardní systémové V39 a V40.@{c}

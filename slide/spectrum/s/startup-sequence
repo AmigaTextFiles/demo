@@ -1,0 +1,13 @@
+;PopoCop 1997
+cls
+big
+type logo
+makedir RAM:Env
+Assign > NIL: Env: Ram:Env
+run > NIL: cliplay mod.agent-06
+ppshow > NIL: df0:Cover nomouse
+ppshow > NIL: df0:#?.pp nomouse
+cliplay 
+run > NIL: cliplay mod.agent-05
+muchmore spectrum.readme
+cliplay

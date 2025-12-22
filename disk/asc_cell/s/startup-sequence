@@ -1,0 +1,11 @@
+setpatch quiet
+   ;turn AGA on!
+run show cellular.iff
+   ;multi-task the piccy, ie leave it on screen at all times
+wait sec 20
+   ;5 secs will stop drives grinding, letting piccy load fully
+longPlay -q mod.cell
+   ; play all mods back 2 back, player by shargatt/lsd!
+   ; music disk converted from the PC to the Amiga by Pazza
+   ; and Shagratt of LSD!  isn`t compatability wonderful!
+

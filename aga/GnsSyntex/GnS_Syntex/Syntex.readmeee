@@ -1,0 +1,86 @@
+
+ This is a 040/060 fix for "Syntex", and old demo by genesis...
+
+ It had just a couple of problems with the interrupt... the one that made the
+ demo stuck on 040/060 was a very tiny and little error, that only occurs on
+ very fast cpus... it checked for 'fake' irqs (that may happen on 040/060),
+ but trashed the stack pointer in case it happenned.
+
+ It wasn't noticed before because I (Skywalker, the main coder) still had a
+ 'poor' but goldie 030 in my A4000, and the 'fake' irq did never happened (and
+ it doesn't happen in a 060 without data cache on... mysteries of Amiga hard-
+ ware...)
+
+ So now it uses the full 060 (even if it won't EVER be noticed, since it
+ was thought to run good on a plain A1200...), and I had to fix another couple
+ of 'too fast' speed troubles... the playing routine didn't like this cpu too
+ much, and the "vblank" interrupt needed to be changed into a "coper" one.
+
+ Now follows the original text, have fun with this demo.
+
+*·*·*·**·***·*****·*********·************·*************·******·****·***·**·*·*
+ o                      ·-----------------------·                           o
+                          S - Y - N - T - E - X
+ o                      ·-----------------------·                           o
+*·*·*·**·***·*****·*********·************·*************·******·****·***·**·*·*
+
+                   -·  A Demo released at the SATURNE-V ·-
+                                     by
+
+                                G·E·N·E·S·I·S
+
+                   /* 3th or 4th place at the demo compo *\
+                        \ | /
+                         \|/
+                          |
+             [..ask the party organizers for it..]  :-)
+
+
+·CrediTs:
+
+      Code:......Phoenix & Skywalker
+      Graphix:...STiLE9
+      Music:.....TiR
+      Design:....Phoenix
+
+
+...We hope you will like this "old-school" designed demo ;)
+                   --·--
+
+(remember to enable data caches by C:SetPathch)
+                    ...
+
+
+
+            Now we want to avail ourselves of this opportunity
+ `--- to say a very very BIG hello to our friends: (in random order) ---'
+     `--------------------------------------------------------------'
+
+.All GeNeSiS' memberz: Leto, Dx0, Case, STiLE9, Panoramix, TiR, Montezuma
+                       Corrosion(/Darkage?), FranZ, Ice, BBK.
+
+.our scene friends ;)  Modem, KaosMaster, Washburn, Lanch, Aud (all in Darkage)
+                       Pink/Abyss, Nao/RamJam, nOT/RamJam, Hedgehog/NahKolor,
+                       Axel (hi!:), Randy/Ex-RamJam, Unreal/Faculty,
+                       Decibel/Darkage, Psycho/Session ;)
+
+                  and of course all #AmigaScne and #AmigaIta users ;)
+
+...I hope not to have forgotten anyone ;)
+
+
+
+··············································································
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+If tou want to get in touch with us for any reason..."email" us :)
+
+Matteo Pedone     - (Phoenix) ..... matped@usa.net
+Emiliano Esposito - (Skywalker) ... eesposito@usa.net
+Matteo Trapella   - (STiLE9) ...... nar4780@iperbole.bologna.it
+Simone Fracassa   - (TiR) ......... s.fracassa@agora.stm.it
+·---·
+Alex Pagnoni (Genesis organizer) - (Leto) ... alex.pag@usa.net
+
+
+
+                                                     Phoenix & Skywalker

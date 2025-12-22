@@ -1,0 +1,7 @@
+IF EXISTS rage03_00.data
+  assign rage!3_a: ""
+ENDIF
+IF EXISTS "Diskb/rage03_01.data"
+  assign rage!3_b: diskb/
+ENDIF
+rage!03.exe

@@ -1,0 +1,5 @@
+copy ChipToFast2 ram:
+wait 2
+ram:ChipToFast2
+delete >NIL: ram:ChipToFast2
+ODYSSEY.exe

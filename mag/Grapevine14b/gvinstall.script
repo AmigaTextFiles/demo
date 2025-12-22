@@ -1,0 +1,30 @@
+; Grapevine Issue 14 HD Install Script
+
+alert "Grapevine Issue 14 HardDisk Install%c%cVersion 1.0a"
+select "dh0:gv14"
+space "2500" ; 2.5mb
+message "Installing Grapevine into `%s/'"
+
+mkdir "%s"
+mkdir "%s/sources"
+
+copyifno "Gv14a:Libs/reqtools.library" "dh0:libs/reqtools.library"
+copy "GV14a:#?" "%s/"
+copy "GV14b:#?" "%s/"
+copy "GV14c:#?" "%s/"
+
+openfile "%s/go"
+writetofile "assign gv14a: %s/"
+writetofile "assign gv14b: %s/"
+writetofile "assign gv14c: %s/"
+writetofile "gv14a:gv14"
+closefile ""
+
+closemessage ""
+
+alert "%cI Haven't installed any of the%cDEVS or L directories%cI assume you already have these%c"
+alert "%cNone of the sources etc. have been installed%cYou know where they are if you need them!%c"
+alert "%cInstall Complete%c"
+
+end ""
+

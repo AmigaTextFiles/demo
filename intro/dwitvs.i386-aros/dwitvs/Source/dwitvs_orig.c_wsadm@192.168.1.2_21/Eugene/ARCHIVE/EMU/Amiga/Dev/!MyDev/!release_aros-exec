@@ -1,0 +1,289 @@
+#include "SDL.h"
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#define I int
+#define FL float
+#define F for
+#define E else
+#define UI unsigned I
+#define ra(x) (x * 3.14 / 180)
+#define pm(a,b) ((((a) >> 1) & 0x7F7F7F7F) + (((b) >> 1) & 0x7F7F7F7F))
+
+struct
+{
+  I x, y;
+  I r, g, b;
+}
+g[51*38];
+
+I *v, w = 400, h = 300, o, i, j, x, y, *di;
+FL an = 0, d;
+UI lg[120000];
+
+gm (I x, I y)
+{
+  I lri, lgi, lbi, rri, rgi, rbi, clr, clg, clb, crr, crg, crb;
+  I ra, ga, ba, cr, cg, cb;
+
+  di = v;
+  o = x + y * 51;
+  di += g[o].x + g[o].y * w;
+
+  lri = ((g[o + 51].r - g[o].r) << 16) >> 3;
+  lgi = ((g[o + 51].g - g[o].g) << 16) >> 3;
+  lbi = ((g[o + 51].b - g[o].b) << 16) >> 3;
+  rri = ((g[o + 51 + 1].r - g[o + 1].r) << 16) >> 3;
+  rgi = ((g[o + 51 + 1].g - g[o + 1].g) << 16) >> 3;
+  rbi = ((g[o + 51 + 1].b - g[o + 1].b) << 16) >> 3;
+
+  clr = g[o].r << 16;
+  clg = g[o].g << 16;
+  clb = g[o].b << 16;
+  crr = g[o + 1].r << 16;
+  crg = g[o + 1].g << 16;
+  crb = g[o + 1].b << 16;
+
+  F (j = 0; j < 8; j++)
+  {
+    ra = (crr - clr) >> 3;
+    ga = (crg - clg) >> 3;
+    ba = (crb - clb) >> 3;
+    cr = clr; cg = clg; cb = clb;
+
+    F (i = 0; i < 8; i++)
+    {
+      *di++ = (cr >> 16) << 16 | (cg >> 16) << 8 | (cb >> 16);
+      cr += ra; cg += ga; cb += ba;
+    }
+
+    di += w - 8;
+    clr += lri; clg += lgi; clb += lbi;
+    crr += rri; crg += rgi; crb += rbi;
+  }
+}
+
+gf (I x, I y, FL s, I r, I gc, I b)
+{
+  I dx, dy;
+
+  F (j = 0; j < 37; j++)
+    F (i = 0; i < 50; i++)
+    {
+      o = i + j * 51;
+
+      dx = abs (g[o].x - x);
+      dy = abs (g[o].y - y);
+      if (dx > w) dx = w;
+      if (dy > h) dy = h;
+      d = 1 - (sqrt (dx * dx + dy * dy) / s);
+      if (d < 0) d = 0;
+
+      g[o].r += r * d;
+      g[o].g += gc * d;
+      g[o].b += b * d;
+      if (g[o].r > 255) g[o].r = 255;
+      if (g[o].g > 255) g[o].g = 255;
+      if (g[o].b > 255) g[o].b = 255;
+    }
+}
+
+rg ()
+{
+  F (y = 0; y < 37; y++)
+    F (x = 0; x < 50; x++)
+      gm (x, y);
+}
+
+fd (UI a)
+{
+  UI i, c;
+
+  F (i = 0; i < w*h; i++)
+  {
+    c = v[i];
+    v[i] = ((c & 0xFF0000) > (a << 16) ? (a << 16) : (c & 0xFF0000)) |
+           ((c & 0xFF00) > (a << 8) ? (a << 8) : (c & 0xFF00)) |
+           ((c & 0xFF) > a ? a : (c & 0xFF));
+  }
+}
+
+bl (UI *b, I w, I h)
+{
+  UI i, c;
+
+  F (i = w+1; i < w*(h-1)-1; i++)
+  {
+    b[i] = pm (pm (b[i-1], b[i+1]), pm (b[i+w-1], b[i+w+1]));
+  }
+}
+
+re (I x1, I y1, I x2, I y2)
+{
+  I i, j;
+
+  F (j = y1; j < y2; j++)
+    F (i = x1; i < x2; i++)
+      lg[i+j*w] = ((rand () % 0xFF) << 16) | ((rand () % 0xFF) << 8) | (rand () % 0xFF);
+
+  lg[x1+y1*w] = lg[x2-1+y1*w] = lg[x1+y2*w-w] = lg[x2-1+y2*w-w] = 0;
+}
+
+main (I ar, char **av)
+{
+  I z, p, o;
+  UI c, fl = 1;
+  SDL_Surface *b;
+  SDL_Event e;
+  FILE *f;
+  FL vx, vy, u1, v1, u2, v2, dxu, dyu, dxv, dyv, cu, cv, lu, lv, sc;
+  UI fr = 0;
+
+  SDL_Init (32);
+  if (ar > 1 && (strcmp (av[1], "-f") ||
+      strcmp (av[1], "--fullscreen"))) fl |= SDL_FULLSCREEN;
+  b = SDL_SetVideoMode (w, h, 32, fl);
+  v = b->pixels;
+
+  memset (g, 0, sizeof (g));
+
+  F (y = 0; y < 38; y++)
+    F (x = 0; x < 51; x++)
+    {
+      g[x+y*51].x = x << 3;
+      g[x+y*51].y = y << 3;
+    }
+
+  re (30, 50, 80, 200);
+  re (30, 50, 130, 80);
+  re (30, 100, 130, 130);
+
+  re (150, 50, 200, 200);
+  re (150, 170, 240, 200);
+
+  re (260, 50, 310, 200);
+  re (330, 50, 365, 110);
+  re (260, 50, 365, 80);
+
+  bl (lg, 400, 300);
+  bl (lg, 400, 300);
+  bl (lg, 400, 300);
+
+  while (!SDL_PollEvent (&e) || e.type != 2)
+  {
+    SDL_LockSurface (b);
+
+    an < 360.0f ? an++ : (an = 0);
+
+    if (fr > 3600)
+    {
+      break;
+    }
+    E if (fr > 2900)
+    {
+      z = 0;
+
+      F (j = 50; j < h - 80; j++)
+      {
+        o = j * w;
+        p = o + 10 * sin (ra (an)) * sin (ra (z++)) * cos (ra (j - 50));
+
+        F (i = 0; i < w; i++)
+        {
+          v[p++] = lg[o++];
+        }
+      }
+
+      bl (v, w, h);
+
+      if (fr < 3155) fd (fr - 2900);
+      if (fr > 3345) fd (3600 - fr);
+    }
+    E if (fr > 2100)
+    {
+      F (j = 0; j < 38; j++)
+        F (i = 0; i < 51; i++)
+        {
+          o = i + j * 51;
+          g[o].r = 150 + 30 * (sin (ra ((i<<3) + an)) + cos (ra ((j^i<<10) + an)));
+          g[o].g = 150 + 30 * (sin (ra ((i^j<<4) + an)) - cos (ra ((j<<6) + an)));
+          g[o].b = 150 + 30 * (sin (ra ((i^j<<5) + an)) * cos (ra ((j<<8) + an)));
+        }
+
+      rg ();
+
+      if (fr < 2355) fd (fr - 2100);
+      if (fr > 2645) fd (2900 - fr);
+    }
+    E if (fr > 1500)
+    {
+      sc = 256 + 64 * sin (ra (an*2));
+      vx = sc * sin (ra (an));
+      vy = sc * cos (ra (an));
+      u1 = 64 - vx + vy / 2 + vy / 2 * sin (ra (an));
+      v1 = 64 - vy - vx / 2 + vx / 2 * cos (ra (an));
+      u2 = 64 + vx + vy / 2 + vy / 2 * sin (ra (an));
+      v2 = 64 + vy - vx / 2 + vx / 2 * cos (ra (an));
+      dxu = (v2 - v1) / w;
+      dxv = (u1 - u2) * sin (ra (an)) / w;
+      dyu = (u2 - u1) / h;
+      dyv = (v2 - v1) / h;
+
+      di = v;
+
+      cu = u1; cv = v1;
+      F (y = 0; y < h; y++)
+      {
+        lu = cu; lv = cv;
+        F (x = 0; x < w; x++)
+        {
+          *di++ = pm (lg[(((UI)lu)%400) + (((UI)lv)%300)*400], *di);
+          lu += dxu; lv += dxv;
+        }
+        cu += dyu; cv += dyv;
+      }
+
+      if (fr < 1755) fd (fr - 1500);
+      if (fr > 1845) fd (2100 - fr);
+    }
+    E if (fr > 600)
+    {
+      F (j = 0; j < 38; j++)
+        F (i = 0; i < 51; i++)
+        {
+          o = i + j * 51;
+          g[o].r = 80 + 30 * (sin (ra ((i<<12) + an)) + cos (ra ((j<<9) + an)));
+          g[o].g = 100 + 30 * (sin (ra ((i<<12) + an)) + cos (ra ((j<<9) + an)));
+          g[o].b = 140 + 50 * (sin (ra ((i<<12) + an)) + cos (ra ((j<<9) + an)));
+        }
+
+      rg ();
+
+      if (fr < 855) fd (fr - 600);
+      if (fr > 1245) fd (1500 - fr);
+    }
+    E
+    {
+      gf (sin (ra (an)) * 150 + w/2, cos (ra (an)) * 100 + h/2, 120 + sin (ra (an*2)) * 70, 40, 150, 255);
+      gf (cos (ra (an * 3)) * 80 + w/2, sin (ra (an * 2)) * 200 + h/2, 170 + sin (ra (an*2)) * 50, 180, 20, 120);
+      gf (cos (ra (an * 2)) * 120 + w/2, sin (ra (an * 3.5)) * 180 + h/2, 120 + sin (ra (an*2)) * 80, 40, 190, 100);
+
+      rg ();
+
+      F (x = 0; x < 51*38; x++)
+      {
+        g[x].r = g[x].g = g[x].b = 0;
+      }
+
+      if (fr < 256) fd (fr);
+      if (fr > 345) fd (600 - fr);
+    }
+
+    SDL_UnlockSurface (b);
+    SDL_Flip (b);
+
+    fr++;
+  }
+    SDL_Quit ();
+
+}

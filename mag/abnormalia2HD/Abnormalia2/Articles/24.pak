@@ -1,0 +1,245 @@
+TITLE:WHAT REALLY HAPPENED AT DEVCOM by MIKE SMITHWICK
+PALETTE:0223 089a 0b9a 06ca
+BRUSH:02
+
+3                         WHAT REALLY HAPPENED AT DEVCOM
+
+  2                             by Mike Smithwick
+
+
+To all AmiGuys and AmiGals!
+
+I  know that I am not really supposed to talk about it, but hell, non-disclosure
+agreements are just pieces of paper, aren't they??  So what follows is a summary
+of  the  events  and  non-events  that  went  on  at the recent Amiga Developers
+Conference and Glee Club Tryouts.
+
+We  arrived  at  the  conference  on  January  25,  Monday.   For early arrivals
+Commode-door  was  holding  additional  seminars.   One was "Introduction to Mac
+Programming", and the other taught by Mehdi Aleeeeeeee!!!!  was called "Managing
+Your Business for Failure-A Case Study".
+
+After  signing  up  everyone received their conference notes in 27 convenient 3"
+binders, a handcart and a free CDTV.
+
+That  evening  they  held  a banquet and inbetween frequent visits to the DevCon
+Kissing  Booth  (thanks to Cathy), the Jolt concessions and tryouts for the Mark
+Barrett  Whine-Alike  contest we begin to hear about the adventures in store for
+us  in  the  upcoming  4  days.  We were tipped off about the new Elvis chipset,
+featuring  the  regular Elvis chip for the low-end Amigas, and the Fat-Elvis for
+the  high  end  models with the option jewelled cape.  We also heard the NewDrek
+was  coming, and that they had rented out EPCOT for what was billed as a "Little
+NewDrek Family Get-together".
+
+That  next  morning we reconvened for the keynote speech covering new directions
+for  Commode-door.   We  learned  that  Commode-doors new direction for 1993 was
+"left  and down the hall" as compared to their 1992 direction of "turn right, go
+down a block and make another right at the beauty parlor, you can't miss it".  I
+assume that this made sense to someone.
+
+After  this  was  a talk on future hardware and software.  Not only did we learn
+more  about  the  Elvis  chipset,  they also talked about the new Elvis.lib, the
+Elvis.emulator  package  and  Elvis  boopsi  objects  and datatypes.  The entire
+interface  was  going  to be modified to take advantage of these "powerhouse new
+capabilities".   "What other computer will talk to you the way Elvis would?" the
+CA  marketing  guy  told  us.  He then typed in something on the machine and the
+Elvis-narrator.device  kicked  in  "Would'ja  please insert one of them disks?",
+which  he  did.   The  computer  then replied "Thank-you, thank- you very much".
+This  is meant to be only the first of many CEKs (Celebrity Enhancement Kits) to
+be  made  available.  If, God-forbid, you're not an Elvis fan, you may have your
+choice  of other PMs (Personality Modules), going all of the way from Elmer Fudd
+("Harddwive  wead  ewwor, hehehehehehehe!") to the Dr_Ruth.lib ("All you haff to
+do  is to please insert disk").  Developers have already begun to take advantage
+of  these  features, from NewDrek's Elvis effect (best observed when one is in a
+highly drug induced state) to Electronic Arse's "Deluxe Elvis Construction Set".
+ASDFG  also showed off their "Morph Elvis Plus" in which anything can be morphed
+into  looking  like  The  King.  SunFries likewise demonstrated their "Studio 54
+Disco Board".
+
+Right  after  this  we  heard  a  double-sonic boom over the hotel.  Rushing out
+visitors  were  treated  to  the sight of NewDrek's own private Space Shuttle on
+final  approach.   At  last,  I thought, I could finally meet that great NewDrek
+babe,  Kiki  Jackhammer!   Star of the Video Roasters special Power Tools effect
+series.
+
+From  then  on the sessions broke up into about 129 different parallel meetings,
+covering  topics  from  "FuzzyLogic  As  Applied to Commode-door's Marketing" to
+"Localizing  you  Software  for  Arkansas".  This brings to mind one of the main
+thrusts  of  the entire conference, namely localization issues.  For instance we
+learned all about the new keymaps, from the Arkansas keymap (everything types an
+"X")  to one for Linear-B to handle that ancient Sumarian market.  At this time,
+CA  also  announced their bringing back of the beloved "Guru" error.  But due to
+the  increased  "diversity"  of the Amiga market, a new sensitivity was awakened
+inside  Commode-door,  so  as  with  everything else the Guru was localized.  In
+Japan  it will read "Shinto priest meditation error".  Machines shipped to South
+America  will  use  the  Madonna  (this  may be a mistake due to the fact that a
+machine running the beta release of this software had 14 shrines built around it
+overnight  following  an  Illegal address error.  However 78 miraculous healings
+were  also  reported testifying to the power of the new OS mods).  Machines sent
+to the far East will use the Buddha, French boxes, Jerry Lewis, and Fidel Castro
+goes to certain pockets in Berkeley.
+
+Around noon the NewDrek entourage arrived, pulling up in 42 stretch limos out in
+front  of  the  hotel.   The  first  14  limos contained nothing but bodyguards,
+off-duty defensive linesmen hired away from Forty Niners.  Then came the NewDrek
+engineers, who were quickly whisked away by the adoring press after tossing some
+flower  petals  our way.  Finally Tim Geniusson stepped out, put a clenched fist
+in  the  air  and  yelled  "Roaster!  Roaster!  Roaster!".  He then approached a
+microphone, and the crowds stilled.  He thanked everyone for coming to the Video
+Roaster Power Supply Developers Conference, tossed some diamonds into the throng
+and mysterious vanished.
+
+A number of disks were handed out to the attendees.  A new SetPatch was supplied
+which came on only 14 disks.
+
+The  following  day  we  heard  about the new interface standards.  Peter Hernia
+opened  up  the  advanced  Intuition meeting by announcing "up to now, GUIs have
+only  addressed  2  of our senses, sight and hearing, ignoring 3 other perfectly
+good senses, those of taste, touch and smell.  Well, wait no longer!".  Beaming,
+Peter  then  began  to demonstrate several new features such as the proportional
+"Scratch and Sniff" object.  He gave a sample of the source code:
+
+
+      smellgad.ng_GadgetText="Lean close and sniff really really hard!";
+      smellgad.ng_GadgetSmell=SNG_PORCUPINE_MUCUS;
+
+
+      gadget=CreateGadget(SMELL_KIND,gad,&smellgad,TAG_DONE);
+
+
+Commode-door  will  supply a scent.lib used by the datatypes, and users are free
+to  add  their  own.   Supplied smells include those for a dead skunk, Madonna's
+armpits,  Sushi  in  a  hot car, Calvin Klien's Obsession and wax.  Beta testers
+have been reporting one fairly major bug however, which seems to make everything
+smell  like  dead skunk.  That could explain why the first 12 rows were empty in
+the meeting room.
+
+He  followed  this  by mentioning the "Point and Lick" extensions still in their
+early  stages  and  showed  the  optional  tongue  electrodes  needed  to "fully
+appreciate"  the  new  features.  For some reason, Peter refused to demonstrate,
+saying something about the smell bug also affecting the taste code.
+
+Extensions were likewise shown for BOOPSI.  The new "OOPSI" modules were created
+for the clumsy programmers out there.
+
+At  this  time, members from the Kansas City Royals handed out flyers announcing
+the  release  of NewDrek's, BlightWave 3.0.  Current owners may upgrade for only
+$42,199.  "A FULL $150 OFF OF THE REGULAR PRICE!".
+
+Besides  the  seminars,  Commode-door  had  special  rooms  set  aside for other
+activities.   They had the "Compatibility Lab" so developers could try out their
+products  on  a  variety  of  equipment.   Next  to  that  was  the  BLAZEMONGER
+Compatibility  lab, so developers could try out their products while BLAZEMONGER
+was running at the same time, in the SAME ROOM!  I never went in there as it was
+always  just  a  bit  crowded  due  to  the presence of half of the Orlando fire
+department  and the NEST team supplied courtesy of the Atomic Energy Commission.
+I  did  notice  that  Commode-  door  thoughtfully  provided  free psychological
+counseling  to  anyone  after  using the lab.  There was a long line for this as
+well.  (Side note :  On the third day, ABC's Nightline did a live broadcast from
+in  front  of  the  lab  door.  I didn't have time to see what they were talking
+about, but I caught Koppel mentioning something about "how could anyone let this
+happen",   and  the  words  "careless",  "irresponsible"  and  "Chernobyl"  were
+overheard as I rushed to the Marketing seminar.)
+
+In  the  Marketing  meetings, Dave Goldenarches revealed some of the preliminary
+sales  figures for the Amiga 1200.  He announced that the Central African market
+has  finally  opened  up,  and  they've sold over 9500 units in only 10 weeks in
+Botswana  alone.   And  16000 machines were sent to Cambodia just for Christmas!
+This was followed by the US Marketing rep who boasted that a full 28 Amiga 1200s
+were  shipped  in December and that they had orders in hand for at least another
+12 units.
+
+A new "PowerDown" program was revealed in which C-64 owners could trade in their
+system  for  a  CDTV.   If  they wanted, the C-64 could be bought back for $1.19
+which could be traded in again if desired.
+
+In  between  the  afternoon  meetings,  various  goodies  were  handed  out.  On
+Wednesday we received free Dove Bars.  On Thursday, it was CDTVs.  Friday due to
+popular  demand, more Dove Bars were given out, as well as CDTVs.  In understand
+that the extra CDTVs were sent to a local landfill.
+
+Thursday  night was "NewDrek" night at EPCOT.  We were ushered in to the park by
+colorful  characters  dressed  as  Penn  and  Teller  (goofy ponytails and nails
+through  their  arms) or Kiki Jackhammer (leather pants, splitting at the seam).
+After  the  catered  French banquet, Michael Jackson performed for a few minutes
+followed  by a reunion of the remaining 3 Beatles.  Next, Tim came out and spoke
+briefly,  announcing that the next DevCon would be held in Topeka, Kansas, which
+he  had  just  bought  (Kansas, not Topeka).  President Clinton wound things up,
+announcing that he had just made Tim Ambassador to God.
+
+The  show  restarted,  SDI  lasers  were  used  to  burn "NEWDREK" on the moon's
+surface.   (Too  bad  about that 747 that wandered into the beam though, but Tim
+brought out his checkbook and promised to take care of things).
+
+As  we left the each attendee was handed a numbered key and directed towards the
+parking  lot.   There  we saw a literal sea of red Ferraris.  Tim said that they
+had considered handing out free T-shirts, but "everyone hands out T-shirts".
+
+On  Friday  morning  we  had  the  Mark  Barrett  working group.  New flags were
+introduced into the driver support code to filter out anything from Mark Barrett
+that   might   get   through.    These  included  MB_ANNIALLATE,  MB_BLAST,  and
+FORCE_MB_TO_SMELL_PORCUPINE_MUCUS.
+
+Commode-door  unveiled their new Mumbly-PEG board, but no one could explain just
+what  it  did.   To  answer  the complaints of no SCSI support in the A4000 they
+showed  off  there  new interface card supporting the SCSI-4 standard!  Shipping
+date  is  whenever  SCSI-4  is  established.   To  support  that  ever expanding
+graphics-computer-multimedia  agricultural market we were shown the EIEIO board,
+able to control 12 milking machines simultaneously.
+
+We  saw the new ABCDTV prototype, dubbed the "3DO Killer" because if placed near
+a  3DO  unit  it  would  explode.   During  the  demo,  the  Arkansas keymap was
+accidentally loaded so all text on the screen was rendered as "X"s.
+
+Commode-door  had  a  store available to all attendees selling things like Amiga
+keychains, CD-ROMs, Dave Haynie pinups, and notes from past conferences.  Buyers
+were given free CDTVs for each purchase over $1.25.
+
+Also on Friday, we were given a peek at the new chipset, dubbed the "AA killer".
+Details   about  these  chips  have  already  been  revealed  at  the  World  of
+Commode-Door, but they did mention a new HAM-24 mode (set with the "Sagan" bit),
+able to display "billyuns and billyuns" of colors at once.
+
+Motorola  came  in  to  talk  of future CPUs, after the 68040 is going to be the
+680486, capable of "emulating" popular chips by other manufacturers.  Then comes
+the 680586, capable of "emulating" popular Motorola chips.
+
+The  retargetable  graphics  seminar  was popular.  We were told that the design
+goal  was  to permit Amiga graphics to be displayable on any device.  Not just a
+display  device,  but  ANY device.  The engineers explained that in the lab they
+already  had  Workbench  displaying  on  a  washing  machine,  a Sears Craftsman
+powerdrill  and  Mr.   Coffee.   They were at a loss to explain as to why anyone
+would want to display workbench on their Mr.  Coffee, but were quick to add that
+the Amiga "would be the first computer to do so!".  They had a point there.
+
+On  Friday night there was a field-trip to the local topless bar, notably absent
+were  most  of  the  developers  who  stayed  back  at  the  hotel building play
+fortresses out of CDTV units.
+
+The  last  day  of  the  conference  began with a talk about the App-BodyBuilder
+software.   Not  only  does it help build nice interfaces, it will pump up those
+flaccid  biceps as well.  This requires a the new "PowerMouse" weighing in at 25
+pounds.
+
+The conference ended with a "Developer's Choice Awards Luncheon", in which Amiga
+developers  were asked to vote for their favorite products.  Best interface went
+to NextStep, best hardware was the Pentium chip, Best Software awarded to Ultima
+Underground.   It  was  decided that next year, winners will be limited to Amiga
+only  products.   The conference ended with drawings for door prizes.  The first
+prize  was  5  CDTVs,  the  second  prize  3 CDTVs, and third prize was an Amiga
+keychain.   The  conference  ended  with a group tour of Disney World, now named
+NewDrek World.
+
+As  I  was  climbing  aboard the plane to head on home I heard that NewDrek just
+bought the planet.
+
+
+P.S.  Portions of this report were inspired by Steve Pietrowicz one dull January
+night inbetween top-10 lists.  Gee, I need to get out more often.
+
+
+
+Copyright  1993  by  Mike  Smithwick,  no  part  of  this  may  be  reprinted or
+distributed  without  permission  from  the  author.  If you do, I'll put you in
+contact  with  the  BLAZEMONGER  "Customer  Service"  department  for  a  little
+"discussion".

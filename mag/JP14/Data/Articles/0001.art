@@ -1,0 +1,103 @@
+!Making Of
+Ghandy & Kalmsy
+11
+µJCµF0µC0
+- --- --------------------- --- -
+The Making Of Ocean Machine
+- --- ------------------------- --- -
+µF1µJE
+
+µC4No matter if you like it or not. It`s somehow like a tradition. Each year the top of the notch from the european demosceners meet in Bingen/Germany while the rest of the world searches for big, colourful eggs made of chocolade - and each year The Black Lotus wins the Amiga democompetition! That`s how it is, simple as that. Together with their coding machine, Kalms of TBL we had a closer look behind the curtain.
+
+µI0002µC1Please tell me how the management tool exactly did help you with doing the demo. Didn't it otherwise kill the spontanity and part of the fun doing it as it all looks so much of profession and not of a hobby anymore.
+  
+
+µC2Successful use of a project management tool requires understanding of some of the differences between a demo project and a professional software project:
+
+1) People who work on a demo do so in their spare time. Thus, they have far less than 40 hours per week to dedicate to the demo, and they work in bursts (one week a person might spend three evenings on the demo, next week zero evenings).
+
+2) People work voluntarily on a demo. A schedule could never be "enforced" upon someone unwilling.
+
+3) What goes into the final product is determined by the people who make the demo, not by some external customer.
+
+
+With this in mind, the project plan should be seen as a kind of a glorified "todo"-list. When you agree that some particular effect should be done, add it to the project plan, separate entries for the graphics work and the codework. Estimate how much time it would take.
+With a well populated project plan, you can see if any person has alarmingly much to do for the demo -- in that case, perhaps you should scrap one of the more work-intensive parts, and try to do something easier instead?
+
+Keep updating the plan on a regular basis. The plan is the list of things that you currently think should be done for the demo. It should change along with your ideas of what the final demo should be like.
+
+We have been doing most of these things since several years -- specifying what needs to be done early on, risk-assessing each part of the demo, making fallback plans for high-risk parts, etc, but usually only verbally.
+
+Having a project management tool encourages you to not only list the tasks, but also list how much time you think it will take. When your spare time is scarce, time estimation is good.
+
+I'm a slacker. I postpone things until the very last minute. Having the plan helped me get started on some heavier coding tasks early on -- without the plan, I'd just think "I can do that tomorrow, there are still several weeks left", but with the plan it's blindingly obvious that, say, "the voxel engine needs to get to at least a functional state in a week or there will be no voxels for Breakpoint".
+
+Louie and Rubberduck have way more self-discipline than me. They'd get by quite fine without the plan.
+
+The golden rule is: you control the plan -- the plan does not control you.
+
+µI0003
+
+µC1Who of the TBL guys are working together in the same company. What are you doing there exactly and how does this fact have any effects on your yearly BP demo?
+  
+
+µC2Rubberduck is working as a producer at DICE, and Louie is Art Director at the same company. I used to work there as well, but since a few months I have returned to student life. Tudor is currently employed at SimBin. Yolk is down in Spain, probably still living off of his girlfriend.  ;)
+
+Working in the games industry is often hectic. I don't know how, but Louie manages to do graphics in his spare time. I find it quite difficult to balance work and spare time -- either I work 120% or I don't work at all. It's difficult to make quality demos during such conditions. In case you wonder why there wasn't much new coding visible for Little Nell and Magia -- well, there you have it. Work took precedence.
+
+It's another story now though. For instance, the voxel engine (ugly as it be) would not have been written if I was still working at DICE. Being a student certainly has its advantages, and a lot of spare time is one of them.
+
+The best thing about working in the same company is that you meet the other people on an almost daily basis, can chitchat and discuss each others' ideas face-to-face. This is no longer the case, but we talk regularly via phone and ICQ, and a trip from Linkoping to Stockholm is only two hours... so the distance is not really a problem.
+
+
+
+µC1How came that you this time worked together with Yolk of Cncd?
+
+µC2Louie initially suggested the tune -- apparently he had wanted to make a demo with it as soundtrack for a long time. I welcomed the chance to go with a sound that wasn't industrial, classic demo fare. Rubberduck was initially not too keen on the concept, but we eventually won him over.
+
+
+µC1Is it really his little sister as the singer in the background and Yugi/Komplex as the one playing the piano?
+  
+µC2Yes.
+
+
+
+µC1I thought it was a bug of the code but the original mp3 of Yolk has the same errors at the end - or was it him, wanting to make his song sounding so noisy during the last seconds?
+  
+µC2The sound bugs are intentional; the tune was not created specifically for this demo.
+
+
+µC1Which of the effects in the demo were animations? The dancing girl wasn't, I heard...
+
+µC2What is an animation? To me, it is a series of images, which might have been compressed in some way. Or a series of 2D polygons (as in State of the Art). Or something similar.
+Fact is, there is a lot of code behind each part in the demo. None of that code even resembles a straight "animation player/decompressor".
+
+The character-animation of the girl has been done in LightWave 7, using various extra plug-ins. Then the character-animation has been saved out as individual keyframes with a resolution of 12.5 keyframes per second. (Each keyframe contains the positions of all vertices in the object at that instant in time.)
+
+At runtime, the demo picks two suitable keyframes, blends them together to get the motion of the girl at the current moment in time, and then sends off the girl along with the background panorama to the 3D engine for rendering.
+
+
+µC1Many people spoke about the voxel scenes - how came it to these visualisations??
+
+µC2Rubberduck has always been a voxel engine fetishist. Recall the tree scene at the end of Mindprobe (TP95)? Some people say it's ugly, I say it leaves some room for the imagination.
+
+Anyway, he came up with a rendering algorithm that was plausible to implement on the Amiga about two months ago. So we did. It took a lot of work to get it to run at any speed -- it was only 12 hours before the demo competition at Breakpoint that the voxel engine was running at a reasonable framerate -- but we think it was worth the trouble.
+
+
+
+µC1The unforgotten swedisch mates from Three Little Elks were your big competitiors for many years. Do you have an idea what they're doing now?
+  
+µC2Explorer/3LE is working as a programmer at DICE; I don't know what the other 3LEers are up to.
+
+
+
+µI0004
+µC1How would you comment this quote from the c64/pc musician and coder KB of Farbrausch which is taken from Pouet.net.
+
+"Though: TBL have done demos like this for years now. Yeah, there are a few improvements like the skinned/y dancer with fake ribbon physics, but this cant hide the fact that apart from marginal improvements it was the same color scheme, the same landscapes, the same design and the same female low-poly model for years now. (...)"
+
+
+µC2We do demos that we like to watch ourselves. What some people call "repetetive", we call "coherent". If we feel like changing style, we'll do so.
+
+
+µC1Kalms, thanks a lot for filling out my questions! Cu at BP 2006!!!

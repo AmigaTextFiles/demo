@@ -1,0 +1,35 @@
+
+This is just a small program I wrote to test some of the layer composition
+features of AmigaOS 4.1 in the course of their implementation; it does not
+serve any practical purpose beyond that.
+However, since a few people asked for it to be released, here it is :)
+
+It can be run either without arguments or with the name of an ARGB picture
+file as argument.
+
+When run without arguments, it will open a simple resizable window with an
+alpha (transparency) map defined by the program itself.
+You can switch between two example alpha maps by pressing any key; one map
+describes a smooth round hole in the middle of the window, the other makes
+the window borders semi-transparent.
+
+When run with a picture name as argument, it will instead open a draggable
+window using the picture's image and alpha channel for its shape.
+It has no close gadget; you can close the window by double-clicking on it.
+
+Note that layer composition must be enabled for this program to work.
+
+Also note that it only works with pictures having an actual alpha channel,
+like for instance 32-bit PNG files.
+
+If you don't have a suitable ARGB picture handy, you might want to test it
+with the sample images (such as the nice dice ;) which can be found on the
+following web pages:
+
+http://en.wikipedia.org/wiki/Portable_Network_Graphics
+http://www.libpng.org/pub/png/png-rgba32.html
+
+That's all, hopefully you'll have some fun with this useless program :)
+
+                                                        Massimo Tantignone
+

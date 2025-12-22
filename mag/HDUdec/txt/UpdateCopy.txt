@@ -1,0 +1,14 @@
+=============================================
+    Update Copy - intoduction
+=============================================
+UpdateCopy is an extension of the standard copy command. It 
+does not only copy files and create (if necessary) directories but 
+also process already existing files. Older files are replaced 
+automatical by newer ones. UpdateCopy first try to found a 
+version-string within the files ($VER: Programname Version ).
+and copy only the one with the higher version or simply compares
+the dates. UpdateCopy features multiple sourcefiles, pattern matching 
+and recursively directory scanning.
+
+Sven Steiniger, 1996, 1997
+Email: ss37@irz.inf.tu-dresden.de

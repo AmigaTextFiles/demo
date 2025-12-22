@@ -1,0 +1,23 @@
+Short:    GenderBender - Fixed PPC Version
+Author:   TotalVision (bjsebo@jota.ii.tuniv.szczecin.pl) 
+Uploader: elf^va (bjsebo@jota.ii.tuniv.szczecin.pl)
+Type:     demo/aga
+Requires: AGA or CGFX, 32Mb of RAM, ppc.library
+
+ This is ppc executable, has got fixed timing routines. Previous
+version has not been synchronized with music on some machines.
+It should be ok now. Simply replace old executable with this
+one. If you find, that the demo runs faster, that the music
+plays (easy way to check this is to observe the lights in first
+scene) simple turn off PPCTimer in prefs program (misc section).
+
+Also I forgot to include the CD cover in previous release.
+
+  Stay Cool.
+	elf^va
+
+PS. And the very latest news: New AGA output has been added. It is 
+called 'HAM6 Small', and it is just a quarter of full screen view.
+but is damn fast ;) Also clip1.iff must be eplaced with this one
+in this archive. It is needed for the small view.
+New VA3D_Prefs are also included.

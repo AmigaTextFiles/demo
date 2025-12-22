@@ -1,0 +1,127 @@
+»CL8:»SML:--------------------------------------
+     »CL9:»BIG:The use of CacheControl
+»CL8:»SML:--------------------------------------
+
+»CL0:If you want to experiment with the
+caches, use the legal ways to handle
+them... There is no reason to do it in
+harware, because it will not give you
+much more speed, and, as I explained
+earlier, you will have to cover
+different CACR configurations.
+The use of the CacheControl OS
+function is more than enough to
+experiment optimizations, and some of
+the functions available run at similar
+speed as a direct CACR 'attack'.
+
+The CacheControl function takes 2
+parameters, CacheBits & CacheMask. In
+CacheMask, you set to 1 the bits you
+want to change, given these
+definitions:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+»CL8:Name               »CL9:Bit# »CL7:Explanation
+»CL8:------------------ »CL9:---- »CL7:------------------------------------------------------
+»CL8:CACRF_EnableI      »CL9:   0 »CL7:Enable instruction cache
+»CL8:CACRF_FreezeI      »CL9:   1 »CL7:Freeze instruction cache
+»CL8:CACRF_ClearI       »CL9:   3 »CL7:Clear instruction cache
+»CL8:CACRF_IBE          »CL9:   4 »CL7:Instruction burst enable
+»CL8:CACRF_EnableD      »CL9:   8 »CL7:68030 Enable data cache
+»CL8:CACRF_FreezeD      »CL9:   9 »CL7:68030 Freeze data cache
+»CL8:CACRF_ClearD       »CL9:  11 »CL7:68030 Clear data cache 
+»CL8:CACRF_DBE          »CL9:  12 »CL7:68030 Data burst enable
+»CL8:CACRF_WriteAllocate»CL9:  13 »CL7:68030 Write-Allocate mode (must always be set!)
+»CL8:CACRF_EnableE      »CL9:  30 »CL7:Master enable for external caches */
+»CL8:CACRF_CopyBack     »CL9:  31 »CL7:Master enable for copyback caches */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+»CL0:Explanation about external caches and copyback in later sections. About
+freezing caches, as said before: Better avoid it, sorry. :) »CL7:(freeze lock
+informations in cache, might be usefull to lock some matrix for performing it
+without data cache overflowing by lot's of data... Troda)
+
+»CL0:So, this way we set the bits we want to change, for enable or disable
+operations. This way we can leave the rest of the bits unchanged. In the
+CacheMask parameter, we only set the bits we want to change, and in the
+CacheBits, we then set the bit to enable a feature, or reset it to disable
+the feature.
+
+For example, if we want to activate burst for data 
+
+»CL4:Move.l $4.w,a6
+Move.l #%1000000000000,d1   »CL5:; We want to change this bit
+»CL4:Move.l #%1000000000000,d0   »CL5:; We set it to 1, enabling databurst
+»CL4:Jsr -648(a6)                »CL5:; Cachecontrol
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+»CL0:The function will return the old bit's
+settings in D0, so we can save them
+and restore the CPU to its initial
+values when we are done. The use of
+the "CPU" shell command can help you
+to verify that your code set the cache
+correctly.

@@ -1,0 +1,88 @@
+                           Phoenix V2.0
+                               By
+                        Stuart A. MacLean
+                    Posse Interactive Software
+                        
+Disclaimer:- The author cannot be held liable for the suitability 
+or accuracy of this manual and/or the program it describes. Any
+damage directly or indirectly caused by the use or misuse of this
+manual and or/or the programs it describes is the sole responsibility 
+of the user her/him self.
+
+Copyright and distribution:- This program and its associated data files
+are public domain and may be distributed freely and may not be sold for
+money to gain profit. The routines of this program are the copyright 
+of Stuart A. MacLean (c) 1995 and cannot be copied or disassembled and
+used in other people's work without the sole permission of myself.
+
+Credits:    Programming by Bonez (Stuart MacLean)
+            Graphics by Shamus and Artvark
+            Music by Feekzoid.
+            
+Installing:- Please note now that this demo is AGA only.
+To install the program and the data files (keeping the data files and
+their subdirectory) into a directory or a disk and then assign that
+directory or drive to `Aggresion:':i.e.
+
+Assign Aggresion: <drive:(directory)>
+
+Run from CLI by running the program "Phoenix".
+
+Usage:- The camera position in the walk-around is controlled by the
+joystick in the following manner. To move forward and backwards push
+the joystick up and down respectively. To rotate from left to right
+push the joystick left and right respectively. To move the camera
+position on the vertical up and down press the fire button and
+at the sametime push and up and down on the joystick respectively.
+To control the size of the screen use the function keys f1-f7. The
+screen sizes and modes and listed as follows:-
+f1 - Lores copperlist.
+f2 - Hires copperlist.
+f3 - 128*72*8 screenmode.
+f4 - 160*90*8 screenmode.
+f5 - 192*108*8 screenmode.
+f6 - 256*144*8 screenmode.
+f7 - 320*180*8 screenmode.
+To exit the program press the left mouse button.
+
+History:- Well where shall I start. The ideas for this program started out
+in September 1994. I had just finished learning 68020 and I wanted to 
+write a graphics engine for demos and games. I started of by looking
+at the code for tmapdemo and then for Wolf_3D but I couldn't understand
+the processes that they were using in their code. So I developed a
+realtime scale routine of my own. But this did not have the speed
+that I needed. I left the routine on the backwash until Feburary this
+year when I found the out how to use the chunky2planar rountines. So
+using these I developed a realtime scale routine based on the one I
+had done in September. The next step was to develop a texture map routine
+for doing walls which could handle a rectangular polygon at any angle and at
+any distance. The development of the Texture Map Engine took about 2-3
+weeks which after that I started work on Aggresion (Transwarp II) demo for
+the Posse (still under development). After completing the major sections of
+the code for the Aggresion I developed the code from the demo and produced
+this program in about a week. I then added the worked on the copperlist
+viewing routines (2 days ago) and then I added the options of the function
+keys, music player, animation brushs.
+   So that is more or less a little story of the development of this
+program. The reason for the assignment to Aggresion: drive is the
+programs source code was storied in my Aggresion directory. As for the
+name Phoenix that is a different matter. After doing the realtime scaling
+routine using the chunky2planar routine I worked a program to do a
+realtime walkaround. But this program failed due to the amount of mistakes
+and bugs and found in the program. I was trying to run before I could walk.
+So I took from what I had learned about that program and developed it into
+the Texture Map Engine and also developed this program which is the result.
+The name Phoenix is that this is program that arose from the ashes of
+the program that had failed. A bit poetic I know.
+
+Future:- I am starting work on a new engine which is totally different.
+This time I am using full raycasting, matrix transformation, Z-buffer
+alogthrims, BSP- tree structures for polygon storage, new and improved
+texture map routines, Cyrus-Beck polygon clipping alogrthims and so on.
+But I have nearly finished all the research and theory into it. This is
+going to be used in a commercial game that we The Posse are working on 
+called "Rise of the Dawn.".
+
+To contact me e-mail at - s.a.maclean@pp.dundee.ac.uk
+To contact Shames at e-mail - mcscs1jy@dct.ac.uk
+To contact Feekzoid at e-mail - pxhannay@mc-lon.mobil.com

@@ -1,0 +1,412 @@
+^^
+       #######  ######             ###       #########         ###########
+      ##  ####  ######             ###       #############     ###########
+     ##     ##    ###             ####        ###      ####     ###      #
+     ###    ##    ##              #####       ###        ###    ###
+     ####         ##             ## ###       ###        ####   ###
+      #####       ##             ##  ###      ###         ###   ###     #
+       ######     ##            ########      ###         ###   #########
+         #####    ##            #########     ###         ###   ###     #
+           ###    ##            #     ###     ###        ####   ###
+     #      ##    ##       #   ##     ####    ###        ###    ###
+     ##     ##    ##       #   ##      ###    ###       ###     ###      #
+     #### ####  ############ ####     ###### #############     ###########
+       #####    ############ ####     ###### ########          ###########
+
+                                 PRESENTS HIS
+
+
+                          ASSEMBLY LANGUAGE TUTORIAL
+
+                                   PART - 2
+
+
+                                    ENJOY!!
+
+
+INTRODUCTION
+
+Okay, here goes with the second part of the tutorial.  Firstly I am afraid that
+we  will have to start on a bad note.  Now it is either that I am so amazing at
+writing  this  tutorial  and  you all understand it really well, or that no one
+actually  reads it.  I haven't actually received a letter from anyone regarding
+the first installment last issue and should this be the case in the next issue,
+I  will not be doing it anymore!  So if you did follow the first part and would
+like me to continue then, I sure you can afford a stamp to write and tell me to
+keep  the  tutorial  going,  I mean it's not as if I doing this for my benefit.
+Should you wish to change the tutorial to a PASCAL one or a BASIC one, that can
+be  arranged  also.   I want to know whether there is actually anyone out there
+listening...  well reading actually!
+
+Well,  that's  the moaning out of the way, and at this current moment in time I
+don't  really  have  much  of  an  idea  of where to start.  Let's just go over
+hopefully what you should of learned in the first part of the tutorial.
+
+In the last issue we went over the co-processor and it's three instructions:
+
+                               MOVE, WAIT, SKIP
+
+In  this  part,  as  promised,  we will be dealing with the playfield hardware.
+(For more info, see chapter 3 of the Hardware Reference Manual.)
+
+Firstly,  we  will  define  what  a  playfield  actually  is and go through the
+playfield  feature,  and  then  we  will,  hopefully,  go  on  to  make our own
+playfield.
+
+Right  to  begin  with,  we all know how a TV works, the beam goes from left to
+right,  displaying  the picture that we see.  The same is true for your beloved
+Amiga,  it  works  on  the  same  principle.   It's just that we have to define
+bitplanes  in  memory  and  fill  them with "1" and "0"s which will make up our
+colours and then the picture that we see.
+
+                         *****************************
+                        *|¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|*
+                        *|                           |*
+                        *|                           |*
+                        *|                           |*
+                        *|                           |*
+                        *|                           |*
+                        *|                           |*
+                        *|                           |*
+                        *|                           |*
+                        *|                           |*
+                        *|___________________________|*
+                         *****************************
+
+                      * = NOT VISIBLE ON A NORMAL SCREEN
+
+On  a  PAL  system,  the  video beam produces about 312 lines on the screen, of
+which 256 are visible.  This is known as the display field.  The speed for each
+display  is  called  the  field  time,  this is 1/60th of a second for NTSC and
+1/50th of a second for PAL.
+
+The  display we see is made up of pixels, which is a single picture element and
+the smallest possible addressable part of the screen.
+
+ |¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|
+ |                           |
+ |                           |
+ |                           |
+ |                           |
+ |                           |
+ |     .  <------------------+---- THE PICTURE IS FORMED FROM MANY LITTLE
+ |                           |     ELEMENTS.  EACH ELEMENT IS CALLED A PIXEL.
+ |                           |
+ |                           |
+ |___________________________|
+
+       |¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|      |¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|
+       |                           |      |                           |
+       |                           |      |                           |
+       |                           |      |                           |
+       |                           |      |                           |
+       |<-------320--PIXELS------->|      |<-------640--PIXELS------->|
+       |                           |      |                           |
+       |                           |      |                           |
+       |                           |      |                           |
+       |                           |      |                           |
+       |___________________________|      |___________________________|
+
+          IN LOW RESOLUTION MODE             IN HIGH RESOLUTION MODE
+        320 PIXELS FILL THE SCREEN          640 PIXELS FILL THE SCREEN
+
+With  the  Amiga  we have a choice of different resolutions.  We can change the
+horizontal  resolution to low or high resolution, or we can change the vertical
+resolution to interlaced or non-interlaced.
+
+These  modes  can  also  be  combined,  so  we  could  have  a high resolution,
+interlaced mode.
+
+The  colour  of  a  pixel  is  defined by the combination of bits that make the
+display.   For example, in a two colour display, if the bit is set to 1 then it
+is  black,  0  and it is white.  For a four colour display, 00 may be black, 01
+may be blue, 10 may be red and 11 may be white, and so on for 8 colour displays
+and up.
+
+
+FORMING A VERY BASIC PLAYFIELD (...THAT PROBABLY WON'T WORK!)
+
+To form a playfield, we need to define a few things:
+
+    *  HEIGHT AND WIDTH OF THE SAID PLAYFIELD
+    *  COLOUR OF EACH PIXEL
+    *  HORIZONTAL RESOLUTION
+    *  VERTICAL RESOLUTION (OR INTERLACING)
+    *  DATA FETCH, WHERE THE DISPLAY IS IN MEMORY AND HOW TO GET IT ON SCREEN
+
+Part One
+
+Firstly  we  need to get the colours that we need and load them into the colour
+registers.   We  then need to allocate some memory for the number of bitplanes,
+then set a pointer to each bitplane.  We then need to write to each bitplane to
+give the correct colour.  The more colours, the more bitplanes we need:
+
+              NUMBER OF COLOURS              NUMBER OF BITPLANES
+
+                       1-2                           1
+                       3-4                           2
+                       5-8                           3
+                       9-16                          4
+                      17-32                          5
+                      33-64                          6
+            AGA-ONLY> 65-128                         7
+            AGA-ONLY>128-256                         8
+
+Loading Colour Registers:
+Okay, to load the colour registers, we should know what this code does.
+
+                LEA  CUSTOM,a0        ;Get the base address into a0
+      MOVE.W #$FFF,COLOR00(a0)        ;Load white into colour register 0
+      MOVE.W #$6FE,COLOR01(a0)        ;Load sky blue into register 1
+
+Okay,  so  we should have no trouble loading the colour registers.  Next on the
+list  is  selecting and defining the number of bitplanes.  After we have chosen
+the number of colours, we need to tell the system how many bitplanes to use.
+
+The  number  of  bitplanes  is selected by writing the number into the register
+BPLCON0 (Bitplane Control Register 0).  The bits we need are bit 14, 13 and 12,
+named BPU2, BPU1 and BPU0 (for bitplanes used).
+
+Having  just  thought  about  this, I have come to the conclusion that, writing
+this  tutorial  is not very easy.  All the reference material that I'm using is
+out  of date for the AGA chipset.  With this in mind I have included some stuff
+from  the only AGA reference material that I could find.  This will explain the
+differences  between  what  I  am  saying and what is actually true for the AGA
+chipset.  This can be used as a reference section.
+
+Anyway, on with the show:
+
+               VALUE           NUMBER OF          NAME(S) OF
+                               BITPLANES          BITPLANES
+
+               000             None *
+               001             1                  PLANE 1
+               010             2                  PLANE 1 & 2
+               011             3                  PLANE 1 - 3
+               100             4                  PLANE 1 - 4
+               101             5                  PLANE 1 - 5
+               110             6                  PLANE 1 - 6 **
+
+   *  - Show only the background color; no playfield visible.
+   ** - Sixth bitplane is used only on dual-playfield mode and in HAM mode.
+        (Not within the scope of this tutorial.)  Dual playfields are best
+        described using AMOS or Blitz Basic.
+
+There  is one little problem with BPLCON0.  We can't load just one register, we
+have to load them all, even if we only want to change one.
+
+On that note...
+
+               MOVE.W  #$2200,BPLCON0+CUSTOM       ;Write to it.
+
+As  it  control's  other  characteristics of the screen and the bits can be set
+independently, several other things are set at the same time.
+
+Namely...
+
+                  * - HAM Mode is off (Hold and Modify).
+                  * - Single-Playfield is set.
+                  * - Composite Video Colour is enabled.
+                  * - Genlock Audio is disabled.
+                  * - Light Pen is disabled.
+                  * - Interlaced Mode is off.
+                  * - External Resynchronization is disabled.
+
+I  will not be going over changing these but should YOU wish to, then write and
+tell  me  and  I'll  do some more on different resolutions and how to get them,
+using BPLCON0.
+
+Allocating Memory For Bitplanes:
+Right, so we have set the number of bitplanes and also set the resolutions that
+we  want.   Now  we need to allocate the required memory for the bitplanes.  We
+use  a  function  call  called  AllocateMEM()  to  allocate the memory for each
+bitplane.   We then need to change BPLxPTH and BPLxPTL (Bitplane path) to point
+to our bitplane.
+
+Okay,  for example, let's say that we have two bitplanes, one at $21000 and the
+other at $25000.  The following code is needed to point to our bitplanes.
+
+                          LEA CUSTOM,a0
+                          MOVE.W  $21000,BPL1PTH(a0)
+                          MOVE.W  $25000,BPL2PTH(a0)
+
+As  the  bitplane  registers  are mapped as a full 680x0 long-word data, we can
+store the address with the 32-bit move instruction.
+
+                                 ----+---+----
+
+Onto  the  good  stuff  now.  Firstly, I must thank our newest member - Nexus -
+simply  because  he had the heart to design the two logos that are used in this
+issue's  tutorial  and  on  the  intro.   I  am  very pleased with the results.
+Although  the  stuff  I  am covering is not ground breaking, it is still a good
+feeling  when  everything  compiles  okay and the program runs without a hitch.
+Okay, on with the show!
+
+In  the SAUCE drawer for this issue you will find an .lha archive.  To use this
+month's  code you will have to extract it from here.  Included is all the stuff
+that  is  also  needed  for this month's tutorial.  I have set it all up so the
+source  looks  to  the  RAM:   So  extract  it to RAM:  and then load DevPac or
+Asm_One  and  yer  on  yer way!  A good IFF converter is also included.  I have
+also included the original IFF's used.
+
+Load  in the example that is on this disk and then assemble it.  You should see
+a  nice  little picture of an AREA-51 logo.  This is a 16-colour LoRes picture,
+but  the  code  can actually display a 32-colour picture.  This is the bit I've
+left you to do.
+
+Draw  a  picture  in  DPaint  or any paint package.  Make sure it's a 32-colour
+320*256  picture and then load up IFFmaster.  Load in the pic and convert it to
+RAW  data.  Next generate a palette for the picture and save this too.  Next we
+have to change the copperlist, using the saved palette data.  Once done you can
+assemble  your  code  and  you  should  see your picture in it's full 32-colour
+glory!
+
+There  is also another version of the code for a high resolution and interlaced
+screen,  I  will  be going over this more in the next part and explaining how I
+did it.
+
+For  the  next  issue,  I  will  try  to learn how to display an AGA picture in
+Assembler, in high and low resolution.  If you have some source code that would
+help then send it to me.  I would be very grateful!
+
+Okay,  well  that  concludes  the  tutorial for this issue.  Next issue we will
+finish  off the bitplanes work by coding the bitplanes from correct colours and
+several other things.
+
+                          Until next time!!
+
+                                    Cheers SLADE! >:)
+
+   -------------------------------------------------------------------------
+
+          (Reference material taken from AGA.guide 1.0 by T.F.A 1994)
+
+Bitplanes
+~~~~~~~~~
+There  are  now  8  bitplanes instead of 6.  In single playfield modes they can
+address  256  colors  instead  of  64.   As long as the memory architecture can
+support  the bandwidth, all 8 bitplanes are available in all 3 resolutions.  In
+the  same  vein, 4+4 bitplane dual playfield is available in all 3 resolutions,
+unless  bitplane  scan-doubling is enabled, in which case both playfields share
+the  same  bitplane  modulus  register.   Bits 15 thru 8 of BPLCON4 comprise an
+8-bit  mask  for  the  8  bitplane  address, XOR'ing the individual bits.  This
+allows the copper to exchange color maps with a single instruction.
+
+BPLCON1  now  contains  an  8-bit  scroll  value  for  each  of the playfields.
+Granularity  of  scroll  now extends down to 35nSec.(1 SHRES pixel), and scroll
+can  delay playfield thru 32 bus cycles.  Bits BPAGEM and BPL32 in new register
+FMODE control size of bitplane data in BPL1DAT" link BPLxDAT thru BPL8DAT.
+
+The  old  6  bitplane  HAM  mode,  unlike  before,  works  in  HIRES  and SHRES
+resolutions.
+
+As before bitplanes 5 and 6 control it's function as follows:
+
+              +-----+-----+--------+--------+------------------+
+              | BP6 | BP5 |   RED  |  GREEN | BLUE             |
+              +-----+-----+--------+--------+------------------+
+              | 0   | 0   | select new base register (1 of 16) |
+              +-----+-----+--------+--------+------------------+
+              | 0   | 1   |  hold  |  hold  | modify           |
+              +-----+-----+--------+--------+------------------+
+              | 1   | 0   | modify |  hold  |  hold            |
+              +-----+-----+--------+--------+------------------+
+              | 1   | 1   |  hold  | modify |  hold            |
+              +-----+-----+--------+--------+------------------+
+
+There  is  a  new  8 bitplane HAM (Hold and Modify) mode.  This mode is invoked
+when  BPU  field  in BPLCON0 is set to 8 , and HAMEN is set.  Bitplanes 1 and 2
+are  used  as  control bits analagous to the function of bitplanes 5 and 6 in 6
+bitplane HAM mode:
+
+              +-----+-----+--------+--------+------------------+
+              | BP2 | BP1 |   RED  |  GREEN | BLUE             |
+              +-----+-----+--------+--------+------------------+
+              | 0   | 1   | select new base register (1 of 64) |
+              +-----+-----+--------+--------+------------------+
+              | 0   | 1   |  hold  |  hold  | modify           |
+              +-----+-----+--------+--------+------------------+
+              | 1   | 0   | modify |  hold  |  hold            |
+              +-----+-----+--------+--------+------------------+
+              | 1   | 1   |  hold  | modify |  hold            |
+              +-----+-----+--------+--------+------------------+
+
+Since  only  6 bitplanes are available for modify data, the data is placed in 6
+MSB.   The  2  LSB are left unmodified, which allows creation of all 16,777,216
+colors  simultaneously, assuming one had a large enough screen and picked one's
+base registers judiciously.  This HAM mode also works in HIRES and SHRES modes.
+
+For  compatibility  reasons  EHB  mode remains intact.  Its existence is rather
+moot in that we have more than enough colors in the colour table to replace its
+functionality.   As before, EHB is invoked whenever SHRES = HIRES = HAMEN = DPF
+=  0  and BPU = 6.  Please note that starting with ECS DENISE there is a bit in
+BPLCON2" link BPLCON2 which disables this mode (KILLEHB).
+
+Bits  PF2OF2,1,0 in BPLCON3 determine second playfield's offset into the colour
+table.   This  is  now  necessary since playfields in DPF mode can have up to 4
+bitplanes.  Offset value are as defined in register map.
+
+BSCAN2  bit  in  FMODE  enables bitplane scan-doubling.  When V0 bit of DIWSTRT
+matches  V0  of  vertical  beam  counter,  BPL1MOD contains the modulus for the
+display  line,  else  BPL2MOD  is  used.   When  scan-doubled both odd and even
+bitplanes  use  the  same  modulus  on a given line, whereas in normal mode odd
+bitplanes  used  BPL1MOD  and  even  bitplanes  used BPL2MOD.  As a result dual
+playfield screens will probably not display correctly when scan-doubled.
+
+   BLTCON0 BLTCON0
+  NAME   rev ADDR type chip Description
+  ---------------------------------------------------------------------------
+  BLTCON0    040  W    A    Blitter control register 0
+  BLTCON0L H 05A  W    A    Blitter control register 0 (lower 8 bits)
+                            This is to speed up software - the upper bits are
+                            often the same.
+  BLTCON1  h 042  W    A    Blitter control register 1
+
+These  two  control  registers are used together to control blitter operations.
+There  are  2  basic  modes  -  ARE, AND, LINE - which are selected by bit 0 of
+BLTCON1, as show below:
+
+         +--------------------------+---------------------------+
+         | AREA MODE ("normal")     | LINE MODE (line draw)     |
+         +------+---------+---------+------+---------+----------+
+         | BIT# | BLTCON0 | BLTCON1 | BIT# | BLTCON0 | BLTCON1  |
+         +------+---------+---------+------+---------+----------+
+         | 15   | ASH3    | BSH3    | 15   | ASH3    | BSH3     |
+         | 14   | ASH2    | BSH2    | 14   | ASH2    | BSH2     |
+         | 13   | ASH1    | BSH1    | 13   | ASH1    | BSH1     |
+         | 12   | ASA0    | BSH0    | 12   | ASH0    | BSH0     |
+         | 11   | USEA    | 0       | 11   | 1       | 0        |
+         | 10   | USEB    | 0       | 10   | 0       | 0        |
+         | 09   | USEC    | 0       | 09   | 1       | 0        |
+         | 08   | USED    | 0       | 08   | 1       | 0        |
+         | 07   | LF7     | DOFF    | 07   | LF7     | DPFF     |
+         | 06   | LF6     | 0       | 06   | LF6     | SIGN     |
+         | 05   | LF5     | 0       | 05   | LF5     | OVF      |
+         | 04   | LF4     | EFE     | 04   | LF4     | SUD      |
+         | 03   | LF3     | IFE     | 03   | LF3     | SUL      |
+         | 02   | LF2     | FCI     | 02   | LF2     | AUL      |
+         | 01   | LF1     | DESC    | 01   | LF1     | SING     |
+         | 00   | LF0     | LINE(=0)| 00   | LF0     | LINE(=1) |
+         +------+---------+---------+------+---------+----------+
+
+         ASH3-0    Shift value of A source
+         BSH3-0    Shift value of B source and line texture
+         USEA      Mode control bit to use source A
+         USEB      Mode control bit to use source B
+         USEC      Mode control bit to use source C
+         USED      Mode control bit to use destination D
+         LF7-0     Logic function minterm select lines
+         EFE       Exclusive fill enable
+         IFE       Inclusive fill enable
+         FCI       Fill carry input
+         DESC      Descending (dec address)control bit
+         LINE      Line mode control bit
+         SIGN      Line draw sign flag
+         OVF       Line/draw r/l word overflow flag
+         SUD       Line draw, Sometimes up or down (=AUD)
+         SUL       Line draw, Sometimes up or left
+         AUL       Line draw, Always up or left
+         SING      line draw, Single bit per horiz line
+         DOFF      Disables the D output- for external ALUs
+                   The cycle occurs normally, but the data
+                   bus is tristate (hires chips only)

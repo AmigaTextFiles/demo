@@ -1,0 +1,59 @@
+@{d B0FBFF}                           @{c FFE426}Zvukový formát MP3 versus Amiga@{c}
+                           @{c FFE426}¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+  Formát  MP3,  nebo-li  MPEG  Audio  Layer 3 vîichni znáte, ùe jo.  Jestli ne, tak ve
+zkratce:  jedná se soubory, zpravidla s koncovkou mp3, které v sobë nesou data získaná
+pêekódováním  klasického  CD-AudioTracku  pêi  kompresi aù 1:12.  Jak, ùe je to moùné?
+Zjednoduîenë  êeçeno,  kódovací  algoritmus  vypustí  frekvence,  beztak lidským uchem
+neslyîitelné.  Teda normálním uchem.  Teda uchem normálních lidí.  Jinak Hi-Fi maniaci
+s  Vámi  budou  o mp3  formátu  vést nekoneçné polemiky, við Pavle?  Takùe pokud jasno
+jdeme  dále.   Jak  jsem  jiù  naznaçil,  k tomu,  abyste  získali soubor kódovaný mp3
+algoritmem  potêebujete  za  a) kámoîe, který Vám ho nahraje, za bé) jiný zdroj, odkud
+mp-trojku  stáhnete  nebo za cé) soubor si sami vyrobíte.  Samozêejme vîechny moùnosti
+jsou správné.  Vemu to od zadu.
+
+  Pro  výrobu  mp3  souboru je têeba celkem dost vëcí:  hlavnë CD-ROM mechaniku, která
+podporuje  stahování  AudioTrackû (têeba ta moje to neumí, checht), stejnë tak nëjakej
+file-systém  s  touto  podporou  (AsimCDFS plnë vyhovuje) a za têetí program, který tu
+îpinavou práci za Vás udëlá.  Výborným zdrojem tzv. Encoding programû je napê. Aminet.
+Naleznete  zde  verze  jak  pro 68k (...upêímnou soustrast) tak i pro PPC.  Tak a tady
+@{d B0FBFF}bych  to  zasek.   Víc  nevim,  jak  sem  êekl,  moje  Old  CD-ROM neumoùñuje stahovat
+AudioTracky.   Aù  se  to  nauçí, tak Vám urçitë napíîu své zkuîenosti s Encodingem na
+PPC.
+
+  Teð se na to podíváme z druhé strany.  Soubor jsme si nëkde sehnali (jo, díky Jerry)
+a touùíme si ho na své Amçe prohnat Paulou.  Co s sebou....ééé teda co k tomu, kdyù si
+chceme   nëco  pêehrát,  potêebujeme?   Gramofon!   No  to  taky,  ale  pro  mp-trojku
+potêebujeme  pêehrávaç formátu mp3.  Kde ho sehnat?  Zase Aminet!  A zas verze pro 68k
+a  pro PPC.  Nevim jak na 060 ale i na Jerryho 040/40 Mhz (já mám jen na 25 Mhz) më to
+moc  nebavilo.   Aby  to necukalo musela se sníùit kvalita, hodit to do mona a pak jen
+çumët  - jako no multitasking.  To vîe pomocí pêehrávaçe @{c FFE426}MPEGA@{c} @{c FFE426}v3.x@{c} v optimalizaci pro
+040FPU.
+
+  @{i}Mëli  jste  zkusit  verzi 040 integer - ta je rychlejîí, pêestoùe ne tak kvalitní...
+Na 68060/60 je vîe v nejlepîím poêádku, v plné kvalitë, 44.1 KHz, stereo to ùere okolo
+30%  CPU  çasu,  tudíù  multitasking  je bez problémû.  Pêesto PPC zûstavá (i cenovë!)
+výhodnëjîí neù 68060 - pozn. ShAmaN.@{ui}
+
+@{d B0FBFF}   Blbý co?  Já vím, ùe to zrovna moc nepovzbudí, zvláîï kdyù vidíte ñáký PC-máço, jak
+mu  to  na  P166MMX  chodí v multitásku.  Tak víte co?  Êeknëte mu, aï si u toho zkusí
+formátovat  disketu  :-))  @{i}[vono  staçí  webovat - pozn. ShAmaN].@{ui}  Kdyby se u toho moc
+îklebil,  jako  ùe  to trhá, tak ho poîlete za mnou.  Momentálnë proùívám Ami-nirvánu:
+poslouchám  mp-trojku  pêes  AHI  na  14-bitech,  souçasnë  smolím  tenhle  çlánek  ve
+WordWorthu  -  no  a  jak sem byl v extázi z pêedeîlých vët, tak sem strçil disketu do
+drajvu  a  jal  se  ji ztrestat formátováním.  Ùe se to zhroutilo?  Ale, ale... hov..!
+Maká  to  jak víno.  Takùe pêátelé, tudy vede cesta.  Bez PPC to prostë nepude.  Je to
+sice  trochu  jinak,  neù  na  PC  -  na Blizzardu mám procesory samozêejmë dva, takùe
+pêehrávání  MP3  sem  naloùil  na  bedra  @{c FFE426}PPCMpegPlayer-u@{c}  (dodanej  spolu s kartou na
+pêiloùeném CD) - ten si to vyêíkává s rychlým PPC603, kdeùto o Wortworth a formátování
+se stará Motorola 68040.  Nádherná symbióza.
+
+  K tomu  PPCMpegPlayeru:   sám  o  sobë  më  tenkrát  moc nezaujal z prostého dûvodu:
+spouîtël  se  asi  s  milionem  parametrû z CLI.  Takùe jsem ho dlouho dobu nahrazoval
+programem  @{c FFE426}AmigaAMP@{c}, jenù jakési GUI má, ale i horîí multitasking.  Majitelé PPC karet
+mohou  k pêehrátí  MP3  pouùít  i @{c FFE426}Isis@{c},  od verze 2.6 má zabudovanou podporu pro tento
+formát,  akorát  se hroutí víc, neù je zdrávo.  Plného uspokojení se mi ale dostalo aù
+@{d B0FBFF}po  uvedení GUI pro kvalitativnë stejnë nejlepîí @{c FFE426}PPCMpegPlayer@{c} (díky Pedro).  Sice nic
+zvláîního, çudlík na zapnutí, vypnutí, posun na dalîí, ale taková moùnost sestavení si
+seznamu skladeb (playlist) docela potëîí.  Takùe u dalîích PPC nábuchû se tëîí...
+
+                                        @{c FF2B32}CronoS@{c}

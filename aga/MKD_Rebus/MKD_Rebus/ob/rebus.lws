@@ -1,0 +1,743 @@
+LWSC
+3
+
+FirstFrame 1
+LastFrame 60
+FrameStep 1
+PreviewFirstFrame 0
+PreviewLastFrame 3000
+PreviewFrameStep 1
+CurrentFrame 717
+FramesPerSecond 30
+
+LoadObjectLayer 1 C:video/newkrabob/rebus.lwo
+ShowObject 6 3
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  6
+  Key 2.0762525 0 0 0 0 0 0 -3.78813 0
+  Key -1.7120725 5.4000001 0 0 0 0 -2.2601612 -1.9253225 0
+  Key -2.1092312 10 0 0 0 0 -0.33624482 -0.060913917 0
+  Key -2.1092312 10.833333 0 0 0 0 0 0 0
+  Key -2.1092312 19.166666 0 0 0 0 0 0 0
+  Key -2.1092312 20 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  6
+  Key 2.5595989 0 0 0 0 0 0 -1.2352437 0
+  Key 1.3242917 5.4000001 0 0 0 0 -1.3821834 -1.1774155 0
+  Key 0 10 0 0 0 0 -1.1211795 -0.20311223 0
+  Key 0 10.833333 0 0 0 0 0 0 0
+  Key 0 19.166666 0 0 0 0 0 0 0
+  Key 0 20 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  6
+  Key -0.57249993 0 0 0 0 0 0 2.9081433 0
+  Key 2.335793 5.4000001 0 0 0 0 0.30914995 0.26334998 0
+  Key 0 10 0 0 0 0 -1.9775425 -0.35825047 0
+  Key 0 10.833333 0 0 0 0 0 0 0
+  Key 0 19.166666 0 0 0 0 0 0 0
+  Key 0 20 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  6
+  Key -0.35255653 0 0 0 0 0 0 0.85705239 0
+  Key 0.50453997 5.4000001 0 0 0 0 0.19038053 0.162176 0
+  Key 0 10 0 0 0 0 -0.42715654 -0.077383429 0
+  Key 0 10.833333 0 0 0 0 0 0 0
+  Key 0 19.166666 0 0 0 0 0 0 0
+  Key 0 20 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  6
+  Key 0.5934121 0 0 0 0 0 0 0.10366699 0
+  Key 0.69708443 5.4000001 0 0 0 0 -0.32044253 -0.27296957 0
+  Key 0 10 0 0 0 0 -0.59016961 -0.10691479 0
+  Key 0 10.833333 0 0 0 0 0 0 0
+  Key 0 19.166666 0 0 0 0 0 0 0
+  Key 0 20 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  6
+  Key 1.0437069 0 0 0 0 0 0 -2.0425942 0
+  Key -0.99899232 5.4000001 0 0 0 0 -0.75115484 -0.63987261 0
+  Key -0.34732056 10 0 0 0 0 0.55172211 0.099949658 0
+  Key -0.34732056 10.833333 0 0 0 0 0.05251855 0.52518547 0
+  Key 0.23038349 19.166666 0 0 0 0 0.52518547 0.05251855 0
+  Key 0.23038349 20 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 6
+{ Envelope
+  6
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 5.4000001 0 0 0 0 0 0 0
+  Key 1 10 0 0 0 0 0 0 0
+  Key 1 10.833333 0 0 0 0 0 0 0
+  Key 1 19.166666 0 0 0 0 0 0 0
+  Key 1 20 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 7
+{ Envelope
+  6
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 5.4000001 0 0 0 0 0 0 0
+  Key 1 10 0 0 0 0 0 0 0
+  Key 1 10.833333 0 0 0 0 0 0 0
+  Key 1 19.166666 0 0 0 0 0 0 0
+  Key 1 20 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 8
+{ Envelope
+  6
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 5.4000001 0 0 0 0 0 0 0
+  Key 1 10 0 0 0 0 0 0 0
+  Key 1 10.833333 0 0 0 0 0 0 0
+  Key 1 19.166666 0 0 0 0 0 0 0
+  Key 1 20 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+ShadowOptions 7
+
+LoadObjectLayer 3 C:video/newkrabob/rebus.lwo
+ShowObject 6 3
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  5
+  Key 0.33521107 0 0 0 0 0 0 -0.33520177 0
+  Key 0 10 0 0 0 0 -0.30942559 -0.025785467 0
+  Key 0 10.833333 0 0 0 0 0 0 0
+  Key 0 19.166666 0 0 0 0 0 0 0
+  Key 0 20 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  5
+  Key 0 0 0 0 0 0 0 0 0
+  Key 0 10 0 0 0 0 0 0 0
+  Key 0 10.833333 0 0 0 0 0 0 0
+  Key 0 19.166666 0 0 0 0 0 0 0
+  Key 0 20 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  5
+  Key 9.5199871 0 0 0 0 0 0 -9.5197229 0
+  Key 0 10 0 0 0 0 -8.7876806 -0.73230672 0
+  Key 0 10.833333 0 0 0 0 0 0 0
+  Key 0 19.166666 0 0 0 0 0 0 0
+  Key 0 20 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  5
+  Key -1.5847583 0 0 0 0 0 0 1.5847143 0
+  Key 0 10 0 0 0 0 1.4628538 0.12190448 0
+  Key 0 10.833333 0 0 0 0 0 0 0
+  Key 0 19.166666 0 0 0 0 0 0 0
+  Key 0 20 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  5
+  Key 0 0 0 0 0 0 0 0 0
+  Key 0 10 0 0 0 0 0 0 0
+  Key 0 10.833333 0 0 0 0 0 0 0
+  Key 0 19.166666 0 0 0 0 0 0 0
+  Key 0 20 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  5
+  Key 0 0 0 0 0 0 0 0 0
+  Key 0 10 0 0 0 0 0 0 0
+  Key 0 10.833333 0 0 0 0 0 0 0
+  Key 0 19.166666 0 0 0 0 0 0 0
+  Key 0 20 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 6
+{ Envelope
+  5
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 10 0 0 0 0 0 0 0
+  Key 1 10.833333 0 0 0 0 0 0 0
+  Key 1 19.166666 0 0 0 0 0 0 0
+  Key 1 20 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 7
+{ Envelope
+  5
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 10 0 0 0 0 0 0 0
+  Key 1 10.833333 0 0 0 0 0 0 0
+  Key 1 19.166666 0 0 0 0 0 0 0
+  Key 1 20 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 8
+{ Envelope
+  5
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 10 0 0 0 0 0 0 0
+  Key 1 10.833333 0 0 0 0 0 0 0
+  Key 1 19.166666 0 0 0 0 0 0 0
+  Key 1 20 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+ShadowOptions 7
+
+LoadObjectLayer 2 C:video/newkrabob/rebus.lwo
+ShowObject 6 3
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  7
+  Key 1.7584695 0 0 0 0 0 0 -0.30697206 0
+  Key 1.4514818 5.4666667 0 0 0 0 -1.3235064 -0.70210403 0
+  Key -0.26714095 8.3666668 0 0 0 0 -1.6002636 -0.90129787 0
+  Key -1.0500796 10 0 0 0 0 -0.51843232 -0.26450628 0
+  Key -1.0500796 10.833333 0 0 0 0 0 0 0
+  Key -1.0500796 19.166666 0 0 0 0 0 0 0
+  Key -1.0500796 20 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  7
+  Key -1.4652003 0 0 0 0 0 0 2.3560574 0
+  Key 0.89097685 5.4666667 0 0 0 0 1.8512744 0.98207843 0
+  Key 1.3681525 8.3666668 0 0 0 0 -0.56996316 -0.32101372 0
+  Key 0 10 0 0 0 0 -0.9059388 -0.4622137 0
+  Key 0 10.833333 0 0 0 0 0 0 0
+  Key 0 19.166666 0 0 0 0 0 0 0
+  Key 0 20 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  7
+  Key -1.3950045 0 0 0 0 0 0 1.2162417 0
+  Key -0.178701 5.4666667 0 0 0 0 0.89402682 0.47427034 0
+  Key -0.026707333 8.3666668 0 0 0 0 0.11431608 0.064384915 0
+  Key 0 10 0 0 0 0 0.017684584 0.0090227472 0
+  Key 0 10.833333 0 0 0 0 0 0 0
+  Key 0 19.166666 0 0 0 0 0 0 0
+  Key 0 20 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  7
+  Key 1.6091942 0 0 0 0 0 0 -1.7522693 0
+  Key -0.1431642 5.4666667 0 0 0 0 -1.2708459 -0.67416823 0
+  Key -0.33581996 8.3666668 0 0 0 0 0.091582984 0.051581219 0
+  Key 0 10 0 0 0 0 0.22236727 0.11345269 0
+  Key 0 10.833333 0 0 0 0 0 0 0
+  Key 0 19.166666 0 0 0 0 0 0 0
+  Key 0 20 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  7
+  Key 0 0 0 0 0 0 0 -0.7260198 0
+  Key -0.72605669 5.4666667 0 0 0 0 -0.26912844 -0.14276935 0
+  Key -0.41189778 8.3666668 0 0 0 0 0.46446273 0.26159397 0
+  Key 0 10 0 0 0 0 0.27274314 0.13915466 0
+  Key 0 10.833333 0 0 0 0 0 0 0
+  Key 0 19.166666 0 0 0 0 0 0 0
+  Key 0 20 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  7
+  Key 0 0 0 0 0 0 0 -0.35253862 0
+  Key -0.35255653 5.4666667 0 0 0 0 -0.10212277 -0.054174885 0
+  Key -0.15629765 8.3666668 0 0 0 0 0.22553249 0.12702404 0
+  Key 0 10 0 0 0 0 0.10349439 0.052803263 0
+  Key 0 10.833333 0 0 0 0 0 0 0
+  Key 0 19.166666 0 0 0 0 0 0 0
+  Key 0 20 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 6
+{ Envelope
+  7
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 5.4666667 0 0 0 0 0 0 0
+  Key 1 8.3666668 0 0 0 0 0 0 0
+  Key 1 10 0 0 0 0 0 0 0
+  Key 1 10.833333 0 0 0 0 0 0 0
+  Key 1 19.166666 0 0 0 0 0 0 0
+  Key 1 20 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 7
+{ Envelope
+  7
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 5.4666667 0 0 0 0 0 0 0
+  Key 1 8.3666668 0 0 0 0 0 0 0
+  Key 1 10 0 0 0 0 0 0 0
+  Key 1 10.833333 0 0 0 0 0 0 0
+  Key 1 19.166666 0 0 0 0 0 0 0
+  Key 1 20 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 8
+{ Envelope
+  7
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 5.4666667 0 0 0 0 0 0 0
+  Key 1 8.3666668 0 0 0 0 0 0 0
+  Key 1 10 0 0 0 0 0 0 0
+  Key 1 10.833333 0 0 0 0 0 0 0
+  Key 1 19.166666 0 0 0 0 0 0 0
+  Key 1 20 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+ShadowOptions 7
+
+LoadObjectLayer 4 C:video/newkrabob/rebus.lwo
+ShowObject 6 3
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  7
+  Key -4.1175056 0 0 0 0 0 0 2.6556447 0
+  Key -1.4617051 4.7333331 0 0 0 0 2.5002286 1.7255099 0
+  Key 0.10823307 8 0 0 0 0 1.5506549 0.94938058 0
+  Key 1.0383304 10 0 0 0 0 0.65653932 0.27355805 0
+  Key 1.0383304 10.833333 0 0 0 0 0 0 0
+  Key 1.0383304 19.166666 0 0 0 0 0 0 0
+  Key 1.0383304 20 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  7
+  Key 2.6460006 0 0 0 0 0 0 -2.9633904 0
+  Key -0.31756365 4.7333331 0 0 0 0 -2.2047095 -1.5215601 0
+  Key -1.0802689 8 0 0 0 0 0.19696987 0.12059379 0
+  Key 0 10 0 0 0 0 0.76254272 0.31772614 0
+  Key 0 10.833333 0 0 0 0 0 0 0
+  Key 0 19.166666 0 0 0 0 0 0 0
+  Key 0 20 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  7
+  Key 0.54250062 0 0 0 0 0 0 -0.43425792 0
+  Key 0.10821719 4.7333331 0 0 0 0 -0.306059 -0.21122383 0
+  Key 0.025217788 8 0 0 0 0 -0.067122057 -0.041095138 0
+  Key 0 10 0 0 0 0 -0.017800791 -0.0074169966 0
+  Key 0 10.833333 0 0 0 0 0 0 0
+  Key 0 19.166666 0 0 0 0 0 0 0
+  Key 0 20 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  7
+  Key -1.4398977 0 0 0 0 0 0 1.5715766 0
+  Key 0.13177112 4.7333331 0 0 0 0 0.92865223 0.64090085 0
+  Key 0.12965541 8 0 0 0 0 -0.081731454 -0.050039664 0
+  Key 0 10 0 0 0 0 -0.091521464 -0.038133942 0
+  Key 0 10.833333 0 0 0 0 0 0 0
+  Key 0 19.166666 0 0 0 0 0 0 0
+  Key 0 20 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  7
+  Key 0.90757173 0 0 0 0 0 0 -0.4295584 0
+  Key 0.47798812 4.7333331 0 0 0 0 -0.42958605 -0.29647487 0
+  Key 0.18151082 8 0 0 0 0 -0.29647365 -0.18151447 0
+  Key 0 10 0 0 0 0 -0.12812528 -0.053385537 0
+  Key 0 10.833333 0 0 0 0 0 0 0
+  Key 0 19.166666 0 0 0 0 0 0 0
+  Key 0 20 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  7
+  Key 1.354376 0 0 0 0 0 0 -1.9551889 0
+  Key -0.60092771 4.7333331 0 0 0 0 -1.0059065 -0.69421715 0
+  Key -0.34574762 8 0 0 0 0 0.3727273 0.22820039 0
+  Key 0 10 0 0 0 0 0.24405715 0.10169048 0
+  Key 0 10.833333 0 0 0 0 0 0 0
+  Key 0 19.166666 0 0 0 0 0 0 0
+  Key 0 20 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 6
+{ Envelope
+  7
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 4.7333331 0 0 0 0 0 0 0
+  Key 1 8 0 0 0 0 0 0 0
+  Key 1 10 0 0 0 0 0 0 0
+  Key 1 10.833333 0 0 0 0 0 0 0
+  Key 1 19.166666 0 0 0 0 0 0 0
+  Key 1 20 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 7
+{ Envelope
+  7
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 4.7333331 0 0 0 0 0 0 0
+  Key 1 8 0 0 0 0 0 0 0
+  Key 1 10 0 0 0 0 0 0 0
+  Key 1 10.833333 0 0 0 0 0 0 0
+  Key 1 19.166666 0 0 0 0 0 0 0
+  Key 1 20 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 8
+{ Envelope
+  7
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 4.7333331 0 0 0 0 0 0 0
+  Key 1 8 0 0 0 0 0 0 0
+  Key 1 10 0 0 0 0 0 0 0
+  Key 1 10.833333 0 0 0 0 0 0 0
+  Key 1 19.166666 0 0 0 0 0 0 0
+  Key 1 20 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+ShadowOptions 7
+
+LoadObjectLayer 5 C:video/newkrabob/rebus.lwo
+ShowObject 6 3
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  7
+  Key -1.9128793 0 0 0 0 0 0 1.3583516 0
+  Key -0.55444801 4.7333331 0 0 0 0 2.4087832 1.2043916 0
+  Key 1.7002956 7.0999999 0 0 0 0 1.1667887 1.4297271 0
+  Key 2.0420678 10 0 0 0 0 0.26548377 0.076288439 0
+  Key 2.0420678 10.833333 0 0 0 0 0 0 0
+  Key 2.0420678 19.166666 0 0 0 0 0 0 0
+  Key 2.0420678 20 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  7
+  Key -1.261927 0 0 0 0 0 0 0.26528811 0
+  Key -0.99662334 4.7333331 0 0 0 0 0.17528331 0.087641656 0
+  Key -0.99900204 7.0999999 0 0 0 0 0.44784972 0.54877359 0
+  Key 0 10 0 0 0 0 0.77601051 0.22299153 0
+  Key 0 10.833333 0 0 0 0 0 0 0
+  Key 0 19.166666 0 0 0 0 0 0 0
+  Key 0 20 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  7
+  Key -0.91249967 0 0 0 0 0 0 1.1684378 0
+  Key 0.25600669 4.7333331 0 0 0 0 0.76921451 0.38460726 0
+  Key 0.24132206 7.0999999 0 0 0 0 -0.11504098 -0.14096572 0
+  Key 0 10 0 0 0 0 -0.18745552 -0.053866532 0
+  Key 0 10.833333 0 0 0 0 0 0 0
+  Key 0 19.166666 0 0 0 0 0 0 0
+  Key 0 20 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  7
+  Key 0 0 0 0 0 0 0 -0.58814156 0
+  Key -0.58817607 4.7333331 0 0 0 0 -0.26933509 -0.13466755 0
+  Key -0.40400264 7.0999999 0 0 0 0 0.26430696 0.32386911 0
+  Key 0 10 0 0 0 0 0.31382349 0.09017916 0
+  Key 0 10.833333 0 0 0 0 0 0 0
+  Key 0 19.166666 0 0 0 0 0 0 0
+  Key 0 20 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  7
+  Key 1.8343403 0 0 0 0 0 0 -0.86820281 0
+  Key 0.96608657 4.7333331 0 0 0 0 -0.86825794 -0.43412897 0
+  Key 0.53195345 7.0999999 0 0 0 0 -0.43412751 -0.53195906 0
+  Key 0 10 0 0 0 0 -0.41321385 -0.11873961 0
+  Key 0 10.833333 0 0 0 0 0 0 0
+  Key 0 19.166666 0 0 0 0 0 0 0
+  Key 0 20 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  7
+  Key 0 0 0 0 0 0 0 0 0
+  Key 0 4.7333331 0 0 0 0 0 0 0
+  Key 0 7.0999999 0 0 0 0 0 0 0
+  Key 0 10 0 0 0 0 0 0 0
+  Key 0 10.833333 0 0 0 0 0 0 0
+  Key 0 19.166666 0 0 0 0 0 0 0
+  Key 0 20 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 6
+{ Envelope
+  7
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 4.7333331 0 0 0 0 0 0 0
+  Key 1 7.0999999 0 0 0 0 0 0 0
+  Key 1 10 0 0 0 0 0 0 0
+  Key 1 10.833333 0 0 0 0 0 0 0
+  Key 1 19.166666 0 0 0 0 0 0 0
+  Key 1 20 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 7
+{ Envelope
+  7
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 4.7333331 0 0 0 0 0 0 0
+  Key 1 7.0999999 0 0 0 0 0 0 0
+  Key 1 10 0 0 0 0 0 0 0
+  Key 1 10.833333 0 0 0 0 0 0 0
+  Key 1 19.166666 0 0 0 0 0 0 0
+  Key 1 20 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 8
+{ Envelope
+  7
+  Key 1 0 0 0 0 0 0 0 0
+  Key 1 4.7333331 0 0 0 0 0 0 0
+  Key 1 7.0999999 0 0 0 0 0 0 0
+  Key 1 10 0 0 0 0 0 0 0
+  Key 1 10.833333 0 0 0 0 0 0 0
+  Key 1 19.166666 0 0 0 0 0 0 0
+  Key 1 20 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+ShadowOptions 7
+
+AmbientColor 1 1 1
+AmbientIntensity 0.25
+
+AddLight
+LightName Light
+ShowLight 1 5
+LightMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  1
+  Key -2 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  1
+  Key 2 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  1
+  Key -2 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  1
+  Key 0.78539813 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  1
+  Key 0.61086524 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 6
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 7
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 8
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+LightColor 1 1 1
+LightIntensity 1
+AffectCaustics 1
+LightType 0
+ShadowType 1
+
+AddCamera
+CameraName Camera
+ShowCamera 1 2
+CameraMotion
+NumChannels 6
+Channel 0
+{ Envelope
+  4
+  Key 0 0 0 0 0 0 0 0 0
+  Key 0 19.166666 0 0 0 0 0 0 0
+  Key 0 20 0 0 0 0 0.0060132723 0.048106179 0
+  Key 0.054119453 26.666666 0 0 0 0 0.054117199 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  4
+  Key 0.125 0 0 0 0 0 0 0 0
+  Key 0.125 19.166666 0 0 0 0 0 0 0
+  Key 0.125 20 0 0 0 0 0 0 0
+  Key 0.125 26.666666 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  4
+  Key -2.8362334 0 0 0 0 0 0 0 0
+  Key -2.8362334 19.166666 0 0 0 0 0 0 0
+  Key -2.8362334 20 0 0 0 0 0.23124257 1.8499405 0
+  Key -0.75505024 26.666666 0 0 0 0 2.0810964 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  4
+  Key 0 0 0 0 0 0 0 0 0
+  Key 0 19.166666 0 0 0 0 0 0 0
+  Key 0 20 0 0 0 0 0.008920568 0.071364544 0
+  Key 0.08028511 26.666666 0 0 0 0 0.080281764 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  4
+  Key 0 0 0 0 0 0 0 0 0
+  Key 0 19.166666 0 0 0 0 0 0 0
+  Key 0 20 0 0 0 0 -0.13245131 -1.0596105 0
+  Key -1.1920618 26.666666 0 0 0 0 -1.1920121 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  4
+  Key 0 0 0 0 0 0 0 0 0
+  Key 0 19.166666 0 0 0 0 0 0 0
+  Key 0 20 0 0 0 0 0 0 0
+  Key 0 26.666666 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+ZoomFactor 1.35
+ResolutionMultiplier 1.0
+FrameSize 640 480
+PixelAspect 1
+MaskPosition 0 0 640 480
+MotionBlur 0
+FieldRendering 0
+
+ApertureHeight 0.015
+Antialiasing 0
+AdaptiveSampling 1
+AdaptiveThreshold 0.1
+
+SolidBackdrop 1
+BackdropColor 0 0 0
+ZenithColor 0 0.1569 0.3137
+SkyColor 0.4706 0.7059 0.9412
+GroundColor 0.1961 0.1569 0.1176
+NadirColor 0.3922 0.3137 0.2353
+FogType 0
+DitherIntensity 1
+AnimatedDither 0
+
+RenderMode 2
+RayTraceEffects 0
+RayTraceOptimization 1
+DataOverlayLabel  
+SaveRGB 0
+SaveAlpha 0
+
+ViewConfiguration 0
+DefineView 0
+ViewType 9
+ViewAimpoint 0 0 0
+ViewZoomFactor 2.084932
+
+GridNumber 80
+GridSize 0.5
+CameraViewBG 0
+ShowMotionPath 1
+ShowFogRadius 0
+ShowFogEffect 0
+ShowSafeAreas 0
+ShowFieldChart 0
+
+CurrentObject 4
+CurrentLight 0
+CurrentCamera 0
+GraphEditorData
+{ GraphEd_Favorites
+}
+{ GE_Expression_Lib
+  1
+}

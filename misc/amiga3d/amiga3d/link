@@ -1,0 +1,25 @@
+.Key file
+;           Compile a C program                       Version 1.02
+failat 65535
+echo "-- Linking <file$t1>..."
+
+df1:c/alink with <file$t1>.with to ram:<file$t1>
+
+if not exists ram:<file$t1>
+echo "Link failed: ERROR..."
+skip END
+endif
+
+if exists df1:<file$t1>
+delete df1:<file$t1>
+endif
+
+copy ram:<file$t1> df1:<file$t1>
+
+if not exists df1:<file$t1>
+echo "Could not copy ram:<file$t1> to df1:<files$t1>..."
+skip END
+endif
+
+echo "-- done linking '<file$t1>'. --"
+LAB END

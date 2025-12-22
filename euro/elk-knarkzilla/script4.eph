@@ -1,0 +1,200 @@
+
+-0 : fader from=0 to=256 dur=20
+0 : fx name=pixellize pixellize.back=pixellize_knark
++0 : fader from=0 to=256 dur=100
+-1 : fader from=256 to=0 dur=100
+2 : fx name=crossfader crossfader.tex0=crossfader_tex1 crossfader.tex1=crossfader_tex1
++0 : fader from=0 to=256 dur=100
++0.5 : set crossfader.tex1=crossfader_tex1
++2.0 : set crossfader.tex0=crossfader_tex2
++2.5 : set crossfader.tex1=crossfader_tex2
++3.0 : set crossfader.tex1=crossfader_tex3
++3.25 : set crossfader.tex0=crossfader_tex3
++4.5 : set crossfader.tex0=crossfader_tex4
+#-0.28 : fader from=256 to=0 dur=100
+-1.0 : fader from=256 to=0 dur=50
+#-0.25 : flasher from=0 to=1024 dur=25
+# Luts ahoy
+-0.125 : fx name=black
+8 : fx name=coplut coplut.light_pulse=vec4(0.0,5,16,0) \
+                   coplut.tex0=coplut_env0 \
+				   coplut.light_color=ivec3(32,48,64) \
+				   coplut.shader=env \
+				   coplut.lut=coplut_tunnel \
+				   coplut.scroll_speed=vec4(0.5,4,0,0)
+8 : fader from=256 to=256 dur=1
++0 : flasher from=1024 to=0 dur=50
++2 : flasher from=256 to=0 dur=25
++4 : flasher from=256 to=0 dur=25
++6 : flasher from=256 to=0 dur=25
++8 : flasher from=256 to=0 dur=25
++10 : flasher from=256 to=0 dur=25
+-0.125 : flasher from=0 to=256 dur=10
+# @Farfar, dualenv is the shader that blends two textures here coplut_env0 and 1. Param controls brightness of env0 and param2 controls brightness of env1
+12 : fx name=coplut coplut.lut=coplut_tunnel2 \
+					coplut.tex0=coplut_env0 \
+					coplut.shader=env \
+				      coplut.light_color=ivec3(32,48,64) \
+					coplut.light_pulse=vec4(30.0,0.05,40,14) \
+					coplut.scroll_speed=vec4(0,5,0,4)
++0 : flasher from=1024 to=0 dur=25
++0 : param2 from=256 to=256 dur=1
++0 : param from=256 to=256 dur=1
+#11 : param from=0 to=256 dur=40
+#11 : param2 from=256 to=0 dur=40
+#-0.5 : set coplut.scroll_speed=vec4(-3,-3,0,0)
+#-0.28 : fader from=256 to=0 dur=100
+#14 : set coplut.lut=coplut_caleidoscope3 coplut.tex0=coplut_env1 coplut.shader=env coplut.scroll_speed=vec4(1,1,0,0)
+-0.125 : flasher from=0 to=256 dur=10
+15.5 : fx name=noiselogo 
+-0.27 : flasher from=0 to=256 dur=10
+-0.5 : fader from=512 to=256 dur=50
+16 : fx name=coplut coplut.lut=coplut_stacked-circles2 coplut.tex0=coplut_env0 coplut.scroll_speed=vec4(-1,1,0,0)
++0 : flasher from=1024 to=0 dur=25
+18 : set coplut.lut=coplut_stacked-circles3 coplut.tex0=coplut_env0 coplut.scroll_speed=vec4(-1,1,0,0)
++0 : flasher from=256 to=0 dur=25
+20 : set coplut.lut=coplut_stacked-circles coplut.tex0=coplut_env0 coplut.scroll_speed=vec4(1.2,1.25,0,0)
++0 : flasher from=256 to=0 dur=25
+22 : set coplut.lut=coplut_stacked-circles4 coplut.tex0=coplut_env0 coplut.scroll_speed=vec4(-1.2,1.25,0,0)
++0 : flasher from=256 to=0 dur=25
+#23 : set coplut.lut=coplut_stacked-circles5 coplut.tex0=coplut_env0 coplut.scroll_speed=vec4(-2.2,-2,0,0)
+-0.5 : fader from=256 to=0 dur=25
+# Quadify in
+#24 : fx name=coplut coplut.shader=picture \
+#				   coplut.lut=coplut_knarkzilla
+24 : fx name=chunkydust chunkydust.back=chunkydust_knarkzilla
++0 : fader from=0 to=256 dur=100
+-0.5 : fader from=256 to=0 dur=20
+#26 : fx name=hdrcopper hdrcopper.gradient=g_gradient
+#+0 : fader from=0 to=256 dur=20
+#-0.25 : fader from=256 to=0 dur=40
+#27 : fx name=noiselogo p=1 q=0 noiselogo.logo=noiselogo_logo
+#+0 : param from=0 to=2048 dur=80
+#+0 : fader from=0 to=256 dur=20
+28 : fx name=scene scene.tex0=scene_tex0              \
+                   scene.skybox=scene_skybox          \
+                   scene.skybox_tex=scene_skybox_tex  \
+                   scene.nmap0=scene_nmap0            \
+                   scene.obj0=scene_obj0              \
+                   scene.env0=scene_env0               \
+                   scene.back=scene_back
++0 : fader from=0 to=256 dur=50
++0 : play nr=0 dur=450
++4 : play nr=8 dur=600
++8 : play nr=2 dur=400
+#+8 : set_state p=1 q=0
+#+8 : play nr=10 dur=450
++12 : play nr=12 dur=350
++12 : set_state p=0 q=0
+-0.28 : fader from=256 to=0 dur=20
+-0.125 : fx name=black
+44 : fx name=cctab cctab.table=cctab_plane cctab.tex0=cctab_tex0 cctab.tex1=cctab_tex1 cctab.tex2=cctab_tex2 cctab.tex3=cctab_tex3
++0 : fader from=0 to=256 dur=20
+
++1 : overlay name=ol_loaderror x0=112 y0=256 x1=112 y1=200 dur=25 
++2 : overlay name=curr y0=200 y1=256 dur=25 
+
+-0.28 : fader from=256 to=0 dur=20
+-0.15 : overlay name=null
+-0.125 : fx name=black
+
+48 : fx name=cctab cctab.table=cctab_ball
++0 : fader from=0 to=256 dur=20
+
++1 : overlay name=ol_farfar x0=112 y0=256 x1=112 y1=200 dur=25 
++2 : overlay name=curr y0=200 y1=256 dur=25 
+
+-0.28 : fader from=256 to=0 dur=20
+-0.15 : overlay name=null
+-0.125 : fx name=black
+
+52 : fx name=cctab cctab.table=cctab_ball_inside cctab.tex0=cctab_tex0 cctab.tex1=cctab_tex1 cctab.tex2=cctab_tex2 cctab.tex3=cctab_tex3
++0 : fader from=0 to=256 dur=20
+
++1 : overlay name=ol_eladamri x0=112 y0=256 x1=112 y1=200 dur=25 
++2 : overlay name=curr y0=200 y1=256 dur=25 
+
+-0.28 : fader from=256 to=0 dur=20
+-0.15 : overlay name=null
+-0.125 : fx name=black
+# ccplane
+56 : fx name=cctab cctab.table=cctab_tunnel
++0 : fader from=0 to=256 dur=20
+
+-0.28 : fader from=256 to=0 dur=20
+-0.125 : fx name=black
+# ccsubtunnel
+#-0.28 : fader from=256 to=0 dur=20
+#-0.125 : fx name=black
+#52 : fx name=cctab cctab.table=cctab_dualtunnel
+#+0 : fader from=0 to=256 dur=20
+#-0.28 : fader from=256 to=0 dur=20
+60 : fx name=birdseye p=0 q=2
++0 : fader from=0 to=256 dur=20
++0 : play nr=0 dur=500
+
+-0.5 : fader from=256 to=0 dur=50
+-0.125 : fx name=black
+# Dust
+68: fx name=dust dust.back=dust_back dust.x_turbulence=g_turb1 dust.y_turbulence=g_turb2 dust.particlesource=g_particlesource
++0 : fader from=0 to=256 dur=100
+
++2.0 : set_state p=1 q=0
+
++8.0 : set_state p=2 q=0
+#18 : set coplut.lut=coplut_silver-face
+84.25 : fx name=coplut coplut.light_color=ivec3(16,8,0) coplut.lut=coplut_kula-2 coplut.tex0=coplut_env0 coplut.shader=env coplut.scroll_speed=vec4(0.5,4,0,0)
++0 : flasher from=1024 to=0 dur=25
++0 : fader from=256 to=256 dur=20
+86.25 : set coplut.scroll_speed=vec4(4.0,1.5,0,0)
++0 : flasher from=1024 to=0 dur=25
+#88.25 : fx name=coplut coplut.light_color=ivec3(16,8,0) coplut.lut=coplut_kula-3 coplut.tex0=coplut_env0 coplut.shader=env coplut.scroll_speed=vec4(-1,-4,0,0)
+88.25 : set coplut.scroll_speed=vec4(-1,-4,0,0)
++0 : flasher from=1024 to=0 dur=25
+#90.25 : set coplut.scroll_speed=vec4(5,3,0,0)
+90.25 : fx name=coplut coplut.light_color=ivec3(32,16,0) coplut.lut=coplut_kula-3 coplut.tex0=coplut_env0 coplut.shader=env coplut.scroll_speed=vec4(8,0,0,0)
++0 : flasher from=1024 to=0 dur=25
+-0.28 : fader from=256 to=0 dur=20
+-0.125 : fx name=black
+92.25 : fx name=coplut coplut.light_color=ivec3(16,8,0) coplut.lut=coplut_torus coplut.scroll_speed=vec4(1,2,0,0)
++0 : flasher from=256 to=0 dur=25
++0 : fader from=0 to=256 dur=20
+-0.28 : fader from=256 to=0 dur=20
+-0.125 : fx name=black
+96.25 : fx name=lut lut.lut=lut_silver-face 
+#lut.scroll_speed=vec4(1,2,0,0)
++0 : flasher from=256 to=0 dur=25
++0 : fader from=0 to=256 dur=20
+-0.28 : fader from=256 to=0 dur=20
+-0.125 : fx name=black
+100.25 : fx name=chunkydust chunkydust.back=chunkydust_guard-dog
++0 : fader from=0 to=256 dur=20
+-0.28 : fader from=256 to=0 dur=20
+-0.125 : fx name=black
+104.25 : fx name=scene scene.tex0=scene_tex0              \
+                   scene.skybox=scene_skybox          \
+                   scene.skybox_tex=scene_skybox_tex  \
+                   scene.nmap0=scene_nmap0            \
+                   scene.obj0=scene_obj0              \
+                   scene.env0=scene_env0               \
+                   scene.back=scene_back p=1
++0 : flasher from=1024 to=0 dur=50
++0 : play nr=14 dur=500
++0 : fader from=256 to=256 dur=25
+#+2 : play nr=0 dur=500
+# Quadify in
+ -0.125 : flasher from=0 to=512 dur=50
+108.25 : fx name=quadify quadify.back=quadify_back p=0 q=0
++0 : flasher from=1024 to=0 dur=50
++0 : fader from=256 to=256 dur=20
+# Quadiy out
+# 112 : fx name=quadify p=1 q=0
+111.5 : fader from=256 to=0 dur=50
+112 : fx name=pixellize pixellize.back=pixellize_intro
++0 : fader from=0 to=256 dur=50
+-0.5 : fader from=256 to=0 dur=20
+116 : set pixellize.back=pixellize_greets
++0 : fader from=0 to=256 dur=20
+#+0 : fader from=0 to=256 dur=50
+-1 : fader from=256 to=0 dur=100
+118 : fx name=black dummy=g_vars dummy=g_nullsprite dummy=g_gradient

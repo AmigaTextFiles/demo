@@ -1,0 +1,94 @@
+AMP#2
+
+
+Uwaga!
+Jeôli masz kîopoty z wczytaniem obrazków, zwolnij trochë pamiëci CHIP lub
+zmniejsz rozdzielczoôê ekranu maga - preferencje/GFX!
+
+
+Mag zostaî stworzony caîkowicie pod system operacyjny Amigi (plus AHI)
+i dziëki temu powinien bez wiëkszych problemów dziaîaê na wszystkich Amigach
+z procesorem 68020 (lub lepszym) i OS-em 3.0 (lub nowszym). Problemów nie
+powinno byê równieû w przypadku emulacji pod MorphOS-em, Amithlonem czy UAE.
+
+Co jest potrzebne by uruchomiê maga?
+
+I. Procesor 68020 lub lepszy.
+
+II. System operacyjny 3.0+ (39+) lub nowszy, wraz z zainstalowanymi
+bibliotekami systemowymi.
+
+Mag otwiera nastëpujâce biblioteki:
+
+- graphics.library - w wersji 39+,
+
+- layer.library - w wersji 39+,
+
+- diskfont.library - w wersji 39+,
+
+- intuition.library - w wersji 39+,
+
+- datatypes.library - w wersji 39+,
+
+- gadtools.library - w wersji 39+,
+
+- asl.library - w wersji 39+,
+
+- cybergraphics.library - w wersji 41+, (jeôli mag jej nie znajdzie, to wybór
+ekranów, na których moûe zostaê otwarty AMP # 2 zostanie zredukowany tylko do
+tych, które oferujâ 256 i mniej kolorów),
+
+- dbplayer.library - w wersji 2+, (jest otwierana tylko w przypadku wîâczenia
+opcji AHI w menu górnym w preferencjach).
+
+Tu dwie maîe uwagi:
+
+- aby wîâczyê opcjë AHI naleûy mieê zainstalowane AHI w wersji 4+,
+
+- aby biblioteka dbplayer.library nie spowodowaîa zawieszenia AMP issue 2,
+musi byê zainstalowane w systemie urzâdzenie AUDIO z handlerem AHI-Handler.
+
+III. Datatypy:
+
+1. IFF,
+
+2. JPEG,
+
+3. PNG,
+
+4. GIF
+
+I kolejna uwaga:
+
+- w SYS:Classes/Datatypes musi znajdowaê sië picture.datatype. Jeûeli bëdzie
+on w wersji niûszej od 43, to wówczas obrazki zapisane w 24 bitach nie bëdâ
+obsîugiwane. Dopiero wersje 43 oraz nowsze - 44 z OS 3.5 i 45 z OS 3.9
+umoûliwiâ wczytanie i wyôwietlenie 24-bitowych grafik.
+
+Jeûeli AMP issue 2 z jakiô magicznych powodów nie bëdzie sië chciaî sië
+uruchomiê, istnieje moûliwoôê zapoznania sië z tekstami i doîâczonymi do nich
+obrazkami za pomocâ zwykîej przeglâdarki np. MultiView.
+
+
+Preferencje - klawiszologia:
+
+- ESC - wyjôcie z programu,
+
+- Return - otwarcie ekranu.
+
+
+Ustawienia cienia:
+
+- ESC - wyjôcie,
+
+- Return - zapis,
+
+- Space - wîâczenie/wyîâczenie cienia,
+
+- Strzaîka w górë - przesuniëcie cienia w górë,
+
+- Strzaîka w dóî - przesuniëcie cienia w dóî,
+
+- Strzaîka w lewo - przesuniëcie cienia w lewo,
+
+- Strzaîka w prawo - przesuniëcie cienia w prawo.

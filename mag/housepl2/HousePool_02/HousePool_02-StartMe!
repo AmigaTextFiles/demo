@@ -1,0 +1,12 @@
+; $VER: 1.02 (12.08.95)
+; $NAME: HousePool Startup Script
+;
+Assign HousePool_02: ""
+CD HousePool_02:
+PPShow HP_02-Bilder/HousePool.ppanim
+Run Powerplayer HP_02-Songs/MMD1.The_HP-Anthem window
+ShowGuide HousePool_02.guide
+;
+Assign HousePool_02: remove
+;
+; © 1995 by HousePool® Media International

@@ -1,0 +1,182 @@
+!Kas1e let
+warp3d dance
+91
+µJCµF1µC0Warp3d Dances by Pistony_1200
+email: kas1e@yandex.ru
+
+µJL 
+µC1].    Intro
+]].   Basic shit.
+]]].  LowLevel. Asm.
+]]]]. The End. 
+
+bonus: intro.
+
+
+µC3[ Intro ]
+
+
+µC5So. What is Warp3d ? I do not intend to talk as a major label, I say it easily: Warp3d 4.0 - it is a bit like directx5, not always, but often. It is just a render, without any 3d options, like virgin d3d from win32. This render provides us: alpha, fog, texture mapping, scaling, rotating.. oops :)
+
+Haage-partner - this is the brand who produced the first version of Warp3d (and last, too, but I'd like to say, that Warp3d for Mediator, will be adapted by Hyperion (Give me aos4!). Btw, in aos4 we will have Warp3d 5.0 (I hope, it will not just be a render).
+
+Warp3d supports tons of graphics boards, but the most common are:
+
+- for classic machines: bvision/cybervision (based on the permedia2 chip) and voodoo3
+- for modern Amigas (a1/peg): also voodoo3 and radeon family.
+ 
+
+
+µC3[ Basic shit ]
+
+
+µC5The first moment (and most important aspect in warp3d coding (and any other demo coding I think) - is synchro. Back to past, I remember my experience with ms-dos coding: I've done a vertical/horizontal retrace and do synchro with it. But it was good for easy-litte cracktros/intros. If i was trying to do demos or something kind of 'big', my result was tons of crap. So, the solution for me was a double-buffering (whoah!), double-buggering I should say.
+
+It means one more chunk of display memory (We write to a second buffer and flip it between first buffer)
+
+
+So, for Aos3.x we have two system friendly ways of realising double-buggering:
+
+1.  ScrollVPort() 
+2.  ScreenBuffer() functions
+
+
+ScrollVPort is old and crappy, and I think the best way to use ScreenBuffer functions (Alloc/Free/Change). So, here is an example:
+
+µC7
+// in init part of code
+
+struct ScreenBuffer* buffer[2];
+int drawBuffer;
+
+void SwitchDisplay(W3D_Context *context,struct Screen *screen)
+{
+
+    buffer[drawBuffer]->sb_DBufInfo->dbi_SafeMessage.mn_ReplyPort=0;
+    while (!ChangeScreenBuffer(screen, buffer[drawBuffer]));
+    drawBuffer ^=1;
+    W3D_SetDrawRegion(context, buffer[drawBuffer]->sb_BitMap,0, &s);
+    WaitBOVP(&(screen)->ViewPort);
+}
+
+// somehere in code
+
+    buffer[0] = AllocScreenBuffer(screen,NULL, SB_SCREEN_BITMAP);
+    buffer[1] = AllocScreenBuffer(screen,NULL, 0);
+
+    bm = screen->RastPort.BitMap;
+
+
+ ...........
+
+   while()
+   {
+       rotate per frame
+       call SwitchDisplay  
+   }
+ ...........
+
+
+
+
+// in end of code 
+
+    if (buffer[0])
+    {
+        buffer[0]->sb_DBufInfo->dbi_SafeMessage.mn_ReplyPort = NULL;
+        while (!ChangeScreenBuffer(screen, buffer[0])){Delay(1);}
+    }
+
+    for (i=0; i<2; i++)
+    {
+        if (buffer[i])
+        {
+            FreeScreenBuffer(screen, buffer[i]);
+            buffer[i] = NULL;
+        }
+    }
+
+
+
+µC5If you want deep details about it, please read the intuition autodocs. 
+
+Next, let's look at Warp3d itself. How to use warp3d and warp3d functions ? So, all answers can be found in the documentation of the warp3d_dev archive. There is a nice guide called warp3ddev. But this one is really basically only. But for start you must read it, too. But if you do not want, or you're just inrerested in what I wrote here ;-)
+
+I want to continue it for some moments:
+
+1. Warp3d is only a library. So, we just open the warp3d.library (or warp3dppc.library) and check drivers of the hardware/software kind:
+
+µC7
+    flags = W3D_CheckDriver();
+    if (flags & W3D_DRIVER_3DHW) printf("Hardware driver available\n");
+    if (flags & W3D_DRIVER_CPU)  printf("Software driver available\n");
+    if (flags == 0) {
+        printf("PANIC: no driver available!!!\n");
+        getout();
+    };
+
+
+µC5Next, use warp3d function. At the end - close the library :) Nothing special.
+
+
+
+2. If you want to do some specific things - you must check if this driver can do that. That's posible by the W3D_Query():
+
+µC7
+ // test on all query.
+  for(a=0;a<163;a++)
+  {
+  res=W3D_Query(context,a,NULL);
+  if(res==W3D_FULLY_SUPPORTED){printf("a=%d full supporting\n",a);};
+  if(res==W3D_PARTIALLY_SUPPORTED){printf("a=%d parially supporting\n",a);};
+ // if(res==W3D_NOT_SUPPORTED){printf("a=%d not supported\n",a);};
+  };
+
+
+
+µC53. Remember - Warp3d can only render. All math (math, proec, mul/div/etc. of matrix) must be done by yourself.
+
+
+µC3[ LowLevel. Asm ]
+
+
+µC5Of course Assembler :) Assembler is power (with JIT in an almost system friendly way :) ). So, our Assembler can help to speedup our prods. Thefore Amiga cpus are not as fast as we want. We can replace functions with memory working, adding evil code...ops. Anyway, have a look at some examples:
+
+µC7
+_W3D_LockHardware:             
+                move.l  a6,-(sp)
+                movea.l (unk_44EB+$29).l,a6
+                movea.l 8(sp),a0
+                jsr     -$3C(a6)
+                movea.l (sp)+,a6
+                rts  
+
+_W3D_SetState:    
+                move.l  a6,-(sp)
+                movea.l (unk_44EB+$29).l,a6
+                movea.l 8(sp),a0
+                movem.l $C(sp),d0-d1
+                jsr     -$30(a6)
+                movea.l (sp)+,a6
+                rts     
+
+_W3D_DrawTriStrip:  
+                move.l  a6,-(sp)
+                movea.l (unk_44EB+$29).l,a6
+                movem.l 8(sp),a0-a1
+                jsr     -$AE(a6)
+                movea.l (sp)+,a6
+                rts     
+
+
+sr 3c,30,ae - numbers of function in warp3d.library. 
+
+
+
+
+µC3[ The End ]
+
+
+µC5In the end, as a little addon so that you can play around a bit with it, I give you a little example of little warp3d code with sources. It can be found in the bonus directory. Of course it is totally ugly, but who cares ?:)
+
+P.S.: It's a 68k binary which uses warp3d.library (not ppc), so, if you use mediator, env:Mediator/MMU must be set to YES as always :)

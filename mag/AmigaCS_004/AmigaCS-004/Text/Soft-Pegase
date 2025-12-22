@@ -1,0 +1,89 @@
+@{xoffset 21}@{d ACEEE5}¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+@{xstep 370}@{font ACS-Title.font 18}PEGASE je BOMBA!@{font}
+@{xstep 445}@{c A6FFF8}@{i}Shaman/Abort@{ui}@{c}@{ystep -8}
+
+
+ @{xstep 2}@{font ACS-Title.font 18}P@{font}omërnë nedávno se na Aminetu objevil zbrusu nový @{c EAFFCA}MPEG audio encoder@{c}, slouùící
+ke  kompresi  @{c EAFFCA}16ti@{c}  bitových  zvukových souborû ve formátu @{c EAFFCA}AIFF@{c}, @{c EAFFCA}MAUD@{c}, @{c EAFFCA}WAV@{c}, @{c EAFFCA}CDDA@{c}
+a @{c EAFFCA}RAW@{c}  (mono  nebo  stereo  na  frekvencích  @{c EAFFCA}32@{c}, @{c EAFFCA}44.1@{c} nebo @{c EAFFCA}48kHz@{c}) do formátu ISO
+@{c EAFFCA}MPEG 1 - Layer 1 a 2@{c} (mono, stereo nebo joint-stereo).  Bohuùel nejnovëjîí @{c EAFFCA}Layer
+3@{c} není zatím podporován, coù je urçitë nejvëtîí nevýhoda programu.  To ale vûbec
+nevadí  -  garantuji  vám,  ùe  na zvukovém výstupu Amigy nemáte îanci rozpoznat
+nëjaký  rozdíl  mezi  Layer  2  (@{c EAFFCA}MP2@{c})  a Layer 3 (@{c EAFFCA}MP3@{c}), navíc je MP2 o nëco ménë
+nároçný  na  výkon CPU.  Pegase pouùívá vysoce optimalizované rutiny zaloùené na
+kvalitním  codecu  Fraunhoferova  Institutu.  Autor @{c EAFFCA}Didier Levet@{c} z Francie chtël
+tímto  dokázat,  ùe perfektnë optimalizovaný program bëùí na 68K rychleji neù na
+PPC.   To  se  mu  také  podaêilo,  protoùe @{c 85CAFF}MusicIn-PPC na 604e/200@{c} enkóduje MP2
+citelnë pomaleji, neù @{c 85CAFF}Pegase na 68060/50@{c}, pêestoùe oba dva programy vycházejí ze
+spoleçných zdrojových kódû v jazyce C.
+  Na  tomto  místë  také musím vyvrátit velice rozîíêený omyl, ùe MP3 kompresuje
+lépe, neù MP2.  To není v ùádném pêípadë pravda - velikosti jsou zcela identické
+a jsou pêímo úmërné na tzv. @{c E7FFC5}BITRATE@{c} (datový tok - udává se v bitech za sekundu).
+Od   této  hodnoty  se  odvíjí  kompresní  pomër  a výsledná  velikost  souboru.
+Pamatujte,  ùe  MPEG  je  obecnë  ztrátová komprese.  Bitrate nemá dokonce velký
+efekt  na  rychlost  enkodování,  jen  na  velikost a kvalitu souboru (çím menîí
+bitrate,  tím  menîí  velikost  a  niùîí  kvalita).  Zde je seznam podporovaných
+kompresních pomërû pro MP2:
+
+@{c E7FFC5}	32, 48, 56, 64, 80, 96, 112, 128, 160, 192, 224, 256, 320 a 384 kbps.@{c}
+
+  Kompresní pomër výsledného souboru vypoçteme jednoduîe:
+
+@{c E7FFC5}	frekvence  ×  bitû/sampl  ×  poçet kanálû  /  bitrate@{c}
+
+  Takùe pro standardní CD skladbu, pêi bitrate 128 kbps:
+
+@{c E7FFC5}	44100  ×  16  ×  2  /  128000  =  11,025   (kompresní pomër, çili ratio)@{c}
+
+
+  Çili  @{c E7FFC5}60MB@{c}  soubor se zkompresuje na @{c E7FFC5}5,44@{c} @{c E7FFC5}MB@{c}.  Teorie êíká, ùe pêi kompresních
+pomërech  vëtîích  neù 8 lidské ucho jiù dokáùe snadno rozpoznat ztrátu kvality.
+Nejçastëji pouùívaný pomër je ovîem 11,025 (128 kbps), coù pro "bëùné ucho" sice
+postaçuje,  ale  CD  kvalitou  se  nazvat nedá.  Pokud si myslíte, ùe máte dobrý
+sluch, budete muset pouùít 192 kbps s ratio 7,35.  Ten samý @{c E7FFC5}60MB@{c} soubor pak bude
+mít výslednou velikost @{c E7FFC5}8,16 MB@{c}, takùe si to dobêe rozmyslete...
+
+  Proto  byl  pro  zlepîení  kvality  pêi  vëtîím  kompresním  pomëru je zaveden
+tzv.reùim  @{c E7FFC5}JOINT STEREO@{c} (@{i}s THC to opravdu nemá nic spoleçného!@{ui} 8-)).  Tato finta
+pracuje  velice  jednoduîe.   Encoder pracuje v tzv.rámcích, coù není nic jiného
+neù úseky dat.  Nejprve kaùdý rámec projde a pokud zjistí, ùe není dostatek bitû
+pro  uloùení  celého  frekvençního  spektra  (çímù  by doîlo ke ztrátë kvality),
+mixuje  çást pásma v monoreùimu.  To ve výsledku poskytne encoderu více bitû pro
+kaùdý  rámec  a  tím  zlepîí  kvalitu  (pochopitelnë  na  çásteçný,  ale  takêka
+neznatelný úkor stereo efektu).
+
+  Pro  lepîí  pochopení  jak  MPEG  encoding  pracuje uvedu dle mého názoru jeho
+nejvëtîí  nedostatek:   pokud  máte  100MB  soubor  plný nul, zabere po kompresi
+stejnou  velikost  jako  100MB  trashmetalové  hudby.   A naopak,  pokud se celé
+spektrum  nevejde do rámce, je rámec brutálnë oêezán.  Tady je velký prostor pro
+dalîí  vylepîování (MP4?).  Naopak výhoda tohoto êeîení spoçívá v tom, ùe se lze
+vùdy spolehnout na konstantní tok dat.
+
+ @{c E7FFC5} Ale zpátky k Pegase...@{c}
+
+  Co se týçe budoucnosti programu, tak jako první se chystá @{c E7FFC5}PowerPC@{c} verze a jako
+dalîí  @{c E7FFC5}MP3@{c}  s  jeho  psychoakustickými  vylepîeními.   @{c E7FFC5}GUI@{c}  bude následovat jako
+poslední, coù si myslím ani nevadí - práce s programem je velmi jednoduchá.
+
+  K  @{b}rychlosti  enkodování@{ub}  lze  êíct,  ùe  pomëru@{c E7FFC5} 2,10 :  1,00@{c} (tj.  3 minutová
+skladba  se  kompresuje  cca. 6,5  minuty)  na  A4000,  68060/60 dosáhnete velmi
+zêídka.   Záleùí  pêedevîím  na  skladbë  a  vytíùení  CPU.   Praktický pomër se
+pohybuje mezi 2,20 - 2,30 (vçetnë doby nutné na çtení skladby z CD!).  Pokud pêi
+enkódování pracujete, je pomër pochopitelnë o nëco horîí.
+
+  Program  nemá  ùádné  GUI, ale lze pouùívat jak z CLI, tak z Workbenche pomocí
+ToolTypû a ASL knihovny.  Potëîující je také fakt, ùe lze bez problémû pêehrávat
+i  právë  encodovaný  song.   (Aï  se jdou vîechny M$ souborový systémy vycpat!)
+Pegase  je  velice rychlý, spolehlivý, kvalitní a navíc se jedná o freeware (coù
+je ostatnë podmínka Fraunhoferova Institutu pro pouùití zdrojových kódû).
+
+
+@{c E7FFC5}	Poùadavky programu Pegase 1.4:
+	¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+	- AmigaOS 2.0 a vyîîí
+	- minimálnë 68020/68030 s 68881/68882
+	- nejlépe 68040/68060 (plné verze vçetnë FPU!)
+	- 4MB RAM a více
+
+
+@{f D5FF97}   @{i}Zkrátka Pegase je nejlepîí a nejrychlejîí MP2 encoder pro 68060 a 68040.@{ui}@{f}

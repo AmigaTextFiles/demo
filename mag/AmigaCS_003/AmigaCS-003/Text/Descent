@@ -1,0 +1,63 @@
+@{d BDFF7A}                                    @{c 6BCBFF}ViRGE Descent@{c}
+                                    @{f FFCD51}¯¯¯¯¯¯¯¯¯¯¯¯¯@{f}
+  Tak  jak  to  vlastnë  vîecko zaçlo?  Úplnë nevinnë.  Jednou ráno, jsem jako obvykle
+zasedl  v  práci (no spíî bych mël êíct na civilce, ale to je jedno) za poçítaç, který
+sem  obsadil hned pêi nástupu.  Vyuùívajíce pêipojky na Internet po pevné lajnë sem si
+prohlíùel standardní odkazy.  Aminet - hmmm, nic moc, nový akDatatypy, CuCuG - zase se
+nëkde  nëco koná, to je fajn, VGR (domovské stránky CyberGraphX) - na stránce ViRGE je
+link  na hru Descent podporující chip ViRGE na Cybervisionech64/3D kartách.  Hu, fakt?
+No  to  je  bezva.   Rázem  se monochromatické ráno zmënilo v úzký svazek elektrických
+impulzû,      tekoucích      z      mého      poçítaçe      právë      na      stránky
+»@{c F4FFDE}www.informatik.uni-trier.de/CIP/tfrieden/@{c}«,  kde  se nový ADescent_ViRGE povaluje pro
+îirokou veêejnost.
+
+  Jenùe  takle  to  vlastnë  nezaçalo.   Zaçátek  je  datován trochu dále do historie.
+Pêesnë  êeçeno  do dob, kdy se na Amize objevily první Doom-remejky.  Kdyù ID-Software
+pustil  do  svëta  zdrojáky  Dooma a kdyù se objevily první kompilace tëchto zdrojákû,
+nikdo   nechtël   vëêit,   ùe   by  to  mohlo  bejt  hratelný  na  jiným  stroji,  neù
+A4000/CV64/060@50,  ale po çase se kód tak zoptimalizoval, ùe je moùné hrát tyto Doomy
+prakticky  na  jakékoliv  konfiguraci.  No a pak to pêiîlo.  Paralax koneçnë pustil do
+svëta  plnýho  nenechavých  Amigistû  zdrojáky  Descenta  I  a hned na to se na CuCuGu
+objevila  zpráviçka,  ùe  "...  je  jen  otázka  çasu, kdy se objevý první Descenty na
+Amigu.".   Jenùe  grafický  engine  Dooma  a Descenta je ponëkud rozdílný (na #AmigaCS
+padlo  dokonce tvrzení, ùe Descent má lepîí engine neù Quake - trochu më to rozesmálo,
+ale to jen okrajem) a tak sem mohl akorát tak oçekávat, jestli to vûbec spustím, çi se
+na nëj podívám u Marvina na PPC.  Dodnes se objevily dva.
+
+  Descent  od  Christiana Sauera (dostupný na @{c F4FFDE}Aminet:game/shoot/Descent.lha@{c}), který je
+na  030  hratelný  pouze v menîím oknë, zato na 040 se dá velmi pëknë hrát.  Podporuje
+AGA, CGX, P96.  Vyùaduje 020+ (checht), 8MB FAST, OS 3.x.
+
+  Dalîí  je  ADescent,  na  kterém  se podílí dost lidí, ale hlavní autoêí jsou Thomas
+Frieden a Hans-Jorg Frieden.  Nejásejte pêedçasnë.  Tento program doslova vyùaduje 030
+a  výîe (ani na 040 se NEDÁ hrát), AGA/CGX/P96, AHI v4, OS 3.x, 10MB RAM (asi v jednom
+celku)  a  ixemul.library.   Opravdu  se s Descentem nedá srovnávat.  Jeho pomalost je
+ohromující.  Rozhodnë ho nedoporuçuji nijak zkouîet hrát.
+
+  No  a pak se objevil ADescent s podporou ViRGE (chip od známého výrobce S3, který má
+jistou  omezenou podporu 3D) pod názvem VDescent, poté pêejmenováno na ADescent_ViRGE.
+Celý  ViRGE  Descent se, po stránce grafické, vûbec nezmënil.  Akorát bëùí v 15 bitech
+(32768  barev)  a  v  rozliîení  od  320x200 po 640x480 s tím rozdílem, ùe nelze mënit
+velikost  oken  (prostë  fullscreen  nebo  nic).   Rychlost je i na mé 030@50MHz velmi
+obstojná  a  na  040@40  (dëkuji  Atlete)  je  velmi  plynulá  (i  v rozliîení 640x480
+hratelná).   Textury  na  stënách  jsou  vyhlazeny  (pixel blending), v pêípadë, ùe se
+pêiblíùíte  ke  stënë,  vidíte  rozmazané fleky, ne obrovské pixely (jak je tomu têebu
+u Dooma).   Tam  kde  je  textura  prûhledná je moùnost zahlédnout alpha kanál (êízená
+prûhlednost).    Ale   stále   je  chybnë  udëláno  mapování  textur,  protoùe  nejsou
+perspektivnë  zkorekturovány.   O to se snaùí poslední verze, kde máte na výbër ze têí
+moùností.
+
+  Normální  mód  (INT)  -  který vlastnë ùádnou korekturu nedëlá.  Mód SubPixel mapper
+(FPU)  -  vyùaduje  FPU  (040+) a také ùádnou korekturu nedëlá, ale urychluje mapování
+textur  na 040+.  A mód SubPixel persp.  (FPUP) - který vyùaduje FPU (040+) a který se
+jiù  snaùí  o jakousi korekci perspektivy (ale moc mu to nejde).  Je to zpûsobeno tím,
+ùe ViRGE neumoùñuje vykreslovat textury perspektivnë zkorigované a zaroveñ je wrapovat
+na  objekt  (objekt  je  zabalen do textury).  Ale to vûbec nevadí.  Hratelnost hry je
+velmi vysoká.  To dokazuje to, ùe sem uù v 6 levelu a doufám, ùe to dohraju celý.  No,
+snad se bude ADescent vyvíjet dál a ùe se doçkáme i PPC verze.
+
+
+                    @{c F4FFDE}(Veîkeré podrobnosti a ScreenSh00ty najdete na
+                      www.informatik.uni-trier.de/CIP/tfrieden)@{c}
+
+                            @{c F4FFDE}AndreW@{c}  <@{c F4FFDE}homolka@terminal.cz@{c}>

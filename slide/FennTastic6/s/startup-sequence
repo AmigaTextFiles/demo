@@ -1,0 +1,45 @@
+screen
+mouseport2
+pal
+border off
+colors
+prompt ""
+type "Title Credits"
+sample s/foxylady -S13900 -V64
+cls
+type Sherilyn
+play >nil: -p5 A Moving Experience
+cls
+ppshow title
+echo "*ec*n*n*n                   - `HE FOUND OUT ABOUT US, DIDN`T HE?' -*n"
+ppshow 1
+echo "*ec*n*n*n                          - `I WANT YOU TO LEAVE' -*n"
+ppshow 2
+echo "*ec*n*n*n                          - COME ON, SPIT IT OUT! -*n"
+ppshow 3
+echo "*ec*n*n*n                           - `I AM BEING MYSELF' -*n"
+ppshow 4
+echo "*ec*n*n*n                         - TWO FOR THE PRICE OF ONE -*n "
+echo "                              - TWICE THE FUN! -*n"
+ppshow 5
+echo "*ec*n*n*n                       - NOW YOU`VE GONE AND DONE IT -*n"
+ppshow 6
+echo "*ec*n*n*n                     - EAT YA HEART OUT DAVY CROCKETT! -*n"
+ppshow 7
+echo "*ec*n*n*n                   - `YOU HAVE TO STAY FOR THE WEEKEND' -*n"
+ppshow 8
+echo "*ec*n*n*n                     - YOU CAN SWIM IN MY POOL ANYDAY! -*n"
+ppshow 9
+echo "*ec*n*n*n                    - THE FOLLOWING PICTURE WAS HAND DRAWN - *n"
+echo "         - THE SIGNATURE IS A FAITHFUL REPRODUCTION OF SHERILYN`S OWN -*n"
+echo "*n*n*n*n                          512K owners press escape now"
+echo "*n*n                      Press left mouse button to continue"
+waitmouse
+ppshow 10
+cls
+type Contact
+waitmouse
+cls
+type End
+waitmouse
+boot

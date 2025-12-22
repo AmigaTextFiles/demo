@@ -1,0 +1,69 @@
+Short:    GenderBender - TotalVision (PPC & 68k & Linux) demo
+Author:   TotalVision (bjsebo@jota.ii.tuniv.szczecin.pl)  
+Uploader: elf^va (bjsebo@jota.ii.tuniv.szczecin.pl)
+Type:     demo/aga
+Requires: AGA or CGFX, 32Mb of RAM, ppc.lib
+
+                         Placed 2nd At Astrosyn 99
+ (Note that this demo was oryginally published on CD-Rom. It is just CD-Rip)
+
+
+                    TotalVision - Life After Venus Art.
+            			/\
+		        	||
+Hi, it is me Feelon. Wonder what the qoute means? Well, after Noe & Elf
+quit the scene, I asked Elf for sources to their engine. We know with
+Elf for many years, and he agreed. He only wanted me, to put a line or two,
+that the 3D engine was written by Noe, with his (Elf) little help.
+I've add a lot of new features to their sources, and now it is quite good ;)
+Also I should thanks Elf, for access to his Amiga. I don't have my own,
+so most of the additional routines I wrote on my PC. On his Amiga I joined
+all the sources together.
+
+Anyway credits for this demo should go to:
+	Feelon  - design, 3D modeling, programming.
+	Ezawir  - Audio atmosphere.
+	Spark   - title logo
+	Noe&Elf - 3D engine.
+
+As you probably realized, most of the cliparts used in this demo are scanned.
+Some people will probably call this lame, but I don't care. Most important
+is, that this demo looks good ;)
+
+And now how to get it to work:
+ First you should run VA3D_Prefs program. Set you options, and save them.
+PPCTimer (in misc section) speeds rendering a lot. However, on some machines
+it can get out of sync. If demo runs too fast, do not use PPCTimer. 
+PPCTimer may cause, that the music will be not synchronized with
+animation.
+On AGA best choice for display is HAM6, or GRAY8. If you want to make some 
+screenshots during demo, enable screenshoting in misc section. To save 
+screenshot, use F1 key during demo. Double buffering slows demo a bit 
+(Elf claims this is due to context switching, whatever it is ;). 
+Next thing you should do, is setting audio options. If You have CD version
+of this demo, you should enable cd music, select cd device you are using
+(probably atapi.device) and set cd unit. This will cause to play CDTrack
+during demo. If this demo is a cd-rip, you should select ahi mode and
+mixing frequency. Audio will be played using AHI.
+Note, that 'PlayMusic' gadget must be set (if you want music) no matter
+if you want module or cd-track to be replayed.
+If cd-music starts too fast, you can add a delay parameter to GenderBender.elf.
+ie. GenderBender.elf 50 ,will wait 1 sec before demo starts. 50tics = 1sec.
+Default is 10 (It will wait 0.2 sec before demo starts). Of course 0
+an be also used (there will be no wait command used).
+If you options are already saved, type start_ppc.bat or start_68k.bat 
+to watch the demo. Note, that 68k version works only on cgfx cards, and 
+requires very fast CPU (060 or better ;)
+
+I have also included program (VA3DPlay.elf) for replaying all *.va3d scenes.
+Use like this: VA3DPlay.elf data/any_scene_you_want.va3d. 
+You should be in GenderBender directory to do that. Otherwise it will crash. 
+This program was written by Elf. Only Amiga PPC & Linux version exist. 
+(.elf is for amiga .linux is for Linux ;)
+
+ Feelon ^ Total Vision
+
+ Chojna 1999.
+
+PS. To run this on linux you will have to change Data/ directory to data/
+And all the data/ entries must be lowercase. Sorry.

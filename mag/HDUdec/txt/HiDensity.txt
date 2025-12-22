@@ -1,0 +1,49 @@
+=============================================
+   HI DENSITY on REGULAR A1200
+=============================================
+
+Introduction
+=============================================
+When Amiga Tech. started manufacturing the A1200 they fitted 
+them with High Density disk drives. This is clear from the fact that
+if one uses high density disks in these computers one has to cover
+the extra hole (found on HD Disks) for them to work well.
+However since Amiga High Density disk drives need to run at half 
+the normal speed in order to store 1.76Mb (which is the standard 
+storage capacity of HD Disks on the Amiga) on one HD Disk and 
+since this needs extra circuitry to be done (which is not present in 
+Amiga Tech. A1200) then HD Disks could not be used on the 
+A1200 internal drive. However everyone knows that PC drives can 
+store 1.44Mb on 1 HD Disk while still spinning at normal speed, 
+so why should`nt our Amiga do this?
+
+This is in fact the purpose of this program to allow users of 
+Amiga Tech. built Amigas to store 1.44Mb of data on HD Disks 
+without needing to buy any extra hardware.
+
+=============================================
+Installation
+=============================================
+The installation is very easy, just copy the gcrdisk.device to your 
+devs: drawer and drag the HF0 icon into the devs/dosdrivers drawer. 
+The new drive called HF0: will be mounted automatically at every boot. 
+For Floppy users they should make some space on a copy of their 
+WB disk and place these files in the drawers. Both files are very small
+and they need only 9K of floppy or Hard Disk space.
+
+=============================================
+Future Plans
+=============================================
+At the moment I have not yet made a mountlist for a PF0 device 
+which should be able to read PC data directly from PC HD Disks. 
+If anyone has any ideas please let me know as any help will be 
+greatly appreciated.
+
+=============================================
+Contacts
+=============================================
+Address: 
+Dr. Ercole Spiteri MD
+`Villa Loreto`, Bishop Buttigieg Street,
+Qala, Gozo, Malta, Europe. GSM 103
+E-Mail: ercole@kemmunet.net.mt

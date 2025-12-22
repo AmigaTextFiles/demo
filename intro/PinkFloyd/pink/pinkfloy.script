@@ -1,0 +1,52 @@
+V3.0
+
+MOUSE on
+FKEYS on
+
+EVENT "Particle Bored"
+SOUND play "pink/sound/Goodbye Blue Sky" volume 64 pan 0 period 324 loops 1 fadein 2
+PICTURE "pink/background/Particle Bored"
+TABS 40 80 120 160 200
+MARGINS on 14 267
+GRID on 16 16
+FONT diamond.font 20
+COLOR 1 0 0 0 0 0 1 0 0 1 3 5 9 7 1
+ATTRIBUTES shadow edge remap kerning
+STYLE 0 3 4 3 6 1 1 16 3 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE random speed 4
+TEXT 13 12 "GERARDO SOFTWARE"
+ATTRIBUTES italics shadow edge kerning
+TEXT 29 34 "        PRESENT"
+ATTRIBUTES shadow edge kerning
+TEXTWIPE dump speed 1
+TEXT 29 56 ""
+TEXTWIPE random speed 4
+TEXT 29 78 "      PINK-FLOYD -"
+TEXTWIPE dump speed 1
+TEXT 29 100 ""
+TEXTWIPE random speed 4
+TEXT 13 122 "       THE WALL -"
+TEXTWIPE dump speed 1
+TEXT 13 144 ""
+TEXTWIPE random speed 4
+TEXT 13 166 "REALIZADO CON VIDI12"
+TEXTWIPE random speed 1
+TEXTOUT 8
+ATTRIBUTES italics shadow edge kerning
+TEXTWIPE random speed 4
+TEXT 13 188 "Cargando Video......please"
+PAUSE 22
+END
+
+EVENT pinkblue.anima1parte
+ANIM pink/anim/pinkblue.anima1parte 2 1 disk
+END
+
+EVENT Untitled.1
+PAUSE 14
+END
+
+EVENT pinkblue.anima2parte
+ANIM pink/anim/pinkblue.anima2parte 2 1 disk
+PAUSE 14
+END

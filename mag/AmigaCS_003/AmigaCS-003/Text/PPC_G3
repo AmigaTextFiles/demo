@@ -1,0 +1,608 @@
+@{d ABFBFF}             @{c 94A4EE}Pavel Nároùný (Troda od Pegas): PPC, G3 - fakta a zkuîenosti@{c}
+             ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Tento  çlánek  si  klade za cíl seznámit çitatele s problematikou kolem PPC (jen tak
+mimochodem,  nejde  o  ùádné  pC, plný název je "PowerPerformaceChip"), jeho rychlosti
+a mýtû,  které  kolem  nëj  uù  stihly vzniknout, napêíklad rychlost emulace na úrovni
+060/60MHz je holý nesmysl.
+
+  S nëkterými názory mûùete nesouhlasit, polemizovat, atd.  Nemyslím si, ùe bych nemël
+dost  zkuîeností (8.5let praxe s Amigou, 6 s pC a 2.5 roku s Macy), ale mohu se mýlit.
+Rád pêijmu jakoukoli diskuzi (ale JEN s dostateçnë fundovanými lidmi =B-).
+
+  @{c 94A4EE}Tak nejprve rozbijeme G3 = FAAAST mýtus.@{c}
+
+  G3  procesor  je  low-end  PPC  chip, pouze 32bitû (stejnë jako 604e a 603e se jedná
+o 32bitový  CPU  s  64bitovou  datovou  sbërnicí  -  pokud  jede na 32bit busu (phase5
+implementace...) je pro naplnëní cacheline potêeba 8 (=moc!) pêístupû do pamëti :((( )
+a  je  myîlen jako náhrada za starîí 603e - má v podstatë stejné zapojení pinû.  Tudíù
+by  moùná îel strçit i do PPC Blizzardu, jen je têeba na synchronizaçní pin pêibastlit
+nëjaký  násobiç  kmitoçtu pro L2 cache (mrknëte do Motorola manuálu).  Proti 604e (jen
+na  stejném  kmitoçtu!)  zaostává,  nejvíce  v  FPU  operacích.   Jinak  se  projevuje
+integrovaná  L2  sluîným  nárustem  výkonu  -  je to první Motorola, která je navrùena
+(optimalizována) na aplikace, ne na výkon.  Rozumëjte, uù 68k êada je jednoznaçnë vùdy
+navrùena  tak,  aby  procesor  mël  (podle tehdejîích znalostí) co nejvyîîí výkon.  To
+ovîem  znamená,  ùe  aby  020,  030,  040  çi  060  podala  optimální  výkon, je têeba
+specifických  optimalizací,  neboï  odliînosti jsou velké (MMU, FPU, pipelining, cache
+back,  etc.).   A  co  jede dobêe na 020 a 030 (ale i tam jsou rozdíly), nemusí îlapat
+optimálnë na 040+.
+
+  Zkrátka  a  dobêe,  zatímco Intel vychází od roku 85 se stejnými instrukcemi a jenom
+hledá,  jak  urychlit  software  (analýzy  pouùívání  instrukcí  a  jejich  rozloùení)
+procesorem,  Motorola  má principielnë jiný zpûsob vývoje smërem ke nejvyîîímu moùnému
+výkonu,  který,  bohuùel,  vyùaduje pêepsání SW (paradoxnë by takový zpûsob vývoje byl
+pêijatelný  spíîe  pro  pC,  kde  je  SW  mnohem  více  a  spíîe by se uùivatel doçkal
+optimalizované  verze  pro  svûj  procesor).   U  PPC  je situace stejná.  Od dnes jiù
+vyslouùilé  601  po  604e.   Jen  G3  se  jakoby vrátila zpët a "optimalizovala se" na
+aplikace,  coù  pêineslo  výkon  i  bez  zmëny  aplikací  (zde  je  têeba hledat koêen
+úspëînosti  G3,  i  kdyù se bezesporu jedná o malý krok zpët).  Architektura PPC chipû
+zdaleka  není  tak  stejná,  jak  by se mohlo zdát.  A optimalizace se rozhodnë nedají
+zabezpeçit  pêepínaçem v kompileru, neboï napêíklad SW nelze napsat tak, aby v pêípadë
+optimalizace  pro  PPC620 - jediné 64bitové PPC (bohuùel, s jeho implementací si nikdo
+zatím neví rady) vyuùil moùnosti pêesunu 64bitového slova najednou, na rozdíl od 603e,
+jeù  toto nezvládne.  Nelze totiù napsat napêíklad nëjaký filtr do Photoshopu tak, aby
+pracoval  32bitovë  automaticky  na  603e  a  64bitovë  na 620 (uù jenom kvûli potêebë
+zarovnání  pole  (image)  na délku slova...).  A nejen to.  Moùnost zpracovat najednou
+64bitû  se  dá  vyuùít pro dalekosáhlé zmëny uù v základní koncepci návrhu algoritmû -
+jenùe tyto by pak nefungovaly na 603e a niùîích PPC procesorech.  Osobnë bych vîak byl
+pro  tuto  verzi  vývoje,  a  jednou  k  ní  dojde.   Jinak je 620, ale i 604e opravdu
+nevyuùitá a G3 vítëzí.  I kdyù jen v prodejnosti (coù je ovîem v souçasné dobë víc neù
+nutnost, jestli má vûbec PPC pêeùít... pozn.Shaman).
+
+  Mël  jsem tu moùnost, testovat G3 Macka proti 604e a 601 a musím êíci, ùe výkonostní
+nárust  (G3  proti  604e BEZ L2 cache) není skoro znatelný (!!!) a nëkde G3 i pêi její
+FAST  L2 a vëtîí frekvenci (nenechte se mýlit, 604e se dëlají v 350MHz) prohrála.  Jen
+video má mnohem rychlejîí (coù ale nesouvisí ani tak s procesorem, ale s ATI grafickým
+çipem  a  kompletnë  pêedëlanou  grafikou.   Následující  srovnání je têeba proto brát
+s rezervou  -  vùdyï  porovnáváme nesrovnatelné - 604e/200 je pouze rozîiêující kartou
+k PowerMac  7500/100 a tento Mac mël jen 32MB RAM (a to staré a pomalé DIMMy), zatímco
+G3  mëla  rychlou  sbërnici,  10ns  (proti  70ns...)  DIMMy, 512kBy L2 (a taky 233MHz)
+a 256MB pamëti...
+
+   (hodnoty jsou násobky proti staré Quadêe.. 040/25 EC (NO FPU...) - více=faster)
+    (jsem zvëdav jak dopadne tabulka v ACS... jakpak si s tím ShAmaN poradí :-) )
+
+
+   @{c 94A4EE}Speedometer 4.02 to vidël takto:@{c}
+   ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+
+  @{c 94A4EE}CPU          Disk    Math   KWhet    Dhry   Towers  QuickSort  BubbleSort  Queens@{c}
+-------------------------------------------------------------------------------------
+@{c 94A4EE}G3 (750/233)@{c}   18.12   4.06   651.51  447.00  19.04     19.15       27.66     18.85
+@{c 94A4EE}604e/200@{c}       13.25   3.87   591.09  419.12  16.14     19.45       24.64     16.49
+
+  @{c 94A4EE}CPU          Puzzle  Permute  I-Matrix  Sieve   FPU FFT   FPU KWhet   F-Matrix@{c}
+-------------------------------------------------------------------------------------
+@{c 94A4EE}G3 (750/233)@{c}   17.62    29.53    20.77    31.52    19.81      21.64       24.58
+@{c 94A4EE}604e/200@{c}       14.41    27.69    18.39    25.75    19.44      24.57       22.30
+
+
+  Znovu  bych  rád  podotknul,  ùe srovnáváme nesrovnatelné a pêesto je G3 pouze o 36%
+rychlejîí na CPU (není to o tolik, co pomër frekvencí, kvûli L2 a FAST sbërnici), a to
+je  nominální  výkon,  v  Photoshopu  je  604e jasný vítëz...  (a kdybych mël L2, více
+pamëti a 604e na 350MHz çi Daystar dual 2x500MHz 604e...  =B-) ).
+
+  A  za  druhé,  nyní  si  porovnáme  601/100 a 604e/200 ve stejném Mackovi.  Jak bude
+vidët,  604e  je  mnohem  rychlejîí,  ale  jak se to projevilo na celkovém výkonu OS a
+aplikací,  to  si  ani nepêejte vëdët.  MAXIMÁLNÍ urychlení jsem namëêil nëco pêes 30%
+(!), jinak ménë (!).  Zkrátka Mac OS se jen tak zrychlit nedá...  Má proto své dûvody,
+jak si povíme dál.  Ale teð slibované srovnání:
+
+
+  @{c 94A4EE}CPU     Disk    Math    KWhet     Dhry    Towers  QuickSort  BubbleSort   Queens@{c}
+-------------------------------------------------------------------------------------
+@{c 94A4EE}601@{c}        5.04   2.75    174.71   165.45    5.45      6.79        8.24      5.18  
+@{c 94A4EE}604e@{c}      13.25   3.87    591.09   419.12   16.14     19.45       24.64     16.49 
+
+  @{c 94A4EE}CPU    Puzzle  Permute  I-Matrix   Sieve   FPU FFT   FPU KWhet   F-Matrix@{c}
+-------------------------------------------------------------------------------------
+@{c 94A4EE}601@{c}       5.45    7.19      7.28      8.19     5.57      9.00        9.34
+@{c 94A4EE}604e@{c}     14.41   27.69     18.39     25.75    19.44     24.57       22.30       
+
+
+  Jak  vidíte,  604e  je o nëçem jiném, pêesto nárust výkonu je skoro nepozorovatelný,
+k mému  velkému  zklamání a vzteku.  Je to zkrátka o trochu sviùnëjîí, toï vîe.  Tento
+výsledek  më ovîem neodradil, abych nevyzkouîel i nëjaké low-level aplikace (hry), kde
+jsem  doufal shlédnout ten výkon.  Takùe teð se pokusím vám sdëlit své (silnë zaujaté)
+çistë  vizuální  (aù  na  Maraton  fps  counter)  porovnání  4  her na uvedených têech
+konfiguracích.   Pûjde  o  Wolfenstein,  Hexen,  Marathon  II a Warcraft.  Moùná mnozí
+namítnou, ùe Wolf je "out of date", ale nëco takového jako je Mac Wolf byste si nemëli
+ani  v  dobë Quake nechat ujít!  Mimochodem, na MacIIci (030&882/25) dëlá asi 17-20fps
+na  320*200 (ano, tato konfigurace má grafickou kartu, ale stejnë je zápis do grafické
+pamëti  i  s  c2p  (??? - proç c2p na gfx kartë?... pozn.Shaman)  o  dost rychlejîí na
+Amize  s 030/50 - co vy na to, programátoêi???).  A je, stejnë jako ostatní fat-binary
+-  çiùe obsahuje optimalizovaný PPC kód.  Wolf dëlal v 320*200 asi tak 90-120fps uù na
+601  (vypnutá  kontrola  rychlosti)  a  asi  tak  28-35fps  na  640*480.  Uù na 601 se
+v 320*200  netrefíte  do dveêí - tak je to rychlé.  Se zapnutou kontrolou rychlosti je
+to  dobré.   Na  604e  më çekal sluîný îok, asi tak 300fps v 320*200 a zhruba 80-90fps
+v 640*480.   Ale,  zajímavé,  se  zapnutou  kontrolou  rychlosti  se  to hroznë vleklo
+(minimálnë  2* pomaleji, neù by mëlo...).  No a na G3 se podepsalo snad vîechno moùný,
+a  tak  si  rychlost nedovolím odhadnou na ménë neù 600fps (!) v 320*200.  Usuzuji tak
+z toho,  ùe  pêi obnovovací frekvenci obrazu 100Hz jsem vidël pêi otáçení se obraz asi
+6*  (moùná  i  8*, ale to se fakt nedá...).  O tom, ùe bych byl schopen dojít do dveêí
+nemûùe  být  ani  êeçi...  V 640*480 to dëlalo asi tak 120-140fps (asi tak 1.5 násobek
+obnovovací frekvence...).  Se zapnutou kontrolou rychlosti to jelo normálnë (na jak na
+604e...)  a pëknë plynule (no, né úplnë, obças to trochu poîkublo...).
+
+
+  Toù a jak Hexen?  Na 601 dëlal asi tak (vùdy 640*480 a vîechno na max!) 17-20fps, na
+604e uù skoro 33fps (refresh 67fps, plynulosti by bylo dosaùeno pêi 33.5fps - hrany by
+byly  vidët dvakrát) ale i na G3 se to jeîtë nedotáhlo na úplnou plynulost, ale to tak
+nelze  brát,  jelikoù  G3 refreshovala 100× za sekundu, a do 50fps chybël maliçký, ale
+opravdu  TAK  maliçký  kousek...   (a  25fps  to  urçitë  nebylo, to by tam hrany byly
+dvakrát...).   Vêele doporuçuji shlédnout Hexena na G3.  Paráda!  Nëco takového se jen
+tak nevidí.  Zcela më to uchvátilo.  HEXEN!
+
+  A  dost.  Marathon2 - The Durandall.  Kdo nezná, pêiîel o hodnë.  Zêejmë nejlepîí 3D
+hra  po  Marathonu  Infinity.   Mûùete si jej zahrát i na Amçe - aù do ADoomu se jedná
+o nejlepîí  na  NEJRYCHLEJÎÍ  3D gamesu - 17-19fps na 060+Z2 CGX, pêepokládám ùe na Z3
+dojde  asi  k  2 (!) násobnému zrychlení zápisové çásti, coù by mohlo znamenat asi tak
+25-30fps...   ADoom  na 060/50 a AA chipech dëlá u më 23.5 a na CGX 17.2 fps...  Znáte
+jinou  gamesku  která  podporuje  48bit  barevnou hloubku?  ;) No nic, Marathon má fps
+hot-key  (pravý  shift  + stêedník, ne Marathon 1!), a tak je moùno zmëêit onen "zcela
+plynulý"  dojem z dema uù na mojí Amize (320*200).  Mimochodem, Infinity se zdá mnohem
+plynulejîí  neù  Durandall na mojí 060, ale Defor na Workshopu êíkal ùe na jeho 040 je
+to  pomalejîí  o  dost.   Buy 060 =B-).  Takùe, v 640*480 to na 601 dëlalo 17fps.  Nic
+moc.   Ale na 604e to napálilo 31.5 fps a nechtëlo slevit ani s nepêáteli a na VELKÝCH
+prostranstvích,  aù  u  toçitých  (!)  schodû  spadl  counter  na 22fps.  Moùná nëjaká
+emulovaná  instrukce,  çi  co  já  vím.   Ale  ani s doublepixly a 320*200 (çi vlastnë
+160*100...) jsem z toho nevyrazil víc fps - takùe 31.5 je pro Durandall nastaveno jako
+maximum  (jako  u  Glooma  je  max.  25fps (2x pal vblank) ).  Tato situace mi ztíùila
+porovnání  výkonu.  Ale tak jako tak, G3 uù nespadla z 31.5 (jednou to dokonce napsalo
+32  -  asi se to spletlo :) ) ani na toçitých schodech.  A v milionech barvách (24bit)
+uù  na  604e vypotil Durandall jen 15fps, na G3 a 601 jsem na tento test zapomnël, ale
+hledám  nëkoho,  kdo má prístup k 48bitové (biliony) grafické kartë na Mackovi (je jen
+jedna...).  Chtël bych to vidët!
+
+  A  nakonec  Warcraft.  Warcraft naprosto zklamal, i na G3 jel asi 4x pomaleji neù na
+mojí  060  pod  Fusionem.   A  to jsem se tak tëîil!!!  Pëknë FAKE PPC code!!!  Akorát
+scrolling  je  na  originálním Mackovi mnohem lepîí, protoùe scroluje, anùto jak Shape
+tak  Fusion  nepodporují  HW  scrolling  a  místo toho, aby refreîovali pouze ten nový
+kousek  co pêibyde po scrollnutí stávající bitmapy, refreîují CELÝ screen, coù zvláîtë
+na Z2 není nejlepîí nápad...
+
+  Takùe, chcete-li rychlý poçítaç na hry, G3 je to pro Vás.  Pro práci a výkon îáhnëte
+spíîe  po  604e  a Umax, Daystar çi Apple maîinkách a naîetêete korunky.  350MHz verze
+s TWIN  Turbo  II  grafickou  kartou je jediný stroj na svëtë, schopný real-time zoomu
+1600*1200*24bit screenu (spoçítejte si prosím, kolik dat je têeba pêesunout v grafické
+pamëti a to vîe v çase menîím neù 1/50 sec - ménë neù 20ms!!!) a práce v Photoshopu je
+koneçnë  "hrou"  :-)  .  Jinak nevëête nëjaké spáse od G3 architektury, jedná se spíîe
+o krok  dozadu  k  stále  jeîtë  32bit  aplikacím.   Nëco jako pII které provozuje bez
+problémû  hodnë  16-bitové  w95,  v  kontrastu proti pPRO, jenù se s w95 a 16bit kódem
+vyloùenë  seká a je nesmysl provozovat jej pod w95 (wNT jsou vyloùenë nezbytné, tak je
+to s 32bitovostí w95...).
+
+  A  teð  si  dáme zase jedno nesmyslné porovnání formou tabulky.  Nesmyslné proto, ùe
+budou  porovnávány  zcela  nesrovnatelné  systémy,  jak  co se týçe HW, tak co se týçe
+pruduktivity  práce  -  anùto to, ùe Photoshop je i pro pC jeîtë neznamená, ùe je jeho
+stejná  verze  stejná  a stejnë pouùitelná jako na Mackovi.  I kdyù jsou verze stejné,
+tak  se  jedná  o  dva  naprosto  odliîné  programy co se týçe profesionálního pouùití
+a UserInterface.  Nemusím snad dodávat, který OS je pouùitelný, ùe.  Vím o çem mluvím,
+dëlám jako grafik na Mackovi a bohuùel obças nëco je têeba spáchat i na pC...  Nevëête
+tomu,  ùe Quark, Photoshop çi Illustrator jsou stejné na pC jako na Mackovi, i kdyù se
+jedná o stejné verze!!!
+
+  Toù  tak.   Mac  G3  uhnal  Pentium II i ve Photoshopu, tolik nadpis çlánku/tabulky.
+Dále se tu píîe ùe by mëlo jít o "nezávislý test", o çemù bych si dovolil pochybovat -
+posuðte  sami.  Porovnávali totiù pC Compaq Professional Workstation 8000 - 2× Pentium
+PRO/200MHz  (né pII?  která informace je pêeklep?  no dobêe, tak jako tak je to 400MHz
+reálného  CPU  výkonu...), 2× 512kBy L2 cache (ùádní îetêílci, profi maîina...), 256MB
+RAM  (Photoshop  je  HLADOVÝ  a _VELMI_ ocení zrychlením více pamëti...), 4.3GBy Ultra
+Fast  Wide SCSI 3 disk (no tohle!) a Matrox Millenium II gfx karta (pëkná hraçka).  No
+a  proti tomu postavili Macka G3 PPC jenom na 266MHz (pC mëlo 400!!!  :-O ), 512kBy L2
+cache  (nemëlo  pC  náhodou  2x 512kBy???  :( ), 96MB RAM (svinë!!!  :((( ) a 4GBy IDE
+disk  (vrchol  vîeho,  dají  mu málo pamëti a jeîtë x let starou out-date technologii,
+kdyù  pêece  ví,  ùe to bude hrçet diskem jako divý!!!  A pak mi bude nëkdo nëco êíkat
+o nezaujatém testu!!!  Ultra Wide proti IDE!!!  To jsou ale svinë!!!  A G3 se dodávají
+i s Ultra  Wide!!!  #?!#!?^#!!  ).  A jeîtë napsali, ùe Photoshopu bylo pêidëleno 80MB
+pamëti  na  pC  i  Mackovi.   Blbost  na  kvadrát,  nebo nëkdo snad ví, jak ve w95/wNT
+pêidëlit aplikaci mnoùství pamëti???  Neznám wNT sice dobêe, ale nepêedpokládám, ùe by
+to  bylo  moùné.  U Maca je to samoêejmé, aplikaci se zadává, kolik má zabavit pamëti,
+ale na pC?  Pêesto Mac pêekvapil:
+
+@{c 94A4EE}Otevêít 15MB formát Photoshop (jpeg + alfa layery + dalîí Photoshop zmatky):@{c}
+pC	2.2 sec
+Mac	3.9 sec (IDE disk proti Ultra Wide... NO CHANCE, PPC WITH IDE...)
+
+@{c 94A4EE}Otoçit doleva o 1.5>@{c}
+pC	10.5 sec
+Mac	 8.0 sec (vida, i s mohutným swapováním na Macu PPC rulez!)
+
+@{c 94A4EE}Pêevod z RGB do CMYK:@{c}
+pC	9.4 sec
+Mac	5.5 sec (PPC drtí, co na tom, ùe intel má 400MHz...)
+
+@{c 94A4EE}Gaussovo rozostêení (1 bod):@{c}
+pC	5.0 sec
+Mac	2.6 sec (témëê 2× rychlejîí!)
+
+@{c 94A4EE}Uloùit jako tiff:@{c}
+pC	5.3 sec
+Mac	4.1 sec (zase ten disk... svinë, svinë, nic neù svinë!!!)
+
+@{c 94A4EE}Uloùit jako tiff s LZW kompresí:@{c}
+pC	22.2 sec
+Mac	 9.9 sec (tu máî, tu máî, tu máî, intel jeden pomalej... nebýt toho disku...)
+
+@{c 94A4EE}Otevêít LZW tiff:@{c}
+pC	31.0 sec
+Mac	15.6 sec (pC? Hehehehe :-) )
+
+@{c 94A4EE}Uloùit EPS s JPEG kompresí:@{c}
+pC	10.4 sec
+Mac	 5.5 sec (PPC mean POWER! B-) )
+
+
+@{c 94A4EE}Doostêit (200, 2, 1):@{c}
+pC	10.3 sec
+Mac	 6.0 sec (pC suck!)
+
+  Jak  vidíte,  pC dostalo pëknë na frak (checht...a to tu nëkdo tvrdil, ùe se G3 hodí
+jen  na hry... ;-) pozn.Shaman).  Je ale têeba si opët a dûraznë zopakovat, ùe pC mëlo
+400MHz  a  Mac  jen  266MHz,  víc  jak  trojnásobek  pamëti  (!)  a Ultra Wide SCSI!!!
+Pêipomínám,  ùe  IDE  je  ovládáno procesorem a pêi pêenosu dat je CPU vytíùen na 100%
+(bez  ohledu  na  to,  jestli to je 020 çi 060 çi G3 PPC 750...), zatímco pêi SCSI DMA
+pêenosu  CPU  zadá  co kam pêesunout a mûùe se vënovat dále poçítání...  Vîechny testy
+jsou  na  porovnání  IDE/SCSI  na  nic,  ponëvadù ty 2.5MB/sec vytlaçím z IDE pêi 100%
+zátëùi  CPU,  zatímco na SCSI není problém 9MB/sec s témëê nulovým zatíùením CPU (opët
+neplatí  pêi  testu, protoùe tam CPU stále testuje a çeká, jestli uù...).  Mimochodem,
+DiskSpeed 4.2 mi ukázal 13MB/sec pêenos s mým Ultra Fast Wide SCSI 3 Westernem...  IDE
+sucks.   Neuvëêí  nikdo, dokud neuvidí bootovat Macka 7.5.3 z filedisku (!!!) za 3 sec
+(!!!)  pod  ShapeShifterem,  çi  ukládat  vëtîí  obrázek v Photogenicsu, atd.  SCSI je
+zkrátka  zcela neporovnatelné s IDE.  Mimochodem, SysInfo 3.24 mi ukazuje 8.9MB/sec na
+mém  UW  SCSI  disku - a pod Mackem mi Speedometer ukázal faktor 4.89 (!) - porovnejte
+s G3  na  266MHy  -  4.06  a 604e na 200MHz - 3.87.  A pak, ùe má Amiga pomalý diskový
+systém!   Nechci  do  toho  nikomu  mluvit,  ale  kdyù i tak low-cost technologie jako
+Blizzard 1260 s SCSI kitem natáhne G3...  Co takhle 4GB Western a UW SCSI?
+
+  A  teð  se  vrátíme  k  Amize  (no koneçnë!) a implementaci PPC technologie na tento
+bezesporu  nejlepîí poçítaç.  Bohuùel, phase5 (dále jen p5) opët pozapomnëla na datum.
+Jaksi  nepochopila,  ùe  60ns  SIMMy  nemohou být to pravé oêechové pro 233MHz 604e...
+Taktéù  absence  L2  cache  limituje  výkon PPC na výkon 68k procesoru.  Jak to?  O co
+rychleji  pûjde  zapsat  50MB  060/50 çi PPC 604e/233???  O nic.  Bude to trvat pêesnë
+sekundu  obëma.   Jak  to?   50MHz  je  v reálu schopen zapsat pouze a jenom 50MB/sec,
+ponëvadù  rychleji to prostë nejde a testy (ne p5...) to dokazují.  Zhruba lze u 32bit
+busu poçítat MHz jako MBy za sekundu (spokojen, ShAmaNe?)  (Asi  to tak empiricky sedí
+u Blizzardu  1260  se  70ns  RAM, ale rozhodnë bych to nevîeobecñoval - 50MHz 32bitová
+sbërnice  pêenese  *teoreticky*  aù  200MB/s...   pozn.Shaman).   Samosebou  závisí na
+optimalizacích  a velikosti bloku pro test.  Cachované výsledky nejsou reálné.  K tomu
+cachování.   060  umí zapsat 100MB/sec do pamëti.  Jak je to moùné?  Kaùdý snad ví, ùe
+060  bëùí internë na dvojnásobku externího kmitoçtu.  Bohuùel, instrukce se vykonávají
+pouze  clockem busu - takùe 50MHz.  Ale, cache bëùí podle vîeho na 100MHz a pipelining
+zajistí  provedení  DVOU  instrukcí  za clock - a máme to 99.8 MB/sec pro 16KB buffer.
+Kdyù  ale buffer zvëtîíme na 1MB, tak se dostaneme blízko 50MB/sec, coù je realistická
+hodnota.  Tu trochu na víc má na svëdomí perfektnë pracující cache.
+
+  Takùe  pokud  se  nám  p5 snaùí namluvit nëjaké îílené výsledky, tak uù víte, jak se
+vëci  mají.   Aï to mëêí na 10MB bufferu, chytráci.  To uù nemluvím o tom, ùe by se na
+040+  dala  pouùít MOVE16 instukce (4 longwordy najednou, great!), kteráù byla pêidána
+kvûli  copy-back  módu 040 - obyçejný zápis s move.l çi movem je na 040 a 060 skoro 2×
+pomalejîí.   p5  are  lammers.   Takùe  uù  je  vám jasné, ùe jakékoliv PPC je stejným
+zpûsobem  limitováno  jako 68k çást?  No, ne tak docela, v keîi si jeîtë mûùe pracovat
+rychle,  a  u  low-cost  BlizzardPPC  je frekvence busu pro 040/25 dëlena dvëmi, takùe
+výkon  68k  çásti  bych vidël jako VELMI omezující i pro 160MHz PPC...  Hlavnë absencí
+10ns  SDRAM DIMMû a L2 je zpûsobeno, ùe PPC na Amize NIKDY nedosáhne rychlosti Maca...
+Bohuùel.   Ale  to  není  zdaleka  vîechno.   Do  Macû se montují PPC s mnohem vyîîími
+frekvencemi.  Zatím co Amiga se musí spokojit s 233MHz.  No, Peskanov/Capsule êíká, ùe
+jeho  pêítel  pêetaktoval  PPC  603e/240  na  280  a jede  mu to (má ale tower a dalîí
+vëtrák!!!)  v pohodë.  Takùe overclock je odzkouîen.  Kdo si troufne na 300MHz???  :-)
+
+  Absence  L2  není  pro më po rozhovoru s Ralphem Schmidtem (Laire) nic pêekvapivého.
+p5  nechápe  cache  managment  ani  68k procesorû, natoùpak PPC.  Dûkazem budiù úryvek
+naîeho  rozhovoru,  v  nëmù  se diskuze toçila kolem L2 cache module pro CSMK I (nikdy
+nedodán na trh...).  Ralph tvrdí ùe:  "Because it would mean serious cacheflush delays
+on  DMAs.  The 68060 cache management is too poor.  Imagine that you have to writeback
+256KB  each  SCSI DMA access and you´ll know what the word "slow" means.  No, snooping
+doesn´t work.  The Intel chipsets have special designed cache controllers and with the
+support  of  their  CPUs  it works a lot better.  (MESI cache protocoll is the keyword
+here which the 68060 doesn´t support).  PPC still does NOT have this.
+
+  What  doesn´t the PPC have ?".  Jak vidíte, PPC zêejnë mëlo mít L2, ale.  O çem (pro
+ty neanglofilní, mimochodem, neupravil jsem ani bit, myslím ùe tam má chybku...) ùe to
+Ralph  vlastnë  mluvil?   Îlo  mu o to, ùe pêi kaùdém DMA pêístupu do pamëti by muselo
+dojít  k  flushnutí (zapsání vîeho z L2 cache a cache do RAM) L2, coù by bylo pomalé -
+a to  mu  uîlo, ùe jsem nechtël 256kB ale 1MB L2...  Mesi protokol je pouùit pro práci
+se  standardními  cache  moduly,  jeù  jsem  navrhl pouùít.  Jenomùe ne tak, jak Ralph
+chtël.   Kaùdý DMA SCSI zápis probíhá do urçené pamëïové oblasti a je VELMI jednoduché
+zajistit, aby souçasnë se do této oblasti nesnaùil zapisovat CPU (MMU...).  Mimochodem
+potêeba  tohoto  êeîení  se  dá  obejít  inteligentním  návrhem  SCSI - prostë si samo
+"lockne"  oblast  zápisu  a  netêeba  cokoliv  flushnouti...  68k procesory mají na to
+instrukce,  které  zabezpeçují  synchronizaci  dokonce  lokálních  promëných  (!!!) ve
+víceprocesorových  systémech (Motorola RULEZ!).  Zde by bylo vhodné upozornit na chybu
+v  release  A  Motorola  060  specification  - instrukce TAS není emulovaná, TAS 2 je.
+Mimochodem,  stejná  chyba  je  v  CGFX  software, kde se pêi jakémkoliv zápisu zamyká
+funkcí  "LockBitMapTagList(cbitmap,lockBmap_Tags)" screen - coù je rádoby nezbytné pro
+to,  aby  pêi zápisu nebylo moùno pêepnout screen - to by zpûsobilo pêepsání této nové
+obrazovky.   Jak z toho ven?  Moùná më nëkteêí nepochopili - ale v praxi to znamená ùe
+pêi  pêehrávání jednoduché animace na CGFX vám myî îkubá mnohem hûêe neù na pC - pokud
+je  refresh  tak  kolem  400*400  pixlu, bohatë staçí v 8bitech, tak myî vidíte nahoêe
+a pak aù dole...  Tak je to pouùitelné...  Zajímavé je, ùe Picasso96 není tak stupidnë
+napsané  a  nëco  takového  u nëj nehrozí - a jeîtë je asi dvakrát rychlejîí v zápisu,
+podporuje  i  speciální  módy  obrazovky, atd.  Získat offset bitmapy je celkem hraçka
+(ùádná tuna init a de-init zmatkû jako na CGFX) - poslechnëte si pH03N1xe:  "Under p96
+you  can  get  directly the gfxboard videomemory address using move.l bm_Planes(a1),a1
+(a1  =  direct  videomemory)".  A jde to!  To je ten dûvod, proç PicassoIV s Picasso96
+nahlavu  rozdrtilo CV-PPC!  Ne, ùe by Z3 sloty byly tak rychlé (ale i tak, 312fps AVI,
+160*120  hicolor  -  060/PicassoIV),  rozdíl  je  v  SW,  p5  sucks!   Znovu si mûùete
+vyslechnout  názory  druhých:   "I  totally hate CGFX, espec.  its bestmodeid() stuff,
+becasue  i  CAN  NOT say to this routine, that i want 15bitRGBpC format (for example),
+just  how  i  want a 15bit screenmode...  ehhh!  Fuck!  Lame system!  (and its totally
+unstable  on  my  PicassoIV...  crash randomly...  argghh...)".  Nic moc povzbuzující,
+ùe?   Ale  nebojte  se,  Picasso96 vás spasí pêed p5...  (no nevím - na CV64/3D mi ani
+nejnovëjîí Picasso96 prostë nechodi - jen çerná obrazovka :-(... pozn.Shaman).
+
+  Tak  jako  s tou L2 keîí - problém je stejný - pêístup do pamëti/procesy...  A ti ùe
+chtëjí  dëlat A-Box!!!  L2 zvládne i 030.  Dûkaz ùe to jde a funguje je zde.  Do Mackû
+se  bëùnë  dávají L2 cache moduly, a to nemyslím jen PPC, i do MacIIci (030&882!) a to
+proklamované pomalé DMA SCSI se zrychlilo o >30% po instalaci L2...  Takùe co myslíte,
+co  Ralph  na  to?   Uù  vám  to  mûùu  êíci.   NIC.  Jak obvyklé u p5...  Mimochodem,
+zrychlení  nëkterých rutin (pakování, texturování...  ) s L2 bylo tak drastické, ùe më
+to  málem  pêivedlo  k  îílené  zuêivosti  nad lamerstvím HW firem pro Amigu...  Takùe
+pozdravujte  p5 a kupte si radîi Elbox, je MNOHEM rychlejîí (pouze 66MHz verze - 50MHz
+verze  je POMALEJÎÍ!!!) a snad budu çasem montovat i L2 a 80MHz verzi procesoru 68060.
+A  to  uù  nemluvím  o  LAME  chip-RAM  interface  u  p5  karet...  Akorát mi pár lidí
+reportovalo  ùe  Apollo  je  sice rychlejîí, ale také nekompatibilní.  K tomu chip-RAM
+interface.   Co  byste  êekli  na  to,  ùe  move.l zápis do chip-RAM je i s nejnovejîí
+060.lib  v44.5  o  30% pomalejîí na A1260 neù na holé (no fast) A1200 - 68EC020/14MHz.
+Lame...  Jen si to zkuste...
+
+  Ale zpët k PPC.  Teð jdeme na emulaci.  Jestli si nëkdo myslí, ùe je moùné dosáhnout
+rychlosti  emulace  jako  060/60, tak evidentnë NEMÁ dostatek zkuîeností s PPC emulací
+68k.   Apple  má i v nejnovëjîích OS stále vëtîinu kódu 68k, poçet nativních volání je
+asi  8% u Mac OS 7.5.3 a asi 10% u Mac OS 8.1.  Po îesti letech vývoje...  Pokud si to
+chcete ovëêit, zkuste programek TrapCheck (Mac, samosebou).  Takùe lze snadno porovnat
+výkon  68k  a PPC v emulaci.  Speedometer ukazuje docela pëkné hodnoty v 68k emulaçním
+testu,  to je ale keîí.  I tak dosahuje 601/100 sotva 1/3 výkonu 060/50 a u 604e çi G3
+k  mému  nesmírnému podivu doîlo jen k malému nárûstu výkonu této, zêejmë stále stejnë
+zapomenuté çásti kódu...  Ale jak êíkám, to je test.  Realita je MNOHEM horîí.  Mám tu
+moùnost  porovnat  pêímo  vedle  sebe stojící PowerMac 7500/100 a MacIIci.  Dokud byla
+v Power Mackovi 601/100 tak se rychlost pohybovala tak asi na 60% výkonu MacIIci, çiùe
+60%  030/25MHz!!!   A to to jeîtë neemuluje FPU ale jen 68020...  (jasnë, software FPU
+doplnëk  to  trochu  spraví).  Na 604e/200 bych to tak vidël na 140% výkonu 030/25MHz.
+Takùe  aï  to napíîe kdo-chce, jak chce, silnë pochybuji ùe se podaêí dosáhnout výkonu
+byï  jen  dnes  uù  jiù  absolutnë  zastaralé  a  nedostateçné  030/50  na 604e/233MHz
+(nezapomínejte,  ùe  Mac  má  L2,  DIMMy  a MNOHEM rychlejîí BUS - p5 vëdomë lùe, není
+schopna  vypotit  ani  konkurence  schopné  (myslím na 66MHz Apollo) akcelerátory a uù
+vûbec  nechápu,  proç  neudëlali  alespoñ  66MHz  bus  - 66MHz 060 mi hoîi on Motoroly
+strkali  jiù  pêed  3  (!)  roky  a tvrdili  nëco  jako ùe je to nejrychlejîí souçasný
+procesor  -  a  tenkrát  mëli bezesporu pravdu (601/100MHz a p/133MHz rozhodnë nemohou
+060/66MHz konkurovat).
+
+@{c 94A4EE}--- Shamanûv komentáê ---@{c}
+  Dal  jsem  si  tu  práci  a  teð  tu  mám  pêed sebou PowerBook 5300cs s IBM PowerPC
+603e/100MHz  (shit  bez  L2  cache,  se  70ns  16MB  RAM  a 500MB 2.5" diskem Toshiba)
+a v pakování  stejného  20MB  archivu LHAçkem (68k emulace) je jen o 18% pomalejîí neù
+Amiga  1200  s 68030/50  (a to  mëla  Amiga  rychlejîí  IDE disk neù Mac).  Proto bych
+netvrdil,  ùe  têeba  PPC  604e/350  MHz  nikdy  nemûùe v praktickém pouùití dosáhnout
+rychlosti  68060, a to ani nemluvë o budoucích PPC.  68060/60 stejný archiv zapakovala
+jen  cca. 6× rychleji!  Jestli má MacOS problém, ùe se rychlost emulace na rychlejîích
+strojích  jiù  nezvëtîuje, tak to je jeho problém (moùná je to proto, ùe emulované 68K
+registry má v pamëti, ne v PPC registrech?).
+
+  S myîlenkou,  ùe  výkonné,  dedikované PPC (pokud nebude muset dëlat nic jiného - ne
+jako  v MacOS  -  a tak  by  îel  v pêípadë  potêeby vyuùít jeden z více PPC procesorû
+v systému)  zvládne  emulovat  výkon 68060 pêiîel Dave Haynie (îkoda, ùe jsem ten mail
+omylem  smazal, krásnë tam bylo vypoçteno, proç to 604e v TransAmu, nebo PRE\BOXu mûùe
+zvládnout).   Staçí si vzít FPU (68k má 8 registrû, PPC 32), instrukçní sada je velice
+podobná - emulace FPU by IMHO i na 603e dosáhla rychlosti 68060.  S integer emulací to
+bohuùel  není  tak  jednoduché,  to jiù bude chtít výkonnëjîí 604e/300+ s jejími têemi
+integer  jednotkami.   Zmínka  o emulaci  060/60  v minulém  ACS  nebyla v souvislosti
+s MacOS, a uù vûbec ne s PowerUP kartami!!!
+
+PS: A abych nezapomnël - nëkdo od Haage&Partner se nedávno chlubil, ùe jejich 68K
+    emulace je údajnë 3× efektivnëjîí neù Apple. Uvidíme...
+@{c 94A4EE}-------------------------@{c}
+
+  Mimochodem,  lidé,  kteêí  PPC  rozumí  a mají jej mi potvrdili, ùe výkon není nijak
+oslnivý  -  Peskanov/Capsule:   "About  the  603:   it's not as good in performance as
+a 060.  It has a FPU unit, and a INT unit (not 2 as 060).  Also, there is not a branch
+prediction  like  on  060.   It only predicts branchs in one direction, choosed by the
+coder:   you  can write bne+ or bne- to give a hint to the assembler.  Anyway, you are
+not  going  to  find  a  240 Mhz 060, eh?  :) And not with 32 int registers and 32 FPU
+registers!".  Pro neanglofily - 603e není tak vykoné, jako 060 - má pouze 1 integrální
+çást,  nemá  branch  prediction,  atd.   Jediné  v  çem  603e  vítëzí  je  240MHz a 32
+integrálních a dalîích 32 FPU registrû (a podstatnë lepîí FPU... pozn.Shaman).  Coù je
+ale pravda jen z çásti - Motorola nyní vyrábí i 80MHz verzi 060.  No a co?  80 ku 240?
+Né  tak  hrr...   68K  procesory  jsou testovány na dvojnásobné frekvenci (to je stará
+povëra - to by se jim pêi tom testování 060 vypaêila, staçí pêetaktování z 50 na 60MHz
+a jak  to hêeje... pozn.Shaman :-).  No dobêe, 160 ku 240 je stále jasnë ménë!  Ok, uù
+jste slyîeli o tom, ùe 060 internë pracuje na dvojnásobku externí frekvence?  Ne?  Tak
+vëzte,  ùe  uù je to 320MHz (!) ku 240MHz.  No to uù je pêesvëdçivé, ne?  A navíc, pro
+68K uù JSOU aplikace - pro PPC teprve budou (moùná...).  A pak, nëkteré zprávy na netu
+êíkají,  ùe  IBM  hodlá  pêesedlat na Merced/Alphu jako procesory a Motorola se vënuje
+spíîe  trhu komunikaçní techniky - takùe PPC se asi pêestane vyrábët...  DOUFÁM, ÙE SE
+TO NESTANE!!!
+
+  Ale zpët k PPC a jeho integraci do Amigy.  S 66MHz busem by uù moùná mohli dosáhnout
+asi  tak 3/4 výkonu stejného Mac PPC na stejné frekvenci.  Pokud by ovîem nëco udëlali
+s  pêístupem do pamëti.  A to uù vûbec nemluvím o pomërnë LAME napsaném pêepínání mezi
+procesory  (jak  êíká  Lászlo  "Hmmm...   i  think  there are some "lame" parts in the
+040/060  and  PPC  task  switch...   hmm..   i  think phase5 didnot know so much about
+software..   (and  there are some missings at the hw site too..  like 64bit mem access
+for  example)"  ).   Jistë,  WarpUp  (PROBOHA,  PODPORUJTE  JEJ,  .ELF  IS !LAME!  AND
+AMIGA-KILLING-WAY  -  NEBO  SNAD  CHCETE  SPOUÎTËT  PROGRAMY  PPCLOADTIMER???  A TEN C
+COMPILER!   LAME!)  (s  aktuální  verzí  PowerUP  se  ELFy  uù  nemusí spouîtët pomocí
+RUNELF... pozn.Shaman)  êeîí  SW  problémy,  ale stále je zde îpatný HW.  128MB RAM je
+výsmëch,  to  se dá poêídit za 3000Kç a já potêebuji víc, Mac je hamtivý..., chci taky
+SDRAM  10ns  buffered  DIMMy  (dostanu  60ns  SIMMy...),  chci plnë 64bit memory acces
+(dostanu  oêezaný  32bit  mem  acces...) a to uù nemluvím o lame SCSI a tak podobnë...
+Naproti tomu na Mackovi nejsou ùádné "kontex switching" zdrùení a má mnohem lepîí HW -
+stále  si  nëkdo  myslí ùe PPC na Amize dokáùe emulovat rychleji neù PPC Mac???  Ha ha
+ha.  Smûla, ale taková je realita.  (Realita je taková, ùe 68K na PowerUP kartách není
+dûvod  emulovat  ... pozn.Shaman).   604e/200MHz  procesorovou kartu si mohu koupit za
+16000,-  (bez  DPH) od pravdëpodobnë nejdraùîího delaera Amos (Olomouc, Dolní námëstí,
+068/5229196,  p.  Navrátil), zatímco za 604e/200 pro Amçu zaplatím "kapku" více - více
+za MNOHEM horîí HW.  No tohle!
+
+  Nerad  bych,  aby tento çlánek vyznël nëjak îpatnë.  Osobnë bych velmi rád PPC Amiga
+budoucnost,  ale  nastolenou  cestou  to  nepûjde.  Musí se drasticky zlepîit HW a 68k
+emulovat.   Taky  OS  musí  být  çistë  PPC  nativní.   Do  té  doby  to je jen výkoný
+koprocesor,  jehoù  výkon se dá rychle zabrzdit pomalým 68k (040 JE pomalá).  Tak proç
+je  na  PPC  ("powrovi",  jak  se  vyjádêil  Bobr  (HI!) ) vîechno tak rychlé?  No, ne
+vîechno,  ale  popoêadë.   Kdyù si projdete testy, çasto zjistíte, ùe 040 je rychlejîí
+neù 060 a PPC samosebou vede, i kdyù ne o moc (Wildfire) çi vûbec xpkbzip kontra rake.
+Pokud  vidíte takový test, nemusíte uù çíst dále.  Témeê vîechny testy totiù pouùívají
+C  a  to  nedokáùe  vypotit kód, který by se alespoñ "nekousal" na 060, ne tak aby byl
+optimalizovaný.    Naproti   tomu   PPC  je  geniální  právë  v  suprových  moùnostech
+optimalizace  kódu  a  ovlivñování skokû (604e!), atd, atd.  To z nëj dëlá ideální CPU
+pro C compiler.  Naproti tomu, jak êíkám, vëtîina benchmarkû pouùívá dokonce emulované
+instrukce  na  060  (jak vtipné, kdyù 040 verze Osirisu vypotí na 060 22-23 fps (24bit
+mpeg) ale 060 verze stëùí 21fps...).  To samosebou znamená opët zcela neregulérní test
+(coù  se  p5  hodí  -  více  lidí si koupí jejich lame karty...).  Ty tuny emulovaných
+instrukcí  a  VELMI  neoptimalizovaný kód Benoitu çi OpenGL bijí do oçí...  I 040/5MHz
+(ano,   5MHz)   bude  nejménë  2x  rychlejîí...   Podívejme  se  spíîe  na  Rake.   Je
+optimalizováno  pouze  pro  020  a  pêesto  na 060 PPC (a to 604e) rozmáçklo jako nic.
+Proç?  To je pêece jednoduché.  S kontexovým switchováním a zápisem a çtením z té samé
+pomalé  pamëti  MUSÍ  být  PPC  pomalejîí  (komprese  je celkem jednoduchá záleùitost,
+rychlost závisí spíî neù na CPU poweru (coù 604e/200MHz bezesporu má, na to se 060 asi
+nechytá)  tak na rychlosti práce s pamëtí - a ta je stejná pro oba procesory (bohuùel,
+L2...).   Zajímalo  by  më, o kolik by se dala zrychlit ta komprese, kdyby se vyêadily
+vîechny dbra a dbf instrukce (vyçistí celou pipeline...), instrukce se naskládaly tak,
+aby  se  vykonaly  vùdy  2integer  a  1FPU za takt (060 RULEZ) a destination buffer se
+marknul jako non cachable (tenhle trik zabrañuje na 040+ a PPC pêeplñování cache daty,
+které  chceme  zapsat  - texturování stën to zrychlilo témëê 3x v ADoomu (!!!), celkem
+logicky pêedpokládám, ùe by se to dalo pouùít i pro kompresi a faktor urychlení by mël
+být stejný çi vyîîí...).  Co na to autor skvëlé xpkMASH.library?  Pokud si nevýî rady,
+kontaktuj më!
+
+  Takùe  PPC  bude  pêínosem  spíîe  v  nároçnëjîích výpoçtech (ray-trace) a snad v 3D
+gamesách.   Jenom  nevím,  jak  programátoêi,  kteêí  nikdy  nedokázali  napsat  nëco,
+rychlostnë  srovnatelného  s  Doomem chtëjí psát na PPC 3D gejmy...  Jinak jak se vám,
+Amigisté,  líbí  fakt  ùe  nejrychlejîí 3D game na Amize je Doom (navíc je stále jeîtë
+hodnë  napsáno  v  C  -  jenomùe inteligentnë, i kdyù...)?  Nezdá se Vám, ùe to s tëmi
+programy  a  jejich  rychlostí je troîku divné?  Marathon, jak êíkám, mi dëlá 17-19fps
+(Infinity!!!), a to MMU refresh refreshuje plnou îíêku obrazovky - ne jen 320*200 jako
+ADoom  ale  640*200  - a to nemluvë o radaru - asi tak 150 lines na výîku - takùe suma
+sumárum,  640*350?   A  pêes Z2.  A jde to.  Pod emulací, pod slow Mac OS, pod pomalým
+Shape (zvláîtë na grafiku, prosím, porovnejte si interní rutiny a TurboEVD!).  A jede!
+Vîechno  na  maximum (ambient sounds, more sounds, higer quality 16bit sounds, all gfx
+detail,  etc.).   To  samý  pêehrávání  Qucktime.  Pod Macem no problemo, kdyù dám DVË
+movie  stejnë  výîkovë  (refresh...),  tak mi to v pohodë stíhá 15fps v 15bit hloubce,
+ordered dithering (!).  Movie 320*240!!!  Fun Factory a Blumchen (Boomerang, BOÙÍ!!!).
+Stejnou movii jsem zkusil na Amize - ale ouha!  Maximálnë jsem z toho vyrazil 6fps (!)
+-  movie  v RAM-disku (!), gray only (!) a no sound (!).  HATE!!!  (320×240???  To jde
+u më  v pohodë  i  v hicoloru, barvách a se zvukem [CyberQT 1.3] a je to i o nëco málo
+plynulejîí  neù  pod  ShapeShifterem... pozn.Shaman).   Skvëlý, autor mi odepsal ùe na
+jeho  604e/200  + 060 + Ultra Wide Quantum Viking SCSI mu to pêehrává QT movie s malým
+zatíùením  procesoru.   Jak  skvëlé vyuùití PPC!!!  Jak rychlé rutiny!  (a to tam nemá
+ani  ditering!!!   :-( ) O dvou+ Qt najednou, pêehrávání v oknech a mixování audio ani
+neslyîel...   Movie  player  bude urçitë v C a sotva nëjak moc optimalizovaný.  A taky
+mûùe pêehrávat i více movií a çiní tak v oknech (strech real-time).  Uù vûbec nemluvím
+o  tom,  ùe  nepouùívá  emulované instrukce (i kdyù do Mackû se 060 nikdy nemontovala,
+pêesto  si  tamní  programátoêi  pêeçetli a respektovali doporuçení Motoroly - nevidël
+jsem  jediný  program,  jenù by pouùíval emulované instrukce...), má super geniální UI
+(user  interface)  -  enter play, arrows rewind, space stop, Esc stop, double Esc stop
+and  close curent, triple ( :-) ) stop, close, exit :-) .  Apple M - center of screen,
+all other black (great!), etc, etc, etc.  Je VÝRAZNË rychlejîí i na 030/50...
+
+
+                              @{c 94A4EE} Mac OS & programs RULEZ!
+                                       Amiga ?@{c}
+
+  Prosím,  Amigisté,  nenadávejte mi.  Nëkdo Vám to êíci musí.  Nebudeme si pêece nëco
+stále nalhávat.  Nutnë potêebujeme lepîí programy.  programy dëlají poçítaç.  Hardware
+je  jen  hromada  îrotu.   Myslíte  ùe  Vám pomûùe PPC + Permedia2?  Uù Vám nëkdo êekl
+o omezeních  VGA  chipû???  Jako têeba 18bit paleta v >24bit módech?  Ne?  Tak slyîte.
+Vîechny  VGA çipy vypotí pouze 64 pêechodû (AGA 256!), coù znamená, ùe grafika uù není
+taková hladká jako na AA...  Bohuùel.  Mac umí...  Dále sprite.  Prý ùe HW sprite.  No
+dobêe.   Ale  jen 2 barvy!  To uù jsme jak na pC çi Macu.  2 barevný pointer!  Já jsem
+se  nedal a nechal jsem si 3 barvy (çtvrtou - transparentní nepoçítám, stejnë jako VGA
+sprite  má vlastnë 2 barvy + 1 transparentní).  Výsledek?  Barva té têetí (kdysi çerný
+lem  na  okraji  pointru,  jak  to  bylo pëkné...) je tak trochu invert/transparent na
+podklad.   Nic  pëkného...  Tohle uù nikdo nëêíká, ùe?  (to byla jedna z prvních vëcí,
+na kterou jsem upozorñoval lidi v konferenci po koupi gfx karty - ale ùít se s tím dá;
+dûleùité  je,  ùe  pointer  nebliká  jako  na Macovi/PC ... pozn.Shaman).  Nerad bych,
+abyste  zavrhli  grafické  karty,  ale je to tak.  Permedia 2 je VGA chip, a kombinace
+±rychlého  procesoru  s  obyçejným VGA chipem nemûùe znamenat nëjakou revoluci, jen se
+rádoby  dotahujeme na pC/Mac (ani to ne...).
+
+  Mimochodem,  a  co  soft?   ???   Ok.   Jak je tu dlouho CGX?  4, 5 let?  A kolik je
+softu,  co ho pêímo podporuje?  Hmmm?  Kolik programû podporuje mûj Virge?  Kde sehnat
+dokumentaci k programování pêímo Virge chipu?  Mimochodem, CGX implementace má nëkolik
+tak  îpatných  vlastností,  ùe budu muset zkusit p96 (jako x dalîích co uù pêeîlo...).
+Uù se vám doneslo, ùe PicassoIV rozdrtilo CVPPC???  (jen první verzi ovladaçe, na nový
+uù  PIV  nemá...   pozn.Shaman).  A coù teprve BVision (slabîí bus interface, bude asi
+výraznë pomalejîí pêi zápisu...  :( ).  A proç, co myslíte?  C je správnë, CyberGraphX
+to  zavinil,  ùe  ani na tak rychlém HW není schopen vypotit alespoñ srovnatelný výkon
+s PicassemIV....   Mimochodem,  kromë standardních progrmû existují taky programy, kde
+záleùí  na  kaùdé instrukci - dema, gamesky.  Pro tento druh software je têeba pêímého
+pêístupu k systémovým zdrojûm, souhlasíte?  Tak se podrùte.  Jestliùe si na CGX zamknu
+bitmapu  (abych  do  ní  mohl  rendrovat pomocí move16 pëknë rychle), je bazová adresa
+platná  pouze v lock/unlock loopu (coù je logické, to by îlo, ok), _ALE_ zamknuta mûùe
+být  pouze 1 fRAMe!!!  A 100x za sekundu nelze zapsat 800*600*24 ani do Permedie 2, to
+mi  mûùete vëêit, ponëvadù tok kolem 180MB/sec je na dneîní CPU kapku pêíliî, a stejnë
+by  bus  nestaçil...   (800*600*32  (24bitû  nelze pêesouvat, a uù vûbec ne rychle) /8
+(bity  do bajtû) /1024 (KBy) /1024 (MBy).  Co to má znamenat?  To nic, jen se nám chce
+êíci, ùe p5 nám prostë zakazuje jakýkoliv pokus o RYCHLOST na CGX...  Mám dojem ùe jde
+o  strategii,  která  má  za  cíl  donutit  uùivatele  upgradovat jeho maîinu smërem k
+mystickému ABoxu (coù je akorát bublina...).  Zkrátka s takovým pêístupem nelze dostat
+rozumnou  rychlost  ani  z CVPPC (WritePixelArray() je _POMALÁ_ funkce, a navíc vypíná
+task  (ehm...  moùná jen zvyîuje prioritu nad prioritu input device...), pravdëpodobnë
+proto, aby byla pomalejîí / znemoùnil se pipelining write, çi tak nëco...).  No, jeîtë
+zkusím  p96  a  pak  uù  nevím.  Ùe Abox bude boùí???  Ale, ale.  Od lidí jako p5 bych
+neçekal  nic  sluîného,  tím  ménë revoluçního.  Pokud dodnes nezvládli ani pêístup do
+pamëti  (o  DMA SCSI pêenosech, L2 keîích a návrzích grafických karet ani nemluvë...),
+pak  nevidím ùádnou îanci aby se to nëjak rychle nauçili...  Jen tak mimochodem, co ùe
+to  brzdí  PPC?   Kontextové  pêepínání?  A co ùe to bude se sdílením pamëti na Aboxu?
+Nëco  jako  chip-RAM,  ùe.   V  sudém  cyklu  CPU, v lichém chip.  To uù sluîne zahýbe
+rychlostí  (o  50% dolû...).  Já vidím jediné êeîení - pamëï na dvojnásobné frekvenci,
+neù  CPU  -  a  to  je nesmysl, ponëvadù 1GHz je nereálná záleùitost, a pak, ùivotnost
+takové  technologie by byla malá, ponëvadù frekvence procesorû se zvyîuje velmi rychle
+(mimochodem,  uù se nedá sehnat pomalejîí neù 200MHz p MMX - Pêerov, 16.  6.  98) a na
+toto  zvýîení  rychlosti  by  ale  architektura  NEMOHLA  reagovat  - pouze s omezením
+pêístupu do pamëti, coù ale degraduje výkon opët skoro na úroveñ pûvodního CPU.
+
+  Zkrátka,  budoucnost  mají  pouze  univerzální  systémy  s pokudmoùno nezávislou CPU
+sbërnicí  a  nëjakým  tím  rychlým  busem  na  grafickou  pamëï (nëco jako A1200 s PPC
+Blizzardem a BVision).  Tady máte dûkaz mého tvrzení - A1200 výrobená v roce 1992/3 je
+i  za  6  let stále pouùitelná - ponëvadù se dá expandovat.  Pokud máte jen CPU kartu,
+jste stále jeîtë odkázáni na grafiku (pomalou, zatracenë pomalou...) a diskové operace
+(pomalé...)  zajiîïované  motherboardem.   Kdyù  pêidáte  CyberVision  a  SCSI, tak uù
+motherboard potêebujete jen na zvuk, po pêidání zvukovky uù ani to ne - vlastnë je tam
+zbyteçný.   Ale  jakýkoliv  pêístup  do  chip-RAM  a tak podobnë BRZDÍ pêíîernë.  Ano,
+chtëlo  by to nový HW, ale i ten rychle zastará (pêed rokem jsme v práci kupovali p100
+a  dnes?  Leùí v îuplíku a je k niçemu...).  Architektura MUSÍ být schopna RADIKÁLNÍCH
+zmën  (nový  CPU, oddëlená grafika, oddëlený UW SCSI êadiç, atd.), jen tak je moùno ji
+prosadit  a udrùet.  Koncept Aboxu je jiù dnes zastaralý a pêekonaný a navíc, jak jsem
+jiù  naznaçil,  je  zde  nëkolik  zásadních  technických  otazníkû nad sdílením pamëti
+(mimochodem,  víte,  ùe  vëtîina  çasu  grafické  karty se spotêebuje na pêekreslování
+obrazu - a po tento ças je samosebou pamëï zatíùena (pêeruîení vylouçeno...) ) - takùe
+pêi  refreîi  screenu  by  CPU nemohl pêistupovat do pamëti...  Jistë uznáte ùe takový
+systém  nemá îanci ani na zprovoznëní, natoù pak na výkonový skok (skok moùná, teð jde
+o to kam).
+
+                                        @{c 94A4EE}Závër@{c}
+
+  Hmmm.  Myslím si, ùe nejlepîí cesta je dnes BoXer.  Uù v souçasné konfiguraci nabízí
+75MHz  CPU  bus (coù je taková malá výkonová revoluce - speciálnë s chip-RAM pêístupem
+rychlejîím  o  30%  - moje milovaná demça pojedou jak divý :) (jestli vûbec pojedou...
+hodnë  dem  má  problémy  se  synchronizací :-( ...pozn.Shaman))  a  Z3 sloty (+ tisíc
+dalîích  vëcí...)  za 479 liber.  Jo, 27 000 je dost, ale abych získal Z3, musím si je
+koupit  od  Microniku  (a za jejich rychlost bych nedal do ohnë ani zlámanou sousedovu
+greîli...) za bratru 15 000.  OK, ale aby îlapaly tak rychle, jak mají, je têeba jeîtë
+CPU  karta  -  Apollo  66MHz  -  26 000.  Takùe suma sumárum, BoXer je o dost levnëjîí
+a hlavnë výkonnëjîí.  A kdyù se vzchopíme a dostatek lidí napíîe Mickovi Tinkerovi aby
+dodëlal  do  BoXera  160MHz CPU bus (zatím jsem ho ukecal na 100MHz, pomoùte!!!), 10ns
+SDRAMM  DIMMy  místo  simû  (jsou  levnëjîí  a rychlejîí...  , poçítá s nimi aù do 2nd
+generace  :(  )  a  nëjaké  DMA  UltraWide SCSI, budeme mít LEVNOU maîinu se svëtovými
+parametry  (rozîiêitelnou  o  PPC) - uvaùte ten výkon!  Mail je Index Information Ltd.
+<index@cix.co.uk>  -  Mick  Tinker.  Nepodceñujte to!  Je pravdëpodobné, ùe ho ukecáme
+a zíkáme  tím  koneçnë  náskok  pêed  pC/Mac (nejnovëjîí pC (Compaq Workstation - ten,
+kterého  G3  tak  vyklepla :) ) uù má 100MHz bus, Macy standardnë 66MHz, nyní tlaçí na
+75, 80 a 100 MHz - 160 by vîem vytêelo zrak - a - není to nemoùné!!!).
+
+  Pro  budoucnost Amigy udëláte dobêe, kdyù budete podporovat kvalitní programy (têeba
+jako ACS) a jejich tvûrce a naopak budete kritiçtí k neschopným programátorûm, jejichù
+výplody  táhnou  Amigu dolû k zemi.  Stále máme jeîtë dostateçnë rychlé procesory (060
+çi  604e)  a diskové subsystémy.  A hlavnë dobrý OS, kde ochrana pamëti je maliçkost -
+staçí  spustit Cyberguarda :) (ale to si pak çlovëk nespustí skoro ùádný demço/gamesku
+- anùto se naçeká na pêesmërování tolika hitû...) (no hlavnë i CyberGuardu do skuteçné
+ochrany pamëti jeîtë hodnë chybí - pêestoùe 99% chyb odhalí, systém ochránit nedokáùe,
+je  to  jen diagnostická utilita... pozn.Shaman).  Zkrátka a dobêe, potêebujeme v prvé
+êadë   dobrý  SOFTWARE  a pospolitost  naîí  obce  Amigistû.   Domnívám  se,  ùe  více
+pêátelství,  kooperace, vypuîtëných zdrojákû a kvalitních programû pomûùe Amize daleko
+více neù nëjaké PPC.  Howg.
+
+
+                      @{c 94A4EE}Pokud mi chcete zanadávat, tady je adresa:
+  Pavel Nároùný, Troda OF PEGAS  <troda@cbnet.cz>, tel.: 0641/20 45 95 (po 18 hod.)
+                    Preferuji mail a budu rád za jakékoliv reakce.@{c}

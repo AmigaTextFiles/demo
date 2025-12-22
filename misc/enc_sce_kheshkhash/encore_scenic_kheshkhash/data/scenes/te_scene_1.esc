@@ -1,0 +1,724 @@
+{
+  "actions": [
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.14147182,
+              0.96704257
+            ],
+            "interpolation": "linear",
+            "time": 20000
+          },
+          {
+            "float_values": [
+              0.0,
+              0.072,
+              -0.20236969
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "camera_1"
+        }
+      ],
+      "loops": 1,
+      "name": "camera_1Action",
+      "start_time": 0,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -2.0,
+              0.0,
+              14.888887
+            ],
+            "interpolation": "linear",
+            "time": 20000
+          },
+          {
+            "float_values": [
+              -2.0,
+              0.0,
+              -17.410157
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "camera_1"
+        }
+      ],
+      "loops": 1,
+      "name": "camera_1Action",
+      "start_time": 0,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 0.60208291,
+            "interpolation": "linear",
+            "time": 20000
+          },
+          {
+            "float_values": -0.56791699,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "fog_gradient"
+        }
+      ],
+      "loops": 1,
+      "name": "fog_gradientAction",
+      "start_time": 0,
+      "type": "position_z"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "time": 0,
+            "uint8_values": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "door_glow"
+        }
+      ],
+      "loops": 1,
+      "name": "door_glowAction",
+      "start_time": 5980,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.9,
+              0.9,
+              1.0,
+              0.9,
+              0.9,
+              1.0,
+              0.9,
+              0.9,
+              1.0
+            ],
+            "interpolation": "bezier",
+            "time": 800
+          },
+          {
+            "float_values": [
+              1.15,
+              1.15,
+              1.0,
+              1.15,
+              1.15,
+              1.0,
+              1.15,
+              1.15,
+              1.0
+            ],
+            "interpolation": "bezier",
+            "time": 800
+          },
+          {
+            "float_values": [
+              0.9,
+              0.9,
+              1.0,
+              0.9,
+              0.9,
+              1.0,
+              0.9,
+              0.9,
+              1.0
+            ],
+            "interpolation": "bezier",
+            "time": 800
+          },
+          {
+            "float_values": [
+              1.15,
+              1.15,
+              1.0,
+              1.15,
+              1.15,
+              1.0,
+              1.15,
+              1.15,
+              1.0
+            ],
+            "interpolation": "bezier",
+            "time": 800
+          },
+          {
+            "float_values": [
+              0.9,
+              0.9,
+              1.0,
+              0.9,
+              0.9,
+              1.0,
+              0.9,
+              0.9,
+              1.0
+            ],
+            "interpolation": "bezier",
+            "time": 800
+          },
+          {
+            "float_values": [
+              1.15,
+              1.15,
+              1.0,
+              1.15,
+              1.15,
+              1.0,
+              1.15,
+              1.15,
+              1.0
+            ],
+            "interpolation": "bezier",
+            "time": 800
+          },
+          {
+            "float_values": [
+              0.9,
+              0.9,
+              1.0,
+              0.9,
+              0.9,
+              1.0,
+              0.9,
+              0.9,
+              1.0
+            ],
+            "interpolation": "bezier",
+            "time": 800
+          },
+          {
+            "float_values": [
+              1.15,
+              1.15,
+              1.0,
+              1.15,
+              1.15,
+              1.0,
+              1.15,
+              1.15,
+              1.0
+            ],
+            "interpolation": "bezier",
+            "time": 800
+          },
+          {
+            "float_values": [
+              0.9,
+              0.9,
+              1.0,
+              0.9,
+              0.9,
+              1.0,
+              0.9,
+              0.9,
+              1.0
+            ],
+            "interpolation": "bezier",
+            "time": 800
+          },
+          {
+            "float_values": [
+              1.15,
+              1.15,
+              1.0,
+              1.15,
+              1.15,
+              1.0,
+              1.15,
+              1.15,
+              1.0
+            ],
+            "interpolation": "bezier",
+            "time": 800
+          },
+          {
+            "float_values": [
+              0.9,
+              0.9,
+              1.0,
+              0.9,
+              0.9,
+              1.0,
+              0.9,
+              0.9,
+              1.0
+            ],
+            "interpolation": "bezier",
+            "time": 800
+          },
+          {
+            "float_values": [
+              1.15,
+              1.15,
+              1.0,
+              1.15,
+              1.15,
+              1.0,
+              1.15,
+              1.15,
+              1.0
+            ],
+            "interpolation": "bezier",
+            "time": 800
+          },
+          {
+            "float_values": [
+              0.9,
+              0.9,
+              1.0,
+              0.9,
+              0.9,
+              1.0,
+              0.9,
+              0.9,
+              1.0
+            ],
+            "interpolation": "bezier",
+            "time": 800
+          },
+          {
+            "float_values": [
+              1.15,
+              1.15,
+              1.0,
+              1.15,
+              1.15,
+              1.0,
+              1.15,
+              1.15,
+              1.0
+            ],
+            "interpolation": "bezier",
+            "time": 800
+          },
+          {
+            "float_values": [
+              0.9,
+              0.9,
+              1.0,
+              0.9,
+              0.9,
+              1.0,
+              0.9,
+              0.9,
+              1.0
+            ],
+            "interpolation": "bezier",
+            "time": 800
+          },
+          {
+            "float_values": [
+              1.15,
+              1.15,
+              1.0,
+              1.15,
+              1.15,
+              1.0,
+              1.15,
+              1.15,
+              1.0
+            ],
+            "interpolation": "bezier",
+            "time": 800
+          },
+          {
+            "float_values": [
+              0.9,
+              0.9,
+              1.0,
+              0.9,
+              0.9,
+              1.0,
+              0.9,
+              0.9,
+              1.0
+            ],
+            "interpolation": "bezier",
+            "time": 600
+          },
+          {
+            "float_values": [
+              1.15,
+              1.15,
+              1.0,
+              1.15,
+              1.15,
+              1.0,
+              1.15,
+              1.15,
+              1.0
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "door_glow"
+        }
+      ],
+      "loops": 1,
+      "name": "door_glowAction",
+      "start_time": 6600,
+      "type": "scale_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 4000
+          },
+          {
+            "float_values": [
+              0.65,
+              0.65,
+              0.65
+            ],
+            "interpolation": "linear",
+            "time": 7480
+          },
+          {
+            "float_values": [
+              0.86,
+              0.86,
+              0.86
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "door_glow"
+        }
+      ],
+      "loops": 1,
+      "name": "Shader NodetreeAction.001",
+      "start_time": 6000,
+      "type": "diffuse_color_rgb"
+    }
+  ],
+  "cameras": [
+    {
+      "far_clip_plane": 100.0,
+      "fov_x": 54.362152,
+      "fov_y": 28.800001,
+      "hide": false,
+      "name": "camera_1",
+      "near_clip_plane": 0.1,
+      "position": [
+        0.0,
+        0.14147182,
+        0.96704257
+      ],
+      "rotation": [
+        -2.0,
+        0.0,
+        14.888887
+      ]
+    }
+  ],
+  "enc_info": {
+    "data_type": "ENCSCN",
+    "date": "07 Dec 2022 15:25:00",
+    "version": "2.0"
+  },
+  "loops": 1,
+  "name": "te_scene_1",
+  "objects": [
+    {
+      "mesh_name": "te_ground",
+      "name": "ground",
+      "order": 5
+    },
+    {
+      "mesh_name": "te_fog_gradient",
+      "name": "fog_gradient",
+      "order": 15,
+      "position": [
+        0.0,
+        0.0,
+        0.60208291
+      ],
+      "properties": {
+        "depth_mask": 0
+      }
+    },
+    {
+      "mesh_name": "te_temple",
+      "name": "temple",
+      "order": 25,
+      "position": [
+        0.0,
+        0.0,
+        -0.31272954
+      ],
+      "tag": 101
+    },
+    {
+      "mesh_name": "te_tree_1",
+      "name": "tree_1a",
+      "order": 45,
+      "position": [
+        -0.20701802,
+        -1e-08,
+        -0.01693989
+      ],
+      "properties": {
+        "face_visibility": "front_back"
+      },
+      "tag": 105
+    },
+    {
+      "mesh_name": "te_tree_2",
+      "name": "tree_2a",
+      "order": 75,
+      "position": [
+        -0.13578008,
+        0.0,
+        0.44395939
+      ],
+      "properties": {
+        "face_visibility": "front_back"
+      },
+      "tag": 111
+    },
+    {
+      "mesh_name": "te_tree_3",
+      "name": "tree_3a",
+      "order": 65,
+      "position": [
+        -0.20185752,
+        -0.0,
+        0.27188772
+      ],
+      "properties": {
+        "face_visibility": "front_back"
+      },
+      "tag": 109
+    },
+    {
+      "mesh_name": "te_tree_4",
+      "name": "tree_4a",
+      "order": 70,
+      "position": [
+        0.14942954,
+        0.0,
+        0.30156091
+      ],
+      "properties": {
+        "face_visibility": "front_back"
+      },
+      "tag": 110
+    },
+    {
+      "mesh_name": "te_column",
+      "name": "column_1",
+      "order": 35,
+      "position": [
+        -0.13699999,
+        0.0,
+        -0.13734755
+      ],
+      "tag": 102
+    },
+    {
+      "mesh_name": "te_column",
+      "name": "column_2",
+      "order": 40,
+      "position": [
+        0.13699999,
+        0.0,
+        -0.13734724
+      ],
+      "tag": 103
+    },
+    {
+      "mesh_name": "te_tree_3",
+      "name": "tree_3b",
+      "order": 60,
+      "position": [
+        0.16987796,
+        -0.0,
+        0.15532714
+      ],
+      "properties": {
+        "face_visibility": "front_back"
+      },
+      "scale": [
+        0.95,
+        0.95,
+        0.95
+      ],
+      "tag": 108
+    },
+    {
+      "mesh_name": "te_tree_2",
+      "name": "tree_2b",
+      "order": 55,
+      "position": [
+        -0.13013311,
+        0.0,
+        0.1091481
+      ],
+      "properties": {
+        "face_visibility": "front_back"
+      },
+      "scale": [
+        -0.88,
+        0.88,
+        0.88
+      ],
+      "tag": 107
+    },
+    {
+      "mesh_name": "te_tree_2",
+      "name": "tree_2c",
+      "order": 50,
+      "position": [
+        0.14517751,
+        0.0,
+        0.02229134
+      ],
+      "properties": {
+        "face_visibility": "front_back"
+      },
+      "tag": 106
+    },
+    {
+      "mesh_name": "te_tree_4",
+      "name": "tree_4b",
+      "order": 30,
+      "position": [
+        -0.19164658,
+        0.0,
+        -0.22293004
+      ],
+      "properties": {
+        "face_visibility": "front_back"
+      },
+      "scale": [
+        -0.82,
+        0.82,
+        0.82
+      ],
+      "tag": 104
+    },
+    {
+      "mesh_name": "te_background",
+      "name": "background",
+      "order": 10,
+      "properties": {
+        "depth_mask": 0
+      }
+    },
+    {
+      "mesh_name": "te_fog",
+      "name": "fog",
+      "order": 20,
+      "properties": {
+        "depth_mask": 0
+      },
+      "tag": 10
+    },
+    {
+      "mesh_name": "te_temple_interior",
+      "name": "temple_interior",
+      "order": 8,
+      "position": [
+        0.0,
+        0.02634346,
+        -0.31266826
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "mesh_name": "te_door_glow",
+      "name": "door_glow",
+      "order": 28,
+      "position": [
+        0.00144934,
+        0.06187547,
+        -0.30989864
+      ],
+      "properties": {
+        "blending": "additive",
+        "depth_mask": 0
+      },
+      "scale": [
+        0.9,
+        0.9,
+        1.0
+      ],
+      "tag": 12
+    },
+    {
+      "mesh_name": "te_door_fog",
+      "name": "door_fog",
+      "order": 23,
+      "position": [
+        0.00126029,
+        0.0612056,
+        -0.31600001
+      ],
+      "tag": 200
+    }
+  ],
+  "properties": {
+    "black_screen": 1.0,
+    "kheshkhash_logo": 0.0
+  },
+  "time": 20000
+}

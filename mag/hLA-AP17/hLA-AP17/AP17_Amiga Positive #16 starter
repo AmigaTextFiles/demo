@@ -1,0 +1,7 @@
+.
+; Amiga Positive strikes back! #17
+if NOT EXISTS env:amigapositive/ap17.prefs
+ ap-prefs
+endif
+;AP17.exe
+engine.exe

@@ -1,0 +1,94 @@
+name:     Jilted Generation Preview
+short:    New System Zine for Polish sceners, MUI
+author:   bosy@plearn.edu.pl (Art-B Group)
+uploader: bosy@plearn.edu.pl (Tomasz Korolczuk)
+version:  0.94 (22.01.98)
+type:     docs/mags
+requires: KS3.0+, MUI 3+
+
+STATUS:   FreeWare
+
+NOTE:     
+
+Z ostatniej chwili: Wyrzuciîem z archiwum Aminetu png_dt. Strata miejsca -
+i tak kaûdy to ma :)
+
+Zapowiedú magazynu dyskowego Jilted Generation (Zbuntowana Generacja).
+Magazyn wspóîpracuje w peîni z Systemem Operacyjnym Amigi, korzysta z MUI,
+ma masë opcji konfiguracyjnych (fonty, podkîady, wiele innych). Uruchomi
+sië na kaûdej Amidze z KS3.0+, 2MB RAM. Magazyn zaprogramowany zostaî z
+myôlâ o Amidze speîniajâcej poniûsze wymagania:
+
+030+, 4MB+ RAM
+ekran VGA 640/512, 256 kolorów (AGA+)
+twardy dysk
+soft: PNG.datatype, ILBM.datatype, MUI3.3+
+
+
+i na takiej Amidze dziaîa wykorzysujâc wszystkie dostëpne opcje. (Uwaga!
+Ze wzglëdu na prawa autorskie musiaîem zamieôciê caîe archiwum z
+PNG.datatype w katalogu Datatypes. Proszë o ewentualne zainstalowanie
+datatype'a wedîug instrukcji)
+
+Zapowiedú jest tylko reklamâ magazynu, pozbawionâ artkuîów i
+przedstawiajâcâ jedynie czëôê moûliwoôci kodu. Zachëcamy wszystkich do
+wspóîpracy, gdyû bez niej magazyn ten nie bëdzie miaî podstaw istnienia.
+Szczegóîy w samym magazynie.
+
+INSTALACJA:
+
+Niestety nie zdâûyîem wykonaê w peîni sprawnego skryptu instalacyjnego, za
+co BARDZO przepraszam. Obiecujë, ûe skrypt ten pojawi sië w pierwszym
+wydaniu magazynu. Tymczasem naleûy:
+
+1. Rozpakowaê zawartoôê archiwum z magazynem w dowolne miejsce twardego
+dysku.
+
+1a. Jeôli nie masz MUI, zdobyê wersjë 3.3+ i zainstalowaê na dysku (BTW:
+Program testowany byî tylko z wersjâ 3.8!).
+
+2. Przegraê wszystkie fonty z katalogu "fonts" do FONTS: (nie jest to
+konieczne, jeôli chcesz uûyê swoich wîasnych fontów, ale pamiëtaj, ûe
+zanim skonfigurujesz JG uûyty zostanie obskurny topaz.font!). Fonty
+przeznaczone dla rozdzielczoôzci VGA majâ odpowiedni komentarz. Aby fonty
+byîy widziane przez System naleûy wykonaê jeszcze polecenie "FixFonts".
+
+3. Przegraê jednâ z konfiguracji programu z katalogu "ENVARC" (PAL1.cfg,
+VGA1.cfg) do katalogu ENVARC:mui/ pod nazwâ JG0.1.cfg. Bardzo przepraszam
+za to powikîanie, ale w sumie nie jest to czynnoôê konieczna i program
+uruchomi sië nawet bez konfiguracji w ENVARC:
+
+4. Jeôli masz sîabâ konfiguracjë sprzëtowâ i mag nie chce Ci sië z jakiô
+powodów  uruchomiê, spróbuj ustawiê w ikonce tooltype'y:
+
+NOPANEL=YES 		- wyîâcza panel, oszczëdza RAM i miejsce na ekranie
+NOPICTURES=YES 		- nie wczytuje obrazków (oszczëdza Chip)
+NOBACKGROUNDS=YES	- nie wczytuje podkîadów (--||--)
+
+Teraz powinien "pójôê" nawet na 1.5MB RAM (!).
+
+5. Uruchom mag klikajâc na jego ikonce. Nie potrzebne sâ ûadne zbëdne
+przypisania (mag stworzony jest do dziaîania wyîâcznie w ôrodowisku
+HDkowym :)
+
+Jeôli mag nie wyôwietla obrazków, podkîadów, ma úle dobrane fonty, sprawdú
+czy przegraîeô wszystkie pliki i czy nazwy wpisane w oknie preferencji sâ
+prawidîowe. Jeôli nie podobajâ Ci sië standardowe podkîady, fonty, etc.
+nagraîem w odpowiednich katalogach kilka dodatkowych plików z owymi.
+Pozatym moûesz uûywaê wszystkiego co masz na swoim HD, pamiëtajâc, ûeby
+np. podkîady przegraê do katalogu "Backgrounds" (zaleûnie od Twojej
+konfiguracji of coz). Pozatym zachëcam do zajrzenia do "Preferencji
+MUI...". Chwilowo wszystkie uûyte w artykule ramki sâ pobierane z ustawieï
+MUI.
+
+KONTAKT:
+
+Wszelkie sugestie, bugrepy, artykuîy, grafiki, dúwiëki powinny lecieê na
+adres:
+
+Tomasz Korolczuk
+ul. Wyspiaïskiego 4/13
+08-300 Sokoîów Podl.
+
+bosy@plearn.edu.pl
+

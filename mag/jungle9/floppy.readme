@@ -1,0 +1,30 @@
+IMPORTANT NOTE IF YOU WANT TO COPY   *TJ9* to a FLOPPY:
+
+Due to *Aminet* rules it wasn`t possible to include the following
+file, which are required to run it perfectly from disk...
+
+df0:c/
+
+      assign
+      execute
+      iconx
+      run
+      setpatch
+      type
+
+df0:devs/
+	printer   (dir)
+        parallel.device
+        printer.device
+        
+
+df0:l/
+        port-handler
+        Ram-Handler
+
+
+It runs perfectly from Harddisk, but if you want to make a bootable
+floppy disk, you might require to copy these files to disk...
+
+Sorry for that inconvenience, but Aminet doesn`t allow DMS anymore, 
+moreover it`s forbidden to include Commodore files... It sucks!

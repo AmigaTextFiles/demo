@@ -1,0 +1,68 @@
+;
+; $VER: Bumerang #5 HD-Install v1.0 by LeMUr (03.06.95)
+;
+; Instalator Bumeranga #5 na twardy dysk.
+; Autor - LeMUr/Indep.
+;
+
+(set @app-name "Bumerang #5")
+
+; Wybranie odpowiedniego katalogu
+(set @gdzie
+   (askdir
+      (prompt "Wybierz katalog, w którym chcesz zainstalowaê \"Bumeranga #5\"\n")
+      (help 
+         (cat "Jeôli nie ma odpowiedniego katalogu to zaîóû go przy pomocy"
+              "\"Make New Drawer\"."
+         )
+      )
+      (default "Work:Scena/Magazyny/Bumerang#5")
+   )
+)
+(complete 15)
+
+; Przegranie programu
+(copyfiles
+   (source "Bumerang#5:Bumerang#5")
+   (dest @gdzie)
+)
+(complete 40)
+
+; Przegranie ikonoy
+(copyfiles
+   (source "Bumerang#5:Bumerang#5.info")
+   (dest @gdzie)
+)
+(complete 50)
+
+; Rozpakowanie wszystkich tekstów i moduîu
+(makedir (tackon @gdzie "BUM_TXT"))
+(complete 75)
+
+; Przegranie clip-artów
+(makedir (tackon @gdzie "BUM_PIC"))
+(copyfiles
+   (source "Bumerang#5:BUM_PIC")
+   (dest (tackon @gdzie "BUM_PIC"))
+   (all)
+)
+(complete 90)
+
+; Przegranie czcionek
+(copyfiles
+   (source "Bumerang#5:Fonts")
+   (dest "Fonts:")
+   (all)
+)
+(complete 100)
+
+; i po robocie!
+(exit
+   (cat "Uruchom teraz z DOSu (niestety...) nastëpujâce polecenie:\n\n"
+        "Bumerang#5:C/Execute Bumerang#5:DeCrunch.bat \""
+        @gdzie
+        "\"\n\ni Bumerang #5 zostanie zainstalowany w katalogu\n\""
+        @gdzie
+        "\"\nMiîego czytania ûyczy redakcja!"
+   )
+)

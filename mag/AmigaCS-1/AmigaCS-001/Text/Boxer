@@ -1,0 +1,108 @@
+@{d D7FFEB}                                   @{c 7DFDFF}BoXeR : Nová A4000?
+                                   ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+  Na  listopadové  výstavë  @{c 7DFDFF}@{b}Computer  '97@{ub}@{c}  v  Kolínë  nad Rýnem byl anglickou firmou @{c 7DFDFF}Index
+Information Ltd@{c} pêedstaven nový návrh Amiga kompatibilního motherboardu s názvem @{c 7DFDFF}@{b}BoXeR@{ub}@{c}. Na
+výstavë  byl  pêedstaven  pouze  návrh tiîtëného spoje, ale jiù týden nato byl hotov první
+prototyp.
+
+  BoXeR je urçen pro stêední têídu domácích a poloprofesionálních multimediálních poçítaçû
+Amiga  zaloùených  na  AA  çipsetu a operaçním systému AmigaOS. Dovoluje sestavit stroje v
+cenovém rozpëtí od A1200 po A4000. Nabízí nízkou cenu, obrovské moùnosti levného rozîíêení
+a  výkon  pêesahující A4000. Kromë AA çipsetu a jednoho zákaznického obvodu obsahuje pouze
+standardní  souçástky,  çímù  je  zaruçena  nejniùîí  moùná cena. Zcela pêepracovaný návrh
+logiky boardu umoùñuje AA çipsetu dosáhnout maximálního výkonu pêi zachování kompatibility
+a  souçasném  rozîíêení  flexibility.  2MB  FlashROM  umoùñuje  updaty  systému i ovladaçû
+hardware,  napê. souborový systém pro CD-ROM bude ve FlashROM, díky çemuù pûjde bootovat i
+z CD.
+
+
+@{d D7FFEB}  BoXeR  bude  prodáván  têemi  zpûsoby. Jednak jako základ nové êady Amig s názvem "Black
+Box"  od dalîí anglické firmy Blittersoft, která se stala oficiálním distributorem. Jednak
+skrze  OEM  dealery,  kteêí své vlastní modely pêizpûsobí místním potêebám trhu. A nakonec
+jako  samostatný,  nevybavený  motherboard prodávaný pêímo zákazníkovi, který si bude moci
+sestavit  vlastní  systém, zcela podle svých pêání. Amiga se tak pêiblíùí velice úspëînému
+stylu  prodeje  PC. Cena zatím nebyla stanovena, ale mëla by se v kaùdém pêípadë pohybovat
+pod cenou dneîní A1200. Zaçátek sériové výroby je oçekáván v nejbliùîích mësících.
+
+
+                                       @{c 7DFDFF}@{u}Hlavní rysy@{uu}@{c}
+
+· 100% kompatibilita s AA Amigami a AmigaOS
+· motherboard je standardu BABY-AT, lze ho tedy bez problémû montovat do bëùných PC skêíní
+· obsahuje univerzální PGA patici pro procesory Motorola 68040 nebo 68060
+· takt lze jednoduîe mënit jumpery na 25/33/40/50/66/75MHz
+· çipset pracuje na frekvenci procesoru (tj. 25-75MHz)
+· 2MB CHIP RAM osazená pêímo na desce
+· pêístup k CHIP RAM je zrychlen minimálnë o 30%
+@{d D7FFEB}· 4× 72 pin standardní SIMM patice aù pro 2GB FAST RAM (podstatnë rychlejîí neù u A4000)
+· 32bitová 2MB @{c 7DFDFF}Flash@{c} ROM, pouùitá pro Kickstart ROM a dalîí residentní moduly
+· floppy disk drive interface pro 2 drivy, vçetnë 0.5s. zpoùdëní signálu RDY
+· vstup pro audio z CD-ROM (mixuje se se zvukem z Pauly, jako u A4000)
+· zálohovaný ças a datum (NiCad baterie)
+· vstup pro klávesnici je standardní DIN konektor pro PC nebo Amiga klávesnici
+  (s automatickou detekcí typu klávesnice)
+· moùnost levného rozîíêení na PowerPC jen za cenu tiîtëného spoje a PPC CPU (ve vývoji)
+· po rozîíêení na PPC jiù nebude potêeba 680x0 procesor (ten vîak mûùe zûstat osazen)
+· MPEG/Genlock modul s kvalitním TV signálem (ve vývoji)
+· funkçní 16-bitové ISA sloty pro levná a nenároçná zaêízení jako jsou modemy, ethernetové
+  a zvukové karty
+
+
+                                    @{c 7DFDFF}@{u}Interní konektory@{uu}@{c}
+
+· paralelní port - 26 pin (standardní PC kabel)
+· sériový port - 10 pin (standardní PC kabel)
+@{d D7FFEB}· vstup CD-ROM audio - 4 pin (pro standardní CD-Audio kabel)
+· napájení - 12 pin (pro standardní PC zdroj)
+· 2× port pro myî/joystick - 10 pin
+· 2× IDE port - 40 pin (pro standardní PC kabel)
+· 1× floppy disk port - 34 pin (pro standardní PC kabel)
+· Amiga 23 pin RGB video (v zadní çásti desky zasunuté do AV boardu)
+· konektor pro dalîí rozîíêení na PowerPC
+· 2× 16bitové aktivní (!) ISA sloty
+· 4× 32bitové Zorro-III sloty
+· 1× Amiga Video slot
+· 1× AV slot - obsahuje audio, kompozitní a RGB signály
+
+
+                                      @{c 7DFDFF}@{u}Co to znamená?@{uu}@{c}
+
+  Pêednë  nëco  takového  tu  mëlo být dávno - uù za dob Amiga Technologies. BoXeR dá vîem
+prodejcûm  Amigy  moùnost  podílet  se  na  sestavování finálního poçítaçe. Dá jim moùnost
+nabízet  takêka  neomezenou  paletu  variant.  Malé  pêipomenutí: A1200 od AT se oficiálnë
+@{d D7FFEB}nedala koupit s jiným harddiskem neù 170MB.
+
+  Pokud  se  na  BoXeRa  podíváme  z  pohledu souçasného majitele A4000 (jako jsem já :-),
+vidíme  tu nëkolik výhod a pouze jedinou nevýhodu. Jasné výhody jsou funkçní ISA sloty, 4×
+vëtîí  FlashROM,  upgrade  na PPC, aù 2GB mnohem rychlejîí FAST RAM, AV slot, rychlejîí AA
+çipy  i CHIP RAM, moùnost montáùe do îirîí nabídky skêíní, druhý IDE port, moùnost pouùití
+PC  zdrojû  a  moùnost  pêipojení  i PC klávesnice. Pak je tu jediná nevýhoda a tou je, ùe
+BoXeR  neobsahuje  standardní  CPU slot (pro tzv. doughterboardy). Tím padá moùnost pouùít
+staré  030/040  karty  od  Commodore,  stejnë jako novëjîí CyberStormy MK1-3, nebo dokonce
+CyberStormy PPC. Je zde ale poêád moùnost PPC modulu, ze kterého by se mëlo dát nabootovat
+i  bez úçasti 680x0 procesoru. Souçasné Zorro karty samozêejmë pûjdou bez problémû pouùít.
+BoXeRu,  stejnë  jako  A4000,  chybí TV modulátor i kompozitní výstup. Vîe potêebné je ale
+vyvedeno  na  AV  slot, coù je takêka geniální êeîení tohoto problému. V AV slotu mûùe být
+jednoduchá  karta,  vyvádëjící  pouze  RGB  signály do Canon-23 (Amiga VideoPort) nebo VGA
+konektoru.  Nebo  tam  mûùe  být karta s genlockem, MPEG modulem, nebo jen TV modulátorem.
+Pêitom originální Video slot zûstává poêád volný...
+
+  Velká  nejasnost  jeîtë  panuje  v otázce, zdali budou PC floppy mechaniky pracovat v HD
+@{d D7FFEB}reùimu,  nebo  jen  DD.   Dle  vyjádêení  îéfkonstruktéra  Mika  Tinkera souçasný prototyp
+dovoluje  pouùívat  PC HD mechaniky pouze v DD reùimu.  Finální verze vîak má pracovat i s
+HD  reùimem  a  to  v  plné rychlosti.  Dokonce bude moùno i bootovat.  Z toho usuzuji, ùe
+floppy  êadiç  bude úplnë nový a ten z pûvodního çipsetu nebude vûbec pouùit!  Osobnë bych
+tento  problém  nejradëji  vidël vyêeîen stejnë jako u projektu Walker.  Zde se poçítalo s
+levným SuperIO obvodem z PC, obsahujícím rychlý ECP paralelní port, 2×sériový port, 2×EIDE
+a  1×FDD  êadiç.   Uvolnëný originální sériový a paralelní port by se pak dal vyuùít têeba
+pro integrovaný MIDI port a sampler.
+
+  BoXeR  Amize  kromë  çipsetu  a  procesoru(û)  umoùní  pouùívat vîechny díly shodnë s PC
+(analogový  joystick  z  PC  jde  pêipojit  jiù  dávno, PC myî do sériového portu rovnëù).
+Doufám, ùe bude vùdy moùnost koupit - byï za více penëz - originální Amiga klávesnici, myî
+nebo  skêíñ...  Také  doufám,  ùe  v dalîím, jiù pêipravovaném Hi-End projektu firmy Index
+Information  Ltd  bude  pouùit  inovovaný  çipset "AA+", PowerPC, PCI sloty a pamëti DIMM.
+Nezbývá  neù  BoXeRu  popêát  velký úspëch a jeîtë úspëînëjîího nástupce. Hlavnë aby se co
+nejdêív zaçal sériovë vyrábët a dostal se rychle na celosvëtový trh.
+
+                                          @{c 7DFDFF}Shaman@{c}

@@ -1,0 +1,335 @@
+
+  Beginning with this new version (v1.1) of the k3d.Fx plugin that
+  provides the whole 3D engine of karate, you can create patch objects
+  that applies on texture objects: Each "t3d" textures define a rendering
+  type, and you can extend each by adding one or more "patch" effect,
+  on these texture objects.
+
+  For the moment, only one patch effect is available, but it allows
+  many things...
+
+ ---------------------------------------- < ShapePatch> with t3dFlat
+
+ a "ShapePatch" Object affects the rendering of a texture, so that
+ an object that uses it will have its edges, its object shape,
+ rendered by another texture of your choice.
+
+ < shapepatch> label | texture to patch |
+    texture used to draw the edges | edge width  |
+    optional close "V" value | optional far "V" value </shapepatch>
+
+
+ You give a label for the patch like for any objects, then
+ the texture where to apply the patch, then
+ the edge width to draw: (in 3D coordinates.Perspective is applied on border width.)
+
+ In the first example, we only use these parameters for a
+ "cartoon rendering", sometimes called "cell shading".
+ It is just an environment mapping with a silly texture, and
+ then a patch applyed on the texture makes it draw a black outline.
+
+ Note: "ShapePatch" looks the object geometry and the polygon and vertex
+ connexity to find the edges to draw. It implies that your object had
+ to be correctly done: if 2 vertexes are at the same place and used by
+ 2 polygons, or if there is a strange polygon configuration, "ShapePatch"
+ will draw funny things.
+
+ So, note how it works:
+  - We create a t3dEnvMap to render the object,
+  - We create a texture for the black outline,
+  - And we create a patch to apply the outline on the t3dEnvMap
+
+<kimg> i_cellEnv | data/cellshadingEnv.iff </kimg>
+<t3dEnvMap> t_CellShading | i_cellEnv  </t3dEnvMap>
+<t3dFlat> t_BlackBorder | 0 </t3dFlat>
+
+<shapepatch> outlinePatch | t_CellShading | t_BlackBorder |0.05 </shapepatch>
+
+ Then we create a little world with objects using this texture:
+
+<World3D> world1 </World3D>
+
+<lwo3d> o_boy | world1 |0|0|0|0|0|0|1|1|1 | data/boyLWOB.lwo |1 | t_CellShading </lwo3d>
+
+<tore> o_w1tore | world1 |0|0|0|0|0|0|1|1|1|
+        12 | 6 | 3.25 | 0.15 | 0|0|0|1|1.0 |t_CellShading|t_CellShading|t_CellShading|t_CellShading </tore>
+
+<cube> o_w1c1 | world1 |0|1.25|0|0|0|0|1.25|0.25|1.25 | t_CellShading| t_CellShading| t_CellShading| t_CellShading| t_CellShading| t_CellShading </cube>
+<cube> o_w1c2 | world1 |3.5|-0.25|3.5|0|0|0|1|3|1 | t_CellShading| t_CellShading| t_CellShading| t_CellShading| t_CellShading| t_CellShading </cube>
+<cube> o_w1c3 | world1 |-3.5|-0.25|-3.5|0|0|0|1|3|1 | t_CellShading| t_CellShading| t_CellShading| t_CellShading| t_CellShading| t_CellShading </cube>
+
+ ---------------------------------------- < ShapePatch> with t3dgoureau...
+
+ "ShapePatch" can be used to patch a goureau shade on the edges of an object,
+ making the object look like if it has a shiny "glow" aspect around it.
+ You learned how to use "t3dgoureau" in tutorial 3D12.
+
+ Unlike "t3dFlat" rendering like in the previous example, "t3dgoureau"
+and the other render mode will will use as edge renderer in this example,
+ use lightning or UV coordinates (coordinates of vertex on a texture)
+  to be rendered.
+
+ In a 3D object, UV coordinates are defined by the geometry.
+ For rendered edge drawn by "ShapePatch", you got to add
+ the optional close "V" value and optional far "V" value in the
+ patch's constructor list. It gives these informations...
+
+ Run and look the glow example in the second part:
+ Close to the object, the shade is shining.
+
+
+<KIMG> i_lightmapGrey | data/lightmapgrey.iff </kimg>
+<KCOLORTABLE> coltab1 | data/remaptable.iff |0|  255|  255|255 </KCOLORTABLE>
+<KCOLORTABLE> coltab2 | data/remaptable.iff |0|  255|  255|128 </KCOLORTABLE>
+
+<t3dFlatLightMap> tLightMapGrey  | i_lightmapGrey </t3dFlatLightMap>
+<t3dgoureau> t_edgegr |i_lightmapGrey | coltab1 | 1.0 </t3dgoureau>
+<shapepatch> edgepatch2 | tLightMapGrey | t_edgegr |0.8|0.45|0.05 </shapepatch>
+
+<t3dFlatLightMap> tLightMapGrey2  | i_lightmapGrey </t3dFlatLightMap>
+<t3dgoureau> t_edgegr2 |i_lightmapGrey | coltab2 | 1.0 </t3dgoureau>
+<shapepatch> edgepatch3 | tLightMapGrey2 | t_edgegr2 |0.25|0.4|0.0 </shapepatch>
+
+<World3D> world2 </World3D>
+
+<cube> o_cubeLight | world2 |0|0|0|0|0|0|1|1|1|
+         tLightMapGrey|tLightMapGrey|tLightMapGrey|tLightMapGrey|tLightMapGrey|tLightMapGrey
+         </cube>
+<lwo3d> o_boy2 | world2 |0|0|0|0|0|0|1|1|1 | data/boyLWOB.lwo |1 | tLightMapGrey2  </lwo3d>
+
+ ---------------------------------------- < ShapePatch> with t3dmapshade...
+
+ As seen in tutorial 3D09, "t3dmapshade" allows a rendering that apply
+ a transparent additive texture-mapping using a 64 color grey image as
+ source, mixing the color with the sahding part of a colortable.
+
+ You can use such rendering for shape patch too, but as for the
+ previous example, the "U" and "V" coordinates of the texture mapping are missing.
+  Don't panic: the V (vertical) texture coordinates are given as the last
+  paramaters in < shapepatch>
+  The U coordinate for texture mapping is automatically computed with
+  the angles of the borders. Look the example running, and compare
+  the texture around the object with data/txtshade.iff, the shade texture.
+   It is quite clear. You can then even change the transparency of the shape
+   with "SetT3dShade" or even scroll it with "ScrollT3d"
+
+<World3D> world3 </World3D>
+
+<kimg> i_GreyImage | data/txtshade.iff </kimg>
+<t3dmapshade> t_bordermapshade |i_GreyImage|coltab2|1.0 </t3dmapshade>
+
+<t3dFlatLightMap> tLightMapGrey3  | i_lightmapGrey </t3dFlatLightMap>
+<shapepatch> edgepatch4 | tLightMapGrey3 | t_bordermapshade |0.4|0|0.125  </shapepatch>
+
+<tore> o_w3tore | world3 |0|0|0|0|0|0|1|1|1|
+        12 | 8 | 1.2 | 0.4 | 0|0|0|1|1.0 |tLightMapGrey3|tLightMapGrey3|tLightMapGrey3|tLightMapGrey3 </tore>
+
+ ------------------------------
+ trick to optimise the karate sprite by clipping a rendering rectangle:
+<kimg> i_logo | data/logozaac.iff </kimg>
+<KRECT> rec_sprite  |0|0.3|1|0.6|
+                    |0|0|1|1|  </KRECT>
+
+<MAIN> mainscript |0|1</MAIN>
+<KCAM> the_camera |0|0|-3|0|0|0|0.4  </KCAM>
+<KCAM> the_camera2 |0|0|-5|0|0|0|0.8  </KCAM>
+
+<KSCRIPT>
+    <ID> mainscript </ID>
+
+    <PLAY> part_CellShadingWorld | 700 | 0 | 1</PLAY>
+    <PLAY> part_GlowEdge | 1600 | 0 | 1</PLAY>
+    <PLAY> part_MapShade |1300|0|1 </PLAY>
+
+</KSCRIPT>
+
+///<KPART>  <ID> part_CellShadingWorld </ID>
+
+
+    <Fx><Pa>setpalette</Pa>     set the screen palette
+        <Pa> i_cellEnv </Pa>
+    </Fx>
+
+    <Fx><Pa>fillrc</Pa> clear the background
+        <Pa>   </Pa>
+        <Pa> cte | 52 </Pa>
+    </Fx>
+
+ ------ draw the background star:
+<World3D> wstar </World3D>
+<t3dFlat> t_d | 42 </t3dFlat>
+<star3d> o_starDisk | wstar |0|0|0|0|0|0|1|1|1 |8|0.8|0.4|0.2|0.4|||t_d2 |||t_d </star3d>
+
+   <Fx><Pa> Set3DObject </Pa>
+        <Pa>  o_starDisk </Pa>
+        <Pa> 3cte |1|1|-3  </Pa> position
+        <Pa> aff |0|0.002 </Pa>  rotations
+        <Pa> cte |0</Pa>
+        <Pa> cte |0</Pa>
+        <Pa> 3cte|1|1|1 </Pa> scale
+    </Fx>
+  <Fx><Pa> Draw3DWorld </Pa>
+          <Pa>   </Pa>
+          <Pa> wstar </Pa>
+          <Pa> the_camera2 </Pa>
+          <Pa> cte|0 </Pa>
+          <Pa> cte|0.25 </Pa>
+          <Pa> cte|20</Pa>
+    </Fx>
+-----
+
+<KTABLE> mvb_x1 | 0,-6 |150,0 |1400,0| 1600,6 </KTABLE>
+    <Fx><Pa> Set3DObject </Pa>   make the plane turn around...
+            <Pa> o_boy  </Pa>
+            <Pa> 3cte|0|0|0</pa> position
+            <Pa> aff|0|0.00</Pa> rot.
+            <Pa> aff|0|0.00</Pa> rot.
+            <Pa> aff|0|0.006</Pa> rot.
+            <Pa> 3cte|1|1|1 </Pa> scale
+    </Fx>
+
+    <Fx><Pa> Set3DObject </Pa>   make the plane turn around...
+            <Pa> o_w1tore  </Pa>
+            <Pa> 3cte|0|0|0</pa> position
+            <Pa> aff|0|0.0035</Pa> rot.
+            <Pa> aff|0|0.00</Pa> rot.
+            <Pa> aff|0.5|0.00</Pa> rot.
+            <Pa> 3cte|1|1|1 </Pa> scale
+    </Fx>
+
+<KTABLE> cam_x | 0,-4 | 200,0 |300,4 |400,0  |500,0    |550,-3.5  |700,3 </KTABLE>
+<KTABLE> cam_y | 0,-4 | 200,-4|300,-3|400,-2 |500,0    |550,1   |700,1  </KTABLE>
+<KTABLE> cam_z | 0,0 | 200,4 |300,0  |400,-3.5|500,-3.5|550,3 |700,3  </KTABLE>
+
+   <Fx><Pa> SetCamTarget </Pa>
+            <Pa> the_camera </Pa>
+
+            <Pa> aftmod | cam_x |0|0 </Pa>    x camera
+            <Pa> aftmod | cam_y |0|0 </Pa>        y camera
+            <Pa> aftmod | cam_z |0|0 </Pa>    z camera
+
+            <Pa> 3cte  |0|0|0  </Pa>    x target
+
+            <Pa> cte|0 </Pa>  angle rotation axe z
+            <Pa> cte|0.5 </Pa>       fov
+            </Fx>
+
+    <Fx><Pa> Draw3DWorld </Pa>
+           <Pa>   </Pa>
+           <Pa> world1 </Pa>
+           <Pa> the_camera  </Pa>
+           <Pa> cte|0 </Pa>
+           <Pa> cte|0.25 </Pa>
+           <Pa> cte|200</Pa>
+     </Fx>
+
+///</KPART>
+
+///<KPART>  <ID> part_GlowEdge </ID>
+  
+   <Fx><Pa>setpalette</Pa>  set the screen palette
+        <Pa> i_cellEnv </Pa>   we have seen each image stands for a 256 color palette too.
+    </Fx>
+
+    <Fx><Pa>fillrc</Pa>  clear the screen background to color 24.
+        <Pa>  </Pa>   default screen rectangle.
+        <Pa> cte | 24 </Pa>
+    </Fx>
+  <Fx><Pa>Sprite</Pa> draw the logo
+        <Pa> rec_sprite </Pa>
+        <Pa> i_logo </Pa>
+        <Pa> 4cte |0.1|0.1|0.9|0.9 </Pa>
+    </Fx>
+    <Fx><Pa> Set3DObject </Pa>  make the tore rotate all the time on the 3 axis:
+        <Pa>  o_cubeLight </Pa>
+        <pa> bounce|0|150|600|-12|0</pa>
+        <Pa> cte |0  </Pa>
+        <pa> bounce|0|250|600|8|0</pa>
+
+        <Pa> aff |-0.01|0.005</Pa>
+        <Pa> aff |0.1|0.006</Pa>
+        <Pa> aff |0.0|0.007</Pa>
+
+        <Pa> 3cte|1|1|1 </Pa>  scale
+    </Fx>
+
+    <Fx><Pa> Set3DObject </Pa>  make the tore rotate all the time on the 3 axis:
+        <Pa>  o_boy2 </Pa>
+        <pa> bounce|600|750|1400|12|0</pa>
+        <Pa> cte |0.75  </Pa>
+        <pa> bounce|600|850|1400|8|0</pa>
+
+            <Pa> sin|0|1.25|0.25</Pa> rot.
+            <Pa> sin|0|0.75|0.1</Pa>
+            <Pa> aff|0|-0.007</Pa> rot.
+
+        <Pa> 3cte|1|1|1 </Pa>  scale
+    </Fx>
+   
+
+    <Fx><Pa> Draw3DWorld </Pa>
+        <Pa>   </Pa>
+        <Pa> world2 </Pa>
+        <Pa> the_camera2 </Pa>
+        <Pa> cte|0 </Pa>
+        <Pa> cte|1 </Pa>
+        <Pa> cte|200</Pa>
+    </Fx>
+
+///</KPART>
+
+///<KPART>  <ID> part_MapShade </ID>
+
+   <Fx><Pa>setpalette</Pa>  set the screen palette
+        <Pa> i_cellEnv </Pa>   we have seen each image stands for a 256 color palette too.
+    </Fx>
+
+    <Fx><Pa>fillrc</Pa>  clear the screen background to color 24.
+        <Pa>  </Pa>   default screen rectangle.
+        <Pa> cte | 20 </Pa>
+    </Fx>
+
+    <Fx><Pa>Sprite</Pa> draw the logo
+        <Pa> rec_sprite </Pa>
+        <Pa> i_logo </Pa>
+        <Pa> 4cte |0.1|0.1|0.9|0.9 </Pa>
+    </Fx>
+
+   <Fx><Pa> ScrollT3d </Pa>  scroll the texture applied in the edges.
+        <Pa> t_bordermapshade </Pa>
+        <Pa> aff|0|0.005 </Pa>
+        <Pa> cte|0 </Pa>
+    </Fx>
+   <Fx><Pa> SetT3dShade </Pa>  Change texture's transparency rate:
+        <Pa> t_bordermapshade </Pa>
+        <Pa> coltab2 </Pa>
+        <Pa> sin|0.7|1.8|0.4 </Pa>
+    </Fx>
+
+    <Fx><Pa> Set3DObject </Pa>  make the tore rotate all the time on the 3 axis:
+        <Pa>  o_w3tore </Pa>
+       <Pa> cte |0  </Pa>
+        <pa> bounce|0|150|1100|-10|0</pa>
+        <pa> bounce|0|150|1100|8|-1.2</pa>
+
+        <Pa> aff |0.0|0.002</Pa>
+        <Pa> aff |0.0|0.005</Pa>
+        <Pa> aff |0.0|0.006</Pa>
+
+        <Pa> 3cte|1|1|1 </Pa>  scale
+    </Fx>
+
+    <Fx><Pa> Draw3DWorld </Pa>
+        <Pa>   </Pa>
+        <Pa> world3 </Pa>
+        <Pa> the_camera2 </Pa>
+        <Pa> cte|0 </Pa>
+        <Pa> cte|1 </Pa>
+        <Pa> cte|200</Pa>
+    </Fx>
+
+///</KPART>
+
+
+
+ 

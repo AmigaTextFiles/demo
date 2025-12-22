@@ -1,0 +1,103 @@
+@{d F3C5FF}                                       @{c FF00A1}ENFORCE@{c}
+                                       @{c FF00A1}¯¯¯¯¯¯¯@{c}
+  Horkou novinkou dubna je novë vznikající akçní-RPG hra s pracovním názvem @{c FF00A1}ENFORCE@{c} od
+praùské  skupiny Insanity.  Rozdíl mezi touto hrou a ostatními 3D ªhramiº, které dosud
+na  Amize  vznikaly  je  v jeji  technické  a  grafické  dokonalosti  a novými herními
+vlastnostmi  (nepûjde  jen  o  stupidní  stêílení do vîeho co se hýbe).  Zde je krátký
+pêehled vlastností tohoto projektu:
+
+- Hra bude mit prvky RPG, to znamena, ze vlastnosti vaseho hrdiny se budou postupne
+  zlepsovat, take vyzbroj si nebudete opatrovat zpusobem, jaky je v hrach toho typu
+  zvykem - sbiranim, ale poctivym nakupem za vase vydelane penize.
+
+- Celkovy prubeh hry by mel byt nelinearni ,coz znamena, ze nebudete pokazde hrat
+  stejne mise ve stejnem poradi.
+
+- V kazde misi budou urcite konkretni úkoly, ktere je treba ke zdarnemu konci udelat.
+  Rozhodne nepujde o obvykle ªvycisteniº celeho levelu a najiti vytahu do dalsiho.
+
+- Pohybove moznosti hlavniho hrdiny budou rozsireny o ruzne úskoky, plazeni,
+  skrcovani, pretaceni se na bok apod.
+
+- Prostredi hry bude velmi zive a interaktivni - jezdici automobily ci metro nebudou
+  nic neobvykleho.  Vzhledem tomu, ze vse v jednotlivych mapach se da ovladat metodou
+  udalosti mezi ruznymi objekty, lze cely svet snadno rozpohybovat a ozivit ruznymi
+  vytahy, tlacitky, teleporty, naslapnymi plosinkami, senzory pohybu apod.
+
+
+  @{c FF00A1}Základní rysy enginu:@{c} 
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+
+- Plne polygonovy, umoznuje naprosto libovolny tvar mapy.
+- Plne polygonove objekty a modely, umoznujici zcela plynule animace a pohledy ze
+  vsech smeru, slozene z vice nez 300 polygonu
+- Neomezeny pocet svetelnych zdroju, ktere lze dynamicky ovladat (zhasinani,
+  rozsveceni apod.)
+- Dynamicka svetla (firebally osvetlujici okolni steny apod.)
+- Paralaxni polopruhledna obloha .
+- Pruhledne textury
+- Kompletne programovatelne interakce hrace s prostredim v jednoduchem skriptovem
+  jazyce (teleporty, spinace, naslapne plosinky,vytahy ovladane v jakychkoliv
+  kombinacich v zavislosti na pripojenem skriptovem programu)
+- Naprosto volny pohyb kamery ve vsech sesti smerech.
+- Realisticke stinovani vytvorene libovolnym nasvicenim sceny.
+- Podpora zobrazeni na AGA a vsech grafickych karet prez CyberGraphX,
+  v libovolnem rozliseni.
+- 256 barevna paleta, nebo 16-bitovy HiColor
+- Podpora 3D funkci Virge!  Uz je castecne funkcni, rychlost v 640x480 je skutecne
+  uchvatna!
+- 3D zvuk
+
+
+
+
+
+    @{c FF00A1}Hardwarové nároky:@{c}
+    @{c FF00A1}Amiga@{c}       minimum         optimalni
+    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+                AGA Amiga       CyberGraphX kompatibilni karty
+                040/40MHz       060/50MHz
+                8Mb             16Mb
+                CD-ROM          CD-ROM, AHI kompatibilni zvukova karta
+                podporováno bude (moùná) PPC CyberGL a PPC 603/604
+
+
+    @{c FF00A1}PC@{c}          minimum         optimalni
+    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+                Pentium 120     Pentium 200
+                16Mb            32Mb
+                Win95           Win95
+                DirectX         DirectX, 3Dfx
+                CD-ROM          CD-ROM
+                Win kompatibilni zvukova karta
+@{c FF00A1}Frequently Asked Questions@{c}
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+
+Q: Will there be a PPC version? Hopefully already in the demo :)
+A: Yes, I'm planning PPC support, at least throught PPC CyberGL,but it's far in
+   future now...
+
+Q: How large screenmodes can we use?
+A: Just now, only 320x240 and 640x480 are selectable, but engine support any
+   resolution upto 1280x1024 (but then it's slow like hell :-)
+
+Q: When will be demo available ?
+A: Maybe this week. I'm working very hard on this.
+
+Q: When will be full game ?
+A: I hope that about 6-9 months.  Maybe it¨s long time, but this will not be only
+   simple 3D shooting game like others...
+
+Q: Why PC version ?
+A: Because I'm not Santa Claus, and I need even some money from this project ;-) But
+   Amiga version will be about 0,5 year before PC version.
+
+Q: Will be there support for 030 processors ?
+A: Unfortunatelly not.  This engine needs FPU, and there are used some tricks, which
+   are possible only on 040/060 processors (for example, interleaving of CPU and FPU
+   instructions), which makes this engine to work on such weak processors like 040
+   that fast.  So, on 030+FPU it will be working, but very slow. (I didn't test it..)
+
+Q: What about P96 ?
+A: I got a lot of e-mails from owners of P96, so I decided, that I'll make support
+   even for P96.

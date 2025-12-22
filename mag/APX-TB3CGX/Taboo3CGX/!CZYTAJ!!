@@ -1,0 +1,183 @@
+
+
+Taboo 3 - podrëcznik uûytkownika :)
+
+
+1\ Wymagania
+2\ Opcje preferencji
+3\ Ewentualne problemy
+
+        Majâc  na  uwadze  dosyê  duûe  problemy,  z  jakimi  borykali  sië
+Czytelnicy   (a   o  jakich  dali  nam  znaê  :),  próbujâc  odpaliê  maga,
+postanowiliômy do tego numeru napisaê bardziej obszernego doc'a.
+        Wiele  bólu  sprawiaîo  niezamieszczenie spisu potrzebnych plików i
+niedopracowanie  procedurki  ich  sprawdzania  z  poziomiu programu.  Za to
+nidopatrzenie  bardzo  przepraszamy.   I  wîaônie  dlatego  w Taboo 3 przed
+uruchomieniem sprawdzane jest, czy potrzebne pliki znajdujâ sië w systemie.
+Tak samo dzieje sië w przypadku pamiëci oraz trybu graficznego.
+        Aby magazyn uruchomiî sië poprawnie naleûy dysponowaê :
+
+1\ WYMAGANIA:
+
+#Sprzët
+
++ dowolna Amiga z
+
+/wersja AGA/
+
+- ukîadami AGA;
+
+- procesor 020+ (MINIMUM!  - ale nie mamy pojëcia jak WOLNO!  mag bëdzie sië
+  wlókî na tym procku), generalnie im wiëcej MIPS'ów, tym lepiej;
+
+- minimum 4mb wolnej pamiëci FAST i 1,5 mb wolnej pamiëci CHIP;
+
+- twardy dysk z wystarczajâcâ iloôciâ miejsca, na rozpakowanie archiwum;
+
+- monitor PAL, MultiSync lub VGA
+
+/wersja Cybergraphics/
+
+- dowolna karta graficzna obsîugiwana przez pakiet Cybergraphics;
+
+- procesor 020+ (MINIMUM!  - ale nie mamy pojëcia jak WOLNO!  mag bëdzie sië
+  wlókî na tym procku), generalnie im wiëcej MIPS'ów, tym lepiej;
+
+- minimum 8mb wolnej pamiëci FAST i 0,7 mb wolnej pamiëci CHIP;
+
+- twardy dysk z wystarczajâcâ iloôciâ miejsca, na rozpakowanie archiwum;
+
+- monitor Mutlisync lub VGA;
+
++ jakiô sprzët nagîaôniajâcy;
+
+#Programy
+
+        Taboo  jako mag systemowy korzysta z zasobów partycji SYStemowej :)
+Oto co powinno znajdowaê sië w Workbenchu :
+
+/obie wersje/
+
++ biblioteki XPKMaster (v3+), DBPlayer (v2+), xpkSQSH (v1+);
+
++ AHI (v4+);
+
++ LZX (v1.01+);
+
++ pliki zawarte w archiwum TabooAGA lub TabooCGX w katalogu SYS;
+
+/wersja CGX/
+
+- pakiet CyberGrapX (v3/v4 - Taboo zostaîo napisane przy uûyciu wersji 3)
+
+2\ OPCJE W PREFERENCJACH:
+
+        Od numeru trzeciego zostaî nieco zmieniony program do zmiany
+preferencji. Zostaîo dodanych kilka opcji. Oto ich opis.
+-> GRAFIKA
+|
+---> ROZDZIELCZOÔÊ : sîuûy do wyboru trybu graficznego, w jakim bëdzie odpalone
+|  Taboo 3. Naleûy wybieraê rozdziaîki dla wersji AGA 640x256(do 480)x8, wersji
+|  CGX 640x480x15(do 24).
+---> MUTLISCAN [tylko wersja AGA] : ze wzglëdu na rozmiar rysunków tytuîowych
+   (640x480), dla osób, które korzystajâ z Multiscana, a maga odpalajâ np. na
+   monitorze MultiSync w Pal'u, zostaîa dodana moûliwoôê wyôwietlenia ich w
+   rozdzielczoôci 640x480. Normalnie dla trybu Pal i DblPal rozdzielczoôê jest
+   podwajana do 640x512. Pozwala to na ominiëcie Interlace'u (w trybie PAL).
+-> MUZYKA
+|---> TRYB AHI : uruchamia preferencje AHI z katalogu SYS:Prefs/.
+|---> MUZYKA PRZY STARCIE : opcja dla osób ze sîabszymi konfigami, u których mag
+   bëdzie sië dîugo wczytywaî. Aby skorzystaê z tej opcji naleûy do katalogu
+   MUZ/SND/ (znajdujâcym sië w gîównym katalogu z Taboo) przegraê 5 dowolnych
+   utworów ProTrackera, zmieniajâc ich nazwy odpowiednio na 1,2,3,4,5. Podczas
+   uruchamiania maga losowo zostanie wczytany jeden z nich i odegrany do momentu
+   zaîadowania wszystkich artykuîów. Naleûy pamiëtaê o tym, aby moduîy nie byîy
+   spakowane!
+
+3\ EWENTUALNE PROBLEMY:
+
+P: 
+Pomimo,  ûe  wszystkie  pliki mam zainstalowane, Taboo podczas uruchamiania
+"wywala"  komunikat  o  braku  potrzebnych  danych (bez podania brakujâcego
+elementu).
+
+O:  
+Spotkaliômy   sië   z  tym  problemem.   Winë  za  to  ponosiîa  biblioteka
+XPKMaster.Byîa  po prostu uszkodzona przez wirusa.  Zatem jeôli wystëpujâ u
+Ciebie  takie  problemy,  sprawdú  czy  potrzebne  pliki  w systemie nie sâ
+uszkodzone.   Jeôli tak musisz je powymieniaê (choêby na te, które znajdujâ
+sië w archiwum z Taboo).
+
+P:  
+Podczas  uruchamiania program domaga sië jakiô dziwnych plików, chce aby mu
+dograê jakieô fonty, biblioteki itd.  Poradúcie co robiê?
+
+O: 
+Taboo3  (AGA  i  CGX)  korzysta z niektórych systemowych bibliotek i komend
+(wymienionych  w  wymaganiach).   Pliki  te znajdujâ sië w archiwum Taboo w
+katalogu  SYS.   Pogrupowane  sâ  w  podkatalogi (biblioteki znajdujâ sië w
+Libs,  fonty  w  podkatalogu  Fonts etc.).  Naleûy przegraê je (w razie ich
+braku) do poszczególnych katalogów na partycji SYStemowej (Libs, Fonts, C).
+
+P:  
+Po wîâczeniu moduîu wielokanaîowego prëdkoôê spada na îeb, na szyjë.
+
+O:  
+Byê  moûe  wina  leûy  w niewîaôciwych ustawieniach AHI.  Spróbuj za pomocâ
+preferencji   Taboo  zmieniê  tryb  muzyczny  i/lub  obniûyê  czëstotliwoôê
+próbkowania.
+
+P:  
+Zanim  mag  sië  uruchomi,  zdâûë wypiê cztery herbaty i przespaê sië przez
+godzinë.    
+
+O:    
+Niestety  uruchamianie  maga  wydîuûyîo sië znacznie w porównaniu z numerem
+#2.  O ile na na procesorach 040/060 da sië to znieôê w miarë spokojnie, to
+na  030 i mniej moûe byê naprawdë kiepsko.  Proponujemy w trakcie odpalania
+Taboo ograniczyê liczbë tasków obciâûajâcych procesor do MINIMUM.
+
+P:  
+Podczas  uruchamiania  Taboo  AGA  bez  StartupSequence  mag  nie  chce sië
+uruchomiê.
+
+O:  
+Aby  bezproblemowo uruchomiê Taboo bez sekwencji startowej, naleûy najpierw
+zapewniê  programowi  dostëp  do  potrzbnych  danych  systemowych.   Przede
+wszystkim  naleûy uruchomiê program SetPatch i dodatkowo jeôli korzystamy z
+innych  trybów  graficznych  niû Pal, naleûy je równieû wczytaê.  Naleûy to
+zrobiê  poprzez  wklepanie  w  Shellu :  DEVS:Monitors/DblPal [enter] lub/i
+(jeôli mamy np.  wîâczonâ opcjë MULTISCAN) DEVS:Monitors/Multiscan [enter].
+Dla pewnoôci dobrze jest takûe wykonaê asygnacjë dla ENV:.
+
+P:  
+Uruchamiam   Taboo,   czekam,  czekam,  czekam...   ,mija  piëê,  dziesiëê,
+piëtnaôcie  minut  a  tu nic.  Caîy czas czarny ekran.  
+
+O:   W  takim  wypadku  naleû  kombinacjâ klawiszy Ctrl+M sprawdziê, czy na
+ekranie WB nie pojawiî sië jakiô komunikat.  Podczas testów nic takiego sië
+nie  zdarzyîo,  ale  to  nie  oznacza, ûe komuô przytrafiê sië to nie moûe.
+Najbardziej  prawdopodobny  moûe  byê  requester  do  ustawiania trybu AHI.
+Jeôli  kombinajca  klawiszy  nie  dziaîa,  najprawdopodobniej  komputer sië
+zwiesiî.   Dokonaj  resetu (moûe coô siedziaîo w pamiëci) i jeôli mag znowu
+sië   powiesi   spróbuj  (jeôli  masz  takâ  moûliwoôê)  uruchomiê  go  bez
+Startup-Sequence.   Jeôli  i to nic nie pomoûe (a z innymi programami takie
+historie sië nie dziejâ) skontaktuj sië z ITU (ditud@box43.pl) i opisz jaki
+masz sprzët, dokîadne objawy zwisu itd.
+
+ITU
+
+Jeszcze kilka sîów ode mnie (Slayer).  Tym razem wszystko podaliômy Wam jak
+na tacy, i jeôli teraz bëdziesz miaî problemy z uruchomieniem, to, wyjdú do
+îazienki  i  sprawdú, czy Cië tam nie ma...  No nie, ûartujë.  Jeôli wiëc i
+tym razem coô jest nie tak z odpaleniem zina (choê to maîo prawdopodobne) -
+skontaktuj sië z ITU - programistâ Taboo:
+
+ITU/Taboo Staff
+ditud@box43.pl
+
+Opisz   jaki   masz  sprzët,  dokîadne  objawy  zwisu  itd.   Jednak  zanim
+zdecydujesz  sië  na  ten  czyn,  PRZECZYTAJ jeszcze raz DOKÎADNIE powyûszy
+tekst i upewnij sië, ûe nie bëdziesz pytaî o coô, co jest tu opisane!
+
+Slayer

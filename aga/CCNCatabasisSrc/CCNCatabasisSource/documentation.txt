@@ -1,0 +1,397 @@
+
+ This is the documentation to recompile the demo
+ "Catabasis" by Cocoon (2017), a demo for
+ unexpanded Aga amigas. But you'll need some fast ram
+ to recompile it !
+
+ Yes, it is opensourced.
+ Feel free to reuse and redistribute any code,
+ yet the images and musics in res/ belong to
+ their respective authors.
+
+ For further questions, the best practice is to
+ hang around the best Amiga coder forum at
+ Amiga Demoscene archive: http://ada.unterground.net,
+ then Forum/Code.
+
+ As you will notice, this codebase is a bit messy
+ so here are a few guidelines to find quickly what
+ may interest you or not, in which files.
+
+ This code doesn't look like oldschool demo code.
+ 97% of the sources here were made after 2015.
+ The startup doesn't shunt the system as deep as
+ usual startup to be able to use regular dos.library
+ both to load files and print outputs for debug.
+ The keyboard is used through legal os device calls.
+
+ The only part in C is the Gif-To-Planar-Bitmap
+ converter. Gif is a very suitable format for AGA,
+ Personal paint is able to load/save gif images and
+ brushes, and 24b palettes are uncompressed in gif.
+ so that's what is directly linked in .dat file.
+
+
+
+
+
+
+	Main plan:
+
+ 1. Installation and prerequesites
+ 2. Makefile: How to assemble and link.
+ 3. Project structure
+ 4. the inner memory alloc system
+ 5. the data files management
+ 6. the GIF-To-Planar-Bitmap Reader.
+ 7. the double-copperlist-compiler
+ 8. the 16 colors polygon tracer
+ 9. the music
+
+
+; - - - - - - - - - - - - - - - - - - - - - -
+1. Installation and prerequesites
+
+	1A. make
+
+	The original project was done using standard
+	makefile, so you have to install something with
+	the standard "make" command, if you don't already
+	have. If you don't want to, there's a "dosmakefile"
+	amiga script you can use instead with
+	">execute dosmakefile".
+
+	A nice quick solution is to install the recent
+	gcc compiler ADE, it will install "make" and a lots
+	of cool unix tools like "grep":
+
+		aminet.net/dev/gcc/ADE.zip
+
+	Unfortunately, the assembler and linker
+	in ADE use another assembler and binary format.
+
+
+	1B. An assembler
+
+	The original makefile used devpac's GenAm
+	to assemble. But it is a commercial product.
+	( GenAm parameters are still in comment in makefile.)
+	So this makefile use the free "PhxAss":
+
+		aminet.net/dev/asm/PhxAss.lha
+
+
+	1C. An executable linker
+
+	Each assembler files in src/ are meant to be
+	assembled in obj/ as .o files. (this is a very
+	standard C way of doing projects, just so you know)
+	Then, a linker must join all .o to make an executable.
+
+	Originally I used SASC to compile the C parts with
+	"no C startup mode", but it is a commercial product
+	so the GifToBm.o is already pre-compiled in cobj/.
+	and we will use some linker from aminet.
+	Hey, it is the same as devpac !
+
+		aminet.net/dev/misc/blink67.lzh
+		(note: lha can extract lzh it seeems.)
+
+	as soon as you have phxass and blink in your "c:"
+	you're ready.
+
+
+
+; - - - - - - - - - - - - - - - - - - - - - -
+2. Makefile: How to assemble and link.
+
+	just open a shell in the root dir and type:
+	
+	>make
+
+	it will read "makefile" and will try to
+	create catabasis.exe and catabasis.dat using
+	phxass and blink.
+
+	To delete all that was created type:
+	
+	>make clean
+
+	now the magic is, if you modify one of the
+	.s file, type make again, and only one file
+	will be reassembled before the linking.
+	If you didn't install make, or have no clock
+	on your amiga, which is required by make, type:
+
+	>execute dosmakefile
+
+
+
+; - - - - - - - - - - - - - - - - - - - - - -
+3. Project structure
+
+	The first file linked is the one in which
+	the program enter: in startupWithShuntAGA.s
+	it gets rid of the OS,
+	declare a vertical-blank interupt, which
+	is a small part of code executed at the end
+	of each 50Hz frame, interupting the main code.
+
+	then it enter demo.s functions, which
+	is responsible for doing usefull memory allocs,
+	inits some math tables (in move.s),
+	init the .dat file, then apply the demo script.
+
+	the demo script is described in a table in the
+	middle of demo.s, and it links various screens
+	that all stands in files that are called fxXXXX.s.
+
+	Each fx files provides:
+		1. an init function
+		2.a CPU drawing function at any frame rate
+			that can use the blitter or not.
+		3. a vertical blank function that set the
+		  copperlist, and can actually also draw
+		  but cannot use the blitter.
+		4. a end function that can actually free
+		 resource declared in init, executed
+		 ONCE the copperlist is gone for sure.
+
+	then these files may use effects that are in
+	other .s files, like k3d for the polygons.
+
+	an important file is demoData.i:
+	It has all the structures used in common
+	for scripting, managing memory and bitmaps,
+	etc.. yes, you can use structures in ASM.
+
+
+
+; - - - - - - - - - - - - - - - - - - - - - -
+4. the inner memory alloc system
+
+	there is 4 large blocks of memory allocated
+	once for all at the demo.s init:
+		
+		- Two large block of chip ram for bitmaps
+		   (_mchip1,_mchip2)
+		- One Extra large bloc of chip ram for
+			the music (_mchip3)
+		- One block of data that can be in fastmem
+		  or chipmem if not available (_mfast).
+
+	then there is an internal memory allocation
+	system in inmem.s with functions _InAlloc()
+	and _InFree(), very alike to Exec's Alloc/free,
+	for the demo use.
+
+	Why ? Because:
+
+	1. We want to work on 2Mb non expanded machines.
+
+	2. having a demo telling you that there is
+	   no more memory in the middle of the demo
+		is not conceivable.
+
+	3. We are kind of streaming the demo,
+		so we want to free/alloc/read files
+		without using more memory.
+
+	4. When you use an Amiga for real, you may have
+		around 1.2Mb Chip really free on your system,
+		and it may be segmented (that's why we have
+		2 large chunks for bitmap: more chances to be
+		allocated).
+
+
+
+
+; - - - - - - - - - - - - - - - - - - - - - -
+5. the data files management and GIF reader
+
+	It is made to loose no times with resources:
+	the dat file is actually an exe that just
+	"concatenate" resource files.
+
+	This is easily done with files res/dat.s
+	and file res/dat.i
+
+	all files linked in .dat are listed in dat.i
+	and are also given a label with this:
+
+		ADDFILE	txtile,texturesG.gif
+
+	... then in the demo code, you can read
+	the file using a "N_" label to read that file:
+
+		moveq	#N_txtile,d0    ;d0.w dat file index
+		clr.l	d1 ; flags
+		lea		txtileBmp(pc),a3 ; to receive palette or NULL
+		bsr    _readGifToBm
+		; return a0 gif sBitmap
+		move.l	a0,txtileBm ; bitmap to be freed with CloseBm
+
+	when modifying dat.i, the makefile should see
+	it and recompile .dat.
+	it may be a good idea to do a "make clean" then
+	to assume resource ids are correct in all codes.
+
+
+; - - - - - - - - - - - - - - - - - - - - - -
+6. the GIF-To-Planar-Bitmap Reader and bitmap formats.
+
+	there is a func _readGifToBm in demo.s that
+	does all inits for an image.
+	No secret, it's some giflib c source compiled
+	with SASC in no startup mode.
+	(so it does have no standard C dependancies)
+	and can use our own _InAlloc/_InFree funcs.
+	It's precompiled in cobj/ but GifToBm.c is in src.
+
+	Of course, libGif alone wouldn't be able to
+	create standard amiga planar bitmaps,
+	so it uses c2p1x1_8_16b_68k_bm.s, a collection
+	of special 8 chunky-to-planar I did, that will
+	create 8 planes bitmaps for 256 colors gifs,
+	or any of the 1,2,4,8,16,32,64,128,256 colors
+	format with the corresponding number of bitplanes.
+	Those "C2P" were not aimed for speed, so they
+	write words, and so here are limitations:
+
+		- no gif interlace mode support.
+		- output image will be 16 pixel width aligned.
+
+	Yes, madam, and that is not all: the bitmap
+	structure created is actually an extension
+	of the OS's standard bitmap structure,
+	in graphics/gfx.i.
+	So those bitmaps could be used by standard OS functions.
+
+	In this demo, this is actually also the case
+	of the screens bitmaps that can be inited/freed
+	 with functions in copperCompiler.s:
+
+        _initBm
+        _closeBm
+
+
+
+; - - - - - - - - - - - - - - - - - - - - - -
+7. the double-copperlist-compiler
+
+	It's all in copperCompiler.s
+
+	One of the aim of this demo was to experiment
+	some AGA-Hardware specific stuffs, including
+	using the blitter in conjunction with the
+	"burst mode": you can set that in the hardware
+	address "fmode".
+
+	there is actually 3 level of bus configuration
+	with AGA, I call them X1, X2 and X4, which is
+	actually accurate for memory alignment
+	(X1 want alignement to 2 bytes, X2 to 4 and X4
+	to 8bytes), but not for speed:
+	Blitter is 2 times faster with X4.
+
+	The nasty thing is, you can't configure your
+	copperlist the same way with each modes, you
+	have to align bitmap memory a different way,
+
+	and even better: if you want to also do parallax
+	scrolls, which is something the amiga can do well,
+	everything changes according to burst mode.
+
+	and even even better: you have more or less sprites
+	available according to these confiurations
+	( fmode+ scroll or not.)
+
+	Considering this, and the fact that the copperlist
+	must be reconfigured each frame, we have
+	an heavy copperlist compiler in copperCompiler.s
+
+	Each effect would create a double buffered
+	copperlist with _cc_InitLowResAGADbl.
+	It allocs and init 2 copperlists in chip mem,
+	and a structure that describe them, possibly in fast.
+	The struct tells where to complete/modify
+	the active copperlist, to set colors, bitmaps,
+	sprites, and/or... recode the per-line wait
+	states for parralax scrools.
+
+	most copperlist stuffs have to be done in vblank
+	because that's where the double copperlist
+	is "switched" and activated.
+
+	That way, you can have most effects done in
+	vblank interupt, running always at 50Hz
+	whatever happens, and a triple buffer still
+	managed at main thread level, running at any fps.
+	classic.
+
+; - - - - - - - - - - - - - - - - - - - - - -
+8. the 16 colors polygon tracer
+
+	mostly in k3d.s or k2d.s
+
+	1. Cleaning the screen is actually done by blitter
+		It does only clean the previous dirty rectangle.
+
+	2. In the same times, geometry is computed
+		with lots of muls/divs, which stalls
+		the CPU but we don't care because bus
+		is used by blitter.
+
+	3. Polygons are drawn with...
+		the dreaded 68020 bfins instruction :)
+		...which is kind of slow.
+
+	 Well, this was experimental. The thing is
+	 almost each loops in the 3d pipeline stands
+	 in 256 bytes, to benefit from 68020's 256byte
+	 code cache: that way, the bus is left for data.
+
+	 Yes, you may have noticed on 68000, half of what
+	 the bus does is loading 68000 code. And on
+	 unexpanded amiga, slow the bus is.
+	 you can theorically avoid that with 68020
+	 only if loops stand in 256 bytes.
+
+	that said, this technique is different from
+	the other amiga polygon techniques known:
+	   - using 32bits chunky to planar
+	   - using full blitter
+
+	From what I see, bfins are not *that bad* for
+	unexpanded amigas in 4 planes.
+	With just one plane and unexpanded amiga,
+	 blitter with burst should be better.
+
+	But watch out:
+	3D Objects are 15 colors flat here, usually
+	128 polygons that can be triangles or quads.
+	
+	On the same configuration, most demo from
+	1993-1995 used 4 or 8 colors, with
+	only 16 or barely 64 polygons meshes.
+	So: Happy.
+
+
+; - - - - - - - - - - - - - - - - - - - - - -
+9. the music
+
+	It's the last version I could find of p61.
+	With my startup it used to crash with no-os
+	mode on A4000 with ethernet cards.
+	So it is configured in p61Link to do
+	like if the os was there.
+
+	If you want to change the music, the size
+	allocated is uglily hardcoded in demoData.i
+	at label "sc3_p61": you have to set the p61 file
+	size there, and also change name of p61 in res/dat.i
+
+	this version of p1 allows to use a table
+	of the sound signal to synchronize effect.
+	I should have used that :) really.
+

@@ -1,0 +1,9 @@
+; Loop to display a rotating cube...
+
+SETFONT topaz 8
+COPY CubeAnim.ASCII Ram:
+Ram:
+
+LAB Repeat
+  Type CubeAnim.ASCII
+SKIP BACK Repeat

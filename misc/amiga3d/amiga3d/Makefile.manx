@@ -1,0 +1,54 @@
+CC =		cc
+CFLAGS =
+#LIBS =		-ldebug
+
+OBJ1 =		3dsubrs.o amiga.o amigaprocedures.o camera.o deallocate.o 
+OBJ2 =		debug.o displayuniverse.o threed.o init.o joystick.o
+OBJ3 =		objectallocate.o startgfxdos.o subdisplay.o
+OBJECTS =	$(OBJ1) $(OBJ2) $(OBJ3)
+
+amiga3d :	$(OBJECTS)
+		$(CC) -o amiga3d $(OBJECTS) $(LIBS)
+
+3dsubrs.o :	3dsubrs.c
+		$(CC) -c $(CFLAGS) 3dsubrs.c
+
+amiga.o :	amiga.c
+		$(CC) -c $(CFLAGS) amiga.c
+
+amigaprocedures.o :	amigaprocedures.c
+		$(CC) -c $(CFLAGS) amigaprocedures.c
+
+camera.o :	camera.c
+		$(CC) -c $(CFLAGS) camera.c
+
+deallocate.o :	deallocate.c
+		$(CC) -c $(CFLAGS) deallocate.c
+
+debug.o :	debug.c
+		$(CC) -c $(CFLAGS) debug.c
+
+displayuniverse.o :	displayuniverse.c
+		$(CC) -c $(CFLAGS) displayuniverse.c
+
+init.o :	init.c
+		$(CC) -c $(CFLAGS) init.c
+
+joystick.o :	joystick.c
+		$(CC) -c $(CFLAGS) joystick.c
+
+objectallocate.o :	objectallocate.c
+		$(CC) -c $(CFLAGS) objectallocate.c
+
+startgfxdos.o :	startgfxdos.c
+		$(CC) -c $(CFLAGS) startgfxdos.c
+
+subdisplay.o :	subdisplay.c
+		$(CC) -c $(CFLAGS) subdisplay.c
+
+threed.o :	threed.c
+		$(CC) -c $(CFLAGS) threed.c
+
+
+
+

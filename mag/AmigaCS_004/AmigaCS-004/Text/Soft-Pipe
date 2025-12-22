@@ -1,0 +1,106 @@
+@{d FFD1FF}@{xoffset 21}¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+@{xstep 404}@{font ACS-Title.font 18}Shellovské roury@{font}
+@{xstep 440}@{c A6FFF8}@{i}Schizzy/Abort@{ui}@{c}@{ystep -8}
+
+
+
+  @{xstep 0}@{font ACS-Title.font 18}C@{font}o to vlastnë roura mûùe bıt?  Roura (také se mûùete çasto setkat s anglickım
+oznaçením  Pipe,  pêípadnë  jeîtë  se  zkratkou  FIFO)  je  prakticky  nejstarîí
+a nejjednoduîîí  zpûsob komunikace mezi rûznımi procesy.  Pêedstavme si modelovı
+pêíklad,  kdy  proces  A  vyprodukuje  urçitá  data a ty potêebujeme pêedat jako
+vstupní  data  procesu  B.   Êeîení je celkem prosté - migrující data si procesy
+pêedají  pomocí  doçasného  souboru.  Má to ovîem nëkolik nevıhod.  Jsme brzdëni
+reùií  pêístupu k diskovım operacím çtení/zápis a navíc proces B musí poçkat, aù
+budou  jeho vstupní data od procesu A kompletnë vygenerována a následnë uloùena.
+Pokud  jsou  data  rozsáhlá, bıvá çasová ztráta znaçná.  Bylo by dobré, kdyby si
+proces  B  mohl  data  odebírat okamùitë, kdy je proces A vyplodí aniù by se tím
+zamëstnával disk.  A pêesnë na tomto principu je idea roury zaloùena.
+
+  Fyzicky  je  roura  êeîena  jako  vyrovnávací  pamëï (buffer) jisté délky dané
+implementací, do níù mûùe právë jeden proces svá vıstupní data zapisovat a právë
+jeden  proces  z  ní  svá  vstupní data naçítat.  Tyto dvë operace jsou navzájem
+asynchronní.   Pokud  proces,  kterı  data produkuje (takzvanı producent), rouru
+zahltí,  vybudí  se  mechanismus  suspend,  kterı producenta pozastaví, aby mohl
+proces,  kterı data odebírá (takzvanı konzument) rouru vyprázdnit.  Poté suspend
+opët  producenta  odblokuje  a  ukonçí  se.   Podobná  situace nastane v opaçném
+pêípadë, kdy konzument odebírá data z roury pêíliî rychle a pokud by v rouêe jiù
+ùádná  nebyla, mohl by se od ní odpojit a celá komunikace by se rozpadla.  Proto
+se  spustí  mechanismus suspend na konzumenta a çeká se, aù producent opët rouru
+naplní.
+
+  Aby se mohl nëjakı proces zapojit do roury, musí splñovat podmínku, ùe odebírá
+data ze standardního vstupu (stdin) a/nebo data zapisuje do standardního vıstupu
+(stdout).  Nëkteré procesy si vystaçí jenom se standardním vstupem a standardním
+vıstupem  - takovım se êíká filtr.  Rourou mûùeme spojit i více procesû neù dva;
+takto  spêaùené  série  procesû  se oznaçují jako kolona.  Nëkteré programy jsou
+typickımi  producenty dat, ty se zadávají vıhradnë na zaçátek kolon, jiné naopak
+typickımi  konzumenty  nebo  filtry,  ty  naopak  vyuùijeme uvnitê nebo na konci
+kolon.   Amigovské  pêíkazy  bohuùel  nebyly  psány jako filtry, spíîe se s nimi
+setkáte v balíku ADE nebo GeekGadgets.
+
+  Roura byla na Amize implemetována, tuîím, jiù ve verzi 1.1 operaçního systému,
+a  to jako queue-handler v logickém zaêízení L:  systémového disku.  Vytvoêil ji
+Matt  Dillon  (autor  DiceC,  DMouse  a  spousty jinıch utilit) a je to takzvaná
+pojmenovaná  roura  -  mûùe  do  ní zapisovat nebo z ní çíst i více nepêíbuznıch
+procesû,  kupêíkladu  procesy  z  rûznıch  shellû,  a roura ukonçením konzumenta
+nezanikne.   Pêed  jejím  pouùitím  ji  musíte  explicitnë  pêihlásit do systému
+pêíkazem  MOUNT  (tedy  MOUNT  PIPE:   anebo  pêesunout  do DEVS:DOSdrivers její
+ikonku).   Tady  bych  si  dovolil  malou  propagaçní  vsuvku:   pokud  s rourou
+pracujete,  nepouùívejte  handler z originální instalace systému, ale seùeñte si
+(têeba z AmiNetu) vylepîenı a opravenı HWG.queue-handler.
+
+  Od verze 37+ má specifikace roury tento formát:
+
+        @{b}@{c 6943FF}PIPE:@{ub}[@{i}jméno@{ui}][/@{i}velikost_bufferu@{ui}][/@{i}poçet_bufferû@{ui}]@{c}
+ @{i}jméno@{ui}            = nepovinnı unikátní název roury
+ @{i}velikost_bufferu@{ui} = defaultnë 4096 bajtû, lze vynechat
+ @{i}poçet_bufferû@{ui}    = maximální poçet bufferû;  pokud  jsou  jiù  vîechny  buffery
+                    zaplnëny  (roura  je  ucpaná),  producent  bude suspendován.
+                    Zadáte-li  zde  nulu, bude poçet bufferû neomezenı.  I tento
+                    údaj lze vynechat.
+
+  Jestli  tedy máte rouru namountovanou, mûùete ji pouùívat jako kterékoliv jiné
+zaêízení.  Zkusme do ní nahustit nëjaká data:
+
+  @{c FF2E55}1> list SYS: >PIPE:@{c}                -> ùádnı listing do okna se nekoná, data se 
+                                        zapisují do roury...
+  @{c FF2E55}1> type PIPE:@{c}                      -> ha! a teğ vidíme vıpis adresáêe
+
+Nyní si zkuste otevêít dvë okna @{sys !C:NewShell}Shellu@{sys} a otestujte mechanismus suspend:
+
+  @{c FF2E55}1> type PIPE:@{c}                      -> roura je prázdná, proces je suspendován
+                                        a "visí"
+  @{c FF2E55}2> list SYS: >PIPE:@{c}                -> teprve teğ se do roury zapisují  data
+                                        a konzument (v Shellu ç.1) je vypisuje
+
+
+  Vidíme,  jak  roura  funguje,  ale  pêesto  to není to pravé oêechové - zpûsob
+jejího zápisu v amigovském shellu je pêíliî koùenı.  Unixové systémy, na kterıch
+byla vlastnë roura "vynalezena", a koneckoncû i MS-DOS, pouùívají jako oddëlovaç
+dvou  procesû  spojenıch  rourou  znak | (svislice).  Zápis celé kolony je potom
+pêehlednı a staçí nám jen jedno okno shellu:
+
+  @{c FF2E55}1> proces1 | proces2 | ... | procesN@{c}
+
+  Stejnou moùnost vîak poskytuje i amigovskı Shell.  Vyuùijeme k tomu jednu jeho
+nedokumentovanou  funkci - promënnou @{b}_pchar@{ub}.  Pokud Shell naçte pêíkazovı êádek,
+hledá  v  nëm  vîechny  oddëlovaçe z @{b}_pchar@{ub} (zde se uplatní právë znak |), úseky
+mezi  dvëma  oddëlovaçi spustí jako program s pêípadnımi argumenty a vynutí jeho
+napojení  na  rouru.   Budeme  vîak jeîtë potêebovat externí program pro obsluhu
+roury.   Tëch  se  na AmiNetu povalují haldy, za nejlepîí povaùuju @{b}Pipe 3.310@{ub} od
+Ville  Saariho.   Má  vlastní handler a tudíù nemusíte mountovat zaêízení PIPE:.
+Je  naprosto  transparentní  (zjednoduîuje schéma "vıstupní buffer producenta ->
+buffer  roury -> vstupní buffer konzumenta"), rychlost protékajících dat je tedy
+dvojnásobná  neù  u  systémového  queue-handleru a navíc se îetêí pamëï.  Pêíkaz
+Pipe  je  pochopitelnë  vhodné  umístit  nëkam, kam vám ukazuje PATH.  Pêed i za
+oddëlovaçem | musí bıt alespoñ jedna mezera.
+
+  A jednoduchı pêíklad na závër:
+
+  @{c FF2E55}1> set _pchar "|"@{c}                             -> vhodné vloùit do shell-startup
+  @{c FF2E55}1> type A | sort | uniq | tr [a-z][A-Z] >B@{c}
+
+Soubor  A  bude  setêídën  (zajistí  sort), filtr uniq z nëj odstraní duplicitní
+êádky  a  filtr  tr vîechna malá písmena pêevede na velká.  Vısledek se uloùí do
+souboru  B  (uvedené  utility  jsou  souçástí  instalace  ADE).   Rychlé,  çisté
+a elegantní (zkuste si totéù pêes klasickou PIPE:  ;-).

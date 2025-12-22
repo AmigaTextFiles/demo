@@ -1,0 +1,3504 @@
+{
+  "actions": [
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "int32_values": 0,
+            "time": 20
+          },
+          {
+            "int32_values": 1,
+            "time": 2220
+          },
+          {
+            "int32_values": 0,
+            "time": 2980
+          },
+          {
+            "int32_values": 1,
+            "time": 1180
+          },
+          {
+            "int32_values": 0,
+            "time": 2560
+          },
+          {
+            "int32_values": 1,
+            "time": 840
+          },
+          {
+            "int32_values": 0,
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "Scene"
+        }
+      ],
+      "loops": 1,
+      "name": "pause_particles",
+      "start_time": 9080,
+      "type": "property_int32"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -9.5e-07,
+              4.93649578,
+              3.070364,
+              -7.5e-07,
+              4.93649578,
+              3.070364,
+              -1.18e-06,
+              4.93649578,
+              3.070364
+            ],
+            "interpolation": "bezier",
+            "time": 1140
+          },
+          {
+            "float_values": [
+              -5.28704023,
+              4.93649578,
+              0.28768063,
+              -3.30884743,
+              4.93649578,
+              2.15355587,
+              -7.14223623,
+              4.93649578,
+              -1.46203434
+            ],
+            "interpolation": "bezier",
+            "time": 1080
+          },
+          {
+            "float_values": [
+              -7.89187765,
+              4.93649578,
+              -4.30401421,
+              -7.89187765,
+              4.93649578,
+              -4.30401421,
+              -7.89187765,
+              4.93649578,
+              -4.30401421
+            ],
+            "interpolation": "bezier",
+            "time": 2980
+          },
+          {
+            "float_values": [
+              -7.89187765,
+              4.93649578,
+              -4.30401421,
+              -7.89187765,
+              4.93649578,
+              -4.30401421,
+              -7.89187765,
+              4.93649578,
+              -4.30401421
+            ],
+            "interpolation": "bezier",
+            "time": 580
+          },
+          {
+            "float_values": [
+              -5.96627712,
+              4.93649578,
+              -8.79069233,
+              -7.77454138,
+              4.93649578,
+              -7.11099863,
+              -3.90069103,
+              4.93649578,
+              -10.71069431
+            ],
+            "interpolation": "bezier",
+            "time": 600
+          },
+          {
+            "float_values": [
+              -0.65881234,
+              4.93649578,
+              -11.02279472,
+              -0.65881234,
+              4.93649578,
+              -11.02279472,
+              -0.65881234,
+              4.93649578,
+              -11.02279472
+            ],
+            "interpolation": "bezier",
+            "time": 2560
+          },
+          {
+            "float_values": [
+              -0.65881234,
+              4.93649578,
+              -11.02279472,
+              -0.65881234,
+              4.93649578,
+              -11.02279472,
+              -0.65881234,
+              4.93649578,
+              -11.02279472
+            ],
+            "interpolation": "bezier",
+            "time": 440
+          },
+          {
+            "float_values": [
+              4.54182863,
+              4.93649578,
+              -8.62924671,
+              2.64328098,
+              4.93649578,
+              -10.30222416,
+              6.08241796,
+              4.93649578,
+              -7.27642632
+            ],
+            "interpolation": "bezier",
+            "time": 400
+          },
+          {
+            "float_values": [
+              6.93537617,
+              4.93649578,
+              -4.33088636,
+              6.93537617,
+              4.93649578,
+              -4.33088636,
+              6.93537617,
+              4.93649578,
+              -4.33088636
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "camera_1"
+        }
+      ],
+      "loops": 1,
+      "name": "camera_1Action.001",
+      "start_time": 9100,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -28.432525,
+              0.0,
+              -0.0,
+              -28.432525,
+              0.0,
+              -0.0,
+              -28.432525,
+              0.0,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 2220
+          },
+          {
+            "float_values": [
+              -28.432525,
+              -90.000009,
+              -0.0,
+              -28.432525,
+              -90.000009,
+              -0.0,
+              -28.432525,
+              -90.000009,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 2980
+          },
+          {
+            "float_values": [
+              -28.432525,
+              -90.000009,
+              -0.0,
+              -28.432525,
+              -90.000009,
+              -0.0,
+              -28.432525,
+              -90.000009,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 1180
+          },
+          {
+            "float_values": [
+              -28.432525,
+              -180.000005,
+              -0.0,
+              -28.432525,
+              -180.000005,
+              -0.0,
+              -28.432525,
+              -180.000005,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 2560
+          },
+          {
+            "float_values": [
+              -28.432525,
+              -180.000005,
+              -0.0,
+              -28.432525,
+              -180.000005,
+              -0.0,
+              -28.432525,
+              -180.000005,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 840
+          },
+          {
+            "float_values": [
+              -28.432525,
+              -270.000001,
+              -0.0,
+              -28.432525,
+              -270.000001,
+              -0.0,
+              -28.432525,
+              -270.000001,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "camera_1"
+        }
+      ],
+      "loops": 1,
+      "name": "camera_1Action.001",
+      "start_time": 9100,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": -10.03784561,
+            "interpolation": "linear",
+            "time": 4500
+          },
+          {
+            "float_values": 6.16391468,
+            "interpolation": "linear",
+            "time": 6000
+          },
+          {
+            "float_values": 14.31927204,
+            "interpolation": "linear",
+            "time": 2440
+          },
+          {
+            "float_values": -1.28959084,
+            "time": 1180
+          },
+          {
+            "float_values": -1.28959084,
+            "interpolation": "linear",
+            "time": 980
+          },
+          {
+            "float_values": -6.43284225,
+            "time": 2640
+          },
+          {
+            "float_values": 5.40178108,
+            "time": 2000
+          },
+          {
+            "float_values": -12.28195381,
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "airplane_1"
+        }
+      ],
+      "loops": 1,
+      "name": "airplane_1Action.001",
+      "start_time": 1360,
+      "type": "position_x"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": -11.30000114,
+            "interpolation": "linear",
+            "time": 4500
+          },
+          {
+            "float_values": -0.16902161,
+            "interpolation": "linear",
+            "time": 6000
+          },
+          {
+            "float_values": -2.5999999,
+            "interpolation": "linear",
+            "time": 2440
+          },
+          {
+            "float_values": -2.5999999,
+            "time": 1180
+          },
+          {
+            "float_values": -2.5999999,
+            "interpolation": "linear",
+            "time": 980
+          },
+          {
+            "float_values": -2.5999999,
+            "time": 2640
+          },
+          {
+            "float_values": -6.57879496,
+            "time": 2000
+          },
+          {
+            "float_values": -6.57879496,
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "airplane_1"
+        }
+      ],
+      "loops": 1,
+      "name": "airplane_1Action.001",
+      "start_time": 1360,
+      "type": "position_z"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 1.3792243,
+            "interpolation": "linear",
+            "time": 4500
+          },
+          {
+            "float_values": 1.3792243,
+            "interpolation": "linear",
+            "time": 6000
+          },
+          {
+            "float_values": 1.3792243,
+            "interpolation": "linear",
+            "time": 2440
+          },
+          {
+            "float_values": 1.3792243,
+            "time": 1180
+          },
+          {
+            "float_values": 1.3792243,
+            "time": 980
+          },
+          {
+            "float_values": 1.3792243,
+            "time": 2640
+          },
+          {
+            "float_values": 1.3792243,
+            "time": 2000
+          },
+          {
+            "float_values": 1.3792243,
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "airplane_1"
+        }
+      ],
+      "loops": 1,
+      "name": "airplane_1Action.001",
+      "start_time": 1360,
+      "type": "position_y"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": -135.0,
+            "time": 9720
+          },
+          {
+            "float_values": 90.000003,
+            "time": 8120
+          },
+          {
+            "float_values": 90.000003,
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "airplane_1"
+        }
+      ],
+      "loops": 1,
+      "name": "airplane_1Action.001",
+      "start_time": 1260,
+      "type": "rotation_y"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 4200,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 6400,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 4620,
+            "uint8_values": 0
+          },
+          {
+            "time": 2620,
+            "uint8_values": 1
+          },
+          {
+            "time": 2020,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "airplane_1"
+        }
+      ],
+      "loops": 1,
+      "name": "airplane_1Action.001",
+      "start_time": 1240,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 144.507501,
+            "time": 8540
+          },
+          {
+            "float_values": [
+              -45.000001,
+              -45.000001,
+              -45.000001
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "airplane_2"
+        }
+      ],
+      "loops": 1,
+      "name": "airplane_2Action.001",
+      "start_time": 3000,
+      "type": "rotation_y"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 4180,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 4340,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 2040,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "airplane_2"
+        }
+      ],
+      "loops": 1,
+      "name": "airplane_2Action.001",
+      "start_time": 2980,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              8.96947861,
+              2.70000005,
+              -14.21721935
+            ],
+            "interpolation": "linear",
+            "time": 4160
+          },
+          {
+            "float_values": [
+              -3.55834341,
+              2.70000005,
+              4.36913776
+            ],
+            "time": 4380
+          },
+          {
+            "float_values": [
+              -5.71875048,
+              2.06677365,
+              -2.74593782
+            ],
+            "interpolation": "linear",
+            "time": 2020
+          },
+          {
+            "float_values": [
+              1.72482443,
+              2.06677008,
+              -10.97223186
+            ],
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "airplane_2"
+        }
+      ],
+      "loops": 1,
+      "name": "airplane_2Action.001",
+      "start_time": 3000,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 0.0,
+            "time": 11280
+          },
+          {
+            "float_values": [
+              45.000001,
+              45.000001,
+              45.000001
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "airplane_3"
+        }
+      ],
+      "loops": 1,
+      "name": "airplane_3Action.001",
+      "start_time": 4540,
+      "type": "rotation_y"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 2740,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 8520,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 2000,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "airplane_3"
+        }
+      ],
+      "loops": 1,
+      "name": "airplane_3Action.001",
+      "start_time": 4520,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.39999998,
+              1.20000005,
+              3.64496469
+            ],
+            "interpolation": "linear",
+            "time": 2720
+          },
+          {
+            "float_values": [
+              0.39999998,
+              1.20000005,
+              -16.83198929
+            ],
+            "interpolation": "linear",
+            "time": 8560
+          },
+          {
+            "float_values": [
+              8.85748863,
+              1.20000005,
+              4.81368208
+            ],
+            "interpolation": "linear",
+            "time": 1980
+          },
+          {
+            "float_values": [
+              -6.1453371,
+              1.20000005,
+              -9.82907486
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "airplane_3"
+        }
+      ],
+      "loops": 1,
+      "name": "airplane_3Action.001",
+      "start_time": 4540,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 4.10857534,
+            "interpolation": "linear",
+            "time": 1940
+          },
+          {
+            "float_values": -12.88267899,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_1"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_1Action",
+      "start_time": 11340,
+      "type": "position_z"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1960,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_1"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_1Action",
+      "start_time": 11320,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": -11.77039146,
+            "interpolation": "linear",
+            "time": 1760
+          },
+          {
+            "float_values": 2.84898853,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_2"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_2Action.001",
+      "start_time": 11680,
+      "type": "position_z"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 1780,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_2"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_2Action.001",
+      "start_time": 11640,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 2.00997829,
+            "interpolation": "linear",
+            "time": 1760
+          },
+          {
+            "float_values": -12.18480873,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_3"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_3Action.001",
+      "start_time": 12000,
+      "type": "position_z"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 1780,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_3"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_3Action.001",
+      "start_time": 11960,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": -11.52419281,
+            "interpolation": "linear",
+            "time": 1760
+          },
+          {
+            "float_values": 3.8351059,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_4"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_4Action.004",
+      "start_time": 12520,
+      "type": "position_z"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1780,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_4"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_4Action.004",
+      "start_time": 12500,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": -9.35955524,
+            "interpolation": "linear",
+            "time": 1760
+          },
+          {
+            "float_values": 6.63384342,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_5"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_5Action",
+      "start_time": 15500,
+      "type": "position_x"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "time": 1800,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_5"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_5Action",
+      "start_time": 15480,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 6.12962484,
+            "interpolation": "linear",
+            "time": 1760
+          },
+          {
+            "float_values": -8.45466232,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_6"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_6Action",
+      "start_time": 15500,
+      "type": "position_x"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "time": 1800,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_6"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_6Action",
+      "start_time": 15480,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": -7.13982582,
+            "interpolation": "linear",
+            "time": 1760
+          },
+          {
+            "float_values": 5.6126194,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_7"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_7Action",
+      "start_time": 16260,
+      "type": "position_x"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "time": 1780,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_7"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_7Action",
+      "start_time": 16240,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 6.61167812,
+            "interpolation": "linear",
+            "time": 1780
+          },
+          {
+            "float_values": -8.81807518,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_8"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_8Action",
+      "start_time": 16160,
+      "type": "position_x"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "time": 1800,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_8"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_8Action",
+      "start_time": 16140,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 2.53514767,
+            "interpolation": "linear",
+            "time": 1760
+          },
+          {
+            "float_values": -11.55595207,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_9"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_9Action",
+      "start_time": 11400,
+      "type": "position_z"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "time": 1780,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_9"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_9Action",
+      "start_time": 11380,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 1.98285246,
+            "interpolation": "linear",
+            "time": 1760
+          },
+          {
+            "float_values": -11.82704163,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_10"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_10Action.001",
+      "start_time": 18880,
+      "type": "position_z"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "time": 1780,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_10"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_10Action.001",
+      "start_time": 18860,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 2.85612583,
+            "interpolation": "linear",
+            "time": 1760
+          },
+          {
+            "float_values": -11.75579453,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_11"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_11Action",
+      "start_time": 12520,
+      "type": "position_z"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "time": 1780,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_11"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_11Action",
+      "start_time": 12500,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": -12.22327042,
+            "interpolation": "linear",
+            "time": 1760
+          },
+          {
+            "float_values": 2.63928366,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_12"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_12Action",
+      "start_time": 18880,
+      "type": "position_z"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "time": 1780,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_12"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_12Action",
+      "start_time": 18860,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 5.95265388,
+            "interpolation": "linear",
+            "time": 1760
+          },
+          {
+            "float_values": -12.73044682,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_13"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_13Action",
+      "start_time": 19740,
+      "type": "position_z"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "time": 1780,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_13"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_13Action",
+      "start_time": 19720,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 3.03621387,
+            "interpolation": "linear",
+            "time": 1760
+          },
+          {
+            "float_values": -11.86455154,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_14"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_14Action",
+      "start_time": 18880,
+      "type": "position_z"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 1780,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_14"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_14Action",
+      "start_time": 18840,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 2.06116533,
+            "interpolation": "linear",
+            "time": 1760
+          },
+          {
+            "float_values": -11.64847565,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_15"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_15Action",
+      "start_time": 19900,
+      "type": "position_z"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 1780,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_15"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_15Action",
+      "start_time": 19860,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": -11.32265186,
+            "interpolation": "linear",
+            "time": 1760
+          },
+          {
+            "float_values": 2.28673553,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_16"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_16Action",
+      "start_time": 19840,
+      "type": "position_z"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "time": 1780,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_16"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_16Action",
+      "start_time": 19820,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 0,
+            "uint8_values": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "emiter_1"
+        }
+      ],
+      "loops": 1,
+      "name": "emiter_1_action",
+      "start_time": 200,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              7.13102341,
+              1.92418993,
+              -6.75301886,
+              7.13102341,
+              1.92418993,
+              -6.75301886,
+              7.13102341,
+              1.92418993,
+              -6.75301886
+            ],
+            "interpolation": "bezier",
+            "time": 1300
+          },
+          {
+            "float_values": [
+              -0.24655461,
+              1.92419004,
+              -1.06500936,
+              2.21906424,
+              1.92419004,
+              -1.06500936,
+              -1.5014776,
+              1.92419004,
+              -1.06500936
+            ],
+            "interpolation": "bezier",
+            "time": 820
+          },
+          {
+            "float_values": [
+              -1.9444859,
+              2.32402658,
+              -2.151438,
+              -1.9444859,
+              2.32402658,
+              -0.98695934,
+              -1.9444859,
+              2.32402658,
+              -3.36559248
+            ],
+            "interpolation": "bezier",
+            "time": 840
+          },
+          {
+            "float_values": [
+              0.34888697,
+              2.08229852,
+              -6.29593182,
+              -0.68682194,
+              2.08229852,
+              -6.29593182,
+              2.29330707,
+              2.08229852,
+              -6.29593182
+            ],
+            "interpolation": "bezier",
+            "time": 1640
+          },
+          {
+            "float_values": [
+              2.97949505,
+              1.38903296,
+              -3.56759429,
+              2.97949505,
+              1.38903296,
+              -4.94122982,
+              2.97949505,
+              1.38903296,
+              -2.22738695
+            ],
+            "interpolation": "bezier",
+            "time": 2000
+          },
+          {
+            "float_values": [
+              -0.02379012,
+              2.44301462,
+              -2.44710469,
+              0.42278934,
+              2.44301462,
+              -2.44710469,
+              -0.47438282,
+              2.44301462,
+              -2.44710469
+            ],
+            "interpolation": "bezier",
+            "time": 1380
+          },
+          {
+            "float_values": [
+              0.46788311,
+              2.68818855,
+              -3.79481101,
+              0.46788311,
+              2.2993207,
+              -3.71253419,
+              0.46788311,
+              2.70637798,
+              -3.79865956
+            ],
+            "interpolation": "bezier",
+            "time": 140
+          },
+          {
+            "float_values": [
+              0.17425442,
+              2.43584538,
+              -3.89122581,
+              0.17425466,
+              2.43584538,
+              -3.89122581,
+              0.17425425,
+              2.43584538,
+              -3.89122581
+            ],
+            "interpolation": "bezier",
+            "time": 140
+          },
+          {
+            "float_values": [
+              -0.18723226,
+              1.82189262,
+              -4.61977291,
+              -0.18723226,
+              1.82189262,
+              -4.61977291,
+              -0.18723226,
+              1.82189262,
+              -4.61977291
+            ],
+            "interpolation": "bezier",
+            "time": 120
+          },
+          {
+            "float_values": [
+              0.386558,
+              2.5766108,
+              -4.56272697,
+              0.47567481,
+              2.5766108,
+              -4.56272745,
+              0.29477158,
+              2.5766108,
+              -4.5627265
+            ],
+            "interpolation": "bezier",
+            "time": 140
+          },
+          {
+            "float_values": [
+              -0.26990396,
+              1.77637553,
+              -5.14355707,
+              -0.26990396,
+              1.77637553,
+              -5.14355707,
+              -0.26990396,
+              1.77637553,
+              -5.14355707
+            ],
+            "interpolation": "bezier",
+            "time": 120
+          },
+          {
+            "float_values": [
+              -0.08019102,
+              2.24591088,
+              -4.02575874,
+              -0.08019102,
+              2.2068882,
+              -4.02575874,
+              -0.08019102,
+              2.30470061,
+              -4.02575874
+            ],
+            "interpolation": "bezier",
+            "time": 140
+          },
+          {
+            "float_values": [
+              0.63981801,
+              2.16646671,
+              -4.21592855,
+              0.63981825,
+              2.16646671,
+              -4.21592855,
+              0.63981771,
+              2.16646671,
+              -4.21592855
+            ],
+            "interpolation": "bezier",
+            "time": 2340
+          },
+          {
+            "float_values": [
+              0.63981801,
+              2.16647005,
+              -4.21592999,
+              0.63981801,
+              2.16647005,
+              -4.21592855,
+              0.63981801,
+              2.16647005,
+              -4.21592999
+            ],
+            "interpolation": "bezier",
+            "time": 100
+          },
+          {
+            "float_values": [
+              1.01509094,
+              1.90858769,
+              -5.02764034,
+              0.72469425,
+              1.90858769,
+              -5.02764034,
+              1.30548763,
+              1.90858769,
+              -5.02764034
+            ],
+            "interpolation": "bezier",
+            "time": 100
+          },
+          {
+            "float_values": [
+              1.86217296,
+              1.90858769,
+              -4.67608738,
+              1.80140138,
+              1.90858769,
+              -4.84107971,
+              1.95940745,
+              1.90858769,
+              -4.41209984
+            ],
+            "interpolation": "bezier",
+            "time": 160
+          },
+          {
+            "float_values": [
+              1.95940745,
+              1.73162186,
+              -4.20333481,
+              1.95940745,
+              1.79755437,
+              -4.20333481,
+              1.95940745,
+              1.66568935,
+              -4.20333481
+            ],
+            "interpolation": "bezier",
+            "time": 160
+          },
+          {
+            "float_values": [
+              1.33041787,
+              1.64485872,
+              -4.59227276,
+              1.33041787,
+              1.64485872,
+              -4.42036533,
+              1.33041787,
+              1.64485872,
+              -4.76418018
+            ],
+            "interpolation": "bezier",
+            "time": 160
+          },
+          {
+            "float_values": [
+              1.97772801,
+              1.64485872,
+              -4.8909626,
+              1.97772801,
+              1.64485872,
+              -4.8909626,
+              1.97772801,
+              1.64485872,
+              -4.8909626
+            ],
+            "interpolation": "bezier",
+            "time": 160
+          },
+          {
+            "float_values": [
+              1.10622883,
+              2.40661359,
+              -4.72788,
+              1.10622883,
+              2.40661359,
+              -4.87786627,
+              1.10622883,
+              2.40661359,
+              -4.57789373
+            ],
+            "interpolation": "bezier",
+            "time": 160
+          },
+          {
+            "float_values": [
+              1.7416631,
+              2.14452219,
+              -3.97353601,
+              1.7416631,
+              2.14452219,
+              -4.29101801,
+              1.7416631,
+              2.14452219,
+              -3.65605426
+            ],
+            "interpolation": "bezier",
+            "time": 160
+          },
+          {
+            "float_values": [
+              0.73193705,
+              2.51403069,
+              -3.30796862,
+              0.73193705,
+              2.51403069,
+              -3.30796862,
+              0.73193705,
+              2.51403069,
+              -3.30796862
+            ],
+            "interpolation": "bezier",
+            "time": 160
+          },
+          {
+            "float_values": [
+              1.95504022,
+              1.93378973,
+              -4.02687693,
+              1.95504022,
+              1.93378973,
+              -4.02687693,
+              1.95504022,
+              1.93378973,
+              -4.02687693
+            ],
+            "interpolation": "bezier",
+            "time": 160
+          },
+          {
+            "float_values": [
+              1.48844051,
+              2.2464819,
+              -3.48398829,
+              1.79561722,
+              2.14912534,
+              -3.48398829,
+              1.1812638,
+              2.34383845,
+              -3.48398829
+            ],
+            "interpolation": "bezier",
+            "time": 160
+          },
+          {
+            "float_values": [
+              0.72633821,
+              2.38794732,
+              -4.38368416,
+              0.72633821,
+              2.32321548,
+              -4.38368416,
+              0.72633821,
+              2.46886206,
+              -4.38368416
+            ],
+            "interpolation": "bezier",
+            "time": 200
+          },
+          {
+            "float_values": [
+              1.10757661,
+              2.68314385,
+              -3.7097981,
+              0.85457021,
+              2.68314385,
+              -3.7097981,
+              1.36058307,
+              2.68314385,
+              -3.7097981
+            ],
+            "interpolation": "bezier",
+            "time": 200
+          },
+          {
+            "float_values": [
+              2.018646,
+              1.96757507,
+              -4.61066008,
+              1.73836541,
+              1.96757507,
+              -4.22308159,
+              2.24287057,
+              1.96757507,
+              -4.92072296
+            ],
+            "interpolation": "bezier",
+            "time": 160
+          },
+          {
+            "float_values": [
+              2.40469217,
+              2.18243194,
+              -5.15033388,
+              2.40469217,
+              2.08994842,
+              -5.15033388,
+              2.40469217,
+              2.29803634,
+              -5.15033388
+            ],
+            "interpolation": "bezier",
+            "time": 200
+          },
+          {
+            "float_values": [
+              0.96370679,
+              2.45620799,
+              -4.68203211,
+              1.52639127,
+              2.36693716,
+              -4.94808865,
+              0.40102232,
+              2.54547882,
+              -4.41597557
+            ],
+            "interpolation": "bezier",
+            "time": 200
+          },
+          {
+            "float_values": [
+              0.15394732,
+              2.65512061,
+              -4.08610344,
+              0.15394732,
+              2.65512061,
+              -4.08610344,
+              0.15394732,
+              2.65512061,
+              -4.08610344
+            ],
+            "interpolation": "bezier",
+            "time": 200
+          },
+          {
+            "float_values": [
+              0.75917864,
+              2.35489392,
+              -4.38313246,
+              0.75917858,
+              2.3548944,
+              -4.38313246,
+              0.759179,
+              2.35489011,
+              -4.38313246
+            ],
+            "interpolation": "bezier",
+            "time": 1360
+          },
+          {
+            "float_values": [
+              0.759179,
+              2.35489011,
+              -4.38313007,
+              0.759179,
+              2.35489011,
+              -4.38313246,
+              0.759179,
+              2.35489011,
+              -4.3831296
+            ],
+            "interpolation": "bezier",
+            "time": 200
+          },
+          {
+            "float_values": [
+              -0.19214249,
+              2.7439208,
+              -2.9174962,
+              0.17772025,
+              2.7439208,
+              -3.48868752,
+              -0.56200522,
+              2.7439208,
+              -2.34630489
+            ],
+            "interpolation": "bezier",
+            "time": 200
+          },
+          {
+            "float_values": [
+              -0.97369033,
+              2.35518122,
+              -1.95615029,
+              -0.72027421,
+              2.35518122,
+              -2.09836459,
+              -1.22710645,
+              2.35518122,
+              -1.81393588
+            ],
+            "interpolation": "bezier",
+            "time": 200
+          },
+          {
+            "float_values": [
+              -1.5756712,
+              2.58407474,
+              -1.77744651,
+              -1.5756712,
+              2.58407474,
+              -1.77744651,
+              -1.5756712,
+              2.58407474,
+              -1.77744651
+            ],
+            "interpolation": "bezier",
+            "time": 200
+          },
+          {
+            "float_values": [
+              -0.67919338,
+              2.14280558,
+              -1.95601726,
+              -0.67919338,
+              2.14280558,
+              -1.95601726,
+              -0.67919338,
+              2.14280558,
+              -1.95601726
+            ],
+            "interpolation": "bezier",
+            "time": 200
+          },
+          {
+            "float_values": [
+              -0.93575871,
+              2.20859361,
+              -1.77906978,
+              -0.75487173,
+              2.20859361,
+              -1.77906978,
+              -1.11664569,
+              2.20859361,
+              -1.77906978
+            ],
+            "interpolation": "bezier",
+            "time": 200
+          },
+          {
+            "float_values": [
+              -1.55545878,
+              1.87172508,
+              -1.78572321,
+              -1.40274239,
+              1.87172508,
+              -1.77906978,
+              -1.70817518,
+              1.87172508,
+              -1.79237664
+            ],
+            "interpolation": "bezier",
+            "time": 200
+          },
+          {
+            "float_values": [
+              -1.727512,
+              2.42038655,
+              -2.06518507,
+              -1.727512,
+              2.20211864,
+              -2.06518507,
+              -1.727512,
+              2.63865447,
+              -2.06518507
+            ],
+            "interpolation": "bezier",
+            "time": 200
+          },
+          {
+            "float_values": [
+              -0.81718892,
+              2.74479961,
+              -1.90908432,
+              -0.81718892,
+              2.74479961,
+              -1.90908432,
+              -0.81718892,
+              2.74479961,
+              -1.90908432
+            ],
+            "interpolation": "bezier",
+            "time": 200
+          },
+          {
+            "float_values": [
+              -1.47581851,
+              2.40663171,
+              -2.60003901,
+              -1.47581851,
+              2.52950239,
+              -2.60003901,
+              -1.47581851,
+              2.28376102,
+              -2.60003901
+            ],
+            "interpolation": "bezier",
+            "time": 200
+          },
+          {
+            "float_values": [
+              -1.25517416,
+              2.25331569,
+              -1.92091632,
+              -1.25517416,
+              2.25331569,
+              -1.92091632,
+              -1.25517416,
+              2.25331569,
+              -1.92091632
+            ],
+            "interpolation": "bezier",
+            "time": 200
+          },
+          {
+            "float_values": [
+              -1.38850236,
+              2.69360495,
+              -3.16197276,
+              -1.33335865,
+              2.69360495,
+              -2.75536561,
+              -1.44364607,
+              2.69360495,
+              -3.56857991
+            ],
+            "interpolation": "bezier",
+            "time": 200
+          },
+          {
+            "float_values": [
+              -1.47574985,
+              2.62023258,
+              -3.73844409,
+              -1.47574985,
+              2.62023258,
+              -3.54734731,
+              -1.47574985,
+              2.62023258,
+              -3.89132142
+            ],
+            "interpolation": "bezier",
+            "time": 160
+          },
+          {
+            "float_values": [
+              -0.99711502,
+              2.85194993,
+              -4.18008995,
+              -0.99711502,
+              2.85194993,
+              -4.18008947,
+              -0.99711502,
+              2.85194993,
+              -4.18009138
+            ],
+            "interpolation": "bezier",
+            "time": 840
+          },
+          {
+            "float_values": [
+              -0.99711537,
+              2.85194993,
+              -4.18009138,
+              -0.99711502,
+              2.85194993,
+              -4.18008995,
+              -0.99711549,
+              2.85194993,
+              -4.18009186
+            ],
+            "interpolation": "bezier",
+            "time": 220
+          },
+          {
+            "float_values": [
+              -1.79724121,
+              2.54028773,
+              -4.58919573,
+              -1.79724121,
+              2.64001441,
+              -4.58919573,
+              -1.79724121,
+              2.44962716,
+              -4.58919573
+            ],
+            "interpolation": "bezier",
+            "time": 200
+          },
+          {
+            "float_values": [
+              -1.74573469,
+              2.38297462,
+              -4.38734818,
+              -1.74573469,
+              2.4517014,
+              -4.38734818,
+              -1.74573469,
+              2.31424785,
+              -4.38734818
+            ],
+            "interpolation": "bezier",
+            "time": 200
+          },
+          {
+            "float_values": [
+              -3.01800871,
+              2.17471981,
+              -4.78310966,
+              -3.01800871,
+              2.17471981,
+              -4.78310966,
+              -3.01800871,
+              2.17471981,
+              -4.78310966
+            ],
+            "interpolation": "bezier",
+            "time": 200
+          },
+          {
+            "float_values": [
+              -2.90098667,
+              2.23222923,
+              -4.13396168,
+              -2.97894073,
+              2.23222923,
+              -4.13396168,
+              -2.82303262,
+              2.23222923,
+              -4.13396168
+            ],
+            "interpolation": "bezier",
+            "time": 200
+          },
+          {
+            "float_values": [
+              -2.25692844,
+              2.14339876,
+              -4.38180971,
+              -2.70619178,
+              2.14339876,
+              -4.38180971,
+              -1.80766511,
+              2.14339876,
+              -4.38180971
+            ],
+            "interpolation": "bezier",
+            "time": 200
+          },
+          {
+            "float_values": [
+              -1.02597666,
+              2.80165768,
+              -4.08760881,
+              -1.02597666,
+              2.80165768,
+              -4.24155331,
+              -1.02597666,
+              2.80165768,
+              -3.93366456
+            ],
+            "interpolation": "bezier",
+            "time": 200
+          },
+          {
+            "float_values": [
+              -1.47157061,
+              2.59967303,
+              -3.76603079,
+              -1.15834522,
+              2.7179656,
+              -3.76603079,
+              -1.784796,
+              2.48138046,
+              -3.76603079
+            ],
+            "interpolation": "bezier",
+            "time": 200
+          },
+          {
+            "float_values": [
+              -2.27888203,
+              2.29860187,
+              -4.60830784,
+              -2.27888203,
+              2.32848692,
+              -4.60830784,
+              -2.27888203,
+              2.26871681,
+              -4.60830784
+            ],
+            "interpolation": "bezier",
+            "time": 200
+          },
+          {
+            "float_values": [
+              -2.13745904,
+              2.26871681,
+              -3.7899282,
+              -2.13745904,
+              2.29860187,
+              -3.7899282,
+              -2.13745904,
+              2.23883176,
+              -3.7899282
+            ],
+            "interpolation": "bezier",
+            "time": 200
+          },
+          {
+            "float_values": [
+              -2.7516067,
+              2.13304567,
+              -4.6565876,
+              -2.7516067,
+              2.13304567,
+              -4.33730125,
+              -2.7516067,
+              2.13304567,
+              -4.97587395
+            ],
+            "interpolation": "bezier",
+            "time": 200
+          },
+          {
+            "float_values": [
+              -1.71661043,
+              2.64031458,
+              -5.06706524,
+              -1.71661043,
+              2.64031458,
+              -5.06706524,
+              -1.71661043,
+              2.64031458,
+              -5.06706524
+            ],
+            "interpolation": "bezier",
+            "time": 200
+          },
+          {
+            "float_values": [
+              -2.11828017,
+              2.25243664,
+              -4.32805777,
+              -2.11828017,
+              2.33404565,
+              -4.69525242,
+              -2.11828017,
+              2.03209257,
+              -3.33663201
+            ],
+            "interpolation": "bezier",
+            "time": 540
+          },
+          {
+            "float_values": [
+              1.25744903,
+              2.03209257,
+              -2.37890482,
+              -0.11391294,
+              2.08296227,
+              -2.37890482,
+              2.93355799,
+              1.96991849,
+              -2.37890482
+            ],
+            "interpolation": "bezier",
+            "time": 660
+          },
+          {
+            "float_values": [
+              3.66406727,
+              1.75576329,
+              -4.9863534,
+              3.66406727,
+              1.75576329,
+              -4.9863534,
+              3.66406727,
+              1.75576329,
+              -4.9863534
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "emiter_1"
+        }
+      ],
+      "loops": 1,
+      "name": "emiter_1_action",
+      "start_time": 200,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": -11.7390728,
+            "interpolation": "linear",
+            "time": 2060
+          },
+          {
+            "float_values": 8.07855415,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_17"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_17Action",
+      "start_time": 15780,
+      "type": "position_x"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "time": 2100,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_17"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_17Action",
+      "start_time": 15760,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 45.000001,
+            "time": 12660
+          },
+          {
+            "float_values": -90.000003,
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "airplane_4"
+        }
+      ],
+      "loops": 1,
+      "name": "airplane_4Action",
+      "start_time": 6300,
+      "type": "rotation_y"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 2380,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 10260,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1880,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "airplane_4"
+        }
+      ],
+      "loops": 1,
+      "name": "airplane_4Action",
+      "start_time": 6280,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              5.87581491,
+              1.89999998,
+              3.33646131
+            ],
+            "interpolation": "linear",
+            "time": 2340
+          },
+          {
+            "float_values": [
+              -5.8319726,
+              1.89999998,
+              -5.24925137
+            ],
+            "interpolation": "linear",
+            "time": 10320
+          },
+          {
+            "float_values": [
+              -10.31916714,
+              2.17535591,
+              -2.5999999
+            ],
+            "interpolation": "linear",
+            "time": 1860
+          },
+          {
+            "float_values": [
+              6.94946671,
+              2.17535591,
+              -2.06677008
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "airplane_4"
+        }
+      ],
+      "loops": 1,
+      "name": "airplane_4Action",
+      "start_time": 6300,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 3340,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz"
+        }
+      ],
+      "loops": 1,
+      "name": "greetzAction",
+      "start_time": 5460,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -5.87172651,
+              0.01,
+              -1.04294491
+            ],
+            "interpolation": "linear",
+            "time": 3320
+          },
+          {
+            "float_values": [
+              10.18118286,
+              0.01,
+              -10.91987038
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz"
+        }
+      ],
+      "loops": 1,
+      "name": "greetzAction",
+      "start_time": 5480,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 3.16100311,
+            "interpolation": "linear",
+            "time": 2100
+          },
+          {
+            "float_values": -10.74956226,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_18"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_18Action",
+      "start_time": 12040,
+      "type": "position_z"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "time": 2120,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_18"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_18Action",
+      "start_time": 12020,
+      "type": "hide"
+    }
+  ],
+  "cameras": [
+    {
+      "far_clip_plane": 80.0,
+      "fov_x": 49.069203,
+      "fov_y": 28.800001,
+      "hide": false,
+      "name": "camera_1",
+      "near_clip_plane": 0.1,
+      "position": [
+        -9.5e-07,
+        4.93649578,
+        3.070364
+      ],
+      "rotation": [
+        -28.432525,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "enc_info": {
+    "data_type": "ENCSCN",
+    "date": "26 Jun 2023 21:10:08",
+    "version": "2.0"
+  },
+  "loops": 1,
+  "name": "Scene",
+  "objects": [
+    {
+      "hide": true,
+      "mesh_name": "ap_airplane_1",
+      "name": "airplane_1",
+      "position": [
+        -10.03784561,
+        1.3792243,
+        -11.30000114
+      ],
+      "rotation": [
+        0.0,
+        -135.0,
+        0.0
+      ],
+      "tag": 500
+    },
+    {
+      "hide": true,
+      "mesh_name": "ap_airplane_1",
+      "name": "airplane_2",
+      "position": [
+        8.96947861,
+        2.70000005,
+        -14.21721935
+      ],
+      "rotation": [
+        0.0,
+        144.507501,
+        0.0
+      ],
+      "tag": 501
+    },
+    {
+      "material": {
+        "diffuse_color_rgba": [
+          0.7,
+          0.7,
+          0.7,
+          1.0
+        ]
+      },
+      "mesh_name": "ap_floor",
+      "name": "floor",
+      "order": -1,
+      "properties": {
+        "depth_mask": 0,
+        "depth_test": 0
+      }
+    },
+    {
+      "hide": true,
+      "mesh_name": "ap_airplane_1",
+      "name": "airplane_3",
+      "position": [
+        0.39999998,
+        1.20000005,
+        3.64496469
+      ],
+      "tag": 502
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.62,
+          0.62,
+          0.62,
+          1.0
+        ]
+      },
+      "mesh_name": "ap_greetz_1",
+      "name": "greetz_1",
+      "order": 11,
+      "position": [
+        -1.69172716,
+        0.01,
+        4.10857534
+      ],
+      "properties": {
+        "depth_mask": 0,
+        "depth_test": 0
+      },
+      "rotation": [
+        0.0,
+        -90.000003,
+        0.0
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.62,
+          0.62,
+          0.62,
+          1.0
+        ]
+      },
+      "mesh_name": "ap_greetz_2",
+      "name": "greetz_2",
+      "order": 12,
+      "position": [
+        -0.5266068,
+        0.01,
+        -11.77039146
+      ],
+      "properties": {
+        "depth_mask": 0,
+        "depth_test": 0
+      },
+      "rotation": [
+        0.0,
+        -90.000003,
+        -0.0
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.62,
+          0.62,
+          0.62,
+          1.0
+        ]
+      },
+      "mesh_name": "ap_greetz_3",
+      "name": "greetz_3",
+      "order": 13,
+      "position": [
+        0.65822786,
+        0.01,
+        2.00997829
+      ],
+      "properties": {
+        "depth_mask": 0,
+        "depth_test": 0
+      },
+      "rotation": [
+        0.0,
+        -90.000003,
+        -0.0
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.62,
+          0.62,
+          0.62,
+          1.0
+        ]
+      },
+      "mesh_name": "ap_greetz_4",
+      "name": "greetz_4",
+      "order": 14,
+      "position": [
+        -0.54015267,
+        0.01,
+        -11.52419281
+      ],
+      "properties": {
+        "depth_mask": 0,
+        "depth_test": 0
+      },
+      "rotation": [
+        0.0,
+        -90.000003,
+        0.0
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.62,
+          0.62,
+          0.62,
+          1.0
+        ]
+      },
+      "mesh_name": "ap_greetz_5",
+      "name": "greetz_5",
+      "order": 15,
+      "position": [
+        -9.35955524,
+        0.01,
+        -4.81684732
+      ],
+      "properties": {
+        "depth_mask": 0,
+        "depth_test": 0
+      },
+      "rotation": [
+        0.0,
+        180.000005,
+        0.0
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.62,
+          0.62,
+          0.62,
+          1.0
+        ]
+      },
+      "mesh_name": "ap_greetz_6",
+      "name": "greetz_6",
+      "order": 16,
+      "position": [
+        6.12962484,
+        0.01,
+        -3.72042608
+      ],
+      "properties": {
+        "depth_mask": 0,
+        "depth_test": 0
+      },
+      "rotation": [
+        0.0,
+        -180.000005,
+        -0.0
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.62,
+          0.62,
+          0.62,
+          1.0
+        ]
+      },
+      "mesh_name": "ap_greetz_7",
+      "name": "greetz_7",
+      "order": 17,
+      "position": [
+        -7.13982582,
+        0.01,
+        -4.86550713
+      ],
+      "properties": {
+        "depth_mask": 0,
+        "depth_test": 0
+      },
+      "rotation": [
+        0.0,
+        180.000005,
+        -0.0
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.62,
+          0.62,
+          0.62,
+          1.0
+        ]
+      },
+      "mesh_name": "ap_greetz_8",
+      "name": "greetz_8",
+      "order": 18,
+      "position": [
+        6.61167812,
+        0.01,
+        -3.70572758
+      ],
+      "properties": {
+        "depth_mask": 0,
+        "depth_test": 0
+      },
+      "rotation": [
+        0.0,
+        180.000005,
+        -0.0
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.62,
+          0.62,
+          0.62,
+          1.0
+        ]
+      },
+      "mesh_name": "ap_greetz_9",
+      "name": "greetz_9",
+      "order": 19,
+      "position": [
+        0.71420395,
+        0.01,
+        2.53514767
+      ],
+      "properties": {
+        "depth_mask": 0,
+        "depth_test": 0
+      },
+      "rotation": [
+        0.0,
+        -90.000003,
+        -0.0
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.62,
+          0.62,
+          0.62,
+          1.0
+        ]
+      },
+      "mesh_name": "ap_greetz_10",
+      "name": "greetz_10",
+      "order": 20,
+      "position": [
+        0.60435009,
+        0.01,
+        1.98285246
+      ],
+      "properties": {
+        "depth_mask": 0,
+        "depth_test": 0
+      },
+      "rotation": [
+        0.0,
+        90.000003,
+        0.0
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.62,
+          0.62,
+          0.62,
+          1.0
+        ]
+      },
+      "mesh_name": "ap_greetz_11",
+      "name": "greetz_11",
+      "order": 21,
+      "position": [
+        0.71929848,
+        0.01,
+        2.85612583
+      ],
+      "properties": {
+        "depth_mask": 0,
+        "depth_test": 0
+      },
+      "rotation": [
+        0.0,
+        -90.000003,
+        0.0
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.62,
+          0.62,
+          0.62,
+          1.0
+        ]
+      },
+      "mesh_name": "ap_greetz_12",
+      "name": "greetz_12",
+      "order": 22,
+      "position": [
+        -0.85377192,
+        0.01,
+        -12.22327042
+      ],
+      "properties": {
+        "depth_mask": 0,
+        "depth_test": 0
+      },
+      "rotation": [
+        0.0,
+        90.000003,
+        -0.0
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.62,
+          0.62,
+          0.62,
+          1.0
+        ]
+      },
+      "mesh_name": "ap_greetz_13",
+      "name": "greetz_13",
+      "order": 23,
+      "position": [
+        -2.15812349,
+        0.01,
+        5.95265388
+      ],
+      "properties": {
+        "depth_mask": 0,
+        "depth_test": 0
+      },
+      "rotation": [
+        0.0,
+        90.000003,
+        0.0
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.62,
+          0.62,
+          0.62,
+          1.0
+        ]
+      },
+      "mesh_name": "ap_greetz_14",
+      "name": "greetz_14",
+      "order": 24,
+      "position": [
+        -2.15002465,
+        0.01,
+        3.03621387
+      ],
+      "properties": {
+        "depth_mask": 0,
+        "depth_test": 0
+      },
+      "rotation": [
+        0.0,
+        90.000003,
+        -0.0
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.62,
+          0.62,
+          0.62,
+          1.0
+        ]
+      },
+      "mesh_name": "ap_greetz_15",
+      "name": "greetz_15",
+      "order": 25,
+      "position": [
+        0.58739591,
+        0.01,
+        2.06116533
+      ],
+      "properties": {
+        "depth_mask": 0,
+        "depth_test": 0
+      },
+      "rotation": [
+        0.0,
+        90.000003,
+        0.0
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.62,
+          0.62,
+          0.62,
+          1.0
+        ]
+      },
+      "mesh_name": "ap_greetz_16",
+      "name": "greetz_16",
+      "order": 26,
+      "position": [
+        -0.81050706,
+        0.01,
+        -11.32265186
+      ],
+      "properties": {
+        "depth_mask": 0,
+        "depth_test": 0
+      },
+      "rotation": [
+        0.0,
+        90.000003,
+        -0.0
+      ]
+    },
+    {
+      "name": "emiter_1",
+      "position": [
+        7.13102341,
+        1.92418993,
+        -6.75301886
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.62,
+          0.62,
+          0.62,
+          1.0
+        ]
+      },
+      "mesh_name": "ap_greetz_17",
+      "name": "greetz_17",
+      "order": 27,
+      "position": [
+        -11.7390728,
+        0.01,
+        -2.7135818
+      ],
+      "properties": {
+        "depth_mask": 0,
+        "depth_test": 0
+      },
+      "rotation": [
+        0.0,
+        180.000005,
+        -0.0
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "ap_airplane_1",
+      "name": "airplane_4",
+      "position": [
+        5.87581491,
+        1.89999998,
+        3.33646131
+      ],
+      "rotation": [
+        0.0,
+        45.000001,
+        0.0
+      ],
+      "tag": 503
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.62,
+          0.62,
+          0.62,
+          1.0
+        ]
+      },
+      "mesh_name": "ap_greetz",
+      "name": "greetz",
+      "order": 10,
+      "position": [
+        -5.87172651,
+        0.01,
+        -1.04294491
+      ],
+      "properties": {
+        "depth_mask": 0,
+        "depth_test": 0
+      },
+      "rotation": [
+        0.0,
+        32.0,
+        0.0
+      ]
+    },
+    {
+      "material": {
+        "diffuse_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "ap_edges_1",
+      "name": "edges_1",
+      "position": [
+        -11.40616703,
+        0.0,
+        -0.0
+      ],
+      "properties": {
+        "blending": "multiply",
+        "depth_mask": 0,
+        "depth_test": 0
+      },
+      "tag": 400
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.62,
+          0.62,
+          0.62,
+          1.0
+        ]
+      },
+      "mesh_name": "ap_greetz_18",
+      "name": "greetz_18",
+      "order": 13,
+      "position": [
+        -1.67971766,
+        0.01,
+        3.16100311
+      ],
+      "properties": {
+        "depth_mask": 0,
+        "depth_test": 0
+      },
+      "rotation": [
+        0.0,
+        -90.000003,
+        -0.0
+      ]
+    }
+  ],
+  "properties": {
+    "pause_particles": 0
+  },
+  "time": 22500
+}

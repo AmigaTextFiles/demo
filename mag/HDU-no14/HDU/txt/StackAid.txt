@@ -1,0 +1,128 @@
+==============================================
+Short: Avoid STACK related gurus (Ramlib/IPrefs) V1.5
+Author: Andreas R. Kleinert, Jim Cooper, Jorma Oksanen
+Requires: OS 2.04 (V37) or higher
+==============================================
+
+First :
+If some program crashes, it's bad.
+Even if these patches helps, it's no excuse.
+
+Also :
+- don't use these patches if you don't need them, i.e. if your 
+system does not crash at all...
+- "one patch more", may be "one patch too much"
+- first try to remove some of the other patches that you may be 
+running
+- if it works for you, and helps to fix some bugs, only use it 
+temporarily; when you upgrade your system's software 
+configuration, i.e. that parts that are likely to cause such problems, 
+next time,  then try again without these patches
+
+Additionally :
+- what "IPrefsPatch" and "RamLibPatch" do, is completely     
+illegal in terms of system-conformeous programming. Those 
+patches do work _accidentally_ with those two processes - if you 
+try the same kind of patch with other programs, it most likely 
+WON'T work as it should (so, DON'T try that, as e.g. the 
+"PatchStack" or "ksc_GowStack" tools do suggest - this was NOT 
+my intention by releasing the sources/idea)
+
+=======
+General
+=======
+- try increasing the stack inside the Boot shell, where s:startup - 
+sequence is executed. For example by adding the following line to 
+it :
+
+C:SetPatch QUIET  ; and then:
+Stack >NIL: <NIL: 8192
+
+- on some systems IPrefs causes problems, while on other 
+systems FastIPrefs causes problems (due to higher stack usage). 
+Try switching between both, while only using the LATEST     
+version of FastIPrefs: take a look at the author's homepage under:
+
+http://www.neuss.netsurf.de/~chbenitz/hws.html
+
+
+===========
+RamLibPatch
+===========
+The "ramlib" task, which Exec uses to manage library loading and 
+initialization, under OS 33-40 (Kickstart 1.2 upto AmigaOS 3.1) 
+only has a stack sized 2050 (2048) bytes. 
+
+This may easily lead to crashes, when
+a) libraries load many other libraries, that load many other 
+libraries, that... 
+b) some of these libraries do need a lot of stack space during 
+initialization
+
+Unfortunately, there is no legal way to increase/swap stacks of 
+foreign tasks under AmigaOS. However, this small patch program 
+does try it nevertheless, and it seems to work flawlessly.
+
+"RamLibPatch" increases the stacksize of the "ramlib" task to 8 K 
+(if not already done) and furthermore should keep all that nasty 
+"ramlib guru #3" crashes away from your system.
+
+Usage :  
+- call it from the Shell first, and check, whether it works for you
+- make some extensive tests, e.g. with datatypes and other 
+libraries
+- if it works OK, put it to your s:startup-sequence right after 
+SetPatch :
+
+Run >NIL: <NIL: RamLibPatch
+
+Drawbacks:
+The old stack never will be given back to the system, as also won't 
+be the new one - until the next reboot.
+
+===========
+IPrefsPatch
+===========
+The "IPrefs" task, which Workbench uses for  various preferences 
+stuff, including Workbench  background patterns, under OS 37-40 
+(AmigaOS 2.04  upto 3.1) only has a stack sized 3500 bytes. This 
+may easily lead to crashes, when datatypes  are used for pattern 
+loading, that have internal  requirements that are higher - usual 
+symptoms  are, that MultiView works flawlessly on an image, 
+while WBPattern crashes immediately. Unfortunately, there is no 
+legal way to increase/swap stacks of foreign tasks  under 
+AmigaOS. Two possible solutions came up :
+
+1. Patching the IPrefs executable
+(since other than Ramlib it's not in ROM) directly to a different 
+stacksize (problem: may not work for every revision)
+
+Usage:   - run it with "rx" from Shell
+
+2. Do it the same way as with Ramlib, and try to increase the 
+stack nevertheless (which seems to work flawlessly, but may       
+sometimes be "too late" in the s:startup-sequence).
+
+"IPrefsPatch" increases the stacksize of the "IPrefs" task to 8 K (if 
+not already done) and furthermore should keep all that nasty 
+"stack overflow" crashes away from your system.
+
+Usage:  - call it from the Shell first, and check, whether it works for 
+you 
+- make some extensive tests, e.g. with some datatypes fromout 
+IPrefs, try to change the WB screenmode once ("use")
+- if it works ok, put it to your s:startup-sequence right after IPrefs:
+
+Run >NIL: <NIL: IPrefsPatch
+
+Drawbacks :
+The old stack never will be given back to the system, as also won't 
+be the new one - until the next reboot.
+
+Well, last not least :
+I'm not responsible for anything, there's no guarantee for anything,
+and all mentioned trademarks are subject to their owners.  
+Changes since V1.3: - adjusting Process structure as well, now  
+Changes since V1.4: - added ARexx script by Jorma Oksanen 
+--
+ARK, 06/Aug/98

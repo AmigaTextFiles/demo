@@ -1,0 +1,268 @@
+;---------------------------------------------------------------------------
+
+;   * Subject: [stella] matt.a65
+;   * From: jvmatthe@eos.ncsu.edu
+;   * Date: Sun, 13 Oct 1996 03:36:51 -0400 (EDT)
+
+;---------------------------------------------------------------------------
+;       INCLUDE 2600.A65
+
+        processor 6502
+
+VSync   EQU     $00
+VBlank	EQU	$01
+WSync	EQU	$02
+RSync	EQU	$03
+NuSiz0	EQU	$04
+NuSiz1	EQU	$05
+CoLuP0	EQU	$06
+CoLuP1	EQU	$07
+CoLuPf	EQU	$08
+CoLuBk	EQU	$09
+CtrlPf  EQU     $0A
+RefP0	EQU	$0B
+RefP1	EQU	$0C
+Pf0	EQU	$0D
+Pf1	EQU	$0E
+Pf2	EQU	$0F
+ResP0	EQU	$10
+ResP1	EQU	$11
+ResM0	EQU	$12
+ResM1	EQU	$13
+ResBl	EQU	$14
+AudC0	EQU	$15
+AudC1	EQU	$16
+AudF0	EQU	$17
+AudF1	EQU	$18
+AudV0	EQU	$19
+AudV1	EQU	$1A
+GrP0	EQU	$1B
+GrP1	EQU	$1C
+EnaM0	EQU	$1D
+EnaM1	EQU	$1E
+EnaBl	EQU	$1F
+HMP0	EQU	$20
+HMP1	EQU	$21
+HMM0	EQU	$22
+HMM1	EQU	$23
+HMBl	EQU	$24
+VDelP0	EQU	$25
+VDelP1	EQU	$26
+VDelBl	EQU	$27
+ResMP0	EQU	$28
+ResMP1	EQU	$29
+HMove	EQU	$2A
+HMClr	EQU	$2B
+CxClr	EQU	$2C
+
+CxM0P	EQU	$00
+CxM1P	EQU	$01
+CxP0FB	EQU	$02
+CxP1FB	EQU	$03
+CxM0FB	EQU	$04
+CxM1FB	EQU	$05
+CxBlPf	EQU	$06
+CxPPMM	EQU	$07
+Inpt0	EQU	$08
+Inpt1	EQU	$09
+Inpt2	EQU	$0A
+Inpt3	EQU	$0B
+Inpt4	EQU	$0C
+Inpt5	EQU	$0D
+
+SwchA	EQU	$280
+SwACnt	EQU	$281
+SwchB	EQU	$282
+SwBCnt	EQU	$283
+InTim	EQU	$284
+Tim1T	EQU	$294
+Tim8T	EQU	$295
+Tim64T	EQU	$296
+T1024T	EQU	$297
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+Temp0   =       $80     ; stores color at top of letters
+Temp1   =       $81     ; stores color on current line
+
+MaxScr  EQU     $20 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        ORG     $1000
+
+Start:  SEI             ; Initialize the machine, set interrupt disable
+        CLD		; clear decimal mode
+        LDX     #$FF	; start X at $FF (255d)
+        TXS		; transfer it to the stack
+        INX		; set X to $00
+        TXA		; transfer it to the accumulator, A
+B1      STA     0,X     ; store $00 at 0+X
+        INX		; increment X
+        BNE     B1      ; if X is not zero yet, go back to @1
+			; the above loop zeros out $00 to $FF
+			; at this point X is $00
+	TXA		; $00 will be first color number, put it in A
+	STA	Temp0	; store it in Temp0
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; 
+
+Top:    ; Start a new screen
+
+; ======================
+;        LDA     #$05
+        LDA     #$35
+        STA     Tim64T	; set timer for $05*$40 = $140 (320d) clocks
+; ======================
+        ; do overscan stuff here
+
+        LDA     #$00	; put $00 in A
+        STA     Pf0	; clear out first playfield section
+        STA     Pf1	; clear out second playfield section
+        STA     Pf2	; clear out third playfield section
+        STA     GrP0	; clear out player graphic 0
+        STA     GrP1	; clear out player graphic 1
+        STA     EnaM0	; clear out missile 0
+        STA     EnaM1	; clear out missile 1
+        STA     EnaBl	; clear out ball
+        STA     CoLuP0  ; set player 0 to black
+        STA     CoLuP1  ; set player 1 to black
+        STA     CoLuPf  ; set playfield to black
+        STA     CoLuBk  ; set background to black
+
+        ; wait for overscan to finish, then start blanking
+        
+B2      LDA     InTim   ; find current value of timer
+        BNE     B2      ; if timer not zero, wait
+			; when we get here, A will be $00
+        LDY     #$82    ; this is 10000010b
+        STY     WSync   ; wait for end of current line
+        STY     VBlank  ; start vertical, disable latches, dump orts
+			; this is from the 10000010b
+        STY     VSync   ; start vertical sync
+        STY     WSync	; send three lines while doing vertical sync
+        STY     WSync	;
+        STY     WSync	;
+        STA     VSync   ; end vertical sync
+; ======================
+;        LDA     #$05    ; put $05 in A
+        LDA     #$43
+        STA     Tim64T  ; start vblank timer
+; ======================
+       
+; Setup the playfield graphics 
+
+        LDA	#$01
+	STA	CtrlPf	; causes a reflection of the playfield
+        LDA     #$0E    ; color white
+        STA     CoLuBk  ; make the background white
+
+	JSR	Blank	; do blanking stuff
+        STA     WSync   ; one more line for good measure
+
+; Draw the screen
+
+	LDA	Temp0	; what is the color at the top of current line?
+	ADC	#$02	; add one to that color
+	STA	Temp0	; store that as new top color
+	STA	Temp1	; also store to increase the color as we
+			; draw screen
+	STA	CoLuPf	; now put that top color in playfield color register
+
+	LDX	#$20	; going to put 32 blank lines at top, so set X to $20
+PreLoop	STA	WSync	; do a line
+	DEX		; decrease X by one
+	BNE	PreLoop	; if X is not zero, do more lines
+
+	LDX	#$00	; there are $20 (32d) lines of playfield, start at $00
+			; but repeat each line 4 times, so really 128 lines
+Loop1	LDA	Table,X	; get the current line of playfield
+	STA	Pf1	; store it in playfield 1
+	STA	Pf2	; store it in playfield 2
+	STA	WSync	; first line
+	LDA	Temp1	; get color of current line
+	ADC	#$01	; increase by one
+	STA	CoLuPf	; store in playfield register
+	STA	WSync	; second
+	ADC	#$01	; increase by one
+	STA	CoLuPf	; store in playfield register
+	STA	WSync	; third
+	ADC	#$01	; increase by one
+	STA	CoLuPf	; store in playfield register
+	STA	WSync	; fourth
+	ADC	#$01	; increase by one
+	STA	CoLuPf	; store in playfield register
+	STA	Temp1	; store latest color
+	INX		; decrease X by one
+	CPX	#$20	; is at $20 yet?
+	BNE	Loop1	; if we aren't done reading data from Table, do again
+	LDX	#$00	; set X to $00
+	STX	Pf1	; use it to clear out playfield
+	STX	Pf2	; same here
+	LDX	#$20	; now prepare to do $20 (32d) lines of blank
+Loop2	STA	WSync	; do one line
+	DEX		; decrease X by one
+	BNE	Loop2	; if X is not zero, do another line
+
+	JMP	Top	; done with this frame, go back to Top
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; 
+
+Table:  .word      $0E0C   ; 00001100
+			; 00001110
+        .word      $0D0F   ; 00001111
+			; 00001101
+        .word      $0C0C   ; 00001100
+			; 00001100
+        .word      $000C   ; 00001100
+			; 00000000
+        .word      $0703   ; 00000011
+			; 00000111
+        .word      $0F0C   ; 00001100
+			; 00001111
+        .word      $0C0C   ; 00001100
+			; 00001100
+        .word      $000C   ; 00001100
+			; 00000000
+        .word      $090F   ; 00001111
+			; 00001001
+        .word      $0101   ; 00000001
+			; 00000001
+        .word      $0101   ; 00000001
+			; 00000001
+        .word      $0003   ; 00000011
+			; 00000000
+        .word      $090F   ; 00001111
+			; 00001001
+        .word      $0101   ; 00000001
+			; 00000001
+        .word      $0101   ; 00000001
+			; 00000001
+        .word      $0003   ; 00000011
+			; 00000000
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; 
+
+
+Blank:  NOP             ; spacer
+B3      LDA     InTim   ; find out current status of timer
+        BNE     B3      ; if timer is zero, then done, otherwise check timer
+        STA     WSync   ; A is $00, kick out another line
+        STA     VBlank  ; blank off, disable latches, remove dump
+        RTS
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; 
+
+        ORG     $17FC   ; vectors for 2k cart
+        .word      Start   ; reset
+        .word      Start   ; IRQ
+
+
+        ORG     $1FFC   ; vectors for 4k cart
+        .word      Start   ; reset
+        .word      Start   ; IRQ
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; 
+
+;        END
+

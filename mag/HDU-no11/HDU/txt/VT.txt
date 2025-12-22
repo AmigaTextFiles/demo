@@ -1,0 +1,41 @@
+=========================================
+Short:    Teletext browser, German, V5.41+
+Author:   wnoeker@t-online.de (Wilhelm Noeker)
+=========================================
+
+VideoText V5.41+, download teletext pages into the amiga, browse 
+them, save them, print them. Requires a teletext decoder chip (SAA 
+5246) with an I²C bus interface to the amiga, e.g. the one described 
+in "c't" magazine. Many features, including job queue, list of 
+favourite page numbers for each TV station, page monitoring on 
+screen or to a file. German version, German docs only, but with an 
+Installer script in both English and German.  And there's an English 
+"localization" available (by Adriano de Minicis): 
+hard/drivr/VTXT_eng_pch.lha. VideoText is Postcard-ware.
+
+Changes from V5.41 -> V5.41+:
+- support for additional types of hardware interfaces
+- updated documentation, mainly with respect to hardware suppliers
+- MagicWB icons (many thanks to Adriano de Minicis!)
+
+Changes from V5.22 -> V5.41:
+- PubScreen
+- start ARexx scripts from within the program
+- search for text strings on pages in memory
+- fixed a bug in i2c.library that made it fail on A1200
+- support for additional types of hardware interfaces
+
+Changes from V5.05 -> V5.22:
+- Screenmode requester
+- two font sizes to choose from
+- ARexx port
+- easier management of favourite page numbers
+- Kickstart 1.3 no longer supported
+
+Changes from V4.2 -> V5.05:
+- support for Jan Leuverink's parallel port interface
+- page scan that grabs "all" available pages
+- Hypertext-like retrace function
+- better representation of TOP-Text information
+- all functions accessible by menu
+- icon ToolTypes are now read/write and accessible from CLI, too

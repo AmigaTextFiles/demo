@@ -1,0 +1,38 @@
+echo     "L O A D I N G ... please wait"
+join wildthing.1 wildthing.2 wildthing.3 wildthing.4 to wildthingcompact.lha
+lha x hd1:wildthingcompact.lha hd1:
+delete wildthing.1
+delete wildthing.2
+delete wildthing.3
+delete wildthing.4
+delete wildthingcompact.lha
+delete join
+.key ""
+echo " "
+echo               "Wild Thing from  The Troggs"
+
+echo               "from the CD "Greatest Hits""
+
+echo               "Produced by Masters Records"
+
+echo             "Manufactured by PILZ Compact Disc"
+Wait 10 sec
+if not exists libs:scala.library
+echo "Copying ScalaDemo system files to your system..."
+copy hd1:scala.library libs:
+copy hd1:scala.device devs:
+copy hd1:scala.config s:
+copy hd1:fonts: all quiet
+endif
+
+echo " "
+echo                   "Now Loading Demo..."
+run p freq 15100 wt
+assign Scala: ""
+stack 25000
+demoplayer scalademo.script
+
+echo " "
+echo "Thanks for using this Demo!"
+echo "Bye!"
+               echo "The Sound plays to end"

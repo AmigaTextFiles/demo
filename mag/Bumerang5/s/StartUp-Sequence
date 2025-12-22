@@ -1,0 +1,8 @@
+Assign ENV: RAM:
+MakeDir RAM:Fonts
+Assign FONTS: RAM:Fonts
+Copy >NIL: SYS:Fonts Fonts: ALL
+PLFonts >NIL:
+PP >NIL:
+LoadWB
+EndCLI >NIL:

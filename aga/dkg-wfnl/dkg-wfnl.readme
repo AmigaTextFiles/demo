@@ -1,0 +1,42 @@
+Short:    Welcome To Our World FINAL
+Author:   mrtickle@amiga4k.ndo.co.uk
+Uploader: mrtickle@amiga4k.ndo.co.uk
+Type:     demo/aga
+Requires: 68020+, AGA, 6MB
+
+   ._______    ______    ________ ___ _____  ______   _______   _________
+ .-|   _   \  _\____ \  _\__    /    /    / _\____ \ |  ____/_ |  _     /_-.
+ |:|   \    \_     /  \_   /    \_   \    \      /  \_  \     \_  /____/ /:|
+ `-|_________/_________/___\_____/____\    \ ________/_________/________/--'
+  <------------------------------------\____\------------------------lm!-->
+
+
+                                · presents ·
+
+                     WELCOME TO OUR WORLD, FINAL VERSION
+
+                        (5th at Mekka/Symposium 2000)
+
+                     Lousy Code, Lousy Gfx, Lousy Music:
+                         Mr Tickle/DKG & Cupid/IRIS
+
+
+Well,  here it is.  The final version of "Welcome To Our World".  The original
+party  version was  coded on Cupid's Amiga  which has an 060.  When I got back
+home  to  my  crappy  030/25mhz,  I  found  that  the demo  didn't  run to  my
+satisfaction.  It still doesn't,  but this is a LOT faster.  The exact changes
+from the party version are:
+
+* Moved some more of the tunnel mainloop into the precalc table
+* Added another precalc table for the tunnel (the tunnel is now MUCH faster ;)
+* Tecon is  now  drawn a  longword  at a  time with a mask  (instead of a byte
+  at a time)
+* The endscroller is a bit faster (but still jerky and slow)
+
+bla, bla, bla.. ;) Really it needs to be re-coded from scratch,  but that just
+isn't going to happen...
+
+Anyway,  this demo isn't earth shattering,  but  Cupid and I  had a LOT of fun
+making it, and that is the most important thing. I hope it makes you laugh.
+
+                   Note: There WILL be a sequal at MS2K+1 ...

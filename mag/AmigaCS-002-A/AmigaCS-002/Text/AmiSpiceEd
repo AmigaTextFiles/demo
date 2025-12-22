@@ -1,0 +1,58 @@
+@{d 99E9FF}  @{c 85BAEE}@{i}Nazdárek!@{ui}@{c}
+
+  Toto  je  môj prvý príspevok do tohto diskmagu a keð Shaman nebude veãmi protestovaï
+(nech  mu je zem ãahká :^}) tak nezostane iba pri ñom.  Dnes mojím çerveným a unaveným
+(lebo  furt na monitor pozerajúcim) oçkom hodíme pohãad na simuláciu @{c 85BAEE}[hmmm...  çervený
+voçi  mám  taky...   pozn.   Shaman]@{c}.   A  to  nie  na  simuláciu motoriek, lietadiel,
+raketoplánov, baní, miest, ponoriek, planét, vesmíru, formúl 1 aù N, helikoptér, chrôb
+a podobne, ale na simuláciu elektrických obvodov.  Elektrické obvody sú také vîelijaké
+súçiastky  a  vodiçe,  ktorými  teçie  elektrický  prúd.  Priznám sa, ùe im ani trochu
+nerozumiem.   Viem iba toãko, ùe sa tam veãa poçíta a pri zloùitejîích obvodoch (napr.
+viac  ako  1  zdroj a 1 odpor) to aj tak nikoho nebaví.  Preto vznikli rôzne programy,
+ktoré to robia namiesto çloveka.
+
+  Jedným  z nich je program @{c 85BAEE}SPICE@{c} (ak vás teraz napadla "hudobná" skupina ZPICE GIRLS,
+okamùite  si  dajte facku; ak vás napadlo korenie SPICE z DUNY od Franka Herberta, tak
+môùete daï facku niekomu vo vaîom okolí).  Predpokladám, ùe vznikol pod nejakým klonom
+unixu  a  podãa toho aj jeho port na Amigu vyzerá.  By ma zaujímalo, çi tí, ço portujú
+soft z unixu na Amçu poznajú slovo Intuition.  Ak ste videli nejaký GNU (ço je skratka
+slov:   garantujeme  neãahké uùívanie ;-]) port, tak viete o çom hovorím:  neprehãadná
+inîtalácia;  dokumentácia,  kde  sa  to  len  hemùí  slovami  ako "foo" (ço to vlastne
+znamená???) a program spúîïateãný iba zo shellu, s miliónmi parametrov.
+
+  @{c 85BAEE}SPICE@{c} má jednoduchú inîtaláciu, v dokumentácii som nenaîiel ani jediného foa, ale má
+jednu  dosï  podstatnú  nevýhodu:   obvod,  ktorý  chcete  odsimulovaï je definovaný v
+textovom  súbore,  ktorý  vytvára...  no kto asi?  Hádajte teraz!  Víïaz vyhráva právo
+preçítaï  si  tento çlánok dokonca a moùno sa dozvie ako si uãahçiï ùivot (so SPICE, s
+niçím  iným  nie!).   Çiùe  pekne  manuálne spájate súçiastky pomocou çísiel uzlov, na
+ktoré  majú  byï  napojené a je to skvelé!  Nepoznám nikoho, kto by sa pri tom niekedy
+pomýlil  alebo  mu  to  dlho  trvalo :~).  Teraz prichádza na rad odsek, ktorý si smie
+preçítaï iba výherca horeuvedenej súïaùe:
+
+  Zrejme  tento  nedostatok  programu  Spice  vadil  aj  niekomu, kto vie programovaï.
+Dotyçný  sa volá Dirk Hasse a jeho dielo AmiSpideEd.  Popis pouùitia tohto programu je
+triviálny:   NAKRESLÍTE si obvod, zadáte hodnoty súçiastok, vyexportujete do Spice | (
+<-  to  je  akoùe "alebo", aby som sa toãko nenapísal :D (smajlik (TM) MOTH)) spustíte
+priamo  Spice  a  AmiSpiceEd  z  toho,  ço  vypãuje  Spice  zobrazí  graf(y).   Manuál
+@{c 85BAEE}AmiSpiceEdu@{c}  je  dosï  struçný, nemusíte ho vôbec çítaï, skoro vîetko sa dá INTUITÍVNE
+pochopiï  hneð  pri  prvom pouùití.  Na jednu vec ale asi hneð z voleja neprídete a tú
+vám  teraz  prezradím:   jednotlivé  súçiastky sa navzájom daju pospájaï takto (ãudovo
+povedané,  dráty  sa  ïahajú  takto):   z  horného  zoznamu  (nad  ktorým  je napísané
+"Libraries")  vyberiete  prvú  poloùku  -  Internal  elements.  Z horného zoznamu (nad
+ktorým  je napísané "Elements") vyberiete prvú poloùku - EDIT-MODE.  Teraz kliknete do
+stredu   prvej   súçiastky   (tzv.    select   -  súçiastka  zmení  farbu),  potom  na
+spojenia-ùiadostivý  vývod  prvej  súçiastky.  Od tejto chvíle sa za îípkou (alebo ako
+vyzerá  váî  pointer) ïahá çiara.  Teraz kliknite do stredu druhej súçiastky (tzv.  to
+isté)  a na s-ù vývod druhej súçiastky.  E VIOLA!  Hotovo!  Zopakovaním tohoto postupu
+spojenie zase vymaùete.
+
+  Nijako  dôkladne  som  AmiSpiceEd  netestoval,  takùe  ak  náhodou  nieço  robí zle,
+nadávajte  vláde (Vlado SR :-D) a nie mne.  Na existenciu tohoto programu ma upozornil
+TyNyT, za ço mu patrí moje...  hmmm, no zrovna moje mu nepatrí niç, ale mi povedal, ùe
+si  objednal  PPC  kartu,  takùe sa bude maï dobre aj bezo mña.  Aspoñ uù vieî, ako sa
+robia connectionz, vîak TynTyn!  ;-)
+
+  Záver:   aj  Spice  aj  AmiSpiceEd  nájdete  v  Aminete v adresári misc/sci.  Oba sú
+freeware, Spice je z roku 1996, AmiSpiceEd je z januára 1998.
+
+                             @{c 85BAEE}napísal rh <rh0@hotmail.com>@{c}

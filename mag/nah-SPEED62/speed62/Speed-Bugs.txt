@@ -1,0 +1,7 @@
+If you are running Picasso96 on a gfx board, Speed may run in NTSC mode,
+which means you won't be able to see the panels. The only way to properly
+avoid this is to boot with no startup sequence (+ setpatch).
+
+On Mr Tickle/DKG's Amiga (A4000 060 CV64/3D), Speed sometimes messes up
+bigtime (the pointer doesn't appear, etc.) This can also be fixed with
+a no startup sequence boot.

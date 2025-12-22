@@ -1,0 +1,16 @@
+;****************************************************************************
+; A little script to start the Ascii Gallery from HD.
+;****************************************************************************
+;
+; Assign diskname to a current directory.
+; if you run this script from a different directory, then replace the
+; "" by the name of the directory, e.g. Work:Demo/Ascii_Gallery
+;
+Assign Ascii_Gallery: ""
+;
+; run the demo!
+;
+Ascii_Gallery:Ascii_Gallery.Exe
+;
+; Bibi!
+;

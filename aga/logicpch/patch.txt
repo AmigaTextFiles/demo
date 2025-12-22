@@ -1,0 +1,31 @@
+LOGIC Patch
+-----------
+
+This patch will fix a few things:  Copyback cache and non-zero VBR should
+work now.  Also a small problem with the player should be gone.  There are
+also .info-files for the executables for WB startup.
+
+Apply this patch to the files that were spread in the partyplace.  The
+files should be called "LOGICC1.LHA" and "LOGICC2.LHA".  To be even more
+sure, check that the file "README.TXT" has size 2527 and the file "LOGIC.EXE"
+has size 48292.
+
+To do the patch-up, make sure that "LOGIC:" is assigned to the demo directory
+with the demo (depacked ofcourse).  Then just execute the file "patch_it":
+  1> Execute patch_it
+
+Then just wait ... :)
+
+Have fun!
+
+Silver Eagle
+
+---------------
+
+Run SETPATCH before running the demo to enable COPYBACK caches on kick ass
+machines.
+
+Flame
+
+
+SPATCH Copryright by SAS Institute Inc., Cary, NC, USA.

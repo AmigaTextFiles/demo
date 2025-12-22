@@ -1,0 +1,45 @@
+DeathTrial FixPatch	0.1
+
+it's just the executable !
+replace the old one by this one.
+and keep the DTDAT directory from the original.
+you can use the command "version" on "DeathTrial.wos"
+to be sure.
+
+Why 0.1 ?
+because their will be OTHER patch.
+this one is released quickly because
+of the trouble with the AHI asl requester.
+
+
+Another patch will be released soon for theses reasons:
+With cybergraphics, you can set the modulo value,
+and make your own screens.DeathTrial, at this moment,
+only recognize 320 pixel modulo.
+A special CGX 15b window mode will be added too.
+as I'm still under AGA, I'm tired of "blind-coding"
+with CGX.
+So , As I'm waiting for my bvision, wait too.:-)
+check daily http://tex.mankind.free.fr
+for theses patch !
+
+NOTE TO PEOPLE THAT THINKS DEATHTRIAL IS NOT "OSFriendly-CODED":
+deathtrial is fully OSfriendly coded,even if it's half asm !
+So Why didn't I put a ASL requester for the screen mode ?
+Shouldn't an "AMIGAOS application" find a video-mode by itself ?
+because if you use a os-function to fill a screen, It'S
+** FUCKING SLOW ** on AGA, it's really slow, on CGX, it's the
+same speed as AGA !! (see gender bender! AND I use the venus
+art c2p !!) Even in the official cybergraphics autodocs, 
+THEY tell people to fake their screens for full speed, and
+give the method to do it (which I use...)
+Nevertheless you can still insult my work and code at:
+
+krabob@free.fr
+
+we will be at the Euskal party 8 in jully2000 in SanSebastian ;-).  
+
+
+
+
+

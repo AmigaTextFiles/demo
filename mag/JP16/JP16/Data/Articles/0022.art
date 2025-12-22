@@ -1,0 +1,76 @@
+!Hively Tracker
+by d!RT!E
+12µF0µC4µJCµI0300
+
+µI0301µJEµF2AOS4-TrackersµF0µC4
+
+A new AHX-based tracker is in the pipe. Its called "Hively Tracker" and is coded by XERON/IRIS. µF1
+
+The first skin is made by SPOT/UPROUGH. It can import/export AHX modules as well as AHX instruments. The tracker itself is more full-featured and has more editing features than AHX. 
+
+SPOT is fascinated by new soundeffects: "...wait 'til you hear the new ring modulation fx! =) it's madness!". 
+
+Very intresting, so we cant resist to ask Xeron some questions concerning Hively:
+µC2
+JP: µC1Hello Xeron, I heared about your new ahx based tracker for OS4 and I like to get some extra information.
+µC2Xeron: µC1Hello d!RT!E, Thanks for taking an interest in my little project!
+
+µC2JP: µC1A lot software developers use Linux SDK and crosscompile for AMiGAOS4. Whats your developer platform, directly on OS4?
+µC2
+Xeron: µC1All my OS4 stuff is coded directly on my AmigaOne XE-G4 with OS4. I love programming for AmigaOS, *on* AmigaOS. I wouldn't have it any other way... ;-)
+µC2
+JP: µC1Will "Hively Tracker" become a commercial product or is it planned as free, pure scene application?
+µC2
+Xeron: µC1No. It wouldn't be right to charge for Hively, as its so heavily based upon the AHX format, which is bartman and pinks baby. Hively will be freeware.
+µC2
+JP: µC1Why you do your own GUI (designed by Spot) any advantages?
+µC2Xeron: µC1Because I always preferred Protracker to Octamed. I think trackers should have custom interfaces, its just not right otherwise ;-) . 
+
+µI0302
+The interface is fully skinnable, and (hopefully!!!!) there should be at least one skin by Dr. Doom in the first release as well as Spots.
+
+µC2JP: µC1I read about the "ring modulation fx" what is this and what other features will be added?
+µC2
+Xeron: µC1Ring modulation is something the SID chip had, but AHX never did. In fact, on the AHX website, it said that AHX v3 might have ring modulation, but I don't think another official AHX will come. 
+
+Anyway, ring modulation is a very simple form of AM synthesis, where two waveforms are multiplied together. The resulting output has all sorts of weird harmonics, but doesn't contain the original waveform, so its not very musical, but great for special effects. It just adds another dimension to it, and was easy to impliment.
+
+HivelyTracker also expands on the AHX format in the following ways:
+
+* Multichannel (up to 16 channels)
+* Two commands per note instead of one
+* Per-channel stereo panning
+* Much more fully featured editor 
+  than AHX had 
+µC2
+JP: µC1At the moment you are searching for Betatesters, is Hively Tracker nearly finished? When is the final release planned?
+µC2
+Xeron: µC1I'm not really searching for betatesters. HivelyTracker 1.0 is very nearly ready, it just has some glitches to work out, and right now i'm adding every single protracker keyboard shortcut that is applicable (AHX and Hively have some things which don't translate directly from protracker, so not all keyboard shortcuts make sense). 
+
+I'm waiting for some demo songs from some people to distribute with the first release, and with a bit of luck a skin from Dr. Doom (he said he *might* have time to do one).
+µC2
+JP: µC1Do you see any chances to get it work on OS3, using fast 68K processors?
+µC2
+Xeron: µC1Well, you should be able to play hivelytracker modules on the higher 68k processors, sure. 
+
+The actual tracker itself? Probably not. I've used a bunch of OS4 improvements including (but not limited to) automatically semaphore protected memory pools, standardised system structure allocation, antialiased font rendering, penless rendering to rastports, and truecolour datatype loading.
+µC2
+JP: µC1A main problem of Amiga Trackers is that its nearly impossible to play the tunes on other platforms correctly. Is a replay routine for MORPHOS, Windows and OSX possible and planned?
+µC2
+Xeron: µC1A portable open-source replay routine is planned for release after the 1.0 release of the tracker.
+µC2
+JP: µC1At Breakpoint a new music compo was started, I think two years ago... The executable music compo. Maybe saving an executable is a option for Hively Tracker too?
+µC2
+Xeron: µC1Heh.. thats probably too much work, but the replayer is going to be opensource, as I said. The format doesn't deviate massively from AHX.
+µC2
+JP: µC1Thank you for your information. I wish you a nice summer and good response for your tracker project.
+µC2
+Xeron: µC1No problem. Cheers, Pete aka XERON
+µC2
+JP sums it up: µC1Hively will become final soon and it will become a ruling scene application just like the original ahx I think. I cant await to see the tool on a Amiga One. 
+
+Also some other tracker projects were intresting these days: Per Johansson released a AOS4-Beta of Protracker 2.3 in 2005. GoatTracker v2.05 (A crossplatform C64 music editor) was ported to AmigaOS 4 by Varthall/Up Rough. 
+
+Digibooster Pro was announced for AOS4 too but ages ago. Their website tells "A program is like a good beer. It needs time to become perfect... And as this was a "news" from 2005 where the users should vote for their features and how the gui should look like, I think this project will still take a long time till it will become reality. I read rumours about Milkytracker for AOS4 but I cant find some tough information about it. 
+
+But more and more scenish and nonscenish music software is developed for AMiGAOS4. Well, this feels good lets see whats next... Renoise? 

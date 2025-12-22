@@ -1,0 +1,17 @@
+stack 20000
+execute make 3dsubrs
+execute make amiga
+execute make amigaprocedures
+execute make camera
+execute make deallocate
+execute make debug
+execute make displayuniverse
+execute make init
+execute make joystick
+execute make objectallocate
+execute make startgfxdos
+execute make subdisplay
+execute make threed
+execute link amiga3d
+echo "make3d: DONE..."
+

@@ -1,0 +1,960 @@
+{
+  "actions": [
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "human_1_shadow"
+        }
+      ],
+      "loops": 1,
+      "name": "human_1_shadow_action",
+      "start_time": 7040,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 1.0,
+            "time": 40
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 920
+          },
+          {
+            "float_values": 0.65,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "human_1_shadow"
+        }
+      ],
+      "loops": 1,
+      "name": "human_1_shadow_matAction.002",
+      "start_time": 7040,
+      "type": "alpha"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 0,
+            "uint8_values": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "butterfly_1"
+        }
+      ],
+      "loops": 1,
+      "name": "butterfly_1Action",
+      "start_time": 6400,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -2.780729,
+              -1.135648,
+              8.205285,
+              -2.780729,
+              -1.135648,
+              8.205285,
+              -2.780729,
+              -1.135648,
+              8.205285
+            ],
+            "interpolation": "bezier",
+            "time": 960
+          },
+          {
+            "float_values": [
+              1.075055,
+              -1.135648,
+              2.891196,
+              0.565015,
+              -1.135648,
+              2.891196,
+              1.542591,
+              -1.135648,
+              2.891196
+            ],
+            "interpolation": "bezier",
+            "time": 880
+          },
+          {
+            "float_values": [
+              1.542591,
+              -1.415257,
+              2.891196,
+              1.379711,
+              -1.415257,
+              2.891196,
+              1.749894,
+              -1.415257,
+              2.891196
+            ],
+            "interpolation": "bezier",
+            "time": 1120
+          },
+          {
+            "float_values": [
+              2.009513,
+              -1.156983,
+              2.917724,
+              2.009513,
+              -1.156983,
+              2.917724,
+              2.009513,
+              -1.156983,
+              2.917724
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "butterfly_1"
+        }
+      ],
+      "loops": 1,
+      "name": "butterfly_1Action",
+      "start_time": 6440,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -0.0,
+              0.0,
+              0.0,
+              -0.0,
+              0.0,
+              0.0,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 960
+          },
+          {
+            "float_values": [
+              -40.704745,
+              -23.677935,
+              -12.099999,
+              -40.704745,
+              -17.759419,
+              -11.262428,
+              -40.704745,
+              -29.103241,
+              -12.867773
+            ],
+            "interpolation": "bezier",
+            "time": 880
+          },
+          {
+            "float_values": [
+              -27.924122,
+              -29.76592,
+              -12.867773,
+              -27.924122,
+              -29.76592,
+              -12.867773,
+              -27.924122,
+              -29.76592,
+              -12.867773
+            ],
+            "interpolation": "bezier",
+            "time": 1120
+          },
+          {
+            "float_values": [
+              -34.475489,
+              -11.554716,
+              -0.0,
+              -34.475489,
+              -11.554716,
+              -0.0,
+              -34.475489,
+              -11.554716,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "butterfly_1"
+        }
+      ],
+      "loops": 1,
+      "name": "butterfly_1Action",
+      "start_time": 6440,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 27.172853,
+            "interpolation": "linear",
+            "time": 9320
+          },
+          {
+            "float_values": 18.081297,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "ships"
+        }
+      ],
+      "loops": 1,
+      "name": "shipsAction.002",
+      "start_time": 0,
+      "type": "position_x"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": -65.579918,
+            "interpolation": "linear",
+            "time": 9320
+          },
+          {
+            "float_values": -70.104218,
+            "interpolation": "linear",
+            "time": 680
+          },
+          {
+            "float_values": -70.434319,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "ships"
+        }
+      ],
+      "loops": 1,
+      "name": "shipsAction.002",
+      "start_time": 0,
+      "type": "position_z"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.35,
+              0.35,
+              0.35
+            ],
+            "interpolation": "bezier",
+            "time": 480
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "human_1_mouth"
+        }
+      ],
+      "loops": 1,
+      "name": "human_1_mouth_action",
+      "start_time": 7040,
+      "type": "scale_y"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.6,
+              0.6,
+              0.6
+            ],
+            "interpolation": "bezier",
+            "time": 480
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "human_1_eye_2"
+        }
+      ],
+      "loops": 1,
+      "name": "human_1_eye_2_action",
+      "start_time": 7040,
+      "type": "scale_y"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.6,
+              0.6,
+              0.6
+            ],
+            "interpolation": "bezier",
+            "time": 480
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "human_1_eye_1"
+        }
+      ],
+      "loops": 1,
+      "name": "human_1_eye_1_action",
+      "start_time": 7040,
+      "type": "scale_y"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": -25.264452,
+            "interpolation": "linear",
+            "time": 9280
+          },
+          {
+            "float_values": -16.05146,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "human_3"
+        }
+      ],
+      "loops": 1,
+      "name": "human_3Action",
+      "start_time": 0,
+      "type": "position_z"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 19.999999,
+            "interpolation": "linear",
+            "time": 960
+          },
+          {
+            "float_values": -19.999999,
+            "interpolation": "linear",
+            "time": 1000
+          },
+          {
+            "float_values": 19.999999,
+            "interpolation": "linear",
+            "time": 1000
+          },
+          {
+            "float_values": -19.999999,
+            "interpolation": "linear",
+            "time": 1000
+          },
+          {
+            "float_values": 19.999999,
+            "interpolation": "linear",
+            "time": 1000
+          },
+          {
+            "float_values": -19.999999,
+            "interpolation": "linear",
+            "time": 1000
+          },
+          {
+            "float_values": 19.999999,
+            "interpolation": "linear",
+            "time": 1000
+          },
+          {
+            "float_values": -19.999999,
+            "interpolation": "linear",
+            "time": 1000
+          },
+          {
+            "float_values": 19.999999,
+            "interpolation": "linear",
+            "time": 1000
+          },
+          {
+            "float_values": -19.999999,
+            "interpolation": "linear",
+            "time": 1000
+          },
+          {
+            "float_values": 19.999999,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "human_3"
+        }
+      ],
+      "loops": 1,
+      "name": "human_3Action",
+      "start_time": 0,
+      "type": "rotation_y"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": -25.372103,
+            "interpolation": "linear",
+            "time": 9280
+          },
+          {
+            "float_values": -16.190516,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "human_2"
+        }
+      ],
+      "loops": 1,
+      "name": "human_2Action",
+      "start_time": 0,
+      "type": "position_z"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 480
+          },
+          {
+            "float_values": -19.999999,
+            "interpolation": "linear",
+            "time": 1000
+          },
+          {
+            "float_values": 19.999999,
+            "interpolation": "linear",
+            "time": 1000
+          },
+          {
+            "float_values": -19.999999,
+            "interpolation": "linear",
+            "time": 1000
+          },
+          {
+            "float_values": 19.999999,
+            "interpolation": "linear",
+            "time": 1000
+          },
+          {
+            "float_values": -19.999999,
+            "interpolation": "linear",
+            "time": 1000
+          },
+          {
+            "float_values": 19.999999,
+            "interpolation": "linear",
+            "time": 1000
+          },
+          {
+            "float_values": -19.999999,
+            "interpolation": "linear",
+            "time": 1000
+          },
+          {
+            "float_values": 19.999999,
+            "interpolation": "linear",
+            "time": 1000
+          },
+          {
+            "float_values": -19.999999,
+            "interpolation": "linear",
+            "time": 1000
+          },
+          {
+            "float_values": 19.999999,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "human_2"
+        }
+      ],
+      "loops": 1,
+      "name": "human_2Action",
+      "start_time": 0,
+      "type": "rotation_y"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.496055,
+              19.778976,
+              -4.347109,
+              -0.496055,
+              19.778976,
+              -4.347109,
+              -0.496055,
+              19.778976,
+              -4.347109
+            ],
+            "interpolation": "bezier",
+            "time": 6160
+          },
+          {
+            "float_values": [
+              -0.496055,
+              -0.501959,
+              6.101446,
+              -0.496055,
+              0.09198,
+              4.041172,
+              -0.496055,
+              -0.802785,
+              7.144962
+            ],
+            "interpolation": "bezier",
+            "time": 3120
+          },
+          {
+            "float_values": [
+              -0.496055,
+              -0.802785,
+              7.144962,
+              -0.496055,
+              -0.802785,
+              7.144962,
+              -0.496055,
+              -0.802785,
+              7.144962
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "camera_1"
+        }
+      ],
+      "loops": 1,
+      "name": "camera_1_action",
+      "start_time": 0,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              3e-06,
+              -26.638166,
+              0.0,
+              3e-06,
+              -26.638166,
+              0.0,
+              3e-06,
+              -26.638166,
+              0.0
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "camera_1"
+        }
+      ],
+      "loops": 1,
+      "name": "camera_1_action",
+      "start_time": 6160,
+      "type": "rotation_xyz"
+    }
+  ],
+  "cameras": [
+    {
+      "far_clip_plane": 100.0,
+      "fov_x": 49.134342,
+      "fov_y": 28.841546,
+      "hide": false,
+      "name": "camera_1",
+      "near_clip_plane": 0.1,
+      "position": [
+        -0.496055,
+        19.778976,
+        -4.347109
+      ],
+      "rotation": [
+        3e-06,
+        -26.638166,
+        0.0
+      ]
+    }
+  ],
+  "enc_info": {
+    "data_type": "ENCSCN",
+    "date": "02 Jul 2020 18:08:53",
+    "version": "2.0"
+  },
+  "loops": 1,
+  "name": "scream_scene",
+  "objects": [
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "specular_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "sc_human_1_shadow",
+      "name": "human_1_shadow",
+      "order": 137,
+      "position": [
+        2.560609,
+        -2.348537,
+        1.405365
+      ],
+      "rotation": [
+        0.0,
+        -23.454344,
+        0.0
+      ]
+    },
+    {
+      "hide": true,
+      "name": "butterfly_1",
+      "position": [
+        -2.780729,
+        -1.135648,
+        8.205285
+      ]
+    },
+    {
+      "mesh_name": "sc_ships",
+      "name": "ships",
+      "order": 30,
+      "position": [
+        27.172853,
+        8.034171,
+        -65.579918
+      ],
+      "rotation": [
+        0.0,
+        -28.099999,
+        0.0
+      ]
+    },
+    {
+      "mesh_name": "sc_human_1_mouth",
+      "name": "human_1_mouth",
+      "order": 170,
+      "position": [
+        2.508545,
+        -0.391286,
+        1.529837
+      ],
+      "rotation": [
+        0.0,
+        -28.099999,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        0.35,
+        1.0
+      ]
+    },
+    {
+      "mesh_name": "sc_human_1_eye_2",
+      "name": "human_1_eye_2",
+      "order": 160,
+      "position": [
+        2.667043,
+        0.023468,
+        1.597078
+      ],
+      "rotation": [
+        0.0,
+        -28.099999,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        0.6,
+        1.0
+      ]
+    },
+    {
+      "mesh_name": "sc_human_1_eye_1",
+      "name": "human_1_eye_1",
+      "order": 150,
+      "position": [
+        2.343513,
+        0.006139,
+        1.457815
+      ],
+      "rotation": [
+        0.0,
+        -28.099999,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        0.6,
+        1.0
+      ]
+    },
+    {
+      "mesh_name": "sc_sky",
+      "name": "sky",
+      "order": 10,
+      "position": [
+        -1.018406,
+        5.815629,
+        -36.184795
+      ],
+      "rotation": [
+        0.0,
+        -28.099999,
+        0.0
+      ]
+    },
+    {
+      "mesh_name": "sc_human_1",
+      "name": "human_1",
+      "order": 140,
+      "position": [
+        2.530612,
+        -2.348537,
+        1.474505
+      ],
+      "rotation": [
+        0.0,
+        -28.099999,
+        0.0
+      ]
+    },
+    {
+      "mesh_name": "sc_human_3",
+      "name": "human_3",
+      "order": 130,
+      "position": [
+        2.530612,
+        -2.348537,
+        -25.264452
+      ],
+      "rotation": [
+        0.0,
+        19.999999,
+        0.0
+      ]
+    },
+    {
+      "mesh_name": "sc_human_2",
+      "name": "human_2",
+      "order": 120,
+      "position": [
+        1.541877,
+        -2.348537,
+        -25.372103
+      ]
+    },
+    {
+      "mesh_name": "sc_background",
+      "name": "background",
+      "order": 20,
+      "position": [
+        -3.800304,
+        5.815629,
+        -34.469494
+      ],
+      "rotation": [
+        0.0,
+        -28.099999,
+        0.0
+      ]
+    },
+    {
+      "mesh_name": "sc_bridge_pole_5",
+      "name": "bridge_pole_5",
+      "position": [
+        3.540902,
+        -1.613908,
+        -23.896246
+      ]
+    },
+    {
+      "mesh_name": "sc_bridge_pole_4",
+      "name": "bridge_pole_4",
+      "position": [
+        3.540902,
+        -1.613908,
+        -16.921915
+      ]
+    },
+    {
+      "mesh_name": "sc_bridge_pole_3",
+      "name": "bridge_pole_3",
+      "position": [
+        3.540902,
+        -1.613908,
+        -10.38152
+      ]
+    },
+    {
+      "mesh_name": "sc_bridge_pole_2",
+      "name": "bridge_pole_2",
+      "position": [
+        3.540902,
+        -1.613908,
+        -3.396663
+      ]
+    },
+    {
+      "mesh_name": "sc_bridge_pole_1",
+      "name": "bridge_pole_1",
+      "position": [
+        3.540902,
+        -1.613908,
+        2.12437
+      ]
+    },
+    {
+      "mesh_name": "sc_bridge_floor",
+      "name": "bridge_floor",
+      "position": [
+        3.601349,
+        -3.466372,
+        -7.037086
+      ]
+    },
+    {
+      "mesh_name": "sc_bridge_handrail_3",
+      "name": "bridge_handrail_3",
+      "position": [
+        3.601349,
+        -3.27647,
+        -7.037086
+      ]
+    },
+    {
+      "mesh_name": "sc_bridge_handrail_2",
+      "name": "bridge_handrail_2",
+      "position": [
+        3.601349,
+        -2.278311,
+        -7.037086
+      ]
+    },
+    {
+      "mesh_name": "sc_bridge_handrail_1",
+      "name": "bridge_handrail_1",
+      "position": [
+        3.601349,
+        -1.452921,
+        -7.037086
+      ]
+    }
+  ],
+  "time": 9280
+}

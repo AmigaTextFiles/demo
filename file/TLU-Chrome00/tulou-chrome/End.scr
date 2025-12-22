@@ -1,0 +1,40 @@
+V3.0
+
+MOUSE on
+FKEYS on
+
+EVENT Black.iff
+PICTURE "RAM:Pic/Black.iff"
+END
+
+EVENT 09_MagicMirror.ANIM32
+SOUND play "Ram Disk:SFX/End.mod" volume 64 pan 0 period 350 loops 1
+ANIM "Tulou-Chrome:Ani/09_MagicMirror.ANI" 25 1 disk
+END
+
+EVENT SlutStart256.iff
+PICTURE "RAM:Pic/SlutStart256.iff"
+WIPE diagonal southeast speed 7
+END
+
+EVENT 10_Slut.ANIM32
+ANIM "Tulou-Chrome:Ani/10_Slut.ANI" 25 10 disk
+END
+
+EVENT SlutEnd256.iff
+PICTURE "RAM:Pic/SlutEnd256.iff"
+END
+
+EVENT Black.iff.1
+SOUND stop fade 2
+PICTURE "RAM:Pic/Black.iff"
+WIPE fade speed 5
+PAUSE 2
+EXIT
+END
+
+EVENT Black.iff.2
+PICTURE "Ram Disk:Pic/Black.iff"
+PAUSE 1
+EXIT
+END

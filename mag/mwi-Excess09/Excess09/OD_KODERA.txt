@@ -1,0 +1,171 @@
+Od kodera.
+
+Wymagania magazynu Excess nr 9:
+
+Amiga (prawdziwa lub wirtualna), OS 3.0+, AGA+, AHI 4.0+ (do obsîugi
+dúwiëku)
+
+Minimalne: 020/14 MHz + 4MB Fast
+Zalecane:  co najmniej 030/50 MHz + 6 MB wolnej pamiëci.  Karta GFX lub
+AGA + monitor SVGA dla rozdzielczoôci 640x480.
+
+Mag z zaîoûenia nie potrzebuje ûadnej instalacji - niepotrzebne jest
+kopiowanie fontów, bibliotek lub innych danych, robienie jakichô
+przypisaï itp.
+
+Na wiëkszoôci konfiguracji start powinien byê bezproblemowy - uûytkownik
+nie bëdzie musiaî wybieraê ûadnych opcji, ekranów itp. - mag powinien
+wykryê i ustawiê sobie wszystko sam.
+
+Uruchomienie maga bez wczytanego systemu jest moûliwe, aczkolwiek
+NIEZALECANE.  Gdyby jednak uruchamianie bez systemu byîo koniecznoôciâ
+(np.  przez niestabilnâ pracë maga), to:
+
+- potrzebne jest uruchomienie "setpatch" i musi istnieê ENV:,
+- úle zadziaîa autowybór trybu AHI,
+- przy promocji ekranu uaktywniâ sië wskaúniki myszki dla trybów PAL (o
+poîowë mniejsze),
+- mag odpali sië w angielskiej wersji jëzykowej.
+
+Problemy autokonfiguracji moûna usunâê przez rëczne ustawienie parametrów
+startowych.
+
+
+Waûniejsze znane problemy:
+
+"Excess" jest jest programem przyjaznym dla systemu, z wyjâtkiem trybu
+"Szybkie na AGA", który "wbija" grafikë bezpoôrednio w pamiëê ekranu, nie
+liczâc jednak programistycznych bîëdów (albo zîego wykorzystania
+systemowych zasobów), które w pewnych sytuacjach mogâ zakîóciê pracë
+programu i systemu.
+
+1.  Jeôli uûywasz popularnej "zwieszki" o nazwie MagicMenu, wielokolorowe
+menu na ekranie Excessa bëdzie doôê kiepsko wyglâdaê.  Poprawne kolory
+menu ustaliîem za pomocâ piór OS3.x i przy standardowym menu albo
+wciôniëciu Ctrl przy MM powinno ono wyglâdaê normalnie.
+
+2.  Mag na koôciach AGA moûe byê...  (jest?) szybszy niû na kartach
+graficznych!  (tryb PAL i opcja "Szybkie na AGA") Wynika to z tego, ûe mag
+wewnëtrznie pracuje na grafice planarnej.  Pracë przy magu zaczâîem juû
+dawno temu i podstawowym zaîoûeniem byîo wtedy szybkie dziaîanie na
+koôciach AGA.  Myôlë jednak, ûe lepiej by mag dziaîaî na karcie trochë
+wolniej niû po prostu zdychaî na realnej Amidze bez karty, co ostatnio
+bardzo mnie irytowaîo.
+
+Proszë sië jednak nie obawiaê, mag jest naprawdë szybki graficznie, tylko
+na A500 byîy ongiô szybsze magi pracujâce na standardowej grafice :)
+
+3.  Odgrywany moduî (zwîaszcza czterokanaîowy) moûe na poczâtku byê
+odgrywany zbyt wolno lub zbyt szybko.  Jest to jednak niezaleûne ode mnie,
+tak dziaîa uûywana przez Excessa biblioteka dbplayer.library.  Inny bîâd
+tej biblioteki to czasami kiepskie tychûe 4-kanaîowych moduîów w
+trybie Paula DMA 8 bit.  Problem ujawnia sië w agatowych trybach 31kHz.
+
+4.  Nie chciaîem, aby mag startowaî z pamiëcio- i procesoroûernym moduîem
+"Mekka", ale tu ostatnie sîowo nie naleûaîo do mnie.  Na nienajlepszych
+konfigach i 4MB pamiëci mag powinien jednak dobrze dziaîaê z najmniejszym
+moduîem 4-kanaîowym.
+
+Z ostatniej chwili: problem prëdkoôci daî sië chyba rozwiâzaê przez
+wstawienie komend F0x w pierwszych liniach pierwszego patternu.
+
+                                  UWAGA!
+
+Ekrany Multiscan oraz DBLPal sâ bardzo duûym obciâûeniem dla wydajnoôci
+klasycznej Amigi i ich wyôwietlanie przy maksymalnej iloôci kolorów moûe w
+przykry sposób zakîóciê prëdkoôê dziaîania Amigi przy odtwarzaniu
+wielokanaîowych muzyczek przez AHI.  Jeôli tak jest u Ciebie, a nie bëdzie
+dostëpnego w magu moduîu 4-kanaîowego, bëdziesz musiaî niestety wyîâczyê
+dúwiëk.
+
+Zapis opcji dziaîa takûe na wybranâ przez uûytkownika muzykë.
+
+5.  Wiëkszoôê obrazków w 640x240 bëdzie kiepsko wyglâdaê, bo niewiele ma
+specjalnie przeskalowane wersje na të rozdzielczoôê.
+
+6. Czasami zawodzi mechanizm zaznaczania wybieranego tekstu, ale samo
+wybieranie dziaîa bez problemów. Zaznaczenie teû moûe w pewnych wypadkach
+nie zostaê usuniëte. Mogâ wystâpiê teû drobne usterki w zmianach
+stanu wskaúnika.
+
+7.  Wiëcej bîëdów nie pamiëtam, za wszystkie serdecznie ûaîujë i obiecujë
+sië poprawiê :)
+
+
+Okno ustawieï - wyjaônienia:
+
+Rysowanie grafiki/Graphics display
+Normalne/Normal - grafika bëdzie rysowana procedurami systemowymi, czyli
+tryb idealny dla wszelkich kart graficznych.  Na koôciach AGA mag
+bardzo szybko dziaîa w tym trybie gdy jest aktywny FBlit (opcja
+FAllocBitmap).
+
+Szybkie na AGA/AGA Direct - uaktywnienie wîasnych procedur rysowania
+grafiki dla ekranów koôci AGA.  Mag odmówi uruchomienia sië w tym trybie,
+jeôli jego ekranem bëdzie ekran karty GFX.
+
+Ekran Excessa/Excess Screen - nazwa trybu ekranu na jakim uruchomi sië
+mag.
+
+Ekran tytuîowy/Title screen - nazwa trybu ekranu na wyôwietlenie
+poczâtkowych obrazków.
+
+Dúwiëk AHI/AHI Sound - nazwa trybu AHI.
+
+Domyôlny/Default - tryb AHI, który zostaî wybrany przez uûytkownika w
+systemowych ustawieniach AHI.
+
+Sam wybierz/Autodetect - mag sam wybierze najlepszâ opcjë.
+
+Bez dúwiëku/No sound - caîkowite wyîâczenie dúwiëku w magu.
+
+
+Ustawienia startowe.
+
+Jeôli sâ problemy z automatycznym wyborem róûnych opcji lub wybór ten Ci
+nie odpowiada, moûesz na staîe ustawiê odpowiednie parametry rëcznie.
+Ustawienia edytujesz w Parametrach ikonki (Tooltypes).
+
+NOTITLESCREEN
+wyîâczy wyôwietlanie sië tytuîowych ekranów z grafikâ - szybszy start maga.
+
+DEBUGMODE
+dodatkowe testowe komunikaty przy starcie maga - to dla mnie:)
+
+COLOURLESS
+wyîâcza kolorki okna startowego.  Makakowi strasznie nie podobaîy sië te
+kolorki, wiëc zrobiîem ten wyîâcznik dla niego i dla osób, które takûe
+draûni ta kolorystyka albo sâ przyzwyczajone do zwykîych szarych okienek.
+
+GFX=AGA lub GFX=NORMAL
+wymusza tryb rysowania grafiki - tylko dla koôci AGA lub procedurami OS.
+
+RESOLUTION=240 lub RESOLUTION=480
+rozdzielczoôê pionowa ekranu maga.
+
+SCREEN=$xxxxxx
+tu musimy w heksach podaê id ekranu maga.
+
+TITLESCREEN=$xxxxxxx
+to samo, ale dla ekranu obrazków tytuîowych.
+
+AHIMODE=$xxxxx
+jaki chcemy mieê tryb AHI
+
+FREQUENCY=xxxxxx
+czëstotliwoôê miksowania trybu AHI
+
+NOSOUND
+definitywnie wyîâcza dúwiëk w magu.
+
+LANGUAGE=ENG/PL
+wymusza polskâ lub angielskâ wersjë jëzykowâ.  Standardowo mag sprawdza
+lokalizacjë systemu i ustawia wersjë jëzykowâ automatycznie.
+
+Przy rëcznym wybraniu ekranów i trybów AHI, mag WYÔWIETLI sposób w jaki
+naleûy ustawiê te parametry.  Jeszcze raz uspokojë, ûe parametry ikonki
+zadziaîajâ zawsze, niezaleûnie od sposobu uruchomienia maga.
+
+-- 
+Binger/Excess Staff
+binger@wp.pl

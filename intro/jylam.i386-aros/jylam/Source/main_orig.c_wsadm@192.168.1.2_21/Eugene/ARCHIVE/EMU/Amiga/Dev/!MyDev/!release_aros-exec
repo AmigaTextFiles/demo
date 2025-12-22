@@ -1,0 +1,315 @@
+#include <SDL.h>
+#include <math.h> /* VC++ sucks */
+
+/*
+  Ok got some more bytes to put.
+  So all copyright is here : (c) 2003 Lamoureux Jean-Yves
+
+  Have a nice day :)
+*/
+
+#define N 50
+ #define W 255
+ #define V W<<8
+  #define R V<<8
+  #define FD R,R,R
+   #define J FD,FD,FD,R,
+   #define K 0,0,0
+   #define M V,W,V,W,V,W,V
+    #define I int
+    #define C cos(a)
+    #define S JP a)
+    #define G R,W,
+     #define T t=500;while ((!SDL_PollEvent (&ev) || ev.type!=2)) { if(!t--)break;
+     #define U b->pixels)
+     #define L r.x = 0;r.y=0;r.w = w;r.h = 300;
+     #define D SDL_FillRect(b, &r, 
+     #define H JP (t+x*3)*s)*
+      #define DP FL ; L	D 0 e }
+      #define E(t) r.x = H(w/2)+w/2; r.y=0;r.w = 5;r.h = h ;D O e
+      #define F(t) r.y = H(h/2)+h/2; r.x=0;r.w = w;r.h = 5 ;D O e
+      #define P ; x++)
+      #define AJ r.w = 
+      #define GP N,V,
+       #define CR ((I*)U[(x+
+       #define FL SDL_Flip(b)
+       #define FR SDL_FillRect(b, &r,
+       #define e );
+       #define j =0;
+       #define FV V,V
+        #define GT ,FV,
+        #define FB 0,W,0,W,W,0,R,
+        #define RB R GT
+        #define DV FD GT
+        #define FO for (
+        #define HJ (sin(y*s+a)*N+N+a) + cos((a-y)*s)*N + 
+        #define c N,N
+         #define l c ,N,
+         #define GI l c,N
+         #define g l c,GI,GI
+         #define HD GI,V
+         #define LM GP GP
+         #define n l c
+         #define d GT V,
+         #define GA V,c,V,
+         #define GL GA  l
+        #define k ++) 
+        #define FJ l N  
+      #define FQ GP GI
+      #define QF GL R
+     #define JH c GT
+     #define XP LM l
+    #define XQ QF, QF, QF,
+   #define XS d V,
+   #define XR N GT
+  #define KI XR l
+  #define JP sin(
+ #define TQ X = x*C-y*S + N/2;
+#define TZ Y = x*S+y*C + N/2;
+
+
+double p[N][N], a,X,f,Y,Z,s=3.14/180,pa[N*4];
+I i,z,q,o,u=1,m[] = {J
+R,K,W,K,W,R,
+  G W,FB
+  G 0,FB
+  G W,FB
+  R,K,W,K,W,R,
+  R,M,W,R,
+  G M,R,
+  R,M,W,R,
+  J
+  },x,y,w=400,h=300,*v,t,O,A[100],sm,sj=0;
+I im[150]={
+FD,RB DV FD,FD,RB V,DV FD,FD,RB V,DV R,RB R,RB FV,DV RB  GA RB DV RB R,RB RB DV FV,R,RB R,RB DV FV,R,RB FV,FV,V,R,RB RB RB FV,FV,V,R,RB RB V,FD,RB DV R,R,FV};
+
+I fo[] =
+ {g d HD, GP l R, GL N  XS  l R, GL FV, JH g ,R  XS  n , GL N d n , QF, GL V d g ,  FJ GT n , GL  FQ, FQ,R, GL  JH g ,  FJ  XS  n , XQ GL V d g , l V  XS  l R, GL N d l R, FQ,R, GL V  XS g , c d FV, l R, GL N d l R, XP R, FQ d g , n GT n , GL  FQ, GP  KI  R, GL  JH g ,  FJ GT JH l  GL N  XS  l R, QF, GL FV, JH g ,R d FV, l R, FQ, FQ, FQ, GP n d FV, g , l V d HD,GI, GP l R, QF, GL  JH g ,  FJ GT  KI  LM n GT HD, GP n , GL V GT R, GP g ,R d HD,GI, FQ, FQ,R, GL V  XS g ,R, GP l V, l FV,  KI  V, XP V, XP V, l V, l FV, XR g , JH  KI  R, GL XR GP l GP  KI  R, GL V, GA g , l FV, n , XQ GL  JH g ,  FJ  XS  n , QF, GL N d l R, FQ d g , n GT n , XQ GL  JH GI,R, GP g , l V d n , QF, GL N d n , GL V GT R, GP g , c d l FQ, JH GI,R, GP l R, GL N d g ,  FJ d FV, l V, XP R, FQ, FQ, FQ d g , l FV, JH l  XQ GL  JH g , l FV,  KI  V, l V, l XP R, XP R, LM HD,g ,  FJ GT N d R, GP l V, l V, XP V, XP XP R, LM g , l FV,  KI  LM HD,GI, GP HD, GP  FJ GT XR g , JH  KI  V, l V, l LM HD,GI, FQ d g , l V d l R, GA HD,HD,GI, GL N  XS g ,g ,g 
+   };
+char tt[]="        THIS IS THE END OF THIS FOUR KILOBYTE COMPO CODED BY JYLAM            IN LESS THAN FOUR K IT FEATURES THREE DIMENTIONNAL TEXTURED VOXEL        PARTICLE SYSTEM       TEXTURE SCALING SINUS PLASMA      NOISE      RASTERS      ZOOM      SINUS BARS AND THIS SINUS SCROLL WITH FOT      THAT S ALL YOU CAN NOW PRESS ESC                          NOW I SAID OK WE WILL NOW END     ";
+SDL_Surface * b; 
+void clbc(void *ut, char *st, int le)
+{
+sj++;
+sm++;
+if(sm&8)
+while(le--)
+{
+     st[le] = sin(le);
+ if(sm&16)
+ st[le] = rand()%128;
+ if(sj>100)
+   if(sm&32)
+     st[le] -= sin(le*40)*80;
+ // st[le] = ((st[le] & 0xff) << 8) | ((st[le] & 0xff00) >> 8); // KALMS: switching endian for already-generated sample data
+ if(sj==200)
+   sj=0;
+}
+
+
+}
+main()
+{
+
+
+SDL_Event ev;  
+SDL_Rect r;
+SDL_AudioSpec des, obt;
+
+ 
+b = SDL_SetVideoMode(w, h, 32, 0 e 
+
+  des.freq=22500;
+des.format=AUDIO_U8;
+des.channels=1;
+des.callback=clbc;
+		     des.samples=512;
+		     SDL_OpenAudio(&des, &obt);
+SDL_PauseAudio(0);
+T
+  
+ 
+ a+=.04;
+ f+=.2;
+ FO y=1; y<N; y k 
+  FO x=1; x<N P
+   p[x][y] = ( JP x/2)+ JP y/2))*( JP f)*4 e 
+ FO y=1; y<N; y k 
+  FO x=1; x<N P
+   {
+	TQ
+	TZ
+	Z = p[x][y];
+	  
+	X = X*C-Z*S;
+	Z = X*S+Z*C;
+	 
+	r.x = (((120.0f*X)/(120 -Z)*3)+ 170.0f);
+	r.y = ((200.0f*Y)/(200 -Z)*3)+ 130.0f;
+	AJ 10;
+	r.h = 10;
+	FR m[(x/5)+(y/5)*10] e   
+   }
+ FO x j x<w*h P
+  {
+
+z = u>>3;
+z ^= u|= q << N;
+q = z&1;
+u >>= 1;
+((I*)U[x]|=z&W>>1; }
+
+ DP 
+
+
+  
+ 
+ T  
+   a+=.7;
+    FO x j x<20 P
+	{A[x] = ((x*10)<<16)+((x/8)<<8)+(W-(x*2) e
+   O=A[x];E(a+(x));A[x] = ((W-x*8)<<16)+((x*10)<<8)+((x/7) e   O=A[x];F(a+(x)); }
+  
+    DP 
+ 
+
+X j 
+
+T
+ 
+  X+=.1;
+ Z = ( JP X)*6)+6;
+ if(((I)Z)==0)Z=1;
+ FO y j y<(9*Z e y k 
+  {
+   FO x j x<(15*Z) P
+    CR N)+(y+N)*w] = CR 200)+(y+N)*w] = CR 220)+(y+150)*w] = CR 0)+(y+170)*w] = CR 150)+(y+180)*w] =im[(x/(I)Z)+(y/(I)Z)*15]; }
+  
+ 
+ DP  
+  
+a j 
+T
+
+ FO y j y<h;y k 
+   {
+
+a+=.0001;
+r.x  j 
+r.y =y;
+AJ HJ N;
+r.h =1;
+FR V e  
+r.x = HJ 250;
+AJ w;
+FR N e  
+AJ r.x;
+r.x-=300;
+FR R e  
+AJ r.x;
+r.x+=N;
+FR W e  
+}
+
+  FL ; L	D 0xFFFF00 e
+
+}
+
+
+T
+z+=10;
+FO y j y<h;y k 
+FO x j x<w;x k 
+{
+((I*)U[x+y*w] = z*x|y*z; }
+  DP 
+
+
+
+
+ FO y=1; y<N; y k 
+  FO x=1; x<N P
+   p[x][y] = ( JP x/2)+ JP y/2))*( JP f)*4 e 
+T
+ a+=.04;
+ 
+
+ FO y=1; y<N; y k 
+  FO x=1; x<N P
+   {
+	TQ
+	TZ
+	Z = p[x][y];
+f=a;
+a=( JP X*8) e 
+ 	X = X*C-Z*S;
+	Z = X*S+Z*C;  
+a=f;
+	 
+	r.x = ((120*X)/(120 -Z)*3)+ 170;
+	r.y = ((200*Y)/(200 -Z)*3)+ 130;
+	AJ 10;
+	r.h = 10;
+FR  p[x][y] e
+   }
+
+FO y j y<h;y+=2)
+ FO x j  x<(w) P
+  {
+((I*)U[x+y*w] =0xFFFFFFFF; }
+
+
+ 
+ DP 
+
+
+
+
+ 
+a=20;
+T
+a+=.15;
+f+=.1;
+FO y j y<h;y+=2)
+FO x j x<w ;x+=2)
+   ((I*)U[(x+1)+y*w] = ((I*)U[x+y*w] =((( JP (x+a)/10* JP a)) + (cos((y+a)/10* JP f))))/2)*128)+128;
+
+ DP 
+
+
+a=X j   
+T
+t++;
+   i j 
+z=q j 
+
+
+a+=.08;
+   while(tt[i])
+{
+
+q j 
+if(tt[i]==32)
+     i++;
+FO y=(tt[i]-65)*8;y<((tt[i]-65)*8)+8;y k 
+  {
+s=( q +  JP z/20+a)*10)+100;
+z=i*8*8;
+   FO x j x<8 ;x k 
+     {
+r.x = z-X;
+r.y =s;
+r.w=r.h=8;
+
+if(x+y*8 < 1600 && x+y*8>0)
+FR fo[x+y*8] e
+
+
+z+=8; }
+q+=8; }    
+     i++;
+     }
+ FL ; L	D N e 
+X+=2; } 
+SDL_Quit();
+}

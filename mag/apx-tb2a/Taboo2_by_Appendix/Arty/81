@@ -1,0 +1,280 @@
+
+
+{1  PODKRËCANIE KART TURBO BLIZZARDPPC
+
+
+Zajmë   sië   tu   podkrëcaniem   kart
+BlizzardPPC.   Istnieje  kilka  wersji
+tej  karty,  a  jednâ  z  najwiëkszych
+róûnic   jest   iloôê  zainstalowanych
+generatorów  kwarcowych.   Podkrëcanie
+procesora   040/060  bëdzie  dotyczyîo
+jedynie    kart    posiadajâcych   dwa
+generatory kwarcowe.  Istniejâ karty z
+jednym kwarcem, ale jeszcze chyba nikt
+takiej   karty  nie  podkrëciî  (ûaden
+fachowiec od przetaktowywania nie miaî
+owej  karty  w swoich rëkach).  Trzeba
+równieû  powiedzieê,  ûe nie wszystkie
+{03 karty  dadzâ  sië podkrëciê lub nie da
+sië  ich przetaktowaê w równym stopniu
+(niektóre  takie  same  karty dajâ sië
+róûnie        podkrëcaê).         Przy
+przetaktowywaniu PPC iloôê kwarców nie
+ma    znaczenia.    W   tekôcie   bëdë
+zamiennie    uûywaî   sîów   generator
+kwarcowy i kwarc, ale w rzeczywistoôci
+sâ  to dwie róûne rzeczy.  Zewnëtrznie
+rozpoznajemy  je  po  tym, ûe kwarc ma
+dwie   nogi,   a   generator  kwarcowy
+cztery.  Jeûeli bëdziecie coô zamawiaê
+to dokîadnie okreôlcie co to ma byê.
+
+{1             ZA I PRZECIW
+
+Na  poczâtek  kaûdy  zastanowi sië czy
+warto  podkrëcaê  kartë?   W  tym celu
+naleûy odpowiedzieê na pewne pytania:
+
+1.     Czy   przetaktowane   procesory
+dziaîajâ krócej?
+
+Tak  to  prawda.   Jeûeli  zamierzacie
+korzystaê    z    karty   dîuûej   niû
+kilkanaôcie  lat  to  podkrëcenie moûe
+wam     to    uniemoûliwiê.     Naleûy
+wspomnieê,  ûe  podkrëcenie  procesora
+040/060      powoduje     równoczeônie
+przyspieszenie     róûnych     ukîadów
+taktowanych   tym   samym  generatorem
+kwarcowym   co   wspomniany  procesor.
+Podkrëcenie procesora PPC wpîywa tylko
+na niego.
+
+2.   Czy podkrëcone procesory mogâ sië
+spaliê z powodu przegrzania?
+
+ Teoretycznie    nie    mogâ   poniewaû
+posiadajâ  odpowiednie zabezpieczenia,
+ale  wysoka  temperatura niekorzystnie
+wpîywa na ûywotnoôê procesora.  Z tego
+powodu       naleûy      zagwarantowaê
+odpowiednie chîodzenie.
+
+3.  Jakie sâ inne zalety podkrëcania ?
+Istnieje kilka pozytywnych aspektów:
+
+A)  Ogólne  przyspieszenie  systemu  i
+programów     (Workbench,    kodowanie
+MP3...)
+
+B)  Przyspieszenie  transferu z dysków
+twardych i pamiëci.
+
+C)  W kilku przypadkach przetaktowanie
+spowodowaîo,   ûe  nie  byî  konieczny
+reset   po   wîâczeniu   komputera  po
+dîuûszym czasie nieuûywania.
+
+D)       Przyspieszenie       urzâdzeï
+podîâczanych  do  karty PPC (BVision -
+sprawdzone  na  40MHz,  urz.   SCSI  -
+sprawdzone na 33MHz).
+
+5.  Czy chcë mieê szybszy komputer?
+
+Na to pytanie odpowiedzcie sobie sami.
+
+{1     CO POTRZEBA DO PODKRËCANIA?
+
+Aby  przetaktowaê  tylko  procesor PPC
+potrzebna  bëdzie  jedynie  lutownica.
+Najlepiej  oporowa  o maîej mocy i jak
+najmniejszym     grocie.     Lutownica
+transformatorowa   z   powodu   zasady
+dziaîania   nie   jest   polecana   do
+lutowania ukîadów elektronicznych.  Do
+podkrëcenia   procesora  040/060  bëdâ
+{04 potrzebne  dodatkowo:   odsysacz  (nie
+konieczny,  ale  zalecany),  generator
+kwarcowy  (o  wartoôci 2 razy wiëkszej
+niû   takâ   jakâ   chcemy   uzyskaê),
+radiator   +  wiatraczek  na  procesor
+040/060,  pasta silikonowa przewodzâca
+ciepîo   (jeûeli   radiator  nie  jest
+samoprzylepny),  podstawki  precyzyjne
+pod   ukîady   scalone   o   wielkoôci
+odpowiedniej do posiadanego kwarca.
+
+{1       PODKRËCANIE PROCESORA PPC
+
+Na  poczâtek  podkrëcimy procesor PPC.
+Ukîadamy  kartë  kwarcami  do  góry  i
+zîâczem  procesora  po prawej stronie.
+Pod    kwarcem    przylutowanym   przy
+krawëdzi  karty  znajdujâ sië malutkie
+rezystorki.   Te  rezystorki  bëdziemy
+musieli    odpowiednio    przelutowaê.
+Odpowiadajâ one za ustawienie mnoûnika
+dla  procesora  PPC.   Jest  tam  piëê
+rezystorków.   Interesujâ  nas jedynie
+cztery od prawej.  Ostatni nie dotyczy
+mnoûnika  i  nie  naleûy go ruszaê.  Z
+powodu  wielkoôci rezystorów lutowanie
+bëdzie  ciëûkie  i  naleûy szczególnie
+uwaûaê,   aby   nie  przegrzaê  ich  i
+ôcieûek  do  których  sâ przylutowane.
+Lutowanie   utrudnia   równieû  kwarc,
+który  znajduje  sië  nad rezystorami.
+Nie  trzeba go caîkowicie odlutowywaê.
+Wystarczy  podnieôê  jednâ  stronë tak
+aby    uzyskaê   dostëp   do   punktów
+lutowniczych.      UWAGA    !!     Nie
+przegrzejcie     ôcieûek     !!     Po
+przelutowaniu   rezystorów   obniûanie
+kwarca  nie jest wymagane.  Zerknijcie
+teraz  na  kartë  i  odczytajcie jakie
+macie   kwarce   od   PPC   (ten   nad
+rezystorami)  oraz  w jakim ustawieniu
+znajdujâ    sië    rezystory.    Teraz
+porównajcie  to  z  poniûszymi danymi.
+Jedynka  oznacza  rezystor w poîoûeniu
+górnym, a zero w dolnym.  Pamiëtajcie,
+ûe   interesujâ   nas  jedynie  cztery
+rezystory od prawej.
+
+UKÎAD	MNOÛNIK	KWARC (MHz)
+             50    60    66.67 75
+0110  2.5   125   150   166   187
+1000  3.0   150   180   200   225
+1110  3.5   175   210   233   262
+1010  4.0   200   240   266   300
+0111  4.5   225   270   300   -
+1011  5.0   250   300   -     -
+1001  5.5   275   -     -     -
+1101  6.0   300   -     -     -
+
+Teraz   jedynie   naleûy   przelutowaê
+odpowiednie rezystory w pozycje, które
+nas  interesujâ.   Poniûej  tabelka na
+jakich    czëstotliwoôciach   dziaîajâ
+odpowiednie procesory:
+
+ORYGINALNIE	PODKRËCONY
+166		200
+175		210 (225 niestabilnie)
+200		266 (300 nie rusza)
+240		270
+
+Wraz    ze   zmianâ   mnoûnika   moûna
+oczywiôcie wymieniê generator kwarcowy
+na  wyûszy  co  jest bardzo korzystne,
+ale  chyba  jeszcze  nie  znalazî  sië
+ômiaîek,   który   by   miaî  kwarc  o
+wartoôci   wyûszej   niû   66.67  MHz.
+Wymiana  kwarca  na  niûszy (np.  ûeby
+uzyskaê  270  MHz  zamiast  266)  jest
+niekorzystna.
+
+     PODKRËCANIE PROCESORA 040/060
+
+Przetaktowanie    procesora    040/060
+wymaga  trochë wiëcej pracy i nakîadów
+finansowych.    Najwiëkszym  problemem
+jest zdobycie odpowiedniego generatora
+kwarcowego.   Ukîadamy  kartë kwarcami
+do  góry i zîâczem procesora po prawej
+stronie.    Bëdziemy  wymieniaê  kwarc
+drugi    od   dolnego   brzegu   karty
+(pierwszy  od  ôrodka karty).  Jakiego
+naleûy  szukaê  ?   Dla  procesora 040
+potrzeby  bëdzie  generator o wartoôci
+dwukrotnie wiëkszej niû tâ jakâ chcemy
+uzyskaê   (np.    66MHz).    Dla   060
+generator powinien mieê wartoôê, którâ
+chcemy  uzyskaê.  Obecnie pewnie macie
+50MHz.    Najlepiej  gdyby  udaîo  sië
+zdobyê ukîad kwadratowy, ale zwykle sâ
+to  ukîady prostokâtne.  Zabieramy sië
+do   roboty.    Na   poczâtek   trzeba
+wylutowaê  "stary" generator kwarcowy.
+Przydatny  bëdzie  odsysacz.   UWAGA !
+Nie  przegrzejcie  ôcieûek  ani samego
+kwarcu    (jest   mniej   odporny   na
+temperaturë   niû  ukîady  scalone)  !
+Jeûeli  macie  generator kwadratowy to
+moûecie  go  od  razu wlutowaê, ale ja
+polecam  wykonanie podstawki.  W razie
+gdy   podkrëcona   karta   nie  bëdzie
+dziaîaîa    stabilnie   moûna   szybko
+wstawiê kwarc o mniejszej wartoôci lub
+oryginalny.   Jak  wykonaê podstawkë ?
+Na  poczâtek  naleûy  zaopatrzyê sië w
+precyzyjnâ  (nóûki  okrâgîe) podstawkë
+pod    ukîad   scalony   o   wielkoôci
+odpowiedniej   do   wielkoôci  kwarcu.
+Wyciâgamy  z  takiej  podstawki cztery
+nóûki  (zostawcie  w  podstawce  nóûki
+skrajne  i  ôrodkowe) i wlutowujemy je
+do  karty.   Podstawka  pod  generator
+kwadratowy  gotowa.   Ûeby  zamontowaê
+ukîad prostokâtny trzeba dodaê jeszcze
+jedno   takie   "piëterko"   i  na  to
+odpowiednio   spreparowanâ  podstawkë.
+Jeûeli  trzymacie  sië tego co pisaîem
+to   podstawkë   mamy  prawie  gotowâ.
+Trzeba  tylko  wygiâê  nogi  na jednym
+koïcu   i  poîâczyê  je  przewodami  z
+nóûkami ôrodkowymi.  Ûeby wszystko sië
+lepiej  trzymaîo to dodatkowe piëterko
+(same   nogi)   moûna   dolutowaê   do
+podstawki.  Takâ podstawkë umieszczamy
+w  taki  sposób,  ûe  wystajâcy koniec
+znajduje  sië  nad radiatorem PPC.  Do
+tej  podstawki  moûemy  wkîadaê kwarce
+prostokâtne   i   kwadratowe.   Trzeba
+jeszcze  zaizolowaê wygiëte nogi, ûeby
+nie  stykaîy sië z radiatorem PPC.  Po
+podkrëceniu    040/060    bëdzie   sië
+znacznie   grzaîo.   Trzeba  na  niego
+zamontowaê  jakiô radiator najlepiej z
+maîym  wiatrakiem.  Karty z procesorem
+040  dajâ  sië  przetaktowaê do 40MHz,
+ale oczywiôcie nie wszystkie.
+
+{1            URUCHOMIENIE
+
+Przed   podkrëceniem   zróbcie   testy
+szybkoôci   róûnymi  programami,  ûeby
+póûniej   porównaê  wyniki.   Nadszedî
+czas  uruchomienia  komputera.  Jeûeli
+wszystko  ruszyîo to najlepiej odpaliê
+jakieô  mocno  obciâûajâce  programy i
+popracowaê kilka godzin.  Jak wszystko
+dziaîa  stabilnie  to  moûecie zamykaê
+obudowë.
+
+{1          SPOTYKANE PROBLEMY
+
+Jeûeli  dziaîa  CLI/SHELL,  ale system
+sië  nie  îaduje  moûe to byê wina úle
+przylutowanych rezystorków.  Naleûy to
+poprawiê i spróbowaê ponownie.  Jeûeli
+nic   nie   pomaga  trzeba  zmniejszyê
+mnoûnik.   Jeûeli system sië wiesza po
+pewnym  czasie  moûe  to oznaczaê:  1.
+Przegrzewanie  któregoô  z ukîadów lub
+samego   procesora.   Jeûeli  procesor
+jest   dobrze   chîodzony   to  naleûy
+zmniejszyê kwarc.  2.  "Nie wyrabinie"
+sië  pamiëci.  Naleûy wtedy w BootMenu
+karty ustawiê tryb 70ns.
+
+
+{2Piotr Czerniawski
+{3piotrcz@box43.gnet.pl
+
+{3ANI  AUTOR  ANI  REDAKCJA  "TABOO" NIE
+{3PONOSI ODPOWIEDZIALNOÔCI ZA EWENTUALNE
+{3SZKODY  POWSTAÎE  W  WYNIKU  WYKONANIA
+{3POWYÛSZYCH CZYNNOÔCI.

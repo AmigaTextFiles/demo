@@ -1,0 +1,110 @@
+
+ -----------------------------------------
+   $VER: SCOPEXT by Smack/Infect  160295
+ -----------------------------------------
+
+ this tiny prog is some kind of a 'sampling oscilloscope'. it uses
+ the parallel port sampler, if you don't have one, then this prog
+ will be useless for you. it also requires an AGA machine.
+
+ (i tested my prog with a friend's sampler and: it didn't work!
+ it seems the sampler waits for some initializing or what, i don't know.
+ my sampler is a 'MasterSound' (C) 1990 microdeal. today it is sold
+ as 'MegaloSound'. it contains only an ADC and a few little parts...)
+
+ the sampling rate is 16kHz so frequencies above 8kHz will not be
+ visible. if you say now 'this is not very much' then i wanna tell you:
+ 16kHz means that during every pal-frame we receive 320 bytes so it fits
+ perfectly on a lores screen. and there's simply not enough cpu power
+ on todays amigas to use a higher resolution for this task. (i think ;-)
+
+ the prog is controlled via keyboard so try these:
+
+ --DISPLAY MODES--
+  F1 - lores 20ms (1 frame)
+  F2 - hires 40ms (2 frames)
+
+ --PLOTTING MODES--
+  F3 - single dot
+  F4 - eight average dots
+  F5 - line
+  F6 - solid
+  F7 - spectrum analyzer
+
+ --OTHER CONTROLS--
+  F9 - show unused processor time
+  F10- freeze display
+  ESC- exit
+
+
+ ABOUT CPU TIME
+
+ the dotted modes (F3+F4) run even on an unaccelerated A1200 in one frame.
+ some Fast RAM and a powerful processor make it possible to run also the
+ other modes in one frame although this depends very much on the sample.
+ if the plotting routine needs too much time screen borders will flash red.
+ you should select a different mode then.
+ holding down F9 makes the usage of processor time visible. the coloured
+ part of the screen shows idle time, the part above with normal colors is
+ needed to plot the scope. green color means the routine got ready within
+ the first frame. in 2-frames-mode there can appear some blue color which
+ shows the routine needed the whole first frame and got ready in the second.
+
+
+ ABOUT THE SPECTRUM ANALYZER:
+
+ it uses a 128-point fast fourier transformation. each bar is about 125Hz
+ wide and represents the level of this frequency band. the frequency range
+ goes from about 125Hz at the left side to about 8kHz at the right side.
+
+ the spectrum analyzer always scans only 256 bytes of the sample,
+ this is due to the fft loop, sorry! if your machine is fast enough you
+ should run it on 20ms display, so you 'miss' only 64 bytes each frame
+ which is 20% of the whole sample. on 40ms display your chances to miss
+ short impulses (such as hihats etc.) are 60%...
+ i don't know how to fix the problem of these 'time gaps' without coding
+ a new fft loop from scratch! (and this is hard work! :^)
+
+
+
+ and remember: this is only a programming experiment. you can't claim
+ me for any damages or trouble my prog could cause. it's all your
+ fault coz you dared to start it ;-)
+
+-----------------------------------------------------------------------
+ contact me:    (Smack/Infect)
+                Michael Henke
+                Praetorius-Str.1/205
+                06124 Halle
+                Germany
+
+-----------------------------------------------------------------------
+
+ HISTORY
+
+ 170195
+  -first release
+
+ 190195
+  -FFT spectrum analyzer implemented
+    NOTE: in this first version there are some 'inaccuracies' in the
+    frequency range. i will fix it as soon as i get some equipment to
+    calibrate the frequencies. and maybe i'll implement 'acoustic scaling'
+    which linearizes the spectrum like the human ear does.
+
+ 200195
+  -spectrum analyzer calibrated (using Masque's Chicken Dialer!!)
+  -peak levels implemented
+
+ 240195
+  -code optimizing
+  -fixed a serious bug in the sampling routine that appeared on the 68030
+   but not on the 68020!  (strange?   it was caused by an unintentional
+   instruction overlap in the cpu's pipeline.)
+
+ 310195
+  -sprite anim built in -> dramatical file length increase, but who cares?!
+   the logo can be switched on/off using the HELP key
+
+ 160295
+  -plotting routines optimized

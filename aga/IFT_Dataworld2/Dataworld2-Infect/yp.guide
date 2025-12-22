@@ -1,0 +1,626 @@
+@DATABASE YP documentation
+@WIDTH 80
+
+@NODE Main "YP - The YAFA animation player"
+@PREV Main
+@NEXT Main
+
+                @{b}YP - The YAFA animation player@{ub}
+                     V0.88 (Thu 26-Dec-96)
+
+                   @{" Introduction           " link introduction}
+                   @{" Requirements           " link requirements}
+
+                   @{" Usage                  " link usage}
+
+                   @{" Technical stuff        " link techstuff}
+                   @{" YAFA file format       " link yafa}
+                   @{" Wildfire               " link wildfire}
+
+                   @{" Bugs/History           " link bugs_history}
+                   @{" Copyright/Distribution " link copyright}
+                   @{" Author                 " link contact}
+
+
+@ENDNODE
+@NODE introduction "YP/Introduction"
+
+The program YP is a player for @{"YAFA" link yafa} animation files.
+It has some features that let your AMIGA become a real multimedia machine:
+
+-play directly from disk (only small pieces of the animation are loaded
+ and displayed at a time, makes it possible to play _huge_ anims)
+  or
+ preload the complete animation for maximum playback speed
+
+-can use all AGA screenmodes (all these Extra-LoRes, Productivity etc.)
+
+-has a special batch file mode (used for sequences of animations that are
+ to be played without a gap between each other)
+ this feature is used in the animation shows 'Dataworld' and 'Wild Summer'
+ by WK-Artworks (available for instance on Aminet)
+
+-can play frame-synchronous sound effects (ProTracker modules, IFF samples)
+@ENDNODE
+@NODE requirements "YP/Requirements"
+
+@{b}Hardware@{ub}
+
+-MC68020 or higher
+-AGA chipset
+-recommended: FastRAM, HardDisk
+
+
+@{b}Software@{ub}
+
+-AmigaOS V39 (3.0) or higher
+-xpkmaster.library and compressors (LIBS:compressors/xpk????.library)
+ if XPK compressed @{"YAFA" link yafa} animations are to be played
+
+
+@{b}Note to graphics card users@{ub}
+
+This program will (most probably) not work with graphics cards.
+It accesses the AGA chipset on hardware level and uses low level system
+routines in order to be most efficient. The main goal was to make the
+player as fast as possible.
+If you are a programmer and want to write a graphics card YAFA player you
+are welcome to contact @{"me" link contact}. I'm going to support you with source code
+and documentation.
+@ENDNODE
+@NODE usage "YP/Usage"
+
+YP has two modes of operation:
+ -single anim playing:     @{b}YP <YAFA file> [options]@{ub}
+ -batch file processing:   @{b}YP -batch <batch file> [general options]@{ub}
+
+Batch files have the same structure like the command line in single anim
+mode (but without the program name 'YP' of course!), each line contains a
+YAFA file name and corresponding anim options, sound options may also be
+specified here (appended to any of the lines). @{"batch file example" link batchexample}
+
+If the first option is '-h' or '?' then YP will print the list of options.
+An ASL file requester opens if YP is started without any options, it lets
+the user select a YAFA anim file. This requester also appears if a specified
+YAFA anim file could not be found.
+
+By default YP opens the so-called 'hardware-display' which is a LoRes screen
+of the default monitor (PAL or NTSC). This makes it possible to zoom small
+animations (not wider than 176 pixels) to full screen size with quite
+reasonable speed (anim option @{"-zoom" link opt_zoom}).
+If an anim is in HAM or is wider than 352 pixels then YP automatically
+switches to the so-called 'gfxlib-display', which can also be done by using
+the @{"-modeID" link opt_modeid} option. It supports the whole range of AGA screenmodes, but
+it can't perform that zooming the 'hardware-display' can do.
+A third display type supported by YP is the 'pubscreen-window' which is
+activated by the @{"-pubscr" link opt_pubscr} option.
+
+@{b}General options@{ub}
+The general options let you choose a type of display and other modes that
+influence the behavior of YP for the whole time it is running.
+ @{"-pubscr" link opt_pubscr} (or -ps) <name>
+ @{"-modeID" link opt_modeid} (or -mid) <hex number or 'req'>
+ @{"-info" link opt_info} (or -i)
+ @{"-wait" link opt_wait} (or -w)
+ @{"-verbose" link opt_verbose} (or -v)
+ @{"-stats" link opt_stats} (or -st)
+ @{"-nodeactivate" link opt_nodeactivate} (or -nd)
+ @{"-fastblit" link opt_fastblit} (or -fb)
+ @{"-scale" link opt_scale} (or -sc)
+ @{"-fastXPK" link opt_fastxpk} (or -fx)
+
+@{b}Animation options@{ub}
+The animation options are used to set buffer sizes and other things that
+are specific for each animation (also important for batch files).
+ @{"-firstframe" link opt_firstframe} (or -ff) <number>
+ @{"-lastframe" link opt_lastframe} (or -lf) <number>
+ @{"-speed" link opt_speed} (or -s) <number>
+ @{"-buffers" link opt_buffers} (or -b) <number>
+ @{"-asyncbuff" link opt_asyncbuff} (or -ab) <number>
+ @{"-caching" link opt_caching} (or -c)
+ @{"-loadall" link opt_loadall} (or -l)
+ @{"-zoom" link opt_zoom} (or -z)
+ @{"-dither" link opt_dither} (or -d)
+
+@{b}Sound options@{ub}
+The sound options are accepted in batch files and on the command line and
+are used to make some noise while the anims are played.
+ @{"-module" link opt_module} (or -mod) <ProTracker module name> <startframe> <stopframe>
+ @{"-sample" link opt_sample} (or -smp) <IFF sample name> <startframe> <stopframe> <channel>
+                     <volume> <repeat>
+ @{"-executable" link opt_executable} (or -exe) <command> <startframe>
+
+
+@{b}Runtime controls@{ub}
+While YP is running it can be controlled via some keystrokes:
+ F1..F10  set playback speed
+ Space    pause/continue
+ s        sleep
+ n        next anim (in batch mode)
+ ESC/LMB  exit
+@ENDNODE
+@NODE techstuff "YP/Technical stuff"
+
+@{"Making it efficient" link tech_1}
+
+@{"Protecting the 'illegal' display against Intuition" link tech_2}
+
+@{"Built-in XPK routines" link opt_fastxpk}
+@ENDNODE
+@NODE tech_1 "YP/Technical stuff/Making it efficient"
+
+@{b}Making it efficient@{ub}
+
+YP is programmed in C (gcc 2.7.0). The most CPU-intensive routines (such
+as C2P, planar image zooming, Delta-decompression) are coded and carefully
+optimized in assembler (ASM-One 1.25).
+The 'realtime system' in YP has been developed during the last few months.
+It is based on a VBlank interrupt for counting the speed values and switching
+the screen buffers, a SoftInterrupt for transferring the frame from the load
+buffer to the screen buffer (doing C2P, Delta-decompression etc.) and the OS
+process itself for loading the frames using asynchronous I/O (sends DOS
+packets to the filesystem).
+
+I spent quite a lot of time on optimizing the player, and I think I nearly
+reached the limit now. The major bottleneck is the slooooow Chip-RAM which
+makes it impossible to play large anims (eg. 640x480x8) at high speed.
+But this doesn't hurt too much as I think it is simply unreasonable to deal
+with animations of that size on today's AMIGAs (I'm talking about full screen
+action and not static presentations or titling).
+A friend of mine has a 68060 with lots of Fast-RAM and a fast HD, and he can
+play 'Dataworld' at 78fps on his A1200! So don't lament that YP runs too slow
+on your machine...
+@ENDNODE
+@NODE tech_2 "YP/Technical stuff/Protecting the 'illegal' display against Intuition"
+
+@{b}Protecting the 'illegal' display against Intuition@{ub}
+
+The 'hardware-display' is a method normally used in demos: switch off
+multitasking and bang in your own copperlists. The 'gfxlib-display' of YP
+is also not very system conform, it is made with MakeVPort() and MrgCop(),
+and then comes LoadView() and makes it visible.
+These methods are quite efficient because they are on a very 'low level' in
+the system software. The problem is that YP can't disable the multitasking
+OS since it has to make use of it for loading and playing. But when the OS
+is running other tasks can open screens, or the user could switch the
+screens using <LCommand M>. This would definitely kill YP's display!
+I experimented a while and found a good way to prevent other tasks from
+destroying the 'illegal' display: YP installs it's own input handler at a
+high priority that 'eats' all inputs, and LockIBase() makes it impossible
+for Intuition to do anything. This works fine as far as I have tested it,
+no screen blanker has a chance when YP is running :-)
+Of course YP can't use Intuition itself when it has locked IBase, so one has
+to be very careful when using the @{"-executable" link opt_executable} option.
+@ENDNODE
+@NODE yafa "YP/YAFA file format"
+
+The animation file format YAFA is a try to develop a new standard that is
+able to supersede IFF-ANIM. The strength of YAFA lies in the great variety
+of compression options which makes it easy to adapt anim files to certain
+requirements. Massive compression using XPK may be the goal of the user of
+a fast machine, while the user of a slower computer prefers faster playback
+at the cost of less compression.
+Delta-compression like it is used in IFF-ANIM and YAFA is useful for 'static
+camera and some flying objects'-like animations, but it gains nothing at
+'crazy camera flight through a tunnel'-like animations. IFF-ANIM offers no
+alternative here, but with YAFA you can choose among the lots of XPK packers
+that are available. When it comes to maximizing XPK compression ratios the
+option to store the frames as chunky images is another switch to try.
+
+YAFA features:
+
+-bit depth 1...8 (2...256 colors, HAM6, HAM8)
+-planar or chunky frames for all depths
+-optional timecode-per-frame
+-optional palette-per-frame
+-optional Delta-compression
+-optional XPK-compression
+-annotations (similar to ANNO in IFF-8SVX)
+
+
+@{b}Software developers!@{ub}
+
+The YAFA anim file format can be the replacement of IFF-ANIM. Please consider
+implementing YAFA loaders/savers in your animation software in order to make
+YAFA more popular and easier to handle. Player programs for graphics cards
+are needed too.
+There is a documentation on the YAFA file format available on Aminet:
+ dev/misc/YAFA-doc.lha
+For further help and support you are welcome to contact @{"me" link contact}.
+@ENDNODE
+@NODE wildfire "YP/Wildfire"
+
+Wildfire is the soon-to-be-released animation-processor and F/X-generator.
+
+Some of the most amazing features are:
+ -full support of the new and innovative YAFA-animation-format
+ -fast converter handling YAFA- and ANIM-files and sequences
+  of pictures (ILBM24, JPEG, datatypes) with many options
+ -24bit-image-sequence-processor featuring about 30 F/X like
+   -water, bump, text, wave, perspective,
+   -compose, alpha, scale, rotate, balancing,
+   -blur, morphing LUT's
+ -creation of new complex effects by combining an unlimited
+  number of the built-in F/X using several temporary buffers
+ -time-dependant animation-parameters via so-called envelopes
+ -stunning preview-mode for all effects
+ -project-editor for creating impressive video-shows combining
+  single animations (batch files for the player YP)
+ -filmstrip-window for easy timing of frame-synchronous sound-F/X
+ -Iconmanager allowing intuitive working using drag&drop
+ -configurable GUI with about 80 windows (no MUI, of course!)
+ -ARexx-Port which allows to control *all* functions of the program
+ -Toolkit to create custom-windows with several types of
+  gadgets and graphical elements to add fully integrated
+  program-extensions (eg. the included animation-transition-maker)
+In a few words: It's *really* hard to exceed the program's limits.
+
+
+It is planned to release Wildfire as Shareware, expect it to appear on Aminet
+in January 97. The price for registering will be around DEM 50 (USD 35).
+@ENDNODE
+@NODE bugs_history "YP/Bugs, History"
+
+@{b}Known bugs@{ub}
+
+The 'gfxlib-display' still has some problems:
+  -there is some annoying 'trash' between two anims in batch mode
+  -palette-per-frame can cause problems with double-buffering
+    (LoadRGB32() needs more time than the VBlank; currently I got no idea how
+    to fix this, please contact @{"me" link contact} if you know how to switch colors and
+    bitmaps simultaneously in a clean way using graphics.library)
+
+
+
+@{b}History@{ub}
+
+v0.88 (Thu 26-Dec-96)
+ -added "-fastXPK" unpacking routine for xpkRAKE
+  (the original routine in the library modifies the packed data,
+  this leads to checksum errors when using YP's "-caching" mode!)
+
+v0.87 (Mon 11-Nov-96)
+ -Workbench-startup added (featuring multiselect and tooltypes)
+ -fixed "SeekAsync"-bug
+ -implemented support for extended Delta-Compression format
+  (one or two start-frames as delta-to-empty-frame or plain image)
+
+v0.86 (Tue 29-Oct-96)
+ -'-info' caused returncode 20
+ -'-nodeactivate' was always on
+ -fixed internal XPK routines using the original source codes
+ -'-fastXPK' is now an official feature
+
+v0.85 (Thu 26-Sep-96)
+ -Aminet release
+
+
+(no consistent history available)
+many versions with lots of fixes and new features.
+
+
+first version December 95, used for 'Dataworld' release at The Party 95
+@ENDNODE
+@NODE copyright "YP/Copyright, Distribution"
+
+@{b}Copyright@{ub}
+
+The program YP is Copyright (c) 1996 Michael Henke. All rights reserved.
+Commercial use is prohibited, if you want to use it for commercial purposes
+you have to get an explicit permission from the @{"author" link contact} first.
+
+YP is released as FREEWARE. It is allowed to charge a fee to recover
+distribution costs, but no profit may be made by selling or otherwise
+distributing the program. It is not allowed to distribute YP without this
+documentation. Modified versions of the program may not be distributed.
+
+It is not allowed to disassemble or otherwise reverse engineer the program.
+If you are interested in the source code please contact the @{"author" link contact}.
+
+
+@{b}Disclaimer@{ub}
+
+No guarantee is given nor implied that this program is fit for any use.
+The program and the information within this text are provided on "AS-IS"
+basis. The entire risk as to its quality and performance is with the user.
+In no event will the author be liable for direct, indirect, incidental or
+consequential damages resulting from any defect in the program. The author
+reserves the right to make changes to the program or the documentation
+without notice.
+@ENDNODE
+@NODE contact "YP/Author"
+@NEXT contact
+
+@{b}Main code and YAFA format development@{ub}
+
+Michael Henke (Smack/Infect)
+Praetoriusstr. 1/205
+06124 Halle/Saale
+Germany
+
+EMail: epgbd@cluster1.urz.uni-halle.de
+
+
+
+@{b}Additional code and author of "WildFire - The animation processor",
+creator of "DataWorld" - the animation demo released at "The Party 1995"@{ub}
+
+Andreas Maschke (WK-Artworks)
+Zenkerstraße 5
+06108 Halle/Saale
+Germany
+
+EMail: epgbc@cluster1.urz.uni-halle.de
+@ENDNODE
+@NODE opt_pubscr "YP/Option -pubscr"
+
+@{b}-pubscr (-ps) <name>@{ub}
+
+
+·activates the 'pubscreen-window' mode
+
+·<name> is the name of the public screen, case-sensitive
+
+·this display mode is rather experimental, it does not support double
+ buffering which leads to a more or less annoying 'flickering'
+@ENDNODE
+@NODE opt_modeid "YP/Option -modeID"
+
+@{b}-modeID (-mid) <hex number or 'req'>@{ub}
+
+
+·activates the 'gfxlib-display'
+
+·the modeID is a hexadecimal number, don't use any prefixes (like $ or 0x)
+
+·if 'req' (without the quotes) or an unavailable modeID is specified an ASL
+ screenmode requester opens
+
+·to get the modeID of a certain screen mode use 'req' and the
+ option @{"-verbose" link opt_verbose}
+
+·examples: LoRes                      0
+           HiRes-Laced             8004
+           Multiscan Productivity 39024
+@ENDNODE
+@NODE opt_info "YP/Option -info"
+
+@{b}-info (-i)@{ub}
+
+
+·print some information about the anim(s) (like @{"-verbose" link opt_verbose}) but don't play
+@ENDNODE
+@NODE opt_wait "YP/Option -wait"
+
+@{b}-wait (-w)@{ub}
+
+
+·open a black screen before the first and after the last anim,
+ continue with <Space>
+
+·useful for video recording because you know exactly when the anim starts
+
+·'hardware-display' only
+@ENDNODE
+@NODE opt_verbose "YP/Option -verbose"
+
+@{b}-verbose (-v)@{ub}
+
+
+·print some information about the anim(s) and also some more warnings
+@ENDNODE
+@NODE opt_stats "YP/Option -stats"
+
+@{b}-stats (-st)@{ub}
+
+
+·print statistics (played frames, play time, frames-per-second) on exit
+@ENDNODE
+@NODE opt_nodeactivate "YP/Option -nodeactivate"
+
+@{b}-nodeactivate (-nd)@{ub}
+
+
+·do not pause and restore system colors when window gets deactivated
+
+·'pubscreen-window' only (option @{"-pubscr" link opt_pubscr})
+@ENDNODE
+@NODE opt_fastblit "YP/Option -fastblit"
+
+@{b}-fastblit (-fb)@{ub}
+
+
+·use faster blitting routine for copying image data into the window,
+ this usually leads to even more 'flickering'
+
+·'pubscreen-window' only (option @{"-pubscr" link opt_pubscr})
+@ENDNODE
+@NODE opt_scale "YP/Option -scale"
+
+@{b}-scale (-sc)@{ub}
+
+
+·make the window resizeable, the anims are scaled to the current window size
+ which is quite slow (thats why it's optional)
+
+·'pubscreen-window' only (option @{"-pubscr" link opt_pubscr})
+@ENDNODE
+@NODE opt_fastxpk "YP/Option -fastXPK"
+
+@{b}-fastXPK (-fx)@{ub}
+
+
+·use YP's internal unpacking routines (currently for FAST, NUKE and RAKE)
+ instead of xpkmaster.library and the corresponding compressor libraries
+
+·a significant speed increase can be achieved by this because using
+ xpkmaster.library results in some overhead:
+  -open/close the compressor library for each XpkUnpack() (=every frame!)
+  -checksum the packed data before unpacking it
+ the latter function can of course be considered as useful because it
+ avoids crashing the unpacking routine on corrupted data, but if you are
+ sure that a YAFA anim is not corrupted (after playing it without '-fx')
+ the risk of crashing YP's unpacking routines should be nearly 0 (ZERO :-)
+
+·the unpacking routines used in YP are based on these compressors:
+  -xpkFAST.library V1.06 (27-Jul-94) by Christian von Roques
+  -xpkNUKE.library V1.1  (02-Nov-92) by Urban Dominik Müller
+  -xpkRAKE.library V1.7  (06-Sep-95) by Karsten Dageförde
+ they were testet with many different files and seem to work well.
+ if you encounter problems with them (an anim plays nice without '-fx' but
+ crashes with it) then please contact @{"me" link contact} and also specify which versions
+ of xpkmaster.library and the compressor were used for packing.
+@ENDNODE
+@NODE opt_firstframe "YP/Option -firstframe"
+
+@{b}-firstframe (-ff) <number>@{ub}
+
+
+·the first frame of the anim to be played,
+ frames before this are skipped
+@ENDNODE
+@NODE opt_lastframe "YP/Option -lastframe"
+
+@{b}-lastframe (-lf) <number>@{ub}
+
+
+·the last frame of the anim to be played
+
+·can be greater than the number of frames in the anim,
+ playing will restart if necessary    
+@ENDNODE
+@NODE opt_speed "YP/Option -speed"
+
+@{b}-speed (-s) <number>@{ub}
+
+
+·set the playing speed for the anim,
+ overrides the value contained in the file
+
+·the speed value is the number of video frames that each anim frame
+ is shown, the smaller the value the faster it plays, minimum is 1
+@ENDNODE
+@NODE opt_buffers "YP/Option -buffers"
+
+@{b}-buffers (-b) <number>@{ub}
+
+
+·set the number of frame buffers for the anim, default is 6
+
+·the buffers are needed for smooth playing while loading from disk,
+ the best number depends on several things (average loading speed,
+ file system fragmentation, CPU and DMA speed etc.)
+@ENDNODE
+@NODE opt_asyncbuff "YP/Option -asyncbuff"
+
+@{b}-asyncbuff (-ab) <number>@{ub}
+
+
+·set the size of each of the two asynchronous load buffers for the anim,
+ the number is in KBytes, default is 64
+
+·large buffers can make loading faster (depends on drive, filesystem etc.),
+ small buffers reduce memory usage but usually decrease loading performance
+@ENDNODE
+@NODE opt_caching "YP/Option -caching"
+
+@{b}-caching (-c)@{ub}
+
+
+·make YP load the complete anim to memory before starting to play
+@ENDNODE
+@NODE opt_loadall "YP/Option -loadall"
+
+@{b}-loadall (-l)@{ub}
+
+
+·make YP load and XPK-decompress the complete anim before starting to play
+@ENDNODE
+@NODE opt_zoom "YP/Option -zoom"
+
+@{b}-zoom (-z)@{ub}
+
+
+·do realtime 2x2 zooming while playing
+
+·'hardware-display' only
+@ENDNODE
+@NODE opt_dither "YP/Option -dither"
+
+@{b}-dither (-d)@{ub}
+
+
+·do realtime 2x2 zooming with simple dithering while playing
+
+·'hardware-display' only
+@ENDNODE
+@NODE opt_module "YP/Option -module"
+
+@{b}-module (-mod) <file name> <start> <stop>@{ub}
+
+
+·the specified ProTracker module is loaded to Chip-RAM before anim playing
+ starts
+
+·module playing starts/stops when the specified anim frames are reached
+ (NOTE for @{"batch files" link batchexample})
+
+·modules are always loaded using XPK (so YP recognizes uncompressed and
+ XPK- or PowerPacker-compressed files)
+@ENDNODE
+@NODE opt_sample "YP/Option -sample"
+
+@{b}-sample (-smp) <file name> <start> <stop> <channel> <volume> <repeat>@{ub}
+
+
+·the specified IFF-8SVX sample is loaded to ChipRAM before anim playing
+ starts
+
+·sample playing starts/stops when the specified anim frames are reached
+ (NOTE for @{"batch files" link batchexample})
+
+·channel is a number 0...3, volume is a number 0...64,
+ repeat is a number: 0=loop forever, other=number of loops
+
+·stereo samples are supported, channel has no meaning then because YP takes
+ two channels for stereo playing automatically
+
+·samples larger than 128 KBytes are not played correctly, this is due to
+ some limitations in the AMIGA audio hardware
+@ENDNODE
+@NODE opt_executable "YP/Option -executable"
+
+@{b}-executable (-exe) <command> <start>@{ub}
+
+
+·the specified AmigaDOS command is executed when the anim frame <start>
+ is reached (NOTE for @{"batch files" link batchexample})
+
+·NOTE:
+  use this with care when YP runs on 'hardware-display' or 'gfxlib-display'!
+  the command may not do any output to a shell window,
+  it may not do anything with windows and screens.
+  (actually the complete Intuition system may not be used!
+  see also @{"tech stuff" link tech_2})
+
+·if <start> is 0 (zero) the command is executed _before_ the player's display
+ is opened (it is allowed to use Intuition)
+@ENDNODE
+@NODE batchexample "YP/Batch file example"
+
+   This is an example of a batch file used by YP:
+
+---cut here-------
+;
+; comment lines have a ';' as first character
+
+; empty lines are allowed too
+; every (real) line contains one animation (and maybe anim options)
+; sound options can be appended to every animation line
+;       NOTE: in batch files the start/stop frames for sounds
+;             are frame numbers in the whole anim sequence
+;             rather than frame numbers of individual anims
+ram:example1.yafa -c -lf 200  -mod ram:mod1 1 500
+ram:example2.yafa -z -ff 20 -lf 400
+---cut here-------
+@ENDNODE

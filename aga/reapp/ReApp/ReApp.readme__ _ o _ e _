@@ -1,0 +1,123 @@
+
+                                 (` () |` ('
+                    ·                                   ·
+                    ·            productions            ·
+                    ·                                   ·
+                    ·      R E A P P E A R A N C E      ·
+                    ·                                   ·
+                    ·    1st place at ACG Hack IV 97    ·
+                    ·                                   ·
+                                   rev 2.0
+
+
+
+····· Discalimer
+
+
+           This software is provided "AS-IS" and the authors will take no
+           responsibilities whatsoever. This program may be distributed as
+           long as the contents of this archive is intact and that only a
+           nominal fee or no fee at all is charged.
+
+           Archive consists of:     ReApp.EXE             Main executable
+                                    ReApp.readme          This textfile
+                                    ptreplay.library      Library
+                                    ptreplay.readme       Library textfile
+
+
+····· Installation
+
+
+           o  Copy included PTREPLAY.LIBRARY (v6.6) to your LIBS:
+
+           o  Put the executable file REAPP.EXE in any directory you want
+
+           o  Start it from a shell. Optional parameters are:
+
+              [ NTSC | MULTISCAN | MULTISCAN2 ]       (PAL being default)
+
+           *  Warning! Using these screenmodes may damage your monitor!
+           There is only one way to find out and we take no responsibility!
+
+
+
+····· Requirements
+
+
+           Amiga + AGA
+
+           Minimum: ~ 1M chip + 2M any + 020
+
+           Recommended: 2M chip + 4M 32bit fast + 030 @ 50MHz
+
+
+
+····· Background
+
+
+            Put together for the ACG Hack IV in Umeå, Sweden, eastern 97.
+
+           We never thought we would have time to do it properly but we
+
+           couldn't let a democompetition in our close neighborhood just
+
+           pass by without giving it a shot. So we did, and this is it.
+
+           Our first demo on the Amiga ever, more of a test-drive of our
+               ¯¯¯¯¯
+           DemoLib and 3d-engine. We don't like it that much.
+
+            We didn't release it right after the Hack because of some bugs
+
+           we wanted to fix. Since the competition was virtually none at
+
+           the Hack and the AmiTech-expo was upcoming we decided to fine-
+
+           tune our demo in order to compete in the AmiTech-democompetition
+
+           aswell with this revision 2.0 of ReAppearance.
+
+
+
+····· Credits
+                                 p r o g r a m m i n g
+
+           DemoLib . . . . . . . . Houbba     Z-clip. . . . . . . . . . Icon
+           C2P. . . . . . . . . . .Houbba     Gouraud. . . . . . . . . .Icon
+           Rotzoom . . . . . . . . Houbba     Bumpmap . . . . . . . . . Icon
+           Cubeosphere. . . . . . . .Icon     Sierpinskivolumes. . . . .Icon
+           Z-shade . . . . . . . . . Icon     Envmap. . . . . . . . . . Icon
+
+                                       m u s i c
+
+           When I Woke Up . . .Farmor/NRP     ptreplay.library . . .Pucko/DD
+
+                                   t h a n k s   t o
+
+           GDI (for Timesfont from aminet), JO (for some graphics),
+           ACG (for arr), Vidamus (for trying), our friends (for bugtest)
+
+
+
+····· Known bugs
+
+           No Enforcer-hits and successfully tested on A4000/030/040/060
+           and A1200/020/030, but...
+
+           * DemoLib resourcetracking does not work 100%, especially not if
+             an memory allocation error occurred in the middle of the demo.
+
+           * Productivity screenmodes do not work 100%, I'll have to look
+             at Fabio Bizzettis source again.
+
+
+
+····· Contacting us
+
+
+ Core Productions      Andreas `Icon' Lindquist     Lennart `Houbba' Marklund
+ cp@ts.umu.se          c95ali@cs.umu.se             da95lmd@ing.umu.se
+ www.ts.umu.se/~cp     www.cs.umu.se/~c95ali        www.ing.umu.se/~da95lmd
+
+
+                                . · © o ® e · .

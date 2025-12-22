@@ -1,0 +1,27 @@
+#                                               -*- Autoconf -*-
+# Process this file with autoconf to produce a configure script.
+
+AC_PREREQ(2.57)
+AC_INIT()
+AM_INIT_AUTOMAKE(sdl-bounce-demo, 1.0)
+AM_CONFIG_HEADER(config.h)
+AC_CONFIG_SRCDIR([bounce.c])
+
+# Checks for programs.
+AC_PROG_CC
+
+# Checks for libraries.
+# FIXME: Replace `main' with a function in `-lSDL':
+AC_CHECK_LIB([SDL], [SDL_Init])
+
+# Checks for header files.
+AC_HEADER_STDC
+AC_CHECK_HEADERS([stdlib.h string.h SDL/SDL.h]) 
+
+# Checks for typedefs, structures, and compiler characteristics.
+
+# Checks for library functions.
+AC_FUNC_MALLOC
+AC_CHECK_FUNCS([atexit])
+
+AC_OUTPUT(Makefile)

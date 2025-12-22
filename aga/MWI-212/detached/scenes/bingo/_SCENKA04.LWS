@@ -1,0 +1,123 @@
+LWSC
+1
+
+FirstFrame 1
+LastFrame 60
+FrameStep 1
+PreviewFirstFrame 1
+PreviewLastFrame 200
+PreviewFrameStep 1
+FramesPerSecond 30.000000
+
+AddNullObject E:/a-madwizards/!d_212/lwo/bingo/1.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+AddNullObject E:/a-madwizards/!d_212/lwo/bingo/2.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+AddNullObject E:/a-madwizards/!d_212/lwo/bingo/3.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+AddNullObject E:/a-madwizards/!d_212/lwo/bingo/4.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+AmbientColor 255 255 255
+AmbIntensity 0.250000
+
+AddLight
+LightName Light
+ShowLight 1 7
+LightMotion (unnamed)
+  9
+  1
+  -2 2 -2 45 35 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LightColor 255 255 255
+LgtIntensity 1.000000
+LightType 0
+ShadowType 1
+
+ShowCamera 1 7
+CameraMotion (unnamed)
+  9
+  5
+  -776.1815 -257.0913 -1134.079 -23.26364 -7.418174 -14.63636 1 1 1
+  0 0 0 0 0
+  -973.8807 81.61108 -542.3948 -2.378217 3.48189 -29.79702 1 1 1
+  53 0 0 0 0
+  -1085.966 170.4087 -93.85956 17.53636 9.081827 -37.63636 1 1 1
+  89 0 0 0 0
+  -523.0474 274.9087 1123.345 92.83639 8.781825 -37.63636 1 1 1
+  160 0 0 0 0
+  47.31625 69.90872 1313.604 92.83639 8.781825 -37.63636 1 1 1
+  200 0 0 0 0
+EndBehavior 1
+ZoomFactor 3.200000
+Resolution 1
+PixelAspectRatio 2
+SegmentMemory 2200000
+Antialiasing 0
+AdaptiveSampling 1
+AdaptiveThreshold 16
+FilmSize 2
+FieldRendering 0
+MotionBlur 0
+DepthOfField 0
+
+SolidBackdrop 1
+BackdropColor 0 0 0
+ZenithColor 0 40 80
+SkyColor 120 180 240
+GroundColor 50 40 30
+NadirColor 100 80 60
+FogType 0
+DitherIntensity 1
+AnimatedDither 0
+
+RenderMode 2
+RayTraceEffects 0
+ClipRayColors 0
+DataOverlayLabel  
+FullSceneParamEval 0
+
+ViewMode 5
+ViewAimpoint -335.750000 0.000000 -287.250000
+ViewDirection 0.300197 -0.314159 0.000000
+ViewZoomFactor 0.526749
+GridNumber 40
+GridSize 50.000000
+ShowMotionPath 1
+ShowBGImage 0
+ShowFogRadius 0
+ShowRedraw 0
+ShowSafeAreas 0
+ShowFieldChart 0

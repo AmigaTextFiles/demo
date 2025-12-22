@@ -1,0 +1,50 @@
+; The Scene Guide is © 1995/1996 Nico Barbat (Dire/Eremation)
+; TheScene_Install V1.0 (11-Dec-95)
+;
+echo ""
+echo ""
+echo "                 THE SCENE GUIDE"
+echo "                Issue 1/3 in 1996"
+echo ""
+echo "         by Nico Barbat (Dire/Eremation)"
+echo ""
+echo ""
+echo "The Scene 1/96 will be installed in its own directory"
+echo "on harddisk dh0 (Sys:). If you want this directory to"
+echo "be in another location on your harddisk,  then simply"
+echo "move the complete directory to that place."
+echo ""
+makedir sys:TheScene196
+echo ""
+echo "Please wait while I am installing 'The Scene 1/96' to"
+echo "the directory SYS:TheScene196 on your hard drive!"
+echo ""
+;
+echo " Copying: TheScene.guide ..."
+copy >NIL: TheScene.guide sys:TheScene196/TheScene.guide
+copy >NIL: TheScene.guide.info sys:TheScene196/TheScene.guide.info
+echo " Copying: TheScene_Advert.iff ..."
+copy >NIL: TheScene_Advert.iff sys:TheScene196/TheScene_Advert.iff
+echo " Copying: file_id.diz ..."
+copy >NIL: file_id.diz sys:TheScene196/file_id.diz
+echo " Copying: ReadMeFirst.txt ..."
+copy >NIL: ReadMeFirst.txt sys:TheScene196/ReadMeFirst.txt
+copy >NIL: ReadMeFirst.txt.info sys:TheScene196/ReadMeFirst.txt.info
+echo " Copying: all needed commands ..."
+copy >NIL: ppshow sys:c/ppshow
+copy >NIL: more sys:c/play
+echo " Copying: Adverts ..."
+copy >NIL: adverts sys:TheScene196/Adverts all
+copy >NIL: adverts.info sys:TheScene196/Adverts.info
+copy >NIL: adverts.info sys:TheScene196.info
+;
+echo ""
+echo "Installation finnished succesfully."
+echo " "
+echo "Please do only spread the original  LHA-package,  not"
+echo "these single files. Otherwise The Scene 1/96 will not"
+echo "work completely (no joke!) ..."
+echo " "
+echo "Signed, Nico Barbat (Dire/Eremation)"
+;
+sys:c/wait 4 secs

@@ -1,0 +1,83 @@
+!Interview with Nosferatu
+Ghandy
+82µJCµF2
+Interview with Nosferatu
+µF1by Ghandy
+
+µI0501
+
+µC1µF1µJLEaster 2020 was the moment when we were all surprised: Chillobits by Offence
+
+The damned Corona virus converted us all to sofa sceners during Easter 2020. To the general surprise this year a few Norwegian and one Finnish C64 demoscener conquered the throne of the Amiga demo-competition. They managed to transform the C64 style and vibe over to the Amiga. Hardly anyone in our community has heard their names before. The only exception is the unforgotten Norwegian fame Jogeir Liljedahl. We recently talked to µC7NosferatuµC1, who merged the work of one graphician, two musicians and three programmers.
+
+On his blog µC4[1]µC1 Nosferatu has published an interesting technical writeup. His basic idea was to create a collection of effects nobody has seen before on the Amiga. Chillobits from Offence should encourage other coders to walk on new paths and to program completely new effects. On the Miggy, there's so much more possible than rotozoomers and vector cubes, he wrote.
+
+An update will provide more compatibility for other Amiga models.
+
+Ghandy: µC3How did you come up with the idea of entering the Amiga democompo? What was your motivation to do so?µC1
+
+Nosferatu: µC7Ah yes, the history. The first impetus came from Perplex. We had just finished the 64K intro Centaur with Nah-Kolor (Revision 2018) and he suggested that we should do something a bit larger next time, and make it a pure Offence prod. So toward the next Revision I threw together a few parts. I think it was just the startup BASIC/CLI fader, spinning lines and credits faces plus the inverse vase. But the lazy (not to mention lame and ugly!) Perplex didn't manage to code even a single little part! So we decided to postpone it... Of course we didn't really start working on it again until a couple months before Revision 2020... Although I did do the groundwork for a few more parts.
+
+Around new year I'd contacted our musician, who'd said earlier he would make us a new tune, and he now said he couldn't due to real life obligations. At this point there were still no other parts done, and I was starting to get doubts about the whole project... I'd also contacted Serpent who agreed to make a short endtune for the greetingspart. So since I'd run into Jogeir at BIT Bergen I asked him, and joyfully he said yes. During March we got the first version of the tune, Perplex and Leuat started coding their parts, and Pal (aka Adolf Blitter) started presenting all the lovely graphics he had created. So from that point everyone fed off each others' energy and we kept full speed until deadline. I still had some things I wanted to change, especially to make it more compatible with other Amiga models. Will do that some day though.
+
+µJCµC5µF1----------------------------------------
+µF0Amiga vs. C64 - differences and similarities
+µF1----------------------------------------
+µJLµC1µF1
+Ghandy: µC3Where do you see the differences between the C64 and the Amiga scene?µC1
+
+Nosferatu: µC7I've been impressed by the flow of many C64 demos, as well as their richness both visually and in ideas. Limitations foster creativity of course. It takes a lot less to make an effect on C64, where the same effect on Amiga would just be lame because it's technically trivial. This enables both smaller effects that could just stay on the screen for 5 seconds, and the really huge and advanced effects that make up the meat of the demo. On Amiga it feels more like we end up with a lot of rehashed rotozoomers, 3D objects or scenes, glenz crap etc. So on C64 there is just a lot more room to be creative. I think we should try to get to that point on Amiga too, because there are still a lot of ideas and variations that can be done.
+
+Note this is from the viewpoint of an Amiga scener, I left the C64 in the age of 1001 Crew. But I have been exposed to a lot of C64 stuff since I rejoined Offence a few years ago. At first I was a bit like the guy in A Clockwork Orange, they tied me up in a chair and pulled out my eyelids with fishhooks to make me watch C64 demos, but later I watched a few on my own. I've always been partial to SIDs, so that helped.µC1
+
+µJCµC5µF1----------------------------------------
+µF0"The Revision crew are undoubtedly the heroes of the demoscene."
+µF1----------------------------------------
+µJLµC1µF1
+Ghandy: µC3How's your experience with this sort of online party? Did you like it? Do you think there would have been more entries in case we could have traveled to the partyplace?µC1
+
+Nosferatu: µC7The number of entries seemed to be about the same as it has been in recent years, except in the PC 8K and 64K categories. It could be that some people saved their entries for other parties with a physical presence... Many would say that PC demos have the bigger audience, and that's why those demo creators choose it as a target platform. It could be that some of those held back their prods because of no live audience. There was some talk in the Amiga community about agreeing on a different party to move releases to, but looks like nothing came of it.
+
+I liked the party well enough given the circumstances. The Revision crew are undoubtedly the heroes of the demoscene. Not just any party could have pulled this off with such panache, I think. I hope next year we can go back to coughing on one another in person though. In the mean time I think many other parties will have to learn from Revision.µC1
+
+Ghandy: µC3Would you have traveled the long way from Sweden down to Saarbrücken? Will you come next year? Revision is cool, no doubt, but it's far away from being an event for c64 sceners.µC1
+
+Nosferatu: µC7Pal, Leuat and I had all ordered tickets and intended to come physically. I've been there in 2018 and 2019, and thought it was a great experience. I'm not a C64 scener, so I can't really answer that part... Also we all live in Norway except Serpent who's in Finland :)
+
+µJCµC5µF1----------------------------------------
+µF0c2p effects are boring on the long run - new ideas are needed!
+µF1----------------------------------------
+µJLµC1µF1
+Ghandy: µC3Why did you release it for the classic Amigas and not for AGA/060 or PPC? Is the Amiga ECS/OCS the only real Amiga for you?µC1
+
+Nosferatu: µC7For me, OCS is the platform I'm most familiar with, demowise. So when I started to take up some democoding again a few years ago, I dug out some old unfinished routines and played with them a bit. I've experimented a bit with AGA but nothing really caught my fancy.
+
+It seems to me that AGA demos often end up doing some kind of c2p effects, which doesn't really appeal to me. I just want to play with the blitter, copper and bitplanes to come up with new ideas. Sure you can do that on AGA too, but it's more fiddly and hard to get the most out of the hardware. 
+
+And of course, if we used 8 bitplanes in the credits part, we would have to find two new guys to contribute to the demo!µC1
+
+Ghandy: µC3There have been a lot releases in the past years on classic machines. Do you have an idea why this movement took place?µC1
+
+Nosferatu: µC7That's a good question, but unfortunately I have no good answer. I just want to say that when I came back to the demoscene a few years ago, I was impressed with the available tools for creating demos on Amiga nowadays, which let you concentrate on making the effects instead of fiddling around with other boring stuff like startup code or build scripts. For me, I don't think I would have gotten back into coding on Amiga if the tools weren't so good.µC1
+
+µJCµC5µF1----------------------------------------
+µF0The only limitation is our imagination
+µF1----------------------------------------
+µJLµC1µF1
+Ghandy: µC3Probably you can compare. Why is the C64 so much more active compared to the Amiga? Or do you see it different?µC1
+
+Nosferatu: µC7I don't see it differently. Partly see question two, but also IMO the secret is in the C64 character mode, which allows for pretty much an infinite variety of effects, limited only by imagination. And of course some effects from higher specced machines are trivial to recreate in C64 character mode, that's always fun. 
+
+I think the C64 scene has managed to keep a critical mass up through the years, while Amiga lost a lot of people to the PC scene when it ascended during the mid/late 90s. Maybe with the current wave Amiga is heading towards such a critical mass too, we'll see.µC1
+
+Ghandy: µC3What are you guys doing in real life? How do you earn your money?µC1
+
+Nosferatu: µC7I do frontend and Java development.µC1
+
+Ghandy: µC3Thanks for your long replies. And don't forget to keep the scene spirit alive!µC1
+
+Nosferatu: µC7You as well!µC1
+
+µC4-----
+[1] https://everydog.home.blog/2020/
+04/13/chillobits-writeup/

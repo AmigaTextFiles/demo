@@ -1,0 +1,75 @@
+===========================================
+HTMLess
+===========================================
+
+1. Introduction
+===============
+HTMLess is just another utility to extract the text inside HTML 
+files (Web pages) and convert it to a readable text format.One 
+month ago I released the first version, since them I received lot 
+of EMails with bugs, ideas and support who keep me busy 
+developing and improving HTMLess, I released 3 improved 
+versions, today (1.May.96; btw it's my birthday *8) a major 
+release is ready: v2.0, I hope this new version could fill the 
+needs of everybody, my goal was a small, eficient, easy to use, 
+fast and reliable program to convert WWW HTML pages to text 
+files. I hope all you will find HTMLess useful.
+
+The main features are:
+- Fast, written 100% in assembler. (Even faster since v1.2, and 
+the fastest with the new in v1.3 CLI option -w or the ToolType 
+WINDOW disabled)
+- Small but powerful utility (only 12000 bytes long).
+- CLI and Workbench usage.
+- ToolTypes support. [New since v2.0]
+- Admit filenames as CLI parameters (can be launched from a
+DiskMaster/DirOpus type program to autoconvert HTML's).
+- All non-ASCII chars are converted.
+- Output text could be formatted to easy reading.
+- Can keep [href's] (like WWW adresses) in the output text.
+- .HTML or .HTM filename suffix could be changed to your own 
+defined text extension. [New since v2.0]
+- The program will report any kind of errors.
+- Very easy to use...just try it.
+- WYSIAWYG (WhatYouSawIsAlmostWhatYouGet)
+- Great results (complex AI routines used *8).
+- HTML Lists converted to text lists.
+- `HTMLess' is a wonderful name. 
+- No annoying requesters when starting/using/quitting program.
+- It's OriginalWare (OriginalWhat?) and it's only Amiga (Yeah!).
+ 
+The only requirement is the "ReqTools.library" by Nico Francois 
+and Magnus Holmgren who fortunately is continuing the 
+development of the indispensable reqtools library.
+
+If you need a custom version of this program (for a personal 
+necessity); contact me and I will try to make a customized 
+version for you (if it isn't to difficult or too much work).
+
+If you think the sources (100% assembler) could be useful for 
+you (to include in a program you are developing or for learning 
+purposes) just contact me and ask for them.
+
+OriginalWare ?
+=================
+
+This  utility  is OriginalWare.That means if you like this program 
+you must buy  an  original Amiga program or game, or send the 
+money to the author of any ShareWare program or game you 
+are using often. (This includes me, $5 or $10 will be welcome)
+
+There  are  lots  of  great Amiga software like `DiskMaster', 
+`Remind', `MultiCX', `Spot', `ReqTools.library', `Deluxe Galaga', 
+`APlayer' and a lot more that you won't never regret to spend 
+your money. If you do this you support the Amiga, and if you 
+support AMIGA you support US.Support software authors and 
+you will get more and better software. This program could be 
+included in any PD compilation at a symbolic price.
+
+Aminet and Fred Fish collections are specifically allowed to 
+include it. This program could be freely included in any Web 
+page or FTP site, but send me an EMail to know it (I can include 
+the address in this doc). For using them in commercial products, 
+my written permission is required. Inclusion in magazines and 
+diskmags will be allowed, if you send me a copy of this 
+publication.

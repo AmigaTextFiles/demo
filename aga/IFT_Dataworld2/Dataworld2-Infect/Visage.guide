@@ -1,0 +1,3537 @@
+@DataBase Visage.guide
+@$VER: Visage.guide 39.11 (8.12.96)
+@(C) Copyright 1995-96 by Magnus Holmgren
+@Author Magnus Holmgren
+@Index INDEX
+@Tab 8
+
+@Node MAIN "Visage.guide"
+
+	@{u}@{b}@{fg highlight}Visage 39.11@{fg text}@{ub}@{uu}
+
+	@{b}A Team OS3 product@{ub}
+
+	Release date: 96-12-08
+
+	Copyright © 1995-96 by Magnus Holmgren
+
+
+Welcome to @{b}Visage@{ub}, a multi-format picture viewer for the Amiga OS (version
+3.0 or higher).
+
+	@{" Introduction      " Link INTRODUCTION}
+	@{" Features          " Link FEATURES}
+	@{" Legal information " Link LEGAL}
+	@{" The JPEG codec    " Link JPEG}
+	@{" Requirements      " Link REQUIREMENTS}
+
+	@{" Team OS3          " Link TEAMOS3}
+
+	@{" Usage             " Link ARGUMENTS}
+	@{" Viewing keys      " Link KEYS}
+	@{" Mode names        " Link MODENAMES}
+	@{" Rendered pictures " Link RENDERED}
+	@{" Included programs " Link PROGRAMS}
+
+	@{" Known problems    " Link BUGS}
+	@{" The future        " Link TODO}
+	@{" Acknowledgments   " Link THANKS}
+	@{" Author            " Link AUTHOR}
+	@{" Program history   " Link HISTORY}
+
+	@{" Index             " Link INDEX}
+
+
+@EndNode
+
+
+@Node INTRODUCTION "Visage.guide/Introduction"
+
+	@{u}@{b}Introduction@{ub}@{uu}
+
+<Sigh> Yet another picture viewer. :)
+
+Oh well, what can I say? There were no picture viewer available that suited
+all my needs. They were lacking such trivial things as looking for
+"external" break signals, and more important things such as good monitor
+support.
+
+But Visage is different. It has many features; some are not available in
+any other picture viewer for the Amiga (as far as I know). Since some of
+these features rely on things introduced in OS 3.0, this program requires
+OS 3.0. There are several viewers that work on OS 2.0, so it is not a major
+problem, IMHO.
+
+The goal was a rather fast viewer, with many features. Picture quality was
+not the most important thing (this mainly applies to the HAM and color
+rendering).
+
+See also:
+
+	@{" Features          " Link FEATURES}
+	@{" Legal information " Link LEGAL}
+	@{" Requirements      " Link REQUIREMENTS}
+	@{" Rendered pictures " Link RENDERED}
+
+@EndNode
+
+
+@Node FEATURES "Visage.guide/Features"
+
+	@{u}@{b}Features@{ub}@{uu}
+
+Displays IFF ILBM, GIF, JPEG (using the @{"Tower JPEG Codec Class" Link JPEG}) and
+datatype pictures.
+
+The internal viewers (IFF ILBM and GIF) use asynchronous IO for high
+performance. The picture decompressors are written in optimized assembler
+for speed.
+
+Full AA, ECS and RTG (I hope! ;) support.
+
+Supports the IFF ILBM chunks CLUT (Color LookUp Table; only RGB), PCHG
+(Palette CHanGe) and SHAM (Sliced HAM).
+
+Displays "deep" pictures in all formats (including datatypes, if needed) on
+ECS Amigas, rendered in HAM, "normal" color (graphics card recommended) or
+grayscale.
+
+IFF ILBM pictures can be Xpk compressed (asynchronous IO is not possible
+for these pictures at the moment).
+
+Fast HAM rendering of pictures, using code written by Rafael D'Halleweyn.
+
+Can @{"scale" Link SCALE} any @{"rendered" Link RENDERED} picture to fit the screen.
+
+Extensive monitor support. Uses a BestModeID()-like function to find a
+suitable mode (if needed or requested).
+
+Any native Amiga screen @{"mode" Link MODE} can be specified with @{"text" Link MODENAMES}! No numbers needed.
+But you can use numbers, if you wish. Or a requester.
+
+Simple promotion of pictures to any installed @{"monitor" Link MONITOR}. No hardcoded command
+line options for this. Even a requester can be used.
+
+Several slideshow options, including a @{"random" Link RANDOM} and a @{"sort" Link SORT} mode, making
+Visage ideal for use with screen blankers as an external module.
+
+Background loading of the next picture while viewing the current, if there
+is enough memory (this can be disabled).
+
+When using background loading, the new pictures do not open in front of all
+other screens (unless told to). The two screens are "attached" to each
+other.
+
+Can @{"fade" Link FADE} pictures (but not HAM, SHAM or PCHG pictures).
+
+Default options can be placed in an @{"environment variable" Link VISAGEOPTS}.
+
+Invisible screen arranging gadgets.
+
+Can execute a @{"command" Link COMMAND} for a picture.
+
+Can show @{"information" Link INFO} about the pictures, @{"test" Link TEST} them or @{"time" Link TIME} them.
+
+@{"Horizontal" Link CENTER} @{i}and @{ui}@{"vertical" Link VCENTER} screen centering.
+
+Can be made resident.
+
+System friendly color @{"cycling" Link CYCLE} (no interrupt).
+
+Several other small features not mentioned here. :)
+
+It is freeware! No need to pay anything (but that does not mean @{"I" Link AUTHOR} would
+not appreciate a donation of any kind! :).
+
+A couple of small and useful utilities @{"included" Link PROGRAMS}.
+
+@EndNode
+
+
+@Node LEGAL "Visage.guide/Legal information"
+
+	@{u}@{b}Legal information@{ub}@{uu}
+
+	@{" License          " Link LICENSE}
+	@{" No warranty      " Link WARRANTY}
+	@{" Acknowledgments  " Link ACKNOWLEDGMENTS}
+
+@EndNode
+
+
+@Node LICENSE "Visage.guide/Legal issues/License"
+@Toc LEGAL
+
+	@{u}@{b}License@{ub}@{uu}
+
+Visage is released under the concept of freeware. This means you are
+allowed to use and copy this program freely, as long as the following
+requirements are fulfilled:
+
+	All files are copied without any alterations or modifications. If
+	any extra files are added, it must be obvious that they do not
+	belong to the original distribution, and that they do not need to
+	be included in any redistribution.
+	Exception: So called "BBS ads" may @{i}not @{ui}be added.
+
+	The copying is done on a non-commercial basis. A small fee to cover
+	media costs etc. may be charged.
+
+	The copier is not claiming the copyright of this program.
+
+Any exceptions from the above require a written permission from the author.
+
+If you want to publish this program on a cover disk or similar, contact me
+first for approval (to make sure you have the latest version etc). I then
+expect a copy of the issue of the magazine in return (additional
+contributions are welcomed :).
+
+@{u}Note@{uu}:	This program uses the LZW decompression algorithm, which due to
+	patent claims probably requires you to license if you distribute
+	this program on a for-profit basis. (See http://www.unisys.com)
+
+@EndNode
+
+
+@Node WARRANTY "Visage.guide/Legal issues/No warranty"
+@Toc LEGAL
+
+	@{u}@{b}No warranty@{ub}@{uu}
+
+@{b}There is no warranty for the programs, to the extent permitted by
+applicable law. Except when otherwise stated in writing the copyright
+holder and/or other parties provide the programs "as is" without warranty
+of any kind, either expressed or implied, including, but not limited to,
+the implied warranties of merchantability and fitness for a particular
+purpose. The entire risk as to the quality and performance of the programs
+is with you. Should the programs prove defective, you assume the cost of
+all necessary servicing, repair or correction.
+
+In no event unless required by applicable law or agreed to in writing will
+any copyright holder, or any other party who may redistribute the programs
+as permitted above, be liable to you for damages, including any general,
+special, incidental or consequential damages arising out of the use or
+inability to use the programs (including but not limited to loss of data or
+data being rendered inaccurate or losses sustained by you or third parties
+or a failure of the programs to operate with any other programs), even if
+such holder or other party has been advised of the possibility of such
+damages.@{ub}
+
+@EndNode
+
+
+@Node ACKNOWLEDGMENTS "Visage.guide/Legal issues/Acknowledgments"
+@Toc LEGAL
+
+	@{u}@{b}Acknowledgments@{ub}@{uu}
+
+This software is based in part on the work of the Independent JPEG Group.
+
+The Graphics Interchange Format(c) is the Copyright property of CompuServe
+Incorporated. GIF(sm) is a Service Mark property of CompuServe Incorporated.
+
+@EndNode
+
+
+@Node REQUIREMENTS "Visage.guide/Requirements"
+
+	@{u}@{b}Requirements@{ub}@{uu}
+
+Visage should work on any Amiga that has OS 3.0 or higher. 512 KB of memory
+is enough for operation, but more memory is indeed recommended (especially
+if you want to view large and/or JPEG pictures). There are no required
+disk-based libraries, although Visage will be limited if some are not
+available (the GIF reader is the only one that does not need any disk-based
+libraries).
+
+I decided to let Visage require OS 3.0, since I otherwise would need to
+rewrite several new functions in OS 3.0, or write code to work around bugs.
+One feature cannot be implemented at all using OS 2.0. Despite all this, I
+might make Visage support OS 2.0 in the future (if @{"I" Link AUTHOR} get requests for it.
+Have not got any yet... ;).
+
+See also:
+
+	@{" Required libraries " Link LIBRARIES}
+
+@EndNode
+
+
+@Node LIBRARIES "Visage.guide/Requirements/Required libraries"
+@Toc REQUIREMENTS
+
+	@{u}@{b}Required libraries@{ub}@{uu}
+
+The following disk-based libraries are not necessary for Visage to operate,
+but certain things will not work if they are not available:
+
+	@{b}iffparse.library@{ub} version 39 or higher
+	For the IFF ILBM reader.
+
+	@{b}tower.library@{ub} version 1 or higher
+	For the JFIF/JPEG reader. To work properly, the files @{i}codec.class,@{ui}
+	@{i}picture.codec @{ui}and @{i}jpeg.codec @{ui}are needed as well, i.e.,
+	@{"the JPEG codec" Link JPEG}. Included with Visage.
+
+	@{b}datatypes.library@{ub} version 39 or higher
+	For the datatypes reader. To work properly, suitable datatypes are
+	needed as well. Some datatypes are included with the system;
+	several exist as different kinds of freely distributable software.
+
+	@{b}asl.library@{ub} version 38 or higher
+	For the file, screen mode and monitor (!) requesters. If not
+	available, you will get a warning if you try to use these
+	requesters.
+
+	@{b}xpkmaster.library@{ub}
+	To view Xpk compressed or encrypted IFF ILBM pictures. For it to
+	work properly, suitable sub-libraries are needed as well. Xpk can be
+	found on Aminet and BBS:es.
+
+	@{b}reqtools.library@{ub} version 38 or higher
+	For the password requester that appears if an Xpk-encrypted picture
+	is encountered, but no password was specified. ReqTools can be
+	found on Aminet and BBS:es.
+
+@EndNode
+
+
+@Node JPEG "Visage.guide/About the JPEG codec"
+
+	@{u}@{b}About the JPEG codec@{ub}@{uu}
+
+This application uses the "Tower JPEG Codec Class" for JPEG support. The
+JPEG codec is Copyright © 1994 Christoph Feck, TowerSystems. All Rights
+Reserved. It is based in part on the work of the Independent JPEG Group.
+
+The JPEG codec is provided "AS-IS" and subject to change without prior
+notice; no warranties are made. All use is at your own risk. No liability
+or responsibility is assumed.
+
+@EndNode
+
+
+@Node TEAMOS3 "Visage.guide/Team OS3"
+
+	@{u}@{b}Team OS3@{ub}@{uu}
+
+Team OS3 is a non-profit association founded by members of the Amiga BBS
+Assimilate in the spring of 1995. It is completely devoted to the Amiga and
+the Amiga spirit.
+
+Its purpose is:
+
+	To work for the use and preservation of the Amiga.
+
+	To work for a high standard of Amiga software, that uses and/or
+	requires OS 3.0 or better.
+
+	To help fellow Amiga owners in distress.
+
+Team OS3 has a sign of approval that only will be given to software that
+fully complies to the Team OS3 quality standards. If you want your program
+tested, just contact us. The standards can be acquired upon request.
+
+Team OS3 is primary for programmers, but ordinary Amigoids are of course
+welcome, if they follow our statues.
+
+
+For information write to:
+
+	Erik Lindberg
+
+	FidoNet:  2:203/123.31
+	Internet: Erik.Lindberg@p31.f123.n203.z2.fidonet.org
+
+or
+
+	Mathias Karlsson
+
+	FidoNet:  2:203/123.24
+	Internet: d3karma@dtek.chalmers.se
+
+@EndNode
+
+
+@Node ARGUMENTS "Visage.guide/Arguments"
+
+	@{u}@{b}Arguments@{ub}@{uu}
+
+Visage can be started from a Shell or the Workbench. For Shell users it
+should be noted that Visage is pure, and may be made resident.
+
+In the case of Workbench start, the tooltypes may be specified in either
+the program icon, the picture icon(s), or any other icon (preferably
+without an associated file). All tooltypes are collected (tooltypes found
+later on overrides earlier ones) and parsed before viewing the pictures.
+
+@{"VisageOpts" Link VISAGEOPTS} can be used to specify new defaults.
+
+For both Workbench and Shell usage, the following arguments/tooltypes can
+be specified:
+
+	@{b}Text arguments@{ub}
+
+	@{" FILES        " Link FILES}   Files to view
+	@{" BORDERBLANK  " Link BORDERBLANK}   Set border blank mode
+	@{" COMMAND      " Link COMMAND}   Command to execute, if requested
+	@{" DITHER       " Link DITHER}   Dither type to use, when needed
+	@{" MODE         " Link MODE}   Screen mode to use
+	@{" MONITOR      " Link MONITOR}   Monitor to use
+	@{" OVERSCAN     " Link OVERSCAN}   Overscan type to use
+	@{" PASSWORD     " Link PASSWORD}   Password for Xpk-encrypted files
+
+	@{b}Numeric arguments@{ub}
+
+	@{" BUFSIZE      " Link BUFSIZE}   IO buffer size for the IFF ILBM and GIF readers
+	@{" DELAY        " Link DELAY}   Time to wait between pictures
+	@{" FADE         " Link FADE}   Speed for picture fade
+	@{" TIMES        " Link TIMES}   How many times the pictures should be displayed
+	@{" TOOLPRI      " Link TOOLPRI}   Task priority for Visage
+	@{" UNIT         " Link UNIT}   Clipboard unit to read from
+
+	@{b}Switches@{ub}
+
+	@{" ALL          " Link ALL}   Enter all drawers encountered
+	@{" BESTMODE     " Link BESTMODE}   Less strict mode promotion
+	@{" CENTER       " Link CENTER}   Center the pictures
+	@{" CLIPBOARD    " Link CLIPBOARD}   Read from the clipboard
+	@{" COLOR        " Link COLOR}   Render deep pictures in color
+	@{" COMPACT      " Link COMPACT}   Use a more compact VERBOSE output
+	@{" CYCLE        " Link CYCLE}   Start color cycling automatically
+	@{" DATATYPES    " Link DATATYPES}   Try to use a datatype
+	@{" ECS          " Link ECS}   Use an ECS-compatible screen depth
+	@{" FOREVER      " Link FOREVER}   View all files until aborted
+	@{" GRAY         " Link GRAY}   Render pictures in grayscale
+	@{" HAM          " Link HAM}   Use HAM "when in doubt"
+	@{" INFO         " Link INFO}   Only show information about pictures
+	@{" LATELOAD     " Link LATELOAD}   Read next picture after time-out
+	@{" LOWMEM       " Link LOWMEM}   No background reading
+	@{" NOAUTOSCROLL " Link NOAUTOSCROLL}   Disable autoscrolling
+	@{" NOBUSY       " Link NOBUSY}   Do not show any busy pointer
+	@{" NOCLICK      " Link NOCLICK}   Do not listen to mouse clicks
+	@{" NODATATYPES  " Link NODATATYPES}   Do not use datatypes
+	@{" NOENV        " Link NOENV}   Do not read options in VisageOpts
+	@{" NOFILECHECK  " Link NOFILECHECK}   Do not check if files exists before pattern parsing
+	@{" NOFLICKER    " Link NOFLICKER}   Do not use laced screen modes
+	@{" NOFOREIGN    " Link NOFOREIGN}   Makes Visage ignore certain modes
+	@{" NOGIF        " Link NOGIF}   Use datatype for GIF pictures
+	@{" NOICON       " Link NOICON}   Ignore any `.info' files found
+	@{" NOIFF        " Link NOIFF}   Use datatype for IFF pictures
+	@{" NOJPEG       " Link NOJPEG}   Use datatype for JPEG pictures
+	@{" NORMALNAMES  " Link NORMALNAMES}   Use normal display mode names
+	@{" NOWARN       " Link NOWARN}   Disable warning messages
+	@{" POINTER      " Link POINTER}   Do not blank the mouse pointer
+	@{" QUIET        " Link QUIET}   Disable most output
+	@{" RANDOM       " Link RANDOM}   View pictures in random order
+	@{" RTG          " Link RTG}   Make Visage work better with some RTG devices
+	@{" SCALE        " Link SCALE}   Scale rendered pictures to fit screen
+	@{" SHOWINFO     " Link SHOWINFO}   Display picture information on picture
+	@{" SORT         " Link SORT}   View pictures in alphabetical order
+	@{" TEST         " Link TEST}   Test pictures, do not display
+	@{" TIME         " Link TIME}   Display loading time
+	@{" TOFRONT      " Link TOFRONT}   Bring newly loaded pictures to the front
+	@{" VCENTER      " Link VCENTER}   Center pictures vertically
+	@{" VERBOSE      " Link VERBOSE}   Display extra information
+	@{" WAITFORPIC   " Link WAITFORPIC}   Wait for next picture to load
+	@{" WBMONITOR    " Link WBMONITOR}   Use the same monitor as the Workbench screen
+
+(57 arguments! ;)
+
+@EndNode
+
+
+@Node VISAGEOPTS "Visage.guide/Arguments/VisageOpts"
+@Toc ARGUMENTS
+
+	@{u}@{b}VisageOpts@{ub}@{uu}
+
+New default values may be specified by entering them in the VisageOpts
+configuration file or environment variable. The search order is as follows:
+
+If the environment variable ConfigPath¹ exist, then try to read the file
+VisageOpts in the drawer specified by ConfigPath. If the environment
+variable or the file does not exist, then read the environment variable
+VisageOpts, if present.
+
+Put all options on any number of lines, similar to if Visage was started
+from the Shell. Comments start with a `#' or `;' at the start of the line,
+and they end at the end of that same line.
+
+To disable the reading of VisageOpts (e.g. in a script), use the NOENV
+switch. This disables both the environment variable and the configuration
+file.
+
+If a switch is specified in VisageOpts, then by specifying it again on the
+command line you will turn off that switch. Thus, if CENTER is found in
+VisageOpts, and CENTER is specified on the command line (or in the
+tooltypes), no centering will occur.
+
+Text or numeric arguments specified on the command line will simply
+override any arguments specified in VisageOpts.
+
+Two arguments in VisageOpts will always be ignored: FILES and NOENV. You
+will not get a warning or anything if they are specified; they are silently
+ignored. This has the side-effect that unknown options are ignored (they
+are "swallowed" by the FILES argument).
+
+See also:
+
+	@{" FILES  " Link FILES}
+	@{" CENTER " Link CENTER}
+	@{" NOENV  " Link NOENV}
+
+
+@{b}-- Footnotes --@{ub}
+
+¹ If you specify `ProgDir:' here (to get the same drawer as where the
+program resides), please remember that you should not make the program
+resident in that case. If you do, you will get `Please insert volume
+ProgDir:' requesters, which can be annoying.
+
+The name of the ConfigPath variable was deliberately chosen to be general.
+The hope is that other programs also will use this, at least as a part of
+their configuration file search path.
+
+@EndNode
+
+
+@Node FILES "Visage.guide/Arguments/FILES"
+@Toc ARGUMENTS
+
+	@{u}@{b}FILES@{ub}@{uu}
+
+Here you specify the files you wish to view. You may enter any number of
+files and drawers here, using patterns if you like.
+
+If you enter the name of a drawer, a file requester will open, located in
+that drawer (unless ALL has been specified). If you in this requester
+specify the name of a file that does not exist, then Visage will treat is
+as a pattern, unless the NOFILECHECK option have been specified. If no file
+is specified (and the requester is not cancelled), then Visage will display
+all pictures in the drawer in question (any pattern will be used).
+
+You may even use this argument as a tooltype in an icon. So, if you would
+like to get a slideshow over some pictures in a drawer, use the following
+tooltypes (in an icon without its corresponding file). The default tool
+should be set to Visage:
+
+	FILES=Pics:Nature
+	ALL
+	DELAY=60
+
+or something similar. A double-click on that icon will start the slideshow.
+
+See also:
+
+	@{" ALL         " Link ALL}
+	@{" CLIPBOARD   " Link CLIPBOARD}
+	@{" DELAY       " Link DELAY}
+	@{" NOFILECHECK " Link NOFILECHECK}
+	@{" RANDOM      " Link RANDOM}
+	@{" SORT        " Link SORT}
+
+@EndNode
+
+
+@Node BORDERBLANK "Visage.guide/Arguments/BORDERBLANK"
+@Toc ARGUMENTS
+
+	@{u}@{b}BORDERBLANK@{ub}@{uu}  Synonym: BB
+
+Here you can specify if Visage should (try to) blank the borders of the
+displayed picture or not. The following arguments are available:
+
+	@{b}ON@{ub}
+	Turn on border blanking.
+
+	@{b}OFF@{ub}
+	Turn off border blanking.
+
+	@{b}DEFAULT@{ub}
+	Use the system default.
+
+If an invalid blanking mode is specified, you will be told about it, and
+the default (DEFAULT) will be used.
+
+@{i}Notes:@{ui}	This affects the systems border blanking flag only. Thus, it might
+	not work on graphics cards (I do not know if any graphics card
+	support this flag).
+
+	Setting the argument to OFF does not seem to work (if the system
+	global border blanking flag is activated). At least that is the
+	case on my system.
+
+	The vertical centering does not look that good if border blanking
+	is on.
+
+See also:
+
+	@{" VCENTER " Link VCENTER}
+
+@EndNode
+
+
+@Node COMMAND "Visage.guide/Arguments/COMMAND"
+@Toc ARGUMENTS
+
+	@{u}@{b}COMMAND@{ub}@{uu}  Synonym: CMD
+
+Here you can specify a command that can be executed for each viewed
+picture. To execute the command, press the `e'-key when the picture in
+question is displayed. When in TEST mode, the command will be executed when
+a picture with an error is found.
+
+The command will be executed as if it had been started in the same drawer
+as the picture. The name will always be quoted (e.g. to make it easy to
+parse from Rexx). The command is run asynchronously, so you may continue to
+the next picture when you like. If the command could not be run for some
+reason, the screen will flash (if no command is specified, then this will
+not happen).
+
+By default the name of the picture will be added to the end of the command.
+If the string `[]' is specified in the command, then the name will replace
+the @{i}first @{ui}occurence of this string. This is similar to how the Alias
+command works (see your AmigaDOS manual for more information about Alias).
+
+This argument makes it easy to mark pictures for deletion or something
+similar. In that case, a command like:
+
+	FileNote [] "Delete this picture"
+
+can be useful. Then simply press `e' for the pictures you do not want to
+keep, and do the actual deletings from a shell or a directory utility.
+Using the above command rather than `Delete' has the benefit that it is
+easy to undo, in case you press the key by mistake.
+
+The command `Move [] TO Pics:' can cause problem in case several pictures
+with the same name (but in different drawers) are processed. An ARexx
+script can be used to work around this problem, if needed. Note that a
+`Move' command is not included with the OS.
+
+@{u}Note@{uu}:	To specify the above example from a shell, you must enter it like
+	this:
+
+		COMMAND="FileNote [] *"Delete this picture*""
+
+	(Note the escaped quotation characters.) If you enter it as a
+	tooltype, just enter it as the first example shows.
+
+See also:
+
+	@{" TEST " Link TEST}
+
+@EndNode
+
+
+@Node DITHER "Visage.guide/Arguments/DITHER"
+@Toc ARGUMENTS
+
+	@{u}@{b}DITHER@{ub}@{uu}
+
+Here you can specify which kind of dithering that should be used, when
+rendering pictures to COLOR or GRAY modes. In the latter case, dither is
+only used when the screen displays less than 256 colors.
+
+Currently, the following dither types are available:
+
+	@{b}NONE@{ub}
+	No dithering. This is the fastest, but also gives the lowest
+	quality. It is not recommended if COLOR rendering is used.
+
+	@{b}ORDERED@{ub}, @{b}ORD@{ub}
+	Ordered dithering. A fast dither, but the quality is not the best.
+	Quite sufficient for grayscale images though. This is the default.
+
+	@{b}FS@{ub}
+	Floyd-Steinberg dithering. Gives very good quality, but is slower
+	than ORDERED (about 30% in the COLOR render case).
+
+If an invalid dither type is specified, you will be told about it, and the
+default (ORDERED) will be used.
+
+See also:
+
+	@{" COLOR             " Link COLOR}
+	@{" GRAY              " Link GRAY}
+	@{" Rendered pictures " Link RENDERED}
+
+@EndNode
+
+
+@Node MODE "Visage.guide/Arguments/MODE"
+@Toc ARGUMENTS
+
+	@{u}@{b}MODE@{ub}@{uu}
+
+Here you can specify which screen mode the pictures should be displayed
+with. There are several ways to specify the mode:
+
+	Via a screen mode requester. Simply enter "REQUEST" or "?" after the
+	MODE keyword. This requires asl.library to be available.
+
+	A decimal or hexadecimal number, "describing" the mode. If the
+	number starts with `$' or `0x' it is assumed to be hex. The program
+	GetModeID can be used to find out the (decimal) number for a
+	certain mode.
+
+	A text string (anything that is not covered by the above). Either a
+	name from the display database, or an algorithmic name.
+
+Specifying a (valid) mode here will override the MONITOR and WBMONITOR
+arguments.
+
+If the specified mode is not capable of displaying the picture for some
+reason, Visage will try to find a replacement mode that is as similar as
+possible. Thus, you usually do not need to worry about things such as HAM
+and EHB. Visage should handle that automatically.
+
+@{u}Note@{uu}:	Visage also understands the "normal" mode names (as shown by the
+	ScreenMode preferences program). However, the normal mode name will
+	only be considered if the mode name didn't match an algorithmic
+	name. Thus, e.g. "DblPAL:High Res" will use the algorithmic name,
+	while "Multiscan:Productivity" will use the normal mode name.
+	The NORMALNAMES switch can be used to change this behaviour (Visage
+	will then check the display database name first).
+
+See also:
+
+	@{" MONITOR                " Link MONITOR}
+	@{" NORMALNAMES            " Link NORMALNAMES}
+	@{" WBMONITOR              " Link WBMONITOR}
+	@{" Algorithmic mode names " Link MODENAMES}
+	@{" GetModeID              " Link GETMODEID}
+
+@EndNode
+
+
+@Node MONITOR "Visage.guide/Arguments/MONITOR"
+@Toc ARGUMENTS
+
+	@{u}@{b}MONITOR@{ub}@{uu}
+
+With this parameter you can easily promote the pictures to display to any
+available monitor, providing it is capable of displaying the picture.
+Simply specify the name of the monitor, or a pattern for the monitor(s),
+and Visage will look through the display database for any matches If found,
+the picture will be promoted to use one of the specified monitors, if
+possible. If several monitors matched the pattern, the BestModeID()
+function will select the monitor it considers to be the best one to display
+the picture.
+
+You can also specify the special name "REQUEST" or "?", to get a requester
+containing the available monitors (except for the so called default
+monitor). Note that the properties window will not contain useful
+information, except for the frequencies. You can currently not select more
+than one monitor in this requester.
+
+Specifying a valid monitor here will override the WBMONITOR argument.
+
+This argument is ignored if a valid MODE has been specified.
+
+@{u}Note@{uu}:	The name of a monitor is usually the same as the name of the file
+	in the `Devs:Monitors' drawer. Remember that VGAOnly is @{i}not @{ui}a
+	monitor.
+
+See also:
+
+	@{" MODE      " Link MODE}
+	@{" WBMONITOR " Link WBMONITOR}
+
+@EndNode
+
+
+@Node OVERSCAN "Visage.guide/Arguments/OVERSCAN"
+@Toc ARGUMENTS
+
+	@{u}@{b}OVERSCAN@{ub}@{uu}
+
+Here you can specify the overscan type that should be used to display the
+picture. You can specify the following types:
+
+	@{b}TEXT@{ub}
+	Text overscan, as set by preferences. Display limits visible.
+
+	@{b}GRAPHICS@{ub}, @{b}STANDARD@{ub}
+	Graphics (or standard) overscan, as set by preferences. Display
+	limits are just out of view. This is the default.
+
+	@{b}MAX@{ub}
+	Maximal overscan. The largest overscan that the system
+	"comfortably" can display.
+
+	@{b}VIDEO@{ub}
+	Video overscan. The largest overscan the system can display,
+	comfortably or not.
+
+If an invalid overscan type is specified you will be told about it, and
+Visage will revert to the default (STANDARD).
+
+See also:
+
+	@{" CENTER       " Link CENTER}
+	@{" MONITOR      " Link MONITOR}
+	@{" NOAUTOSCROLL " Link NOAUTOSCROLL}
+	@{" WBMONITOR    " Link WBMONITOR}
+
+@EndNode
+
+
+@Node PASSWORD "Visage.guide/Arguments/PASSWORD"
+@Toc ARGUMENTS
+
+	@{u}@{b}PASSWORD@{ub}@{uu}
+
+Here you can specify the password for any Xpk-encrypted IFF ILBM picture
+found. If no password is specified, and an encrypted file is encountered,
+then a ReqTools requester will be opened for that file (if ReqTools is
+available). To disable this requester, simply enter a password! ;)
+
+@EndNode
+
+
+@Node BUFSIZE "Visage.guide/Arguments/BUFSIZE"
+@Toc ARGUMENTS
+
+	@{u}@{b}BUFSIZE@{ub}@{uu}
+
+Here you can specify the size of the IO buffers (in kilobytes) used by the
+asynchronous IO code (used by the IFF ILBM and GIF readers). Two buffers of
+roughly half the size specified will be allocated, if possible. Normally
+this value should not need changes, but you might get somewhat better
+performance with other values here (depending on the media).
+
+Default is 16 KB. Values below 4 KB are rounded to 4 KB, but the code will
+(usually) try with smaller buffers, if there is not enough memory
+available.
+
+@{u}Note@{uu}:	This buffer size should not be larger that roughly half the average
+	size of the files you display, or the benefit of "double buffered
+	asynchronous IO" will be lost.
+
+@EndNode
+
+
+@Node DELAY "Visage.guide/Arguments/DELAY"
+@Toc ARGUMENTS
+
+	@{u}@{b}DELAY@{ub}@{uu}
+
+Here you can specify the time to wait between pictures. When the time-out
+has expired, the next picture will be shown automatically, like in a
+slideshow. The delay starts counting when the currently visible picture is
+completely loaded. A delay of zero is valid. Default is no delay (i.e.,
+only move to the next picture when the user requests it).
+
+See also:
+
+	@{" FOREVER    " Link FOREVER}
+	@{" LATELOAD   " Link LATELOAD}
+	@{" LOWMEM     " Link LOWMEM}
+	@{" RANDOM     " Link RANDOM}
+	@{" SORT       " Link SORT}
+	@{" TIMES      " Link TIMES}
+	@{" TOFRONT    " Link TOFRONT}
+	@{" WAITFORPIC " Link WAITFORPIC}
+
+@EndNode
+
+
+@Node FADE "Visage.guide/Arguments/FADE"
+@Toc ARGUMENTS
+
+	@{u}@{b}FADE@{ub}@{uu}
+
+Here you can specify the speed with which the pictures should fade in and
+out when opened and closed. 1 is the fastest, and 4 is the slowest. Values
+out of range are rounded to the closest valid value. Default is 0 (no fade).
+
+@{u}Notes@{uu}:	HAM, PCHG and SHAM pictures can not be faded, due to the nature of
+	these picture formats.
+
+	Some auxiliary memory might be needed for a successful fade. If
+	this memory is not available, the fade will silently not be done.
+
+@EndNode
+
+
+@Node TIMES "Visage.guide/Arguments/TIMES"
+@Toc ARGUMENTS
+
+	@{u}@{b}TIMES@{ub}@{uu}
+
+The number of times to view the files. Default is 1.
+
+Any value specified here overrides the FOREVER switch.
+
+See also:
+
+	@{" FOREVER " Link FOREVER}
+
+@EndNode
+
+
+@Node TOOLPRI "Visage.guide/Arguments/TOOLPRI"
+@Toc ARGUMENTS
+
+	@{u}@{b}TOOLPRI@{ub}@{uu}
+
+The task priority Visage should use when displaying the pictures. Valid
+range is -128 to 4 (to prevent Visage from disturbing more important
+programs). Values out of range are rounded to the closest valid value.
+Default value depends on the starting program (usually it is 0).
+
+This argument can be useful when Visage is used as an external screen
+blanker module.
+
+@{u}Note@{uu}:	The Workbench automatically parses any TOOLPRI tooltype. It was
+	added to Visage so that the priority easily can be specified e.g.
+	in VisageOpts.
+
+See also:
+
+	@{" VisageOpts " Link VISAGEOPTS}
+
+@EndNode
+
+
+@Node UNIT "Visage.guide/Arguments/UNIT"
+@Toc ARGUMENTS
+
+	@{u}@{b}UNIT@{ub}@{uu}
+
+The clipboard unit to read from, if CLIPBOARD has been specified. The value
+should be between 0 and 255 (inclusive). Values out of range are rounded.
+Default is 0.
+
+See also:
+
+	@{" CLIPBOARD " Link CLIPBOARD}
+
+@EndNode
+
+
+@Node ALL "Visage.guide/Arguments/ALL"
+@Toc ARGUMENTS
+
+	@{u}@{b}ALL@{ub}@{uu}
+
+If this option has been specified, then Visage will enter any drawers
+encountered during the pattern matching process.
+
+@{u}Note@{uu}:	If this switch is used, then you will @{i}not @{ui}get a file requester if
+	you enter the name of a drawer on the command line. Instead Visage
+	will enter that drawer (and any drawers within) and start
+	displaying all pictures found.
+
+See also:
+
+	@{" FILES " Link FILES}
+
+@EndNode
+
+
+@Node BESTMODE "Visage.guide/Arguments/BESTMODE"
+@Toc ARGUMENTS
+
+	@{u}@{b}BESTMODE@{ub}@{uu}
+
+If this switch is specified, then Visage will always search the display
+database for the best screen mode to display the picture with, even if it
+is not necessary.
+
+Also, Visage will be less strict when looking for a replacement mode when
+doing monitor promotion. Visage will ignore the size of the "source" screen
+mode; the size will be taken from the picture instead. Only the aspect will
+be considered.
+
+If a MODE has been specified, then this option will be ignored.
+
+See also:
+
+	@{" MODE " Link MODE}
+
+@EndNode
+
+
+@Node CENTER "Visage.guide/Arguments/CENTER"
+@Toc ARGUMENTS
+
+	@{u}@{b}CENTER@{ub}@{uu}  Synonym: CENTRE
+
+If this switch is specified, the displayed pictures will be centered
+horizontally, if needed. If you also want vertical center, see the VCENTER
+switch.
+
+@{u}Notes@{uu}:	If a screen promoter is installed, the centering may be wrong
+	sometimes. It depends on how the screen mode is changed, and how
+	"good" the promoting software is.
+
+	For Super72 screen modes, the centering may be more or less wrong
+	(the amount depends on the OS version).
+
+	This centering does not seem to work on (most) graphic card screens.
+
+See also:
+
+	@{" VCENTER " Link VCENTER}
+
+@EndNode
+
+
+@Node CLIPBOARD "Visage.guide/Arguments/CLIPBOARD"
+@Toc ARGUMENTS
+
+	@{u}@{b}CLIPBOARD@{ub}@{uu}
+
+If this switch is specified, then Visage will try to read the data from the
+clipboard. Any files specified in the FILES argument are ignored.
+
+Use the UNIT argument to specify which clipboard unit Visage should read
+from.
+
+See also:
+
+	@{" FILES " Link FILES}
+	@{" UNIT  " Link UNIT}
+
+@EndNode
+
+
+@Node COLOR "Visage.guide/Arguments/COLOR"
+@Toc ARGUMENTS
+
+	@{u}@{b}COLOR@{ub}@{uu}  Synonym: COLOUR
+
+If this switch is specified, then pictures that normally would be rendered
+in a HAM mode, will be rendered in a normal color mode instead.
+
+This switch is mainly intended for owners of graphic cards (especially
+those who have ECS Amigas), since it allows Visage to render the picture to
+a screen mode supported by the card (although I have heard that there are
+cards that support a "faked" HAM8).
+
+The GRAY option will override this one, if both are specified.
+
+@{u}Note@{uu}:	The color rendering is a so called one-pass render with a fixed
+	palette. This means that it is rather fast, but the quality is not
+	the best. By default, the rendering includes ordered dither, but
+	this may be changed, to improve either the speed or the quality
+	(the quality will drop significantly if dithering is disabled).
+
+See also:
+
+	@{" DITHER            " Link DITHER}
+	@{" GRAY              " Link GRAY}
+	@{" Rendered pictures " Link RENDERED}
+
+@EndNode
+
+
+@Node COMPACT "Visage.guide/Arguments/COMPACT"
+@Toc ARGUMENTS
+
+	@{u}@{b}COMPACT@{ub}@{uu}
+
+If this switch is specified, then the VERBOSE output will be a bit more
+compact. It assumes that your console is wide enough to accommodate all
+output in one line. This means that the console needs to be at least 90-100
+characters wide (the exact width depends on the picture and screen mode
+name, and if you want timing information).
+
+See also:
+
+	@{" QUIET   " Link QUIET}
+	@{" TIME    " Link TIME}
+	@{" VERBOSE " Link VERBOSE}
+
+@EndNode
+
+
+@Node CYCLE "Visage.guide/Arguments/CYCLE"
+@Toc ARGUMENTS
+
+	@{u}@{b}CYCLE@{ub}@{uu}
+
+If this switch is specified, then color cycling will automatically be
+started for pictures that have color cycling information.
+
+@{u}Notes@{uu}:	This cycling only understands "simple" (CRNG) cycling right now. I
+	think I know how to implement the "complex" (DRNG) cycling, but I
+	have not worked out all details yet. If you have some example code
+	or similar, please send it to @{"me" Link AUTHOR}. ;)
+
+	The cycling is done in a high priority subtask. The vertical
+	blanking interrupt is not used, since the function used to change
+	colors may not be called from an interrupt (it can cause
+	deadlocks/crashes). This can make the cycling a bit jerky at times.
+	This can not be avoided.
+
+@EndNode
+
+
+@Node DATATYPES "Visage.guide/Arguments/DATATYPES"
+@Toc ARGUMENTS
+
+	@{u}@{b}DATATYPES@{ub}@{uu}  Synonym: DT
+
+Try to view the files with a datatype before trying with internal viewers.
+The NODATATYPES switch overrides this one, if both are specified.
+
+See also:
+
+	@{" NODATATYPES " Link NODATATYPES}
+	@{" NOGIF       " Link NOGIF}
+	@{" NOIFF       " Link NOIFF}
+	@{" NOJPEG      " Link NOJPEG}
+
+@EndNode
+
+
+@Node ECS "Visage.guide/Arguments/ECS"
+@Toc ARGUMENTS
+
+	@{u}@{b}ECS@{ub}@{uu}
+
+Originally intended as a debugging option (to check the ECS-graphics
+conversion routines), I decided to leave it in. What is does is to make
+Visage think that only ECS graphics is available (not even any graphics
+card).
+
+I read somewhere (in fidonet, I think) that some FastJPEG users (that had
+AA graphics) used the ECS version in grayscale mode, in order to get a fast
+preview of the picture. Using this switch will have the same effect. This
+can be especially useful on e.g. an A1200 without fast memory. It will make
+the rendering of deep pictures quite a bit faster.
+
+See also:
+
+	@{" GRAY " Link GRAY}
+
+@EndNode
+
+
+@Node FOREVER "Visage.guide/Arguments/FOREVER"
+@Toc ARGUMENTS
+
+	@{u}@{b}FOREVER@{ub}@{uu}
+
+Keep viewing the pictures until interrupted. It actually sets the TIMES
+argument to a very high value (4,294,967,295 :).
+
+Any value specified in the TIMES argument overrides this switch.
+
+See also:
+
+	@{" TIMES " Link TIMES}
+
+@EndNode
+
+
+@Node GRAY "Visage.guide/Arguments/GRAY"
+@Toc ARGUMENTS
+
+	@{u}@{b}GRAY@{ub}@{uu}  Synonym: GREY
+
+Convert rendered pictures to grayscale.
+
+This option will override COLOR, if both are specified.
+
+See also:
+
+	@{" COLOR             " Link COLOR}
+	@{" DITHER            " Link DITHER}
+	@{" Rendered pictures " Link RENDERED}
+
+@EndNode
+
+
+@Node HAM "Visage.guide/Arguments/HAM"
+@Toc ARGUMENTS
+
+	@{u}@{b}HAM@{ub}@{uu}
+
+This switch tells Visage that a HAM mode should be selected for IFF ILBMs
+that have a depth of 6 bitplanes, and do not have any so called CAMG chunk
+(this chunk tells what kind of screen mode that should be used to display
+the picture). If not specified, Visage assumes an extra halfbrite (EHB)
+mode should be used.
+
+Note that this switch does not force a HAM mode to be used, only that a HAM
+mode should be used in case of doubt.
+
+@EndNode
+
+
+@Node INFO "Visage.guide/Arguments/INFO"
+@Toc ARGUMENTS
+
+	@{u}@{b}INFO@{ub}@{uu}
+
+If this switch is specified, then Visage will not display any pictures. It
+will simply read some information about the picture, and display that
+information.
+
+Thus, all options related to how things are rendered are ignored. However,
+screen mode related arguments are not, as the VERBOSE option still may be
+used.
+
+This switch is in many ways similar to the TEST switch. The two major
+differences are that the picture is not loaded at all, and that VERBOSE is
+considered.
+
+This switch overrides TEST and QUIET, if they are specified as well.
+
+@{u}Note@{uu}:	Datatypes will always load the entire picture, although nothing
+	will be displayed. This can not be avoided.
+
+See also:
+
+	@{" MODE    " Link MODE}
+	@{" MONITOR " Link MONITOR}
+	@{" TEST    " Link TEST}
+	@{" VERBOSE " Link VERBOSE}
+
+@EndNode
+
+
+@Node LATELOAD "Visage.guide/Arguments/LATELOAD"
+@Toc ARGUMENTS
+
+	@{u}@{b}LATELOAD@{ub}@{uu}
+
+When viewing several files, this switch tells Visage to wait with loading
+the next picture until told to do so. Background loading is not disabled,
+only delayed. When used in slideshows, the extra memory needed for
+background loading is therefore delayed to when it is really needed.
+
+See also:
+
+	@{" LOWMEM     " Link LOWMEM}
+	@{" WAITFORPIC " Link WAITFORPIC}
+
+@EndNode
+
+
+@Node LOWMEM "Visage.guide/Arguments/LOWMEM"
+@Toc ARGUMENTS
+
+	@{u}@{b}LOWMEM@{ub}@{uu}
+
+If this switch is specified, then the background loading of pictures is
+disabled.
+
+@{u}Note@{uu}:	Visage will automatically close any displayed picture, if there
+	is not enough memory to load the next one in the background. Thus,
+	this switch should not be needed much.
+
+See also:
+
+	@{" LATELOAD " Link LATELOAD}
+
+@EndNode
+
+
+@Node NOAUTOSCROLL "Visage.guide/Arguments/NOAUTOSCROLL"
+@Toc ARGUMENTS
+
+	@{u}@{b}NOAUTOSCROLL@{ub}@{uu}  Synonym: NOAS
+
+If this switch is specified, then the autoscrolling of pictures is disabled.
+The cursor keys can still be used to move around in the picture.
+
+Usually, when the mouse pointer reaches the edges of a screen that is
+larger than the display area, the screen will automatically start
+scrolling, to show the "hidden" areas.
+
+See also:
+
+	@{" Viewing keys " Link KEYS}
+
+@EndNode
+
+
+@Node NOBUSY "Visage.guide/Arguments/NOBUSY"
+@Toc ARGUMENTS
+
+	@{u}@{b}NOBUSY@{ub}@{uu}
+
+If this switch is specified, then no busy pointer will be shown when a
+picture is loaded (in the foreground or the background).
+
+See also:
+
+	@{" POINTER      " Link POINTER}
+	@{" Viewing keys " Link KEYS}
+
+@EndNode
+
+
+@Node NOCLICK "Visage.guide/Arguments/NOCLICK"
+@Toc ARGUMENTS
+
+	@{u}@{b}NOCLICK@{ub}@{uu}
+
+If this switch is specified, then Visage will ignore any mouse click on a
+picture. To view the next picture, or exit Visage, the keyboard need to be
+used (or you could send a so called break signal).
+
+@EndNode
+
+
+@Node NODATATYPES "Visage.guide/Arguments/NODATATYPES"
+@Toc ARGUMENTS
+
+	@{u}@{b}NODATATYPES@{ub}@{uu}  Synonym: NODT
+
+If this switch is specified, then Visage will not try to use datatypes if
+the picture format was not known to Visage.
+
+This switch overrides DATATYPES, if both are specified.
+
+See also:
+
+	@{" DATATYPES " Link DATATYPES}
+	@{" NOGIF     " Link NOGIF}
+	@{" NOIFF     " Link NOIFF}
+	@{" NOJPEG    " Link NOJPEG}
+
+@EndNode
+
+
+@Node NOENV "Visage.guide/Arguments/NOENV"
+@Toc ARGUMENTS
+
+	@{u}@{b}NOENV@{ub}@{uu}
+
+If this switch is specified, then Visage will not consider the options
+stored in the configuration file or the environment variable VisageOpts.
+
+See also:
+
+	@{" VisageOpts " Link VISAGEOPTS}
+
+@EndNode
+
+
+@Node NOFILECHECK "Visage.guide/Arguments/NOFILECHECK"
+@Toc ARGUMENTS
+
+	@{u}@{b}NOFILECHECK@{ub}@{uu}  Synonym: NOFC
+
+If this switch is specified, then Visage will not check if files specified
+in the FILES argument or a file requester exists before processing. By
+default, Visage will check if the file really exist before attempting to
+parse any patterns in the name.
+
+This behaviour is needed, since at this stage Visage does not know if the
+file was specified in the FILES argument or if it was a multiselected icon,
+as a result of the generic argument parsing functions used. To work around
+this problem, Visage will check if the name actually refers to an existing
+file.
+
+Since this behaviour can cause some minor problems (i.e., a pattern is not
+recognized as expected), you have this switch to decide on how Visage
+should behave.
+
+See also:
+
+	@{" FILES " Link FILES}
+
+@EndNode
+
+
+@Node NOFLICKER "Visage.guide/Arguments/NOFLICKER"
+@Toc ARGUMENTS
+
+	@{u}@{b}NOFLICKER@{ub}@{uu}
+
+If this switch is specified, then Visage will not use laced screen modes.
+Mostly useful if you have AA graphics, and you do not promote the pictures
+to either the NTSC monitor or the PAL monitor.
+
+See also:
+
+	@{" MODE      " Link MODE}
+	@{" MONITOR   " Link MONITOR}
+	@{" WBMONITOR " Link WBMONITOR}
+
+@EndNode
+
+
+@Node NOFOREIGN "Visage.guide/Arguments/NOFOREIGN"
+@Toc ARGUMENTS
+
+	@{u}@{b}NOFOREIGN@{ub}@{uu}
+
+If this switch is specified, then Visage will make sure it doesn't use
+certain display modes, namely those with the so called foreign flag set.
+
+There is a certain confusion regarding this flag and its use. Because of
+that (and the fact that different Intuition emulators behave differently in
+certain aspects), Visage can get into problems, depending on which
+Intuition emulator that is in use. Most notably, Visage can crash when used
+with e.g. the PicassoII.
+
+If you experience this problem, then this switch should (hopefully) solve
+your problems.
+
+@EndNode
+
+
+@Node NOGIF "Visage.guide/Arguments/NOGIF"
+@Toc ARGUMENTS
+
+	@{u}@{b}NOGIF@{ub}@{uu}
+
+Try to view GIF files with a datatype before trying with the internal
+viewer. The NODATATYPES switch overrides this one, if both are specified.
+
+See also:
+
+	@{" DATATYPES   " Link DATATYPES}
+	@{" NODATATYPES " Link NODATATYPES}
+	@{" NOIFF       " Link NOIFF}
+	@{" NOJPEG      " Link NOJPEG}
+
+@EndNode
+
+
+@Node NOICON "Visage.guide/Arguments/NOICON"
+@Toc ARGUMENTS
+
+	@{u}@{b}NOICON@{ub}@{uu}
+
+If this switch is specified, then any file encountered that ends with
+`.info' will be ignored. This makes it easy to avoid icons, when using a
+(complex) pattern. This switch allso affects the file requester, and
+prevents icons from being showed, regardless of the pattern used.
+
+@{u}Notes@{uu}:	As there are datatypes that can display icons (i.e. files typically
+	ending with `.info'), you should not use this switch when you intend
+	to view icons.
+
+See also:
+
+	@{" ALL      " Link ALL}
+	@{" FILES    " Link FILES}
+	@{" INFO     " Link INFO}
+	@{" SHOWINFO " Link SHOWINFO}
+
+@EndNode
+
+
+@Node NOIFF "Visage.guide/Arguments/NOIFF"
+@Toc ARGUMENTS
+
+	@{u}@{b}NOIFF@{ub}@{uu}
+
+Try to view IFF files with a datatype before trying with the internal
+viewer. The NODATATYPES switch overrides this one, if both are specified.
+
+See also:
+
+	@{" DATATYPES   " Link DATATYPES}
+	@{" NODATATYPES " Link NODATATYPES}
+	@{" NOGIF       " Link NOGIF}
+	@{" NOJPEG      " Link NOJPEG}
+
+@EndNode
+
+
+@Node NOJPEG "Visage.guide/Arguments/NOJPEG"
+@Toc ARGUMENTS
+
+	@{u}@{b}NOJPEG@{ub}@{uu}
+
+Try to view JPEG/JFIF files with a datatype before trying with the internal
+viewer. The NODATATYPES switch overrides this one, if both are specified.
+
+See also:
+
+	@{" DATATYPES   " Link DATATYPES}
+	@{" NODATATYPES " Link NODATATYPES}
+	@{" NOGIF       " Link NOGIF}
+	@{" NOIFF       " Link NOIFF}
+
+@EndNode
+
+
+@Node NORMALNAMES "Visage.guide/Arguments/NORMALNAMES"
+@Toc ARGUMENTS
+
+	@{u}@{b}NORMALNAMES@{ub}@{uu}
+
+If this switch is specified, then the algorithmic mode names will not be
+used when displaying the mode names. You may still use them when specifying
+a mode though, although these names will have a lower priority then (see
+MODE for more information about this).
+
+This is might be needed if you have a graphics card (unless you use
+CyberGraphX). Or maybe you prefer the normal names.
+
+If RTG is specified, then this switch will be set as well.
+
+See also:
+
+	@{" MODE                   " Link MODE}
+	@{" RTG                    " Link RTG}
+	@{" Algorithmic mode names " Link MODENAMES}
+
+@EndNode
+
+
+@Node NOWARN "Visage.guide/Arguments/NOWARN"
+@Toc ARGUMENTS
+
+	@{u}@{b}NOWARN@{ub}@{uu}
+
+If this switch is specified, then most warning messages will not be
+displayed. Some warnings can be a bit annoying when Visage is started from
+the Workbench.
+
+@EndNode
+
+
+@Node POINTER "Visage.guide/Arguments/POINTER"
+@Toc ARGUMENTS
+
+	@{u}@{b}POINTER@{ub}@{uu}
+
+If this switch is specified, then a normal mouse pointer will be displayed
+when the busy pointer is not displayed. Normally, no mouse pointer is
+visible during this time.
+
+See also:
+
+	@{" NOBUSY       " Link NOBUSY}
+	@{" Viewing keys " Link KEYS}
+
+@EndNode
+
+
+@Node QUIET "Visage.guide/Arguments/QUIET"
+@Toc ARGUMENTS
+
+	@{u}@{b}QUIET@{ub}@{uu}
+
+If this switch is specified, then most output from Visage is disabled.
+Errors and similar things are still displayed. This option is automatically
+used when the program is started from the Workbench.
+
+If the INFO switch is specified, then this switch will be ignored.
+
+See also:
+
+	@{" INFO    " Link INFO}
+	@{" TIME    " Link TIME}
+	@{" VERBOSE " Link VERBOSE}
+
+@EndNode
+
+
+@Node RANDOM "Visage.guide/Arguments/RANDOM"
+@Toc ARGUMENTS
+
+	@{u}@{b}RANDOM@{ub}@{uu}
+
+If this switch is specified, then Visage will display all
+specified/selected files in random order, rather than the (perhaps somewhat
+random) order in which they were found. This switch overrides SORT, if both
+are specified.
+
+@{u}Note@{uu}:	Visage will first scan through any patterns specified, before
+	starting to view the pictures. This may take a little while. It
+	also means that you will not get a new file requester after having
+	viewed the first selected files.
+
+See also:
+
+	@{" DELAY " Link DELAY}
+	@{" SORT  " Link SORT}
+
+@EndNode
+
+
+@Node RTG "Visage.guide/Arguments/RTG"
+@Toc ARGUMENTS
+
+	@{u}@{b}RTG@{ub}@{uu}
+
+If this switch is specified, then Visage will not make certain assumptions
+about the contents of the display database (i.e. that a certain flag will
+be set for all non-native Amiga modes). This assumption makes Visage work
+slightly better (i.e. work faster and/or use less memory) when displaying
+pictures in a native Amiga mode.
+
+However, (partly) due to bugs in the current system software, this
+assumption is not (always?) correct when a graphics card is installed, and
+this can lead to problems. Thus, if Visage seems to be unable to display a
+picture on a "graphics card screen mode", then you should try this option.
+
+Thanks to a new way handling things (in Visage 39.2), this switch should
+not be needed, but I find it best to make no such assumptions! ;) Also,
+Visage is capable of recognizing CyberGraphX modes, so this switch will not
+be needed if you have CyberGraphX installed.
+
+This switch implies NORMALNAMES.
+
+See also:
+
+	@{" NORMALNAMES " Link NORMALNAMES}
+
+@EndNode
+
+
+@Node SCALE "Visage.guide/Arguments/SCALE"
+@Toc ARGUMENTS
+
+	@{u}@{b}SCALE@{ub}@{uu}
+
+If this switch is specified, then rendered pictures will be scaled down to
+the visible part of the screen in question, if needed.
+
+@{u}Notes@{uu}:	This scaling uses a simple (but fast) algorithm, and hence the
+	result may not be that good at times. The result largely depends on
+	the picture in question.
+
+See also:
+
+	@{" Rendered pictures " Link RENDERED}
+
+@EndNode
+
+
+@Node SHOWINFO "Visage.guide/Arguments/SHOWINFO"
+@Toc ARGUMENTS
+
+	@{u}@{b}SHOWINFO@{ub}@{uu}
+
+If this switch is specified, the Visage will not only display picture
+information in the Shell it was started from (if any), but will also
+display it on (or rater, above) the actual picture.
+
+The VERBOSE switch can be used to specify how much information that should
+be displayed, similar to the output in a Shell. TIME information is
+(currently) not displayed on the picture.
+
+This switch is not affected by the QUIET switch.
+
+@{u}Notes@{uu}:	This information is usually not displayed for datatype pictures.
+	Re-rendered datatype pictures will have this information though.
+
+	Visage will only use a single line for the text. This means that
+	the text can be truncated, if the screen is not wide enough.
+
+	The font used is the one used by the default public screen (at the
+	Visage was started), or, if Visage was unable to find the default
+	public screen, the current system default font.
+
+	Visage will examine the colormap, and will try to find the best
+	colors. However, the text may not always be (clearly) visible
+	anyway. Also, when used with PCHG or SHAM pictures, the color
+	selection may seem a bit odd (and incorrect).
+
+See also:
+
+	@{" QUIET             " Link QUIET}
+	@{" TIME              " Link TIME}
+	@{" VERBOSE           " Link VERBOSE}
+	@{" Rendered pictures " Link RENDERED}
+
+@EndNode
+
+
+@Node SORT "Visage.guide/Arguments/SORT"
+@Toc ARGUMENTS
+
+	@{u}@{b}SORT@{ub}@{uu}
+
+If this switch is specified, then Visage will display all
+specified/selected files in alphabetical order, rather than the (perhaps
+somewhat random) order in which they were found. The RANDOM switch
+overrides this switch, if both are specified.
+
+@{u}Note@{uu}:	Visage will first scan through any patterns specified, before
+	starting to view the pictures. This may take a little while. It
+	also means that you will not get a new file requester after having
+	viewed the first selected files.
+
+See also:
+
+	@{" DELAY  " Link DELAY}
+	@{" RANDOM " Link RANDOM}
+
+@EndNode
+
+
+@Node TEST "Visage.guide/Arguments/TEST"
+@Toc ARGUMENTS
+
+	@{u}@{b}TEST@{ub}@{uu}
+
+If this switch is specified, then Visage will not actually display the
+pictures. Rather, it will try to load them to see if they seem to be free
+from errors. When all files have been tested, Visage will print out a
+status message, showing if any picture contained any error. Also, if there
+was any error, the WARN flag will be set.
+
+For each file that failed with a "data" error, an error message will be
+printed, and the COMMAND will be executed (if specified). Errors caused by
+external things (such as out of memory) are not considered here.
+
+If this switch is specified, then many other switches and arguments will be
+ignored.
+
+If INFO is specified as well, then this switch will be ignored.
+
+@{u}Notes@{uu}:	Only certain errors causes Visage to treat it as a bad. I.e. exit
+	with the WARN flag and execute the command.
+
+	Even if a picture "fails", it might still be more or less viewable
+	(e.g., it is not much of a problem if the error occurred while
+	loading the last few pixel-lines of the picture). Conversely, the
+	fact that a picture passes the testing does not mean that the
+	picture is free from trashed graphics.
+
+	It seems like most datatypes does not return any error, even if the
+	picture contained detectable errors. Thus, you should use the
+	NODATATYPES option to make sure that this does not happen.
+
+See also:
+
+	@{" COMMAND     " Link COMMAND}
+	@{" NODATATYPES " Link NODATATYPES}
+	@{" INFO        " Link INFO}
+
+@EndNode
+
+
+@Node TIME "Visage.guide/Arguments/TIME"
+@Toc ARGUMENTS
+
+	@{u}@{b}TIME@{ub}@{uu}
+
+If this switch is specified (and QUIET is not), then Visage will display
+how long it took to load (and possibly render) the picture. This time
+does not include the time it took to open the screen in case a datatype
+picture was loaded. However, the only case when this can make any
+noticeable difference is when you display the picture on a graphics card
+screen (on the other hand, the difference can be quite large).
+
+@{u}Note@{uu}:	Since the QUIET option always is on when Visage has been started
+	from the Workbench, there is no point in specifying this option in
+	the tooltypes of an icon.
+
+See also:
+
+	@{" QUIET   " Link QUIET}
+	@{" VERBOSE " Link VERBOSE}
+
+@EndNode
+
+
+@Node TOFRONT "Visage.guide/Arguments/TOFRONT"
+@Toc ARGUMENTS
+
+	@{u}@{b}TOFRONT@{ub}@{uu}
+
+If this switch is specified, then the picture will be brought to the front
+each time a new picture is to be displayed. This is useful in slideshows in
+screen blankers, which should bring their screens to the front every now
+and then (in case some other program has opened a screen in front of the
+blanker).
+
+See also:
+
+	@{" DELAY  " Link DELAY}
+	@{" RANDOM " Link RANDOM}
+	@{" SORT   " Link SORT}
+
+@EndNode
+
+
+@Node VERBOSE "Visage.guide/Arguments/VERBOSE"
+@Toc ARGUMENTS
+
+	@{u}@{b}VERBOSE@{ub}@{uu}
+
+If this switch is specified (and QUIET is not), then some extra information
+about the pictures will be displayed. Currently this is the screen size and
+mode used by the picture. This screen mode name uses the algorithmic name,
+if possible.
+
+If the SHOWINFO switch has been specified, the extra information will be
+displayed on the picture as well.
+
+@{u}Note@{uu}:	Since the QUIET option always is on when Visage has been started
+	from the Workbench, there is no point in specifying this option in
+	the tooltypes of an icon, unless SHOWINFO has been specified.
+
+See also:
+
+	@{" SHOWINFO               " Link SHOWINFO}
+	@{" TIME                   " Link TIME}
+	@{" QUIET                  " Link QUIET}
+	@{" Algorithmic mode names " Link MODENAMES}
+
+@EndNode
+
+
+@Node VCENTER "Visage.guide/Arguments/VCENTER"
+@Toc ARGUMENTS
+
+	@{u}@{b}VCENTER@{ub}@{uu}  Synonym: VCENTRE
+
+If this switch is specified, the displayed pictures will be centered
+vertically, if needed.
+
+@{u}Notes@{uu}:	If a screen promoter is installed, the centering may be wrong
+	sometimes. It depends on how the screen mode is changed, and how
+	"good" the promoting software is.
+
+	Due to the implementation, it does not look that good if border
+	blanking is enabled (this ca not easily be avoided).
+
+	The centering:
+
+		Only works for datatype pictures that need to be
+		re-rendered.
+
+		Will make the picture use some more graphics memory.
+
+		Should work on all graphic cards (that put proper
+		information in the display database).
+
+See also:
+
+	@{" CENTER " Link CENTER}
+
+@EndNode
+
+
+@Node WAITFORPIC "Visage.guide/Arguments/WAITFORPIC"
+@Toc ARGUMENTS
+
+	@{u}@{b}WAITFORPIC@{ub}@{uu}
+
+If this switch is specified together with DELAY - and perhaps LATELOAD -
+then Visage will wait for the next picture to load completely before
+switching to that one (if there is enough memory to load the picture in the
+background).
+
+Visage will never wait if you tell it to move to the next picture.
+
+See also:
+
+	@{" DELAY    " Link DELAY}
+	@{" LATELOAD " Link LATELOAD}
+	@{" LOWMEM   " Link LOWMEM}
+
+@EndNode
+
+
+@Node WBMONITOR "Visage.guide/Arguments/WBMONITOR"
+@Toc ARGUMENTS
+
+	@{u}@{b}WBMONITOR@{ub}@{uu}  Synonym: WBMON
+
+Similar to MONITOR, but it will promote the pictures to the same monitor as
+the Workbench screen is using (if possible). The MONITOR argument overrides
+this switch, if both are specified.
+
+@{u}Note@{uu}:	If you use the so called default monitor for your Workbench
+	screen, then this option will not work. This can only happen if the
+	relevant preferences file is not available for some reason (to
+	create it, simply select a suitable mode in the ScreenMode
+	preferences editor and select "Save" or "Use").
+
+See also:
+
+	@{" MODE    " Link MODE}
+	@{" MONITOR " Link MONITOR}
+
+@EndNode
+
+
+@Node KEYS "Visage.guide/Viewing keys"
+
+	@{u}@{b}Viewing keys@{ub}@{uu}
+
+When displaying a picture, there are several keys you can use:
+
+	@{b}Esc@{ub}, @{b}Q@{ub}
+	Quit Visage.
+
+	@{b}E@{ub}
+	Execute the @{"COMMAND" Link COMMAND}, if specified.
+
+	@{b}B@{ub}, @{b}N@{ub}
+	Toggle the @{"NOBUSY" Link NOBUSY} option.
+
+	@{b}M@{ub}, @{b}P@{ub}
+	Toggle the @{"POINTER" Link POINTER} option.
+
+	@{b}Space@{ub}, @{b}Return@{ub}, @{b}Enter@{ub}
+	View the next picture. If the last picture is shown, show a file
+	requester or exit.
+
+You can also use the cursor keys and/or the numeric keyboard to scroll
+around in the picture. When doing this, no qualifier will scroll using
+steps of 10 pixels, @{b}Shift@{ub} uses steps of a quarter of the visible size, @{b}Alt@{ub}
+uses steps of three quarters of the visible size, while @{b}Control@{ub} moves to
+the extreme.
+
+The mouse can be used as well (unless the @{"NOCLICK" Link NOCLICK} switch has been
+specified):
+
+	@{b}Left button@{ub}
+	View the next picture. If the last picture is shown, show a file
+	requester or exit.
+
+	@{b}Right button@{ub}
+	Quit Visage.
+
+You can of course also use these keys/mouse buttons while a picture is
+loaded. There may be a small delay before Visage reacts though (this is
+usually due to IO buffering, or a datatype picture is being loaded).
+
+@EndNode
+
+
+@Node MODENAMES "Visage.guide/Algorithmic mode names"
+
+	@{u}@{b}Algorithmic mode names@{ub}@{uu}
+
+An algorithmic name is a name that is built out of information available in
+the so called display database. These names are rather similar to the
+(English) names seen in e.g. the ScreenMode preferences program, but some
+things differ.
+
+But why have different names? Well, the reason is rather simple actually.
+The display database only contains names for relatively few screen modes¹.
+With these algorithmic names, you can specify any mode using text (in a
+consistent manner). You are not limited to the rather few modes the OS
+programmers decided to put names on.
+
+	@{" Mode name parts    " Link MN_PARTS}   How a mode name is "constructed".
+	@{" Mode name examples " Link MN_EXAMPLES}   Some examples.
+	@{" Mode name notes    " Link MN_NOTES}   Some notes about the mode names.
+
+Visage also supports the more traditional (and in some ways simpler) way of
+displaying modes without a name, where the name consists of the monitor
+name, the screen size, and any special mode flags. Examples:
+
+	PICCOLO:1024x768
+	MULTISCAN:320x240 HAM
+
+
+@{b}-- Footnotes --@{ub}
+
+¹ By using a custom sys/monitors.catalog file, more names can be added. The
+problem is that screen mode names are limited to about 30 chars, and this
+is not enough for many modes (especially MULTISCAN modes). The algorithmic
+names can be much longer (the internal buffer is currently 256 chars ;).
+
+@EndNode
+
+
+@Node MN_PARTS "Visage.guide/Algorithmic mode names/Mode name parts"
+@Toc MODENAMES
+
+	@{u}@{b}Mode name parts@{ub}@{uu}
+
+A name is made of a couple of components, of which some are required, and
+others are optional. The different components are separated from each other
+by a single space.
+
+This is the how the mode name should look (required components enclosed in
+<>, optional components enclosed in []):
+
+	<@{b}Monitor name:@{ub}><@{b}Horizontal resolution@{ub}> [@{b}Vertical resolution@{ub}]
+	[@{b}Special mode flag@{ub}]
+
+And here is an explanation of the different components:
+
+	@{b}Monitor name:@{ub}
+	The name of the monitor, including an ending colon (`:'). Example:
+	"PAL:".
+
+	@{b}Horizontal resolution:@{ub}
+	The nominal horizontal size (i.e. without overscan). Use one of the
+	following:
+		"Extra-Low Res"  - Less than 200 pixels wide.
+		"Low Res"        - Between 200 and 400 pixels wide.
+		"High Res"       - Between 400 and 800 pixels wide.
+		"Super-High Res" - More than 800 pixels wide.
+
+	@{b}Vertical resolution:@{ub}
+	The nominal vertical size (i.e. without overscan). Use one of the
+	following:
+		"Double" - So called double-scanned mode. Usually less than
+			   200 pixels high.
+		""       - Normal mode. Usually between 200 and 400 pixels.
+			   Sometimes more, up to 5-600 pixels.
+		"Laced"  - Interlaced ("flicker") mode. At least 400
+			   pixels. Often more.
+
+	@{b}Special mode flag:@{ub}
+	The following ones are available:
+		"HAM" - Hold And Modify. A special "compressed" mode with
+			many colors, but color selection is restricted. six
+			or eight bitplanes.
+		"EHB" - Extra HalfBrite. 64 colors (six bitplanes). The
+			second half of the colors are copies of the first,
+			but they are half as bright.
+
+There are a few more special mode flags that could be used, but they are
+not useful in this application.
+
+@EndNode
+
+
+@Node MN_EXAMPLES "Visage.guide/Algorithmic mode names/Examples"
+@Toc MODENAMES
+
+	@{u}@{b}Mode name examples@{ub}@{uu}
+
+Here are some examples on how the algorithmic mode names can look (English
+system defaults in parentheses):
+
+	DblPAL:Low Res                    (DblPAL:Low Res No Flicker)
+	Euro72:High Res                   (Euro72:Productivity)
+	Euro72:Extra-Low Res Double       («No equivalent»)
+	DblNTSC:Low Res Laced             (DblNTSC:Low Res Laced)
+	Super72:Super-High Res Laced HAM  («No equivalent»)
+
+Please note that e.g. the modes `PAL:Low Res' and `DblPAL:Low Res' have
+very different aspect with these kind of names! The "equivalent" of
+`PAL:Low Res' in DblPAL is `DblPAL:Low Res Double'.
+
+@EndNode
+
+
+@Node MN_NOTES "Visage.guide/Algorithmic mode names/Notes"
+@Toc MN_MODENAMES
+
+	@{u}@{b}Mode name notes@{ub}@{uu}
+
+It is usually not that important to specify the right special mode. If a
+special mode is needed, but not specified, then Visage will try to find a
+suitable replacement mode.
+
+The strings will be translated if a suitable catalog is installed and used,
+but Visage will always understand the English strings listed above. Also
+note that the monitor name is never translated.
+
+The algorithmic names are only suitable for native Amiga modes. Visage is
+currently only capable of detecting CyberGraphX modes, and will use the
+normal display database name (if any) instead. For graphics cards with
+other emulation software, I reccommend the use of the NORMALNAMES switch.
+
+See also:
+
+	@{" Mode name parts " Link MN_PARTS}
+	@{" NORMALNAMES     " Link NORMALNAMES}
+
+@EndNode
+
+
+@Node RENDERED "Visage.guide/Rendered pictures"
+
+	@{u}@{b}Rendered pictures@{ub}@{uu}
+
+A rendered picture is simply a picture that Visage must do more with, apart
+from reading - and possibly unpacking - the data, in order to be able to
+display it. Some picture formats (e.g. GIF and JPEG) are not stored in the
+normal Amiga bitmap format, and must therefore be converted. Others are in
+bitmap form, but your Amiga might not be able to display them anyway (e.g.
+24-bit IFF ILBM pictures). These must be converted as well.
+
+The rendering of such pictures can be controlled by using the COLOR, GRAY,
+SCALE and DITHER options (and the ECS option).
+
+Datatype pictures is a special case: If the system is not capable of
+correctly displaying a datatype picture, Visage will re-render it to a
+displayable format. If the system is capable of showing it, no re-render
+will be done, as this process costs rather much time and memory.
+
+See also:
+
+	@{" COLOR  " Link COLOR}
+	@{" DITHER " Link DITHER}
+	@{" ECS    " Link ECS}
+	@{" GRAY   " Link GRAY}
+	@{" SCALE  " Link SCALE}
+
+@EndNode
+
+
+@Node PROGRAMS "Visage.guide/Included programs"
+
+	@{u}@{b}Included programs@{ub}@{uu}
+
+In this archive (in the drawer `Visage/C') you can find a couple of extra
+support programs that I have written (some of these can also be found in
+the PicBoot archive):
+
+	@{" DeleteLink " Link DELETELINK}   Delete files without checking them first
+	@{" GetModeID  " Link GETMODEID}   Print the mode id number for a screen mode
+	@{" Kill       " Link KILL}   Stop another task, similar to Break
+	@{" MakeLink   " Link MAKELINK}   Make links, supports soft links too
+	@{" UnpackILBM " Link UNPACKILBM}   Unpack the BODY chunk of an IFF ILBM file
+
+The following program is used during the installation:
+
+	@{" UpdateTT   " Link UPDATETT}   Update tooltypes from one icon to another
+
+Feel free to use the programs above whereever you like, but if you do copy
+them, distribute them with another program or anything like that, please
+include the manual page in question, and a note that @{"I" Link AUTHOR} wrote them.
+
+There is another program in the distribution archive, FixAG, written by
+Martin Taillefer. It is used during the installation to add automatic
+wordwrapping to the Visage.guide file (this wordwrap requires AmigaGuide
+version 39 or higher). It makes a few assumptions about the document
+header, so please use it with care. It simply copies the file from the
+source to the dest, adds a "@WordWrap"-command in the "header" and removes
+linefeeds found in paragraphs from the file.
+
+Finally, in the `Visage/Rexx' drawer, you can find an ARexx script written
+by Leo Davidson. Its purpose is to use Visage to show slideshows in
+Directory Opus 5.
+
+@EndNode
+
+
+@Node DELETELINK "Visage.guide/Included programs/DeleteLink"
+@Toc PROGRAMS
+
+    @{b}NAME@{ub}
+
+	DeleteLink -- Delete files without checking them first.
+
+
+    @{b}TEMPLATE@{ub}
+
+	DeleteLink FILES/A/M,QUIET/S
+
+
+    @{b}SYNOPSIS@{ub}
+
+	Kill [FILES] <Files...> [QUIET]
+
+
+    @{b}DESCRIPTION@{ub}
+
+	Simply try to delete the specified files. DeleteLink will not try
+	to find out if it is possible to delete the file or anything like
+	that.
+
+	Patterns are not supported.
+
+
+    @{b}NOTES@{ub}
+
+	The normal Delete command in AmigaOS can not delete a soft link, if
+	the target for the soft link has been deleted. The Delete command
+	tries to "lock" the file to be deleted, in order to get some
+	information about it. For soft links, this locking also means that
+	the link will be resolved, i.e. the OS tries to lock the link
+	target, not the link itself. If the target file doesn't exist, then
+	Delete thinks that there is no file to delete, and quits.
+
+	DeleteLink avoids that problem by instead "blindly" trying to delete
+	the file, without first locking it.
+
+@EndNode
+
+
+@Node GETMODEID "Visage.guide/Included programs/GetModeID"
+@Toc PROGRAMS
+
+    @{b}NAME@{ub}
+
+	GetModeID -- Get screen mode id number.
+
+
+    @{b}SYNOPSIS@{ub}
+
+	GetModeID
+
+
+    @{b}DESCRIPTION@{ub}
+
+	Open an Asl or ReqTools screen mode requester, and print out the
+	decimal number for the selected screen mode. Only the number is
+	printed, making it suitable for "backticking" it into the command
+	line of other programs.
+
+
+    @{b}EXAMPLE@{ub}
+
+	A bit useless perhaps, since Visage has a mode requester (among
+	other things) already, but just an example to show how it can be
+	used:
+
+	Visage Pics:Some.Pic MODE `GetModeID`
+
+@EndNode
+
+
+@Node KILL "Visage.guide/Included programs/Kill"
+@Toc PROGRAMS
+
+    @{b}NAME@{ub}
+
+	Kill -- Send a break signal to a program.
+
+
+    @{b}TEMPLATE@{ub}
+
+	Kill NAME/A,ALL/S,C/S,D/S,E/S,F/S
+
+
+    @{b}SYNOPSIS@{ub}
+
+	Kill [NAME] <Name> [ALL] [C] [D] [E] [F]
+
+
+    @{b}DESCRIPTION@{ub}
+
+	Send the specified break signal(s) to the specified program. If the
+	program is not found, do nothing and return WARN. Any combination of
+	break signals are allowed.
+
+	Exactly how a program reacts (if at all) to a certain break signal
+	is up to the program, but below you can see the typical action (if
+	any is "defined").
+
+
+    @{b}OPTIONS@{ub}
+
+	NAME
+		The name of the program that should receive the break
+		signal. Note that this is the so called process name, not
+		the program name. They might differ, but usually they
+		should not. The first program with this name is signalled.
+		The search is not case sensitive.
+
+	ALL
+		All break signals below are to be sent.
+
+	C
+		Send the break signal Ctrl-C. The program usually quits
+		upon receiving it. This is the default signal.
+
+	D
+		Send the break signal Ctrl-D. Some programs (such as
+		Visage) abort the current "operation" (or file), and
+		proceeds with the next (if any).
+
+	E
+		Send the break signal Ctrl-E.
+
+	F
+		Send the break signal Ctrl-F. The program usually "pops
+		up" (bringing any window to the front) upon receiving it.
+
+@EndNode
+
+
+@Node MAKELINK "Visage.guide/Included programs/MakeLink"
+@Toc PROGRAMS
+
+    @{b}NAME@{ub}
+
+	MakeLink -- Make a link from one file or drawer to another.
+
+
+    @{b}TEMPLATE@{ub}
+
+	MakeLink FROM/A,TO/A,HARD/S,SOFT/S,FORCE/S
+
+
+    @{b}SYNOPSIS@{ub}
+
+	MakeLink [FROM] <Source> [TO] <Dest> [HARD] [SOFT] [FORCE]
+
+
+    @{b}DESCRIPTION@{ub}
+
+	Creates a file on a disk that is a pointer to another file. When an
+	application or command calls the FROM file, the TO file is actually
+	used. By default, MakeLink makes hard links - the FROM and TO files
+	must both be on the same volume.
+
+	To make soft links - which can cross volumes - the SOFT keyword
+	must be specified. This might not be supported by all filesystems
+	or OS versions.
+
+	Normally, MakeLink does not support drawer links, as they can be
+	dangerous to applications. To create a drawer link you must use the
+	FORCE option. If MakeLink detects that you are creating a circular
+	link, such as a link to a parent drawer, you will receive a Link
+	loop not allowed message.
+
+
+    @{b}OPTIONS@{ub}
+
+	FROM
+		The name of the link to be created.
+
+	TO
+		The file/drawer the link should point to.
+
+	HARD
+		Create a hard link. Hard links can only point to files or
+		drawers on the same volume. This is the default.
+
+	SOFT
+		Create a soft link. Soft links can point to files or
+		drawers on other volumes.
+
+	FORCE
+		You must specify this in order to make a drawer link.
+
+
+    @{b}NOTES@{ub}
+
+	MakeLink requires OS 3.0 or better to operate, as soft links are
+	said to not be fully supported in earlier OS versions.
+
+	OS 3.0 seems to only allow the creation of soft directory links. OS
+	3.1 supports soft file links as well.
+
+	Not all programs support soft links. Especially soft file links can
+	cause problems, and may for example show up as a directory.
+
+	Using soft links can be a bit tricky. If you delete the
+	file/directory the soft link points at, then not all programs will
+	be able to delete it. In that case, you have to create the file the
+	link points to, and then delete the link (and finally the file). Or
+	you could use the included @{"DeleteLink" Link DELETELINK} program.
+
+	The complete path to soft links (including the file name) can not
+	be more than 256 chars long, due to limitations in the current OS
+	version. If you try to create the link anyway, you will get a
+	non-functional link.
+
+
+@EndNode
+
+
+@Node UNPACKILBM "Visage.guide/Included programs/UnpackILBM"
+@Toc PROGRAMS
+
+    @{b}NAME@{ub}
+
+	UnpackILBM -- Unpack IFF ILBM pictures.
+
+
+    @{b}TEMPLATE@{ub}
+
+	UnpackILBM FROM/A,TO
+
+
+    @{b}SYNOPSIS@{ub}
+
+	UnpackILBM [FROM] <Source> [TO <Dest>]
+
+
+    @{b}DESCRIPTION@{ub}
+
+	Unpack the so called BODY chunk of an IFF ILBM file. The BODY chunk
+	contains the actual picture data. The other parts of the file are
+	simply copied.
+
+
+    @{b}OPTIONS@{ub}
+
+	FROM	The picture to unpack.
+
+	TO	The file to unpack to. If not specified, then the unpacked
+		file will overwrite the original (via a temporary file).
+		Specifying the same file for both FROM and TO causes an
+		error.
+
+
+    @{b}FUTURE PLANS@{ub}
+
+	Several things could be improved, including buffered I/O (and thus
+	not loading the entire BODY chunk into memory and unpack it there);
+	a chunk filter (to remove unwanted chunks). Other (less likely to
+	be implemented) things include the possiblity to add/change some
+	chunks and pack the BODY chunk.
+
+@EndNode
+
+
+@Node UPDATETT "Visage.guide/Included programs/UpdateTT"
+@Toc PROGRAMS
+
+    @{b}NAME@{ub}
+
+    	UpdateTT -- Update tooltypes from one icon to another.
+
+
+    @{b}TEMPLATE@{ub}
+
+	UpdateTT FROM/A,TO/A,TT=TOOLTYPES/A/M
+
+
+    @{b}SYNOPSIS@{ub}
+
+	UpdateTT [FROM] <Source> [TO] <Dest> [TOOLTYPES] <ToolType> ...
+
+
+    @{b}DESCRIPTION@{ub}
+
+	Update tooltypes from one icon to another. The tooltypes specified
+	(patterns are allowed) that are found in the FROM icon, will be
+	copied to the TO icon, but only if the did not already exist in the
+	TO icon. All other tooltypes are left unchanged.
+
+	When specifying the tooltypes, only the actual "name" of the
+	tooltype is considered. Any arguments are ingored, as are "comment
+	parentheses" ("()" around the tooltype to disable it).
+
+
+    @{b}OPTIONS@{ub}
+
+	FROM
+		The name of the icon to read the tooltypes from, without
+		the ".info" extension.
+
+	TO
+		The name of the icon to update the tooltypes to, without
+		the ".info" extension.
+
+	TOOLTYPES
+		The tooltypes that should be updated. Patterns are allowed.
+		Parentheses around tooltypes in the icons (to disable them)
+		are ignored, as are any arguments.
+
+@EndNode
+
+
+@Node BUGS "Visage.guide/Known problems"
+
+	@{u}@{b}Known problems@{ub}@{uu}
+
+Visage has been extensively tested on a variety of different Amigas
+(sometimes with Enforcer and/or Mungwall running), and I am happy to say
+that there are not many known problems at the moment.
+
+However, there are a couple of things that you should be aware of:
+
+	@{" Back picture visible " Link BACK_PICTURE}
+	@{" Bad aspect           " Link BAD_ASPECT}
+	@{" Graphic cards        " Link GFX_CARD}
+	@{" Mouse jumping        " Link MOUSE_JUMP}
+	@{" Screen centering     " Link SCREEN_CENTER}
+	@{" Tooltypes ignored    " Link NO_TOOLTYPES}
+
+There is also one bug that I have been unable to fix. Luckily, it is rather
+harmless. Sometimes the @{"fade" Link FADE} will stop when the picture is very dark (but
+not completely black). I do not know why or when this happens; I have only
+noticed it once.
+
+I would not be the least surprised if more serious problems or bugs turns
+up. After all, bug-free software is a goal that is impossible to reach. :)
+
+@EndNode
+
+
+@Node BACK_PICTURE "Visage.guide/Known problems/Back picture visible"
+
+	@{u}@{b}Back picture visible@{ub}@{uu}
+
+Under some very special circumstances, the picture loaded in the background
+may be partially visible. This and cannot be avoided, and is harmless.
+
+@EndNode
+
+
+@Node BAD_ASPECT "Visage.guide/Known problems/Bad aspect"
+
+	@{u}@{b}Bad aspect@{ub}@{uu}
+
+Some pictures have a strange aspect stored in the file. Thus, if you do get
+a strange aspect for a picture, this is the most likely explanation (or
+maybe your Amiga does not have a screen mode with a proper aspect). If you
+have a graphics card, it is possible that the display database does not
+contain proper values (for the modes provided by the graphic card). The
+internal BestModeID() function is very strict when it comes to the aspect,
+so this should not be the source of the problem.
+
+For certain GIF files (of the GIF89a version) it is possible that Visage
+gets the aspect wrong. I hope I have interpreted the GIF specification
+correctly, but if not, then the aspect will be wrong. As I don't have any
+GIF89a picture that uses this feature, I have not been able to test it. If
+you have such a picture (especially one that is displayed incorrectly), I
+would appreciate if you could send it to @{"me" Link AUTHOR}.
+
+@EndNode
+
+
+@Node GFX_CARD "Visage.guide/Known problems/Graphic cards"
+
+	@{u}@{b}Graphic cards@{ub}@{uu}
+
+As I do not own a graphics card myself, it is a bit tricky to ensure that
+Visage really works with the "Intuition emulators" most cards have. I do
+have a couple of beta testers that have graphic cards though, so Visage
+should behave fairly well.
+
+One important thing to remember is that you should use the COLOR switch
+(and possibly the DITHER argument as well) if you want to display e.g.
+colour JPEG pictures with your graphic card (unless it supports HAM8).
+
+Here is a list over how the most common emulators behaves (according to the
+beta testers! ;):
+
+	@{b}EGS@{ub}
+	Pictures are displayed properly. However, it seems like the
+	background loading does not work. The LOWMEM or LATELOAD option
+	should be specified in that case.
+
+	@{b}Picasso@{ub}
+	No known serious problems. Possibly some trashed graphics at the
+	right side of the picture (but hopefully not). Please note that the
+	NOFOREIGN switch might be needed for Visage to work properly (i.e.
+	not crash ;).
+
+	@{b}CyberGraphX@{ub}
+	No known serious problems. Visage may select the wrong mode
+	sometimes, due to errors in the display database.
+
+I have not been able to trace any of the above problems to bugs in Visage
+(maybe some of the problems can be avoided, if I only knew how ;). It
+should be noted that newer/older versions of the emulation software may
+work differently. Also, the beta testers have not tested the final release
+version. ;)
+
+See also:
+
+	@{" COLOR       " Link COLOR}
+	@{" DITHER      " Link DITHER}
+	@{" LATELOAD    " Link LATELOAD}
+	@{" LOWMEM      " Link LOWMEM}
+	@{" NOFOREIGN   " Link NOFOREIGN}
+	@{" NORMALNAMES " Link NORMALNAMES}
+	@{" RTG         " Link RTG}
+
+@EndNode
+
+
+@Node MOUSE_JUMP "Visage.guide/Known problems/Mouse jumping"
+
+	@{u}@{b}Mouse jumping@{ub}@{uu}
+
+During picture loading (especially in the background), the mouse pointer
+"jumps" a little horizontally. I do not know if this is specific to my
+computer (and all my background utilities), but it does happen for other
+picture viewers as well.
+
+I do not know why this happens; if it is due to a bug in Visage (not
+likely, considering that other programs have similar "problems") or what.
+It seems to be harmless though.
+
+@EndNode
+
+
+@Node SCREEN_CENTER "Visage.guide/Known problems/Screen centering"
+
+	@{u}@{b}Screen centering@{ub}@{uu}
+
+The screen centering algorithm does not seem to work most "intuition
+emulators" for graphic cards (I think I know how this could be worked
+around, but I have not bothered with it yet ;).
+
+Also, the centering may be more or less wrong for Super72 screens. The
+exact amount depends on the OS version.
+
+@EndNode
+
+
+@Node NO_TOOLTYPES "Visage.guide/Known problems/Tooltypes ignored"
+
+	@{u}@{b}Tooltypes ignored@{ub}@{uu}
+
+It is possible that the tooltypes specified in the Visage icon are ignored.
+This can happen if you e.g. double-click on an icon that has Visage as the
+default tool. If the Workbench needs to search the command path for Visage,
+it will then pass on information that makes Visage believe that the program
+is located in the same drawer as the project icon, which is not the case.
+Seems to be a Workbench bug if you ask me. ;) I do not know which versions
+of Workbench that have this problem. 3.1 (40.5) has it at least.
+
+To work around this problem, select the project icon, and double-click on
+the Visage icon with shift pressed, or make sure the project icon contains
+the full path to Visage.
+
+@EndNode
+
+
+@Node TODO "Visage.guide/The future"
+
+	@{u}@{b}The future@{ub}@{uu}
+
+There are a several things that could be improved or implemented. These are
+things I (or a user or beta tester) have though of during the development,
+but did not get implemented, either due to lack of information, time,
+"interest" (i.e. if I thought it could be useful) or something similar.
+
+Anyway, here is a list over the more important ones:
+
+	Support for PNG (Portable Network Graphics) pictures. Anyone who
+	have a small and compact zlib decompressor (preferably in
+	assembler)? ;)
+
+	Improve the quality of rendered "deep" pictures in ECS modes. Code
+	that detects grayscale pictures could be nice. Future versions of
+	the PNG code might help as well.
+
+	Direct support for graphic cards, via EGS and/or CyberGraphX. I
+	think I have enough information to implement CyberGraphX support
+	(and I have a couple of betatesters), so this is likely to be
+	implemented in an upcoming version (next major update perhaps). I'd
+	really prefer to be able to test things myself though. ;)
+
+	A GUI mode, to make Visage easier to use, especially from the
+	Workbench. This would probably mean a set of menus, and slightly
+	different behavior (when the mode is enabled).
+
+	Load more than one picture in the background (similar to FastView).
+
+And a few minor ones:
+
+	Internal multitasking. This would mean that Visage would better
+	respond to e.g. cursor keys, while loading a datatype picture.
+
+	Support for superview.library/multipic.library?
+
+If you have any suggestions on what you think should be implemented, feel
+free to contact @{"me" Link AUTHOR}.
+
+I have no immediate plans to add the following:
+
+	Animation support. I suggest you use a dedicated animation viewer
+	instead, such as BigAnim.
+
+	More picture formats. I do plan to add PNG, but only since this
+	seems to be a rather "good" format, that will be used a lot in the
+	future. Maybe a few more formats will be added, but I do not know of
+	any other right now (and using datatypes is much better for "odd"
+	formats anyway).
+
+@EndNode
+
+
+@Node THANKS "Visage.guide/Acknowledgments"
+
+	@{u}@{b}Acknowledgments@{ub}@{uu}
+
+There are a couple of persons who have helped me in one way or another with
+this program (in no particular order):
+
+	@{b}Christoph Feck@{ub}
+	The Tower JPEG Codec Class.
+
+	@{b}The Independent JPEG Group@{ub}
+	The color quantization/dithering functions.
+
+	@{b}Rafael D'Halleweyn@{ub}
+	The fast 24-bit to HAM6/HAM8 encoding functions.
+
+	@{b}Sebastiano Vigna@{ub}
+	The PCHG specification and example code.
+
+	@{b}Martin Taillefer@{ub}
+	The asynchronous IO code and the FixAG program. (Although I had to
+	fix a bug or two in the async io code myself! ;)
+
+	@{b}Günther Röhrich@{ub}
+	His ideas/suggestions, and the help he gave me about his HAM
+	encoding function, although I decided to not use it.
+
+	@{b}Lars Eilebrecht@{ub}
+	For DoIconLite, which was used during the installation in earlier
+	versions of Visage. I replaced it with a program written by myself,
+	since DoIconLite did not quite work the way I wanted.
+
+	@{b}Phil Vedovatti@{ub}
+	For the nice NewIcons.
+
+	@{b}John Hendrikx@{ub}
+	For the chunky to planar conversion routines (sorry, the planar to
+	chunky functions are not flexible enough ;).
+
+	@{b}Lee Kindness@{ub}
+	For Umentiler, and being kind (!) enough to implement my specific
+	requests, so that I don't need to mess around with ARexx scipts and
+	environment variables to process this manual.
+
+	@{b}Erik Lindberg@{ub}, @{b}Johan Billing@{ub}, @{b}Hans Bergengren@{ub},
+	@{b}Mathias Karlsson@{ub}, @{b}Mattias Johansson@{ub}, @{b}Reinhard Katzmann@{ub},
+	@{b}Thorsten Marquardt@{ub}, @{b}Lars Eilebrecht@{ub}, @{b}Nick Soggia@{ub}
+	Beta testing. A special thank must go to Mathias Karlsson, who
+	suggested the name for this program.
+
+@EndNode
+
+
+@Node AUTHOR "Visage.guide/Author information"
+
+	@{u}@{b}Author information@{ub}@{uu}
+
+If you wish to send me comments, bug reports, gifts, money or whatever,
+then use this address:
+
+	Magnus Holmgren
+	Kvarnbergsvägen 5
+	S-444 47  Stenungsund
+	SWEDEN
+
+Electronic addresses:
+
+	Fidonet : 2:203/512.10
+	Internet: cmh@lls.se
+	WWW     : http://www.lls.se/~cmh/
+
+The latest version of Visage is available for download from my home page.
+There you can also find some information about me, and other programs I
+have written.
+
+If you send me a bug report, please read the relevant sections of this
+manual first (mainly the @{"argument" Link ARGUMENTS} section if suitable, and the
+@{"known problems" Link BUGS} section). Many known "problems" (or features ;) are
+mentioned here.
+
+Also, please include some basic system information with your bug report (OS
+version, CPU type and graphics subsystem are of main interest here). If the
+problem only occurs in certain cases (e.g. a certain picture type or size,
+or certain arguments), please specify this as well. Thank you.
+
+@EndNode
+
+
+@Node HISTORY "Visage.guide/Program history"
+
+	@{u}@{b}Program history@{ub}@{uu}
+
+	@{" Version 39.0  " Link V39_0}
+	@{" Version 39.1  " Link V39_1}
+	@{" Version 39.2  " Link V39_2}
+	@{" Version 39.3  " Link V39_3}
+	@{" Version 39.4  " Link V39_4}
+	@{" Version 39.5  " Link V39_5}
+	@{" Version 39.6  " Link V39_6}
+	@{" Version 39.7  " Link V39_7}
+	@{" Version 39.8  " Link V39_8}
+	@{" Version 39.9  " Link V39_9}
+	@{" Version 39.10 " Link V39_10}
+	@{" Version 39.11 " Link V39_11}
+
+@EndNode
+
+
+@Node V39_0 "Visage.Guide/Program history/Version 39.0"
+@Toc HISTORY
+
+	@{u}@{b}Version 39.0@{ub}@{uu}
+
+Initial release.
+
+@EndNode
+
+
+@Node V39_1 "Visage.Guide/Program history/Version 39.1"
+@Toc HISTORY
+
+	@{u}@{b}Version 39.1@{ub}@{uu}
+
+Various bug fixes to the Xpk support code (it was a last minute addition.
+The beta testers never saw it ;):
+
+	Certain seeks did not work. Usually caused crashes if the unpacking
+	was breaked.
+
+	After a break, the next picture will be started faster (never
+	noticed, due to the bug above ;).
+
+	Errors (during read) was not quite properly handled.
+
+Fixed a bug that caused MungWall hits, but usually nothing else. ;)
+
+Tried to remove the "odd" error requesters some users got after cancelling
+the file requester. I am not sure why this happened, but hopefully the
+changes will help. If not, I guess I will have to remove it, although this
+must be due to some "bad" Asl patcher or something similarly buggy. ;)
+
+Corrected the version string. The last part of the version number should
+never have been there.
+
+The working name of the program (PicView) was left in a few places. Funny,
+I thought I had searched through the relevant files.. ;)
+
+Please note that my Fidonet address changed to 2:204/204.6 on the 13th of
+August ('95)!
+
+Added support for color rendering of pictures, based on code from the
+Independent JPEG Group. The quality is not great perhaps (largely based on
+the fact that the palette is fixed), but on a 256 color screen the result
+is fairly good, at least with dithering.
+
+Now (optionally) @{"dithers" Link DITHER} grayscale @{"rendered" Link RENDERED} pictures on ECS Amigas.
+Improved the quality quite noticably.
+
+Made various minor cleanups to the program. Hopefully made it a bit
+smaller. ;) (Eaten up by all additions..)
+
+Updated the installer script a bit.
+
+Norwegian translation by Jan-Tore Eliassen included.
+
+Included a simple ARexx script written by Leo Davidson. Its purpose is to
+use Visage for a slideshow in DirOpus5.
+
+Removed an Enforcer hit. Only occurred when Visage encountered a file it
+could not display, and no other picture was displayed.
+
+Added support for soft file links (the OS handles soft dir links by itself).
+
+Included a @{"MakeLink" Link MAKELINK} clone I wrote quite a while ago, but never released, so
+that you can make soft links yourself. Note: This clone has the same size
+as the original (MakeLink 37.4)! ;)
+
+Fixed a bug that (probably) could cause the wrong filename to be displayed
+sometimes. I never noticed it... ;)
+
+Included DoIconLite by Lars Eilebrecht, to allow easy and flexible update
+of the tooltypes in the icon (in the installation script).
+
+Added the @{"TIME" Link TIME} tooltype. So now you can see how long it took to load each
+picture. Note: This is another "last minute addition", so do not be
+surprised if things does not quite work as expected. ;)
+
+Added @{"COMPACT" Link COMPACT} switch. By default, Visage is now displaying verbose output
+on a separate line, to make it look better on consoles with a "limited"
+width. Using this switch will revert to the old one-line format.
+
+If an error occurred when using the @{"RANDOM" Link RANDOM} option, some memory (and locks
+on drawers) was not always freed.
+
+Updated the asynchronous IO code, to work around a problem when using
+SnoopDos with "ShowRexx" active. Caused enforcer hits if Enfocer and
+Mungwall was running.
+
+@EndNode
+
+
+@Node V39_2 "Visage.Guide/Program history/Version 39.2"
+@Toc HISTORY
+
+	@{u}@{b}Version 39.2@{ub}@{uu}
+
+	Compile date: November 7, 1995
+	Program size: 46312 bytes
+
+Finnish translation by Osma Ahvenlampi included.
+
+The GIF reader sometimes reported odd errors if there was an error in the
+picture.
+
+If there was an error in a picture, the error message was printed before
+the picture information.
+
+No newline was printed after the error message.
+
+Timing information output was not quite right (leading parenthese was shown
+when it should not, and vice versa).
+
+Empty files now get a meaningful error message.
+
+Did some changes to improve RTG support (i.e. an attempt to make it
+actually work ;).
+
+Removed an Enforcer hit when using @{"GRAY" Link GRAY} output and @{"DITHER" Link DITHER} NONE.
+
+Added the @{"NORMALNAMES" Link NORMALNAMES} switch, in case you prefer the normal display mode
+names (and sizes plus modes for those without a name), or you have a
+graphics card.
+
+Fixed a typo in this manual, so that one link to the man page for
+DoIconLite works.
+
+Certain constructed mode names were not correct. Could only happen for
+"foreign" (normally graphics card) modes without a name. Made a couple of
+other changes to the related code.
+
+Implemented color cycling. Added the @{"CYCLE" Link CYCLE} argument, to automatically start
+the cycling when needed. This cycling only supports "simple" (CRNG) cycling
+at the moment.
+
+@{"SORT" Link SORT} argument added. If specified, then the pictures will be displayed in
+alphabetical order. Behaves otherwise as @{"RANDOM" Link RANDOM}.
+
+@{"NOCLICK" Link NOCLICK} argument added. If specified, then Visage will ignore any mouse
+clicks on the pictures. To view the next picture or exit, the keyboard need
+to be used.
+
+@{"COMMAND" Link COMMAND} argument added. Here a command can be specified, that is executed
+when `e' is pressed.
+
+VisageOpts may now contain comments. Comments starts with a `#' or `;' on
+the beginning of a line, and ends with the end of that line.
+
+Visage now looks for the file VisageOpts in the drawer specified in the
+environment variable ConfigPath, before looking for the environment
+variable VisageOpts.
+
+@{"TEST" Link TEST} argument added. Causes pictures to be loaded, but not displayed. If a
+picture fails, the @{"COMMAND" Link COMMAND} is executed, if specified.
+
+Fixed a few problems in the installer script.
+
+Cleaned up the output code. The WShell scrollback looks much better now.
+
+If you specify a file in the file requester that refers to a file that
+does not exist, then Visage will interpret it as a pattern. This allows you
+to select a drawer, and then specify a pattern in a very easy way. ;)
+
+Replaced some catalogs strings.
+
+Rewrote dithering functions into assembler. Overall render speed increased
+some 13-18 percent (depending on dither mode) on a rather large (scaled)
+JPEG on my system (A4000/040).
+
+Added the @{"RTG" Link RTG} switch. Forced by the fact that Visage assumed a certain
+flags in the display database would be set for foreign screen modes, but
+due to bugs in some system software, this was not the case. This switch
+will make Visage slower on rendering some pictures, and/or use more memory
+for datatype pictures, when displayed in native Amiga modes. Thus, it
+should only be used when needed; i.e., when a graphics card is installed.
+
+Visage will now always try to use the aspect of the screen mode stored in
+an IFF ILBM picture. This did not always happen earlier.
+
+Visage did not render dithered grayscale images properly (the picture was
+almost completely black).
+
+Added some simple CyberGraphX support. Visage is now able to properly
+recognize a CyberGraphX mode, and will behave accordingly. Thus, the @{"RTG" Link RTG}
+switch is not needed if you have CyberGraphX installed.
+
+Replaced the NewIcon image with one drawn by Phil Vedovatti.
+
+Visage sometimes exited without reason when a bad file was found.
+
+Changed to chunky <-> planar conversion code written by John Hendrikx
+(except for chunky to planar for 8-bit screens). Shaved some 700 bytes from
+the program, and made it a tad faster.
+
+If no password was specified, but one is needed, Visage will now prompt for
+one, if ReqTools is available.
+
+Added GRAPHICS as a synonym to STANDARD, for the @{"OVERSCAN" Link OVERSCAN} argument.
+
+Added some safety checks.
+
+Cleaned up some parts of this manual. Also changed the layout a little.
+
+Reduced memory usage during dither and/or color render (at most a couple of
+KBs).
+
+Added vertical centering (@{"VCENTER" Link VCENTER}). Note that this looks best if border
+blanking is off, due to how it is implemented. It also makes the picture
+use more graphics memory.
+
+Fixed a bug that could make gray scale rendering a tiny bit slower than
+needed. ;)
+
+Added support for background color in GIFs (of version 89a). Nice when the
+border blanking is not on, and/or vertican screen centering is used. Note
+that not all GIFs use this feature.
+
+Localized date in "initial about string". ;)
+
+Changed way of rendering interlaced GIFs. Looks much better, but is
+slightly slower. This method is not used if the picture is scaled (it will
+not look good.. ;).
+
+Changed way of detecting foreign modes. Not as flexible as the old one, but
+should work much better. And even if it should become "out of date", the
+only drawback will be that Visage sometimes will be a bit slower than
+needed. ;) Should hopefully remove the need for the @{"RTG" Link RTG} switch.
+
+Made some more changes for improved RTG support.
+
+Fixed a bug that could cause crashes when started from Workbench via a
+project icon.
+
+@EndNode
+
+
+@Node V39_3 "Visage.Guide/Program history/Version 39.3"
+@Toc HISTORY
+
+	@{u}@{b}Version 39.3@{ub}@{uu}
+
+        Compile date: December 12, 1995
+        Program size: 95152 bytes
+
+@{"TEST" Link TEST} option did not work properly. It said "Not enough memory" for all
+non-datatype pictures, and did not display picture information for datatype
+pictures. Note that it seems like most datatypes doesn't report any error,
+even if the picture did contain detectable errors.
+
+Rewrote the scaling functions. The new ones have much higher precision (and
+are smaller and simpler, without loss of speed). The scaling should always
+make a perfect screen fit now! ;)
+
+Made some other scaling related changes, so that Visage (hopefully) will
+make the picture completely visible at all times.
+
+Visage did not properly parse the density (i.e. "reversed" aspect)
+information in JPEG pictures.
+
+Tried to remove the trashed graphics that sometimes can be seen to the
+right of a picture, when diplayed on a Picasso emulation screen.
+
+Made some further optimizations on the dithering functions (cases DITHER
+NONE and DITHER ORDERED). Overall speed increase at most some 6%.
+
+GIF pictures that were larger than specified (in the header) caused
+problems for Visage.
+
+Fixed a bug in the @{"SORT" Link SORT} option, that could cause crashes and similar.
+
+Added nifty @{"SHOWINFO" Link SHOWINFO} switch. Displays picture information above the acutal
+picture.
+
+Added @{"INFO" Link INFO} switch. Makes Visage display information about the picture, but
+not load it.
+
+Cleaned up the datatype reader a bit. Did not improve behavior as I had
+hoped (found the reason for it after I hade made the change ;).
+
+Replaced DoIconLite with @{"UpdateTT" Link UPDATETT}. I wrote UpdateTT since DoIconLite did
+not quite behave the way I wanted. UpdateTT is also much smaller. ;)
+
+Tried to fix the crashes when promoting IFF ILBM pictures to CyberGraphX
+modes.
+
+Improved the @{"TOFRONT" Link TOFRONT} behavior a little.
+
+French translation by Georges Goncalves included.
+
+@EndNode
+
+
+@Node V39_4 "Visage.Guide/Program history/Version 39.4"
+@Toc HISTORY
+
+	@{u}@{b}Version 39.4@{ub}@{uu}
+
+	Compile date: December 22, 1995
+	Program size: 47692 bytes
+
+Fixed a problem that trashed memory when displaying (non-scaled) interlaced
+GIFs.
+
+Missing/incorrect password got no error message. I knew about the problem
+before I released version 39.3, but I forgot to fix it! ;)
+
+The "Program size:" field in the version 39.3 information was with all
+debug info (it is quite much ;).
+
+Special screen modes (HAM, EHB and similar) was not properly handled when a
+MODE argument was specified, possibly causing pictures to be displayed in
+the wrong special mode.
+
+The @{"LOWMEM" Link LOWMEM} option caused crashes if "show next picture" was requested
+while loading the current picture.
+
+@EndNode
+
+
+@Node V39_5 "Visage.Guide/Program history/Version 39.5"
+@Toc HISTORY
+
+	@{u}@{b}Version 39.5@{ub}@{uu}
+
+	Compile date: January 21, 1996
+	Program size: 43832 bytes
+
+Fixed a bug that caused Visage to not work on CyberGraphX screens (and
+quite likely other intuition emulators as well). Introduced in version 39.3
+and/or 39.4.
+
+Recompiled with SAS/C 6.56. Reduced size with almost 4 KB.
+
+Fixed an Enforcer hit that occurred when starting Visage from a shell with
+the @{"QUIET" Link QUIET} option.
+
+Visage did not always close datatypes.library as needed, when viewing
+datatype pictures.
+
+German translation by Lars Eilebrecht included (I got one from Christian
+Kemp first, but his translation was not quite complete ;).
+
+Added some more error checking in the GIF unpacker.
+
+When breaking the current picture to view the next, Visage behaved as if
+the @{"LOWMEM" Link LOWMEM} switch had been specified.
+
+Visage did not propagate break signals that were recieved during a fade.
+Now the fading code simply peeks on the received signals and does not
+process them (leaving that for later). This means that Visage will not
+react immediately to break signals during the fade, but to fix that would
+cost more work than I would like to spend right now. ;)
+
+Argh! Catalog generation went haywire in version 39.3. :/ Why did not
+anyone notice this eariler? ;)
+
+If @{"SHOWINFO" Link SHOWINFO} was specified, but there were no @{"vertical centering" Link VCENTER} or @{"scaling" Link SCALE},
+then Visage could calculate the wrong screen height, and would quite likely
+trash some graphics memory.
+
+Visage would quit on certain errors (such as file did not exist).
+
+Switched on invisible typing in the password requester.
+
+Visage sometimes ignored "show next picture" requests.
+
+Misc cleanups and optimizations. I hope I did not break anything fixed
+above. ;)
+
+Changed so that @{"UpdateTT" Link UPDATETT} only requires OS 2.04+. I made it require OS 3.0
+for no real reason. ;) Added a proper version string. Recompiled with SAS/C.
+
+@EndNode
+
+
+@Node V39_6 "Visage.Guide/Program history/Version 39.6"
+@Toc HISTORY
+
+	@{u}@{b}Version 39.6@{ub}@{uu}
+
+	Compile date: 23-Mar-96
+	Program size: 45204 bytes
+
+Removed some debug output in a BestMode related function (forgot to do it
+in 39.5 ;).
+
+Some errors in the GIF reader wasn't properly reported.
+
+Certain "early" picture errors caused Visage to crash.
+
+The IFF reader would crash when rendering to foreign screen modes
+(including when the @{"RTG" Link RTG} switch had been used, since it makes Visage assume
+all modes are foreign).
+
+Interlaced GIF pictures weren't alway rendered properly. It seems like it
+didn't always render the final pixel line. While at it, I cleaned up the
+responsible code.
+
+Fixed a quirk in the Installer script (selecting English catalog for
+installation didn't work).
+
+The color selection for the @{"SHOWINFO" Link SHOWINFO} text didn't always produce the
+correct result, possibly making the text invisible.
+
+Added pattern support for the @{"MONITOR" Link MONITOR} argument.
+
+Added the @{"NOICON" Link NOICON} switch. Makes Visage ignore any `#?.info' files
+enountered.
+
+Increased the date buffer, when displaying the about message. This to solve
+the problem for an Italian user, with a buggy Italian locale. Since I
+assume other users (mostly Italian, I guess ;) can have this problem as
+well (i.e. Visage crashes when right after displaying the about message), I
+made this simple workaround.
+
+Changed the @{"NORMALNAMES" Link NORMALNAMES} behaviour a little. When specified, then the
+display database names will be checked first, when using the @{"MODE" Link MODE}
+argument. The behaviour here was not clearly defined earlier.
+
+Visage will now remap datatype pictures the system can't display. This is
+needed for proper behaviour on ECS Amigas. This forced me to change back to
+the old (and somewhat slower) planar to chunky converting code, as it is
+more generic. It is still much faster than the ROM code. ;)
+
+Added the @{"NOFOREIGN" Link NOFOREIGN} switch, to make Visage work better with certain
+Intuition emulators (most notably the PicassoII). If Visage tended to crash
+for you - especially when you didn't specify a display mode yourself - then
+you should try this switch.
+
+Some minor internal improvements...
+
+Improved argument handling for tooltypes. Strings with quotation characters
+were not properly handled. The main candidate for this problem was the
+@{"COMMAND" Link COMMAND} argument.
+
+Improved mode selection for PCHG pictures (so that modes that do not
+support such pictures are avoided).
+
+French and Italian catalogs updated.
+
+@EndNode
+
+
+@Node V39_7 "Visage.Guide/Program history/Version 39.7"
+@Toc HISTORY
+
+	@{u}@{b}Version 39.7@{ub}@{uu}
+
+	Compile date: 12-Apr-96
+	Program size: 45168 bytes
+
+Note: Version 39.6 was only available from my home page. For reasons
+unknown to me, I was unable to upload it to Aminet. I only got messages
+about corrupt archives, while the archive was ok when I tested it.
+
+Workbench argument parsing didn't work properly. Sorry, I hardly ever start
+Visage from the Workbench! ;)
+
+The bottom of interlaced GIFs still didn't look quite right. I think I've
+got it right now.
+
+Errors that occured during the internal IFF ILBM or GIF unpacking got the
+wrong error message.
+
+@EndNode
+
+
+@Node V39_8 "Visage.Guide/Program history/Version 39.8"
+@Toc HISTORY
+
+	@{u}@{b}Version 39.8@{ub}@{uu}
+
+	Compile date: 96-05-06
+	Program size: 45232 bytes
+
+Finally found and fixed the bug that caused crashes when the system ran low
+on chip memory.
+
+Updated the installer scrip to really work when english language was
+selected during install (an updated 39.7 archive with this fix has been
+available on my home page).
+
+Updated the installation script: Made changes for better V43 conformance,
+and added some other things.
+
+Finally updated the Swedish translation. ;)
+
+@EndNode
+
+
+@Node V39_9 "Visage.Guide/Program history/Version 39.9"
+@Toc HISTORY
+
+	@{u}@{b}Version 39.9@{ub}@{uu}
+
+	Compile date: 96-07-02
+	Program size: 45040 bytes
+
+Visage should now work better with the V43 picture.datatype and truecolor
+(24-bit) images.
+
+Datatype re-rendering was not correctly done for HAM8 pictures.
+
+Made some other minor changes and cleanups to the datatype reader.
+
+The text displayed by the @{"SHOWINFO" Link SHOWINFO} switch was not displayed on the right
+position, sometimes making text clipped (due to the font I normally use, I
+did not notice the problem. I know; should have tested with some other
+fonts ;).
+
+The task creation code were doing somewhat naughty things, causing Mungwall
+hits (however, this did work with the current OS versions). Changed to more
+proper behaviour.
+
+Russian and Spanish translations included.
+
+Clearified the behaviour of the @{"VisageOpts" Link VISAGEOPTS} configuration.
+
+Visage did not always clean up properly when aborted. This would usually
+only happen for datatype pictures.
+
+Visage did not behave consistently if @{"WAITFORPIC" Link WAITFORPIC} was specified, and you
+asked Visage to view the next picture. Now Visage will never wait in this
+particular case. Cleared up the manual on this part as well.
+
+Tweaked the startup code a little.
+
+Funny... I just found out that (most) DOS function indeed does support soft
+links, at least in OS 3.1. How come I did not notice this before, when I
+added the "soft link support" code in Visage in the first place? As I think
+of it, the error code was a bit odd. ;) Anyway, that code have now been
+removed, saving a few bytes.
+
+Upcoded @{"MakeLink" Link MAKELINK} to C and added soft link detection. It will now state that
+links between volumes needs the SOFT keyword, rather than saying something
+like "object not of require type".
+
+@EndNode
+
+
+@Node V39_10 "Visage.Guide/Program history/Version 39.10"
+@Toc HISTORY
+
+	@{u}@{b}Version 39.10@{ub}@{uu}
+
+	Compile date: 96-09-26
+	Program size: 45088 bytes
+
+Increased miminal bitmap width from 16 to 80, when running under OS 3.0.
+This should fix the improperly displayed narrow pictures (i.e. those less
+than 80 pixels wide).
+
+When specifying the @{"NOICON" Link NOICON} switch, then the file requester will not
+include any icons either.
+
+Visage now sanity checks some picture parameters to prevent problems.
+Earlier, pictures with e.g. a depth of zero would cause crashes.
+
+Rendering deep grayscale (more than 16 shades) pictures on ECS Amigas with
+dithering turned off didn't look very well. Fixed.
+
+Visage always (?) treated files selected in a file requester as having
+patterns, when MuFS was installed, due to a bug in Visage. As a result,
+files containg pattern characters couldn't be selected (without some extra
+work).
+
+Added spanish translation of the installer script.
+
+@EndNode
+
+
+@Node V39_11 "Visage.Guide/Program history/Version 39.11"
+@Toc HISTORY
+
+	@{u}@{b}Version 39.11@{ub}@{uu}
+
+	Compile date: 96-12-08
+	Program size: 45148 bytes
+
+Norwegian translation updated. Added translations for Dutch (I've had the
+actual translation since 39.8, but no catalog was made for it, nor was the
+install script updated ;) and Serbian (at least I assume that is what
+Srpski stands for ;). Updated the installer script to install Russian
+catalogs as well.
+
+Added the @{"NOFILECHECK" Link NOFILECHECK} switch, and changed the behaviour in the file
+requester a bit. If the switch is not specified, then Visage will always
+check if a specified file exists, rather than process it as a pattern. This
+solves the problem with failing to display pictures with pattern characters
+in the name or the path, especially when Visage is started from the
+Workbench. The drawback is that patterns might not always be treated as you
+like. Hence the switch.
+
+The release archive is now created a bit differently. Should hopefully fix
+the uploading problems I've experienced (most likely caused by Unix LhA
+failing on the Visage archive. I've removed some archiving options likely
+to cause problems according to Stefan Boberg). The 39.10 release didn't
+make it either... :)
+
+Added the @{"BORDERBLANK" Link BORDERBLANK} option.
+
+Recompiled with SAS/C 6.57.
+
+Wrote the @{"DeleteLink" Link DELETELINK} command.
+
+Added version string to MakeLink, and recompiled it with SAS/C 6.57.
+
+@EndNode
+
+
+@Node INDEX "Visage.guide/Index"
+
+	@{u}@{b}Index@{ub}@{uu}
+
+	@{b}A@{ub}
+
+	@{" About the JPEG codec " Link JPEG}
+	@{" Acknowledgments " Link THANKS}
+	@{" Acknowledgments, legal " Link ACKNOWLEDGMENTS}
+	@{" Algorithmic mode names " Link MODENAMES}
+	@{" ALL " Link ALL}
+	@{" Arguments " Link ARGUMENTS}
+	@{" Author information " Link AUTHOR}
+
+	@{b}B@{ub}
+
+	@{" Back picture visible " Link BACK_PICTURE}
+	@{" Bad aspect " Link BAD_ASPECT}
+	@{" BESTMODE " Link BESTMODE}
+	@{" BORDERBLANK " Link BORDERBLANK}
+	@{" BUFSIZE " Link BUFSIZE}
+	@{" Bug reports " Link AUTHOR}
+
+	@{b}C@{ub}
+
+	@{" CENTER " Link CENTER}
+	@{" CLIPBOARD " Link CLIPBOARD}
+	@{" COLOR " Link COLOR}
+	@{" COMMAND " Link COMMAND}
+	@{" COMPACT " Link COMPACT}
+	@{" CYCLE " Link CYCLE}
+
+	@{b}D@{ub}
+
+	@{" DATATYPES " Link DATATYPES}
+	@{" DELAY " Link DELAY}
+	@{" DeleteLink " Link DELETELINK}
+	@{" DITHER " Link DITHER}
+
+	@{b}E@{ub}
+
+	@{" ECS " Link ECS}
+	@{" Environment variable " Link "VISAGEOPTS"}
+
+	@{b}F@{ub}
+
+	@{" FADE " Link FADE}
+	@{" Features " Link FEATURES }
+	@{" FILES " Link FILES}
+	@{" FOREVER " Link FOREVER}
+
+	@{b}G@{ub}
+
+	@{" GetModeID " Link GETMODEID}
+	@{" Graphic cards " Link GFX_CARD}
+	@{" GRAY " Link GRAY}
+
+	@{b}H@{ub}
+
+	@{" HAM " Link HAM}
+	@{" History " Link HISTORY}
+
+	@{b}I@{ub}
+
+	@{" I " Link AUTHOR}
+	@{" Included programs " Link PROGRAMS}
+	@{" INFO " Link INFO}
+	@{" Information, author " Link AUTHOR}
+	@{" Information, legal " Link LEGAL}
+	@{" Introduction " Link INTRODUCTION}
+
+	@{b}J@{ub}
+
+	@{" JPEG codec " Link JPEG}
+	@{" Jumping mouse " Link MOUSE_JUMP}
+
+	@{b}K@{ub}
+
+	@{" Keys " Link KEYS}
+	@{" Kill " Link KILL}
+	@{" Known problems " Link BUGS}
+
+	@{b}L@{ub}
+
+	@{" LATELOAD " Link LATELOAD}
+	@{" Legal acknowledgments " Link ACKNOWLEDGMENTS }
+	@{" Legal information " Link LEGAL}
+	@{" License " Link LICENSE }
+	@{" LOWMEM " Link LOWMEM}
+
+	@{b}M@{ub}
+
+	@{" MakeLink " Link MAKELINK}
+	@{" Me " Link AUTHOR}
+	@{" Mode name examples " Link MN_EXAMPLES}
+	@{" Mode name notes " Link MN_NOTES}
+	@{" Mode name parts " Link MN_PARTS}
+	@{" Mode names " Link MODENAMES}
+	@{" MODE " Link MODE}
+	@{" MONITOR " Link MONITOR}
+	@{" Monitor promotion " Link MONITOR}
+	@{" Mouse jumping " Link MOUSE_JUMP}
+
+	@{b}N@{ub}
+
+	@{" No warranty " Link WARRANTY}
+	@{" NOAUTOSCROLL " Link NOAUTOSCROLL}
+	@{" NOBUSY " Link NOBUSY}
+	@{" NOCLICK " Link NOCLICK}
+	@{" NODATATYPES " Link NODATATYPES}
+	@{" NOENV " Link NOENV}
+	@{" NOFILECHECK " Link NOFILECHECK}
+	@{" NOFLICKER " Link NOFLICKER}
+	@{" NOFOREIGN " Link NOFOREIGN}
+	@{" NOGIF " Link NOGIF}
+	@{" NOICON " Link NOICON}
+	@{" NOIFF " Link NOIFF}
+	@{" NOJPEG " Link NOJPEG}
+	@{" NORMALNAMES " Link NORMALNAMES}
+	@{" NOWARN " Link NOWARN}
+
+	@{b}O@{ub}
+
+	@{" OVERSCAN " Link OVERSCAN}
+
+	@{b}P@{ub}
+
+	@{" PASSWORD " Link PASSWORD}
+	@{" POINTER " Link POINTER}
+	@{" Problems " Link BUGS}
+	@{" Program history " Link HISTORY}
+	@{" Programs " Link PROGRAMS}
+
+	@{b}Q@{ub}
+
+	@{" QUIET " Link QUIET}
+
+	@{b}R@{ub}
+
+	@{" RANDOM " Link RANDOM}
+	@{" Rendered pictures " Link RENDERED}
+	@{" Reporting bugs " Link AUTHOR}
+	@{" Required libraries " Link LIBRARIES}
+	@{" Requirements " Link REQUIREMENTS}
+	@{" RTG " Link RTG}
+
+	@{b}S@{ub}
+
+	@{" SCALE " Link SCALE}
+	@{" Screen centering " Link SCREEN_CENTER}
+	@{" SHOWINFO " Link SHOWINFO}
+	@{" SORT " Link SORT }
+
+	@{b}T@{ub}
+
+	@{" Team OS3 " Link TEAMOS3}
+	@{" TEST " Link TEST}
+	@{" The future " Link TODO}
+	@{" The JPEG codec " Link JPEG}
+	@{" TIME " Link TIME}
+	@{" TIMES " Link TIMES}
+	@{" TOFRONT " Link TOFRONT}
+	@{" TOOLPRI " Link TOOLPRI}
+	@{" Tooltypes ignored " Link NO_TOOLTYPES}
+	@{" Tower JPEG codec " Link JPEG}
+
+	@{b}U@{ub}
+
+	@{" UNIT " Link UNIT}
+	@{" UnpackILBM " Link UNPACKILBM}
+	@{" UpdateTT " Link UPDATETT}
+	@{" Usage " Link ARGUMENTS}
+
+	@{b}V@{ub}
+
+	@{" VCENTER " Link VCENTER}
+	@{" VERBOSE " Link VERBOSE}
+	@{" Version history " Link HISTORY}
+	@{" Viewing keys " Link KEYS}
+	@{" VisageOpts " Link VISAGEOPTS}
+
+	@{b}W@{ub}
+
+	@{" WAITFORPIC " Link WAITFORPIC}
+	@{" WBMONITOR " Link WBMONITOR}
+
+@EndNode

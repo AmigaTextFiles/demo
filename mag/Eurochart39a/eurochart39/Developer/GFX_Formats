@@ -1,0 +1,110 @@
+
+
+                           The Official Eurochart
+
+                               F o r m a t s:
+                               --------------
+
+-----------------------------------------------------------------------------
+
+Eurochart Section:
+------------------
+
+Size:                        640*256*7
+
+There has to be room for text area of 320*190 - in this area it is advisable
+to keep contrast to a minimum, since otherwise it's pretty
+hard for us to find colours which will make it possible for others to read
+the text. Of course, none of the buttons can be situated in this area.
+
+Buttons (a '/' means that the button should contain one of these texts):
+
+Coders/Best Coder
+Musicians/Best Musician
+Graphicians/Best Graphician
+Swappers/Best Swapper
+Editors/Article Writers/Best Editor/Best Article Writer
+64k Intros/Best 64k Intro
+4k Intros/Best 4k Intro
+Demos/Best Demo
+Slideshows/Best Slideshow
+Musicdisks/Best Musicdisk
+Diskmagazines/Best Diskmagazine
+Groups/Best Group
+
+Euronews
+Gallery
+Quit
+
+-----------------------------------------------------------------------------
+
+EuroNews Section:
+-----------------
+
+The topbar size is:          640*16*6
+The bottom bar size is:      640*48*6
+
+These can be altered as long as there's a space of 640*192 in the middle.
+
+Buttons (a '/' means that the button should contain one of these texts):
+
+Arrow/Left
+Arrow/Right
+Arrow/Up
+Arrow/Down
+Eurochart/Main
+Menu
+Search
+
+All buttons should be animated in some way - simple or advanced - this means
+that we need to versions, one with all the buttons pressed and where they're
+not.
+
+Search Window:
+--------------
+
+Should be small... :) About 256*64 -> 272*64 is fine. 
+A text area with the height of 12 and black background is necessary.
+It should of course have the same palette as the news section.
+
+Buttons (a '/' means that the button should contain one of these texts):
+Search
+Case
+Continue
+Close-Button in the upper left corner.
+
+-----------------------------------------------------------------------------
+
+EuroGallery Section:
+--------------------
+
+The topbar size is:          640*16*6
+The bottom bar size is:      640*105*6
+
+These can be altered as long as there's a space of 640*128 in the middle.
+
+Buttons (a '/' means that the button should contain one of these texts):
+
+Quit/Exit        
+Eurochart/Main
+Arrow/Left
+Arrow/Right
+
+The Text area in bottom area should be able to contain 3 lines of text(around
+386*38 pixels - or more).
+
+All buttons should be animated in some way - simple or advanced - this means
+that we need to versions, one with all the buttons pressed and where they're
+not.
+
+-----------------------------------------------------------------------------
+
+Clip-Art
+--------
+
+Should be in 128 colours, and usually, we need small clip-arts.
+If the width is dividable by 16, it will be lots prettier to look at when it
+is actually used. Otherwise there will be black spaces around it.
+
+Of course the height should never be over 180, because otherwise they will
+not fit.

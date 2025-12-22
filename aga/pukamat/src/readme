@@ -1,0 +1,10 @@
+To compile with SAS/C:
+
+AGA:
+sc pukamataga.c c2p/c2p2x1_8_c5_030_y128.o mouse.o link
+
+V39:
+sc pukamatv39.c c2p/c2p2x1_8_c5_030.o mouse.o link
+
+RTG:
+sc pukamatrtg.c mouse.o link

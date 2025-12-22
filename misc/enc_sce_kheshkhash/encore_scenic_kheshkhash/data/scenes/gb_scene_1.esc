@@ -1,0 +1,612 @@
+{
+  "actions": [
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 17200
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "gb_scene_1"
+        }
+      ],
+      "loops": 1,
+      "name": "smoked_man_alpha",
+      "start_time": 0,
+      "type": "property_float"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 1.75,
+            "interpolation": "linear",
+            "time": 17200
+          },
+          {
+            "float_values": 0.35815918,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "camera_1"
+        }
+      ],
+      "loops": 1,
+      "name": "camera_1Action",
+      "start_time": 0,
+      "type": "position_z"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": -0.0,
+            "interpolation": "linear",
+            "time": 17200
+          },
+          {
+            "float_values": -240.000007,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "camera_1"
+        }
+      ],
+      "loops": 1,
+      "name": "camera_1Action",
+      "start_time": 0,
+      "type": "rotation_z"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": -0.0,
+            "interpolation": "linear",
+            "time": 17200
+          },
+          {
+            "float_values": -720.00002,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "big_flare"
+        }
+      ],
+      "loops": 1,
+      "name": "big_flareAction",
+      "start_time": 0,
+      "type": "rotation_z"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 4360
+          },
+          {
+            "float_values": [
+              4.0,
+              4.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "big_flare"
+        }
+      ],
+      "loops": 1,
+      "name": "big_flareAction",
+      "start_time": 12840,
+      "type": "scale_xyz"
+    }
+  ],
+  "cameras": [
+    {
+      "far_clip_plane": 100.0,
+      "fov_x": 54.362152,
+      "fov_y": 28.800001,
+      "hide": false,
+      "name": "camera_1",
+      "near_clip_plane": 0.1,
+      "position": [
+        0.0,
+        0.0,
+        1.75
+      ],
+      "rotation": [
+        3e-06,
+        0.0,
+        -0.0
+      ]
+    }
+  ],
+  "enc_info": {
+    "data_type": "ENCSCN",
+    "date": "05 Dec 2022 21:37:19",
+    "version": "2.0"
+  },
+  "loops": 1,
+  "name": "gb_scene_1",
+  "objects": [
+    {
+      "mesh_name": "gb_big_flare",
+      "name": "big_flare",
+      "properties": {
+        "blending": "additive",
+        "depth_mask": 0
+      }
+    },
+    {
+      "mesh_name": "gb_small_flare",
+      "name": "small_flare_1",
+      "position": [
+        0.06079759,
+        -0.04177901,
+        1.56953645
+      ],
+      "tag": 22
+    },
+    {
+      "mesh_name": "gb_small_flare",
+      "name": "small_flare_2",
+      "position": [
+        0.057333,
+        0.03845595,
+        1.5289135
+      ],
+      "tag": 22
+    },
+    {
+      "mesh_name": "gb_small_flare",
+      "name": "small_flare_3",
+      "position": [
+        -0.07090276,
+        0.01048427,
+        1.47237754
+      ],
+      "tag": 22
+    },
+    {
+      "mesh_name": "gb_small_flare",
+      "name": "small_flare_4",
+      "position": [
+        -0.01382174,
+        0.06625304,
+        1.41179097
+      ],
+      "tag": 22
+    },
+    {
+      "mesh_name": "gb_small_flare",
+      "name": "small_flare_5",
+      "position": [
+        0.01090323,
+        -0.0672544,
+        1.33149636
+      ],
+      "tag": 22
+    },
+    {
+      "mesh_name": "gb_small_flare",
+      "name": "small_flare_6",
+      "position": [
+        -0.06873631,
+        -0.00932697,
+        1.26705539
+      ],
+      "properties": {
+        "blending": "additive"
+      }
+    },
+    {
+      "mesh_name": "gb_small_flare",
+      "name": "small_flare_7",
+      "position": [
+        0.08683557,
+        0.03577241,
+        1.16597724
+      ],
+      "properties": {
+        "blending": "additive"
+      }
+    },
+    {
+      "mesh_name": "gb_small_flare",
+      "name": "small_flare_8",
+      "position": [
+        -0.06359387,
+        0.04867395,
+        1.08520997
+      ],
+      "properties": {
+        "blending": "additive"
+      }
+    },
+    {
+      "mesh_name": "gb_small_flare",
+      "name": "small_flare_9",
+      "position": [
+        0.05820293,
+        -0.05200741,
+        1.17445493
+      ],
+      "properties": {
+        "blending": "additive"
+      }
+    },
+    {
+      "mesh_name": "gb_small_flare",
+      "name": "small_flare_10",
+      "position": [
+        -0.068345,
+        -0.05200741,
+        1.07205093
+      ],
+      "properties": {
+        "blending": "additive"
+      }
+    },
+    {
+      "mesh_name": "gb_small_flare",
+      "name": "small_flare_11",
+      "position": [
+        0.09944961,
+        -0.00063964,
+        0.93542284
+      ],
+      "properties": {
+        "blending": "additive"
+      }
+    },
+    {
+      "mesh_name": "gb_small_flare",
+      "name": "small_flare_12",
+      "position": [
+        -0.10971496,
+        -0.00063964,
+        0.89926153
+      ],
+      "properties": {
+        "blending": "additive"
+      }
+    },
+    {
+      "mesh_name": "gb_small_flare",
+      "name": "small_flare_13",
+      "position": [
+        0.06672764,
+        0.08262572,
+        0.84806222
+      ],
+      "properties": {
+        "blending": "additive"
+      }
+    },
+    {
+      "mesh_name": "gb_small_flare",
+      "name": "small_flare_14",
+      "position": [
+        0.00335748,
+        -0.08284063,
+        0.9999913
+      ],
+      "properties": {
+        "blending": "additive"
+      }
+    },
+    {
+      "mesh_name": "gb_small_flare",
+      "name": "small_flare_15",
+      "position": [
+        -0.07981566,
+        0.03345714,
+        0.78465825
+      ],
+      "properties": {
+        "blending": "additive"
+      }
+    },
+    {
+      "mesh_name": "gb_small_flare",
+      "name": "small_flare_16",
+      "position": [
+        -0.06201883,
+        -0.0588992,
+        0.71993059
+      ],
+      "properties": {
+        "blending": "additive"
+      }
+    },
+    {
+      "mesh_name": "gb_small_flare",
+      "name": "small_flare_17",
+      "position": [
+        0.08372101,
+        -0.0321049,
+        0.64466792
+      ],
+      "properties": {
+        "blending": "additive"
+      }
+    },
+    {
+      "mesh_name": "gb_small_flare",
+      "name": "small_flare_18",
+      "position": [
+        0.05341945,
+        0.07244132,
+        0.63211876
+      ],
+      "properties": {
+        "blending": "additive"
+      }
+    },
+    {
+      "mesh_name": "gb_small_flare",
+      "name": "small_flare_19",
+      "position": [
+        -0.04859819,
+        0.0656219,
+        0.69257575
+      ],
+      "properties": {
+        "blending": "additive"
+      }
+    },
+    {
+      "mesh_name": "gb_small_flare",
+      "name": "small_flare_20",
+      "position": [
+        -0.08188924,
+        0.01276724,
+        0.57569259
+      ],
+      "properties": {
+        "blending": "additive"
+      }
+    },
+    {
+      "mesh_name": "gb_small_flare",
+      "name": "small_flare_21",
+      "position": [
+        0.0072751,
+        -0.0647062,
+        0.56720895
+      ],
+      "properties": {
+        "blending": "additive"
+      }
+    },
+    {
+      "mesh_name": "gb_small_flare",
+      "name": "small_flare_22",
+      "position": [
+        0.04244294,
+        0.04730137,
+        0.51461047
+      ],
+      "properties": {
+        "blending": "additive"
+      }
+    },
+    {
+      "mesh_name": "gb_small_flare",
+      "name": "small_flare_23",
+      "position": [
+        -0.06451088,
+        -0.04523438,
+        0.46776256
+      ],
+      "properties": {
+        "blending": "additive"
+      }
+    },
+    {
+      "mesh_name": "gb_small_flare",
+      "name": "small_flare_24",
+      "position": [
+        -0.06451088,
+        0.05407608,
+        0.42457324
+      ],
+      "properties": {
+        "blending": "additive"
+      }
+    },
+    {
+      "mesh_name": "gb_small_flare",
+      "name": "small_flare_25",
+      "position": [
+        0.04063525,
+        -0.05938763,
+        0.42457324
+      ],
+      "properties": {
+        "blending": "additive"
+      }
+    },
+    {
+      "mesh_name": "gb_small_flare",
+      "name": "small_flare_26",
+      "position": [
+        0.10015271,
+        -0.00729075,
+        0.37595728
+      ],
+      "properties": {
+        "blending": "additive"
+      }
+    },
+    {
+      "mesh_name": "gb_small_flare",
+      "name": "small_flare_27",
+      "position": [
+        -0.06982484,
+        -0.00729075,
+        0.27552131
+      ],
+      "properties": {
+        "blending": "additive"
+      }
+    },
+    {
+      "mesh_name": "gb_small_flare",
+      "name": "small_flare_28",
+      "position": [
+        -0.01193872,
+        0.06547194,
+        0.23100883
+      ],
+      "properties": {
+        "blending": "additive"
+      }
+    },
+    {
+      "mesh_name": "gb_small_flare",
+      "name": "small_flare_29",
+      "position": [
+        -0.02368403,
+        -0.06770316,
+        0.31940812
+      ],
+      "properties": {
+        "blending": "additive"
+      }
+    },
+    {
+      "mesh_name": "gb_small_flare",
+      "name": "small_flare_30",
+      "position": [
+        0.0676742,
+        0.01436879,
+        0.18266782
+      ],
+      "properties": {
+        "blending": "additive"
+      }
+    },
+    {
+      "mesh_name": "gb_small_flare",
+      "name": "small_flare_31",
+      "position": [
+        0.11768924,
+        0.06872304,
+        0.12025993
+      ],
+      "properties": {
+        "blending": "additive"
+      }
+    },
+    {
+      "mesh_name": "gb_small_flare",
+      "name": "small_flare_32",
+      "position": [
+        -0.05440897,
+        0.00290651,
+        0.11674629
+      ],
+      "properties": {
+        "blending": "additive"
+      }
+    },
+    {
+      "mesh_name": "gb_small_flare",
+      "name": "small_flare_33",
+      "position": [
+        0.07255526,
+        -0.06015656,
+        0.11674629
+      ],
+      "properties": {
+        "blending": "additive"
+      }
+    },
+    {
+      "mesh_name": "gb_small_flare",
+      "name": "small_flare_34",
+      "position": [
+        -0.05411703,
+        0.04688119,
+        0.11674629
+      ],
+      "properties": {
+        "blending": "additive"
+      }
+    },
+    {
+      "mesh_name": "gb_small_flare",
+      "name": "small_flare_35",
+      "position": [
+        -0.00508536,
+        0.12644896,
+        0.55293024
+      ],
+      "properties": {
+        "blending": "additive"
+      }
+    },
+    {
+      "mesh_name": "gb_small_flare",
+      "name": "small_flare_36",
+      "position": [
+        0.00413255,
+        -0.03757283,
+        0.09051138
+      ],
+      "properties": {
+        "blending": "additive"
+      }
+    },
+    {
+      "mesh_name": "gb_small_flare",
+      "name": "small_flare_37",
+      "position": [
+        0.02774065,
+        0.04674605,
+        0.06764653
+      ],
+      "properties": {
+        "blending": "additive"
+      }
+    }
+  ],
+  "properties": {
+    "smoked_man_alpha": 1.0
+  },
+  "time": 17200
+}

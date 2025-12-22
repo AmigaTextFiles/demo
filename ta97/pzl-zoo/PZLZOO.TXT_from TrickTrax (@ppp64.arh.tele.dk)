@@ -1,0 +1,112 @@
+                         .    ___________  __________ _________,
+(Puzzle)_________.--------¦ __/          l_/         l_|_      /____________
+\\  ____       _/         l_\\`--------   `-/------      /     /  __________/
+ \\____.-------^-------------/______------/______------l_____/-l----------'©Mt
+                                                               ¯¯¯¯¯¯¯¯¯¯
+                         ///////////////////////////
+
+
+                    Puzzle presents a new demo called:
+
+
+                                   Zoo
+                                 --------
+
+                        Code: Hexagon & TrickTrax
+
+                           Graphics: Deckard
+
+                            Music: TrickTrax
+
+
+
+
+INSTALLING ZOO:
+               Copy all files to the same directory.
+
+
+RUNNING ZOO:   The demo will skip the intropart if run with less than 1.7MB
+               chipmem.
+               PZLZOO.EXE also has to be executed from the dir in which the
+               .DAT files are.
+
+               Sorry! :(
+
+
+INFO:          This is really the demo where everything went wrong!
+
+               Zoo was originally meant to be released at The Copenhagen Party
+               but due to some real nasty bugs it was postponed. Assembly
+               seemed to be the right place to release it, so we found the
+               bugs and improved the demo. But the troubles wasn't over. The
+               very last changes (rename of files, PROGDIR:, modulechanges etc)
+               resulted in new bugs, which have been impossible to track down,
+               and after more than 3 weeks of bughunting in vain, we had 2
+               choises left:
+
+               1. Throw the demo down the drain
+               2. Make it work the best we could
+
+               We chose the latter, even though we don't like to release stuff
+               with bugs! We heard about many cancelled amigademos for the
+               Assembly and decided that we wouldn't be one of them.
+
+               We have to move on and look foreward, so there will never be a
+               bugfixed version of Zoo. Sorry again! :(
+
+               BTW: The endscroller can be paused with right mousebutton.
+
+
+KNOWN BUGS:    Spritebug - The suckin' sprites appear even though they have
+               been turned off with the DMA. We could change all our
+               copperlists, but time has run out.
+
+               PROGDIR: bug - For some odd reason PROGDIR: doesn't seem to
+               work with multiple executeables & includes, so we had to make
+               a lame bat-file, which have to be run from the directory in
+               which the DAT-files are placed. Sucks!
+
+               Mysterious bug - NO idea what this is, but it sometimes causes
+               the demo to crash at the phong-texturemapping part. This
+               happens VERY rarely on 030/50, so we haven't been able to find
+               it (who knows, maybe it's gone by now).
+
+
+REQUIREMENTS:  The demo is optimized for A1230, but will probably run on an
+               A1220 with 4MB ram, which also is the minimum. At it's early
+               stages, Zoo was tested on A4040 & A4060 and ran fine with the
+               use of setpatch. Hopefully it still does.
+
+
+THE AUTHORS:   Hexagon
+               E-mail: tsale@tdk.dk
+
+               TrickTrax
+               E-mail: tricktrax@hotmail.com
+
+               Both can be found on #AmigaScne as well.
+
+HOMEPAGE:      www.geocities.com/researchtriangle/2717
+               (Under construction)
+
+
+GREETINGS:     All friends in the whole wide world :) Especially Darkhawk/IRIS
+               for being cool & GFB for keeping surprises comming.
+
+
+MEMBERLIST:    Archangel        -       Music
+               Deckard          -       Graphics, Raytrace
+               Decoy            -       Swapping
+               Deone            -       Graphics
+               Hexagon          -       Code
+               Powdi            -       Code
+               Relief           -       Music
+               ///Ruben.        -       3D-Graphics
+               TrickTrax        -       Music, Code, Organizing
+               Trooper          -       UK Spreader
+
+JOINING:       We are looking for graphicians & coders! Contact TrickTrax on
+               IRC or by Email.
+
+
+Released August 1997

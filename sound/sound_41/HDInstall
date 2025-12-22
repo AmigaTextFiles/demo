@@ -1,0 +1,143 @@
+;$VER: Sound #4 HD Installation script V1.33 (13.11.95)
+;
+; (c) Copyright 1995,1996 John 'SHAYERA' Hinge / Spoon
+;
+; Version History :
+; 1.31 : Whoops, It seems that I had forgotten the fonts ;)
+; 1.32 : Added copying of the XPK files.
+; 1.33 ; Added checking of enough free space on destination.
+
+
+
+(complete 0)
+(set @default-dest "Work:")
+
+; Set up various Texts
+
+(set #MainName-Txt ("Sound #4 The Mood Issue"))
+
+(set #BaseName-Txt ("Sound4"))
+
+(set #Disk1Name-Txt (cat #BaseName-Txt "_1:"))
+
+(set #Disk2Name-Txt (cat #BaseName-Txt "_2:"))
+
+(set #Intro-Txt (cat "\n\nWelcome to \n" #MainName-Txt "\n"
+                     "Hard Disk Install Script\n\n\n\n"))
+
+(set #LowSpace-Txt (cat "\n\n\n" #MainName-Txt
+                       " requires 1.5 MB free on your disk.\n\n"
+                       "Installation failed due to low diskspace...\n\n"))
+
+(set #Path-Txt (cat "Select the target directory. A directory "
+                    #BaseName-Txt " will " "be created there."))
+
+(set #Path-Help (cat "\nThis section lets you choose the "
+                     "target directory to install " #MainName-Txt
+                     ". \n\n" "A directory " #BaseName-Txt
+                     " will be created there.\n\n"
+                     "Default is Work:\n\n\n"
+                     @askdir-help))
+
+
+; The actual Main routine of the Script
+
+(message #Intro-Txt)
+
+
+; Select Installation destination
+(set target (askdir (prompt #Path-Txt) (help #Path-Help)
+                    (default @default-dest) (newpath)))
+
+(set FreeSpace (getdiskspace target))
+
+(set @default-dest target)
+
+; Check for enough free space on target disk
+(
+	if	(< FreeSpace 1500000)		; Do we have less than 1.5 Mb free ??
+		(abort #LowSpace-Txt)
+)
+
+
+(complete 5)
+
+; Do file copying.. Only one of the copyings has been 'folded out'
+;  as they all are similar
+
+;XPK files
+(copylib
+	(prompt (cat "Copying the XPKMaster library."))
+	(help @copylib-help)
+	(source (cat (tackon #Disk1Name-Txt "libs/xpkmaster.library")))
+	(dest "LIBS:")
+	(confirm)
+)
+
+(copylib
+	(prompt (cat "Copying the XPKSQSH library."))
+	(help @copylib-help)
+	(source (cat (tackon #Disk1Name-Txt "libs/compressors/xpkSQSH.library")))
+	(dest "LIBS:compressors")
+	(confirm)
+)
+
+
+(
+	copyfiles
+	(
+		prompt "Copying to " #target
+	)
+	(
+		help @copy-files-help
+	)
+	(
+		source #Disk1Name-Txt
+	)
+	(
+		dest
+		(
+			tackon target #BaseName-Txt
+		)
+	)
+	(
+		pattern "Sound#?"
+	)
+)
+
+
+;Doc files
+(complete 10)
+(copyfiles (prompt "Copying to " #target) (help @copy-files-help) (source #Disk1Name-Txt)
+(dest (tackon target #BaseName-Txt)) (pattern "DO#?"))
+
+;Fonts
+(complete 20)
+(copyfiles (prompt "Copying to " #target) (help @copy-files-help) (source #Disk1Name-Txt)
+(dest (tackon target #BaseName-Txt)) (pattern "FO#?"))
+
+;Gfx files from Disk 1
+(complete 25)
+(copyfiles (prompt "Copying to " #target) (help @copy-files-help) (source #Disk1Name-Txt)
+(dest (tackon target #BaseName-Txt)) (pattern "GF#?"))
+
+;Msx files from Disk 1
+(complete 37)
+(copyfiles (prompt "Copying to " #target) (help @copy-files-help) (source #Disk1Name-Txt)
+(dest (tackon target #BaseName-Txt)) (pattern "MS#?"))
+
+;Gfx files from Disk 2
+(complete 50)
+(copyfiles (prompt "Copying to " #target) (help @copy-files-help) (source #Disk2Name-Txt)
+(dest (tackon target #BaseName-Txt)) (pattern "GF#?"))
+
+;Msx files from Disk 2
+(complete 75)
+(copyfiles (prompt "Copying to " #target) (help @copy-files-help) (source #Disk2Name-Txt)
+(dest (tackon target #BaseName-Txt)) (pattern "MS#?"))
+
+;The control file which convinces Sound to run as one dir setup
+(complete 95)
+(copyfiles (prompt "Copying to " #target) (help @copy-files-help) (source #Disk2Name-Txt)
+(dest (tackon target #BaseName-Txt)) (pattern "DISK2#?"))
+(complete 100)

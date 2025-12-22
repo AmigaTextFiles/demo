@@ -1,0 +1,31 @@
+
+       _      ____ _____ _____ ______
+      ///\  /\\   \\ ___\\ ___\\    _\
+     ////\\//\\\   \\\__\\\\  ¯ ¯¯\ \¯
+    ////  \/  \\\\¯¯ \ ___\\\___   \ \
+   ////        \\\\   \\  \\\   \   \ \
+   ¯ ¯          ¯ ¯    ¯   ¯ ¯¯¯¯    ¯¯
+
+  This is an example of how to code Demos in Blitz2. If you are interested
+  in the source-codes, you may have a look at them in the "scr"-drawer.
+  There are two versions in the archive: One for MC68030 processors and
+  above, and one for MC68020 processors, but I hope nobody will need that!
+
+  To start the demo you have to disable the cpu-caches and you have to use
+  an assign:
+
+        ASSIGN impact: <path>
+
+  Replace <path> with the path where "impact.exe" and all the other files
+  are to be found. Then change directory to "impact:" and type
+
+        impact.exe
+
+     or
+
+        impact020.exe
+
+  to start the demo.
+
+                                              ...have fun :-)
+

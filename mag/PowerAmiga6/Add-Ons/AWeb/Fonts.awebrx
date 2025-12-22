@@ -1,0 +1,118 @@
+/* font config tool 
+$VER: fonts.awebrx 1.2 23-Dec-2000
+Written by Tom Parker, parkert@ihug.co.nz (soon to change to t.parker@paradise.net.nz)
+This script is freeware, do what you will with it, but leave my name here..
+
+Changes:
+Version 1.2: Umm.. some bugfixes?
+Version 1.1: Added support for 3.4 Font Aliases
+Version 1.0: Initial release
+*/
+
+	ports = SHOW('P')
+	
+   PARSE VAR ports dummy 'AWEB.' portnr . /* note the trailing period! */
+   ADDRESS VALUE 'AWEB.' || portnr
+
+   OPTIONS RESULTS
+
+   'GET ACTIVEPORT'
+   ADDRESS VALUE RESULT
+
+	parse arg command args
+	
+	if upper(command) = "INC" then do
+		delta = args
+		change = 'true'
+	end
+	if upper(command) = "DEC" then do
+		delta = -1 * args
+		change = 'true'
+	end
+	
+	if change = 'true' then do
+		'GetCFG FONT stem' fonts
+		do i = 1 to fonts.0
+      	parse var fonts.i.value name "/" size
+   	   fonts.i.value = name "/" size + delta
+   	end
+      'setcfg font stem' fonts
+   end
+
+	if upper(command) = 'SAVE' then do
+		args = strip(args)
+		if open(1,args,w) then do
+			call writeln(1, "STANDARDFONTS")
+			'GetCFG FONT stem' fonts
+			do i = 1 to fonts.0
+				call writeln(1, fonts.i.item)
+				call writeln(1, fonts.i.value)
+			end
+			call writeln(1, "FONTALIASES")
+			'GetCFG FONTALIAS stem' aliases
+			do i = 1 to aliases.0
+				call writeln(1, aliases.i.value)
+			end
+			call close(1)
+		end
+	end
+	
+	if upper(command) = 'LOAD' then do
+		args = strip(args)
+		if open(1,args,r) then do
+			/* first read standard fonts */
+			header = readln(1)
+			if header == "STANDARDFONTS" then do
+				do i = 1 to 14
+					name = readln(1)
+					fonttype = readln(1)
+					fonts.i.item = name
+					fonts.i.value = fonttype
+				end
+				fonts.0 = 14
+			end 
+			else do
+				say "Invalid file format - could not find STANDARDFONT header"
+				exit 20
+			end
+			
+			/* then read font aliases */
+			header = readln(1)
+			if header == "FONTALIASES" then do
+				i = 1
+				do while ~eof(1)
+					aliases.i.item = "FONTALIAS"
+					/* we have the aliased font names on the first line */
+					aliases.i.value = readln(1)
+					/* then seven lines with each of the fonts sizes */
+					do j = 1 to 7
+						aliases.i.value = aliases.i.value || '0a'x || readln(1)
+					end
+					i = i + 1
+				end
+			end
+			else do
+				say "Invalid file format - could not find FONTALIASES header"
+				say "Found" header
+				exit 20
+			end
+			aliases.0 = i - 2
+			say i
+			
+			'setcfg font stem' fonts
+			'setcfg fontalias stem' aliases
+		end
+	end
+	
+	if command = "?" then do
+		say "Font Tool for AWeb"
+		say "4 modes of operation:"
+		say "           fonts.awebrx INC <number>"
+		say "increments all standard font sizes by <number> (does not yet support aliased font sizes)"
+		say "           fonts.awebrx DEC <number>"
+		say "decrements all standard font sizes by <number> (does not yet support aliased font sizes)"		
+		say "           fonts.awebrx SAVE <filename>"
+		say "saves the current font configuration to file <filename>"
+		say "           fonts.awebrx LOAD <filename>"
+		say "loads the font configuration previously saved to <filename>"
+	end

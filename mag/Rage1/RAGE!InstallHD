@@ -1,0 +1,118 @@
+;
+; RAGE!#01 Install Script.
+; $VER: RAGE!#01 Install Script for installer v1.1 (28/Dec/95)
+;
+
+(
+   (complete 0)
+; Remove these two assigns first
+   (makeassign "RAGE!#01:")
+
+; Ask where to install RAGE!#01
+   (set @default-dest "Work:")
+   (set dest1
+      (askdir
+         (prompt "Select the location to install the RAGE!#01 directory.")
+         (help "Choose a destination partition or directory"
+                 " to contain RAGE!#01. The Installer will"
+                 " create a directory called 'RAGE!#01' in the"
+                 " location directory you choose and then copy"
+                 " RAGE!#01's files to it."
+         (default @default-dest)
+         )
+      )
+   )
+
+   (set @default-dest (tackon dest1 "RAGE!#01"))
+
+   (if (exists @default-dest
+               (noreq))
+      (message "\n\nThe RAGE!#01 Directory already exists.\n"
+               "Do you still want to install RAGE!#01 ?\n\n"
+               "If you decide to continue, then RAGE!#01 will be"
+               " be merged into this old directory.\n\n"
+               "Anyway, it is strongly advised to stop the"
+               " installation, to erase the old RAGE!#01 directory,"
+               " to remove the ASSIGNs in your user-startup"
+               " and to re-install RAGE!#01 again.")
+      (message "\n\n\n\n\nRAGE!#01 will be installed in " @default-dest
+               "\n\nPlease confirm this action."))
+
+; Make some directories
+   (makedir @default-dest (safe) (infos))
+   (makedir ("%s/fonts" @default-dest) (safe))
+   (makedir ("%s/libs" @default-dest) (safe))
+   (makedir ("%s/Datas" @default-dest) (safe))
+   (makedir ("%s/c" @default-dest) (safe))
+   (makedir ("%s/s" @default-dest) (safe))
+   (complete 5)
+
+; Install RAGE!#01 from Disk.
+   (askdisk (prompt "\n\n\n\n\nPlease insert RAGE!#01 disk.")
+            (help "\n\n\n\n\n Insert the Disk containing the first RAGE! issue")
+            (dest "RAGE!#01"))
+
+   (set fontsdest (tackon @default-dest "fonts/"))
+   (copyfiles (source "RAGE!#01:fonts/")
+              (dest fontsdest)
+              (all))
+
+   (complete 10)
+   (set libsdest (tackon @default-dest "libs/"))
+   (copyfiles (source "RAGE!#01:libs/")
+              (dest libsdest)
+              (all))
+
+   (complete 20)
+   (set Datasdest (tackon @default-dest "Datas/"))
+   (copyfiles (source "RAGE!#01:Datas/")
+              (dest Datasdest)
+              (all))
+
+   (complete 30)
+   (copyfiles (source "RAGE!#01:RAGE!#01")
+              (dest @default-dest))
+
+   (copyfiles (source "RAGE!#01:RAGE!#01.info")
+              (dest @default-dest))
+
+   (copyfiles (source "RAGE!#01:RAGE!installHD")
+              (dest @default-dest))
+
+   (copyfiles (source "RAGE!#01:RAGE!installHD.info")
+              (dest @default-dest))
+
+   (complete 40)
+   (set cdest (tackon @default-dest "c/"))
+   (copyfiles (source "RAGE!#01:c")
+              (dest cdest)
+              (all))
+
+   (complete 50)
+   (set cdest (tackon @default-dest "s/"))
+   (copyfiles (source "RAGE!#01:s")
+              (dest cdest)
+              (all))
+
+   (complete 60)
+; ask to modify the user-startup
+   (startup "RAGE!#01"
+            (prompt "\n\nDo you want to put the following lines\n"
+                    "in your startup-sequence ?\n\n\n"
+                    ("assign RAGE!#01: %s\n" @default-dest))
+            (help "\n\n\nRAGE!#01 need these listed logical ASSIGNs to"
+                  " find its files."
+                  " If you want, these ASSIGNs"
+                  " will be written in youR startup-sequence"
+                  " if not, you will have to write them yourself"
+                  " in your startup-sequence otherwise RAGE!#01"
+                  " won't work.")
+            (command ("assign RAGE!#01: %s\n" @default-dest)))
+
+; Some assigns to use RAGE!#01 right now !
+   (makeassign "RAGE!#01:" @default-dest)
+
+   (complete 70)
+
+; End of Installation Script.
+)

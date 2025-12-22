@@ -1,0 +1,439 @@
+@{xoffset 21}@{d F1FFA1}¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+@{xstep 180}@{font ACS-Title.font 18}Nëkterá doporuçení programátorûm/coderûm@{font}
+@{xstep 465}@{c A6FFF8}@{i}Troda/Pegas@{ui}@{c}@{ystep -8}
+
+
+  @{xstep 4}@{font ACS-Title.font 18}J@{font}akoùto jeden  z  uùivatelû  Amigy  jsem se rozhodl napsat nëkolik doporuçení
+ohlednë  programování  a  kódování  dem.   Investoval  jsem nemalé peníze, abych
+docílil  rychlého bëhu aplikací a plynulého bëhu dem, ale, bohuùel, hodnë kodérû
+zêejmë  neví  jak docílit, aby jejich rutinky bëhaly optimálnë na 040+.  A to je
+velmi  îpatné.  Domnívám  se totiù, ùe cílem je pêece plynulý efekt - a taky aby
+tento  efekt bëùel mnohem lépe na mnohem rychlejîím hardwaru.  Nedomnívám se, ùe
+je  potêeba optimalizovat efekt tak, aby bëùel rychle i na pomalém hardwaru jako
+je  030/040.  Navíc tyto snahy çasto vedou k pêíîerným double-pixelûm a podobným
+snahám  o rychlost na úkor kvality - a kam to vede?  Takový efekt (pokud funguje
+na  060)  dosáhne  hravë  50fps  -  a co z toho, stále je to @{c FFEE28}HNUSNÉ@{c}!  Je to sice
+rychlé,  ale  navùdy hnusné.  Kdyby byl efekt pomalejîí, ale pëkný, je îance, ùe
+se  zrychlí  na  rychlejîím  hardware,  ale  tak?   Domnívám  se,  ùe  je  têeba
+optimalizovat tak, aby demo bëùelo nejlépe na nejlepîím, nejrychlejsím hardware.
+Absolutnë  bez  ohledu  na  to,  jak  pobëùí (pokud vûbec) na starém a odepsaném
+hardware, jako je 030.  A toto je velká çást Amiga problému - mnoho programátorû
+zapomíná  na  nový,  moderní hardware.  Podívejme se na to - Amiga je dnes témëê
+mrtvá,  a  proç?   Proç  je  platforma, která má takový vynikající OS jako Amiga
+v takových  problémech,  jako je?  Proç je napêíklad Mac na tom mnohem lépe, neù
+Amiga  -  a  jeho  OS je mnohem horîí, neù AmigaOS?  @{c FFEE28}@{i}[napê.  velká çást MacOS je
+napsána v Pascalu (!) ... pozn.Shaman]@{ui}@{c}
+
+  Je  to  jednoduché  -  Mac má kvalitní aplikace.  Jak moùná víte, uùivatelé si
+nekupují poçítaç pro jeho OS, çi pro jeho hardware.  Koho zajímá, jestli poçítaç
+bëùí na 68K, PPC çi MIPS r10000, nebo x86?  Nikoho.  Lidé si kupují poçítaçe pro
+pouùívání  aplikací.  Ano, eventuelnë je nezbytné pouùít OS, ovîem majoritnë jen
+a  pouze  pro  spuîtëní  aplikace.   Mac mnë ukázal cestu, otevêel mi oçi.  Není
+dûleùité,  jestli  je pomalejîí neù pC (je, mluvím-li o 604e/200MHz...) - je zde
+mnoho  dûvodû,  proç je mnohem pouùitelnëjîí (a práce na nëm produktivnëjîí) neù
+pC.   Je  uùivatelsky  pêívëtivý  a  má  vynikající aplikace.  Toï vîe.  V práci
+pracuji  jako  grafik  a  DTP pracovník a neù bych pracoval na pC, tak preferuji
+MacIIci  (030&882/25MHz).   Ano, je asi tak 10 pomalejîí neù mé pracovní pC, ale
+doporuçuji  vyzkouîet  si  Quark  3.31 na pC a Mackovi.  Rozdíl je tak velký, ùe
+nikdy  nebudu pracovat na pC.  Pouze kvalitní aplikace mohou pomoci Amize.  A to
+mnohem  více, neù nëjaké PPC.
+
+  Proç  jsem  napsal  tento  úvod?   Protoùe  dema jsou taky aplikace a je velmi
+îpatné,  kdyù  obsahují nëkteré velmi jednoduîe napravitelné chyby.  Nemylte se,
+kaùdý  program  je  zodpovëdný  za  jakousi  pomyslnou hladinu kvality software.
+Dobré  programy  táhnou  ostatní programy ke zlepîení, îpatné mají pêesnë opaçný
+vliv.   Kvalita  software  se musí zmënit.  A témëê vîichni kodéêi se zapomínají
+vyvarovat pomërnë jednoduchých chyb.
+
+  Nejdêíve  ze  vîeho, spousta dem spadne, kdyù je chci @{c FFEE28}spustit z ikonky@{c}.  Je mi
+jasné, proç.  Není zde korektní spouîtëcí kód, který by pamatoval i na spouîtëní
+z WB  ikony.  Prostë malý kousek kódu, který handluje, jestli program je spuîtën
+z  WB  nebo  Shellu.   Domnívám  se,  ùe  je  potêeba, aby se dema dala spouîtët
+i z ikonky,  protoùe  to  je nejçastëji pouùívaná (zcela základní!) moùnost, jak
+spustit  program.  Já nevlastním ùádný DOS-box, abych byl odkázán na ASCII "GUI"
+pêi  spouîtëní programû.  A kdyù uù jsme u tëch DOS-boxû, rád bych pêipomnël, ùe
+názvy  souborû  na Amize nepotêebují .exe pêípony.  Moje @{c FFEE28}Amiga není DOS-box@{c} a já
+opravdu  nechci  vidët takové hrûzy na své Amçe.  Ano, je jednoduché pêejmenovat
+soubor,  ale stejnë je to nepotêebné a hnusné.  Ale jak zjistit, který soubor je
+spustitelný  (kdyù  máme  demo  s více soubory)?  No pêeci ten s ikonou, ne?  ;)
+A pokud ne, doporuçuji pouùít '!' jako první písmeno jména spustitelného souboru
+-  v  tom  pêípadë  je vùdy rychle k nalezení, kdyù jsou soubory setêídëny podle
+jména,  tak  je  hnedle nahoêe.  Mimochodem - jednosouborové dema jsou nejlepîí,
+maximálnë jeden datasoubor a kód v samostatném souboru.
+
+  Dále  pokraçujme  pakováním.  @{c FFEE28}Nepakujte nic.@{c}  Je mnoho dûvodû proç, staçí snad
+pêipomenout  pár.   Kdyù  finálnë  spakujete  demo  Lharkou çi Lzx-kem, velikost
+archivu  bude  menîí,  pokud  soubory budou depakované - a to je cíl, ne?  Pokud
+spouîtíte  spakovaný soubor, je to nejenom pomalejîí, ale hlavnë je potêeba více
+pamëti  na  spuîtëní,  neù  by  bylo,  kdyù  by soubor nebyl spakován.  Také tím
+dochází  k  fragmentování  pamëti,  mûùe  dojít  i  k  poîkození  memorylistu...
+(pakování  exe  souborû  je  defacto hack do systému...) Ok, Titanic nepotêebuje
+více  pamëti  (ale  je  SLOW), ale stejnë - mnoho depakovacích rutin má problémy
+s 040+  procesory  (Crunchmania, etc...).  Jistë, pokud intro musí být zpakováno
+na  40  çi  64kBy...   V  tom  pêípadë  pouùijte StoneCruncher pro compo, çi jen
+pêedveðte  ùe  Stc  spakuje  Váî  program  pod daný limit, ale proboha îiête jen
+depakovanou verzi.  Hodnë inter padá na 040+ jen díky depakovací rutinë.
+
+  Dále jsem vidël uù mnoho ReadMe çi doc souborû s @{c FFEE28}divnými nastaveními tooltypû@{c},
+jako  napêíklad  More,  PPMore a podobnë.  Prosím, nepiîte do DefaultToltypu NIC
+jiného  neù MultiView.  Nebo si myslíte, ùe uùivatelé grafických karet mají tyto
+hrûzy a preferují 50Hz PAL, 1blp pêed 1024×768 a ergonomickou frekvencí?  Na RTG
+(retargable  gfx,  obecnë jakákoliv grafická karta) jede MultiView îílenë rychle
+(krásný  scrolling!),  narozdíl od ostatních pochybených nesystémových zmatkû...
+Nespecifikujte  cestu  k  MultiViewu - protoùe kaùdý uùivatel mûùe mít MultiView
+kde  chce,  staçí,  kdyù  je  adresáê  kde  se  nachází  uveden za pêíkazem Path
+v Startup-Sequenci -> systém tyto cesty prochází, kdyù hledá MultiView.
+
+  Ok, zpët k demûm.  Po  @{c FFEE28}dvojitém kliknutí@{c} na ikonku by se demo (kdyù budete mít
+îtëstí) mëlo rozbëhnout.  Ovîem hodnë programátorû zapomíná, ùe je nezbytné, aby
+se také kdykoliv dalo z dema vyskoçit, kdyù se zmáçkne LMB (LeftMouseButton ;)).
+To  pêece není problém dodëlat, nezapomínejte na to, prosím.  Bohuùel, není vùdy
+rozumné  okamùitë vyskoçit z dema, protoùe se çasto stává, ùe to cvaknutí LMB je
+zaznamenáno  operaçním systémem a protoùe pozice myîítka je urçitë jiná, neù pêi
+spuîtëní  dema,  OS  interpretuje toto kliknutí jako Drag & Drop akci s ikonkou,
+a demo,  jeho  adresáê, çi cokoliv jiného se pêesune - a ani nevíte kam.  Jednou
+mûj  pêítel  dokonce  spustil  kopírování mého Work:  partitionu do Public:  ...
+Bylo by tudíù dobré, kdyby kodér rychle ztmavil (fade) obrazovku a vymazal input
+buffer pro prevenci takových situací jako jsem popsal.  Je nepêíjemné, kdyù máte
+více  oken, hledat kam ùe se demo (navíc çasto bez ikonky, takùe musíte pêepnout
+zobrazení kaùdého okna...  :( ) "schovalo".
+
+  Kdyù  uù  jsme  u  toho  konce  -  domnívám se, ùe @{c FFEE28}scroll@{c} by se standardnë mël
+pauzovat  na  RMB,  bohuùel, hodnë lidí na tuto podstatnou vlastnost zapomíná...
+Standardní  UI (User Interface - uùivatelské rozhraní) je velmi dobrý, Macovský,
+nápad,  nevidím dûvod, proç jen nenásledovat.  Pravá myîka mûùe být taky pouùita
+pro  rûzné  indikace  pêi  bëhu  dema,  napêíklad k indikaci vytíùení (cooperem)
+systému,  a  tak podobnë.  (mrknëte na dobré staré demo Friday at Eight od Polka
+Brothers - bohuùel, aby hudba bëùela, musíte resetovat VBR...).
+
+  Dalîí  çasto  vyskytující  se  chyba  je, ùe mnoho programátorû se domnívá, ùe
+@{c FFEE28}assignování@{c}  je  potêebné.   To je ale hloupý vtip.  Napêíklad MacOS nemá ùádnou
+takovou funkci, a pêece funguje.  Také jsem nevidël pC demo, které by poùadovalo
+assign.   (pC  dema na mých 64MB RAM êíkají:  "Program is too big to be fit into
+memory.")  Programátoêi, pêestañte vtipkovat a zaçnëte pouùívat funkci AmigaDOSu
+GetProgramDir(), kteráù Vám pêedá cestu, ve které jste, takùe pouùívání hloupých
+assignû  mûùe  být  nahrazeno  progdirem.   Já  se vyhýbám demûm, která poùadují
+assign.   Je  to  jednoduîe  pêíliî  lame na to, abych to byl ochoten tolerovat.
+@{c FFEE28}@{i}(nejjednoduîîí je  pêímo  pêistupovat  k logickému  zaêízení  PROGDIR:, které se
+automaticky nahrazuje cestou, ze které byl program spuîtën ... pozn.Shaman)@{ui}@{c}.
+
+  Teð pojðme k @{c FFEE28}poçtu souborû@{c}.  Nëkteré dema (Closer, Dim...) sestávají s velkého
+poçtu  souborû.   To  je  pêímo hrozné.  Je jednoduché pouùít dos.library funkcí
+k pêístupu  k  více souborûm, spojeným v jeden velký datasoubor.  Já mám nejvíce
+v oblibë  jednosouborová  dema  (pamëï  je  dnes  velmi  levná...), ale existují
+dûvody,  jako  napêíklad  fix-dem  aby  fungovaly na vyîîích konfiguracích, proç
+ponechat  spustitelný  soubor  obsahující  pouze  kód  jako  samostatný  soubor.
+Mimochodem,   kdyù  budete  psát  svûj  vlastní  pêístup  k  souborûm  v  jednom
+datasouboru,  prosím, nepouùívejte ùádný hack - pouùijte 100% OS funkce, jelikoù
+mnoho  lidí  má  vëtîí  bloky  na harddisku (já mám 4k - mnohem rychlejîí delete
+(zhruba 100× :-) ), ale také znám lidi, co mají 32kBy bloky, ne 0.5kBy bloky!
+
+  Pojðme   se   ale   bavit   zase   o   kódu.    Dema  by  mëla  být  testována
+s @{c FFEE28}Enforcerem/CyberGuardem@{c},  a  nemëla  by mít ùádné hity - ùádné chyby, které by
+mohly  zapêíçinit  pád  systému  po demu.  Já doporuçuji pouùívat 060 pro vývoj,
+protoùe  na  060 kombinace Sushi, SeqTrackeru, CyberGuardu a MungWallu Vám ukáùe
+diassemblovaný  kód  kolem êádku, který zpûsobil hit (hit je samozêejmë odchycen
+a není  povolen)  a  skoçí  zpët do editoru na êádku, která zpûsobila tuto chybu
+a hit.   To  udëlá  z vylechtávání programu zábavnou hru.  Doporuçuji prozkoumat
+velmi   çasto   pouùívaný   Player   6.1A   (pouùívejte  fix!,  k  dispozici  na
+"http://come.to/amiga")  protoùe  ten  je  nejçastëjîí  pêíçinou  hitû - není to
+proto,  ùe by byl snad îpatnë napsán, ale proto, ùe mnoho codérû po sobë napsalo
+do  tohoto replayeru svoje vlastní inicializaçní zmatky a ty jsou pêímo protkány
+bugsy a jsou bohaté na hity.
+
+
+  Dalîí  varování  je potêeba pêi @{c FFEE28}otevírání obrazovky@{c}.  Pouùijte OS!  Bez ohledu
+na  to,  ùe  hacky  typu "move.w #32,$dff1dc" fungují na vëtîinë systémû (jen na
+vîech  PAL  maîinkách...), nefungují s jinými grafickými výstupy (jiné rozliîení
+(DbPal,  Multiscan...) çi RTG).  I kdyù tento hack opravdu zapne PAL, neêekne uù
+operaçnímu  systému,  ùe  se  tu otvírá nová obrazovka a bylo by ji têeba dát do
+popêedí.   To  je  hlavnë  têeba pro vîechny ScanDoublery a uùivatele grafických
+karet  -  jinak  tito  uvidí jen zamrzlou myî na svém WorkBenchi, jako napêíklad
+s demem  ThugLife  a  mnoha  dalîími...  Prosím, pouùívejte OS.  Ten Vám zajistí
+vîechny  potêebné  alokace,  atd.   Jen  prosím  nazapomínejte, ùe na grafických
+kartách  je  moùno  zobrazit  bitmapy  i z Fast-RAM, takùe pokud vstup je, nedej
+boùe, na PALu, MUSÍTE specifikovat Chip-RAM (ne jen public graphic memory, to je
+uù  i  Fast-RAM!),  jinak uvidíte volnou Chip-RAM...  têeba BigAnim, prvni verze
+dema  PhaseOne  a  tak...  CGX má option planes2fast, které zajiîïuje pêesouvání
+vîeho,  kde není Chip-RAM pêímo uvedena do Fast-RAM...  a CGX je dnes nejçastëji
+pouùívaný RTG software...
+
+  To  co  bylo  uvedeno  doposud  berte  jako základní návod, jak udëlat funkçní
+program.   Teð  nëco kolem podporování @{c FFEE28}p96/CGX a AHI@{c}.  Dnes jiù není vhodná doba
+na  psaní  hardwérových  trikû, které vyrazí z poçítadla maximum za cenu pêímého
+pêístupu  k hardware.  Ano, AHI je pomalejîí neù têeba Player6.1A (nejrychlejîí,
+cca  60-120  rasterpixels  na 4 kanál MOD...), ale AHI pêináîí podporu zvukových
+karet,  AHI normálnë podporuje více kanálû, vysoké mixovací frekvence a podobnë.
+A hlavnë, AHI jede mnohem rychleji na KS3.1 a zvukové kartë.  Ano, vezme si nëco
+CPU  výkonu,  ale  na  060 to není nijak kritické.  Zkouîel jsem demo Everything
+Dies,  které  má  AHI a RTG podporu a namëêil jsem pro vaîi informaci toto:  pêi
+Paula  8bit  mono  módu  a 4kHz mixovací frekvenci je hudba skuteçnë hnusná, ale
+kdyù  toto  zmëníte  na  Paulu v 14bit, kalibrovaném stereu a mixovací frekvenci
+28kHz,  tak  rozdíl  çiní  ani  ne  0.5 fps!!!  Kdo mûùe êíci, ùe AHI je pomalé?
+Pouùil  jsem  AHI  4.180,  060  verzi a ta napêíklad s DigiBoosterem 2.20 dokáùe
+pêehrát  najednou  v  16bitovém  módu  (mimochodem,  benchmarky  jsou dëlané pro
+8bitový  mód...)  pêi  mixovací  frekvenci  44.1kHz  na  FastPaula  14bit stereo
+calibrated  vîech  128 kanálû!!!  Ano, scopes se pêekreslily tak dvakrát za celý
+testovací  patern a taky scrolling patternu...  pêekreslil se asi tak 6×.  A myî
+uù  îkubala.   Ale  fungovalo  to a hrálo to nezpomalenë (neù to zpomalí, tak se
+úplnë zastaví scopes a scrolling...)!
+
+  Jo, RTG a AHI, to jsou dobré vëci.  Jistë, grafické karty Vám neumoùní spoustu
+trikû  které  ulehçí  procesoru,  ale  jsou  velmi rychlé v @{c FFEE28}zápisu chunky dat@{c} na
+screen  a také umoùñují vysoká rozliîení, HI a TrueColor módy...  Také hardwarem
+podporované  funkce  systému  doznaly velkého zrychlení, napêíklad ScrollVPort()
+dokáùe  scrollovat low-res (CGX) screen 960-krát za sekundu (960 fps!!!) a jeîtë
+v  800  × 600 × 8 bit to dokáùe stále jeîtë 101-krát za sekundu na mojí obyçejné
+kartë  CV3D  s  zpropadenë  pomalými  Z2  sloty  (CV3D je skoro 2× pomalejîí neù
+PicassoIV  a CGX je pomalejîí neù p96, zejména pêi zápisu...).  Double buffering
+je  také  moùný (dokonce jednoduchý) - staçí otevêít 2× vyîîí obrazovku (320*240
+rozliîení,  320*480  obrazovka)  a  pouùít ScrollVPort() kterýù ji posune nahoru
+a dolû,  podle  toho,  který buffer je dorendrován...  Tento zpûsob je rychlejîí
+neù  ChangeScreenBuffer(),  kterýù vyùaduje kopírování screenbufferu blitterem -
+mnohem  pomalejîí,  zvláîtë  u  vëtîích  a  Hi çi TrueColor screenû.  Jen prosím
+pouùívejte  240  êádkû, ne 200 êádkû, jinak pomër pixelû není blízký 1*1 a místo
+kruùnice dostanete elipsu...
+
+  Kdyù  mluvíme  o  zpûsobech  jak  urychlit  kód, bylo by dobré pêipomenout, ùe
+rutina  bëùící  kolem  40-45 fps je hodnë îkubaná - na rychlém HW je têeba zaçít
+uvaùovat  nad  nastavením  maximální  @{c FFEE28}rychlosti  obnovování obrazovky@{c} (fps) jako
+u XTR,  TestamentuII  a podobnë.  Protoùe dnes mohou mít vîichni uùivatelé jinou
+obnovovací   frekvenci   screenu  (nejsme  na  pC  ;)  je  têeba  na  to  myslet
+a nenastavovat  nic  natvrdo.  Kdy rutina vypadá plynule?  Kdyù její rychlost je
+v celoçíselném  pomëru  k  rychlosti  obnovování obrazovky.  Pro PAL je to velmi
+jednoduché  -  50  fps  (1:1)  je super, 25 fps (1:2) je stále docela dobré, jen
+hrany  jsou tam jakoby dvakrát.  17 fps (1:3) a niùîí jsou pouùitelné, ale ne uù
+nijak  zvláîtë  plynulé.   Takùe  jediná  cesta  jak  to udëlat dobêe je umoùnit
+uùivateli  aby  si  nastavil  svou  rychlost  obnovování  obrazovky,  nastavením
+dëlitele  mezi  rychlostí obnovování obrazovky a rychlostí rutiny.  1 jako kaùdý
+první  frame,  2  kaùdý  druhý  a  tak  dále.   Nëkteré  hry mají toto nastaveno
+"natvrdo"  (napê.   Gloom  má  max. 25  fps).  Nezapomínejte na to, prosím, kdyù
+uvaùujete nad plynulým, doublebuferovaným pohybem.  Nejçastëji je moùno uvaùovat
+nad  25 fps, protoùe dosaùení 50 fps je moùné (vëtîinou) jen na 060/66+.  Neù se
+zaçnëte   domnívat,   ùe   to   je   nemoùné,  mrknëte  se  na  moje  doporuçení
+a "http://come.to/amiga",  pêípadnë  shlédnëte nëjaké dobré demo, jako napêíklad
+Muscles/Impulse  na  030  a  pak  na  060/66 a Vaîe myîlení ohlednë rychlosti se
+zmëní.  Garantováno (kdyù jsem to vidël, tak jsem si 060 koupil).
+
+  Nejprve  jaké  instrukce  jsou  navùdy zapovëzeny - tyto jsou @{c FFEE28}emulovány na 060@{c}
+(jinými  slovy  bez  060.library  (SetPatch)  Vám  program spadne, byï s jedinou
+takovou  instrukcí...).   Nepouùívejte  ùádnou, ani pro inicializaci.  Vypotí to
+trap  pêeruîení  a  emulaci.  To dokáùe sníùit rychlost aù na úrovëñ kolem 5-10%
+základní A1200.
+
+    DIVU.L  <EA>,Dr:Dq
+    DIVS.L  <EA>,Dr:Dq
+    MULU.L  <EA>,Dr:Dq
+    MULS.L  <EA>,Dr:Dq
+    MOVEP   Dx,(d16,Ay)
+    MOVEP   (d16,Ay),Dx
+    CHK2    <EA>,Rn
+    CMP2    <EA>,Rn
+    CAS2    Dc1:Dc2,Du1:Du2,(Rn1):(Rn2)
+    CAS Dc,Du,<EA>
+
+
+  Neimplementované FPU instrukce v 68060.  Ovîem 060 FPU je nejrychlejîí.
+
+    FACOS       FASIN       FATAN
+    FATANH      FCOS        FCOSH
+    FETOX       FETOXM1     FGETEXP
+    FGETMAN     FLOG10      FLOGN
+    FLOGNP1     FMOVECR     FSIN
+    FSINCOS     FSINH       FTAN
+    FTANH       FTENTOX     FTWOTOX
+    FLOG2       FMOD        FREM
+    FSCALE      FTRAPcc     FDBcc
+    FScc
+    FMOVEM.X (dynamic register list)
+    FMOVEM.L #immediate of 2 or 3 control regs
+    F<OP>.X  #immediate,FPn
+    F<OP>.P  #immediate,FPn
+
+
+  Následující instrukce:
+
+    FMUL.S Fp0,Fp1
+    MOVE.L D0,D2
+    MOVE.L D1,D3
+    MOVE.L D2,D4
+    ADD.L D5,D6
+    ADD.L D0,D1 - se vykonají ve 3 cyklech !!!
+
+
+  Na 060 (jako na vîech branch-prediction procesorech) to vypadá, ùe nezáleùí na
+tom,  jestli  pouùíváte  registry  nebo pamëï pro ukládání operandû.  Samozêejmë
+registry  jsou  rychlejîí,  ale  dle  Adryho  testû nebyl zjiîtën ùádný rozdíl -
+vypadá to, ùe cache pracuje velmi dobêe.
+
+  Jeîtë kolem instrukcí a çasování - NOP má 9 cyklû, FDIVU 16 (!), ale DIVU mûùe
+trvat  i  tak  málo,  jako 9 (!!!) cyklû - závisí to na dëliteli (tzv.  multiple
+exit points...).  Jo, NOP taky maùe pipeline, takùe moc nepouùívat!  Pak tu máme
+jeden  bugs  v manuálu - instrukce TAS není emulovaná, instrukce TAS2 uù ano (to
+není ani nutné uvádët, synchronizace více 68k na Amize zatím nehrozí...  :-( ).
+
+  Kdyù  píîete  nëjakou  rutinu,  vyvarujte  se  vîech  moùných  @{c FFEE28}"DBRA@{c} Dx,loop",
+nahraðte to @{c FFEE28}"SUBQ.l@{c} #1,Dx; @{c FFEE28}BPL.w@{c} loop".  DBRA a podobné - vîechny DBxx instrukce
+-  zpûsobují  çiîtëní  pipeline  -  çekají  na její vyprázdnëní (dokonçení vîech
+instrukcí).  Drasticky to dokáùe zrychlit loopy s mnoha DBxx instrukcemi.
+
+  Piîte  rutiny a navrhujte algoritmy tak, aby mohly vyuùívat @{c FFEE28}pipeline@{c} zêetëzení
+instrukcí.   Dvë  integrální,  jedna  FPU a jeden skok - to lze vykonat v jednom
+cyklu (!), ale jen, kdyù pouùívají rozdílné registry, operandy, atd...
+
+  @{c FFEE28}MOVE16@{c}.   Kvûli  novému copy-back módu 040 byla pêidána nová MOVE16 instrukce.
+Pouùívání  MOVE.l  (na  040+)  sniùuje rychlost asi na polovinu, kdyù pêesouváte
+vëtîí  blok.   Je  to  proto, ùe pêi copy-back módu jsou data nejprve zapsána do
+cache  a teprve posléze (pêeteçení cache) do RAM.  MOVE.l je pouùitelné pro malé
+bloky  dat,  zápis,  který je keîován çi zápis do Chip-RAM.  Nepouùívejte MOVE16
+pro  zápis  do  Chip-RAM (SLOW!).  Pokud opravdu potêebujete 64 bitovou pêesnost
+pro své výpoçty, udëlejte to takto (aby se zachovala 060 kopatibilita):
+
+Pro 020/030/040:
+@{c FFEE28}Mul_040@{c}         MULS.l   D1,D1:D0                 ;64-bit násobení
+                MOVE.w   D1,D0
+                SWAP     D0
+                RTS
+
+Pro 060+:
+@{c FFEE28}Mul_060@{c}         FMOVE.l D0,Fp0
+                FMUL.l  D1,Fp0
+                FMUL.s  #0.0000152587890625,fp0   ;D0 * D1 / 65536   @{c FFEE28}=8-O@{c}
+                FMOVE.l Fp0,D0
+                RTS
+
+  Stejný postup je pro dëlení. Jak vidíte, FPU RULEZ!
+
+  Teð nëco kolem @{c FFEE28}MMU triku@{c}.  Kdyù máte rutinu, která nëco rendruje do bufferu çi
+jen  zapisuje data do nëj, není od vëci, zkusit zmënit cache mód pro buffer, aby
+se  zabránilo  pêeplñování  cache  daty,  které  se budou jenom zapisovat (Andry
+dosáhl  sluîného  zrychlení  i u rutiny,  která  zpëtnë  çetla  z  bufferu  data
+(blurring)  -  >30% ).  V ideálním pêípadë (zpûsob zápisu...) je moùné dosáhnout
+aù  trojnásobku  (!)  výkonu.   Byla tak urychlena DrawColumn() rutina v ADoomu.
+Pro  pêíklad se mrknëte na ADoom zdrojáky (ADoomsrc.lha, a amiga_mmu.s).  Pomûùe
+to znaçnë na 040+.  A nejrychlejîí kód na nejrychlejîím procesoru je cíl!
+
+  Pokud  se  bavíme  o  nejrychlejîím  kódu,  tak je dobré poznamenat ùe na 040+
+vîechny 020/030 @{c FFEE28}c2p rutiny@{c} jedou velice pomalu, je nezbytnë nutné pouùívat lepîí
+c2p   pro   040+.    Vypadá   to,   ùe  dnes  je  nejlepîí  Aki  c2p  pro  ADoom
+(c2p8_040_amlaukka.s),  která  dosahuje 85 fps (320*200*8) na A4k, CSMKII 060/60
+(Hi  ShAmaNe!),  kdeùto vîechny ty "nejrychlejîí" c2p pro 020/030 nedosahují ani
+poloviny výkonu.
+
+  Zpët  ale  k tomu nejdûleùitëjîímu.  Doporuçuji, aby jste vîichni programovali
+@{c FFEE28}jen  pro  040+@{c},  anùto pouùívání paralelních FPU operací (taky 040 FPU je mnohem
+lepîí  neù  68882)  pomûùe  vyîîímu výkonu, také MMU a branch unit Vám pêedvedou
+svou  sílu!   Rutiny budou "çistîí" a çitelnëjîí.  Nedomnívám se, ùe stojí vûbec
+zato uvaùovat o tom, jestli vîichni uù mají procesor 040+ (040 - vyrobena v roce
+1990  -  @{f D2FF8C}VZBUÐTE  SE@{f}!!!)  .   Pokud  se  zaçne  programovat  pro 040+, uùivatelé
+upgradují,  a  to je jen dobré pro Amigu.  Proç nedat uùivatelûm silnou motivaci
+k upgrade?  Kdyù si více lidí koupí akceleraçní (nejlépe 66MHz Apollo ;-) karty,
+ty  budou  levnëjîí  -  a  tak  si je bude moci koupit jeîtë více lidí.  Prosím,
+pomoùte  nastartovat  tuto  cestu  vývoje,  protoùe podobný vývoj na pC znamenal
+posun k rychlému a levnému hardware.
+
+  Kdyù  uùivatelé budou více tlaçeni @{c FFEE28}doporuçeními@{c} (doporuçujte 060/66 ;-) a 040+
+bude  nezbytnë potêeba, tak si ji brzy koupí, nebo opustí Amigu (Hi NoRo!) - ale
+to  je  taky  dobré,  protoùe  uùivatelé,  mající  jen holou A1200 pomohou Amize
+nejvíce,  kdyù  upgradují  nebo  ji  prodají  - dalîí majitel bude postaven pêed
+stejné  dilema  a kdyù bude inteligentní, tak si koupí poêádný procesor (nejlépe
+060  nebo PPC ;) .  Opravdu je nejvyîîí ças (jestli není uù pozdë, jak nás ty pC
+drtëj...) pêejít na 040+ za kaùdou cenu.  Jdëte do toho.
+
+  Dále  se  mrkneme  na @{c FFEE28}bugsy@{c}.  Vîechno na svëtë má bugy.  To je pêece normální,
+zvláîtë  u  dem,  dodëlávaných  na  poslední  chvíli  na  párty  v noci...  Ano,
+deadline.   Ale  proç  se  pak  nevrátit  jeîtë  na  chvíli  a vypustit fixnutou
+produkci?   To je podle më jeden z velkých Amiga problémû - @{f EE5100}NIC není dotaùeno do
+konce@{f},  výsledkem  çehoù  je îpatný software (i dema jsou software), ùádné fixy,
+ùádná  podpora,  nemoùnost  pêátelsky  nëkoho  o fix poùádat (okamùitë je çlovëk
+podezêelý...   no  kdo  by dëlal fix, ùe?), ùádné pêátelství, ùádná Amiga - nebo
+jsme to schopni zmënit?
+
+  Já  prostë  nachápu,  k  çemu jsou ty (rozdrbané a nedodëlané) produkce?  Proç
+tolik  lidí  zabíjí  tak  moc  çasu  pro  nic?   Kdyù  investují  tolik  çasu na
+zkompletování  dema,  proç  demu (programu) nevënovat jeîtë trochu çasu (minimum
+v porovnání  s çasem, potêebným pro kompletaci dema) a vypustit pozdëji fixnutou
+verzi?   Ano,  nëkteêí  kodéêi  se  o  to  snaùí,  a já je za to chválím (Azure,
+Powdihacker,  BJSebo...),  ale  vëtîina  ne.   Proç  Dr.Jekyll  nebo  Mr.Hyde od
+Andromedy  nefixnuli  perfektní  Nexus7, jenù nejede na 060?  Proç Jamie od BOMB
+nefixne  (i  kdyù  to prvnë sliboval!) Thug Life?  I chci vidët ty pulse-Gourard
+objekty  bëùet  "everyframe"  (Nexus7).   I chci vidët Thug Life na scandoubleru
+a plynule  bëùící  na  mojí 060.  Taky se domnívám, ùe tyhle "problémy" s hi-end
+hardwarem odrazují mnoho lidí od koupë.
+
+  A  to není vîe.  Mnoho hloupých, lame lidí v rûzných Amiga - periodicích píîou
+o   @{c FFEE28}"nekompatibilitë"@{c}  procesoru  060!!!   Jak  îpatný  vtip!   Kvûli  pêíîerným
+kodérským  zpûsobûm  a  hackûm (napêíklad jako Supervisor mód a "hraní" si s SSP
+a CCR registrem (Hi Jamie!)...), které moùná dokáùou kód urychlit o nëjakých 10%
+na  zpropadenë  pomalých a zastaralých 030 Amigách (je to vûbec jeîtë Amiga?  Já
+myslím ùe NE) je pak 060 (ale i 040...) hodnocena jako "nekompatibilní" !!!
+
+  @{f FEFF59}Kde  je  to  peklo, odkud nám sem posílají takové lidi?@{f}  Podívejte se, jak Mac
+aplikace  bëhají  na 060 oproti Amize a zvláîtë si uvëdomte, ùe 060 nikdy nebyla
+do Macka pouùita - a pêesto Mac aplikace nemají ùádné emulované instrukce a bëùí
+rychleji  neù  "nativní"  Amiga  aplikace  (têeba  FractalDesign  Painter kontra
+Photogenics,   MoviePlayer   kontra   cokoliv   na  Amize...).   Proç?   Protoùe
+programátoêi  na  Macku  si  pêeçetli  a @{c FFEE28}RESPEKTOVALI@{c} doporuçení Motoroly a její
+plány do budoucna.  A hlavnë, podporují nejrychlejîí hardware...
+
+  Amigisté,  jak  se  Vám  líbí  fakt, ùe nejrychlejîí Amiga Doom-clone je @{c FFEE28}Doom@{c}?
+Doom, pêekompilovaný na pomalých C kompilerech (ano, nejdûleùitëjîí vykreslovací
+rutiny jsou 100% asm...).  Proç, ku pêíkladu, Breathless není rychlejîí, kdyù je
+udëlán 100% v assembleru?  A jeho engine je navíc jednoduîîí.  ADoom 1.2 mi dëlá
+23.5  fps  a  nëco  pêes  28 fps na 66MHz, na rychlejîím hardware pak i více neù
+35fps,  a  Breathless  na  fullscreenu  dokáùe  vypotit  jen asi tak 10-12fps...
+Domnívám  se,  ùe  nëco  MUSÍ  být îpatnë.  Vypadá to, ùe kvalita Amiga software
+potêebuje ZLEPÎIT a to hodnë.
+
+  Kdyù  jsme u toho, proç demo - codéêi nevypustí @{c FFEE28}zdrojový kód@{c} souçasnë s demem?
+Proç není zdrojový kód îíêen standardnë s demem?  Proç?  Kdyù bude kód pêístupný
+vîem,  je  pravdëpodobné,  ùe  nëkdo pêijde na to, jak to zrychlit, udëlat jinak
+a lépe.   A aby demo bëùelo sviùnë - to je snad cíl, ne?  A pokud nikdo nedokáùe
+rutinu  zrychlit,  nic se nedëje.  Jsem si témëê jistý, ùe vypuîtëní kódu pomûùe
+ostatním  kodérûm  aby  se  pouçili çi pêípadnë zlepîili a dëlali lepîí, çistëji
+naprogramované  a  rychlejîí  dema,  hry  çi  programy.  Jsem si jistý, ùe pokud
+i velký  poçet  kodérû vypustí své zdrojáky, napêíklad pro texturování, pouze ta
+nejlepîí, nejrychlejîí a s nejlepîím výsledkem (korektní perspektiva, atd.) bude
+pouùívána,  pêípadnë  vylepîena.   Tak  jako  vùdy,  kdyù  je  moùno  si  vybrat
+z konkurençních produktû.
+
+  Mimochodem,  podívejte  se  na  @{c FFEE28}ADoom@{c}.   Má  naprosto  çisté  texturování stën
+a podlahy,  totálnë çisté rays.  A teð se podívejte na ostatní Amiga enginy.  Co
+vidíte,   têeba   u   AB3DII?    Hrûza...    Trapped?   Pêíîerné  texturování...
+Breathless?   Uù  témëê  çisté texturování (rays!), ale stále to jeîtë má jakési
+îumy...   :(  Proç  pouùívat  chybující  a  îpatné  rutiny, kdyù jsou zde çistîí
+a rychlejîí zpûsoby?  Domnívám se, ùe je neskuteçnë neproduktivní zabíjení çasu,
+kdyù  si kaùdý kodér musí napsat vlastní rutinu pro texturování.  Tuhle "výsadu"
+mûùeme  s  klidem pêenechat DOS-boxûm, kde je ale tolik zdrojákû pêístupných, ùe
+se  çlovëku  dëlá  îpatnë...   to se to pak uçí!  Stále se domníváte, ùe by bylo
+îpatné, kdyby zdrojáky byly dostupné?
+
+  Pokud  si  mylíte,  ùe  demoscéna  je zaloùena na @{c FFEE28}soutëùení kodérû@{c} - ANO, máte
+pravdu.   A  pokud  si  myslíte,  ùe  kdyù budou vîichni pouùívat stejný kód pro
+texturování tak scéna zemêe, jste vedle jak ta jedle.  Rychlost kódu je jen malý
+krok,  jak  udëlat  dobré  demo.   Taky  design, grafika a hudba jsou podstatné.
+A kdyù  rutiny  budou dostupné, nejen ùe kodéêi budou produkovat lepîí dema, ale
+hlavnë budou hledat nové postupy, efekty, experimentovat, a to posune scénu dál,
+neù  snaùení  se  zrychlit  texturování.   A,  samozêejmë,  pokud budou zdrojáky
+dostupné,  nejprve  se  budou vylepîovat a poté se opët bude hledat nëco jiného,
+lepîího,  zajímavëjîího...   Vùdycky  bude  dost  nových  myîlenek, a kdyù budou
+dostupné  zdrojáky  -  kdo by se zabýval starými efekty?  Prostë se budou hledat
+nové.   @{c FFEE28}Vypuîtëní zdrojákû nezniçí scénu@{c} - naopak, pomûùe jí a hodnë.  Podívejte
+se  na  pC.   Je to hnusný shit, jasnë, ale spousta zdrojákû je volnë dostupných
+(FutureCrew...),  coù  umoùñuje  jednoduîîí  studium  a  rychlejîí  postup scény
+kupêedu.   pC  scéna  roste velmi rychle, a zdrojáky jsou jedním z dûleùitých aù
+klíçových  faktû.   A Amiga scéna je menîí a menîí, a zanikne.  Vîechno zanikne.
+I Amiga  jednou  zanikne.   Ovîem ta doba je velmi blízko pro nás vîechny, pokud
+budeme postupovat stejnými zpûsoby jako dosud.
+
+  Velmi  se  omlouvám,  pokud  nëkteré  moje  názory jsou îpatné, nepêátelské çi
+depresivní,  nebo,  coù  je  nejhorîí  alternativa, stejné jako názory milovníka
+pC...   :(  @{c FFEE28}Nemám  ùádné pC a nikdy si ho nekoupím, to je realita@{c}.  Já mám stále
+a navùdy  Amigu,  bez  ohledu  na to, jestli to bude brzy BoXer kvûli 68k výkonu
+(Z3,  rychlá  sbërnice, 75MHz 060, rychlejîí zápis do Chip-RAM a tak podobnë...)
+nebo  PPC Amiga.  @{c FFEE28}Mám rád svou Amigu@{c}, ale na druhou stranu se uù nemohu dívat na
+to, kam vëci dnes spëjí...
+
+  Jeîtë  jednou se omlouvám, ùe tento pêíspëvek je zêejmë pêíliî kritický.  Budu
+rád,  kdyù  si  budu  moci  pêeçíst  Vaîe  reakce.   Také  jsem pêipraven pomoci
+s odlaðováním a otestováním rutin komukoliv, pokud bude têeba.

@@ -1,0 +1,79 @@
+»CL9:--------------------------------------
+»CL8:     »BIG:Changes Since Last Issue»
+»CL9:--------------------------------------
+»CL7:
+Well... first of all there where »CL6:BIG»
+problems with the first release right
+before x-mas. The »CL6:major fuckup» was the
+fonts that it couldn't load... The
+problem was that even so that the two
+fonts where present in the Fonts:
+directory it still failed. After a
+major bug hunting, I located the
+precise error to be in the font header
+files, because the font names also are
+stored internally inside the 2 header
+font files (The ?.font files). Ofcause
+I wasn't aware of that :-) & since
+everybody in Depth who beta-tested it
+had the 2 fonts (»CL6:Scala» & »CL6:P0T-NOoDLE»)
+it wasn't discovered before it was too
+late... Sorry about that one!!!
+
+»CL1:Of other less important bugs, there
+was a tiny one in the search routine
+so that if you search'ed for a word
+that also stood in a clipart filename
+it most likely resulted in a guru.
+As I overwrite the first char in the
+found word with a highlight code used
+by my textwriter routine (so it knows
+what to highlight:))... Well this
+should be fixed now!!!
+
+»CL7:Beside fixing theese bugs. I added
+the possiblity of searching though all
+the articles in one go, then standing
+in the menu (Try it!!! »CL6:I'm proud!!!» It
+takes less than a »CL6:second» to search
+trough all the articles).
+
+I also added the possiblity of using
+the right mouse botton to toggle
+between the menu & articles.
+
+»CL1:And finally I updated all my error
+handling routines so its less likely
+to guru if an error occours...
+(EG: Now it dosn't guru if it can't
+find a clipart on the harddisk).
+»PIC:Raven1»
+
+
+
+
+
+
+
+
+
+
+
+»CL7:& finally a week later at »CL6:The Party 6»
+in Aars, the first issue was released
+again!!! (Here we go again:-)).
+
+»CL1:New things added to EC#29 are so far
+the possiblity of using some »CLA:color
+cycling» in the articles. (Got the idea
+from another mag I saw at the party).
+»CL7:In the chart section the stats text
+has been formatted in a new way giving
+space to more text. The stat diagram
+has also been coded, so its back like
+in the good old days.
+
+»CL1:I can also mention that the code has
+grown with around »CL6:500» lines from »CL6:6100»
+to »CLB:6600» lines (& more to come :-))
+since the before x-max issue...  

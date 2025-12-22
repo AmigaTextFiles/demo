@@ -1,0 +1,19 @@
+failat 20
+path Abstract-1:c add
+echo "Interactive's Abstract Installer ....."
+echo
+echo " please select where to create the ´Abstract´ drawer ..."
+requestfile >env:dest drawersonly noicons hd1:
+cd $dest
+makedir Abstract
+cd Abstract
+echo " drawer generated, depacking main part ..."
+lha -q x Abstract-1:Abstract.lha
+echo " copying additional files ..."
+copy Abstract-1:Abstract      Abstract
+copy Abstract-1:Abstract.info Abstract.info
+echo " please insert disk 2 and press the lmb ..."
+waitmouse
+echo " copying endpart ..."
+copy Abstract-2:EndPart.exe   EndPart.exe
+echo " installation finished, enjoy the demo ..."

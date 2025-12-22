@@ -1,0 +1,263 @@
+                     English version below
+
+
+                     BIENVENUE A LA DEMO
+                     REVOLUTION HARLEQUIN
+
+
+                     Ceci est une démo freeware,
+                     Montrez-la à vos amis,
+                     Distribuez-la dans le monde entier.
+
+
+Cette démo a été conçu à partir d'un noyau de code développé en juillet 89
+par le légendaire SEB de Wild Copper. C'est pas tout neuf, mais personne
+d'autre n'a encore réussi à faire CA.
+
+
+Des gens qui s'appellent UP-FRONT ( Cult of intelligence ) ont fait quelques
+démos multicolores absolument géniales (disons-le) mais ça tourne pas en 3D.
+
+Bon, c'est vrai, cette démo, on aurait pu vous en faire profiter plus tôt,
+mais vous savez ce que c'est, à part être génial SEB est le plus grand 
+glandeur (disons-le) que je connaisse, il a laissé traîner un mois, puis un
+autre, et puis bon 2 ans, bon d'accord il a fait math sup/spé entre temps...
+ça occupe. Quant au reste de l'équipe de TECSOFT, nous étions tous plongés
+dans des projets plus "sérieux".
+
+
+Mais voilà, mars 91, la carte HARLEQUIN est arrivée, LA carte 32 bits sur
+Amiga ( 24 pour la couleur et 8 pour la transparence vidéo ) avec la possi-
+bilité de dessiner enfin en 16 millions de couleurs sur l'Amiga. De retou-
+cher les images 3D et les digits,sur l'écran. De transformer nos Amigas en
+de véritables palettes vidéographiques professionnelles. 
+
+
+Evidemment chez TECSOFT IMAGES, où tout ce qui touche à l'Image nous intéres-
+se on a bondit. La Révolution Harlequin était en marche. En deux semaines
+nous avons développé la structure et les premières options de TV PAINT, LA
+palette 32bits, qui a stupéfié tout ceux qui l'ont vue au CeBit. Depuis, le
+développement se poursuit à grande vitesse, par la même équipe qui program-
+mait il y a 2 ans déjà la démo Révolution ( c'est-à-dire qu'ils assurent pas
+mal merci).
+
+Entretemps on a aussi interfacé avec la carte HARLEQUIN: Mixator qui visua-
+lise les images 16 millions de couleurs (RGB, TGA...) aux formats Amiga, et
+sait donc maintenant le faire sur la carte HARLEQUIN. (Cette version de
+Mixator s'appelle TV Display).
+
+Nous avons aussi développé TV Record qui est un programme d'enregistrement
+automatisé d'images 32 bits, avec pilotage de magnétoscopes à la trame près.
+Tv Record permet d'enregistrer automatiquement des animations en 16 millions
+de couleurs, il affiche l'image sur la carte HARLEQUIN ( qui est BROADCAST
+ça tombe bien ) et déclenche le magnétoscope pour en enregistrer le nombre
+de trames désirées. C'est génial.
+
+Pour en savoir plus sur tel ou tel programme, recevoir de la doc sur la
+carte HARLEQUIN ou pour vous procurer une K7 démo de TV PAINT vous nous
+contactez : 
+
+                      TECSOFT IMAGES
+                      19 Rue Dupont des Loges
+                      57000 METZ
+                      Tél: 87.74.33.27
+                      Fax: 87.75.75.14
+
+                      36.15 LOAD   rubrique VITRINE: TECSOFT
+
+
+Bon. Donc, La carte HARLEQUIN arrive. Et on se creusait la tête pour trouver
+comment parler d'une carte 16.7 millions de couleurs sur des Amigas qui n'en
+affichent que 4096 : dilemne ! C'est alors que nous nous sommes rappelé de
+la démo Révolution dont on pouvait peut-être se servir un jour...  On a cor-
+rigé quelques bugs, converti quelques images TGA et RGB12, règlé quelques
+presets... et voilà.
+
+QUELQUES TOUCHES DE CONTROL:
+
+F1 à F5 :  quelques presets
+
+F9 - F10 : change d'image ( il n'y en a que 4 on a eu pitié de
+                            ceux qui n'ont pas 8 méga de fast )
+
+Pavé Numérique:
+
+1 :     REVOLUTION ( tourne dans un sens et dans l'autre )
+2 :     stop révolution
+
+3 :     scrolling latéral ( gauche-droite-sans )
+
+4 :     scrolling de profondeur !!!
+5 :     stop scrolling de profondeur 
+
+6 :     colle l'image au fond
+
+7 :     scrolling vertical ( haut-bas )
+8 :     stop scrolling vertical
+
+9 :     inverse plancher et plafond
+
+
+Le noyau du central ayant été pondu par SEB lors une nuit de cauchemar c'est
+de la programmation brut de brut comme on en faisait au temps des cartes per-
+forées et des lampes : le programme réserve sa mémoire en absolu, si y'a pas
+de place il s'y met quand même, le code se modifie lui-même en cours d'exécu-
+tion, les labels ont des noms totalement inprobables (yayak,yokyok,yakayaka,
+yokoyoko,yayaokok,poueet,rototo,titi,tata,toto,tyty,truc et turlutu, mais le
+meileur reste à mes yeux l'inimitable "label_de_cadix" qui, à mon avis, rem-
+porte le 1er prix )( il serait temps d'organiser le concours du programme le
+plus sale mais que font les messageries et les journaux Amiga ? ).
+
+Autant dire que ce code pur jus est absolument ILLISIBLE, et qu'il y a long-
+temps que nous avons perdu l'espoir de tout comprendre ou de seulement repé-
+rer ne serait-ce qu'un semblant de structure dans ce délire de programmeur
+fou ( SEB lui-même refuse de replonger dans ses sources sans l'aide d'une
+équipe de 10 sherpas et 40 porteurs rompus à l'exploration des jungles et
+des marais de très haute altitude).
+
+
+Par une chance incroyable ce programme tourne sur 68020,68030 et même sur
+A3000 !! Amiga500 512K et Kickstart 1.2 s'abstenir ! Pour des problèmes de
+vitesse il vous FAUT de la Fast. Nous n'avons pas pu corriger tous les bugs
+alors restez indulgents et vigilants, RESETez votre machine après avoir
+lancé la démo et attendez-vous à quelques plantages ( notamment si vous
+utilisez en même temps les touches 1 et 4 ou si vous faite reculer l'image
+trop loin (ça ne passe qu'avec les 020/030 ) ou un peu de clignotement dans
+certains cas et sur certaines machines.
+
+J'espère que vous nous pardonnerez.
+
+
+Voilà, c'est fini.
+
+
+                                             El kiko del Sol.
+
+
+
+
+            HERE IT IS THE FRENGLISH VERSION FOR OUR FRIENDS
+            WHO REALLY WANT TO TRY TO UNDERSTAND SOMETHING.
+
+
+                  La Version Française est au-dessus
+
+
+                        WELCOME TO THE DEMO
+                      (HARLEQUIN) REVOLUTION
+
+
+                      This is a freeware demo,
+                      Show it to your friends,
+                      And spread it in the world...
+
+
+This demo was conceived on the base of an original code developped in july
+1989 by the famous SEB from the famous Wild Copper. It's a pretty old isn't
+it ? But nobody reached this result yet...
+
+Some guys, named UP-FRONT ( Cult-of-intelligence ) have made some multico-
+loured and genious (yes they were) demos but, you see, they didn't roll and
+scroll in 3D.
+
+
+I'm agree that we could offer you this demo soon. Right. But you know what
+it is... apart to be a genious SEB is the bigger loafer that i know. He
+waited a month, and then another, and then 2 years, right, he continued his
+studies in Superior Mathematics... that's spend time. About the rest of the
+team from TECSOFT, we were too busy in some "more serious" projects.
+
+
+But, in march 91, the Harlequin board came. THE Amiga 32 bits board ( 24 for
+the colours, 8 for the Alpha Channel) The oportunity to work in 16 millions
+colours on Amiga, to retouch 3D and digitilizing images on the screen, to
+turn our Amigas in real professionals graphics stations.
+
+Of course, in TECSOFT, where everything about images amaze us, we ran. In 2
+weeks, we created the main structure and the first options of TV Paint, the
+32bits Paint Program which astounded everybody who seen it in the Cebit.
+Since, the developpement is going on, with the same team who developped 2
+years ago the Revolution Demo ( it means they know there job ).
+
+
+Meanwhile, other programs were interfaced with the Harlequin board : Mixator
+a soft which displaied RGB images in Amiga formats and knows do it on Harle-
+quin now. ( this implemanted version is called TV Display ).
+
+We also developped TV Record, a soft which controls time-coded VTR to record
+32 bits images. TV Record is able to record automatically 16 millions co-
+lours animations, it displays each image on the Harlequin board ( which, by
+chance,is BROADCAST quality ) and runs VTR to record a number of frames that
+you specified. Very practicle.
+
+
+To know more about these programs, have some informations on Harlequin board
+or received a TV PAINT demo tape contact your local Amiga dealer or us in
+France:
+
+                      TECSOFT IMAGES
+                      19 Rue Dupont des Loges
+                      57000 METZ
+                      FRANCE
+
+                      Fax: 87.75.75.14
+                      Tél: 87.74.33.27
+
+So. The Harlequin was coming and we wonder how to show a 16 millions colours
+board on a 4096 colours computer... At this moment we remembered the Revolu-
+tion Demo which we may use someday. We corrected some bugs, converted some
+TGA images in RGB12, set some presets... and here it is.
+
+
+SOME CONTROL KEYS:
+
+F1 à F5 :  some presets
+
+F9 - F10 : change image ( there is 4
+                 ceux qui n'ont pas 8 méga de fast )
+
+Numeric Keyboard:
+
+1 :     REVOLUTION ( roll in and out )
+2 :     stop révolution
+
+3 :     lateral scrolling ( left-right-without )
+
+4 :     deep scrolling !!!
+5 :     stop deep scrolling 
+
+6 :     the deepest value
+
+7 :     vertical scrolling ( up-down )
+8 :     vertical scrolling
+
+9 : invert up and downside
+
+
+The original basic code was dreamed by SEB during a summer nightmare. This
+really rough coding : the program reserves memory at absolutes addresses &
+modify itself during execution, the label are called with completly impro-
+bable names (yayak,yokyok,yakayaka,yokoyoko,yayaokok,poueet,rototo,titi,
+tata,toto,tyty,truc and turlutu, but i think the best is the inimitable 
+"label_de_cadix" which wins the first price. It's a french joke : label
+means also "la belle" in french "the beauty from cadix" is also a song ).
+
+This means that this extra dry code is absolutly UNREADABLE, even the author
+himself can't understand nothing in this definitly unstructured thing.
+
+By an incredible chance, it runs on 68020/030 boards and even on A3000 (!!),
+but not on a A500 with 512K or kickstart 1.2 : for speed you need FAST mem.
+We didn't reached to correct all the bugs so please have mercy and be
+watchful: reset your computer after running the demo and be ready for some
+crashes ( when using the keys 1 and 4 together for example or taking the
+image too far in the background) or some flicking effect in some configura-
+tions. I hope you will excuse us. 
+
+
+That'all folks
+Have some fun
+
+
+                                             El kiko del Sol.
+
+

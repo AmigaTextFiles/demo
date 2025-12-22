@@ -1,0 +1,4 @@
+Segelschiff
+-----------
+
+Von Thomas Richter

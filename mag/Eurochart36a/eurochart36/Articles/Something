@@ -1,0 +1,781 @@
+»CL5:--------------------------------------
+»CL4:         »BIG:The simple starfield»SML:
+»CL5:--------------------------------------
+
+»CL1:           by Cytron/Depth
+
+»CL0:I'm kind of uninspired for the time
+being. The last effect, I decided to
+make, was a faked starroutine.
+
+»CL1:»BIG:The concept:
+»SML:»CL0:
+»CL1:-» Precalc some tables for the movement
+  of each star.
+  (I'll get back to this part later)
+»CL1:-» Shut down system.
+»CL1:-» Plot starmovement of each star,
+  every star's startingframe varying
+  from the next.
+
+It's as simple as that :-)
+
+»CL2:When making complex routines, it is
+important to divide it into smaller
+parts. This is not a complex routine,
+but anyhow, I find it very easier to
+keep my overview when dividing into
+smaller parts. This makes my code
+sadly unoptimized, but optimizing is
+not recommended for beginners anyway
+:-)  - first of all, a coder needs to
+think normally - later on in his/her
+carreer he/she can then turn into an
+incredibly skilled optimizer and join
+groups like Oxyron and EndZeit... This
+is way beyond the scope of this
+article, however. Let's get it on:
+
+»CL4:For each star, I've calculated 128
+frames of movement from (0,0) to a
+random point on the circle centering
+(0,0) and having radius 170 - just
+outside the boundaries on the screen
+(okok - the distance from the center
+to the corners is 205, but noone will
+ever notice).
+
+»CL3:»BIG:The math:
+»CL2:»SML:
+Interpolating (meaning taking the
+straight line between two points)
+linearly (having the same deltavalue
+for each entry) will look wrong.
+
+Explaining this is a bit hard for me,
+but study your own physics/math-books
+if you want to know why.
+
+Instead, a parabolic interpolation
+will look right. In straight
+mathematical terms, the movement will
+look like this:
+
+»CL3:x(n) = ScaleXFactor*n²
+y(n) = ScaleYFactor*n²
+»
+, where n will range from 0 to 127.
+
+For each point, I will need to
+calculate the X and Y scalefactor.
+
+This isn't all that hard, as I know
+that the last frame has n=127, which
+gives me:
+»CL3:
+EndPointX = x(127) = ScaleXFactor*127²
+EndPointY = y(127) = ScaleYFactor*127²
+»
+and since both EndPointX and EndPointY
+are known values, the scalefactors
+will be
+»CL3:
+ScaleXFactor=EndPointX/127²
+ScaleYFactor=EndPointY/127²
+»
+Or more generally, if the startpoint
+isn't (0,0) and the number of frames
+is not 128:
+»CL3:
+XFactor=(EndX-StartX)/(NUMFRAMES-1)²
+YFactor=(EndY-StartY)/(NUMFRAMES-1)²
+»
+and the formulas
+»CL3:x(n)=StartX+XFactor*n²
+y(n)=StartY+YFactor*n²
+»give me the movement.
+
+
+»CL7:If this seems as high math for you, I
+guess that you'll have to study harder
+:-) .. Anyway, in order to be nice,
+I've also included a little math on
+how to implement the linear
+interpolation:
+
+Here, the formulas will look like this:
+»CL6:XPerFrame=(EndX-StartX)/(NUMFRAMES-1)
+YPerFrame=(EndY-StartY)/(NUMFRAMES-1)
+»
+For each frame, you then simply add
+the XPerFrame to the current position.
+eg. if x has to move from 0 to 100 in
+ten frames, the position will be:
+0, 11, 22, 33, 44, 56, 67, 78, 89, 100
+
+»CL8:»BIG:Fixed point representation:
+»SML:»CL9:
+I'm afraid that my memory let's me
+down here - I can't remember if I've
+introduced this subject before. Anyway
+- fixed point notation comes in very
+handy in situations like the above
+calculations in machinecode.
+
+Without FPU, the registers available
+are only able to store whole numbers.
+However, the small example above with
+interpolation from 0 to 100 with
+(EndX-StartX)/(NUMFRAMES-1)
+demanded that XPerFrame was
+(100-0)/9=11.11
+
+This is not that hard to obtain.
+
+Before dividing 100 with 9, I simply
+multiply it with 2^16. (Easily done
+with the swap instruction)
+
+This way, the result of the division
+is not 11, but 728177. The term for
+this is that 11.11 is represented with
+16bit fixed point notation. Adding 1
+to the number will be the same as
+adding 1/(2^16) to 11.
+
+»CL8:When swapping   728177, I get 11
+When swapping 2*728177, I get 22
+When swapping 9*728177, I get 99
+»
+Hmm... This hasn't taken me anywhere.
+However, adding 0.5 - (represented as
+16bit fixed point it is 32768) to all
+results, will give me what I need -
+correct rounding.
+
+»CL1:»BIG:The point calculation routine:
+»SML:»CL0:
+I've chosen to have a sine and cosine
+table with amplitude 170 and 1024
+angles precalced. This way, getting a
+random point on the circle boils down
+to this:
+
+»CL1:-» Get a random number.
+»CL1:-» AND with 1023, so the number is in
+  the range [0;1023]
+»CL1:-» Look up sine to the number. This is
+  the YEnd
+»CL1:-» Look up cosine to the number. This
+  is the XEnd
+»CL1:-» Call the subroutine that
+  interpolates parabolic.
+
+This has to be done NUMPOINTS times.
+
+The subroutines interpolating the
+points performs the above described
+math and calls a subroutine NUMFRAMES
+times, that places the point in the
+table.
+The subroutine placing the point in
+the table performs an out of bound
+check. If point is out of bounds (0,0)
+is put into pointtable instead of the
+point.
+
+This subdividing comes in handier and
+handier, the more complex your
+routines get. Why? - you may ask.
+Simply because you can TEST each
+little routine seperately: Instead of
+working through 2000 lines of code one
+time for 160 hours to find some
+strange error, you can simply make a
+little testroutine after finishing
+every little subroutine.
+
+
+
+
+
+        »PIC:ID1»
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        Let's see
+                        the listing:
+                        First the
+                        parabolic
+                        precalccaller:
+»CL4:InitStars01:
+»CL5:;     NUMPOINTS times:
+;     Get a random angle.
+;     Use sines/cosines to get point on circle with radius=RADIUS
+;     Call CalcPoints with (0,0) - (PointX,PointY), NUMFRAMES-1»
+      lea      StarData01,a0
+      move.w   #SS_NUMPOINTS-1,d7
+.loop jsr      Random
+      and.w    #1023,d0
+      lea      SS_Sine,a1
+      lea      256*2(a1),a2
+      moveq    #0,d2
+      moveq    #0,d3
+
+      move.w   (a1,d0.w*2),d4
+      move.w   (a2,d0.w*2),d5
+      move.w   #NUMFRAMES-1,d6
+      jsr      MakeLinePointsParabolic
+      dbf      d7,.loop
+      rts
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+»CL9:StarData01 is the memoryarray for the stars.
+
+
+ »PIC:Mattarazzo2»
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Now the linear precalccaller:
+»CL4:InitStars00:
+»CL5:;     NUMPOINTS times:
+;     Get a random angle.
+;     Use sines/cosines to get point on circle with radius=RADIUS
+;     Call CalcPoints with (0,0) - (PointX,PointY), NUMFRAMES-1»
+      lea      StarData00,a0
+      move.w   #SS_NUMPOINTS-1,d7
+.loop jsr      Random
+      and.w    #1023,d0
+      lea      SS_Sine,a1
+      lea      256*2(a1),a2
+      moveq    #0,d2
+      moveq    #0,d3
+
+      move.w   (a1,d0.w*2),d4
+      move.w   (a2,d0.w*2),d5
+      move.w   #NUMFRAMES-1,d6
+      jsr      MakeLinePoints
+      dbf      d7,.loop
+      rts
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+»CL9:Note that these routines are almost
+identical. I could have made ONE
+routine, but this seems more clear to me.
+The Random routine returns a 'random'
+number in d0. More about random
+routines in another course :-) 
+
+       »PIC:Budgie5»
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The parabolic inplementer:
+»CL4:      section  CalcPoints,code
+
+»CL5:; Makes a parabolic looked up table. eg startx=0 endx=100 numframes=10
+; will give 0,1,4,11,19,30,44,60,79,99
+
+; Maths: gets deltax and deltay. divides results by (NUMFRAMES-1)²
+; This result will be multiplyed with framenumber² for each frame.
+; f(t)=scalefactor*t²
+
+; (d2,d3) is (FromX,FromY) d4,d5 is (ToX,ToY).
+; d6 is number of steps-1.
+; a0 is pointer to put points into
+
+; If point is not on screen, (0,0) will be written into memory
+
+; on exit regs contains:
+; a0 pointer to next place in memory
+; d7 not changed
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+»CL4:MakeLinePointsParabolic:
+      move.w   d2,d0
+      move.w   d3,d1
+      sub.w    d2,d4»CL5:    ; Delta X»
+      sub.w    d3,d5»CL5:    ; Delta Y»
+      swap     d2
+      swap     d3
+      swap     d4
+      swap     d5
+      move.w   #$8000,d2»CL5:        ; XPos±0.5 16 bit fixed point»
+      move.w   #$8000,d3»CL5:        ; YPos±0.5 16 bit fixed point»
+
+      move.l   d2,a2
+      move.l   d3,a3
+      clr.w    d4
+      clr.w    d5
+      move.w   d6,d0
+      mulu.w   d0,d0
+      divs.l   d0,d4»CL5:    ; Scale X 16bit fixed point»
+      divs.l   d0,d5»CL5:    ; Scale Y 16bit fixed point»
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      moveq    #0,d2»CL5:                    ; Framecount»
+      bra.b    .firsttimejump
+.loop move.w   d2,d0
+      mulu.w   d0,d0»CL5:                    ; n²»
+      move.l   d0,d1»CL5:                    ; n²»
+      muls.l   d4,d0
+      muls.l   d5,d1
+      add.l    a2,d0»CL5:                    ; Next XPos»
+      add.l    a3,d1»CL5:                    ; Next YPos»
+      swap     d0   »CL5:                    ; Correct from 16bit fixedpoint»
+      swap     d1
+.firsttimejump      »CL5:                    ; First time, just insert startpos»
+      bsr      InsertPoint
+      addq.w   #1,d2
+      dbf      d6,.loop
+      rts
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+»CL9:And the linear variant:
+
+»CL4:      section  CalcPoints,code
+
+»CL5:; (d2,d3) is (FromX,FromY) d4,d5 is (ToX,ToY).
+; d6 is number of steps-1.
+; a0 is pointer to put points into
+; If point is not on screen, (0,0) will be written into memory
+
+; on exit regs contains:
+; a0 pointer to next place in memory
+; d7 not changed»
+MakeLinePoints:
+      move.w   d2,d0
+      move.w   d3,d1
+      sub.w    d2,d4    »CL5:; Delta X»
+      sub.w    d3,d5    »CL5:; Delta Y»
+      swap     d2
+      swap     d3
+      swap     d4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+»CL4:      swap     d5
+      clr.w    d2»CL5:       ; XPos 16 bit fixed point»
+      clr.w    d3»CL5:       ; XPos 16 bit fixed point»
+      clr.w    d4
+      clr.w    d5
+      divs.l   #NUMFRAMES-1,d4    »CL5:  ; Step X 16bit fixed point»
+      divs.l   #NUMFRAMES-1,d5    »CL5:  ; Step Y 16bit fixed point»
+      bra.b    .firsttimejump
+.loop add.l    d4,d2              »CL5:      ; Next XPos»
+      add.l    d5,d3              »CL5:      ; Next YPos»
+      move.l   d2,d0              »CL5:      ; Correct from 16bit fixedpoint»
+      move.l   d3,d1
+      swap     d0
+      swap     d1
+.firsttimejump                    »CL5:      ; First time, just insert startpos»
+      bsr      InsertPoint
+      dbf      d6,.loop
+      rts
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+»CL9:Note that both routines call the subroutine InsertPoint:
+
+»CL5:; (d0,d1) is (x,y) to move into (a0) with increment of a0
+; If point is not on screen, (0,0) will be written into memory
+»CL4:InsertPoint:
+      cmp.w    #XMAX,d1
+      bgt.b    .outofbounds
+      cmp.w    #XMIN,d1
+      blt.b    .outofbounds
+      cmp.w    #YMAX,d0
+      bgt.b    .outofbounds
+      cmp.w    #YMIN,d0
+      blt.b    .outofbounds
+      swap     d0
+      move.w   d1,d0
+      move.l   d0,(a0)+
+      rts
+.outofbounds
+      move.l   #0,(a0)+
+      rts
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+»CL0:I should perhaps note, that this
+listing has been contained in four
+different files.
+
+This is another great idea when going
+upwards in complexity - make a lot a
+general routines, so that yu don't
+have to copy/paste all your code from
+one time to another - but rather just
+include the needed routines and call
+them.
+
+
+
+
+
+
+
+
+»CL9:Plotting is now obtained like this:
+»PIC:Budgie6»
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+»CL4:SS_StarData:
+»CL5:; Point at FramePos d0   in point 1
+; Point at FramePos d0+1 in point 2
+; Point at FramePos d0+2 in point 3 etc.
+; ArraySize for each pointdata is 2*2*128 (128 is numframes)
+»
+      move.l   a4,a0
+      lea      SS_Points,a1
+      move.w   #SS_NUMPOINTS-1,d7
+.loop and.w    #$007f,d0                »CL5:; Wrap counter around at 128»
+      move.l   (a0,d0.w*4),(a1)+        »CL5:; *4 as each Pointentry is a longword»
+      addq.w   #1,d0                    »CL5:; Index next Frame in next point»
+      add.l    #2*2*NUMFRAMES,a0        »CL5:; Index Next Point»
+      dbf      d7,.loop
+      rts
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+»CL0:This routine is called with two
+parameters:
+»CL1:d0» contains current framenumber
+»CL1:a4» contains pointer to the points -
+either the parabolic or the linear
+interpolation.
+
+»CL1:SS_Points» is the pointer to the points
+that will actually be displayed on the
+screen.
+
+This is done by yet another routine -
+my planarplotter that I have written
+about in another course.
+
+The planarplotter is called with a
+pointer to the following structure:
+
+»CL5:;DC.W Numpoints
+;DC.W PlScrW (40 for 320)
+;DC.W Height
+;DC.L Pointer to Pointer to PlScrDest
+;DC.L PointSrc (Y.W,X.W Signed)
+»
+Confused yet? Well - nobody ever said
+it was easy to code :-) Anyway - those
+of you out there that actually
+understand all this and get something
+out of it (all you newbies, or
+whatever you have turned into by now)
+might begin to wonder: How come that
+he hasn't made his precalc routines
+more general - called with a poitner
+containing:
+»CL5:
+;DC.W Numpoints
+;DC.W NumFrames
+;DC.W XMin
+;DC.W XMax
+;DC.W YMin
+;DC.W YMax
+;DC.W NumAngles
+;DC.W Radius
+;DC.L Pointer to PointData
+»
+This is simply because I'm lazy - and
+I really ought to rewrite it and make
+it like that instead - it will be a
+little bit slower and the size will
+grow. However, it would make my
+routine more flexible and faster to
+change.
+
+
+»BIG:»CL6:Epilogue:
+»SML:»CL7:
+As you'll notice in the example
+source, I've also included star trails
+and fadeups/fadedowns. I'm sure that
+some of you'd like to know how - well
+- go figure, and perhaps I'll tell you
+next time :-)
+»PIC:Mattarazzo3» 

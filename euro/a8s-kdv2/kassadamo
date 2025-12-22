@@ -1,0 +1,696 @@
+V3.0
+
+MOUSE on
+FKEYS on
+
+EVENT programoversikt.anim
+SOUND play "rimi:KassadamoDrawer/p4intro.snd" volume 64 pan 0 period 178 loops 1 fadein 1
+ANIM "rimi:KassadamoDrawer/programoversikt.anim" 5 1
+PAUSE 1
+END
+
+EVENT straks2.iff
+SOUND play "rimi:KassadamoDrawer/strakskassdamo.snd" volume 64 pan 0 period 214 loops 1
+PICTURE "rimi:KassadamoDrawer/straks2.iff"
+WIPE blank speed 30
+PAUSE 4
+END
+
+EVENT forned.anim
+SOUND play "rimi:KassadamoDrawer/fotned.snd" volume 64 pan 0 period 122 loops 1
+ANIM "rimi:KassadamoDrawer/forned.anim" 8 1
+WIPE blank speed 5
+PAUSE 3
+END
+
+EVENT "mod.ikke det samme"
+SOUND play "rimi:KassadamoDrawer/mod.ikke det samme" volume 64 pan 0 period 350 loops 1
+PAUSE 1
+END
+
+EVENT utenreklame.anim
+SOUND volume 64 fade 1
+ANIM "rimi:KassadamoDrawer/utenreklame.anim" 8 1
+WIPE blank speed 5
+PAUSE 8
+END
+
+EVENT blackback.iff
+PICTURE "rimi:KassadamoDrawer/blackback.iff"
+WIPE blank speed 5
+PAUSE 3
+END
+
+EVENT besj&go1.iff
+SOUND play "rimi:KassadamoDrawer/goldVSpampi1-1.snd" volume 64 pan 0 period 178 loops 1
+PICTURE "rimi:KassadamoDrawer/besj&go1.iff"
+WIPE blank speed 5
+PAUSE 10
+END
+
+EVENT besj&go2.iff
+SOUND play "rimi:KassadamoDrawer/goldVSpampi2.snd" volume 64 pan 0 period 178 loops 1
+PICTURE "rimi:KassadamoDrawer/besj&go2.iff"
+WIPE blank speed 30
+PAUSE 31
+END
+
+EVENT besj&go3.iff
+PICTURE "rimi:KassadamoDrawer/besj&go3.iff"
+WIPE blank speed 5
+PAUSE 6
+END
+
+EVENT foropp.anim
+SOUND play "rimi:KassadamoDrawer/fotopp.snd" volume 64 pan 0 period 122 loops 1
+ANIM "rimi:KassadamoDrawer/foropp.anim" 8 1
+WIPE blank speed 5
+PAUSE 6
+END
+
+EVENT progpresav.snd
+SOUND play "rimi:KassadamoDrawer/progpresav.snd" volume 64 pan 0 period -72 loops 1
+PAUSE 2
+END
+
+EVENT spons_pasta.iff
+SOUND play "rimi:KassadamoDrawer/fluesopp.snd" volume 64 pan 0 period 122 loops 1
+PICTURE "rimi:KassadamoDrawer/spons_pasta.iff"
+PAUSE 3
+END
+
+EVENT spons_bryggern.iff
+SOUND play "rimi:KassadamoDrawer/bRyggern.snd" volume 64 pan 0 period 122 loops 1
+PICTURE "rimi:KassadamoDrawer/spons_bryggern.iff"
+PAUSE 3
+END
+
+EVENT spons_råner.iff
+SOUND play "rimi:KassadamoDrawer/bilprodusent.snd" volume 64 pan 0 period 122 loops 1
+PICTURE "rimi:KassadamoDrawer/spons_råner.iff"
+PAUSE 3
+END
+
+EVENT countdown.anim
+SOUND play "rimi:KassadamoDrawer/CartoonIntro2.snd" volume 64 pan 0 period 178 loops 1
+ANIM "rimi:KassadamoDrawer/countdown.anim" 11 1
+PAUSE 8
+END
+
+EVENT mod.introduction.01
+SOUND play "rimi:KassadamoDrawer/mod.introduction.01" volume 64 pan 0 period 350 loops 1
+END
+
+EVENT presents.anim
+ANIM "rimi:KassadamoDrawer/presents.anim" 25 1
+PAUSE 1
+END
+
+EVENT a8saround.iff
+PICTURE "rimi:KassadamoDrawer/a8saround.iff"
+WIPE fade bycolor 0 speed 5
+PAUSE 4
+END
+
+EVENT intro_motionpic.iff
+PICTURE "rimi:KassadamoDrawer/intro_motionpic.iff"
+WIPE fade bycolor 0 speed 5
+PAUSE 4
+END
+
+EVENT intro_kassadamo.iff
+PICTURE "rimi:KassadamoDrawer/intro_kassadamo.iff"
+WIPE fade bycolor 0 speed 5
+PAUSE 4
+END
+
+EVENT intro_basedONnovel.iff
+PICTURE "rimi:KassadamoDrawer/intro_basedONnovel.iff"
+WIPE fade bycolor 0 speed 5
+PAUSE 4
+END
+
+EVENT intro_kassASdamo.iff
+PICTURE "rimi:KassadamoDrawer/intro_kassASdamo.iff"
+WIPE fade bycolor 0 speed 5
+PAUSE 4
+END
+
+EVENT intro_statister.iff
+PICTURE "rimi:KassadamoDrawer/intro_statister.iff"
+WIPE fade bycolor 0 speed 5
+PAUSE 4
+END
+
+EVENT intro_lincoln.iff
+PICTURE "rimi:KassadamoDrawer/intro_lincoln.iff"
+WIPE fade bycolor 0 speed 5
+PAUSE 4
+END
+
+EVENT rimikvardag1.iff
+PICTURE "rimi:KassadamoDrawer/rimikvardag1.iff"
+WIPE fade bycolor 0 speed 5
+PAUSE 3
+END
+
+EVENT rimikvardag2.iff
+PICTURE "rimi:KassadamoDrawer/rimikvardag2.iff"
+WIPE chest speed 10
+PAUSE 3
+END
+
+EVENT rimikvardag3.iff
+SOUND volume 64
+PICTURE "rimi:KassadamoDrawer/rimikvardag3.iff"
+WIPE chest backwards speed 10
+PAUSE 3
+END
+
+EVENT rimikvardag4.iff
+PICTURE "rimi:KassadamoDrawer/rimikvardag4.iff"
+WIPE chest speed 10
+PAUSE 3
+END
+
+EVENT rimi-outside1.anim
+SOUND play "rimi:KassadamoDrawer/heiltvanlegdag.snd" volume 64 pan 0 period 178 loops 1
+ANIM "rimi:KassadamoDrawer/rimi-outside1.anim" 8 1
+PAUSE 4
+END
+
+EVENT rimi_inne.iff
+SOUND play "rimi:KassadamoDrawer/gromose.snd" volume 64 pan 0 period 178 loops 1
+PICTURE "rimi:KassadamoDrawer/rimi_inne.iff"
+PAUSE 5
+END
+
+EVENT meanwhile.iff
+PICTURE "rimi:KassadamoDrawer/meanwhile.iff"
+PAUSE 2
+END
+
+EVENT rimi_paalageret.iff
+PICTURE "rimi:KassadamoDrawer/rimi_paalageret.iff"
+PAUSE 2
+END
+
+EVENT rimi_lager1.anim
+ANIM "rimi:KassadamoDrawer/rimi_lager1.anim" 6 1
+PAUSE 1
+END
+
+EVENT rimi_lager2.anim
+SOUND play "rimi:KassadamoDrawer/ditttrekkvidar.snd" volume 64 pan 0 period 178 loops 1
+ANIM "rimi:KassadamoDrawer/rimi_lager2.anim" 6 1
+PAUSE 1
+END
+
+EVENT rimi_lager1.anim.1
+ANIM "rimi:KassadamoDrawer/rimi_lager1.anim" 6 1
+PAUSE 1
+END
+
+EVENT rimi_lager3.anim
+SOUND play "rimi:KassadamoDrawer/proeveraatenke.snd" volume 64 pan 0 period 178 loops 1
+ANIM "rimi:KassadamoDrawer/rimi_lager3.anim" 6 1
+PAUSE 1
+END
+
+EVENT rimi_lager3.anim.1
+ANIM "rimi:KassadamoDrawer/rimi_lager3.anim" 6 1
+PAUSE 1
+END
+
+EVENT rimi_lager4.anim
+SOUND play "rimi:KassadamoDrawer/gaaogsjaadupia.snd" volume 64 pan 0 period 178 loops 1
+ANIM "rimi:KassadamoDrawer/rimi_lager4.anim" 6 1
+PAUSE 1.320
+END
+
+EVENT rimi_lager1.anim.3
+ANIM "rimi:KassadamoDrawer/rimi_lager1.anim" 6 1
+PAUSE 1
+END
+
+EVENT rimi_lager5.anim
+SOUND play "rimi:KassadamoDrawer/jada_bareetttil.snd" volume 64 pan 0 period 178 loops 1
+ANIM "rimi:KassadamoDrawer/rimi_lager5.anim" 6 1
+PAUSE 1
+END
+
+EVENT rimi_lager5.anim.1
+ANIM "rimi:KassadamoDrawer/rimi_lager5.anim" 6 1
+PAUSE 1
+END
+
+EVENT dagutoginn.iff
+SOUND play "rimi:KassadamoDrawer/slikvardet_mensaa.snd" volume 64 pan 0 period 178 loops 1
+PICTURE "rimi:KassadamoDrawer/dagutoginn.iff"
+PAUSE 2
+END
+
+EVENT mensaaeindag.iff
+PICTURE "rimi:KassadamoDrawer/mensaaeindag.iff"
+PAUSE 3
+END
+
+EVENT rimi-outside2.anim
+SOUND play "rimi:KassadamoDrawer/brumbrumwroom.snd" volume 64 pan 0 period 214 loops 1
+ANIM "rimi:KassadamoDrawer/rimi-outside2.anim" 14 1
+PAUSE 2
+END
+
+EVENT varkassatom.iff
+SOUND play "rimi:KassadamoDrawer/varkassentom.snd" volume 64 pan 0 period 178 loops 1
+PICTURE "rimi:KassadamoDrawer/varkassatom.iff"
+PAUSE 4
+END
+
+EVENT rimi_inne_tom.iff
+SOUND play "rimi:KassadamoDrawer/momlemomle.snd" volume 64 pan 0 period 214 loops 1
+PICTURE "rimi:KassadamoDrawer/rimi_inne_tom.iff"
+PAUSE 4
+END
+
+EVENT rimi_lager1v1.anim
+ANIM "rimi:KassadamoDrawer/rimi_lager1v1.anim" 6 1
+PAUSE 1
+END
+
+EVENT rimi_lager1v2.anim
+ANIM "rimi:KassadamoDrawer/rimi_lager1v2.anim" 6 1
+PAUSE 1.320
+END
+
+EVENT rimi_lager1v1.anim.1
+ANIM "rimi:KassadamoDrawer/rimi_lager1v1.anim" 6 1
+PAUSE 1
+END
+
+EVENT rimi_lager1v3.anim
+SOUND play "rimi:KassadamoDrawer/faensåstille.snd" volume 64 pan 0 period 214 loops 1
+ANIM "rimi:KassadamoDrawer/rimi_lager1v3.anim" 6 1
+PAUSE 1.320
+END
+
+EVENT rimi_lager1v1.anim.2
+ANIM "rimi:KassadamoDrawer/rimi_lager1v1.anim" 6 1
+PAUSE 1
+END
+
+EVENT rimi_lager1v4.anim
+SOUND play "rimi:KassadamoDrawer/jegvarutesist.snd" volume 64 pan 0 period 214 loops 1
+ANIM "rimi:KassadamoDrawer/rimi_lager1v4.anim" 6 2
+PAUSE 1.320
+END
+
+EVENT rimi_lager1v1.anim.3
+ANIM "rimi:KassadamoDrawer/rimi_lager1v1.anim" 6 2
+PAUSE 1
+END
+
+EVENT rimi_flytaav.anim
+SOUND play "rimi:KassadamoDrawer/flytaav.snd" volume 64 pan 0 period 214 loops 1
+ANIM "rimi:KassadamoDrawer/rimi_flytaav.anim" 16 1
+PAUSE 2
+END
+
+EVENT sahvasomskjer.anim
+SOUND play "rimi:KassadamoDrawer/sehvasomskjer.snd" volume 64 pan 0 period 214 loops 1
+ANIM "rimi:KassadamoDrawer/sahvasomskjer.anim" 8 1
+PAUSE 2
+END
+
+EVENT kommernyhetene2.iff
+SOUND play "rimi:KassadamoDrawer/nyenyheitene.snd" volume 64 pan 0 period 214 loops 1
+PICTURE "rimi:KassadamoDrawer/kommernyhetene2.iff"
+PAUSE 5
+END
+
+EVENT nyppidyblue1.iff
+SOUND play "rimi:KassadamoDrawer/nyenuppidy.snd" volume 64 pan 0 period 214 loops 1
+PICTURE "rimi:KassadamoDrawer/nyppidyblue1.iff"
+WIPE grid4 speed 10
+PAUSE 6
+END
+
+EVENT sahvasomskjer.anim.1
+SOUND play "rimi:KassadamoDrawer/sehvasomskjer.snd" volume 64 pan 0 period 214 loops 1
+ANIM "rimi:KassadamoDrawer/sahvasomskjer.anim" 8 1
+PAUSE 3
+END
+
+EVENT damopåøyo.iff
+SOUND play "rimi:KassadamoDrawer/hawaii.snd" volume 64 pan 0 period 214 loops 1
+PICTURE "rimi:KassadamoDrawer/damopåøyo.iff"
+WIPE blank speed 2
+PAUSE 6
+END
+
+EVENT damozoom.iff
+PICTURE "rimi:KassadamoDrawer/damozoom.iff"
+WIPE blank speed 5
+TABS 100 200 300 400 500
+MARGINS on 32 607
+FONT 2001.font 8
+COLOR 255 48 48 48 48 0 255 48 0 255 61 59 55 57 255
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 9 1 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 30 15 ""
+PAUSE 4
+END
+
+EVENT sexydamo1.iff
+PICTURE "rimi:KassadamoDrawer/sexydamo1.iff"
+WIPE center speed 4
+PAUSE 6
+END
+
+EVENT storyend_funnetlykken.iff
+PICTURE "rimi:KassadamoDrawer/storyend_funnetlykken.iff"
+WIPE pers speed 5
+PAUSE 4
+END
+
+EVENT storyend_noengangslutt.iff
+PICTURE "rimi:KassadamoDrawer/storyend_noengangslutt.iff"
+WIPE pers speed 5
+PAUSE 4
+END
+
+EVENT storyend_hvemvant.iff
+PICTURE "rimi:KassadamoDrawer/storyend_hvemvant.iff"
+WIPE pers speed 5
+PAUSE 4
+END
+
+EVENT storyend_tokpia.iff
+PICTURE "rimi:KassadamoDrawer/storyend_tokpia.iff"
+WIPE pers speed 5
+PAUSE 4
+END
+
+EVENT storyend_hvaermeningen.iff
+PICTURE "rimi:KassadamoDrawer/storyend_hvaermeningen.iff"
+WIPE pers speed 5
+PAUSE 4
+END
+
+EVENT storyend_theend.iff
+SOUND stop fade 6
+PICTURE "rimi:KassadamoDrawer/storyend_theend.iff"
+WIPE pers speed 5
+PAUSE 6
+END
+
+EVENT rekl_str1.iff
+SOUND play "rimi:KassadamoDrawer/pling.snd" volume 64 pan 0 period 214 loops 1
+PICTURE "rimi:KassadamoDrawer/rekl_str1.iff"
+WIPE blank speed 30
+PAUSE 3
+END
+
+EVENT tannkrem_redd.iff
+SOUND play "rimi:KassadamoDrawer/reddforåsmile.snd" volume 64 pan 0 period 214 loops 1
+PICTURE "rimi:KassadamoDrawer/tannkrem_redd.iff"
+WIPE blank speed 15
+PAUSE 4
+END
+
+EVENT tannkrem_lysere.iff
+SOUND play "rimi:KassadamoDrawer/lyserefremtid.snd" volume 64 pan 0 period 214 loops 1
+PICTURE "rimi:KassadamoDrawer/tannkrem_lysere.iff"
+WIPE blank speed 15
+PAUSE 6
+END
+
+EVENT tannkrem_lysetenner.iff
+PICTURE "rimi:KassadamoDrawer/tannkrem_lysetenner.iff"
+WIPE blank speed 5
+PAUSE 5
+END
+
+EVENT tannkrem_kjøpno.iff
+SOUND play "rimi:KassadamoDrawer/prøvedennå.snd" volume 64 pan 0 period 214 loops 1
+PICTURE "rimi:KassadamoDrawer/tannkrem_kjøpno.iff"
+WIPE blank speed 15
+PAUSE 4
+END
+
+EVENT blackback.iff.1
+PICTURE "rimi:KassadamoDrawer/blackback.iff"
+WIPE blank speed 5
+PAUSE 2
+END
+
+EVENT koraanar.iff
+SOUND play "rimi:KassadamoDrawer/embalasje.snd" volume 64 pan 0 period 214 loops 1
+PICTURE "rimi:KassadamoDrawer/koraanar.iff"
+WIPE blank speed 15
+PAUSE 6
+END
+
+EVENT rekl_str2.anim
+SOUND play "rimi:KassadamoDrawer/snø.snd" volume 64 pan 0 period 214 loops 1
+ANIM "rimi:KassadamoDrawer/rekl_str2.anim" 8 1
+PAUSE 6
+END
+
+EVENT lking1.iff
+SOUND play "rimi:KassadamoDrawer/add_soundpart.snd" volume 64 pan 0 period 214 loops 1
+PICTURE "rimi:KassadamoDrawer/lking1.iff"
+WIPE blank speed 5
+PAUSE 3
+END
+
+EVENT lking2.iff
+PICTURE "rimi:KassadamoDrawer/lking2.iff"
+WIPE blank speed 5
+PAUSE 5
+END
+
+EVENT banan_pres.iff
+PICTURE "rimi:KassadamoDrawer/banan_pres.iff"
+WIPE blank speed 5
+PAUSE 3
+END
+
+EVENT add_part.iff
+PICTURE "rimi:KassadamoDrawer/add_part.iff"
+WIPE blank speed 5
+PAUSE 3
+END
+
+EVENT intro_doom0.iff
+PICTURE "rimi:KassadamoDrawer/intro_doom0.iff"
+WIPE blank speed 5
+PAUSE 3
+END
+
+EVENT intro_doom1.iff
+PICTURE "rimi:KassadamoDrawer/intro_doom1.iff"
+WIPE cube south speed 15
+PAUSE 1
+END
+
+EVENT intro_doom2.iff
+PICTURE "rimi:KassadamoDrawer/intro_doom2.iff"
+WIPE cube south speed 15
+PAUSE 1
+END
+
+EVENT intro_doom3.iff
+PICTURE "rimi:KassadamoDrawer/intro_doom3.iff"
+WIPE cube south speed 15
+PAUSE 1
+END
+
+EVENT intro_doom4.iff
+PICTURE "rimi:KassadamoDrawer/intro_doom4.iff"
+WIPE cube south speed 15
+PAUSE 1
+END
+
+EVENT nå.anim
+ANIM "rimi:KassadamoDrawer/nå.anim" 50 30
+PAUSE 1
+END
+
+EVENT doom1.ANIM5
+ANIM "rimi:KassadamoDrawer/doom1.ANIM5" 50 1
+END
+
+EVENT killkill.anim
+ANIM "rimi:KassadamoDrawer/killkill.anim" 50 30
+END
+
+EVENT doom5fwd.ANIM5
+ANIM "rimi:KassadamoDrawer/doom5fwd.ANIM5" 50 1
+END
+
+EVENT doom5bkw.ANIM5
+ANIM "rimi:KassadamoDrawer/doom5bkw.ANIM5" 50 1
+END
+
+EVENT doom5fwd.ANIM5.1
+ANIM "rimi:KassadamoDrawer/doom5fwd.ANIM5" 50 1
+END
+
+EVENT doom5bkw.ANIM5.1
+ANIM "rimi:KassadamoDrawer/doom5bkw.ANIM5" 50 1
+END
+
+EVENT doom5fwd.ANIM5.2
+ANIM "rimi:KassadamoDrawer/doom5fwd.ANIM5" 50 1
+END
+
+EVENT doom5bkw.ANIM5.2
+ANIM "rimi:KassadamoDrawer/doom5bkw.ANIM5" 50 1
+END
+
+EVENT doom5fwd.ANIM5.3
+ANIM "rimi:KassadamoDrawer/doom5fwd.ANIM5" 50 1
+END
+
+EVENT doom5bkw.ANIM5.3
+ANIM "rimi:KassadamoDrawer/doom5bkw.ANIM5" 50 1
+END
+
+EVENT stop.anim
+ANIM "rimi:KassadamoDrawer/stop.anim" 50 30
+END
+
+EVENT DOOM00forw.ANIM5
+ANIM "rimi:KassadamoDrawer/DOOM00forw.ANIM5" 50 1
+END
+
+EVENT DOOM01backw.ANIM5
+ANIM "rimi:KassadamoDrawer/DOOM01backw.ANIM5" 50 1
+END
+
+EVENT why.anim
+ANIM "rimi:KassadamoDrawer/why.anim" 50 30
+END
+
+EVENT doom2.ANIM5
+ANIM "rimi:KassadamoDrawer/doom2.ANIM5" 50 1
+END
+
+EVENT lamers.anim
+ANIM "rimi:KassadamoDrawer/lamers.anim" 50 30
+END
+
+EVENT doom3.ANIM5
+ANIM "rimi:KassadamoDrawer/doom3.ANIM5" 50 1
+END
+
+EVENT nomore.anim
+ANIM "rimi:KassadamoDrawer/nomore.anim" 50 30
+END
+
+EVENT doom6.ANIM5
+ANIM "rimi:KassadamoDrawer/doom6.ANIM5" 50 1
+END
+
+EVENT stop.anim.1
+ANIM "rimi:KassadamoDrawer/stop.anim" 50 16
+END
+
+EVENT doom6bak.ANIM5
+ANIM "rimi:KassadamoDrawer/doom6bak.ANIM5" 50 1
+END
+
+EVENT gultlys.anim.1
+ANIM "rimi:KassadamoDrawer/gultlys.anim" 50 10
+END
+
+EVENT doom4.ANIM5
+ANIM "rimi:KassadamoDrawer/doom4.ANIM5" 50 1
+END
+
+EVENT nomore2.anim
+ANIM "rimi:KassadamoDrawer/nomore2.anim" 50 60
+END
+
+EVENT gultlys.anim
+ANIM "rimi:KassadamoDrawer/gultlys.anim" 50 33
+PAUSE 1
+END
+
+EVENT QuickGrab.001.ANIM5
+ANIM "rimi:KassadamoDrawer/QuickGrab.001.ANIM5" 24 4
+PAUSE 1
+END
+
+EVENT wb1.anim
+ANIM "rimi:KassadamoDrawer/wb1.anim" 50 1
+WIPE blank speed 8
+PAUSE 1
+END
+
+EVENT killkill.anim.1
+ANIM "rimi:KassadamoDrawer/killkill.anim" 50 30
+PAUSE 1
+END
+
+EVENT doom5fwd.ANIM5.4
+ANIM "rimi:KassadamoDrawer/doom5fwd.ANIM5" 50 1
+END
+
+EVENT doom5bkw.ANIM5.4
+ANIM "rimi:KassadamoDrawer/doom5bkw.ANIM5" 50 1
+END
+
+EVENT doom5fwd.ANIM5.5
+ANIM "rimi:KassadamoDrawer/doom5fwd.ANIM5" 50 1
+END
+
+EVENT doom5bkw.ANIM5.5
+ANIM "rimi:KassadamoDrawer/doom5bkw.ANIM5" 50 1
+END
+
+EVENT doom5fwd.ANIM5.6
+ANIM "rimi:KassadamoDrawer/doom5fwd.ANIM5" 50 1
+END
+
+EVENT doom5bkw.ANIM5.6
+ANIM "rimi:KassadamoDrawer/doom5bkw.ANIM5" 50 1
+END
+
+EVENT re_hereends.iff
+PICTURE "Sykkeldøro:temp/kassadamodrawer/re_hereends.iff"
+WIPE blank speed 5
+PAUSE 3
+END
+
+EVENT re_want.iff
+PICTURE "Sykkeldøro:temp/kassadamodrawer/re_want.iff"
+WIPE blank speed 5
+PAUSE 5
+END
+
+EVENT re_cd.iff
+PICTURE "Sykkeldøro:temp/kassadamodrawer/re_cd.iff"
+WIPE blank speed 5
+PAUSE 5
+END
+
+EVENT re_order.iff
+PICTURE "Sykkeldøro:temp/kassadamodrawer/re_order.iff"
+WIPE blank speed 5
+PAUSE 7
+END
+
+EVENT re_astep.iff
+PICTURE "Sykkeldøro:temp/kassadamodrawer/re_astep.iff"
+WIPE blank speed 5
+PAUSE 3
+END
+
+EVENT a8s1998.iff
+PICTURE "rimi:KassadamoDrawer/a8s1998.iff"
+WIPE blank speed 5
+PAUSE -1
+END

@@ -1,0 +1,50 @@
+{
+  "enc_info": {
+    "data_type": "ENCPAR",
+    "version": "2.0"
+  },
+  "max_num_particles": 1000,
+  "num_create_particles": 2,
+  "sorting_type": "disabled",
+  "shape_type": "plane_billboard",
+  "life_time": 1,
+  "particles_per_sec": 70,
+  "update_freq": 50,
+  "spread": 0.3,
+  "locked_position_axis": false,
+  "texture_frames_matrix": [
+    1, 1
+  ],
+  "texture_file_name": "sa_particles_1_tex",
+  "layer_1": {
+    "blending": "additive",
+    "color_keys_rgba": [
+      0.015,
+      1,
+      0.015,
+      1,
+      0,
+      0,
+      0,
+      1
+    ],
+    "color_key_times": [
+      0,
+      1
+    ],
+    "size_keys": [
+      0.14,
+      0.01
+    ],
+    "size_key_times": [
+      0,
+      1
+    ],
+    "texture_keys": [
+      0
+    ],
+    "texture_key_times": [
+      0
+    ]
+  }
+}

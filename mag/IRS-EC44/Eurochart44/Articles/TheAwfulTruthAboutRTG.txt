@@ -1,0 +1,306 @@
+
+»CL6:--------------------------------------------------------------------------------
+»CL0:                           The Awful Truth About RTG
+»CL6:--------------------------------------------------------------------------------
+
+                          Written by »CL5:Dr. Doom »CL6:of »CL5:IRIS
+
+»CL1:In  the  past  months since  the  last
+edition of the EC  a few diskmags have
+passed my way,  and  I've learned that
+the RTG vs.  non-RTG discussion  rages
+on even   when I'm  not  looking. »CL8:Yup,
+there's  a surprise, half of the world
+is  behind  my back,  and   there  are
+things  going  on  which are beyond my
+control.»CL1: I don't like this.
+
+Well,  yes,  and  I  do  not  like  to
+comment on articles either, so instead
+
+
+
+
+
+
+
+
+I'll    address   the   lot   of   you
+Intuition coders; Intuition is not the
+Holy  Grail! I  offer  these thoughts:
+
+»CL8:            Compatibility
+
+»CL1:Although some say AGA-only productions
+are the "less  compatible", I urge you
+to think this  over  just  once.  »CL7:What
+makes   an   AGA    production    less
+compatible?»CL1:  The  fact  that  it won't
+cooperate  with   CGX   which   is   a
+third-party  software  hack?  The fact
+that  it  requires   equipment  that's
+usually  considered  mandatory for the
+operation of an Amiga? If that defines
+"less    compatible",   I'm     afraid
+compatibility  is  going to be hard to
+achieve.
+
+»CL8:Now,  I'm  going  to   make   a   bold
+statement  here:  Disabling the system
+is    a    good   idea.»CL1:    Why?    For
+
+compatibility. Uh oh, pissed off a few
+people there, I think. Well, see, once
+you  shut  down  the system, your only
+variables are the  amount of memory at
+your disposal,  the  CPU type  and the
+FPU type. Memory is  easily  allocated
+(even    automatically)    and     the
+appropriate  error  messages   can  be
+printed  if  this  fails.  CPU and FPU
+types can  be  checked in exec.library
+with ease. This makes  your production
+fail-safe! Everything else is reset to
+standards  that  hold  true throughout
+Europe, and if your  demo doesn't work
+then,  you  can  be  pretty  sure it's
+your own fault and not a compatibility
+issue.
+
+When on the other hand you  decide  to
+use  an  Intuition  screen, a world of
+file   systems,    display    drivers,
+workbench configurations,  OS  patches
+and  hacks  (such  as  mode promoters,
+input tweakers, workbench beautifiers,
+etc.)  and even  differing versions of
+the   operating    system    seriously
+threaten  the   compatibility  of  the
+production.  »CL7:If  something goes wrong,
+it MIGHT be  your code, it  MIGHT be a
+bug in the  operating system,»CL1: it MIGHT
+be  ModePro  giving  you   one    more
+bitplane than  you asked for, it might
+even  be    an   MMU-utility   causing
+problems  which  can  be   practically
+impossible  to trace. When (or if) you
+eliminate all  these problems, there's
+always  the  chance  that   the   next
+configuration will produce an array of
+new   ones   you   couldn't   possibly
+predict.
+
+»CL1:(»CL8:In  such  a  case  the    coder  will
+inevitably  be  blamed  for his "lousy
+code"  which "failed  to consider" all
+of   the   potential   pitfalls.»CL1:  Yet,
+ironically,  when  a  14-year-old  OCS
+production  fails  on  a newer  Amiga,
+it's    automatically   considered   a
+failure of the principle of non-system
+coding  and almost  never  regarded as
+bad programming, even though the coder
+was probably,  by comparison  to  most
+coders today, a novice.)
+
+»CL7:Just to  summarize:  If  a  non-system
+production    fails       and      the
+initialization routine works perfectly
+(i.e.   completely   initializes   the
+system), it is NOT the system's fault.»CL1:
+It  may  be   the   assembler/compiler
+(AsmPro has some weird bugs, mind you)
+but    that's    unlikely.    In   all
+likelihood,  the  coder  did something
+wrong.  If  a   non-system  production
+works  on  one  machine  but  not   on
+another  and  the  problem is not very
+obvious (CPU  type, etc.), the code is
+probably (i.e. pretty much definitely)
+buggy, but certain conditions may hide
+or  obscure  the  bugs  so  that  some
+systems do not reveal them.
+
+(All of  this assumes, of course, that
+we're  talking  about "clean" hardware
+banging.)
+
+»CL8:                Speed
+
+»CL1:There  is   a   considerable   penalty
+involved speed-wise  when  choosing an
+Intuition screen over  a hardware one,
+and yet  another penalty when choosing
+RTG over plain  Intuition, unless  you
+are prepared  to  sacrifice  a lot  of
+time  coding  different  routines  for
+different set-ups.
+
+Of  course,    that's     from     the
+perspective  of one who doesn't own  a
+graphics   card.    But   RTG    means
+Re-Targetable  Graphics,   not  simply
+catering  to  the gfx-card owners.  Do
+you  really  think you gain popularity
+if  most   sceners    watching    your
+production go,  "Hey,  this  would  be
+much faster  if it wasn't  meant to be
+shown on a gfx-card."
+
+»CL8:What RTG does  not  allow  you  to  do
+(easily)  is  optimise  for  a  planar
+display. For  example, only  an  idiot
+would use  8  bits  per  pixel  for  a
+monochrome  effect.»CL1: It's  hard  enough
+to distinguish  between  128 shades of
+the  same  colour,  so wasting DMA and
+C2P time  with  another   bitplane  is
+ridiculous.  Of  course,  a   gfx-card
+doesn't care  if the  palette  ignores
+one bit of every  byte, but AGA  does.
+For  another  example,  an  AGA screen 
+might only be 180 or so lines tall and
+still  remain centred,  whereas an RTG
+screen needs an additional 38 lines at
+the top  which aren't  rendered.  This
+can be  worked  around, of course, but
+then you're knee-deep in  special-case
+coding already  and RTG starts to lose
+its appeal.
+
+»CL8:Now, there  are  many  useful  palette
+tricks  for  blending   one   set   of
+bitplanes with another, creating, say,
+a    transparent      scroller,     or
+crossfading   between   images.»CL1:   Does
+anyone have any idea how slow a chunky
+crossfade   looks    by    comparison?
+Bitplanes  are  ideal  for these tasks
+and  many  others,  which  again means
+special-case  coding   in   order   to
+achieve  optimum speed on both AGA and
+gfx-cards.
+
+»CL7:Let's  also remember that  the fastest
+of  chunky  effects  on AGA interleave
+rendering with  C2P  operations, or at
+least with writes to chip memory. This
+works  in  plain  Intuition but not if
+RTG is to be enabled.»CL1:
+
+As  for   the    difference    between
+Intuition  and   non-Intuition,  well,
+merely  leaving  the  operating system
+running eats up an amount of CPU time.
+(Although by setting the task priority
+of the  production  high  enough  this
+amount becomes less significant.)
+
+Consider  such  things as  1x2 and 2x1
+displays. How do  you do a 1x2 display
+in  Intuition?  Scale  your  effect to
+double  height,  of course, giving you
+as  much  chipmem   access  as  a  1x1
+display during  the C2P, as well  as a
+slight  overhead   before    it   (»CL8:the
+hardware equivalent is to change three
+registers  upon  which   the   display
+hardware automatically  displays every
+line  twice, so, you decide  which  is
+faster»CL1:).  This  is  really  a  case of
+Intuition not accounting  for  all the
+tricks  that  coders  come  up with to
+boost performance. And how could it?
+
+As  for  2x1  effects (and 2x2 effects
+which  can  be   combined from 2x1 and
+1x2), there are  certain  C2P routines
+which expand 1x1  to 2x1 with a slight
+speed benefit compared to  scaling the
+chunky  screen  first and then doing a
+1x1 C2P.
+
+ »CL8:            Flexibility
+
+»CL1:The   thing  that  really   bugs    an
+old-timer as  myself (hah) is the vast
+number  of  things RTG  simply doesn't
+let you do.
+
+»CL7:Since you're  left with  no  immediate
+way  to  time  your  effects   to  the
+vertical  refresh,  you  will  need to
+read or measure the exact (!) vertical
+refresh frequency  of the display mode
+your  user  chooses  and   set   up  a
+CIA-timer    to   serve    interrupts.»CL1:
+Moreover, since the frequency is not a
+fixed  constant  as  it  is  on  a PAL
+display,  one-frame   motion   becomes
+tricky or  in  some  cases impossible.»CL1:
+Consider a scroller.  Such  an  effect
+will  not  be  able  to  move N pixels
+every frame  without  moving faster on
+some  computers  than on others, since
+the  number  of  frames   per   second
+becomes  variable.  To  look smooth, a
+scroller  would  need    some   tricky
+interpolation  routines   that   would
+probably make it too slow to be smooth
+anyway.
+
+»CL8:Ok, now, I  am  going to wrap this up.
+Just remember,  this  is  not meant to
+discourage RTG productions  or make me
+out to look like the oldschool fanatic
+that  I  really  am.»CL1:   I   like    RTG
+productions   because     they     are
+productions  and  all  productions are
+nice, even if they  are released under
+the Loonies label. However,  I do hope
+I can discourage the  attitude towards
+AGA  that  I  have  seen  expressed in
+diskmags recently.  I don't  know what
+makes people  think  the  way they do,
+because no  matter  how  I look at it,
+they seem to be wrong.
+
+»CL7:I guess part of it is about wanting to
+see all  of  that  expensive  hardware
+being  put  to   use. »CL1:  This   is   an
+unpleasant  notion,  because  it means
+many  coders  have  spent   money   on
+hardware  which later turned out to be
+more or  less worthless (like, oh say,
+PPC boards).  Now  they   won't  admit
+how  worthless  it  really is, so they
+try to justify  the  unfair price they
+paid by making the rest  of us believe
+it's   the  one   and  only  road   to
+salvaging  the   Amiga  scene.  That's
+particularly unpleasant since no Amiga
+hardware is really being  manufactured
+on a large scale at present.
+
+»CL8:Again, I like RTG productions, I think
+most  people  do.  I  just   fail   to
+appreciate   being   told   that   the
+traditional approach to demo coding is
+outdated,   especially    when     the
+arguments  are   weak  and   the  tone
+is self-righteous.»CL1:
+
+Yep,  I  got  all excited  there. That
+wasn't supposed  to happen.  Should up
+my  medication.  Check   with   doctor
+tomorrow.  Yes.  Goodnight  everybody.
+
+
+
+
+
+
+
+
+
+      »PIC:3.iff»

@@ -1,0 +1,270 @@
+LWSC
+1
+
+FirstFrame 1
+LastFrame 60
+FrameStep 1
+PreviewFirstFrame 0
+PreviewLastFrame 750
+PreviewFrameStep 1
+FramesPerSecond 45
+
+LoadObject droga.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  2
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+  0 0 0 -270 0 0 1 1 1
+  750 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+LoadObject droga_lewa_01.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  2
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+  0 0 0 -360 0 0 1 1 1
+  750 0 0 0 0
+EndBehavior 1
+LockedChannels 48
+ShadowOptions 7
+
+LoadObject droga_lewa_02.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  2
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+  0 0 0 99.99999 0 0 1 1 1
+  750 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+LoadObject droga_lewa_03.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  2
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+  0 0 0 -415 0 0 1 1 1
+  750 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+LoadObject droga_lewa_04.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+LoadObject droga_prawa_01.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  2
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+  0 0 0 -260 0 0 1 1 1
+  750 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+LoadObject droga_prawa_02.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  2
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+  0 0 0 150 0 0 1 1 1
+  750 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+LoadObject droga_prawa_03.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  2
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+  0 0 0 -390 0 0 1 1 1
+  750 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+LoadObject droga_prawa_04.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+LoadObject stelarz.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  3
+  -0.02304171 0.600445 0.05396071 50.6 20 89.99999 0.001 0.001 0.001
+  0 0 0 0 0
+  -0.05553069 0.600445 -0.003020805 -10.69982 20 89.99999 0.001 0.001 0.001
+  173 0 0 0 0
+  -0.03311166 0.600445 -0.04253042 -55.69999 20 89.99999 0.001 0.001 0.001
+  300 0 0 0 0
+EndBehavior 1
+PivotPoint 0.0004239494 0 -0.002063417
+ShadowOptions 7
+
+LoadObject stelarz.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  5
+  -0.02495355 0.600445 0.05469937 50.6 20 120 0.001 0.001 0.001
+  0 0 0 0 0
+  -0.02495355 0.600445 0.05469937 50.6 20 120 0.001 0.001 0.001
+  250 0 0 0 0
+  -0.05553069 0.600445 -0.003020805 -10.69982 20 120 0.001 0.001 0.001
+  423 0 0 0 0
+  -0.05366679 0.600445 -0.01289533 -21.68434 20 120 0.001 0.001 0.001
+  454 0 0 0 0
+  -0.03311166 0.600445 -0.04253042 -55.69999 20 120 0.001 0.001 0.001
+  550 0 0 0 0
+EndBehavior 1
+LockedChannels 24
+PivotPoint 0.0004239494 0 -0.002063417
+ShadowOptions 7
+
+LoadObject stelarz.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  5
+  -0.02495355 0.600445 0.05469937 50.6 20 110 0.001 0.001 0.001
+  0 0 0 0 0
+  -0.02495355 0.600445 0.05469937 50.6 20 110 0.001 0.001 0.001
+  436 0 0 0 0
+  -0.04893394 0.600445 0.01641993 10.20621 20 110 0.001 0.001 0.001
+  550 0 0 0 0
+  -0.05553069 0.600445 -0.003020805 -10.69982 20 110 0.001 0.001 0.001
+  609 0 0 0 0
+  -0.03311166 0.600445 -0.04253042 -55.69999 20 110 0.001 0.001 0.001
+  736 0 0 0 0
+EndBehavior 1
+PivotPoint 0.0004239494 0 -0.002063417
+ShadowOptions 7
+
+LoadObject Beta1wxwxw.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  3
+  0 0.6010704 0 0 0 0 0.005 0.005 0.005
+  0 0 0 0 0
+  0 0.6010704 0 0 324.4797 0 0.005 0.005 0.005
+  338 0 0 0 0
+  0 0.6010704 0 0 719.9999 0 0.005 0.005 0.005
+  750 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+AmbientColor 255 255 255
+AmbIntensity 0.25
+
+AddLight
+LightName Light
+ShowLight 1 5
+LightMotion (unnamed)
+  9
+  1
+  -2 2 -2 45 35 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LightColor 255 255 255
+LgtIntensity 1
+LightType 0
+ShadowType 1
+
+ShowCamera 1 2
+CameraMotion (unnamed)
+  9
+  7
+  -0.05321101 0.6 -0.04164156 -19.79999 0 59.29992 1 1 1
+  0 0 0 0 0
+  -0.05321101 0.6 -0.04164156 -19.79999 0 59.29992 1 1 1
+  124 0 0 0 0
+  -0.05321101 0.6 -0.04164156 -51.5 0 59.29992 1 1 1
+  176 0 0 0 0
+  -0.05321101 0.6 -0.04164156 -110.6 0 59.29992 1 1 1
+  250 0 0 0 0
+  -0.05321101 0.6 -0.04164156 -23.50002 0 135.9 1 1 1
+  335 0 0 0 0
+  -0.05321101 0.6 -0.04164156 -17.70002 47.10006 135.9 1 1 1
+  408 0 0 0 0
+  -0.05321101 0.6 -0.04164156 -14.20001 4.151474e-005 90.49998 1 1 1
+  604 0 0 0 0
+EndBehavior 1
+ZoomFactor (envelope)
+  1
+  1
+  1.972
+  0 0 0 0 0
+EndBehavior 1
+Resolution 1
+CustomSize 640 380
+PixelAspectRatio -1
+CustomPixelRatio 1
+MaskPosition 0 0 640 480
+MotionBlur 0
+FieldRendering 0
+SegmentMemory 8000000
+ApertureHeight 0.015
+Antialiasing 0
+AdaptiveSampling 1
+AdaptiveThreshold 26
+
+SolidBackdrop 1
+BackdropColor 0 0 0
+ZenithColor 0 40 80
+SkyColor 120 180 240
+GroundColor 50 40 30
+NadirColor 100 80 60
+FogType 0
+DitherIntensity 1
+AnimatedDither 0
+
+RenderMode 2
+RayTraceEffects 0
+RayTraceOptimization 1
+DataOverlayLabel  
+SaveRGB 0
+SaveAlpha 0
+
+ViewType 9
+CenterItem 1
+ViewAimpoint 0 0.6010704 0
+ViewZoomFactor 0.5150788
+
+GridNumber 100
+GridSize 0.01
+CameraViewBG 0
+ShowMotionPath 1
+ShowFogRadius 0
+ShowFogEffect 1
+ShowSafeAreas 1
+ShowFieldChart 1
+OverlayColor 1

@@ -1,0 +1,190 @@
+# Intro
+#0 : fx name=lut lut.lut=lut_zoomer lut.tex=lut_zoomer_planet
+#0 : fx name=lowpass lowpass.back=lowpass_martini
+#+0 : fader from=1 to=1 dur=0.01
+#+0 : param2 from=0 to=1 dur=1
+#-1 : param2 from=1 to=0 dur=1
+0 : fx name=lut lut.lut=lut_zoomer_lerp32 lut.tex=scene_planet
+# lut_zoomer_cave0
+#0 : fx name=scene scene.scene=scene_planet scene.back=none lut.lut=lut_zoomer
++0 : param from=0.0 to=0.24 dur=12
++0 : param2 from=1.19 to=0.015 dur=12
++0 : fader from=0 to=1 dur=2
+-0.25 : fader from=1 to=0 dur=0.25
+12 : fx name=scene scene.scene=scene_waterflex scene.back=none 
++0 : overlay name=data/waterflex.scn/martini_320.pcx x0=0 y0=80 x1=0 y1=80 dur=0.5 fade0=0 fade1=1 
++0 : play nr=0 dur=200
++0 : glow_threshold from=0 to=0 dur=0.1 
++0 : glow from=1 to=65 dur=0.5
++0 : fader from=0 to=1 dur=0.5
++0.5 : play nr=0 dur=8
++1.5 : overlay name=data/waterflex.scn/martini_320.pcx x0=0 y0=80 x1=0 y1=80 dur=0.5 fade0=1 fade1=0 
+#+7.75 : fader from=1 to=0 dur=0.5
++8 : play nr=6 dur=4
++12 : play nr=4 dur=4
+26 : play nr=8 dur=3
+#-2 : fader from=1 to=0 dur=2
+28 : fx name=lut lut.lut=lut_wobble lut.tex=lut_zoomer_cave3
++0 : fader from=0 to=1 dur=0.5
++0 : param from=0.0 to=0.09 dur=4
++0 : param2 from=1.4 to=0.2 dur=5
+-1 : fader from=1 to=0 dur=1
+32 : fx name=lut lut.lut=lut_wobble lut.tex=lut_zoomer_cave1
++0 : fader from=0 to=1 dur=0.5
++0 : param from=0.0 to=0.05 dur=4
++0 : param2 from=1.4 to=0.2 dur=5
+-1 : fader from=1 to=0 dur=1
+#36 : fx name=coplut coplut.shader=picture coplut.lut=coplut_oceanmask 
+#+0 : fader from=0 to=1 dur=1
+#-1 : fader from=1 to=0 dur=1
+36 : fx name=vhs 
+#vhs_back=picture coplut.lut=coplut_oceanmask 
++0 : fader from=0 to=1 dur=0.75
+-0.25 : fader from=1 to=0 dur=0.25
+
+# lut_zoomer_cave4
+#36 : fx name=lut lut.lut=lut_wobble lut.tex=lut_zoomer_cave1
+#+0 : fader from=0 to=1 dur=0.5
+#+0 : param from=0.0 to=0.05 dur=4
+#+0 : param2 from=1.4 to=0.2 dur=5
+#-1 : fader from=1 to=0 dur=1
+39 : fx name=scene scene.scene=scene_morph_anim scene.back=data/morph-anim.scn/light1.pcx
++0 : glow_threshold from=0 to=0 dur=0 
++0 : glow from=1 to=65 dur=0.5
++0 : fader from=0 to=1 dur=1.5
+# +0 : glow from=0 to=0 dur=0.01
++0 : glow_threshold from=32 to=32 dur=0
++0 : play nr=4 dur=5
+42 : play nr=0 dur=8
++0 : set scene.back=data/morph-anim.scn/light2.pcx
+46 : play nr=2 dur=4
++0 : set scene.back=data/morph-anim.scn/light1.pcx
+50 : play nr=6 dur=8
++0 : set scene.back=data/morph-anim.scn/light2.pcx
+-0.5 : fader from=1 to=0 dur=0.5
+56 : fx name=lut lut.lut=lut_zoomer_lerp32 lut.tex=lut_zoomer_cave0
++0 : glow from=0 to=0 dur=1
++0 : glow_threshold from=0 to=0 dur=1
++0 : param from=0 to=0.1 dur=4
++0 : param2 from=1.4 to=0.125 dur=8
+# 58 : fx name=scene scene.scene=scene_zoom_particles 
+#+0 : play nr=0 dur=4
+#+4 : play nr=2 dur=4
++0 : fader from=0 to=1 dur=0.5
+-0.25 : flasher from=0 to=2 dur=0.25
+60 : fx name=scene scene.scene=scene_skreiboks 
++0 : glow_threshold from=0 to=0 dur=0 
++0 : glow from=1 to=40 dur=0.5
++0 : flasher from=2 to=0 dur=0.5
+#+0 : glow from=0 to=0 dur=1
++0 : fader from=1 to=1 dur=0.5
++0 : play nr=0 dur=3
+-0.25 : fader from=1 to=0 dur=0.25
+62 : fx name=scene scene.scene=scene_skreiboks 
++0 : fader from=0 to=1 dur=0.25
++0 : play nr=2 dur=3
+-0.25 : fader from=1 to=0 dur=0.25
+64 : fx name=scene scene.scene=scene_skreiboks
++0 : fader from=0 to=1 dur=0.25
++0 : play nr=4 dur=7
+-0.25 : fader from=1 to=0 dur=0.25
+68 : fx name=scene scene.scene=scene_skreiboks_mask 
++0 : glow_threshold from=0 to=0 dur=0 
++0 : glow from=1 to=45 dur=0.5
++0 : fader from=0 to=1 dur=0.25
++0 : play nr=0 dur=4
+-0.25 : fader from=1 to=0 dur=0.25
+72 : fx name=scene scene.scene=scene_skreiboks_mask 
++0 : fader from=0 to=1 dur=0.25
++0 : play nr=2 dur=4
+-0.25 : fader from=1 to=0 dur=0.25
+76 : fx name=scene scene.scene=scene_skreiboks_mask 
++0 : fader from=0 to=1 dur=0.25
++0 : play nr=4 dur=4
+-0.25 : fader from=1 to=0 dur=0.25
+80 : fx name=scene scene.scene=scene_skreiboks_mask 
++0 : fader from=0 to=1 dur=0.25
++0 : play nr=8 dur=4
+-0.25 : fader from=1 to=0 dur=0.25
+84 : fx name=scene scene.scene=scene_skreiboks_mask 
++0 : fader from=0 to=1 dur=0.25
++0 : play nr=6 dur=4
+-0.5 : fader from=1 to=0 dur=0.5
+88 : fx name=lut lut.lut=lut_zoomer_lerp32 lut.tex=lut_zoomer_tex1
++0 : param from=1.0 to=0.8 dur=8
++0 : param2 from=1.12 to=0.5 dur=4
++0 : fader from=0 to=1 dur=0.5
+-0.5 : fader from=1 to=0 dur=0.5
+#84 : fx name=lut lut.lut=lut_zoomer lut.tex=lut_zoomer_cold_temple
+#+0 : fader from=0 to=1 dur=0.5
+#+0 : param from=0.02 to=0 dur=4
+#+0 : param2 from=0.1 to=1.0 dur=4
+#-0.5 : fader from=1 to=0 dur=0.5
+92: fx name=lut lut.lut=lut_zoomer_lerp32 lut.tex=lut_zoomer_cold_temple
++0 : param from=0.0 to=0.005 dur=8
++0 : param2 from=0.125 to=1.0 dur=8
++0 : fader from=0 to=1 dur=0.5
+-0.125 : flasher from=0 to=1 dur=0.125
+100 : fx name=lut lut.lut=lut_zoomer_lerp32 lut.tex=lut_zoomer_gold_temple
++0 : flasher from=1 to=0 dur=0.125
++0 : param from=0.01 to=0.02 dur=8
++0 : param2 from=1.0 to=0.25 dur=8
++0 : fader from=1 to=1 dur=1
+-0.5 : flasher from=0 to=1 dur=0.5
+108 : fx name=lut lut.lut=lut_zoomer_lerp32 lut.tex=lut_zoomer_planet2
++0 : flasher from=1 to=0 dur=1
++0 : param from=0 to=1.25 dur=14
++0 : param2 from=0 to=1.10 dur=14
+#+0 : fader from=1 to=0.75 dur=1
+-2 : fader from=1 to=0 dur=2
+120 : fx name=lowpass lowpass.back=lowpass_xerxes
++0 : fader from=1 to=1 dur=0.01
++0 : param2 from=0 to=1 dur=1
+-1 : param2 from=1 to=0 dur=1
+122 : set lowpass.back=lowpass_farfar
++0 : fader from=1 to=1 dur=0.01
++0 : param2 from=0 to=1 dur=1
+-1 : param2 from=1 to=0 dur=1
+124 : set lowpass.back=lowpass_evilryu
++0 : fader from=1 to=1 dur=0.01
++0 : param2 from=0 to=1 dur=1
+-1 : param2 from=1 to=0 dur=1
+126 : set lowpass.back=lowpass_loaderror
++0 : fader from=1 to=1 dur=0.01
++0 : param2 from=0 to=1 dur=1
+-1 : param2 from=1 to=0 dur=1
+128 : fx name=black dummy=g_vars dummy=g_nullsprite
+# Everything under here is commented out and is for easy copy paste
+*
+# Reference
+0 : fx name=pixellize pixellize.back=quadify_loaderror
+8 : fx name=quadify quadify.back=quadify_xerxes p=1 q=0
+-0.125 : fx name=black
+10 : fx name=interference p=1 interference.tex0=interference_tex0
+-0.125 : fx name=black
+16 : fx name=scene scene.scene=scene_katakana_bw scene.bpl_overlay=easter_bunnydog scene.back=none 
+24 : fx name=hdrcopper
+32 : fx name=circles 
+40 : fx name=cctab cctab.table=cctab_ball
++0 : overlay name=ol_gorilla x0=48 y0=50 x1=48 y1=50 dur=25 
++0 : overlay name=curr y0=0 y1=170 dur=100 
+-0.125 : overlay name=null
+60 : fx name=coplut coplut.light_pulse=vec4(0.0,5,16,0) \
+                  coplut.tex0=coplut_env0 \
+                  coplut.light_color=ivec3(32,48,64) \
+                  coplut.shader=picture \
+                  coplut.lut=coplut_netflex \
+                  coplut.scroll_speed=vec4(0.5,4,0,0)
+64 : fx name=lowpass lowpass.back=lowpass_bunny
+2 : fx name=crossfader crossfader.tex0=crossfader_tex1 crossfader.tex1=crossfader_tex1
++0.5 : set crossfader.tex1=crossfader_tex1
++2.0 : set crossfader.tex0=crossfader_tex2
++2.5 : set crossfader.tex1=crossfader_tex2
++3.0 : set crossfader.tex1=crossfader_tex3
++3.25 : set crossfader.tex0=crossfader_tex3
++4.5 : set crossfader.tex0=crossfader_tex4
+15.5 : fx name=noiselogo 
+24 : fx name=chunkydust chunkydust.back=data/knarkzilla-8bit.iff
+60 : fx name=birdseye p=0 q=2
+68 : fx name=dust dust.back=dust_back dust.x_turbulence=g_turb1 dust.y_turbulence=g_turb2 dust.particlesource=g_particlesource
+*

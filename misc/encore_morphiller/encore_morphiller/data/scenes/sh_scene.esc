@@ -1,0 +1,586 @@
+{
+  "actions": [
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 1.0010000467300415,
+            "interpolation": "linear",
+            "time": 1300
+          },
+          {
+            "float_values": -0.5099999904632568,
+            "time": 340
+          },
+          {
+            "float_values": -0.0009999871253967285,
+            "interpolation": "linear",
+            "time": 3220
+          },
+          {
+            "float_values": -0.0009999978356063366,
+            "interpolation": "linear",
+            "time": 780
+          },
+          {
+            "float_values": 1.0010000467300415,
+            "time": 560
+          },
+          {
+            "float_values": 1.0010000467300415,
+            "interpolation": "linear",
+            "time": 260
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "Scene"
+        }
+      ],
+      "loops": 1,
+      "name": "dark_area_pos_x",
+      "start_time": 740,
+      "type": "property_float"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 0.5,
+            "time": 340
+          },
+          {
+            "float_values": 0.0009999871253967285,
+            "interpolation": "linear",
+            "time": 3220
+          },
+          {
+            "float_values": 1.0019999742507935,
+            "time": 780
+          },
+          {
+            "float_values": 1.0019999742507935,
+            "interpolation": "linear",
+            "time": 560
+          },
+          {
+            "float_values": 0.5,
+            "interpolation": "linear",
+            "time": 260
+          },
+          {
+            "float_values": [
+              0.30000001192092896,
+              0.30000001192092896,
+              0.30000001192092896
+            ],
+            "interpolation": "bezier",
+            "time": 160
+          },
+          {
+            "float_values": [
+              0.7000004053115845,
+              0.7000004053115845,
+              0.7000004053115845
+            ],
+            "interpolation": "bezier",
+            "time": 160
+          },
+          {
+            "float_values": [
+              0.4000004529953003,
+              0.4000004529953003,
+              0.4000004529953003
+            ],
+            "interpolation": "bezier",
+            "time": 160
+          },
+          {
+            "float_values": [
+              0.6000000238418579,
+              0.6000000238418579,
+              0.6000000238418579
+            ],
+            "interpolation": "bezier",
+            "time": 160
+          },
+          {
+            "float_values": [
+              0.4500004053115845,
+              0.4500004053115845,
+              0.4500004053115845
+            ],
+            "interpolation": "bezier",
+            "time": 160
+          },
+          {
+            "float_values": [
+              0.550000011920929,
+              0.550000011920929,
+              0.550000011920929
+            ],
+            "interpolation": "bezier",
+            "time": 140
+          },
+          {
+            "float_values": [
+              0.4749999940395355,
+              0.48839840292930603,
+              0.47308605909347534
+            ],
+            "interpolation": "bezier",
+            "time": 20
+          },
+          {
+            "float_values": [
+              0.47999998927116394,
+              0.47999998927116394,
+              0.47999998927116394
+            ],
+            "interpolation": "bezier",
+            "time": 100
+          },
+          {
+            "float_values": [
+              0.5249999761581421,
+              0.5249999761581421,
+              0.5249999761581421
+            ],
+            "interpolation": "bezier",
+            "time": 160
+          },
+          {
+            "float_values": [
+              0.49000000953674316,
+              0.49000000953674316,
+              0.49000000953674316
+            ],
+            "interpolation": "bezier",
+            "time": 80
+          },
+          {
+            "float_values": [
+              0.5,
+              0.5,
+              0.5
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "Scene"
+        }
+      ],
+      "loops": 1,
+      "name": "dark_area_width",
+      "start_time": 2040,
+      "type": "property_float"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -31.97861099,
+              6.59123182,
+              70.41507721
+            ],
+            "interpolation": "linear",
+            "time": 8560
+          },
+          {
+            "float_values": [
+              2.50256824,
+              6.59123182,
+              70.77056122
+            ],
+            "time": 20
+          },
+          {
+            "float_values": [
+              -12.54218674,
+              3.72346091,
+              46.16259384
+            ],
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": [
+              -4.57374668,
+              3.72346091,
+              46.16259384
+            ],
+            "time": 20
+          },
+          {
+            "float_values": [
+              -13.04250813,
+              4.16776371,
+              31.54896545
+            ],
+            "interpolation": "linear",
+            "time": 1000
+          },
+          {
+            "float_values": [
+              -0.0817945,
+              4.16776371,
+              33.38401794
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "camera_1"
+        }
+      ],
+      "loops": 1,
+      "name": "camera_1Action",
+      "start_time": 0,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              7.168716,
+              -17.802236,
+              -0.0
+            ],
+            "interpolation": "linear",
+            "time": 8560
+          },
+          {
+            "float_values": [
+              7.168716,
+              2.910204,
+              -0.0
+            ],
+            "time": 20
+          },
+          {
+            "float_values": [
+              7.168716,
+              -9.078349,
+              -0.0
+            ],
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": [
+              7.168716,
+              -0.568623,
+              -0.0
+            ],
+            "time": 20
+          },
+          {
+            "float_values": [
+              7.168716,
+              -13.858405,
+              -0.0
+            ],
+            "interpolation": "linear",
+            "time": 1000
+          },
+          {
+            "float_values": [
+              7.168716,
+              8.171118,
+              -0.0
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "camera_1"
+        }
+      ],
+      "loops": 1,
+      "name": "camera_1Action",
+      "start_time": 0,
+      "type": "rotation_xyz"
+    }
+  ],
+  "cameras": [
+    {
+      "far_clip_plane": 1500.0,
+      "fov_x": 49.069203,
+      "fov_y": 28.800001,
+      "hide": false,
+      "name": "camera_1",
+      "near_clip_plane": 1.0,
+      "position": [
+        -31.97861099,
+        6.59123182,
+        70.41507721
+      ],
+      "rotation": [
+        7.168716,
+        -17.802236,
+        -0.0
+      ]
+    }
+  ],
+  "enc_info": {
+    "data_type": "ENCSCN",
+    "date": "26 Jun 2023 22:43:00",
+    "version": "2.0"
+  },
+  "loops": 1,
+  "name": "Scene",
+  "objects": [
+    {
+      "mesh_name": "sh_house",
+      "name": "house",
+      "position": [
+        23.27002335,
+        0.0,
+        -177.41954041
+      ],
+      "properties": {
+        "base_dark": 0.20000000298023224,
+        "base_light": 0.550000011920929,
+        "color_mode": "gen_vcolors",
+        "dark": 1,
+        "light": 1
+      }
+    },
+    {
+      "mesh_name": "sh_background",
+      "name": "background",
+      "position": [
+        0.0,
+        0.0,
+        -623.06970215
+      ],
+      "properties": {
+        "color_mode": "vcolors",
+        "dark": 1,
+        "light": 1
+      },
+      "rotation": [
+        90.000003,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "material": {
+        "diffuse_color_rgba": [
+          0.22,
+          0.22,
+          0.22,
+          1.0
+        ]
+      },
+      "mesh_name": "sh_plams",
+      "name": "plams",
+      "position": [
+        2.00034761,
+        0.2,
+        -4.94077015
+      ],
+      "properties": {
+        "color_mode": "mesh_color",
+        "dark": 1,
+        "dark_grey": 0.20000000298023224,
+        "light": 1
+      }
+    },
+    {
+      "material": {
+        "diffuse_color_rgba": [
+          0.2,
+          0.2,
+          0.2,
+          1.0
+        ]
+      },
+      "mesh_name": "sh_human",
+      "name": "light_human",
+      "position": [
+        0.0,
+        4.94000006,
+        -1.70650005
+      ],
+      "properties": {
+        "light": 1
+      }
+    },
+    {
+      "material": {
+        "diffuse_color_rgba": [
+          0.17,
+          0.17,
+          0.17,
+          1.0
+        ]
+      },
+      "mesh_name": "sh_swing",
+      "name": "light_swing",
+      "position": [
+        0.0,
+        20.0,
+        -0.0
+      ],
+      "properties": {
+        "light": 1
+      }
+    },
+    {
+      "material": {
+        "diffuse_color_rgba": [
+          0.17,
+          0.17,
+          0.17,
+          1.0
+        ]
+      },
+      "mesh_name": "sh_swing_base",
+      "name": "light_swing_base",
+      "properties": {
+        "light": 1
+      }
+    },
+    {
+      "material": {
+        "diffuse_color_rgba": [
+          0.1,
+          0.1,
+          0.1,
+          1.0
+        ]
+      },
+      "mesh_name": "sh_dark_human",
+      "name": "dark_human",
+      "position": [
+        -9.29151726,
+        0.0,
+        5.49928379
+      ],
+      "properties": {
+        "dark": 1
+      }
+    },
+    {
+      "material": {
+        "diffuse_color_rgba": [
+          0.4,
+          0.4,
+          0.4,
+          1.0
+        ]
+      },
+      "mesh_name": "sh_dark_human_glow",
+      "name": "dark_human_glow",
+      "order": 1,
+      "position": [
+        -9.29151726,
+        0.0,
+        5.49928379
+      ],
+      "properties": {
+        "blending": "additive",
+        "dark": 1,
+        "depth_mask": 0,
+        "depth_test": 0,
+        "look_at": "camera"
+      }
+    },
+    {
+      "material": {
+        "diffuse_color_rgba": [
+          0.0597,
+          0.0597,
+          0.0597,
+          1.0
+        ]
+      },
+      "mesh_name": "sh_swing",
+      "name": "dark_swing",
+      "position": [
+        0.0,
+        20.0,
+        -0.0
+      ],
+      "properties": {
+        "dark": 1
+      }
+    },
+    {
+      "material": {
+        "diffuse_color_rgba": [
+          0.0526,
+          0.0526,
+          0.0526,
+          1.0
+        ]
+      },
+      "mesh_name": "sh_swing_base",
+      "name": "dark_swing_base",
+      "properties": {
+        "dark": 1
+      }
+    },
+    {
+      "material": {
+        "diffuse_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "sh_dark_cover",
+      "name": "dark_cover",
+      "position": [
+        0.0,
+        0.0,
+        41.67146301
+      ],
+      "properties": {
+        "blending": "multiply",
+        "depth_mask": 0,
+        "depth_test": 0
+      }
+    },
+    {
+      "mesh_name": "sh_light_cover",
+      "name": "light_cover",
+      "position": [
+        0.0,
+        0.0,
+        47.6067276
+      ],
+      "properties": {
+        "blending": "multiply",
+        "depth_mask": 0,
+        "depth_test": 0
+      }
+    }
+  ],
+  "properties": {
+    "dark_area_pos_x": 1.0010000467300415,
+    "dark_area_width": 0.5
+  },
+  "time": 10000
+}

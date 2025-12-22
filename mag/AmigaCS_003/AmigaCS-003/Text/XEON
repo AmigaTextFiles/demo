@@ -1,0 +1,90 @@
+@{d D1EEB3}                        @{c D0FF5C}Intel míêí vysoko (opsáno z CHIPWEEK)@{c}
+                        @{c D0FF5C}¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+ @{i}Spoleçnost Intel pêedstavila 29.çervna nový procesor nazvaný Intel Pentium II Xeon.
+                 Podívejme se na tento procesor trochu podrobnëji...@{ui}
+
+
+  Jiù  název procesoru naznaçuje, ùe se jedná o jiný procesor neù Pentium II - jiný ve
+velikosti  @{c BAFF97}(pêekvapení níùe... pozn.ShAmaN)@{c}, zpûsobu pêipojení @{c BAFF97}(6 nesluçitelných patic
+za 2 roky,  jenom?... pozn. ShAmaN)@{c}  i v dalîích  vlastnostech @{c BAFF97}(ááále  --- zase  vaêej
+z vody? ...pozn.ShAmaN)@{c}.   Intel  tedy tímto procesorem míêí do výkonnostních oblastí,
+kde  pêíliî  vidët zatím nebyl @{c BAFF97}(a ani nebude...  i kdyù Vítkovické ùelezárny budou mít
+alespoñ  zase  kîeft - viz dále... pozn.ShAmaN)@{c}.  Procesor má 32KB pamëï první úrovnë,
+a protoùe  u serverû  a pracovních  stanic  je  dûleùitëjîí  pamëï  cache druhé úrovnë
+@{c BAFF97}(zatímco L1 cache je úplnë nedûleùitá, ùe?... pozn.ShAmaN)@{c}, je Xeon vybaven buð 512KB,
+nebo  dokonce  neuvëêitelnými  1MB pamëti L2.  Procesor Xeon je také schopen adresovat
+více  pamëti  (aù úùasných 64GB pamëti - ale to jen teoreticky, prakticky je to mnohem
+ménë).   @{c BAFF97}(Pentium II  do  333Mhz  verze  mëlo  také 'úùasné feature' - mohlo adresovat
+pouze 512MB, jinak procesor nepracoval správnë... pozn.ShAmaN)@{c}.
+  Vlastní jednotka CPU není ani tak pêiliî velká; celý
+procesor   je   vîak   tvoêen   destiçkou  @{c BAFF97}(óóó... jak
+eufemistické! pozn.ShAmaN)@{c},    na   které   je   kromë
+procesoru  také  pamëï  cache (rychlejîí, vëtîí, lepîí        @{p XEON.png 400 0}
+a s vëtîí  tepelnou  ztrátou, neù v pêípadë Pentia II)
+a také  dalîí obvody, coù jsou pêíçiny vëtîí velikosti
+procesoru  @{c BAFF97}(áááááá...   shit,  to je bomba výrazivo ->
+'vëtîí'  to  snad  ne!?... To mi mimochodem pêipomnëlo
+ten  známý  inzerát:  "Prodám mobilní telefon sovëtské
+výroby.  Znaçka:  i s podvozkem"...  pozn. ShAmaN ;-)@{c}.
+Procesor  je zabalen ve speciálním pouzdêe, které není
+zas   tak  velké,  jak  by  se  u moderního  procesoru
+oçekávalo.   Jeho rozmëry jsou 152,4 × 121,9 × 18,5 mm
+a výsledek  je  jasnë vidët na obrázku @{c BAFF97}(ano, je to jen
+375×  více  neù  Motorola  G3 - 49mm²... pozn.ShAmaN)@{c}.
+Hmotnost  tohoto  supermoderního 'obra' mezi procesory
+je  pêes  pûl kilogramu!  Proti pêehêívání je procesor         @{c D0FF5C}XEON a Pentium II@{c}
+zabezpeçen  mohutným  pasivním  chladiçem  a v pêípadë
+nutnosti mûùe spustit výkonné vëtráky, nebo mûùe upozornit správce systému na neúmërné
+pêehêívání.
+
+  Procesor  se  instaluje do Slotu 2, který je sice fyzicky stejný jako Slot 1 (urçený
+pro  procesory  Pentium  II),  ale  procesory  nelze vzájemnë zamënit.  Cena procesoru
+s 512KB  L2 cache je $1124 (cca.  40000 Kç), s 1MB $2836 (cca. 99000 Kç) a s 2MB $4800
+(168000  Kç).  Procesor PentiumPro tak má svého nástupce, který ho ve výkonu @{c BAFF97}(spotêebë
+kWatt?... pozn. ShAmaN)@{c}   pêekoná   asi   o 40%.   Prodej  PentiaPro  tedy  s nejvëtîí
+pravdëpodobností bude konçit.
+
+  Kromë  nového  procesoru pêedstavila spoleçnosti Intel také novou çipovou sadu Intel
+450NX,  která  dokáùe  vyuùít  jeho vlastnosti.  Právë çipová sada vyvolala jeîtë pêed
+uvedením  procesoru  rûzné  spekulace,  protoùe se objevila chyba.  Chybu (spoçívajíci
+v îpatné  komunikaci  mezi çipovou sadou a procesorem a ve zhroucení systému) pêiznala
+pozdëji  i spoleçnost  Intel.   Mikrojádro procesoru lze naîtëstí softwarovë upravovat
+@{c BAFF97}(hi,  virus writers!... pozn.ShAmaN)@{c}, a tak staçí upravit BIOS poçítaçe.  Podle Intelu
+se tedy nejedná o závaùnou chybu @{c BAFF97}(NO JISTË!!!  JAK JINAK?!... pozn.ShAmaN)@{c}.
+
+                                   @{c D0FF5C}Celeron poroste@{c}
+                                   @{c D0FF5C}¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+  Intel dnes nabízí procesory pro rûzné segmenty trhu.  Procesor Celeron je revoluçním
+procesorem  firmy  Intel,  který  byl navrùen speciálnë pro poçítaçe ªBasic PCº @{c BAFF97}(yeah!
+Basic,  Basic, Basic... to tam jako bude Basic v ROM ?!?... pozn.ShAmaN)@{c}.  Dêíve totiù
+nové poçítaçe s pêijatelným @{c BAFF97}(co to je 'pêijatelným'?  ùe se na requester çeká ménë neù
+10   sekund?... pozn.ShAmaN)@{c}  výkonem  potêebovaly  procesory  na  výkonnostní  îpiçce
+a teprve  postupnë,  následkem  uvádëní nových a výkonnëjîích verzí, se z nich stávaly
+levnëjîí  a ménë  výkonné  procesory @{c BAFF97}(:-O  takùe s çasem výkon klesá?... pozn.ShAmaN)@{c}.
+Celeron  na  rozdíl od Pentia II a Xeonu nemá drahou pamëï cache L2; díky tomu se také
+ménë  zahêívá,  a  tak  se  nemusí  speciálnë balit.  Moùností dalîího zlevñování není
+pêíliî, proto Intel uvaùuje i o dalîích variantách.  Jednou z nich je procesor Celeron
+urçený   pro  novou  ª370pinovou  paticiº.   Pouùití  této  patice  (která  vîak  není
+kompatibilní  s paticí  Socket  7),  by  totiù mëlo pêispët ke sníùení ceny.  K patici
+Socket    7    se    tedy    Intel    vrátit    nechce    a z technologických   @{c BAFF97}(anebo
+marketingových?... pozn.ShAmaN)@{c}  pêíçin  prý ani nemûùe.  Také výkon Celeronu poroste,
+a to  díky  zvýîení  jeho  frekvence  ze  souçasných  300  MHz na 333MHz (kódové jméno
+procesoru  je  Mendocino) a také uvolñování tepla by mëlo zûstat v pêijatelných mezích
+@{c BAFF97}(rozumëj: v mezích   pêímotopû... pozn.ShAmaN)@{c};   proto   se   procesor  nebude  muset
+nákladnëji  balit.   Velikost pamëti L2 cache byla zvolena tak, aby pêispëla k vyîîímu
+výkonu  (její  absence je totiù çasto kritizována a skuteçnë vede k sníùení výkonu pod
+úroveñ  procesoru  Pentium).   Ve vývoji je také procesor Katmai, který bude obsahovat
+nové  instrukce  pro  podporu  3D  grafiky,  nëkdy oznaçované jako technologie MMX II,
+pêestoùe s MMX asi nebude kompatibilní...
+
+                                        @{c D0FF5C}- ptr@{c}
+
+______________________________________________________________________________________
+
+                                   @{c BAFF97} @{i}PS by ShAmaN:@{ui}
+
+     Po týdnu zveêejnil Intel seznam zjiîtëných chyb Xeonu -> bylo jich 'jen' 37!
+                          Uù se teîíte na notebook s Xeonem?
+                   Píîí vîichni 'vlez-do-ptr-lidi' takovéto çlánky?
+                     A co Jan Tleskaç? Byl taky dealerem Intelu?
+      AmigaCS doporuçuje http://www.tomshardware.com  --> není placeno Intelem!@{c}

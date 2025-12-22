@@ -1,0 +1,21 @@
+Short:        Sinus Font SDL effect
+Author:       Angelo "Encelo" Theodorou , Morphos port by Fabrizio "Lanch" Bartoloni
+Uploader:     lanch@tiscali.it (Fabrizio Bartoloni)
+Type:         demo/file
+Architecture: ppc-morphos
+
+Sinusfont: a simple SDL_ttf based sinus scroller
+Copyright (C) 2004 Angelo "Encelo" Theodorou
+
+Info
+----
+Just a simple sinus scroller developed to test the possibilities of SDL_ttf library and its use inside the game 
+Mars: Land of No Mercy (http://mars.sourceforge.net).
+
+Compiling
+---------
+$gcc sinusfont.c -o sinusfont `sdl-config --libs --cflags` -lSDL_ttf
+or 
+$make
+
+

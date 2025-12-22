@@ -1,0 +1,41 @@
+
+
+				 DARKNESS
+				 ~~~~~~~~
+				 presents
+
+				LONG  TRIP
+				~~~~~~~~~~
+			      Fixed version!
+
+  A 64k intro released at The Real Italian Party 1998
+			  ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ It took the first place.
+
+
+ . Code : PSB
+ . Gfx  : Rafale, Seg
+ . Music: Corrosion/Darkage
+
+
+Note: This intro need the xpkmaster.library and the sublib xpkSQSH.library.
+~~~~  Contrary to the compo version, xpkMASH.library is not needed.
+      The intro is crunched with CrunchMania, so on 68060, you'll have to
+      unpack the intro with a tool like dld. Sorry for inconvenience...
+
+ Here is at last the fixed version of Long Trip. Credits part was totally
+buggy on all Amiga except mine and the one used to show the compos!!!
+So, I was surprised when everybody told me there was a problem. Actually, the
+bug was just one instruction, but I still don't understand why it worked on
+my Amiga! (you can't use add with bltapth...)
+ Another bug was removed: a problem of double buffering on all 2x2 routines.
+The bug was only visible on fast processors, at least on Rafale's 68060.
+
+So, I think now this version is totally bullet-proof (proved to be
+68060-proof at least! :) )
+
+
+	Enjoy this production!
+
+		PSB/Darkness
+

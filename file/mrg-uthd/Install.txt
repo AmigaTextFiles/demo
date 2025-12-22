@@ -1,0 +1,18 @@
+This is just a small release to make my ol' party-winning
+demo called 'Unknown Territory' Harddisk Installable...
+
+Make sure you've assigned 'UTdata:' to the directory where
+you've put the file 'UnknownTerritory.data'.
+
+Now you are able to run 'Unknown Territory' from the Workbench
+or a shell. ( The demo can't be quitted 8-)
+
+If about 900Kb of free FASTmem is availabe, this demo will be
+loaded into fastmem, otherwise allocating CHIPmem at $100000
+will be tried. If allocating chipmem also fails, the loader
+will quit. 
+
+If you can't get it to work, or some bugs should appear, drop
+a message addressed to 'JACK' at No Vegetables.....
+
+	Signed : Jack of Mirage

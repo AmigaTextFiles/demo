@@ -1,0 +1,6 @@
+sdlmove:	dwitvs.c
+	i386-aros-gcc -lm -w dwitvs.c -o ../dwitvs -lSDL
+	i386-aros-strip --strip-unneeded --remove-section .comment ../dwitvs
+
+clean:
+	rm sdlmove

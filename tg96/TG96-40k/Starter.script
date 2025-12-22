@@ -1,0 +1,20 @@
+; Starter.script til Amiga-40k-Intro
+
+
+cls
+echo "Loading... "
+c!s-mixem.exe
+
+cls
+echo "Loading... "
+dIsAsteR!.exe
+
+cls
+echo "Loading... "
+setpatch quiet
+CPU Cache Burst
+lights.exe
+
+cls
+echo "Loading... "
+brainbow.exe

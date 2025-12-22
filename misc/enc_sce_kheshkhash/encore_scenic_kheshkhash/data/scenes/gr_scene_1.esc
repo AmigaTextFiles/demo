@@ -1,0 +1,4368 @@
+{
+  "actions": [
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "time": 1740,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_1"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_1Action.002",
+      "start_time": 9840,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.32581654,
+              0.27444515,
+              -1.30944109
+            ],
+            "interpolation": "linear",
+            "time": 1720
+          },
+          {
+            "float_values": [
+              0.30429503,
+              -0.14103283,
+              -0.91209865
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_1"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_1Action.002",
+      "start_time": 9860,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              17.690176,
+              -0.0
+            ],
+            "interpolation": "linear",
+            "time": 1720
+          },
+          {
+            "float_values": [
+              0.0,
+              -24.296221,
+              -0.0
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_1"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_1Action.002",
+      "start_time": 9860,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 940
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_1"
+        }
+      ],
+      "loops": 1,
+      "name": "Shader NodetreeAction",
+      "start_time": 9860,
+      "type": "diffuse_color_rgb"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "time": 1400,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_2"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_2Action",
+      "start_time": 10540,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.05232697,
+              0.0,
+              -0.3421858
+            ],
+            "interpolation": "linear",
+            "time": 1380
+          },
+          {
+            "float_values": [
+              0.09540534,
+              0.0723068,
+              -0.89386111
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_2"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_2Action",
+      "start_time": 10560,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              10.75756,
+              -14.967246
+            ],
+            "interpolation": "linear",
+            "time": 1380
+          },
+          {
+            "float_values": [
+              -18.851344,
+              5.092785,
+              16.149815
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_2"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_2Action",
+      "start_time": 10560,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 620
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_2"
+        }
+      ],
+      "loops": 1,
+      "name": "Shader NodetreeAction.001",
+      "start_time": 10540,
+      "type": "diffuse_color_rgb"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1400,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_3"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_3Action.001",
+      "start_time": 11120,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -1.17858756
+            ],
+            "interpolation": "linear",
+            "time": 1380
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -0.71565533
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_3"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_3Action.001",
+      "start_time": 11140,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              9.807941
+            ],
+            "interpolation": "linear",
+            "time": 1380
+          },
+          {
+            "float_values": [
+              1.224066,
+              34.177683,
+              7.748884
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_3"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_3Action.001",
+      "start_time": 11140,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 620
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_3"
+        }
+      ],
+      "loops": 1,
+      "name": "Shader NodetreeAction.002",
+      "start_time": 11120,
+      "type": "diffuse_color_rgb"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1440,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_4"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_3Action",
+      "start_time": 11720,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -0.19635957
+            ],
+            "interpolation": "linear",
+            "time": 1420
+          },
+          {
+            "float_values": [
+              0.0376864,
+              0.0,
+              -1.16519129
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_4"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_3Action",
+      "start_time": 11740,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -23.903825,
+              1.126924,
+              22.944779
+            ],
+            "interpolation": "linear",
+            "time": 1420
+          },
+          {
+            "float_values": [
+              0.0,
+              1.126924,
+              22.944779
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_4"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_3Action",
+      "start_time": 11740,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 660
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_4"
+        }
+      ],
+      "loops": 1,
+      "name": "Shader NodetreeAction.004",
+      "start_time": 11720,
+      "type": "diffuse_color_rgb"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1440,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_5"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_5Action",
+      "start_time": 12420,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.16035774,
+              0.13748071,
+              -1.31016254
+            ],
+            "interpolation": "linear",
+            "time": 1420
+          },
+          {
+            "float_values": [
+              0.02939704,
+              -0.04942632,
+              -0.73173261
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_5"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_5Action",
+      "start_time": 12440,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -35.395789,
+              4.185471,
+              19.246122
+            ],
+            "interpolation": "linear",
+            "time": 1420
+          },
+          {
+            "float_values": [
+              -2e-06,
+              4.045901,
+              -12.413109
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_5"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_5Action",
+      "start_time": 12440,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 660
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_5"
+        }
+      ],
+      "loops": 1,
+      "name": "Shader NodetreeAction.005",
+      "start_time": 12420,
+      "type": "diffuse_color_rgb"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1400,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_6"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_6Action",
+      "start_time": 13060,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.3614524,
+              -0.05693758,
+              -0.81535649
+            ],
+            "interpolation": "linear",
+            "time": 1380
+          },
+          {
+            "float_values": [
+              -0.31618512,
+              -0.05693758,
+              -0.66507816
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_6"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_6Action",
+      "start_time": 13080,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -34.674285,
+              0.0,
+              -0.0
+            ],
+            "interpolation": "linear",
+            "time": 1380
+          },
+          {
+            "float_values": [
+              0.0,
+              29.819336,
+              -0.0
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_6"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_6Action",
+      "start_time": 13080,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 620
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_6"
+        }
+      ],
+      "loops": 1,
+      "name": "Shader NodetreeAction.006",
+      "start_time": 13060,
+      "type": "diffuse_color_rgb"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1400,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_7"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_7Action",
+      "start_time": 14000,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.00108,
+              0.00899961,
+              -0.46082458
+            ],
+            "interpolation": "linear",
+            "time": 1380
+          },
+          {
+            "float_values": [
+              0.21921676,
+              0.13182501,
+              -0.82147628
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_7"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_7Action",
+      "start_time": 14020,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -39.46625,
+              36.257615,
+              9.236322
+            ],
+            "interpolation": "linear",
+            "time": 1380
+          },
+          {
+            "float_values": [
+              -19.540051,
+              -26.21019,
+              11.233823
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_7"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_7Action",
+      "start_time": 14020,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 620
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_7"
+        }
+      ],
+      "loops": 1,
+      "name": "Shader NodetreeAction.007",
+      "start_time": 14000,
+      "type": "diffuse_color_rgb"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1460,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_8"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_8Action",
+      "start_time": 14360,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -1.6841141
+            ],
+            "interpolation": "linear",
+            "time": 1420
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -0.33594525
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_8"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_8Action",
+      "start_time": 14380,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -40.752351
+            ],
+            "interpolation": "linear",
+            "time": 1420
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              23.165176
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_8"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_8Action",
+      "start_time": 14380,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 680
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_8"
+        }
+      ],
+      "loops": 1,
+      "name": "Shader NodetreeAction.008",
+      "start_time": 14360,
+      "type": "diffuse_color_rgb"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1400,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_9"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_9Action",
+      "start_time": 15140,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -0.52344549
+            ],
+            "interpolation": "linear",
+            "time": 1380
+          },
+          {
+            "float_values": [
+              0.0,
+              0.09738069,
+              -0.63774514
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_9"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_9Action",
+      "start_time": 15160,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -33.431269,
+              27.41633,
+              15.250603
+            ],
+            "interpolation": "linear",
+            "time": 1380
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -19.52976
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_9"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_9Action",
+      "start_time": 15160,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 620
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_9"
+        }
+      ],
+      "loops": 1,
+      "name": "Shader NodetreeAction.009",
+      "start_time": 15140,
+      "type": "diffuse_color_rgb"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1420,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_10"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_10Action",
+      "start_time": 15540,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.07643814,
+              -0.81664813
+            ],
+            "interpolation": "linear",
+            "time": 1400
+          },
+          {
+            "float_values": [
+              0.00215825,
+              -0.00574479,
+              -0.34406847
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_10"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_10Action",
+      "start_time": 15560,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              49.02857,
+              8.999999
+            ],
+            "interpolation": "linear",
+            "time": 1400
+          },
+          {
+            "float_values": [
+              1.683507,
+              -22.241326,
+              7.217644
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_10"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_10Action",
+      "start_time": 15560,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 640
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_10"
+        }
+      ],
+      "loops": 1,
+      "name": "Shader NodetreeAction.010",
+      "start_time": 15540,
+      "type": "diffuse_color_rgb"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1400,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_11"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_11Action",
+      "start_time": 16000,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.09135342,
+              -0.10166127,
+              -0.69721836
+            ],
+            "interpolation": "linear",
+            "time": 1380
+          },
+          {
+            "float_values": [
+              0.23135695,
+              0.10228752,
+              -1.04277563
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_11"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_11Action",
+      "start_time": 16020,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -27.961661
+            ],
+            "interpolation": "linear",
+            "time": 1380
+          },
+          {
+            "float_values": [
+              -0.041237,
+              16.451878,
+              29.569771
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_11"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_11Action",
+      "start_time": 16020,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 620
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_11"
+        }
+      ],
+      "loops": 1,
+      "name": "Shader NodetreeAction.011",
+      "start_time": 16000,
+      "type": "diffuse_color_rgb"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1460,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_12"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_12Action",
+      "start_time": 16780,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              -0.09864213,
+              -0.84042996
+            ],
+            "interpolation": "linear",
+            "time": 1440
+          },
+          {
+            "float_values": [
+              0.0,
+              0.15112489,
+              -0.78919154
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_12"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_12Action",
+      "start_time": 16800,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              17.071402,
+              -0.0
+            ],
+            "interpolation": "linear",
+            "time": 1440
+          },
+          {
+            "float_values": [
+              4.940907,
+              -31.767053,
+              8.025161
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_12"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_12Action",
+      "start_time": 16800,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 680
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_12"
+        }
+      ],
+      "loops": 1,
+      "name": "Shader NodetreeAction.012",
+      "start_time": 16780,
+      "type": "diffuse_color_rgb"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1400,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_13"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_13Action",
+      "start_time": 17360,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -0.29503468
+            ],
+            "interpolation": "linear",
+            "time": 1380
+          },
+          {
+            "float_values": [
+              0.03976216,
+              0.04003896,
+              -1.08111823
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_13"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_13Action",
+      "start_time": 17380,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -53.593452,
+              0.0,
+              -5.469641
+            ],
+            "interpolation": "linear",
+            "time": 1380
+          },
+          {
+            "float_values": [
+              2.640164,
+              29.119716,
+              10.043952
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_13"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_13Action",
+      "start_time": 17380,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 620
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_13"
+        }
+      ],
+      "loops": 1,
+      "name": "Shader NodetreeAction.013",
+      "start_time": 17360,
+      "type": "diffuse_color_rgb"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1420,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_14"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_14Action",
+      "start_time": 18200,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.10784419,
+              0.05083508,
+              -0.36552247
+            ],
+            "interpolation": "linear",
+            "time": 1400
+          },
+          {
+            "float_values": [
+              -0.12805754,
+              -0.07259297,
+              -0.59491223
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_14"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_14Action",
+      "start_time": 18220,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              46.199997,
+              3.338006,
+              19.545068
+            ],
+            "interpolation": "linear",
+            "time": 1400
+          },
+          {
+            "float_values": [
+              -10.000001,
+              22.399617,
+              19.545068
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_14"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_14Action",
+      "start_time": 18220,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 640
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_14"
+        }
+      ],
+      "loops": 1,
+      "name": "Shader NodetreeAction.014",
+      "start_time": 18200,
+      "type": "diffuse_color_rgb"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1420,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_15"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_15Action",
+      "start_time": 18940,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -0.9614346
+            ],
+            "interpolation": "linear",
+            "time": 1400
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -0.83809423
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_15"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_15Action",
+      "start_time": 18960,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -3.217053,
+              23.852387,
+              -18.977373
+            ],
+            "interpolation": "linear",
+            "time": 1400
+          },
+          {
+            "float_values": [
+              0.0,
+              -46.724235,
+              -4.376881
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_15"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_15Action",
+      "start_time": 18960,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 640
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_15"
+        }
+      ],
+      "loops": 1,
+      "name": "Shader NodetreeAction.015",
+      "start_time": 18940,
+      "type": "diffuse_color_rgb"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1420,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_16"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_16Action",
+      "start_time": 19600,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.16501305,
+              0.12664737,
+              -1.13669896
+            ],
+            "interpolation": "linear",
+            "time": 1400
+          },
+          {
+            "float_values": [
+              0.0892822,
+              -0.01430477,
+              -0.59397686
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_16"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_16Action",
+      "start_time": 19620,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -21.199999,
+              0.0,
+              15.674905
+            ],
+            "interpolation": "linear",
+            "time": 1400
+          },
+          {
+            "float_values": [
+              -33.999999,
+              0.0,
+              9.874257
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_16"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_16Action",
+      "start_time": 19620,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 640
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_16"
+        }
+      ],
+      "loops": 1,
+      "name": "Shader NodetreeAction.016",
+      "start_time": 19600,
+      "type": "diffuse_color_rgb"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1420,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_17"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_17Action",
+      "start_time": 20320,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.02948362,
+              0.07220617,
+              -0.91382092
+            ],
+            "interpolation": "linear",
+            "time": 1400
+          },
+          {
+            "float_values": [
+              -0.03753445,
+              -0.05562447,
+              -0.64241332
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_17"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_17Action",
+      "start_time": 20340,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -30.999995,
+              0.0,
+              -17.84468
+            ],
+            "interpolation": "linear",
+            "time": 1400
+          },
+          {
+            "float_values": [
+              -20.799996,
+              -51.199996,
+              -0.0
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_17"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_17Action",
+      "start_time": 20340,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 640
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_17"
+        }
+      ],
+      "loops": 1,
+      "name": "Shader NodetreeAction.017",
+      "start_time": 20320,
+      "type": "diffuse_color_rgb"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1420,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_18"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_18Action",
+      "start_time": 21000,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.2238981,
+              -0.19218506,
+              -0.94305027
+            ],
+            "interpolation": "linear",
+            "time": 1400
+          },
+          {
+            "float_values": [
+              0.13045098,
+              -0.02028713,
+              -0.4172444
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_18"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_18Action",
+      "start_time": 21020,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -0.0
+            ],
+            "interpolation": "linear",
+            "time": 1400
+          },
+          {
+            "float_values": [
+              -25.199997,
+              0.0,
+              -23.599997
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_18"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_18Action",
+      "start_time": 21020,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 640
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_18"
+        }
+      ],
+      "loops": 1,
+      "name": "Shader NodetreeAction.018",
+      "start_time": 21000,
+      "type": "diffuse_color_rgb"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1400,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_19"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_19Action",
+      "start_time": 21740,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              -0.07288922,
+              -1.78262198
+            ],
+            "interpolation": "linear",
+            "time": 1380
+          },
+          {
+            "float_values": [
+              -0.02265576,
+              -0.02233569,
+              -0.71638006
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_19"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_19Action",
+      "start_time": 21760,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -23.599999,
+              0.0,
+              3.772162
+            ],
+            "interpolation": "linear",
+            "time": 1380
+          },
+          {
+            "float_values": [
+              -23.600004,
+              53.715674,
+              -0.0
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_19"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_19Action",
+      "start_time": 21760,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 620
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_19"
+        }
+      ],
+      "loops": 1,
+      "name": "Shader NodetreeAction.019",
+      "start_time": 21740,
+      "type": "diffuse_color_rgb"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1400,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_20"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_20Action",
+      "start_time": 21860,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.07749667,
+              0.06866769,
+              -0.53318763
+            ],
+            "interpolation": "linear",
+            "time": 1380
+          },
+          {
+            "float_values": [
+              -0.14108652,
+              -0.07626422,
+              -0.53318763
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_20"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_20Action",
+      "start_time": 21880,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -27.199996,
+              0.0,
+              25.796052
+            ],
+            "interpolation": "linear",
+            "time": 1380
+          },
+          {
+            "float_values": [
+              23.799996,
+              -44.933745,
+              6.6
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_20"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_20Action",
+      "start_time": 21880,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 620
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_20"
+        }
+      ],
+      "loops": 1,
+      "name": "Shader NodetreeAction.020",
+      "start_time": 21860,
+      "type": "diffuse_color_rgb"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1400,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_21"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_21Action",
+      "start_time": 22560,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.1653541,
+              0.07022076,
+              -0.85121822
+            ],
+            "interpolation": "linear",
+            "time": 1380
+          },
+          {
+            "float_values": [
+              0.10101509,
+              -0.06957027,
+              -0.61960602
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_21"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_21Action",
+      "start_time": 22580,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              18.599998,
+              15.751521,
+              8.05492
+            ],
+            "interpolation": "linear",
+            "time": 1380
+          },
+          {
+            "float_values": [
+              -26.999997,
+              15.751521,
+              -23.799999
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_21"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_21Action",
+      "start_time": 22580,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 620
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_21"
+        }
+      ],
+      "loops": 1,
+      "name": "Shader NodetreeAction.021",
+      "start_time": 22560,
+      "type": "diffuse_color_rgb"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1420,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_22"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_22Action",
+      "start_time": 23540,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.14575574,
+              -0.08148349,
+              -0.82521737
+            ],
+            "interpolation": "linear",
+            "time": 1400
+          },
+          {
+            "float_values": [
+              -0.01600944,
+              0.09580188,
+              -0.76929009
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_22"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_22Action",
+      "start_time": 23560,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              37.415646,
+              -6.2
+            ],
+            "interpolation": "linear",
+            "time": 1400
+          },
+          {
+            "float_values": [
+              -19.999998,
+              21.437785,
+              -6.199999
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_22"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_22Action",
+      "start_time": 23560,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 640
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_22"
+        }
+      ],
+      "loops": 1,
+      "name": "Shader NodetreeAction.022",
+      "start_time": 23540,
+      "type": "diffuse_color_rgb"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1420,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_23"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_23Action",
+      "start_time": 24340,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -0.73201865
+            ],
+            "interpolation": "linear",
+            "time": 1400
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -1.15503073
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_23"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_23Action",
+      "start_time": 24360,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              43.599997,
+              0.0,
+              13.399999
+            ],
+            "interpolation": "linear",
+            "time": 1400
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -25.399998
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_23"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_23Action",
+      "start_time": 24360,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 640
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_23"
+        }
+      ],
+      "loops": 1,
+      "name": "Shader NodetreeAction.023",
+      "start_time": 24340,
+      "type": "diffuse_color_rgb"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1240,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_24"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_24Action",
+      "start_time": 25020,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.09695289,
+              -0.04814862,
+              -0.83055043
+            ],
+            "interpolation": "linear",
+            "time": 1220
+          },
+          {
+            "float_values": [
+              0.09662846,
+              0.07973553,
+              -0.79475754
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_24"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_24Action",
+      "start_time": 25040,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -24.599999,
+              24.799997,
+              -15.2
+            ],
+            "interpolation": "linear",
+            "time": 1220
+          },
+          {
+            "float_values": [
+              -24.599999,
+              0.0,
+              7.599998
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_24"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_24Action",
+      "start_time": 25040,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 460
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_24"
+        }
+      ],
+      "loops": 1,
+      "name": "Shader NodetreeAction.024",
+      "start_time": 25020,
+      "type": "diffuse_color_rgb"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1380,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_25"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_25Action",
+      "start_time": 25620,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.15010619,
+              0.05386475,
+              -0.61883116
+            ],
+            "interpolation": "linear",
+            "time": 1360
+          },
+          {
+            "float_values": [
+              0.06387895,
+              -0.06026055,
+              -0.2834518
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_25"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_25Action",
+      "start_time": 25640,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -12.599998,
+              0.0,
+              24.597306
+            ],
+            "interpolation": "linear",
+            "time": 1360
+          },
+          {
+            "float_values": [
+              -0.0,
+              0.0,
+              -33.569949
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_25"
+        }
+      ],
+      "loops": 1,
+      "name": "greetz_25Action",
+      "start_time": 25640,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 600
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "greetz_25"
+        }
+      ],
+      "loops": 1,
+      "name": "Shader NodetreeAction.025",
+      "start_time": 25620,
+      "type": "diffuse_color_rgb"
+    }
+  ],
+  "cameras": [
+    {
+      "far_clip_plane": 100.0,
+      "fov_x": 54.362152,
+      "fov_y": 28.800001,
+      "hide": false,
+      "name": "camera_1",
+      "near_clip_plane": 0.1,
+      "rotation": [
+        3e-06,
+        0.0,
+        -0.0
+      ]
+    }
+  ],
+  "enc_info": {
+    "data_type": "ENCSCN",
+    "date": "30 Nov 2022 01:15:28",
+    "version": "2.0"
+  },
+  "loops": 1,
+  "name": "gr_scene_1",
+  "objects": [
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "mesh_name": "gr_greetz_1",
+      "name": "greetz_1",
+      "position": [
+        -0.32581654,
+        0.27444515,
+        -1.30944109
+      ],
+      "properties": {
+        "blending": "additive",
+        "depth_mask": 0
+      },
+      "rotation": [
+        0.0,
+        17.690176,
+        -0.0
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "mesh_name": "gr_greetz_2",
+      "name": "greetz_2",
+      "position": [
+        -0.05232697,
+        0.0,
+        -0.3421858
+      ],
+      "properties": {
+        "blending": "additive",
+        "depth_mask": 0
+      },
+      "rotation": [
+        0.0,
+        10.75756,
+        -14.967246
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "mesh_name": "gr_greetz_3",
+      "name": "greetz_3",
+      "position": [
+        0.0,
+        0.0,
+        -1.17858756
+      ],
+      "properties": {
+        "blending": "additive",
+        "depth_mask": 0
+      },
+      "rotation": [
+        0.0,
+        0.0,
+        9.807941
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "mesh_name": "gr_greetz_4",
+      "name": "greetz_4",
+      "position": [
+        0.0,
+        0.0,
+        -0.19635957
+      ],
+      "properties": {
+        "blending": "additive",
+        "depth_mask": 0
+      },
+      "rotation": [
+        -23.903825,
+        1.126924,
+        22.944779
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "mesh_name": "gr_greetz_5",
+      "name": "greetz_5",
+      "position": [
+        -0.16035774,
+        0.13748071,
+        -1.31016254
+      ],
+      "properties": {
+        "blending": "additive",
+        "depth_mask": 0
+      },
+      "rotation": [
+        -35.395789,
+        4.185471,
+        19.246122
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "mesh_name": "gr_greetz_6",
+      "name": "greetz_6",
+      "position": [
+        0.3614524,
+        -0.05693758,
+        -0.81535649
+      ],
+      "properties": {
+        "blending": "additive",
+        "depth_mask": 0
+      },
+      "rotation": [
+        -34.674285,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "mesh_name": "gr_greetz_7",
+      "name": "greetz_7",
+      "position": [
+        0.00108,
+        0.00899961,
+        -0.46082458
+      ],
+      "properties": {
+        "blending": "additive",
+        "depth_mask": 0
+      },
+      "rotation": [
+        -39.46625,
+        36.257615,
+        9.236322
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "mesh_name": "gr_greetz_8",
+      "name": "greetz_8",
+      "position": [
+        0.0,
+        0.0,
+        -1.6841141
+      ],
+      "properties": {
+        "blending": "additive",
+        "depth_mask": 0
+      },
+      "rotation": [
+        0.0,
+        0.0,
+        -40.752351
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "mesh_name": "gr_greetz_9",
+      "name": "greetz_9",
+      "position": [
+        0.0,
+        0.0,
+        -0.52344549
+      ],
+      "properties": {
+        "blending": "additive",
+        "depth_mask": 0
+      },
+      "rotation": [
+        -33.431269,
+        27.41633,
+        15.250603
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "mesh_name": "gr_greetz_10",
+      "name": "greetz_10",
+      "position": [
+        0.0,
+        0.07643814,
+        -0.81664813
+      ],
+      "properties": {
+        "blending": "additive",
+        "depth_mask": 0
+      },
+      "rotation": [
+        0.0,
+        49.02857,
+        8.999999
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "mesh_name": "gr_greetz_11",
+      "name": "greetz_11",
+      "position": [
+        -0.09135342,
+        -0.10166127,
+        -0.69721836
+      ],
+      "properties": {
+        "blending": "additive",
+        "depth_mask": 0
+      },
+      "rotation": [
+        0.0,
+        0.0,
+        -27.961661
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "mesh_name": "gr_greetz_12",
+      "name": "greetz_12",
+      "position": [
+        0.0,
+        -0.09864213,
+        -0.84042996
+      ],
+      "properties": {
+        "blending": "additive",
+        "depth_mask": 0
+      },
+      "rotation": [
+        0.0,
+        17.071402,
+        -0.0
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "mesh_name": "gr_greetz_13",
+      "name": "greetz_13",
+      "position": [
+        0.0,
+        0.0,
+        -0.29503468
+      ],
+      "properties": {
+        "blending": "additive",
+        "depth_mask": 0
+      },
+      "rotation": [
+        -53.593452,
+        0.0,
+        -5.469641
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "mesh_name": "gr_greetz_14",
+      "name": "greetz_14",
+      "position": [
+        0.10784419,
+        0.05083508,
+        -0.36552247
+      ],
+      "properties": {
+        "blending": "additive",
+        "depth_mask": 0
+      },
+      "rotation": [
+        46.199997,
+        3.338006,
+        19.545068
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "mesh_name": "gr_greetz_15",
+      "name": "greetz_15",
+      "position": [
+        0.0,
+        0.0,
+        -0.9614346
+      ],
+      "properties": {
+        "blending": "additive",
+        "depth_mask": 0
+      },
+      "rotation": [
+        -3.217053,
+        23.852387,
+        -18.977373
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "mesh_name": "gr_greetz_16",
+      "name": "greetz_16",
+      "position": [
+        -0.16501305,
+        0.12664737,
+        -1.13669896
+      ],
+      "properties": {
+        "blending": "additive",
+        "depth_mask": 0
+      },
+      "rotation": [
+        -21.199999,
+        0.0,
+        15.674905
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "mesh_name": "gr_greetz_17",
+      "name": "greetz_17",
+      "position": [
+        -0.02948362,
+        0.07220617,
+        -0.91382092
+      ],
+      "properties": {
+        "blending": "additive",
+        "depth_mask": 0
+      },
+      "rotation": [
+        -30.999995,
+        0.0,
+        -17.84468
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "mesh_name": "gr_greetz_18",
+      "name": "greetz_18",
+      "position": [
+        -0.2238981,
+        -0.19218506,
+        -0.94305027
+      ],
+      "properties": {
+        "blending": "additive",
+        "depth_mask": 0
+      }
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "mesh_name": "gr_greetz_19",
+      "name": "greetz_19",
+      "position": [
+        0.0,
+        -0.07288922,
+        -1.78262198
+      ],
+      "properties": {
+        "blending": "additive",
+        "depth_mask": 0
+      },
+      "rotation": [
+        -23.599999,
+        0.0,
+        3.772162
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "mesh_name": "gr_greetz_20",
+      "name": "greetz_20",
+      "position": [
+        0.07749667,
+        0.06866769,
+        -0.53318763
+      ],
+      "properties": {
+        "blending": "additive",
+        "depth_mask": 0
+      },
+      "rotation": [
+        -27.199996,
+        0.0,
+        25.796052
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "mesh_name": "gr_greetz_21",
+      "name": "greetz_21",
+      "position": [
+        -0.1653541,
+        0.07022076,
+        -0.85121822
+      ],
+      "properties": {
+        "blending": "additive",
+        "depth_mask": 0
+      },
+      "rotation": [
+        18.599998,
+        15.751521,
+        8.05492
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "mesh_name": "gr_greetz_22",
+      "name": "greetz_22",
+      "position": [
+        0.14575574,
+        -0.08148349,
+        -0.82521737
+      ],
+      "properties": {
+        "blending": "additive",
+        "depth_mask": 0
+      },
+      "rotation": [
+        0.0,
+        37.415646,
+        -6.2
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "mesh_name": "gr_greetz_23",
+      "name": "greetz_23",
+      "position": [
+        0.0,
+        0.0,
+        -0.73201865
+      ],
+      "properties": {
+        "blending": "additive",
+        "depth_mask": 0
+      },
+      "rotation": [
+        43.599997,
+        0.0,
+        13.399999
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "mesh_name": "gr_greetz_24",
+      "name": "greetz_24",
+      "position": [
+        -0.09695289,
+        -0.04814862,
+        -0.83055043
+      ],
+      "properties": {
+        "blending": "additive",
+        "depth_mask": 0
+      },
+      "rotation": [
+        -24.599999,
+        24.799997,
+        -15.2
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "mesh_name": "gr_greetz_25",
+      "name": "greetz_25",
+      "position": [
+        -0.15010619,
+        0.05386475,
+        -0.61883116
+      ],
+      "properties": {
+        "blending": "additive",
+        "depth_mask": 0
+      },
+      "rotation": [
+        -12.599998,
+        0.0,
+        24.597306
+      ]
+    }
+  ],
+  "time": 36500
+}

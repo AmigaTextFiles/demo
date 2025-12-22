@@ -1,0 +1,295 @@
+ This example shows the 3d object constructor 'star3d' in action
+ and we will also use textures 't3dFlat' and 't3dFlatLightmap':
+ It goes like:
+
+
+ < star3d> label | father | (9 parameters:position:rotations,scale)|
+			NumberOfBranches | RayLength1 | RayLength2 |
+			CenterPointShiftInZ | OutLineWidth |
+			TextureASide1 | TextureBSide1 | TextureOutlineSide1 |
+			TextureASide2 | TextureBSide2 | TextureOutlineSide2 |
+ </star3d>
+
+ label is of course the name of the object.
+ father can be a world label, or another object label where to attach.
+
+ NumberOfBranches means: the number of branches your star will have. (minimum is 2.)
+
+ CenterPointShifting: Distance Shifting the center. if it is 0.0, your star will be flat shaped.
+
+ OutLineWidth: there is an optional Outline (if outline textures are present),
+    you specify the outline width there.
+
+ note if RayLength1=RayLength2, you'll have a disk, not a star.
+
+  Texture A and B on a same side are used alternately around the disk.
+  TextureOutline are used to make the outline.
+
+   With All 3d object constructors, textures are asked at the end of the definition.
+  you can set a valid texture already defined before,you can use
+  the same texture many times, and you can also let the texture empty by typing
+  nothing, it is valid, and corresponding polygons will just NOT BE CREATED.
+  If the texture is not found (name invalid), the polygons will not be
+  created either.
+
+---------- about the useful < clone3d> constructor.
+
+  In the example below, we create a star named starOutLine,
+  and we clone it 4 times with  < clone3d>, a 3d object constructor.
+  clone3d make a new object having the same shape as another.
+
+ < clone3d> label | father | (9 parameters:position:rotations,scale)| name of the object to take the shape </clone3d>
+
+  This constructor is useful if you want to create many object with the same shape.
+ It is faster to clone than to rebuild another object with same parameters than another,
+ and most of all, in the future, 3d objects could have dynamic shapes:
+ Then modifying an object will modify all its clones.
+
+----------- about < t3dFlat> texture constructors:
+
+ Polygon drawn with these textures will be filled with one color.
+ You just specify a label for the texture and a color number in the palette:
+ Let's construct for real:
+
+<t3dFlat> t_Red   | 1  </t3dFlat>
+<t3dFlat> t_Yellow| 94  </t3dFlat>
+<t3dFlat> t_black | 0  </t3dFlat>
+
+ You can specify or not an optional 3rd parameter: a colortable.
+ The palette-To-Palette operation of the colortable will be used for
+ a transparency or a 'color addition'.
+
+----------- about < t3dFlatLightMap> texture constructors:
+
+ Polygon drawn with a 't3dFlatLightMap' will have one color,
+ but it uses a 64 by 64 pixel image to find which one:
+ this image (which must have the same palette as the one used on the screen.)
+ represent a lighted sphere. (have a look at our .iff listed below.)
+  This sphere give all angles possible for a visible polygon.
+
+ When creating a t3dFlatLightMap, you specify a label and one of these images
+ created before. The object that use it will be lighted the same way as your
+ sphere image:
+
+<KIMG> i_lightmapRed  | data/lightmapred.iff </kimg>
+<KIMG> i_lightmapGreen| data/lightmapgreen.iff </kimg>
+<KIMG> i_lightmapGrey | data/lightmapgrey.iff </kimg>
+ 
+<t3dFlatLightMap> tLightMapRed   | i_lightmapRed  </t3dFlatLightMap>
+<t3dFlatLightMap> tLightMapGreen | i_lightmapGreen </t3dFlatLightMap>
+<t3dFlatLightMap> tLightMapGrey  | i_lightmapGrey </t3dFlatLightMap>
+
+ You can specify or not an optional 3rd parameter: a colortable.
+ The palette-To-Palette operation of the colortable will be used for
+ a transparency or a 'color addition'.
+
+-------------------------------------------------------------------------
+ 
+ some worlds:
+
+<World3D> world1 </World3D>
+<World3D> world2 </World3D>
+<World3D> world3 </World3D>
+<World3D> world4 </World3D>
+
+ some stars...
+
+<star3d> starBig1 | world1 |0|0|0|0|0|0|1|1|1 |
+         5|0.75|0.25|0.2|0.1| tLightMapGreen | tLightMapGreen |t_black| tLightMapGreen | tLightMapGreen |t_black </star3d>
+
+<star3d> starBig2 | world2 |0|0|0|0|0|0|1|1|1 |
+         8|0.85|1.0|0.75|0.0|tLightMapGrey |tLightMapGrey | |tLightMapGrey |tLightMapGrey| </star3d>
+
+<star3d> starOutLine | world3 |0|0|0|0|0|0|1|1|1 |8|0.5|0.4|0.2|0.1| | |t_black | | | t_black </star3d>
+<clone3d> starOutLine2 | starOutLine |0|0|0|0.1|0.1|0.1|0.75|0.75|0.75 | starOutLine </clone3d>
+<clone3d> starOutLine3 | starOutLine2 |0|0|0|0.1|0.1|0.1|0.75|0.75|0.75 | starOutLine </clone3d>
+<clone3d> starOutLine4 | starOutLine3 |0|0|0|0.1|0.1|0.1|0.75|0.75|0.75 | starOutLine </clone3d>
+<clone3d> starOutLine5 | starOutLine4 |0|0|0|0.1|0.1|0.1|0.75|0.75|0.75 | starOutLine </clone3d>
+
+
+
+<star3d> starDisk | world4 |0|0|0|0|0|0|1|1|1 |5|2.0|2.0|0.2|0.1|
+          t_Red |t_Yellow | |t_Red |t_Yellow|  </star3d>
+
+--------------------------------- other constructions ----
+
+<MAIN> mainscript |0|1</MAIN>
+<KCAM> the_camera |0|0|-2|0|0|0|1  </KCAM>
+<KCAM> largecamera |0|0|-1.75|0|0|0|0.4  </KCAM> bigger angle
+ 
+--------------------------------- script definition ----
+<KSCRIPT>  
+    <ID> mainscript </ID>
+    <PLAY> mainpart | 2400 | 0 | 1 </PLAY>
+    <PLAY> endpart | 200 | 2400 | 1 </PLAY>
+</KSCRIPT>
+<KSCRIPT>
+    <ID> SubScript </ID>
+    <PLAY> part1 | 800 | 0 | 1 </PLAY>
+    <PLAY> part2 | 800 | 0 | 1 </PLAY>
+    <PLAY> part3 | 800 | 0 | 1 </PLAY>
+</KSCRIPT>
+
+<KPART>
+    <ID> mainpart </ID>
+    note: no use to clear the screen: the disc
+    will erase the background itself.
+
+    <Fx><Pa>setpalette</Pa>		set the screen palette
+        <Pa> i_lightmapRed </Pa>
+    </Fx>
+  
+    <Fx><Pa> Set3DObject </Pa>
+	    <Pa>  starDisk </Pa>
+
+	    <Pa> 3cte |0|0|-1  </Pa> position
+
+	    <Pa> cos |0|0.2|2 </Pa>  rotations
+	    <Pa> cte |0.2</Pa>
+	    <Pa> cte |0.1</Pa>
+
+	    <Pa> 3cte|1|1|1 </Pa> scale
+    </Fx>
+
+    <Fx><Pa> Draw3DWorld </Pa>
+          <Pa>   </Pa>	      
+          <Pa> world4 </Pa>   
+          <Pa> the_camera </Pa>
+          <Pa> cte|0 </Pa>    
+          <Pa> cte|0.25 </Pa>  
+          <Pa> cte|20</Pa>   
+    </Fx>
+
+
+    <Fx><Pa> PlayScript </Pa>
+    	    <Pa> SubScript  </Pa>
+    	    <Pa> aff |0|1 </Pa> time
+    </Fx>
+
+</KPART>
+
+<KPART>
+    <ID> part1 </ID>
+
+    <Fx><Pa> Set3DObject </Pa>
+	    <Pa>  starBig1 </Pa>
+
+            <Pa> bounce|100|150|750|-2.2|0 </pa> position
+	    <Pa> 2cte |0|-0.75  </Pa>
+
+	    <Pa> sin |0|0.2|0.5  </Pa>  rotations
+	    <Pa> sin |0|0.25|1.2 </Pa>
+	    <Pa> aff |0|0.01</Pa>
+
+	    <Pa> 3cte|1|1|1 </Pa> scale
+    </Fx>
+
+    <Fx><Pa> Draw3DWorld </Pa>
+          <Pa>   </Pa>
+          <Pa> world1 </Pa>
+          <Pa> largecamera </Pa>
+          <Pa> cte|0 </Pa>
+          <Pa> cte|0.125 </Pa>
+          <Pa> cte|20</Pa>
+    </Fx>
+
+</KPART>
+
+<KPART>
+    <ID> part2 </ID>
+
+    <Fx><Pa> Set3DObject </Pa>
+	    <Pa> starOutLine  </Pa>
+
+            <Pa> bounce|0|50|750|2.2|0 </pa> position
+	    <Pa> 2cte |0|-1  </Pa>
+
+	    <Pa> sin |0|0.2|0.5  </Pa>  rotations
+	    <Pa> sin |0|0.25|1.2 </Pa>
+	    <Pa> aff |0|0.01</Pa>
+
+	    <Pa> 3cte|1|1|1 </Pa> scale
+    </Fx>
+
+    <Fx><Pa> Draw3DWorld </Pa>
+          <Pa>   </Pa>
+          <Pa> world3 </Pa>
+          <Pa> largecamera </Pa>
+          <Pa> cte|0 </Pa>
+          <Pa> cte|0.25 </Pa>
+          <Pa> cte|20</Pa>
+    </Fx>
+
+   
+
+</KPART>
+
+<KPART>
+    <ID> part3 </ID>
+
+    <Fx><Pa> Set3DObject </Pa>
+	    <Pa> starBig2  </Pa>
+
+            <Pa> 2cte |0|0  </Pa> x,y
+            <Pa> bounce|0|200|580|1.0|0 </pa> z
+
+	    <Pa> sin |0|0.12|0.5  </Pa>  rotations
+	    <Pa> sin |0|0.18|1.2 </Pa>
+	    <Pa> aff |0|0.01</Pa>
+
+	    <Pa> 3cte|1|1|1 </Pa> scale
+    </Fx>
+
+    <Fx><Pa> Draw3DWorld </Pa>
+          <Pa>   </Pa>
+          <Pa> world2 </Pa>
+          <Pa> largecamera </Pa>
+          <Pa> cte|0 </Pa>     unused time
+          <Pa> cte|0.25 </Pa>  near cut plane.
+          <Pa> cte|1.75</Pa>      far cut plane
+    </Fx>
+
+</KPART>
+
+<KPART>    note: in the endpart, i clear the screen
+    <ID> endpart </ID>
+
+    <Fx><Pa>setpalette</Pa>		set the screen palette
+        <Pa> i_lightmapRed </Pa>
+    </Fx>
+
+    <Fx><Pa> FillRC </Pa>
+    	<Pa>  </Pa>
+    	<Pa> cte | 44</Pa>
+    </Fx>
+
+<ktable> stargo |2400,-1 |2600,40 </ktable>
+    <Fx><Pa> Set3DObject </Pa>
+	    <Pa>  starDisk </Pa>
+
+	    <Pa> 2cte |0|0 </pa>
+            <Pa> aft |stargo|0|0  </Pa> z
+
+	    <Pa> cos |0|0.2|2 </Pa>  rotations
+	    <Pa> cte |0.2</Pa>
+	    <Pa> cte |0.1</Pa>
+
+	    <Pa> 3cte|1|1|1 </Pa> scale
+    </Fx>
+
+    <Fx><Pa> Draw3DWorld </Pa>
+          <Pa>   </Pa>
+          <Pa> world4 </Pa>
+          <Pa> the_camera </Pa>
+          <Pa> cte|0 </Pa>
+          <Pa> cte|0.25 </Pa>
+          <Pa> cte|30</Pa>
+    </Fx>
+
+
+    <Fx><Pa> PlayScript </Pa>
+    	    <Pa> SubScript  </Pa>
+    	    <Pa> aff |0|1 </Pa> time
+    </Fx>
+
+</KPART>

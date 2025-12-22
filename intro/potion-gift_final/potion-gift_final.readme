@@ -1,0 +1,56 @@
+          This is the final version of the famous "Gift (Gush 2)"
+                       64 kilobytes intro by Potion.
+
+      Credits: code, design - Mavey; music, soft-synth code, design: Skip.
+
+             Intro was released at Mekka/Symposium Party 2000
+                        in Fallingbostel, Germany.
+  It came 1st in the Amiga 64kb Intro Compo with a result of 537 points.
+
+         Minimum requirements: AGA, 68030+FPU, 16MB FastRAM, AHI.
+   Recommended: AGA, full 68060/66 or faster, AHI, RAM-mapped Kickstart 3.1.
+
+        This version lets you choose the AHI-mode with a requester,
+           so it *SHOULD* work on any AHI-aware sound hardware,
+      but HASN'T BEEN TESTED ON ANYTHING BESIDES REGULAR PAULA CHIP!
+
+                                 IMPORTANT
+                                -----------
+   This version uses "Autoboost" feature of DBM-player (which isn't perfect)
+  to automatically calculate the loudest volume possible without clipping,
+    so it's important to set your primary AHI device's Clipping to ON,
+ otherwise the crackling noise may appear in louder parts of the music
+                          (well, at least on Paula).
+
+
+
+            Below - original readme file from the party release
+            ---------------------------------------------------
+
+potion gives you ...
+
+                                  g i f t
+                               ( g u s h 2 )
+
+                           a 64 kilobytes intro
+
+                                 starring
+
+                              Mavey and Skip
+
+                        released at Mekka/Symposium
+                                 A.D. 2000
+
+                                     ·
+
+required ..............68030+FPU, 16MB FastRAM (should run with 12MB), AHI
+recommended ...........68060, BlizKick (or RemApollo), !OxyPatcher!, Kick3.1
+
+note:     yes, there is an AHI sound, but it works ONLY on Paula/14bit/28kHz;
+          the full version will include full AHI support and will be released
+          after the party, so watch out!
+
+keywords: psychedelic trance · over 3MB of synthesized samples · 14 channels
+                          meta balls · realtime raytracing
+
+                   PS. we DO know rem / procreation :))

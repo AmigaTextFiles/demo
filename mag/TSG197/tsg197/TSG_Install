@@ -1,0 +1,65 @@
+; The Scene Guide is © 1995-1997 Nico Barbat (Dire/Eremation)
+; TSG_Install V1.02 (05-Jan-97)
+
+echo "*N"
+echo "                  *E[1m*E[34mTHE SCENE GUIDE*E[0m"
+echo "                 *E[34mIssue 1/3 in 1997*N"
+echo "          *E[31mby Nico Barbat (Dire/Eremation)*N*N"
+echo " The Scene Guide 1/96 will be installed in its own dir-"
+echo " ectory on your harddisk. If you want this directory to"
+echo " be in another place  on your harddisk,  then just move"
+echo " the complete drawer to that place.*N"
+
+makedir sys:TheSceneGuide197
+echo "Creating directory TheSceneGuide197 on your hd-partition system!*N"
+
+echo "*E[33m  Installing:"
+
+echo "*E[34m                ... The Scene Guide        0% completed"
+copy >NIL: TSG96.guide sys:TheSceneGuide197/TSG96.guide
+copy >NIL: TSG96.guide.info sys:TheSceneGuide197/TSG96.guide.info
+copy >NIL: TSG97.guide sys:TheSceneGuide197/TSG97.guide
+copy >NIL: TSG97.guide.info sys:TheSceneGuide197/TSG97.guide.info
+
+echo "                ... data-files                  60% completed"
+copy >NIL: TSG_Data1 sys:TheSceneGuide197/TSG_Data1
+copy >NIL: TSG_Data2 sys:TheSceneGuide197/TSG_Data2
+copy >NIL: StartTSG96 sys:TheSceneGuide197/StartTSG96
+copy >NIL: StartTSG96.info sys:TheSceneGuide197/StartTSG96.info
+copy >NIL: StartTSG97 sys:TheSceneGuide197/StartTSG97
+copy >NIL: StartTSG97.info sys:TheSceneGuide197/StartTSG97.info
+
+echo "                ... graphics                    75% completed"
+copy >NIL: TSG_Advert.iff sys:TheSceneGuide197/TSG_Advert.iff
+copy >NIL: TSG_Title.iff sys:TheSceneGuide197/TSG_Title.iff
+
+echo "                ... sounds                      80% completed"
+copy >NIL: TSG_Module1.mod sys:TheSceneGuide197/TSG_Module1.mod
+copy >NIL: TSG_Module2.mod sys:TheSceneGuide197/TSG_Module2.mod
+
+echo "                ... commands                    85% completed"
+copy >NIL: c/ppshow sys:c/ppshow
+copy >NIL: c/ppmore sys:c/ppmore
+copy >NIL: c/noiseplayer sys:c/noiseplayer
+
+echo "                ... Adverts                     87% completed"
+copy >NIL: TSG_Adverts sys:TheSceneGuide197/TSG_Adverts all
+
+echo "                ... other needed files.         90% completed*n"
+copy >NIL: ReadMe sys:TheSceneGuide197/ReadMe
+copy >NIL: ReadMe.info sys:TheSceneGuide197/ReadMe.info
+copy >NIL: file_id.diz sys:TheSceneGuide197/file_id.diz
+copy >NIL: fonts sys:fonts all
+copy >NIL: TSG_Install sys:TheSceneGuide197/TSG_Install
+copy >NIL: TSG_Install.info sys:TheSceneGuide197/TSG_Install.info
+copy >NIL: TSG_adverts.info sys:TheSceneGuide197/TSG_Adverts.info
+copy >NIL: TSG_adverts.info sys:TheSceneGuide197.info
+
+echo " "
+echo "*E[33m Installation finnished completely and succesfully.*N"
+
+echo "*E[31m Please do only spread the original LHA-package, not"
+echo " only these single files. Otherwise <The Scene Guide 1/97>"
+echo " will not work completely (no joke!) ...*N"
+echo "   Signed, *E[3m*E[32mNico Barbat (Dire/Eremation)*E[0m"
+wait 5 secs

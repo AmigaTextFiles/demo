@@ -1,0 +1,243 @@
+
+; IMAZINE installer written by MR SOFT / WORLD FEDERATION OF MAD HACKERS
+; (for IMAZINE #4 adapted by Harry / SG)
+
+(complete 0)
+
+(welcome
+		"\n"
+		"  ***    ***    *********  ***    ***    ***    ***\n"
+		"  ***    ***    ***        ****  ****    ***    ***\n"
+		"  ***    ***    ***        *** ** ***    ***    ***\n"
+		"  ***    ***    ********   *** ** ***    **********\n"
+		"  *** ** ***    ********   ***    ***    **********\n"
+		"  *** ** ***    ***        ***    ***    ***    ***\n"
+		"  ****  **** ** ***     ** ***    *** ** ***    ***\n"
+		"  ***    *** ** ***     ** ***    *** ** ***    ***\n"
+		"\n"
+		"      ------------------------------------------\n"
+		"      IMAZINE #4 Installer by MR SOFT / W.F.M.H.\n"
+		"      ------------------------------------------\n"
+		
+)
+
+(set wynik
+	(askoptions
+		(prompt  "Co chcesz zainstalowac?")
+			(help    "\n\n\n\n"
+			 	 "                     Co za tupet!\n"
+				 "      Nie powiesz mi chyba ze Cie to przerasta?!\n"
+			)  		     
+		(choices "Moduly muzyczne"
+			 "DeliPlayers"
+			 "ExIT"
+			 "NewAss"
+			 "Tools"
+			 "Sources"
+			 "CED pieces"
+	     )
+	)
+)
+
+(set imazine_dest
+	(tackon
+		(askdir
+			(default "WORK:")
+			(prompt  "Gdzie zyczysz sobie zainstalowac IMAZINE #4?")
+			(help    "\n\n\n\n"
+				 " Z wyswietlonej listy wybierz urzadzenie lub katalog,\n"
+				 "     w ktorym chcialbys zainstalowac IMAZINE #4.\n"
+				 "    Program instalacyjny zalozy dodatkowy katalog\n"
+				 "  o nazwie IMAZINE_IV i w nim to umiesci wszelakie\n"
+				 "             niezbedne zbiory plikowe.\n")
+)
+			"IMAZINE_IV"
+	)
+)
+
+
+
+(makedir imazine_dest (infos))
+
+(set @default-dest imazine_dest)
+
+(askdisk
+	    (prompt  "\n\n\n\nBadz laskaw umiescic dysk zwany \"IZ4_A\" w dowolnym napedzie.")
+	(help	 "\n\n\n"
+			 "     A to wszystko po to aby mozna bylo skopiowac\n"
+			 "  niezbedne pliki z dyskietki owej na Twoj wspanialy\n"
+			 "                     dysk twardy.\n")
+	    (dest    "IZ4_A")
+	(newname "ImazineDiskA")
+)
+
+(working "Kopiuje niezbedne biblioteki systemowe...")
+
+(copylib
+    (source "ImazineDiskA:Libs/powerpacker.library")
+    (dest   "LIBS:")
+)
+(copylib
+    (source "ImazineDiskA:Libs/xpkmaster.library")
+    (dest   "LIBS:")
+)
+(copylib
+    (source "ImazineDiskA:Libs/diskfont.library")
+    (dest   "LIBS:")
+)
+(copylib
+    (source "ImazineDiskA:Libs/iff.library")
+    (dest   "LIBS:")
+)
+(copylib
+    (source "ImazineDiskA:Libs/reqtools.library")
+    (dest   "LIBS:")
+)
+(copylib
+    (source "ImazineDiskA:Libs/compressors/xpkNUKE.library")
+    (dest   "LIBS:compressors")
+)
+(copylib
+    (source "ImazineDiskA:Libs/compressors/xpkSQSH.library")
+    (dest   "LIBS:compressors")
+)
+
+(working "Kopiuje niezbedne fonty.")
+(copyfiles
+	(source "ImazineDiskA:Fonts")
+	(dest "FONTS:")
+	(all)
+)
+
+(copyfiles
+	(source "ImazineDiskA:IMAZINE_IV")
+	(dest imazine_dest)
+	(infos)
+)
+(complete 16)
+(copyfiles
+	(source "ImazineDiskA:IMZ_EXE")
+	(dest (tackon imazine_dest "IMZ_EXE"))
+    (all)
+)
+(complete 23)
+
+(copyfiles
+	(source "ImazineDiskA:Imazine.config")
+	(dest imazine_dest)
+)
+(complete 24)
+
+
+(if (bitand wynik 1)
+ (
+	(copyfiles
+   	(source "ImazineDiskA:MODULES")
+   	(dest (tackon imazine_dest "MODULES"))
+    (all)
+   )
+   (complete 35)
+ )
+)
+
+(if (bitand wynik 2)
+ (
+	(copyfiles
+   	(source "ImazineDiskA:DeliPlayers")
+   	(dest (tackon imazine_dest "DeliPlayers"))
+    (all)
+   )
+   (complete 38)
+ )
+)
+
+(if (bitand wynik 4)
+ (
+	(copyfiles
+   	(source "ImazineDiskA:_Exit")
+   	(dest (tackon imazine_dest "_Exit"))
+    (all)
+   )
+   (complete 43)
+ )
+)
+
+(if (bitand wynik 16)
+ (
+	(copyfiles
+	(source "ImazineDiskA:_Tools")
+	(dest (tackon imazine_dest "_Tools"))
+    (all)
+    )
+    (complete 45)
+ )
+)
+
+(if (bitand wynik 32)
+ (
+	(copyfiles
+   	(source "ImazineDiskA:_Sources")
+   	(dest (tackon imazine_dest "_Sources"))
+    (all)
+    )
+    (complete 50)
+ )
+)
+	
+
+(askdisk
+	(prompt 	"\n\n\n\nBadz laskaw umiescic dysk zwany \"IZ4_B\" w dowolnym napedzie.")
+	(help	"\n\n\n"
+			"     A to wszystko po to aby mozna bylo skopiowac\n"
+			"  niezbedne pliki z dyskietki owej na Twoj wspanialy\n"
+			"                     dysk twardy.\n")
+	(dest  "IZ4_B")
+	(newname "ImazineDiskB")
+)
+
+
+(copyfiles
+	(source "ImazineDiskB:ARTYKULY")
+	(dest (tackon imazine_dest "ARTYKULY"))
+    (all)
+)
+(complete 80)
+
+(copyfiles
+	(source "ImazineDiskB:GRAFIKI")
+	(dest (tackon imazine_dest "GRAFIKI"))
+    (all)
+)
+(complete 86)
+
+(copyfiles
+	(source "ImazineDiskB:ILUSTRACJE")
+	(dest (tackon imazine_dest "ILUSTRACJE"))
+    (all)
+)
+(complete 89)
+
+
+(if (bitand wynik 8)
+ (
+	(copyfiles
+   	(source "ImazineDiskB:_NewAss")
+   	(dest (tackon imazine_dest "_NewAss"))
+	(all)
+    )
+    (complete 97)
+ )
+)
+
+(if (bitand wynik 64)
+ (
+	(copyfiles
+	(source "ImazineDiskB:_CedPieces")
+	(dest (tackon imazine_dest "_CedPieces"))
+    (all)
+   )
+ )
+)
+
+(complete 100)
+(exit)

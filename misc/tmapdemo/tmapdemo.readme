@@ -1,0 +1,81 @@
+This is a quick and dirty 3d demo I did for AA machines. It requires a joystick
+and an A1200 or A4000. Source code in assembly is provided.
+
+	Don't run this without a joystick since the only way to quit is by
+pressing the joystick button!
+
+	Do whatever you want with the code. Trash it, write a PD game,
+write a commerical game, I don't care. No warranties provided, etc.
+BUT, send me a copy!
+
+About the source:
+
+	The whole demo was written in about a week, and is largely
+unoptimized. Much room for improvement.
+
+	I assembled it using ADAPT (hx68). Any other assembler which
+supports 020 ops *should* work.
+
+	There are some '020 only instructions sprinkled throughout
+the source code, but getting it to work on non-020, non-ecs machines,
+wouldn't be too hard. Since everything is done in 256 color chunky 
+pixels, the bulk of the code could be unchanged, and then the part
+that transfers it to the screen could pass the pixels through a 
+lookup table to convert them to (for instance) half-bright. The
+same technique could be used to get it running in a window on
+the WB screen using palette-sharing.
+
+	DEMO.I contains some equates which can be changed in 
+order to change window size, position, etc.
+
+	All the ONTIMER/OFFTIMER macros sprinkled throughout the code
+are for my profiler. I wouldn't recommend turning on the PROFILE
+symbol unless you like enforcer hits.
+
+	If the flag DO_CEILING is turned on, Gouraud shaded ceilings
+will be rendered, as well as floors.
+
+	If the symbol DOBLUR is turned on, the 3d system will render
+the chunky image at half the horizontal resolution, and then double
+it when transferring it to the screen using a 64k blurring table.
+This could provide some speedup (if ChunkyToPlanar wasn't so much of
+a bottleneck).
+
+	If the symbol MOTION_BLUR is set, a simple motion blur effect
+will be created via the same 64k table.
+
+	The routine YLRUUFillT in ylrfill.asm can be used to make
+the texture mapped polygons transparent.
+
+	The ChunkyToPlanar routine is based on source code from
+Richard Addison (addison@usc.edu). I hope he doesn't mind how
+much I mangled it up for this demo.
+
+	DEMOMAIN.ASM contains a nice little elapsed time function for
+game timing. This means that you move through the world at the 
+same rate on every computer, whether it is an NTSC A4000 or a
+PAL A1200, even if you are ray-tracing in the background.
+
+	The texture mapping only handles "wall-type" polygons, and
+is only linear. All of the 3d is setup to handle arbitrary
+texture maps, though.
+
+	I kind of like the 3d clipper, because it is small and simple.
+
+	The Gouraud shader is pretty cheesy, doing one divide per scanline.
+
+	The structure of the world is a quick hack, and is probably on good
+enough for what its doing now.
+
+	I'm not using the full palette.
+
+	The .c files are small utilities which were used to make the palettes,
+lighting tables, etc. They require 3.0 and Christian Weber's iff.library.
+
+*-------------------------------------------*---------------------------*
+|Chris Green - Graphics Software Engineer   - chrisg@commodore.COM      f
+|                  Commodore-Amiga          - uunet!cbmvax!chrisg       n
+|My opinions are my own, and do not         - icantforgettheimpression  o
+|necessarily represent those of my employer.- youmadeyouleftaholeinthe  r
+|"A screaming comes across the sky..."      - backofmyhead              d
+*-------------------------------------------*---------------------------*

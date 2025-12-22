@@ -1,0 +1,59 @@
+
+ SCOPEXT2 by Smack/Infect 200295
+---------------------------------
+
+This is no fucking 'doc.txt' as this is no utility for everybody.
+I coded this program mainly to practice some coding techniques and
+not to reach the masses. Actually I wonder if anybody will ever use
+or even like it but I don't care.
+So what is it? An audio analyzer, or better to say a toy of an analyzer.
+It uses a sampler connected to the parallel port of your Amiga. The
+program shows some realtime displays about the incoming signals.
+
+The program needs much CPU power. On a standard A1200 you can use only
+half of it. A 68030+ and some Fast RAM help a lot! (and not only for
+this task, your computer is never too fast...)
+
+Ok, get it to the point. On the upper half of the screen you'll see
+the sound as a waveform. I had to make some compromises here. The points
+are not connected by lines as it would take too much time drawing them.
+There are seven 'average dots' instead which still makes 8*256=2048 dots
+to plot every frame. The lower half of the screen is filled by a spectrum.
+It shows the signal levels at specified frequencies. The program does
+a 128 point Fast Fourier Transformation each frame and shows the levels
+as bars. The frequency scale is quite exact while the levels have no
+absolute value (but they are compareable inside this display!)
+If your machine is too slow for the routines the screen will flash red.
+You can switch off one part to get it working. But you'd better buy
+an accelerator card to have more fun.
+
+Now some facts on the internal features. I hope the sampling routine works
+with some other samplers except mine, I had a 'very close' look at some
+wellknown sound programs before. The timing is based on the level4-IRQ.
+Yes, it is the audio interrupt. The playback is done without DMA also in
+that interrupt. This is what I learned: don't rely on the CIA, use AUDIO! ;-)
+By the way, the sampling is done at a rate of about 25.6 kHz in mono.
+This gives us 512 fresh bytes per frame, just right for the FFT.
+All accesses to port, screen and sound by-pass the operating system to gain
+a few cycles, so people would call it 'hardware hacking'. I'm proud of it!
+
+So what! My English is lousy, my program is pure shit, and I'm laughing!
+Am I crazy, do I use drugs? Haha, you will never know...
+
+
+contact me for some reason by sending a picture postcard of your hometown to:
+                              (Smack/Infect)
+                              Michael  Henke
+                           Praetorius Str. 1/205
+                                06124 Halle
+                                 Germany
+
+                             or send e-mail to:
+                      epgbd@cluster1.urz.Uni-Halle.de
+
+P.S.
+ Infect rules!
+ (no joke ;-)
+
+
+

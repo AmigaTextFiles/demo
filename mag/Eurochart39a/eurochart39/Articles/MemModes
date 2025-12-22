@@ -1,0 +1,121 @@
+»CL8:»SML:--------------------------------------
+     »CL9:»BIG:Memory Modes and MMU
+»CL8:»SML:--------------------------------------
+
+»CL0:MMU means »CL1:Memory Management Unit», and
+it's a device that is located between
+the CPU and the memory bus. Its main
+purpose was to allow Virtual Memory,
+although it can provide endless
+services. The MMU simply translates
+every address the CPU supplies into a
+new one defined by the user. MMU
+splits the address in blocks (4096
+bytes is the minimum block size
+selectable), looks in a table that
+defines real address & state of every
+block and translates the address.
+
+MMU allows marking every block with
+some features; you can "protect"
+memory (trying to write into this
+block will cause an exception), mark
+it as non-cacheable, »CL7:(This is VERY
+interesting, you can simply change
+cache mode for any block, which is
+very important... Troda)» and many
+others...
+
+»CL0:A description of MMU functionality is
+out of the scope of this article, so
+if you want to learn about it, get
+yourself some of the Motorola books I
+list at the end of the article.
+
+»CL0:The MMU »CL1:*could*» provide a good service
+to demo coders, because you can do
+these kinds of things:
+»CL1:-» Mark some buffers as cacheable, and
+  others as non-cacheable. If you have
+  carefully read the example about
+  performance, you already know why
+  this is helpful.
+»CL1:-» Control if a block of memory has
+  been modified or not without having
+  to compare all bytes. This is used
+  sometimes in C2P to update only the
+  part of the screen that has been
+  changed. Shapeshifter external AGA
+  drives usually works using this
+  concept, for example. »CL7:(Optimal for
+  black effects, but also for weird
+  objets, etc... Troda)»
+»CL1:-» Change block addresses. Although
+  somewhat bizarre, certain
+  optimizations can be performed
+  reordering memory blocks. »CL7:(Such as
+  rotozoom, for example, by reordering
+  texture in memory...Troda)»
+»CL1:-» In multiprocessor systems (I know,
+  we don't find those everyday :) can
+  be very useful the fact that we can
+  mark memory areas as cacheable
+  write-through. »CL7:(Not only that, for
+  example on systems with DMA into
+  fast-RAM (SCSI, for example) and
+  with L2 this can avoid flushing mach
+  data from L2 for each DMA memory
+  access... Troda)»
+
+»CL0:Well, I supose this is worth further
+explanation...
+
+You can set memory in »CL1:4» cache states:
+»CL1:1»- Non-cacheable precise
+»CL1:2»- Non-cacheable imprecise - These 2
+   models are related to bus error
+   protocols. I have seen both used on
+   chip memory, for example.
+»CL1:3»- Cacheable copyback; That's usually
+   the fast memory one, and it's the
+   model I have described earlier.
+»CL1:4»- Cacheable writethrough; Works as
+   copyback, BUT every writing is made
+   to both cache and memory. This
+   means memory always have the same
+   content as the cache, but reading
+   is far faster than in noncacheable
+   memory. It's obviously far slower
+   than copyback.
+
+»CL0:I explain all this because
+multiprocessor PPC based systems has
+been announced already 2 times (»CL1:Phase5»
+& »CL1:Escena»). »CL7:(and none of them will
+come, I think ... Troda)»
+
+»CL0:Usually, MMU is suposed to be a
+privilege of OS programmers; Amiga OS
+doesn't provide MMU support, so any
+MMU change has to be made low-level,
+as a hack. »CL7:(Not any longer with Thomas
+MMU.lib project, see
+»CL8:www.math.tu-berlin.de/
+~thor/thor/index.html»CL7: ... Troda)»CL0: On
+the other hand, a MMU.library was
+released by individual efforts a short
+time ago. Also, »CL1:WarpOS», the PPC H&P
+system, provides several functions to
+handle PPC MMUs.
+
+»CL0:MMU handling is different on every 68k
+implementation. I really believe that
+it is better to avoid MMU hacking, as
+far as no official OS support is
+provided, and if we will eventually
+get it, it's better to think twice
+before asking for non-cached memory
+(and that also applies to WarpOS).
+Continue reading and you will know
+why. »CL7:(But in some cases MMU usage will
+be worth gold... Troda)»

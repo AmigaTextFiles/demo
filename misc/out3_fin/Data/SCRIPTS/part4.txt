@@ -1,0 +1,136 @@
+<World3D> world_invisible </World3D>
+<World3D> world1 </World3D>
+
+<KIMG> back1 | data/part4/back1.iff </KIMG>
+<KIMG> text3 | data/part4/text3.iff </KIMG>
+<KTABLE> move5 | 0,-0.4 | 80,-0.05 | 220,-0.05 | 300,-0.4 </KTABLE>
+<KTABLE> move_5 | 300,-0.4 | 380,-0.05 | 500,-0.05 | 520,-0.4 </KTABLE>
+
+<KIMG> text4 | data/part4/text4.iff </KIMG>
+<KTABLE> move6 | 0,1 | 50,1 | 130,0.55 | 270,0.55 | 350,1 </KTABLE>
+<KTABLE> move_6 | 300,1 | 350,1 | 380,0.55 | 520,0.55 | 550,1 </KTABLE>
+
+<KTABLE> move7 | 0,100 | 50,0 | 520,0 | 550,-100 </KTABLE>
+
+<KTABLE> paltab1 | 0,0 | 30,1 | 520,1 | 550,0 </KTABLE>
+
+<KIMG> texture2 | data/part4/texture2.iff </KIMG>
+<t3dEnvMap> tmapenv | texture2 </t3dEnvMap>
+<lwo3d> knot_invisible | world_invisible | 0|0|5|0|0|0|1|1|1| data/part4/knot.lwo | 1 | tmapenv</lwo3d>
+<clone3d> knot | world1|0|0|0|0|0|0|1|1|1| knot_invisible </clone3d>
+
+<KCAM> camera1 |0|0|-28|0|0|0|0.2  </KCAM>
+
+<KPART>
+    <ID> Part4 </ID>
+
+  <Fx><Pa> FillRc </Pa><Pa></Pa><Pa>cte| 0 </Pa></Fx>
+
+  <Fx>
+      <Pa>BindPalette</Pa>
+      <Pa> aft | paltab1 | 0 | 0 </Pa>
+      <Pa>CTE|0</Pa>              type of fade:0,1,2,3
+      <Pa>CTE|255</Pa>            optional color 0->255 (0)
+      <Pa>texture2</Pa>     palette where to fade ( "B" )
+      <Pa>texture2</Pa>            optional source Palette(2)
+      <Pa>CTE|0</Pa>              type of fade:0,1,2,3
+      <Pa>CTE|255</Pa>            optional color 0->255 (0)
+      <Pa>texture2</Pa>       Palette where to fade ( "B" )
+      <Pa>texture2</Pa>       optional source Palette(2)
+      <Pa>CTE|0</Pa>              type of fade:0,1,2,3
+      <Pa>CTE|255</Pa>            optional color 0->255 (0)
+      <Pa>texture2</Pa>       Palette where to fade ( "B" )
+      <Pa>texture2</Pa>       optional source Palette(2)
+  </Fx>
+
+   <Fx><Pa> spriteplain </Pa>
+      <Pa> mainscreen </pa>
+      <Pa> back1 </Pa>
+      <Pa> cte | 0 </Pa>
+      <Pa> cte | 0.2 </Pa>
+      <Pa> cte | 1 </Pa>
+      <Pa> cte | 0.8 </Pa>
+   </Fx>
+
+
+    <Fx><Pa> Clone3DShape </Pa><Pa> knot </Pa><Pa> knot_invisible </Pa></Fx>
+
+    displace vertexes:
+    <Fx><Pa> VertexSin </Pa>
+        <Pa> knot </Pa>
+        <Pa> sin|0|0.4|0.5 </Pa> offset X
+        <Pa> sin|0|0.8|0.5 </Pa>        Y
+        <Pa> sin|0|0.35|0.5</Pa>        Z
+
+        <Pa> cte|0.2</Pa> frequence X
+        <Pa> cte|0.2</Pa>           Y
+        <Pa> cte|0.2</Pa>           Z
+
+        <Pa> cte|1.0</Pa> amplitude X
+        <Pa> cte|1.5</Pa>           Y
+        <Pa> cte|1.0</Pa>           Z
+    </Fx>
+ note if all amplitude are 0, there is no displacement.
+
+    <Fx><Pa> Set3DObject </Pa>
+        <Pa>  knot </Pa>
+
+        <Pa> cte | 0 </Pa>
+        <Pa> aft | move7 | 0 | 0 </Pa>
+        <Pa> cte | 0 </Pa>
+
+        <Pa> aff |-0.01|0.005</Pa>
+        <Pa> aff |0.1|0.006</Pa>
+        <Pa> aff |0.0|0.007</Pa>
+
+        <Pa> 3cte|1|1|1 </Pa>  scale
+    </Fx>
+
+    <Fx><Pa> Draw3DWorld </Pa>
+        <Pa> mainscreen </Pa>
+        <Pa> world1 </Pa>
+        <Pa> camera1 </Pa>
+        <Pa> cte|0 </Pa>
+        <Pa> cte|1 </Pa>
+        <Pa> cte|200</Pa>
+    </Fx>
+
+   <Fx><Pa> sprite </Pa>
+      <Pa> mainscreen </pa>
+      <Pa> text3 </Pa>
+      <Pa> spl | move5 | 0 | 0 </Pa>
+      <Pa> cte | 0.2</Pa>
+      <Pa> spl | move5 | 0 | 0.4</Pa>
+      <Pa> cte | 0.3</Pa>
+   </Fx>
+
+   <Fx><Pa> sprite </Pa>
+      <Pa> mainscreen </pa>
+      <Pa> text4 </Pa>
+      <Pa> spl | move6 | 0 | 0 </Pa>
+      <Pa> cte | 0.7</Pa>
+      <Pa> spl | move6 | 0 | 0.5</Pa>
+      <Pa> cte | 0.8</Pa>
+   </Fx>
+
+   <Fx><Pa> sprite </Pa>
+      <Pa> mainscreen </pa>
+      <Pa> text3 </Pa>
+      <Pa> spl | move_6 | 0 | 0 </Pa>
+      <Pa> cte | 0.2</Pa>
+      <Pa> spl | move_6 | 0 | 0.5</Pa>
+      <Pa> cte | 0.3</Pa>
+   </Fx>
+
+   <Fx><Pa> sprite </Pa>
+      <Pa> mainscreen </pa>
+      <Pa> text4 </Pa>
+      <Pa> spl | move_5 | 0 | 0 </Pa>
+      <Pa> cte | 0.7</Pa>
+      <Pa> spl | move_5 | 0 | 0.4</Pa>
+      <Pa> cte | 0.8</Pa>
+   </Fx>
+
+
+
+</KPART>

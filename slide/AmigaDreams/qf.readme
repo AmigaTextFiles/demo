@@ -1,0 +1,241 @@
+
+                           QuickFlix Rev 0.12
+
+    Copyright (c) 1987  Jeff Kunzelman, Rodney Iwashina, Takeshi Suganuma
+
+  If you like this program please feel free to send a donation ($10.00)
+  payable to:
+          Rodney Iwashina  11333 Yolanda Ave.  Northridge, Ca. 91326
+
+  You can make as many copies of this program as you like and give it to
+  all your friends, on the condition that you abide by these guidelines:
+
+     The copy(s) (including documentation) must remain unmodified
+     and intact.
+     The copy(s) cannot be sold for money or profit, except by the
+     original authors.
+     At the time of transfer, the new recipient(s) agree(s) to the above
+     guidelines.
+
+  Suggestions and comments of any kind can be sent to the above address
+  or through CIS (76224,102).  We hope that you enjoy this shareware!
+
+
+Introduction:
+
+        QuickFlix is an IFF slideshow and cel animation program.
+        It takes full advantage of the Amiga's multi-tasking operating
+        system by creating multiple tasks to manage each of its
+        resources, communicating via executive messages and ports,
+        and sharing data in a common memory pool.  QuickFlix supports
+        the LO-RES, HI-RES, NON-INTERLACE, INTERLACE, and HAM modes of
+        the Amiga.  QuickFlix can be commanded to run independently
+        or can be triggered by an external source.  A stand-alone
+        slideshow or animation sequence can be gernerated when
+        QuickFlix is run independently.  External triggering allows a
+        user to interactively control the slideshow or animation.
+        QuickFlix implements a caching system that pre-loads pictures
+        into memory.  This feature allows QuickFlix to support the
+        rapid frame rate necessary for cel animation.
+
+
+CLI Usage:
+
+        QuickFlix [-t<tick rate>] [-l<log file>] <script file> ...
+
+        <script file> is the name of the script file containing the
+                names of the pictures, the special effects information,
+                and the timing information.  All timing information is
+                expressed in number of ticks.  Multiple script files
+                may be chained together by specifying them on the
+                command line.
+
+        -t<tick rate> indicates the timer tick rate, where <tick rate>
+                is a decimal integer from 0 to 60, corresponding to tick
+                rates of 0 to 60 ticks per second.  When the tick rate is
+                set to 0, the external triggering is enabled.  This
+                option defaults to 30 tick per second.
+
+        -l<log file> designates the file to log informational and error
+                messages.  If this option is not specified, no log file
+                will be created.
+
+        QuickFlix can be exited at any time by pressing the ESC key or
+                <CTRL> C; holding the CTRL key down and pressing the C key.
+
+        usage example:
+
+                QuickFlix -t24 -llogfile script
+
+                This example will read the script information from the
+                file "script", the tick rate will be 24 ticks per
+                second, and the log information will be written into the
+                file "logfile".
+
+
+Workbench Usage:
+
+        QuickFlix can also be invoked from the Workbench.  A single
+        script can be invoked by double-clicking on the desired script
+        file icon.  A single script file can also be invoked by
+        shift-clicking (holding the SHIFT key down and clicking on the
+        the icon) the desired script file icon, then double-clicking
+        on the QuickFlix icon.  Multiple scripts can be invoked by
+        shift-clicking all desired script file icons, then double-clicking
+        on the QuickFlix icon.  When multiple scripts are selected, the
+        'tool types' information from the first shift-selected script
+        will be used for all subsequent scripts.
+
+        Valid Tool Types:
+
+             n=<anything> (no seperate fast memory cache)
+             l=<log file name>
+             t=<ticks per second> (t=0 = use joystick)
+
+             All others will be ignored.
+
+
+Script Format:
+
+        Entries in the script file must conform to the following format:
+
+        s <picture file> - any IFF picture file
+
+        n <ticks> - Switch to next picture in script in <ticks> ticks
+                where <ticks> is a positive decimal integer.  If
+                the last picture in the script includes this entry,
+                QuickFlix will exit when the switch occurs, otherwise
+                the last picture will remain on the screen until QuickFlix
+                is manually exited via an ESC or <CTRL> C.
+
+        i <start ticks> <end ticks> <interval ticks> <red> <green> <blue> -
+                Fade in the current picture starting at <start ticks> ticks
+                after the picture is switched in, end fade at <end ticks>
+                ticks after the picture is switched in, fade at intervals
+                of <interval ticks> ticks, and fade in from color <red>,
+                <green>, <blue> where all tick values are positive decimal
+                integers and all colors are hexidecimal values from 0 to f.
+
+        o <start ticks> <end ticks> <interval ticks> <red> <green> <blue> -
+                Fade out the current picture starting at <start ticks> ticks
+                after the picture is switched in, end fade at <end ticks>
+                ticks after the picture is switched in, fade at intervals
+                of <interval ticks> ticks, and fade out to color <red>,
+                <green>, <blue> where all tick values are positive decimal
+                integers and all colors are hexidecimal values from 0 to f.
+
+        c <start ticks> <end ticks> <delay factor> - Cycle color ranges
+                starting at <start ticks> ticks after the picture is
+                switched in, end cycling at <end ticks> ticks after the
+                picture is swithced in, with a delay factor of
+                <delay factor> applied to the color cycle rate where
+                all values are positive decimal integers.  The color
+                cycle ranges and rates are read from the IFF file.
+
+        script example:
+
+                s picture1
+                n 40
+                i 0 0 1 0 0 0
+                o 20 0 1 f f f
+                s picture2
+                n 60
+                i 0 0 2 f f f
+                o 30 0 2 0 0 0
+                s picture3
+                n 80
+                i 0 0 1 0 0 f
+                o 60 0 1 0 0 f
+                c 0 0 1
+
+                This example will show three pictures.  The first picture
+                is "picture1".  It will be shown for 40 ticks, fade in from
+                black when it is switched in, and fade out to white 20
+                ticks from the time it is switched in.  The second picture
+                is "picture2".  I will be shwon for 60 ticks, fade in from
+                white when it is switched in, and fade out to black 30
+                ticks from the time it is switched in.  The third picture
+                is "picture3".  It will be shown for 80 ticks, fade in
+                from blue when the picture is switched in, fade out to blue
+                60 ticks from the time it is switched in, and will color
+                cycle the cycle ranges with a delay factor of 1.  QuickFlix
+                will exit after showing this picture since it is the last
+                one in the script and it specifies a switch.
+
+
+Cel Animation:
+
+        Given the architecture of the system, cel animation becomes
+        a simple exercise of script manipulation.  The pictures that
+        make up the animation can be entered to be shown for a short
+        nubmer of ticks, and the tick rate can be adjusted to a reasonable
+        rate for animation.  The cache allows rapid switching of pictures
+        as long as the pictures are in the cache, otherwise the pictures
+        have to be read from the disk.  The cache will hold about 5
+        320x200x5 (typical DeluxePaint) pictures on a 512K Amiga, about
+        40 on a 2.5M Amiga.  These numbers will vary depending on the
+        resolution, interlace, and number of bit planes, because the cache
+        is memory dependent.  The more memory, the better, but if the
+        display rate exceeds the cache fill rate, the cache will
+        eventually get behind, causing a pause in the animation.  There
+        are a number of things you can do to optimize animations.
+        Additional memory will result in a larger cache and therefore
+        a higher cache hit rate.  A hard disk will increase the transfer
+        rate of pictures from disk to cache.  Pictures with fewer bit
+        planes will decrease the amount of memory needed for each picture.
+        Repeating short sequences of pictures in the script will allow
+        a higher cache hit rate.  Color cycling can be used to simulate
+        animation.
+
+
+External Triggering:
+
+        External triggering allows a user to interactively control the
+        slideshow or animation.
+
+        A joystick connected to port 2 of the Amiga can be used for
+        interactive control.  The joystick can increase or decrease
+        the tick rate by pushing the joystick up or pulling it back.
+        Pressing the joystick button at any time will enable the
+        single-step mode.  In this mode, each button press will cause
+        a timer tick to occur.  Continuous timer tick mode is re-enabled
+        by moving the joystick up or down.  Moving the joystick to the
+        right will switch to the next picture in the script.
+
+
+Known Problems:
+
+        The picture swithing rate does not keep up with the tick rate
+        at tick rates exceeding about 24 frames per second.
+
+        Fades and color cycling effects do not work on HAM pictures.
+
+
+Future Enhancements:
+
+        We are continuously trying to improve our product.  Suggestions
+        and comments are more than welcome.  We would like to know what
+        type of application you are using QuickFlix for and any
+        enhancements that you would like to see incorporated into it.
+        Our current list of enhancements follow.
+
+                Repeat and reverse for script
+
+                External device synchronization
+
+                Additional special effects
+
+
+Notes:
+
+       The logfile output option is extremly handy to determine
+       problems.  The logfile will keep a trace of the general
+       operation of the QuickFlix system.  Information will include
+       cache statistics and errors.  The errors will indicate
+       bad IFF files, memory resource problems, etc.  A good place
+       to put the logfile is in the ram disk (i.e. -l ram:logfile).
+       The log file will not be created with an icon so it must be
+       accessed from the CLI.
+
+       We really are looking for comments about this program, so
+       drop us a note and tell us what you think.

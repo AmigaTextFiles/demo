@@ -1,0 +1,28 @@
+echo " "
+echo " "
+Echo "Instalace fy. *e[32mAdventronic System v1.0*e[0m"
+Echo "-------------------------------------"
+Echo " "
+Echo "Napis cestu, kam se ma Top Secret nainstalovat:"
+SET >nil: DH ?
+CD $DH
+MakeDir TOP_SECRET
+CD TOP_SECRET/
+copy >nil: df0:C to DH0:C
+Copy >nil: df0:DEVS to DH0:DEVS
+Copy >nil: df0:LIBS to DH0:LIBS
+Copy >nil: df0:FONTS to DH0:FONTS
+Copy >nil: df0:aladdin.iff to ""
+Copy >nil: df0:background.iff to ""
+Copy >nil: df0:Credits to ""
+Copy >nil: df0:Credits.info to ""
+Copy >nil: df0:CtiMne! to ""
+Copy >nil: df0:CtiMne!.info to ""
+Copy >nil: df0:intro.iff to ""
+Copy >nil: df0:menu.iff to ""
+Copy >nil: df0:samamax.iff to ""
+Copy >nil: df0:TopSecret to ""
+Copy >nil: df0:Topsecret.info to ""
+Copy >nil: df0:ts to ""
+Copy >nil: df0:Ikona/TOP_SECRET.info to $DH
+Echo "*nInstalace dokoncena!"

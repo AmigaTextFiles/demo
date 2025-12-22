@@ -1,0 +1,157 @@
+Short:    MusicDisk Earth-Tribe-Media
+Author:   ehrich@fh-brandenburg.de (SNIPER)
+Uploader: ehrich@fh-brandenburg.de (SNIPER)
+Type:     demo/sound
+
+*********************************
+
+   _/\  /(_/\  _/\    I·T·S
+  /) ¯\/\   /\/  /    
+ _\   ¯\__ __/  /¯\_  MUSIC            
+/(/ ___/ / \ \__  _/                  
+\   /=()=\ ()==\ /()  · · ·            
+ ¯¯¯      ¯     ¯    
+: eARTH·tRIBE·mEDIA
+
+after 2 years of delays and
+hd-crashes the long-awaited
+        MUSIC DISK 
+
+by mETA. design and coding 
+by nERO sNIPER kERNAL cHAOS
+supports PPC, ENJOY!
+
+*********************************
+
+         ________      ____          ____        ______   _______
+      __/    ___/   __/    |__    __/    |______(__  __)_/   ___/
+      |      _/_____|      __/____|      |     _|(-\/-)|_     |_______
+      |      |      |      |      |     _|     \__¯`'¯__/     |      |
+      |      |      |      |      |     \_      |/    \|      |      |
+      |__    :      ___    :      _______|      _`^^^^'___    :      |
+         \__________|  \__________|      |______|______|  \__________|
+
+          in association with 
+          k n c  - l a b e l    &   n u a n c e
+          released in September 1998
+          (with over one year delay...):
+
+                                                Earth - Tribe - Media.
+  
+                              a compilation of contempoary house-music
+
+
+
+featuring:
+
+m u s i c                  Meta/Ethic
+g r a p h i c s            Nero/Matrix & Ethic
+a d d .  g r a p h i c s   Chaos!/KnC-Label
+b o x   o b j e c t        Frantic/Ethic
+i n t e r f a c e          Kernal/KnC-Label
+i n t r o d u c t i o n    Sniper/Nuance.
+t h a n x   t o            Ramboy/Warp9
+
+                                                              loading:
+
+                                   unpack all files into one directory
+       run ETM-trailer.exe to watch the introduction (no multitasking)
+             run EarthTribeMedia to watch the musicdisk (multitasking)
+             everything should work on MC68020 with 4MB RAM or better.
+
+
+contact & feedback:        Meta_ETC@hotmail.com
+                           Kernal@brb.snafu.de
+                           nero@cs.TU-Berlin.de
+                           ehrich@fh-brandenburg.de
+
+
+
+Ok, here some information about the introducing trailer:
+
+
+
+             Requirements:
+
+             COM:        Amiga 
+             CPU:        68030+ (040,060 supported)
+             PPC:        supported
+             FPU:        supported
+             ROM:        2.x+
+             CHIPSET:    AGA
+             CHIPMEM:    1MB
+             FASTMEM:    4MB (better you have a little bit more memory)
+
+
+
+
+Attention:
+----------
+
+    - do not run tools like Enforcer,VMM,...etc
+    - do not quit the trailer if no AGA/020/Kick2.x installed
+
+
+This Intro-Trailer supports your PowerPC-CPU.
+
+But you must install the WarpOS V7 or V8+ by Haage & Partner before.
+Download the latest version at www.haage-partner.com.
+With WarpOS V7 I have some problems on my BlizzardPPC.(Memory).
+
+Supported are only chunkytoplanar and some little routines, but 95% is coded
+in 68k-ASM and 5% in PPC-ASM.
+
+If this intro does not run on your system please use "ETM-Intro NOPPC NODEBUG".
+
+
+
+
+
+
+Tested on following configurations:
+-----------------------------------
+
+    - A1200 030/50 
+    - A1200 040/25 + PPC603e/160mhz 
+    - A4000 060/50 + PPC604e/200mhz 
+
+
+
+
+CLI-Arguments:
+--------------
+
+        NOPPC   - disable PowerPC 
+        PATCH   - patch all CPU-Vectors (don't work on 040+)
+        NODEBUG - do not patch something
+        SCREEN  - not included
+        DBLPAL  - not included
+        AHI     - not included
+
+
+
+
+
+
+contact Sniper at:
+------------------
+        
+        ehrich@fh-brandenburg.de
+
+        Enrico Ehrich
+        Lerchenweg 3
+        14542 Werder(Havel)
+        Germany
+
+
+Special thanks to:
+------------------
+
+        Nero,R.A.Y,Kernal,Chaos,Frantic,Meta and Ramboy
+
+
+Hope you like it.
+Ciao 
+            Sniper
+
+

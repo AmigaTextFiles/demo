@@ -1,0 +1,23 @@
+Short:    Virtual disks on HD V2_2
+Author:   a1h5he@ux-01.pb.bib.de ( Dirk Hebisch )
+
+HF Mounter, a graphical frontend  for fmsdisk.device
+    - completely rewritten
+    - fontsensitive GUI
+    - locale support
+    - Configurable via tooltypes
+      or enclosed Config-script
+    - Supports unpacking DMS-Archives
+
+HFMounter (shortly HFM) is a graphical frontend for the 
+diskette simulating  'fmsdisk.device'. You may take any harddisk
+and use (emulate) up to 12 diskettes on  it. The HF-Units could 
+nicely be used f.e for unpacking DMS-Archives  onto your 
+harddisk. It is based on the 'fmsdisk.device' by Dave Jones ©1996!
+
+The units HF0: to HF11: are a full Diskette-Replacement. All 
+functions, beside Booting, of a normal Diskette; HF Units take
+advantage of them.
+
+This program is shareware. If you decide to use it frequently, it 
+is mandatory to send the author a donation!

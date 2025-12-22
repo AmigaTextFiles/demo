@@ -1,0 +1,14 @@
+Echo "»» Piece Of Mind HD-Loader made by Zer0-X! ««"
+Echo ""
+Echo ""
+Echo "This script will install your Piece Of Mind disk"
+Echo "to the currect directory."
+Echo ""
+Echo "Insert disk into DF0: and press left mousebutton!"
+WaitMouse
+Echo "Reading...   ...Please wait a moment!"
+Disk2File 0 NikkiCorruptions.Disk
+Echo ""
+Echo ""
+Echo "The disk should now be in this directory. You may proceed by"
+Echo "loading the file called `PieceOfMind' $3->"

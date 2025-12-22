@@ -1,0 +1,35 @@
+============================================
+Short: JPEG Viewer for AGA and PPC (BETA)
+Author: Fredrik Westermarck <fredrik.westermarck@mds.mdh.se>
+============================================
+
+PowerView is a JPEG-picture viewer for Amigas equipped with a 
+PPC-accelerator. The JPEG conversion is based upon libjpeg 
+(V6b) from the Independent JPEG Group.
+
+The program is still in beta so there might still be serious bugs. If 
+you use this program please report bugs/misfeatures to me.
+
+New versions will first be available on my homepage at -
+ULR: http://www.mds.mdh.se/~adb94fwk/
+
+History:
+V0.2b  1999-01-25
+· The CENTER option is woring again
+ · The version string is right this time
+
+V0.2 1999-01-25
+· To quit the program you can now press any of the mousebuttons,
+q or escape
+· Removed the profiler compiler option :)
+· Memory requirements is now less than before, due to no more
+memory is allocated than needed to display the picture
+· Autoscrolling added
+· The CENTER option is right now non-functional, but it will 
+probaly fixed later on.
+
+V0.1b  1999-01-20
+· Improved the CLI-argument & WB-ToolTypes parsing
+
+V0.1   1999-01-19
+· First public beta

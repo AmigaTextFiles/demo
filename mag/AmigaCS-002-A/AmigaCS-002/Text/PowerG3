@@ -1,0 +1,53 @@
+@{d C5E9FF}                             @{c 2ADFCC}G3 zadupaly Pentia do zemë!@{c}
+                             ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Americký  çasopis BYTE uveêejnil srovnání procesorû PowerPC G3 (têetí generace - tj.
+typy  740  a  750) a Pentia II.  Pêestoùe testované modely G3 byly jen na 233 a 266MHz
+(jiù se vyrábí i 300MHz verze) a Pentium II bylo na 300 a 333MHz, výsledky dopadly pro
+Pentium katastrofálnë...
+
+   @{c 63116C}*********@{c}@{c 9F2E5B}*********@{c}@{c D22A50}***********@{c}@{c FF475D}************@{c}@{c FF834C}*************@{c}@{c FFC14C}*************@{c}@{c FAFF47}*************@{c}
+   @{c 2ADFCC}Power Macintosh G3 @ 266MHz - index 9.01@{c}
+
+   @{c 63116C}*********@{c}@{c 9F2E5B}*********@{c}@{c D22A50}***********@{c}@{c FF475D}************@{c}@{c FF834C}*************@{c}@{c FFC14C}*************@{c}@{c FAFF47}***@{c}
+   @{c 2ADFCC}Power Macintosh G3 @ 233MHz - index 7.88@{c}
+
+   @{c 63116C}*********@{c}@{c 9F2E5B}*********@{c}@{c D22A50}*********@{c}
+   @{c 2ADFCC}Compaq 4860/PII @ 333MHz - index 4.64@{c}
+
+   @{c 63116C}*********@{c}@{c 9F2E5B}*********@{c}@{c D22A50}********@{c}
+   @{c 2ADFCC}Compaq 5100/PII @ 300MHz - index 4.26@{c}
+  Vîimëte  si  pêedevîím  zanedbatelného rozdílu mezi 300 a 333MHz Pentiem a mohutného
+nárûstu   výkonu  mezi  233  a  266MHz  G3.   Zde  se  jednoznaçnë  potvrzují  kvality
+architektury  Motorola  G3,  oproti  20  let staré architektuêe Intelu.  Motorola vede
+nejenom  architekturou,  ale  i  v technologii  výroby a navíc má dvojnásobné mnoùství
+interní cache (zvláîï 32KB pro instrukce a 32KB pro data).  PowerPC G3 je také fyzicky
+více  neù  3×  menîí  neù  PentiumII  a co  je  nejdûleùitëjîí "@{c 2ADFCC}ùere@{c}" jen 15% spotêeby
+PentiaII  (G3 - 7 Wattû,  PII - 48 Wattû),  coù  umoùilo  Apple postavit nejvýkonnëjîí
+notebooky  na svëtë.  Pro Intel je výhêevnost jejich CPU noçní mûrou a tak i speciální
+notebookové verze PII@233 topëj jak kotel v elektrárnë.
+
+  Pokud  nevëêíte  Bytemark testu vëzte, ùe i reálných aplikacích (Adobe Photoshop) se
+potvrdil  výkon  G3 obdobnými výsledky.  Steve Jobs (CEO Apple) také nedávno pêedvádël
+výkon  G3@233 oproti Compaqu s PII na 400MHz a G3 bylo i tak o 1/3 rychlejîí...  navíc
+G3@233 je více jak 10× levnëjîí neù PII@400...  Apple samozêejmë tëchto úspëchû velice
+aktivnë  a dravë  vyuùívá  a není  divu, ùe je od ledna 1998 po delîí dobë opët velice
+ziskový  a PowerMacû  G3 se jen za první mësíc prodalo pêes pûl miliónu kusû.  Myslím,
+ùe  o nástupci  68K u Amigy  je rozhodnuto:  zvláîtë, kdyù vylepîené G3 budou v druhém
+pololetí 1998 obsahovat dalîí jednotku - 128 bitový vektorový procesor (AltiVec).
+
+  Jestliùe  vám  bude nëkdo tvrdit, ùe Intel dëlá ty nejlepîí a nejrychlejîí procesory
+na  svëtë,  a ùe víc MHz znamená automaticky vëtîí výkon, mûùete ho s klidným svëdomím
+nakopat do prdele!
+
+
+                                     @{c 07EEFF}PowerPC G3@{c}                  @{c 07EEFF}Pentium II@{c}
+@{c 2ADFCC}--------------------------------------------------------------------------------------@{c}
+@{c 07EEFF}Vîeobecné INTEGER registry@{c}        32 - univerzální           8 - silnë neuniverzální
+@{c 07EEFF}Vîeobecné FLOAT registry@{c}          32 - univerzální           8 - v zásobníku :-) shit
+@{c 07EEFF}Interní cache (level 1)@{c}           duální 32KB + 32KB         32KB
+@{c 07EEFF}Externí cache (level 2)@{c}           512KB - 1MB                512KB
+@{c 07EEFF}Spotêeba@{c}                          7 W                        48 W
+@{c 2ADFCC}--------------------------------------------------------------------------------------@{c}
+
+
+                                      @{c 07EEFF}-@{c} ShAmaN @{c 07EEFF}-@{c}

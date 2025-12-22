@@ -1,0 +1,158 @@
+{5  ARTICLE TO DEMONSTRATE THE CONTROL
+
+{5       CODES USED IN GRAPEVINE
+
+
+{6             NORMAL TEXT
+
+{1Colour 1
+{2Colour 2
+{3Colour 3
+{4Colour 4
+{5Colour 5
+{6Colour 6
+
+{1When a colour is selected, the text
+stays that colour until another colour
+is selected, or until another page is
+started, in which case it defaults to
+white coloured normal font.
+
+
+
+{6               FLASHING
+{1
+Add a{{7 to make the text flash, this
+command flashes one line, or 
+characters until it finds another 
+flash command,
+   
+{7{1Colour 1
+{7{2Colour 2
+{7{3Colour 3
+{7{4Colour 4
+{7{5Colour 5
+{7{6Colour 6
+
+{1And now it's off!
+
+Or you can {7Flash {7individual 
+characters!
+
+
+
+
+{6            DOUBLE HEIGHT
+
+{1This is turned on with{{9, it must be
+followed with a blank line!
+
+
+{9        THIS IS DOUBLE HEIGHT
+
+
+{8{9THIS IS THE 2ND FONT IN DOUBLE HEIGHT
+
+
+The double height command MUST be used
+on every line it it needed.
+
+You can colour and flash it as
+described above.
+
+
+
+
+
+{6             SECOND FONT
+{1
+This is turned on with{{8, it MUST be
+turned on EVERY line, this is used for
+sub-headings etc.
+
+{8ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijkl
+{8mnopqrstuvwxyz1234567890!"£$%^&*()_+-
+{8=\\[]:@;#><,.
+
+It can be coloured, flashed and put in
+double height as described!
+
+You can mix the normal and second font
+eg.
+
+{8Hello {8there {8its {8easy!
+
+
+
+
+
+{6          DOUBLE WIDTH FONT
+{1
+This is used mainly for titles etc, it
+MUST be turned on every line.  It is
+turned on with{{A, note that it MUST
+be a capital A, and every character
+followed with a space;
+
+eg. D O U B L E
+
+Which looks like;
+
+{A             D O U B L E
+
+
+
+
+
+
+
+
+
+{6           DOUBLE SIZE FONT
+
+{1This font is used for titles; it MUST
+be turned on every line it is needed.
+It must have each character followed
+by a space and must be followed with a
+blank line eg;
+
+{9{A       T H I S   I S   B I G !
+
+And you can colour or flash it!
+
+
+
+
+
+
+
+
+
+
+
+{6          POWERPACKED FILES
+
+{1This article tester can handle files
+which are in either powerpacked or
+not.
+
+
+{6                USAGE
+
+{1From the CLI type;
+
+"Grapevinetest MyArticle"
+
+simple huh!
+
+
+{6                NOTES
+
+{1All the control commands do NOT take
+any space on the screen, they are
+treated by the grapevine software as
+control codes.
+Look at this file in a text editor, it
+should help you understand!
+
+end.

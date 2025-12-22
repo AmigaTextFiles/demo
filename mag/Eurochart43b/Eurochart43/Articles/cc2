@@ -1,0 +1,752 @@
+»CL1:--------------------------------------------------------------------------------
+»BIG:»CL0:                                                      THE ESSENTIAL BLITTER
+»SML:»CL1:--------------------------------------------------------------------------------
+                        »CL4:        by Dr. Doom/IRIS»CL1:
+
+One  of the most complex, and probably
+the  most  flexible  piece  of  custom
+hardware  in the »CL0:Amiga»CL1: is the »CL0:blitter»CL1:.
+Its  function can be described simply;
+read  data from 3 input channels, then
+perform  any  logical operation on the
+three  inputs  and write the result to
+the  output channel.  By "any" logical
+operation   I   really   do  mean  any
+operation.   »CL0:AND,  OR,  NAND, NOR, EOR»CL1:
+etc.   are  possible,  but so are many
+others that would almost never be used
+outside of freakish Amiga demo coding.
+Some   of   these   are   useless   in
+themselves  but may serve a purpose in
+
+
+
+
+
+a sequence of blits.
+
+--------------------------------------
+»CL0:            LOGIC FUNCTIONS»CL1:
+--------------------------------------
+
+To   make  understanding  these  logic
+operations  easier,  Commodore  used a
+system  called  »CL0:minterms»CL1:.   Don't ever
+work   with  »CL0:minterms»CL1:!   They're  just
+impossible  to  fathom  and completely
+unnecessary.   The  operation you want
+to perform, see, can be described in 8
+bits,   each   bit   representing  the
+desired  output  from a combination of
+inputs  from the three input channels.
+(The   blitter   actually  works  with
+16-bit  words, but you may think of it
+as a bit blitter for most purposes.)
+
+»CL0: channel:   a   b   c  ->    d»CL1:
+
+            0   0   0  »CL0:->  <bit 0>»CL1:
+            0   0   1  »CL0:->  <bit 1>»CL1:
+            0   1   0  »CL0:->  <bit 2>»CL1:
+            0   1   1  »CL0:->  <bit 3>»CL1:
+            1   0   0  »CL0:->  <bit 4>»CL1:
+            1   0   1  »CL0:->  <bit 5>»CL1:
+            1   1   0  »CL0:->  <bit 6>»CL1:
+            1   1   1  »CL0:->  <bit 7>»CL1:
+
+Now,  suppose  you  want  all possible
+combinations  of  inputs »CL0:A»CL1:, »CL0:B»CL1: and »CL0:C»CL1: to
+yield   an   output   of  »CL0:0»CL1:  (a  clear
+operation),  then  the  »CL0:logic function»CL1:
+(LF)  you  need is »CL0:%00000000»CL1:.  Suppose
+you  want  to  »CL0:OR»CL1:  the  three channels
+together.    This   means   an  »CL0:LF»CL1:  of
+»CL0:%11111110»CL1:.   You just consider each of
+the  eight  combinations  of  possible
+input  bits  and decide what value you
+want output in each case.
+
+You  can  disable any of the channels,
+even  channel  »CL0:D»CL1:,  the output channel,
+although  this  would make no sense at
+all.   If  you disable channels, which
+you  often  will if performing e.g.  a
+simple  rectangular  blit  or  a clear
+operation,  you  can't  be  sure  what
+input  you'll  get  from  the disabled
+channels (actually you can, but hey..)
+In  any  case, you design the »CL0:LF»CL1: so it
+ignores  the disabled channels.  So if
+you want to »CL0:EOR»CL1: channels »CL0:B»CL1: and »CL0:C»CL1:, with
+channel  »CL0:A»CL1:  disabled  and ignored, the
+appropriate LF would be »CL0:%01100110»CL1:.
+
+These   minterms,   as  they're  still
+called  most  places even if you don't
+actually use C='s »CL0:minterms»CL1:, are really
+the easy part, though, but also one of
+the  places  where  the blitter really
+shows its flexibility.  It can perform
+»CL0:256 different logic operations»CL1: on zero
+to  three  inputs  as  opposed  to the
+CPU's 3 (?) operations on two inputs.
+
+--------------------------------------
+»CL0:        THE NOT SO EASY PARTS»CL1:
+--------------------------------------
+
+Sadly, the blitter isn't able to guess
+what you want to blit, so specifying a
+logic function isn't enough.  You have
+to be very specific.
+
+Each   channel  has  its  own  »CL0:address
+register»CL1:, affectionately named »CL0:BLTxPT,»CL1:
+substituting   »CL0:'x'»CL1:   for  the  channel
+identifier  »CL0:A»CL1:,  »CL0:B»CL1:,  »CL0:C»CL1: or »CL0:D»CL1:.  Like most
+»CL0:custom   chips»CL1:,  the  blitter  doesn't
+understand  »CL0:odd  addresses»CL1:,  so always
+align these to »CL0:16 bits»CL1:.  The registers
+are  used  as memory pointers, so they
+change  during  the  blit.  This often
+saves you the trouble of having to set
+all  the pointers again and again when
+blitting  consecutive  images, such as
+the  individual  bitplanes  of  a bob.
+But  then again, sometimes it's just a
+pain in the ass.  Live with it.
+
+The    »CL0:size»CL1:    of    the    blit    is
+»CL0:two-dimensional»CL1:,  although the blitter
+doesn't consult the playfield hardware
+to  determine  the  dimensions  of the
+bitmap.  This matters not.  In fact it
+only  makes  the blitter more flexible
+that   you  have  to  specify  »CL0:modulos»CL1:
+yourself.   You've  even  got a »CL0:modulo»CL1:
+value  for  each channel which enables
+you  (among many other things) to blit
+images   between   completely  unalike
+»CL0:bitmaps»CL1:.   The  size  of  the  blit is
+applied to all channels, logically, so
+each  of  the four »CL0:modulos»CL1: is added to
+the corresponding channel address when
+
+                     »CL0:bits 15-12 »CL1:: shift value for channel »CL0:A»CL1:
+                     »CL0:bit     11 »CL1:: enable channel »CL0:A»CL1:
+                     »CL0:bit     10 »CL1:: enable channel »CL0:B»CL1:
+                     »CL0:bit      9 »CL1:: enable channel »CL0:C»CL1:
+                     »CL0:bit      8 »CL1:: enable channel »CL0:D»CL1:
+                     »CL0:bits   7-0 »CL1:: logic function (aka the minterm)
+each    horizontal   line   has   been
+processed.  Modulo registers are named
+»CL0:BLTxMOD»CL1:.    The   »CL0:modulo  adjust»CL1:  also
+occurs after the last line of the blit
+which  is nice to know when you're not
+resetting the pointers after a blit.
+
+There  are two »CL0:control registers»CL1:, each
+containing  an  array of bits that may
+influence   the   operation   of   the
+blitter.  »CL0:BLTCON0»CL1:  (as seen  below) is
+the   most important.
+
+
+
+
+
+
+
+
+But you should  set »CL0:BLTCON1»CL1:  as well, although  in many cases  you only  need to
+set it once for a long sequence of blits:
+
+»CL0:   bits 15-12 »CL1:: shift value for channel »CL0:B»CL1:
+»CL0:   bits 11- 8 »CL1:: unused in "normal" mode, set to 0 (explained later)
+»CL0:   bit      7 »CL1:: disable »CL0:D»CL1: output for »CL0:external ALUs»CL1: (never used this myself)
+»CL0:   bits  6- 5 »CL1:: again, unused in "normal" mode
+»CL0:   bit      4 »CL1:: exclusive »CL0:fill»CL1: enable
+»CL0:   bit      3 »CL1:: inclusive »CL0:fill»CL1: enable
+»CL0:   bit      2 »CL1:: »CL0:fill»CL1: carry input
+»CL0:   bit      1 »CL1:: descending address mode »CL0:(predecrement)»CL1:
+»CL0:   bit      0 »CL1:: line mode enable
+
+The  »CL0:shift»CL1:  values are  important. They  determine the number  of binary  places
+to  shift the  input  »CL0:RIGHT»CL1: for inputs »CL0:A»CL1:  and »CL0:B»CL1:. Channel C  can not be  shifted,
+but you usually don't want this anyway, and channel »CL0:D»CL1: has no input to shift.
+
+You  enable  channels  as  you  see  fit, but  you  should  be aware  that  some
+channels  steal more  »CL0:memory  cycles»CL1: than  others, making  the blit  slower. For
+details on this, see the hardware reference or wait for another article.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The  »CL0:logic  function»CL1:  has already been
+discussed.   Just  put  your  8-bit »CL0:LF»CL1:
+where  it's  supposed to go and you're
+all set.  Well, almost anyway.
+
+»CL0:Descending   address  mode»CL1:  is  useful
+sometimes and pretty self-explanatory.
+It's  mandatory in »CL0:fill»CL1: operations (at
+least  if  you  want them to succeed).
+These,  as  well as »CL0:line mode»CL1:, will be
+detailed  eventually.   Note  that  in
+descending   mode   the   »CL0:modulos»CL1:  are
+subtracted  from  rather than added to
+the address registers.
+
+»CL0:BLTAFWM»CL1: and »CL0:BLTALWM»CL1: contain masks that
+are  »CL0:AND»CL1:'ed with the 16-bit input from
+channel  »CL0:A»CL1:  on the first and last word
+of   each  line,  respectively.   Only
+channel »CL0:A»CL1: has this feature.  First and
+last   word   masks  are  useful  when
+shifting  the  data  from  channel  »CL0:A»CL1:;
+suppose  you want to blit a »CL0:bob»CL1: that's
+32 pixels wide and it has to be put on
+horizontal  position  »CL0:8»CL1: of the screen.
+You can set your horizontal size to 32
+bits and point channel »CL0:D»CL1: to position »CL0:0»CL1:
+on  a  line,  but  this is as close as
+you'll get.  So you can do two things:
+One  way  is  to append 16 »CL0:blank pixel
+columns»CL1:  to  the  right of the bob and
+set  the shift values to »CL0:8»CL1:.  That does
+the  trick.   Another  way is to use a
+modulo  of  »CL0:-16»CL1:  (essentially faking a
+width  of 48), then setting »CL0:BLTAFWM»CL1: to
+»CL0:%0000000011111111»CL1:  so  as to blank out
+the leftmost 8 bits on each line which
+will contain only garbage if anything,
+and  then BLTALWM to »CL0:%1111111100000000»CL1:
+to  blank  out  the  last  8  bits  of
+potential   garbage.    This   may  be
+confusing,  but  I'll explain it again
+in the 'bobs' section I hope to get to
+soon.
+
+The  last  step  is to set the »CL0:size»CL1: of
+the  blit.   This has to be done after
+all   the   other  registers  are  set
+because  »CL0:BLTSIZE»CL1:  doubles  as a strobe
+register  which activates the blitter.
+The    blitter    size   is   somewhat
+restricted.  »CL0:BLTSIZE»CL1: looks like this:
+
+  »CL0:bits 15- 6 : »CL1:vertical size, lines
+  »CL0:bits  5- 0 : »CL1:horizontal size, words
+
+As  you can see, the maximum height of
+a blit is »CL0:1024 lines»CL1:.  A value of »CL0:1»CL1: to
+»CL0:1023»CL1: blits that number of lines, while
+a  value  of  »CL0:0»CL1:  causes the blitter to
+blit  »CL0:1024»CL1: lines (a size of »CL0:0»CL1: would be
+meaningless otherwise).
+
+»CL0:Horizontal»CL1:  size is specified in »CL0:words»CL1:
+of  bitplane  data.  This means that a
+value  of »CL0:1»CL1: starts a »CL0:16-bit»CL1: wide blit,
+»CL0:2»CL1:  produces  a »CL0:32-bit»CL1: wide blit, etc.,
+and  again  »CL0:0»CL1:  causes  »CL0:1024»CL1:  bits  (or
+pixels) to be processed on each line.
+
+With   the  introduction  of  the  »CL0:AGA»CL1:
+chipset   though,  Commodore  realized
+that   »CL0:1024x1024»CL1:   was  too  strict  a
+limitation,   so   an  extra  pair  of
+registers  were  added to handle blits
+of  as  much  as  »CL0:32768x32768»CL1:  pixels.
+Using  these,  it  is not necessary to
+set  »CL0:BLTSIZE»CL1:.   They're called »CL0:BLTSIZV»CL1:
+and »CL0:BLTSIZH»CL1: and look like this:
+
+
+
+
+
+ »CL0:  bit     15 »CL1:: unused
+ »CL0:  bits 14- 0 »CL1:: vertical size, lines
+
+ »CL0:  bits 15-11 »CL1:: unused
+ »CL0:  bits 10- 0 »CL1:: horizontal size, words
+
+Guess  which  is which.  If you decide
+to use these, know that »CL0:BLTSIZH»CL1: is the
+strobe  register and should be written
+last.   Setting  it before »CL0:BLTSIZV»CL1: can
+produce some odd bugs that may be hard
+to trace, so beware.
+
+
+
+
+
+
+
+         »PIC:dafreak-ec1.iff»
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+»CL1:--------------------------------------------------------------------------------
+»CL0:                               IT REALLY IS MAGIC»CL1:
+--------------------------------------------------------------------------------
+
+That is really all one needs to know to perform simple blits.  With this you can
+copy rectangular images, clear displays (or other »CL0:chip»CL1: memory areas), as well as
+other  basic  stuff  of  course.  As an example, to clear »CL0:4»CL1: bitplanes of »CL0:320x256»CL1:
+pixels,  this  piece  of code is all you need:  (I'll use »CL0:symbols»CL1: for the custom
+registers  here,  for  »CL0:readability»CL1:,  although I usually wouldn't in my own code.
+These symbols are supplied with various assemblers as include files.)
+
+                »CL2:lea»CL3:     $dff000,a6                      »CL2:; custom reg base
+
+                »CL2:move.l  »CL3:#bitplanes,bltdpt(a6)   »CL2:        ; address of planes
+»CL2:                move.w  »CL3:#0,bltdmod(a6)                  »CL2:; modulo d = 0
+»CL2:                move.w  »CL3:#%0000000100000000,bplcon0(a6)  »CL2:; to clear stuff
+»CL2:                move.w  »CL3:#%0000000000000000,bplcon1(a6)  »CL2:; ensure line mode
+                                                        ; is disabled
+                move.w  »CL3:#(256*4)*64+320/16,bltsize(a6)  »CL2:; size and strobe
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+»CL1:...   and  the blitter works its magic
+immediately.  Note two things, though;
+blitter  »CL0:DMA»CL1:  must be enabled, and the
+blitter   must   not   be  engaged  in
+anything when you start writing to its
+registers.
+
+The first condition is met by enabling
+blitter  »CL0:DMA»CL1:  in  »CL0:DMACON»CL1:.  No problem.
+The  second may be met by either being
+sure  the  blitter isn't »CL0:active»CL1: (which
+is   impossible   sometimes),   or  by
+»CL0:waiting»CL1:  for the blitter to »CL0:finish»CL1:.  I
+use   a  small  routine,  sometimes  a
+macro, for this;
+
+»CL2:waitblit        »CL3:move.w  dmaconr(a6),d0
+                btst    #14,d0
+                bne.b   waitblit
+                rts
+»CL1:This  routine  reads  the »CL0:blitter busy
+»CL1:status  bit  which  is  found  in  the
+»CL0:DMACONR»CL1:  register.   There  are better
+ways   of   »CL0:managing»CL1:  blits,  such  as
+blitter  queueing,  but  this involves
+the  design  of  the  entire  routine,
+sometimes  the  entire  production, so
+I'll leave that topic for now.
+
+The  best place to call the »CL0:'waitblit'»CL1:
+routine  is  right before you write to
+the   »CL0:first»CL1:  blitter  register.   This
+gives  the  largest amount of time for
+the  blitter  to  finish  any  ongoing
+operation.   You  know  of course that
+the blitter is independent of the »CL0:CPU»CL1:,
+which  means  you  can use the time it
+takes  the blitter to clear the screen
+for something else.  It's best if this
+something  else  stays  out of »CL0:chipmem»CL1:
+and  »CL0:slowmem»CL1:  (if  at  all  possible),
+otherwise  it'll  have  to  fight  the
+blitter  for  »CL0:chipmem  cycles»CL1:,  making
+everything   a   bit  slower  than  it
+would've been otherwise.  It »CL0:may»CL1: still
+pay off, though.  Remember that.  Even
+if   the   CPU   steals  half  of  the
+blitter's  chipmem cycles, the blitter
+will  »CL0:still»CL1:  do some work that the CPU
+would  otherwise  have  to  do itself,
+»CL0:stalling»CL1:  everything  to  run,  say, a
+simple   »CL0:write  loop»CL1:.   Of  course  on
+faster  Amigas the »CL0:CPU»CL1: outperforms the
+»CL0:blitter»CL1: and is thus »CL0:SOMETIMES»CL1: a better
+way of clearing chipmem buffers.
+
+So,   »CL0:start»CL1:   the   blitter,  do  some
+»CL0:calculations»CL1:,  and right before you're
+going  to  »CL0:write»CL1:  to the planes you've
+been  clearing,  call »CL0:waitblit»CL1: to make
+sure  the  blitter  won't clear any of
+what  you're  about to »CL0:write»CL1:.  Simple.
+You  may find that using »CL0:three»CL1: buffers
+is ideal for some planar effects (such
+as  dot  effects).   That  leaves  one
+buffer  »CL0:on  screen»CL1:,  one  buffer being
+»CL0:updated»CL1:, and one buffer being »CL0:cleared»CL1:.
+
+--------------------------------------
+»CL0:          MORE COMPLEX STUFF»CL1:
+--------------------------------------
+
+The  blitter  has  four  channels,  so
+let's use some of them, shall we?  ;)
+
+»CL0:Bobs»CL1:.   A  classic routine, surrounded
+by  much  »CL0:mystique»CL1:  and  the victim of
+ferocious »CL0:competition»CL1: in the old days.
+Who  would  hold  the  record  for the
+highest  number  of  bobs »CL0:DRAWN»CL1: in one
+frame?   (Forget  those fake "»CL0:infinite
+bob»CL1:"    routines,    they're    really
+pathetic,  just  as it's »CL0:pathetic»CL1: when
+people  use  them  as  an argument why
+breaking  the  bob  record  is »CL0:stupid»CL1:.
+There are better arguments anyway.  ;)
+The  following routine won't break any
+records,  but hopefully it'll show you
+the »CL0:principles»CL1:.
+
+First of all, we need to »CL0:define»CL1: a bob.
+As you know, a bob is an »CL0:image copied»CL1:,
+with a »CL0:mask»CL1:, to an »CL0:arbitrary»CL1: position.
+So,   we   pretend   to  load  up  our
+favourite paint proggy and draw a nice
+little packet of »CL0:Bird's Custard Powder»CL1:
+with  a  size  of  »CL0:64x64»CL1:  pixels.   It
+doesn't  matter  which colours we use,
+since the »CL0:transparency»CL1: of the image is
+defined  by the »CL0:mask»CL1:.  So, we draw and
+draw  and  draw  until we're left with
+the  most beautiful packet of powdered
+custard  the  world  has ever seen in,
+say,  »CL0:3»CL1: bitplanes.  Now we draw a »CL0:mask»CL1:
+of   the   same   size,  defining  the
+»CL0:silhouette»CL1: of the packet.  The mask is
+only  »CL0:one»CL1:  bitplane deep, since we can
+reuse  the same mask for each bitplane
+in the image.
+
+For simplicity, let's add »CL0:16»CL1: pixels of
+colour  »CL0:0»CL1:  to the right of the bob and
+its  mask.   This  will  enable  us to
+easily  »CL0:shift»CL1: the image.  Now save the
+»CL0:80x64»CL1:  bob image in »CL0:raw»CL1: planar format,
+and  save  the  »CL0:80x64»CL1: mask as a single
+80x64  bitplane.  Include them in your
+code,  or  load  them  or whatever and
+place them in »CL0:chip»CL1: memory.
+
+Next off we need to code a bit.  Let's
+make a generic routine which accepts a
+set  of  »CL0:coordinates»CL1:  and  a playfield
+»CL0:pointer»CL1:.   The »CL0:Y»CL1: coordinate is easy to
+handle,  of  course.  Just multiply it
+by  the  bitplane  width and add it to
+the destination pointer.
+
+The   »CL0:X»CL1:   coordinate   requires   some
+thinking  however.  It consists of two
+parts,   you  might  say.   One  which
+defines  the  number  of »CL0:words»CL1: to move
+right   from  the  left  edge  of  the
+bitplane,  and  one  which defines the
+number of »CL0:pixels»CL1: to move farther after
+that.   So  we  might  start by adding
+»CL0:X/16  words»CL1:  to  the destination.  Ie.
+»CL0:INT(X/16)*2»CL1:  bytes.   The  »CL0:lower»CL1:  four
+bits of »CL0:X (X MOD 16)»CL1: we may now use as
+a »CL0:shift»CL1: value for sources »CL0:A»CL1: and »CL0:B»CL1:.
+Now   let's   assign   stuff   to  the
+channels.   Channel  »CL0:A»CL1: will be the bob
+image  data,  channel  »CL0:B»CL1: will hold the
+mask,  and  channel  »CL0:C»CL1: and »CL0:D»CL1: will both
+point   to  the  destination  address.
+This  is  only  one  way  of assigning
+channels  but  definately adequate for
+demonstration   purposes.   If  you're
+wondering  why we need channel »CL0:C»CL1:, it's
+because we are actually »CL0:overwriting»CL1: an
+entire  80x64  pixel  rectangle.   The
+blitter  will  work  in  no other way,
+BUT,  we  can use the mask, channel »CL0:B»CL1:,
+to  determine  which  pixels will come
+from the original image (»CL0:C»CL1:), and which
+will be replaced by the new image (»CL0:A»CL1:),
+effectively   creating  a  transparent
+region  around  the  actual image.  In
+any case, output goes to channel »CL0:D»CL1:.
+
+
+
+
+»CL0:First»CL1:  and  »CL0:last-word»CL1:  masks are handy
+when  blitting bobs, but we don't need
+them  in  this  particular case, cause
+we've  appended  16  »CL0:zero-bits»CL1: to each
+line  in  both  the  bob and the mask,
+making   sure   that  all  the  pixels
+shifted in from the »CL0:left»CL1: on channels »CL0:A»CL1:
+and »CL0:B»CL1: will be »CL0:zero»CL1:.
+
+Then    for    the   »CL0:logic   function»CL1:.
+Remember,  channel  »CL0:B»CL1:  is  supposed to
+decide  whether  output  »CL0:D»CL1: should come
+from  input »CL0:A»CL1: or input »CL0:C»CL1:.  We can fill
+out the form from earlier on:
+
+
+
+
+
+
+»CL0: channel:   a   b   c  ->  d»CL1:
+
+            0   0   0  »CL0:->  0»CL1:
+            0   0   1  »CL0:->  1»CL1:
+            0   1   0  »CL0:->  0»CL1:
+            0   1   1  »CL0:->  0»CL1:
+            1   0   0  »CL0:->  0»CL1:
+            1   0   1  »CL0:->  1»CL1:
+            1   1   0  »CL0:->  1»CL1:
+            1   1   1  »CL0:->  1»CL1:
+
+In  other  words  the  logic  function
+required  is »CL0:%11100010»CL1:.  With all that
+in  mind,  our routine might look like
+this:
+
+
+
+»CL2:;   amazing bob routine
+;
+;   input:  d0.w = x coordinate
+;           d1.w = y coordinate
+;           a0.l = pointer to first bitplane
+
+»CL2:blitbob
+»CL3:                mulu.w  #320/8,d1              »CL2:         ; y position
+»CL3:                add.l   d1,a0             »CL2:              ; .. added
+
+»CL3:                move.w  d0,d1
+»CL3:                lsr.w   #4,d1
+»CL3:                lsl.w   #1,d1                    »CL2:       ; x pos (word part)
+»CL3:                add.w   d1,a0               »CL2:            ; .. added
+
+»CL3:                and.w   #%1111,d0                  »CL2:     ; the shift value
+»CL3:                ror.w   #4,d0                     »CL2:      ; now in the right
+                                                      »CL2:  ;   place for bltconx
+»CL3:                lea     $dff000,a6
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+»CL3:                bsr     waitblit
+
+»CL3:                move.w  d0,bltcon1(a6)       »CL2:           ; bltcon1 ready
+   »CL3:             or.w    #%111111100010,d0         »CL2:      ; lf and usecode
+        »CL3:        move.w  d0,bltcon0(a6)                 »CL2: ; bltcon0 ready
+
+»CL3:                move.l  #bobimage,bltapt(a6) »CL2:           ; image, channel a
+
+     »CL3:           move.w  #$ffff,bltafwm(a6)        »CL2:      ; clear masks
+          »CL3:      move.w  #$ffff,bltalwm(a6)
+
+               »CL3: move.w  #0,bltamod(a6)                 »CL2: ; modulo a
+»CL3:                move.w  #0,bltbmod(a6)         »CL2:         ; modulo b
+     »CL3:           move.w  #(320-80)/8,bltcmod(a6)     »CL2:    ; modulo c
+          »CL3:      move.w  #(320-80)/8,bltdmod(a6)         »CL2:; modulo d
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+»CL2:;   blit plane 1
+                
+»CL3:                move.l  #bobmask,bltbpt(a6)»CL2:             ; mask, channel b
+     »CL3:           move.l  a0,bltcpt(a6)           »CL2:        ; output, channel c
+          »CL3:      move.l  a0,bltdpt(a6)                »CL2:   ; output, channel d
+               »CL3: move.w  #64*64+(80/16),bltsize(a6)   »CL2:   ; you go girl
+
+»CL2:;   blit plane 2
+
+»CL3:                add.w   #320*256/8,a0           »CL2:        ; go to next plane
+»CL5:                *
+                
+»CL3:                bsr     waitblit
+     »CL3:           move.l  #bobmask,bltbpt(a6)»CL2:             ; mask, channel b
+          »CL3:      move.l  a0,bltcpt(a6)           »CL2:        ; output, channel c
+               »CL3: move.l  a0,bltdpt(a6)                »CL2:   ; output, channel d
+»CL3:                move.w  #64*64+(80/16),bltsize(a6)»CL2:      ; wheeee!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+»CL2:;   blit plane 3
+
+»CL3:                add.w   #320*256/8,a0      »CL2:             ; go to next plane
+»CL5:                *
+
+»CL3:                bsr     waitblit
+     »CL3:           move.l  #bobmask,bltbpt(a6)       »CL2:      ; mask, channel b
+          »CL3:      move.l  a0,bltcpt(a6)                  »CL2: ; output, channel c
+               »CL3: move.l  a0,bltdpt(a6)      »CL2:             ; output, channel d
+»CL3:                move.w  #64*64+(80/16),bltsize(a6)  »CL2:    ; last blit
+    »CL5:            *
+
+»CL3:                rts
+
+»CL1:When this routine returns, the blitter will be working on the last bitplane.  An
+extra  call to »CL0:waitblit»CL1: should be done before the output is put on screen but is
+not necessary before calling the same routine again.  The places marked with »CL5:*»CL1:'s
+would  be  ideal  spots to do some »CL0:arithmetic»CL1: while the blitter's busy, so as to
+minimize the time spent »CL0:waiting»CL1: for it to finish.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+And  oh  yeah,  I  never  tested  that
+routine,  so if it doesn't work, email
+me,  and  be  sure to include the word
+»CL0:"pleasedeletememrspamfilter" »CL1:  in  the
+subject  line  to make sure I get your
+letter.
+
+--------------------------------------
+»CL0:                 RIGHT»CL1:
+--------------------------------------
+
+In   this  article  I've  covered  the
+things  that  most  people  think  the
+blitter is capabable of or useful for.
+But  the  blitter  can  do  »CL0:much»CL1: more.
+»CL0:Shadebobs»CL1:   and   »CL0:lensflares»CL1:,   actual
+»CL0:planar  blur»CL1:,  image  »CL0:distortion»CL1:,  »CL0:C2P»CL1:
+operations,  image  »CL0:rotation»CL1:,  polygon
+»CL0:filling»CL1:,   »CL0:zooming»CL1:,  »CL0:linedrawing»CL1:  and,
+yes,  »CL0:much»CL1:  more.  It can even perform
+some  functions that aren't related to
+graphics,  such  as »CL0:MFM»CL1: decoding (used
+by  the  system  and trackloaders when
+reading   floppies)   and  even  »CL0:sound»CL1:
+generation.   I  hope  to cover all of
+these  topics eventually, but not now,
+cause  I'm  tired  and  depressed  and
+hungry  and all out of cigarettes.  So
+fuck off for now.  You're welcome. »CL4::)»CL1:
+
+Hmm.. some people  don't seem  to like
+smileys... go figure.

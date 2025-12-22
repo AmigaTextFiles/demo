@@ -1,0 +1,1004 @@
+<MAIN> MScript  |0|1  </MAIN> MainScript,Time Offset(int),Time Mult(float)
+====================================================
+========            Rectangles              ========
+====================================================
+/// Rectangles
+
+
+<KRECT> r_up   |0|0|1|0.1|   |0|0|1|1|  </KRECT>
+<KRECT> r_Theatre   |0|0.1|1|0.8|   |0|0|1|1|  </KRECT>
+<KRECT> r_text   |0|0.8|1|0.92|   |0|0|1|1|  </KRECT>
+<KRECT> r_down   |0|0.92|1|1|   |0|0|1|1|  </KRECT>
+
+<KRECT> r_square   |0|0|1|1|   |0|0|1|1|  </KRECT>
+
+<KCAM> cam_1 |0|0|0|0|0|0|1  </KCAM>
+
+<KRECT> r_clip   |0|0|1|1|   |0|0|1|1|  </KRECT>
+
+
+ 
+///
+====================================================
+========            Images                  ========
+====================================================
+/// Images
+
+<KIMG>IMrigob   |stoldata/rigob.iff   </KIMG>
+<KIMG>IMpamel   |stoldata/pamel.iff   </KIMG>
+<KIMG>IMnewsp   |stoldata/newsp.iff   </KIMG>
+<KIMG>IMtextl   |stoldata/textl.iff   </KIMG>
+<KIMG>IMcasa   |stoldata/casa.iff   </KIMG>
+<KIMG>IMtapi1   |stoldata/tapi1.iff   </KIMG>
+<KIMG>IMtapi2   |stoldata/tapi2.iff   </KIMG>
+<KIMG>IMdeg     |stoldata/degr.iff    </KIMG>
+<KIMG>IMatemi   |stoldata/atemi.iff    </KIMG>
+<KIMG>IMw       |stoldata/w.iff    </KIMG>
+<KIMG>IMmean    |stoldata/mean.iff    </KIMG>
+<KIMG>IMbark    |stoldata/barky.iff    </KIMG>
+<KIMG>IMblove   |stoldata/blove.iff    </KIMG>
+
+<KIMG>IMsun     |stoldata/suns.iff    </KIMG>
+
+<KIMG>IMaar1   |stoldata/aron1.iff   </KIMG>
+<KIMG>IMaar2   |stoldata/aron2.iff   </KIMG>
+<KIMG>IMaar3   |stoldata/aron3.iff    </KIMG>
+
+<KIMG>IMzaac   |stoldata/zaaclogo.iff    </KIMG>
+
+<KIMG>IMtitl   |stoldata/titl.iff    </KIMG>
+
+<KPAL>  Pal |stoldata/rigob.iff </KPAL>
+<KPAL>  Palz|stoldata/zaaclogo.iff </KPAL>
+
+<KCOLORTABLE> c_Palblack |stoldata/ctable.iff |0|0|0|0    </KCOLORTABLE>
+<KCOLORTABLE> c_Palwhite |stoldata/ctable.iff |0|255|255|255    </KCOLORTABLE>
+
+///
+====================================================
+========            Music                   ========
+====================================================
+<KP61> todp6 | stoldata/p61.JPOfLove </KP61>
+
+====================================================
+========            Part                    ========
+====================================================
+///------------------------------ p_MACROtext
+<KPART>
+        <ID> p_MACROtext </ID>
+
+0.78 ->  -0.7
+
+<KTABLE> T_scroltext |0,0.78|100,0.78|3000,-0.7 </KTABLE>
+
+ print scroll text
+  <Fx><Pa>SpritePlain</Pa>
+            <Pa>REC| r_text </Pa>
+            <Pa>IMA| IMtextl </Pa>
+            <Pa>CTE|0</Pa>
+
+            <P a>CTE|0</Pa>
+            <Pa>AFT| T_scroltext |0|0</Pa>
+
+            <Pa>CTE|1</Pa>
+
+            <Pa>AFT| T_scroltext |0|1.6</Pa>
+            <P a>CTE|1.6</Pa>
+
+            </Fx>
+
+    <Fx><Pa>SpriteLight</Pa>
+            <Pa>REC|r_text</Pa>
+            <Pa>IMA| IMdeg </Pa>
+            <Pa>CTE|0</Pa>
+            <Pa>CTE|0.8</Pa>
+            <Pa>CTE|1</Pa>
+            <Pa>CTE|0.82</Pa>
+            <Pa>DTB|c_Palblack</Pa>
+            <Pa>CTE|1</Pa>
+            </Fx>
+
+    <Fx><Pa>SpriteLight</Pa>
+            <Pa>REC|r_text</Pa>
+            <Pa>IMA| IMdeg </Pa>
+            <Pa>CTE|0</Pa>
+            <Pa>CTE|0.92</Pa>
+            <Pa>CTE|1</Pa>
+            <Pa>CTE|0.9</Pa>
+            <Pa>DTB|c_Palblack</Pa>
+            <Pa>CTE|1</Pa>
+            </Fx>
+
+</KPART>
+///
+====================================================
+========            Part                    ========
+====================================================
+///------------------------------ p_Boot
+<KPART>
+        <ID>    p_Boot </ID>
+
+
+==================== set palette ==================
+<KTABLE> T_fadeboot |0,1 |250,1 |300,0 </KTABLE>
+
+<Fx><Pa>BindPalette</Pa>
+            <Pa>AFT|T_fadeboot|0|0</Pa>    rate 0->1
+
+            <Pa>CTE|0</Pa>      type of fade:0,1,2,3
+            <Pa>CTE|255</Pa>    optional color 0->255 (0)
+            <Pa>DTB|Pal</Pa>    palette where to fade
+            <Pa>DTB|Pal</Pa>    optional source Palette(2)
+
+            <Pa>CTE|0</Pa>      type of fade:0,1,2,3
+            <Pa>CTE|255</Pa>    optional color 0->255 (0)
+            <Pa>DTB|Pal</Pa>    Palette where to fade
+            <Pa>DTB|Pal</Pa>    optional source Palette(2)
+
+            <Pa>CTE|0</Pa>      type of fade:0,1,2,3
+            <Pa>CTE|255</Pa>    optional color 0->255 (0)
+            <Pa>DTB|Pal</Pa>    Palette where to fade
+            <Pa>DTB|Pal</Pa>    optional source Palette(2)
+        </Fx>
+
+
+
+ <Fx><Pa>FillRC</Pa><Pa>REC|</Pa><Pa>CTE|1</Pa>
+   </Fx>
+logo
+   <Fx><Pa>SpritePlain</Pa>
+           <Pa>REC| </Pa>
+           <Pa>IMA|  IMaar1  </Pa>
+           <Pa>CTE|0.35</Pa>
+           <Pa>CTE|0.38</Pa>
+           <Pa>CTE|0.655</Pa>
+           <Pa>CTE|0.62</Pa>
+           </Fx>
+aaron
+<KTABLE> T_aarY1 |0,-0.2 |50,0.3 </KTABLE>
+
+   <Fx><Pa>SpritePlain</Pa>
+           <Pa>REC| </Pa>
+           <Pa>IMA|  IMaar3  </Pa>
+           <Pa>CTE|0.35</Pa>
+           <Pa>AFT|T_aarY1|0|0 </Pa>
+           <Pa>CTE|0.655</Pa>
+           <Pa>AFT|T_aarY1|0|0.07</Pa>
+           </Fx>
+suks
+   <Fx><Pa>SpritePlain</Pa>
+           <Pa>REC| </Pa>
+           <Pa>IMA|  IMaar2  </Pa>
+           <Pa>CTE|0.35</Pa>
+           <Pa>CTE|0.625</Pa>
+           <Pa>CTE|0.655</Pa>
+           <Pa>CTE|0.68</Pa>
+           </Fx>            p
+<KTABLE> T_aaf |0,1|60,1 | 110,0 </KTABLE>
+    <Fx><Pa>SpriteLight</Pa>
+            <Pa>REC|    </Pa>
+            <Pa>IMA|    IMw  </Pa>
+           <Pa>CTE|0.35</Pa>
+           <Pa>CTE|0.625</Pa>
+           <Pa>CTE|0.655</Pa>
+           <Pa>CTE|0.68</Pa>
+           <Pa>DTB|c_Palwhite</Pa>
+           <Pa>AFT|T_aaf|0|0</Pa>
+            </Fx>
+
+
+========== movin square
+<KTABLE> T_logspY1 |0,0.4041 |50,0.52 |100,0.4041 </KTABLE>
+
+  <Fx><Pa>SetRect</Pa>
+            <Pa>REC| r_square </Pa>
+            <Pa>CTE|0.4375</Pa>
+            <Pa>AFTmod|T_logspY1|0|0</Pa>
+            <Pa>CTE|0.5281</Pa>
+            <Pa>AFTmod|T_logspY1|0|0.084</Pa>
+
+            <Pa>CTE|0</Pa>
+            <Pa>CTE|0</Pa>
+            <Pa>CTE|1</Pa>
+            <Pa>CTE|1</Pa>
+            </Fx>
+
+ <Fx><Pa>FillRC</Pa><Pa>REC|r_square</Pa><Pa>CTE|0</Pa>
+   </Fx>
+
+
+==================== start music
+            <Fx><Pa>PlayP61</Pa><Pa>DTB|todp6</Pa>
+                </Fx>
+
+
+</KPART>
+///
+====================================================
+========            Part                    ========
+====================================================
+///------------------------------ p_end
+<KPART>
+        <ID>    p_end </ID>
+==================== set palette ==================
+<KTABLE> T_fadeend |0,0 |25,0|75,1 |150,1|200,0 </KTABLE>
+
+<Fx><Pa>BindPalette</Pa>
+            <Pa>AFT|T_fadeend|0|0</Pa>    rate 0->1
+
+            <Pa>CTE|0</Pa>      type of fade:0,1,2,3
+            <Pa>CTE|0</Pa>    optional color 0->255 (0)
+            <Pa>DTB|Palz</Pa>    palette where to fade
+            <Pa>DTB|Palz</Pa>    optional source Palette(2)
+
+            <Pa>CTE|0</Pa>      type of fade:0,1,2,3
+            <Pa>CTE|0</Pa>    optional color 0->255 (0)
+            <Pa>DTB|Palz</Pa>    Palette where to fade
+            <Pa>DTB|Palz</Pa>    optional source Palette(2)
+
+            <Pa>CTE|0</Pa>      type of fade:0,1,2,3
+            <Pa>CTE|0</Pa>    optional color 0->255 (0)
+            <Pa>DTB|Palz</Pa>    Palette where to fade
+            <Pa>DTB|Palz</Pa>    optional source Palette(2)
+        </Fx>
+
+ <Fx><Pa>FillRC</Pa><Pa>REC|</Pa><Pa>CTE|1</Pa>
+   </Fx>
+
+   <Fx><Pa>SpritePlain</Pa>
+           <Pa>REC| </Pa>
+           <Pa>IMA|  IMzaac  </Pa>
+           <Pa>CTE|0</Pa>
+           <Pa>CTE|0</Pa>
+           <Pa>CTE|1</Pa>
+           <Pa>CTE|1</Pa>
+           </Fx>
+
+</KPART>
+///
+====================================================
+========            Part                    ========
+====================================================
+///------------------------------ p_title
+<KPART>
+        <ID>  p_title </ID>
+
+<KTABLE> T_fadetit11 |0,0 |200,1|300,1|350,0  </KTABLE>
+<KTABLE> T_fadetyp11 |0,255 |250,255|256,0  </KTABLE>
+
+<Fx><Pa>BindPalette</Pa>
+            <Pa>AFT|T_fadetit11|0|0</Pa>    rate 0->1
+
+            <Pa>CTE|0</Pa>      type of fade:0,1,2,3
+            <Pa>AFT|T_fadetyp11|0|0</Pa>    optional color 0->255 (0)
+            <Pa>DTB|Pal</Pa>    palette where to fade
+            <Pa>DTB|Pal</Pa>    optional source Palette(2)
+
+            <Pa>CTE|0</Pa>      type of fade:0,1,2,3
+            <Pa>AFT|T_fadetyp11|0|0</Pa>    optional color 0->255 (0)
+            <Pa>DTB|Pal</Pa>    Palette where to fade
+            <Pa>DTB|Pal</Pa>    optional source Palette(2)
+
+            <Pa>CTE|0</Pa>      type of fade:0,1,2,3
+            <Pa>AFT|T_fadetyp11|0|0</Pa>    optional color 0->255 (0)
+            <Pa>DTB|Pal</Pa>    Palette where to fade
+            <Pa>DTB|Pal</Pa>    optional source Palette(2)
+        </Fx>
+
+<KTABLE> T_titX1 |0,0 |500,-0.25 </KTABLE>
+<KTABLE> T_titX2 |0,1 |500,1.25 </KTABLE>
+
+
+   <Fx><Pa>SpritePlain</Pa>
+            <Pa>REC|</Pa>
+            <Pa>IMA| IMcasa </Pa>
+            <Pa>AFT|T_titX1|0|0</Pa>
+            <Pa>AFT|T_titX1|0|0</Pa>
+            <Pa>AFT|T_titX2|0|0</Pa>
+            <Pa>AFT|T_titX2|0|0</Pa>
+            </Fx>
+<KTABLE> T_titmX1 |0,1 |200,0.8 </KTABLE>
+   <Fx><Pa>Sprite</Pa>
+            <Pa>REC|</Pa>
+            <Pa>IMA| IMmean </Pa>
+            <Pa>CTE|0</Pa>
+            <Pa>AFT|T_titmX1|0|0</Pa>
+            <Pa>CTE|1</Pa>
+            <Pa>AFT|T_titmX1|0|0.15</Pa>
+            </Fx>
+
+
+</KPART>
+///
+====================================================
+========            Part                    ========
+====================================================
+///------------------------------ p_title1
+<KPART>
+        <ID>  p_title1 </ID>
+
+<KTABLE> T_fadetit1 |0,0 |50,1|250,1|300,0  </KTABLE>
+<K TABLE> T_fadetit1t|0,255 |60,255|200,255|300,255  </KTABLE>
+<KTABLE> T_fadetit1t|0,255 |60,255 </KTABLE>
+
+
+<Fx><Pa>BindPalette</Pa>
+            <Pa>AFT|T_fadetit1|0|0</Pa>    rate 0->1
+
+            <Pa>CTE|0</Pa>      type of fade:0,1,2,3
+            <Pa>AFT|T_fadetit1t|0|0</Pa>    optional color 0->255 (0)
+            <Pa>DTB|Pal</Pa>    palette where to fade
+            <Pa>DTB|Pal</Pa>    optional source Palette(2)
+
+            <Pa>CTE|0</Pa>      type of fade:0,1,2,3
+            <Pa>AFT|T_fadetit1t|0|0</Pa>    optional color 0->255 (0)
+            <Pa>DTB|Pal</Pa>    Palette where to fade
+            <Pa>DTB|Pal</Pa>    optional source Palette(2)
+
+            <Pa>CTE|0</Pa>      type of fade:0,1,2,3
+            <Pa>AFT|T_fadetit1t|0|0</Pa>    optional color 0->255 (0)
+            <Pa>DTB|Pal</Pa>    Palette where to fade
+            <Pa>DTB|Pal</Pa>    optional source Palette(2)
+        </Fx>
+
+<KTABLE> T_tit1X1 |0,-0.25 |300,0 </KTABLE>
+<KTABLE> T_tit1X2 |0,1.25 |300,1 </KTABLE>
+
+   <Fx><Pa>SpritePlain</Pa>
+            <Pa>REC|</Pa>
+            <Pa>IMA| IMcasa </Pa>
+            <Pa>AFT|T_tit1X1|0|0</Pa>
+            <Pa>AFT|T_tit1X1|0|0</Pa>
+            <Pa>AFT|T_tit1X2|0|0</Pa>
+            <Pa>AFT|T_tit1X2|0|0</Pa>
+            </Fx>
+
+   <Fx><Pa>SpritePlain</Pa>
+            <Pa>REC|</Pa>
+            <Pa>IMA| IMsun </Pa>
+            <Pa>AFT|T_tit1X1|0|0</Pa>
+            <Pa>AFT|T_tit1X1|0|0</Pa>
+            <Pa>AFT|T_tit1X2|0|0</Pa>
+            <Pa>AFT|T_tit1X2|0|0</Pa>
+            </Fx>
+
+<KTABLE> T_logsp1Y1 |0,0.5 |250,0  </KTABLE>
+<KTABLE> T_logsp1Y2 |0,0.5 |250,1  </KTABLE>
+
+  <Fx><Pa>SetRect</Pa>
+            <Pa>REC| r_clip </Pa>
+            <Pa>CTE|0</Pa>
+            <Pa>AFT|T_logsp1Y1|0|0</Pa>
+            <Pa>CTE|1</Pa>
+            <Pa>AFT|T_logsp1Y2|0|0</Pa>
+
+            <Pa>CTE|0</Pa>
+            <Pa>CTE|0</Pa>
+            <Pa>CTE|1</Pa>
+            <Pa>CTE|1</Pa>
+            </Fx>
+
+   <Fx><Pa>Sprite</Pa>
+            <Pa>REC|r_clip</Pa>
+            <Pa>IMA| IMtitl </Pa>
+            <Pa>CTE|0</Pa>
+            <Pa>CTE|0.25</Pa>
+            <Pa>CTE|1</Pa>
+            <Pa>CTE|0.75</Pa>
+            </Fx>
+
+
+
+</KPART>
+///
+====================================================
+========            Part                    ========
+====================================================
+///------------------------------ p_clear
+<KPART>
+        <ID> p_clear </ID>
+ <Fx><Pa>FillRC</Pa><Pa>REC| </Pa><Pa>CTE|0</Pa>
+   </Fx>
+</KPART>
+///
+====================================================
+========            Part                    ========
+====================================================
+///------------------------------ p_m_rigchiote
+<KPART>
+        <ID> p_m_rigchiote </ID>
+
+ <Fx><Pa> SetCamCoord </Pa>
+            <Pa>DTB| cam_1</Pa>
+
+            <Pa>aff|0|0.05</Pa>    x
+            <Pa>CTE|0</Pa>        y
+            <Pa>aff|0|2</Pa>    z
+
+            <Pa>aff|0|0.003</Pa>    o1
+            <Pa>aff|0|0.002</Pa>    o2
+            <Pa>aff|0|0.001</Pa>    o3
+
+            <Pa>CTE|0.15</Pa>       fov
+            </Fx>
+
+<Fx><Pa> Ground </Pa>
+            <Pa>REC|r_Theatre</Pa>
+            <Pa>IMA|IMtapi2</Pa>
+            <Pa>DTB| cam_1</Pa>     camera
+
+            <Pa>CTE|3</Pa>          ceiling dist.
+            <Pa>CTE|3</Pa>          floor dist
+
+            <Pa>CTE|0.12</Pa>          zoomtxtU
+            <Pa>CTE|0.12</Pa>          zoomtxtV
+
+            <Pa>CTE|0</Pa>          ?
+            <Pa>CTE|0</Pa>          ?
+            <Pa>CTE|0</Pa> mapping type
+            </Fx>
+
+   <Fx><Pa>Sprite</Pa>
+            <Pa>REC| r_Theatre</Pa>
+            <Pa>IMA|  IMrigob   </Pa>
+            <Pa>SIN|0.4|6.5|0.015</Pa>
+            <Pa>SIN|0.1|-5.4|0.015</Pa>
+            <Pa>SIN|1.2|4.3|0.015</Pa>
+            <Pa>SIN|1  |5.2|0.015</Pa>
+            </Fx>
+
+</KPART>
+///
+====================================================
+========            Part                    ========
+====================================================
+///------------------------------ p_m_rigchiote2
+<KPART>
+        <ID> p_m_rigchiote2 </ID>
+
+ <Fx><Pa> SetCamCoord </Pa>
+            <Pa>DTB| cam_1</Pa>
+
+            <Pa>aff|0|0.05</Pa>    x
+            <Pa>CTE|0</Pa>        y
+            <Pa>aff|0|2</Pa>    z
+
+            <Pa>aff|0|0.003</Pa>    o1
+            <Pa>aff|0|0.002</Pa>    o2
+            <Pa>aff|0|0.001</Pa>    o3
+
+            <Pa>CTE|0.15</Pa>       fov
+            </Fx>
+
+<Fx><Pa> Ground </Pa>
+            <Pa>REC|r_Theatre</Pa>
+            <Pa>IMA|IMtapi2</Pa>
+            <Pa>DTB| cam_1</Pa>     camera
+
+            <Pa>CTE|3</Pa>          ceiling dist.
+            <Pa>CTE|3</Pa>          floor dist
+
+            <Pa>CTE|0.12</Pa>          zoomtxtU
+            <Pa>CTE|0.12</Pa>          zoomtxtV
+
+            <Pa>CTE|0</Pa>          ?
+            <Pa>CTE|0</Pa>          ?
+            <Pa>CTE|0</Pa> mapping type
+            </Fx>
+
+   <Fx><Pa>Sprite</Pa>
+            <Pa>REC| r_Theatre</Pa>
+            <Pa>IMA|  IMrigob   </Pa>
+            <Pa>SIN|0.1|6.5|0.015</Pa>
+            <Pa>SIN|0.05|-5.4|0.015</Pa>
+            <Pa>SIN|0.9|4.3|0.015</Pa>
+            <Pa>SIN|1.05  |5.2|0.015</Pa>
+            </Fx>
+
+</KPART>
+///
+====================================================
+========            Part                    ========
+====================================================
+///------------------------------ p_m_rigchiote3
+<KPART>
+        <ID> p_m_rigchiote3 </ID>
+
+
+ <Fx><Pa> Warper </Pa>
+            <Pa>REC|r_Theatre</Pa>
+            <Pa>IMA|IMtapi2</Pa>
+
+            <Pa>CTE|0.8</Pa> zoomx
+            <Pa>CTE|0.8</Pa> zoomy
+            <Pa>SIN|0|0.5|0.03</Pa> ofsx
+            <Pa>COS|0|0.5|0.03</Pa> ofsY
+
+            <Pa>CTE|0.6</Pa>  ampl
+            <Pa>CTE|0.2</Pa>  freq
+            <Pa>SIN|0|0.4|2</Pa>
+            <Pa>COS|0|0.6|2</Pa>
+
+            <Pa>CTE|0</Pa> mapping type
+            </Fx>
+<KTABLE> T_pzrX1 |0,0.1  |200,-0.1 </KTABLE>
+<KTABLE> T_pzrY1 |0,0.05 |200,-0.01 </KTABLE>
+<KTABLE> T_pzrX2 |0,0.9  |200,1.1 </KTABLE>
+<KTABLE> T_pzrY2 |0,1.05 |200,1.2 </KTABLE>
+
+   <Fx><Pa>Sprite</Pa>
+            <Pa>REC| r_Theatre</Pa>
+            <Pa>IMA|  IMrigob   </Pa>
+            <Pa>aft|T_pzrX1|0|0</Pa>
+            <Pa>aft|T_pzrY1|0|0</Pa>
+            <Pa>aft|T_pzrX2|0|0</Pa>
+            <Pa>aft|T_pzrY2|0|0</Pa>
+            </Fx>
+
+</KPART>
+///
+====================================================
+========            Part                    ========
+====================================================
+///------------------------------ p_m_rigchiote4
+<KPART>
+        <ID> p_m_rigchiote4 </ID>
+
+
+ <Fx><Pa> Twirl </Pa>
+            <Pa>REC|r_Theatre</Pa>
+            <Pa>IMA|IMtapi1</Pa>
+
+            <Pa>SIN|0|1|0.25</Pa> ofsx
+            <Pa>COS|0|1|0.25</Pa> ofsY
+            <P a>CTE|0</Pa> ofsx
+            <P a>CTE|0</Pa> ofsY
+
+            <Pa>SIN|0|0.1|1</Pa> start angle
+            <Pa>CTE|0</Pa>    amp. angle
+            <Pa>CTE|0</Pa>    freq angle
+
+            <Pa>CTE|0</Pa>         start dist.
+            <Pa>SIN|0|0.6|0.5</Pa> amp.dist
+            <Pa>COS|0|0.2|32</Pa> freq dist
+
+            <Pa>CTE|0</Pa> mapping type
+            </Fx>
+   <Fx><Pa>Sprite</Pa>
+            <Pa>REC| r_Theatre</Pa>
+            <Pa>IMA|  IMrigob   </Pa>
+            <Pa>SIN|0.4|6.5|0.015</Pa>
+            <Pa>SIN|0.1|-5.4|0.015</Pa>
+            <Pa>SIN|1.2|4.3|0.015</Pa>
+            <Pa>SIN|1  |5.2|0.015</Pa>
+            </Fx>
+
+  <Fx><Pa>Sprite</Pa>
+            <Pa>REC| r_Theatre</Pa>
+            <Pa>IMA|  IMbark   </Pa>
+            <Pa>SIN|0.05|6.5|0.015</Pa>
+            <Pa>SIN|0.1|-5.4|0.015</Pa>
+            <Pa>SIN|0.4|4.3|0.015</Pa>
+            <Pa>SIN|0.8  |5.2|0.015</Pa>
+            </Fx>
+
+</KPART>
+///
+====================================================
+========            Part                    ========
+====================================================
+///------------------------------ p_m_doglove
+<KPART>
+        <ID> p_m_doglove </ID>
+
+
+ <Fx><Pa> Twirl </Pa>
+            <Pa>REC|r_Theatre</Pa>
+            <Pa>IMA|IMtapi1</Pa>
+
+            <Pa>SIN|0|1|0.15</Pa> ofsx
+            <Pa>COS|0|1|0.15</Pa> ofsY
+
+            <Pa>SIN|0|0.1|1</Pa> start angle
+            <Pa>CTE|0.2</Pa>    amp. angle
+            <Pa>CTE|0.5</Pa>    freq angle
+
+            <Pa>CTE|0</Pa>         start dist.
+            <Pa>SIN|0|0.6|0.5</Pa> amp.dist
+            <Pa>COS|0|0.2|32</Pa> freq dist
+
+            <Pa>CTE|0</Pa> mapping type
+            </Fx>
+
+<KTABLE> T_lateX1 |0,0.45 |400,0 </KTABLE>
+<KTABLE> T_lateY1 |0,0.45 |400,-0.1 </KTABLE>
+<KTABLE> T_lateX2 |0,0.55 |400,1 </KTABLE>
+<KTABLE> T_lateY2 |0,0.55 |400,1.1 </KTABLE>
+
+  <Fx><Pa>Sprite</Pa>
+            <Pa>REC| r_Theatre</Pa>
+            <Pa>IMA|  IMblove   </Pa>
+            <Pa>AFT|T_lateX1|0|0</Pa>
+            <Pa>AFT|T_lateY1|0|0</Pa>
+            <Pa>AFT|T_lateX2|0|0</Pa>
+            <Pa>AFT|T_lateY2|0|0</Pa>
+            </Fx>
+
+</KPART>
+///
+====================================================
+========            Part                    ========
+====================================================
+///------------------------------ p_m_rigjp
+<KPART>
+        <ID> p_m_rigjp </ID>
+
+ <Fx><Pa> SetCamCoord </Pa>
+            <Pa>DTB| cam_1</Pa>
+
+            <Pa>aff|0|0.05</Pa>    x
+            <Pa>CTE|0</Pa>        y
+            <Pa>aff|0|2</Pa>    z
+
+            <Pa>aff|0|0.003</Pa>    o1
+            <Pa>aff|0|0.002</Pa>    o2
+            <Pa>aff|0|0.001</Pa>    o3
+
+            <Pa>CTE|0.15</Pa>       fov
+            </Fx>
+
+<Fx><Pa> Ground </Pa>
+            <Pa>REC|r_Theatre</Pa>
+            <Pa>IMA|IMtapi1</Pa>
+            <Pa>DTB| cam_1</Pa>     camera
+
+            <Pa>CTE|3</Pa>          ceiling dist.
+            <Pa>CTE|3</Pa>          floor dist
+
+            <Pa>CTE|0.12</Pa>          zoomtxtU
+            <Pa>CTE|0.12</Pa>          zoomtxtV
+
+            <Pa>CTE|0</Pa>          ?
+            <Pa>CTE|0</Pa>          ?
+            <Pa>CTE|0</Pa> mapping type
+            </Fx>
+
+   <Fx><Pa>Sprite</Pa>
+            <Pa>REC| r_Theatre</Pa>
+            <Pa>IMA|  IMrigob   </Pa>
+            <Pa>CTE|0.3</Pa>
+            <Pa>SIN|0|-5.4|0.015</Pa>
+            <Pa>CTE|1.1</Pa>
+            <Pa>SIN|0.9  |5.2|0.015</Pa>
+            </Fx>
+
+
+   <Fx><Pa>Sprite</Pa>
+            <Pa>REC| r_Theatre</Pa>
+            <Pa>IMA|  IMnewsp   </Pa>
+            <Pa>SIN|0.05|6.5|0.015</Pa>
+            <Pa>SIN|0.15|6|0.06</Pa>
+            <Pa>SIN|0.55|4.3|0.015</Pa>
+            <Pa>SIN|0.9|6|0.06</Pa>
+            </Fx>
+
+</KPART>
+///
+====================================================
+========            Part                    ========
+====================================================
+///------------------------------ p_m_pam1
+<KPART>
+        <ID> p_m_pam1 </ID>
+
+ <Fx><Pa> SetCamCoord </Pa>
+            <Pa>DTB| cam_1</Pa>
+
+            <Pa>aff|0|0.015</Pa>    x
+            <Pa>CTE|0</Pa>        y
+            <Pa>aff|0|2</Pa>    z
+
+            <Pa>aff|0|-0.002</Pa>    o1
+            <Pa>aff|0|-0.001</Pa>    o2
+            <Pa>aff|0|-0.001</Pa>    o3
+
+            <Pa>CTE|0.15</Pa>       fov
+            </Fx>
+
+<Fx><Pa> Ground </Pa>
+            <Pa>REC|r_Theatre</Pa>
+            <Pa>IMA|IMtapi1</Pa>
+            <Pa>DTB| cam_1</Pa>     camera
+
+            <Pa>CTE|3</Pa>          ceiling dist.
+            <Pa>CTE|3</Pa>          floor dist
+
+            <Pa>CTE|0.12</Pa>          zoomtxtU
+            <Pa>CTE|0.12</Pa>          zoomtxtV
+
+            <Pa>CTE|0</Pa>          ?
+            <Pa>CTE|0</Pa>          ?
+            <Pa>CTE|0</Pa> mapping type
+            </Fx>
+
+
+  <Fx><Pa>Sprite</Pa>
+            <Pa>REC| r_Theatre</Pa>
+            <Pa>IMA|  IMpamel   </Pa>
+            <Pa>SIN|-0.2|6.5|0.015</Pa>
+            <Pa>SIN|0.1|7.5|0.015</Pa>
+            <Pa>SIN|0.3|6.1|0.015</Pa>
+            <Pa>SIN|0.85|7|0.015</Pa>
+            </Fx>
+
+</KPART>
+///
+====================================================
+========            Part                    ========
+====================================================
+///------------------------------ p_m_pam2
+<KPART>
+        <ID> p_m_pam2 </ID>
+
+ <Fx><Pa> SetCamCoord </Pa>
+            <Pa>DTB| cam_1</Pa>
+
+            <Pa>aff|0|0.015</Pa>    x
+            <Pa>CTE|0</Pa>        y
+            <Pa>aff|0|2</Pa>    z
+
+            <Pa>aff|0|-0.002</Pa>    o1
+            <Pa>aff|0|-0.001</Pa>    o2
+            <Pa>aff|0|-0.001</Pa>    o3
+
+            <Pa>CTE|0.15</Pa>       fov
+            </Fx>
+
+<Fx><Pa> Ground </Pa>
+            <Pa>REC|r_Theatre</Pa>
+            <Pa>IMA|IMtapi1</Pa>
+            <Pa>DTB| cam_1</Pa>     camera
+
+            <Pa>CTE|3</Pa>          ceiling dist.
+            <Pa>CTE|3</Pa>          floor dist
+
+            <Pa>CTE|0.12</Pa>          zoomtxtU
+            <Pa>CTE|0.12</Pa>          zoomtxtV
+
+            <Pa>CTE|0</Pa>          ?
+            <Pa>CTE|0</Pa>          ?
+            <Pa>CTE|0</Pa> mapping type
+            </Fx>
+
+
+  <Fx><Pa>Sprite</Pa>
+            <Pa>REC| r_Theatre</Pa>
+            <Pa>IMA|  IMpamel   </Pa>
+            <Pa>CTE|1.1</Pa>
+            <Pa>SIN|0.1|7.5|0.005</Pa>
+            <Pa>SIN|0.5|6.1|0.015</Pa>
+            <Pa>SIN|0.8|7|0</Pa>
+            </Fx>
+
+</KPART>
+///
+====================================================
+========            Part                    ========
+====================================================
+///------------------------------ p_m_pamsup
+<KPART>
+        <ID> p_m_pamsup </ID>
+
+ <Fx><Pa> SetCamCoord </Pa>
+            <Pa>DTB| cam_1</Pa>
+
+            <Pa>aff|0|0.015</Pa>    x
+            <Pa>CTE|0</Pa>        y
+            <Pa>aff|0|2</Pa>    z
+
+            <Pa>aff|0|-0.002</Pa>    o1
+            <Pa>aff|0|-0.001</Pa>    o2
+            <Pa>aff|0|-0.001</Pa>    o3
+
+            <Pa>CTE|0.15</Pa>       fov
+            </Fx>
+
+<Fx><Pa> Ground </Pa>
+            <Pa>REC|r_Theatre</Pa>
+            <Pa>IMA|IMtapi1</Pa>
+            <Pa>DTB| cam_1</Pa>     camera
+
+            <Pa>CTE|3</Pa>          ceiling dist.
+            <Pa>CTE|3</Pa>          floor dist
+
+            <Pa>CTE|0.12</Pa>          zoomtxtU
+            <Pa>CTE|0.12</Pa>          zoomtxtV
+
+            <Pa>CTE|0</Pa>          ?
+            <Pa>CTE|0</Pa>          ?
+            <Pa>CTE|0</Pa> mapping type
+            </Fx>
+
+<KTABLE> T_pzY1 |0,0.1 |100,-0.1 </KTABLE>
+<KTABLE> T_pzX2 |0,0.6 |100,0.8 </KTABLE>
+<KTABLE> T_pzY2 |0,0.9 |100,1.1 </KTABLE>
+
+  <Fx><Pa>Sprite</Pa>
+            <Pa>REC| r_Theatre</Pa>
+            <Pa>IMA|  IMpamel   </Pa>
+
+            <Pa>cte|0</Pa>
+            <Pa>aft|T_pzY1|0|0</Pa>
+            <Pa>aft|T_pzX2|0|0</Pa>
+            <Pa>aft|T_pzY2|0|0</Pa>
+
+            </Fx>
+
+</KPART>
+///
+====================================================
+========            Part                    ========
+====================================================
+///------------------------------ p_m_atemi
+<KPART>
+        <ID> p_m_atemi </ID>
+
+ <Fx><Pa> SetCamCoord </Pa>
+            <Pa>DTB| cam_1</Pa>
+
+            <Pa>aff|0|0.015</Pa>    x
+            <Pa>CTE|0</Pa>        y
+            <Pa>aff|0|2</Pa>    z
+
+            <Pa>aff|0|-0.002</Pa>    o1
+            <Pa>aff|0|-0.001</Pa>    o2
+            <Pa>aff|0|-0.001</Pa>    o3
+
+            <Pa>CTE|0.15</Pa>       fov
+            </Fx>
+
+
+<Fx><Pa> Tunnel </Pa>
+            <Pa>REC|r_Theatre</Pa>
+            <Pa>IMA|IMtapi1</Pa>
+            <Pa>DTB| cam_1</Pa>     camera
+
+            <Pa>CTE|2</Pa>          ceiling dist.
+            <Pa>CTE|0.25</Pa>          zoomtxtV
+
+            <Pa>CTE|0</Pa>          ?
+            <Pa>CTE|0</Pa>          ?
+            <Pa>CTE|0</Pa> mapping type
+            </Fx>
+
+
+<KTABLE> T_ateX1 |0,0.45 |400,0 </KTABLE>
+<KTABLE> T_ateY1 |0,0.45 |400,-0.1 </KTABLE>
+<KTABLE> T_ateX2 |0,0.55 |400,1 </KTABLE>
+<KTABLE> T_ateY2 |0,0.55 |400,1.1 </KTABLE>
+
+  <Fx><Pa>Sprite</Pa>
+            <Pa>REC| r_Theatre</Pa>
+            <Pa>IMA|  IMatemi   </Pa>
+            <Pa>AFT|T_ateX1|0|0</Pa>
+            <Pa>AFT|T_ateY1|0|0</Pa>
+            <Pa>AFT|T_ateX2|0|0</Pa>
+            <Pa>AFT|T_ateY2|0|0</Pa>
+            </Fx>
+
+</KPART>
+///
+====================================================
+========            Part                    ========
+====================================================
+///------------------------------ p_m_black
+<KPART>
+        <ID> p_m_black </ID>
+ <Fx><Pa>FillRC</Pa><Pa>REC| r_Theatre </Pa><Pa>CTE|0</Pa>
+   </Fx>
+</KPART>
+///
+====================================================
+========            Part                    ========
+====================================================
+///------------------------------ p_drama
+<KPART>
+        <ID>  p_drama </ID>
+
+<KTABLE> T_fadetitk1 |0,1 |1219,1|1220,0|1245,1  </KTABLE>
+
+
+<Fx><Pa>BindPalette</Pa>
+            <Pa>AFT|T_fadetitk1|0|0</Pa>    rate 0->1
+
+            <Pa>CTE|0</Pa>      type of fade:0,1,2,3
+            <Pa>cte|255</Pa>    optional color 0->255 (0)
+            <Pa>DTB|Pal</Pa>    palette where to fade
+            <Pa>DTB|Pal</Pa>    optional source Palette(2)
+
+            <Pa>CTE|0</Pa>      type of fade:0,1,2,3
+            <Pa>cte|255</Pa>    optional color 0->255 (0)
+            <Pa>DTB|Pal</Pa>    Palette where to fade
+            <Pa>DTB|Pal</Pa>    optional source Palette(2)
+
+            <Pa>CTE|0</Pa>      type of fade:0,1,2,3
+            <Pa>cte|255</Pa>    optional color 0->255 (0)
+            <Pa>DTB|Pal</Pa>    Palette where to fade
+            <Pa>DTB|Pal</Pa>    optional source Palette(2)
+        </Fx>
+
+==================================
+====== make 2 empty space up  down NO MORE
+      <F x><Pa>FillRC</Pa><Pa>REC|r_up</Pa><Pa>CTE|0</Pa>
+            </Fx>
+      <F x><Pa>FillRC</Pa><Pa>REC|r_down</Pa><Pa>CTE|0</Pa>
+            </Fx>
+
+==================================
+====== movie theatre part
+
+   <Fx><Pa> PlayScript </Pa><Pa>DTB| MovieScript </Pa><Pa>AFF|0|1</Pa>
+            </Fx>
+==================================
+====== text part
+   <Fx><Pa> PlayPart </Pa><Pa>DTB| p_MACROtext </Pa><Pa>AFF|0|1</Pa>
+            </Fx>
+</KPART>
+///
+====================================================
+========                                    ========
+========            Script                  ========
+========                                    ========
+====================================================
+
+<KSCRIPT>
+                <ID> MovieScript </ID>
+
+    <PLAY> p_m_rigchiote |200|400|1</PLAY>
+    <PLAY> p_m_black |20|0|1</PLAY>
+
+    <PLAY> p_m_pam1 |100|100|1</PLAY>
+    <PLAY> p_m_black |20|0|1</PLAY>
+
+    <PLAY> p_m_rigchiote2 |100|400|1</PLAY>
+    <PLAY> p_m_black |20|0|1</PLAY>
+
+    <PLAY> p_m_rigjp |300|0|1</PLAY>
+    <PLAY> p_m_black |20|0|1</PLAY>
+
+    <PLAY> p_m_pamsup |100|0|1</PLAY>
+    <PLAY> p_m_black |20|0|1</PLAY>
+
+    <PLAY> p_m_rigchiote3 |300|0|1</PLAY>
+    <PLAY> p_m_black |20|0|1</PLAY>
+
+    <PLAY> p_m_rigchiote4 |300|0|1</PLAY>
+    <PLAY> p_m_black |20|0|1</PLAY>
+
+    <PLAY> p_m_pam2 |300|100|1</PLAY> une passade
+    <PLAY> p_m_black |50|0|1</PLAY>
+
+    <PLAY> p_m_atemi |415|0|1</PLAY>
+    <PLAY> p_m_black |200|0|1</PLAY>
+
+    <PLAY> p_m_rigchiote4 |400|0|1</PLAY>
+    <PLAY> p_m_black |20|0|1</PLAY>
+
+    <PLAY> p_m_doglove |300|0|1</PLAY>
+    <PLAY> p_m_black |400|0|1</PLAY>
+
+</KSCRIPT>
+
+<KSCRIPT>
+                <ID> MScript </ID>
+    <PLAY> p_Boot |300|0|1</PLAY>300
+    <PLAY> p_title1 |300|0|1</PLAY>
+    <PLAY> p_title |350|0|1</PLAY>
+    <PLAY> p_clear |50|0|1</PLAY>
+
+    <PLAY> p_drama |3250|0|1</PLAY>3450-200
+
+  <PLAY> p_end |200|0|1</PLAY>300
+
+
+</KSCRIPT>

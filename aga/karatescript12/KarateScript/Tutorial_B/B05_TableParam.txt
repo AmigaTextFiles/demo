@@ -1,0 +1,249 @@
+ 
+   The <KTABLE > constructors and the "aft" and "spl" parameters
+
+ IN a first part playeded, aft are demonstrated,
+ then in a second part, splines are demonstrated, so
+ you can judge the difference.
+
+ We have seen each parameter that need a float value, to describe
+a movement or anywhat, all do a mathematical equation where the "x"
+is in fact the date, the time counted in 1/50 second.
+ (it is not the case for "cte" that give a constant.)
+
+ all the cinematic, the movements of karate are conducted by these
+ "float" parameters. Some describe a complicated and useful movement, like
+"bounce" or "sin" and "cos", but it would be nice to have a better
+way to move all that.
+
+that's why float parameters "aft" and "spl" have been created.
+(some derived parameters almost equivalent exist, "aftmod" and "splmod".)
+
+ they all got the form:
+
+            <Pa> aft | tablename | timeoffset | valueoffset  </Pa>
+
+ and tablename is a label of an object of type "table" created with:
+
+    <KTABLE > tablelabel | date0 , value0 | date1 , value1 | date2 , value2 |... </KTABLE>
+
+ You create what could be called a "spline table":
+ it is a serial of pair of values ("keys") describing a 2D curves, with the time
+ in abscisse, and a one-dimension value that vary with time.
+ this curve could like this: where "+" are keys.
+ note keys date must be sorted !!!  (but you can have any amount of times
+ between keys....
+
+value.
+|
+|  +----+            +
+| /      \          /
+|/        \+---+   /
++               \ /
++----------------+------> time.
+
+ the command "aft" (for afine table) will at any date return an
+ interpoled value, like if lines has been traced in the time. :-)
+
+ the command "spl", will do splines curves which are more nice.
+ note this command has been sped-up for old amigas.
+
+ aftmod and splmod are version where, if the frame date is before or
+ after the curve described, the movement is restarted inside the curve.
+
+ since you can write a ktable anywhere on the script ( near the effect
+ that use it), it is very convenient to have a total control on the
+ movement of any of your elements in your demo.
+
+ you may think it is still uncomfortable to use, but like
+ karate is plugins-oriented, nothing prevent from adding more
+ float parameters, or doing tools that would generates "<KTABLE >" for you !!!
+
+----------------------------------------------------------------
+ now let's have a demonstration !!!
+
+
+<MAIN> myscript |0|1</MAIN>              the main script to play...
+
+<KIMG> texture256x256 | data/texture1.iff </KIMG>
+
+<KIMG> impacman | data/oldpac.iff </KIMG>       These one, used for sprites
+<KIMG> imghost  | data/ghost1.iff </KIMG>       can be any-sized.
+<KIMG> imghost2  | data/inky.iff </KIMG>
+
+--------------------------------------------------
+<KSCRIPT>                           let's write a script to play.
+
+    <ID> myscript </ID>
+
+
+     perform aft and aftmod param exemple
+
+    <PLAY> table aft 3Dexemple | 1500 | 0 | 1 </PLAY>
+
+    perform spl (spline)
+
+    <PLAY> table spl 3Dexemple | 1500 | 0 | 1 </PLAY>
+
+</KSCRIPT>
+
+------------------------
+///<KPART><ID>  table aft 3Dexemple  </ID>
+
+    <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> impacman </Pa>
+    </Fx>
+   
+   <Fx><Pa> Warper </Pa>
+            <Pa> </Pa>              the rectangle where to draw (default)
+            <Pa> texture256x256 </Pa> the 256x256 texture to deform
+
+            <Pa>CTE|0.8</Pa>        a zoomx rate
+            <Pa>CTE|0.8</Pa>        a zoomy rate
+            <Pa>SIN|0|0.5|0.03</Pa> texture offset x
+            <Pa>COS|0|0.5|0.03</Pa> texture offset Y
+
+            <Pa>CTE|0.4</Pa>        amplitude of deformation
+            <Pa>CTE|0.2</Pa>        frequency of deformation
+            <Pa>SIN|0|0.4|2</Pa>    X offset of the deformation
+            <Pa>COS|0|0.6|2</Pa>    Y...
+
+            <Pa>CTE|0</Pa> mapping type
+    </Fx>
+
+<KCAM> cam_1 |0|0|0|0|0|0|1 </KCAM>
+
+
+------------- use one camera, changing by sprites, moved with tables ....
+<KTABLE> sprx1 | 0,-2 | 150,0 | 200,0 | 250,1 | 375,2 | 500,0 | 750,0    |765,0.1  |800,0   |1000,0   |1300,2 </KTABLE>
+<KTABLE> spry1 | 0,0 |          200,0 | 250,-1 | 375,0 | 500,1.2 | 750,0 |765,-0.1 |800,0    </KTABLE>
+<KTABLE> sprz1 | 0,0 |          200,2 | 250,0 |      500,0 | 750,2.5     |765,3.2  |800,2.5 |1000,1.0 </KTABLE>
+
+
+
+ <Fx><Pa>SetCamCoord</Pa><Pa>cam_1</Pa>         a mini pacman will "follow"
+            <Pa> aft | sprx1 |-50 | 0</Pa>    x   the big one (after) with a
+            <Pa> aft | spry1 |-50 | 0</Pa>    y   one second offset
+            <Pa> aft | sprz1 |-50 | 0</Pa>    z
+            <Pa> 4cte |0|0|0|0.8</Pa>
+            </Fx>
+   <Fx><Pa>Sprite</Pa><Pa></Pa><Pa> impacman </Pa><Pa> 4cam| cam_1 |0.5|0.5|0|0|4 </Pa>
+    </Fx>
+
+ <Fx><Pa>SetCamCoord</Pa><Pa>cam_1</Pa>
+            <Pa> aft | sprx1 |0 | 0</Pa>    x
+            <Pa> aft | spry1 |0 | 0</Pa>    y
+            <Pa> aft | sprz1 |0 | 0</Pa>    z
+            <Pa> 4cte |0|0|0|0.8</Pa>
+            </Fx>
+   <Fx><Pa>Sprite</Pa><Pa></Pa><Pa> impacman </Pa><Pa> 4cam| cam_1 |1|1|0|0|4 </Pa>
+    </Fx>
+
+
+  a ghost will have the same X coordinates, but a sine on Z
+
+ <Fx><Pa>SetCamCoord</Pa><Pa>cam_1</Pa>
+            <Pa> aft | sprx1 |0 | 0</Pa>    x
+            <Pa> cte | -1</Pa>    y
+            <Pa> sin | 1 |2.4 | 0.25</Pa>        z
+            <Pa> 4cte |0|0|0|0.8</Pa>       rotations and fov.
+            </Fx>
+   <Fx><Pa>Sprite</Pa><Pa></Pa><Pa> imghost </Pa><Pa> 4cam| cam_1 |0.8|0.8|0|0|4 </Pa>
+    </Fx>
+------------------------- yellow ghost will do something else.
+
+<KTABLE> sprx2 | 0, -1 | 100,-1 | 200,1 |300,1  |400,-1 | 500,1 | 600,1| 700,-1 |800,-1 </KTABLE>
+<KTABLE> spry2 | 0, -1 | 100,1  | 200,1 |300,-1 |400,-1 | 500,-1| 600,1| 700,1  |800,-1 </KTABLE>
+
+
+
+ <Fx><Pa>SetCamCoord</Pa><Pa>cam_1</Pa>
+            <Pa> aftmod | sprx2 |0 | 0</Pa>    x
+            <Pa> aftmod | spry2 |0 |0</Pa>    y
+            <Pa> cte | 1 </Pa>        z
+            <Pa> 4cte |0|0|0|0.8</Pa>       rotations and fov.
+            </Fx>
+   <Fx><Pa>Sprite</Pa><Pa></Pa><Pa> imghost2 </Pa><Pa> 4cam| cam_1 |0.8|0.8|0|0|4 </Pa>
+    </Fx>
+
+
+  
+
+///</KPART>
+------------------------
+///<KPART><ID>  table spl 3Dexemple  </ID>
+
+
+    <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> impacman </Pa>
+    </Fx>
+
+   <Fx><Pa> Warper </Pa>
+            <Pa> </Pa>              the rectangle where to draw (default)
+            <Pa> texture256x256 </Pa> the 256x256 texture to deform
+
+            <Pa>CTE|0.8</Pa>        a zoomx rate
+            <Pa>CTE|0.8</Pa>        a zoomy rate
+            <Pa>SIN|0|0.5|0.03</Pa> texture offset x
+            <Pa>COS|0|0.5|0.03</Pa> texture offset Y
+
+            <Pa>CTE|0.4</Pa>        amplitude of deformation
+            <Pa>CTE|0.2</Pa>        frequency of deformation
+            <Pa>SIN|0|0.4|2</Pa>    X offset of the deformation
+            <Pa>COS|0|0.6|2</Pa>    Y...
+
+            <Pa>CTE|0</Pa> mapping type
+    </Fx>
+
+
+
+
+------------- use one camera, changing by sprites, moved with tables ....
+
+
+
+
+
+
+ <Fx><Pa>SetCamCoord</Pa><Pa>cam_1</Pa>         a mini pacman will "follow"
+            <Pa> spl | sprx1 |-50 | 0</Pa>    x   the big one (spler) with a
+            <Pa> spl | spry1 |-50 | 0</Pa>    y   one second offset
+            <Pa> spl | sprz1 |-50 | 0</Pa>    z
+            <Pa> 4cte |0|0|0|0.8</Pa>
+            </Fx>
+   <Fx><Pa>Sprite</Pa><Pa></Pa><Pa> impacman </Pa><Pa> 4cam| cam_1 |0.5|0.5|0|0|4 </Pa>
+    </Fx>
+
+ <Fx><Pa>SetCamCoord</Pa><Pa>cam_1</Pa>
+            <Pa> spl | sprx1 |0 | 0</Pa>    x
+            <Pa> spl | spry1 |0 | 0</Pa>    y
+            <Pa> spl | sprz1 |0 | 0</Pa>    z
+            <Pa> 4cte |0|0|0|0.8</Pa>
+            </Fx>
+   <Fx><Pa>Sprite</Pa><Pa></Pa><Pa> impacman </Pa><Pa> 4cam| cam_1 |1|1|0|0|4 </Pa>
+    </Fx>
+
+
+  a ghost will have the same X coordinates, but a sine on Z
+
+ <Fx><Pa>SetCamCoord</Pa><Pa>cam_1</Pa>
+            <Pa> spl | sprx1 |0 | 0</Pa>    x
+            <Pa> cte | -1</Pa>    y
+            <Pa> sin | 1 |2.4 | 0.25</Pa>        z
+            <Pa> 4cte |0|0|0|0.8</Pa>       rotations and fov.
+            </Fx>
+   <Fx><Pa>Sprite</Pa><Pa></Pa><Pa> imghost </Pa><Pa> 4cam| cam_1 |0.8|0.8|0|0|4 </Pa>
+    </Fx>
+------------------------- yellow ghost will do something else.
+
+ <Fx><Pa>SetCamCoord</Pa><Pa>cam_1</Pa>
+            <Pa> splmod | sprx2 |0 | 0</Pa>    x
+            <Pa> splmod | spry2 |0 |0</Pa>    y
+            <Pa> cte | 1 </Pa>        z
+            <Pa> 4cte |0|0|0|0.8</Pa>       rotations and fov.
+            </Fx>
+   <Fx><Pa>Sprite</Pa><Pa></Pa><Pa> imghost2 </Pa><Pa> 4cam| cam_1 |0.8|0.8|0|0|4 </Pa>
+    </Fx>
+
+///</KPART>

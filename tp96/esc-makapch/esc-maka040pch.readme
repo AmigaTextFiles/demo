@@ -1,0 +1,51 @@
+Short: 040/060 patch for Essence Makaveli demo from TP6
+Uploader: amlaukka@cc.helsinki.fi
+Type: demo/tp6
+
+Installation:
+
+    Unpack the original "makaveli.exe" with xfddecrunch or similar
+tool (it's Crunchmania packed) Then apply makaveli.pch with the
+supplied spatch utility.
+
+    Run the demo from cold boot with all the caches on. Note that the
+module player routine in the demo doesn't like VBR in fast mem and
+other screen modes than PAL aren't handled correctly.
+
+CPU CACHE
+makaveli.exe
+
+Note! Do not apply this patch if you own M68030
+
+Description:
+
+    The original version of the demo doesn't work on M68040 or M68060
+because it uses self modifying code heavily and depends on certain
+bits of the CACR register to clear the caches which simply aren't
+there on these processors. It would be a better idea to use
+exec.library functions CacheClearE() and CacheClearU() to perform this
+task. Then you can be rest assured that it will work on all the
+processors.
+
+    For you technically minded here are the M68040 CACR register bits:
+
+31 - DE (Enable data cache)
+15 - IE (Enable instruction cache)
+
+Other bits are undefined and should be kept zero.
+
+    M68060 CACR register bits:
+
+31 - EDC (Enable data cache)
+30 - NAD (No allocate mode)
+29 - ESB (Enable store buffer)
+28 - DPI (Disable CPUSH invalidation)
+27 - FOC (1/2 Cache mode operation)
+23 - EBC (Enable branch cache)
+22 - CABC (Clear all entries in the branch cache)
+21 - CUBC (Clear all user entries in the branch cache)
+15 - EIC (Enable instruction cache)
+14 - NAI (No allocate mode)
+13 - FIC (1/2 Cache mode operation)
+
+Other bits are reserved by Motorola and should be kept zero.

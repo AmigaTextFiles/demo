@@ -1,0 +1,56 @@
+Short:    Fixes of Creep(40k),Phi(64k) and Zimbabwe.
+Uploader: AZURE@hamburg.roses.de
+Author:   AZURE@hamburg.roses.de
+Type:     demo/aga
+Requires: AGA Chipset, fast CPU
+
+This package is containing some fixes of old productions by me.  After  I
+got  an A4000 a lot of my old productions had weird sound due to a bug in
+The Player 6.1a in "nosystemfriendy"-mode. I fixed that  and  also  fixed
+several other bugs.
+
+Some homepages:
+
+    http://home.pages.de/~artwork - Artwork homepage
+    http://home.pages.de/~bzr     - Bizarre arts homepage
+
+
+Creep - 40k from TP5 (Artwork)
+------------------------------
+
+    Code: Azure,Crash           gfx:Fiver                     sfx:SMT
+
+    Changed stuff in v1.1:
+
+        - Fixed a lot of 040/060 related bugs. (VBR)
+        - ThePlayer 6.1a bugfix for A4000.
+
+    Well - on the attempt of fixing this intro for 68060-amiga in 1995 my
+    amiga died. So it was never done.
+
+
+Phi - 64k from South Sealand 96 (Artwork)
+-----------------------------------------
+
+    Code: Azure,Tron           gfx:Fiver                      sfx:SMT
+
+    Changed stuff in v1.1:
+
+        - ThePlayer 6.1a bugfix for A4000.
+        - Customn 040/060 C2P added. This will be used, when you
+          run the intro on a 040/060 based Amiga. It avoids flickering
+          and improves speed.
+
+Zimbabwe - Demo from Voyage 95 (Bizarre arts)
+---------------------------------------------
+
+    Code: Azure                gfx:Fiver, Coming art         sfx:Antibrain
+
+    Changed stuff in v1.4:
+
+        - ThePlayer 6.1a bugfix for A4000.
+        - Fixed cache-, timing- and VBR- problems arising on 040/060.
+          Now it works on 040/060
+
+
+

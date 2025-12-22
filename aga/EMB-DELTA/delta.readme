@@ -1,0 +1,69 @@
+Short:    official release of DELTA the demo 2nd at Assembly'98
+Author:   Embassy
+Uploader: apjhamal@cc.helsinki.fi (Antti Hämäläinen)
+Type:     demo/aga
+
+
+Requires fpu and lot's of Mhz, about 8mb of fast
+
+SUPPORTS CGX ie. cybergraphics, 320x240x8bit screenmode.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+                               EMBASSY presents 
+
+
+                         DELtA the official release
+                         with the bugfixes required
+
+
+                    originally released  at Assembly'98
+
+
+
+
+
+
+
+!IMPORTANT!  RUNNING THE DEMO!
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1> execute setpatch.
+2> execute CGX monitor.
+3> assign ASM98: to the directory where you decrunched the demo.
+
+This demo was tested with following setups:
+
+ - a1200 mc68060 16mb fast (AGA) ks3.0
+ - a4000 mc68060^ppc604e/233 72mb fast (CGX) with cvPPC graphicscard and AGA
+   mapped ks3.1
+
+Demo requires about 8mb of fast and 1.7 mb of chip.
+
+The version that the Asm98 organizers spreaded wasn't ready and contained
+some bugs, the bug that prevented it from working on 020/030 machines with
+fpu is now fixed.
+
+
+..........
+ credits : are included in the demo
+~~~~~~~~ : ~~~~~~~~~~~~~~~~~~~~~~~~
+         .
+
+       demo requires mc680x0 processor lot's of Mhz's, fpu, aga/cgx
+                about 8MB of fastmemory and HD space.
+
+
+             demo supports cgx compliant graphicscards (320x240/8bit)
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+              contact : www.helsinki.fi/~apjhamal/emb
+
+
+
+
+.hmd/emb.1998.
+
+

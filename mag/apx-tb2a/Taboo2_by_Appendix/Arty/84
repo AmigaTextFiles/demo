@@ -1,0 +1,388 @@
+
+
+{1        MSX - ZAPOMNIANY ÔWIAT
+
+
+{3Czy  wiecie  co to jest MSX?  Nie?  No
+{3cóû,  nie martwcie sië, juû wyjaôniam.
+{3MSX  to  nazwa  komputera, a wîaôciwie
+{3pewnego standartu bardzo popularnego w
+{3latach osiemdziesiâtych i poczâtku lat
+{3dziewiëdziesiâtych  na naszym skaûonym
+{3globie.
+    Ale dlaczego prawie nikt o nim nie
+sîyszaî?   Odpowiedû  jest prosta.  Ta
+8-bitowa    maszynka    cieszyîa   sië
+najwiëkszym  powodzeniem w egzotycznej
+Japonii - tam zresztâ powstaî pierwszy
+taki komp.  Co prawda swoich fanów MSX
+zyskaî  równieû  w  zachodniej  czëôci
+Europy,  ale  byî  to raczej margines.
+Rynek  europejski  zdobyty  byî  wtedy
+przecieû    na   caîej   linii   przez
+Commodore 64 i Atari, MSX wiëc sië nie
+przyjâî.   Chyba  szkoda,  bo  jak  na
+tamte  czasy  miaî  on caîkiem potëûne
+moûliwoôci.    Procesor   Z80  (wersja
+odpowiednio  "podkëcona",  na przykîad
+do  6Mhz),  3 kanaîowy dúwiëk za który
+odpowiedzialny   byî  znany  wszystkim
+maniakom      oômiobitowców      ukîad
+AY-38910/12   (Amstrad,   nowsze  ZX),
+16/32  kolorowa  grafika  w 256 x 192,
+lub  512  x  192.  Sprzëtowe sprite'y,
+16KB  rozszerzalnej pamiëci, wbudowany
+BASIC  (Zgadnijcie  jakiej  firmy?   A
+pamiëtacie   kto   popeîniî  BASIC  na
+Amige?   Tak, tak, micro$oft...), port
+do   Cartridge'ów,   wbudowana  stacja
+dysków  3,5  cala o pojemnoôci 720 kB.
+Póúniej  pojawiî sië MSX2, oferujâc na
+przykîad    w    niektórych    trybach
+graficznych   nawet  do  256  kolorów,
+128KB  rozszerzalnej  pamiëci  czy teû
+wbudowany blitter.  Powstaîo teû kilka
+nastëpnych  modeli  i klonów:  MSX2+ i
+MSX  Turbo-R  wzbogaconych  o  kolejne
+ulepszenia:      niektóre    pozwalaîy
+uzyskaê  19268 kolorów jednoczeônie na
+ekranie,  miaîy  szybszy procesor itd.
+W    najwiëkszym    rozkwicie    MSX'a
+produkowaîo kiladziesiât firm.
+
+{1          AMIGA GOES (f)MSX
+
+Mam  nadziejë,  ûe  zaintrygowaîem Was
+tym  wstëpem.   Dobra,  ale  co  to ma
+wszystko  wspólnego z Ami?  Otóû [Hans
+Guijt]  - amigowiec z Holandii daî nam
+moûliwoôê    pobawienia    sië    owym
+mitycznym  MSX'em  -  jest  on autorem
+emulatora  fMSX, o którym chcë dzisiaj
+napisaê.   Gwoli  ôcisîoôci,  na Amigë
+dostëpny   jest  przynajmniej  jeszcze
+jeden  dobry  emulator MSX'a:  AmiMSX,
+ale moim faworytem jest wîaônie fMSX i
+to on pierwszy pójdzie "do zmielenia".
+    Program   zadowoli   sië  MC68020,
+OS'em  3.0 i 3 MB Ram.  Jednak z takim
+konfigiem   za   duûo  nie  zdziaîamy.
+Zgodnie  ze  starâ  meksykaïskâ zasadâ
+(mówiâcâ  o  iloôci  papryki w daniach
+dla   teôciowej   majâcej  problemy  z
+wâtrobâ)  im  wiëcej  tym  lepiej.  Na
+moim   Apollo  1240/40  Mhz  emulowana
+maszyna  chodzi nieúle.  Na procesorze
+060,    fMSX    musi   byê   momentami
+zwalniany.     Posiadacze    sîabszych
+konfigów  mogâ pomanipulowaê z iloôciâ
+klatek na sekundë, lub zuboûyê muzykë.
+Program  wykorzystuje  w  peîni zasoby
+systemu,  karty  graficzne i muzyczne.
+Niestety  wersja  na  PPC  jeszcze nie
+powstaîa,  ale  nic  straconego bowiem
+autor  ciâgle  pracuje nad programem i
+nie   wyklucza  stworzenia  fMSX  PPC,
+jeôli  otrzyma  duûo  takich sygnaîów.
+No  i  informacja najcenniejsza:  fMSX
+jest programem freeware, a nowe wersje
+moûemy  otrzymaê  gratis  via  e-mail,
+naleûy    tylko   wysîaê   odpowiedniâ
+informacjë   do   autora  z  proôbâ  o
+umieszczenie na liôcie chëtnych.
+
+    Mamy juû najnowszâ wersjë fMSX, na
+przykîad  z kompaktu ACS CoverCD, MACD
+czy   Aminetu,  co  dalej?   Najlepiej
+zaopatrzyê     sië     od    razu    w
+oprogramowanie  na  MSX'a.  Oto adresy
+FTP'ów:
+
+{2    ftp.funet.fi            /pub/msx/
+{2    komkon.com              /pub/MSX/
+{2    jazz.snu.ac.kr          /pub/msx/
+
+Moûna  teû  zaopatrzyê  sië w miëso na
+poniûszych stronach www:
+
+    http://www.file-hunter.com
+    http://surf.to/fmsx
+    http://www.casema.net/~tfh/
+    http://www.cs.umd.edu/users/fms/
+    http://www.upcnet.upc.es/~jsp4/
+           msx.html
+    http://dynamo.geol.msu.ru/msx/
+    http://home.earthlink.net/
+           ~tbelmont/msx/index.html
+
+{1           Z CZYM SIË TO JE
+
+Zbiory  moûemy  napotkaê  w rozmaitych
+formach.    Najczëôciej   bëdâ  one  w
+postaci  ROM'ów  cartridge'ów - z tymi
+raczej  nie  ma  kîopotów,  po  prostu
+wczytujemy taki ROM klikajâc na button
+[CARTRIDGE],  resetujemy MSX'a (button
+[RESET])  i  gotowe.   Problemem  przy
+aktywacji cartridge'ów moûe byê jednak
+ich  typ  - fMSX przyjmuje nastëpujâce
+formaty:  SCC 1,2, Konami 1,2, i ASCII
+1,2.   Gdy  nie wiemy z jakim formatem
+mamy   do  czynienia  musimy  niestety
+eksperymentowaê metodâ prób i bîëdów -
+gdy  do  tego dojdâ jeszcze kombinacje
+ustawieï  z modelami komputerów:  MSX,
+MSX2   i   MSX2+,  sprawa  sië  trochë
+komplikuje.     Na    szczëôcie,   gdy
+dobierzemy juû odpowiednie preferencje
+do  danego kartridûa - moûemy wybraê z
+górnego   menu  opcjë  [CARTRIDGE/SAVE
+CONFIGURATION],     zapisujâc     jego
+ustawienia  w  tooltype'ach ikony.  Od
+tego  momentu  dany program bëdzie sië
+od razu îadowaî wraz z nimi.
+    Czasami ôciâgniëte archiwum bëdzie
+zawieraê  programy  skîadajâce  sië  z
+wielu  rozmaitych plików.  Postëpujemy
+wtedy  tak:   tworzymy na naszym dysku
+katalog   o   nazwie  np.   STUFF1,  i
+rozpakowujemy   doï  archiwum.   Teraz
+klikamy   na  [DRIVE  A]  i  wybieramy
+ôcieûkë    dostëpu    do   utworzonego
+uprzednio   katalogu.   Od  teraz  MSX
+traktuje  zawartoôê  STUFF1 jako swojâ
+dyskietkë.    Radzë,   by   w   jednym
+katalogu nie trzymaê zbyt duûej iloôci
+plików   (limit   wynosi  112),  a  to
+dlatego,  ûe  po  kaûdym  resecie  MSX
+czyta   taki   sztuczny  "dysk",  a  w
+przypadku,    gdy    jest   on   mocno
+wypeîniony  -  bëdzie  to  trwaê  doôê
+dîugo.    Aby  teraz  odczytaê  coô  z
+takiego  pseudodysku musimy popracowaê
+z  samym MSX'em postëpujâc rozmaicie w
+zaleûnoôci od trzyznakowych rozszerzeï
+plików.
+    Rozszerzenie   .BAS   oznacza  tak
+zwane  Basic  Files.   Aby  wczytaê  i
+uruchomiê  taki  plik wpisujemy:  LOAD
+"Nazwa.BAS",R,  lub  RUN  "Nazwa.BAS".
+Gdy   natkniemy   sië  na  zbiór  typu
+"nazwa.BIN",   wczytujemy  go  poprzez
+komendë:    BLOAD  "nazwa.BIN",R,  zaô
+pliki  o  rozszerzeniu  .BAT  lub .COM
+moûemy   uruchomiê   tylko  z  poziomu
+MSX-DOS   -   który   jest  oczywiôcie
+"...copyright  by  m$",  ma  to jednak
+dobrâ  stronë,  otóû  skîadnia poleceï
+jest    prawie    identyczna   jak   w
+grzybiarskim   DOS'ie.    Aby   jednak
+cieszyê   sië   (?)   trybem   MSX-DOS
+potrzebujemy co najmniej dwóch plików,
+a    mianowicie    COMMAND.COM    oraz
+MSXDOS.SYS, które musimy zaîatwiê sami
+(czasami  sâ  doîâczane  do archiwów z
+MSX'owym   softem)   i   przegraê   do
+katalogów   zawierajâcych  programy  o
+rozszerzeniach   .BAT  i  .COM,  które
+chcemy   uruchomiê.   Po  resecie  MSX
+powita  nas  juû  w  trybie DOS, teraz
+wystarczy  tylko wpisaê nazwë gîównego
+pliku do uruchomienia i gotowe.
+    Czasami   moûna  teû  spotkaê  tak
+zwane disk-images, czyli obrazy caîych
+dysków zrzucone do pojedyïczych plików
+(najczëôciej  o  rozszerzeniu  .dsk) -
+tutaj  równieû  postëpujemy jak wyûej:
+[DRIVE  A],  wybór  ôcieûki  dostëpu i
+[RESET]   -  w  wiëkszoôci  przypadków
+powinno  to  wystarczyê,  gdyû program
+uruchomi sië sam.
+    Niestety   software   moûemy   teû
+znaleúê   w   jeszcze   kilku   innych
+opakowaniach - bardziej unikatowych, a
+co  gorsza  nawet  w  opisanych  tutaj
+rodzajach   danych  mogâ  nas  spotkaê
+róûne   wyjâtkowe   i  nieprzewidziane
+sytuacje.     Jeôli    jesteôcie   tym
+zainteresowani,  mogë powróciê do tego
+tematu.   Na  razie  to co napisaîem o
+plikach  powinno wystarczyê do caîkiem
+swobodnego    uûywania   MSX'a.    Mam
+nadziejë,  ûe  nikogo  przy okazji nie
+zniechëciîem      tymi      wszystkimi
+zawiîoôciami   -  cóû  taka  jest  juû
+filozofia  samego  MSX'a i nawet Matka
+Teresa z Kajuty nic na to nie poradzi.
+
+{1             PROGRAMOTEKA
+
+Tyle  zachodu z tymi plikami, czy to w
+ogóle   gra   warta  ôwieczki?   Jakie
+wîaôciwie  jest  to  oprogramowanie na
+MSX'a?
+    Jeôli   podobnie   jak   ja,   gdy
+wchodzicie  do salonu gier, omijacie z
+pogardâ  wszelkie  szafki z Tekken'em,
+MK  III  czy innâ multimediâ, szukajâc
+coin-up'ów       duûo       starszych,
+zakurzonych,   stojâcych   gdzieô   na
+uboczu  - bëdziecie z fMSX zadowoleni.
+W     ogóle    wszelcy    poszukiwacze
+zaginionych    systemów    i   szaleni
+komputerowi  romatycy  bëdâ w raju :).
+Zresztâ,   muszë  przyznaê,  ûe  dobre
+MSX'owe  gry  wcale mocno nie ustëpujâ
+niektórym      amigowym      amos'owym
+freeware'om, majâ jednak nad nimi takâ
+oto  przewagë:  bez problemu chodzâ na
+monitorach SVGA i kartach graficznych.
+    Znajdâ    teû   coô   dla   siebie
+wielbiciele uûytków, na MSX'a dostëpne
+sâ   kompilatory  takich  zapomnianych
+jëzyków   jak   Fortran   czy   Cobol.
+Znalazîem   równieû   emulator  ZX-81.
+Niby  to  wszystko  jest teû na Amigë,
+ale  na przykîad "sîawnej" bazy danych
+dBASE  II  czy  Borland  Pascala  - ja
+jeszcze  u  nas  nie  spotkaîem, a tam
+jest.
+    Poza tym powstaïcie maniacy sceny!
+Tak,  tak,  na  MSX'a  po  dziô  dzieï
+pojawiajâ  sië  dema  i  ziny, a grupa
+newsowa   comp.sys.msx   ponoê  ciâgle
+tëtni  ûyciem.   Niestety  jak zapewne
+wszyscy  wiecie, scenowi twórcy czësto
+uciekajâ  sië  w  swych produkcjach do
+rozmaitych  bîëdów  konstrukcyjnych  i
+sztuczek  hardware'owych,  a to raczej
+nie   wpîywa   dodatnio  na  moûliwoôê
+uruchomienia niektórych tych produkcji
+na  emulatorze  (tyczy  sië to zresztâ
+kaûdej  platfomy,  i  napawa mnie przy
+okazji  dobrym  humorem,  gdy  znajomi
+grzybiarze    pîaczâ   nad   amigowymi
+demkami  sprzed  stu  lat,  ûe im "nie
+bardzo chodzâ" na emulatorze Amigi, na
+superwydajnym najnowszym pentiumie).
+
+{1         JESZCZE O fMSX 2.2
+
+Z  ciekawszym moûliwoôci programu fMSX
+2.2  warto  zwróciê  ponadto  uwagë na
+menu   [TOOLS],   w   którym  to  mamy
+podrëczny     asortyment    zawodowego
+gracza, czyli programiki do dorabiania
+nieômiertelnoôci.   Sposób  ich uûycia
+jest  analogiczny do opisywanego przez
+R2D2  w  ACS  5/99 programu "Cheater".
+[CHEAT   FINDER]   sîuûy  do  szukania
+komórek  pamiëci zawierajâcych wartoôê
+interesujâcego  nas  wskaúnika (iloôci
+ûyê/statków   czy  liczby  trufli),  a
+[MEMORY    EDITOR]    umoûliwia    nam
+grzebanie  w  pamiëci i dowolnâ zmianë
+tego  wskaúnika  w czasie rzeczywistym
+:-).
+    Kilka  sîów wyjaônienia naleûy sië
+teû  muzyce.   fMSX daje nam moûliwoôê
+wyboru     rodzaju    dúwiëku.     PSG
+(Programmable   Sound   Generator)  to
+ukîad  doôê  skromny, ale wykorzystuje
+go   niestety   aû   85%  gier.   Duûo
+przyjemniejsze    pulsacje    generuje
+natomiast  SCC  - piëcio kanaîowy chip
+wykorzystywany przez gry firmy Konami.
+Jeôli wygrzebiecie gdzieô takâ gierkë,
+nie  zapomnijcie wîâczyê wîaônie [SCC]
+w  [SETTINGS/AUDIO].  Dúwiëk moûna teû
+caîkowicie    wyîâczyê   (dobre   przy
+wolniutkich   procach),   lub  ustawiê
+jednoczeônie  PSG  + SCC (zatrudniajâc
+AHI).  Istnieje teû moûliwoôê emulacji
+jeszcze bardziej wymyôlnych muzycznych
+akcesoriów,  ale  wykorzystuje  je tak
+maîo  softu  na MSX'a ûe nie ma co sië
+nad nimi rozwodziê.
+    Aby   ten   opis   nie   byî  taki
+pozytywny,  czas  trochë pokrytykowaê.
+fMSX   ma   problemy   z   emulowaniem
+standardu    MSX2(+)    (skomplikowana
+grafika  robi  swoje).   Znalazîem teû
+gry   i   programy,   które  odmawiaîy
+wspóîpracy,   lub   podczas   emulacji
+których  wystëpowaîy  bîëdy, w pewnych
+wypadkach  caîkowicie uniemoûliwiajâce
+grë   (np.   Decathlon).   Szczególnie
+daje  sië  to we znaki przy nowszych i
+bardziej  skomplikowanych  technicznie
+grach.    Sâ   równieû   trudnoôci   z
+podmianâ  wbudowanych ROMów.  Aby tego
+wszystkiego uniknâê najlepiej zapoznaê
+sië  dokîadnie z listâ przetestowanych
+progsów   doîâczanâ   do   archiwum  z
+fMSX'em.  Jednak te "babole" nie sâ na
+tyle  powaûne, aby nawet nie spróbowaê
+poemulowaê  i nie poznaê fascynujâcego
+"zapomnianego  ôwiata",  tym bardziej,
+ûe   Hans   Guijt   powaûnie  traktuje
+wszelkie raporty o zauwaûonych bîëdach
+
+{1            TIPS and TRICKS
+
+Jeôli   jakiô   program   niewiadomego
+pochodzenia  nie  chce  sie uruchomiê,
+spróbuj  zmieniê emulowany komputer na
+MSX2  lub  MSX2+,  czasami  pomaga teû
+zwiëkszenie   iloôci  pamiëci  w  jakâ
+bëdzie  wyposaûony nasz wirtualny MSX.
+Moûna    teû   zastosowaê   jednâ   ze
+sztuczek,   które   to  opisane  sâ  w
+plikach  amiga  guide  doîâczonych  do
+programu.
+
+    Jak  napisaîem  na  poczâtku:  MSX
+byî  popularny  w  Japonii.  Co to dla
+nas  oznacza w praktyce?  Niestety to,
+ûe  duûa czëôê softu/gier jest wîaônie
+po      japoïsku.      W     przypadku
+zrëcznoôciówek  nie  ma  to  za duûego
+znaczenia,  w koïcu amputacja czîonków
+wrogich   meduz,   tudzieû  penetracja
+wnëtrznoôci wôciekîych ameb nie wymaga
+specjalnych  instrukcji, ale co zrobiê
+ze     strategiami,     przygodówkami,
+RPG'ami, tekstówkami czy uûytkami?  Na
+szczëôcie  wiëkszoôê progsów dla MSX'a
+istnieje w róûnych wersjach jëzykowych
+(prawie  zawsze  jest teû angielski) i
+na   dobrze  przygotowanych  serwisach
+www, autorzy podajâ, "po jakiemu jest"
+dany   program/gra.    Naprawdë  warto
+zwróciê   na   to   uwagë,  bo  widzâc
+"japoïskie  krzaki",  a nie majâc brwi
+nachylonych  chociaûby  pod  kâtem  45
+stopni  w  stosunku  do ust, moûna sië
+zniechëciê  (a np.  gierki RPG z MSX'a
+sâ   caîkiem  fajne  -  Dragon  Slayer
+rulez!).
+
+    Z   trybu   MSXDOS  moûna  przejôê
+spowrotem   do   trybu  BASIC  poprzez
+wpisanie:  "BASIC".
+
+    Jeôli jakiô program nadal nie chce
+dziaîaê,  moûna  spróbowaê zdobyê go w
+innej  postaci.   Z moich emiprycznych
+badaï     wynika,    ûe    najbardziej
+traumatyczne   przeûycia   dostarczajâ
+archiwa zawierajâce pliki, duûo lepiej
+jest   z   obrazami   dysków   .dsk  i
+cartridge'ami.
+
+ps.    Opis   oparîem  na  wersji  2.2
+programu.   Jest  juû  dostëpna wersja
+2.3 beta, która niweluje kilka bîëdów.
+
+{2Slayer/Appendix
+{2[ Taboo Staff ]

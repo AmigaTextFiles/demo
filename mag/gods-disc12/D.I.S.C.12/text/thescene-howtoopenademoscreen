@@ -1,0 +1,178 @@
+discnew.font,8
+«s6=166,227,181»
+«s7=191,206,254»
+«»
+«c2»«ac»HOW TO OPEN A DEMOSCREEN«»
+«»
+«c1»By Krabob/Mankind«»
+«»
+«as»«c6»A code article about opening a demo screen that works EVERYWHERE
+with intuition and cgx.«»
+«»
+«c7»I'd like to talk to you about a problem that will certainly
+creates debates, as this subject is sensitive:
+it's about «c6»compatibility of demos, «c7»and most of all on their «c6»starting code.
+«c7»Before Going further, I would like to thank «c6»DISC «c7»for letting me talk about this
+in their mag, and also, I ask you to forgive me for my strange english.«»
+«»
+Looking at the demos of the last 3 years, I noticed the totality of the
+effects was coded for «c6»chunky screen «c7»in a 320 pixel width resolution.
+and almost all was using copper hacking, «c6»ChunkyToPlanar, «c7»and system
+disabling. Each of these three technique was known for years,
+and was found and taught by old coders with an a500 coding culture.
+It was not so bad,as it worked, and an effort was made to be 68060 
+and a4000 compatible too.«»
+«»
+But notice this: when on A500, system disabling and copper hacking
+was a necessity, on a1200 or a4000 with at least 68030 it is not:
+«c6»Sytem disabling «c7»doesn't give more speed (or just a little!), 
+and copper hacking is useless, since "de facto" all demos are 
+coded in Chunky mode!«»
+«»
+On another hand, more and more people got a «c6»graphic card, «c7»despite 
+the death of phase5 and the lameness of DCE.(Obviously, I do :).
+And to my mind, there must be a lot of demo coders that wonder
+how to code an AGA and CGX compatible demo, but just don't know
+how to do it.And how to code «c6»cgx compatible «c7»when you just got AGA?
+(for the losts: CGX=cybergraphics,the graphic card driver)«»
+«»
+A lot of solution are available, but some are more interesting for 
+sceners, to my mind:«»
+«»
+ «c6»- using rtgmaster.library and the rtg package.
+«c7»nice, as you can provide your c2p for aga or use CGX.
+but this is something more to install, and that lib
+doesn't do much at last.As a demo coder, you certainly
+want to supervise what happen when the screen is drawn!«»
+«»
+ «c6»- using picasso.library and the picasso stuffs.
+«c7»again more nice ! the only problem is that
+this drivers are not available for all cards!
+most of all, cgx is emuled by picasso,so...«»
+ «c6»- using intuition, cybergraphics.library and 
+graphics.library/WritePixelArray8 «c7»to draw the screen.
+Boarggh... Both WritePixelArray8 and WriteChunkyPixel are
+lame to draw a whole screen like we do with a C2P.
+these functions are to my mind, only to be used with windows,
+(patched or not.) PPC user should never use this particularly.«»
+«»
+ «c6»- using intuition, cybergraphics.library,Kalm's C2P or a copy pass.
+«c7»It's the better thing possible to my mind:
+if we have AGA, we have an intuition screen with the best C2P
+possible, so: aga is fast.
+if we have CGX, we get a pointer on the card's "chip memory"
+and we only do Our copy pass (or direct rendering).
+note that «c6»fast double buffering is always possible with the both,
+«c7»by using intuition functions.«»
+«»
+Why not letting the system open, by the way: «c6»Amiga Multitasking «c7»is
+something powerful, you know ?«»
+«»
+The problem with that cgx technics is that most amiga coders still 
+have «c6»no graphic cards, «c7»and can't test their codes for cgx.«»
+«»
+If anyone is interrested, (and if noone is interested, it's the same:-)
+I will code (when I'll found the time) a Both AGA and CGX compatible
+version of the example you can found on the beloved site «c6»"Amycoders"
+(http://come.to/amiga/ nowadays) 
+«c7»this source is called «c6»"startup source for chunky display" «c7»and was
+coded by Merko.
+It's already a great part of code: It opens an
+intuition screen under AGA, and let the use of our dear M.kalm's C2P,
+with intuition triple buffer, all that written cent per cent Asm 68K!«»
+«»
+To work with CGX, just some more lines are needed.
+with that kind of "certified" screen opening routine, every coder,
+even those with no graphic cards, will be able to make clean and powerful
+compatible demos.«»
+«»
+To illustrate my thought, Here is some example from different generations of 
+starting code: «»
+«»
+«al» an «c6»A500 «c7»trackdisk demos:«»
+    - Shut and forget all that fucking lame slow amigaOS1.3.«»
+    - Open a ECS screen by hacking the copper list in order to code "Fakes"!«»
+    - Run the demo with a ugly 68000 only compatible code.«»
+    - Draw the screen with blitter/copper and whatever.«»
+    - Refresh the screen with copper hacks also.«»
+    - crash if it had to quit.«»
+«»
+ an «c6»A1200 «c7»demo nowaday (with 030-060):«»
+    - Shut all that fast,beautiful and powerful amigaOS3.x.(?)«»
+    - Open an AGA screen by hacking the copper,to code... Chunky effects(?)«»
+    - Run the demo with a good compatible 680X0 code.«»
+    - Draw the screen with a ChunkyToPlanar routine.«»
+    - Refresh the double buffered screen with copper hacks.«»
+    - Return to the system, like if nothing had happened.«»
+«»
+«as»And now, see what could be done nowaday (and the way to do it):
+I noticed the cybergraphics functions to use, and when, because
+it's the most important thing to know. See cybergraphics.doc
+to find the parameters !
+Note that you could use an ASL requester to ask a screen ModeID.
+in that case,use cybergraphics.library/IsCyberModeID to find
+if it is CGX. 
+Note again that cybergraphics.library functions are only used
+to find a screen ID, and after the screen opening, to find the Chunky
+screen pointer.«»
+«al»
+    «c6»- Check for cybergraphics.library«»
+«»
+    «c7»- if this one is present it will run CGX:«»
+         - Ask cgx the best screen type ID with:«»
+           cybergraphics.library/BestCModeIDTagList«»
+«»
+    - (else) no cgx libs were found it will run AGA:«»
+         - Ask intuition a screen ID (or get a pal or dblpal ID ).«»
+«»
+    - Open an intuition screen with that screen type using:«»
+      intuition.library/OpenScreen«»
+«»
+    - if we are CGX,get the screen width modulo, pixel format and chunky pointer.«»
+       (it is needed for refresh)«»
+       cybergraphics.library/LockBitMapTagList«»
+       cybergraphics.library/UnLockBitMap«»
+«»
+    - Run the effects with a good compatible 680X0 code (as always).«»
+    - Make the screen refresh:«»
+      - if the screen is AGA:«»
+         - Draw the screen with a ChunkyToPlanar routine.«»
+«»
+      - else the screen is CGX:«»
+         - Draw the Chunky screen directly on Chunky memory«»
+           or with a cpuBlitting pass.«»
+«»
+    - Refresh the dblbuffer screen with the nice graphics functions «»
+      done for that:«»
+      graphics.library/ChangeVPBitMap (it need to alloc other things)«»
+«»
+    - Return to the system, (you could continue to use during the demo).«»
+«»
+«as»«c7»Anyway, The cybergraphics.library documentation is very clear, and
+can be found on aminet. Notice that «c6»LockbitmapTaglist «c7»is safe to be used
+to get the screen chunky pointer,if it is done at each frame!
+some people only do that at start: it seems to work the same way.«»
+«»
+I could write about Picasso, but Picasso emulates 
+cgx very well, and the schemes is the same.«»
+«»
+In conclusion,here is a little «c6»list of demo aga&cgx compatible
+demos «c7»I found (I continue to search, don't hesitate to contact me!):
+PPC demo are noticed. This list is NOT exhaustive.«»
+«»
+ «c6»-Dreamscape Disorder  by Logic Probe«»
+ -BangCock by Embassy«»
+ -Delta by Embassy«»
+ -MysterTremor by Embassy«»
+ -EuskalParty8 Invitation  by Mankind«»
+ -Bastardemon Intro by Mankind.«»
+ -all Mankind PPC demos.«»
+ -GenderBender by venusart (68K/PPC)«»
+«»
+ «c7»- It appears that a non-spreaded version of "killer/cncd" is cgx.(scoop!)«»
+ - I will myself adapt NewWorldChild and ScrapsOfbeing to work on CGX.«»
+«»
+«c6»Please notice that this article actually was written for D.I.S.C. #11, but
+due to some mistakes we forget to include it. Apologize to Krabob!«»
+«»  
+«e»

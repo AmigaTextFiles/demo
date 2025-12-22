@@ -1,0 +1,7 @@
+assign mrt: ""
+assign fonts: mrt:fonts
+assign env: mrt:data
+setpatch quiet
+devs:monitors/pal
+cd mrt:
+scalammplayer script

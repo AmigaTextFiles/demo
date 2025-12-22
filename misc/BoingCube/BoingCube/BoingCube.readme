@@ -1,0 +1,234 @@
+
+BoingCube - 1.45
+================
+
+A production featuring a bouncing rotating boing cube, checkered red and white.
+
+(Note: During benchmarking sound will be muted, mouse hidden and keyboard
+actions inactive for BoingCube. During this time it's also only possible to
+quit/abort using Ctrl + C if started in fullscreen.)
+
+Keyboard actions (during normal mode):
+  ESC  For quit.
+  P    For pause.
+  F    Toggles FPS info on screeen on/off.
+  S    Toggles the sound on/off (inactive if -nosound option is used).
+
+From command line (Shell) pass:
+  -gofullscreen  For fullscreen mode.
+  -nosound       For no sound effects.
+  -fps           Show FPS info on screen at startup.
+  -version       Prints out version information.
+  -complete      Will render each piece completely, either red or white.
+  -blueside      Enables the blue side with a boing ball in it, instead of the
+                 normal red white checkered. Inactive if benchmarking.
+  -20p           Sets the (aimed) frame-rate to 20 FPS.
+  -25p           Sets the (aimed) frame-rate to 25 FPS.
+  -30p           Sets the (aimed) frame-rate to 30 FPS.
+  -50p           Sets the (aimed) frame-rate to 50 FPS.
+  -software      Graphics will be used in software only (on the CPU.) Disables
+                 hardware accelerated graphics. Disabled is default.
+  -hardware      Graphics will be used in hardware only (on the GPU.) Enables
+                 hardware accelerated graphics.  Activated is default.
+  -noaccbuffer   Is obsolete and is no longer supported, use -software or
+                 -hardware instead.
+  -noaccgfx      Is obsolete and is no longer supported, use -software or
+                 -hardware instead.
+  -sync          This option has only effect when benchmarking. It will
+                 synchronize double buffer with the monitor refresh rate.
+  -benchmark     Defaults to -benchmark10 and -hardware. All benchmarks will
+                 also mute the sound, hide the mouse pointer and make the
+                 keyboard actions inactive for BoingCube. If you still need to
+                 quit, use Ctrl + C.
+                 Note, multitasking is still active, but please be
+                 patient while benchmarking as actions during the benchmark
+                 will influence the result. For best results close all programs
+                 that you don't absolutely need before benchmarking.
+                 For best results boot up without all WBStartup modules and
+                 then benchmark.
+  -benchmark1    Counts iterations (frames) per one second.
+  -benchmark2    Counts iterations (frames) per two seconds.
+  -benchmark5    Counts iterations (frames) per five seconds.
+  -benchmark10   Counts iterations (frames) per ten seconds.
+  -benchmark20   Counts iterations (frames) per 20 seconds.
+  -benchmark60   Counts iterations (frames) per 60 seconds.
+  -step          For debugging purposes.
+
+Benchmarking
+------------
+(Note: On my Sam440ep-flex 800MHz I gain a few more FPS with this new version
+1.45 than with version 1.40.)
+
+For benchmarking, type f.ex.
+
+Shell:> BoingCube -benchmark
+Shell:> BoingCube -benchmark -software
+Shell:> BoingCube -benchmark20 -gofullscreen
+Shell:> BoingCube -benchmark60 -gofullscreen -sync
+
+Note, for best results close all programs that you don't absolutely need before
+benchmarking. Or even better, deactivate all modules in WBStartup and reboot
+(or start without WBStartup modules), then benchmark.
+
+On my machine (Sam440ep-flex 800MHz, 1GB RAM and Radeon 9250 with AOS4.1 FE,
+1920x1080 ARGB32 WB screen) and WITHOUT any WBStartup modules I get:
+
+
+1.> boingcube -benchmark
+
+*** BoingCube benchmark ***
+Name:            -benchmark10 (Counts iterations per ten seconds.)
+Version:         1.45 - 6.1 - 6.1 (20160425)
+Mode:            Windowed NON-vsynced HARDware
+Hardware acc.:   Buff: ON (hardware)   Gfx: ON (hardware)
+Iterations:      662 frames
+Duration:        10013 ms (10.013 seconds)
+Rendering time:  90 ms (0.090 seconds) [lower is better]
+R. frame-rate:   7355.555 FPS (rendering frame-rate) [higher is better]
+Result:          66.114 FPS (displayed frames/second) [higher is better]
+
+
+1.> boingcube -benchmark -software
+
+*** BoingCube benchmark ***
+Name:            -benchmark10 (Counts iterations per ten seconds.)
+Version:         1.45 - 6.1 - 6.1 (20160425)
+Mode:            Windowed NON-vsynced SOFTware
+Hardware acc.:   Buff: OFF (software)   Gfx: OFF (software)
+Iterations:      587 frames
+Duration:        10003 ms (10.003 seconds)
+Rendering time:  785 ms (0.785 seconds) [lower is better]
+R. frame-rate:   747.770 FPS (rendering frame-rate) [higher is better]
+Result:          58.682 FPS (displayed frames/second) [higher is better]
+
+
+1.> boingcube -benchmark -gofullscreen
+
+*** BoingCube benchmark ***
+Name:            -benchmark10 (Counts iterations per ten seconds.)
+Version:         1.45 - 6.1 - 6.1 (20160425)
+Mode:            Fullscreen NON-vsynced HARDware
+Hardware acc.:   Buff: ON (hardware)   Gfx: ON (hardware)
+Iterations:      650 frames
+Duration:        10009 ms (10.009 seconds)
+Rendering time:  88 ms (0.088 seconds) [lower is better]
+R. frame-rate:   7386.363 FPS (rendering frame-rate) [higher is better]
+Result:          64.941 FPS (displayed frames/second) [higher is better]
+
+
+Known issues
+------------
+- Spikes an occasional triangle sometimes, it's on the TOFIX/BUG list.
+- If you set the progressive format to higher than your system can manage, then
+  the rotation of the cube will slow down to almost a halt.
+
+
+Changes
+-------
+BoingCube 1.45: (2016 Apr)
+  - Fixed sound issue, samples came a few frames too early.
+  - Swapped the two last lines in the benchmark output.
+  - Decimal numbers in the benchmark output are now showed with three decimals.
+    Remaining decimals are chopped off + zeroes are padded if too few dicimals.
+  - Added kernel and hwd version info to the benchmark output.
+  - Added hardware acc. info the Mode-field in the benchmark output (SOFTware or 
+    HARDware will be shown).
+  - Implemented -step option for debugging purpose.
+  - Increased the varying pitch when the cube hits the floor.
+  - Fixed wrong default tools for readme icons.
+  - Compiled with new version (on my Sam440ep-flex 800MHz I get a few more FPS).
+BoingCube 1.40: (2016 Apr)
+  - Added gradient (to black) to the checkered chess foreground.
+  - Added a big text to the background.
+  - Added the options -software and -hardware for esier handling. The options
+    -noaccgfx and -noaccbuffer has become obsolete and are no
+    longer supported. Use -software or -hardware instead.
+  - Added a benchmark drawer with scripts and pre-snapshotted icons.
+BoingCube 1.31: (2015 Dec)
+  - Fixed an issue with the sound that sometimes exits with an error message.
+  - Fixed pre-snapshotted icons in the BoingCube drawer.
+  - Fixed issue, FPS colliding with benchmark-note when -fps option is used
+    during benchmarking.
+  - Fixed wrong progressive-format in the title during benchmarking.
+  - Added -30p option for setting the progressive format to 30p. (30 FPS, given
+    your system can manage it.)
+  - Added some random behaviour to the rotation when hitting walls, not when
+    benchmarking though.
+  - Retweaked the selected image of the BoingCube icon.
+  - Added Amiga version VERSTAG.
+  - Fixed incorrect intro in the readme, and some other minor changes.
+BoingCube 1.30: (2015 Dec)
+  - Flow improved, less lag.
+  - Added texture to each chechmark side of the cube.
+  - Implemented frame rate options -20p, -25p and -50p that sets the frame rate
+    to 20, 25 or 50 FPS. 25 FPS (25p) is the default.
+  - Added -fps option for showing FPS on the screen info at startup.
+  - Added F keyboard action for toggling the FPS info.
+  - Added -noaccgfx option for storing GFX "in software", by default graphics
+    is stored "in hardware" (on the GPU). Note, if this option isn't
+    used (acc. gfx: ON), only some GFX is actually stored in hardware.
+  - Added -noaccbuffer option for storing the double buffer "in software", by
+    default the double buffer is stored "in hardware" (on the GPU).
+  - Added pre-snapshotted icon for the BoingCube drawer, and BoingCube icon
+    cleaned up.
+  - Changed the -noblue option to -blueside for showing the blue on one side of
+    the cube, so the "noblue" is now default. (Inactive if benchmarking.)
+  - Fixed bug "If un-iconified background gets gray" (reported by jabirulo,
+    thanks) by removing the iconify gadget.
+  - Added proper error message when fullscreen fails to open, noiced by
+    smf thanks.
+  - Added some info about closing programs before benchmarking, notified by
+    John "328gts", thanks.
+  - Added some bugfix code to try to fix black background at startup on some
+    systems, reported by Raziel, thanks.
+  - Some updates/changes to the benchmark output.
+BoingCube 1.20: (2015 Nov)
+  - Implemented rendering time per second, beyond FPS while vsynded or not.
+    Thank you Hans de Ruiter for this.
+  - Implemented -sync option that synchronizes the double buffer with the
+    monitor refresh rate. Has only effect when benchmarking.
+  - Implemented -noblue option that disables the blue side with a ball in it.
+    Kind of suggested by Raziel and Severin.
+  - Added duration when going fullscreen so the screen catches up.
+  - Fixed so that options are non-case-sensitive.
+  - Clarified readme a bit, among other minor updates/changes.
+BoingCube 1.12z and 1.12y: Thanks a lot for testing Spectre660.
+BoingCube 1.11: (2015 Nov)
+  - Bugfix for sync issue in benchmark mode, thanks TSK for notifying.
+  - Swapped places of Version and Name in benchmark output.
+  - Fixed quite many (sneaking) typos in this readme!
+BoingCube 1.10: (2015 Nov)
+  - Implemented benchmark mode.
+  - Fixed so it collides correctly with walls.
+  - Changed bouncing floor sound to a little better quality sample, also added
+    a random pitch to it.
+  - Changed bouncing wall sound, and also made it change
+    channel panning depending if it's a right or left wall bounce.
+  - Added a tiny  shift (random) in position when bouncing on the floor
+   (inactive when benchmarking).
+  - Implemented -nosound option for muting the sound.
+  - Implemented error message for unknown options passed from command line.
+  - Implemented -version option that prints out version information.
+  - A few other minor fixes and changes.
+BoingCube 1.0: (22 Nov 2015)
+  - First release.
+
+
+Requirements
+------------
+AmigaOS 4 and a High or True Color screen with a resolution of at least
+640x480. For fullscreen mode a 640x480 screen must be accessible.
+
+
+Credits
+-------
+Design, code and gfx by Marko K. Seppänen (based on code by Andreas Falkenhahn
+and Timm S. Mueller).
+
+Thanks all that has tested, given reports and pointers. Individual credits in
+the Changes-section.
+
+
+Home Page
+---------
+http://m4rko.com/amiga

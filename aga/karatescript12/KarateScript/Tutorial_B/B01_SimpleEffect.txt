@@ -1,0 +1,218 @@
+
+ At last ! an exemple with a pure demo effect !!!
+
+ This short exemple show the simple use of an effect on the
+ whole karate screen.
+
+ this effet is a "twirl", a radial deformation of an image texture.
+
+ the parts played only consist of this effect.
+ you can see the effect "twirl" must be filled with a suit of parameters.
+ each KARATE effect need a corresponding serie of parameters.
+
+ A karate effect can be so modulable that you can see it many times and
+ doesn't recognize it's the same !!!!
+
+ We need 11 others parameters for the "twirl" effect, parameter "0" only
+ giving the name of the effect.
+ the parameter type asked are (in the order:):
+
+ - (rectangle) the rectangle where to draw the effect (see the rectangle tutorial for more info)
+ - (image) the texture image used for the deformation.
+
+    An important note here: karate only use 256 pixel width and 256 pixel height
+    texture for some effect like this. If the size of the image is not good,
+    the effect will not be drawn.
+    All "deformation" or texture mapping effects will need 256x256 textures.
+    others effects like zoom can have any size for their images.
+    Asumed that, be sure the code used for the effect is ultra-optimized.
+
+ - (float) an offset on the width texture pixel. moving this parameter cause a X scrolling
+ - (float) an offset on the Height texture pixel. moving this parameter cause a Y scrolling
+
+ - (float)  start of the sinus deformation of the angle
+ - (float)  amplitude of deformation of angle
+ - (float)  frequency of the deformation of the angle.
+
+ - (float)  start of the sinus deformation of the distance to center
+ - (float)  amplitude of deformation of the distance to center
+ - (float)  frequency of the deformation of the distance to center.
+
+ - (float) the mapping type (0= normal mapping) (1=...)
+
+ It's nice to have a definition of an effect to use and it's parameter,
+ following by exemple, but How can I know all effects available in KARATE,
+ and what are their parameters used for ?
+
+ If you want to know the definition of all karate Effects, Object Builder and
+ parameters you can use, type: "karate c" in AMIGADos with the "c" option:
+ it will show the whole list of effects known by the engine, with a complete
+ description.
+
+ Note that KARATE use plugins: in the directory "Fx" near "Karate" you can find
+".Fx" files. Their are shared-libraries containing each many (0 or) effects,
+parameters and object-builder, so that you can expect karate to be both
+object-oriented and turned toward future !!! wwwouah !!
+
+ the options "c" tells you if something come from a .Fx demo-module (demodule?)
+or if it was "builtin" in the karate executable file.
+
+
+
+
+<MAIN> myscript |0|1</MAIN>              the main script to play...
+
+<KIMG> texture256x256 | data/texture1.iff </KIMG>   let's create an image.
+                                                    Note this image must be 256x256.
+
+<KIMG> impacman | data/oldpac.iff </KIMG>       These one, used for sprites
+<KIMG> imghost  | data/ghost1.iff </KIMG>       can be any-sized.
+<KIMG> imghost2  | data/inky.iff </KIMG>
+
+--------------------------------------------------
+<KSCRIPT>                           let's write a script to play.
+
+    <ID> myscript </ID>
+
+    <PLAY> mypart | 300 | 0 | 1 </PLAY>
+    <PLAY> blankpart | 25 | 0 | 1 </PLAY>       --> let's have some short dark screen between
+    <PLAY> mypart2| 300 | 0 | 1 </PLAY>
+    <PLAY> blankpart | 25 | 0 | 1 </PLAY>
+    <PLAY> mypart3 | 300 | 0 | 1 </PLAY>
+    <PLAY> blankpart | 25 | 0 | 1 </PLAY>
+    <PLAY> mypart | 300 | 0 | 1 </PLAY>
+    <PLAY> blankpart | 25 | 0 | 1 </PLAY>
+    <PLAY> mypart2| 300 | 0 | 1 </PLAY>
+    <PLAY> blankpart | 25 | 0 | 1 </PLAY>
+    <PLAY> mypart3 | 300 | 0 | 1 </PLAY>
+    <PLAY> blankpart | 25 | 0 | 1 </PLAY>
+
+    <PLAY> mypart | 99999 | 0 | 1 </PLAY>       to 'infinite'
+
+
+</KSCRIPT>
+
+--------------------------------------------------------
+<KPART>
+
+    <ID> mypart  </ID>
+
+    <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> texture256x256 </Pa>   we have seen each image stands for a 256 color palette too.
+    </Fx>
+
+    <Fx>
+        <Pa> Twirl </Pa>
+        <Pa></Pa>
+        <Pa> texture256x256 </Pa>
+
+        <Pa>SIN|0|1|0.25</Pa> ofsx
+        <Pa>COS|0|1|0.25</Pa> ofsY
+
+        <Pa>SIN|0|0.1|1</Pa> start angle
+        <Pa>CTE|0</Pa>    amp. angle
+        <Pa>CTE|0</Pa>    freq angle
+
+        <Pa>CTE|0</Pa>         start dist.
+        <Pa>SIN|0|0.6|0.5</Pa> amp.dist
+        <Pa>COS|0|0.2|32</Pa> freq dist
+
+        <Pa>CTE|0</Pa> mapping type
+    </Fx>
+
+    + 1 sprite :-)
+    <Fx><Pa> Sprite </Pa>
+        <Pa></Pa>
+        <Pa> impacman   </Pa>
+        <Pa> 4cte|0|0|0.15|0.15 </Pa>
+    </Fx>
+
+
+
+</KPART>
+----------------------------- a blank between effects.
+<KPART>
+
+    <ID> blankpart  </ID>
+
+    <Fx><Pa> FillRc </Pa><Pa></Pa><Pa>cte| 0 </Pa></Fx>
+
+</KPART>
+------------------------ the same effect with different parameters.
+<KPART>
+
+    <ID> mypart2  </ID>
+
+    <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> texture256x256 </Pa>   we have seen each image stands for a 256 color palette too.
+    </Fx>
+
+    <Fx>
+        <Pa> Twirl </Pa>
+        <Pa></Pa>
+        <Pa> texture256x256 </Pa>
+
+        <Pa>SIN|0|1|0.25</Pa> ofsx
+        <Pa>COS|0|1|0.25</Pa> ofsY
+
+        <Pa>SIN|0|0.1|1</Pa> start angle
+        <Pa>CTE|0.2</Pa>    amp. angle
+        <Pa>sin|0|0.8|0.9</Pa>    freq angle
+
+        <Pa>CTE|0</Pa>         start dist.
+        <Pa>cte|0</Pa> amp.dist
+        <Pa>cte|0</Pa> freq dist
+
+        <Pa>CTE|0</Pa> mapping type
+    </Fx>
+
+    + 1 sprite :-)
+    <Fx><Pa> Sprite </Pa>
+        <Pa></Pa>
+        <Pa> imghost   </Pa>
+        <Pa> 4cte|0|0|0.15|0.15 </Pa>
+    </Fx>
+
+
+</KPART>
+
+------------------------ the same effect with different parameters.
+<KPART>
+
+    <ID> mypart3  </ID>
+
+    <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> texture256x256 </Pa>   we have seen each image stands for a 256 color palette too.
+    </Fx>
+
+    <Fx>
+        <Pa> Twirl </Pa>
+        <Pa></Pa>
+        <Pa> texture256x256 </Pa>
+
+        <Pa>SIN|0|1|0.25</Pa> ofsx
+        <Pa>COS|0|1|0.25</Pa> ofsY
+
+        <Pa>cte|0</Pa> start angle
+        <Pa>CTE|0</Pa>    amp. angle
+        <Pa>cte|0</Pa>    freq angle
+
+        <Pa>SIN|0|0.1|0.2</Pa>         start dist.
+        <Pa>cte|0.4/Pa> amp.dist
+        <Pa>cte|16</Pa> freq dist
+
+        <Pa>CTE|0</Pa> mapping type
+    </Fx>
+
+    + 1 sprite :-)
+    <Fx><Pa> Sprite </Pa>
+        <Pa></Pa>
+        <Pa> imghost2   </Pa>
+        <Pa> 4cte|0|0|0.15|0.15 </Pa>
+    </Fx>
+
+
+</KPART>

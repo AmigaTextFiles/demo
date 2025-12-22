@@ -1,0 +1,222 @@
+                                Wolf3D - Amiga
+
+
+                            Codex:  STL/Damage(SF)
+
+                 C2P combination of c2p_020_fastram and c2p4.a
+
+                                   Gfx:  STL
+
+              Quality Assurance and High Depressing:  Friends :)
+
+
+V1.0 16..17.12.94, (pre)^n release and obsolete as well as V1.1.
+V1.1 followed some days later as a quick re-release after improvements.
+
+Changes after V1.1:
+
+· Game engine optimized and lots of shit kicked out from the ray routines.
+· Document mistakes corrected.
+
+V1.2 release date 26.12.94. Changes after V1.2:
+
+· Doors (basically pretty ready, but yet disabled for unsubdividional reasons)
+· Real dithering (or actually not, but should fool you :)
+· EHB/OCS and 256/AGA colour modes.
+· The usage of blitter added to the C2P routine.
+· Faster, optimized etc...
+
+V1.3 released?  Dunno...  :)
+
+· Anyway, even more optimizations, HD crashes (not caused by the Wolf though :)
+and other nice surprises (My HD's PSU blew up...  Sigh)...
+
+V1.4 release: this hopefully also spread...
+
+                                 *** V1.5 ***
+
+What's new:
+
+Floor/Ceiling texture mapping
+Bigger screen
+
+
+MAIL: andezl@kastelli.otol.fi
+IRC: Check out STL!andezl* on #amiga or #amigascne
+
+
+This  demo  is made for an interest in coding a FAST similar 3D routine that is
+used in Wolfenstein (or why not better while on it :) For a long time, that was
+not  possible  due  to the lack of algorithms required to the rendering of a 3D
+screen  from  a  simple  2D  map.  The last kick needed came from the documents
+written by Brian Marshall.
+
+Without  him,  this  demo would not exist.  Also extra thanks to Count Zero for
+supplying  me  with  those documents.  And most thanks to Peter McGavin for his
+fine Chunky sources.
+
+The  hardware requirements are kept to minimum in order to make this accessible
+for  everyone.   The only limit is the EHB mode, which (as I recall) limits out
+the A1000 machines, which don't have it.
+
+Features:
+
+· Two screen sizes, 128x96 and 192x160.
+
+· Two colour modes, 64-EHB and 256-AGA.
+
+· Floor, ceiling and wall Texture mapping.
+
+· Depth cueing with realtime texture dithering.
+
+· Sprites.
+
+                                      ***
+
+Here  are  the keyboard controls for the game.  Mitsumis are welcome and others
+are not.  A1200 is especially unstabile.  Key detection fails, key releases may
+be  left  undetected,  matrix  fails  and  other general shit.  Well, not fatal
+though.  Most of the time it works (= at least 50% of cases).
+
+
+ESC/LMB=quit
+
+Joystick Fire/R-ALT=fire current weapon.  N/A
+
+R-Amiga=modify turn left/right keys to do sidewalk.  N/A
+
+Space=open door.  N/A
+
+Shift=running mode, also available on numeric.
+
+
+Numeric keyboard controls:
+
+
+		[		]		/		*
+	  sidewalk left	  move forwards	  sidewalk right
+
+
+		7		8		9		-
+	    turn left	  move forwards	   turn right
+
+
+		4		5		6		+
+	    turn left	 move backwards	   turn right	  fire weapon N/A
+
+
+		1		2		3		E
+	    turn left	 move backwards	   turn right	   open doors N/A
+
+
+		0				.
+	   running mode
+
+
+Another  method for primary controlling, although more limited, is to use arrow
+keys.  This helps with the A1200's keyboard.
+
+
+                                  The Engine
+                                  ----------
+
+What's new?  (Again)
+
+The view is completely texture mapped, in contrary to the previous version that
+had  only  the  walls  texture  mapped.   Now  mapping  includes walls, floors,
+ceilings, sprites and doors (that are faked yet!).  All the walls, ceilings and
+floors  are  faded and dithered according the depth and the type of the texture
+block  (floor  is  the  darkest,  ceiling  little lighter and wall receives the
+maximum light) to accomplish the view perfection to the eye.
+
+The  floor/ceiling routine was started from scratch and has reached the current
+form  after 9 hours of optimizing/developing.  This routine is the thirth one I
+have made for such purpose.  It is at least the fastest I have seen anywhere so
+far.  Sorry for not having an actual floor/ceiling texture selection map.  Will
+be done some day.
+
+Here's  a  little comparision that I have made to the leading Wolf Clone (in my
+opinion),  that  is  yet  very similar to my own:  Nearest match is POOM, and I
+talk about the version demonstarted in Parallax's demo Drool This.
+
+What makes DamageWolf better than POOM?
+
+- Soft fading, lots of entirely differing colours and only 64 colours used
+  (AGA uses full 256 colour palette, of course).
+
+- Ceiling and floor are independent in both the lighting level and texture. 
+  Any texture could be selected, but this is yet limited. (I think POOM
+  mirrors ceiling to floor (or the other way), fast and simple solution)
+
+- Smaller memory usage (this means worse textures, though)
+
+- Texture Dithering (gives more than 100 rastered colours)
+
+- Very long distance view (one ray is traced at least 40 squares of map before
+  it is assumed never to hit anything), I believe the farthest on Amiga.
+
+- Faster/Equal speed (Actually I don't know, Drool This run on 68030/50
+  without any framerate information except the one given by analog measuring
+  equipment, ie. my eyes and the size of the view wasn't mentioned (or I
+  didn't catch it))
+
+What DMGWolf misses compared to POOM?
+
+- Doors (although POOM's doors can be easily managed)
+- Nice textures, animation, 128x128 blocks etc... (I am NOT a GFXian.)
+- POOM has larger screen.
+- POOM's sprites are faded
+
+
+Of course I have seen some other Wolfs, too, but they hardly match with mine's.
+I'm  waiting  for  TextDemo5,  which should have all kinds of neat stuff, and I
+want  to  see Alien Breed 3D as well...  And of course the next release of POOM
+:)
+
+
+                                 General info
+                                 ------------
+
+Firstly,  the  AGA  versions  of  the  routine  may  not  work.   I have had no
+possibilities  of  testing  this demo on AGA systems (or higher processors than
+the  68000,  but  shouldn't matter).  I'm almost sure that this works, but then
+again,  if  there is any static then please mail me and tell me what goes wrong
+and  mention  the  system  you  are  running the demo on as well.  You may also
+politely  express  that  I'm  a  complete  idiot for failing in such a pathetic
+manner :)
+
+Secondly, the OCS/ECS versions of this demo should run perfectly well :)
+
+Another  note here is the doors, or the wannabe-just-testing -doors.  They seem
+to  curve  and  bulge  interestingly.   The thing that goes wrong is the linear
+interpolation used, which leads to all these false results.  I haven't had time
+to  develope a hyperbolic or any other proper texture interpolation system.  Oh
+yeah, the texture selected for the doors is just some garbage I found on my HD,
+and NOT the final (as you can guess :) ...
+
+Some  more  words  about  those dull sprites.  That lamp thingie for example is
+there  for testing purposes and doesn't even deserve to be thought as a joke :)
+..   Besides,  as  mentioned, I'm not a gfxian.  Well, hell.  Also the lighting
+level  of  the  sprites  fails.   This is for the fact that the sprites are not
+faded  at  all.  Sorry.  This can be fixed very easily, but whattafuck, I'll do
+that the other day :)
+
+And the last note is that the Texture Dithering process has bugs.  This appears
+as  sudden  hiliting  of  some  colours/dithering componenets.  Don't know what
+causes  this.  Anyway, all this little finishnessless is due to the fact that I
+haven't yet cared about them too much.  Well, there will be re-releases in case
+this version turns out to have more bugs than advantages :)
+
+The  precalculating  sequence  at  the start takes a while.  It is not that the
+Wolf  calculates a lot - it is that there are some pretty complex things to do.
+If  I  precalculated  somewhat  20KB  and included that into the .exe, the demo
+would start about instantly.
+
+                                      ***
+
+Enough.   N-joy,  have  fun,  explore.   If  you  have comments, suggestions or
+questions, just mail me.  Any mail would be most welcome.
+
+
+* STL / Damage --- Antti Lankila --- andezl@kastelli.otol.fi *
+* ^^^ = IRC     -                 -            MAIL          *

@@ -1,0 +1,651 @@
+@database TheSceneGuide.guide "TheScene.guide"
+@master TheSceneGuide.guide " The Scene Guide"
+@author "Nico Barbat (Dire/Eremation)"
+@(c) "© 1995-1997 Nico Barbat"
+@$ver: "TheSceneGuide.guide 1/3 in 1997 (22-Jan-97)"
+@font microknight.font 8
+@wordwrap on
+@proportional on
+@width 80
+@help "TSG_Data1/Help!"
+@index "TSG_Data2/Main"
+
+@remark "The Scene Guide - A Guide-Document about the Amiga Scene"
+@remark "THE SCENE GUIDE is (c) 1995-1997 DIRE/EREMATION (NICO BARBAT)"
+
+
+@node Main " The Scene Guide by Dire/Eremation ... Life is a party! "
+   -=\/=-=/\=-=\/=-=/\=-=\/=-=/\=-=\/=-=/\=-=\/=-=/\=-=\/=-=/\=-=\/=-=/\=-
+
+        @{b} @{u}@{bg fill} - T - H - E -   - S - C - E - N - E -   - G - U - I - D - E - @{bg background}@{uu}@{ub}
+            ____ ___ ______ _____ _____ _______ __ __ ___   _______
+Issue`s    / __//  .\\  __// _ _ \\ __ \\_  __// //  \\  \_/ _____/
+topic:    / >_ /  \_// >_ / //// // _  / / /  / // / // /\  / @{bg shine}Dire / ERM@{bg back}
+          \__/ \/\__\\__/ \/ ~ \/ \/ \/  \/   \/ \__/ \/  \/  @{bg shine} presents @{bg back}
+53 parties    ________ _  __ ____     ___  ____ ____ __  __ ____
+in `96 ---    \__  __// L/ // __/    /___>/ __// __//  \/ // __/
+even  more      / /  / _  // >_    __\\  / /_ / >_ / /\  // >_   @{bg shine} Issue 1/3 @{bg back}
+than 1995!      \/   \j L/ \__/    \___> \__/ \__/ \/  \/ \__/   @{bg shine}(22-Jan-97)@{bg back}
+
+                           @{bg fill}@{" The Parties 1988-1996 " link TSG96.guide/Partiesmain}@{bg background}
+                           @{bg fill}@{" The Parties 1997-.... " link Partiesmain}@{bg background}
+                           @{bg fill}@{"   Party-Invitations   " link partiesplanned}@{bg background}
+                           @{bg fill}@{"      Information      " link TSG_Data1/main}@{bg background}
+
+   -=\/=-=/\=-=\/=-=/\=-=\/=-=/\=-=\/=-=/\=-=\/=-=/\=-=\/=-=/\=-=\/=-=/\=-
+   @{"  " system "ppshow TSG_Title.iff"} Title-Picture   @{"  " system "noiseplayer -p4 TSG_Module1.mod"} Title-Sound #1   @{"  " system "noiseplayer -p4 TSG_Module2.mod"} Title-Sound #2   @{"  " link addresses} Addy!
+   -=\/=-=/\=-=\/=-=/\=-=\/=-=/\=-=\/=-=/\=-=\/=-=/\=-=\/=-=/\=-=\/=-=/\=-
+   @{"  " link TSG_Data2/index1_charts} Groups-Charts   @{"  " link TSG_Data2/visitorscharts} Visitor-Charts   @{"  " link TSG_Data2/Main} The TSG-Index    @{"  " link TSG_Data1/Help!} How 2
+   -=\/=-=/\=-=\/=-=/\=-=\/=-=/\=-=\/=-=/\=-=\/=-=/\=-=\/=-=/\=-=\/=-=/\=-
+@endnode
+
+@node addresses " Important Addresses "
+@toc information
+
+   -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+   @{i}Author`s Address @{ui}
+
+      Snail-Mail     : Nico Barbat
+                       (Dire of Eremation)   <-- don`t write this
+                       Rheinaustraße 37          on the envelope!
+                       51149 Köln
+                       Germany                    @{" IFF-Advert " system "ppshow TSG_Advert.iff"}
+
+      E-Mail         : nb@netdesign.de
+
+      Phone          : +49-(0)228-311892 (Monday to Thursday only)
+      BBS-Connection : Los Endos  +49-(0)2103-52440 (Dire)
+
+       Use this address for everything concerning @{i}The Scene. @{ui}
+
+   -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+    @{" Other Addresses " link TSG_Data1/addresses_sub}   AT, distributors, swappers, other authors
+
+   -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+@endnode
+
+
+@node partiesmain " The Parties of the Scene "
+@toc main
+
+
+
+
+       ________ _  __ ____    ___ _____ _____ _______ __ ____ ___
+       \__  __// L/ // __/   /  .\\ __ \\   .\\_  __// // __//___>
+         / /  / _  // >_    / ___// _  //  \_/ / /  / // >_ _\\
+         \/   \j L/ \__/    \/    \/ \/ \/\__\ \/   \/ \__//___>
+
+
+                          @{b}1 9 9 7   -   . . . . @{ub}
+
+
+                      @{bg fill} @{b} @{u}THE PARTIES OF THE SCENE@{uu} @{ub} @{bg background}
+
+
+                  1997 has just begun, so what do you expect?
+
+                    Take a look into the @{"party invitations" link partiesplanned}!
+
+
+
+
+
+
+ @{"   Party Invitations   " link partiesplanned}  !Party-Invitations!
+
+
+ @{"    Unknown Parties    " link TSG96.guide/partiesunknown}
+
+
+ @{"  The Party Calendar   " link partiescalendar}
+
+
+
+                                        @{" -=O    Please support us!    O=- " link TSG_Data1/support}
+
+                                        @{" -=O  Back to the Main-Menu!  O=- " link main}
+
+
+
+ @{" The Parties 1988-1996 " link TSG96.guide/partiesmain}
+@endnode
+
+@node partiesplanned " Planned Parties "
+@toc PartiesMain
+
+
+@{b}
+    Planned Parties
+@{ub}
+
+     These are parties which are @{i}planned in the near future. @{ui}
+     Everyone is invited to visit these events ...
+
+
+ @{b}Party @{ub}                      | @{b}Organiser @{ub}          | @{b}Location @{ub}| @{b}Date @{ub}
+ ============================*=====================*==========*=============
+*@{"GASP `97                   " link p197}| Eremation,Dreamdeal.| France   |           97
+ ----------------------------+---------------------+----------+-------------
+*@{"Rush Hours Party `97       " link p207}| Phuture 303, Scum   | Poland   |       Feb/97
+ ----------------------------+---------------------+----------+-------------
+*@{"SILIconvention `97         " link p213}| Oxyron, ...         | Germany  | 28-31/Mar/97
+ ----------------------------+---------------------+----------+-------------
+*@{"Symposium & Mekka `97      " link p202}| PB,Lego,Phantasm,...| Germany  | 28-31/Mar/97
+ ----------------------------+---------------------+----------+-------------
+*@{"The Gathering `97          " link p196}| Crusaders           | Norway   |       Mar/97
+ ============================*=====================*==========*=============
+@endnode
+
+@node partiescalendar " The Party Calendar"
+@toc partiesmain
+
+
+ @{b}THE PARTY CALENDAR @{ub}
+
+
+ @{b}1988@{ub} ??? ??     Vortex 42 Party `88
+      Dec ??     Alcatraz Copy-Party `88
+
+ @{b}1989@{ub} ??? ??     Paranoimia Copy-Party `89
+      Aug ??     Digitech Summer Conference `89
+      Nov 05     Spectre & Northstar `89
+      Dec ??     X-Mas Party `89
+
+ @{b}1990@{ub} ??? ??     CES Exposition `90
+      ??? ??     Silents & RSI Amiga `90
+      Jan 05     Phenomena & Censor Party
+      Feb ??     Anarchy Winter Conference `90
+      Mar ??     CeBIT `90
+      Apr 12-15  Swedish Elite Easter Conference `90
+      Jun 28-29  Summer Conference `90
+      Oct 05     No Limits & IMP 666 Party `90
+      Dec 26     X-Mas Party `90
+      Dec 29     Theatre & Network Party `90
+
+ @{b}1991@{ub} ??? ??     Anarchy Eastern Party `91
+      ??? ??     Turtle Party `91
+      Feb 23     Anarchy Winter Conference `91
+      Mar 91     CeBIT `91
+      Apr 15     The Gathering `91
+      Apr 26-28  Summit Party `91
+      Jun 04     World of Commodore `91 (USA)
+      Jun 15     E.C.E.S. Party `91
+      Jun 28-30  Amega Party `91
+      Sep 29-30  Razor 1911 & IMP 666 Party `91
+      Oct 19     Action Conference `91
+      Nov ??     World of Commodore `91 (D)
+      Nov 16-17  Treacl Celebration `91
+      Dec 26-28  The Party 1
+
+ @{b}1992@{ub} ??? ??     Castle Conference `92
+      ??? ??     Garden Party 1
+      ??? ??     Svithiod Meditation `92
+      Feb 14-16  16 Bit Show `92
+      Mar ??     CeBIT `92
+      Apr ??     Eastern Conference `92 (D)
+      Apr 04     Anarchy Eastern Party `92
+      Apr 15-19  The Gathering `92
+      Apr 18     Eastern Conference `92 (B)
+      Jun 07-09  Society Summer Party `92
+      Jun 26-29  Hurricane Summer Party `92
+      Jul ??     Digital Access Party 1
+      Jul ??     Galemand`s Gilde `92
+      Jul 24-26  The Assembly `92
+      Aug 01     Prime Party `92
+      Sep 26-27  Fifth Generation and Darkness Party `92
+      Oct 10     Ami-Expo Party `92
+      Oct 24     Digital Symposium `92
+      Nov ??     Rebels Party `92
+      Nov ??     World of Commodore `92 (D)
+      Dec 04-06  World of Commodore `92 (CAN)
+      Dec 18     Bash 3 Party `92
+      Dec 27-29  The Party 2
+
+ @{b}1993@{ub} ??? ??     Analogy & Hitek Party `93
+      ??? ??     Hammering `93
+      ??? ??     Radwar Rainbow Party VII
+      ??? ??     Southern Party `93
+      Mar 27-28  CeBIT `93
+      Apr ??     Spring Party `94
+      Apr 07-10  The Gathering `93
+      Apr 09-11  Semi Party `93
+      Apr 24-25  Data-Live Conference `93
+      Apr 24-25  Garden Party 2
+      May 29-31  The Computer Crossroads `93
+      Jun ??     Holland is OK Party `93
+      Jul ??     Digital Access Party 2
+      Jul ??     South Sealand Party `93
+      Jul ??     Sun`n`Fun Party `93
+      Jul 23-25  Meltdown Party `93
+      Jul 30     Rendezvous Party `93
+      Jul 30     Galemand`s Gilde `93
+      Aug ??     Dublin Party `93
+      Aug 01-02  680X0 Convention `93
+      Aug 05-08  European Computer Conference `93
+      Aug 10-13  The Assembly `93
+      Aug 14-15  Somewhere in Holland 1
+      Aug 28     Destiny Communion `93
+      Sep 03-04  Saturne Party 1
+      Oct ??     Aggressive Party 1
+      Oct 19-21  Melon`s 2nd Birthday Party
+      Oct 23-24  Polish Autumn Party `93
+      Oct 31     Helloween Conference `93
+      Nov ??     World of Commodore `93 (D)
+      Nov 13-14  Helloween Party `93
+      Dec 27-29  The Party 3
+
+ @{b}1994@{ub} ??? ??     3S Party 1
+      ??? ??     Low Density Party `94
+      Mar ??     CeBIT `94
+      Mar 29     The Gathering `94
+      Apr ??     Eastern Conference `94 (D)
+      Apr ??     Ladojen Kokoontumis Ajot Lahti Party `94
+      Apr 01     Pearl Party `94
+      Apr 07-09  Hammering `94
+      Apr 22-24  Saturne Party 2
+      May ??     Primavera Party `94
+      May 15     Hackerance `94
+      Jun 24-26  South Sealand Party `94
+      Jul ??     Pacman Party `94
+      Aug ??     Euskal Party 1
+      Aug ??     Intel Outside Party 1
+      Aug 05-07  The Assembly `94
+      Oct 08-09  Doom`s Day Party `94
+      Oct 29-31  Wired `94
+      Nov 05-06  World of Commodore `94 (D)
+      Nov 12-13  Gelloween Party `94
+      Dec 27-29  The Party 4
+      Dec 27-30  Euskal Party 2
+
+ @{b}1995@{ub} ??? ??     Computer Art Festival `95
+      ??? ??     Demobit `95
+      ??? ??     IT-WO Party `95
+      ??? ??     Phoenix Party `95
+      ??? ??     Prime Party `95 - Barbeque
+      ??? ??     Radwar Rainbow Party IX
+      ??? ??     Rebellion Party `95
+      Mar ??     CeBIT `95
+      Mar ??     Gelloween Party `95
+      Mar 11-12  Primavera Party `95
+      Mar 31     Virtual Conspiracy `95
+      Apr ??     Eastern Conference `95 (PL)
+      Apr 07-09  Scenest Party `95
+      Apr 11-15  The Gathering `95
+      Apr 22-23  Black Box Symposium `95
+      May 20-21  Nexus Party `95
+      May 28     Hackerance `94
+      Jun ??     Abduction `95
+      Jun 15-18  Icing Party `95
+      Jun 16-18  Junction Party `95
+      Jul 03-08  Odyssey Party `95
+      Jul 07-09  South Sealand Party `95
+      Jul 08-10  Somewhere in Holland 2
+      Jul 20-22  Valhall Party `95
+      Jul 21-23  Posadas Party `95
+      Aug 10-13  Boozembly `95
+      Aug 10-13  The Assembly `95
+      Aug 11-15  GASP `95
+      Aug 19-20  Enlight Party `95
+      Aug 27     Party Zone III
+      Aug 28-29  Intel Outside Party 2
+      Sep 22     Project Party `95
+      Sep 29     Happening `95
+      Oct 06-08  Party Remedy `95
+      Oct 12-15  Euskal Party 3
+      Oct 13-15  Scenario Party `95
+      Oct 14-15  Berzan Party `95
+      Oct 21     Digital Symposium `95
+      Oct 28     Ten Years Scene Party `95
+      Nov 03-05  Computer Convention `95
+      Nov 03-05  Wired Party `95
+      Nov 10-12  Compusphere 5
+      Nov 11-12  Voyage Party `95
+      Nov 17-19  Kindergarden Party 4
+      Dec ??     Aggressive Party 2
+      Dec ??     Meltdown Party `93
+      Dec 01-03  Liquid Party `95
+      Dec 02-03  Dusk Conference `95
+      Dec 15-17  Borlänge Demo Party 1
+      Dec 15-17  Exe Party `95
+      Dec 27-29  The Party 5
+
+ @{b}1996@{ub} Jan 20-21  Juhla Party `96
+      Jan 26-28  Kindergarden Party 5
+      Feb ??     Creutz Party `96
+      Mar ??     CeBIT `96
+      Mar 02-03  Convention `96 (Germany)
+      Apr ??     Bestial Amiga Party `96
+      Apr ??     Frost Party `96
+      Apr 02-06  The Gathering `96
+      Apr 04-07  Workshop `96
+      Apr 05-08  Symposium `96
+      Apr 12-14  Scenest Party `96
+      Apr 26-28  Demolition Party 1
+      Apr 26-28  Saturne Party 3
+      May 10-12  Compusphere 6
+      May 17-19  Ludvika Positive Party `96
+      May 24-26  Icing Party `96
+      Jun 01-02  Rage Party `96
+      Jun 07-09  Abduction `96
+      Jun 14-17  Party Remedy `96
+      Jun 22-23  Polish Summer Party `96
+      Jul 05-07  South Sealand Party `96
+      Jul 07-14  Mulle Party `96
+      Jul 12-14  The Summer Computer Conference `96
+      Jul 12-14  The Summer Party `96
+      Jul 22-24  Somewhere in Huibsland `96
+      Jul 25-28  Euskal Party 4
+      Aug ??     Gigafun `96
+      Aug ??     Suspect Party `96
+      Aug 02-05  Skyscrape Gathering `96
+      Aug 03-04  Amiga Convention `96
+      Aug 16-18  The Assembly `96
+      Aug 24-25  Enlight Party `96
+      Aug 30-31  Intel Outside 3
+      Aug 30-01  3S Party 2
+      Aug 30-01  AntIQ Party `96
+      Sep 07-08  Bizarre Party `96
+      Sep 27-29  Skenery `96
+      Oct ??     Pie Slice `96
+      Oct ??     Berzan Party `96
+      Oct ??     Somewhere in Holland 3
+      Oct 04-06  Fudge Party `96
+      Oct 18-20  Scene Meeting `96
+      Nov ??     Demolition 2
+      Nov 01-03  Halloween `96 (Sweden)
+      Nov 01-03  Halloween `96 (France)
+      Nov 01-03  Saturne Party 4
+      Nov 01-03  Wired Party `96
+      Nov 08-10  Cache `96
+      Nov 08-10  Scenario `96
+      Nov 09-10  Gravity `96
+      Nov 15-17  Kindergarden Party 6
+      Nov 15-17  Convention `96 (Norway)
+      Dec 27-29  The Party 6
+
+      -------------------------------
+
+ @{b}SOON@{ub}
+
+ 1997 Feb ??     Rush Hours Party `97
+      Mar ??     The Gathering `97
+      Mar 28-31  SILIconvention `97
+      Mar 28-31  Symposium & Mekka `97
+      ??? ??     GASP `97
+@endnode
+
+
+
+-------------------
+
+
+
+@node p196 " The Gathering `97"
+@toc Partiesplanned
+
+
+@{b}
+    The Gathering `97
+@{ub}
+
+    Organiser: Crusaders
+    Date     : March 1996
+    Location : Vikingskipet, Norway
+
+    @{" Information       " link p196-info}
+@endnode
+
+@node p196-info " The Gathering `97 - Information"
+@toc p196
+
+
+    @{b}The Gathering `97 - Information @{ub}
+
+
+    You can access information about this party from:
+
+    Internet    http://www.coming.soon   OR   http://www.crusaders.no
+    Telephone   +47-(0)90119966 (Vegard Skjefstad)
+                +47-(0)90086488 (Geir Allstedt)
+                +47-(0)92637891 (Trond Michelsen)
+    BBS         Crusaders BBS (Conference: TG96)....+47-(0)22-104646
+                                                    +47-(0)22-100893
+                Infolink BBS (Conf.: Gathering96)...+47-(0)22-571600
+                                                    +47-(0)22-571604
+                Spacebar BBS........................+47-(0)64-933499
+    Snail-Mail  Crusaders Productions
+                Stasjonsvn. 56
+                2010 Stroemmen
+                Norway
+    E-Mail      vegards@infolink.no (Vegard Skjefstad)
+                espen@team17.com (Geir Allstedt)
+                michelt@iu.hioslo.no (Trond Michelsen)
+
+
+    The following competitions will be held:
+    Amiga Nostalgia Demo (OCS), Amiga 4K Intro, PC 4K Intro,
+    C-64 Demo, Amiga 40K Intro, 4 channel music, multichannel
+    music, Amiga & PC Fast-Intro, PC 64K Intro, Graphics,
+    Wild Demo, Amiga Demo, PC Demo.
+@endnode
+
+
+
+@node p197 " GASP `97 "
+@toc Partiesplanned
+
+
+@{b}
+    GASP `97
+@{ub}
+
+    (G)ainful (A)wesome (S)ummer (P)arty
+
+    Organiser: Eremation, Dreamdealers
+    Date     : 1997 (?)
+    Location : France
+
+    @{" Information       " link p197-info}
+@endnode
+
+@node p197-info " GASP `97 - Information"
+@toc p197
+
+
+    @{b}GASP `97 - Information @{ub}
+
+
+    It is not yet sure if this party will be organized.
+
+
+    You can access information about this party from:
+
+    Snail-Mail     Dreamdealers, PO Box 56, 13153 Tarascon Cedex, France
+@endnode
+
+
+
+@node p202 " Symposium & Mekka `97 "
+@toc PartiesMain
+
+
+@{b}
+    Symposium & Mekka `97
+@{ub}
+
+    Organiser: Polka Brothers, Lego, Phantasm, Smash Designs, Amable, Avena
+    Date     : 28-31 March 1997
+    Location : Seevetal near Hamburg, Germany
+
+    @{" Information       " link p202-info}
+
+    @{" Invitation Demo   " link p202-invite}
+@endnode
+
+@node p202-invite " Symposium & Mekka `97  - Invitation Demo "
+@toc p202
+
+   @{" Symposium & Mekka `97 Party Invitation ...... Lego " link d1705}
+@endnode
+
+@node p202-info " Symposium & Mekka `97  - Information"
+@toc p202
+
+
+    @{b}Symposium & Mekka `97 - Information @{ub}
+
+
+    You can access information about this party from:
+
+    E-Mail          gandalf@blackbox.dame.de (Gandalf)
+                    rawstyle@blackbox.dame.de, ii7349@fh-wedel.de (Raw Style)
+    World Wide Web  http://134.28.37.10/~frank/sym97/
+                    http://www.szczecin.pl/~rawstyle/sym97/
+                    http://members.aol.com/sym97/
+    BBS (Black Box) +49-4105-84619  (v34)
+                    +49-4105-669011 (ISDN)
+    Snail Mail      Frank Schliefer,
+                       Am Musterplatz 27, 21220 Seevetal, Germany
+                    Michael Krause,
+                       Mannesallee 24, 21107 Hamburg, Germany
+
+
+
+    A CD-Rom with all released productions from Mekka `96,
+    Symposium `96 and Symposium & Mekka `97 will be released
+    for about 20 DM or less after the party.
+@endnode
+
+
+
+@node p207 " Rush Hours Party `97 "
+@toc Partiesplanned
+
+
+@{b}
+    Rush Hours Party `97
+@{ub}
+
+    Organiser: Phuture 303, Scum
+    Date     : February 1997
+    Location : Czestochowa, Poland
+
+    @{" Information       " link p207-info}
+@endnode
+
+@node p207-info " Rush Hours Party `97 - Information"
+@toc p207
+
+
+    @{b}Rush Hours Party `97 - Information @{ub}
+
+
+    You can access information about this party from:
+
+     Snail Mail  Mr.Uhu/Phuture 303, Jarek Ciszowski,
+                    Joselewicza 2/6, 42-200 Czestochowa, Poland
+                 The Founder/Scum, Darek Cierpial,
+                    Bankowa 7/18, 42-290 Blachownia, Poland
+                 The Soul/Bucket, Tomasz Dusza,
+                    Obr.Westerplatte 31/61, 42-218 Czestochowa, Poland
+     Telephone   +48-(0)34-240952 (Jarek)
+                 +48-(0)34-253312 (Tomasz)
+
+
+
+    The following competitions will be held:
+    Demo, (all systems), 64K Intro (all systems), 4K Intro (all systems),
+    4 channel music (only Amiga), multichannel music (only PC),
+    graphics (painted), graphics (raytraced), Ascii, Animation.
+    Crazy Competitions: Fast Music, masterblaster, Rave, Baloons
+    Destroying, Chest, Rope, Death Drunk, Making a snowman,
+    snowballs fighting, and others.
+@endnode
+
+
+
+@node p213 " SILIconvention `97 "
+@toc PartiesMain
+
+
+@{b}
+    SILIconvention `97
+@{ub}
+
+    Can you face it?
+
+    Organiser: Oxyron (and various others on other systems)
+    Date     : 28-31 March 1997
+    Location : Bremen, Germany
+
+    @{" Information       " link p213-info}
+@endnode
+
+@node p213-info " SILIconvention `97  - Information"
+@toc p213
+
+
+    @{b}SILIconvention `97 - Information @{ub}
+
+
+    You can access information about this party from:
+
+    E-Mail          siliconvention@siliconvention.com
+		    t_gietschel@mail.netwave.de
+		    joerg_tobergte@hb2.maus.de
+                    count0@mail.netwave.de
+    World Wide Web  http://www.siliconvention.com
+    Snailmail       Tino Gietschel
+		    Kattenescher Weg 18a
+		    28277 Bremen - Germany
+
+
+
+    The following competitions will be held:
+    Amiga:   Demo, 40Kb Intro
+    Falcon:  Demo, 96Kb Intro
+    PC:      Demo, 64Kb INtro
+    C-64:    Demo, graphics, music
+    Acorn:   Demo, Intro
+    All systems: coding, graphics, render, fake demo, 4 channel music,
+                 multichannel music, wild, surprise, netwave.
+@endnode
+
+
+-------------------
+
+
+@node d1705
+@toc p202-invite
+
+
+@{b}
+    Symposium & Mekka `97 Party Invitation
+@{ub}
+
+     Producer  : Lego
+
+     Coder     : Raw Style
+     Graphician: Herr Sol
+     Sounder   : Ronny/Teklords
+     Designer  : Herr Sol
+
+     Size      : 309K
+     System    : AGA
+     How2Handle: Exit (rmb)
+     Remark    : This demo was released on @{"The Party 6" link TSG96.guide/p164-other}.
+
+     Genre     : Filedemo
+
+
+     WhatIsIt? : Whatever a party invitation might look like ... this
+                 one`s design is smashing. The rest? Well, it`s only a
+                 party invitation! :) (Dire)
+
+
+     @{" Go to Symposium & Mekka `97" link p202-invite}
+@endnode
+

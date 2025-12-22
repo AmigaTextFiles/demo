@@ -1,0 +1,231 @@
+
+----------------------------------------- < lws3d>
+
+ Here come the second "world3D" constructor in the K3D.Fx plugin,
+ after "< World3D>": It creates a full scene from a lightwave scene file.
+ You can create such file using the Lightwave3D 6.5 Scene editor, from NewTek.
+
+
+    < lws3d> scenelabel | file.lws | optional colortable  </lws3d>
+
+
+ As told in tutorial 3D07, Karate was already able to render objects
+ modeled with Lightwave with "< lwo3d>", and to attach it to a "world3D".
+Now, it is possible to directly read and construct a whole Scene file
+with only one constructor...
+
+ A Scene file stands for a description of many objects put in space,
+one or more cameras, and their their movements.
+
+ So, < lws3d>, creates a World, and attach 3D Objects in it, refered
+ as ".lwo" (Lightwave objects) files inside the ".lws" text file.
+ Then the constructor recursively build "t3d" karate rendering textures
+ the best way it can for the objecs (note: if you add an optional colortable
+ to the < lws3d> constructor, the rendering types will be better) ,
+ and also build all the cinematics movements as < ktable> karate objects.
+
+  If a scene,or many scenes, or a < lwo3d> use the same .lwo file,
+  it will be loaded only once.
+  Same for the textures: if 2 or more objects, whatever they are, use
+  a 3d textures with the same name, the texture will only be created once.
+ It allows to construct a lot of scenes with the same objects, at a low
+ memory cost. Note: you can access lwo used by a lws3d, with the name:
+ "scenelabel_o0" where 0 is the number of the object.
+ textures create can be reach by "t_LightWaveTextureName".
+  images used by these textures can be reach by "i_ImageName"
+
+ As you see, this construction process actually build many karate objects
+ of many different types, but it is completely automatic and invisible.
+ This is indeed, very easy to load a whole complex scene,
+  then the render effect "Draw3DWorld" will draw this scenes, but their
+  is a major difference with classic world3Ds: all camera and objects cinematics
+  are known. So, to make everything move, you need to:
+
+  - Use the new effect "SetCamToWorld" to apply the camera cinematic from the scene.
+  - Use parameter "4" of "Draw3DWorld", to give the time playing rate:
+     Then this effect will manage the objects movement, and then render.
+
+ This way, you can use the camera movements defined in the lws file,
+ or use other camera movements ( use your imagination). You can also
+ use the lightwave scene camera movement for any karate purposes (...)
+
+ As you might guess, not all lightwave scene and objects informations could be bind
+ to the k3D karate 3D engine. Here is a list of what < lws3d> can really
+ do for the moment:
+
+ - Creates the first camera cinematics: position, rotation, FOV.
+ - Load Object layers through < lwo3d> and their cinematics:
+    Position, rotation and scale.
+
+ Currently, this tutorial is entitled as beta because LW Object hierarchy is still
+ not implemented. Also, LW morphing is not implemented.
+ (but these features already exist in karate engine, see 3D02 and 3D10.)
+
+ You also got to follow some rules if you want the objects to be built
+ correctly:
+
+   -  < lws3d> uses the DOS path given for the .lws file (here: "data/")
+       to search for all .lwo and image files. So all .lws, .lwo and images
+       must stands in the same directory. The original pathes described
+       in the files do not matter. Of course, all images must be 8b 256x256.
+
+   - From now on, < lwo3d> has been enhaced to build better texture types:
+     If you edit an environment mapping texture texture with LW, you will
+     have a < t3MapEnv> built.
+
+   - If you create a texture mapping with a mapping image in LW, it will
+     construct a < t3dMapping> accordingly.
+
+      Then if you specify a colortable to < lws3d>, these additional textures
+       will be automatically built:
+
+   - Flat mapping will build < t3dFlat> with the nearest color
+     found in the palette.
+
+   - Editing a LW texture with an environment image AND a mapping image
+     will result by a < t3denvmapdbl> (see tutorial 3D13)
+
+   - Editing a LW texture with an environment image AND a mapping image
+     AND an elevation bump map will result by a < t3dMapBump>
+     (see tutorial 3D13)
+
+ A last note: the movements are in fact played using the same
+ "spline" function as in parameters "spl" and "splmod". Due to the
+ fact that karate does not use floating point units, the camera and
+ object movements can differ lightly from what was modelised in
+ LW Scene Editor.
+
+
+...An image for the color palette:
+<kimg> image1 | data/texture2.iff </kimg>
+... A Colortable:
+<KColorTable> coltab1 | data/remaptable.iff |0|255|255|255 </KCOLORTABLE>
+
+...A camera:
+<KCAM> the_camera |0|0|-3|0|0|0|0.5  </KCAM>
+
+... The scene:
+<lws3d> world_scene | data/letterscene.lws | coltab1 </lws3d>
+
+... Another one, this time we attach an extra background objects:
+<lws3d> world_scene2 | data/letterscene.lws | coltab1 </lws3d>
+
+
+<KIMG> i_lightmapRed  | data/lightmapred.iff </kimg>
+<KIMG> i_lightmapgrey | data/lightmapgrey.iff </kimg>
+<t3dFlatLightMap> tLightMapRed   | i_lightmapRed  </t3dFlatLightMap>
+<t3dFlatLightMap> tLightMapGrey  | i_lightmapGrey </t3dFlatLightMap>
+<sphere> amigasphere | world_scene2 |2|0|4|0|0|0|-20|-20|-20|
+         8 | 12 | 2.5| 0|0.0|0.0|1|1|tLightMapRed|tlightmapgrey|tlightmapgrey|tLightMapRed</sphere>
+
+
+
+
+<MAIN> mainscript |0|1</MAIN>
+<KSCRIPT>
+  <ID> mainscript </ID>
+  <PLAY> part1 | 800|0|1</PLAY>
+  <PLAY> part2 | 1000|0|1</PLAY>
+  <PLAY> part3 | 1000|0|1</PLAY>
+</KSCRIPT>
+
+<KPART> <ID> part1 </ID>
+
+   
+    <Fx><Pa>setpalette</Pa>  set the screen palette
+        <Pa> image1 </Pa>
+    </Fx>
+
+
+    <Fx><Pa> FillRC </Pa>
+            <Pa>   </Pa>
+            <Pa> cte|2 </Pa>
+        </Fx>
+
+
+ <Fx><Pa> SetCamToWorld </Pa>
+            <Pa> the_camera  </Pa>
+            <Pa> world_scene </Pa>
+            <Pa> aff|0|3 </Pa>
+        </Fx>
+
+ <Fx><Pa> Draw3DWorld </Pa>
+            <Pa>   </Pa>
+            <Pa> world_scene </Pa>
+            <Pa> the_camera </Pa>
+            <Pa> aff|0|3 </Pa>
+            <Pa> cte|0.2 </Pa>
+            <Pa> cte|256</Pa>
+        </Fx>
+
+
+</KPART>
+
+<KPART> <ID> part2 </ID>
+
+
+    <Fx><Pa>setpalette</Pa>  set the screen palette
+        <Pa> image1 </Pa>
+    </Fx>
+
+   
+ <Fx><Pa> SetCamToWorld </Pa>
+            <Pa> the_camera  </Pa>
+            <Pa> world_scene2 </Pa>
+            <Pa> aff|0|3 </Pa>
+        </Fx>
+
+ <Fx><Pa> Draw3DWorld </Pa>
+            <Pa>   </Pa>
+            <Pa> world_scene2 </Pa>
+            <Pa> the_camera </Pa>
+            <Pa> aff|0|3 </Pa>
+            <Pa> cte|0.2 </Pa>
+            <Pa> cte|256</Pa>
+        </Fx>
+
+
+</KPART>
+
+<KPART> <ID> part3 </ID>
+
+    <Fx><Pa>setpalette</Pa>  set the screen palette
+        <Pa> image1 </Pa>
+    </Fx>
+
+
+ <Fx><Pa> SetCamToWorld </Pa>
+            <Pa> the_camera  </Pa>
+            <Pa> world_scene </Pa>
+            <Pa> aff|0|3 </Pa>
+        </Fx>
+
+    <Fx><Pa> Ground </Pa>
+            <Pa> </Pa>          rectangle where to draw.
+            <Pa> image1 </Pa>      256x256 image to deform.
+            <Pa> the_camera </Pa>     camera
+
+            <Pa>cte|0.05</Pa>       floor
+            <Pa>CTE|4</Pa>          ceiling
+
+            <Pa>CTE|0</Pa>          ?
+            <Pa>CTE|0</Pa>          ?
+            <Pa>CTE|0</Pa>          mapping type: 0= normal
+            </Fx>
+
+
+ <Fx><Pa> Draw3DWorld </Pa>
+            <Pa>   </Pa>
+            <Pa> world_scene </Pa>
+            <Pa> the_camera </Pa>
+            <Pa> aff|0|3 </Pa>
+            <Pa> cte|0.2 </Pa>
+            <Pa> cte|256</Pa>
+        </Fx>
+
+
+</KPART>
+
+
+
+

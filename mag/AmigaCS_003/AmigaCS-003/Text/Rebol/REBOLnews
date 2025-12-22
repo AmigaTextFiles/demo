@@ -1,0 +1,104 @@
+@{d CAFFFD}
+Podãa stavu dlhîie neaktualizovanej @{c AEE4FF}www.REBOL.com@{c} stránky by sa mohlo zdaï, ùe v REBOL
+Technologies  sa  niç  nedeje:  tri mesiace staré "news" a pribliùne dva mesiace staré
+"job postings" (@{l Rebol/REBOLjobs}pracovné príleùitosti@{l}).
+
+
+  Ale uù v  blízkej budúcnosti by sa to malo zmeniï, ço potvrdila aj @{c AEE4FF}Cindy Sassenrath@{c}.
+Neaktuálnosï  stránky  a  vîeobecný  nedostatok  informácií je pravdepodobne spôsobený
+permanentnou  @{l Rebol/BusyCarl}zaneprázdnenosïou@{l}  REBOL  teamu.   Naviac sám Carl povedal, ùe zatiaã je
+príliî   skoro   zaçaï   nejakú   masívnu   propagáciu  REBOLu  v  známejîích  médiách
+(internetových  aj  konvençných).   Na menej známych stránkach (osnews.com, cucug.org,
+amiga.org) sa uù síce skôr objavili struçné informácie o ðalîom vývoji a moùnom súvise
+REBOLu  s  AmigaOS ðalîej generácie, a dokonca Carl poskytol nejaké interview v jednom
+americkom  rádiu  (ktorého  transkript  sa mi zatiaã nepodarilo získaï) i menîím Amiga
+çasopisom, ale to vîetko je iba "ticho" pred búrkou.
+
+
+
+  Zámerom  urçite  je  udrùaï vývoj v tajnosti, a zatiaã na seba príliî neupozorñovaï,
+pretoùe  lobovanie  "Evil  Empire"  Micro$oftu  v  organizácii,  ktorá ustanovuje HTML
+îtandard,  by  mohlo maï negatívny vplyv na budúcnosï REBOLu (podpora HTML a Internetu
+vîeobecne  je  pre  REBOL  kãúçová),  a tak oslabiï vieru investorov v ùivotaschopnosï
+tohto  projektu.   Takýmito  a  podobnými  intrigami by Microsoft mohol priviesï REBOL
+Technologies  ku  krachu,  çím by dosï elegantne (ako veãakrát predtým) odstrelil túto
+malú  firmiçku  s  veãkým  nápadom, ktorý Microsoftu tak veãmi chýba (IMHO Microsoftu,
+okrem  dobrých  programátorov, najviac chýba práve invencia).  Druhou moùnosïou je, ùe
+by  sa  Microsoft  pokúsil  REBOL  Technologies  kúpiï,  ale  to  je vzhãadom na osobu
+Sassenratha na 101% vylúçené.
+
+  Ok,  to  bola  iba  krátka  úvaha na tému, preço by sa na prvý pohãad mohlo zdaï, ùe
+REBOL  je  vopred  mètvy  projekt.  Dúfam, ùe pomohla pochopiï okolnosti vývoja REBOLu
+tým,  ktorí  sa  oñ predbeùne zaujímajú, a prípadne tým z vás, ktorí uù teraz povaùujú
+REBOL  za  zbytoçnosï a len ðalîí programovací jazyk, pomohla pozrieï sa na vec trochu
+inak.
+
+
+                                    @{c AEE4FF}REBOL News!@{c}
+
+                             REBOL goes @{f B0B7FF}Beta Release@{f}...!
+
+@{c AEE4FF}Máj - Júl 1998@{c}
+
+-> V  máji  bol  Carl  na  interview  v jednom americkom rádiu.  Transkript by mal byï
+   na adrese  <http://www.kzyx.com/pc>  (no neviem, podãa náîho proxy serveru táto web
+   stránka neexistuje)
+
+
+-> 31. Mája Carl povedal:
+   "Som si istý,  ùe v budúcnosti REBOL urçitým spôsobom bude súçasïou Amiga OS.  Budú
+    ho chcieï hneð ako uvidia, ço to je a ako môùe byï pre nich uùitoçný."  -  çím ale
+    nepovedal, ùe REBOL má nahradiï AREXX...  REBOL by funkçnosïou iste mohol nahradiï
+    AREXX, ale je moùné, ùe vplyvom Amiga, Inc. sa AREXX zaçne opäï vyvíjaï, a podobne
+    ako predtým bude integrovaný i do ðalîej generácie AmigaOS - do AmigaOS 5.0
+
+
+-> 1. Júna Carl oznámil,  ùe Beta verzia REBOLu  má byï dostupná v priebehu niekoãkých
+   mesiacov, priçom má maï mnoho interných zmien...
+
+   @{c AEE4FF}REBOL team@{c} má zatiaã päï çlenov:  - Carl Sassenrath  (Chief REBOL)
+                                     - Cindy Sassenrath  (Operations Manager)
+                                     - Brenda   ???
+                                     - Dan Stevens  (Business Development REBOL)
+                                     - Joe      ???
+
+
+-> REBOL  by  v  Beta verzii  mal _plne_ podporovaï vîetky známe Internetové protokoly
+   (HTTP, FTP, Email, ...),  priçom so 'vzdialenými' súbormi/adresármi sa bude cez FTP
+   pracovaï veãmi podobne (analogicky) ako s lokálnymi súbormi/adresármi.
+
+   Ðalej by malo byï moùné spúîïaï rôzne externé programy (podobne ako AREXX) a  nemal
+   by chýbaï ani  "task!"  datatyp, pomocou ktorého by sa mali daï jednoducho vytváraï
+   tasky, ço by významne rozîírilo moùnosti vyuùitia REBOLu.
+
+
+-> Zdôrazñuje sa, ùe REBOL bude prostriedkom komunikácie medzi dvomi rôznymi kontextmi
+   (medzi ãuðmi, poçítaçmi, procesmi, sieïami), teda orientácia na Internet je jasná..
+
+
+-> Neúplny zoznam operaçných systémov, ktoré bude REBOL Technologies podporovaï:
+
+   	AmigaOS
+   	BeOS
+   	BSD UNIX - FreeBSD, NetBSD, ...
+   	LINUX
+        MacOS
+        PSION EpocOS
+   	Solaris
+   	UNIX
+        Windoze 95/98
+        Windoze NT
+
+-> Nasledujúca verzia REBOLu -- REBOL/Share -- by mala byï k dispozícii na konci leta.
+   Táto verzia bude FREE a nájdete ju na Internete,  napr. na  <http://www.REBOL.com>.
+   Pravdepodobne to bude Beta verzia,  priçom nebude maï ùiadne obmedzenia  a  bude sa
+   distribuovaï s aktuálnou dokumentáciou. Na jeseñ sa plánuje plná verzia REBOL/Core.
+
+
+-> Podãa posledných informácií má REBOL Team uù 9 çlenov, ale mená nie sú známe.
+
+___
+
+
+Aj s pomocou Pekra informácie vyçíhal:                @{c AEE4FF}DNA@{c}
+                                                      @{c AEE4FF}REBOL tester/translator@{c}

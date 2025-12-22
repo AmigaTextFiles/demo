@@ -1,0 +1,66 @@
+===========================================
+Short: Make tasks use a bigger stack
+Author: Andreas R. Kleinert, Kyzer/CSG
+===========================================
+
+If  you  get crashes from "ramlib" or IPrefs, it may be because 
+their stack is  too  small. Normally you can make programs use a 
+bigger stack by using the  "stack"  command  before  executing 
+them, but IPrefs and ramlib do not work in the normal way.
+
+There's   a   couple  of  programs  written  by  Andreas  Kleinert,  
+called "RamLibPatch"  and "IPrefsPatch", which can increase the 
+size of the ramlib and  IPrefs  stack,  respectively.  It's  a  simple  
+program  he's written, quickly,  and  it seems to work fine. But, as 
+usual, it can be done smaller and better in assembler.
+
+So,  I've  made "GrowStack". It is much smaller than both those 
+patches, it allows  you  to  specify  the  two important options - 
+name of task and new stack  size - on the command line , 
+therefore you only need one program to apply any number of 
+stack size changes.
+
+USAGE:
+GrowStack <name of task> <new size of stack>
+
+- GrowStack requires the task to already be loaded in memory, 
+otherwise it will print 'object not found'. This is not a problem for 
+ramlib (which is always in memory), but it does mean that to 
+patch IPrefs, you have to run GrowStack _after_ IPrefs in the 
+startup.
+
+- There must be enough memory for the stack, otherwise it will 
+print 'not enough memory'.
+
+- It cannot shrink stacks, only grow them. If the stack is already 
+as big as (or bigger than) the size you specify, then nothing will 
+be done.
+
+- changing another task's stack is _not allowed_, but all current 
+Amigas allow it to be done successfully, despite this rule. Future 
+versions of the OS, or programs that enforce system rules, may 
+cause this program to crash or fail.
+
+- The memory used by the old stack is NOT freed.
+
+SHOULD I USE THIS PROGRAM?
+The same rules as ARK's patches (see util/sys/ GrowStack. 
+readme) apply :
+- if you occasionally get crashes from IPrefs or ramlib, try using 
+this program as specified, and perform whatever you did to make 
+it crash. If it nolonger crashes, great.
+
+- If it didn't prevent the crash, or you don't normally get crashes 
+from these two tasks, then there is no need to install or use this   
+program.
+
+INSTALLATION:
+To  perform  both  the  IPrefsPatch and RamLibPatch, put these 
+two lines in your s:startup-sequence, exactly as written, just after 
+IPrefs is started :
+
+GrowStack "« IPrefs »" 16384
+GrowStack "ramlib" 16384
+
+This makes IPrefs and ramlib both have 16Kb stacks instead of 
+4k stacks.

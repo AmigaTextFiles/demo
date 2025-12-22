@@ -1,0 +1,207 @@
+LWSC
+1
+
+FirstFrame 1
+LastFrame 60
+FrameStep 1
+PreviewFirstFrame 1
+PreviewLastFrame 270
+PreviewFrameStep 1
+FramesPerSecond 30.000000
+
+LoadObject C:\demo\kdemo\demo\main\robot\s2\vage.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+LoadObject C:\demo\kdemo\demo\main\robot\s2\robfart.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  2
+  0 0 218 0 0 0 1 1 1
+  0 0 0 0 0
+  0 0 -44.3417 0 0 0 1 1 1
+  270 0 0 0 0
+EndBehavior 1
+LockedChannels 3
+ShadowOptions 7
+
+LoadObject C:\demo\kdemo\demo\main\robot\s3\moln.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -52.87106 8.800001 -140.2652 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+LoadObject C:\demo\kdemo\demo\main\robot\s3\moln.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  9.986996 -5.05 -141.9731 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+LoadObject C:\demo\kdemo\demo\main\robot\s3\moln.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  11.17317 -5.05 -38.277 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+LoadObject C:\demo\kdemo\demo\main\robot\s3\moln.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  10.09813 -3.25 -245.3093 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+LoadObject C:\demo\kdemo\demo\main\robot\s3\moln.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -10.64455 -3.25 -232.2543 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+LoadObject C:\demo\kdemo\demo\main\robot\s3\moln.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -9.351381 -3.25 -84.3027 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+LoadObject C:\demo\kdemo\demo\main\robot\s3\moln.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  38.31168 -3.25 -85.43983 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+LoadObject C:\demo\kdemo\demo\main\robot\s3\moln.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  49.75187 -3.25 -147.671 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+LoadObject C:\demo\kdemo\demo\main\robot\s3\moln.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -55.39253 -3.25 -88.97864 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+LoadObject C:\demo\kdemo\demo\main\robot\s3\moln.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -65.29624 -3.25 -156.503 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+AmbientColor 255 255 255
+AmbIntensity 1.000000
+
+AddLight
+LightName Light
+ShowLight 1 7
+LightMotion (unnamed)
+  9
+  1
+  -2 2 -2 45 35 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LightColor 255 255 255
+LgtIntensity 1.000000
+LightType 0
+ShadowType 1
+
+ShowCamera 1 7
+CameraMotion (unnamed)
+  9
+  5
+  8.729773 -1.199992 207.6136 -46.09999 -16.39999 0 1 1 1
+  0 0 0 0 0
+  11.04546 7.700011 162.4145 -62.10004 19.4 0 1 1 1
+  48 0 0 0 0
+  0.5218305 4.234998 113.9319 -159.6514 6.08424 0 1 1 1
+  119 0 0 0 0
+  -10.53271 1.60001 67.40534 -218.4 -3.600006 0 1 1 1
+  163 0 0 0 0
+  -7.896175 1.95001 -57.12572 -337.0999 -0.8000059 0 1 1 1
+  270 0 0 0 0
+EndBehavior 1
+ZoomFactor 3.200000
+Resolution 1
+CustomSize 320 200
+PixelAspectRatio 2
+SegmentMemory 22000000
+Antialiasing 0
+AdaptiveSampling 1
+AdaptiveThreshold 16
+FilmSize 2
+FieldRendering 0
+MotionBlur 0
+DepthOfField 0
+
+SolidBackdrop 1
+BackdropColor 0 0 0
+ZenithColor 0 40 80
+SkyColor 120 180 240
+GroundColor 50 40 30
+NadirColor 100 80 60
+FogType 0
+DitherIntensity 1
+AnimatedDither 0
+
+RenderMode 2
+RayTraceEffects 0
+ClipRayColors 0
+DataOverlayLabel  
+FullSceneParamEval 0
+
+ViewMode 5
+ViewAimpoint 9.756237 0.000000 -177.518112
+ViewDirection 0.581195 -0.137881 0.000000
+ViewZoomFactor 4.065684
+GridNumber 20
+GridSize 10.000000
+ShowMotionPath 1
+ShowBGImage 0
+ShowFogRadius 0
+ShowRedraw 0
+ShowSafeAreas 0
+ShowFieldChart 0

@@ -1,0 +1,859 @@
+{
+  "actions": [
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "int32_values": 0,
+            "time": 4583
+          },
+          {
+            "int32_values": 1,
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "la_scene_6"
+        }
+      ],
+      "loops": 1,
+      "name": "scene_hide",
+      "start_time": 0,
+      "type": "property_int32"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 625
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 3125
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 833
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "la_scene_6"
+        }
+      ],
+      "loops": 1,
+      "name": "scene_color",
+      "start_time": 0,
+      "type": "property_float"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 4583
+          },
+          {
+            "float_values": 755.99998,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "ballerina"
+        }
+      ],
+      "loops": 1,
+      "name": "ballerinaAction",
+      "start_time": 0,
+      "type": "rotation_y"
+    }
+  ],
+  "cameras": [
+    {
+      "far_clip_plane": 100.0,
+      "fov_x": 49.134342,
+      "fov_y": 28.841546,
+      "hide": false,
+      "name": "camera_1",
+      "near_clip_plane": 0.1,
+      "position": [
+        0.0,
+        4.16,
+        18.360001
+      ],
+      "rotation": [
+        3e-06,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "enc_info": {
+    "data_type": "ENCSCN",
+    "date": "29 Mar 2020 20:26:02",
+    "version": "2.0"
+  },
+  "loops": 1,
+  "name": "la_scene_6",
+  "objects": [
+    {
+      "mesh_name": "la3_ballerina",
+      "name": "ballerina"
+    },
+    {
+      "mesh_name": "la3_arm_left",
+      "name": "arm_left",
+      "position": [
+        0.183194,
+        5.602429,
+        0.977922
+      ],
+      "properties": {
+        "num_lines": 10
+      },
+      "rotation": [
+        43.393274,
+        -80.596642,
+        82.491767
+      ]
+    },
+    {
+      "mesh_name": "la3_arm_right",
+      "name": "arm_right",
+      "position": [
+        -0.429001,
+        5.622294,
+        0.489067
+      ],
+      "properties": {
+        "num_lines": 10
+      },
+      "rotation": [
+        -48.101843,
+        9.071482,
+        106.573914
+      ]
+    },
+    {
+      "mesh_name": "la3_breast_left",
+      "name": "breast_left",
+      "position": [
+        -0.164089,
+        5.015878,
+        1.045557
+      ],
+      "properties": {
+        "num_lines": 11
+      },
+      "rotation": [
+        -0.870651,
+        -25.076705,
+        -0.97418
+      ]
+    },
+    {
+      "mesh_name": "la3_breast_right",
+      "name": "breast_right",
+      "position": [
+        -0.504054,
+        5.019221,
+        0.797634
+      ],
+      "properties": {
+        "num_lines": 11
+      },
+      "rotation": [
+        -2.365139,
+        -52.377159,
+        -5.108018
+      ]
+    },
+    {
+      "mesh_name": "la3_eyes",
+      "name": "eyes",
+      "position": [
+        -0.216996,
+        6.398702,
+        1.045497
+      ],
+      "properties": {
+        "num_lines": 8
+      },
+      "rotation": [
+        -250.122811,
+        -238.348412,
+        -106.745946
+      ]
+    },
+    {
+      "mesh_name": "la3_foot_left",
+      "name": "foot_left",
+      "position": [
+        0.058902,
+        0.774808,
+        0.052723
+      ],
+      "properties": {
+        "num_lines": 30
+      },
+      "rotation": [
+        -7.818485,
+        0.0,
+        -3.935511
+      ]
+    },
+    {
+      "mesh_name": "la3_hand_left_1",
+      "name": "hand_left_1",
+      "position": [
+        0.340531,
+        5.367734,
+        1.05855
+      ],
+      "properties": {
+        "num_lines": 42
+      },
+      "rotation": [
+        -118.601194,
+        38.245791,
+        -1.16165
+      ]
+    },
+    {
+      "mesh_name": "la3_hand_left_2",
+      "name": "hand_left_2",
+      "position": [
+        0.856474,
+        5.815799,
+        1.698443
+      ],
+      "properties": {
+        "num_lines": 50
+      },
+      "rotation": [
+        -130.514451,
+        5.609861,
+        0.427463
+      ]
+    },
+    {
+      "mesh_name": "la3_hand_left_3",
+      "name": "hand_left_3",
+      "position": [
+        0.932667,
+        6.587173,
+        2.597402
+      ],
+      "properties": {
+        "num_lines": 20
+      },
+      "rotation": [
+        -139.595488,
+        -25.919422,
+        12.867048
+      ]
+    },
+    {
+      "mesh_name": "la3_hand_right_1",
+      "name": "hand_right_1",
+      "position": [
+        -0.620803,
+        5.425662,
+        0.304925
+      ],
+      "properties": {
+        "num_lines": 42
+      },
+      "rotation": [
+        -91.134483,
+        -155.85418,
+        -65.716494
+      ]
+    },
+    {
+      "mesh_name": "la3_hand_right_2",
+      "name": "hand_right_2",
+      "position": [
+        -0.9985,
+        5.433304,
+        -0.549822
+      ],
+      "properties": {
+        "num_lines": 50
+      },
+      "rotation": [
+        -90.410121,
+        -154.110788,
+        -65.520755
+      ]
+    },
+    {
+      "mesh_name": "la3_hand_right_3",
+      "name": "hand_right_3",
+      "position": [
+        -1.488074,
+        5.444736,
+        -1.625442
+      ],
+      "properties": {
+        "num_lines": 20
+      },
+      "rotation": [
+        -77.399956,
+        -139.017996,
+        -62.655955
+      ]
+    },
+    {
+      "mesh_name": "la3_head",
+      "name": "head",
+      "position": [
+        -0.212328,
+        5.867217,
+        0.829031
+      ],
+      "properties": {
+        "num_lines": 20
+      },
+      "rotation": [
+        -15.799515,
+        12.555139,
+        5.622016
+      ]
+    },
+    {
+      "mesh_name": "la3_leg_left_1",
+      "name": "leg_left_1",
+      "position": [
+        0.145812,
+        3.816043,
+        0.137406
+      ],
+      "properties": {
+        "num_lines": 50
+      },
+      "rotation": [
+        -4.05418,
+        0.116738,
+        -2.292125
+      ]
+    },
+    {
+      "mesh_name": "la3_leg_left_2",
+      "name": "leg_left_2",
+      "position": [
+        0.11121,
+        2.404327,
+        0.116528
+      ],
+      "properties": {
+        "num_lines": 55
+      },
+      "rotation": [
+        2.427719,
+        0.0,
+        -3.935511
+      ],
+      "scale": [
+        1.0,
+        1.0812,
+        1.0
+      ]
+    },
+    {
+      "mesh_name": "la3_leg_right_1",
+      "name": "leg_right_1",
+      "position": [
+        -0.378033,
+        3.852081,
+        0.123114
+      ],
+      "properties": {
+        "num_lines": 50
+      },
+      "rotation": [
+        155.975388,
+        100.261583,
+        -86.247538
+      ]
+    },
+    {
+      "mesh_name": "la3_leg_right_2",
+      "name": "leg_right_2",
+      "position": [
+        -1.070113,
+        3.941457,
+        -1.104099
+      ],
+      "properties": {
+        "num_lines": 55
+      },
+      "rotation": [
+        201.302969,
+        126.541289,
+        -88.766778
+      ],
+      "scale": [
+        1.0,
+        1.0812,
+        1.0
+      ]
+    },
+    {
+      "mesh_name": "la3_neck",
+      "name": "neck",
+      "position": [
+        -0.17541,
+        6.073267,
+        0.780061
+      ],
+      "properties": {
+        "num_lines": 16
+      },
+      "rotation": [
+        9.304443,
+        -28.269245,
+        -3.467351
+      ]
+    },
+    {
+      "mesh_name": "la3_nose",
+      "name": "nose",
+      "position": [
+        -0.190924,
+        6.272558,
+        1.105443
+      ],
+      "properties": {
+        "num_lines": 8
+      },
+      "rotation": [
+        -28.036048,
+        12.555139,
+        5.622016
+      ]
+    },
+    {
+      "mesh_name": "la3_skirt_01",
+      "name": "skirt_01",
+      "position": [
+        -0.056124,
+        3.796765,
+        0.77714
+      ],
+      "properties": {
+        "num_lines": 50
+      },
+      "rotation": [
+        -11.317501,
+        -1.7002,
+        1.741306
+      ]
+    },
+    {
+      "mesh_name": "la3_skirt_02",
+      "name": "skirt_02",
+      "position": [
+        -0.056707,
+        4.235667,
+        0.309443
+      ],
+      "properties": {
+        "num_lines": 50
+      },
+      "rotation": [
+        -98.003236,
+        175.78556,
+        0.529367
+      ]
+    },
+    {
+      "mesh_name": "la3_skirt_03",
+      "name": "skirt_03",
+      "position": [
+        -0.553762,
+        4.026002,
+        0.491346
+      ],
+      "properties": {
+        "num_lines": 50
+      },
+      "rotation": [
+        -53.151839,
+        269.87091,
+        -42.04394
+      ]
+    },
+    {
+      "mesh_name": "la3_skirt_04",
+      "name": "skirt_04",
+      "position": [
+        0.400284,
+        4.058043,
+        0.52239
+      ],
+      "properties": {
+        "num_lines": 50
+      },
+      "rotation": [
+        -58.653498,
+        449.870929,
+        42.043943
+      ]
+    },
+    {
+      "mesh_name": "la3_skirt_05",
+      "name": "skirt_05",
+      "position": [
+        0.105868,
+        3.826012,
+        0.754976
+      ],
+      "properties": {
+        "num_lines": 50
+      },
+      "rotation": [
+        -13.29241,
+        11.182641,
+        16.081906
+      ]
+    },
+    {
+      "mesh_name": "la3_skirt_06",
+      "name": "skirt_06",
+      "position": [
+        0.253694,
+        3.874313,
+        0.710782
+      ],
+      "properties": {
+        "num_lines": 50
+      },
+      "rotation": [
+        -21.403692,
+        30.083681,
+        29.454146
+      ]
+    },
+    {
+      "mesh_name": "la3_skirt_07",
+      "name": "skirt_07",
+      "position": [
+        0.375441,
+        3.953659,
+        0.640755
+      ],
+      "properties": {
+        "num_lines": 50
+      },
+      "rotation": [
+        -38.024315,
+        58.324693,
+        41.036736
+      ]
+    },
+    {
+      "mesh_name": "la3_skirt_08",
+      "name": "skirt_08",
+      "position": [
+        -0.250496,
+        3.818622,
+        0.740574
+      ],
+      "properties": {
+        "num_lines": 50
+      },
+      "rotation": [
+        -14.202344,
+        -15.012821,
+        -10.111649
+      ]
+    },
+    {
+      "mesh_name": "la3_skirt_09",
+      "name": "skirt_09",
+      "position": [
+        -0.417727,
+        3.853957,
+        0.69078
+      ],
+      "properties": {
+        "num_lines": 50
+      },
+      "rotation": [
+        -21.872221,
+        -34.493162,
+        -24.8675
+      ]
+    },
+    {
+      "mesh_name": "la3_skirt_10",
+      "name": "skirt_10",
+      "position": [
+        -0.527865,
+        3.936975,
+        0.591724
+      ],
+      "properties": {
+        "num_lines": 50
+      },
+      "rotation": [
+        -34.535909,
+        -58.38835,
+        -36.4239
+      ]
+    },
+    {
+      "mesh_name": "la3_skirt_11",
+      "name": "skirt_11",
+      "position": [
+        -0.468518,
+        4.113894,
+        0.413872
+      ],
+      "properties": {
+        "num_lines": 50
+      },
+      "rotation": [
+        -80.010878,
+        233.245168,
+        -34.924079
+      ]
+    },
+    {
+      "mesh_name": "la3_skirt_12",
+      "name": "skirt_12",
+      "position": [
+        -0.33358,
+        4.169879,
+        0.355696
+      ],
+      "properties": {
+        "num_lines": 50
+      },
+      "rotation": [
+        -94.646505,
+        209.487366,
+        -31.38572
+      ]
+    },
+    {
+      "mesh_name": "la3_skirt_13",
+      "name": "skirt_13",
+      "position": [
+        -0.19841,
+        4.206751,
+        0.31342
+      ],
+      "properties": {
+        "num_lines": 50
+      },
+      "rotation": [
+        -99.414155,
+        192.675129,
+        -15.866632
+      ]
+    },
+    {
+      "mesh_name": "la3_skirt_14",
+      "name": "skirt_14",
+      "position": [
+        0.087233,
+        4.210075,
+        0.334632
+      ],
+      "properties": {
+        "num_lines": 50
+      },
+      "rotation": [
+        -96.119169,
+        162.315266,
+        12.376348
+      ]
+    },
+    {
+      "mesh_name": "la3_skirt_15",
+      "name": "skirt_15",
+      "position": [
+        0.200641,
+        4.168999,
+        0.380594
+      ],
+      "properties": {
+        "num_lines": 50
+      },
+      "rotation": [
+        -91.335974,
+        146.329112,
+        24.33809
+      ]
+    },
+    {
+      "mesh_name": "la3_skirt_16",
+      "name": "skirt_16",
+      "position": [
+        0.320084,
+        4.118575,
+        0.444092
+      ],
+      "properties": {
+        "num_lines": 50
+      },
+      "rotation": [
+        -81.330771,
+        124.178863,
+        35.519883
+      ]
+    },
+    {
+      "mesh_name": "la3_topknot",
+      "name": "top_knot",
+      "position": [
+        -0.353686,
+        6.417471,
+        0.437677
+      ],
+      "properties": {
+        "num_lines": 12
+      },
+      "rotation": [
+        -82.959409,
+        12.555139,
+        5.622016
+      ]
+    },
+    {
+      "mesh_name": "la3_trunk_1",
+      "name": "trunk_1",
+      "position": [
+        -0.105992,
+        4.0949,
+        0.534603
+      ],
+      "properties": {
+        "num_lines": 20
+      },
+      "rotation": [
+        50.650671,
+        0.0,
+        -3.935511
+      ]
+    },
+    {
+      "mesh_name": "la3_trunk_2",
+      "name": "trunk_2",
+      "position": [
+        -0.145181,
+        4.422325,
+        0.737321
+      ],
+      "properties": {
+        "num_lines": 25
+      },
+      "rotation": [
+        39.400708,
+        -8.821433,
+        -3.889101
+      ]
+    },
+    {
+      "mesh_name": "la3_trunk_3",
+      "name": "trunk_3",
+      "position": [
+        -0.211461,
+        4.623917,
+        0.815406
+      ],
+      "properties": {
+        "num_lines": 25
+      },
+      "rotation": [
+        28.357767,
+        -18.790293,
+        -3.72637
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        0.9558
+      ]
+    },
+    {
+      "mesh_name": "la3_trunk_4",
+      "name": "trunk_4",
+      "position": [
+        -0.243689,
+        4.945107,
+        0.768292
+      ],
+      "properties": {
+        "num_lines": 25
+      },
+      "rotation": [
+        8.723116,
+        -38.414036,
+        -3.085507
+      ],
+      "scale": [
+        0.8983,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "mesh_name": "la3_trunk_5",
+      "name": "trunk_5",
+      "position": [
+        -0.23219,
+        5.700936,
+        0.819362
+      ],
+      "properties": {
+        "num_lines": 25
+      },
+      "rotation": [
+        8.723116,
+        -38.414036,
+        -3.085507
+      ]
+    },
+    {
+      "mesh_name": "la3_foot_right",
+      "name": "foot_right",
+      "position": [
+        -1.502927,
+        4.021889,
+        -2.674787
+      ],
+      "properties": {
+        "num_lines": 30
+      },
+      "rotation": [
+        -149.263635,
+        -202.127892,
+        -80.637295
+      ]
+    }
+  ],
+  "properties": {
+    "scene_color": 0.0,
+    "scene_hide": 0
+  },
+  "time": 4583
+}

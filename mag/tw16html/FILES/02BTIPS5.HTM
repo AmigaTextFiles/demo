@@ -1,0 +1,360 @@
+<HTML>
+<HEAD>
+<TITLE>TW16</TITLE></HEAD>
+<BODY BACKGROUND="..\bgnd.jpg" BGCOLOR="#000000" TEXT="#FFFFFF">
+<CENTER>
+<table border=0><TR><TD>
+<pre>
+<font color =#FF94E8></PRE><CENTER><FONT FACE=ARIAL SIZE=7><I><B>BLITZ TIPS #5</CENTER></FONT></B></I><PRE>
+<font color =#FF94DC>
+<font color =#FF94D0>
+<font color =#FF94C4>
+<font color =#FF94B8>
+<font color =#FF94AC>
+<font color =#FF94A0>
+<font color =#FFD04C>                                   By
+<font color =#FFF44C>                          BootBlock/TerraForm
+<font color =#FFFFFF>
+<font color =#FFFFAC>
+If  Kei  has decided it was a good idea, I have included the code to the
+example  program (at the bottom of this file) in the `Goodies' drawer on
+Disk Nº 2.
+
+<font color =#FFFFB8>
+Phew  mista!   It's been ages since I did one of this Blitz Tips things.
+Um...  are we on #4 or #5 ?  Pah, let's say #5.
+<font color =#FFFFC4>
+Okay,  this  Blitz  Tips  installment  will  be about polishing off your
+programs.
+<font color =#FFFFD0>
+When  finishing  a  program  (which is quite rare in my case), you often
+<font color =#FFFFDC>wonder  what  else  to  add  to make it run just that bit more smoother.
+<font color =#FFFFE8>I'll be giving such tips here ....
+
+
+<font color =#FFB8FF>
+</PRE><CENTER><FONT FACE=ARIAL SIZE=5><B><I>ERROR TRAPPING</CENTER></FONT></B></I><PRE>
+<font color =#FFB8F4>
+<font color =#FFB8E8>
+<font color =#FFC4FF>It's very suprising the number of people that don't include "proper"
+<font color =#FFD0FF>error  trapping code within their program (You should see AMOS programs,
+<font color =#FFDCFF>NONE of them have got good error trapping, they don't give you any info.
+<font color =#FFE8FF>They just quit/crash.  AMOS?  SHIT, THAT'S WHAT!) ....
+
+<font color =#FFC4F4>
+The  very  first  thing  you'll need is adequate error trapping.  Try to
+give  the  user  as much info as possible on why the program shat itself
+(not  TOO MUCH, as you might bog the code down - see later on how to get
+good error info to the user, which is also good for debugging purposes).
+<font color =#FFC4E8>
+So,  at the start of the code (just after the WBStartUp command), insert
+a simple error handler like so ...
+<font color =#4C4C4C>
+    ;---- Install simple error handler ....
+    ;
+<font color =#FFFF58>    SetErr
+      DisplayBeep_ 0
+      EasyRequest  "Uh Oh!","A FATAL ERROR HAS OCCURRED!","Quit Now!"
+      End
+    End SetErr
+<font color =#FFC4DC>
+The  code  in-between  SetErr  and End SetErr will be ran if a bad error
+occurrs (window not opening, can't find file(s), etc).
+<font color =#FFC4D0>
+This  is  no  good  if  you want to find the exact problem, so you use a
+string$  to  contain a description of the current section of the program
+being executed.  More on this later.
+
+
+<font color =#D0F4D0>
+</PRE><CENTER><FONT FACE=ARIAL SIZE=5><B><I>ExecVersion</CENTER></FONT></B></I><PRE>
+<font color =#D0F4C4>
+<font color =#D0F4B8>
+If your program requires a minimum OS version, then this command is used
+<font color =#D0F4AC>(see  manual for return values).  Place this just after the SetErr...End
+<font color =#D0F4A0>SetErr  code.  For example, if you're using GadTools, the user will need
+<font color =#D0F494>OS v2.00 (if  OS v2.04 is needed, then I'm shagged, as I think I've been
+<font color =#D0F488>requesting a minimum of OS 2.0), so you use this piece of code :
+<font color =#4C4C4C>
+    ;---- See if user has got minimum OS, if not, then ....
+    ;
+<font color =#FFFF58>    If ExecVersion&lt;36
+      DisplayBeep_ 0
+      EasyRequest "Soz mate!","You need AT LEAST OS v2.00 !","Damn!"
+      Pop If : End
+    EndIf
+
+
+<font color =#FFA0DC>
+</PRE><CENTER><FONT FACE=ARIAL SIZE=5><B><I>Window Checking</CENTER></FONT></B></I><PRE>
+<font color =#FFACDC>
+<font color =#FFB8DC>
+<font color =#FFC4DC>For  the  users which have got the Blitz Support Suite (BSS), the Window
+command  can be used as a function, so you can check to see if it opened
+okay.  Look at thou code ...
+<font color =#4C4C4C>
+    ;---- Try and open main window ....
+    ;
+<font color =#FFFF58>    If Window(0,0,11,640,11,$1100E,"A Titlebar Window!",1,2)=0
+      DisplayBeep_ 0
+      EasyRequest "Error!","Error opening main window!","Quit nar!"
+      Pop If : End
+    EndIf
+<font color =#FFC4D0>
+If  for  some reason the window failed to open, then you'll be told.  If
+you're coding a utility and you are implementing loads of error checking
+features  and things, then look at dis ....
+<font color =#4C4C4C>
+    ;---- Define vars/etc ...
+    ;
+<font color =#FFFFF4>    WIN_X.w     = 150
+    WIN_Y.w     = 50
+    WIN_ERROR$  = "I couldn't  seem to open my window at the"+Chr$(10)
+    WIN_ERROR$  + "default co-ordinates. Shall I try opening"+Chr$(10)
+    WIN_ERROR$  + "it at the top-left of the screen ?"
+
+<font color =#4C4C4C>_MAINGUI:
+<font color =#FFFF58>    FindScreen 0
+    If Window(0,WIN_X,WIN_Y,1300,1000,$1100E,"SuckMaster V0.1",1,2)=0
+      DisplayBeep_ 0
+      If EasyRequest("Window Error!",WIN_ERROR$,"Yup!|Nah!")=1
+        Pop If : Pop If : WIN_X=0 : WIN_Y=0
+        Goto _MAINGUI
+      Else
+        Pop If : Pop If
+        End
+      EndIf
+    EndIf
+<font color =#E8E8E8>
+    ····
+<font color =#FFFFFF>    Rest of code 
+<font color =#E8E8E8>    ....
+
+<font color =#FFC4C4>
+This  will  try  and  open the GUI at stupid co-ordinates (so the window
+will  flag  an error straight away), you'll get a message if you want to
+try and open the window at the top-left of the screen.  If so, it'll try
+again, else it'll quit.
+<font color =#FFC4B8>
+There  will  be  full  (but  quite  useless)  example code of the things
+mentioned in this text in the following subject .....
+
+
+<font color =#70E8FF>
+</PRE><CENTER><FONT FACE=ARIAL SIZE=5><B><I>BETTER ERROR TRAPING</CENTER></FONT></B></I><PRE>
+<font color =#70F4FF>
+<font color =#70FFFF>
+Of  course  the  best  error  traping  method,  is to use a command as a
+function  and see what it returns.  True (-1) for success, False (0) for
+failure.   But,  due  to  a  STUPID  bug  in the Blitz 2 compiler v1.90,
+<font color =#7CFFFF>Statements  and Functions would make the program crash when the debugger
+was  enabled,  so  I  had  to  find  a  way  around it (with the help of
+<font color =#88FFFF>overusing Gosub's), as SetErr...End SetErr was obviously not enough help
+for debugging.  So I found a way around it.
+<font color =#94FFFF>
+There's  2 ways you can do this.  You can put the error messages into an
+array  (harder to update though) or you can basically do it "on the fly"
+<font color =#A0FFFF>(not sure the fly would like it very much).  I prefer the "litteral" way
+(I  think  that's  what  it might be called, dunno really.  I'll call it
+<font color =#ACFFFF>that instead of continually typing "on the fly" all the time).
+
+<font color =#B8FFFF>First of all, you need a string$ variable to keep the error text.  Let's
+<font color =#C4FFFF>use ErrorTxt$ in this example.
+
+<font color =#D0FFFF>Right,  every time you come to a dodgy command/routine that has a chance
+<font color =#DCFFFF>of causing an error, you insert put a string defining the possible error
+<font color =#E8FFFF>into  ErrorTxt$.   So if an error occurrs, the text in ErrorTxt$ will be
+<font color =#F4FFFF>displayed.
+
+<font color =#FFFFFF>Aha, how do I display the ErrorTxt$ string when an error occurrs?  Easy,
+<font color =#FFFFF4>use SetErr...End SetErr like so ....
+<font color =#4C4C4C>
+    ;---- Define our sexy error handler ....
+    ;
+<font color =#FFFF58>    SetErr
+      DisplayBeep_ 0
+      EasyRequest "FATAL ERROR!",ErrorTxt$,"Quick NOW!"
+      End
+    End SetErr
+<font color =#FFFFE8>
+There,  that  was  easy!  Now, here's that example program using all the
+<font color =#FFFFDC>stuff  mentioned  in  this file (including the error traping above,  plus
+<font color =#FFFFD0>other stuff). Comments are also included (also colour-coded to my version
+of Blitz 2) ....
+
+<font color =#4C4C4C>
+;
+; Reboot V1.5 by BootBlock/TerraForm.
+;
+; CREATED : 26/07/1997 - Saturday.
+; FINISHED: 26/07/1997 - Saturday.
+; MODIFIED: 26/07/1997 - Saturday.
+;
+;  NOTES:
+;   Example program to demonstrate the things talked about  in
+;   this Blitz Tips. This is also an enhanced version that was
+;   featured in The Word #10 or #11 (whatever).
+;
+;   This program is a  bit  small  to  include  very  detailed
+;   ErrorTxt$ messages. Sorry.
+;
+;   OS V2.04 is required for this to work!
+;
+
+;---- Let's us start from Workbench via an icon ....
+<font color =#FFFF58>WBStartUp
+<font color =#4C4C4C>
+  ;---- Our infamous modified error handler ....
+  ;
+<font color =#FFFF58>  SetErr
+    DisplayBeep_ 0
+    EasyRequest  "FATAL ERROR!",ErrorTxt$,"QUIT NOW!"
+    End
+  End SetErr
+<font color =#4C4C4C>
+  ;---- We need at least6 OS v2.04 to run (I think) ....
+  ;
+<font color =#FFFF58>  If ExecVersion&lt;36
+    DisplayBeep_ 0
+    EasyRequest "Soz mate!","You need at least OS v2.04!","Bah!"
+    Pop If : End
+  EndIf
+<font color =#4C4C4C>
+;###########################################################
+;---------------------------- Original by D!ck ....
+<font color =#FFFF58>  Statement _READFONTPREFS{}
+   SHARED scfont.w
+    pref$  = "ENV:Sys/font.prefs" : fail=0
+
+    If Exists(pref$)=518
+      filepos.l=AllocVec_(518,1|65536)
+      rf.b=ReadFile(0,pref$)
+      If rf=-1 
+        ReadMem 0,filepos,518 : CloseFile 0 
+        scfont=Peek.w(filepos+386)
+      EndIf
+      If rt=0  Then fail=0
+      FreeVec_ filepos.l
+    Else
+      fail=True
+    EndIf
+
+    If FindTask_(Chr$(171)+" IPrefs "+Chr$(187))=0 Then fail=-1
+    If fail=-1 Then scfont$="topaz.font" : scfont=8
+  End Statement
+<font color =#4C4C4C>
+;###########################################################VARS / ETC
+<font color =#4C4C4C>
+  WinTitle$  = "Reboot v1.05"
+  ScrTitle$  = Chr$(134)+"Reboot V1.05 by BootBlock/TerraForm, 25/7/97."
+  WIN_X.w    = 512
+  WIN_Y.w    = 11
+
+  WIN_ERROR$ = "Error opening main window. Shall I try opening"+Chr$(10)
+  WIN_ERROR$ + "the window at the top-left of the screen ?"
+
+  NewPrefs$  = "I have just received a message from the system"+Chr$(10)
+  NewPrefs$  + "telling me that the preferences has just  been"+Chr$(10)
+  NewPrefs$  + "modified.  Shall I close down for about 5 secs"+Chr$(10)
+  NewPrefs$  + "and re-open again to reflect the changes ?"
+
+  ErrorTxt$  = "Error loading fonts!"
+
+;###########################################################MAIN GUI/LOOP
+
+  ;--- This program isn't fully font-sensitive, so we'll
+  ;    have to force the program to use an 8-point font.
+  ;    Obviously,  the  Personal font looks  far  better
+  ;    than the Topaz font,  so  let's load them in this
+  ;    order.  The Topaz font is always  available,  but
+  ;    the Personal font may not be.  If it's not,  then
+  ;    we'll have the Topaz font to fall back on. Neat, eh?
+  ;
+<font color =#FFFF58>  LoadFont 0,"topaz.font",8
+  LoadFont 0,"personal.font",8
+<font color =#4C4C4C>
+  ErrorTxt$="Error executing _READFONTPREFS{} !"
+
+  _READFONTPREFS{}
+
+  ErrorTxt$="Error setting up main window!"
+
+_MAINGUI:
+<font color =#FFFF58>  FindScreen 0
+  If Window(0,WIN_X,(WIN_Y-8+scfont),128,30,$1100E,"Setting Up!",1,2)=0
+    DisplayBeep_ 0
+    If EasyRequest("Window Error!",WIN_ERROR$,"Yup!|Nah!")=1
+      Pop If : Pop If : WIN_X=0 : WIN_Y=11
+      Goto _MAINGUI
+    Else
+      Pop If : Pop If
+      End
+    EndIf
+  EndIf
+  GTButton         0,50,6,2,108,13,"_REBOOT",$0010
+  AttachGTList     0,0
+  GTBevelBox       0,4,11,120,(17-8+scfont),$0000
+  SetWindowTitles_ Peek.l(Addr Window(0)),&amp;WinTitle$,&amp;ScrTitle$
+<font color =#4C4C4C>
+  ErrorTxt$     = "Error during _MAINLOOP !"
+
+_MAINLOOP:
+<font color =#FFFF58>  Repeat
+    EventType.l=WaitEvent
+<font color =#4C4C4C>
+    ;--- If GadgetHit detected, then reboot (as there's only
+    ;    one gadget in the window, it must have been that
+    ;    that caused the event) ....
+    ;
+<font color =#FFFF58>    If EventType.l=$40 Then ColdReboot_
+<font color =#4C4C4C>
+    ;--- This checks to see if we have been sent  a  message
+    ;    from Mr Exec telling us that the system preferences
+    ;    have been modified. If so, then inform the user ...
+    ;
+<font color =#FFFF58>    If EventType.l=$4000
+      If EasyRequest("The Exec talked to me!",NewPrefs$,"Okay!|Nope!")=1
+        CloseWindow 0   : Free GTList 0
+        Pop If : Pop If : Pop  Repeat
+        Goto _MAINGUI
+      EndIf
+    EndIf
+
+  Until EventType.l=$200                ;If CloseGadget hit, then ...
+  ErrorTxt$ = "Closing down error!"
+  CloseWindow 0 : Free GTList 0         ;... free window/GTList and
+End                                     ;then finally end the program.
+
+
+<font color =#FFFFFF>
+By  the  way,  I  typed  this  program into this article first, and then
+decided  to  include  it  in plain ASCII form to be loaded into Blitz 2.
+Just select "Load ..." (or Left AMIGA+L) and the file is located on disk
+2  in  the  `Goodies'  drawer (if Kei has included it).  Maybe something
+simliar to this :
+<font color =#E8E8FF>                    "WORD15B:Goodies/BlitzTips5.asc"
+<font color =#FFFFFF>
+If you've any questions or code to share with us, then either send it to
+the address in the Contributions article, or to me:
+<font color =#FFFF7C>
+                            BootBlock/TerraForm
+<font color =#FFFF88>                            115 Corporation Road
+<font color =#FFFF94>                            Grimsby
+<font color =#FFFFA0>                            N.E. Lincs
+<font color =#FFFFAC>                            DN31 1UR
+<font color =#FFFFB8>                            England
+<font color =#FFFFFF>
+If  you  send  it/them  to me, and you would like a personal reply, then
+please  try  and  include  an  SSAE  (Stamped Self Addressed Envelope).
+<font color =#FFACAC>Bysie!
+
+<font color =#FFFF4C>
+!-TrF-!
+
+
+end
+</PRE>
+</TD></TR></TABLE>
+</CENTRE>
+</BODY>
+</HTML>

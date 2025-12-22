@@ -1,0 +1,286 @@
+; $VER: DanceDiverse2 Installer v1.0 (1-1-95)
+; Copyright © 1994-1995 by Suburban Base Sweden. Written by Eracore/SUB.
+(complete 0)
+(set OK 0)
+(message "\n\nWelcome to the Dance Diverse 2 Install script.\nThis will put"
+	 " the musicdisk on your selected device.\n\nMake sure you have 2MB"
+ 	 " of diskspace and plenty of Chip Memory Available.\n\n\nSelect"
+	 " PROCEED if you want to continue, hit ABORT otherwise.")
+(complete 5)
+(set DestPath
+	(askdir	(prompt	"Where should DanceDiverse2 by installed?")
+		(help	"\n DanceDiverse2 will be copied to the choosen path"
+			" in directory called DD2.\n")
+		(default "SYS:")))
+(if (= (substr destpath (- (strlen destpath) 1) 1) ":")
+	(set dummy "42" )
+	(set destpath (cat destpath "/") ))
+(set @default-dest destpath)
+(if (< (getdiskspace destpath) 13000000)
+	(abort 	"There is not enough diskspace avaiable in " DestPath
+		".\n\nPlease select an other directory or device.")
+	(set dummy "42"))
+(if	(askbool
+		(prompt	"\n\nAre you sure, that DanceDiverse2 should be\n"
+			"installed to " DestPath "\n\n\nA new directory"
+			" called 'DD2' will be created, where you will find"
+			" the necessary files.\n")
+		(help 	"\n If you don't want to install DD2 in the\n"
+		        "choosen directory, select the NO Gadget.\n\n"
+		        " If you confirm the selected directory\n"
+		        "then press YES."))
+	(set OK 1))
+(if (= OK 1)
+	(	(complete 10)
+		(set FinalPath (cat (tackon DestPath "DD2")))
+		(makedir
+			(FinalPath))
+		;	(infos))
+ 		(askdisk
+			(prompt "\n\n\n\nPlease insert the first disk\n\n"
+				"of DanceDiverse2 in any drive")
+			(help 	"\n Insert Disk 1 of DanceDiverse2 Musicdisk.\n"
+			      	"\nOtherwise press Abort Install.")
+			(dest 	"dANCe_dIVERSe_#2_01"))
+		(complete 15)
+
+		(copyfiles
+        		(prompt "Copying Files to ")
+                        FinalPath
+                        (".")
+			(source "dANCe_dIVERSe_#2_01:")
+			(dest 	FinalPath)
+			(pattern "#?")
+			(optional "force")
+			(files))
+ 		(askdisk
+			(prompt "\n\n\n\nPlease insert the second disk\n\n"
+				"of DanceDiverse2 in any drive")
+			(help 	"\n Insert Disk 2 of DanceDiverse2 Musicdisk.\n"
+			      	"\nOtherwise press Abort Install.")
+			(dest 	"dANCe_dIVERSe_#2_02"))
+		(complete 20)
+		(copyfiles
+        		(prompt "Copying Files to ")
+                        FinalPath
+                        (".")
+			(source "dANCe_dIVERSe_#2_02:")
+			(dest 	FinalPath)
+			(pattern "#?")
+			(optional "force")
+			(files))
+ 		(askdisk
+			(prompt "\n\n\n\nPlease insert the third disk\n\n"
+				"of DanceDiverse2 in any drive")
+			(help 	"\n Insert Disk 3 of DanceDiverse2 Musicdisk.\n"
+			      	"\nOtherwise press Abort Install.")
+			(dest 	"dANCe_dIVERSe_#2_03"))
+		(complete 25)
+		(copyfiles
+        		(prompt "Copying Files to ")
+                        FinalPath
+                        (".")
+			(source "dANCe_dIVERSe_#2_03:")
+			(dest 	FinalPath)
+			(pattern "#?")
+			(optional "force")
+			(files))
+ 		(askdisk
+			(prompt "\n\n\n\nPlease insert the fourth disk\n\n"
+				"of DanceDiverse2 in any drive")
+			(help 	"\n Insert Disk 4 of DanceDiverse2 Musicdisk.\n"
+			      	"\nOtherwise press Abort Install.")
+			(dest 	"dANCe_dIVERSe_#2_04"))
+		(complete 30)
+		(copyfiles
+        		(prompt "Copying Files to ")
+                        FinalPath
+                        (".")
+			(source "dANCe_dIVERSe_#2_04:")
+			(dest 	FinalPath)
+			(pattern "#?")
+			(optional "force")
+			(files))
+ 		(askdisk
+			(prompt "\n\n\n\nPlease insert the fifth disk\n\n"
+				"of DanceDiverse2 in any drive")
+			(help 	"\n Insert Disk 5 of DanceDiverse2 Musicdisk.\n"
+			      	"\nOtherwise press Abort Install.")
+			(dest 	"dANCe_dIVERSe_#2_05"))
+		(complete 35)
+		(copyfiles
+        		(prompt "Copying Files to ")
+                        FinalPath
+                        (".")
+			(source "dANCe_dIVERSe_#2_05:")
+			(dest 	FinalPath)
+			(pattern "#?")
+			(optional "force")
+			(files))
+ 		(askdisk
+			(prompt "\n\n\n\nPlease insert the sixth disk\n\n"
+				"of DanceDiverse2 in any drive")
+			(help 	"\n Insert Disk 6 of DanceDiverse2 Musicdisk.\n"
+			      	"\nOtherwise press Abort Install.")
+			(dest 	"dANCe_dIVERSe_#2_06"))
+		(complete 40)
+		(copyfiles
+        		(prompt "Copying Files to ")
+                        FinalPath
+                        (".")
+			(source "dANCe_dIVERSe_#2_06:")
+			(dest 	FinalPath)
+			(pattern "#?")
+			(optional "force")
+			(files))
+ 		(askdisk
+			(prompt "\n\n\n\nPlease insert the seventh disk\n\n"
+				"of DanceDiverse2 in any drive")
+			(help 	"\n Insert Disk 7 of DanceDiverse2 Musicdisk.\n"
+			      	"\nOtherwise press Abort Install.")
+			(dest 	"dANCe_dIVERSe_#2_07"))
+		(complete 45)
+		(copyfiles
+        		(prompt "Copying Files to ")
+                        FinalPath
+                        (".")
+			(source "dANCe_dIVERSe_#2_07:")
+			(dest 	FinalPath)
+			(pattern "#?")
+			(optional "force")
+			(files))
+ 		(askdisk
+			(prompt "\n\n\n\nPlease insert the eigth disk\n\n"
+				"of DanceDiverse2 in any drive")
+			(help 	"\n Insert Disk 8 of DanceDiverse2 Musicdisk.\n"
+			      	"\nOtherwise press Abort Install.")
+			(dest 	"dANCe_dIVERSe_#2_08"))
+		(complete 50)
+		(copyfiles
+        		(prompt "Copying Files to ")
+                        FinalPath
+                        (".")
+			(source "dANCe_dIVERSe_#2_08:")
+			(dest 	FinalPath)
+			(pattern "#?")
+			(optional "force")
+			(files))
+ 		(askdisk
+			(prompt "\n\n\n\nPlease insert the nineth disk\n\n"
+				"of DanceDiverse2 in any drive")
+			(help 	"\n Insert Disk 9 of DanceDiverse2 Musicdisk.\n"
+			      	"\nOtherwise press Abort Install.")
+			(dest 	"dANCe_dIVERSe_#2_09"))
+		(complete 55)
+		(copyfiles
+        		(prompt "Copying Files to ")
+                        FinalPath
+                        (".")
+			(source "dANCe_dIVERSe_#2_09:")
+			(dest 	FinalPath)
+			(pattern "#?")
+			(optional "force")
+			(files))
+ 		(askdisk
+			(prompt "\n\n\n\nPlease insert the tenth disk\n\n"
+				"of DanceDiverse2 in any drive")
+			(help 	"\n Insert Disk 10 of DanceDiverse2 Musicdisk.\n"
+			      	"\nOtherwise press Abort Install.")
+			(dest 	"dANCe_dIVERSe_#2_10"))
+		(complete 60)
+		(copyfiles
+        		(prompt "Copying Files to ")
+                        FinalPath
+                        (".")
+			(source "dANCe_dIVERSe_#2_10:")
+			(dest 	FinalPath)
+			(pattern "#?")
+			(optional "force")
+			(files))
+ 		(askdisk
+			(prompt "\n\n\n\nPlease insert the eleventh disk\n\n"
+				"of DanceDiverse2 in any drive")
+			(help 	"\n Insert Disk 11 of DanceDiverse2 Musicdisk.\n"
+			      	"\nOtherwise press Abort Install.")
+			(dest 	"dANCe_dIVERSe_#2_11"))
+		(complete 65)
+		(copyfiles
+        		(prompt "Copying Files to ")
+                        FinalPath
+                        (".")
+			(source "dANCe_dIVERSe_#2_11:")
+			(dest 	FinalPath)
+			(pattern "#?")
+			(optional "force")
+			(files))
+ 		(askdisk
+			(prompt "\n\n\n\nPlease insert the twelveth disk\n\n"
+				"of DanceDiverse2 in any drive")
+			(help 	"\n Insert Disk 12 of DanceDiverse2 Musicdisk.\n"
+			      	"\nOtherwise press Abort Install.")
+			(dest 	"dANCe_dIVERSe_#2_12"))
+		(complete 70)
+		(copyfiles
+        		(prompt "Copying Files to ")
+                        FinalPath
+                        (".")
+			(source "dANCe_dIVERSe_#2_12:")
+			(dest 	FinalPath)
+			(pattern "#?")
+			(optional "force")
+			(files))
+		(askdisk
+			(prompt "\n\n\n\nPlease insert the thirteenth disk\n\n"
+				"of DanceDiverse2 in any drive")
+			(help 	"\nInsert Disk 13 of DanceDiverse2 Musicdisk.\n"
+			      	"\nOtherwise press Abort Install.")
+			(dest 	"dANCe_dIVERSe_#2_13"))
+		(complete 75)
+		(copyfiles
+        		(prompt "Copying Files to ")
+                        FinalPath
+                        (".")
+			(source "dANCe_dIVERSe_#2_13:")
+			(dest 	FinalPath)
+			(pattern "#?")
+			(optional "force")
+			(files))))
+(complete 80)
+(startup "DanceDiverse2"
+	(prompt "\n\nAre you ready to modify \"S:User-Startup\" so"
+		" DanceDiverse2 can be used with your system?")
+   	(help 	"\nAssign dANCe_dIVERSe_#2_01: " Finalpath
+		"\nAssign dANCe_dIVERSe_#2_02: " Finalpath
+		"\nAssign dANCe_dIVERSe_#2_03: " Finalpath
+		"\nAssign dANCe_dIVERSe_#2_04: " Finalpath
+		"\nAssign dANCe_dIVERSe_#2_05: " Finalpath
+		"\nAssign dANCe_dIVERSe_#2_06: " Finalpath
+		"\nAssign dANCe_dIVERSe_#2_07: " Finalpath
+		"\nAssign dANCe_dIVERSe_#2_08: " Finalpath
+		"\nAssign dANCe_dIVERSe_#2_09: " Finalpath
+		"\nAssign dANCe_dIVERSe_#2_10: " Finalpath
+		"\nAssign dANCe_dIVERSe_#2_11: " Finalpath
+		"\nAssign dANCe_dIVERSe_#2_12: " Finalpath
+        	"\nAssign dANCe_dIVERSe_#2_13: " Finalpath
+		"\nPath dANCe_dIVERSe_#2_01: add\n"
+        	"\nThese lines will be added to S:User-Startup")
+	(command "Assign dANCe_dIVERSe_#2_01: " Finalpath "\n"
+		 "Assign dANCe_dIVERSe_#2_02: " Finalpath "\n"
+		 "Assign dANCe_dIVERSe_#2_03: " Finalpath "\n"
+		 "Assign dANCe_dIVERSe_#2_04: " Finalpath "\n"
+		 "Assign dANCe_dIVERSe_#2_05: " Finalpath "\n"
+		 "Assign dANCe_dIVERSe_#2_06: " Finalpath "\n"
+		 "Assign dANCe_dIVERSe_#2_07: " Finalpath "\n"
+		 "Assign dANCe_dIVERSe_#2_08: " Finalpath "\n"
+		 "Assign dANCe_dIVERSe_#2_09: " Finalpath "\n"
+		 "Assign dANCe_dIVERSe_#2_10: " Finalpath "\n"
+		 "Assign dANCe_dIVERSe_#2_11: " Finalpath "\n"
+		 "Assign dANCe_dIVERSe_#2_12: " Finalpath "\n"
+		 "Assign dANCe_dIVERSe_#2_13: " Finalpath "\n"
+      		"Path dANCe_dIVERSe_#2_01: add\n"))
+(complete 90)
+(set default-dest DestPath)
+(message "\n\nInstallation is now complete!\n\n"
+	 "To run DanceDiverse2 reboot HardDisk and run 'DanceDiverse2!'\n")
+(complete 100)
+(exit)

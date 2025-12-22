@@ -1,0 +1,56 @@
+Short:    YM2149 soundchip emulator v1.0 for EP/DT (Main)
+Type:     mus/play
+Uploader: pomarede@isty-info.uvsq.fr (Nicolas Pomarede)
+Author:	  pomarede@isty-info.uvsq.fr (Nicolas Pomarede)
+
+
+
+Description :
+-------------
+
+  This is MYST v1.0, the YM2149 emulator to play Atari ST soundchip musics
+  on the Amiga. This archive contains the binaries as well as the docs.
+  For a fully working version, you should also get the MYST_Data_?.lha
+  (normally in the same directory where you found this readme file)
+  This program is FREEWARE and ©1997-98 by Nicolas Pomarede.
+
+  Brief overview of the emulator :
+   - works with 68000 and any OS (at least OS 1.3).
+   - compatible with Eagleplayer 1.54 and Delitracker II.
+   - supports all known ST effects (enveloppes, samples, SID env).
+   - already more than 1000 musics available.
+   - low memory requirement (approx 60 Kb of chip RAM).
+   - very fast mixing routines at 25 KHz (20-25% of the A500 CPU time on average).
+   - special YMST header to provide text informations, as well as relocation
+     for absolute replay routines, subsongs, replay time, ...
+   - standalone emulator binary to include in your own program.
+
+
+
+Quick installation :
+--------------------
+
+  Copy the file YMPlayer in your usual EP or DT player directory.
+  For more infos, see the MYST.txt doc inside this archive.
+
+
+
+
+History :
+---------
+
+  - 15/01/1998, v1.0 : first public release on the net.
+
+
+
+Contact address :
+-----------------
+
+  e-mail : pomarede@isty-info.uvsq.fr (Nicolas Pomarede)
+    In case this address doesn't work anymore, you should still find me
+    in Amiga newsgroups, or somewhere on the Net.
+
+
+
+					LISTEN AND REMEMBER THE GOOD OLD TIME
+								Mr.STYCKX

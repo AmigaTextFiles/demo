@@ -1,0 +1,19 @@
+Short:    'StandardRaise 2' by Nature
+Uploader: pmats@algonet.se (Pezac/Nature)
+Author:   pmats@algonet.se (Pezac/Nature + the rest)
+Type:     demo/aga
+Requires: 68020+, AGA, 4MB Fastmem
+
+'StandardRaise 2' was released at a local small party in Sweden,
+therefore the lack of quality. But if you like 2d effects, this
+could be a good one :)
+
+ Code by Pezac&Yomat
+  Gfx by Pezac
+Music by Pezac with some fixes by Pipe
+
+060-users:
+With datacache turned on the effects will run smoothly, but the
+ham8 routines will flicker (our ham8-c2p isnt't 100% tuned yet). The
+solution to avoid the flickering is to turn off the datacache, but
+then all the other effects will lose speed. Dilemma? :)

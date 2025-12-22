@@ -1,0 +1,128 @@
+!Minimig
+Skan
+12
+µI0072
+
+µJCµF2The MiniMig Project
+Interviewing Dennis Van Weeren
+µF1interviewed by Skan/Dream Merchants
+µJEµF0µC1Amiga in an FPGA : Minimig - stands for (very originally ) mini Amiga. Aim is to built a complete OCS A500 (with some extra grunt and features like 4Mbyte ram and fast 68000 processor) on a circuit board about the size of a floppy drive. 
+
+µF1µC3 "Never give up, never surrender"µC5
+
+I must be honest: when I met Dennis for the first time at this year's Codex my first feeling was a mix between general puzzlement and happiness: I could but wonder I was not in front of an old and weird hippie, a hardware geek with long hair and even longer beard, wearing some silly t-shirt and thick glasses. 
+
+µI0074
+Well, Dennis is a good-looking 30-years-old regular guy with a damn good knowledge in electronics and an insane passion for Amiga. And while you may be fooled by his appearance and may think he's not an experienced hardware engineer, well, just a quick chat with him and every shadow of doubt disappears. That's why I had to ask his email addy: I knew I would have needed to share some more words to get an interview for JP! :)
+
+µC5Q: From complete anonimity to Amiga-superstar status (passing through the usual accuse of being a hoaxer), everything in less then 6 months: what's your feeling about that?
+
+µC1A: When I first posted on Amiga.org I had been working on the project for  almost a year. The first reactions were very mixed with some people calling the whole project an outright hoax while other people where wondering where it could be bought. At that time, Minimig was already fully functional and ran games like Lemmings and Lotus without any problems. So, during the first few days after posting, any comments like "it's a hoax" were very amusing to me 'cause I knew what I had. During that first period I probably checked the forum almost every 10 minutes and litterally laughed my ass off on some occasions. Soon enough however, people started asking me to come to user-meetings to show Minimig to the community. This way I have ended up as far as Italy and England, which was really fun to do. But still, I do not feel like an "Amiga-superstar" at all. I may have succeeded in making a Verilog version of the Amiga chipset, I haven't provided the community with a new motherboard or other real hardware. So in that sense, I haven't really contributed to the scene (yet).
+
+µC5Q: Before any question concerning the MiniMig project: can you explain what is an FPGA, in simple words?
+µC1A: Yes! A computer is essentially made up of thousand of basic, very simple circuits called gates. These gates control the most simple functions in digital electronics like for example the "AND" or "OR" functions. 
+
+All these gates are wired together in a specific way to form computer circuits like microprocessors and interfaces. FPGA stands for "field programmable gate array" and contains thousands of these gates, just like a computer circuit but with one great exception: The wiring between the gates is programmable! This means that an FPGA can be made to behave exactly like say, an MC68000 just by programming the FPGA to wire its gates together like they would be in a real MC68000. If programmed right, the FPGA works exactly like the MC68000. That is the power of today's FPGA's.
+
+µC5Q: Tell us: how did this insane idea ever come to your mind?
+
+µC1A: I was indirectly inspired by the C64DTV. Somewhere around January 2005 I was browsing the Amiga.org forum and stumbled across a thread discussing the possibility of putting an Amiga in a joystick. Things like ASIC's, FPGA's and VHDL were mentioned in the discussion and being a hardware engineer, they immediately caught my attention. I remember that the discussion ended with the notion that it should be possible to put an Amiga in a joystick but it would be a difficult task. The first step of such an undertaking would be to reverse engineer the Amiga chipset and get it running inside an FPGA. The following weeks I discussed this idea with a colleague who also happened to be an Amiga enthusiast and did some FPGA programming during his previous job. The more he told me about FPGA's and the more I dug into my old Amiga literature, the more I became convinced that it could be done. So, he advised me on getting an FPGA developer board and I started working. My first goal was to learn Verilog. Verilog is a language that is used to describe hardware. Learning Verilog took me a month or so and when I got my first "running lights" working (running light are like the "hello world" in FPGA programming) I decided I was ready for the real project; an Amiga in an FPGA. At first progress was rather slow because an Amiga turned out to be a lot more complicated than "running lights"! During that period I made all beginners errors you can think off. For example, when working on the serial port I did a very stupid thing. I routed the rxd line directly into the state machine that controlled the serial receiver. Every time a scooter drove down the street, the Minimig would crash. I spent days figuring out what caused it until I found out that the state machine got upset by the glitches on the RXD line caused by the scooter's ignition.
+
+µC5Q: Have your job been helpful in the development of the MiniMig in any way?
+
+µC1A: Yes, very helpful. At work I had the oppurtunity to design and etch my own circuit boards which I needed to expand the basic developer board. The developer board I use doesn't have an 68000 processor so I added one using the expansion headers. Also, it is often difficult to buy electronics parts as a hobbyist, my work allowed me to order parts that are normally only sold to corporate customers.
+
+µC5Q: How will the "final" Minimig work? Will there be a kinda boot-menu through  which you could select ADF files stuffed into the MMC card?
+
+µC1A: Yes, the final Minimig will have a button on its front called "Menu". By pressing this button an on-screen-display (OSD) is put up where ADF files can the be selected from the MMC card using the keyboard or joystick. The idea is to have some sort of an Amiga console on which you can play all classic Amiga games. Power will be provided by a simple wall-adapter. The Minimig will be connected to a television using a SCART cable.
+
+µC5Q: Are you planning to put some flashram on-board in order to store Kickstarts?
+
+µC1A: No, everything, including the Kickstarts, will be loaded from the MMC card. To me, it is the easiest solution as the Minimig board only needs a single type of memory (RAM) and the flash card is big enough to hold both the kickstarts and the ADF images. This concept was born very early in the Minimig development as the initial developer board only had RAM and no flash memory. This concept also makes Minimig very flexible as a universal platform because it can also behave like other computer just be loading another core. Platforms I would personally like to see (and are within the possibilities of the Minimig) are the Atari ST, Sega Master System and of course the NES.
+
+µC5Q: How can the different "cores" be moved into the MiniMig? What external hardware is needed for that?
+
+µC1A: That is actually very easy. The cores are loaded by the MiniMig from the MMC flash card. So, all you need is a flash card reader to transfer the .bin files from the PC to the MiniMig. The MiniMig can then use these cores straight away. You could almost consider MiniMig a "core" player as opposed to an MP3 player or CD player. Developing the cores should be easy too as the MiniMig hardware is not very complicated and easy to understand. Just download the free Xilinx ISE development and start coding!
+
+µC5Q: Will the MiniMig be 100% Amiga compatible?
+
+µC1A: At this stage I would say Minimig is 90% compatible. There are still some issues with sprites and copper timing that need to be resolved. My hope is however that Minimig will be improved by the community once the sources are available. That way it should be possible to make Minimig as compatible as UAE currently is.
+
+µC5Q: Will the Verilog source be released as open-source then?
+
+µC1A: Yes, it is the only way to move Minimig forward.
+
+µC5Q: You've stated that implementing the 68k CPU on FPGA would be a huge effort: do you know a Commodore engineer designed an 80MHz 68000 in Verilog/VHDL some years ago?
+
+µC1A: I didn't know that. I have respect for the Commodore enigineer that pulled that off. My view is that the MC68000 is as complex as the Amiga chipset itself. So for Minimig, if I would have chosen to put the 68000 in the FPGA as well, it would have doubled the developing time. Besides, I needed a stable base setup to work with which is why I chose to use an off-the-shelf MC68SEC000 processor.
+
+µI0073
+µC5Q: Can you tell us how the new board design is progressing?
+
+µC1A: The new board design was finished around June 2006 but I haven't been able to build it together due to time constraints. I have moved into a new house that needed a lot of work to get done so in the last few months my spare time was completely spent with painting, laying floors and putting wallpaper on instead of soldering, programming and wondering "why doesn't it work?" :-). But, I have finally sent the gerbers (PCB design files) to the manufacturer so I hope to have fully assembled boards by the end of November. The new board will be a big improvement over the prototype and serve as a sort of reference design for hobby builders.
+
+µC5Q: Are there any chances to see a commercial product based upon this board?
+
+µC1A: I get that question a lot. As it is now, Minimig will not be available as a commercial product. There are however, products in the work by other developers that should be able to run the Minimig core. The most promising board seems to be the new "Samantha" board. This board contains an FPGA that is large enough and although it has no 68000, the PPC processor of Samantha should be able to emulate the 68000 without problems.
+
+µC5Q: Even if commercial availability is far beyond view, have you ever thought of building a little batch of final boards (dunno: 10, 50, 100 units) and sell'em to "selected" people?
+
+µC1A: The board I am working on at the moment will be produced as a series of 5 boards. I will keep two of them and the other three have already been "reserved" by some direct Amiga-friends. The design of this board will be  released as part of the open-sourcing, so maybe someone will decide to build a small batch. I would like that, very much as hardware is much needed for  people wanting to experiment with the Minimig sources.
+
+µC5Q: Did you notice it's full of "hardware-engineers" and "chip-designers" on Amiga.org forums? Isn't this quite irritating? ;)
+
+µC1A: No, mostly I do not find it annying at all as those people sometimes come up with good ideas or constructive comments. It is only when people start openly bashing my project I am getting slightly irritated as you might have noticed around page 37 of my thread at amiga.org :-) I think the reason that there are a lot of engineers on the Amiga.org forums is the Amiga itself. Technically the Amiga is such a nice machine that it has a natural attraction to technically minded persons. Personally I have learned so much from working with the Amiga that it has even improved the designs I do at work!
+
+µC5Q: You've been flooded with the oddest requests: do you think you will improve the MiniMig with some of those silly suggestions?
+
+µC1A: Maybe in some later stage, remember that I want to make a console-like Amiga 500 replacement. A system like that doesn't need zorro slots or G5 PPC processors. One of the suggestions I did add however is a scandoubler, which makes it easier to connect to standard VGA monitors. Another very useful addition in this line would be a composite or component video output. Currently, Minimig relies on the SCART connector to connect to a televisison. Most American TV sets do not have this connector. In order to use Minimig there a component or composite video output would be ideal.
+
+µC5Q: I know you're not interested in developing an AGA version, but do you think it would be possible to "expand" the Minimig design to a full AGA clone? Or will this be an endless effort?
+
+µC1A: It it possible to expand the design to AGA specifications. Some aspects of AGA are very simple to implement like for example the extra bitplanes (more colors) and the "big blit" capability. The problem with AGA however is that AGA has programmable scan and refresh rates and that alone has a huge impact on internal system timing. Getting that right is the most difficult I think.
+
+µC5Q: You've stated you could add extra features, like 16bit audio or chunky graphics mode: do you see the Minimig as a potential demo-machine on which a new breed of Amiga demos can rise?
+
+µC1A: That would be fun! It is amazing to see that even platforms like the Gameboy Advance and the C64DTV are used to design demos so why wouldn't a Minimig be used like that? The FPGA concept would allow for some very radical demo's indeed. Because the hardware is programmable, the coder can add any features he or she would like. Think of features like 16bit audio, chunky mode, blitter-nasty mode without stopping the cpu. Those things should be very easy to add and could be activated by some weird register poke sequence. But also more exciting things like Z-buffers or extra copper instructions should be possible. The rules of the competition would have to allow it though, but a hardware-oriented coder could do wonders with this kind of stuff!
+
+µI0071
+µC5Q: I suppose you realize you've paved the way for other similar projects: do  you think we'll see more Amiga-on-FPGA concepts in the future?
+
+µC1A: Definately, A lot of capable people where toying with the idea of doing what I have done. Some people will probably give up because there is no challenge anymore once it has been done while others will start working beacuse it can be done. So I think we will see more project like Minimig in the not-so-distant future.
+
+µC5Q: How prophetic!! I've just read Jen's interview about the A-Clone... did you know anything about that? And about the NatAmi project?
+
+µC1A: I knew about Clone-A since Codex Alpe Adria 2006. Also, I knew about NatAmi. Both projects are very dissimilar to mine. Clone-A tries to replicate a cycle-exact A500, while I allow myself a bit more freedom without sacrificing game compatibility. NatAmi is more workbench oriented if I'm correct. NatAmi tries to build a high-end Amiga where game-compatibility is not that great an issue.
+
+µC5Q: Million dollar question: have you considered joining Jen's effort and share some experiences? Or are the A-Clone and the Minimig so totally different you could never make'em meet?
+
+µC1A: I never considered that. Jens also never asked me to join forces. Clone-A and Minimig are two totally indepedent developments and will always stay that way.
+
+µC5Q: Personal request: please make the PS/2 keyboard connector A4000 compatible!
+
+µC1A: No problem, Minimig is very modular and written in Verilog, just rewrite the keyboard Verilog module and off you go!
+
+µC5Q: Will you turn to other projects once the new PCB layout is ready? Any Amiga-related ones in the pipeline?
+
+µC1A: I have more projects in the pipeline but unfortunately no Amiga-related ones. My next project after Minimig is a tube-amplifier that I am going to build for my brother. Tubes are another fascination of mine and I have built several amplifiers already. In fact, the only amplifier I have at home right now is a self-built 2*30W tube amplifier. I guess my fascination for "old" hardware goes much further than the relatively "new" Amiga!
+
+µC5Q: Is there anything you wanna say to our readers?
+
+µC1A: That is the most difficult question by far! The only thing I can say is that I really hope people will start working with this code so that MiniMig  can evolve in the same way as UAE has. This way, we can still show our grand-children what a *real* computer looked like in a future where the last Amiga in the world has propably blown it's final CIA! :-)
+
+µC5Ok Dennis, thank you so much for the interview and for this great, fantastic dream-come-true called MiniMig. And now: back to work! We wanna put our hands on that toy! ;)
+
+Closing words: dunno you guys, but I feel something great has just began and the future looks so sexy now... :)
+If you wanna learn more about the MiniMig project and hear the latest news from Dennis, use Google goddammit!!! ;P
+
+Seriously, just follow this link:
+
+http://www.amiga.org/
+modules/newbb/viewtopic.php
+?topic_id=27988&forum=8
+If you wanna hear/see Dennis' seminar at Codex2006, you can find some podcasts at: 
+http://www.amigaforever.com/
+news-events/20060701
+codex_alpe_adria/
+
+µC1Skan^Dream_Merchants

@@ -1,0 +1,54 @@
+@{d FF2626}                                       @{c D32C28}DOOM@{c} na Amize
+                                      ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  @{c FBFF35}Tvrdilo se, ùe to nejde!@{c}
+
+    @{c DADD2E}Tvrdilo se, ùe to nikdy nebude!@{c}
+
+      @{c B8BB27}Tvrdilo se, ùe je to zcela nemoùné!@{c}
+
+        @{c 979920}Tvrdilo se, ùe Amiga na to nikdy nestaçí!@{c}
+
+          @{c 757719}Tvrdila se spousta dalîích debilních nesmyslû!@{c}
+
+            Ale je to tak -> DOOM je i pro Amigu a nejenùe chodí perfektnë,
+            ale je jich uù tolik, ùe se v tom çlovëk jen teùko orientuje!!!
+
+
+  Vîe zaçalo @{c F8E422}23. prosince 1997@{c}.  John Carmack, jeden ze zakladatelû ID softu a také hlavní
+programátor  hry  DOOM  udëlil  svëtu pëkný @{c F8E422}dáreçek@{c} k Vánocûm - uveêejnil veîkeré zdrojové
+@{d FF2626}kódy  Linuxové  verze  hry  DOOM  II  pro  nevýdëleçné úçely.  Nicménë k vlastní hêe poêád
+potêebujete  skuteçné datové soubory z originální hry (ty jsou naîtëstí shodné pro vîechny
+platformy).   Díky  tomu, ùe Linuxový port je sluînë portovatelný i na jiné systémy (Amize
+ostatnë  nikdy  nedëlalo  portování unixoidních programû vëtîí problémy), okamùitë vzniklo
+nëkolik  portû  pro  Amigu.   Tím okamùitë je myîleno @{c F8E422}do 3 dnû@{c} - i kdyù první verze nebyly
+vûbec  optimalizované  a potêebovaly k bëhu ixemul.library.  Bëhem dvou mësícû se vyrojilo
+nejménë  10  rûzných  mutací  -  skoro  vîechny  samozêejmë  podporují  RTG  i  AHI,  bëùí
+v multitaskingu,  nëkteré  mají  jiù  funkçní  síïovou  podporu (hra po internetu).  Rûzné
+mutace  jsou  rûznë  optimalizovány pro procesory od 68020 pêes 030,040,060 aù po PowerPC.
+Kaùdý  si  snad  vzpomene  na  nëkdejîí kecy ID softu, ùe Amiga nikdy na tuto hru nestaçí.
+Pêitom  to  bylo  v dobë,  kdy jiù byly bëùnë v prodeji turbokarty s @{c F8E422}68030@50MHz.@{c}  Dnes na
+této  konfiguraci,  na  AA  çipech  je  hra  výbornë  @{c F8E422}hratelná@{c}  i ve "fullscreenu" a to jí
+pêedëlávali  pouzí "amatéêi".  Na 68060 s grafickou kartou bëùí hra stabilnë na @{c F8E422}35fps@{c}, coù
+je natvrdo nastavený limit ve zdrojových kódech (snad pûjde odstranit :-).  PowerPC neçiní
+ùádné problémy utáhnout 10 spuîtëných her najednou.
+
+
+
+@{d FF2626}                              @{u}@{c F0F804}Porovnání nejznámëjîích portû@{c}@{uu}
+
+              @{c E48516}Zvuk  AHI  Hudba  Klávesy  Joy  Myî  ECS  AGA  RTG  TCP  Min.poùadavky@{c}
+@{c 89168F}¯¯¯¯¯¯¯¯¯¯¯|¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+@{c E48516}AmigaDoom@{c}  @{c 89168F}|@{c}  ANO   ANO   NE      ANO    ANO  NE   ANO  ANO  ANO  ANO  020,8MB,ixemul,AHI
+@{c E48516}ADoom@{c}      @{c 89168F}|@{c}  ANO   NE    ANO     ANO    ANO  ANO  ANO  ANO  ANO  ANO  020,8MB
+@{c E48516}AmiDoom@{c}    @{c 89168F}|@{c}  ANO   NE    NE      ANO    NE   ANO  ANO  ANO  ANO  ANO  020,6MB,ixemul
+@{c E48516}PsiDoom@{c}    @{c 89168F}|@{c}  ANO   ANO   NE      ANO    NE   NE   NE   ANO  NE   NE   020,8MB,AGA,AHI
+@{c E48516}DoomAttack@{c} @{c 89168F}|@{c}  ANO   NE    NE      ANO    ANO  ANO  NE   ANO  ANO  NE   020,8MB,AGA
+@{c E48516}ZhaDoom@{c}    @{c 89168F}|@{c}  ANO   NE    NE      ANO    ???  ???  ???  ANO  ANO  ???  PPC,8MB
+@{c E48516}VDoomPPC@{c}   @{c 89168F}|@{c}  ANO   NE    NE      ANO    ???  ???  ANO  ANO  ANO  ???  PPC,8MB
+@{c 89168F}___________|______________________________________________________________________________@{c}
+  * pozn: @{c E48516}ADoom@{c} a @{c E48516}VDoomPPC@{c} umí libovolná rozliîení, ne jen 320×200
+  * pozn: vîechny porty jsou ve vývoji, takùe se neustále zlepîují
+
+                                  @{c D6D80D}Shaman@{c}
+
+PS: @{i}Mimochodem, objevil se také AlienBreed3D-TKG pêepsaný pro grafické karty. Náêez!@{ui}

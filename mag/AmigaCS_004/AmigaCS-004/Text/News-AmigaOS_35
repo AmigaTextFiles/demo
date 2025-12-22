@@ -1,0 +1,192 @@
+@{xoffset 21}@{d 78BAFF}¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+@{xstep 305}@{font ACS-Title.font 18}AmigaOS 3.5 pêeci jen bude!@{font}
+@{xstep 445}@{c A6FFF8}@{i}Shaman/Abort@{ui}@{c}@{ystep -8}
+
+
+
+  @{xstep 2}@{font ACS-Title.font 18}D@{font}ne  5.êíjna   @{c F0F8FF}1998@{c}  byl  na  výstavë
+@{c F0F8FF}Midwest Amiga Expo '98@{c} oficiálnë oznámen
+@{c F0F8FF}@{b}AmigaOS  3.5@{ub}@{c}  pro  klasické  @{i}68K@{ui}  a  @{i}PPC@{ui}
+Amigy.   Po  mnoha  zmatcích,  oznámení,
+zruîení  a nátlaku ze strany amigistické         @{p Domination99.png 322 65}
+veêejnosti  i  firem  byl  tedy  projekt
+@{c F0F8FF}AmigaOS   3.5@{c}   opët   oùiven.   Výstavu
+organizovala  skupina  uùivatelû @{c F0F8FF}AmiCon@{c},
+která   rozdávala   triçka   "@{f B5DFFF}Stop   The
+Madness:   Buy an Amiga@{f}" a CD "@{f 91B2CC}Microsoft
+World  Domination  99  -  Total  Control  Edition  1.0@{f}" (@{i}viz obrázek@{ui}).  Bohuùel,
+plánované vystoupení amigistické legendy @{c D0D7DD}RJ Micala@{c} se nekonalo.
+
+
+  Jednoznaçnë nejvýznamnëjîí událostí výstavy bylo prohláîení @{c D0D7DD}Amiga, Inc.@{c}, která
+ústy  @{c D0D7DD}@{b}Billa  McEwena@{ub}@{c}  oznámila  @{c D0D7DD}vydání AmigaOS 3.5@{c}.  Tento projekt je realizován
+spoluprací asi 20 externistû a spoleçností pod vedením @{c D0D7DD}@{b}Fleecy Mosse@{ub}@{c}.  Na systému
+3.5  se  pracuje  paralelnë  k@{b} @{c D0D7DD}AmigaOS NG 5.0@{ub}@{c},  který  by tím nemël být opoùdën.
+AmigaOS  3.5  je  plánován  na  konec  prvního  çtvrtletí  roku  1999, k dostání
+v obchodech bude @{c D0D7DD}pouze na CD@{c} koncem prvního pololetí @{c D0D7DD}1999@{c}.
+
+
+  Na  AmigaOS  3.5  pracuje  pêedevîím  zkuîený  programátor @{c D0D7DD}@{b}Olaf Barthel@{ub}@{c} (@{i}Term,
+MagicMenu,  AmigaDeveloperCD@{ui}).  Jednotlivé smëry dalîího vývoje systému byly jiù
+delîí  dobu  jasné, proto asi málokoho pêekvapí - snad kromë podpory @{c D0D7DD}PowerPC@{c}, na
+které pracují @{c D0D7DD}Haage & Partner@{c}.  Tím by se snad i v otázce @{c D0D7DD}PowerPC@{c} mëlo vyjasnit,
+protoùe  pêes  halasnë  propagovanou  spolupráci  @{c D0D7DD}phase5@{c}  a  @{c D0D7DD}H&P@{c} zatím k ùádnému
+sblíùení  nedoîlo  @{i}(alespoñ  takový @{c D0D7DD}Ralph Schmidt@{c} [Laire] z phase5 reaguje poêád
+velice podráùdënë, pokud je o tématu êeç@{ui}).
+
+@{c D0D7DD}@{b}  Základní kameny AmigaOS 3.5 jsou@{ub}
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+
+@{c D0D7DD}  1) Re-Targetable Graphics (@{b}RTG@{ub})@{c}
+
+  Pêesmërovatelná  grafika  pomocí externích driverû byla v souçasnosti dostupná
+pomocí   více   çi   ménë   elegantních  patchû  (@{i}jmenujme  jen  nejrozîíêenëjîí
+CyberGraphX, Picasso96 a EGS@{ui}).  Koneçnë bude ustanoven @{c D0D7DD}JEDINÝ SPOLEÇNÝ@{c} standard.
+Odhaduje se, ùe bude pouùit çásteçnë zdokonalený @{c D0D7DD}RTG@{c} systém @{c D0D7DD}Picasso 96@{c}.
+
+@{c D0D7DD}  2) Re-Targetable Audio (@{b}ARTAS@{ub})@{c}
+
+  Pêestoùe  externí  zvukové  karty nejsou na Amize bëùným jevem, do budoucna je
+nutné  poçítat  s  pêesmërovatelným  zvukem.   V  této  oblasti  sice jiù vznikl
+neoficiální  standard @{c D0D7DD}AHI@{c}, nicménë se s ním nepoçítá (@{i}to potvrzuje i autor @{c D0D7DD}AHI@{ui}@{c}).
+Pro @{c D0D7DD}AHI@{c} vîak vznikne driver, který umoùní i "@{c D0D7DD}starým@{c}" AHI-kompatibilním aplikacím
+pouùívat bez jediné zmëny kódu nový @{c D0D7DD}@{b}ARTAS@{ub}@{c}.  ARTAS vîak bude nabízet mnohem více.
+Podle prohláîení autorû jiù existují drivery pro vëtîinu zvukových karet.
+
+
+@{c D0D7DD}  3) Vylepîený Fast File System (@{b}FFS@{ub})@{c}
+
+  Tuto  práci jiù dêíve realizovala Amiga International (@{c D0D7DD}@{i}Heinz Wröbel@{ui}@{c}).  Koneçnë
+bude  systém  dokonale  podporovat  více  jak @{c D0D7DD}4GB@{c} harddisky, bude obsahovat nový
+@{c D0D7DD}64@{c}bitový  souborový  systém,  nové  utility  @{c D0D7DD}Format@{c} a @{c D0D7DD}HDToolBox@{c}.  (@{i}Pozn.  - nová
+zkuîební   betaverze   @{c D0D7DD}FFS   43.20@{c}   se  nedávno  objevila  na  stránkách  @{c D0D7DD}Amiga
+International@{c}@{ui}).
+
+
+@{c D0D7DD}  4) CD-Filing System (@{b}CDFS@{ub})@{c}
+
+  V  této  oblasti  existují  dva  velice  kvalitní  komerçní produkty (@{c D0D7DD}AsimCDFS@{c}
+a @{c D0D7DD}IDEFix@{c})  a pro @{c D0D7DD}AI@{c} nebude urçitë jednoduché dosáhnout jejich kvalit.  Je moùné,
+ùe  AI  jeden  z  nich  licencuje  (obdobnë  jako  @{c D0D7DD}Commodore@{c}  onehdá  licencoval
+vynikající @{c D0D7DD}CrossDOS@{c} od firmy @{c D0D7DD}ConsulTron@{c}).
+
+ @{c D0D7DD} 5) Vylepîený tisk a nové ovladaçe
+@{c}
+  Budou  rozîíêeny moùnosti ovladaçû tiskáren a také pêibydou oficiální ovladaçe
+pro vëtîinu v souçasnosti prodávaných tiskáren.  @{f 91B2CC}Koneçnë@{f}!
+
+
+@{c D0D7DD}  6) Plná podpora Internetu@{c}
+
+  Oçekává  se  obdobná  (@{i}ale  pochopitelnë lepîí@{ui} :-)) výbava jako @{c D0D7DD}AmigaSurfer@{c} od
+bývalé @{c D0D7DD}AT@{c}.  Tj.  bude obsahovat klienty pro @{c D0D7DD}email@{c}, @{c D0D7DD}www a ftp@{c}.  Zdá se, ùe @{c D0D7DD}@{b}Holger
+Kruse@{ub}@{c} (@{i}autor @{c D0D7DD}Miami@{ui}@{c}) má zde také svou dûleùitou úlohu.
+
+@{c D0D7DD}  7) Podpora PowerPC koprocesoru@{c}
+
+  @{c D0D7DD}Podpora  PPC@{c}  bude  realizována pomocí @{c D0D7DD}Haage & Partner WarpUP@{c}.  Êeîení @{c D0D7DD}phase 5@{c}
+@{c D0D7DD}PowerUP@{c}  bylo  zamítnuto  jako jednoúçelové a nedostaçující (@{i}@{c D0D7DD}Ralph Schmidt@{c} kvûli
+tomu  prý  opustil  @{c D0D7DD}p5@{c}  i  @{c D0D7DD}Amigu@{c}@{ui}).   @{c D0D7DD}Plnë@{c}  @{c D0D7DD}nativní@{c}  @{c D0D7DD}PPC@{c}  systém  vîak neçekejte.
+Nedoçkali byste se ho totiù dêív, neù za dva roky...
+
+
+@{c D0D7DD}  8) Aktualizované a vylepîené interface
+@{c}
+  @{c D0D7DD}Nové@{c}  @{c D0D7DD}GUI@{c} potêebuje Amiga jako sûl.  Protoùe nebudou s novým systémem dodávány
+nové @{c D0D7DD}ROM@{c}ky (budou vyùadovány @{c D0D7DD}ROM 3.1@{c} (@{f 91B2CC}!!!@{f}) a zatím není zcela jasné jestli staçí
+softwarový @{c D0D7DD}Kickstart 3.1@{c} - i kdyù teoreticky musí staçit), jediná îance jsou buð
+patche,  nebo  celá  nová gadtools.library.  Zcela urçitë bude nová icon.library
+a moùná i kompletnë nový @{c D0D7DD}WB@{c} (avîak mluví se i o pouùití@{b} @{c D0D7DD}DOpusu 5@{c} @{ub}- @{c D0D7DD}@{b}Magellan@{ub}@{c}).
+
+
+@{c D0D7DD}  9) Vylepîený @{b}ARexx@{c}@{ub}
+
+  Pêestoùe  bývalý autor ARexxu @{c D0D7DD}@{b}William Haves@{c} @{ub}@{f 91B2CC}nenávidí@{f} Amigu (@{i}Commodore mu nikdy
+nezaplatil  honoráêe  za portování tohoto programovacího jazyka@{ui}), práva na @{c D0D7DD}ARexx@{c}
+má @{c D0D7DD}Amiga, Inc@{c}. a proto ho mûùe volnë pouùívat a zdokonalovat.
+
+
+@{c D0D7DD} 10) Opravy chyb a vylepîení ve spoustë oblastí@{b} OS@{c}@{ub}
+
+  Opravy  chyb  budou  realizovány  systémovým  pêíkazem  @{c D0D7DD}SetPatch@{c}, oçekávají se
+i nové verze @{c D0D7DD}asl.library@{c}, datatypû (@{c D0D7DD}MPEG, QT@{c}) a dalîí vylepîení.
+
+
+@{c D0D7DD} 11) Nová uùivatelská dokumentace@{c}
+
+  Uùivatelská  dokumentace  bude  îíêena  na @{c D0D7DD}CD@{c} ve formátu @{c D0D7DD}HTML@{c}.  Kaùdé @{c D0D7DD}CD@{c} navíc
+obdrùí booklet s názvem ª@{c D0D7DD}Amiga - minulost, pêítomnost a budoucnost@{c}º.
+
+---
+
+  Dalîí velice dûleùitá informace je, ùe budoucí @{c D0D7DD}OS 5.0@{c} bude zpëtnë kompatibilní
+s @{c D0D7DD}OS  3.5@{c}.   @{c D0D7DD}AInc@{c} potvrdila, ùe vëtîina programû co chodí pod @{c D0D7DD}OS 3.1@{c} bude chodit
+i pod   @{c D0D7DD}3.5@{c}.    To   je   z vývojáêského   hlediska   otázka,   protoùe  @{c D0D7DD}3.5@{c}  je
+vîeobecnë chápán  jako  "@{i}@{c D0D7DD}pêechodový  most  k systému  5.0 a definitivní úklid po
+minulosti 1.x@{c}@{ui}".
+
+  Dalîí  zpráva  oznámená  na této výstavë se týkala opoùdëní vývojového systému
+(@{i}Amiga  OS @{c D0D7DD}5.0@{c}-Dev, dêíve oznaçován jako @{c D0D7DD}4.0@{ui}@{c}).  @{c D0D7DD}AInc@{c} musela zmënit strategického
+partnera,  který bude vyrábët vývojové systémy, avîak nový partner má být údajnë
+mnohonásobnë  lepîí.   Bohuùel  z  tohoto  dûvodu nebude vývojový systém @{c D0D7DD}5.0-Dev@{c}
+pêedstaven na výstavë @{c D0D7DD}Computer '98@{c} v Kolínë nad Rýnem.  Zpoùdëní se prý naîtëstí
+netýká dalîích plánû s @{c D0D7DD}Amiga NG@{c}.
+
+  Poslední  vëc,  o  které  se @{c D0D7DD}@{b}Bill McEwen@{ub}@{c} zmínil, je, ùe @{c D0D7DD}AInc@{c} chystá pêednostnë
+informovat tiîtëné amigistické çasopisy (@{i}aby jim pomohla pêeçkat toto nepêíjemné
+období  çekání  a zabránila  tak  jejich  krachu@{ui}).   Na  stránce @{c D0D7DD}AInc@{c} se jiù pro
+redaktory tiîtëných periodik objevil registraçní formuláê.
+
+  Na  výstavë  také  vystoupil  zástupce  @{c D0D7DD}ICOA@{c}  @{c D0D7DD}@{b}Kermit  Woodall@{ub}@{c} (@{c D0D7DD}@{i}ImageFX@{ui}@{c}), který
+informoval   o pêipravované   stránce  @{i}www.amiga.net@{ui}  a o novém  projektu  lepîí
+protipirátské politiky, kterou @{c D0D7DD}ICOA@{c} chystá spoleçnë s @{c D0D7DD}AInc@{c}.
+
+
+
+                       @{c D0D7DD}  Çasový plán vývoje AmigaOS 3.5
+                         ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+
+	êíjen - prosinec 1998  ...............   alfa stádium vývoje
+
+	leden - zaçátek února 1999 ...........   betatesting
+
+	bêezen 1999 ..........................   opravy chyb, test stability
+
+	duben/kvëten 1999 ....................   dokumentace, balení
+
+	çerven 1999 ..........................   distribuce, prodej
+
+
+
+  Je  patrno,  ùe  za 6 mësícû se toho nedá pêíliî stihnout.  Proto nebudou u @{c D0D7DD}AI@{c}
+znovuvynalézat  vynalezené  a  pouùijí  maximum z dneîních "@{i}hackû@{ui}", které jednak
+lépe  integrují  do systému a jednak je ustanoví oficiálním standardem.  Novinky
+v podobë  virtuální  pamëti  (@{c D0D7DD}VM@{c}),  ochrany pamëti (@{c D0D7DD}MP@{c}), resource trackingu (@{c D0D7DD}RT@{c})
+nebo  symetrického  multiprocessingu (@{c D0D7DD}SMP@{c}) oçekávejte aù v @{c D0D7DD}AmigaOS 5.0@{c}, který má
+být hotov aù za 13 mësícû.  Do té doby hodlá AInc udrùet uùivatele systémem @{c D0D7DD}3.5@{c}.
+@{c D0D7DD}SW@{c}  a  @{c D0D7DD}HW@{c}  vývojáêi  se  mají  zatím  uçit  @{c D0D7DD}C++@{c},  @{c D0D7DD}OpenGL@{c}  a protokoly  @{c D0D7DD}USB@{c}, @{c D0D7DD}PCI@{c},
+@{c D0D7DD}FireWire@{c}...
+
+
+
+                           Hardwarové poùadavky AmigaOS 3.5
+                           ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+@{c D9DDAD}	Minimální:
+		- 68020 nebo vyîîí procesor
+		- 4 MB Fast RAM
+		- AGA grafika, 2MB Chip RAM
+		- CD-ROM
+		- harddisk
+		- Kickstart 3.1 (ROMky)@{c}
+
+@{c DDD380}	Doporuçené:
+		- 68030 nebo vyîîí procesor
+		- 8 MB Fast RAM a více
+		- grafická karta a scandoubler
+		- modem@{c}
+
+	@{c DBDD2C}Optimální:
+		- 68060 procesor s PowerPC akcelerátorem
+		- 32 MB Fast RAM a více
+		- 16-bitová zvuková karta
+		- I/O karta@{c}

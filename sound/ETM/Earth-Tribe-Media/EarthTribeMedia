@@ -1,0 +1,17 @@
+echo "running setpatch.."
+setpatch >NIL:
+
+echo "enable caches.."
+c/cpu cache burst >NIL:
+
+c/fadeout
+
+; start the intro
+ETM-trailer.exe
+
+; start interface
+run >NIL: <NIL: etm
+
+wait 5
+c/fadein
+

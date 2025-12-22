@@ -1,0 +1,41 @@
+
+Ilyad v1.4 by Alcatraz (update from v1.3 to v1.4)
+
+Configuration required : AGA chipset
+                         4MB of Fast-Ram
+                         (Hard-Disk)
+
+(If you have a 68030 or better, the demo will be a bit improved).
+Install Ilyad on your HD to get full speed.
+
+Press left mouse button during the first part to skip the intro.
+
+Contact us at:
+
+Hornet:    Alain Malek
+           Bonne-Esperance 1
+           1006 Lausanne
+           Switzerland
+
+           (email: amalek@di.epfl.ch)
+
+Just copy the file Ilyad to the disk 1. (You must have Ilyad v1.3 to update
+the demo to v1.4 !)
+
+History:
+
+- v1.3:
+fixed for 4000/40
+lots of error messages added
+uses less chip memory (can be launched from workbench)
+works from DoublePAL workbench.
+some parts, improved
+All disks have changed !
+
+- v1.4:
+No more random reset with a Microbotics accelerator.
+(It seems that this board generates level7 interrupts at random time !)
+I tried to remove the crash after the 'worm ring' part on a stock A1200 with
+4MB of fast. (I couldn't actually try it ... )
+Running the demo from the Shell with the parameter -f will force the demo
+in its 68030+ mode. ( example: Ilyad -f )

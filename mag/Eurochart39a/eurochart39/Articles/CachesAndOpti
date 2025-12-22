@@ -1,0 +1,216 @@
+»CL8:»SML:--------------------------------------
+     »CL9:»BIG:Caches and Optimisation
+»CL8:»SML:--------------------------------------
+
+»CL0:Uncareful use of CacheClearU could end
+with crashes, but, well, we are demo
+coders, aren't we? We want our code to
+push the CPU to its limits, right? At
+least that's what I like to think :)
+So, I will continue talking about
+cache inner workings, so you
+understand how caches affect the speed
+of your code and how you can use them
+to improve performance.
+The best I can do is to explain the
+caches evolution in the 68k series, so
+every concept will be explained in
+order.
+
+The 68020 was the first 68k to have a
+proper cache. It possesed a little
+code cache of 256 bytes. It was
+organised in LONGs, 64*4 bytes.
+You could deactivate, clear, or freeze
+the code cache with the CACR register.
+(I will not talk about the freeze
+feature in this article, and I think
+it's better to ignore it, but in some
+cases and loops might be usefull). 
+When 68000 coders wanted to optimise a
+long loop, they used to do things
+like, for example
+
+»CL4:Next:
+   move.w   d0,(A0)+
+   move.w   d0,(A0)+
+   move.w   d0,(A0)+
+   .
+   .
+   .
+   dbf   d1,Next
+ 
+»CL0:instead of
+
+»CL4:Next:
+   move.w   d0,(A0)+
+   dbf   d1,Next
+
+»CL0:This way, they avoided the expensive
+(in time) dbf instruccion.
+But what happens in 020?
+The first "»CL4:move...»" instructions are
+read from memory and enter the cache.
+If there are less than 256 bytes of
+"»CL4:move..»", then the »CL4:dbf» gets back to
+the beginning, but as all the code is
+in the cache, is not read from memory
+anymore, and performance is a lot
+faster.
+But, if the 68000 coder unrolled the
+loop too much (that's what this
+optimisation is called: "»CL1:loop
+unrolling»"), every "»CL4:move...»" after the
+256 bytes limit will push out other
+"»CL4:move»"s from the cache. If the loop is
+320 bytes long, the 020 will have to
+read half of the "»CL4:move»" instructions
+again for every run through the loop.
+If the loop is 512 bytes or more, the
+cache will remain unused, totally
+overflowed.
+Many people didn't care about the
+whole thing when making innerloops,
+thus ruining optimisation when
+ignoring the cache limits. I remenber
+that when I began on the amiga, I
+hacked a bit into one of the first AGA
+demos, "»CL1:Cream» /»CL1: Absolute»". It had one
+of those chunky-copper screens, with
+one of those cool A500 rotozooms,
+which consisted of one "»CL4:move.w
+#$xxxx(A0),#$xxxx(A1)»" for every pixel
+in a line.
+As the size of every line was ~90
+pixels, the innerloop was 90*6=560
+bytes long. So he was totally killing
+the code cache, hence, killing his own
+optimisation. That can be considered
+normal, as 020 was new for everybody
+in the scene in 93, but you can find
+this same 'bug' TODAY. I could mention
+names of coders considered top ones,
+which happily ignore the sizes of
+their innerloops, or unroll to
+optimise without knowing that they are
+breaking the 256 bytes limit...
+
+...a limit which also applies in 030.
+The 030 introduced in the 68k series
+the Harvard architecture we know
+today, although it has by far the most
+complex cache scheme in 68k series..
+It features 2 caches, 256 bytes long,
+one for code and one for data, which
+are fully independent. They are
+organised in 16 bytes lines, unlike
+the 020. This allows the BURST mode,
+which can speed up some operations
+(more later).
+The code cache works as the 020 one,
+except that 030 one, organises the
+memory in 16-byte rows. This means
+that if the CPU asks for a code word
+in $1006, (and is not already in the
+cache), the cache cleans a line of 16
+bytes, and marks it with the $1000
+adress; then, it stores the longword
+corresponding $1004-$1007. After that
+it serves the $1006 word to the CPU.
+IF, and only IF code-BURST is
+activated, the rest of the line is
+read, in the order $1008, $100C,
+$1000. (remember, $1004 long has
+already been read).
+
+The data cache works similar for data,
+although it allows writing
+- If an instrucction like "»CL4:move.l
+  (A0),D0»" runs, a process similar to
+  the code one happens.
+- If an instruction writes to memory
+  (like "»CL4:move.w D1,(A3)»"), two things
+  can happen:
+  1. The data was already in the
+     cache; then, the write just
+     substitutes the old value with
+     the new one.
+  2. The data was not in the cache;
+     then, the cache needs to READ the
+     data and substitute those new
+     written bytes.
+
+Remember, when caches are active,
+LONGS are always read. But, if BURST
+is active also, 4 LONGS are read, and
+fill a cache line.
+So, what's that "BURST" mode?
+Nowadays memory operate in two steps;
+I don't want to get technical (and
+also I don't want to show my lack of
+knowledge about the matter) so the
+thing is that in random access the CPU
+feeds the address and then
+reads/writes the memory.
+BURST mode allows the CPU to feed the
+address, and then reading/writting X
+times. Usually X=4, but, for example,
+in a PPC CPU on a 32 bit bus (like the
+blizzardppc), X=8.
+So the CPU makes the first step ONCE
+for several accesses, hence it works
+far faster if you are going to need
+all that data. Now we can draw some
+conclusions about 030:
+- The fastest way to copy data on a
+  030 is with data cache & data burst.
+- If a loop heavily read/writes
+  randomly on a large buffer, data
+  burst will slow it, as the data
+  cache will read an ugly lot of
+  unnescesary data.
+- The ideal 030 code has 256 bytes (at
+  max.) inner loops, and code cache is
+  always on. Code with huge branch
+  tables is far from good there, and
+  can perform better sometimes killing
+  both, code cache+code burst.
+
+Let's deal now with the simplest cache
+design, and most similar to modern
+ones BTW. I am talking about the 040.
+68040 has both caches, 4096 bytes
+long. They are organised in 16 bytes
+lines (4 longs), but BURST modes are
+forced now. You can have code/data
+cache+burst, or choose not to have
+cache at all.
+Now, every time you access memory, a
+whole 16 bytes line enters the cache
+in BURST mode, there is not any other
+cache option. As you can realise, this
+is a problem in most code
+optimisations, especially those based
+in long tables.
+Usually, memory access is much slower
+(on 040/40 and upwards) than normal
+processing, and now a lot of unwanted
+memory is recalled as well. I will
+elaborate on the problem later, in the
+performance example.
+
+The same CPU model can be applied to
+060 - the only difference being that
+it has 8192 bytes long caches. Also,
+the 060 has a new cache, the branch
+cache, but its existence should be
+invisible to the coder. Branch caches
+are also present in PPC 604 and 750.
+The meaning and inner workings of
+branch caches are beyond the scope of
+this article, but anybody serious
+about optimisation should know the
+problems of branching in modern CPUs,
+so I recommend further reading about
+the matter; »CL1:Motorola» PPC manuals have
+the subject well covered, for example.

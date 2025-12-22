@@ -1,0 +1,86 @@
+
+ just a note to explain the use of the last "mapping type"
+ parameter, which exist in these raycaster effects:
+
+ Warper
+ Twirl
+ Tunnel
+ Ground
+
+ it was always set to 0 before (cte|0)
+ now assume (cte|1) is possible, with:
+  value 0 meaning color 0 is written
+  value 1 meaning color 0 is transparent (sprite like)
+
+ so here some use of it:
+
+-----------------------------------------------------------------
+
+
+<MAIN> myscript |0|1</MAIN>              the main script to play...
+
+<KIMG> texture256x256 | data/logozaac.iff </KIMG>   let's create an image.
+                                                    Note this image must be 256x256.
+
+<KIMG> impacman | data/oldpac.iff </KIMG>       These one, used for sprites
+
+
+<KRECT>    shortquad   |0|0.25|1|0.75|
+                       |0|0|1|1|  </KRECT>
+
+
+--------------------------------------------------
+<KSCRIPT>                           let's write a script to play.
+
+    <ID> myscript </ID>
+
+    <PLAY> mypart | 2000 | 0 | 1 </PLAY>
+ 
+
+
+</KSCRIPT>
+
+--------------------------------------------------------
+<KPART>
+
+    <ID> mypart  </ID>
+
+    <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> texture256x256 </Pa>   we have seen each image stands for a 256 color palette too.
+    </Fx>
+
+   <Fx><Pa> SpritePlain </Pa>
+        <Pa> shortquad  </Pa>
+        <Pa> impacman   </Pa>
+        <Pa> 4cte|0|0.25|1|0.75 </Pa>
+    </Fx>
+  
+    <Fx><Pa> Warper </Pa>
+            <Pa> shortquad  </Pa>              the rectangle where to draw (default)
+            <Pa> texture256x256 </Pa> the 256x256 texture to deform
+
+            <Pa>CTE|0.9</Pa>        a zoomx rate
+            <Pa>CTE|0.9</Pa>        a zoomy rate
+            <Pa>SIN|0.5|0.4|0.45</Pa> texture offset x
+            <Pa>COS|0.7|0.5|0.45</Pa> texture offset Y
+
+            <Pa>CTE|0.26</Pa>        amplitude of deformation
+            <Pa>CTE|0.4</Pa>        frequency of deformation
+            <Pa>SIN|0|0.34|1</Pa>    X offset of the deformation
+            <Pa>COS|0|0.45|0</Pa>    Y...
+
+            <Pa>CTE|1</Pa> mapping type TO 1
+    </Fx>
+
+
+
+    + 1 sprite :-)
+    <Fx><Pa> Sprite </Pa>
+        <Pa></Pa>
+        <Pa> impacman   </Pa>
+        <Pa> 4cte|0|0|0.15|0.15 </Pa>
+    </Fx>
+
+</KPART>
+--------------------------

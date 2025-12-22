@@ -1,0 +1,1977 @@
+{
+  "actions": [
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 10880
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "sn_scene_2"
+        }
+      ],
+      "loops": 1,
+      "name": "scroll_position",
+      "start_time": 0,
+      "type": "property_float"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 1420
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "sn_scene_2"
+        }
+      ],
+      "loops": 1,
+      "name": "scroll_alpha",
+      "start_time": 9300,
+      "type": "property_float"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "int32_values": 0,
+            "time": 1980
+          },
+          {
+            "int32_values": 1,
+            "time": 2440
+          },
+          {
+            "int32_values": 2,
+            "time": 2420
+          },
+          {
+            "int32_values": 3,
+            "time": 1740
+          },
+          {
+            "int32_values": 0,
+            "time": 2300
+          },
+          {
+            "int32_values": -1,
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "sn_scene_2"
+        }
+      ],
+      "loops": 1,
+      "name": "scroll_color",
+      "start_time": 0,
+      "type": "property_int32"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 100
+          },
+          {
+            "float_values": 0.23000000417232513,
+            "interpolation": "linear",
+            "time": 100
+          },
+          {
+            "float_values": -0.19999998807907104,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 0.18000000715255737,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": -0.10000002384185791,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 0.07999999821186066,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": -0.10000002384185791,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 440
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": -2.0,
+            "interpolation": "linear",
+            "time": 100
+          },
+          {
+            "float_values": 0.20000004768371582,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": -0.10000002384185791,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 300
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 100
+          },
+          {
+            "float_values": 0.20000000298023224,
+            "interpolation": "linear",
+            "time": 100
+          },
+          {
+            "float_values": -0.19999998807907104,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 380
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 0.25,
+            "interpolation": "linear",
+            "time": 100
+          },
+          {
+            "float_values": -0.19999998807907104,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 0.18000000715255737,
+            "interpolation": "linear",
+            "time": 100
+          },
+          {
+            "float_values": -0.10000002384185791,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 0.07999999821186066,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 460
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": -0.19999998807907104,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 0.12999999523162842,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": -2.0,
+            "interpolation": "linear",
+            "time": 100
+          },
+          {
+            "float_values": 0.15000000596046448,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": -0.10000002384185791,
+            "interpolation": "linear",
+            "time": 60
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 440
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": -0.19999998807907104,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 0.25,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": -0.3999999761581421,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 0.10000002384185791,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 220
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 0.15000000596046448,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": -0.19999998807907104,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 520
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 100
+          },
+          {
+            "float_values": 0.10000002384185791,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": -0.19999998807907104,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 0.15000000596046448,
+            "interpolation": "linear",
+            "time": 100
+          },
+          {
+            "float_values": -2.0,
+            "interpolation": "linear",
+            "time": 100
+          },
+          {
+            "float_values": 0.20000004768371582,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": -0.10000002384185791,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 320
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 0.25,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": -0.3999999761581421,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 0.15000000596046448,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": -0.19999998807907104,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 0.07999999821186066,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": -0.10000002384185791,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 520
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": -2.0,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 0.20000004768371582,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": -0.19999998807907104,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 0.12999999523162842,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 180
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 0.10000000149011612,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "sn_scene_2"
+        }
+      ],
+      "loops": 1,
+      "name": "scroll_scale_y",
+      "start_time": 860,
+      "type": "property_float"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": -270.000001,
+            "interpolation": "linear",
+            "time": 10880
+          },
+          {
+            "float_values": -0.0,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "snake_2_1"
+        }
+      ],
+      "loops": 1,
+      "name": "snake_2_1_action",
+      "start_time": 0,
+      "type": "rotation_z"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 200
+          },
+          {
+            "float_values": 1.1,
+            "interpolation": "linear",
+            "time": 180
+          },
+          {
+            "float_values": 0.9,
+            "interpolation": "linear",
+            "time": 100
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 300
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 60
+          },
+          {
+            "float_values": 1.1,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 0.9,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.2,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 0.8,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.3,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 0.7,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.2,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 0.8,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.1,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 0.9,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 160
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 120
+          },
+          {
+            "float_values": 0.6,
+            "interpolation": "linear",
+            "time": 120
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 600
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 140
+          },
+          {
+            "float_values": 1.2,
+            "interpolation": "linear",
+            "time": 140
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 320
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 120
+          },
+          {
+            "float_values": 1.6,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 0.9,
+            "interpolation": "linear",
+            "time": 120
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 660
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 140
+          },
+          {
+            "float_values": 1.6,
+            "interpolation": "linear",
+            "time": 100
+          },
+          {
+            "float_values": 0.8,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.3,
+            "interpolation": "linear",
+            "time": 100
+          },
+          {
+            "float_values": 0.9,
+            "interpolation": "linear",
+            "time": 100
+          },
+          {
+            "float_values": 1.1,
+            "interpolation": "linear",
+            "time": 100
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 300
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 100
+          },
+          {
+            "float_values": 0.4,
+            "interpolation": "linear",
+            "time": 100
+          },
+          {
+            "float_values": 1.2,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 320
+          },
+          {
+            "float_values": 1.6,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 0.7,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.4,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 0.8,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.2,
+            "interpolation": "linear",
+            "time": 100
+          },
+          {
+            "float_values": 0.9,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 440
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 100
+          },
+          {
+            "float_values": 1.1,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 0.9,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.2,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 0.8,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.3,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 0.7,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.4,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 0.8,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.2,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 0.9,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.05,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "snake_2_1"
+        }
+      ],
+      "loops": 1,
+      "name": "snake_2_1_action",
+      "start_time": 1060,
+      "type": "scale_x"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 200
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 180
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 100
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 280
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 60
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 20
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 160
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 160
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 600
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 140
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 140
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 320
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 120
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 120
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 660
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 140
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 100
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 100
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 100
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 100
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 300
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 100
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 100
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 320
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 100
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 440
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 100
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "snake_2_1"
+        }
+      ],
+      "loops": 1,
+      "name": "snake_2_1_action",
+      "start_time": 1060,
+      "type": "scale_z"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 200
+          },
+          {
+            "float_values": 1.1,
+            "interpolation": "linear",
+            "time": 180
+          },
+          {
+            "float_values": 0.9,
+            "interpolation": "linear",
+            "time": 100
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 280
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.1,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 0.9,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.2,
+            "interpolation": "linear",
+            "time": 60
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 20
+          },
+          {
+            "float_values": 0.8,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.3,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 0.7,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.2,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 0.8,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.1,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 0.9,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 160
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 0.6,
+            "interpolation": "linear",
+            "time": 160
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 600
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 140
+          },
+          {
+            "float_values": 1.2,
+            "interpolation": "linear",
+            "time": 140
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 320
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 120
+          },
+          {
+            "float_values": 1.6,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 0.9,
+            "interpolation": "linear",
+            "time": 120
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 660
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 140
+          },
+          {
+            "float_values": 1.6,
+            "interpolation": "linear",
+            "time": 100
+          },
+          {
+            "float_values": 0.8,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.3,
+            "interpolation": "linear",
+            "time": 100
+          },
+          {
+            "float_values": 0.9,
+            "interpolation": "linear",
+            "time": 100
+          },
+          {
+            "float_values": 1.1,
+            "interpolation": "linear",
+            "time": 100
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 300
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 100
+          },
+          {
+            "float_values": 0.4,
+            "interpolation": "linear",
+            "time": 100
+          },
+          {
+            "float_values": 1.2,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 320
+          },
+          {
+            "float_values": 1.6,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 0.7,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.4,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 0.8,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.2,
+            "interpolation": "linear",
+            "time": 100
+          },
+          {
+            "float_values": 0.9,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 440
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 100
+          },
+          {
+            "float_values": 1.1,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 0.9,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.2,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 0.8,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.3,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 0.7,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.4,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 0.8,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.2,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 0.9,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.05,
+            "interpolation": "linear",
+            "time": 80
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "snake_2_1"
+        }
+      ],
+      "loops": 1,
+      "name": "snake_2_1_action",
+      "start_time": 1060,
+      "type": "scale_y"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "bezier",
+            "time": 1000
+          },
+          {
+            "float_values": [
+              0.699999988079071,
+              0.699999988079071,
+              0.699999988079071
+            ],
+            "interpolation": "bezier",
+            "time": 2000
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "bezier",
+            "time": 2000
+          },
+          {
+            "float_values": [
+              0.699999988079071,
+              0.699999988079071,
+              0.699999988079071
+            ],
+            "interpolation": "bezier",
+            "time": 2000
+          },
+          {
+            "float_values": [
+              0.10000000149011612,
+              0.10000000149011612,
+              0.10000000149011612
+            ],
+            "interpolation": "bezier",
+            "time": 2000
+          },
+          {
+            "float_values": [
+              0.800000011920929,
+              0.800000011920929,
+              0.800000011920929
+            ],
+            "interpolation": "bezier",
+            "time": 1880
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "snake_2_1"
+        }
+      ],
+      "loops": 1,
+      "name": "Morph_X",
+      "start_time": 0,
+      "type": "mesh_shape"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "bezier",
+            "time": 2000
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "bezier",
+            "time": 2000
+          },
+          {
+            "float_values": [
+              0.4000000059604645,
+              0.4000000059604645,
+              0.4000000059604645
+            ],
+            "interpolation": "bezier",
+            "time": 2000
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "bezier",
+            "time": 2000
+          },
+          {
+            "float_values": [
+              0.20000000298023224,
+              0.20000000298023224,
+              0.20000000298023224
+            ],
+            "interpolation": "bezier",
+            "time": 2000
+          },
+          {
+            "float_values": [
+              0.699999988079071,
+              0.38686850666999817,
+              0.837777853012085
+            ],
+            "interpolation": "bezier",
+            "time": 880
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "snake_2_1"
+        }
+      ],
+      "loops": 1,
+      "name": "Morph_Z",
+      "start_time": 0,
+      "type": "mesh_shape"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.2,
+              0.05,
+              0.05
+            ],
+            "interpolation": "linear",
+            "time": 1640
+          },
+          {
+            "float_values": [
+              0.2,
+              0.05,
+              0.05
+            ],
+            "interpolation": "linear",
+            "time": 340
+          },
+          {
+            "float_values": [
+              0.2,
+              0.8,
+              0.2
+            ],
+            "interpolation": "linear",
+            "time": 160
+          },
+          {
+            "float_values": [
+              0.05,
+              0.2,
+              0.05
+            ],
+            "interpolation": "linear",
+            "time": 1920
+          },
+          {
+            "float_values": [
+              0.05,
+              0.2,
+              0.05
+            ],
+            "interpolation": "linear",
+            "time": 360
+          },
+          {
+            "float_values": [
+              0.2,
+              0.2,
+              0.8
+            ],
+            "interpolation": "linear",
+            "time": 220
+          },
+          {
+            "float_values": [
+              0.05,
+              0.05,
+              0.2
+            ],
+            "interpolation": "linear",
+            "time": 1920
+          },
+          {
+            "float_values": [
+              0.05,
+              0.05,
+              0.2
+            ],
+            "interpolation": "linear",
+            "time": 280
+          },
+          {
+            "float_values": [
+              0.8,
+              0.8,
+              0.2
+            ],
+            "interpolation": "linear",
+            "time": 220
+          },
+          {
+            "float_values": [
+              0.2,
+              0.2,
+              0.05
+            ],
+            "interpolation": "linear",
+            "time": 1300
+          },
+          {
+            "float_values": [
+              0.2,
+              0.2,
+              0.05
+            ],
+            "interpolation": "linear",
+            "time": 220
+          },
+          {
+            "float_values": [
+              0.8,
+              0.1,
+              0.1
+            ],
+            "interpolation": "linear",
+            "time": 200
+          },
+          {
+            "float_values": [
+              0.2,
+              0.05,
+              0.05
+            ],
+            "interpolation": "linear",
+            "time": 520
+          },
+          {
+            "float_values": [
+              0.2,
+              0.05,
+              0.05
+            ],
+            "interpolation": "linear",
+            "time": 1420
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "snake_2_1"
+        }
+      ],
+      "loops": 1,
+      "name": "Shader NodetreeAction",
+      "start_time": 0,
+      "type": "diffuse_color_rgb"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -4.30329132,
+              4.50655794,
+              10.32590199,
+              -4.30329132,
+              4.50655794,
+              10.32590199,
+              -4.30329132,
+              4.50655794,
+              10.32590199
+            ],
+            "interpolation": "bezier",
+            "time": 1500
+          },
+          {
+            "float_values": [
+              -7.24819565,
+              3.09262896,
+              1.84139442,
+              -7.24819565,
+              3.36031079,
+              6.0836482,
+              -7.24819565,
+              2.82494712,
+              -2.40085936
+            ],
+            "interpolation": "bezier",
+            "time": 1500
+          },
+          {
+            "float_values": [
+              -3.21796489,
+              2.82494712,
+              -6.64311314,
+              -3.21796489,
+              2.82494712,
+              -6.64311314,
+              -3.21796489,
+              2.82494712,
+              -6.64311314
+            ],
+            "interpolation": "bezier",
+            "time": 2200
+          },
+          {
+            "float_values": [
+              -3.58928728,
+              8.98007393,
+              -6.61429596,
+              -3.58928728,
+              8.98007393,
+              -6.62004375,
+              -3.58928728,
+              8.98007393,
+              -6.61048174
+            ],
+            "interpolation": "bezier",
+            "time": 1460
+          },
+          {
+            "float_values": [
+              2.70401525,
+              7.60713053,
+              -5.92799282,
+              0.37741852,
+              7.60713053,
+              -6.61429596,
+              5.76364899,
+              7.60713053,
+              -5.02545738
+            ],
+            "interpolation": "bezier",
+            "time": 1920
+          },
+          {
+            "float_values": [
+              5.9868679,
+              7.65867567,
+              4.49563503,
+              5.9868679,
+              7.60713053,
+              1.74297595,
+              5.9868679,
+              7.71559,
+              7.53502941
+            ],
+            "interpolation": "bezier",
+            "time": 2120
+          },
+          {
+            "float_values": [
+              -3.20625448,
+              8.81019974,
+              7.53502941,
+              -3.20625448,
+              8.81019974,
+              7.53502941,
+              -3.20625448,
+              8.81019974,
+              7.53502941
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "camera_1"
+        }
+      ],
+      "loops": 1,
+      "name": "camera_1Action",
+      "start_time": 0,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -19.292297,
+              -36.858993,
+              0.0,
+              -19.292297,
+              -36.858993,
+              0.0,
+              -19.292297,
+              -36.858993,
+              0.0
+            ],
+            "interpolation": "bezier",
+            "time": 1500
+          },
+          {
+            "float_values": [
+              -19.292297,
+              -90.146633,
+              -0.0,
+              -19.292297,
+              -63.50281,
+              -0.0,
+              -19.292297,
+              -116.790456,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 1500
+          },
+          {
+            "float_values": [
+              -19.292297,
+              -143.434273,
+              -0.0,
+              -19.292297,
+              -143.434273,
+              -0.0,
+              -19.292297,
+              -143.434273,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 2200
+          },
+          {
+            "float_values": [
+              -51.271984,
+              -134.584055,
+              -0.0,
+              -51.271984,
+              -134.584055,
+              -0.0,
+              -51.271984,
+              -134.584055,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 1460
+          },
+          {
+            "float_values": [
+              -51.271984,
+              -216.265168,
+              0.0,
+              -51.271984,
+              -182.338703,
+              0.0,
+              -51.271984,
+              -260.880797,
+              0.0
+            ],
+            "interpolation": "bezier",
+            "time": 1920
+          },
+          {
+            "float_values": [
+              -51.271984,
+              -315.248091,
+              -0.0,
+              -51.271984,
+              -281.581898,
+              -0.0,
+              -51.271984,
+              -352.421177,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 2120
+          },
+          {
+            "float_values": [
+              -51.271984,
+              -405.401042,
+              0.0,
+              -51.271984,
+              -405.401042,
+              0.0,
+              -51.271984,
+              -405.401042,
+              0.0
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "camera_1"
+        }
+      ],
+      "loops": 1,
+      "name": "camera_1Action",
+      "start_time": 0,
+      "type": "rotation_xyz"
+    }
+  ],
+  "cameras": [
+    {
+      "far_clip_plane": 500.0,
+      "fov_x": 46.206633,
+      "fov_y": 24.081748,
+      "hide": false,
+      "name": "camera_1",
+      "near_clip_plane": 0.1,
+      "position": [
+        -4.30329132,
+        4.50655794,
+        10.32590199
+      ],
+      "rotation": [
+        -19.292297,
+        -36.858993,
+        0.0
+      ]
+    }
+  ],
+  "enc_info": {
+    "data_type": "ENCSCN",
+    "date": "11 Oct 2022 21:20:51",
+    "version": "2.0"
+  },
+  "loops": 1,
+  "name": "sn_scene_2",
+  "objects": [
+    {
+      "material": {
+        "diffuse_color_rgba": [
+          0.2,
+          0.05,
+          0.05,
+          1.0
+        ]
+      },
+      "mesh_name": "sn_snake_2_1",
+      "name": "snake_2_1",
+      "properties": {
+        "blending": "additive",
+        "depth_mask": 0
+      },
+      "rotation": [
+        0.0,
+        0.0,
+        -270.000001
+      ],
+      "tag": 550
+    }
+  ],
+  "properties": {
+    "scroll_alpha": 1.0,
+    "scroll_color": 0,
+    "scroll_position": 0.0,
+    "scroll_scale_y": 0.0
+  },
+  "time": 10880
+}

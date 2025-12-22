@@ -1,0 +1,11 @@
+stack 40000
+
+c/ptp >NIL: music/mod.sneeze_remix
+run <NIL: >NIL: c/intro_pics
+wait 12
+
+c/yp >NIL: -batch dataworld.yp
+
+wait 7
+c/end_pics
+c/ptp >NIL: q

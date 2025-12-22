@@ -1,0 +1,79 @@
+Short:    Animation for Christmas at Millennium 2000
+Uploader: Andrew@basden.demon.co.uk
+Author:   Andrew@basden.demon.co.uk
+Type:     demo/aga
+
+CHRISTMAS'99 + MILLENNIUM 2000 ANIMATION
+
+This is a Videotracker 'vidule' that can be run straight from floppy disk 
+on startup, since it is self-contained and has within itself all that is 
+needed.  It runs on a bottom-of-the-line Amiga 1200 with a single floppy 
+disk - we turn it on and off with a timer.  Simply copy all the files
+to a bootable floppy and boot off it.
+
+Contents of Archive:
+	vt.2000 - the vidule
+	s/startup-sequence - what you might expect!
+	2000.readme - this file
+	2000.protext - Handout containing the info below in Protext.
+	2000.pgs - my Pagestream file for a label
+
+THE CONTENT
+
+This animation is a portrayal of Christmas and the Millennium, 2000 years 
+(approximately) since the birth of Jesus Christ.  2000 years ago, the 
+Living God became a human being.  So that he would share our humanity, bear 
+our problems and that we might truly live.  'Jesus' means that he can save 
+us from those problems.  'Christ' means that he is the 'anointed one', the 
+only one who has the real authority and power to do so.
+
+Much of the cycle is pure visuals - circles, wire shapes, moire patterns, 
+colour cycling, and the like - which have no deliberate symbolic meaning. 
+At various places throughout the cycle, various short messages appear:
+      The birth of Jesus via a woman called Mary who was still a virgin.
+      "Christ - that we might truly live"
+      "Jesus"
+      and the Christian symbols of the Cross and the Millennium.
+The Cross was the means of execution used to kill Jesus Christ nearly 2000 
+years ago.  Nails were driven through your wrists into a cross piece, and 
+you hung from them, arms stretched wide in the baking sun, until you die.
+
+The message is that Christ, fully God, became fully human too, then died, 
+not just because he annoyed the authorities of the day, but for us.  To 
+sort out the mess we had made - and still make of the world.
+
+While various other religions have stories about gods being born and gods 
+rising from death, none give it the full meaning that it means that God is 
+with us in the deepest way possible, rather than 'above' us - and none 
+place it in history.  That is why 2000 is so important: it says this was a 
+real happening, not just a story - and it affects us today.
+
+THE TECHNOLOGY
+
+This animation is played by Videotracker, a software package for the Amiga 
+that puts visual events on the screen in time with a music track.  Each 
+event - starting an animation, putting up a picture, changing colours, etc. 
+- is attached to an instrument and comes up when that instrument is played.
+
+The animation makes full use of the special hardware features of the Amiga:
+  Fast swapping between visual fields: that is how the animation manages 
+to show things in fast sequence.
+  'Dual playfield', in which two visual fields are shown, one behind the 
+other: e.g. see the moire fringe effects when two sets of circles move with 
+respect to each other.
+  Copper list, which changes the colour registers as the video beam makes 
+its way down the screen, giving the smooth shading you see in some parts.
+  Colour cycling, in which the colour registers are changed from frame to 
+frame, so that colours come and go.
+  Videoline shift, in which each line on the screen can be shifted 
+slightly to right or left: see the 'wobble' in some parts.
+  High efficiency: the animation is run on a bottom-of-the-range Amiga 
+1200, (a mere 2 Mb of memory, 14MHz clock), single floppy disk.
+  Safe switch-off: as long as the Amiga is not actually accessing the 
+disks, it can be switched off without having to be 'closed down'.
+  Fast, automatic start-up: the Amiga starts up in a few seconds from 
+switch-on, loading the animation straight away and running it.
+  So the animation can be run on a timer that switches on and off at times 
+of our choice, and saving power at other times.
+
+Andrew Basden, Main Street Chapel, Frodsham, 12 December 1999.

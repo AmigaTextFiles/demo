@@ -1,0 +1,5 @@
+sdlmove:	hogwagen.c
+	gcc `sdl-config --cflags --libs` -lm -W -lpthread hogwagen.c -o hogwagen -lSDL
+
+clean:
+	rm sdlmove

@@ -1,0 +1,411 @@
+    ___________/\_____________ ____________/\___________   
+   /   __________/________    \      \__      \_______  \     
+   \________   \__/     \ ____/        /        /   \    \    
+    /      /    \        \/           /        /     \    \
+   /      /     /\        \_       __/      __/       \   /
+   \___________/  \_______/ \_____/   \____/  \_______/__/
+ 
+         !SPOON - THE GROUPING GROUP OF ALL GROUPS!
+
+                     Doc for Sound #2
+
+This file contains the text that didn't quite make it into the 
+editorial.  This file also reflects the (sorry)  state of mind 
+of the coder :)
+
+LEGAL DEPARTMENT :
+
+ SOUND 2 IS NOT, AND WILL NEVER BE PUBLIC DOMAIN.
+
+ SOUND 2 IS  COPYRIGHTED  BUT FREELY  DISTRIBUTABLE  SOFTWARE.
+
+              THIS IS ALSO KNOWN AS FREEWARE
+
+ YOU  ARE ALLOWED TO SPREAD THE PACKAGE FREELY, AS LONG AS YOU 
+ DO NOT CHARGE  MORE THAN  A REASONABLE FEE TO COVER EXPENSES.
+ SINCE THIS  IS  HARD TO GRASP  FOR  SOME  DEALERS IN GERMANY,
+ I DECLARE THAT NO GERMAN PD DISTRIBUTORS ARE ALLOWED TO CARRY 
+ THIS PROGRAM IN THEIR LIBRARIES.
+ THE ONLY EXCEPTION ARE :
+   
+   AMIGA MAGAZIN PD-DISKS, IF THEY SHOULD DESIRE TO DISTRIBUTE 
+   THIS.
+
+ IT IS ALSO ALLOWED FOR THE FOLLOWING TO PUT SOUND ON CD-ROM :
+
+   FRED FISH ON HIS FRESH FISH AND OTHER FISH CD'S
+   AMINET ON THE AMINET CD'S
+
+ OTHER DISTRIBUTORS MUST CONTACT SPOON FOR A LICENSE.
+
+ IT IS EXPRESSIVELY FORBIDDEN FOR THE GERMAN PD LIBRARY :
+
+  MALLANDER SOFTWARE
+
+ TO DISTRIBUTE SOUND, AND ALL OTHER SPOON RELEASES, AS THEY MOT
+ ONLY CHARGE WAY TO MUCH FOR PD STUFF, BUT ALSO SELL VARIOUS
+ SCENE RELEASES FOR HIGH PROFITS AND SELL DISKS WITH RIPPED GFX
+
+ REMEMBER,  THAT  THE  COPYRIGHT  FOR  SOUND  LIES  WITH  JOHN 
+ 'SHAYERA' HINGE AND CHRISTINE  HANSEN (CHRISTINE DE LA QUEEN) 
+ OF THE DEMO GROUP SPOON,BUT THE COPYRIGHT FOR THE MUSIC, LIES 
+ WITH THE INDIVIDUAL MUSICIANS THEMSELVES.  
+ THEREFOR,  IF  YOU  LIKE  THE MUSIC, AND WOULD LIKE TO USE IT 
+ OTHER  THAN FOR  PRIVATE LISTENING, THEN  CONTACT US, AND  WE 
+ WILL PUT YOU IN TOUCH WITH THE AUTHOR, AND  USUALLY HE OR SHE 
+ WILL ALLOW YOUR USE OF THE MUSIC.
+
+
+ The People responsible for Sound #2 are :
+
+ Christine Hansen (CDLQ) :
+   Concept, Design and Graphics
+
+ Carsten Kaae (AXE) :
+   Graphics
+
+ Subsonic / Disaster :
+   Font stuff
+
+ Braintumor & Heywood / Stone Arts :
+   Main tune
+
+ John Hinge (SHAYERA) :
+   Code and the small chars in the font (really bad eh. :)
+
+ Intro :
+  Slide / Polka Brothers :
+   Code, Graphics, Music
+  Shayera / Spoon :
+   Startup code, and some minor details
+
+ For the individual musicians, see the Info screen in Sound 2.
+
+
+History so far :
+
+The original code for Sound #1, has almost NOT been reused for 
+this program for several reasons :
+The original code  was a superb  example  of how NOT to code a 
+program intended for easy maintaining..
+The  source consisted of two main parts and a host of support-
+files,  which  not  even I could remember quite which did what 
+and why :)
+Also  the  code was very bad, and resembled nothing as much as 
+the fact that it was written in great haste...
+The  goal for the Sound 2  Source, is to achieve as much modu-
+larity  as possible, thereby making migration of the code pos-
+sible.  This could be used to port it to run on GFX-Cards,  or 
+even  a Port to  other machines  (PC's, PowerPC's, HP-Apollo's 
+etc...)  I  would only have  to update for  example GFXSupport 
+(and the replayer if I port to a new machine)
+
+
+This  program has  been written entirely in 'C' except for the 
+following :
+       The Decruncher (RNC V2)
+       The Replayer (The Player V6.1A)
+
+The source for Sound 2 is divided into these modules :
+ Main.c :
+                Opens global stuff, calls GFX routines, etc...
+                Portable to any C-compiler (& therefor compu-
+                ter :) )
+                There is some native (Amiga-OS) stuff in this, 
+                but this will be  fairly  easy to port (I hope
+                /suspect :)
+
+ GFXSupport.c :
+                Implementation specific graphics routines..
+                Currently 1 version :
+                 One for Native AGA Amiga's
+                 This allocates screens, loads, and  decrunches 
+                 screen data, and handles gadgets etc..
+
+ FileSupport.c : 
+                Implementation  of  General  File Loading rou-
+                tines...
+
+ IntroSequence.c :
+                This run the  Spoon  intro sequence, ie. shows 
+                some nice pictures.
+
+ OnBoardGFX.c :
+                This contains the 'onboard' graphics, gadgets 
+                and stuff, which is too small to deserve sepa-
+                rate loading..
+
+ Texts.c :
+                This  contains  ModuleInfo's, Rules text,  and 
+                the dreaded Editorial...
+                I don't  change this  so often, so it's better 
+                to leave it  in a separate file, and save com-
+                pilation time..
+
+ P61.o :
+                This is a version of The Player V6.1 by Guru / 
+                Sahara Surfers adapted to work with C programs 
+                (Parameter calls etc..)
+
+ RNC_2.o :
+                This  is  a Decruncher  for the ProPack 2.x by 
+                Rob Northen. This decrunches 'mode 2' crunched 
+                files.
+
+ Due to  the way I am  organizing  things the  Main program is 
+ quite small.  The Final Compile gives ca. 57 Kb. Compare this 
+ with 'EuroChart's 4-500 Kb (unpacked) Modularity Rulez :)
+
+ as of 14.02.95 nearly all the code is up and running...
+ It shows the texts correctlym and the Loader's are working...
+ now it is a matter of  banging on the selectors visually, and 
+ tackle the dreaded Intro-Sequence.. and  ofcourse waiting for 
+ the Intro..
+
+ as of 17.02.95  all the code is finished,  and  it appears to 
+ work :)  Especially the selector gadgets were  quite funny to 
+ set up...
+ Sometimes Intuition can be a real pain...  If you  use struct 
+ Image stuff, it  destroys the data  in all  6 bitplanes, even 
+ though the image is only 5 planes deep.  Therefor  I  decided 
+ to use struct Borders instead..
+ Why is the autodocs for intuition so strange ??
+ The documentation says the  Border uses  a sequence of vector 
+ coordinates, but it is really  just plain coordinates !!!  It 
+ looked very funny until I caught this little bug :)
+ 
+ as of 24.02.95  I am getting REAL tired of this production..
+ all code is running, and everything appears to be ok.
+ I have gotten all the GFX inseted at its place, including
+ some GFX I only found out I needed, when i looked through the
+ data directory in order to clean out not needed files..
+ Now there is pretty images for both sets of selectors :)
+
+ The most of the time between 25.02 & 2.03 has been spent both
+ waiting for the Intro, and bugfixing some stuff...
+ The only real significant changes are :
+ Sound now works form Startup-Sequence (as it should)
+ You can Pause and Exit the Editorial
+
+ For more insight into the progress of how I made this, read
+ the text file called Sound2.LOG, it is sort of a day to day
+ diary of what happened when..
+
+ Small Instructions :
+
+ In the CLI type Sound2 <return>
+
+ When tired of it, either press ESCAPE or click on the 
+  'exit to DOS' gadget
+
+ Press the keys 1-\ on the keyboard(above the alphabetic keys)
+ to load the 13 selectable tunes !!
+ Due to policies, you can NOT reselect the wonderful first mo-
+ dule, as this module is larger than the rest of  the modules, 
+ and is a special introduction piece.  This is  NEVER meant to 
+ be re-selectable... listen, push gadget and weep :)
+
+ Simple, eh... ??
+
+ Amongst  the response to Sound #1, several  people  (swappers 
+ mostly) have complained  that  Sound wasn't a 'one file' pro-
+ gram, but that would be a real pain in the ***!!!
+ I would have to make it either with overlays, since it  isn't 
+ feasible to load ALL of the stuff (300Kb gfx & 500 Kb msx) at 
+ once  AND leave space for  buffers,  spare screens etc... and 
+ frankly, I know zilch about overlays..
+ Or make it as 2 files..
+ A main program and one large datafile, like  some diskmags do 
+ it...  I have thought about this, but I find it  much  easier 
+ to do it with my current system of separate files...
+
+ Sound #2 is developed on the following configuration :
+
+  Commodore Amiga A1200, 2Mb Chip memory, AGA chipset
+  Kickstart V 3.0 (39.106)
+  Workbench V 3.0 (39.29)
+  X-tra diskdrive,of suspect manufacturing:) (6 years/no err's)
+  Quantum Prodrive ELP120 120 Mb 3½" HD
+
+ Tested on :
+  A1200, No FastRam, Kick 3
+  A1200, 4 Mb FastRam, Kick 3 (Thanx Merge)
+  A4030, 2 Mb Chip, 2 Mb Fast, Kick 3 (Thanx Bagger)
+
+
+ Tools used in the creation of Sound #2 so far :
+
+ SAS/C Amiga C/C++ compiler V6.50
+  (I hope SAS Institure reconsiders their dropping the Amiga..
+   it will be irritating to port this to eg. Maxon C/C++ 3)
+
+ Cygnussoft CED 3.5
+  (Miles beyond SAS/C's SE editor :)
+
+ HiSoft Devpac Amiga Assembler V3.04
+  (The best for serious system programming)
+ ASM-One V1.25 by The Flame Arrows
+  (GURU/S2 : Why did you drop the Devpac versions of P61 ???)
+
+ Electronic Arts Deluxe Paint V4.5 (AGA)
+  (It's old, It's slow, but it is trustworthy :)
+
+ Cloanto's Personal Paint V6
+  (Why can't DPaint use Sound's legal system font ??)
+
+ PicCon V2.5 (Registered Version :)
+  (This program is REALLY great, go out and register it today)
+
+ ExoticRipper V2.27 (Registered)
+
+ ProPack 2.08 by Rob Northen Computing
+  (This cruncher gives really great performance !!
+   the raw GFX data for sound takes up 1740800 bytes
+   the crunched gfx takes               302202 bytes
+   that is a crunch to only 17.36 % !!!)
+
+ The Player V6.1A (610.1) -  08.01.95 by Guru / Sahara Surfers
+  (The best for both speedy replay, and good diskspace saving)
+
+ Directory Opus V4.12 by Innovatronics
+  (nice.. still waiting for V5)
+
+ DiskMaster V2.1c by Greg Cunningham / Progressive Peripherals 
+ Inc.
+  (not so advanced but uses MUCH less memory than DOpus)
+
+ AmigaDate by Tomi Ollila <too@cardhu.cs.hut.fi>
+  (one of those tools you wonder how you got by without)
+
+ Special Hardware used :
+
+ Commodore Amiga CD32+FMV,
+  to keep my mind distracted while I work :)
+
+ Special thanks so far :
+
+ Estrup / Static Bytes for input on how to 'cheat' Intuition..
+  Actually the idea is NOT to cheat Intui.. For 12 revisions I 
+  was  using an  interlieved  bitmap, and this has given me NO 
+  end of headaches as blitting into this,and extending it with 
+  an extra bitplane for text etc, was NOT so easy.
+  Estrup  claimed, that it wasn't neccessary  to use an inter-
+  lieved screen, and he was right:)(I don't know why it didn't 
+  work before ??)
+
+ Merge / Polka B.	for being friendly
+
+ Airwalk / Polka B.  for keeping me writing in C :)  (You keep 
+  bugging me to write it in ASM, so  I  keep  bugging you  and
+  keep  on  doing it in C ;^)  Thanx for the wipe 'algorithm', 
+  but as of 14.02, I got some response on my current wipes, so 
+  it  will probably  not be implemented...  except  maybe  for 
+  Sound #3, when I have rewritten it in C :)
+
+ Colin	Some day I WILL do a GFX card version,in the meantime, 
+  I am REALLY  enjoying that CD32... Now  I just have to get a 
+  SX-1 :)
+
+ Slide / Polka B. Well the music for my 40K was nice atleast:)
+  Thanks for lending me the batch of CD's...  Now I have some-
+  thing to listen to :)
+
+ Bagger  For letting me run this on a 4030,and for coming with 
+  good suggestions  concerning code, even though  I seldom use 
+  them :) (I don't know  if the 'hack'  from Viacom is necces-
+  sary ??) (actually i KNOW the 'hack' form Viacom is not nec-
+  cessary :)
+
+ The AD&D 2nd. Ed. Crowd,  for taking my mind of off things at
+  least once in the week...
+
+ Guru / Sahara Surfers for keeping on updating The Player, and 
+  making it more powerful with each revision...
+
+ To these for keeping me 'sane' :
+
+ J.M.Jarre        : Concerts in China, Equinoxe, Oxygene
+ Queen            : A Day At The Races, The Game,News of 
+                    the world, Innuendo, Greatest Hits I+II
+ Erasure          : Wonderland,The Circus,The Innocents, 
+                    Wild!, Chorus, I Say I Say I Say
+ Bjørn Lynne      : Montage
+ Pet Shop Boys    : Very
+ Mike Oldfield    : Tubular Bells II
+ Grid             : Evolver
+ Ace of Base      : Happy Nation, US-Version
+ ABBA             : Gold (Ok, so I'm nostalgic. just bugger off)
+ Kim Wilde        : The Singles Collection
+ The Commitments  : Soundtrack
+
+
+ Look out for other forthcoming Spoon productions :
+
+  Blue Savannah : 
+        A Harddisk only, Music-Experience-Demo
+        Code by : Shayera, GFX by : CDLQ,AXE, SFX by : B-Toven 
+        (after Erasure)
+        This demo will be an AGA  and  Harddisk  only,  as the 
+        amount of data is too great to be  practical on floppy 
+        disk, and besides; HD's are cheap,  so  let's all sup-
+        port them, and then we can make as nice demo's  as the 
+        PC's !!!
+
+ If you are interested in joining Spoon (and you should be !!)
+ Then  send us some examples of your work.. Coders should con-
+ tact me (Shayera)  All  others contact  Christine de La Queen 
+ (adress elsewhere on this disk)
+
+ We are searching for :
+        Coders (AGA experience preferred)
+        SFX    (Protracker, or PT compatible (Fast/Take/Scream 
+               etc.. 4 channels .MOD)
+        GFX    (A 'full screen' painter would be nice)
+        Trace  (NOT just another  'look  at them glassballs on 
+               that chessplane')
+
+ We`ll put up people from Saudi Arabia or Kuwait are very wel-
+ come, and can contact us concerning our special economic sup-
+ port member program (ESMP)  (We promise nice long letters and 
+ cheap membership :) (ok, just kidding, but don't hold back if 
+ you want to support us ;)
+
+
+ Questions, bug reports etc, to :
+
+  John 'SHAYERA' Hinge of SPOON
+
+  Silkeborgvej 220 B, 1
+
+  DK-8230 Åbyhøj
+
+  Denmark
+
+ email : nomachine-nowhere-noplace@thevoid.gov
+ www   : don't hold your breath :)
+
+ actually you can reach Spoon via FidoNet :
+  Duffy/Spoon :
+   Rikard Bosnjakovic @ 2:203/316.100
+
+ Make  a note of which  Spoonie the  message is for, and Duffy 
+ will forward the message (he better... ;)
+
+
+ Advert :
+
+     If you are an official representative from a game company 
+ seeking  new employees, then I can be contacted  at the above 
+ address... I am fluent in 68K Assembler, and 'C', and,as this 
+ program shows,I am not afraid of working in big projects with 
+ modular builds.  This  has  been a good excercise in managing 
+ such a project,and I feel pretty confident about my abilities 
+ when it comes to coding on the Commodore Amiga series of mini 
+ computers.  I  have  also  some  experience  in   coding  the 
+ Commodore  64, but this is probably  not  of any significance 
+ here in 1995 :)
+
+
+  1995, the revolution is coming... 
+  Spoon... We always eat our cornflakes
+

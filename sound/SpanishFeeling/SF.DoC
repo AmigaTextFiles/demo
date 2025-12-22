@@ -1,0 +1,108 @@
+
+     Spanish Feelin (The Spanish Music Disk)        (27/11/1995)
+     ---------------------------------------
+
+     Probado en: A500, A500+, A600, A1200
+
+
+         Saludos   a  todos  y  bienvenidos  a  mi  primera  producción  en
+     ensamblador. No  es  que haya hecho algo del otro mundo, pero para ser
+     la  primera  cosa  que  hago  en  ensamblador  a mí me parece que está
+     bastante bien, por algo se empieza, ¿no?.
+
+         La historia de este music-disk se remonta al mes de junio de 1995.
+     Por  aquel  entonces  yo  estaba  comenzando  a  hacer  mis pinitos en
+     ensamblador debido en parte  a  Xele/Odrusba,  que  me  apoyó en ello.
+     Diseñé una  especie  de  menú  de  opciones con el source de una intro
+     antigua e hice una rutina de carga de ficheros.  El problema es que la
+     rutina la copié (+ o -) de un libro e iba que daba pena.  Tras hacerle
+     muchos ajustes,  cambios y yo qué sé cuantas cosas más,  al  final  no
+     llegó  a  funcionar  todo  lo  debidamente  que yo esperaba ya que los
+     buffers que se  creaban  eran  tremendos  y  al  comprimirlos  con  el
+     PowerPacker  te  salía  un  GURU alucinante.  Cuando conseguí resolver
+     estos  problemas  usando  la instrucción  AllocMem me encontré con que
+     la  rutina de detección de teclas se ralentizaba un montón a causa del
+     scroll que tenía el menú y la rutina para los módulos, la cual era más
+     lenta que un cojo.  Opté por cambiar la rutina usando ProRunner,  pero
+     cuando ya todo parecía ir bien resultó que los módulos no  funcionaban
+     debido al scroll, un desastre.  Al final dejé de lado el programa y me
+     puse a hacer otras cosas que me comiesen menos la oreja.
+
+         Tras un largo paréntesis sin tocar el ensamblador  debido  a  unas
+     vacaciones  muy  merecidas  que me pegué en Málaga y Valencia,  retomé
+     otra vez el programa del music-disk. Decidí comenzar a escribirlo todo
+     desde el principio,  pero sin scroll ni puñetas ni nada.  Primero idee
+     la nueva rutina de carga.  Al final funcionó a las mil  maravillas  en
+     todos  los  kickstarts.  Tras  eso  busqué  un sistema para cargar los
+     módulos comprimidos  y  así  salvaguardar  espacio  en  el  disco.  La
+     decisión fue StoneCracker.  Tenía las rutinas para descomprimir o sea,
+     que en teoría no debería haber costado  mucho  realizar  el  programa,
+     pero no fue así.  La rutina se volvía loca con los bitplanos que tenía
+     en pantalla.  De vez en cuando  funcionaba  y  otras  veces  "Software
+     Failure".  Probé de todo, que si AllocMem, que si buffers usando DCB y
+     BLK,  de todo.  Sin bitplanos en pantalla  funcionaba  bien,  pero  en
+     cuanto  llamaba  a  la GFx library todo se iba a la mierda,  y todavía
+     sigo sin saber por qué.  Incluso llegó a ocurrir  una  cosa  realmente
+     curiosa. Todos los módulos se descomprimían sin problemas execeptuando
+     el  primero  que  salía,   que  sin  causa  alguna  sonaba  mal  y  la
+     programación estaba perfecta.  Tras esto opté de nuevo por buscar otro
+     sistema de compresión para los módulos.  Tras buscar y buscar encontré
+     uno  que  parecía  ideal.   Se  trataba  de  The  Player  6.1a.   Este
+     compresor/player comprime los módulos de una manera  eficiente  (mucho
+     más que ProRunner,  PowerPacker o Stone Cracker) y encima es el Player
+     más rápido que conozco.  Tras hacer una serie de pruebas  con  ASM-One
+     1.15  y  ver  que  funcionaba  decidí terminar de escribir el programa
+     usando este método.  Al final no hubo problemas (o casi),  exceptuando
+     que la compilación por poco la tuve que hacer en el A1200 de Dr.Falken
+     porque  en el A500 mío  se  me  quedaba  sin  memoria   debido  a  los  
+     buffers  que tenía definidos para los samples de los módulos comprimi-
+     dos. Al final hice dos programas para unirlos con  el  linker, uno que 
+     eran los buffers y el modulo del menu propiamente dicho, y el otro que
+     era el programa principal. Los compile por separado y  ahora si que me
+     daba la memoria,  aún  así es muy posible que el  programa  cargue con 
+     tan sólo 512Kb, pero.. quien no tiene aun al menos 1MB de RAM?
+
+         Y bueno,  creo que más o menos esta es la historia de la  creación
+     de  Spanish  Feeling.  A  lo  mejor más adelante realizo más discos de
+     estos en plan continuación,  pero prometo meter  algún  efectillo  por
+     medio, comprendedme, todavía estoy aprendiendo.
+
+         Y nada más, si quereis contactad conmigo .....
+
+                  -The Lawnmover Man/Suicidal Tendencies-
+                          Jesús Reyes Martínez
+                    C/Carlos J.R. Hamilton. Daida C. 308
+                       38001 Santa Cruz de Tenerife
+
+                        Teléfono: (922) 27 96 77
+
+    Creditos:
+    ========
+
+    * cODIGO: The Lawnmover Man
+
+    * gRAFICOS: The Lawnmover Man y Cyco-OZzY
+
+    * mUSICAS:  Blue/TNC
+                Critical Science/Suicidal Tendencies
+                Estrayk/Darkness
+                Dølby/Darkness
+                Nino/Nivel 7
+                Grim Reaper/Nivel 7
+
+    * mUSICA iNTRO rIPPEADA pOR: The Lawnmover Man
+
+    * mUSICA mENU: Estrayk & Dølby / Darkness
+
+   
+    A Suicidal Tendencies Production in 1995: "Spanish Feeling"
+
+    Suicidal Tendencies members are:
+    ===============================
+
+    * The Lawnmover Man: Coder, GFX, Organizer, Swapper
+    * Cyco-Ozzy: GFX, Organizer
+    * The Punisher: Technical Support, Swapper
+    * Critical Science: Musician
+    * Silize: Musician
+    * JFRimus: Coder, Swapper

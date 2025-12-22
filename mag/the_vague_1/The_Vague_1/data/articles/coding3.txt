@@ -1,0 +1,137 @@
+                            WHAT'S A TRACKER
+                                 By FBY 
+                      translation done by Scizo^dcb
+                                (LESSON 1)
+
+Easy ~question, very ~tough ~answer. ~I ~will ~try ~using ~as many examples ~as ~possible
+and ~to ~make ~everything ~easier, ~otherwise ~I ~really ~think ~we ~~won't ~make ~out ~~of ~it
+alive.... :) Good. Do you have in mind a Pentagram notation?
+
+°PROGDIR:data/clips/fby1-1.raw°5°   
+Ok. So ~now ~hit ~it ~a ~little ~on ~a ~side ~so that it's almost ~upside ~down... what? ~you
+see a violin key upside down? no. damn, you hit too much...:) You ~need ~to imagine
+a ~~vertical ~~pentagram... ~~hmm... ~~so ~~you ~~have ~~to ~read ~notes ~~top to bottom, and not
+left to right, and each one of them ~will be placed on its own ~"channel" (remember
+this term...) and ~not ~together ~with ~the ~other ~notes as happened in the pentagram.
+So here is what it would look to your eyes a standard 4 tracks tracker:
+
+°PROGDIR:data/clips/fby1-2.raw°11°   
+This is (to ~let ~you ~learn a ~bit of terms) a Pattern, a page ~that ~together ~with ~the
+others, put in ~Sequence, ~forms a ~musical ~Module. ~A ~module ~Sequence ~can ~be, ~for
+instance, composed by 7 patterns: 
+
+    Pos1 ~- ~Pattern1 ~~.. Introduction
+    Pos2 - Pattern5 .. Initial Part
+    Pos3 - Pattern4 .. First Part
+    Pos4 - Pattern3 .. Chorus
+    Pos5 - Pattern4 .. First Part
+    Pos6 - Pattern3 .. Chorus
+    Pos7 - Pattern2 .. Final Part 
+
+As ~~you ~~can ~~see ~~it's ~~not ~~necessary ~to ~have ~~patterns ~~used ~~in ~~sequence (which
+means ~that ~Pattern ~1 ~doens't ~~have ~to ~be ~*strictly* ~played ~first, ~Pattern ~2 ~played
+second and so on...).~~~~The important thing is to sort them in the right order into~~~~~~the
+Sequencing menu.~~~And in this pretty easy way you can swap parts of a song, for
+example,to let~~~"First Part"~~~be played before~~~"Initial Part",just swapping position 2 with
+position 3. Also ~if ~you ~want ~to ~play "Chorus" after the "Final Part", you just need
+to add this row...
+
+    Pos8 - Pattern3 .. Chorus
+
+... in the Sequencing menu... obviously!
+
+Before going ~on ~we ~need ~to clearify the fact that all the trackers use "American"
+notation ~instead ~of ~the latin ~Doo, ~Ree, ~Miiiiii ~(ouch! ~missed ~right ~note!). ~But ~this ~is
+easier knowing that "C" stands for "Do", this anyway is the table:
+ 
+    C = Do  
+    D = Re  
+    E = Mi  
+    F = Fa
+    G = Sol
+    A = La 
+    B = Si 
+ 
+The most difficoult part can probably be the space/time differentiation between the
+"tracker" ~as ~opposed ~to ~the ~classical ~"pentagram". Don't ~worry, ~don't ~worry, ~don't
+be staring at me like that... I'm just gonna explain you: In~~~~~the classical method note
+lenght is expressed by the symbol:
+
+  ~~|
+ O| - two/quarters note
+ O  - four/quarters note
+
+...~~~and so on,~~~~but on~~~~a~~~~tracker you just write the note and nothing else.~~~It's duration
+depends on how much space there is ~between ~the note itself and the next one...
+No worries, here's an example:
+
+ 00 | E-2 10.C40|
+ 01 ~~| --- ~~~00.000|
+ 02 | --- ~~~00.000|
+ 03 | --- ~~~00.000|
+ 04 | E-2 10.C40|
+
+In this case note lasts four lines, which is an absolute value.
+
+And now how do I know if these 4 lines last 4 seconds or 40?! Correct question.
+And ~the ~rules ~are ~the ~same ~as ~the ~pentagram ~ones, a 4/4 ~bar ~will ~last ~more ~or
+less, depending on base tempo defined at the beginning, example:
+
+Allegro: 
+°PROGDIR:data/clips/fby1-4.raw°5°   
+A ~bar ~like ~this (note ~base ~tempo ALLEGRO) could last about two seconds. Surely
+in this song...
+
+Lento:
+°PROGDIR:data/clips/fby1-5.raw°5°   
+... bar duration could last for at least 4 seconds.
+
+So ~we ~can ~declare ~that "base tempo" is like a scan speed at which a song gets
+read/played.~~~~A Pentagram gets read left to right,~~~~a tracker top to bottom.~~~Ok? Good.
+Scan speed then exist in trackers aswell. It's called SPEED.
+
+Let's ~get ~back ~to ~describing ~what ~all ~those numbers in a tracker ~page are. (Fig2)
+So... the ~~number ~~on ~~the ~~side ~~of ~~the ~~note ~~stats ~~the ~~played ~~octave (for ~example
+C-2 = ~Second ~octave ~C) ~On ~a ~standard ~PC ~tracker ~there ~is ~a usable range of 7
+octaves.
+
+We can then give a meaning to that column (on notes side) full of zeroes):
+
+C-2 10.000
+
+    First two digits are used to distinguish the selected instrument,~~~~which is the
+    one ~which ~gets ~used ~to ~play ~the ~note (C-2). In ~this ~case ~we will ~listen ~a
+    (second ~octave) ~C ~played ~by ~instrument ~10 (which could be, for example, a
+    piano)
+
+C-2 10.C20
+
+    The last three digits define the effect ~to ~be ~applied ~on ~the ~instrument ~while
+    playes the C-2 note.If you leave that to 000 the sound of the instrument will
+    remain the original.In our case we instead used the "C" effect which acts on
+    the volume. The ~last ~two ~digits ~define ~the ~"intensity" ~of ~the ~selected effect.
+    For ~example ~with ~C20 ~the ~note ~will ~be ~played ~exactly ~with ~the ~half ~of the
+    original ~~volume ~(which ~is ~40). ~So ~if ~we ~write ~C-2 ~10.C40 ~or ~C-2 ~10.C00 ~we
+    won't hear any difference in the sound.
+
+Are you with me now? Let's hope so...~~~~remember that for any clarification you can
+contact me here. Good, let's go on.
+  
+Let's give examples~~~~~of~~~~well diffused trackers.~~~~Protracker,~~~~for instance.~~~~This has been
+created ~in ~the ~end ~~of ~'80s ~~on ~~Amiga, ~~to ~~fill ~~a ~~series ~~of ~~trackers, ~more ~~or ~~less
+powerful, more or less easy to use... Surely the first release of Protracker (and its
+evolution in the next releases) shook ~the ~uprising home computer music. Protracker
+indeed "monopolized" Amiga ~music ~with ~~a ~~bit ~~of ~~time, ~and ~~since ~'90-'91 ~~fiercefully
+entered~~~~PC~~~~world...~~~~Programs like Scream Tracker~~~~and,~~~~even more than~~~it,~~~~FastTracker2
+are nothing but~~~~~"evolved clones" of the mythical Protracker,~~~~with more channels~~~~and
+sometimes better quality~~~~(as~~~~in the case~~~~~of~~~~FastTracker2 where you can even have
+32 stereo 16bit channels!)
+
+We can't ~avoid ~to ~remember that Scene (relatively to music) owns "everything" to
+the~~~~~invention~~~~~of~~~~this~~~~~historical~~~~~program~~~~(although~~~~the~~~~base original idea~~~~was~~~~developed
+around the time of the mythical C-64)
+
+Okay, this short note was a must....
+ 
+Perfect, now ~all ~you ~have ~to ~do ~is ~grab a tracker in order to compose and some
+instrument~~~~to~~~~start playing.~~~Wish you good job... and watch out for your neighboors.¤

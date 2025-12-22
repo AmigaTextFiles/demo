@@ -1,0 +1,64 @@
+
+ Ok, Here is a nice little script again:
+
+<MAIN> myscript |0|1</MAIN>
+
+<KIMG> impacman | data/oldpac.iff </KIMG>
+<KIMG> imghost  | data/ghost1.iff </KIMG>
+
+
+<KSCRIPT>
+    <ID> myscript </ID>
+    <PLAY> mypart | 99999 | 0 | 1 </PLAY>
+
+</KSCRIPT>
+
+
+<KPART>
+
+    <ID> mypart  </ID>
+
+ as usually, colors need to be set:
+
+    <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> impacman </Pa>
+    </Fx>
+
+ fillrc is a simple command that draw a whole rectangle context with a given color
+ from the palette. Here we fill the whole screen with color 135.
+ just set "< Fx>", it will set the Fx in comment: the screen will
+ not be cleared at each frame !!!
+
+    <Fx><Pa> FillRC</Pa>
+        <Pa></Pa>
+        <Pa> cte | 135  </Pa>
+    </Fx>
+
+    <Fx>
+        <Pa>Sprite</Pa>                 A pacman sprite is drawn with
+        <Pa></Pa>                       a trembling movement due to
+        <Pa> impacman </Pa>             the "rnd" parameter.
+        <Pa> rnd | 0.25 | 0.254 </pa>   >rnd | 0.25 | 0.254< means a value
+        <Pa> rnd | 0.25 | 0.256 </pa>   took randomly between 0.25 and 0.254
+        <Pa> rnd | 0.75 |0.754</pa>     is returned as one of the coordinate.
+        <Pa> rnd | 0.75 | 0.756</pa>    ( here X1, Y1 X2 , Y2 of the sprite.)
+    </Fx>
+
+ the second sprite is written after the first one,
+ so it will be drawn over it.
+
+   <Fx>
+        <Pa>Sprite</Pa>            A ghost having a simple sinus move.
+        <Pa></Pa>                  sin |a|b|c return  a+ ( sin(b*time)* c)
+        <Pa> imghost </Pa>
+        <Pa> sin | 0.25 | 0.7 | 0.5</pa>   here, sin()
+        <Pa> cte | 0.25 </pa>
+        <Pa> sin | 0.75 | 0.7 | 0.5</pa>   the same sinus command as in X1, but + 0.5.
+        <Pa> cte | 0.75 </pa>
+    </Fx>
+
+
+ this kpart stand for what is printed when a frame is played.
+
+</KPART>

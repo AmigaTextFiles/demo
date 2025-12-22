@@ -1,0 +1,286 @@
+
+ Using the "PlayScriptLink" Fx.
+
+ "PlayScriptLink" is an extended "PlayScript" effect, as defined
+ in tutorial C02: It also provide a way to recursively
+ play another script from a part.
+
+ But where "PlayScript" was only playing parts one after the others,
+ "PlayScriptLink" uses 2 additional scripts to manage the way
+ a part will leave, and the way the new part will come.
+ Actually, it was created for the demo "What you say" from demoGroup "mankind",
+ and this production is a perfect example of what it can do.
+
+ So exactly the parameters of "PlayScriptLink" are:
+
+ - the main script to play
+ - the time (most of the time set: "aff|0|1")
+ - the outgoing script
+ - the incoming script.
+
+ The main script will be played the same way as with "PlayScript",
+ with the correct timelength for the parts, but for a given
+ part, it will actually play at each frame:
+
+  -1. One frame of the corresponding outgoing part
+     that changes objects in a way the previous part "had to go".
+  -2. One frame of the PREVIOUS part of the mainscript (if there is)
+     exactly like if the previous part was continuing
+
+  -3. One frame of the corresponding "incoming script" part.
+        It had to change objects in a way the current part is coming in.
+  -4. One frame of the current part of the main Script.
+
+
+ In this example, all parts of the mainscript draw something
+ on rectangle "mainrec".
+
+  The parts in the outgoing script applies a movement on "mainrec",
+ so that it disappear, when the corresponding parts in the incoming
+ script make "mainrec" coming in.
+ You can imagine to change different objects to make your links.
+
+
+  
+
+-------------------------------------------------
+<MAIN> mainscript |0|1</MAIN>              the main script to play...
+-------------------------------------
+<KIMG> texture256x256 | data/texture1.iff </KIMG>   let's create an image.
+<KIMG> txt3 | data/txt3.iff </KIMG>
+<KIMG> txt4 | data/txt4.iff </KIMG>
+
+<KCAM> cam_1 | 0|0|0|0|0|0|1  </KCAM>
+
+<KCOLORTABLE> coltab2 | data/remaptable.iff |1|  0|  0|  0    </KCOLORTABLE>
+
+
+ a rectangle for all effects:
+
+<KRECT> rc_fA  |0|0|1|1|  |0|0|1|1| </KRECT>
+
+
+<KSCRIPT><ID> mainscript </ID>
+        <PLAY> mainpart | 1600 | 0 | 1 </PLAY>
+</KSCRIPT>
+
+ The normal script has 8 parts:
+
+<KSCRIPT><ID> NormalScript </ID>
+
+        <PLAY> pa1 | 200 | 0 | 1 </PLAY>
+        <PLAY> pa2 | 200 | 0 | 1 </PLAY>
+        <PLAY> pa3 | 200 | 0 | 1 </PLAY>
+        <PLAY> pa1 | 200 | 0 | 1 </PLAY>
+        <PLAY> pa2 | 200 | 0 | 1 </PLAY>
+        <PLAY> pa3 | 200 | 0 | 1 </PLAY>
+        <PLAY> pa1 | 200 | 0 | 1 </PLAY>
+        <PLAY> pa2 | 200 | 0 | 1 </PLAY>
+</KSCRIPT>
+
+ So the outgoing script has 8 part too:
+
+<KSCRIPT><ID> ScriptOut </ID>
+<PLAY> pa_Out1 | 150 | 0 | 1 </PLAY>
+<PLAY> pa_Out2 | 150 | 0 | 1 </PLAY>
+<PLAY> pa_Out3 | 150| 0 | 1 </PLAY>
+<PLAY> pa_Out2 | 150 | 0 | 1 </PLAY>
+<PLAY> pa_Out1 | 150 | 0 | 1 </PLAY>
+<PLAY> pa_Out2 | 150 | 0 | 1 </PLAY>
+<PLAY> pa_Out3 | 150| 0 | 1 </PLAY>
+<PLAY> pa_Out2 | 150 | 0 | 1 </PLAY>
+
+</KSCRIPT>
+
+ And the incoming script has 8 part too:
+
+<KSCRIPT><ID> ScriptIn </ID>
+ <PLAY> pa_In1 | 150 | 0 | 1 </PLAY> the time length stands for the link change here
+ <PLAY> pa_In2 | 150 | 0 | 1 </PLAY> as this script is used in PlayScriptLink.
+ <PLAY> pa_In3 | 150 | 0 | 1 </PLAY>
+ <PLAY> pa_In2 | 150 | 0 | 1 </PLAY>
+ <PLAY> pa_In1 | 150 | 0 | 1 </PLAY>
+ <PLAY> pa_In2 | 150 | 0 | 1 </PLAY>
+ <PLAY> pa_In3 | 150 | 0 | 1 </PLAY>
+ <PLAY> pa_In2 | 150 | 0 | 1 </PLAY>
+</KSCRIPT>
+
+
+<KPART><ID>mainpart</ID>
+
+    <Fx><Pa>setpalette</Pa>
+        <Pa> texture256x256 </Pa>
+    </Fx>
+
+    <Fx><Pa> PlayScriptLink </Pa>
+       <Pa> NormalScript </Pa>
+       <Pa>AFF|0|1</Pa>
+       <Pa> ScriptOut </Pa>
+       <Pa> ScriptIn </Pa>
+    </Fx>
+
+</KPART>
+
+ The out and in parts change the rectangle where effect are drawn:
+
+///<KPART><ID>pa_Out1</ID>
+
+   <Fx><Pa> setrect </Pa>
+    <Pa> rc_fA  </Pa>
+      <pa> bounce|0|50|2000|0|1</pa>
+      <Pa> 3cte|0|1|1  </Pa> clip rectangle
+      <Pa> 4cte|0|0|1|1 </Pa> pos rectangle
+   </Fx>
+
+///</KPART>
+///<KPART><ID>pa_In1</ID>
+
+   <Fx><Pa> setrect </Pa>
+    <Pa> rc_fA  </Pa>
+      <Pa> 2cte|0|0  </Pa>
+      <pa> bounce|0|50|2000|0|1.001</pa>
+      <Pa> cte|1 </Pa>
+
+      <Pa> 4cte|0|0|1|1 </Pa> pos rectangle
+   </Fx>
+
+///</KPART>
+///<KPART><ID>pa_Out2</ID>
+
+   <Fx><Pa> setrect </Pa>
+    <Pa> rc_fA  </Pa>
+
+      <Pa> cte|0  </Pa>
+      <pa> bounce|0|50|2000|0|1</pa>
+      <Pa> 2cte|1|1  </Pa> clip rectangle
+
+      <Pa> 4cte|0|0|1|1 </Pa> pos rectangle
+   </Fx>
+
+///</KPART>
+///<KPART><ID>pa_In2</ID>
+
+   <Fx><Pa> setrect </Pa>
+    <Pa> rc_fA  </Pa>
+      <Pa> 3cte|0|0|1  </Pa>
+      <pa> bounce|0|50|2000|0|1.001</pa>
+
+      <Pa> 4cte|0|0|1|1 </Pa> pos rectangle
+   </Fx>
+
+///</KPART>
+///<KPART><ID>pa_Out3</ID>
+
+   <Fx><Pa> setrect </Pa>
+    <Pa> rc_fA  </Pa>
+
+      <Pa> cte|0  </Pa>
+      <pa> bounce|0|50|2000|0|-1</pa>
+      <Pa> cte|1  </Pa>
+      <pa> bounce|0|50|2000|1|0</pa>
+
+      <Pa> cte|0  </Pa>
+      <pa> bounce|0|50|2000|0|-1</pa>
+      <Pa> cte|1  </Pa>
+      <pa> bounce|0|50|2000|1|0</pa>
+
+   </Fx>
+
+///</KPART>
+///<KPART><ID>pa_In3</ID>
+
+   <Fx><Pa> setrect </Pa>
+      <Pa> rc_fA  </Pa>
+      <Pa> cte|0  </Pa>
+      <pa> bounce|0|50|2000|1|0</pa>
+      <Pa> cte|1  </Pa>
+      <pa> bounce|0|50|2000|2|1</pa>
+
+      <Pa> cte|0  </Pa>
+      <pa> bounce|0|50|2000|1|0</pa>
+      <Pa> cte|1  </Pa>
+      <pa> bounce|0|50|2000|2|1</pa>
+
+   </Fx>
+
+///</KPART>
+
+ The parts that draw on the rectangle:
+
+///<KPART>  <ID> pa1  </ID>
+
+    <Fx>
+        <Pa> Twirl </Pa>
+        <Pa> rc_fA </Pa>
+        <Pa> texture256x256 </Pa>
+
+        <Pa>SIN|0|0.5|0.25</Pa> ofsx
+        <Pa>COS|0|0.5|0.25</Pa> ofsY
+
+        <Pa>SIN|0|0.05|1</Pa> start angle
+        <Pa>CTE|0.2</Pa>    amp. angle
+        <Pa>sin|0|0.4|0.9</Pa>    freq angle
+
+        <Pa>CTE|0</Pa>         start dist.
+        <Pa>cte|0</Pa> amp.dist
+        <Pa>cte|0</Pa> freq dist
+
+        <Pa>CTE|0</Pa> mapping type
+    </Fx>
+
+///</KPART>
+///<KPART>  <ID> pa2  </ID>
+ 
+   <Fx><Pa> Warper </Pa>
+            <Pa> rc_fA </Pa>              the rectangle where to draw (default)
+            <Pa> txt3 </Pa> the 256x256 texture to deform
+
+            <Pa>CTE|0.8</Pa>        a zoomx rate
+            <Pa>CTE|0.8</Pa>        a zoomy rate
+            <Pa>SIN|0|0.25|0.03</Pa> texture offset x
+            <Pa>COS|0|0.25|0.03</Pa> texture offset Y
+
+            <Pa>CTE|0.4</Pa>        amplitude of deformation
+            <Pa>CTE|0.2</Pa>        frequency of deformation
+            <Pa>SIN|0|0.2|2</Pa>    X offset of the deformation
+            <Pa>COS|0|0.3|2</Pa>    Y...
+
+            <Pa>CTE|0</Pa> mapping type
+    </Fx>
+
+    <Fx><Pa>RadialBlur</pa>
+        <Pa> rc_fA </Pa>     rectangle by default.
+        <Pa> coltab2 </Pa>              "persistence with decay" is very handy with radialblur.
+        <Pa> sin|0.5|0.4|0.2 </Pa>  X center of the radial blur.
+        <Pa> sin|0.5|0.3|0.2</Pa>   Y
+        <Pa>cte|0.92</Pa>           Width zooming strength [0,1]
+        <Pa>cte|0.92</Pa>           Height zooming strength [0,1]
+    </Fx>
+
+
+///</KPART>
+///<KPART>  <ID> pa3  </ID>
+
+  <Fx>
+        <Pa> Twirl </Pa>
+        <Pa> rc_fA </Pa>
+        <Pa> txt4 </Pa>
+
+        <Pa>SIN|0|0.5|0.25</Pa> ofsx
+        <Pa>COS|0|0.5|0.25</Pa> ofsY
+
+        <Pa>SIN|0|0.05|1</Pa> start angle
+        <Pa>CTE|0</Pa>    amp. angle
+        <Pa>CTE|0</Pa>    freq angle
+
+        <Pa>CTE|0</Pa>         start dist.
+        <Pa>SIN|0|0.3|0.5</Pa> amp.dist
+        <Pa>COS|0|0.1|32</Pa> freq dist
+
+        <Pa>CTE|0</Pa> mapping type
+    </Fx>
+
+///</KPART>
+
+
+

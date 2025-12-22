@@ -1,0 +1,98 @@
+ OK,
+
+ This tutorial will learn you how to use the "Tunnel"
+Texture deformation 3D effect. As all 3D effects, it needs a camera.
+
+  You have discovered the cameras objects
+ you can create with < KCAM> in the multiparameter
+ tutorial  ( A06 ).
+
+ you have seen a camera object has a position
+ (x,y,z)
+ three angles:
+ o1, rotate on Z axis
+ o2, rotate on X axis
+ o3, rotate on Y axis (must be that...)
+
+ and also a length "FOV" that give the angle of view and must be >0.
+
+
+
+ the "Tunnel" Fx will draw on your rectangle a view of
+ WITHIN a tunnel, texture-mapping a 256x256 image.
+ ( I repeat: all "deformed" images on karate must be 256x256,
+ only-zoomed-ones can have any resolutions.)
+
+ You can only move along the tunnel Z axis, X and Y of the camera
+ are ignored. (you can use any rotation anyhow).
+ You set a distance between you and the edge of the tunnel.
+
+ so this is very simple to use: reset your camera values:
+ (this can be done here with setcamcoords for describing movements.)
+ then use the tunnel fx with the camera.
+
+
+<MAIN> myscript |0|1</MAIN>              the main script to play...
+
+<KIMG> texture256x256_2 | data/texture2.iff </KIMG>   let's create an image.
+                                                    Note this image must be 256x256.
+<KIMG> imghost2  | data/inky.iff </KIMG>
+
+<KCAM> cam_1 |0|0|0|0|0|0|1  </KCAM> camera (x,y,z,o1,o2,o3,FOV)
+
+--------------------------------------------------
+<KSCRIPT>                           let's write a script to play.
+
+    <ID> myscript </ID>
+
+    <PLAY> mypart | 10000 | 0 | 1 </PLAY>
+
+</KSCRIPT>
+
+--------------------------------------------------------
+<KPART>
+
+    <ID> mypart </ID>
+
+    <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> texture256x256_2 </Pa>   we have seen each image stands for a 256 color palette too.
+    </Fx>
+
+   
+   <Fx><Pa> setcamcoord  </Pa>
+        <PA> cam_1 </Pa>
+        <PA> 2cte|0|0</Pa>
+        <PA> aff|0|4 </Pa>
+
+        <PA> aff|0|0.001 </Pa>
+        <PA> aff|0|0.003 </Pa>
+        <PA> aff|0|0.002 </Pa>
+        <PA> cte|0.3 </Pa>
+    </Fx>
+
+<Fx><Pa> Tunnel </Pa>
+            <Pa>  </Pa>
+            <Pa> texture256x256_2  </Pa>
+            <Pa> cam_1</Pa>     camera
+
+            <Pa>CTE|2</Pa>          distance to edges.
+            <Pa>CTE|0.25</Pa>          zoom texture V
+
+            <Pa>CTE|0</Pa>          -not defined yet. set 0-
+            <Pa>CTE|0</Pa>          -not defined yet. set 0-
+            <Pa>CTE|0</Pa>          mapping type 0=normal.
+            </Fx>
+
+
+    + 1 sprite :-)
+    <Fx><Pa> Sprite </Pa>
+        <Pa></Pa>
+        <Pa> imghost2   </Pa>
+        <Pa> 4cte|1|0|0.85|0.15 </Pa>
+    </Fx>
+
+
+
+</KPART>
+

@@ -1,0 +1,229 @@
+                       »PIC:Kollaps3.iff»          
+»CL9:»SML:----------------------
+»CL8:»BIG:The 5.25-inch drive
+»CL9:»SML:----------------------
+
+»CL5:  by Coma of Mantra
+
+
+
+»CL0:Recently I became a PC owner. I got it
+from a friend who had upgraded to a
+ridiculously over-speeded 400 MHz
+machine. It was nothing more than an
+old P120, but fully functional. All it
+lacked was a keyboard. Well, I
+happened to have an old PC keyboard
+lying around in my closet, so I tried
+to connect it... but the connector was
+of the wrong type. So I had to buy a
+keyboard adaptor for $10. OK, now it
+worked. But the keyboard magically
+slowed down the computer with about
+90%! Furthermore, it was impossible to
+use the mouse buttons when the
+keyboard was connected.
+
+I've never experienced an error like
+this, and I've been working with
+customer-support... Well, the computer
+was useless with this keyboard, it was
+probably short-circuited in some very
+weird way, so I threw it away and
+borrowed one from my friend. He also
+had some old ethernet-cards he didn't
+need, so I took one. I had plans to
+bring this computer to »CL1:The Party», you
+see. Well, home with the netcard. Down
+with it in an unused port. Boot the
+computer... »CL1:"new hardware found"»,
+that's right, and it even was
+correctly identified. But it didn't
+work (surprise!). The computer
+wouldn't accept to assign the card to
+any other memory area than the default
+one, and this area didn't even exist.
+It would have existed if I had 28 Gb
+of memory in the computer, and sadly
+enough I didn't...
+
+With a disappointed roar I once again
+disassembled the computer and ripped
+out the non-working card. OK, reboot
+the shit-computer again. Now a new
+icon suddenly appeared on the
+»CL1:"workbench"», the network icon. Looks
+like I forgot to de-install the
+netcard. OK, that's a quick operation.
+Just enter the system setup, and away
+with the card. OK. Reboot. And what
+happens? »CL1:"New hardware found"»!!! The
+damned card is still there! But it
+really isn't! I just happen to be
+looking at it lying at the table next
+to the computer! And there's not even
+a question, just a blaring »CL1:"installing
+network drivers"» message. I must have
+tried to remove the card from the
+setup and restart the computer 20
+times or something, but every time it
+detected the nonexistent card. Totally
+unexplainable. I've never heard of
+such an error - and still I've worked
+with customer support. 
+
+Well, the worst part is yet to come.
+Irritated, I let the computer think
+that there was a netcard, at least for
+the moment. After all, it didn't
+disturb my other work in any way...  
+...or so I thought. Shortly thereafter
+I had to copy some files from the
+»CL1:Amiga» to the »CL1:PC». OK, a disk in the
+drive, click on »CL1:"A:"»... »CL1:"drive not
+ready"». What? Why? I checked out »CL1:"This
+computer"»... and there it said: Drive
+A:, 5.25-inch disk. »CL1:5.25 inch»? Wasn't
+that 3.5 inches a minute ago? How is
+that possible? I must have altered it
+by mistake while tampering with the
+netcard. Yes, that must be the
+explanation. Quickly entered the setup
+again... but it was impossible to
+choose the 3.5-inch disk. Well, I
+removed the driver and let the
+computer search for it by itself. »CL1:"New
+hardware found"». No shit, ya dumb
+computer.... And this »CL1:"new hardware"»
+was... a »CL1:5.25»-inch drive!!!
+
+Time for a nervous breakdown.
+10..9..8..7..6..5..4..3..2..1..
+»CL9:booooooooooom!!!»
+I furiously tried EVERYTHING for an
+hour or so, but no, it was hopeless:
+the drive had magically transformed
+into a »CL1:5.25-inch-drive». And it
+couldn't be accessed, since the
+hardware didn't correspond to what
+Windows claimed it to be. I got even
+madder and fetched my PC-oriented
+friend. He brought his internal drive,
+and we tried it. No difference. No
+error in the drive. We again tried all
+the things I'd been trying on my own,
+but no difference. I've never heard of
+such an error, and still I've been
+working with customer support. There
+was many strange errors in those days,
+but this takes the prize. We checked
+out the »CL1:BIOS», but the settings were
+correct - drive A: was a 3.5-inch
+drive. We tried to boot from A: with a
+startdisk, but the computer didn't
+even look at the disk. Checked the
+BIOS again, and the boot sequence was
+correct - first A:, then C:. "Well",
+my friend said, »CL1:"this error will be a
+classic one. We can only re-install
+Windows and hope for the best"». So he
+fetched the install CD, and we got to
+work. But the installation program
+refused to install Windows over an
+existing version. Well, that's not a
+big problem. I jumped out to »CL1:DOS» and
+deleted it all.
+
+Now the installation actually worked!
+Now we only had to reboot again, and
+it would work. I crossed my fingers
+and hit the vulcan nerve-pinch...
+»CL1:"Starting Windows 95"». »CL9:Hooray!» There's
+the ugly picture with the clouds. But
+suddenly... »CL1:"This version of Windows
+cannot be run with DOS 7.0 or higher"».
+WHAAAAAAT??? The DOS is TOO NEW?!
+Agk... argh... Now I was ready to
+throw the computer out the window, but
+my friend told me that we simply would
+format the HD and copy his Windows-dir
+to it. For the 10th time that day we
+ran down to his place. Fortunately it
+was no problem to format'n'copy, so we
+soon were back at my place, and
+re-installed the drive into my behexed
+computer. We booted it... and it
+worked! Well, not really.
+
+Windows still considered the disk
+drive to be a 5.25-inch one... »CL1:"This
+MUST be a hardware error!"» I yelled,
+and my friend yelled back: »CL1:"It just
+CAN'T BE! The BIOS would have reported
+it!"». I agreed. Then we had only one
+thing left to try - clear the BIOS
+settings, whatever good that would do.
+It was very improbable that it would
+help, but now we were really
+desperate. Somewhere in the computer,
+Windows stored faulty information
+about the drive, and if it wasn't on
+the HD, it must be in the BIOS
+data.
+
+OK, reboot and jump into the bootmenu.
+Clear BIOS and reboot. Now the
+computer wouldn't even start. Back
+into the bootmenu. We checked and
+altered every little setting, and when
+we finally were done, it pretty much
+looked like before we had cleared it.
+Well, one last reboot... hey, it
+works! »CL1:Windows» was loading... OK! I
+checked out »CL1:"This computer"» and...
+WOW! »CL1:"Drive A:», »CL1:3.5-inch disk"». It
+worked! It couldn't work, but it did.
+
+Now I was happy again, but it didn't
+last very long. A glance down the list
+of attached units, and... but, where's
+the CD? Oh noo, this can't be
+happening!! The CD is gone! But why?
+The so-called Plug'n'play system must
+have missed it when we re-installed
+the HD. OK, so search for it, then.
+»CL1:"New hardware found"». A Mitsumi CD, so
+far it's right. But there was only 3
+available device drivers - one for
+"old" single-speed drives, one for
+"new" single-speed drives, and one for
+double-speed drives. And this happened
+to be an astonishing quad-speed drive.
+Tried out the 2x-driver, but of course
+it didn't work. The only effect it had
+was bringing the computer to believe
+that there was some kind of error on
+the general IDE connector - »CL1:Windows»
+thought it had something to do with
+the HD instead of the CD, but this
+didn't surprise me one bit after
+everything that had happened. 
+
+So now I again have a working disk
+drive, but it left me with a useless
+CD. I've never before heard of such an
+error, and still I've worked with...
+...well, I guess you know by now...
+And I think you all can imagine the
+relief I felt when I returned to my
+»CL1:trusty Amiga». If you happen to have an
+win95 install-disk for a Mitsumi 4x
+CD, please contact me! My addy should
+be in the adverts part. Or email:
+»CL1:coma_3le@usa.net».
+
+Epilogue: The computer still detects
+the nonexistent Ethernet card at every
+startup, and every time I remove it
+again. It has become something of a
+habit. 

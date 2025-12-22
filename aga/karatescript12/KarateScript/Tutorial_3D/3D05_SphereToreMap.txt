@@ -1,0 +1,224 @@
+  This example shows the 3d object constructors 'sphere' and 'tore'
+ in action and we will also learn the use of texture constructor 't3dmapping'
+ It goes like:
+
+
+--------- sphere:
+
+< sphere> label | father | (9 parameters:position:rotations,scale)|
+        NumberOfLongitude | NumberOfLatitude | SphereRayWidth| TexturePrefNumber |
+        u1|v1|u2|v2 rectangle mapping coordinates |
+        texture0 | texture1 | texture2 | texture3
+        </sphere>
+
+ label is of course the name of the object.
+ father can be a world label, or another object label where to attach.
+
+ NumberOfLatitude:  is the number of subdivision AROUND the sphere. Minimum is 2.
+ NumberOfLatitude:  is the number of subdivision from north to south on the sphere. Minimum is 2.
+ SphereRayWidth:    gives the size of the sphere.
+ TexturePrefNumber: is set to 0 or 1: it places the 4 textures on the sphere a different way.
+ u1|v1|u2|v2:       if you use texture mapping, the XY coordinates on the texture will fit this rectangle.
+                    ( so default values should be 0.0|0.0|1.0|1.0 )
+ texture0,1,2,3:    the textures (t3d..) used to draw the polygons. If you set
+                    4 times the same texture, the whole sphere will be drawn with it.
+                    If you omit a name ('| |') or give a wrong texture name, the
+                    corresponding polygons will not be created.
+                    Now if  TexturePrefNumber is 0, textures will be put like this around
+                    the sphere:
+ | t0 | t1 |
+ +----+----+
+ | t2 | t3 |
+                    ...And if TexturePrefNumber is 1, t0,t1,t2,t3 will be used
+                    each on a quarter of the sphere.
+
+--------- tore:
+
+ You sure know what's a tore, hey ? it's some kind of a donught, but
+that wouldn't be a cake you see :)
+
+< tore> label | father | (9 parameters:position:rotations,scale)|
+        NumberOfDivisionOut | NumberOfDivisionIn |
+        RayWidthOut | RayWidthIn | TexturePrefNumber |
+        u1|v1|u2|v2 rectangle mapping coordinates |
+        texture0 | texture1 | texture2 | texture3
+        </tore>
+
+ Most parameters have the same role in < sphere> except:
+
+NumberOfDivisionOut:    the number of Division used around the whole tore. Minimum is 3.
+NumberOfDivisionIn:     the number of Division used for the circles inside the tore. Minimum is also 3.
+RayWidthOut:            distance between the center of the tore and the center of the little circles.
+RayWidthIn:             Ray Width of a little circle.
+                        We should have  RayWidthIn <= (less or equal) to RayWidthOut
+                        Or it will gives strange results.
+ Note: the tore is created 'around an Y axis.'.
+ the total width of the Horizontal object itself is:
+  ( RayWidthOut + RayWidthIn ) * 2
+
+-------- about < t3dmapping>:
+
+ Creating a 'texture mapping' is very easy, you just got to
+create a classic image object before, that must be 256 x 256 pixel sized.
+then with < t3dmapping> you specify a name for your texture, and the image label:
+ Let's do it for real:
+
+<kimg> image256x256 | data/texture2.iff </kimg>
+<t3dmapping> myTextureMapping | image256x256  </t3dmapping>
+
+
+ Note You can continue using the image for other stuffs in the script.
+ Now be aware that the way the texture is mapped on a 3D object depends
+ of the 3D object itself. For each vertex (point in space) of an object
+ must exist a 2D coordinates on the texture (noted U,V (sometimes t,s)
+ instead of X,Y to not make mistake with space coordinates.)
+
+  These UV Coordinates are defined with the object. It is automatic for
+ such constructors as < sphere> and < tore>, but not for < mesh3d> and < lwo>
+ where you have to define it by other ways.
+ Note that if your 3d object does not use texture mapping, UV coordinates
+ are useless of course.
+
+ An extented version of < t3dmapping> ,< t3dmappingSprite> do exactly the same
+ but color 0 is then transparent !
+
+ Also, for < t3dmapping>, you can add as an optional 3rd parameter: a colortable.
+ (see colortable tutorial.) What does it do, to your mind ? :)
+  Ok, I tell: it makes it transparent.
+
+-------------------------------
+
+ <World3D> world1 </World3D>
+
+<KIMG> i_lightmapRed  | data/lightmapred.iff </kimg>
+<KIMG> i_lightmapgrey | data/lightmapgrey.iff </kimg>
+<t3dFlatLightMap> tLightMapRed   | i_lightmapRed  </t3dFlatLightMap>
+<t3dFlatLightMap> tLightMapGrey  | i_lightmapGrey </t3dFlatLightMap>
+<cube> bigroom | world1 |0|0|0|0|0|0|-16|-16|-16 |tLightMapRed |tLightMapRed |tLightMapRed |tLightMapRed |tLightMapRed|tLightMapRed  </cube>
+
+couldn't resist ;)
+<sphere> amigasphere | world1 |2|0|4|0|0|0|1|1|1|
+         8 | 12 | 2.5| 0|0.0|0.0|1|1|tLightMapRed|tlightmapgrey|tlightmapgrey|tLightMapRed</sphere>
+
+
+
+<tore> tore1 | world1 |0|0|5|0|0|0|1|1|1|
+        12 | 8 | 0.9|0.5 | 0|0.0|0.00|1|1 |myTextureMapping|myTextureMapping|myTextureMapping|myTextureMapping </tore>
+
+<sphere> spheremap | world1 |-2|-1|4|0|0|0|1|1|1|
+         8 | 12 | 1.5| 0|0.0|0.5|1|1|myTextureMapping|myTextureMapping|myTextureMapping|myTextureMapping</sphere>
+
+
+<cube> cubemap | world1 |0|0|0|0|0|0|1|1|1|
+         myTextureMapping|myTextureMapping|myTextureMapping|myTextureMapping
+         | myTextureMapping|myTextureMapping
+         </cube>
+
+
+--------------------------------- other constructions ----
+
+<MAIN> mainscript |0|1</MAIN>
+<KCAM> the_camera |0|0|0|0|0|0|0.25  </KCAM>
+
+<KSCRIPT>
+    <ID> mainscript </ID>
+    <PLAY> mainpart | 6000 | 0 | 1 </PLAY>
+</KSCRIPT>
+
+<KPART>
+    <ID> mainpart </ID>
+    note: no use to clear the background, the room cube do so.
+
+    <Fx><Pa>setpalette</Pa>     set the screen palette
+        <Pa> i_lightmapRed </Pa>
+    </Fx>
+   <Fx><Pa>fillrc</Pa> 
+        <Pa>  </Pa>  
+        <Pa> cte | 0 </Pa>
+    </Fx>
+
+
+ We ride the camera using movement tables:
+
+<KTABLE> cam_x | 0,0 | 200,0   |300,2.2|400,0  |500,-2.2|550,-1   |700,-3 |900,0|1200,0</KTABLE>
+<KTABLE> cam_y | 0,-0.5 | 200,0|300,0|400,0  |500,0     |550,0.8 |700,-0.8|900,0|1200,0</KTABLE>
+<KTABLE> cam_z | 0,0 | 200,3   |300,4|400,5.5|500,4     |550,3.5 |700,3   |900,0|1200,0</KTABLE>
+
+<KTABLE> cam_tx | 0,0 | 200,0 |550,0 |700,0   |900,0|1200,0</KTABLE>
+<KTABLE> cam_ty | 0,0 | 200,0 |550,0 |700,0.2 |900,0|1200,0</KTABLE>
+<KTABLE> cam_tz | 0,4 | 200,4 |550,4 |700,-1  |900,-1|1200,-1</KTABLE>
+
+<KTABLE> cam_o1 | 0,0 |300,0 | 400,-0.2|600,0.2 | 700,0 |900,0 |1200,0</KTABLE>
+
+    <Fx><Pa> SetCamTarget </Pa>
+            <Pa> the_camera </Pa>
+
+            <Pa> aftmod | cam_x |0|0 </Pa>    x camera
+            <Pa> aftmod | cam_y |0|0 </Pa>    y
+            <Pa> aftmod | cam_z |0|0 </Pa>    z
+
+            <Pa> aftmod | cam_tx |0|0  </Pa>    x target
+            <Pa> aftmod | cam_ty |0|0  </Pa>    y
+            <Pa> aftmod | cam_tz |0|0  </Pa>    z
+
+            <Pa> aftmod | cam_o1 |0|0  </Pa> angle rotation z axis
+            <Pa> cte|0.35 </Pa> fov
+            </Fx>
+
+    <Fx><Pa> Set3DObject </Pa>
+            <Pa> tore1  </Pa>
+            <Pa> 3cte |0|0|5</pa> position
+            <Pa> aff |0|0.012 </Pa>  rotations
+            <Pa> aff |0|0.008</Pa>
+            <Pa> aff |0|0.0061</Pa>
+
+            <Pa> 3cte|1|1|1 </Pa> scale
+    </Fx>
+
+<KTABLE> spheremove | 0,8 |150,-8 | 300,8</KTABLE>
+   <Fx><Pa> Set3DObject </Pa>
+         <Pa> amigasphere  </Pa>
+         <Pa> cte |-8</pa> position
+         <Pa> BounceOn |0|50|50|8|-4 </pa>
+         <Pa> aftmod|spheremove|0|0</Pa>
+         <Pa> aff |0.2|0 </Pa>  rotations
+         <Pa> aff |0|0.01</Pa>
+         <Pa> aff |0|0.0</Pa>
+
+         <Pa> 3cte|1|1|1 </Pa> scale
+     </Fx>
+
+
+    <Fx><Pa> Set3DObject </Pa>
+         <Pa> spheremap  </Pa>
+         <Pa> cos |0|0.2|3</pa> position
+         <Pa> sin |0|0.2|3</pa>
+             <Pa> cte|6</Pa>
+         <Pa> aff |0|0.0012 </Pa>  rotations
+         <Pa> aff |0|0.008</Pa>
+         <Pa> aff |0|0.0061</Pa>
+
+         <Pa> 3cte|1|1|1 </Pa> scale
+     </Fx>
+     <Fx><Pa> Set3DObject </Pa>
+         <Pa> cubemap  </Pa>
+         <Pa> 3cte |0|0|-3.0</pa> position
+         <Pa> aff |0|0.0012 </Pa>  rotations
+         <Pa> aff |0|0.008</Pa>
+         <Pa> aff |0|0.0061</Pa>
+         <Pa> 3cte|1|1|1 </Pa> scale
+     </Fx>
+
+
+     <Fx><Pa> Draw3DWorld </Pa>
+           <Pa>   </Pa>
+           <Pa> world1 </Pa>
+           <Pa> the_camera </Pa>
+           <Pa> cte|0 </Pa>
+           <Pa> cte|0.25 </Pa>
+           <Pa> cte|200</Pa>
+     </Fx>
+
+  
+</KPART>
+

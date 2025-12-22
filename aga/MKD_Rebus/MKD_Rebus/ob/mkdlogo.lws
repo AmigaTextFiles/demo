@@ -1,0 +1,318 @@
+LWSC
+3
+
+FirstFrame 1
+LastFrame 60
+FrameStep 1
+PreviewFirstFrame 0
+PreviewLastFrame 3000
+PreviewFrameStep 1
+CurrentFrame 864
+FramesPerSecond 30
+
+LoadObjectLayer 1 C:video/newkrabob/logomkd1.lwo
+ShowObject 6 3
+ObjectMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 6
+{ Envelope
+  1
+  Key 0.71000016 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 7
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 8
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+Plugin DisplacementHandler 1 LW_MorphMixer
+2
+1
+{ Group
+  2
+  "mkd"
+}
+{ MorfForm
+  "s1"
+  0.013338925
+  { Envelope
+    4
+    Key 0 0 0 0 0 0 0 0.72394228 0
+    Key 0.72403234 2.2333333 0 0 0 0 0.34703255 0.52831823 0
+    Key 0.87535077 5.6333332 0 0 0 0 -0.37366354 -0.33702987 0
+    Key 0.013338925 8.6999998 0 0 0 0 -0.86193377 0 0
+    Behaviors 1 1
+  }
+}
+{ MorfForm
+  "s2"
+  0
+  { Envelope
+    4
+    Key 0 0 0 0 0 0 0 0.18352273 0
+    Key 0.1835307 6.4000001 0 0 0 0 0.5516032 0.26143694 0
+    Key 0.81304014 9.4333334 0 0 0 0 -0.096539274 -0.086991429 0
+    Key 0 12.166667 0 0 0 0 -0.81295753 0 0
+    Behaviors 1 1
+  }
+}
+EndPlugin
+ShadowOptions 7
+
+AmbientColor 1 1 1
+AmbientIntensity 0.25
+
+AddLight
+LightName Light
+ShowLight 1 5
+LightMotion
+NumChannels 9
+Channel 0
+{ Envelope
+  1
+  Key -2 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  1
+  Key 2 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  1
+  Key -2 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  1
+  Key 0.78539813 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  1
+  Key 0.61086524 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  1
+  Key 0 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 6
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 7
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 8
+{ Envelope
+  1
+  Key 1 0 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+LightColor 1 1 1
+LightIntensity 1
+AffectCaustics 1
+LightType 0
+ShadowType 1
+
+AddCamera
+CameraName Camera
+ShowCamera 1 2
+CameraMotion
+NumChannels 6
+Channel 0
+{ Envelope
+  7
+  Key -2.7799969 0 0 0 0 0 0 1.4849172 0
+  Key -1.2949972 5 0 0 0 0 1.4312499 1.4312499 0
+  Key 0.082502812 10 0 0 0 0 0.91082019 0.33396739 0
+  Key -0.050209645 11.833333 0 0 0 0 0 0 0
+  Key 0.082502812 20 0 0 0 0 1.0948794 0.67033434 0
+  Key 1.7150041 25 0 0 0 0 6.3712525 6.3712525 0
+  Key 12.825007 30 0 0 0 0 11.109386 0 0
+  Behaviors 1 1
+}
+Channel 1
+{ Envelope
+  7
+  Key 1.0225 0 0 0 0 0 0 0 0
+  Key 1.0225 5 0 0 0 0 -0.70749998 -0.70749998 0
+  Key -0.39249998 10 0 0 0 0 -0.93500805 -0.34283629 0
+  Key -0.2553443 11.833333 0 0 0 0 0 0 0
+  Key -0.39249998 20 0 0 0 0 0.15682749 0.096016832 0
+  Key -0.0024999776 25 0 0 0 0 0.19500001 0.19500001 0
+  Key -0.0024999776 30 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+Channel 2
+{ Envelope
+  7
+  Key -3.857502 0 0 0 0 0 0 1.1374371 0
+  Key -2.7200017 5 0 0 0 0 0.57000005 0.57000005 0
+  Key -2.7175019 10 0 0 0 0 0.13368601 0.049018204 0
+  Key -2.5372975 11.833333 0 0 0 0 0 0 0
+  Key -2.7175019 20 0 0 0 0 0.68060154 0.41669482 0
+  Key -1.4400011 25 0 0 0 0 -0.56125081 -0.56125081 0
+  Key -3.8400035 30 0 0 0 0 -2.399869 0 0
+  Behaviors 1 1
+}
+Channel 3
+{ Envelope
+  7
+  Key 1.2007864 0 0 0 0 0 0 -0.82374978 0
+  Key 0.37699082 5 0 0 0 0 -0.60388398 -0.60388398 0
+  Key -0.0069816019 10 0 0 0 0 -0.27065381 -0.099239729 0
+  Key 0.0070972908 11.833333 0 0 0 0 0 0 0
+  Key -0.0069816019 20 0 0 0 0 -0.49154806 -0.30094779 0
+  Key -0.78539854 25 0 0 0 0 -0.42062441 -0.42062441 0
+  Key -0.84823042 30 0 0 0 0 -0.062828392 0 0
+  Behaviors 1 1
+}
+Channel 4
+{ Envelope
+  7
+  Key 0.72780234 0 0 0 0 0 0 -0.39965817 0
+  Key 0.32812196 5 0 0 0 0 -0.4284783 -0.4284783 0
+  Key -0.12915429 10 0 0 0 0 -0.30184454 -0.11067633 0
+  Key -0.084398888 11.833333 0 0 0 0 0 0 0
+  Key -0.12915429 20 0 0 0 0 0.070752017 0.043317564 0
+  Key 0.029670693 25 0 0 0 0 0.067195192 0.067195192 0
+  Key 0.0052360855 30 0 0 0 0 -0.02443325 0 0
+  Behaviors 1 1
+}
+Channel 5
+{ Envelope
+  6
+  Key 4.7586322 0.46666667 0 0 0 0 3.1415923 1.5245078 0
+  Key 6.2831845 10 0 0 0 0 1.2778324 0.245737 0
+  Key 6.2822018 11.833333 0 0 0 0 0 0 0
+  Key 6.2831845 20 0 0 0 0 0.00060956087 0.00037320051 0
+  Key 6.2831845 25 0 0 0 0 0 0 0
+  Key 6.2831845 30 0 0 0 0 0 0 0
+  Behaviors 1 1
+}
+
+ZoomFactor 3.2
+ResolutionMultiplier 1.0
+FrameSize 640 480
+PixelAspect 1
+MaskPosition 0 0 640 480
+MotionBlur 0
+FieldRendering 0
+
+ApertureHeight 0.015
+Antialiasing 0
+AdaptiveSampling 1
+AdaptiveThreshold 0.1
+
+SolidBackdrop 1
+BackdropColor 0 0 0
+ZenithColor 0 0.1569 0.3137
+SkyColor 0.4706 0.7059 0.9412
+GroundColor 0.1961 0.1569 0.1176
+NadirColor 0.3922 0.3137 0.2353
+FogType 0
+DitherIntensity 1
+AnimatedDither 0
+
+RenderMode 2
+RayTraceEffects 0
+RayTraceOptimization 1
+DataOverlayLabel  
+SaveRGB 0
+SaveAlpha 0
+
+ViewConfiguration 11
+DefineView 0
+ViewType 7
+ViewAimpoint 0 0 0
+ViewRotation -17.2 18 0
+ViewZoomFactor 4
+DefineView 1
+ViewType 1
+ViewAimpoint 4.4925 0 -0.9574999
+ViewZoomFactor 1.042466
+DefineView 2
+ViewType 9
+ViewAimpoint 0 0 0
+ViewZoomFactor 4
+DefineView 3
+ViewType 3
+ViewAimpoint 0 0 0
+ViewZoomFactor 4
+
+GridNumber 80
+GridSize 0.5
+CameraViewBG 0
+ShowMotionPath 1
+ShowFogRadius 0
+ShowFogEffect 0
+ShowSafeAreas 0
+ShowFieldChart 0
+
+CurrentObject 0
+CurrentLight 0
+CurrentCamera 0
+GraphEditorData
+{ GraphEd_Favorites
+}
+{ GE_Expression_Lib
+  1
+}

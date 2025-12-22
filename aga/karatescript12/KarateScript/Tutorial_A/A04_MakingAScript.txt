@@ -1,0 +1,276 @@
+
+ Ok, Here is a nice little script again:
+ We make 3 < kpart> wich stands for differents scenes,
+ and we make a movie with, in a < kscript>.
+
+<MAIN> myscript |0|1</MAIN>
+
+<KIMG> impacman | data/oldpac.iff </KIMG>
+<KIMG> imghost  | data/ghost1.iff </KIMG>
+<KIMG> imghost2  | data/inky.iff </KIMG>
+ to understand the way all the effect are used,
+ see the A03 script.
+
+ you can here see how parameters sin,cos,sint,cost and bounce are used !
+
+
+ note: the /// comment are a convenience when using Golded as text editor.
+
+-----------------------------------------------------------------------
+///<KPART>        <ID> mypart1 </ID>
+          
+
+ oldpacman is at the center,
+ 4 ghosts make circles.
+
+
+    <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> impacman </Pa>
+    </Fx>
+
+    <Fx><Pa> FillRC</Pa>
+        <Pa></Pa>
+        <Pa> cte | 134  </Pa>
+    </Fx>
+
+ here we can see a silly using of the parameter "sin" and "cos"
+the formula used for <Pa> sin | aa|bb|cc </Pa>  is:
+
+ sin = aa + sin( time*bb  )*cc
+
+ you can manage to make circles with that, but you can use to:
+ <Pa> sint | aa|bb|cc|dd </Pa>
+
+ the parameter dd is a time offset in 1/50 seconds...
+the formula is:
+sint =  aa + sin( (time + dd)*bb  )*cc
+see mypart2 for a use of "sint".
+
+    <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> impacman </Pa>
+        <Pa> sin | 0.25 | 0.3 | 0.05 </pa>
+        <Pa> cte | 0.25  </pa>
+        <Pa> sin | 0.75 | 0.3 | 0.05 </pa>
+        <Pa> cte | 0.75  </pa>
+    </Fx>
+
+   <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> imghost </Pa>
+        <Pa> cos | 0.4 | 0.7 | 0.4</pa>
+        <Pa> sin | 0.4 | 0.7 | 0.4</pa>
+        <Pa> cos | 0.6 | 0.7 | 0.4</pa>
+        <Pa> sin | 0.6 | 0.7 | 0.4</pa>
+
+    </Fx>
+
+   <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> imghost </Pa>
+        <Pa> cos | 0.4 | 0.7 | -0.4</pa>
+        <Pa> sin | 0.4 | 0.7 | -0.4</pa>
+        <Pa> cos | 0.6 | 0.7 | -0.4</pa>
+        <Pa> sin | 0.6 | 0.7 | -0.4</pa>
+
+    </Fx>
+
+   <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> imghost </Pa>
+        <Pa> sin | 0.4 | 0.7 | -0.4</pa>
+        <Pa> cos | 0.4 | 0.7 | 0.4</pa>
+        <Pa> sin | 0.6 | 0.7 | -0.4</pa>
+        <Pa> cos | 0.6 | 0.7 | 0.4</pa>
+
+    </Fx>
+
+   <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> imghost </Pa>
+        <Pa> sin | 0.4 | 0.7 | 0.4</pa>
+        <Pa> cos | 0.4 | 0.7 | -0.4</pa>
+        <Pa> sin | 0.6 | 0.7 | 0.4</pa>
+        <Pa> cos | 0.6 | 0.7 | -0.4</pa>
+
+    </Fx>
+
+</KPART>
+///
+-----------------------------------------------------------------------
+///<KPART>       <ID> mypart2 </ID>
+
+ oldpacman do strange sines movements,
+ ghosts come for a visit.
+
+    <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> impacman </Pa>
+    </Fx>
+
+    <Fx><Pa> FillRC</Pa>
+        <Pa></Pa>
+        <Pa> cte | 2  </Pa>
+    </Fx>
+
+    <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> impacman </Pa>
+        <Pa> sin | 0.5 | 0.8 | 0.25 </pa>
+        <Pa> cos | 0.8 | 0.8 | 0.25  </pa>
+        <Pa> sin | 0.5 | 0.8 | -0.25 </pa>
+        <Pa> cos | 0.8 | 0.8 | -0.25 </pa>
+    </Fx>
+
+   <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> imghost </Pa>
+        <Pa> cos | 0.4 | 0.7 | 0.4</pa>
+        <Pa> sin | 0.4 | 0.7 | 0.4</pa>
+        <Pa> cos | 0.6 | 0.7 | 0.4</pa>
+        <Pa> sin | 0.6 | 0.7 | 0.4</pa>
+
+    </Fx>
+
+  <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> imghost </Pa>
+        <Pa> cost | 0.4 | 0.7 | 0.4|50</pa> 1 second later
+        <Pa> sint | 0.4 | 0.7 | 0.4|50</pa>
+        <Pa> cost | 0.6 | 0.7 | 0.4|50</pa>
+        <Pa> sint | 0.6 | 0.7 | 0.4|50</pa>
+
+    </Fx>
+----------------------------------------------------------
+---------   yellow ghost come to say hello          ------
+
+    <Fx>
+        <Pa>Sprite</Pa>                              yellow ghost jumpin
+        <Pa></Pa>
+        <Pa> imghost2 </Pa>
+
+
+        <Pa> bounce|200|250|300|-0.25|0  </Pa>
+        <Pa> cte |0.1  </PA>
+        <Pa> bounce|200|250|300|0|0.25 </Pa>
+        <Pa> cte |0.46  </PA>
+    </Fx>
+
+ the bounce parameter is really handy cause it describe a movement using
+ 2 parts of a "parabole", to describe a sort of jump.
+ the model is:
+
+ <Pa> bounce| time0 | time1 | time2 | val1 | val2 </Pa>
+
+ before time0 the value is val1.
+ between time0 and time1, the value "jump" to val2.
+ then it stays to val2 between time1 and time2.
+ after time2, it jump back to val1.
+
+ note that if time1 is equal to time2, you obtain a perfect parabole.
+
+
+
+
+</KPART>
+///
+-----------------------------------------------------------------------
+///<KPART>       <ID> mypart3 </ID>
+
+
+     a pacman come from the right and jump !!
+    a ghost come from the left and jump too !!
+
+    <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> impacman </Pa>
+    </Fx>
+
+    <Fx><Pa> FillRC</Pa>
+        <Pa></Pa>
+        <Pa> cte | 240  </Pa>
+    </Fx>
+
+    <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>
+        <Pa> impacman </Pa>                 old pac jumpin' !
+
+        <Pa> aff| 0 |0.0015 </pa>
+        <Pa> bounce|150|250|360|0.65|0.05  </Pa>
+        <Pa> aff| 0.25|0.0015 </pa>
+        <Pa> bounce|170|250|360|0.95|0.25 </Pa>
+    </Fx>
+
+
+    <Fx>
+        <Pa>Sprite</Pa>                              yellow ghost jumpin
+        <Pa></Pa>
+        <Pa> imghost2 </Pa>
+
+        <Pa> aff| 1 |-0.0015 </pa>
+        <Pa> bounce|150|250|360|0.65|0.15  </Pa>
+        <Pa> aff| 0.8|-0.0015 </pa>
+        <Pa> bounce|170|250|360|0.95|0.45 </Pa>
+    </Fx>
+
+   <Fx>
+        <Pa>Sprite</Pa>
+        <Pa></Pa>                           green ghost up the screen
+        <Pa> imghost </Pa>
+        <Pa> sin | 0.4 | 0.7 | 0.4</pa>
+        <Pa> cte | 0.0.01 </pa>
+        <Pa> sin | 0.6 | 0.7 | 0.4</pa>
+        <Pa> cte | 0.25 </pa>
+
+    </Fx>
+
+
+</KPART>
+///
+
+-----------------------------------------------------------------------
+
+<KSCRIPT>
+    <ID> myscript </ID>
+
+    <PLAY> mypart1 | 200 | 0   | 1 </PLAY>      played 4 seconds
+
+    <PLAY> mypart2 | 400 | 0   | 1 </PLAY>       played 8 seconds
+
+
+    <PLAY> mypart3 | 600 | 50   | 1 </PLAY>     part 3,  12 seconds !!!
+
+    <PLAY> mypart1 | 200 | 200   | -1 </PLAY>    played 4 seonds reversed !!!
+   <PLAY> mypart1 | 50 | 0   | 4 </PLAY>
+    <PLAY> mypart1 | 50 | 50   | -4 </PLAY>
+
+    <PLAY> mypart3 | 50 | 200   | 4 </PLAY>
+    <PLAY> mypart3 | 50 | 400   | -4 </PLAY>
+    <PLAY> mypart3 | 100 | 200   | 4 </PLAY>
+
+    <PLAY> mypart3 | 100 | 600   | -8 </PLAY>
+
+
+   <PLAY> mypart1 | 100 | 50   | 0.5 </PLAY>
+    <PLAY> mypart1 | 100 | 100   | 2 </PLAY>
+   <PLAY> mypart1 | 100 | 150   | -0.5 </PLAY>
+    <PLAY> mypart1 | 100 | 200   | 1 </PLAY>
+
+
+    <PLAY> mypart2 | 50 | 0   | 1 </PLAY>
+
+
+    <PLAY> mypart1 | 500  | 0 | 1 </PLAY>
+
+</KSCRIPT>
+

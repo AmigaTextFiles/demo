@@ -1,0 +1,101 @@
+<world3d> world_11  </world3d>
+
+<KCOLORTABLE> table11 | data/part11/remap1.iff |0|255|255|255    </KCOLORTABLE>
+
+<KIMG> texture16 | data/part11/texture1.iff </KIMG>
+<t3dmapping> tmap16 | texture16 </t3dmapping>
+
+<KIMG> topnoise16 | data/part11/topnoise.iff </KIMG>
+
+<KIMG> map16_2 | data/part11/lightmap.iff </kimg>
+<t3dFlatLightMap> tmap16_2 | map16_2 </t3dFlatLightMap>
+
+
+<lwo3d> truba | world_11 | 0|0|0|0|0|0|2|0.5|0.5| data/part11/truba.lwo | 1 | tmap16</lwo3d>
+<lwo3d> star16 | world_11 | 0|0|0|0|0|0|0.5|0.5|0.5| data/part11/star.lwo | 1 | tmap16_2</lwo3d>
+
+<KCAM> camera11 |0|0|-650|0|0.2|0|0.3  </KCAM>
+
+<KPART>
+    <ID> Part11 </ID>
+
+  <Fx><Pa> FillRc </Pa><Pa></Pa><Pa>cte| 0 </Pa></Fx>
+
+  <Fx>
+      <Pa>BindPalette</Pa>
+      <Pa> aft | paltab3 | 0 | 0 </Pa>
+      <Pa>CTE|0</Pa>              type of fade:0,1,2,3
+      <Pa>CTE|255</Pa>            optional color 0->255 (0)
+      <Pa>texture16</Pa>     palette where to fade ( "B" )
+      <Pa>texture16</Pa>            optional source Palette(2)
+      <Pa>CTE|0</Pa>              type of fade:0,1,2,3
+      <Pa>CTE|255</Pa>            optional color 0->255 (0)
+      <Pa>texture16</Pa>       Palette where to fade ( "B" )
+      <Pa>texture16</Pa>       optional source Palette(2)
+      <Pa>CTE|0</Pa>              type of fade:0,1,2,3
+      <Pa>CTE|255</Pa>            optional color 0->255 (0)
+      <Pa>texture16</Pa>       Palette where to fade ( "B" )
+      <Pa>texture16</Pa>       optional source Palette(2)
+  </Fx>
+
+
+
+    <Fx><Pa> Set3DObject </Pa>  make the tore rotate all the time on the 3 axis:
+        <Pa> truba </Pa>
+        <Pa> cte |0  </Pa> posx
+        <Pa> cte |0  </Pa> posy
+        <Pa> aff |0|-0.8  </Pa> posz
+        <Pa> cte |0 </Pa> o1
+        <Pa> cte |0.495 </Pa>o2
+        <Pa> cte |0 </Pa> o3
+
+        <Pa> 3cte|1|1|1 </Pa>  scale
+    </Fx>
+
+    <Fx><Pa> Set3DObject </Pa>  make the tore rotate all the time on the 3 axis:
+        <Pa> star16 </Pa>
+        <Pa> cte |0  </Pa>
+        <Pa> cte |10  </Pa>
+        <Pa> cte |-635  </Pa>
+        <Pa> aff |-0.01|0.005</Pa>
+        <Pa> aff |0.1|0.006</Pa>
+        <Pa> aff |0.0|0.007</Pa>
+
+        <Pa> 3cte|0.1|0.1|0.1 </Pa>  scale
+    </Fx>
+
+
+
+    <Fx><Pa> Draw3DWorld </Pa>
+        <Pa> mainscreen </Pa>
+        <Pa> world_11</Pa>
+        <Pa> camera11 </Pa>
+        <Pa> cte|0 </Pa>
+        <Pa> cte|1 </Pa>
+        <Pa> cte|2000</Pa>
+    </Fx>
+
+
+  < Fx>
+      <Pa> radialblur </Pa>
+      <Pa> mainscreen </Pa>        rectangle where to make radialblur
+      <Pa> table11 </Pa>       the color remap table to apply color operation
+      <Pa> cte | 0.5 </Pa>      X center of radial zoom according to position
+      <Pa> cte | 0.5 </Pa>      Y center of radial zoom according to position
+      <Pa> cte | 0.95 </Pa>      X rate of zoom. please >0
+      <Pa> cte | 0.95 </Pa>      Y rate of zoom. please >0
+  </Fx>
+
+   <Fx><Pa> SpriteTable </Pa>
+        <Pa>mainscreen</Pa>
+        <Pa> topnoise16 </Pa>
+        <Pa> cte | 0 </Pa>
+        <Pa> cte | 0.2 </Pa>
+        <Pa> cte | 1 </Pa>
+        <Pa> cte | 0.8 </Pa>
+        <Pa> table11 </Pa>  50% transpa
+    </Fx>
+
+
+
+</KPART>

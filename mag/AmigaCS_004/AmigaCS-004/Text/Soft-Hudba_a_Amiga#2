@@ -1,0 +1,85 @@
+@{xoffset 21}@{d 7AFF68}¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+@{xstep 364}@{font ACS-Title.font 18}Hudba a Amiga (2.díl)@{font}
+@{xstep 458}@{c A6FFF8}@{i}Wolf/Abort@{ui}@{c}@{ystep -8}
+
+
+  @{xstep 1}@{font ACS-Title.font 18}V@{font} minulém  çísle  @{c D7FFC7}ACS@{c}  jsem  popsal  poçítaçovou hudbu obecnë a nyní pêichází
+chvíle,  abych  popsal práci v jednotlivých hudebních editorech.  Ten popis bude
+struçnëjîí,   protoùe   budu  popisovat  jednotlivé  editory  komplexnë  (@{i}výhody
+a nevýhody@{ui}).   Pêíîtë  popíîu detailnë funkce @{c D7FFC7}ProTrackeru@{c} a @{c D7FFC7}OctaMEDu@{c}, které jsou
+nejrozîíêenëjîí.
+
+@{c D7FFC7}  Takùe to sjedu popoêadë:
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+  @{c D7FFC7}@{u}ProTracker@{uu}@{c}  -  Tak  tohoto "@{i}dëdka@{ui}" mezi trackery asi nemusím moc pêedstavovat.
+Je  neuvëêitelné,  ùe  tento  v  podstatë  zastaralý editor se stále tëîí takové
+oblibë  u mnoha  hudebníkû  (@{i}i  u më @{ui}:-).  Jeho hlavní silou je velmi intuitivní
+ovládání, jednoduchost, rychlost, malé nároky na hardware a hlavnë - je zadarmo.
+Zatím  existuje  ve  verzi  4.xx,  ale  ta  je  témëê shodná s "@{i}trojkovou@{ui}" êadou
+@{c D7FFC7}ProTrackerû@{c}.   Z  nevýhod  bych  uvedl  malé  moùnosti  sample-editoru,  absence
+notového  zápisu  a  ignorace @{c D7FFC7}MIDI@{c}.  Je smutné, ùe verze 2 spolupracovala s @{c D7FFC7}MIDI@{c}
+alespoñ  na  bázi  rozîiêujících  kláves,  coù  u verzí 3 a 4 z nepochopitelných
+dûvodû  chybí.  Ani v dokumentaci jsem o tom nic nenaîel a dodnes existuje jeîtë
+spousta  hudebníkû, kteêí díky této "@{i}chybiçce@{ui}" stále pouùívají verzi 2, která má
+ale dost odpudivé @{c D7FFC7}GUI@{c}.
+
+  @{c D7FFC7}@{u}OctaMED@{uu}@{c}  -  Je  zajímavé,  ùe  tento dost propracovaný tracker nikdy nesklidil
+takovou slávu jako @{c D7FFC7}ProTracker@{c}, i kdyù nabízí daleko více moùností.  Je to hlavnë
+jeho  vynikající  a pêehledné @{c D7FFC7}GUI@{c}, skvëlé moùnosti editace samplû a dobrý editor
+notového  zápisu.   Je  jedna  vëc,  ve  které  @{c D7FFC7}OctaMED@{c}  opravdu  vyniká - práce
+s @{c D7FFC7}MIDI-zaêízeními@{c}.   Oproti  ProTrackeru  opravdu  velký  rozdíl.   @{c D7FFC7}OctaMED@{c} nyní
+existuje  ve  verzi  OctaMED  SoundStudio  v1.xx,  coù  je následník @{c D7FFC7}OctaMEDu 6@{c}.
+Oproti  verzi  @{c D7FFC7}6@{c}  má  nëkolik  vylepîení,  napê.   editor notového zápisu, který
+u verze  @{c D7FFC7}6@{c}  chybël,  rozîíêené  efekty  (@{i}impozantní  echo@{ui}), nové mixovací rutiny
+a mnoho  dalîího.   Snad  jedinou  vadou  na  kráse  je  skuteçnost,  ùe @{c D7FFC7}OctaMED@{c}
+@{c D7FFC7}Soundstudio@{c}  je  komerçní  produkt.   (@{i}Coù  ale  asi mnoha lidem nevadí@{ui} :-).  Na
+druhou  stranu  ale dostanete opravdu profesionální nástroj ke tvorbë poçítaçové
+hudby.   (@{i}I  kdyù  by asi spousta hudebníkûm dëlalo problémy zvykat si na trochu
+jiné @{c D7FFC7}GUI@{c}, neù jsou zvyklí z @{c D7FFC7}ProTrackeru@{c}@{ui}).
+
+  @{c D7FFC7}@{u}DigiBooster@{uu}@{c}  Pro  (@{i}DBPro@{ui})  -  Tak  tento editor si zaslouùí zvýîenou pozornost
+u hudebníkû,  kterým uù pêestaly staçit 4 (çi 8) editaçní stopy @{c D7FFC7}ProTrackeru@{c} nebo
+@{c D7FFC7}OctaMEDu@{c}.   @{c D7FFC7}DBPro@{c}  jich  totiù  zvládá  aù @{f C0FF5E}128!@{f}  Tohle dílko od naîich severních
+sousedû  toho  ale  umí  daleko  více!   Nejenùe plnë podporuje (a vyùaduje) @{c D7FFC7}AHI@{c}
+(@{i}sláva  zvukovým  kartám@{ui}!),  umí tedy pracovat s 16-ti bitovým zvukem, ale navíc
+umoùñuje  editaci  aù  1024 patternû a zvládá 256 samplû v jedné skladbë.  Dalîí
+ohromná  výhoda  je,  ùe  pouùívá  stejné znaçení sample-efektû jako @{c D7FFC7}ProTracker@{c},
+takùe není problém pro hudebníky odkojené Protrackerem zvykat si na nové znaçení
+efektû  (@{i}jako je tomu napê.  u @{c D7FFC7}OctaMEDu@{c}@{ui}).  DBPro podporuje i @{c D7FFC7}PC-formáty@{c} jako @{c D7FFC7}S3M@{c}
+a  @{c D7FFC7}XM@{c},  tudíù  odpadají  starosti  s konvertováním.   Na  druhou stranu má @{c D7FFC7}DBPro@{c}
+pochopitelnë  troîku vyîîí nároky na konfiguraci Amigy.  Autoêi sice uvádëjí, ùe
+staçí 020, ale k váùnëjîí práci to nepêipadá v úvahu.  Doporuçená konfigurace je
+030  +  FastRAM,  ale to je opravdu minimum.  Trochu më pêekvapily malé moùnosti
+sample-editoru,  které by mohly být v programu takovéhoto formátu vëtîí.  I kdyù
+@{c D7FFC7}DBPro@{c}  podporuje i takové vëci jako panning envelope (@{i}obálky@{ui}), tak si myslím, ùe
+kdyby  mël  @{c D7FFC7}DBPro@{c}  sample-editor  jako  têeba  @{c D7FFC7}MusicLineEd@{c},  nemël  by  na Amize
+konkurenci.  @{c D7FFC7}DBPro@{c} @{c D7FFC7}je shareware@{c} a tëch 50 DM není rozhodnë moc, vzhledem k tomu,
+co tento editor umoùñuje.
+
+ @{c D7FFC7}@{u} Music   Line  Editor@{c} @{uu} (ML)  -  @{c D7FFC7}ML@{c}  je  vyjímeçný  hudební  editor  nejen  svým
+sample-editorem,  ale  i  rozdílným zpûsobem editace skladby.  Ona "@{i}vyjímeçnost@{ui}"
+vyplývá  z  toho,  ùe  v  @{b}ML  neexistují  patterny @{ub} (@{i}tzn.   bloky, ze kterých se
+kompletuje skladba@{ui}), ale kaùdé stopë se pêiêadí urçitá rychlost.  Tëch stop mûùe
+být 8 a funguje to asi tak, ùe si hudebník vytvoêí v jedné stopë napê. rytmickou
+linku,   které  pêiêadí  urçitou  rychlost  a nezávisle  na  ní,  vytvoêí  napê.
+melodickou  linku,  která  není  zatíùená  tempem  rytmické  linky, jako je tomu
+u ostatních   editorû.    To,   co   ale  dëlá  @{c D7FFC7}ML@{c}  skvëlým  editorem,  je  jeho
+sample-editor.   Ten umoùñuje naprosto jednoduîe vytváêet rûzné efekty se samply
+jako  napê. @{c D7FFC7}morphing@{c},  @{c D7FFC7}mixing@{c},  @{c D7FFC7}echo@{c}  a mnoho dalîích efektû.  @{c D7FFC7}ML@{c} ani není tolik
+nároçný  na  hardware (@{i}vzhledem k moùnosti editace "jen" v osmi stopách@{ui}) - Amiga
+1200  s  FastRAM  na  solidnëjîí práci postaçuje.  Je jen îkoda, ùe se @{c D7FFC7}MLine@{c} moc
+nerozîíêil a autoêi zvaùují, zda pokraçovat ve vývoji.
+
+
+  @{c D7FFC7}@{u}Symphonie@{uu}@{c} - @{c D7FFC7}Symphonie@{c} existuje ve dvou verzích:  @{c D7FFC7}Symphonie Jr@{c} a @{c D7FFC7}Symphonie Pro@{c},
+pêiçemù  ta  první  je  trochu  ochuzená  o  nëkteré efekty.  No, Symphonie není
+rozhodnë   îpatná  -  podporuje  aù  @{c D7FFC7}256@{c}  kanálû  a  disponuje  celkem  sluînými
+sample-efekty  (@{i}16  bit@{ui}).   Na  druhou  stranu  zcela  ignoruje  @{c D7FFC7}MIDI@{c},  má dosti
+chaotické  @{c D7FFC7}GUI@{c}  a  @{c D7FFC7}neumí  (?!)  importovat@{c}  @{c D7FFC7}ProTracker-moduly@{c}.   Nemá  význam se
+o @{c D7FFC7}Symphonii@{c}  více  rozepisovat  -  ten  kdo  nepotêebuje takové vymoùenosti jaké
+nabízí napê.  @{c D7FFC7}MLineEd@{c} çi @{c D7FFC7}DigiBoosterPro@{c}, ale chce troîku profesionálnëjîí editor
+neù  @{c D7FFC7}Pro Tracker@{c}, není lepîí êeîení, neù si Symphonii poêídit.  Navíc, @{c D7FFC7}Symphonie@{c}
+byla z nedostatku zájemcû o její koupi uvolnëna jako freeware.
+
+
+                                                       [@{c 46FF45}pokraçování pêíîtë@{c}]

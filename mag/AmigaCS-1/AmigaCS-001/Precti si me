@@ -1,0 +1,74 @@
+/*****************************************************************************
+ *                                                                           *
+ *                   DiskMag AmigaCS #001   21.3.1998                        *
+ *                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                     *
+ *                                                                           *
+ *                  code      Jarda 'ShAmaN' Pokorny                         *
+ *                  gfx       Jarda 'JR' Rozmara                             *
+ *                            Honza 'AliEn' Prochazka                        *
+ *                 music      Honza 'AliEn' Prochazka                        *
+ *                                                                           *
+ *             sefredaktor    Jarda 'ShAmaN' Pokorny                         *
+ *               redakce      Mila 'YA' Petr                                 *
+ *                            Jarda 'JR' Rozmara                             *
+ *                            Petr 'Schizzy' Skala                           *
+ *                                                                           *
+ *****************************************************************************/
+
+  Minimalni pozadavky:
+    Amiga s AGA cipy, OS 3.0 a vyssi, datatypy (datatypes.library
+    a ilbm.datatype), CPU 68020 a vyssi, alespon 1.8MB volne CHIP RAM
+
+  Doporucena konfigurace:
+    navic turbokarta + nejaka FastRAM (potom staci mene CHIPky) a monitor
+
+  Program chodi perfektne pod CyberGraphX (nadefinujte si rezim 640x256x8)
+
+
+
+  Omlouvame  se,  pokud  by  to  nahodou  nechodilo, nebo se hroutilo.  Na PALu
+zkuste  uvolnit  co  nejvic  CHIPky  a ujistit se, ze mate standardni systemovy
+datatypy  (ruzne  "vylepsovane"  maji spoustu chyb, vcetne V43 24bit datatypu).
+Take  lze  pomoci  tooltypu  vypnout hudbu a efekty a tim usetrit hodne CHIPky.
+Pokud mate problemy, nastavte MUSIC=NO, EFFECT=NO a OSC=NO.
+
+
+_______________________________________________________________________________
+
+
+                                   GREETINGS
+                                   ~~~~~~~~~
+
+  From Shaman
+  ¯¯¯¯¯¯¯¯¯¯¯
+   - Mira Janicek (diky za clanek)
+   - YAN (dik za pohadku)
+   - WAX (taky dik za super clanek)
+   - vsichni z #AmigaCS
+   - Tomaash Benda z AR
+   - Vitek Martinek (doufam, ze se k nam pripojis!)
+   - ustecky DEGENS (zvlaste Dousa a Miza)
+
+  From JR
+  ¯¯¯¯¯¯¯
+   - Raistlin alias Fredy
+   - Stepan the Ozvenar :=)
+   - Marry
+   - all orthodoux Amigists and cyberpunkers
+
+
+_______________________________________________________________________________
+
+   Kontaktni adresa:          Jaroslav Pokorny
+                              Kmochova 25
+                      400 11  Usti nad Labem
+
+                      EMAIL:  shaman@sun.ujep.cz
+                        WWW:  http://sun.ujep.cz/~pokorny
+
+
+_______________________________________________________________________________
+
+  Jeste: JR a YA maj novy emailovy adresy:  jr@area93.cz  a  ya@area93.cz !!!
+_______________________________________________________________________________
+

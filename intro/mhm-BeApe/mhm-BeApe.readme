@@ -1,0 +1,28 @@
+Short:        beape 4k intro - CAFe02 winner with sources (v0.2 bugfxd)
+Author:       mayhem@amigascne.org
+Uploader:     lvd@dgap.mipt.ru
+Type:         demo/intro
+Version:      v0.2 (13-Jan-2k3)
+
+ Requirements:
+
+1. Amiga 020+ noFPU (AGA or GFX card)
+2. OS 3.1 (blazeWCP recommended)
+3. 700kb chip + 4mb fast
+4. paula
+
+ Known bugs:
+
+1. Sometimes causes guru on exit
+
+ History:
+
+v0.2 (13-Jan-2k3):
+     bug fixed (while compiling with cMODE=RUN): after copying code to fastmem
+     no CacheClearU was performed.
+
+v0.1 (30-Dec-2k2):
+     first aminet release
+
+ Warning: in this package 
+          4kpack - (c) Azure

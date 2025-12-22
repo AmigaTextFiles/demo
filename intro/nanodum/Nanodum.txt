@@ -1,0 +1,87 @@
+Jelou, tios.
+
+Dadas las controversias y polémicas que la intro-4k ganadora de la Euskal Amiga
+Party III ha generado, ahí va ésta version, que NO NECESITA NI UTILIZA la 
+stc.library.
+Encima, y ya como coña, AHORA OCUPA MENOS QUE ANTES, y va una pizca mas rápido.
+La subrutina de fractales la he hecho ahora pseudoaleatoria, para que las 
+paredes sean siempre iguales, y parezcan siempre paredes, y no Mandelbrots.
+He añadido una rutina de dither de pseudo-Floyd-Steinberg para las paredes.
+La intro no funciona desde Wb, asi es que ejecutala desde un Shell.
+
+El ejecutable con cabecera de descompresion ocupaba en un principio 4432 bytes.
+Reordenando codigo para facilitar el algoritmo Lempel-Ziv del StoneCracker,
+consegui que la longitud bajase a 4322 bytes.
+Eliminando BSRs y RTSs, y algunas chorradillas del sistema, y optimizando
+algunas instrucciones, baje la longitud a 4286 bytes.
+Curiosamente, a veces ocupa menos comprimido, un monton de JSRs a la misma 
+direccion, que si fueran BSR.Bs. Esto es porque el Lempel-Ziv se basa en
+repeticiones de cadenas. Mientras los JSRs guardan la direccion entera, y por
+lo tanto siempre la misma, un BSR.B guarda el offset respecto al pc, siempre
+diferente en cada BSR.B, y aportando menos cadenas repetidas.
+Tambien curiosamente, bajando la calidad del StoneCracker a "2k", el tamaño 
+se redujo aun mas, hasta 4266 bytes. A "1k" daba peor rendimiento, y a "4k"
+tambien. Que cosas.
+Finalmente, pasando un filtro delta a la unica tabla que quedaba, y añadiendo
+la rutinilla "desdeltalizadora" lo deje en la longitud final que ahora veis.
+Y vosotros direis: "A mi que coño me importa". Pues bueno, ya lo se, pero es
+que si no, igual pensais que ha sido coser y cantar. Pues no.
+
+Espero que esto tranquilize a los que se mosquearon por que usaba la puñetera
+libreria del Stone Cracker. No obstante, desde aqui les digo que son muchisimas
+las demos que utilizan librerias de compresion.
+Es mas; si en vez de usar el Stone Cracker hubiese usado el PowerPacker, nadie
+hubiese protestado. Podria poner una larga lista de intros 64/40/4 que utilizan
+librerias de compresion, pero no va en mi linea.
+No obstante comprendo que la gracia de las intros de 4ks es precisamente eso:
+sus 4ks. Pues bueno, ahora el Nanodum ocupa 3920 bytes, sin usar ninguna
+libreria de descompresion.
+
+Las horas que he tenido que meter al teclado, para reducir aun mas el tamaño,se
+las dedico a los que han criticado esta intro.
+
+Un saludillo pa tol mundo (menos pa los peceros) ;)
+
+PD: Si conoces a alguien que protesto por lo de la libreria, pasale este .lha,
+    fale tio?. Muchas gracias. Nos vemos en la proxima party...
+
+PD: El proyecto esta en marcha... 
+       "EL ADVENIMIENTO DEL PIMIENTO"
+                               The demo
+    (aunque tal vez se llame "Phalophagia"... Ummm.... ya veremos)
+    ¡Nombres serios No-Rules!.
+
+Phornee/GOBLINS
+
+... solo hay algo peor que un tramposo... un tramposo chauvinista.¡Dosf!.
+...Pentium Pro... la videoconsola mas cara del mundo...
+           ,__.       ___    ,_____.   ,___     ___ ___    ___    ___
+         ,W@@@@W.   g@@@@@s  ]@@@@@@@s ]@@@     @@@ @@@b   @@@ ,W@@@@@s
+        i@@@A*@@@. W@@A*M@@W ]@@@@@@@@i]@@@     @@@ @@@@i  @@@ W@@**@@@[
+       ,@@@!  !**!]@@A   Y@@[]@@@  Y@@[]@@@     @@@ @@@@@. @@@ @@@_ '~~`
+       ]@@@       @@@`   '@@@]@@@mm@@@`]@@@     @@@ @@@@@W @@@ Y@@@@m_
+       ]@@@   @@@[@@@     @@@]@@@@@@@W.]@@@     @@@ @@@A@@W@@@  VM@@@@W.
+       ]@@@   @@@[@@@.   ,@@@]@@@  '@@@]@@@     @@@ @@@[!@@@@@    'VM@@@
+       !@@@b  ,W@[Y@@W. ,W@@[]@@@  ,@@@]@@@     @@@ @@@[ Y@@@@immm  ,@@@
+        V@@@@@@@@[ M@@@@@@@A ]@@@@@@@@A]@@@@@@@[@@@ @@@[  M@@@!@@@@@@@@!
+         '*@@@*@@[  VM@@@Af  ]@@@@@@@*`]@@@@@@@[@@@ @@@[  '@@@ '*@@@@*`
+
+       Odio el inglés, pero este mensaje tiene que ir en él, asi que...
+To contact us call: 
+Code: (94)-4126369 (Ask for Alberto) Birra/GOBLINS(BIRRA@CIBER.ES)
+      (94)-4466285 (Ask for Alvaro) Jupiter/GOBLINS(JUPITER@CIBER.ES)
+      (94)-4163017 (Ask for Ismael) Phornee/GOBLINS    
+      (94)-4152115 (Ask for Alex) Tom/GOBLINS
+      (94)-4473135 (Ask for Ismael)TxunkyPunky/GOBLINS(HERRERO@RIGEL.DEUSTO.ES)
+GFX:  (94)-4163017 (Ask for Unai o Ismael) Lentium & Phornee/GOBLINS
+Music: Don't call us. Our music is a useless one.
+Or just write to:     Ismael Raya 
+               C/Zabalbide N°10 esc. izda 4°C
+                CP: 48006 Bilbao (Spain)
+
+We'd like to exchange knowledges about demo programming in Cobol language,
+and 2D painting with scanner. We are also interested in lame routines, 
+Pascal Sources, Bill Gates photographs, and Intel stickers. Demo makers
+will be grateful. We are the elite of the PC scene. Fuck us!.
+
+Amiga,Rol & Magic Rules!.

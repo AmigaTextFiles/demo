@@ -1,0 +1,13 @@
+assign mmd: ""
+cd mmd:
+c/assign devs: mmd:devs/ add
+c/assign system: mmd:system/ add
+c/assign s: mmd:s/ add
+c/assign c: mmd:c/ add
+c/assign libs: mmd:libs/ add
+System/SetMap md
+
+newshell window=con:0/0//256/FederalShell_-_Press_HELP_for_Choice/CLOSE
+
+c/more message
+

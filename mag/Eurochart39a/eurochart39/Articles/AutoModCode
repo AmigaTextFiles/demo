@@ -1,0 +1,161 @@
+»CL8:»SML:--------------------------------------
+        »CL9:»BIG:AutoModifying Code
+»CL8:»SML:--------------------------------------
+
+»CL0:This theme is a bit of a problem...
+Most coders will laugh at any of my
+suggestions of leaving cache control
+to the OS, because some optimisations
+seem really impossible this way.
+
+Let's begin saying that code
+changing/creation is handled in a
+different way from PPC to 68k and
+80x86. 80x86, for example, solves the
+problem with hardware. Any change in
+the code will be assimilated by the
+CPU, directly, without any cleaning
+code involved. This can look as an
+advantage, but believe me, Intel would
+probably pay a lot to avoid dealing
+with this... Well, for that and for
+throwing the whole 8x86 architecture
+to the bin! XD
+
+On the other hand, on PPC there are
+instructions to clean only the cache
+you want to flush. These instructions
+works in cache lines, flushing them to
+memory or invalidating them. So, you
+can modify some code, flush it from
+the cache to memory and invalidate any
+copy of this code on the code cache.
+This way, when the code is launched,
+it will be read correctly from memory.
+
+The real loser here is the 68k. 68000
+allows automodifying code (ATC from
+now for short), as it doesn't have any
+proper cache. 68020 has code cache, so
+you can need cache clearing sometimes.
+The same applies to 68030, with major
+reasons, as it has also datacache
+which can retain modified code. As
+caches grew on 040 and 060 (to 4096 &
+8192 bytes), flushing all cache
+contents began to seem being a bit of
+a big bottleneck for system
+programmers. Motorola solved the
+problem with CINV and CPUSH
+instructions, which has similar
+function to the ppc ones I have
+described.
+
+Real good ATC on 040/060 should use
+these 2 instructions, but this would
+give the problem of writing different
+code for different CPUs. As this is
+not going to happen (I think enough
+people have tried and failed to
+deliver), I will not explain those
+instructions; if you want to learn
+them, get the 040 documentation. In my
+opinion, delivering 040/060 demos only
+is not a good idea, so I will not give
+any hints. »CL7:(and I think that coding
+for 030 is mad and obsolete, 060
+rulez... Troda)
+
+»CL0:I really think fast ATC is possible
+just calling simple system functions,
+but an operation like »CL4:CacheClearU()»
+easily will take around 1 screen
+raster line of CPU time to do.
+
+You can make all code changes for the
+frame being drawed at once and call
+»CL4:CacheClear» only once; but this will
+only work for trivial automodifying...
+The real deal is making HEAVY ATC with
+very few cache cleaning, and getting
+it to work on every 68k CPU avalaible.
+Is this possible? Yes, indeed it is
+and I wonder why every coder that uses
+ATC gets it so wrong... As an example,
+let's see how the Real French Texture
+Mapping (tm) inner loop looks:
+
+»CL4:.
+.
+.
+move.b #$xxxx(A0),(A1)+
+move.b #$yyyy(A0),(A1)+
+move.b #$zzzz(A0),(A1)+
+move.b #$mmmm(A0),(A1)+
+move.b #$nnnn(A0),(A1)+
+.
+.
+.
+
+»CL0:This way of texturing requires
+modifying all offsets (»CL4:#$xxxx,#$yyyy,»
+etc...) for every triangle. Modifying
+and clearing caches would end in a
+horrible slowdown... Can you imagine
+losing a raster-line for every
+polygon? Usually, French coders didn't
+care about cache clearing, as their
+code was targeted to 020/030 CPUs. 256
+bytes of cache is flushed very early:
+In the moment the routine is finishing
+automodify, nearly all the data is in
+memory.
+
+Also, the code is usually too long for
+the code cache, so it doesn't remain
+there too much. »CL7:(but on 060 this end
+with horrible things...Troda)»
+
+»CL0:Solutions? Here you have one:
+1»CL1:-» Split your polygon routine. One
+   makes polygon edges and modify
+   different copies of the TM code;
+   the other just call the
+   automodified code, which really
+   draws the polygon.
+2»CL1:-» Reserve a big memory chunk for the
+   inner loop. Copy (the
+   move.b's...loop) it several times
+   to fill the block. The block should
+   be several times larger than the
+   maximum data/code cache avalaible.
+   »CL7:(Well, but when someone finally
+   gives 68k L2, as on Macs or Atari,
+   then what? Troda)» Ensure every copy
+   of the loop is separated of the
+   near ones, by the size of a cache
+   line (16 bytes).
+3»CL1:-» Clear all caches to ensure your
+   copies go to memory.
+
+»CL0:Now, for every frame being drawn:
+
+1»CL1:-» Make edges and modify a different
+   copy of the code for every polygon.
+2»CL1:-» When finished OR when the buffer of
+   code copies is filled, clear all
+   caches and call the modifyed code.
+
+Yes, it's a bit slower than the usual
+no-cache handle or CPUSH-CINV
+solution, and more complex to code,
+but this should work on every 68k.
+
+Please note that I don't want to
+recommend ATC to anybody; learn and
+try is OK, but using things you don't
+really control, will end in unstable
+code. »CL7:(Jamie learns, that is for sure,
+his Ride is absolutely the best (in
+code and mapping) demo ever made or
+seen on Amiga so far... Troda)» 

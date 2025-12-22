@@ -1,0 +1,28 @@
+==========================================
+  Rtgmaster Developer Archive
+  Author:   MagicSN@Birdland.es.bawue.de
+==========================================
+
+This is part of the new rtgmaster release V24.0. rtgmaster is a 
+library system to make GFX Board Compatible Game Coding 
+easy. It supports :
+
+- Direct Access to the Video RAM
+- With some effort the code even runs on ECS/AGA (through    
+c2p)
+- Supports nearly all WB Emulations
+- And much more
+
+This part of the archive is for the developper. It contains 
+Binaries and Demos, Autodocs and Includes. You might be 
+interested in getting the Driver Archive, additionally, if you do 
+not want having to bother with Library/OS Coding. This Driver 
+Archive contains an example driver where you do not have to 
+know about this. This is all done internally in the driver.
+
+The other rtgmaster archives are rtgmaster_user.lha and 
+rtgmaster_driv.lha. The Driver Archive contains the Binaries 
+and an Example Driver that can be used to add GFX Board 
+Support to a game without knowing something about 
+Library/OS Coding, the User Archive contains Demos and 
+Binaries (they are also contained here, though).

@@ -1,0 +1,214 @@
+
+ Displacing vertex position of a 3D object.
+
+  Usually, all ob3d object constructor like < tore>, < sphere> < lwo> and others
+ create a static object you can move, scale, rotate, but its shape doesn't change.
+
+  Karate provides ways to modify the shape of an object in real time,
+ after they have been created, but you got to understand how it works:
+ 2 objects at least must be used to create a displacement effect:
+
+ - An invisible Model Object (that will not change.) attached to an undrawn world.
+ - A visible clone of this object.(that will be changed in real time.) and drawn.
+
+ We have seen < clone3d> can create a object with the same shape of another.
+ So we can create the 'visible' object as a clone: the models and the visible
+ must have the same vertex list.
+
+ Then we have 2 displacing effects:
+
+ Effect 'VertexSin' can do a sinusoidal displacement on a ob3d.
+ Effect 'VertexAddMorph' can do a morphing on a ob3d.
+
+ These effects 'add' a deformation on an existing object.
+ When a frame is drawn and the < kpart> played, a new deformation
+ will be added to the last ones: so you ALWAYS have to use 'Clone3DShape'
+ just before: 'Clone3DShape' is an effect that just reset an object shape
+ to the shape of another one, with the same number of vertex.
+
+
+ In a < kpart>  They ALWAYS had to be used like this:
+
+ <Fx><Pa> Clone3DShape </Pa><Pa> obvisible </Pa><Pa> obmodel </Pa> </Fx>
+ <Fx><Pa> VertexSin </Pa><Pa> obvisible </Pa> ... </Fx>
+
+ <Fx><Pa> Clone3DShape </Pa><Pa> obvisible </Pa> <Pa> obmodel </Pa> </Fx>
+ <Fx><Pa> VertexAddMorph </Pa><Pa> obvisible </Pa> ... </Fx>
+
+ this could be seen like this in a program:
+
+ obvisible = obmodel
+ obvisible = obvisible +  displacement
+
+ What is the avantage of doing so ? Simply because it makes possible
+ to stack multiple diplacements one on the other:
+
+ obvisible = obmodel
+ obvisible = obvisible +  morph
+ obvisible = obvisible +  displacement
+ ...
+--------------------------- Effect 'VertexAddMorph'
+
+   <Fx><Pa> VertexAddMorph </Pa>
+        <Pa> object to modify  </Pa>
+        <Pa> objectA </Pa>
+        <Pa> objectB </Pa>
+        <Pa> rate [0,1] </Pa>
+    </Fx>
+
+ if rate is 0, nothing happen.
+ then, when it moves to 1,
+  'object to modify' shape is added with the difference
+  between objectA and objectB.
+
+ It means if 'object to modify' has the shape of 'objectA' before,
+ and rate is 1, it will set the shape of objectB.
+
+ this is called 'relative morphing'.
+
+-----------------------
+
+<kimg> i_2 | data/texture2.iff </kimg>
+<t3dEnvMap> tmapenv | i_2  </t3dEnvMap>
+
+<World3D> world_invisible </World3D>
+
+<tore> tore_invisible| world_invisible |0|0|5|0|0|0|1|1|1|
+        20 | 10 | 2|1 | 0|0.0|0.00|1|0.5 |tmapenv|tmapenv|tmapenv|tmapenv </tore>
+
+ tore1 is created with same vertex list as tore_invisible:
+
+<World3D> world1 </World3D>
+<clone3d> tore1 | world1|0|0|0|0|0|0|1|1|1| tore_invisible </clone3d>
+
+<KCAM> the_camera |0|0|-5|0|0|0|0.8  </KCAM>
+
+<MAIN> myscript |0|1</MAIN>
+
+<KSCRIPT>
+    <ID> myscript </ID>
+    <PLAY> part_displace | 800 | 0 | 1 </PLAY>
+    <PLAY> part_morph | 800 | 0 | 1 </PLAY>
+</KSCRIPT>
+----------------------------------
+<KPART> <ID> part_displace </ID>
+
+
+    <Fx><Pa>setpalette</Pa>  set the screen palette
+        <Pa> i_2 </Pa>   we have seen each image stands for a 256 color palette too.
+    </Fx>
+
+    <Fx><Pa>fillrc</Pa>  clear the screen background to color 24.
+        <Pa>  </Pa>   default screen rectangle.
+        <Pa> cte | 24 </Pa>
+    </Fx>
+
+  ------------------------------------------ vertex shaders!
+    recopy the original shape:
+    <Fx><Pa> Clone3DShape </Pa><Pa> tore1 </Pa><Pa> tore_invisible </Pa></Fx>
+
+    displace vertexes:
+    <Fx><Pa> VertexSin </Pa>
+        <Pa> tore1 </Pa>
+        <Pa> sin|0|0.4|0.5 </Pa> offset X
+        <Pa> sin|0|0.8|0.5 </Pa>        Y
+        <Pa> sin|0|0.35|0.5</Pa>        Z
+
+        <Pa> cte|0.2</Pa> frequence X
+        <Pa> cte|0.2</Pa>           Y
+        <Pa> cte|0.2</Pa>           Z
+
+        <Pa> cte|0.6</Pa> amplitude X
+        <Pa> cte|0.6</Pa>           Y
+        <Pa> cte|0.6</Pa>           Z
+    </Fx>
+ note if all amplitude are 0, there is no displacement.
+
+    <Fx><Pa> Set3DObject </Pa>  make the tore rotate all the time on the 3 axis:
+        <Pa>  tore1 </Pa>
+        <Pa> 3cte |0|0|0  </Pa>
+
+        <Pa> aff |-0.01|0.005</Pa>
+        <Pa> aff |0.1|0.006</Pa>
+        <Pa> aff |0.0|0.007</Pa>
+
+        <Pa> 3cte|1|1|1 </Pa>  scale
+    </Fx>
+
+    <Fx><Pa> Draw3DWorld </Pa>
+        <Pa>   </Pa>
+        <Pa> world1 </Pa>
+        <Pa> the_camera </Pa>
+        <Pa> cte|0 </Pa>
+        <Pa> cte|1 </Pa>
+        <Pa> cte|200</Pa>
+    </Fx>
+
+</KPART>
+-----------------------------------------
+<World3D> world2 </World3D>
+
+<KIMG> i_lightmapGrey | data/lightmapgrey.iff </kimg>
+<t3dFlatLightMap> tLightMapGrey  | i_lightmapGrey </t3dFlatLightMap>
+
+<star3d> starBig2 | world2 |0|0|0|0|0|0|1|1|1 |
+         8|0.85|1.0|0.75|0.0|tLightMapGrey |tLightMapGrey | |tLightMapGrey |tLightMapGrey| </star3d>
+<star3d> starBig2a | world_invisible |0|0|0|0|0|0|1|1|1 |
+         8|0.85|1.0|0.75|0.0|tLightMapGrey |tLightMapGrey | |tLightMapGrey |tLightMapGrey| </star3d>
+<star3d> starBig2b | world_invisible |0|0|0|0|0|0|1|1|1 |
+         8|1.2|0.75|0|0.0|tLightMapGrey |tLightMapGrey | |tLightMapGrey |tLightMapGrey| </star3d>
+
+<KCAM> the_camera2 |0|0|-2|0|0|0|0.6  </KCAM>
+
+
+<KPART> <ID> part_morph </ID>
+
+    <Fx><Pa>setpalette</Pa>  set the screen palette
+        <Pa> i_2 </Pa>   we have seen each image stands for a 256 color palette too.
+    </Fx>
+
+    <Fx><Pa>fillrc</Pa>  clear the screen background to color 24.
+        <Pa>  </Pa>   default screen rectangle.
+        <Pa> cte | 24 </Pa>
+    </Fx>
+
+    --------------------- morph:
+    recopy the original shape:
+    <Fx><Pa> clone3dshape </Pa>
+        <Pa> starBig2  </Pa>
+        <Pa> starBig2a </Pa>
+    </Fx>
+
+    <Fx><Pa> VertexAddMorph </Pa>
+        <Pa> starBig2  </Pa>
+        <Pa> starBig2a </Pa>
+        <Pa> starBig2b </Pa>
+        <Pa> sin |0.5|1.2|0.5 </Pa>  rate
+    </Fx>
+    it means:
+    starBig2 = starBig2a + (starBig2b-starBig2a) * rate
+    -------------------- move visible object:
+   <Fx><Pa> Set3DObject </Pa>  make the tore rotate all the time on the 3 axis:
+        <Pa>  starBig2 </Pa>
+        <Pa> 3cte |0|0|0  </Pa>
+
+        <Pa> aff |-0.01|0.005</Pa>
+        <Pa> aff |0.1|0.006</Pa>
+        <Pa> aff |0.0|0.007</Pa>
+
+        <Pa> 3cte|1|1|1 </Pa>  scale
+    </Fx>
+    
+    -------------------- draw:
+    <Fx><Pa> Draw3DWorld </Pa>
+        <Pa>   </Pa>
+        <Pa> world2 </Pa>
+        <Pa> the_camera2 </Pa>
+        <Pa> cte|0 </Pa>
+        <Pa> cte|1 </Pa>
+        <Pa> cte|200</Pa>
+    </Fx>
+
+
+</KPART>
+-----------------------------------------

@@ -1,0 +1,52 @@
+@{d DFFFBF}@{xoffset 21}¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+@{xstep 383}@{font ACS-Title.font 18}@{c 78FFF8}HiSpeed a diakritika@{c}@{font}
+@{xstep 417}@{c A6FFF8}@{i}Radoslav Hodniçák@{ui}@{c}@{ystep -8}
+
+
+	@{xstep 1}@{font ACS-Title.font 18}@{c FBFF8C}N@{font}edávno som  sa  stal majiteãom tlaçiarne z rodu HP Laserjetovitých a ihneð
+@{c CFFF94}som  sa  nadîene  pustil@{c}  @{c 78FFF8}do  tlaçenia  vîetkých  mo@{c}@{c CFFF94}ùných  textov  (hlavne  teda@{c}
+@{c CFFF94}dokumentácie  k program@{c}o@{c 73CBFF}m). Mno, ale keðùe som chudo@{c}@{c CFFF94}bný a eîte k tomu aj lakomý,@{c}
+@{c 93FF91}chcel  som  nejako zmini@{c}@{c 73CBFF}malizovaï spotrebu tonera aj@{c} @{c 93FF91}papiera. I padol mi zrak na@{c}
+@{c 93FF91}utilitku  HiSpeed  z dis@{c}@{c 8AB0FF}tribúcie  GoldEDu (nedávno v@{c}@{c 93FF91}ypustený ako freeware, dobrý@{c}
+@{c 75FFAC}timing ;-)) a po pár tes@{c}@{c 8AB0FF}tovacích výtlaçkoch mi bolo@{c} @{c 75FFAC}jasné, ùe to je ONO. HiSpeed@{c}
+@{c 75FFAC}totiù  dokáùe  pouùitím@{c} @{c 8A8AFF}menîích fontov narvaï na jed@{c}@{c 75FFAC}nu A4 stranu niekoãkonásobne@{c}
+@{c 5CFFD8}väçîie  mnoùstvo textu a@{c}@{c 8A8AFF}ko pri pouùití normálnej veã@{c}@{c 5CFFD8}kosti fontu. Naviac vie text@{c}
+@{c 5CFFD8}rozhádzaï  do viacerých@{c} @{c 8A8AFF}stâpcov takùe sa to aj pohod@{c}@{c 5CFFD8}lne çíta. No a tlaç je vðaka@{c}
+@{c 5CFFD8}textovému reùimu veãmi r@{c}@{c B37FFF}ýchla. Skvelá vec keby...@{c}
+
+   @{c 6BFFF6}To  keby  je tá prekl@{c}@{c B37FFF}iata diakritika, ktorou nás@{c} @{c 4AFFFB}obdarili naîi jazykotvorci.@{c}
+@{c 6BFFF6}Struçne povedané, HiSpee@{c}@{c CE70FF}d podporuje iba kódovanie EC@{c}@{c 4AFFFB}MA/ISO LATIN 1. A to tak, ùe@{c}
+@{c 7FFFC8}na  fest  (nepouùíva  systémový  ovladaç tlaçiarne ale posiela PCL kód priamo na
+paralelný/sériový port). Tak som sa naîtval, ùe je Dietmar Eilert taký zadubenec
+a ignoruje potreby neanglických a nenemeckých národov na iné znakové sady ako je@{c}
+@{c 97FF94}ECMA.  Nechal som si vytlaçiï jeden kratîí dokument do súboru a pozrel som si ho
+v  hexa  editore.  Povel  na  nastavenie  kódovania  ECMA bol na zaçiatku kaùdej
+stránky textu. Mno, hovorím si, tak to proste nahradím a hotovo. Lenùe sa ozvala@{c}
+@{c CEFF9C}moja  neúnavná  lenivosï:@{i} `To tu akoùe budeî kaùdý text tlaçiï do súboru a potom
+tam  eîte  nahradzovaï nejaké znaky? Si zoîalel alebo ti îibe.' @{ui}Mala pravdu. Tak
+som  do  hex editora nahral samotný HiSpeed a naîiel nasledujúci long-word:@{b} $ 1B@{c}
+@{c FEFF7D}28  30  4E  @{ub}(naîïastie  sa  tam  vyskytoval  iba raz). To je totiù PCL príkaz na
+nastavenie  kódovania  ECMA/ISO  LATIN  1.  Zrejme  si  kaùdý domyslí, ùe som to
+prepísal.@{c}
+
+	@{c FDFF42}Moùnosti sú:@{c}
+
+@{c 70FFFD}ISO 8859.2 alias ISO LATIN 2 :@{c} @{b} @{c FDFF42}$ 1B 28 32 4E@{c}@{ub}
+@{c 70FFFD}WINDOWS EE alias CP1250 :@{c}      @{b} @{c FDFF42}$ 1B 28 39 45@{c}@{ub}
+@{c 70FFFD}(obe testované)@{c}
+
+
+@{c 9BFF87}  Iné  kódovania  sa  z  rôznych  dôvodov  týmto  spôsobom rozchodiï nedajú, ale
+nemyslím,  ùe by to niekomu vadilo.  Toù to je asi tak vîetko.  Potreba previesï@{c}
+@{c 6EFF96}text  Prevodníkom  je  len  malé  zdrùanie  a úspora papiera HiSpeedom je naozaj
+fantastická:   napr.   okolo 550 KB dokumentácie som vytlaçil na 40 (îtyridsaï!)@{c}
+@{c 68FFCE}listov bez toho aby som si musel zároveñ objednaï silnejîie dioptrie.@{c}
+
+
+@{i}@{c FAFF00}rh <rh@hysteria.sk>@{ui}@{c}
+
+
+@{c 54F1FF}Pozdrajvy, poðakovania a iné zvery naîích lesov:@{c}
+
+   @{c 5ECEFF} - Shamanovi za E2/KOI8 ovladaçe pre 'eLky'@{c}
+    @{c 7DBAFF}- UF0vi za pomoc pri hãadaní popisu PCL na sieti@{c}

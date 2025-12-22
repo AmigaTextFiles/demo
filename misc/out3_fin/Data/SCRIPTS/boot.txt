@@ -1,0 +1,26 @@
+
+<MAIN> boot | 0 | 1 </MAIN> name | time offset | time playing rate (1/50)
+
+<KIMG> preloadpic | data/preload/preload.iff </KIMG> loading gauge
+
+<KSCRIPT>
+  <ID> boot </ID>
+  <PLAY> preload | 200 | 0 | 1 </PLAY> name | playing time | time offset | playing rate
+</KSCRIPT>
+
+<KPART>
+  <ID> preload </ID>
+
+  <Fx>
+      <Pa> SetPalette </Pa>
+      <Pa> preloadpic </Pa> load palette from preload
+  </Fx>
+
+  <Fx>
+      <Pa> Sprite </Pa>
+      <Pa> </Pa>
+      <Pa> preloadpic </Pa>
+      <Pa> 4cte | 0.20 | 0.45 | 0.8 | 0.55 </pa>
+  </Fx>
+
+</KPART>

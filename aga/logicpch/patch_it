@@ -1,0 +1,74 @@
+;*** Patch the needed files...
+
+echo " ****** Patching files..."
+
+spatch -pNCUBE.pch -oram:temp_out LOGIC:NCUBE.EXE
+copy >NIL: ram:temp_out LOGIC:NCUBE.EXE
+delete >NIL: ram:temp_out
+
+spatch -pCAROLCO.pch -oram:temp_out LOGIC:CAROLCO.EXE
+copy >NIL: ram:temp_out LOGIC:CAROLCO.EXE
+delete >NIL: ram:temp_out
+
+spatch -pENDPART.pch -oram:temp_out LOGIC:ENDPART.EXE
+copy >NIL: ram:temp_out LOGIC:ENDPART.EXE
+delete >NIL: ram:temp_out
+
+spatch -pFIELDDOT.pch -oram:temp_out LOGIC:FIELDDOT.EXE
+copy >NIL: ram:temp_out LOGIC:FIELDDOT.EXE
+delete >NIL: ram:temp_out
+
+spatch -pGOLDMAT.pch -oram:temp_out LOGIC:GOLDMAT.EXE
+copy >NIL: ram:temp_out LOGIC:GOLDMAT.EXE
+delete >NIL: ram:temp_out
+
+spatch -pINTRO.pch -oram:temp_out LOGIC:INTRO.EXE
+copy >NIL: ram:temp_out LOGIC:INTRO.EXE
+delete >NIL: ram:temp_out
+
+spatch -pPYGMYSUN.pch -oram:temp_out LOGIC:PYGMYSUN.EXE
+copy >NIL: ram:temp_out LOGIC:PYGMYSUN.EXE
+delete >NIL: ram:temp_out
+
+spatch -pREADME.pch -oram:temp_out LOGIC:README.TXT
+copy >NIL: ram:temp_out LOGIC:README.TXT
+delete >NIL: ram:temp_out
+
+spatch -pRUNLOGIC.pch -oram:temp_out LOGIC:RUNLOGIC
+copy >NIL: ram:temp_out LOGIC:RUNLOGIC
+delete >NIL: ram:temp_out
+
+spatch -pSHADECLU.pch -oram:temp_out LOGIC:SHADECLU.EXE
+copy >NIL: ram:temp_out LOGIC:SHADECLU.EXE
+delete >NIL: ram:temp_out
+
+spatch -pSHOWPIC.pch -oram:temp_out LOGIC:SHOWPIC.EXE
+copy >NIL: ram:temp_out LOGIC:SHOWPIC.EXE
+delete >NIL: ram:temp_out
+
+spatch -pTOROIDS.pch -oram:temp_out LOGIC:TOROIDS.EXE
+copy >NIL: ram:temp_out LOGIC:TOROIDS.EXE
+delete >NIL: ram:temp_out
+
+spatch -pLOGIC.pch -oram:temp_out LOGIC:LOGIC.EXE
+copy >NIL: ram:temp_out LOGIC:LOGIC.EXE
+delete >NIL: ram:temp_out
+
+spatch -pLOGICLOW.pch -oram:temp_out LOGIC:LOGICLOW.EXE
+copy >NIL: ram:temp_out LOGIC:LOGICLOW.EXE
+delete >NIL: ram:temp_out
+
+spatch -pCITY.pch -oram:temp_out LOGIC:CITY.EXE
+copy >NIL: ram:temp_out LOGIC:CITY.EXE
+delete >NIL: ram:temp_out
+
+spatch -pTUNNEL.pch -oram:temp_out LOGIC:TUNNEL.EXE
+copy >NIL: ram:temp_out LOGIC:TUNNEL.EXE
+delete >NIL: ram:temp_out
+
+;*** Add new files
+
+echo " ****** Adding new files..."
+
+copy >NIL: LOGIC.info LOGIC:
+copy >NIL: LOGICLOW.info LOGIC:

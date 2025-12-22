@@ -1,0 +1,239 @@
+
+ Welcome to the demonstration of one of the more powerful side of KARATE:
+
+ The RECTANGLES !!!
+
+ We have seen in the firsts tutorials that all effects (<Fx>) that
+draw a graphical effect on the screen all needs first a "rectangle"
+parameter. For the moment, we always used the "root" rectangle, which
+stands for the whole screen, with coordinates 0,0,1,1, with an empty parameter:
+<Pa> </Pa> : for karate, giving no rectangle names as parameter means
+the root parameter.
+
+It is very easy creating other rectangle with the object builder: <KRECT >:
+
+
+< KRECT> reclabel | x1c| y1c| x2c| y2c  | clipfather rectangle
+                  |x1p | y1p | x2p |y2p | posfather rectangle </KRECT>
+
+ Here, the reclabel rectangle is created.
+  the coordinates x1c,... are the clipping rectangle coordinates,
+  it means the effects will NEVER be drawn outside this rectangle.
+
+  clipfather is a rectangle which clipping cut this rectangle effects too.
+  all rectangles are took in 2 hierachies: the clipping and the position scale
+  aspect hierarchy.
+
+  the rectangle coordinates x1p,... give the scale of the effect to draw,
+  it means if you change this one by making it bigger, all
+  effects drawn within will zoom !!.
+
+  position father 's scale give the origin of the x1p,y1p,... rectangle...
+
+  this must be hard to understand in a first time, consider a "default"
+ rectangle would look like:
+
+<KRECT> rec_all |0|0|1|1|   |0|0|1|1| </KRECT>
+
+ which build a rectangle with the same properties as the "root" one.
+ (as clipfather and posfather are root (nothing), rec_all is a direct son.)
+
+ Another idea you could get is when the parameters given for
+ the clipping and position are the sames, it acts like if you where
+ dealing with a "mini-PicureInPicture-subscreen":
+
+<KRECT> miniscreen |0.25|0.25|0.75|0.75| rec_all
+                   |0.25|0.25|0.75|0.75| rec_all </KRECT>
+
+ (miniscreen is son of rec_all, itself son of root)
+
+ let's have a first demonstration with some effects....
+ other rectangles tutorials will follow.
+
+ You can note too that the values of a rectangle can be changed
+ after its creation with a "setrect" Fx.
+ 
+-------------------------------------------------
+<MAIN> myscript |0|1</MAIN>              the main script to play...
+
+<KIMG> texture256x256 | data/texture1.iff </KIMG>   let's create an image.
+                                                    Note this image must be 256x256.
+
+<KIMG> impacman | data/oldpac.iff </KIMG>       These one, used for sprites
+<KIMG> imghost  | data/ghost1.iff </KIMG>       can be any-sized.
+<KIMG> imghost2  | data/inky.iff </KIMG>
+
+<KIMG> imtv  | data/tv.iff </KIMG>
+
+<KIMG> imwatch  | data/watching.iff </KIMG>
+
+
+ a camera...
+<KCAM> cam_1 | 0|0|0|0|0|0|1  </KCAM>
+
+ some colortables...
+<KCOLORTABLE> coltab1 | data/remaptable.iff |0|255|255|255    </KCOLORTABLE>
+<KCOLORTABLE> coltab2 | data/remaptable.iff |1|  0|  0|  0    </KCOLORTABLE>
+
+-
+
+-------------------------------------------------
+/// RECTANGLE CREATION
+
+<KRECT>    quad1   |0|0|0.5|0.5| rec_all
+                    |0|0|0.5|0.5| rec_all </KRECT>
+
+<KRECT>    quad2   |0.5|0|1|0.5| rec_all
+                    |0.5|0|1|0.5| rec_all </KRECT>
+
+<KRECT>   quad3    |0|0.5|0.5|1| rec_all
+                    |0|0.5|0.5|1| rec_all </KRECT>
+
+<KRECT>   quad4    |0.5|0.5|1|1| rec_all
+                    |0.5|0.5|1|1| rec_all </KRECT>
+
+
+
+
+///
+--------------------------------------------------
+<KSCRIPT>                           let's write a script to play.
+
+    <ID> myscript </ID>
+
+
+    <PLAY> part1 | 200000 | 0 | 1 </PLAY>
+  
+</KSCRIPT>
+------------------------
+///<KPART>  <ID> part1  </ID>
+
+    <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> texture256x256 </Pa>   we have seen each image stands for a 256 color palette too.
+    </Fx>
+
+---------------- in this part, let's have 4 effect in 4 rectangles..
+
+    <Fx><Pa> FillRC</Pa> <Pa></Pa> <Pa>cte| 4</Pa>  </Fx> all screen to color
+
+------------- but first, let's have a little moving with their father...
+
+<KTABLE> mvtsx1 | 0,0 |                   600,0 | 700,0.5  |800,-0.25 |900,0.25|1000,0.25 |1100,-0.25|1200,-0.25 |1300,0 |1500,0 </KTABLE>
+<KTABLE> mvtsy1 | 0,0 |                   600,0 | 700,-0.1 |800,0.25  |900,0.25|1000,-0.25|1100,-0.25|1200,0.25  |1300,0 |1500,0</KTABLE>
+<KTABLE> mvtsz1 | 0,0 | 400,0 | 500,-3  |600,-3 | 700,-0.5 |800,0.5   |900,0.5                       |1200,0.5   |1300,0 |1500,0    </KTABLE>
+
+
+<Fx><Pa>SetCamCoord</Pa><Pa>cam_1</Pa>
+            <Pa> aftmod | mvtsx1 |0|0 </Pa>             x
+            <Pa> aftmod | mvtsy1 |0|0   </Pa>    y
+            <Pa> aftmod | mvtsz1 |0|0   </Pa>       z
+            <Pa> 4cte |0|0|0|1</Pa>  o1,o2,o3,fov
+            </Fx>
+
+    <Fx><Pa> setrect </Pa>
+            <Pa> rec_all  </Pa>
+            <Pa> 4cam| cam_1 |1|1|0|0|1  </Pa> clip rectangle
+            <Pa> 4cam| cam_1 |1|1|0|0|1  </Pa> pos rectangle
+
+    </Fx>
+
+
+
+---------------------- now draw our 4 screens quads.
+
+
+    <Fx>
+        <Pa> Twirl </Pa>
+        <Pa> quad1  </Pa>
+        <Pa> texture256x256 </Pa>
+
+        <Pa>SIN|0|0.5|0.25</Pa> ofsx
+        <Pa>COS|0|0.5|0.25</Pa> ofsY
+
+        <Pa>SIN|0|0.1|1</Pa> start angle
+        <Pa>CTE|0.2</Pa>    amp. angle
+        <Pa>sin|0|0.4|0.9</Pa>    freq angle
+
+        <Pa>CTE|0</Pa>         start dist.
+        <Pa>cte|0</Pa> amp.dist
+        <Pa>cte|0</Pa> freq dist
+
+        <Pa>CTE|0</Pa> mapping type
+    </Fx>
+
+
+   <Fx>
+        <Pa> Sprite </Pa>
+        <Pa> quad2  </Pa>
+        <Pa> impacman </Pa>
+
+        <Pa>SIN|0.5|0.5|0.5</Pa>
+        <Pa>COS|0.5|0.5|0.5</Pa>
+        <Pa>SIN|0.5|0.5|-0.5</Pa>
+        <Pa>COS|0.5|0.5|-0.5</Pa>
+    </Fx>
+
+   <Fx><Pa> Warper </Pa>
+            <Pa> quad4 </Pa>              the rectangle where to draw (default)
+            <Pa> texture256x256 </Pa> the 256x256 texture to deform
+
+            <Pa>CTE|0.8</Pa>        a zoomx rate
+            <Pa>CTE|0.8</Pa>        a zoomy rate
+            <Pa>SIN|0|0.25|0.03</Pa> texture offset x
+            <Pa>COS|0|0.25|0.03</Pa> texture offset Y
+
+            <Pa>CTE|0.4</Pa>        amplitude of deformation
+            <Pa>CTE|0.2</Pa>        frequency of deformation
+            <Pa>SIN|0|0.2|2</Pa>    X offset of the deformation
+            <Pa>COS|0|0.3|2</Pa>    Y...
+
+            <Pa>CTE|0</Pa> mapping type
+    </Fx>
+
+  <Fx>
+        <Pa> SpritePlain </Pa>
+        <Pa> quad3  </Pa>
+        <Pa> imghost2 </Pa>
+
+        <Pa>SIN|-0.2|2|0.1</Pa>
+        <Pa>COS|-0.2|2.1|0.1</Pa>
+        <Pa>SIN|1.2|2.2|0.1</Pa>
+        <Pa>COS|1.2|2.3|0.1</Pa>
+    </Fx>
+
+-------------------- over all that, and in the same part,
+let's have a logo on root screen
+
+    <Fx><Pa>sprite</Pa>
+        <Pa></PA>
+        <Pa> imtv   </Pa>
+        <Pa> RND|0.0|-0.001   </Pa>
+        <Pa> RND|-0.01|0.02   </Pa>
+        <Pa> RND|0.222|0.22   </Pa>
+        <Pa> RND|0.25|0.251   </Pa>
+    </Fx>
+
+
+   <Fx><Pa>spriteLight</Pa>
+        <Pa></PA>
+        <Pa> imwatch   </Pa>
+        <Pa> cos | 0.18 | 1.5|0.01 </Pa>
+        <Pa> sin | 0.04| 1.5|0.01  </Pa>
+        <Pa> cos| 0.72 | 1.5|0.01 </Pa>
+        <Pa> sin | 0.14 | 1.5|0.01  </Pa>
+        <Pa> coltab2 </Pa>
+        <Pa> cte|1</Pa>
+
+    </Fx>
+
+   <Fx><Pa>spriteLight</Pa>
+        <Pa></PA>
+        <Pa> imwatch   </Pa>
+        <Pa> 4cte | 0.2 |0.05|0.7|0.13 </Pa>
+        <Pa> coltab1 </Pa>
+        <Pa> cte|0.9</Pa>
+
+    </Fx>
+
+///</KPART>

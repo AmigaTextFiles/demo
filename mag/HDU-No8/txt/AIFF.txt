@@ -1,0 +1,52 @@
+==============================================
+    AIFF sound datatype
+==============================================
+
+AIFF Sound DataType for Workbench 3.0
+Written by Olaf `Olsen' Barthel
+Public Domain
+
+AIFF is an acronym for "Audio Interchange File Format". This file 
+format was devised by Apple Computer, Inc. and a number of third 
+party developers. It is mostly used on Apple Computers, such as 
+the notorious Apple II, Apple IIGS and the Apple Macintosh. With 
+the introduction of System 7 the Sound Manager was enhanced to 
+support direct playback of "AIFF" and "AIFC" format files, thus 
+making this file format an integral part of the Macintosh operating 
+system. Most digital sound recording software on the Apple 
+Macintosh supports "AIFF" as the native sound file format. Rather 
+recently, "AIFF" was adopted for use with Kodak Portfolio CDs 
+since the corresponding development software is largely 
+Macintosh-based.
+
+"AIFF" and its `sister format' "AIFC" are in many ways similar to 
+the "8SVX" IFF format which is commonly used on the Amiga. 
+Both are stored in IFF format, can contain sampled sound data 
+and offer means to store musical instrument data. Unlike "8SVX" it 
+provides additional services, such as MIDI support, data markers 
+and audio recording information. Sampled sound data is stored 
+interleaved for multiple channels, making it easy to replay stereo 
+sound. Samples do not need to be eight bits wide, such as 
+required by the "8SVX" format. In fact, they can be anything from 
+1-32 bits wide.
+
+While both "AIFF" and "AIFC" share the IFF file structure and thus 
+are designed as interchangeable file formats to be used on many 
+computer platforms Apple Computer, Inc. added data 
+compression support to "AIFC". As always, all the standard data 
+compression methods are based upon proprietary algorithms to 
+which Apple Computer, Inc. probably holds patents and is 
+unwilling to share. In essence, this restricts the portability of 
+compressed "AIFC" files which violates the essential idea behind 
+the IFF concept. To do it right, a new chunk would have had to be 
+added to the original "AIFF" format description. 
+
+Installation
+The "AIFF" datatype distribution should consist of the following 
+files: aiff.datatype, AIFF, AIFF.info, AIFF.guide, AIFF.guide.info, 
+Source code (in the "source" drawer). 
+
+Copy the file "aiff.datatype" into the "SYS:Classes/DataTypes" 
+drawer. The "AIFF" and "AIFF.info" files should be placed in the 
+"DEVS:DataTypes" drawer. In order to use the datatype you will 
+need to reboot the machine. 

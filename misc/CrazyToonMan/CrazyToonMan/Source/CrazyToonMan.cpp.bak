@@ -1,0 +1,241 @@
+/********************************************
+
+OpenGL program by Andreas Gustafsson (C) 2001
+
+********************************************/
+
+#define WIN_TIMER // To use Win-specific Queryperformance
+
+#include "stdio.h"
+#include "math.h"
+//This program requires the OpenGL and GLUT libraries
+// You can obtain them for free from http://www.opengl.org
+#include "GL/glut.h"
+#include "texture.h"
+
+double time=0,deltaTime=0;
+
+#ifdef WIN_TIMER
+static LARGE_INTEGER TimeFreq, TimeStart;
+int updateFPS=0;
+double curFPS=0;
+char titleString[100];
+#endif
+
+int haltMovement=0;
+CTexture bluetexture;
+CTexture redtexture;
+CTexture groundtexture;
+
+void UpdateTimer()
+{
+	#ifdef WIN_TIMER
+	static double oldTime;
+   LARGE_INTEGER TimeNow;
+   QueryPerformanceCounter(&TimeNow);
+   time=((TimeNow.QuadPart-TimeStart.QuadPart)*1000/TimeFreq.QuadPart);
+   time=time/1000;	
+   deltaTime=time-oldTime;
+   oldTime=time;
+
+	if(deltaTime>0) curFPS+=1.f/deltaTime;
+	updateFPS++;
+	if(updateFPS==100)
+	{
+		sprintf(titleString,"OpenGL program by Andreas Gustafsson (Shadow/Noice) (C) 2001   -=[ FPS:%.0f ]=-",curFPS/100.0);
+   	glutSetWindowTitle(titleString);
+   	updateFPS=0;
+   	curFPS=0;
+   }
+	#else
+   deltaTime=0.01;
+   time+=deltaTime;
+	#endif
+}
+
+void Resize( GLsizei iWidth, GLsizei iHeight ) 
+{ 
+	glViewport (0,0,iWidth,iHeight); 
+	glMatrixMode (GL_PROJECTION);
+	glLoadIdentity();
+	gluPerspective(55.0,(GLfloat)iWidth/(GLfloat)iHeight, 1.0, 20.0);
+	glMatrixMode(GL_MODELVIEW);
+	glLoadIdentity();
+	glTranslatef (0.0, 0.0, -3.0);
+}
+
+void Keyboard(unsigned char cKey, int iX, int iY)
+{
+   switch(cKey)
+   {
+		case ' ' :
+      {
+      	haltMovement=1-haltMovement;
+   	} 
+   	break;
+   }
+}
+
+void Idle()
+{
+	glutPostRedisplay();
+}
+
+void Init()
+{
+	bluetexture.LoadJPG("toonblue.jpg");
+	redtexture.LoadJPG("toonred.jpg");
+	groundtexture.LoadJPG("naiveground.jpg");
+}
+
+void Blob(int complex,float x,float y,float z)
+{
+	glPushMatrix();
+	glScalef(x,y,z);
+	glutSolidSphere(1,complex,complex);
+	glPopMatrix();
+}
+
+void DrawScene() 
+{ 	
+   static GLfloat rotY = 0.0;
+   static float tilt =0.0;
+   static float zoom=0.0;
+
+   UpdateTimer();
+	glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT ); 
+
+   glPushMatrix(); 
+
+	if(!haltMovement)
+	{
+   	rotY += deltaTime*20;
+		tilt=30+10*sin(time*0.7);
+		zoom=1.0*sin(time*0.4);
+   }
+  	glRotatef(tilt, 1.0, 0.0, 0.0);
+  	glRotatef(rotY, 0.0, 1.0, 0.0);
+	glTranslatef (0.0, 0.0, zoom);
+
+   glColor3f(1.0, 1.0, 1.0);
+   glEnable(GL_TEXTURE_2D);
+	glEnable(GL_TEXTURE_GEN_S);
+	glEnable(GL_TEXTURE_GEN_T);
+	glTexGenf(GL_S,GL_TEXTURE_GEN_MODE,GL_SPHERE_MAP);
+	glTexGenf(GL_T,GL_TEXTURE_GEN_MODE,GL_SPHERE_MAP);
+	glColor3f(1.0f,1.0f,1.0f);   	
+	glPushMatrix();
+	glTranslatef(0,0.25*fabs(sin(time*3)),0);
+	glRotatef(-25*cos(time*3),0,1,0);
+	// Body
+	glPushMatrix();
+   bluetexture.Use();
+	Blob(24,0.5,0.75,0.5);
+	// Head
+	glTranslatef(0,0.8,0);
+   redtexture.Use();
+	Blob(16,0.4,0.4,0.4);
+	// Eye 1
+	glPushMatrix();
+	glDisable(GL_TEXTURE_2D);
+	glTranslatef(-0.15,0.15,0.35);
+	Blob(16,0.15,0.15,0.15);
+	glColor3f(0,0,0);
+	glTranslatef(0.1*sin(3*time),0.1*cos(3*time),0.1);
+	Blob(12,0.05,0.05,0.05);
+	glColor3f(1,1,1);
+	glPopMatrix();
+	// Eye 2
+	glPushMatrix();
+	glDisable(GL_TEXTURE_2D);
+	glTranslatef(0.15,0.15,0.35);
+	Blob(16,0.15,0.15,0.15);
+	glColor3f(0,0,0);
+	glTranslatef(0.1*sin(-4*time),0.1*cos(-4*time),0.1);
+	Blob(12,0.05,0.05,0.05);
+	glColor3f(1,1,1);
+	glPopMatrix();
+	glEnable(GL_TEXTURE_2D);
+	glPopMatrix();	
+   bluetexture.Use();
+	// Arm1
+	glPushMatrix();
+	glTranslatef(-0.25,0.0,0);
+	glRotatef(25*sin(time*5),0,0,1);
+	glTranslatef(-0.25,0.25,0);
+	Blob(16,0.5,0.2,0.2);
+   glPopMatrix(); 
+	// Arm2
+	glPushMatrix();
+	glTranslatef(0.25,0.0,0);
+	glRotatef(-25*sin(time*5),0,0,1);
+	glTranslatef(0.25,0.25,0);
+	Blob(16,0.5,0.2,0.2);
+   glPopMatrix(); 
+	// Leg1
+	glPushMatrix();
+	glTranslatef(0.35,-0.25,0);
+	glRotatef(25*sin(time*3),1,0,0);
+	glTranslatef(0,-0.45,0);
+	Blob(16,0.2,0.5,0.2);
+   glPopMatrix(); 
+	// Leg2
+	glPushMatrix();
+	glTranslatef(-0.35,-0.25,0);
+	glRotatef(25*sin(time*-3),1,0,0);
+	glTranslatef(0,-0.45,0);
+	Blob(16,0.2,0.5,0.2);
+   glPopMatrix(); 
+   glPopMatrix();
+
+	glDisable(GL_TEXTURE_GEN_S);
+	glDisable(GL_TEXTURE_GEN_T);
+	int test=(time*200);
+	test=test % 1000;
+	float test2=test;
+	test2/=1000;
+   groundtexture.Use();
+   glTranslatef(0,-1.05,0);
+   glBegin(GL_QUADS);   
+  	glTexCoord2f( 0, 0+test2);
+	glVertex3f(-5,0.0f,-5);
+	glTexCoord2f( 2, 0+test2);
+	glVertex3f(5,0.0f,-5);
+	glTexCoord2f( 2, 2+test2);
+	glVertex3f(5,0.0f,5);
+	glTexCoord2f( 0, 2+test2 );
+	glVertex3f(-5,0.0f,5);
+	glEnd();
+   
+   glPopMatrix();
+   glutSwapBuffers(); 
+}
+
+void main(int argc, char **argv) 
+{ 
+   GLsizei iWidth = 640.0; 
+   GLsizei iHeight = 480.0; 
+
+   glutInit(&argc, argv);
+   glutInitWindowPosition( 0, 0);
+   glutInitWindowSize(iWidth, iHeight);
+   glutInitDisplayMode( GLUT_RGB | GLUT_DEPTH | GLUT_DOUBLE );
+   glutCreateWindow( "OpenGL Program by Andreas Gustafsson" );
+   glutDisplayFunc(DrawScene );
+   glutIdleFunc(Idle );
+   glutReshapeFunc(Resize );
+   glutKeyboardFunc(Keyboard );
+	Init();
+
+   glClearColor( 0.6, 0.6, 1.0, 0.0 ); 
+   glEnable(GL_DEPTH_TEST); 
+
+	#ifdef WIN_TIMER
+   QueryPerformanceFrequency(&TimeFreq);
+   QueryPerformanceCounter(&TimeStart);
+   #endif
+
+   Resize(iWidth, iHeight); 
+   glutMainLoop(); 
+
+}

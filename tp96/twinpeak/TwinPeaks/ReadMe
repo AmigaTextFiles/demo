@@ -1,0 +1,199 @@
+
+[TRSi - BACK TO THE ROOTS]
+
+
+       ______________________________    _________________________ 
+   . _/      __     ___________      \__/     ________     __     \     .
+  .  \      /        \_    ___/    ___/\_________     \___/        \_ . 
+   ·. \____/          /    \        \___/       /      \_/          /· . · 
+ ·.· .  ._/          /      \                  /        /          /.·. · 
+ ...·.:::\__________/        \_________________________/          /:::.·. .  
+ .-----------------\__________/cONE!------------------\__________/--------.  
+ |                                                                        |
+ |                                                                        |
+ |        [- t R I S T A R   a N D   r E D ^ s E C T O R   i N C ]        |
+ |                                                                        |
+ |                                pRESENT                                 |
+ |                                                                        |
+ |                                                                        |
+ |  TWIN PEAKS *BETA* AGA/HD-DEMO MADE BY THE TWINS, VIRGILL AND NOOGMAN  |
+ |  --------------------------------------------------------------------  |
+ |                                                                        |
+ `------------------------------------------------------------------------'
+
+
+
+[explanation]
+*--------------------------------------------------------------------*
+
+Important words at the beginning...  the POWERPACKER LIBRARY is needed
+for  this  demo!   Don`t forget to copy it to your LIBS:  for the case
+that  you  haven`t installed it already (it was wisely included in the
+first  archive  of this production).  Just do that by hand; no one was
+willed  to  write  a `powerpacker.library-hd-installer` for the lamers
+;))  Furthermore  we  have to mention that you HAVE to use CURSOR KEYS
+(walk  around)  and `+` `#` (going up/down) to control the 2nd effect,
+the Textured-Voxel!
+
+
+Please  note  that  this  is  `just` a BETA version of this fine demo!
+Twin Peaks was developed during a whole year and THIS version (the one
+you  are  looking at the moment) was thought to be an internal preview
+version  for  TRSi members only; too bad that a filestructure-error of
+AFS  crippled  and deleted the majority of the source-codes which made
+it  impossible to recover anything!  Well, you`ll never be able to get
+your  hands  on  a  `final`  version  of this demo because the present
+sources  do  not  exist  anymore and the backuped sources aren`t worth
+anything  due  its  age!   We  were  thinking  about not releasing the
+production (due the fact that it`s not finished yet and will never be)
+but lateron we came to the conclusion that we do not have the right to
+withhold this marvellous demo (even if it`s an early preview) from the
+eyes  of  the  amiga  users.   Moreover  it  does not have to fear the
+competition  with  other demos!  Anyway, enjoy this BETA-production as
+we  did!  btw, please excuse incompatibility with eg.  A4000 computers
+but  these  bugs can not be fixed nor removed anymore; this production
+runs fine on A1200/HD/030/4MB!
+
+-CtRL
+
+*--------------------------------------------------------------------*
+
+
+[words from the coders]
+*--------------------------------------------------------------------*
+
+TWIN PEAKS:  (BETA-VERSION)
+-----------
+
+Code: The Twins / Trsi
+Gfx:  Noogman / Artwork
+Sfx:  Virgill / Trsi & Essence & Artwork
+
+
+Greetings goes to :
+-------------------
+
+Tron, SMT, CONtROL, Touchstone, Errox, Rewired, Fade-One !
+
+
+Effects:
+--------
+
+1. Bump-Plate: Static Bumpmapping with height-included (distance to camera)
+               gradient  calculation.
+
+2. Textured-Voxel: Uses scaled Textures instead of one-coloured Voxels.
+                   Use CURSOR KEYS (for walking around) and `+` `#` to
+                   go UP and DOWN! (routine will exit automatically)
+
+3. Jumping Ball: ChunkyCopper-Effect with scaling and R-G-B calculated
+                 transpulency and shading.
+
+4. Rayfraction: Simulated glass, wich breaks the light in both directions,
+                at the entry point and the leaving point of the glass.
+                This causes the low framerate... In addition an overlaied
+                Phong-map.
+
+5. Phong-Duck: Very fast Phong-shading and an very imaginative object !
+
+6. Phong-Cup: The first real transparent Phong-shaded Object.
+
+7. Textured-Phong: Chess-King consists of 400 Phong-shaded Texturepolygons.
+
+8. Picture: Nice Fantasy-Picture by Noogman.
+
+9. Cave: Twin-Voxel. Both Voxels were rendered in one integrated routine.
+         The complex World is calculated during the previous picture.
+         Only idiots think its mirrored...
+
+10. Bump-Map: Fast bumpmapped Object with different changing materials.
+              The environmental part looks also very nice...
+
+11. Voxel: The 596885th Voxel-Routine and also the same old Landscape...
+           but : Very fast, very wide view, depth cuing, lens flaires
+           .. even very nice.
+
+12. Moving Bumpmap: Dynamic Bumpmapping !! (Not that old static shit !)
+                    The new gradients were calculated every frame.
+
+13. THE END: The routine is the same as in the rayfraction-effect, but
+             without the leaving light fraction and no Phong. This
+             improves the speed...
+
+
+So  after  a  long  time  we  have  (not) finished our next Demo.  Our
+hard-disk  died  in  Nov.96 and with it the final version !!  Thanx to
+the  HOLY A.F.S.  for that !!!  We´ll hope, you like the show, but the
+final  version  will  never  come  out.....(snief)  The  final version
+contained a color-(!)interpolated Voxel-scape, improved GFX by NoOgMaN
+(in  this  version  some  GFX is our (the Twins) work !), a new Effect
+with  mixed  textures  glass and flat-shaded with environment mapping,
+and a synchronously run to the (completed)music.
+
+And  now  one thing we must say about us and a group (i think the name
+begins  with artw...  or so !!!!  (WE DONT KNOW !!!)) This group wants
+to  join  us  at  the  beginning of 1996 to make a big Demo called THE
+GATE.   We´ve  send  our  new  Routines  (the  bumpmapping ones !) and
+explained this to the Coder.  Some Month later the Main-Coder wants to
+make the Demo without us and we leaved the group.
+
+**********************************************************************
+
+Wir denken, das derjenige weiss, wer gemeint ist !!!  Aber Routinen zu
+klauen  scheint  ja  eh  Deine  Bestimmung zu sein (wie mans schon von
+vielen gehört hat, und Du selber zugegeben hast !).  Arroganz ist eben
+auch azur-blau-schimmernd !!
+
+**********************************************************************
+
+
+ Our Address:  (only for friendly people !)
+
+ The Twins
+ Andre & Frank Hugenroth
+ Bockradener Str. 71
+ 49477 Ibbenbüren
+
+ e-mail: afhuge@t-online.de
+
+*--------------------------------------------------------------------*
+
+
+[greetings]
+*--------------------------------------------------------------------*
+
+Divine  kindness  to  our  mates in TBL, CNCD, Virtual Dreams, Rebels,
+Sanity,  Stellar,  Silents,  Parallax,  Compley, Sonik, Scoopex, Bomb,
+Polka  brothers,  Alcatraz,  Razor,  Haujobb, Mirage, Spaceballs, DCS,
+Balance,  Movement, Essence, Andromeda .  Furthermore we would like to
+greet  our  partners  in  crime;  FAIRGHT,  SUNFLEX  INC,  LIGHTFORCE,
+DELIRIUM,  QUARTEX  &  CLASSIC,  HELLFIRE,  DIGITAL  CORRUPTION,  LSD,
+PRESTIGE, HOODLUM
+
+*--------------------------------------------------------------------*
+
+
+[scrolltexts, which haven`t had any chance to be included anymore...]
+*--------------------------------------------------------------------*
+
+hello  mates,  this is control.  well, just another amazing production
+from  trsi!   the  sleeping  gods  are  back in town!  enjoy the great
+routines  of  this  awesome demonstration.  well, i would like to send
+best  regards  to  the  development  team  of this demo and to my best
+mates...   all  members  of trsi worldwide, trsi recordz, denny, lenny
+dee,  logic,  orbit,  astro, laserdance, alloc, schorse, digiman, tom,
+santa  claus,  polaris, tnm, autopsy, ferox, goldman, cybermage, rage,
+quedex,  pigment,  cougar,  pot noodle, twk, sigma seven, xxx, melvin,
+lance,  conan,  the  pride, ayatollah, jake, ramona, retep, ice, mike,
+touchtone,  scar,  boosta, 2fast, deathknight, moi, hoson, mindbender,
+bezzzerk,  blood,  pyro,  max.   okay, get in touch with me though the
+internet...    if   you   dare!    hehe!    email   your  comments  to
+control@trsi.de.   btw,  verena, i really love you!  wrap!  control is
+away...
+
+Get your hands on the new audio cds from TRSi RECORDZ!
+
+*--------------------------------------------------------------------*
+
+[TRSi - BACK TO THE ROOTS]
+

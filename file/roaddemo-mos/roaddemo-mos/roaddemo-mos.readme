@@ -1,0 +1,21 @@
+Short:        SDL/OpenGL demo effect
+Author:       Ray Kelm, Morphos port by Fabrizio "Lanch" Bartoloni
+Uploader:     lanch@tiscali.it (Fabrizio Bartoloni)
+Type:         demo/file
+Architecture: ppc-morphos
+Version:      1.1.0
+
+Note from porting author: still very buggy here, resize the initial window
+if you can't see the road at first, don't mind the graphical glitches.
+
+
+This is my bezier-road demo ported from glut to SDL.
+
+Use the right mouse button to select one of the endpoints or 
+control points, then click and drag with the left mouse
+button to move the point.
+
+This program is released under the GPL version 2, and requires
+SDL version 1.1.0 or higher.
+
+Ray Kelm <rhk@newimage.com>

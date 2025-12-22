@@ -1,0 +1,96 @@
+!Interviewing Alfred Faust
+Psychreator
+12µJCµF2Bars'n'Pipes - 
+and Alfred Faust
+µF1interviewed by Psychreator/mds
+
+µJEµF0µC1In this massive interview Psychreator/mds talks to the man behind Bars'n'Pipes about this popular Amiga sequencer and his plans for the future.
+
+µF1µC0
+µC5Psychreator:µC1 Hi Alfred, first of all, please tell our readers something about yourself.
+
+µC5Alfred:µC1 Oh, what shall I say ...
+I'm now 53 years old and already a pensioner. I'm married, and we have 4 children, 3 sons and 1 daughter. The youngest, the daughter, is now 23 years old. Nearly 10 years ago, the doctors diagnosed that I have a hard incureable illnes, called "Myastenia gravis" (weak muscles). This was the reason, why I couldn't continue to work in my profession as a parson in the "Evangelish Lutherian Church in Thuringia". Before I became a pastor in 1982, I worked as a church musician at some places in Thuringia.
+
+That I became ill was luck for the users of Bars&Pipes ... ;-) I found a new "job", as Todor Fay in decembre 2000, exactly at my birthday, released the sourcecode of Bars&Pipes Professional: further development of Bars&Pipes.
+
+µC5Psychreator:µC1 Have you ever heard of the Amiga Demoscene, have you been active and how do you like the Demoscene in general?
+
+µC5Alfred:µC1 My oldest son was the first one to show me some Amiga Demos. He purchased his own computer (AMIGA 1200) in 1994. Short after he got his own AMIGA, he started programmming for AMIGA-OS, mostly in E but also in assembler. Soon, he tryed to do some small demos, not very big but nice. I myself have not had the time to do something similar. But I was very interested, also because of the (at that time) fantastic sound possibilities of the AMIGA. It's very impressive, what "our best girlfriend" is able to show. I'm not active in the AMIGA Demoscene, but I like it.
+
+µC5Psychreator:µC1 Do you have a favorite Amiga Demoscene production?
+
+µC5Alfred:µC1 Sorry, no. But exactly in these days, I have had a look again at my CD-collection from the "good old days" (for example the CU-AMIGA Magazine series). Its real fun for me to see and hear, what nice and good things had been created at that time. Example: Nexus7 by Philipp Teschner. Nearly 5 minutes great sound and graphic... size ~800kB... fits on a DD-disk.
+
+µC5Psychreator:µC1 What Kind of Computer systems do you use today and what was your first computer ever?
+
+µC5Alfred:µC1 In my small computer room I work with:
+
+- an AMIGA 1200 / Blizzard 1230-50 / 32 MB / 3.4 GB HD / CD-ROM
+
+- a PEGASOS / MorphOS / 256 MB RAM / 6.4 GB HD / CD - ROM / Soundblaster LIVE! - soundcard
+
+- a microA1 / OS4 / 256 MB RAM / 20 GB HD / CD - ROM / Soundblaster LIVE! - soundcard
+
+- a Sempron 3000+ machine / SuSE LINUX 10.2 / Windows 2000
+
+You may think,... what a rich men... four different computers...
+
+The first 3 computers in this lists are all gifts. The AMIGA1200 is from my oldest son. The PEGASOS was sponsored by AHT Europe, Birmingham, UK. The microA1 was sponsored by Hyperion Entertainment - Belgium. The sponsored machines are "connected" with the job, to port BarsnPipes to MorphOS and OS4. My very frist computer was an AMIGA 500 - purchased in 1991, wich I had upgraded (for much money) with an accelerator and HD and CDRom. Later I built it into a tower. Unfortunately it does not work anymore. Maybe I will reactivate it sometime. I have also had a towered A1200 with a ZorroII board, MerlinII-gfx-card and Prelude-soundcard and MultifaceIII I/O-card with 68040/40 BizzardIV accelerator. Unfortunately it broke some weeks ago. With big efforts I could rescue my whole programming data. The HD from this computer now works in the A1200/68030. Unfortunately I haven't got much money available as a pensioner. So I can't buy a new motherboard for my towered A1200. The other one has no working serial port, no MIDI available, no further development on BarsnPipes (at the moment) for classic AMIGA OS.
+
+µC5Psychreator:µC1 Why do you like coding on Amiga instead of coding for other plattform like PC or Consoles?
+
+µC5Alfred:µC1 I've tryed to program for Windows, AROS and JAVA in the past. But programming for AMIGA is really more fun. It's much easier to reach the target on AMIGA. With JAVA it is also relatively easy to program, but it is much more complex and it's purely object oriented. I've also made an attempt to write a JAVA version of BarsnPipes. Because Java is object oriented, BnP must be written from scratch, so I only can make very small steps. Sure, I have the blueprint of a fantastic program, but all must be written again. AROS is similar, like AMIGA-OS, but its a bit harder to code for it. AROS is not the same, like AMIGA-OS. My attempt to port BarsnPipes to AROS couldn't be finalized yet.
+AMIGA's API (Application Programming Interface) is simple (compared to the other platforms' API's). The base programming language is C with any possibilities for assembler. There are many other programming languages available for AMIGA. Unfortunately they are not useable for my purposes. But nevertheless, programming isn't an easy job in general.
+µJRµC5Alfred FaustµC1
+µI1101µC5µJEPsychreator:µC1 Now we want to hear from you something about your main project called Bars N'Pipes. What is this software good for and how does it work?
+
+µC5Alfred:µC1 Where to begin? First of all: I'm NOT the inventor of BarsnPipes. BarsnPipes is the "child" of Todor Fay and his wife Melissa Jordan Gray, who founded the Blue Ribbon Inc. in 1988 (!). Some words about Blue Ribbon Inc.: After Commodore went became insolvent and the AMIGA market got more and more unimportant, this software company had to take a hard decision for its own future. In 1996 they were overtaken by Microsoft Inc. There they worked on the "Music machines"-project. They also invented the Direct Audio, which was later further developed to the well known DirectX. In 1998 some english friends asked Microsoft Inc. for the source-code of "Bars&Pipes Professional 2.5b" (this was the official name of the last release, which was given away as FREEWARE - not Public Domain). The answer from Microsoft Inc.: 'Yes, you can get the source-code for 1.000.000 US$'. In other words "NO!". Nobody could invest such a big amount of money in a niche project of a niche computer-system. In November 2000, however, Todor Fay surprised the Bars&Pipes community with the announcement to release the sourcecode of Bars&Pipes Pro. He was looking for some programmers who would be willing to prepare the material for an official release for the public. I was one of the lucky eight who received the source - worth 1 million US$.
+Shortly after that, a discussion between those programmers who had received the source-code came up on the question of how to make a general project.
+No solution could be found regarding the central storing place and the leader of the project. Because I was very curious whether the material could be compiled to a running B&P, I started a development direction on my own.
+First of all, I had a closer look at the material that I had received. So I could recognize that this was the source of Bars&Pipes Pro 2.5c beta, a never released version. Also, the material was incomplete and not bugfree. I started to prepare the source during christmas in 2000. Later, I could compile the source for the first time to a running program... with many bugs and incomplete.
+This first preparatory work was very hard and took much time. At the end of May 2001, I could finalize this first step. The source of the main program and the sources of some tools and accessories (the plugins of B&P), which had also been given us, were in a complete and compileable state.
+Todor Fay had given me his "OK" to take this material as the official release of the source-code of "Bars&Pipes Professional 2.5c beta" to public. It is downloadable from my homepage: www. alfred-j-faust .de
+Immediately after that I started to create my own further developing project (line) in order to show that
+
+a) this is the further developed Bars&Pipes Pro
+b) this is a own developing line
+
+I decided to give the program the name: "BarsnPipes New".
+
+What, please, is BarsnPipes good for ?
+
+BarsnPipes is simply the best Multimedia MIDI sequencer program, which was ever made for a computer... yes... really...
+I seriously browsed the software market for a MIDI-sequencer, which has a similar functionality and is similarly easy to handle and similarly expandable through a plugin-surface like BarsnPipes... I couldn't find a single one. Sure, there are other great musicial programs with MIDI-possibilities, but none has the possibilities of BarsnPipes. Example: only BarsnPipes can record on all 16 MIDI-channels at the same time simultaneously.
+
+What's MIDI?
+
+In the time, as computers were big monsters, with no music-capabilities, electronic music instruments were already on the market. The engineers searched for a possibility to play an instrument from another one. The "Musical Instrument Digital Interface" was born. Over a 2 wire cable only very short commands are transmitted like:
+
+- Note c3 on, Note c3 off
+(the note command also contains the velocity - a value for the loudness of a tone).
+
+- choosing a sound on the other instrument a so called "Program change message"
+
+- There are some other MIDI commands, to change other values of a sound, like the place in the stereo-panorama, the base volume of instrument. These are: "Controller change Messages"
+
+- There are many other kinds of MIDI messages.
+
+MIDI works on 16 different channels, meaning 16 different instruments can be controlled by MIDI simultaneously. The most important disadvantage of MIDI-transmission: it is a serial transmission protocol - one after another. So it is technically not possible to send for example two NoteOn-commands at the same time. MIDI makes use of the fact that the human ear can't recognize small latencies (like the human eyes can't see single pictures, if they are changed fast - like in cinema). You can't hear 3 or 5 milliseconds time shift as a delay, you hear this as if it was simulteneous.
+When the personal computers came up (AMIGA was one of these new computers), MIDI also could be controlled by them. Now it was possible not only to control MIDI-instruments, but also to record and manipulate the recorded MIDI-data. Exactly for this purpose Bars&Pipes was made. There are some other good MIDI-sequencers made for AMIGA (ex. "MusicX" by Talin), but only Bars&Pipes has the genious plugin-system, by which the capabilities of B&P can be expanded almost without limits.
+If a new function shall be added to B&P... tell it a programmer (who hopefully is a musician, too), and he can write a tool or an accessory.
+The user-interface of BarsnPipes is constructed as intuitive as possible - for musicians who are mostly not computerfreaks. Any of the serious musicians, who are still using BarsnPipes, won't ever want to miss it. BarsnPipes is handy for beginners and also very suitable for professionals.
+
+µA0111µC5µJCPress down cursor for part two!
+
+
+
+ 
+
+
+
+
+
+
+
+

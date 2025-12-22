@@ -1,0 +1,70 @@
+
+ ---------------------------------------
+  $VER:  SCOPEPT by Smack/Infect 170495
+ ---------------------------------------
+
+ This program plays a ProTracker module and shows some oscilloscope-like
+ plots on the screen. Due to the very CPU-hungry plotting routines and the
+ sprite anim it requires an AGA machine. It is recommended to have some
+ FastRAM and a powerful processor to enjoy the 'nicer' modes.
+
+ The prog is controlled via keyboard so try these:
+
+  --SCREEN MODES--
+  F1 .. Quadrascope 
+  F2 .. Stereoscope
+  F3 .. Monoscope
+
+  --PLOTTING MODES--
+  F6 .. dot
+  F7 .. line
+  F8 .. solid
+
+  --OTHER CONTROLS--
+  F9 ..  show free processor time
+  F10 .. hold display
+  HELP.. switch the _cool_ Infect logo on/off
+  ESC .. exit
+
+ NOTE:
+ If your machine is too slow for the selected plotting mode the screen
+ borders will flash red. You should use a different mode then.
+ (the dotted modes run even on a standard A1200)
+
+ I did not (and I never will!) implement a decruncher for the modules coz:
+   -it would mean more work for me to code it :^)
+   -I don't need it (CrunchMania + RTDD = MORE_FUN!)
+   -there are many good decrunch utilities to do this job
+    (just make a little batch file for your personal needs...)
+
+ other features:
+   -no AREXX port
+   -no MUI support (hi to A.Maschke, thx for the anims!)
+   -no multi tasking
+   -no file requester (use DirOpus...)
+
+
+--------------------------------------------------------------------------
+ Contact me for coders chat or anything else:
+     (Smack/Infect)
+     Michael Henke
+     Praetorius-Str.1/205
+     06124 Halle
+     Germany
+
+--------------------------------------------------------------------------
+ HISTORY
+
+ 090195
+   -first version  (it had various terrible bugs,
+                    sorry to all people who had trouble with it)
+
+ 100295
+   -recoded from scratch, runs stable now, does not 'eat mem' anymore
+
+ 150295
+   -some optimizations
+
+ 170495
+   -if FastRAM is detected, it is also used for plotting (a lot faster!)
+

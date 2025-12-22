@@ -1,0 +1,38 @@
+Short: 040/060 patch for Bomb! Shaft7 demo from TP6
+Uploader: amlaukka@cc.helsinki.fi
+Type: demo/tp6
+
+Installation:
+
+    Unpack the archive and apply the patches to each of the original
+demo files with the supplied spatch utility.
+
+spatch -pBombBump.pch BombBumb.mtp!
+...
+
+    Run the demo from cold boot with all the caches on. Note that the
+module player in the demo doesn't seem to like Workbench.
+
+Setpatch
+shaft7.exe
+
+Note! Do not apply this patch if you own M68030.
+
+Description:
+
+    The original version of the demo doesn't work on M68040 or M68060
+because it uses self modifying code heavily and uses broken macros to
+perform cache flushing. It would be a better idea to use exec.library
+functions CacheClearE() or CacheClearU() to perform this task. Then
+you can be rest assured that it will work on all processors.
+
+    To the coder of the demo: Your macro used CINVA on 040 but this
+doesn't work as intended because it only invalidates the cache lines
+(dirty data is lost) and doesn't push the cache lines to memory. On
+the other hand CPUSHA BC does the work correctly. Flushing of both
+caches is necessary because data cache may hold the cache lines
+containing the self modifying code. Other bugs include mostly
+"cut&paste" errors. A few times the macro was before the self
+modifying part and in some parts the processor_id variable was left
+unitialized (equals to 020?) so it branched right after the CINVA
+instruction.

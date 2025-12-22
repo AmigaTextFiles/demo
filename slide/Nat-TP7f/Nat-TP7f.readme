@@ -1,0 +1,14 @@
+Short:    Bugfix for Nature & AP's TP7 slideshow
+Uploader: pmats@algonet.se (Pezac/Nature)
+Author:   pmats@algonet.se (Pezac/Nature)
+Type:     demo/slide
+Requires: N_AP-TP7.lha (the original slideshow archive)
+
+This is a small bugfix for Nature & ArtificialPeople's TP7 slideshow. You
+must still have the original archive (N_AP-TP7.lha) though. Just put the
+'TP7_in_Short_fix' file in the same directory as the slideshow, and run
+that file instead of the old executable.
+
+The fix are for people who have VBR moved to fast, which makes the music
+disappear. The problem was that the replayer didn't support an altered
+VBR (TrackerPacker 3.1 is the replayer used).

@@ -1,0 +1,37 @@
+developing instructions
+
+1. intro compiling
+
+ - get devpac
+ - check presence of the standard system includes
+ - load "!main_17.s"
+ - turn optimizations on or off
+ - make sure cMODE definition is set to RUN or DEBUG
+ - check PATTERNS definition according to the dbm2cron results
+   (if you are converting new musiñ)
+ - assemble to executable file 
+ - run and enjoy
+
+2. intro packing
+
+ - set cMODE to PACK
+ - turn off any devpac debug features
+ - compile to executable file
+ - rename "!main_17" to "!main.bin"
+ - by using ced remove first 32 bytes of "!main.bin"
+ - remove everything starting from word "end!" till end (including this word itself!)
+ - save the result
+ - run "4kpack" from CLI in the same directory
+ - insert 'maxcode' value into "!depack7.s" (D_MAXCODE)
+ - select packer optimization (D_OPTIMIZE)
+ - turn off any devpac debug features and optimizations
+ - compile "!depack7.s" to "!devpack" - your new packed intro! :-)
+
+3. new muz converting
+
+ - use only those five samples in example music file ("quit.DBM")
+ - execute "dbm2cron <yourmusic.DBM> <yourmusic.BIN>"
+ - remember number of patterns ("CRON - patterns")
+ - replace 'incbin "muza1.bin"' in "!main_17.s" with incbin of your <yourmusic.BIN>
+ - change PATTERNS definition according to the remembered number of patterns.
+ - now you are ready to compile intro with your new music!

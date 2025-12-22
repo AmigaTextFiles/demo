@@ -1,0 +1,113 @@
+{
+  "actions": [
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              1.08851504,
+              0.30236325,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 25800
+          },
+          {
+            "float_values": [
+              -1.34159946,
+              -0.63613141,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "object_1"
+        }
+      ],
+      "loops": 1,
+      "name": "object_1_action",
+      "start_time": 0,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -0.0
+            ],
+            "interpolation": "linear",
+            "time": 25800
+          },
+          {
+            "float_values": [
+              200.000001,
+              299.999995,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "object_1"
+        }
+      ],
+      "loops": 1,
+      "name": "object_1_action",
+      "start_time": 0,
+      "type": "rotation_xyz"
+    }
+  ],
+  "cameras": [
+    {
+      "far_clip_plane": 100.0,
+      "fov_x": 54.362152,
+      "fov_y": 28.800001,
+      "hide": false,
+      "name": "camera_1",
+      "near_clip_plane": 0.1,
+      "position": [
+        0.0,
+        0.0,
+        4.0
+      ],
+      "rotation": [
+        3e-06,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "enc_info": {
+    "data_type": "ENCSCN",
+    "date": "17 Nov 2022 16:35:10",
+    "version": "2.0"
+  },
+  "loops": 1,
+  "name": "sc_scene_1",
+  "objects": [
+    {
+      "mesh_name": "sc_object_1",
+      "name": "object_1",
+      "position": [
+        1.08851504,
+        0.30236325,
+        0.0
+      ],
+      "tag": 10
+    }
+  ],
+  "properties": {
+    "credit": 0
+  },
+  "time": 25800
+}

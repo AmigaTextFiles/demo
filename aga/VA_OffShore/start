@@ -1,0 +1,7 @@
+setpatch QUIET
+assign env: envarc:
+assign t: ram:
+assign libs: libs/ add
+stack 500000
+VA3D_Prefs.exe
+main.elf

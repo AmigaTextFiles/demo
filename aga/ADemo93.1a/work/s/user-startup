@@ -1,0 +1,9 @@
+if exists s:Demo
+   execute work:demo/s/InitDemo
+   execute Demoscript
+     else
+   echo "*N*N Mit dem Shell-Befehl DemoStart kann die Demo gestartet werden.*N"
+   wait 3
+   endif
+
+

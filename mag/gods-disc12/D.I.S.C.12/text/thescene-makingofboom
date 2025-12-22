@@ -1,0 +1,173 @@
+discnew.font,8
+«s6=166,227,181»
+«s7=191,206,254»
+«»
+«c2»«ac»BOOM - THE MAKING OF...«»
+«»
+«c1»By Scicco/Scarab and StingRay/Scarab«»
+«»
+«as»«c6»Scicco:«»
+«»
+«c7»All started in the early summer of 2000, when I visited
+«c6»DC.Clark and Mr.Vain «c7»in Herne. It was the first time we
+met outside a party. We had no plans for a 4k, I just
+tried to calculate my first samples. These first tries
+were very interesting for me, so i continued in calculating
+different samples. After I realized that the space needed
+to calc these samples was very small, «c6»the basic idea of
+making an intro in 4kb was born. «c7»I calculated some samples
+for the sounders, who tried to make tunes with them.
+Some days later the first tune was finished, the «c6»Boom-Song.«»
+«»
+«c7»I loved the sound, so I tried to find a way to get this
+tune in very little space. I needed some weeks, but the
+result was great: the whole song was running in about 1.2 kb.
+This gave us motivation to keep on coding. :)«»
+«»
+While I was coding and optimizing «c6»the 4kb-soundengine «c7»I finished
+the «c6»free-dir-plane effect. «c7»As we needed textures for this effect
+I also coded some routines calculating textures.«»
+«»
+Two months flow by, then we had another meeting at DaNDeEs place.
+It was a very interesting meeting as we planned more and more of
+the 4k. StingRay coded on my first «c6»metaball-tries «c7»while I was
+optimizing the texture-stuff.
+The funny thing is that we coded a tool to set the blobs on the
+screen so that we easily could «c6»create the logos. «c7»After we created
+the logos we coded a routine to let the blobs fly around. We
+tried to let them fly in a circle way, but there was a bug in the
+routine, the blobs flew like they wanted. But as it looked nice
+we decided to leave this "bug" and call it a feature. :) Then
+DC.Clark had the nice idea to let the blobs wobble while they are
+flying, and we did some code and it looked funny. We optimized
+the routine and the next effect was finished.«»
+«»
+After this meeting we were highly motivated to finish the intro.
+At this time the «c6»sound was finished, the texture-generator was done
+and the free-dirs and blobs were running as we wanted.«»
+«»
+«c7»Back home we optimized the routines a bit, then I went on holiday,
+so it was StingRay's task to do the systempart of the intro and
+additional effects, too.«»
+«»
+«»
+«c6»StingRay:«»
+«»
+«c7»Yo, coffee lover Sting at the keys now. Well, since I not only
+drink coffee the whole day but also claim to be a coder, I also
+coded some stuff for Boom. :) The first thing I did was to code
+the «c6»startup code «c7»for Boom. First I thought, that this wouldn't
+be very time consuming, because I already had my nice 4k startup
+code which I used in my 4k intro I did for MS2k-1. Since I already
+optimized it heavily (at least that's what I thought...) I didn't
+think that there was big room for optimizing left. But, coding
+knowledge increases and so I spend lot's of days «c6»killing bytes
+«c7»in the startup code. Actually I nearly completely recoded the
+whole startup code in a more efficient way and at the end
+I managed to cut down the startup code, including the palette
+generator, CGX/AGA support and the VBI handler to 834 Bytes.
+For the AGA support I used the «c6»mini-c2p routine «c7»by our
+dear c2p master, better known as Kalms. And guess what, I even
+put my dirty hands on his c2p code and optimized the c2p routine
+too. :) (Original size was 25o bytes, optimized size: 236 Bytes :D)
+Too bad I didn't count the amount of cigarettes and coffee
+I consumed while optimizing the startup code. :=)«»
+«»
+After the startup code was finished, the real fun started, putting
+the intro routines together. During the summer I coded a nice
+little «c6»water effect «c7»working with non-linear palettes (getting
+this one to run at decent speed on my 68o3o was quite a hard
+task, but that's another story) and a transparent rotation zoomer.
+Since we only used calculated (i.e. linear) palettes in Boom, I
+adapted both routines for linear palettes. Then, while watching
+my water routine, I got a nice idea (that doesn't happen very
+often ;D). How about writing something with the water? I simply
+used the metaball coords we used at the beginning to get
+«c6»'Boom' and 'SCL' «c7»written on the screen. This was quite nice
+but still I missed something. So I timed it with the music
+and now I know, why girls tend to call coders 'nerds'. :)
+I didn't know the inner workings of Scicco's nice sound
+engine and so I had to listen to the music over and over
+again to wait for the bass sample just to see my text
+changing routine in action. I'm not sure anymore, who of
+us spent more time listening to the tune, Scicco while
+coding the sound engine or me while timing my water
+effect ;). It took me nearly one day to get the correct
+timing...«»
+«»
+I then combined Scicco's «c6»free-directional tunnel «c7»with
+the water routine and the next problem arised. Lot's
+of overflow errors. So I had to implement a pixel-clip
+routine in the innerloop of my once so fast water
+routine. I managed to do the pixel-clipper in just 22
+bytes but it extremely slowed down the water routine :(
+But thanks to this «c6»pixel-clipper, «c7»we got some kind of
+«c6»'fake lighting' «c7»which looked quite nice ;)«»
+«»
+Implementing the «c6»transparent rotation zoomer «c7»wasn't
+much of a problem, I just had to spend some hours
+optimizing it, because my original routine wasn't
+coded with size but speed in mind.«»
+«»
+I then added all the other routines and spent day
+and night (mostly nights ;D) to optimize everything.
+I even developed my very own «c6»'Hunk Faker' «c7»which allowed
+us, to do the whole intro pc-relative, heavy magic
+indeed :). Never underestimate the power of Macros :).
+I called Scicco nearly everyday, telling him, how many
+bytes I killed last night :).
+But since I won't bore you with the details of
+'Harcore byte killing using too much coffee, too many
+cigarettes and too less sleep' :) I hand over the keys to
+master Scicco again who successfully managed to
+bring back my coding motivation which I seemed to
+have lost forever. Thanks man, you're great!
+But before I go I just wanna say hello to all coders
+still doing great demos on our beloved Amiga.
+«c6»Keep the spirit!«»
+«»
+«»
+Scicco:«»
+«»
+«c7»After all parts for the intro were finished, we discovered, that
+we needed an «c6»own cruncher. «c7»All 'standard' crunchers had the same effect:
+the assembled intro got bigger. So I used a known crunching algorithm
+and coded an own decruncher. After some weeks of optimizing the
+decruncher (I needed to as the decruncher code is not crunched :) the
+decruncher was finished: about 300 bytes of code. The cruncher was a
+bit better than the familiar used ones and it saved some bytes in the
+crunched file.«»
+«»
+After coding this nice decruncher we brought ourself to finish
+the intro. All effects were done, only «c6»the fader and the final
+timing «c7»was missing. We met again to finish this piece of code
+together. We needed one more long night to finish the fader and
+parts of the timing. After the intro was running in a final design
+we looked at the size again: uncrunched 4702 bytes. Crunched with our
+cruncher it was about 4500 bytes.«»
+«»
+The next two weeks were full of «c6»hardcode optimizing. «c7»Everyone
+was thinking about X-Mas «c5»(not me, I was sleeping after all the
+hard work I did for Boom :D -Sting) «c7»and I was thinking about Boom
+and commands and ways to optimize this or that routine. :) Short: I
+had only Boom in my mind. I optimized all stuff down to crunched
+4096 bytes.«»
+«»
+The funny thing: later we wanted to fix one bug which occured while the
+intro was running on a CGFX-screen. We changed only one register, no
+more commands, and the intro was 4 bytes bigger, 4100 bytes. Hehe, it
+was the last fun to find the last command to kill to achieve the
+final size again. :) We found it and «c6»Boom «c7»was finished!«»
+«»
+We all were looking forward to the MS2001 and were very lucky when the
+intro achieved place #1. «c6»Thanks to all voters!«»
+«»
+It was real fun to create this intro!«»
+«»
+And finally we have to send our respect to «c6»Ephidrena and Exploder «c7»for
+being such good 4k-creators! Your intros also inspired us to code
+a nice 4k-intro!«»
+«»
+«»
+«c6»Scicco and StingRay «c7»signing off...«»
+«e»

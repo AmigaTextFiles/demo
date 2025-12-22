@@ -1,0 +1,103 @@
+;
+;                                 |rOn oF TrS|
+
+;        Remember: For fast and friendly elite mail-trading write to:
+;        .: iRoN of TrSi +  Broniewskiego 36/8 + 59700 Boleslawiec :.
+;
+;               One question -> what are you looking for here?
+;
+
+(complete 0)                ; set complete to 0
+
+(set @default-dest          ; ask for destination
+    (askdir
+        (prompt "Please select a directory where SUN will be installed. Drawer SUN will be created!")
+        (help @askdir-help)
+        (default "dh1:")
+    )
+)
+
+(set destdir (tackon @default-dest "SUN"))
+                            ; set destination to linked together names
+
+(makedir destdir            ; Do I should explain it?
+    (prompt "I will create the directory /"SUN/"")
+    (help @makedir-help)
+    (infos)
+)
+
+(onerror (exit "Sorry, error..."))
+
+(complete 5)
+
+(message "TRSI POLISH DIVISION\n\n\nPresents\n\n\A slideshow by Lazur\n\n\nMusic by Dreamer\nCode by Iron\n\n\n\" S U N \"")
+
+(if (exists "TRSI:SUN0")                                    ; check if exists
+    (message "OK. I will copy all files from disk1 now...") ; yes, it does
+    (until (exists "TRSI:SUN0")                             ; no, it doesn't
+        (message "Ehm... You have to change disk!")         ; - repeat it until
+    )                                                       ; it exists
+)
+
+(complete 10)
+
+(copyfiles                      ; it's very important in all installers
+    (prompt "Copying data files from disk 1")
+    (help @copyfiles-help)
+    (source "TRSI:")
+    (dest destdir)
+    (pattern "SUN?")
+    (files)
+)
+
+(complete 40)
+
+(copyfiles
+    (prompt "Copying main-file from disk 1")
+    (help @copyfiles-help)
+    (source "TRSI:SUN")
+    (dest destdir)
+)
+
+(copyfiles
+    (prompt "Copying main-file from disk 1")
+    (help @copyfiles-help)
+    (source "TRSI:TRSI-SUN.info")
+    (dest destdir)
+)
+
+(copyfiles
+    (prompt "Copying main-file from disk 1")
+    (help @copyfiles-help)
+    (source "TRSI:S/TRSI-SUN")
+    (dest destdir)
+)
+
+(complete 50)
+
+(if (exists "TRSI:SUN6")
+    (message "OK. I will copy all files from disk2 now...")
+    (until (exists "TRSI:SUN6") 
+        (message "Ehm... You have to change disk!")
+    )
+)
+
+(copyfiles
+    (prompt "Copying data files from disk 2")
+    (help @copyfiles-help)
+    (source "TRSI:")
+    (dest destdir)
+    (pattern "SUN?")
+    (files)
+)
+
+(complete 99)
+
+(message "For swapping write to:\n\nIron\nul.Broniewskiego 36/8\n59-700 Boleslawiec\n\nNorby\nPo Box 20\n56-300 Milicz\n\nQBA\nPo Box 105\n12-100 Sczytno")
+
+(message "\n\n\nIf you don't have fast memory, then please disconnect all not used drives/partitions!\n\nSun needs about 1.8MB to decrunch!\n\n"
+         "You can decrunch \"SUN\" main file and after that SUN will need about 1.3MB to run.\n")
+
+(complete 100)
+
+(exit)                          ; blah...

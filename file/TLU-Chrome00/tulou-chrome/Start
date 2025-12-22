@@ -1,0 +1,7 @@
+assign Tulou-Chrome: ""
+setpatch
+copy Tulou-Chrome:sfx#? all ram:
+copy Tulou-Chrome:pic#? all ram:
+Type1 Loading.txt
+wait 3
+infoplayer Demo.scr

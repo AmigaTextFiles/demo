@@ -1,0 +1,197 @@
+@{d DFFFBF}@{xoffset 21}@{c 5854FF}¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+@{xstep 450}@{font ACS-Title.font 18}@{c 5C70FF}Lens effect@{font}@{c}
+@{xstep 445}@{i}@{c 577BFF}FiDo/Insanity@{ui}@{c}@{ystep 0}
+
+@{c 1EA5FF}  Açkoliv  je  tato  rubrika  sice spíîe vedena jako 3D efekty, nebude tomu vùdy
+pouze  tak,  protoùe ne vîechny 3D efekty musí být dësnë cool a naopak.  Dûkazem
+budiù  první  çást  z  mého  dema @{c}@{c 28FF80}Graveyard@{c}@{c 19A8FF}, které jste mohli vidët na posledním
+Amiga-workshopu,  neù  z  toho  udelali nëjakou podëlanou party pro pleçkáêe ;(.
+Zmínëný  efekt  asi nemá název, takùe mu dám vlastní -@{c} @{c 28FF80}LENS@{c} @{c 2BAAFF}(çoçka).  Efekt jsem
+poprvé  vidël na@{c} @{c 19FF92}PC s Windows 95 a Flus packem@{c} @{c 2BAAFF}a dësnë se mi líbil.  Ve zmínëném
+shitu  to  bylo  prezentováno jako îetêiç obrazovky (to by më dësnë zajímalo, co
+tím  jako  jako  chtëli  îetêit  :-/).  Vypadalo to prostë jako kdybyste sebrali
+babiçce  jedno  sklo z brýlí a rejdili s ním po obrázku.@{c}  @{c 23FFB5}Cool!@{c}  @{c 2BAAFF}Tenkrát jsem si
+êíkal, jak je to moùný, ùe to ten pekáç stíhá tak krásnë rychle.  Odpovëð pêiîla
+záhy  -  pêedtím,  neù  se  to rozebëlo, se objevilo na 10 vteêin okýnko a v nëm
+nápis@{c}  @{c 1EFFD6}"Rendering  lens..."@{c}  @{c 2BAAFF}(pozdëji si dokáùeme, ùe tëch dlouhých deset vteêin
+byl  jen  dalîí  z dûkazû neschopnosti "programátorû" od Microsoftu).  Tak, dost
+kecû, hned si ukáùeme, jak si nëco takovýho udëlat doma na Amize @{c}@{c 2BAAFF}!@{c}
+
+ @{c 1CBCFF} Základem   je   opravdu  jakási  "çoçka",  reprezentovaná  çtvercovou  maticí,
+obsahující  hodnotu  tlouîïky  çoçky  v  daném místë.  Hodnota nemusí mít pêíliî
+velikou  pêesnost,  takùe nám staçí@{c} @{c 1CFF86}1 byte na jednu hodnotu.@{c}  @{c 1CBCFF}Ti chytêejîí se uù
+urçitë  praîtili do çela, nahodili@{c} @{c 19FF97}Deluxe-Paint v 256 barevným módu@{c 1CBCFF},@{c} @{c 23FFB2}jako paletu
+nastavili  stupnici  îedi@{c}  @{c 1CBCFF}a  nëjakým vhodným nástrojem nëjakou plastickou çoçku
+bëhem  pár  vteêin  vytvoêili  a  poté  pomocí  nëjakého chytrého konvertoru (já
+pouùívám  PicCon)  pêevedli  do  chunky formátu.  Mûùeme si sice napsat program,
+který nám pomocí@{c} @{c 0CFFBF}sin/cos@{c} @{c 1CBCFF}nëco spoçítá, ale proç si pêidëlávat práci, ùe?@{c}
+
+
+	@{p Lens1.png 100 110}
+
+
+
+                                                        @{c 19FFE9}  @{i}pêíklady
+                                                          çoçek@{ui}@{c}
+
+
+@{c 21AAFF}  Dalîím krokem je, dosáhnou toho, abychom nemuseli sloùitë kaùdý pixel poçítat,
+protoùe  nëjakým  slideshow  bychom asi nikoho neoslnili.  Kdyù se podíváte pêes
+skuteçnou  lupu,  uvëdomíte  si,  ùe  obrázek  je  pêes  ní@{c}  @{c 21FF74}roztaùený do stran,
+symetricky  smërem od stêedu@{c}@{c 21FF74}.@{c} @{c 21AAFF} Kdyù lupou pohnete, zmëní se sice obrázek,@{c} @{c 17FF7B}ale to
+roztaùení  je  poêád stejné!@{c}  @{c 21AAFF}A v tom to je.  Kdyù si pêedstavít@{c 21AAFF}e@{c} @{c 14FF8D}stejnou matici
+hodnot,@{c}  @{c 21AAFF}jako  je  zdrojová@{c} @{c 11FF9D}a vedle ní dáte dalîí (akorát ùe uù není bytová, ale
+longwordová)@{c}  @{c 21AAFF}a  do  kaùdé hodnoty si dáte@{c} @{c 11FF9D}offset bodu@{c}@{c 21AAFF}, který vidíte,@{c} @{c 0FFFAD}od pozice,
+odkud  bod pûvodnë pochází@{c 21AAFF},@{c}@{c 28ADFF} mûùete s takovou tabulkou vzít jakýkoliv obrázek, na@{c}
+@{c 21AAFF}urçité pozici pêekreslíte obrázek tak, ùe@{c} @{c 19FFBF}vezmete offsetovou hodnotu@{c} @{c 21AAFF}konkrétního
+bodu@{c}  @{c 19FFBF}pêiçtete  jí  k  adrese  pixelu@{c 21AAFF},@{c} @{c 28ADFF}který zrovna pêekreslujete@{c} @{c 21AAFF}a@{c} @{c 19FFDB}ze spoçítané
+pozice@{c}  @{c 21AAFF}na  obrázku@{c}  @{c 19FFDB}vezmete  pixel@{c}  @{c 28ADFF}a  zapíîete  ho  na  pozici@{c}@{c 21AAFF},  kde se zrovna@{c}
+@{c 21AAFF}nacházíte,  tak  dosáhnete  pêesnë poùadovaného efektu.  Zní to dësnë, ale je to
+fakt jednoduché!@{c}
+
+
+@{c 21AAFF}  Je  dobré  mít  dva  stejné  obrázky,  jeden  pêekreslovat,  a  druhý mít jako@{c}
+@{c 21AAFF}zdrojový.@{c}
+@{c 1CFF78}
+	----------------------------------------------------------------
+	| pêekreslovaný obrázek
+	|    ________
+	|   |........|
+	|   |........|  <-- Tady v tom çtverci se bude kreslit nakreslené
+	|   |........|      body jsou vzaté ze stejné pozice + offset ze
+	|   |________|      spoçítané tabulky, ale ze zdrojového obrázku.
+	|            
+	|
+	|
+	|
+	|@{c}
+
+
+@{c 28ADFF}  No, to je sice hezký, ale jeîtë zbývá spoçítat tu chytrou tabulku, takùe:@{c}
+
+@{c 239AFF}________________________________________________________________________________
+MakeOffsets:
+@{c 19FF97}        ;a0 - adresa bytové tabulky s tlouîïkou
+        ;d0 - index zvëtîení çoçky, abysme s ní mohli jeîtë 
+        ; pro vëtîí efekt hejbat...@{c}
+
+@{c 1CFF78}       @{c 23FF8C} lea         LensOffsets,a1@{c}  @{c 23ADFF};adresa tabulky     @{c}
+      @{c 23FF8C}  move.l      #4096<<4,a2 @{c}    @{c 23ADFF};konstanta@{c}
+      @{c 23FF8C}  move.w      #128,a3
+        move.w      d0,d7@{c}
+
+@{c 19FF97};çoçka je veliká 120×120 pixelu (neptejte se më proç tak kretenský
+;rozmëry, je to uù 2,5 roku a já to fakt nevím... ;)@{c}
+
+@{c 1CFF78}        moveq       #60,d4
+       @{c 23FF8C} moveq       #-60,d1@{c} @{c 23ADFF};Y vzdálenost od stêedu@{c}
+     @{c 23FF8C}   moveq       #9,d6@{c}
+@{c 23FF8C}.LoopY  moveq       #-60,d0@{c} @{c 23ADFF};X vzdálenost od stêedu@{c}
+@{c 23FF8C}.LoopX  moveq       #0,d2   @{c}
+       @{c 23FF8C} move.b      (a0)+,d2@{c}
+       @{c 23FF8C} mulu        d7,d2 @{c}     @{c 23ADFF} ;troîku to zvëtîíme, aï se s tim líp pracuje@{c}
+      @{c 23FF8C}  lsr.w       #7,d2@{c}
+  @{c 23FF8C}      add.w       a3,d2@{c}
+     @{c 23FF8C}   move.l      a2,d3@{c}
+      @{c 23FF8C}  divu        d2,d3   @{c}   @{c 23ADFF} @{c}@{c 23ADFF};1/z@{c}
+
+@{c 23ADFF};tímhle získáme vlastní efekt çoçky, ùe se smërem od stêedu mëní úroveñ zakêivení@{c}
+      @{c 23FF8C}  move.w      d0,d2@{c}   
+     @{c 23FF8C}   muls        d3,d2  @{c}    @{c 23ADFF} ;x-offset zdrojový obrázek -> cílový@{c}
+     @{c 23FF8C}   move.w      d1,d5@{c}
+      @{c 23FF8C}  muls        d3,d5  @{c}    @{c 23ADFF} ;y-offset@{c}
+      @{c 23FF8C}  asr.w       d6,d2@{c}
+      @{c 23FF8C}  asr.w       d6,d5@{c}
+       @{c 23FF8C} add.w       d4,d2@{c}
+     @{c 23FF8C}   ext.l       d2@{c}
+@{c 23FF8C}        add.w       d4,d5
+        mulu        #320,d5@{c}
+
+@{c 23ADFF};obrázek se kterým pracujem je îiroký 320 pixelu, takùe spoçítáme
+;offset = xoff + yoff * îíêka.@{c}
+
+   @{c 23FF8C}     add.l       d2,d5@{c}
+     @{c 23FF8C}   move.l      d5,(a1)+  @{c}@{c 23ADFF}  ;zapíîem do magický tabulky @{c}
+  @{c 23FF8C}      addq.w      #1,d0
+        cmp.w       d4,d0@{c}
+ @{c 23FF8C}       bne.s       LoopX2  @{c} @{c 23ADFF}   ;celý êádek     @{c}
+@{c 23FF8C}        addq.w      #1,d1
+        cmp.w       d4,d1@{c}
+@{c 23FF8C}        bne.s       LoopY2  @{c}   @{c 23ADFF} ;aù dolû@{c}
+ @{c 23FF8C}       rts@{c}
+
+@{c 14FFFB}  Takùe   máme   çoçku.    Teð  jeîtë  primitivní  pêíklad,  jak  ji  vykreslit.
+Vykreslování  je  samozêejmë do chunky-bufferu, který pak mûùeme nëjakou vhodnou@{c}
+@{c 14FFFB}c2p  rutinou hodit do AGA screenu, nebo v pêípadë graf.karet renderovat pêímo do
+video-ram.@{c}
+
+@{c 14FFFB}RenderLens:@{c}
+       @{c 23ADFF} ;d0.l-Offset v obrázku Xoff+Yoff*îíêka@{c}
+
+   @{c 23FF8C}     lea         (ChunkyBuffer,d0.l),a0 @{c}@{c 23ADFF} @{c}@{c 23ADFF};sem to nakreslíme@{c}
+    @{c 23FF8C}    lea         (PictureBuffer,d0.l),a1@{c} @{c 23ADFF};zdroj@{c}
+@{c 23FF8C}        lea         LensOffsets,a2@{c}
+   @{c 23FF8C}     move.w      #200,d4 @{c}@{c 23ADFF};320-120@{c}
+    @{c 23FF8C}    moveq       #14,d5@{c}
+   @{c 23FF8C}     moveq       #119,d7@{c}
+@{c 23FF8C}.LoopY  move.w      d5,d6@{c}
+
+@{c 23ADFF};protoùe pamëï je svinsky pomalá, pouùijeme jeîtë nëjaký trik, jak to
+;trochu urychlit - budem zapisovat po long-wodech ...@{c}
+
+@{c 23FF8C}.LoopX  move.l      (a2)+,d2@{c}
+@{c 23FF8C}        move.b      (a1,d2.l),d3
+        move.l      (a2)+,d2
+@{c 23FF8C}        lsl.w       #8,d3
+        move.b      (a1,d2.l),d3
+        move.l      (a2)+,d2
+        swap        d3
+        move.b      (a1,d2.l),d3
+        move.l      (a2)+,d2
+        lsl.w       #8,d3
+        move.b      (a1,d2.l),d3
+        move.l      (a2)+,d2
+        move.l      d3,(a0)+
+        move.b      (a1,d2.l),d3
+        move.l      (a2)+,d2
+        lsl.w       #8,d3
+        move.b      (a1,d2.l),d3
+        move.l      (a2)+,d2
+        swap        d3
+@{c 23FF8C}        move.b      (a1,d2.l),d3
+        move.l      (a2)+,d2
+@{c 23FF8C}        lsl.w       #8,d3
+        move.b      (a1,d2.l),d3
+        move.l      (a2)+,d2
+        move.l      d3,(a0)+
+        dbra        d6,.LoopX@{c}
+
+@{c 23ADFF};Na 040/060 je tohle rychlejîí, neù dbra:@{c}
+@{c 23ADFF}        ;subq.w     #1,d6
+        ;bpl.s      .LoopX@{c}
+
+@{c 23FF8C}        add.l       d4,a0
+        dbra        d7,.LoopY@{c}
+@{c 23ADFF}        ;subq.w     #1,d7
+        ;bpl.s      .LoopY@{c}
+@{c 23FF8C}        rts@{c}
+
+@{c 239AFF}________________________________________________________________________________
+
+@{c 23FF8C}  Není  zde  uvedeno,  jak je dëlaný double-buffer@{c} @{c 239AFF}a jak je zajiîtëno updatování
+výsledného bufferu, ale to uù jistë zvládnete sami... ;)@{c}
+
+                          @{c 23FF8C}s pozdravem FiDo of INSANITY@{c}
+
+
+
+
+
+                             @{p Lens2.png 140 62}
+
+
+
+
+
+
+                                                     @{i}@{f 66FFD5}...výsledný vzhled efektu@{f}@{ui}

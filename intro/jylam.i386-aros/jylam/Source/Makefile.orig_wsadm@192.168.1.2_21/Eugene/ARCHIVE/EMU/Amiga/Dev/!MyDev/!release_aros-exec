@@ -1,0 +1,5 @@
+CFLAGS = `sdl-config --cflags`
+LDLIBS = `sdl-config --libs`
+all:
+	gcc $(CFLAGS) $(LDLIBS) main.c -o main -lm -Wall -std=c99 -pedantic -O6
+	cat main.c | perl -pe 's/[\s\r\n]//g' | wc -c

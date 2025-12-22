@@ -1,0 +1,98 @@
+Hello there Amiga freaks!
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This is the final version of our intro G-Force. The compoversion that has
+been spread is not a totally ready version, due to the killing time limit.
+Also, Assembly rules didn't allow usage of disk libraries, so I couldn't
+make the compoversion use my own compatibility library, backstab.
+
+There have been some rumours about the intro being precalculation, or some
+sort of fuzzied chunky2planar-implementation. It really is 2x2 resolution,
+with 1x2 accurate (rastered -- or 'dithered') shading in 16 colors (meaning
+that the edges of polygons are in 2-pix rez and the shading inside polygons
+is in 1-pix rez).
+
+To show that the routine really _is_ realtime, there is a 'free-flight'
+version in the package. This version is AGA only, because making an OCS
+version of this too would have been an overkill :). Please understand that
+pretabling is _not_ the same as precalculation, because pretabling doesn't
+create any limitations to the routine. (Besides, if I could precalc in 8
+seconds, I could make it realtime instead :=)
+
+Even though the compoversion requires AGA, it only uses it for palettes
+and fetchmode (which makes the intro run a 'bit' faster). In the package you
+will also find a version for any Amiga, that runs on 68020 or better.
+Unfortunately a version for 68000/010 would require so much retyping of
+the code (not to mention deoptimizing everything) that I don't consider
+it worth it. And besides, how many A500/A600/A2000 owners there are with
+'000/'010, 2 megs chip and 4 megs fast??
+
+Sorry about the dirty OCS colors, we used palettes that had "small
+scale" instead of full valour from dark to bright, so some colors
+in the palette are doubled etc.. Palettes have been rescaled, so they
+are using colors in much bigger range to cover for the lack of shades.
+It would have been possible to improve these palettes a great deal,
+but I didn't consider it worth the trouble.. *duck*
+
+There are still some "deadline bugs" left in the intro, I didn't want
+to invest energy in fixing "bugs" in sorting the face and so on. These
+could have been done relatively easily, though.. The other 'flicks' that
+look like bugs.. well, I know why they are there, but fixing it in
+this particular routine would need a largeish rewrite (the actual vector
+routine was coded in a big hurry :)
+
+A problem with the music with a4000/040 is due to some special feature
+in '040 that we weren't able to track down (copper interrupt..). The version
+in the package _should_ be free of this problem, even though we haven't
+tested it on an a4000.
+
+
+
+External info on the intro:
+
+Most of the complex objects are designed by Branch (on paper!), and
+some minor objects + Pygmy sun was designed by me (Silver Eagle). Three
+objects (SGI logo, spring and the spiky ball) were imported from a
+Silicon Graphics's demo 'Newton', with a permission from SGI.
+
+Tune "Canberra, Australia" was composed by Papaija, size 42302 bytes.
+
+Coding by me (Silver Eagle), except for the modplayer, which was coded
+by Flame.
+
+Special thanks to Christer Ericson whose =very= fast realtime longword SQRT
+routine I used, I didn't have time to do one myself (I got to know about
+"no disk libraries" - rule a few weeks before the party, shocked :).
+
+Special greets to Andreas Björck, and all the IRC people on #amigascne (and
+amiga scene :-).
+
+Have fun!
+
+Silver Eagle / Pygmy Projects
+
+
+To contact me:
+
+ snail-mail
+
+      Sami Vaarala
+      Sotkapolku 4
+      96910 Rovaniemi
+      Finland
+
+ e-mail
+
+      silvere@freenet.hut.fi
+
+
+
+
+It's Flame writing... Hope you enjoy this package. I would like to send some
+greetz to (if you are missing, nuke me 8):
+
+	reward, jugi, zuikkis, nose, dr. skull, intruder, dr. wacko, sbt,
+	stelios, dweezil, andreas björck, destop, legend, astro, taipan,
+	celebrandil (mode :), saviour, scope, python, jester, chaos, diddle
+	and all #amigascne people and x2ftp.oulu.fi users.
+

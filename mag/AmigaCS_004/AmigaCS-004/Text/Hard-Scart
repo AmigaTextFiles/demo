@@ -1,0 +1,83 @@
+@{xoffset 21}@{d FFCF78}¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+@{xstep 210}@{font ACS-Title.font 18}Návod na vırobu redukce RGB - SCART@{font}
+@{xstep 470}@{c A6FFF8}@{i}EOJ/Degens@{ui}@{c}@{ystep -8}
+
+
+
+ @{xstep 8}@{font ACS-Title.font 18}D@{font}nes má  skoro  kaùdá  televize nebo video konektor @{c EEE639}SCART@{c}.  Pomocí @{c EEE639}SCART@{c}u lze
+kaùdou   Amigu  pêipojit  k takové  @{i}televizi/videu@{ui}  a  zapomenout  na  modulátor
+a neçitelnı obraz.  Tento çlánek vám êekne jak na to.
+
+@{c EEE639}Co budete potêebovat?
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+  @{c EEE639}RG@{c}@{c EEE639}B@{c} konektor do AMIGY - @{c EEE639}23@{c} pin samice @{f FF1914}€@{f}
+  @{c EEE639}SCART@{c} konektor - @{c EEE639}20@{c} pin samec @{f 2831FF}@{f}
+
+   + a) bez audio - stínënı kabel @{c EEE639}6 ùil@{c}
+     b) s audio - stínënı kabel @{c EEE639}7 ùil@{c}, 2× CINCH samec a stínënı kabel @{c EEE639}2 ùíly@{c}
+
+
+@{c EEE639}Popis zapojení
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+                      @{c EEE639}AMIGA@{c}                      @{c EEE639}VIDEO@{c}
+
+                 Pin RGB                 ------  Pin SCART
+               ---------------------------------------------
+                 @{c EEE639}3@{c}       RGB-RED         ------  15
+                 @{c EEE639}4@{c}       RGB-GREEN       ------  11
+                 @{c EEE639}5@{c}       RGB-BLUE        ------  7
+                 @{c EEE639}10@{c}      _CSYNC          ------  20
+                 @{c EEE639}22@{c}      +12V,175mA      ------  8
+                 @{c EEE639}23@{c}      +5V,300mA       ------  16
+                 @{c EEE639}R+L AUDIO@{c}               ------  6         (verze s audio)
+                 @{c EEE639}16+20@{c}   GND(stínëní)    ------  2+5+9+13+17
+
+                          (@{i}pêipojte v kabelu na stínëní, navíc sem u verze
+                           s audio pêipojte stínëní z druhého kabelu@{ui})
+
+
+@{c EEE639}  Praktické rady
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+
+  U  verze  bez  audio  myslím není potêeba komentáê, prostë propojíte konektory
+stínënım kabelem @{c EEE639}6 ùil@{c} podle vıîe uvedeného schéma.  U verze s audio (@{i}to znamená
+ùe  do  na  SCARTu  bude  zapojen  i pin AUDIO IN, tedy pûjde vám do videa hudba
+z poçítaçe@{ui})  udëlejte  to  samé  + pêipájejte @{c EEE639}CINCH@{c}e na stínënı kabel @{c EEE639}2 ùíly@{c}, na
+druhém konci obë ùíly spojte a pêipojte to na @{c EEE639}SCART@{c} pin 6 (Mûùete to vést rovnou
+do  @{c EEE639}SCART@{c}u,  ale rozumëjîí a elegantnëjîí je pouùít místo kabelu@{c EEE639} 6ùil@{c} kabel @{c EEE639}7ùil@{c}
+a vést  audio  do  @{c EEE639}RGB@{c}  konektoru  a odtud  do  @{c EEE639}SCARTu@{c}  jedním  kabelem spoleçnë
+s ostatním) stínëní z tohoto kabelu pêipojte ke stínëní hlavního kabelu.
+
+  Pokud nebudete moci sehnat @{c EEE639}RGB@{c} konektor 23pin, mûùete pouùít bëùnı konektor na
+paralelní  port  (25 pin) pêiçemù musíte 2 piny @{f EFFF00}upilovat@{f}, aby se veîel do Amigy.
+Potom ale pozor na posun v oznaçení pinû!
+
+
+   @{c EEE639}RGB@{c}-@{c EE726B}zezadu@{c}
+	       ---------------------------
+	  pin1 \ . . . . . . . . . . . . / pin12
+	  pin13 \ . . . . . . . . . . . / pin23
+	         -----------------------
+
+
+   @{c EEE639}SCART@{c}-@{c EE726B}zezadu@{c}
+	         -------------------
+	  pin 1 |. . . . . . . . . .|    pin 10
+	  pin 2 | . . . . . . . . . .\   pin 20
+	         ---------------------
+
+
+@{i}Pozn.:  Autor nepêebírá zodpovëdnost za jakékoli îkody zpûsobené tímto
+        kabelem, @{c EECE4A}a to je vîe pêátelé@{c}.@{ui}
+
+
+
+
+@{font ACS-Normal.font 8}
+PS. Pokud jsem @{c EEE240}já hlava vyhulená@{c} náhodou na nëco zapomnël zasílejte
+@{ystep 3}    dotazy na <@{i}skramusky@kvt.ujep.cz@{ui}> nebo na adresu:
+
+
+              @{i}  Josef Skramuskı, Masarykova 137, ÚL, ÇR@{ui}
+@{ystep 3}            S úsmëvem na tváêi :) sepsal EOJ of @{c EEE240}D@{c}.@{c EEE240}E@{c}.@{c EEE240}G@{c}.@{c EEE240}E@{c}.@{c EEE240}N@{c}.@{c EEE240}S@{c}.
+@{font}

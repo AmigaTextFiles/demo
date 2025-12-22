@@ -1,0 +1,45 @@
+; Installer for the magnificent Official Eurochart by Depth
+
+(message "Welcome to the Official Eurochart install script \n Theres nothing to it realy, so we haven't included different levels of operation mode. \n Please remember that BOTH archives needs to be extracted to the same place.")
+
+(set @default-dest
+ (askdir 
+	(help "Just select the stupid dir!!! For christ sake.. Go buy a PC..")
+	(prompt "Please select a dir for The Official Eurochart.\nA directory named EuroChart28 will be created there.")
+	(default "")
+ )
+)
+
+(if (not (exists "Fonts:EuroChartSmall.font"))
+ (if (not (exists "Fonts:EuroChartBig.font"))
+  (copyfiles
+	(help "What are you?? Bill I'm to sexy for my mom Gates?? I'm copying some files you jerk!")
+	(prompt "Copying requiered fonts to FONTS:")
+	(all)
+	(dest "FONTS:")
+	(source "fonts")
+  )
+ )
+)
+
+(set @default-dest 
+	(tackon @default-dest "EuroChart29")
+)
+
+(makedir @default-dest)
+
+(copyfiles
+	(help "What are you?? Bill I'm to sexy for my mom Gates?? I'm copying some files you jerk!")
+	(prompt "Copying the Official Eurochart")
+	(all)
+	(dest @default-dest)
+	(source "")
+)
+
+(delete (tackon @default-dest "install"))
+(delete (tackon @default-dest "install.info"))
+(run
+   (cat 'delete "' (tackon @default-dest 'fonts') '" all quiet')
+   (prompt "")
+)
+(exit)

@@ -1,0 +1,351 @@
+             ~~~~HOW TO USE COMMANDS/EFFECTS ON A TRACKER
+                                  By FBY
+                       translation done by Scizo^dcb
+                                 (LESSON 2)
+
+ Perfect, if you reached this point it means that:
+
+ 1 - You come from Lesson 1, so I suppose that the thing really interests you!
+ 2 - You already know how a ~tracker ~works ~but ~you want to read ~again about it
+     a bit, especially about the commands.
+
+ Anyway let's start back from ~where we dropped ~last ~time, ~precisely ~on ~my ~invite
+ to grab tracker and instruments.~~~Good. If trying to you had problems I invite you to
+ try again under my guidance.
+
+ Got~~~~a~~~~tracker at reach of hand? (for example FastTracker2 which~~~~I~~~~strongly~~~~suggest
+ you) Once ~the ~program ~is ~launched ~you ~will ~be ~in ~front ~of ~that ~screen with a lot
+ of ~tracks ~and ~loads ~of ~numbers. ~Good. ~Meanwhile ~we ~need ~to ~manage ~loading ~in
+ memory some instrument.~~~~Usually in these trackers there's always~~~~a menu regarding
+ disk ~~operations, ~so ~~look ~~for ~~something ~~like ~~Disk ~Operation ~~or ~~something ~like ~that.
+ Done yet ? ~Now ~look carefully ~and ~on ~my ~website ~you ~will ~~find ~a ~library with ~a
+ moderate amount of instruments,FBY Samples Library...nothing~~~~too~~~~hilarious,~~~just what
+ you need to start doing something...~~~Ok,~~~~once loaded~~~~~a~~~~~bit of samples you can start
+ straight on composing something... you'd ask "how"? Simply using your ~keyboard as
+  a ~real ~music ~keyboard. Every ~key ~is ~indeed (aside ~function ~keys, special keys and
+ numerical keypad) a ~representation of a note. Usually ~in a ~tracker ~the ~keyboard ~is
+ mapped like this:
+
+ From "Z" to "M" notes of lower Octave
+ From "A" to "J" "sharp" (#) notes of lower Octave
+ From "Q" to "U" notes of higher Octave
+ From "1" to "7" "sharp" (#) notes of higher Octave
+
+ So used the ~keys ~as ~described ~above to write notes... nothing will happen though
+ if ~you ~don't ~activate ~Editing ~mode. ~Usually ~it's ~just ~enought ~to ~press ~spacebar to
+ activate it and press it again to deactivate ~it. To ~verify ~if ~you're ~in ~Editing ~or ~not
+ you can see (for example on FastTracker2) if the screen borders are grey~~~(Active)
+ or black (Passiv... errr... Deactive).
+
+ Good. Now I leave you in peace to let you take first steps...
+
+ R O N F . . . R O N F . . . R O N F . . . R O N F . .
+
+ Ehm....~~~eh? You already tried?~~~~Want other notions?~~~~damm, not even the time to take
+ a nap... oh well, let's go on....
+
+ Once ~this ~~part ~~is ~~over ~~you ~~would ~~start ~~using ~~some ~more ~~effect, ~to ~~make ~~your
+ experiments as ~closer ~to ~a ~real ~song ~as ~possible. Here's the list of most common
+  ~effects which you can find and use on a tracker:
+
+ 1 - Portamento UP                            9 - Play with Offset
+ 2 - Portamento DOWN                        A - Volume Slide
+ 3 - Portamento TO NOTE                      B - Jump to Pattern
+ 4 - Vibrato                                  C - Volume
+ 5 - Portamento TO NOTA + Volume Slide        D - Pattern Break
+ 6 - Vibrato + Volume Slide                    ~~~E - Secondary Effects
+ 7 - Tremolo                                  F - Speed (Speed + Tempo)
+ 8 - Unused
+
+ Watch out~~~-~~~The order~~~~I~~~~chose to~~~~~show you their functioning won't~~~~~be~~~~the numerical
+ one, rather the best one for a linear and simpler comprehension.
+
+ What's ~all ~this ~stuff ? Well ~it's surely way interesting, but you're gonna see... Try
+ to read ~and ~learn ~the ~following rows ~and ~maybe try them ~on ~the ~tracker. Not ~all
+ ~of them are so easy to use, so you should better ~start with simpler ones, volume
+ controls related ones for instance. Here's the most common effects in detail:
+
+ = = = = =
+ # 1 - Portamento UP (*)
+
+ Syntax: Values ranging from 100 to 1FF. Applies both with and without a note.
+ Description: ~Acts ~on ~note ~tone, ~increasing ~it ~of ~a ~bit ~(depending ~on ~~the ~intensity
+  you decide to apply, from ~00 ~(nothing) ~~to ~FF) ~with ~a ~Slide ~~effect. ~Timespan ~of ~a
+ slide will always be within a second (even if intensity is FF...)
+ °PROGDIR:data/articles/coding4/track_2_1.raw°64°241°100°
+ = = = = =
+ ~# 2 - Portamento DOWN (*)
+
+ Syntax: Values ~ranging ~from ~200 to 2FF. Applies both with and without a note.
+ Description: Acts like Portamento UP, just in the opposite way.
+ °PROGDIR:data/articles/coding4/track_2_2.raw°64°300°70°
+ You can see ~on ~the ~example ~that you can use it also on an already played note.
+ (repetition~~~~~to~~~~avoid misunderstandings,~~~~see SYNTAX) Obviously if note sounds stops
+ on row 01, we're not gonna listen any slide... :)
+
+ = = = = =
+ # 3 - Portamento TO NOTA (*)
+
+ ~Syntax: Values ~ranging from 300 to 3FF. Doesn't apply in presence of played note.
+ Description: Another effect which acts on note ~tone, this time in a more ~intelligent
+  and sofisticated way. Firstly you need to write ~the ~note ~toward ~which ~you ~want
+ to ~bring ~the ~~tone ~of ~the ~~played ~note. Then ~you ~need ~to ~specify ~the ~speed ~with
+ which  that ~note  has ~to ~~be  reached. ~This ~~allows ~~both ~~making  ~~highly  precise
+ Portamentos and to decide Slide dynamic,which means you can either make it slow
+ and ~very ~slide ~or ~quick, or ~even ~mostly ~unhearable, ~similar ~to ~an ~Acciaccatura, or
+ Hammering. It could happen that the value you chose is too low ~and that it is not
+ possible ~to ~reach ~the ~desired ~note. ~Try ~to ~believe. ~But ~let's ~have ~some ~examples
+ for this effect which should be understood in the detail:
+ °PROGDIR:data/articles/coding4/track_2_3.raw°128°432°10°
+Example1: In this case D-2 notes gets reached with a full slide effect...
+
+ Example 2: ~As ~~you ~~can ~~see ~~you ~~can ~~place ~the ~effect ~on ~several ~rows ~without
+ having ~to ~repeat ~the ~same note if the lines are ~in ~succession. Note ~gets reached
+ in this case also, but with a slower and loger slide...
+
+ Example3 : The example above could also be written like this...~~Total intensity is still
+ "09", since in ~case ~there ~is ~the ~effect ~3 ~without ~intensity (00) ~the ~last one gets
+  used if different from 0. This one's hard, isn't it? :)
+ °PROGDIR:data/articles/coding4/track_2_4.raw°128°287°80° Example4: Note gets reached quickly and results as an hammering.
+
+ Example5: Ui!~~~~To pretend to reach C in the higher octave with just~~~~"09"~~~~as~~~~intensity
+ it's a little of an illusion... 8^) Try with an intensity of at least "20".
+
+ Note: If ~~writing ~a ~note ~(the ~~tone ~~destination ~~one) ~~you ~~erase ~~the ~number ~of ~the
+ instrument (which in this case  was 10...) there is another Feature, which lets you
+ keep the volume of the previous note. Let's see another example:
+ °PROGDIR:data/articles/coding4/track_2_5.raw°112°340°50°
+  In This case note volume is~~~~"kept"~~~~to 22,~~~~~otherwise it would have been reset~~~~to~~~~40.
+
+ = = = = =
+ # 4 - VIBRATO
+
+ Syntax: Speed - ranging from 40x to 4Fx. Intensity - ranging from 4x0 to 4xF.
+ ~       Applies both with and without a note.
+ Description: Effect ~which ~acts, even ~if more ~sensitively ~than ~others, on ~note ~tone
+ (so on instrument frequency). You probably already know the Vibrato effect,~~~~~so I'm
+ going straight to the examples.
+
+ °PROGDIR:data/articles/coding4/track_2_6.raw°96°149°150°
+ Simple ~example ~of ~a ~Vibrato ~effect ~of ~medium ~speed (7) ~and pretty ~low ~intensity
+ (3) (you ~can ~barely hear ~it...). As ~you ~can ~see you can ~write the ~note ~just once
+ and ~then repeat ~the ~4 ~as ~long ~as ~you ~want ~it ~to last. To ~be clear: in ~this~ case
+ effect starts from row 2 and stops on row 5.
+
+ = = = = =
+ # 7 - TREMOLO
+
+  Syntax: Speed - ranging from 70x to 7Fx. Intensity - ranging from 7x0 to 7xF.
+ ~       Applies both with and without a note.
+ ~Description: Usage ~is just the same as Vibrato, but it works on Volume instead of
+ Tone. Obvious!
+ °PROGDIR:data/articles/coding4/track_2_7.raw°96°154°150°
+
+ Nothing to say, it's just like before...
+
+ = = = = =
+ # 8 - Unused
+
+ = = = = =
+ # 9 - Play with OFF-SET
+~
+ ~Syntax: Applies with note only.
+ Description: This ~effect ~is very ~particoular. ~Someone think it's useless while others
+ have fune using it for the casualty ~of the results...~~~~:I Good. It means that the note
+ doesn't get played from its beginning, but a little further.
+
+-
+  °PROGDIR:data/articles/coding4/track_2_8.raw°208°431°10°
+
+   oo ~~@ Point from which it gets played
+   oo
+   oo
+   oo - unplayed part
+
+
+ Note gets played after ~the ~"real" ~beginning. As ~if ~~someone ~~cut ~~a ~~tiny ~~bit ~of ~~the
+ wave. The Timbre of the instrument gets sensitively changed.
+
+-
+
+ °PROGDIR:data/articles/coding4/track_2_9.raw°208°436°10°
+
+   ~~~~o                                            ~~~~@  Point from which
+   ~~~~o                                             ~o  it gets played
+   ~~~~~|~~~ o o o o o o    Unplayed  Part    o o o o o o~ |
+
+
+ Still another timbre variation, and huge this time around...
+
+
+-
+ °PROGDIR:data/articles/coding4/track_2_10.raw°176°419°10°                                                                @
+                                          ~~Point from which we try to play it
+ If~~~~the instrument has~~~~a~~~~~short duration ed the offset value is too high,~~~then probably
+ we ~are ~not ~gonna ~listen ~anything (wanna ~try ~playing ~an ~instrument after it's ~end
+ anyone?)
+ °PROGDIR:data/articles/coding4/track_2_11.raw°112°313°10°
+-
+ ~Just like ~effect 3, if ~there ~is ~"00" ~set ~instead ~of ~instrument~ number ~the ~note will
+ be played at the same volume of the previous one. In this case "2A".
+
+ = = = = =
+ # A - VOLUME Slide (*)
+
+ Syntax: ~~~~Intensity Increment - values ranging from A0x to AFx.
+         Intensity Decrement - values ranging from Ax0 to AxF.
+ ~       ~~~Applies both with and without a note.
+ ~Description: ~~Pretty ~~good. ~~This ~~is ~~a ~~very ~~nice ~~effect. What ~~does ~this ~~effect ~do?
+ Simple ~~and ~~nice. ~Increments ~~or ~~decrements ~~volume (~see ~~SYNTAX) ~~based ~~on ~~the
+ applied intensity.
+
+ °PROGDIR:data/articles/coding4/track_2_12.raw°128°306°65°
+Example1: ~Volume ~gets ~lowered ~from ~"40" ~(remind ~you ~that... ~if ~there's ~nothing ~~on
+ the side of note it the maximum/original volume is applied) to about "10" and pretty
+  drastically. If ~the ~instrument ~is ~longer ~enough ~it ~an ~effect ~similar ~to ~the ~"reeverb"
+ ~could come out of it...
+
+ Example2: ~Volume ~gets ~drastically ~set to zero! Note: (to be read after the ~reading
+ of "C" effect workings)
+
+ °PROGDIR:data/articles/coding4/track_2_13.raw°128°306°60°
+So. This ~is~ a ~delicate ~point. ~Apparently ~the results ~of ~this ~comparation ~~might ~look
+ identical, ~~because ~~~with ~~both ~~~methods ~~you ~~~get ~~~to ~~a ~~~final ~~volume ~~of ~"10". That's
+ ~partially true, ~but ~while ~with ~"C" ~effect ~the ~volume ~gets ~immediatly switched from
+ 40 to 10 (with a clear and not so nice break), with "A" ~effect ~all ~the intermediate
+ values between the "initial" volume and the one "to be reatched" get played,~~~~which
+ a ~consequent ~high ~sense~ of ~softness ~and ~fluidness. In ~this ~case it can be ~called
+ Volume Fade.
+
+ = = = = =
+ # B - Pattern JUMP
+
+  Syntax: Applies both with and without a note.
+ Description: ~~Page ~~Jump. It's ~~just ~~used ~~to ~~jump ~to ~~another ~~pattern ~~in ~~the ~~sorted
+ sequence. Just like Pattern Break, ~the ~row on ~which ~the ~effect is located ~it's the
+ last to be played.
+
+ = = = = =
+ # C - VOLUME
+ ~
+ ~Syntax: Values ~ranging ~from ~~C00 ~to ~~C40. ~Applies ~~both ~with ~and ~without ~a ~note.
+ Description:~~~~This surely~~~~~is the~~~~~main command and also the most used one.~~~~64 levels
+ of volume (I~~~~~remind you that numbers are hexadecimal,~~~~so 40H) are for the moment
+ the maximum that a tracker can offer and I gotta say it ain't bad at all!~~~The usage
+ of the effect it's very simple and can be resumed with a single example.
+
+ °PROGDIR:data/articles/coding4/track_2_14.raw°96°146°150°
+
+ Simple: ~note ~C-2 ~has ~volume ~40. ~Note ~D-3 ~has ~volume ~zero (but ~then ~again ~why
+ the hell did I write it?!?). Note A-4 has volume 0E (14 in decimal...)
+ ~
+  = = = = =
+ # D - Pattern Break
+
+ Syntax: Just write D00...!
+ Description:~~~~Pattern~~~~~Interruption.~~~~It jumps straight~~~~on~~~~the~~~~next~~~~pattern~~~~in~~~~the sequence.
+ Very clear! Note. The line on which the D effect is on gets played aswell.
+
+ °PROGDIR:data/articles/coding4/track_2_15.raw°96°140°150°
+
+ The~~~~pattern gets played until row 05~~~(INCLUDED)~~~and then jumps~~~~on~~~~the~~~~next~~~~pattern
+ ~in sequence.
+
+ = = = = =
+ # Ex - Various Secondary Effects
+
+ I wouldn't spend lot of time, at least for ~this ~time, ~to ~stop ~on ~these ~effects: less
+ importance, bigger complexity... (!)
+
+ = = = = =
+  # F - Speed & Tempo
+
+ Syntax:
+  Speed: values ranging from F00 to F1F (the smaller, the quicker).
+  Tempo: values ranging from F20 to FFF (the smaller, the slower).
+ Description: Tempo, by default, is "7D" (125 in decimal).~~~(default = if nobody has yet
+ set a value,~~~~this values gets auto setted,~~~~hence the default...).~~~Default speed is "06"
+ ~
+ So... a little definition of Speed and Tempo just ~to ~diversificate ~them: Speed ~is ~the
+ base speed of the song, while Tempo is the speed in detail... In other words,~~~~while
+ speed has just "32" possible values on the speed scale, from ~minimum to maximum
+ possible, tempo has "224" of ~them. This ~lets ~you ~understand that even ~a ~variation
+ of~~~~~1 in the speed could be way more relevant than one of the tempo...~~~~ok,~~~~but let's
+ see a... what ?? .. an example, of course!
+
+ °PROGDIR:data/articles/coding4/track_2_16.raw°128°349°50°
+
+  "3" degrees increment of SPEED "3" degrees of TEMPO.
+
+ As you can see the ~increment ~is ~just the same, but while in the former case the
+ speed on row 04 doubles, in the latter gets just increased a lot.
+
+ = = = = =
+ # 5 - Portamento TO NOTE + VOLUME Slide (*)
+
+ Syntax: ~~~~Intensity Increment - values ranging from 50x to 5Fx.
+         Intensity Decrement - values ranging from 5x0 to 5xF.
+         Applies both with and without a note.
+         Has to be used after the usage of effect "3".
+ Description:~~~~So...~~~this effect,~~~as well as the next one you're going to see,~~~has mainly
+ born as a composer need,~~~~~which having just a single column of effect wasn't able
+ to execute~~~~a~~~~one tone slide together with~~~~a~~~~volume fade.~~~talkin cheaper you couldn't
+ lower the volume of a note while you are already modifying it with the~~~~portamento
+ ~effect. ~Here, ~this ~~effect ~~ties ~two ~~effects ~~together, ~the ~"3" ~and ~~the ~"A". ~Do ~~you
+ remind ~what ~this ~two ~~effects ~do ? ~3 ~is ~~the ~~Portamento ~to ~~Note, A ~is ~~the ~way
+ sofisticated Volume Slide. Here comes the effect "5" which uses the intensity with
+ the same dynamic as in effect A,~~~~while at the same time~~~~~it makes a~~~~Portamento to
+ the ~chosen ~note ~with ~the ~last ~used ~3 ~effect. For ~this reason in the SYNTAX it's
+ written that~~~~it~~~~MUST~~~~be~~~~~used after the effect 3,~~~otherwise effect 5 has~~~no~~~meaning...
+ let's see:
+
+-
+ °PROGDIR:data/articles/coding4/track_2_17.raw°128°351°50°
+
+ ~Example 1: This is an ~ipotetical ~case of a ~two columns track for the effects. Note
+ E-2 gets slided through ~toward the E-1 note with the Slide "3" effect, and on row
+ 05~~~~it~~~~gets topped~~~~by~~~~the fade effect which~~~~is~~~~mild~~~~in~~~~the~~~~beginning,~~~~and gets stronger
+ in the following lines while the 3 effect continues what it was doing~~~~(I remind you
+ that~~~~in~~~~this case 300~~~~is~~~~~the same as saying 30A).~~~~We know anyway that we can't
+ have two effects column on a common tracker.
+
+ Example2: With the 5 effect we do the same thing ~using ~a ~single ~effects ~column.
+ The 3 effect conginues with the same intensity ~as ~the ~one ~on ~the ~last ~used ~line
+ (3A) ~while ~the ~~intensity ~~of ~~the ~~volume ~~effect ~~gets ~~written ~~near ~~the ~~5 ~~and ~~it's
+ dynamic ~it's, as ~already ~stated, the ~same ~as ~in effect "A". Impossible ~to ~explain it
+ better this!
+
+
+  = = = = =
+ # 6 - Vibrato + VOLUME Slide (*)
+ ~
+ ~Syntax: ~~~~Intensity Increment - values ranging from 60x to 60F.
+         Intensity Decrement - values ranging from 6x0 to 6xF.
+         Applies both with and without a note.
+         Has to be used after the usage of effect "4".
+ Description: Nothing much ~to ~say ~about this. Did ~you ~understand ~how ~the ~previos
+ effect works?~~~Good.~~~This does the same but instead of Portamento to Note,~~~~it does
+ it with the Vibrato.
+
+ °PROGDIR:data/articles/coding4/track_2_18.raw°96°147°150°
+
+ ~Vibrato effect starts at row 02. At row 05 the volume ~starts ~decreasing (still like
+ effect A) while at the same time the Vibrato effect goes on. Very simple!!
+
+ = = = = =
+ (*) - VERY IMPORTANT
+
+  All ~~the ~~effects ~~marked ~~with ~~a ~~(*) ~~have ~~a ~~different ~~rendering ~~depending ~~on ~the
+ pattern ~scan ~speed (F)... Example: ~A ~Portamento ~Up ~effect ~of ~102 ~with ~Speed ~06
+ will have the same effect as one of 104 with speed of 03.
+
+ In ~other ~words doubling ~SPEED (be it ~Speed ~or~ Tempo) ~you ~have ~the intensity of
+ the ~used ~effect. ~Everything ~clear ? ~In ~case ~of this ~lesson ~the ~effects have been
+ tested with a Standard Speed, (Speed=6 and Tempo=7D)
+
+ Pheeeeww.. anf.. anf..~~~~let me cut myself some slack. I hope this stuff will keep you
+ busy for a while. before having some good knowledge about ~all ~these ~effects and
+ the usage~~~~of~~~FastTracker2 some time will certainly pass,~~~~so I believe that~~~~I~~~~will have
+ ~some time to rest.. so wish me a Good Night, while I wish you:
+
+ HAPPY WRITING !!!

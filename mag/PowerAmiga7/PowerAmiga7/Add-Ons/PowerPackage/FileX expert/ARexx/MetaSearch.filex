@@ -1,0 +1,307 @@
+
+                       /* MetaSearch Engine v0.37 */
+                 /* Casting by Mind Engine on 16.03.03 */
+
+numeric digits 14
+options results
+
+signal on break_c
+signal on break_e
+signal on failure
+signal on halt
+signal on syntax
+signal on ioerr
+
+lib.0 = 2
+lib.1 = 'rexxreqtools.library'
+lib.2 = 'rexxtricks.library'
+
+do i = 1 to lib.0
+if ~show(libraries,lib.i) then
+ if ~addlib(lib.i,0,-30,0) then
+  quit('Cannot Open 'lib.i!'',i)
+end
+
+paws = 'T:' /* Dir for save logs */
+loga = 1    /* Enable/Disable log */
+clipa = 1   /* Write entry to clip */
+
+GETATTR APPLICATION SCREEN; scrink = result
+GETATTR VIEW MARK; IF result = TRUE THEN SETBLOCKMARK
+
+infors = 'Enter hex combination, use ?? for masking.' '0A'x,
+         'Note: dont use full mask as first & last entry!' '0A'x,
+         'Good finding, my friend! :)'
+
+    entro = rtgetstring(,Infors,'Data Input Request...',,,
+    'rtgs_backfill = false' 'rt_pubscrname = "'scrink'"',
+    'rtgs_flags = gsreqf_centertext')
+
+    if rtresult = 0 then exit
+    entro = compress(entro,','); consta = entro
+
+if clipa then ok = writeclipboard(0,entro)
+
+matr.0 = Length(entro)/2
+
+call logger
+
+if verify(upper(entro),'0123456789ABCDEF?') ~= 0 then do
+REQUESTNOTIFY '"You enter invalid hex sequence!"'
+exit
+end
+
+do i = 1 to matr.0
+ matr.i = substr(entro,1,2)
+ entro = delstr(entro,1,2)
+end
+
+s = matr.0; rest = 0; t = 0
+
+if matr.1 == '??' | matr.s == '??' then do
+REQUESTNOTIFY '"You chicken shit! I warn you about mask!"'
+exit
+end
+
+do while finda(matr.1)
+
+st = 0; rpt = 0
+
+if matr.0 = 1 then st = 1
+
+  do i = 2 to matr.0
+
+  if matr.i == '??' then do
+   GETATTR VIEW CURSORPOS
+   GOTOBYTE result + 1
+   end
+     else
+      if getta(matr.i) then do
+       if i = matr.0 then st = 1
+       GETATTR VIEW CURSORPOS
+       GOTOBYTE result + 1
+      end
+        else
+          break
+  end
+
+ if st then do
+   st = 0 
+   GOTOBOOKMARK 1
+
+call logosec
+call dataset
+
+sens.0 = 1
+sens.1 = '$' || off || ' $' || byte
+
+t = t + 1
+
+if ~stemcopy('sens',1,'pens',t) then do
+REQUESTNOTIFY '"Internal Error!"'; exit
+end
+
+   REQUESTRESPONSE BUTTONS '"Yep|Nop"' PROMPT '"Continue Quest?"'
+   if rc = 0 then do
+    call logofin; call viewtech; exit
+   end
+  rpt = 1
+ end
+
+end
+
+call logofin
+call viewtech
+
+exit
+
+
+getta:
+parse arg matra
+matra = upper(matra)
+GETATTR VIEW CURSORPOS
+posit = result
+GETBYTES posit 1
+
+ if pos('?',matra,1) ~= 0 then do
+  ps = verify(matra,'?')
+   if substr(matra,ps,1) ~= substr(result,ps,1) then do
+    return 0
+   end
+    else
+    return 1
+ end
+
+if result ~= matra then
+ return 0
+else
+ return 1
+
+
+finda:
+parse arg matrix
+
+GETATTR FILE FILELEN
+lena = result; posit = 0
+
+  if pos('?',matrix,1) ~= 0 then
+   do forever
+     ps = verify(matrix,'?')
+     SETBOOKMARK 1
+     GETATTR VIEW CURSORPOS
+     posit = result
+     if rpt = 1 then posit = posit + 1
+     GETBYTES posit 1; rpt = 0
+    if substr(matrix,ps,1) ~= substr(result,ps,1) then do
+     GOTOBYTE posit + 1
+    end
+      else do
+        GOTOBYTE posit + 1; return 1
+      end
+    if posit >= lena-1 then do
+    REQUESTNOTIFY '"Sorry, no matches! =("'; return 0
+    end
+   end
+
+FIND QUIET HEX matrix; recode = rc
+  if recode ~= 5 then do
+    SETBOOKMARK 1
+    GETATTR VIEW CURSORPOS
+    GOTOBYTE result + 1
+  end
+    else do
+      REQUESTNOTIFY '"Sorry, no matches! =("'
+      return 0
+      end
+
+return 1
+
+
+logger:
+
+if loga ~= 1 then return
+
+lg.0 = 8
+lg.1 = 'Date & Time: ' || Date() Time()
+lg.2 =  Center('',36,'-')
+
+GETATTR FILE FULLNAME; name = result
+
+nimo = paws || filepart(name) || '.log'
+
+lg.3 = 'Name: ' || name
+
+GETATTR FILE FILELEN
+
+lg.4 = 'Size: ' || result || '/$'|| d2x(result)
+lg.5 = 'Type: ' fileid_identify(name,'D')
+lg.6 = Center('',36,'-')
+lg.7 = 'Mask: ' || '$' || entro
+lg.8 = Center('',36,'-')
+
+if ~writefile(nimo,'lg') then do
+ REQUESTNOTIFY '"Write to log file failed!"'
+ loga = 0
+end
+
+return
+
+
+logosec:
+
+if loga ~= 1 then return
+
+call dataset
+
+lg.0 = 1
+lg.1 = 'Offset: $' || off || Center('',4,' ') || ' Entry: $' || byte
+
+if ~writefile(nimo,'lg','A') then do
+ REQUESTNOTIFY '"Write to log file failed!"'
+ loga = 0
+end
+
+rest = rest + 1
+
+return
+
+
+dataset:
+
+GETATTR VIEW CURSORPOS; off = result; GETBYTES off matr.0; byte = result
+off = d2x(off)
+do while length(off) ~= 8
+ off = '0' || off
+end
+
+return
+
+
+logofin:
+
+if loga ~= 1 then return
+
+lg.0 = 2
+lg.1 = Center('',36,'-')
+lg.2 = 'Founds: ' || rest
+
+if ~writefile(nimo,'lg','A') then do
+ REQUESTNOTIFY '"Write to log file failed!"'
+ loga = 0
+end
+
+return
+
+
+logoend:
+
+if loga ~= 1 then return
+
+lg.0 = 1
+lg.1 = 'Fatal exit!'
+
+if ~writefile(nimo,'lg','A') then do
+ say '"Write to log file failed!"'
+end
+
+return
+
+
+viewtech:
+
+if pens.0 = 'pens.0' then return
+
+          wins.title = 'Find Mask: $' || consta
+          wins.gadgettext   = '_Jump|_Exit'
+          wins.pubscreen    = scrink
+          wins.font         = 'SCREEN'
+          wins.sort         = 'FALSE'; wins.multiselect  = 'FALSE'
+     
+     if viewlist('pens','wins','dest') then do
+
+        select
+            when dest.gadget = 1 then GOTOBYTE x2d(substr(dest.1,2,8))
+        end
+     end
+
+return
+
+break_c:
+break_e:
+failure:
+halt:
+syntax:
+ioerr:
+call logoend
+Text = 'Something wrong! I am die! +('
+Gadtxt = '_GoodBye!'
+Title = 'Last message'
+respon = 0
+call messa
+exit
+
+messa:
+call rtezrequest(Text,Gadtxt,Title,,
+  'rt_pubscrname = "'scrink'"' 'rtez_flags = ezreqf_centertext',
+  'rtez_defaultresponse = 'respon'')
+return

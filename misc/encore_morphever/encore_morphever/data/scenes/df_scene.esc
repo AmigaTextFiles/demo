@@ -1,0 +1,2829 @@
+{
+  "actions": [
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              1.42999995,
+              8.74376392
+            ],
+            "interpolation": "linear",
+            "time": 1380
+          },
+          {
+            "float_values": [
+              0.0,
+              1.42999971,
+              1.39380836
+            ],
+            "interpolation": "linear",
+            "time": 1520
+          },
+          {
+            "float_values": [
+              -0.39999986,
+              1.42999971,
+              -5.60904503
+            ],
+            "interpolation": "linear",
+            "time": 1160
+          },
+          {
+            "float_values": [
+              0.0,
+              1.42999971,
+              -10.11467171
+            ],
+            "interpolation": "linear",
+            "time": 740
+          },
+          {
+            "float_values": [
+              0.0,
+              1.42999971,
+              -14.17648888
+            ],
+            "interpolation": "linear",
+            "time": 560
+          },
+          {
+            "float_values": [
+              0.09648502,
+              1.2429558,
+              -16.43081856
+            ],
+            "interpolation": "linear",
+            "time": 960
+          },
+          {
+            "float_values": [
+              0.0,
+              1.42999971,
+              -20.15536308
+            ],
+            "interpolation": "linear",
+            "time": 800
+          },
+          {
+            "float_values": [
+              0.0,
+              1.42999971,
+              -23.78189468
+            ],
+            "interpolation": "linear",
+            "time": 2360
+          },
+          {
+            "float_values": [
+              3.01691151,
+              1.42999971,
+              -35.81819153
+            ],
+            "interpolation": "linear",
+            "time": 520
+          },
+          {
+            "float_values": [
+              0.0,
+              1.42999971,
+              -38.98810577
+            ],
+            "interpolation": "linear",
+            "time": 7400
+          },
+          {
+            "float_values": [
+              0.0,
+              1.42999995,
+              -59.45911789
+            ],
+            "interpolation": "linear",
+            "time": 6020
+          },
+          {
+            "float_values": [
+              0.0,
+              5.49827433,
+              -67.12097931
+            ],
+            "time": 20
+          },
+          {
+            "float_values": [
+              -2.12624145,
+              5.30293465,
+              -65.88397217
+            ],
+            "interpolation": "linear",
+            "time": 7660
+          },
+          {
+            "float_values": [
+              3.24694824,
+              5.30293465,
+              -64.71289062
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "camera_1"
+        }
+      ],
+      "loops": 1,
+      "name": "camera_1_trans_action",
+      "start_time": 0,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              3e-06,
+              0.0,
+              -0.0,
+              3e-06,
+              0.0,
+              -0.0,
+              3e-06,
+              0.0,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 1520
+          },
+          {
+            "float_values": [
+              3e-06,
+              -35.322993,
+              -0.0,
+              3e-06,
+              -35.322993,
+              -0.0,
+              3e-06,
+              -35.322993,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 1160
+          },
+          {
+            "float_values": [
+              3e-06,
+              0.0,
+              -0.0,
+              3e-06,
+              0.0,
+              -0.0,
+              3e-06,
+              0.0,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 560
+          },
+          {
+            "float_values": [
+              3e-06,
+              0.0,
+              -0.0,
+              3e-06,
+              0.0,
+              -0.0,
+              3e-06,
+              0.0,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 280
+          },
+          {
+            "float_values": [
+              -6.526195,
+              -1.312011,
+              -12.831987,
+              -6.526195,
+              -1.312006,
+              -12.831987,
+              -6.526195,
+              -1.312034,
+              -12.831987
+            ],
+            "interpolation": "bezier",
+            "time": 1220
+          },
+          {
+            "float_values": [
+              3e-06,
+              0.0,
+              -0.0,
+              3e-06,
+              0.0,
+              -0.0,
+              3e-06,
+              0.0,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 980
+          },
+          {
+            "float_values": [
+              3e-06,
+              0.0,
+              -0.0,
+              3e-06,
+              0.0,
+              -0.0,
+              3e-06,
+              0.0,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 2380
+          },
+          {
+            "float_values": [
+              3e-06,
+              80.856032,
+              -0.0,
+              3e-06,
+              80.856032,
+              -0.0,
+              3e-06,
+              80.856032,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 520
+          },
+          {
+            "float_values": [
+              3e-06,
+              0.0,
+              -0.0,
+              3e-06,
+              0.0,
+              -0.0,
+              3e-06,
+              0.0,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 5700
+          },
+          {
+            "float_values": [
+              3e-06,
+              0.0,
+              -0.0,
+              3e-06,
+              0.0,
+              -0.0,
+              3e-06,
+              0.0,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 1940
+          },
+          {
+            "float_values": [
+              12.639452,
+              0.0,
+              -0.0,
+              12.639452,
+              0.0,
+              -0.0,
+              12.639452,
+              0.0,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 5780
+          },
+          {
+            "float_values": [
+              2.899534,
+              0.0,
+              -0.0
+            ],
+            "time": 20
+          },
+          {
+            "float_values": [
+              3e-06,
+              -25.770382,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 7660
+          },
+          {
+            "float_values": [
+              3e-06,
+              34.660949,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "camera_1"
+        }
+      ],
+      "loops": 1,
+      "name": "camera_1_trans_action",
+      "start_time": 1380,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              1.42999995,
+              -33.30614853
+            ],
+            "interpolation": "linear",
+            "time": 2160
+          },
+          {
+            "float_values": [
+              0.32906103,
+              1.42999995,
+              -31.42334747
+            ],
+            "interpolation": "linear",
+            "time": 720
+          },
+          {
+            "float_values": [
+              3.72084999,
+              1.42999995,
+              -13.30771637
+            ],
+            "interpolation": "linear",
+            "time": 1100
+          },
+          {
+            "float_values": [
+              -0.25241935,
+              1.42999995,
+              -29.88053513
+            ],
+            "interpolation": "linear",
+            "time": 1860
+          },
+          {
+            "float_values": [
+              -0.25241935,
+              1.42999995,
+              -49.33856583
+            ],
+            "interpolation": "linear",
+            "time": 1540
+          },
+          {
+            "float_values": [
+              -0.25241935,
+              1.42999995,
+              -49.33856583
+            ],
+            "interpolation": "linear",
+            "time": 940
+          },
+          {
+            "float_values": [
+              -0.25241935,
+              1.42999995,
+              -36.81687164
+            ],
+            "interpolation": "linear",
+            "time": 2160
+          },
+          {
+            "float_values": [
+              -0.25241935,
+              1.42999995,
+              -71.42651367
+            ],
+            "interpolation": "linear",
+            "time": 2620
+          },
+          {
+            "float_values": [
+              -0.25241947,
+              1.42999995,
+              -61.79756927
+            ],
+            "interpolation": "linear",
+            "time": 3500
+          },
+          {
+            "float_values": [
+              -0.25241947,
+              1.42999995,
+              -68.17433929
+            ],
+            "interpolation": "linear",
+            "time": 2360
+          },
+          {
+            "float_values": [
+              -0.25241947,
+              1.42999995,
+              -71.16748047
+            ],
+            "interpolation": "linear",
+            "time": 2100
+          },
+          {
+            "float_values": [
+              -0.25241947,
+              1.42999995,
+              -83.36331177
+            ],
+            "interpolation": "linear",
+            "time": 1920
+          },
+          {
+            "float_values": [
+              -0.25241947,
+              1.42999995,
+              -69.88047791
+            ],
+            "interpolation": "linear",
+            "time": 440
+          },
+          {
+            "float_values": [
+              -0.23171018,
+              1.42999995,
+              -69.87877655
+            ],
+            "time": 20
+          },
+          {
+            "float_values": [
+              1.80359232,
+              1.42999995,
+              -89.03262329
+            ],
+            "interpolation": "linear",
+            "time": 880
+          },
+          {
+            "float_values": [
+              0.00097847,
+              1.42999995,
+              -69.97341156
+            ],
+            "interpolation": "linear",
+            "time": 2420
+          },
+          {
+            "float_values": [
+              0.02359605,
+              1.42999995,
+              -69.90769196
+            ],
+            "interpolation": "linear",
+            "time": 580
+          },
+          {
+            "float_values": [
+              -3.00740314,
+              1.42999995,
+              -81.58895111
+            ],
+            "interpolation": "linear",
+            "time": 680
+          },
+          {
+            "float_values": [
+              -0.03142262,
+              1.42999995,
+              -69.90903473
+            ],
+            "interpolation": "linear",
+            "time": 1220
+          },
+          {
+            "float_values": [
+              0.04127586,
+              1.42999995,
+              -69.85632324
+            ],
+            "interpolation": "linear",
+            "time": 1880
+          },
+          {
+            "float_values": [
+              -9.63804531,
+              1.42999995,
+              -80.70889282
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "focus_point"
+        }
+      ],
+      "loops": 1,
+      "name": "focus_pointAction.001",
+      "start_time": 0,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              2.9802322387695312e-08,
+              2.9802322387695312e-08,
+              2.9802322387695312e-08
+            ],
+            "interpolation": "bezier",
+            "time": 780
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "bezier",
+            "time": 360
+          },
+          {
+            "float_values": [
+              2.9802322387695312e-08,
+              2.9802322387695312e-08,
+              2.9802322387695312e-08
+            ],
+            "interpolation": "bezier",
+            "time": 280
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "bezier",
+            "time": 1120
+          },
+          {
+            "float_values": [
+              2.9802322387695312e-08,
+              2.9802322387695312e-08,
+              2.9802322387695312e-08
+            ],
+            "interpolation": "bezier",
+            "time": 420
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "bezier",
+            "time": 440
+          },
+          {
+            "float_values": [
+              2.9802322387695312e-08,
+              2.9802322387695312e-08,
+              2.9802322387695312e-08
+            ],
+            "interpolation": "bezier",
+            "time": 360
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "bezier",
+            "time": 560
+          },
+          {
+            "float_values": [
+              2.9802322387695312e-08,
+              2.9802322387695312e-08,
+              2.9802322387695312e-08
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "ant_1"
+        }
+      ],
+      "loops": 1,
+      "name": "shape_1",
+      "start_time": 5300,
+      "type": "mesh_shape"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "ant_1"
+        }
+      ],
+      "loops": 1,
+      "name": "shape_2",
+      "start_time": 7840,
+      "type": "mesh_shape"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              2.9802322387695312e-08,
+              2.9802322387695312e-08,
+              2.9802322387695312e-08
+            ],
+            "interpolation": "bezier",
+            "time": 540
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "bezier",
+            "time": 620
+          },
+          {
+            "float_values": [
+              2.9802322387695312e-08,
+              2.9802322387695312e-08,
+              2.9802322387695312e-08
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mantis_1"
+        }
+      ],
+      "loops": 1,
+      "name": "shape_1",
+      "start_time": 1040,
+      "type": "mesh_shape"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              2.9802322387695312e-08,
+              2.9802322387695312e-08,
+              2.9802322387695312e-08
+            ],
+            "interpolation": "bezier",
+            "time": 700
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "bezier",
+            "time": 380
+          },
+          {
+            "float_values": [
+              2.9802322387695312e-08,
+              2.9802322387695312e-08,
+              2.9802322387695312e-08
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "mantis_1"
+        }
+      ],
+      "loops": 1,
+      "name": "shape_2",
+      "start_time": 2240,
+      "type": "mesh_shape"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 20,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "butterfly_1"
+        }
+      ],
+      "loops": 1,
+      "name": "butterfly_1_action",
+      "start_time": 21000,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              3.17485428,
+              12.83412838,
+              -33.89386749,
+              3.17485428,
+              12.83412838,
+              -33.89386749,
+              3.17485428,
+              12.83412838,
+              -33.89386749
+            ],
+            "interpolation": "bezier",
+            "time": 4900
+          },
+          {
+            "float_values": [
+              -0.02196026,
+              2.25500345,
+              -37.57292175,
+              2.79508877,
+              2.25500345,
+              -37.57292175,
+              -1.1431253,
+              2.25500345,
+              -37.57292175
+            ],
+            "interpolation": "bezier",
+            "time": 1940
+          },
+          {
+            "float_values": [
+              -2.62482381,
+              7.00552654,
+              -37.41112518,
+              -2.62482381,
+              7.00552654,
+              -37.41112518,
+              -2.62482381,
+              7.00552654,
+              -37.41112518
+            ],
+            "interpolation": "bezier",
+            "time": 2780
+          },
+          {
+            "float_values": [
+              0.31412268,
+              5.43698931,
+              -51.7195816,
+              0.31412268,
+              7.00552464,
+              -37.41111374,
+              0.31412268,
+              4.9618721,
+              -56.0395546
+            ],
+            "interpolation": "bezier",
+            "time": 840
+          },
+          {
+            "float_values": [
+              -3.17216635,
+              2.95712423,
+              -63.29882431,
+              -1.20578897,
+              2.95712423,
+              -61.73185349,
+              -5.885571,
+              2.95712423,
+              -65.45915985
+            ],
+            "interpolation": "bezier",
+            "time": 880
+          },
+          {
+            "float_values": [
+              -10.29032898,
+              5.56429625,
+              -65.7128067,
+              -10.29032898,
+              5.56429625,
+              -65.66345978,
+              -10.29032898,
+              5.56429625,
+              -65.78539276
+            ],
+            "interpolation": "bezier",
+            "time": 1300
+          },
+          {
+            "float_values": [
+              -9.08067703,
+              3.2902751,
+              -68.68382263,
+              -9.91866016,
+              3.2902751,
+              -65.7128067,
+              -8.31585312,
+              3.2902751,
+              -71.39324951
+            ],
+            "interpolation": "bezier",
+            "time": 1160
+          },
+          {
+            "float_values": [
+              -3.32842183,
+              6.96217442,
+              -76.1891861,
+              -7.26722431,
+              6.12225437,
+              -76.1891861,
+              2.13972449,
+              8.1262846,
+              -76.1891861
+            ],
+            "interpolation": "bezier",
+            "time": 1140
+          },
+          {
+            "float_values": [
+              14.00749969,
+              8.17539215,
+              -76.1891861
+            ],
+            "time": 20
+          },
+          {
+            "float_values": [
+              14.00749969,
+              8.50437164,
+              -76.1891861,
+              14.00749969,
+              8.50437164,
+              -76.1891861,
+              14.00749969,
+              8.50437164,
+              -76.1891861
+            ],
+            "interpolation": "bezier",
+            "time": 2700
+          },
+          {
+            "float_values": [
+              -12.61262798,
+              4.81694889,
+              -78.12104797
+            ],
+            "time": 20
+          },
+          {
+            "float_values": [
+              -15.02021313,
+              1.13747549,
+              -84.0617981
+            ],
+            "interpolation": "linear",
+            "time": 2220
+          },
+          {
+            "float_values": [
+              15.32044792,
+              13.4046402,
+              -77.3363266
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "butterfly_1"
+        }
+      ],
+      "loops": 1,
+      "name": "butterfly_1_action",
+      "start_time": 1100,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -52.904046,
+              180.424993,
+              -0.0,
+              -52.904046,
+              180.424993,
+              -0.0,
+              -52.904046,
+              180.424993,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 4900
+          },
+          {
+            "float_values": [
+              -52.904046,
+              180.424993,
+              -0.0,
+              -52.904046,
+              180.424993,
+              -0.0,
+              -52.904046,
+              180.424993,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 4720
+          },
+          {
+            "float_values": [
+              -52.904046,
+              9.644159,
+              -0.0,
+              -52.904046,
+              9.644159,
+              -0.0,
+              -52.904046,
+              9.644159,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 840
+          },
+          {
+            "float_values": [
+              -52.904046,
+              29.568258,
+              -0.0,
+              -52.904046,
+              18.976897,
+              -0.0,
+              -52.904046,
+              44.14731,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 880
+          },
+          {
+            "float_values": [
+              -52.904046,
+              65.1882,
+              -0.0,
+              -52.904046,
+              65.1882,
+              -0.0,
+              -52.904046,
+              65.1882,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 1300
+          },
+          {
+            "float_values": [
+              -52.90405,
+              -70.979278,
+              -0.0,
+              -52.90405,
+              -57.554801,
+              -0.0,
+              -52.90405,
+              -83.232508,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 1160
+          },
+          {
+            "float_values": [
+              -52.90405,
+              -82.671558,
+              -0.0,
+              -52.90405,
+              -82.671558,
+              -0.0,
+              -52.90405,
+              -82.671558,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 1140
+          },
+          {
+            "float_values": [
+              -52.90405,
+              -82.671558,
+              -0.0
+            ],
+            "time": 20
+          },
+          {
+            "float_values": [
+              -61.317074,
+              -253.5034,
+              -2.510377,
+              -61.317074,
+              -253.5034,
+              -2.510377,
+              -61.317074,
+              -253.5034,
+              -2.510377
+            ],
+            "interpolation": "bezier",
+            "time": 2700
+          },
+          {
+            "float_values": [
+              -61.317074,
+              -240.3119,
+              -2.510377
+            ],
+            "time": 20
+          },
+          {
+            "float_values": [
+              -61.317074,
+              -97.096699,
+              -0.0
+            ],
+            "interpolation": "linear",
+            "time": 2220
+          },
+          {
+            "float_values": [
+              -61.317074,
+              -106.825088,
+              -0.0
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "butterfly_1"
+        }
+      ],
+      "loops": 1,
+      "name": "butterfly_1_action",
+      "start_time": 1100,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "climber_1"
+        }
+      ],
+      "loops": 1,
+      "name": "climber_1Action",
+      "start_time": 24540,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 3340
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "climber_1"
+        }
+      ],
+      "loops": 1,
+      "name": "climber_1_small",
+      "start_time": 24560,
+      "type": "mesh_shape"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 1760
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "climber_1"
+        }
+      ],
+      "loops": 1,
+      "name": "climber_1_curve_2",
+      "start_time": 27280,
+      "type": "mesh_shape"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 380
+          },
+          {
+            "float_values": 0.6823529005050659,
+            "interpolation": "linear",
+            "time": 300
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 600
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 420
+          },
+          {
+            "float_values": 0.3529411554336548,
+            "interpolation": "linear",
+            "time": 480
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 460
+          },
+          {
+            "float_values": 0.19999998807907104,
+            "interpolation": "linear",
+            "time": 440
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 640
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 520
+          },
+          {
+            "float_values": 0.7764706015586853,
+            "interpolation": "linear",
+            "time": 740
+          },
+          {
+            "float_values": 0.011764705181121826,
+            "interpolation": "linear",
+            "time": 500
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 220
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "climber_1"
+        }
+      ],
+      "loops": 1,
+      "name": "climber_1_curve_1",
+      "start_time": 25400,
+      "type": "mesh_shape"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "time": 0,
+            "uint8_values": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "climber_2"
+        }
+      ],
+      "loops": 1,
+      "name": "climber_2Action",
+      "start_time": 24540,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 4120
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "climber_2"
+        }
+      ],
+      "loops": 1,
+      "name": "climber_2_small",
+      "start_time": 24560,
+      "type": "mesh_shape"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 3200
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "climber_2"
+        }
+      ],
+      "loops": 1,
+      "name": "climber_2_curve_2",
+      "start_time": 26300,
+      "type": "mesh_shape"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 1020
+          },
+          {
+            "float_values": 0.5741015076637268,
+            "interpolation": "linear",
+            "time": 1100
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 900
+          },
+          {
+            "float_values": 0.5334186553955078,
+            "interpolation": "linear",
+            "time": 980
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 800
+          },
+          {
+            "float_values": 0.8705882430076599,
+            "interpolation": "linear",
+            "time": 980
+          },
+          {
+            "float_values": 0.24705880880355835,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "climber_2"
+        }
+      ],
+      "loops": 1,
+      "name": "climber_2_curve_1",
+      "start_time": 25220,
+      "type": "mesh_shape"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "climber_3"
+        }
+      ],
+      "loops": 1,
+      "name": "climber_3Action",
+      "start_time": 24540,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 5600
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "climber_3"
+        }
+      ],
+      "loops": 1,
+      "name": "climber_3_small",
+      "start_time": 24560,
+      "type": "mesh_shape"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 3020
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "climber_3"
+        }
+      ],
+      "loops": 1,
+      "name": "climber_3_curve_2",
+      "start_time": 27500,
+      "type": "mesh_shape"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 400
+          },
+          {
+            "float_values": 0.4941176474094391,
+            "interpolation": "linear",
+            "time": 1180
+          },
+          {
+            "float_values": 0.17691084742546082,
+            "interpolation": "linear",
+            "time": 1440
+          },
+          {
+            "float_values": 0.988235354423523,
+            "interpolation": "linear",
+            "time": 880
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 1120
+          },
+          {
+            "float_values": 0.804796576499939,
+            "interpolation": "linear",
+            "time": 900
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "climber_3"
+        }
+      ],
+      "loops": 1,
+      "name": "climber_3_curve_1",
+      "start_time": 25180,
+      "type": "mesh_shape"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "climber_4"
+        }
+      ],
+      "loops": 1,
+      "name": "climber_4Action",
+      "start_time": 24540,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 4140
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "climber_4"
+        }
+      ],
+      "loops": 1,
+      "name": "climber_4_small",
+      "start_time": 24560,
+      "type": "mesh_shape"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 3480
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "climber_4"
+        }
+      ],
+      "loops": 1,
+      "name": "climber_4_curve_2",
+      "start_time": 26060,
+      "type": "mesh_shape"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 460
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 580
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 520
+          },
+          {
+            "float_values": 0.7764706015586853,
+            "interpolation": "linear",
+            "time": 920
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 440
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 560
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 640
+          },
+          {
+            "float_values": 0.8235294222831726,
+            "interpolation": "linear",
+            "time": 720
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 560
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "climber_4"
+        }
+      ],
+      "loops": 1,
+      "name": "climber_4_curve_1",
+      "start_time": 25700,
+      "type": "mesh_shape"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "climber_5"
+        }
+      ],
+      "loops": 1,
+      "name": "climber_5Action",
+      "start_time": 24540,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 4840
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "climber_5"
+        }
+      ],
+      "loops": 1,
+      "name": "climber_4_small",
+      "start_time": 24560,
+      "type": "mesh_shape"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 4900
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "climber_5"
+        }
+      ],
+      "loops": 1,
+      "name": "climber_4_curve_2",
+      "start_time": 25320,
+      "type": "mesh_shape"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 480
+          },
+          {
+            "float_values": 0.4588235318660736,
+            "interpolation": "linear",
+            "time": 500
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 560
+          },
+          {
+            "float_values": 0.8823529481887817,
+            "interpolation": "linear",
+            "time": 600
+          },
+          {
+            "float_values": 0.270588219165802,
+            "interpolation": "linear",
+            "time": 940
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 560
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 760
+          },
+          {
+            "float_values": 0.9529411792755127,
+            "interpolation": "linear",
+            "time": 740
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 800
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "climber_5"
+        }
+      ],
+      "loops": 1,
+      "name": "climber_4_curve_1",
+      "start_time": 25160,
+      "type": "mesh_shape"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "climber_6"
+        }
+      ],
+      "loops": 1,
+      "name": "climber_6Action",
+      "start_time": 23960,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 3700
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "climber_6"
+        }
+      ],
+      "loops": 1,
+      "name": "climber_4_small",
+      "start_time": 23980,
+      "type": "mesh_shape"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 2080
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "climber_6"
+        }
+      ],
+      "loops": 1,
+      "name": "climber_4_curve_2",
+      "start_time": 26480,
+      "type": "mesh_shape"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 380
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 380
+          },
+          {
+            "float_values": 0.19999998807907104,
+            "interpolation": "linear",
+            "time": 420
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 480
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 460
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 500
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 520
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 560
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 600
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 660
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "climber_6"
+        }
+      ],
+      "loops": 1,
+      "name": "climber_4_curve_1",
+      "start_time": 26140,
+      "type": "mesh_shape"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "time": 0,
+            "uint8_values": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "emiter_1"
+        }
+      ],
+      "loops": 1,
+      "name": "emiter_1_action",
+      "start_time": 23660,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "time": 0,
+            "uint8_values": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "emiter_2"
+        }
+      ],
+      "loops": 1,
+      "name": "emiter_2_action",
+      "start_time": 23660,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "time": 0,
+            "uint8_values": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "emiter_3"
+        }
+      ],
+      "loops": 1,
+      "name": "emiter_3_action",
+      "start_time": 23660,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "time": 0,
+            "uint8_values": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "emiter_4"
+        }
+      ],
+      "loops": 1,
+      "name": "emiter_4Action",
+      "start_time": 23660,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 20,
+            "uint8_values": 1
+          },
+          {
+            "time": 0,
+            "uint8_values": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "emiter_5"
+        }
+      ],
+      "loops": 1,
+      "name": "emiter_5Action",
+      "start_time": 23660,
+      "type": "hide"
+    }
+  ],
+  "cameras": [
+    {
+      "far_clip_plane": 80.0,
+      "fov_x": 49.069203,
+      "fov_y": 28.800001,
+      "hide": false,
+      "name": "camera_1",
+      "near_clip_plane": 0.1,
+      "position": [
+        0.0,
+        1.42999995,
+        8.74376392
+      ],
+      "rotation": [
+        3e-06,
+        0.0,
+        -0.0
+      ]
+    }
+  ],
+  "enc_info": {
+    "data_type": "ENCSCN",
+    "date": "22 Oct 2022 01:07:06",
+    "version": "2.0"
+  },
+  "loops": 1,
+  "name": "Scene",
+  "objects": [
+    {
+      "mesh_name": "df_human_1",
+      "name": "human_1",
+      "position": [
+        1e-08,
+        4.00443172,
+        -69.89754486
+      ]
+    },
+    {
+      "layer": 0,
+      "name": "focus_point",
+      "position": [
+        0.0,
+        1.42999995,
+        -33.30614853
+      ],
+      "properties": {
+        "blur_mode": "none"
+      },
+      "tag": 152
+    },
+    {
+      "mesh_name": "df_ant_1",
+      "name": "ant_1",
+      "position": [
+        -5.6613102,
+        1e-08,
+        -36.89111328
+      ],
+      "rotation": [
+        0.0,
+        -101.916934,
+        -0.0
+      ]
+    },
+    {
+      "mesh_name": "df_mantis_1",
+      "name": "mantis_1",
+      "position": [
+        4.39571714,
+        0.0,
+        -11.665308
+      ],
+      "rotation": [
+        0.0,
+        49.247624,
+        0.0
+      ]
+    },
+    {
+      "mesh_name": "df_butterfly_1_trunk",
+      "name": "butterfly_1_trunk",
+      "position": [
+        0.0,
+        -2.50944281,
+        12.38689804
+      ],
+      "properties": {
+        "depth_mask": 0,
+        "depth_test": 0
+      },
+      "tag": 153
+    },
+    {
+      "mesh_name": "df_butterfly_1_wing_left",
+      "name": "butterfly_1_wing_left",
+      "position": [
+        0.0,
+        -2.50944281,
+        12.38689804
+      ],
+      "properties": {
+        "depth_mask": 0,
+        "depth_test": 0
+      },
+      "tag": 154
+    },
+    {
+      "mesh_name": "df_butterfly_1_wing_right",
+      "name": "butterfly_1_wing_right",
+      "position": [
+        0.0,
+        -2.50944281,
+        12.38689804
+      ],
+      "properties": {
+        "depth_mask": 0,
+        "depth_test": 0
+      },
+      "tag": 155
+    },
+    {
+      "name": "butterfly_1",
+      "position": [
+        3.17485428,
+        12.83412838,
+        -33.89386749
+      ],
+      "properties": {
+        "blur_mode": "none",
+        "depth_mask": 0,
+        "depth_test": 0
+      },
+      "rotation": [
+        -52.904046,
+        180.424993,
+        -0.0
+      ],
+      "tag": 156
+    },
+    {
+      "mesh_name": "df_environment_1",
+      "name": "environment_1",
+      "properties": {
+        "blur_mode": "none"
+      },
+      "tag": 151
+    },
+    {
+      "mesh_name": "df_cover_1",
+      "name": "cover_1",
+      "position": [
+        0.0,
+        0.0,
+        12.25079155
+      ],
+      "properties": {
+        "blending": "multiply",
+        "depth_mask": 0,
+        "depth_test": 0
+      },
+      "tag": 157
+    },
+    {
+      "mesh_name": "df_throne_1",
+      "name": "throne_1",
+      "position": [
+        1e-08,
+        4.00443172,
+        -70.29753876
+      ]
+    },
+    {
+      "mesh_name": "df_platform_1",
+      "name": "platform_1",
+      "position": [
+        0.0,
+        3.80499005,
+        -69.10540009
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "df_climber_1",
+      "name": "climber_1",
+      "position": [
+        0.7721523,
+        3.35658932,
+        -70.83990479
+      ],
+      "properties": {
+        "depth_mask": 0,
+        "visibility_man": 0
+      }
+    },
+    {
+      "hide": true,
+      "mesh_name": "df_climber_2",
+      "name": "climber_2",
+      "position": [
+        -1.18018031,
+        3.35658932,
+        -70.66996002
+      ],
+      "properties": {
+        "depth_mask": 0,
+        "visibility_man": 0
+      }
+    },
+    {
+      "hide": true,
+      "mesh_name": "df_climber_3",
+      "name": "climber_3",
+      "position": [
+        -1.24533248,
+        3.35658932,
+        -69.95664978
+      ],
+      "properties": {
+        "depth_mask": 0,
+        "visibility_man": 0
+      }
+    },
+    {
+      "hide": true,
+      "mesh_name": "df_climber_4",
+      "name": "climber_4",
+      "position": [
+        -0.76040643,
+        3.35658932,
+        -71.02085114
+      ],
+      "properties": {
+        "depth_mask": 0,
+        "visibility_man": 0
+      }
+    },
+    {
+      "hide": true,
+      "mesh_name": "df_climber_5",
+      "name": "climber_5",
+      "position": [
+        1.31707227,
+        3.35658932,
+        -68.94393921
+      ],
+      "properties": {
+        "depth_mask": 0,
+        "visibility_man": 0
+      }
+    },
+    {
+      "hide": true,
+      "mesh_name": "df_climber_6",
+      "name": "climber_6",
+      "position": [
+        0.09224159,
+        3.35658932,
+        -70.94179535
+      ],
+      "properties": {
+        "depth_mask": 0,
+        "visibility_man": 0
+      }
+    },
+    {
+      "hide": true,
+      "name": "emiter_1",
+      "position": [
+        -1.50982773,
+        2.89495778,
+        -72.46608734
+      ],
+      "properties": {
+        "blur_mode": "none"
+      }
+    },
+    {
+      "hide": true,
+      "name": "emiter_2",
+      "position": [
+        -3.5663867,
+        2.89495778,
+        -71.71324158
+      ],
+      "properties": {
+        "blur_mode": "none"
+      }
+    },
+    {
+      "hide": true,
+      "name": "emiter_3",
+      "position": [
+        -0.32062232,
+        2.89495778,
+        -73.77313232
+      ],
+      "properties": {
+        "blur_mode": "none"
+      }
+    },
+    {
+      "hide": true,
+      "name": "emiter_4",
+      "position": [
+        -3.62218714,
+        2.89495778,
+        -69.94818115
+      ],
+      "properties": {
+        "blur_mode": "none"
+      }
+    },
+    {
+      "hide": true,
+      "name": "emiter_5",
+      "position": [
+        1.8358953,
+        2.89495778,
+        -73.3822403
+      ],
+      "properties": {
+        "blur_mode": "none"
+      }
+    },
+    {
+      "mesh_name": "df_tree_1",
+      "name": "tree_1",
+      "position": [
+        -2.85009193,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "mesh_name": "df_tree_2",
+      "name": "tree_2",
+      "position": [
+        9.19691467,
+        0.0,
+        -26.06009102
+      ]
+    },
+    {
+      "mesh_name": "df_tree_3",
+      "name": "tree_3",
+      "position": [
+        4.64464283,
+        -0.02646806,
+        -33.42137146
+      ]
+    },
+    {
+      "mesh_name": "df_tree_4",
+      "name": "tree_4",
+      "position": [
+        -6.64607525,
+        3e-08,
+        -27.82611465
+      ]
+    },
+    {
+      "mesh_name": "df_tree_5",
+      "name": "tree_5",
+      "position": [
+        -8.66363144,
+        0.0,
+        -11.78635216
+      ]
+    },
+    {
+      "mesh_name": "df_tree_6",
+      "name": "tree_6",
+      "position": [
+        2.96604466,
+        0.0,
+        -16.9991703
+      ]
+    },
+    {
+      "mesh_name": "df_tree_7",
+      "name": "tree_7",
+      "position": [
+        7.51870108,
+        0.0,
+        -11.254426
+      ]
+    },
+    {
+      "mesh_name": "df_tree_8",
+      "name": "tree_8",
+      "position": [
+        6.32055902,
+        0.0,
+        -7.19942904
+      ]
+    },
+    {
+      "mesh_name": "df_tree_9",
+      "name": "tree_9",
+      "position": [
+        1.60546875,
+        0.0,
+        1.27225196
+      ]
+    },
+    {
+      "mesh_name": "df_tree_10",
+      "name": "tree_10",
+      "position": [
+        -12.64482689,
+        0.0,
+        -44.92889404
+      ]
+    },
+    {
+      "mesh_name": "df_tree_11",
+      "name": "tree_11",
+      "position": [
+        -3.08801174,
+        0.0,
+        -12.73871231
+      ]
+    },
+    {
+      "mesh_name": "df_tree_12",
+      "name": "tree_12",
+      "position": [
+        7.11592913,
+        3e-08,
+        -15.08564091
+      ]
+    },
+    {
+      "mesh_name": "df_tree_13",
+      "name": "tree_13",
+      "position": [
+        -3.57056952,
+        0.0,
+        -7.30389786
+      ]
+    },
+    {
+      "mesh_name": "df_tree_14",
+      "name": "tree_14",
+      "position": [
+        3.01139235,
+        0.0,
+        -4.74166775
+      ]
+    },
+    {
+      "mesh_name": "df_tree_15",
+      "name": "tree_15",
+      "position": [
+        -12.17022896,
+        1e-08,
+        -39.85641861
+      ]
+    },
+    {
+      "mesh_name": "df_tree_16",
+      "name": "tree_16",
+      "position": [
+        -4.61372805,
+        -2.4e-07,
+        -22.02181816
+      ]
+    },
+    {
+      "mesh_name": "df_tree_17",
+      "name": "tree_17",
+      "position": [
+        8.88956451,
+        0.0,
+        -34.86079025
+      ]
+    },
+    {
+      "mesh_name": "df_tree_18",
+      "name": "tree_18",
+      "position": [
+        4.02022505,
+        -4.8e-07,
+        -26.26205635
+      ]
+    },
+    {
+      "mesh_name": "df_tree_19",
+      "name": "tree_19",
+      "position": [
+        -11.61464024,
+        0.0,
+        -34.7339859
+      ]
+    },
+    {
+      "mesh_name": "df_tree_20",
+      "name": "tree_20",
+      "position": [
+        -3.14844036,
+        3e-08,
+        -56.21479034
+      ]
+    },
+    {
+      "mesh_name": "df_tree_21",
+      "name": "tree_21",
+      "position": [
+        -10.64070034,
+        0.0,
+        -23.10098267
+      ]
+    },
+    {
+      "mesh_name": "df_tree_22",
+      "name": "tree_22",
+      "position": [
+        2.24282598,
+        0.0,
+        -52.47382355
+      ]
+    },
+    {
+      "mesh_name": "df_tree_23",
+      "name": "tree_23",
+      "position": [
+        8.25829601,
+        0.0,
+        -48.39756012
+      ]
+    },
+    {
+      "mesh_name": "df_tree_24",
+      "name": "tree_24",
+      "position": [
+        6.33819771,
+        -9.5e-07,
+        -20.38345528
+      ]
+    },
+    {
+      "mesh_name": "df_tree_25",
+      "name": "tree_25",
+      "position": [
+        -9.27676868,
+        -9.5e-07,
+        -50.79436874
+      ]
+    },
+    {
+      "mesh_name": "df_tree_26",
+      "name": "tree_26",
+      "position": [
+        -10.14594269,
+        0.0,
+        -30.37524986
+      ]
+    },
+    {
+      "mesh_name": "df_tree_27",
+      "name": "tree_27",
+      "position": [
+        5.05336046,
+        -1e-08,
+        -55.9264946
+      ]
+    },
+    {
+      "mesh_name": "df_tree_28",
+      "name": "tree_28",
+      "position": [
+        -8.73717117,
+        -9.5e-07,
+        -45.40950012
+      ]
+    },
+    {
+      "mesh_name": "df_tree_29",
+      "name": "tree_29",
+      "position": [
+        3.91421318,
+        -2.4e-07,
+        -40.34688568
+      ]
+    },
+    {
+      "mesh_name": "df_tree_30",
+      "name": "tree_30",
+      "position": [
+        -6.14824009,
+        6e-08,
+        -49.95029068
+      ]
+    },
+    {
+      "mesh_name": "df_tree_31",
+      "name": "tree_31",
+      "position": [
+        -3.3039155,
+        0.0,
+        -48.69002914
+      ]
+    },
+    {
+      "mesh_name": "df_tree_32",
+      "name": "tree_32",
+      "position": [
+        3.37184,
+        -1.2e-07,
+        -44.94899368
+      ]
+    },
+    {
+      "mesh_name": "df_step_1",
+      "name": "step_1",
+      "position": [
+        0.0,
+        0.0499995,
+        -61.6045723
+      ]
+    },
+    {
+      "mesh_name": "df_step_1",
+      "name": "step_2",
+      "position": [
+        0.0,
+        0.29999956,
+        -62.1045723
+      ]
+    },
+    {
+      "mesh_name": "df_step_1",
+      "name": "step_3",
+      "position": [
+        0.0,
+        0.54999983,
+        -62.6045723
+      ]
+    },
+    {
+      "mesh_name": "df_step_1",
+      "name": "step_4",
+      "position": [
+        0.0,
+        0.80000019,
+        -63.1045723
+      ]
+    },
+    {
+      "mesh_name": "df_step_1",
+      "name": "step_5",
+      "position": [
+        0.0,
+        1.05000043,
+        -63.6045723
+      ]
+    },
+    {
+      "mesh_name": "df_step_1",
+      "name": "step_6",
+      "position": [
+        0.0,
+        1.30000079,
+        -64.10457611
+      ]
+    },
+    {
+      "mesh_name": "df_step_1",
+      "name": "step_7",
+      "position": [
+        0.0,
+        1.55000103,
+        -64.60458374
+      ]
+    },
+    {
+      "mesh_name": "df_step_1",
+      "name": "step_8",
+      "position": [
+        0.0,
+        1.80000138,
+        -65.10458374
+      ]
+    },
+    {
+      "mesh_name": "df_step_1",
+      "name": "step_9",
+      "position": [
+        0.0,
+        2.05000162,
+        -65.60458374
+      ]
+    },
+    {
+      "mesh_name": "df_step_1",
+      "name": "step_10",
+      "position": [
+        0.0,
+        2.30000162,
+        -66.10458374
+      ]
+    },
+    {
+      "mesh_name": "df_step_1",
+      "name": "step_11",
+      "position": [
+        0.0,
+        2.55000162,
+        -66.60458374
+      ]
+    },
+    {
+      "mesh_name": "df_step_1",
+      "name": "step_12",
+      "position": [
+        0.0,
+        2.80000162,
+        -67.10458374
+      ]
+    },
+    {
+      "mesh_name": "df_step_1",
+      "name": "step_13",
+      "position": [
+        0.0,
+        3.05000162,
+        -67.60458374
+      ]
+    },
+    {
+      "mesh_name": "df_step_1",
+      "name": "step_14",
+      "position": [
+        0.0,
+        3.30000162,
+        -68.10458374
+      ]
+    },
+    {
+      "mesh_name": "df_step_1",
+      "name": "step_15",
+      "position": [
+        0.0,
+        3.55000162,
+        -68.60458374
+      ]
+    }
+  ],
+  "properties": {
+    "visibility_max_distance": 42,
+    "visibility_min_distance": 1.7999999523162842
+  },
+  "time": 31100
+}

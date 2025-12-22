@@ -1,0 +1,144 @@
+
+
+                      P e z a c  /  N a t u r e
+
+                           p r e s e n t s
+
+                -   T r i b u t e   t o   A c i d   -
+
+                         a   4 k   i n t r o
+
+                f o r   B r e a k p o i n t   2 0 0 4
+
+
+
+        .--  A d d i t i o n a l  C r e d i t s  ---- -  -   -
+        |
+        |     Packer by Azure              (with permission)
+        |        C2P by Blueberry/Loonies  (with permission)
+        |
+        `--------------- -  -   -
+
+
+ 4k - The ultimate coder challenge, size large enough to do something
+      interesting and size small enough to hinder incbins :)
+
+
+
+-----------------.
+ F e a t u r e s |
+-----------------'
+
+Softsynth including drums, bassline, filters, delay and distortion
+Streaming sound using 14bit/28604Hz
+Multiple-pass visualization effects that run one-frame
+Acid music :)
+
+
+
+-------------------------.
+ R e q u i r e m e n t s |
+-------------------------'
+
+AGA, 020+, FPU, 16MB fastmem
+
+If you have only 16MB fastmem like me, you might have to run this from
+a clean startup + setpatch in order to make it work.
+
+
+
+---------.
+ I n f o |
+---------'
+
+Note: The intro will precalc with a black screen for a while! It takes
+some time on 060 so I won't even think about 030.
+
+This 4k has a focus on sound. Most of the size is occupied by softsynth
+code and the graphical effects are a result of the the sound.
+
+Actually the bassline synth is trying to mimic the sound of a freebass383
+but the result is a bit different from the real thing.
+
+This intro is designed for 060! It will work on 020+ but the result
+will not be fun to look at! So if you're watching this intro on anything
+except 060 please remember this. This is because the use of muls in some
+innerloops and the use of the bigger datacache.
+
+Yes really, I'm using a 2x2 8bit screen year 2004. Why? I wanted all effects
+to run one-frame even while using multiple passes when rendering. Also the
+streaming system will steal some additional cpu time. I prefer this over
+having  a) the same effects with 1x1 and terrible framerate  b) a 1x1 screen
+but only using one-pass effects to make it run smoothly.
+
+The softsynth parts are actually designed to work in realtime but for the
+sake of speed the music is precalculated. This is the reason why the precalc
+is so long but I guess you suspected that already :)
+
+
+
+-------------------.
+ T e s t e d   o n |
+-------------------'
+
+A1200 - Blizzard1260 @ 50
+
+
+
+-------------------.
+ T h a n k s   t o |
+-------------------'
+
+Azure:
+ He made the packer I used. Also for making his source to wave public,
+ in which I found out how to make a 256-width-screen centered with
+ fetchmode 3. He also helped me a lot with size optimizing and other
+ coding stuff (mainly support for the packer) via IRC!
+
+Pipe/Nature:
+ Great help regarding sound stuff without actually knowing I was planning
+ to make a 4k.
+
+Loaderror/Ephidrena:
+ The man who accepted my challenge and after that helped me a bit with
+ size optimizing via IRC. Good luck to him in the 4k compo!
+
+Blueberry/Loonies:
+ He gave me his non-public 2x1 c2p's for 060, just like that.
+
+Csound staff: 
+ Making their great knowledge available to everyone regarding sound stuff.
+
+Chip/Nature:
+ He helped me very close to breakpoint with a strange code-growing error.
+ It wasn't so strange when you realized what it was though :) I managed
+ to make the offsets in a struct larger than 16bit and the offsets are
+ used many times in the code.
+
+
+
+---------------.
+ C o n t a c t |
+---------------'
+
+You'll find Nature's homepage at:
+ http://move.to/nature
+If the move.to redirector doesn't work the real address is:
+ http://www.algonet.se/~pmats/
+.. but please don't save that one, it might change in the future.
+
+
+
+---------------------------------------.
+ N a t u r e   v s   E p h i d r e n a |
+---------------------------------------'
+
+As written by Zerox/Gods in Eurochart 37 there really was a 4k challenge
+going on between me and Loaderror/Ephidrena. I challenged Loaderror on IRC
+in 2003 to make the best 4k for Breakpoint'04 and this is what came out.
+
+
+
+
+Now at last you must know the truth:  roger federer > all
+                                      mirko "cro cop" filipovic > all

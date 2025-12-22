@@ -1,0 +1,19 @@
+Echo "»» Artifice HD-Loader made by Zer0-X! ««"
+Echo ""
+Echo ""
+Echo "This script will install your (2) Artifice disks"
+Echo "to the currect directory."
+Echo ""
+Echo "Insert disk 1 into DF0: and press left mousebutton!"
+WaitMouse
+Echo "Reading...   ...Please wait a moment!"
+Disk2File 0 TRSI.Disk1
+Echo ""
+Echo "Insert disk 2 into DF0: and press left mousebutton!"
+WaitMouse
+Echo "Reading...   ...Please wait a moment!"
+Disk2File 0 TRSI.Disk2
+Echo ""
+Echo ""
+Echo "All disks should now be in this directory. You may proceed by"
+Echo "loading the file called `Artifice' $3->"

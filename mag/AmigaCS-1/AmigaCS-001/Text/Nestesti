@@ -1,0 +1,464 @@
+@{d 3DFDFF}                    @{c 00C5A8}Václav Kovaêík:  Windows95 - îtëstí nebo prokletí?
+             aneb srovnání Windows 95 s Amiga OS a dalîími operaçními systémy@{c}
+           @{c 00E7C5}¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+
+  Operaçní  systém  (dále jen OS) je nedílnou souçástí základní výbavy poçítaçe. Bez OS se
+poçítaç  chová  jako mrtvý brouk. Oùivením poçítaçe vîak jeho úloha nekonçí. Právë naopak.
+Teprve  nyní  se  ukáùe,  co  OS  umí.  Na jeho stabilitë a moùnostech závisí z velké míry
+efektivita práce uùivatele a bezpeçnost uloùených dat.
+
+  Rozliîení  mezi  dobrým  a îpatným OS je velmi obtíùné jiù z dûvodu rozdílného oçekávání
+rûzných uùivatelû. Staçí se jen zamyslet nad tím, jakou úlohu hraje OS v rûzných oblastech
+pouùití  poçítaçû.  Pracovník  v  oblasti  DTP  bude mít na OS velmi vysoké nároky. Správa
+fontû,  lokalizace,  barevná  kalibrace systému a hlavnë bezchybný výstup na postscriptová
+zaêízení  jsou  pro nëj ùivotnë dûleùité. OS musí také zvládnout velké pamëïové nároky DTP
+aplikací,  správu  velkokapacitních  výmënných  médií  a  to  uù vûbec nemluvím o vysokých
+rozliîeních  v  milionech barev (samozêejmë pokud nesázíte v TEXu). Hráçi poçítaçových her
+budou  naopak  od  OS  oçekávat, ùe pûjde hêe pokud moùno co nejvíce z cesty. Nejlepîí je,
+kdyù  hêe  pêenechá  kontrolu  nad  systémovými  prostêedky úplnë nebo jí alespoñ poskytne
+@{d 3DFDFF}transparentní  rozhranní  (ale rychlé!) pro ovládání hardware od rûzných výrobcû. Poslední
+skupinou,  kterou  uvedu  jako pêíklad odliîných poùadavkû na OS, jsou uùivatelé pracující
+v oblasti  videografiky.  Ti  obvykle  poùadují  od  OS  multimediální  schopnosti  vçetnë
+synchronizace  obrazu a zvuku - vîechny sluùby obvykle v reálném çase. Animace pêepisovaná
+na  video  se  zkrátka nesmí ani jednou cuknout. Pokud OS není schopen kontinuálnë dodávat
+velké mnoùství dat, je nepouùitelný. Ùe devítistý snímek animace byl na disku fragmentován
+do  spousty  malých  kouskû  a OS jej nestihl naçíst? Ùe si OS právë teð potêeboval nahrát
+svoji  çást  odloùenou  na  pevném disku a pêeruîil pêehrávání? To uùivatele nezajímá. Vîe
+musí  fungovat  tak, jak má. A proç jsem zvolil právë uùivatele z tëchto oblastí, které se
+nëkomu mohou zdát atypické? Dûvodû je nëkolik. Pêi nenároçné práci v textovém editoru nebo
+tabulkovém procesoru se klady a zápory OS pêíliî neprojeví. Aù kdyù chceme po systému nëco
+více, poznáme, s kým máme tu çest.
+
+  Dalîím  dûvodem zkoumání OS (zvláîtë Windows 95) z tëchto netradiçních pohledû je nástup
+poçítaçû  PC do oblasti DTP a videa a vytlaçení (témëê likvidace) platforem, které byly na
+tyto  oblasti  specializované.  Je  proto namístë si poloùit otázku, zda PC pêineslo tëmto
+profesím  nëco  víc  neù  jen  niùîí  cenu,  a jestli naopak nedoîlo v nëkterých smërech k
+návratu  do historie a nebude nás nyní çekat cesta objevování zapomenutého a potýkání se s
+@{d 3DFDFF}jiù  dêíve  vyêeîenými problémy. Jsem si vëdom toho, ùe porovnávání dvou nebo více OS je z
+velké  míry  subjektivní.  Proto  prosím  çtenáêe,  aby se na vîechna absolutní prohláîení
+uvedená  v  této  recenzi dívali jako na názor uùivatele, který se vîemi zmínënými systémy
+pracuje,  jistë vîak neobsáhne vîechny moùnosti kaùdého z nich a nëkterým vlastnostem dává
+(z  dûvodu svého profesního zamëêení) vëtîí váhu, neù by uçinil recenzent jiný. Nechï jsem
+çtenáêi  jen  prûvodcem, který udává recenzi smër, zamyîlení nad pêedkládanými informacemi
+by vîak mëlo být vëcí spoleçnou.
+
+
+  Nejprve  se  tedy  pokusíme  definovat  vlastnosti,  které  jsou pro uùivatele (vzhledem
+k zamëêení  çlánku  pomineme  sluùby OS programátorûm) pêi práci s OS podstatné a podíváme
+se,  jak se s rûznými problémy vypoêádaly Windows 95, a jestli v jiném systému nenalezneme
+êeîení "lepîí". Za "lepîí" budeme povaùovat êeîení obecnëjîí, které vyhovuje více skupinám
+uùivatelû,  pêiçemù  nebudeme  pêíliî  brát  na zêetel velikost jednotlivých uùivatelských
+skupin. Proç? To se pokusíme objasnit dále.
+
+
+
+@{d 3DFDFF}   @{c 00E7C5}1. Mýty kolem OS
+   ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+  Neù  se pustíme do konkrétní recenze, musíme si uvëdomit nëkteré nepravdivé skuteçnosti,
+kterými nás zahlcuje vîudypêítomná reklama.
+
+  Mezi  mýty,  které  îíêí  marketingoví  mágové  nëkterých  firem produkujících OS, patêí
+prohláîení:  "Operaçní  systém musí být pro laika intuitivnë ovladatelný." Ne ùe bych toto
+tvrzení  striktnë odmítal, má vîak svûj rub i líc. Je têeba si uvëdomit, ùe existuje vztah
+mezi pêiblíùením ovládání poçítaçe çlovëku a moùností vyuùít vîech funkcí poçítaçe. Vëc je
+samozêejmë  nutné  posuzovat i z hlediska çasové efektivity. Grafické uùivatelské rozhraní
+OS  je zajisté pêínosem pro vëtîinu bëùných operací, je vîak nutnë omezující. Vizualizovat
+lze totiù daleko ménë funkcí, neù lze zadat z pêíkazové êádky a mocnost pêíkazové êádky je
+zase   menîí   neù   (systémového)   programovacího  jazyka.  Navíc  pouùívání  grafického
+uùivatelského  rozhraní  nemusí být pro vîechny operace çasovë tou nejoptimálnëjîí cestou.
+Napêíklad  napsání  pêíkazu: delete *.info je urçitë jednoduîîí neù vybírání vîech souborû
+pomocí  myîi  a  jejich  pêetahování  do  koîe.  Laickým  uùivatelûm  ale omezení plynoucí
+z grafického  ovládání  nevadí.  Dávají  pêednost OS s menîím poçtem snadno zvládnutelných
+graficky   prezentovaných  funkcí,  vítají  také  samostatné  chování  OS,  (napê.  údrùba
+@{d 3DFDFF}souborových  systémû,  hlídání  volného  místa  na  disku  atd.) a nezajímají je systémové
+informace  týkající  se  volné  operaçní  pamëti,  spuîtëných úloh, vyuùití procesoru atd.
+Naopak  profesionální  uùivatelé,  kteêí  chtëjí  poçítaç maximálnë vyuùít, mají rádi celý
+systém  pod  kontrolou,  na  nëkteré  operace pouùívají pêíkazovou êádku a çasto vyuùívané
+operace  si  programují pomocí systémového skriptového jazyka. Samozêejmë jen tehdy, pokud
+to daný OS umoùñuje.
+
+
+  A  nyní  jsme u jádra problému. S masivním nárûstem poçtu laikû ovládajících poçítaçe se
+OS  pêizpûsobují  jejich  minimálním  znalostem  a  tudíù se klade dûraz pouze na grafické
+ovládání  a sniùuje se tak mnoùství uùivatelem dosaùitelných funkcí. Dokladem mých slov je
+pronikání  Windows  NT  na  trh serverû, kde dêíve kraloval UNIX. Rapidní sníùení mocnosti
+prostêedkû  slouùících  k ovládání OS vîak vzruîuje jen ty, kteêí od nëj chtëjí nëco více,
+neù  jen  pêesouvání  ikonek. Tëch je vîak v záplavë nových laických uùivatelû stále menîí
+procento,  které pro tvûrce OS pêestává být zajímavé. Proto pêi porovnávání systémû budeme
+vënovat  velkou  pozornost  nejen  grafickému  uùivatelskému  rozhraní, ale také moùnostem
+pêíkazové êádky a existenci systémového skriptového jazyka.
+
+@{d 3DFDFF}  Dalîím  mýtem,  který je rozîíêen mezi uùivateli a který není z významné çásti pravdivý,
+je názor, ùe "nejrozîíêenëjîí OS je tím nejlepîím". Z pêedchozího odstavce mûùeme vyvodit,
+ùe  s narûstajícím poçtem laických uùivatelû se rozîiêuje OS, který splñuje dvë podmínky -
+má  snadnou obsluhu a stejný OS pouùívá nëkdo v okolí. Pro takový systém, protoùe je stále
+více  rozîíêený,  se  vyplatí  programovat  nové  aplikace. Kdyù pak nëkterý (byï zkuîený)
+uùivatel  chce  pouùívat  tyto  nové  aplikace,  musí si koupit i onen rozîíêený OS. Tento
+systém  se  tím  stává  jeîtë  rozîíêenëjîím,  programuje  se  pro nëj jeîtë více aplikací
+a koleçko se uzavírá. O úspëchu systému vîak rozhodla v podstatë masa reklamou ovlivnëných
+laických uùivatelû, kteêí jsou posledními, kteêí jsou k tomu kompetentní. Dalîím dûleùitým
+faktorem,  který  souvisí  s dêíve zmínënými podmínkami, je çasový náskok, s jakým daný OS
+(nebo  jeho  pêedchûdce)  pêiîel  na trh. Zaráùející je, ùe nikde nehraje roli kvalita OS.
+Nesmyslnost  a  zhoubnost tohoto komerçního kolotoçe si uvëdomíme pêi pêedstavë, ùe bychom
+namísto lékaêe sami rozhodovali o výbëru lékû ke své léçbë, a to podle toho, jak snadno çi
+obtíùnë se nám budou polykat a jakou mají barvu.
+
+
+
+
+@{d 3DFDFF}   @{c 00E7C5}2. Historie Windows 95 a Amiga OS
+   ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+  Abychom pochopili odliînosti obou operaçních systémû, je têeba vëdët nëco o koêenech, ze
+kterých vzeîly. Bývá sluîností zaçít u starîího, proto se nejprve podíváme, jak se vyvíjel
+Amiga OS (grafická nástavba má název Workbench). Jeho významnëjîí rozîíêení nastalo v roce
+1986  ve  verzích  1.2 a 1.3 spolu s poçítaçem Amiga 500, se kterým byl dodáván. Jiù tehdy
+disponoval  preemptivním  multitaskingem,  grafickým  uùivatelským  rozhraním i pêíkazovou
+êádkou.  Na  svou  dobu  vynikající  vlastnosti,  zvláîtë grafické, souvisely se speciální
+hardwarovou  architekturou  poçítaçe  Amiga.  Jeho  kompatibilita  s  televizní normou PAL
+(a NTSC)  ho  pêedurçila  k  vyuùití  v oblasti videa a TV grafiky. Firma Commodore, která
+Amigy  vyrábëla,  poté  na  nëkolik  let  usnula  na vavêínech a dalîí výkonnostní skok se
+uskuteçnil  aù  v  roce  1989, kdy byla dána na trh Amiga 3000 spolu s verzí Amiga OS 2.0.
+Verze  2.0  mëla  zcela  pêepracovaný  design, bylo pêidáno objektové rozîíêení, vylepîeny
+tiskové   funkce   a ovladaçe  zaêízení.  OS  doplnil  systémový  skriptový  jazyk  ARexx.
+Následovníci - Amiga 4000 a Amiga 1200 z roku 1991 - putovali na trh s verzí Amiga OS 3.0,
+která v návaznosti na nové grafické çipy obsahovala zmëny zvláîtë v oblasti grafiky. Verze
+3.1,  která  je  jiù  nëkolik let "nejnovëjîí" verzí Amiga OS, pouze opravila drobné chyby
+verze pêedchozí a vylepîila spolupráci Amigy s grafickými kartami têetích výrobcû.
+@{d 3DFDFF}
+  Historie  vývoje  Windows je vîem çtenáêûm patrnë známa daleko lépe, neù je tomu u Amiga
+OS,  proto  jen  pêipomeñme,  ùe  Windows  95 pracují na poçítaçích IBM PC kompatibilních.
+Navazují  na  operaçní  systém  MS-DOS s grafickou nástavbou Windows 3.11. Obsahují v sobë
+také  prvky  technologie  Windows NT, která byla vyvíjena paralelnë s Windows 3.11. Na trh
+byly uvedeny v polovinë roku 1995.
+
+
+   @{c 00E7C5}3. Hardwarové odliînosti Amigy a PC
+   ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+  Pêi  hodnocení  OS  nesmíme  zapomenout  také na specifika poçítaçû, na kterých pracují.
+Zatím  co  Amiga  OS  je napasován na hardware konkrétního typu Amigy (çást OS je v pamëti
+ROM),  Windows  95  musí obsáhnout zcela rozdílná PC rûzných konfigurací. Amigy jsou navíc
+jiù  od  svého  vzniku  32  bitové.  Neexistuje  tedy  problém  s  pêechodem  ze 16 bitové
+architektury jako u PC. Dalîí významné rozdíly je moùné nalézt v konstrukci obou poçítaçû.
+Zatím co u PC je dominantním prvkem procesor (Intel), Amiga je charakteristická spoluprací
+nëkolika  koprocesorû  s  vlastním pamëïovým prostorem, které odlehçují hlavnímu procesoru
+(Motorola).   Velký   rozdíl   je   také   v  obsluze  pêeruîení.  Patnáct  let  pouùívaný
+@{d 3DFDFF}autokonfiguraçní  systém  poçítaçû  Amiga  umoùñuje  uùivateli totéù, co u Windows 95 nová
+technologie Plug and Play (zasuñ kartu a pracuj). Amiga vîak mûùe na rozdíl od dneîních PC
+bezkonfliktnë  obslouùit  pomocí  pouhých dvou pêeruîení aù 512 rozîiêujících karet. Dalîí
+technickou  drobností  je  zvláîtní  konstrukce  disketové  mechaniky.  Ta  totiù neustále
+kontroluje  pêítomnost diskety a po jejím vloùení ji sama detekuje a její ikonu zobrazí na
+pracovní ploîe.
+
+
+
+   @{c 00E7C5}4. Základní vlastnosti OS
+   ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+  K   základním   vlastnostem   OS  patêí  správa  vstupních/výstupních  zaêízení  (portû,
+rozîiêujících  karet atd.), diskových pamëtí, pêidëlování pamëti aplikacím, reakce na akce
+uùivatele  atd. My se v následujícím textu budeme podrobnëji zabývat nëkterými podstatnými
+charakteristikami  operaçních  systémû  z  pohledu  uùivatele  a pokusíme se popsat zpûsob
+implementace existujících technologií ve Windows 95 a v jiných systémech.
+
+
+@{d 3DFDFF}   @{c 00E7C5}4.1 Komunikace OS s uùivatelem
+   ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+  Z  hlediska správné funkce OS není sice problematika komunikace systému s uùivatelem tím
+nejzásadnëjîím  problémem,  pro  uùivatele  je  vîak  dûleùitá,  neboï podstatnë ovlivñuje
+efektivitu  jeho  práce  a  mnoùství  dosaùitelných  funkcí.  Navíc  jsme se jiù problémem
+uùivatelského rozhraní zabývali, dokonçeme tedy myîlenku zapoçatou v první çásti. Grafické
+uùivatelské rozhraní Windows se zjevnë inspirovalo poçítaçi Macintosh. Pêínosem Windows 95
+je  správa  oken  pomocí  zvláîtní  liîty  a programová nabídka Start. Açkoli mnozí radëji
+vyuùívají  zástupce  na  ploîe, velmi chválím moùnost si vybrat. Jen kdyby liîta byla lépe
+konfigurovatelná.  Také kontextové menu pod pravým tlaçítkem myîi je velmi uùiteçné. Co se
+týká  dalîích  pouùitých  ovládacích  prvkû  (tlaçítka,  roletová  menu,  okénka pro vstup
+êetëzcû,  dialogové  panely  atd.),  jejich  implementace  je co do funkçnosti srovnatelná
+s Amiga  OS,  design  vîak  mají  lepîí Windows.  @{c 5167F8}[ovîem jen v základní instalaci, nemluvë
+o tom,  ùe  ve  Windows musí být vîechny ikony stejnë velké, pouùívat stejné barvy a nelze
+ani zamënit ikonu adresáêe - pozn.  Shaman]@{c}
+
+  Mezi  drobné  muîky  grafického  rozhraní  Windows  95  patêí  nedomyîlená  (stejnë jako
+u Macintoshe)  realizace  dialogového  panelu pro otvírání a ukládání souborû. Chybí totiù
+@{d 3DFDFF}moùnost  zvëtîení okna, aby bylo moùné zobrazení vëtîího poçtu souborû. Nepêíjemné je také
+zablokování  ovládání  okna  aplikace  pêi  otevêení  dialogového panelu. Velmi podstatnou
+závadou  je  absence  pêíkazového êádku. Prompt DOSu se totiù neodvaùuji pêíkazovým êádkem
+nazývat.  Základní  funkci  sice plní, ale pokud jej porovnáme s moùnostmi pêíkazové êádky
+UNIXu  nebo  Amiga  OS,  je  to  jen chudý pêíbuzný. Mnozí namítnou, ùe poçítaçe Macintosh
+nemají  pêíkazovou  êádku  vûbec.  Ano,  je to pravda. OS Macintoshe vîak disponuje daleko
+mocnëjîím nástrojem pro nároçné uùivatele a tím je systémový skriptový jazyk Apple script.
+Systémové  programovací jazyky mají vîechny moderní operaçní systémy kromë Windows a UNIXu
+(v  UNIX  jej  vîak  nahrazuje kvalitní pêíkazová êádka a jazyky jako Perl apod). Operaçní
+systém  OS/2  od IBM disponuje Rexxem, který byl portován na Amigu pod názvem ARexx. Co to
+vûbec  systémový  skriptový  jazyk  je a v çem spoçívá jeho výhoda? Na vysvëtlení je nutná
+trocha  teorie.  Úlohy  v  multitaskingových systémech spolu obvykle komunikují, zpravidla
+prostêednictvím   zpráv.  Nejintensivnëjîí  komunikace  probíhá  mezi  operaçním  systémem
+a aplikací.  Pro  pêijímání  zpráv  má  aplikace  vytvoêen  tzv.  port.  Situaci si mûùeme
+pêedstavit  následovnë:  Aplikace çeká na vstup uùivatele. Ten myîí stiskne ovládací prvek
+(napê. tlaçítko pro ukonçení programu) a operaçní systém podá aplikaci zprávu: "Hola hola,
+vstávej  lenochu,  uùivatel  stisknul levým tlaçítkem myîí ten a ten grafický prvek, který
+obsahuje  êetëzec Quit." Aplikace zjistí, co má pêi obdrùení êetëzce Quit udëlat a operaci
+@{d 3DFDFF}provede.  Funkce ARexxu spoçívá v podstatë v tom, ùe simuluje akce uùivatele. ARexx posílá
+zprávy  (pêíkazy) zapsané formou programu na port aplikace a ta reaguje stejnë, jako kdyby
+ji  ovládal uùivatel. V praxi je vîe trochu sloùitëjîí, pro ilustraci vîak toto pêirovnání
+postaçí. Jazyk samozêejmë obsahuje vlastní pêíkazy, podobnë jako C nebo Pascal. ARexx vîak
+díky speciálnímu zpûsobu napojení na aplikaci umoùñuje pouùívání jejích funkcí, které jsou
+zpravidla ekvivalenty funkcí z menu a klávesových zkratek jako pêíkazû jazyka. Dovede také
+vzájemnë  propojit více aplikací a souçasnë vyuùívat sluùeb a pêíkazû Amiga OS v kombinaci
+se  svými  interními  pêíkazy  a funkcemi. To vîe na systémové úrovni a plnë pod kontrolou
+uùivatele.  V  aplikacích  bëùnë  nahrazuje  makrojazyk  v  podobë tak, jak jej známe u PC
+napêíklad z Wordu. Síla ARexxu jako systémového jazyka se nejvíce projeví pêi automatizaci
+hromadného  zpracovávání  dat  více aplikacemi. Açkoli v tomto pêípadë platí, ùe kdo ARexx
+neuvidí,  tak  patrnë  nepochopí  dosah  jeho  moùností,  pêesto jeden pêíklad za vîechny.
+Vyrábíme  hudební  videoklip.  V  jednom  zábëru  bychom rádi na obraz zpëváka naklíçovali
+efektní  grafickou  prezentaci  záznamu  hudby,  tzv.  equalizér. Pomocí pêíkazû ARexxu ze
+souboru  s digitalizovanou hudbou naçteme hodnoty a pêepoçítáme je do pêísluîného mëêítka.
+Poté  se  pêipojíme  na  grafický  program, pêísluînými pêíkazy vybereme kreslicí nástroj,
+barvu  a  prûbëùnë  posíláme  aplikaci  data  a  pêíkazy  o pohybu kurzoru prostêednictvím
+ARexxového portu. Kreslicí program vykreslí hudební kêivku na kaùdém snímku digitalizované
+@{d 3DFEFF}sekvence  se  zpëvákem,  pêípadnë  pêidá dalîí efekty (auru, stín) a upravený snímek uloùí
+zpët.  Moùná  namítnete,  ùe  ARexx  vyuùijí jen pokroçilí uùivatelé. Není to vîak pravda.
+Vëtîina  aplikací  je  jiù  od  výrobce  dodávána s êadou skriptû pêipravených pro pouùití
+êadovým  uùivatelem. Profesionál si mûùe skripty upravovat nebo programovat nové. Není pak
+omezen  moùnostmi  jedné  aplikace,  ale  pro  své speciální poùadavky si propojí aplikací
+nëkolik,  pêípadnë  si  aplikacemi  nesplnitelné  poùadavky  doprogramuje sám.  Toto niçím
+neomezující  prostêedí,  které  Amiga  OS  vytváêí,  povaùuji  za podstatnou výhodu oproti
+Windows 95.
+
+
+  Dalîí  geniální vlastností Amiga OS, kterou zatím nelze spatêit na ùádné jiné platformë,
+jsou  tzv.  virtuální  obrazovky.  Zatím  co  Windows  95  bëùnë  pracují  pouze  s jednou
+obrazovkou,  na které otevírají okna s aplikacemi, Amiga dovoluje mít pracovních obrazovek
+s  okny  více.  Pêímo  v  nastaveních  vlastností  aplikace si uùivatel volí, jestli se má
+program  spustit  na té çi oné obrazovce v oknë nebo zdali si má otevêít vlastní virtuální
+obrazovku.  Poçet  virtuálních  obrazovek  na  Amize  není  omezen, mají na sobë nezávislé
+obrazové  rozliîení  a barevnou hloubku. Pokud napêíklad pracujete v tabulkovém procesoru,
+staçí  vám  obrazovka  v  ménë  barvách, ale v co nejvëtîím rozliîení, abyste mëli pêehled
+@{d 3DFEFF}o vîech  buñkách.  Pracujete-li  naopak  v grafickém programu, je zpravidla nutností velký
+poçet barev, který je ovîem çasto dosaùitelný pouze v niùîích rozliîeních. Na Amize mûùete
+v tëchto aplikacích pracovat souçasnë - kaùdá má svoji virtuální obrazovku.  Ve Windows 95
+je  nutné  buð  zvolit  kompromis, nebo mënit konfiguraci a restartovat (obvykle) poçítaç.
+Pêepínání mezi virtuálními obrazovkami je extrémnë rychlé, synchronizované s horizontálním
+zatemnëním.   Obrazovky  s  bëùícími  aplikacemi jsou umístëny v êadë na sobë a na fyzické
+obrazovce monitoru je zobrazena ta nejhornëjîí.  Obrazovku lze uchopit myîí za horní liîtu
+a  stáhnout  v  reálném  çase  dolû.  Pod stahovanou obrazovkou se okamùitë objevuje obsah
+virtuální obrazovky, která za ní následuje.  Takto lze umístit na jednu fyzickou obrazovku
+více  obrazovek  virtuálních.   Zajímavá  je  skuteçnost,  ùe na jediném monitoru je moùné
+zobrazovat  obrazovky s rûzným rozliîením i s rûznou barevnou paletou souçasnë.  Uùivatelé
+Windows  si  mohou  funkci  virtuálních  obrazovek alespoñ çásteçnë pêedstavit na pêíkladu
+DOSovské  aplikace  spuîtëné  v  celoobrazovkovém  reùimu  s  moùností  jejího pêepínání s
+obrazovkou Windows.
+
+
+
+
+@{d 3DFEFF}   @{c 00E7C5}4.2 Vyuùití hardware a nároky OS
+   ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+  Nyní  se  zamëêíme  na  schopnost  OS maximálnë vyuùít hardware poçítaçe. Zde je situace
+jednoznaçná.  Protoùe  OS  Amigy  je  îitý  na  míru  kaùdého  modelu a je programovaný ve
+strojovém  jazyku,  nelze pochybovat o tom, ùe vyuùívá hardware lépe neù Windows 95, které
+musí  pracovat  na  poçítaçích mnoha set výrobcû s rûznými komponentami. Nejlepîím dûkazem
+vîak je skuteçnost, ùe Amiga OS ve své nejnovëjîí verzi pracuje pouùitelnë i na Amize 500,
+která  je osazena procesorem MC68000 s taktem 7 MHz. Nároky Windows 95 jsou úplnë v jiných
+dimenzích.  Hardware  PC  je vîak díky masové výrobë levnëjîí neù hardware Amigy, proto se
+plýtvání  výkonem  na penëùence zákazníka pêíliî neprojeví. Trochu më ale mrzí, ùe nëkteré
+nápady  z  Amigy,  jako  napêíklad  virtuální  obrazovky,  Windows 95 zatím neokopírovaly,
+pêestoùe  hardware  nëkterých  grafických  karet  by  to  umoùñoval.  @{c 5167F8}[neumoùñoval - napê.
+souçasné  zobrazení  nëkolika  obrazovek  v  rûzných  rozliîeních a barvách nezvládnou ani
+nejmodernëjîí grafické çipy - pozn.Shaman]@{c}
+
+
+
+
+@{d 3DFEFF}   @{c 00E7C5}4.3 Stabilita OS
+   ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+  Pro  uùivatele  velmi podstatnou vlastností je stabilita OS. Tu ovlivñuje mnoho faktorû.
+V praxi se ale ukazuje, ùe nejstabilnëjîími systémy jsou ty, které jsou pêímo pêizpûsobeny
+konkrétní konfiguraci poçítaçe (typu a poçtu procesorû, pamëti, grafické kartë). Napêíklad
+UNIX  je  obvykle  kompilován  pro  rûzné konfigurace zvláîï. Vynikající je i stabilita OS
+poçítaçû  Macintosh,  protoùe  mají  hardwarovë  optimalizovanou çást OS v ROM stejnë jako
+Amiga. Zato u Windows 95 nelze obecnë o stabilitë vûbec hovoêit. Díky odliînostem hardware
+mohou  být  Windows  na  nëkterém  poçítaçi  velmi  stabilní,  na jiném témëê nepouùitelné
+a existuje  i  skupina  PC  "kompatibilních", kam je nelze ani nainstalovat. Nepêíjemná je
+pêitom  skuteçnost, ùe odhalení problému je v mnoha pêípadech nemoùné. Tuto situaci si ale
+Microsoft  velmi  dobêe  uvëdomuje, a proto pêipravuje pro výrobce hardware závazné normy,
+které  musí  poçítaç  splnit,  aby  na  nëm pracovaly Windows 95 bez problémû. Výrobce pak
+obdrùí  nálepku  o  kompatibilitë  s  Windows  95  (patrnë  ne úplnë zdarma). A pokud vliv
+Microsoftu  na  výrobce  hardware jeîtë vzroste, mûùeme se doçkat i doby, kdy çást Windows
+bude umístëna pêímo v ROM poçítaçe.
+
+
+@{d 3DFEFF}  Dalîím  faktorem,  který  ovlivñuje  stabilitu celého systému, je stabilita aplikací. Po
+operaçním systému poùadujeme, aby disponoval tzv. ochranou pamëti. Ta zabezpeçí, ùe îpatnë
+naprogramovaná  aplikace,  která  opustí vymezený pamëïový prostor, je ukonçena dêíve, neù
+naruîí  integritu systému. Operaçní systémy jako UNIX, Windows 95 nebo OS/2 ochranu pamëti
+implementovanou  mají.  Systém  Macintoshe a Amiga OS ne. Aplikace proto mûùe zpûsobit pád
+celého  systému.  Vzhledem  k pêehlednosti Amiga OS je vîak chybnë naprogramovaná aplikace
+obvykle  rychle  odhalena.  Neexistence  ochrany  pamëti  vîak  komplikuje dalîí vývoj OS.
+@{c 5167F8}[ochrana  pamëti  je  vîak  k  dispozici  pomocí  speciálních  utilit,  pêedevîim vîak pro
+programátory - pozn. Shaman]@{c}
+
+  U  Windows 95 stabilitu negativnë ovlivñuje zpûsob správy systémových informací. Ty jsou
+soustêedëny  v jednom centru, v tzv. registraçních souborech. Tato myîlenka je sama o sobë
+skvëlá,  realizace  vîak ponëkud pokulhává. Aplikace mohou do registru více ménë libovolnë
+zasahovat  a  pokud dojde bëhem práce poçítaçe k jeho "zatuhnutí" nebo k výpadku napájení,
+mûùe být provedená zmëna v registru ztracena a stav poçítaçe po restartu neodpovídá obsahu
+registrû a systém postupnë ztrácí integritu. Aplikace se zaçínají chovat podivnë a nëkteré
+dokonce  nejdou  spustit,  obvykle  s  hláîením  o  poruîení  ochrany pamëti. Nezbývá, neù
+reinstalovat  celý  systém.  Kaùdý,  kdo  s  Windows  95  pracuje  jiù alespoñ rok a çasto
+@{d 3DFEFF}instaluje nové aplikace (platí zvláîtë pro internetové tuláky, kteêí "stahují" a instalují
+vîe,  co  najdou),  jistë jiù nëkolikrát Windows 95 reinstalovával. A není to práce na pár
+minut.  Amiga  OS  podobné  problémy nemá, protoùe správu systémových informací êeîí jiným
+zpûsobem,  který  je odolnëjîí vûçi chybám. Proto jsem bëhem sedmi let, co Amigu pouùívám,
+nebyl  nucen  systém  reinstalovat, vyjma pêípadu pêechodu na novou verzi.  @{c 5167F8}[já uù 8 let -
+a to programuju a instaloval jsem za tu dobu tisíce programû, her a utilit - pozn.Shaman]@{c}
+
+
+   @{c 00E7C5}4.4 Multitasking
+   ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+  Velmi  dûleùitou  vlastností  OS  je pro uùivatele multitasking. Multitaskingem rozumíme
+schopnost  OS  pêepínat  mezi  spuîtënými  programy  tak  rychle,  ùe se uùivateli zdá, ùe
+programy  pracují  souçasnë.  O  multitaskingu  nelze  hovoêit  u systémû, které mohou mít
+spuîtënou  pouze  jedinou  aplikaci  (napê.  MS  DOS).  Poçítaçe  Macintosh a Windows 3.11
+disponují  tzv.  kooperativním  multitaskingem,  coù je honosný název pro moùnost spouîtët
+více  aplikací  souçasnë,  pêiçemù  obvykle pracuje jen jedna uùivatelem vybraná aplikace.
+Multitasking  UNIXu,  Windows  95 a Amiga OS, kde çasové kvantum pêidëluje aplikaci OS, je
+nazýván  preemptivním.  Windows  95  vîak  nezvládly  implementaci multitaskingu dokonale,
+@{d 3DFEFF}protoùe  nevhodnë  êeîí  otázku  nastavování  priorit  jednotlivým  úlohám. Dalîí nevýhodu
+spatêuji také v nesprávném rozloùení priorit mezi systémové úlohy. Konkrétnë priorita úloh
+obstarávajících   pêekreslení   obrazovky   by  mëla  být  zvýîena.  Pêi  pêepínání  právë
+poçítajících  aplikací dochází totiù k neuvëêitelnë pomalému pêekreslování obrazovky, a to
+i  na  velmi  rychlých  poçítaçích.  Samozêejmë  záleùí  také  grafické kartë, pêesto vîak
+pêepínání  obrazovek  bëùících  úloh  na jedenáct let staré Amize 500 (takt 7 MHz) probíhá
+mnohonásobnë  rychleji.  Samozêejmë  ne  proto, ùe by tento starouîek mël vëtîí výkon, ale
+pêekreslení  obrazovky  má  prostë vyîîí prioritu a to subjektivnë zvyîuje dojem sviùnosti
+celého systému. @{c 5167F8}[malé upêesnëní: toto platí pro pêekreslování oken v rámci jedné obrazovky
+- pro pêepínání obrazovek se pouùívá koprocesor - pozn. Shaman]@{c}
+
+
+   @{c 00E7C5}4.5 Otevêenost OS
+   ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+  Pro kaùdého uùivatele je neocenitelnou vlastností otevêenost OS. Pod otevêeností systému
+rozumíme   moùnost   jeho  dynamického  pêizpûsobení  novým  trendûm  vývoje  informaçních
+technologií  bez  nutnosti  vydávání  nových  vzájemnë  omezenë kompatibilních verzí. Tato
+situace nastává u poçítaçû PC s OS od Microsoftu. Pêechod od zastaralého MS DOSu k opravdu
+@{d 3DFEFF}pouùitelnému  systému  probíhá velmi pomalu a bolestnë, za cenu velkých investic ze strany
+uùivatelû. Nové programy na starých systémech samozêejmë nefungují, staré aplikace pracují
+na  nových jen s velkými obtíùemi, coù pêináîí nutnost (pokud chceme opravdu pracovat a ne
+êeîit  kolize)  kupovat nové verze aplikací. Navíc je velmi obtíùné urçit, který systém je
+nový  a  který  starý,  protoùe  Windows  NT  a  Windows  95 existují vedle sebe více ménë
+paralelnë,  pêiçemù  nëkteré aplikace fungují na obou systémech, jiné vîak jen na jednom z
+nich. Kompatibilita hardware s obëma systémy je jeîtë daleko horîí.
+
+
+  Amiga  OS  se  vyvíjí po velkých skocích s vëtîími çasovými prodlevami. Ty je vîak têeba
+rozumnë  pêeklenout.  Proto  je  Amiga OS navrùený tak otevêenë, aby nové moduly (têeba od
+têetích  výrobcû)  do nëj bezkonfliktnë zapadly. Pêíkladem nám mohou být prûbëùnë vyvíjené
+objektové definice typû dat, tzv. datatypes. Jedná se o definiçní soubory, které kompletnë
+popisují daný formát (napêíklad IFF, WAV, PCX, BMP, GIF, PNG, ANIM, FLC, MPEG, PostScript,
+HTML  atd.).  Kdyù  se  nedávno  objevil nový obrazový formát PNG, staçilo nainstalovat do
+systému  jeho  datatype  a  od  této chvíle s ním umëly pracovat i aplikace, které vznikly
+dêíve neù tento formát.
+
+@{d 3DFEFF}  Dalîím  pêíkladem otevêenosti Amiga OS je správa pomocných programû - commodities (na PC
+známé  jako  utility,  rezidentní  programy).  Ty  jsou programovány na základë aktuálních
+potêeb  uùivatelû  rûznými  firmami  nebo  jednotlivci.  Aby  nevznikl  chaos  a neutrpëla
+stabilita,  mají  commodities  pêesnë definované rozhraní, které umoùñuje jejich centrální
+správu,  kontrolu  stavu  a  konfiguraci  uùivatelem.  Vîechny  commodities mají napêíklad
+konfigurovatelné  své  horké  klávesy,  aby  nedocházelo  ke  kolizím s jinými aplikacemi.
+Otevêený  pêístup je uplatñován také pêi práci se zaêízeními, aï jiù jde o tiskárny, pevné
+disky,  výmënná  média  nebo  síï.  Právë  bezproblémová  implementace  síïového prostêedí
+provedená  têetím  výrobcem (síï není pêímo v Amiga OS vzhledem k roku vydání podporována)
+je  krásným  pêíkladem otevêenosti tohoto systému. @{c 5167F8}[Ovîem SANA-II specifikace sítí pochází
+jiù od Commodora, je závazná a je tudíù systémem podporována! - pozn.Shaman]@{c}
+
+
+   @{c 00E7C5}4.6 Pêehlednost OS
+   ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+  Na  první  pohled  vlastnost  nepodstatná, avîak z hlediska dlouhodobého provozu OS, kdy
+instalujeme  nový  a maùeme starý software, nabývající na závaùnosti. Windows svûj vnitêní
+svët  pêed uùivatelem peçlivë skrývají a veîkeré zmëny probíhají pêes pomocné programy. Aï
+@{d 3DFEFF}jiù  se  jedná  o  instalaçní  a  deinstalaçní  programy, konfiguraçní utility nebo editor
+registrû.  Proto  jsou dodávané aplikace, pomocné soubory, sdílené knihovny, *.ini a *.reg
+soubory uloùeny na disku v adresáêi \WINDOWS bez ladu a skladu. Nic bych proti tomu nemël,
+kdyby  Windows fungovaly bez problémû, ale vùdy tomu tak není a hledání chyby v této znëti
+stovek  souborû  je  velmi  obtíùné.  Amiga  OS  vsadil  na pêesnë definovanou adresáêovou
+strukturu.  Soubory  jsou roztêídëny dle své funkce do pêísluîných adresáêû a podadresáêû.
+Instalaçní programy a konfiguraçní utility jsou k dispozici samozêejmë také, ale OS poçítá
+s  tím,  ùe nejsou samospasitelné.  @{c 5167F8}[Micro$oft zkrátka povýîil praseçí chlívek jako základ
+své systémové architektury - pozn.  Shaman]@{c}
+
+  Chaos do OS pêináîejí obvykle aplikace têetích výrobcû, které si çasto v systému dëlají,
+co  chtëjí.  Novë  instalovaná  aplikace  totiù  pêidává do OS mnoho nových souborû, které
+potêebuje  ke  své  çinnosti. Kromë binárního programu také datové a dokumentaçní soubory,
+linkovatelné  knihovny,  fonty,  nastavení  atd.  Systém pêi spuîtëní aplikace musí vëdët,
+odkud  má  tyto soubory nahrát, a to i v pêípadë, pokud celou aplikaci pêesuneme jinam. Ve
+Windows  95  si  aplikace  nahraje potêebné soubory do podadresáêû svého podstromu nebo do
+adresáêe  Windows.  Na  Amize  je situace jednoznaçnëjîí a souçasnë dynamiçtëjîí. Operaçní
+systém  Amigy  totiù  nehledá  své  soubory v adresáêích, ale v tzv. logických zaêízeních.
+@{d 3DFEFF}Konfiguraçní  soubory  v zaêízení env:, linkovatelné systémové knihovny v zaêízení libs: a
+fonty  v zaêízení fonts:, drivery v zaêízení l: atd. Dynamiçnost êeîení spoçívá v moùnosti
+pêiêazení  více  adresáêû  jednomu  logickému  zaêízení.  Proto  lze soubory doprovázející
+aplikaci umisïovat libovolnë s dûrazem na jejich funkci, pêehlednost apod. Pêíkazem assign
+pak jednoznaçnë pêiêadíme zvolený adresáê k pêísluînému logickému zaêízení.
+
+   @{c 00E7C5}4.7 Ostatní vlastnosti
+   ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+  Açkoli  nebylo  moùné  postihnout  vîechny  funkce  obou  OS,  je  vhodné detailní popis
+vybraných vlastností v tomto místë ukonçit. Pêesto jeîtë nëkteré dalîí alespoñ vyjmenujme:
+novou  myîlenkou, kterou se mohou Windows pochlubit, je OLE a DDE. Jistë uùiteçný nástroj,
+zvláîtë  pro  kanceláêské  aplikace.  Tiskové  moùnosti  Windows 95 jsou jiù na dostateçné
+úrovni,  co  se  bëùných kanceláêských potêeb týká. Problémem je výstup v PostScriptu (pro
+profesionální  DTP), protoùe jeho driver není doposud ve Windows 95 úplnë bez chyb. Údajnë
+jej  má  pro  Microsoft naprogramovat pêímo firma Adobe, situace by se proto mëla zlepîit.
+Podpora  sítí  pod Windows 95 je na dobré úrovni a stále se zlepîuje. Windows 95 jsou vîak
+urçeny  jen  jako klientské stroje. O servery svádí boj UNIX, Windows NT a systémy od IBM.
+Zpûsob  lokalizace  je mnohem lépe realizován na Amize, protoùe je pêi nesrovnatelnë lepîí
+@{d 3DFEFF}funkçnosti  jednoduîîí.  Pêi  lokalizaci  není  totiù  têeba  zasahovat  do binárního kódu
+programu,  pouze se vytvoêí externí soubor s çeskými texty. Spuîtëný program si sám zjistí
+nastavené  prostêedí  a  podle  nëj  se pokusí nahrát soubor s lokalizovanými texty. Vëtîí
+problém  je  pouze  s kvalitními çeskými vektorovými fonty ve formátu Amigy. Trh zde totiù
+není pêíliî velký. @{c 5167F8}[AmigaOS má vektorové fonty implementovány naprosto otevêenë, staçí jen
+pro kaùdý druh fontu mít ovladaç - pozn.Shaman]@{c}
+
+   @{c 00E7C5}5. Závër
+   ¯¯¯¯¯¯¯¯@{c}
+  Jsou  tedy  Windows  95  îtëstím  nebo  prokletím?  Jaký  soud vyneseme závërem? Windows
+bezesporu  patêí  mezi  nejrozîíêenëjîí  OS  a svoji pozici si stále více upevñují. Jejich
+kvalita  a  pêínos  vîak  není tak velký, aby omlouval likvidaci alternativních platforem.
+Problémy s PostScriptem a nëkterými profesionálními zaêízeními zpûsobují, ùe profesionál v
+oblasti  DTP  musí  své  investice  dobêe zváùit. Také pracovníci v oblasti videa ztratili
+výhody  pêedchozí  platformy  Amiga,  pêiçemù  ne  ve  vîem  ji PC nahradí. Snad jen hráçi
+poçítaçových  her  mohou být spokojeni. Vysoký výkon procesorû Intel v kombinaci s DirectX
+dëlají  z PC ideální herní stroj. Snad jen kdyby nebyly problémy s kompatibilitou starîích
+her.
+@{d 3DFEFF}
+  Windows  95 patrnë nejsou pro nároçného uùivatele tím, po çem touùí. Chápu, kdyù s tímto
+konstatováním  nebudou souhlasit uùivatelé MS DOSu, pêípadnë Windows 3.11, kteêí pêeîli na
+Windows  95  a jiné srovnání neznají. Pro në jsou Windows 95 urçitë velkým skokem vpêed. V
+této  souvislosti  se  mi vîak vybavuje lidové rçení: "Jednooký mezi slepými králem". Kdyù
+vîak listuji bëùnými çeskými poçítaçovými periodiky, zdá se mi, ùe jedno oko je standardem
+i na postech, kde bych oçekával jistý rozhled.
+
+  Vëêím  ale,  ùe  pokroçilé  technologie jako systémový programovací jazyk nebo virtuální
+obrazovky  budou do Windows çasem implementovány. Na co vîak u Microsoftu çekají? ARexx má
+Amiga  uù  8  let,  OS/2 jeîtë déle. Otálení mi pêipadá spíîe jako dobrý marketingový tah.
+Pokud totiù budou klíçové technologie implementovány postupnë, mûùe mít Microsoft jistotu,
+ùe  si  zákazníci  budou nuceni dokupovat stále nové a nové verze jejich OS. Jestliùe vîak
+monopol  Microsoftu pêekroçí jisté meze a pêestanou fungovat konkurençní trùní mechanismy,
+bude  si  moci  Microsoft  s  uùivateli  dëlat,  co  se mu zlíbí @{c 5167F8}[a hlavnë jim donekoneçna
+vysávat penëùenky - pozn.  Shaman]@{c}.  A to se mi nezdá ani pêíliî îïastné, ani v souladu se
+zásadami volného trhu.
+
+@{d 3DFEFF}  Pokud  pêece jen çtenáê oçekává odpovëð na otázku, jaký systém má budoucnost, do kterého
+má  investovat,  aby  byl spokojen - mël s ním minimum problémû a pêitom v nëm byl schopen
+udëlat  vîe, co potêebuje, musím ho zklamat. Osvëdçené OS jiných platforem pomalu ztrácejí
+své  pozice,  nedají  se proto pokládat za pêíliî perspektivní, alespoñ v oblasti osobních
+poçítaçû.  Na  první pohled vítëzné Windows vîak své hardwarové nároky mëní tak rychle, ùe
+jejich nové verze nepûjdou patrnë na dnes zakoupený poçítaç stejnë nainstalovat, natoù aby
+na  nëm rychle a stabilnë pracovaly. Dnes je tedy v podstatë jedno, jestli vám za dva roky
+na  stole  zastará  Macintosh, Amiga nebo PC.  A co se týká moùností jednotlivých systémû?
+Pokud pêi své práci chcete být opravdu co nejménë omezeni, mohu nabídnout pouze êeîení, ke
+kterému  jsem  byl  stavem  výpoçetní techniky donucen já.  V mé pracovnë totiù vedle sebe
+sedí ethernetem propojená Amiga, Macintosh i PC.
+
+                             @{c 00E7C5}Václav Kovaêík  (wax@fi.muni.cz)@{c}
+                @{c 5167F8}[Vyîlo jako pêíloha internetového deníku Neviditelný pes]@{c}

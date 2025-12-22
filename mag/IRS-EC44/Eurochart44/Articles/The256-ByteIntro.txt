@@ -1,0 +1,589 @@
+
+»CL6:--------------------------------------------------------------------------------
+»CL0:                               The 256-Byte Intro
+»CL6:--------------------------------------------------------------------------------
+
+                          Written by »CL5:Dr. Doom »CL6:of »CL5:IRIS
+
+»CL1:Boredom can be a very inspiring thing.
+
+And so  it  was that  one  day  I  was
+feeling  extremely bored.  Having just
+(sort  of)   survived  the  exhausting
+trial of piecing  together an issue of
+the  Eurochart,  »CL8:I  was more  or  less
+prepared  to  swallow  my  own  tongue
+rather than  look at  another piece of
+code for a long, long time. »CL1:Protracker
+had pissed  me off  earlier  that  day
+with  its "spontaneous crash" feature,
+and PPaint hadn't  really appealed  to
+
+
+
+
+
+
+
+me  since  I  downgraded  to  030.  No
+matter  how hard  I kicked  my TV set,
+it'd only produce predictable American
+sitcoms  and  creepy  soaps.  »CL7:My music
+collection was as humble as ever,  and
+I wasn't in the mood for music anyway.
+»CL1:And of  course no  vodka, no  beer, no
+horny  nurses  knocking  on  my  door,
+nothing.
+ - What a predicament, huh?
+
+Luckily,  I'd  recently   expanded  my
+collection  of  scene productions, and
+watching a few  of  them  sounded like
+the perfect  remedy  for my particular
+problem.   Listing   the   directories
+alphabetically  somehow  lead  me into
+the "4k Intros" directory first. Yeah,
+go figure.  Now, since  no  group  has
+ever  decided to call itself "Aaabbc",
+Apathy   appeared   under   my   mouse
+pointer. A swift  double-click led  me
+further down the  tree and there I was
+confronted  with  no  less   than  one
+directory. Hmm. "2k Is Too Much!", the
+greenish  white  shouted  at  my eyes.
+Well, I  guess  it is.  Twice  more  I
+clicked.
+
+»CL8:Suddenly,    something    caught    my
+attention  and  I  snapped  out  of my
+boredom-induced  semitrance.»CL1:  In  this
+directory were  three files. A readme,
+a .info file, and  a third file  which
+had to be the  executable. »CL7:What caught
+my attention  was  the fact  that this
+third  file  was  nowhere  near  2k in
+size. 256  bytes was  all  it amounted
+to.»CL1:  My  own  non-system startup alone
+was  some  300  bytes  (and my  system
+startup about a  million  times that),
+and if  this  was  actually  an intro,
+here  was   quite  an   accomplishment
+staring  me   in   the  face.  Without
+further hesitation I doubleclicked and
+poof! -  »CL6:My  workbench  turned  into a
+starfield with the message "Zeeball of
+Apathy,  256  bytes"  printed  in  the
+corner. Wow.»CL1:
+
+In   a   heartbeat,  coder's  instinct
+took   over  (yes,  there  IS  such  a
+thing). What  was  going  on here? Was
+this   an   Intuition   screen?  Nope,
+Amiga+M did nothing.  Surely,  Zeeball
+couldn't  have disabled input handling
+in 256 bytes  AND opened  a screen AND
+rendered a starfield.  No, it appeared
+to  be  a   system   killer.   But  so
+small? I quit the intro  and was  even
+more amazed to find  my system running
+perfectly.   Obviously   the    system
+startup  was  not  only  tiny but also
+safe.
+
+»CL8:Now, I'm not usually  one  to resource
+other people's code, and this would be
+no   exception.»CL1:  However,  I  couldn't
+resist the temptation  to load  up the
+Barfly  Debugger  and  have  a  little
+look.   Click-click-click,   and   the
+DissWindow  appeared.  Looking briefly
+at the code,  puzzled started  to take
+the place of  astonished. This  was no
+startup  routine   at  all.  Certainly
+wasn't  a  decruncher,  and it  wasn't
+even an  icon  startup even though the
+intro came equipped with an icon. Odd.
+I turned to  the  readme file.  "Don't
+rename the executable!", it said.
+
+»CL7:I renamed  the executable  (well  what
+did you  expect when you  specifically
+tell   me  not  to?).  It  crashed.  I
+renamed it  back. It  worked.»CL1:  I  then
+focused on the  suspicious presence of
+the  icon. I  renamed  only  the .info
+file. It  crashed.  Aha! Although  the
+icon  appeared  perfectly  normal from
+the workbench, a  hex dump  showed  me
+otherwise.  What  I  saw  was  clearly
+code,     strings        such       as
+"graphics.library",0 and  empty spaces
+for  variables.  I   even   found  the
+message   "Myslenie    to   przywilej.
+Gratulacje!"  which I'm guessing means
+something to  the effect of "Congrats,
+you figured it out".
+»CL6:
+Apparently   the   executable   merely
+loaded the actual  code hidden away in
+the   icon. This   was   brilliant.»CL1:  A
+genuine fake in the truest of spirits.
+Thumbs  up   to    Zeeball   who   has
+otherwise  not  impressed  me  so  far
+(yes,  arrogance   is   a   registered
+trademark of the IRIS  Corporation, in
+case you're wondering).
+
+»CL8:Now, most coders would have merely sat
+back, smiled  and  turned  on the next
+intro.»CL1:  But  not  this  one. For  some
+reason I  was  suddenly  determined to
+prove that this could  be done without
+faking. My mind  shifted into sideways
+and I loaded  my assembler, completely
+forgetting the pain  and the horror it
+had inflicted upon  me during my weeks
+of  setting  up  the  Eurochart.  This
+looked like a job for...
+
+»CL8:     HOW TO CODE A 256-BYTE INTRO
+
+»CL1:The  first  step  I took was scrapping
+the traditional startupcode.  Even  if
+madly   size-optimized,   it  wouldn't
+leave  any room  for an effect,  or at
+least  not  enough  for a starfield. »CL7:I
+wanted it to  open a screen and return
+to the system screen afterwards. Since
+no one  would  watch  a  starfield for
+more  than  a few seconds,»CL1:  I  figured
+multitasking  could  be  left  on with
+relative safety. It would just have to
+give me a planar display to work with.
+
+So I needed to  open  grapics.library,
+or  at  least  find  it  in  memory in
+order   to   read   the  pointers   to
+the  active  view  and copperlist,  as
+well as call LoadView(null) to  safely
+reset  the  display.  The  traditional
+approach, and  the  one  taught in all
+coders' dogma, is to open  the library
+through OpenLibrary() with  a  pointer
+to the string "graphics.library". This
+alone would cost me 36 bytes. No way!
+
+
+»CL8:Long ago,  bad  coders  opted  to find
+exec.library and  then  traverse   the
+linked   list    of     libraries    a
+predetermined number of steps and then
+assume  that they'd  found the library
+they  were  looking  for. »CL1:  This   was
+possible  for  e.g.  graphics.library,
+because ROM libraries are always open.
+I decided  to  explore this. It turned
+out that  graphics.library was library
+#44 on my computer. Nice, but, just as
+I'd   thought  a  simple 10-byte  loop
+function    might    lead     me    to
+graphics.library,  a  reboot  later it
+had moved to position 35. Obviously  I
+would never know  where to find it. At
+least   not   without   comparing  the
+library  name  to  a  string, but that
+would  be  at  least  as  big  as  the
+traditional approach. Curses!
+
+Then  inspiration struck (as it  often
+does  when  you're  a genius). I would
+make a compare function which compared
+values  derived  from  strings  rather
+than  strings. This  way  I would only           »PIC:3.iff»
+have  to  save  the   derivative   for
+"graphics.library",0  and  I  would be
+able to  find  the  right library with
+reasonable  certainty.  This is what I
+came up with:
+
+
+; find something that looks a bit like
+; graphics.library (execbase is in a6)
+
+»CL7:.loop           move.l  4(a6),a6
+»CL7:                move.l  10(a6),a0
+»CL7:                move.l  (a0)+,d0                   »CL8:; string'
+»CL7:                add.l   (a0)+,d0
+»CL7:                add.l   (a0),d0
+»CL7:                cmp.l   #"grap"+"hics"+".lib",d0   »CL8:; keep the faith
+»CL7:                bne.b   .loop
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+»CL1:Now     the    odds     of     finding
+graphics.library were in my favour and
+this  only  cost me  22 bytes.  I  was
+pretty  pleased,  although    I  still
+insist such  genius should be rewarded
+more  handsomely.   Life   is   cruel.
+
+The startup routine  was next. I would
+need  to  save  the  active  view in a
+register,  call  LoadView(null) (which
+was  no  problem  now),  then set up a
+lowres display of some sort. »CL8:I decided
+to  set   up    everything    from   a
+copperlist,    since   I'd   need   to
+install  one  anyway  as the null-view
+copperlist continuously  disabled  all
+display DMA.»CL1:  But  where  to  put  the
+copperlist... a different  section was
+out of the question since the presence
+of more  section  descriptors  in  the
+executable  was  not  what  I  needed.
+Moreover, this  would  also  involve a
+relocation,  and  a  relocation  table
+would add  about  40 bytes, even  with
+only one entry. So there could only be
+one section,  and  it would have to be
+in chip memory, which is usually not a
+good place to put your code, but then,
+it was  just  a  starfield. My startup
+routine eventually  looked  like this:
+
+»PIC:4.iff»             »PIC:4.iff»             »PIC:4.iff»
+
+
+
+
+
+
+
+
+
+»CL7:section code,code_c
+
+»CL7:                .
+»CL7:                . (graphics.library to a6)
+»CL7:                .
+
+»CL7:                move.l  $22(a6),d4         »CL8:; save view
+
+»CL7:                sub.l   a1,a1              »CL8:; loadview(null)
+»CL7:                jsr     -222(a6)
+
+»CL7:                lea     copper(pc),a0      »CL8:; install copperlist
+»CL7:                move.l  a0,$080(a5)        »CL8:; a5 = $dff000 somehow
+
+»CL7:                .
+»CL7:                . (avoiding d4 here)
+»CL7:                .
+
+»CL7:                move.l  d4,a1             »CL8: ; reload view
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+»CL7:                jsr     -222(a6)
+»CL7:                move.l  $26(a6),$080(a5)   »CL8:; restore copperlist
+
+»CL7:                rts                        »CL8:; the end
+
+»CL7:;   bonzai copperlist
+
+»CL7:copper          dc.w    $0100,$1200        »CL8:; 1 plane, colorburst
+»CL7:                dc.w    $0180,$0424        »CL8:; palette (purple and
+»CL7:                dc.w    $0182,$008f        »CL8:;   cyan, naturally)
+»CL7:                dc.l    -2
+
+»CL1:I was able to reduce the copperlist to
+only  setting  BPLCON0 and colour regs
+0 and 1,  because  LoadView(null)  had
+initialised  everything  else  for me.
+Only  thing  missing   was   disabling
+sprite DMA, so sprites did flicker for
+the first  second the intro ran, but I
+left that  for  later, not knowing  if
+
+
+
+
+
+
+
+
+
+
+
+
+»CL1:there'd be room for it.
+The next step was to set up a bitplane
+where  I  might render my starfield. I
+had to  allocate   this   memory  with
+exec.library  to  avoid  those   nasty
+relocations.
+
+
+
+»CL7:;   allocate chipmem space
+
+»CL7:                move.l  4.w,a6
+»CL7:                moveq   #10240>>8,d0       »CL8:; give me 8000 bytes
+»CL7:                lsl.l   #8,d0              »CL8:; and some room to play
+»CL7:                moveq   #3,d1
+»CL7:                jsr     -198(a6)           »CL8:; allocmem()
+»CL7:                move.l  d0,a2              »CL8:; never fails i guess
+                                                 »PIC:4.iff»
+»CL1:Now with my bitplane safely (?) in A2,
+I was ready to play.  At first I tried
+to use the startup code as a data area
+for my  star  coordinates, but  it was
+nowhere near big  nor random enough to
+give    a    good    result.    So   I
+initialized  a  table  in my allocated
+memory area instead.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+»CL7:;   initialize stars
+
+»CL7:                moveq.l #-79,d0            »CL8:; random number seed
+»CL7:                lea     8192(a2),a0
+»CL7:                move.w  #128*3-1,d7
+»CL7:.initloop       ror.l   d0,d0              »CL8:; get random number
+»CL7:                addq.l  #7,d0
+»CL7:                move.w  d0,(a0)+
+»CL7:                dbra    d7,.initloop
+
+»CL1:128  stars  was  the  most I could use
+without  needing  a  move.w   for  the
+second  loop  counter. I  was  worried
+this would take  too much space but it
+had to look  good as well  as be tiny.
+The   main    loop    required    some
+consideration, as it  was the  largest
+part  of  the code. It  would  need to
+wait   for   the   vertical   blanking
+
+
+
+
+
+
+
+
+
+
+»CL1:
+interval, clear the screen, render and
+move the stars, test for a mouse click
+and loop if none occurred.
+
+Checking  the vertical  beam  position
+turned   out    to    be    the   best
+(i.e. smallest) way to time the effect
+
+
+
+»CL7:.mainloop
+»CL7:                .
+»CL7:                .
+
+»CL7:                cmp.w  #$12f,5(a5)         »CL8:; wait for end-of-diw
+»CL7:                bne.b  .mainloop
+»CL7:                
+
+»CL1:This left me with some time to  render
+before   anything  would   be   shown.
+Perfect.  Then  for  setting  up   and
+clearing  the   bitplane,   obviously:
+
+»CL7:                move.l  a2,$0e0(a5)        »CL8:; set bitplane pointer
+
+»CL7:                move.l  a2,a0              »CL8:; clear bitplane
+»CL7:                move.w  #8192/4-1,d7
+»CL7:.clearloop      clr.l   (a0)+
+»CL7:                dbra    d7,.clearloop
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+»CL1:All  that   was  left  now   was   the
+starfield.  A  bit  of linear algebra,
+half  a  cigarette  and  one   cup  of
+coffee later  I  was  left with this:
+
+»CL7:                moveq   #128-1,d6
+»CL7:.loopstar
+»CL7:                movem.w (a0)+,d0-d2   »CL8:     ; load (x,y,z) and extend
+»CL7:                subq.b  #7,-2(a0)     »CL8:     ; old z :- 7
+»CL7:                bcs.b   .skipstar     »CL8:     ; if carry, then z could
+                                           »CL8:;   be zero, so skip to
+                                           »CL8:;   avoid divide-by-zero
+»CL7:                lsr.w   #7,d2         »CL8:     ; force positive and
+                                           »CL8:;   adjust perspective
+»CL7:                divs.w  d2,d0             »CL8: ; do perspective thing
+»CL7:                divs.w  d2,d1
+
+»CL7:                add.w   #160,d0            »CL8:; center x and clip
+»CL7:                cmp.w   #320,d0
+»CL7:                bhs.b   .skipstar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+»CL7:                add.w   #100,d1            »CL8:; center y and clip
+»CL7:                cmp.w   #200,d1            »CL8:; i don't think there's
+»CL7:                bhs.b   .skipstar          »CL8:;   a smaller way to do
+»CL7:                                           »CL8:;   this, really
+»CL7:                muls.w  #40,d1             »CL8:; plot point
+»CL7:                moveq   #-$80,d2
+»CL7:                ror.b   d0,d2
+»CL7:                lsr.w   #3,d0
+»CL7:                add.w   d0,d1
+»CL7:                or.b    d2,(a2,d1.w)
+»CL7:.skipstar
+»CL7:                dbra    d6,.loopstar
+
+»CL7:                btst.b  #2,$016(a5)        »CL8:; test for rmb because
+»CL7:                bne.b   .mainloop          »CL8:;   lmb is in $bfexxx
+»CL7:                                           »CL8:;   and $dffxxx is in a5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+»CL1:After making  sure it  really  worked,
+I assembled  the  thing  and saved the
+executable. I  had done it! 240 bytes,
+which  was  enough  to let  me fix the
+sprite   flicker   problem    with  an
+additional copper instruction and even
+insert a couple of NOPs in the code to
+show off.
+
+»CL8:I'm feeling  somewhat proud  of myself            »PIC:3.iff»
+now. I  know   this    is    a   small
+accomplishment,»CL1:  and   after  all,   I
+didn't manage to print any text on the
+screen (and the starfield  lacks depth
+shading and so on), but I  did write a
+"complete" intro in just 256  bytes, a
+thing that another  coder  had to fake
+but I  could  do  for  real.  I  think
+that's neat.  Now of  course  I'll  go
+back to  being  bored.  I  don't  dare
+watch  another  4k  intro.  Besides, I 
+think I'll leave those to the ones who
+can't  be  bothered  to  size-optimize
+their code.
+
+(»CL7:You   can   find    the   uncommented
+sourcecode along  with the  executable
+somewhere  in  this Eurochart archive,
+probably   the    bonus    directory.»CL1:)

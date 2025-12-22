@@ -1,0 +1,17 @@
+.bra {
+.ket }
+.key AGA/S,CGX/S
+
+stack 500000
+assign libs: libs/ add
+assign env: envarc:
+assign t: ram:
+setpatch QUIET
+
+if {AGA}
+ Fr1aga
+endif
+
+if {CGX}
+ Fr1cgx
+endif

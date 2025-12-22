@@ -1,0 +1,414 @@
+»CL1:»SML:--------------------------------------------------------------------------------
+»CL0:»BIG:                                                        CUSTOM CHIPS UNITE!
+»CL1:»SML:--------------------------------------------------------------------------------
+  »CL5:                              by Dr. Doom/IRIS»CL1:
+
+It  was  common  knowledge  in the old
+days   that  blitting  small  pictures
+(e.g.   armies of »CL0:bobs»CL1:) is impractical
+because  updating the blitter's set of
+»CL0:registers»CL1:   repeatedly  could  end  up
+eating  a  lot  of  CPU time.  And the
+time  in-between  these  updates isn't
+long  enough to do any serious »CL0:context
+switching»CL1:    in   order   to   perform
+calculations (or whatever) parallel to
+the workings of the blitter.
+
+The  solution,  obviously,  is  to let
+some  other  chip  feed  data  to  the
+blitter, and the copper is pretty much
+
+
+
+
+
+ideal for this task.
+
+The  copper  is  able  to  control the
+blitter  completely.   It  can control
+other   things   besides  the  display
+hardware   as   well,   but  its  most
+significant strength is its ability to
+write to the blitter's registers.
+
+By default, the system won't allow the
+copper   to   write   to  the  blitter
+registers.   This  is to ensure that a
+runaway  copperlist  doesn't start the
+blitter, trashing random memory areas.
+Commodore's   documentation   on  this
+issue  is  very  unclear.   It  merely
+states  that  the  blitter's registers
+are   located   between   »CL0:$DFF010»CL1:  and
+»CL0:$DFF020»CL1: (which is untrue) and that the
+copper  won't be able to write to this
+area  unless  you  activate the »CL0:Copper
+Danger  Mode»CL1:  (but  $010-$020 contains
+only  read-only registers - way to go!
+=).
+
+For  some  reason  they  divided these
+addresses  by four.  In actuality, the
+copper   won't  be  allowed  to  touch
+registers  < »CL0:$080»CL1: unless »CL0:CDANG»CL1: is set.
+Once  it's  set, the copper may modify
+registers  as low as »CL0:$040»CL1:.  Anyway, if
+you  want  the  copper  to  be able to
+control  the  blitter, you have to set
+the  »CL0:Copper  Danger bit»CL1: (CDANG, or bit
+»CL0:1»CL1:)  of  »CL0:COPCON»CL1: (»CL0:$DFF02E»CL1:).  This has to
+be done by the CPU, obviously.
+
+The  next  step would be to »CL0:create»CL1: the
+copperlist.   This  is tricky if CDANG
+is  already  enabled, which is why the
+copper  should  be  either  »CL0:off»CL1:  or in
+»CL0:CDANG=0»CL1:  mode  while  you  create  the
+copperlist.
+
+»CL1:--------------------------------------
+»CL0:       DESIGNING THE COPPERLIST
+»CL1:--------------------------------------
+
+How  exactly  to  control  the blitter
+using  the copper depends very much on
+the  individual  effect, or whether or
+not   you   desire  a  »CL0:general-purpose»CL1:
+copperlist.     One    of    the   key
+considerations  would be which blitter
+registers to update for each blit.
+
+
+
+»CL1:As  an example, let's take a simple 3-plane »CL0:bob»CL1: blit.  To simplify this further,
+let's use »CL0:interleaved»CL1: bitplanes so we'll only need »CL0:one blit per bob»CL1:.  Let's also
+(correctly)  assume  that  the  blit  will  finish  in less than one frame.  The
+copperlist   needs  to  do  this,  after  the  standard  playfield  and  palette
+definitions:
+
+ »CL0:1.»CL1: Initialize »CL0:BLTAFWM»CL1: and »CL0:BLTALWM»CL1:
+ »CL0:2.»CL1: Set »CL0:BLTCON0»CL1: to use all inputs, the right »CL0:shift»CL1: value and a bob »CL0:minterm»CL1:
+»CL0: 3.»CL1: Set »CL0:BLTCON1»CL1: to the right shift value
+»CL0: 4.»CL1: Point »CL0:BLTAPT»CL1: to the interleaved bob
+»CL0: 5.»CL1: Point »CL0:BLTBPT»CL1: to the interleaved mask
+»CL0: 6.»CL1: Point »CL0:BLTCPT»CL1: and »CL0:BLTDPT»CL1: to the destination
+»CL0: 7.»CL1: Set the »CL0:modulos»CL1: appropriately
+»CL0: 8.»CL1: Set »CL0:BLTSIZE»CL1:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+»CL1:Fairly simple. The copperlist could look like this:
+
+»CL3:                dc.w    $0044,$ffff  »CL2:                   ; first word mask
+»CL3:                dc.w    $0046,$ffff  »CL2:                   ; last word mask
+
+»CL2:bltcon0         »CL3:dc.w    $0040,0
+»CL2:bltcon1         »CL3:dc.w    $0042,0
+
+»CL2:sourceh         »CL3:dc.w    $0050,0 »CL2:                        ; bltapt
+»CL2:sourcel    »CL3:     dc.w    $0052,0
+»CL2:maskh           »CL3:dc.w    $004c,0 »CL2:                        ; bltbpt
+»CL2:maskl           »CL3:dc.w    $004e,0
+»CL2:dest0h          »CL3:dc.w    $0048,0 »CL2:                        ; bltcpt
+»CL2:dest0l          »CL3:dc.w    $004a,0
+»CL2:dest1h          »CL3:dc.w    $0054,0 »CL2:                        ; bltdpt
+»CL2:dest1l          »CL3:dc.w    $0056,0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+»CL3:                dc.w    $0064,$0000»CL2:                     ; modulo a
+     »CL3:           dc.w    $0062,$0000     »CL2:                ; modulo b
+          »CL3:      dc.w    $0060,scrwidth-bobwidth»CL2:         ; modulo c
+               »CL3: dc.w    $0066,scrwidth-bobwidth     »CL2:    ; modulo d
+
+»CL3:                dc.w    $0058,bobwidth/2+bobheight*64   »CL2:; bltsize
+
+»CL1:As  you  can  see, »CL0:10 words»CL1: need to be written to the copperlist to make the bob
+appear.   Once  they're written, though, the copperlist will always »CL0:plot»CL1: the bob
+at  that  position.   This  is not very useful, of course.  So let's try to make
+more bobs appear on the screen.
+
+First of all, we should »CL0:optimize»CL1: the copperlist a bit.  Some writes only need to
+be  performed  once  for  all  the  blits.  We'll move them to the top.  Another
+change  is  introducing  a  »CL0:blitter wait»CL1: instruction.  To blit two bobs, then, a
+good copperlist could look like this (assuming the bobs are the same size):
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+»CL3:                dc.w    $0044,$ffff  »CL2:                   ; first word mask
+     »CL3:           dc.w    $0046,$ffff       »CL2:              ; last word mask
+          »CL3:      dc.w    $0064,$0000            »CL2:         ; modulo a
+               »CL3: dc.w    $0062,$0000                 »CL2:    ; modulo b
+»CL3:                dc.w    $0060,scrwidth-bobwidth  »CL2:       ; modulo c
+     »CL3:           dc.w    $0066,scrwidth-bobwidth       »CL2:  ; modulo d
+
+;  bob 1
+
+»CL2:bltcon0_1  »CL3:     dc.w    $0040,0
+»CL2:bltcon1_1  »CL3:     dc.w    $0042,0
+
+»CL2:sourceh_1  »CL3:     dc.w    $0050,0            »CL2:             ; bltapt
+»CL2:sourcel_1  »CL3:     dc.w    $0052,0
+»CL2:maskh_1    »CL3:     dc.w    $004c,0            »CL2:             ; bltbpt
+»CL2:maskl_1    »CL3:     dc.w    $004e,0
+»CL2:dest0h_1   »CL3:     dc.w    $0048,0            »CL2:             ; bltcpt
+»CL2:dest0l_1   »CL3:     dc.w    $004a,0
+»CL2:dest1h_1   »CL3:     dc.w    $0054,0            »CL2:             ; bltdpt
+»CL2:dest1l_1   »CL3:     dc.w    $0056,0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+»CL3:                dc.w    $0058,bobwidth/2+bobheight*64»CL2:   ; bltsize
+    »CL3:            dc.w    $0001,$0000                     »CL2:; blitter wait
+
+;  bob 2
+
+»CL2:bltcon0_2  »CL3:     dc.w    $0040,0
+»CL2:bltcon1_2  »CL3:     dc.w    $0042,0
+
+»CL2:sourceh_2  »CL3:     dc.w    $0050,0        »CL2:                 ; bltapt
+»CL2:sourcel_2  »CL3:     dc.w    $0052,0
+»CL2:maskh_2    »CL3:     dc.w    $004c,0        »CL2:                 ; bltbpt
+»CL2:maskl_2    »CL3:     dc.w    $004e,0
+»CL2:dest0h_2   »CL3:     dc.w    $0048,0        »CL2:                 ; bltcpt
+»CL2:dest0l_2   »CL3:     dc.w    $004a,0
+»CL2:dest1h_2   »CL3:     dc.w    $0054,0        »CL2:                 ; bltdpt
+»CL2:dest1l_2   »CL3:     dc.w    $0056,0
+
+»CL3:                dc.w    $0058,bobwidth/2+bobheight*64  »CL2: ; bltsize
+»CL3:                dc.w    $0001,$0000            »CL2:         ; blitter wait
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+»CL1:There.   This  could  go on and on, of
+course,    but    it    would   become
+»CL0:troublesome»CL1:  to manage more than a few
+bobs  this  way,  and the advantage of
+using the copper when blitting bobs is
+that you can have a really »CL0:huge»CL1: amount
+of  them appear.  A good idea would be
+to  create  the  copperlist from a »CL0:CPU
+routine»CL1:,  letting each blit be a fixed
+»CL0:structure »CL1: that  might then be indexed
+using  the  relative  addresses of the
+fields  needing to be changed in order
+to »CL0: move»CL1:  the  corresponding bob.  And
+»CL0:stuff»CL1:.
+
+You  might  also  skip  the  update of
+»CL0:BLTAPT»CL1:  and  »CL0:BLTBPT»CL1:  if  the bobs were
+aligned   in  memory  so  that  bob  »CL0:2»CL1:
+immediately   followed  bob »CL0: 1»CL1:.   This
+would speed things up further.
+Another  problem, of course, is making
+sure the CPU's »CL0:updating»CL1: of each copper
+routine doesn't »CL0:intersect»CL1: the copper's
+using   these  routines.   That  might
+cause  »CL0:flicker»CL1:,  or  even  lead  to  a
+»CL0:crash»CL1:.   Using two copperlists (a kind
+of  »CL0:doublebuffering»CL1:) may not always be
+necessary, but it always works.  :)
+
+--------------------------------------
+     GOING SLOWER THAN ONE-FRAME
+--------------------------------------
+
+If   the  copperlist  described  above
+doesn't have time to finish before the
+following   »CL0:VBL»CL1:,   bobs   will  simply
+»CL0:disappear»CL1:.   This is not exactly a big
+deal,  but it does mean the effect has
+to be one-frame.  Copperlists»CL0: can»CL1: span
+more than one frame, though.
+»CL1:The  idea  is that upon beginning each blit, »CL0:COP2LC»CL1: is set so as to remember how
+far  the copper got on this copperlist.  The first part of the copperlist should
+have a structure like this:
+
+ »CL0:1.»CL1: The usual playfield stuff etc.  
+ »CL0:2.»CL1: Set the »CL0:blitter registers»CL1: that only need to be set once 
+ »CL0:3.»CL1: Write to »CL0:COPJMP2»CL1:, causing a copper jump to the address in »CL0:COP2LC»CL1:
+
+This  will  make  the  copper  »CL0:resume»CL1: the copperlist at whatever location »CL0:COP2LC»CL1:
+suggests.  The blitter routines should then be changed to something like this:
+
+»CL2:startaddress    »CL3:dc.w    $0001,$0000           »CL2:          ; blitter wait
+
+»CL2:bltcon0         »CL3:dc.w    $0040,0
+»CL2:bltcon1         »CL3:dc.w    $0042,0
+
+»CL2:sourceh         »CL3:dc.w    $0050,0                    »CL2:     ; bltapt
+»CL2:sourcel         »CL3:dc.w    $0052,0
+»CL2:maskh           »CL3:dc.w    $004c,0                         »CL2:; bltbpt
+»CL2:maskl           »CL3:dc.w    $004e,0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+»CL2:dest0h        »CL3:  dc.w    $0048,0 »CL2:                        ; bltcpt
+»CL2:dest0l          »CL3:dc.w    $004a,0
+»CL2:dest1h     »CL3:     dc.w    $0054,0      »CL2:                   ; bltdpt
+»CL2:dest1l»CL3:          dc.w    $0056,0
+
+»CL0:(A)        »CL3:     dc.w    $0058,bobwidth/2+bobheight*64 »CL2:  ; bltsize
+
+»CL0:(B)           »CL3:  dc.w    $0084,<startaddress of next blit hiword>
+»CL0:(C)         »CL3:    dc.w    $0086,<startaddress of next blit loword>
+
+»CL1:Get  it?   This  way your copperlist can be as long as you like it, and a sudden
+VBL in the middle of everything won't keep the copperlist from finishing.
+
+It's  a  bit  »CL0:unreliable»CL1:, of course.  If the »CL0:VBL»CL1: occurs between the instructions
+marked  »CL0:(A)»CL1: and»CL0: (B)»CL1:, one bob will be shown twice (but at the same position so it
+won't  show),  and  if  it happens between »CL0:(B)»CL1: and»CL0: (C)»CL1: all hell breaks loose :).
+You can solve that problem using conditional »CL0:SKIP»CL1: instructions to make sure that
+»CL0:COP2LC »CL1: isn't  changed  when  the  beam gets very close to the end of the »CL0:frame»CL1:.
+(Again  another  use  for  the  allegedly  useless »CL0:SKIP»CL1: instruction.  I hate you
+guys.)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+»CL1:-------------------------------------------------------------------------------
+»CL0:                                   THAT'S IT
+»CL1:-------------------------------------------------------------------------------
+
+There  are  more  tricks to controlling the blitter through the copper, but I'll
+preserve  some  of  the »CL0:mystery»CL1: and some of the »CL0:challenge»CL1: of figuring out how to
+safely  make  three independent processors work together, which (»CL0:coincidentally»CL1:)
+will  also  spare  me  a  lot  of  trouble.   And  now  for something completely
+different...

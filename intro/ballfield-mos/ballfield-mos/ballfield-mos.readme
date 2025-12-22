@@ -1,0 +1,42 @@
+Short:        Ballfield SDL demo
+Author:       david@olofson.net (David Olofson), Morphos port by Fabrizio "Lanch" Bartoloni
+Uploader:     lanch@tiscali.it (Fabrizio Bartoloni)
+Type:         demo/intro
+Architecture: ppc-morphos;
+
+
+                     Ballfield
+                     ---------
+
+Here's a cute little thing that should bring back
+memories from the days of the Amiga and Atari ST,
+and the old demo scene culture. I played with other
+stuff most of the time on my Amiga, so I guess I'll
+have my fun now, when it's dead simple and you
+don't even have to hack any asm code! ;-)
+
+
+The program supports a few command line options:
+
+	-f	Fullscreen
+	-nd	No Double Buffering
+	-h	Use Hardware Surface
+	-<n>	Depth = <n> bits
+	-na	Don't use antialiazing
+
+
+	//David Olofson  <david@olofson.net>
+
+Note from porting author:
+
+Under GCC 2.95.3
+
+stack 100000
+bin:sh configure
+bin:make
+
+was enough to compile this Morphos version, anyway it doesn't quit properly and there may be further
+ problems my quick test didn't unveil. This "no quit" problem appeared on some other SDL Morphos
+  ports i've seen done by more experienced programmers than me, feel free to improve quality of this
+  porting, i may do it myself but time is a major constrain like usual. Beside that graphic files
+  must stay in the same directory than executable...

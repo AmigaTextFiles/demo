@@ -1,0 +1,64 @@
+/*****************************************************************************
+ *                                                                           *
+ *                   DiskMag AmigaCS #002   10.05.1998                       *
+ *                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                       *
+ *                                                                           *
+ *                  code      Jarda 'ShAmaN' Pokorny                         *
+ *                   gfx      Jarda 'JR' Rozmara                             *
+ *                 music      Jarda 'JR' Rozmara                             *
+ *                                                                           *
+ *               redakce      Jarda 'ShAmaN' Pokorny                         *
+ *                            Mila 'YA' Petr                                 *
+ *                            Petr 'Schizzy' Skala                           *
+ *                            Jarda 'JR' Rozmara                             *
+ *                                                                           *
+ *****************************************************************************/
+
+  DiskMag je plne systemovy, proto chodi perfektne pod CyberGraphX (nadefinujte
+si v CGXMode rezim 640x256x8), pak je i bleskove rychly (a musi se brzdit :-).
+
+  Pozadavky:
+  - Amiga s CPU 68020+, AGA cipy a AmigaOS 3.0 a vyssim
+  - nainstalovane datatypy (datatypes.library, picture a ilbm.datatype)
+  - 1MB volne CHIPky, nejakou FASTku a harddisk.
+
+  Zname chyby:
+  - V39-V40 datatypy spatne remapuji nektere obrazky - V43 maji mnohem lepsi
+    remapovaci rutiny (V44 datatyp pro AGA je prilozen v adresari Extras)
+  - pokud vam na PALu nestaci CHIPka, tak lze pomoci tooltypu vypnout hudbu
+    a animace (MUSIC=NO, ANIM=NO)
+  - pokud prehravaci rutina spatne prehrava z FASTky, nastavte FASTPLAY=NO
+
+_______________________________________________________________________________
+
+
+                                   GREETINGS
+                                   ~~~~~~~~~
+
+  From Shaman
+  ¯¯¯¯¯¯¯¯¯¯¯
+   - Andrej 'DNA' Bunta ... stay C00L!
+   - Snappy, uF0, pekr, Lopolo ... a vubec vsichni z IRC kanalu #amigacs!
+   - Tomaaash Benda z AR
+   - Jarek Novosad ... sejdeme se na Tesaku!
+
+  From JR
+  ¯¯¯¯¯¯¯
+   - Raistlin alias Fredy
+   - Marry (nekdy zase zabrejkujem!)
+   - all orthodoux Amigists and cyberpunkers
+
+
+_______________________________________________________________________________
+
+                                Kontaktni adresy
+                                ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+
+   Redakce            EMAIL:  abort@post.cz
+   ~~~~~~~              WWW:  http://sun.ujep.cz/~pokorny/amigacs
+
+
+   Bugreporty         EMAIL:  shaman@sun.ujep.cz
+   ~~~~~~~~~~
+
+_______________________________________________________________________________

@@ -1,0 +1,56 @@
+P³yta CD-R z amigowymi danymi
+
+
+
+Nie  bêdzie  to kolejny artyku³ o tym jak wypalaæ p³ytki na Amidze, ale jak
+przerzuciæ  dane z Amigi na p³ytê CD-R lub CD-W nagran± na PC.  Duûa zachêt
+do  nagrywania  p³ytek  u "niebieskich braci" jest cena, która jest niska w
+mojej  miejscowo¶ci  wynosi  5  z³.  i to juû na przyzwoitej p³ytce a je¶li
+jest  to  nasz  dobry  znajomy  to  nagra  nam  tê  p³ytkê za friko.  Innym
+argumentem  przemawiaj±cym za tym jest to ûe ma³o amigowców ma nagrywarki a
+je¶li  kto¶  ma juû nagrywarkê to znajduje siê on nas daleko i nie ma sensu
+przesy³anie  przez internet danych na nagranie p³ytki innym plusem jest ich
+powszechno¶æ  w¶ród  niebieskiej  spo³eczno¶ci.   Jak  siê  do tego zabraæ?
+Oczywi¶cie  bêd±  potrzebne  wcze¶niej  zgromadzone  dane,  dysk  twardy
+sformatowany  w  sposób umoûliwiaj±cy rozpoznanie przez niebieskiego brata.
+
+
+Do  przerzucenia  danych  z  naszego twardego dysku na pecetowy twardy dysk
+potrzebny  bêdzie  file  menadûer,  który  bêdzie  obs³ugiwa³  nazwy plików
+d³uûsze  niû  przewiduje Workbench (30 znaków w FFS) np.  "Directory Opus",
+"File  Master" (niestety nie radzi sobie z tym).  Bêdzie on nam szczególnie
+potrzebny  gdy  nasza  p³ytka  bêdzie  zawieraæ  np.   mp3, adpcm4 gdyû one
+wymagaj±  przewaûnie  d³ugich nazw, kaûdy kto przechowuje na swoim amigowym
+twardym  dysku  zd±ûy³  siê  z  tym  problemem  zetkn±æ lub inne dane które
+wymagaj± d³uûszej nazwy niû 30 znaków.  Aby nasze dane mog³y znale¶æ siê na
+p³ytce  to  musimy  je jeszcze poddaæ kilku operacjom.  Windows jako system
+operacyjny  jest bardzo wyczulony na nietypowe znaki i dlatego nasze pliki,
+które  maj±  byæ  nagrane  u  kolegi grzybiarza nie mog± zawieraæ amigowych
+polskich  znaków  z  wyj±tkiem  ma³ym  "ó", które pokrywa siê z windowsowym
+ma³ym  "ó"  oprócz polskich znaków Windows nie prze³knie "*","?","<" i ">".
+
+
+Po  tej  operacji  moûemy  byæ  pewni,  ûe  nasze dane w oko³o 99,9% zostan
+nagrane  na p³ytce.  Dlaczego tak siê dzieje wydaje siê mi, ûe problem tkwi
+w  sterownikach  obs³uguj±ce  pecetowe  dyski ja uûywam FAT95 w wersji 3.07
+(kto  go nie uûywa ?), przy kopiowaniu danych z naszego pecetowego twardego
+dysku  na  kolegi  dysk, pecet nie móg³ odczytaæ kilku plików w drug± stron
+jak  narazie  to  nie  mia³em jeszcze ûadnych problemów a dane z pecetowego
+dysku  przenoszê  do¶æ  czêsto raz a czasem dwa razy w tygodniu o to juû od
+jakiego¶  czasu.  Prawdopodobn± przyczyn± by³ b³±d w programie FAT95, który
+niedokoïca  dobrze  radzi  sobie  z  FATami.   W  przypadku gdy mamy dysk o
+pojemno¶ci  wiêkszej  niû  4 Gb to dziwnie siê on z takimi dyskami obchodzi
+otóû dzieli on je na mniejsze wielko¶æ logiczne po 4 Gb.  chociaû mamy dysk
+o  pojemno¶ci np.  8 Gb to file menadûer pokazuje nam ilo¶æ wolnego miejsca
+jako  4  Gb.   Po  zape³nieniu  tego miejsca udostêpnione s± nastêpne 4 Gb.
+Aby¶my  byli  z  naszej  p³ytki  w  100%  zadowoleni  potrzebny  nam bêdzie
+CacheCDFS  w  odpowiedniej  wersji  lub inny program umoûliwiaj±cy czytanie
+d³ugich  nazw  na  p³ytkach  CD-r w standardzie PC, bo w przeciwnym wypadku
+bêdziemy  tylko  widzieli  8  znaków  i  plus 3 znaki rozszerzania.  "Mi³ej
+zabawy" z windowsem ûyczy 
+
+
+Z-E-D/dA
+
+
+zed1200@go2.pl

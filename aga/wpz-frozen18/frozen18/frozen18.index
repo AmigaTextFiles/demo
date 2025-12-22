@@ -1,0 +1,429 @@
+                 .
+         |       |  ®e/sea                __ ______
+         |       | ______.      _______    T      ·|   ___________
+      ___|       |_\  _  |______\      \___|   ____|___\
+         |       |     | |_     \\__    \     ----'    _
+      ===|       |=====|___________/____//_____________/
+         |       |                                    /     _index
+         |       |                                   /____________
+         ·
+
+       o1. älä ota sitä vakavasti by da jormas
+
+Short:    dA JoRMaS: Älä ota sitä vakavasti (Assembly'99 64k intro)
+Author:   jormas@da.jormas.com (dA JoRMaS)
+Uploader: vesuri@da.jormas.com (Vesuri/dA JoRMaS)
+Type:     demo/sound
+Requires: Any Amiga
+
+		   ____.
+		 dA\   :_. ______ ______ _  _____ __ _____
+		 .__\__  |/  _  ./   __/  \/    /   \    /_
+  		 |_   /  |   /  |_   \ ___/ zZ /  .  \__   \
+	 	  /______|______:/____\  /____/   |   \/____\
+                 ------------------------------ - |____\-----
+                      dA JoRMaS - Älä ota sitä vakavasti
+                      Assembly '99 64k intro competition
+                 --------------------------------------------
+                                (6.Aug.1999)
+
+Älä ota sitä vakavasti does not support gfx cards. On OCS and ECS machines it
+always runs in a PAL mode. The default behaviour on AGA machines is to run
+in a PAL mode if the current screenmode is PAL, NTSC, or a gfx card mode and
+in a VGA mode if the current screenmode is not PAL, NTSC, nor a gfx card
+mode. This default behaviour can be changed using the VGA tooltype or
+command line argument.
+
+There are two tooltypes / command line arguments:
+
+JRm-äOSv.eXE ?
+LOOP/S,VGA/S:
+
+LOOP: The intro loops until the user clicks the left mousebutton.
+ VGA: The intro runs in a · VGA mode IF the current screenmode is PAL, NTSC,
+                            or a gfx card mode
+                          · PAL mode IF the current screenmode is not PAL,
+                            NTSC, nor a gfx card mode
+
+The VGA tooltype / command line argument has no effect on OCS and ECS
+machines.
+
+----------------------------------------------------------------------------
+: Code                        Vesuri :: Modulename               Vakavanha :
+: Graphics                    Vesuri :: Modulelength                171192 :
+: Music                       Vesuri :: Playtime                     0"51' :
+: Style                        Remix :: BPM                            134 :
+----------------------------------------------------------------------------
+
+----------------------------------------------------------------------------
+:                            dA JoRMaS in the net                          :
+----------------------------------------------------------------------------
+: dA JoRMaS Home Page                                http://www.jormas.com :
+: dA JoRMaS E-Mail                                    jormas@da.jormas.com :
+: dA JoRMaS Productions              any Aminet site, demo/sound directory :
+: dA JoRMaS Modules                  any Aminet site, mods/jorma directory :
+----------------------------------------------------------------------------
+
+----------------------------------------------------------------------------
+:                         Contact dA JoRMaS by Mail                        :
+----------------------------------------------------------------------------
+: dA JoRMaS MailHQ                   Polvitie 8, 41160 Tikkakoski, Finland :
+----------------------------------------------------------------------------
+
+----------------------------------------------------------------------------
+:                           dA JoRMaS' Boards:                             :
+----------------------------------------------------------------------------
+: Status : Boardname            : Nodes : Sysop      : IP address          :
+----------------------------------------------------------------------------
+: WHQ    : Juju                 :   n   : wREC       : fINDiT!             :
+: FinHQ  : Dying Degree         : down! : Carnifex   : down!               :
+: PHQ    : dAsECT!              :   1   : mADbART    : varies              :
+: GHQ    : Los Endos            :   4   : Exon       : varies              :
+: SwHQ   : Dial Hard            :   5   : Fury       : varies              :
+: NHQ    : Genetic Waste        :   1   : Magz       : varies              :
+: UKHQ   : Permanent Vacation   :   n   : Mic Flair  : varies              :
+: DHQ    : Atmosphere           :   n   : Delite     :                     :
+: HkiHQ    Bermuda Triangle     :   1   : Kurpitza   :                     :
+----------------------------------------------------------------------------
+
+       o2. push by extreme
+
+                         :....      ....:
+                 ........:  ___     :   :.......
+               ..:   ____ _/  /_____:___ ____: ___  ____ ___
+             ..: :../ (-_\   /__   /  __/ (-_:/   `'   / (-_....:.
+                 : /_____/  _\ /__/__/ /_____/__/  /__/_____/
+                 :.     /__/       .:        : /__/   :
+                 :...........:......:        :        :..dvr..
+                      :                      :....:...:
+
+                        d r e a m s   g o e s   o n!
+
+
+                                -= P U S H =-
+
+                             die erste invasion
+
+                                  64k intro
+
+
+                        THIS IS COMPO VERSION ONLY!
+                     Final version available comming soon.
+
+
+                An Extreme contribution for the Assembly'99
+
+
+                 Design...................Exploder & MagiC
+                 Code, 3D modeling, samples.......Exploder
+                 Music..............................Visual
+                 Organizing..........................MagiC
+                 Special thanx to...Mac Buster & BriteLite
+
+
+         Requirements: 020+ AGA about 1mb chip ram and 14mb fast ram
+
+
+     It is our first 64k intro on AMIGA so don`t blame us very strong ;)
+      All parts of the intro was modeled in two weeks before the party.
+
+
+Some parts of polygon faktory was written on "naked" Amiga 1200 with 1mb fast.
+             Other things was written using Blizzard 030/50MHz.
+
+             So  if  you want to support poor russian demoscene
+           you may send some gifts to our addresses (see below) :)
+
+
+    Main music theme taken from original song by Komakino "Man On Mars"
+                         and was remixed by Visual.
+
+                     Epilogue music called "Lost Love".
+                  Original  version  composed  in  1997 and
+               used in our ZX-Spectrum demo called "Power UP".
+
+
+
+               Also see our products on ZX-Spectrum platform.
+
+
+
+
+
+
+                      Extreme Entertainment production
+                                    1999
+
+                             the_extreme@mail.ru
+
+
+
+
+
+              -------------------------------------------------
+
+                        Contact the Extreme team at:
+
+                the_extreme@mail.ru or #xtm or 2:5020/659.52
+
+                           homepage will come soon
+
+
+                                snail mail:
+
+             - MagiC:        Victor Moskalyov
+                             Perevedenovskiy pereulok, 12-87
+                             Moscow, 107082
+                             Russia
+
+                             +7 (095) 267-6976 (russian only!)
+
+             - Exploder:     Alexey Veresov
+                             Mira st., 74-41
+                             Vladimir, 600007
+                             Russia
+
+                             +7 (0922) 29-04-25 (russian only!)
+
+              -------------------------------------------------
+
+
+                               date: 05-Aug-99
+
+       ------------------------------------------------------------
+
+       o3. sparkling blue arctic light by spaceballs
+
+-------------------------
+sparklingbluearcticlight
+64kb's of intro from
+Spaceballs
+at the Assembly'99.
+code..............slummy
+add.drawings.......boost
+music...............teis
+-------------------------
+        ------------------------------------------------------------
+
+       o4. pulsar by scoopex
+             _____________________________________________
+            |						  |
+        ______                                            |
+       /   __ \                                           |
+      /   /\/  \	     =[SINCE 1988]=               |
+     /   / /   /\                                         |
+    /   /_/___/_/___    ______    ______    ______    ______    ____  ____
+  __\____   \/   __ \__/   __ \__/   __ \__/   __ \__/   __ \__/   /\/   /\_
+ //   /\/   /   /\/__\/   /\/  \/   /\/  \/   /\/  \/   /\/  \/_  /_/  _/ //
+ /   / /   /   / _\__/   / /   /   / /   /   /_/   /   ______/\/ __   /\\/¯
+/   /_/   /   /_/   /   /_/   /   /_/   /    _____/   /\____/   /\/   /\
+\________/\________/\________/\________/____/\___/_______/\/___/ /___/ /
+ \_______\/\_______\/\_______\/\_______\____\/   \_______\/\___\/\___\/
+    \/\ \   |                                             |  [K]/ /\/
+       \/   |     =[G.E.N.E.R.A.T.I.O.N.S A.H.E.A.D]=     |     \/
+            |                                             |
+            |                   presents                  |
+            |  !                                          |
+            | ||       a 64k intro at Assembly'99         |
+            | ||                                          |
+            --++--               called:                  |
+            --++------                                    |
+            | ||              =[ PULSAR ]=                |
+            |_||__________________________________________|
+
+--[ HARDWARE REQUIREMENTS ]-----------------------------------------------
+
+  AGA, 68020....................................Required
+  68030/50......................................Highly recommended
+
+--------------------------------------------------------------------------
+
+--[ CREDITS ]-------------------------------------------------------------
+
+  Code....... Darklon
+  Graphics....Acryl
+  Music.......Archor
+
+--------------------------------------------------------------------------
+
+--[ IMPORTANT NOTE ]------------------------------------------------------
+
+  This version has a bug when running it with Cyberstorm CPU boards.
+  Therefore run it without 'setpatch' command and execute 'cpu cache'
+  command before running the intro. If you run it with 'setpatch' command,
+  you wont be able to hear the music.
+
+  We have bug fixed version coming up shortly.
+
+  Most of the rountines in this intro are over 1 year old. In fact, this
+  was already ment to be released at Assembly'98 year ago but we failed.
+  Anyway, here it is at last and hope you'll still enjoy it and vote for
+  us. :)
+
+--------------------------------------------------------------------------
+
+---[ CONTACT SCOOPEX ]----------------------------------------------------
+
+       Via email:
+       scoopex@amigascne.org
+
+       Via snail-mail:
+       ---------------
+       Karpow/Scx		   Thunder/Scx
+       Seppo Seppala               Jean-Francis Lopez
+       Korpikylantie 245           58 Citee Du Chateau D'eau
+       61980 Pantane               62970 Courcelles Les Lens
+       Finland			   France
+
+       Splatterhead/Scx            Decoy/Scx
+       Vesa Kivisilta              Danni Hansen
+       P.O. Box 62                 Jernbanegade 24, 2.sal
+       15141 Lahti                 DK-7100 Vejle
+       Finland                     Denmark
+
+       Remember to check out our homepage at:
+       http://amigascne.org/scoopex
+
+       And get our latest releases from:
+       ftp.funet.fi:pub/amiga/demos/Scoopex
+
+       Stay tuned...
+
+-------------------------------------------------------------------------
+     SCOOPEX - GENERATIONS AHEAD - SINCE 1988 - RANGERISM'S NOT DEAD!
+-------------------------------------------------------------------------
+       ------------------------------------------------------------
+
+       o5. kangooroa or something by bus
+
+
+B.US presented by kangooroo or what...
+
+
+koder notes:
+
+origianally i planned another intro for this party, but unfortunately - or usually ? -
+i have no time to do my original plans. this intro is origianally planned to
+another party too (one years ago), as 4k ...hehe...
+Ok thats all now, sorry for the lack of design and code,
+(some of them are 030 optimied and others are 060, cool noh ?)
+one effect - the best one ofcoz - is skipped due to lack of time,
+but i promise a "real" stuff in the verynearfuture, and a fixed version of that intro. (if anyone reqests)
+
+
+thanks go.to: Adam for his fast gfx support, and ADR^CJ for their amiga support... (hope he give me back my monitor :)
+and a sorry for teo, but i cant include his new music in the intro, no time to debug the mod-player.....:/
+
+
+and all of we will wish a great partying to every ASMer....:)
+
+       ------------------------------------------------------------
+
+       o6. hc-dc10 by spedes
+
+
+Amiga 64KB Intro
+----------------
+
+Title: HC-DC #10
+Author: dA sPEDES dEMO pOSSE
+
+
+
+
+
+
+released at arsembly'99 ...
+
+             another fine quality release..
+
+       ------------------------------------------------------------
+
+       o7. wx-co 123 by replay
+
+replay - http://shine.scene.org/replay
+
+  wx-co 123
+
+    replay at assembly in finland, 1999.
+
+    our second amiga release. our first amiga 64k.
+
+    code whisker
+    music xhale/dcs
+
+    030/50 preferable (no optimizing results in high demands)
+    no aga, no chunky
+    tends to run slow on MC68000
+
+       ------------------------------------------------------------
+
+       o8. g4 by rock
+
+full title: G4 by  - Rock
+Points:     292
+Place:      8
+This entry was shown as #7 in the compo.
+Official computing at Assembly 99 by Zepo
+
+       ------------------------------------------------------------
+
+       o9. gap by extreme
+
+
+                         :....      ....:
+                 ........:  ___     :   :.......
+               ..:   ____ _/  /_____:___ ____: ___  ____ ___
+             ..: :../ (-_\   /__   /  __/ (-_:/   `'   / (-_....:.
+                 : /_____/  _\ /__/__/ /_____/__/  /__/_____/
+                 :.     /__/       .:        : /__/   :
+                 :...........:......:        :        :..dvr..
+                      :                      :....:...:
+
+                        d r e a m s   g o e s   o n!
+
+
+                                -> G A P <-
+
+                                 die intro
+
+
+                            by Exploder/Extreme
+
+
+
+              -------------------------------------------------
+
+                     Contact me and the Extreme team at:
+
+                the_extreme@mair.ru or #xtm or 2:5020/659.52
+
+
+ see ya...                                                   date: 06-Aug-99
+
+       ------------------------------------------------------------
+
+       1o. pukamat by tundrah
+
+       ------------------------------------------------------------
+
+       11. land by sabaoth
+
+       ------------------------------------------------------------
+
+       12. etic by digital
+
+
+  ETIC
+
+  A 4kB intro that plays TB-303 -like sound
+  Created by Thain/Digital (tims@iki.fi)
+  Released at Assembly '99
+
+  FPU required
+  68060 required for smooth playback
+
+  Based on some old stuff by Kalsu/Mellow Chips
+  Thanks to Angel/Sensible and Neure/Digital
+
+       ------------------------------------------------------------

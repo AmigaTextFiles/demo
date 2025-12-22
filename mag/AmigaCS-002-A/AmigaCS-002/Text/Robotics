@@ -1,0 +1,45 @@
+@{d F28AFF}           @{c FFBAFE}Doporuçené nastavení modemû US ROBOTICS pro çeskou telefonní síï@{c}
+          ==================================================================
+
+
+@{c FFBAFE}@{u}Nastavení inicializaçního êetëzce@{uu}:@{c}
+
+  AT&F AT@{c CE8AFF}&H1@{c}&R2@{c CE8AFF}&B1@{c}&A3@{c CE8AFF}X3@{c}S6=3@{c CE8AFF}S8=3@{c}&P0
+     |    @{c CE8AFF}|@{c}  |  @{c CE8AFF}|@{c}  | @{c CE8AFF}|@{c} |   @{c CE8AFF}|@{c}    |
+     |    @{c CE8AFF}|@{c}  |  @{c CE8AFF}|@{c}  | @{c CE8AFF}|@{c} |   @{c CE8AFF}|@{c}    +- pomër mezi pulsy (jen pro analogové ústêedny)
+     |    @{c CE8AFF}|@{c}  |  @{c CE8AFF}|@{c}  | @{c CE8AFF}|@{c} |   @{c CE8AFF}+------@{c} @{c CE8AFF}nastavení doby pro trvaní pauzy ","@{c}
+     |    @{c CE8AFF}|@{c}  |  @{c CE8AFF}|@{c}  | @{c CE8AFF}|@{c} +---------- kolik sekund çeká modem pêed vytáçením
+     |    @{c CE8AFF}|@{c}  |  @{c CE8AFF}|@{c}  | @{c CE8AFF}+------------ rozeznávat BUSY (obsazenou linku)@{c}
+     |    @{c CE8AFF}|@{c}  |  @{c CE8AFF}|@{c}  +-------------- zobrazování rozîíêených vysledkových kódû
+     |    @{c CE8AFF}|@{c}  |  @{c CE8AFF}+----------------- pevná rychlost DTE/DCE port-modem@{c}
+     |    @{c CE8AFF}|@{c}  +-------------------- êízení prûtoku RTS
+     |    @{c CE8AFF}+----------------------- êízení prûtoku CTS@{c}
+     +---------------------------- default (firemní) nastavení
+
+  Çastým  zdrojem  problémû  je nastaveni parametru ATB0 resp.  ATB1.  Pro univerzální
+pouùití  nastavte  VÙDY  volaný  modem na ATB0 a volající na ATB1.  Nejlepîí êeîení je
+nastavit  v inicializaçním êetëzci B0 a vytáçet pêíkazem ATB1DP.  Pokud jste pêipojeni
+k digitální  ústêednë,  mûùete  vytáçet  pêíkazem  ATDT...
+
+  @{c CE8AFF}Pro dobrou spolupráci se software jsou dûleùité pêedevîím následující parametry@{c}:
+
+         @{c CE8AFF}Software@{c}                                @{c CE8AFF}Modem@{c}
+   -----------------------------------------------------------------------------
+    zamçení baud. rychlosti:
+    (Lock Baud rate) YES                  @{c CE8AFF}AT&B1@{c}   doporuçeno!!
+    nelze nastavit                        @{c CE8AFF}AT&B0@{c}   pouùijte tam kde nelze jinak!
+   -----------------------------------------------------------------------------
+    êízení toku dat (Flow Control)
+    hardware, RTS/CTS                     @{c CE8AFF}AT&H1@{c}   silnë doporuçeno!!!
+    software,XON/XOFF,^Q/^S               @{c CE8AFF}AT&H2@{c}   kde nelze jinak
+    none, ùádná                           @{c CE8AFF}AT&H0@{c}   nevhodné pro MNP nebo V42!
+   -----------------------------------------------------------------------------
+
+                       @{c CE8AFF}Nastavení rychlosti sériového rozhraní:@{c}
+                       ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+               Pro dobré vyuùití datové komprese nastavte rychlost na:
+
+    @{c CE8AFF}19200@{c} bps .......... u pomalých Amig s procesory 68000, 68020
+    @{c CE8AFF}38400@{c} bps .......... u Amig s procesory 68030, 68040
+    @{c CE8AFF}57600@{c} bps .......... u Amig s procesory 68040, 68060
+    @{c CE8AFF}115200@{c} bps ......... u Amig s rychlým sériovým portem (HyperCOM, MultiFace3)

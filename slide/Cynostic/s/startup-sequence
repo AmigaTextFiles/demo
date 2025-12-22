@@ -1,0 +1,9 @@
+AGA-SETTER 3 1
+play -p6 AGA_DEMO:tune
+picshow LOADINGPIC
+ppshow >NIL: FILE AGA_DEMO:pic4 TIME 10
+ppshow >NIL: FILE AGA_DEMO:pic3 TIME 10
+ppshow >NIL: FILE AGA_DEMO:pic2 TIME 10
+ppshow >NIL: FILE AGA_DEMO:pic1 TIME 10
+ppshow >NIL: FILE AGA_DEMO:pic0 TIME 10
+Reboot

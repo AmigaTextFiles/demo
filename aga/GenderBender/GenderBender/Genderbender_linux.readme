@@ -1,0 +1,39 @@
+ Hello stranger.
+  This is xFree86 Linux port of TotalVision demo called 'GenderBender'.
+ It was oryginaly prepared for PPC Amiga systems, and then was recompiled by me (elf^va)
+ for xFree86 Linux. 
+   How to start:
+    1) (if you got cd-rom version of this demo) 
+       - copy all files from this cdrom to any location on you hd.
+       - change dir to GenderBender/ and type 
+   	  GenderBender.Linux
+       - if you want to hear cd music during demo, 
+         type GenderBender.Linux -cdrom cdromdevice
+         where cdromdevice is something like /dev/cdrom
+    2) (if you dont have cd-rom version (cd-rip ;)
+       - change directory to GenderBender, and type GenderBender.Linux
+
+And remember, that this demo works in hicolor (15bpp) so you should run your x server
+in at least 16bpp.
+
+-------------
+
+Quick FAQ (by la piovra ona el diablo)
+
+Q: Beee, cdrom problems, demo refuse to start...
+A: If cdrom error occures, please manually start and stop audio track in your cd 
+   (use hardware button or cd software (cdtools)) before you start demo.
+
+Q: Demo hang up or (ups) segmentation fault appear
+A: This problem occures in the old cd version, please change all files name in the "data" directory
+   to LOWER letters (also directory name eg. Data -> data)
+
+Q: Fine, but how to ... mount cdrom in Linux
+A: Well, "mount -t iso9660 /dev/hdX /cdrom" where X - your drive letter 
+   (hdd - second ide slave)
+
+Have A Fun!
+-------------
+
+elf^va, 
+ Szczecin 1999.

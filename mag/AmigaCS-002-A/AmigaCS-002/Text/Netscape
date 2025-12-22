@@ -1,0 +1,34 @@
+@{d 00FFF4}                                    @{c 45D6FF}Nechï skape II@{c}
+                                    @{c 45D6FF}~~~~~~~~~~~~~~@{c}
+  Jak  firma  Netscape  poçátkem  roku  slíbila, zveêejnila na svém  serveru 3. bêezna
+zdrojový  kód  svého nového webovského brouzdadla@{c 45D6FF} Communicator 5@{c}.  Zlé jazyky tvrdily,
+ùe  têídenní  zpoùdëní  bylo  zpûsobeno  nároçným  "odvîivováním", programátoêi v kódu
+údajnë   bëùnë   pouùívali   promënné  s  názvy  jako  cunt,  dumbass  apod.,  nemluvë
+o komentáêích :-)  Velikost  zdrojového  kódu  je  vpravdë ohromující; nejmenîí je pro
+Unixy  (skoro  9  Megs), nejvëtîí - pochopitelnë pro WinDOWNs (12 Megs), a to je jeîtë
+celý  archiv  pakován!  Netscape varovala, ùe zdrojový kód je plný chyb (?) a pro jeho
+kompilaci  je  bezpodmíneçnë  nutné  ovládat  C/C++.   Jednomu  z  prvních  se povedlo
+vybudovat  funkçní  spustitelný  tvar jakémusi americkému vývojáêi na stanici Sparc LX
+bëùící  pod  SunOS/Solaris  a vybavenou 64 Megs pamëti.  Celá kompilace trvala ... osm
+hodin a výsledkem bylo 400 Megs zdrojového a objektového kódu.
+
+  A jaká je situace s portací pro @{c 45D6FF}AmigaOS@{c}?  Zatím je jeîtë brzy (têi týdny po uvolnëní
+kódu)  na  nëjaké  závëry.   Zaçátek vypadal slibnë; na Internetu se utvoêila vývojová
+skupina   s  názvem  OpenScape,  jejímù  zámërem  bylo  právë  vytvoêit  volnou  verzi
+Communicatora  na co nejvëtîí poçet platforem.  Nás mûùe tëîit fakt, ùe AmigaOS byl na
+seznamu  uveden  jako  první  z  alternativních  operaçních  systémû  (po Windows, Mac
+a Unixu, zato pêed OS/2, BeOS a OS9).  Pro programátory bude asi tëùký oêíîek fakt, ùe
+velká  çást  kódu  (asi 20%) je závislá na platformë, a také jak adaptovat nativní GUI
+(OSF/Motif)  na  nëjaké  amigovské  GUI  (pravdëpodobnë  MUI).   Secure  Socket  Layer
+(chránëný pêenos dat) bude pravdëpodobnë êeîen nëjakou komponentou, jakou má MiamiSSL;
+pro  Javu by se dal pouùít jeden z volnë îiêitelných (a stále vyvíjených) Java Virtual
+Machine  -  têeba  GNU  Kaffe.  Tyto dohady se objevovaly v polovinë dubna, od té doby
+jsem  nezaznamenal  ùádný  pohyb.   OpenScape  group  na dotazy odpovídá trapným "stay
+tuned!" :(
+
+                                     - @{c 45D6FF}schizzy@{c} -
+
+
+  BTW:   pokud  bude  pêímo  do  nového AmigaOS 3.5 (respektive 4.0) integrován nëjaký
+webowský  klient  (Voyager?  Opera???) - a takové dohady se uù na Netu vyskytly - bude
+vîechno zase úplnë jinak...  8-)

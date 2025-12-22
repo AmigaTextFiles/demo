@@ -1,0 +1,121 @@
+Short:        GL Excess - The OpenGL Demo for AmigaOS3
+Author:       'Wawa' TOKARSKI
+Uploader:     thellier free fr
+Type:         demo/misc
+Version:      1.0
+Requires:     RTG system,68020-40,fpu,StormMesa,Warp3D
+Architecture: m68k-amigaos >= 3.0.0
+
+INSTALLATION 
+1) Install StormMesa libraries
+2) Install Warp3D or Wazp3D libraries
+3) Copy GLeXcess_OS3 and GLeXcess_OS3.info where you want
+4) For glExcess to run you also need the original 123 data files : it is a /data directory containing 122 .raw 1 .dat
+You can get them from PC version, from Linux sources or from another Amiga like version (AROS,etc...)
+http://www.glexcess.com/files.htm
+
+USAGE
+For Full Screen type "setenv glut/force_fs 1 " then start the demo
+Hit space to go to next demo
+
+HISTORY 
+11/04/2009 (Alain Thellier)
+----------
+New icon.
+Enhanced new release Wazp3D Beta45.5 that fully support the glexcess demo OS3 68k so now works in any UAE with JIT.
+(Wazp3D-Prefs: Directly write in Bitmap:ON Poly Hack More:ON Coloring GL:ON Simu. Perspective:ON )
+Known bugs with Wazp3D: some triangles are missing on scene3 (blue mountain) & scene8 (sea)
+
+10/24/2009 (Wawa)
+----------
+Ported the glexcess demo to OS3 68k/StormMesa
+
+10/22/2009 (Alex Carmona)
+----------
+
+Ported the glexcess demo to OS4/miniGL
+
+Compilation went pretty smoothly but the resulting binary had a few issues so
+I made a few changes:
+
+1) Replaced the buggy command line arguments handling with this template:
+
+glxs WIDTH/N HEIGHT/N DEPTH/N REFRESH/N
+
+The defaults are "640 480 24 60" (640x480 24bit 60Hz)
+
+Specifying no argument or the first 2 arguments will open a window, while if 3 or
+more arguments are provided it will open in fullscreen mode.
+
+2) I've set the timing steps to 30 by default (change with A/Z keys).
+
+On my A1-XE with Radeon 7500 it results in what looks like a normal pace though
+GPU-intensive sequences may still appear a bit slow.
+
+3) To prevent the usual 100% CPU load from GL (which blocks <= 0 pri tasks),
+I've inserted a 20 millisecond delay in the rendering loop.
+
+To pause the demo completely (e.g. no CPU load) press A or Z to make it open
+the console window and press any key in the console, then press A or Z again
+in the glexcess window. All rendering will stop until you press enter or
+backspace in the console so that it can print the new timing step value.
+
+It's possible to jump to the next scene by pressing Space at anytime during the
+demo but I've had a few crashes when the window was set to 320x240 so beware.
+
+
+10/09/2003
+----------
+
+This is the source code for the demo part only, benchmarking code is not included.
+All references to Win32-specific code have been removed, in order to make the
+whole thing easily portable. Unfortunately, this also implies that there is no
+realiable timing anymore (glut timing just could not do the work), though you can
+adjust the timing step with 'a' and 'z' keys. Space bar will jump to the next scene.
+
+Command line arguments:
+-----------------------
+Arg1: Windowed/Fullscreen (0/1)
+Arg2: Width
+Arg3: Height
+Arg4: Bpp
+Arg5: VFreq
+
+Notice about textures:
+----------------------
+All textures have been converted to a simple R8G8B8 format, where the first two bytes
+contain width and height as powers of 2. This makes it possible to load and edit
+textures inside Photoshop, just remember to set 3 (interleaved) color channels and
+a header size of 2 bytes, most times the program will automatically guess the right
+dimensions.
+
+License:
+--------
+
+The source code is published under the terms of the GNU General Public License V2.
+For more details about the license, read the LICENSE file available in the source
+distribution.
+
+Building the demo on Win32+MSVC:
+--------------------------------
+
+You need to have the opengl.lib, glu.lib and glut.lib files available somewhere in
+the your linking lib path.
+
+Then open the glxglut.dsw project, and click on compile (F7 shortcut).
+
+Building the demo on Unix:
+--------------------------
+
+You need to have the development headers of opengl/mesa, glu and glut installed with
+corresponding libs.
+
+Then type in the root dir of this source distribution just type:
+$ make
+
+There is no install rule, and the demo must be run in current path (it needs access
+to ./data)
+
+----------------------------------------------------------
+As usual, feel free to drop comments: bustard@glexcess.com
+----------------------------------------------------------

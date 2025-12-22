@@ -1,0 +1,239 @@
+{
+  "actions": [
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "int32_values": 1,
+            "time": 4700
+          },
+          {
+            "int32_values": 2,
+            "time": 4500
+          },
+          {
+            "int32_values": 3,
+            "time": 4500
+          },
+          {
+            "int32_values": 4,
+            "time": 3500
+          },
+          {
+            "int32_values": 5,
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "pi_scene_1"
+        }
+      ],
+      "loops": 1,
+      "name": "event",
+      "start_time": 4500,
+      "type": "property_int32"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.24605238,
+              0.9713096,
+              -0.1981494
+            ],
+            "interpolation": "linear",
+            "time": 4480
+          },
+          {
+            "float_values": [
+              -0.33943632,
+              1.2413758,
+              0.21970285
+            ],
+            "time": 20
+          },
+          {
+            "float_values": [
+              -1.04563236,
+              1.61124313,
+              -0.21164729
+            ],
+            "interpolation": "linear",
+            "time": 4680
+          },
+          {
+            "float_values": [
+              -0.37054381,
+              1.74809074,
+              -0.47797784
+            ],
+            "time": 20
+          },
+          {
+            "float_values": [
+              0.05703293,
+              1.71051168,
+              -0.94149941
+            ],
+            "interpolation": "linear",
+            "time": 14520
+          },
+          {
+            "float_values": [
+              -0.60005379,
+              1.71649063,
+              -0.74730313
+            ],
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "camera_1"
+        }
+      ],
+      "loops": 1,
+      "name": "camera_1Action",
+      "start_time": 0,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -69.505394,
+              -103.353719,
+              -0.0
+            ],
+            "interpolation": "linear",
+            "time": 4480
+          },
+          {
+            "float_values": [
+              -69.505396,
+              -103.353719,
+              -0.0
+            ],
+            "time": 20
+          },
+          {
+            "float_values": [
+              -47.174451,
+              -110.106263,
+              -0.0
+            ],
+            "interpolation": "linear",
+            "time": 4680
+          },
+          {
+            "float_values": [
+              -58.400499,
+              -154.812931,
+              -4.343559
+            ],
+            "time": 20
+          },
+          {
+            "float_values": [
+              -54.154706,
+              -157.41552,
+              17.374666
+            ],
+            "interpolation": "linear",
+            "time": 14520
+          },
+          {
+            "float_values": [
+              -52.647731,
+              -126.38776,
+              15.916122
+            ],
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "camera_1"
+        }
+      ],
+      "loops": 1,
+      "name": "camera_1Action",
+      "start_time": 0,
+      "type": "rotation_xyz"
+    }
+  ],
+  "cameras": [
+    {
+      "far_clip_plane": 100.0,
+      "fov_x": 54.362152,
+      "fov_y": 28.800001,
+      "hide": false,
+      "name": "camera_1",
+      "near_clip_plane": 0.1,
+      "position": [
+        -0.24605238,
+        0.9713096,
+        -0.1981494
+      ],
+      "rotation": [
+        -69.505394,
+        -103.353719,
+        -0.0
+      ]
+    }
+  ],
+  "enc_info": {
+    "data_type": "ENCSCN",
+    "date": "20 Nov 2022 01:57:12",
+    "version": "2.0"
+  },
+  "loops": 1,
+  "name": "pi_scene_1",
+  "objects": [
+    {
+      "mesh_name": "pi_pipe",
+      "name": "pipe",
+      "position": [
+        0.0,
+        0.17414087,
+        -0.0
+      ]
+    },
+    {
+      "mesh_name": "pi_ground",
+      "name": "ground",
+      "order": -2,
+      "properties": {
+        "depth_test": 0
+      }
+    },
+    {
+      "mesh_name": "pi_shadow",
+      "name": "shadow",
+      "order": -1,
+      "properties": {
+        "blending": "multiply",
+        "depth_mask": 0,
+        "depth_test": 0
+      }
+    },
+    {
+      "name": "smoke_emiter",
+      "position": [
+        -0.0,
+        0.39196128,
+        0.314704
+      ]
+    }
+  ],
+  "properties": {
+    "event": 1
+  },
+  "time": 32000
+}

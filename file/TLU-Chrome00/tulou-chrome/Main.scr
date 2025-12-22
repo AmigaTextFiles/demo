@@ -1,0 +1,85 @@
+V3.0
+
+MOUSE on
+FKEYS on
+
+EVENT Chrome256.iff
+SOUND play "Ram:SFX/Main.mod" volume 64 pan 0 period 350 loops 1
+PICTURE "RAM:Pic/Chrome256.iff"
+PAUSE 3
+END
+
+EVENT 01_ChromeStar1.ANIM8L
+ANIM "Tulou-Chrome:Ani/01_ChromeStar1.ANI" 25 1
+WIPE newscrollout south speed 5
+END
+
+EVENT 02_ChromeStar2.ANIM8L
+ANIM "Tulou-Chrome:Ani/02_ChromeStar2.ANI" 25 3
+END
+
+EVENT 03_ChromeStar3.ANIM32
+ANIM "Tulou-Chrome:Ani/03_ChromeStar3.ANI" 25 1 disk
+END
+
+EVENT 04_Credits.ANIM32
+ANIM "Tulou-Chrome:Ani/04_Credits.ANI" 25 1 disk
+END
+
+EVENT CromeStarEND256.iff
+PICTURE "RAM:Pic/CromeStarEND256.iff"
+TABS 50 100 150 200 250
+MARGINS on 16 303
+COLOR 255 0 0 0 0 0 255 0 0 255 221 122 16 73 255
+ATTRIBUTES remap kerning
+STYLE 2 3 4 3 6 1 1 9 1 1 13 0 0 5 2 0 4 4 3
+TEXTWIPE loop east easeout speed 6
+BRUSH -1 -2 "RAM:Pic/jezebel256.iff" size 323 163
+END
+
+EVENT RobotStart256.iff
+PICTURE "RAM:Pic/RobotStart256.iff"
+WIPE windmill speed 3
+PAUSE 3
+END
+
+EVENT 05_Robot.ANIM32
+ANIM "Tulou-Chrome:Ani/05_Robot.ANI" 25 1 disk
+END
+
+EVENT RobotEND256.iff
+PICTURE "RAM:Pic/RobotEND256.iff"
+END
+
+EVENT White.iff
+PICTURE "RAM:Pic/White.iff"
+WIPE fadetowhite speed 5
+END
+
+EVENT GreetingsStart256.iff
+PICTURE "RAM:Pic/GreetingsStart256.iff"
+WIPE fadetowhite speed 10
+END
+
+EVENT 06_Greetings.ANIM32
+ANIM "Tulou-Chrome:Ani/06_Greetings.ANI" 25 1 disk
+END
+
+EVENT 07_Mohikan.ANIM32
+ANIM "Tulou-Chrome:Ani/07_Mohikan.ANI" 25 1 disk
+END
+
+EVENT 08_MohikanEnd.ANIM32
+ANIM "Tulou-Chrome:Ani/08_MohikanEnd.ANI" 25 1 disk
+END
+
+EVENT MohikanEnd256.iff
+PICTURE "RAM:Pic/MohikanEnd256.iff"
+END
+
+EVENT Black.iff
+SOUND stop fade 5
+PICTURE "RAM:Pic/Black.iff"
+WIPE fade bycolor 0 speed 5
+PAUSE 5
+END

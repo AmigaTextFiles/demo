@@ -1,0 +1,200 @@
+
+ "MapRect"
+
+ and
+
+ "MapRectSprite"
+
+ are 2 effects that provide a way to draw a sprite in a square,
+ but the coordinates read on the texture can be manipulated.
+ it means if you can move both the rectangle where it is drawn, but
+ also the X and Y coordinates on the textures at a given corner.
+ the texture coords are given in pixel, and the rectangle drawn in (0,1.0)
+
+ the only difference between maprect and Maprect stands
+ in the fact that Maprect have color 0 transparent.
+
+ as this effect is a deformation fx, all images using it
+ must be 256x256 pixel, (and you can't use image animation with bmfonts.)
+
+ note a possible trick:
+ drawing many rectangle each nears other with their edges corresponding,
+ send settings silly deformations, and assuring that for an edge,
+ the deformations are the same. (run this exemple to understand.)
+
+
+ it's also possible to do a simple rotozoom with this effect,
+ by putting sinus and cosinus functions as needed.
+
+
+   <Fx><Pa>Maprect </Pa>
+                <Pa>  </Pa>                    the rectangle where to draw
+                <Pa> texture256x256 </Pa>  the 256x256 image to deform
+                <Pa>CTE|0.2</Pa>            the x1
+                <Pa>CTE|0.3</Pa>                y1
+                <Pa>CTE|0.5</Pa>                x2
+                <Pa>CTE|0.6</Pa>                y2 rectangle where to draw
+
+                <Pa>COS|35|8.6|20</Pa>          the x,y coordinates on texture
+                <Pa>SIN|30|10.6|29</Pa>         of the first corner.
+
+                <Pa>CTE|128</Pa>                the x,y...
+                <Pa>SIN|30|-6.5|29</Pa>         of the 2nd corner
+
+                <Pa>COS|35|-9|30</Pa>           of the 3rd
+                <Pa>SIN|108|10.6|30</Pa>
+
+                <Pa>CTE|128</Pa>                of the 4rth.
+                <Pa>CTE|128</Pa>
+            </Fx>
+
+
+
+<MAIN> mainscript |0|1</MAIN>              the main script to play...
+-------------------------------------
+<KIMG> texture256x256 | data/logozaac.iff </KIMG>   let's create an image.
+<KIMG> txt4 | data/txt4.iff </KIMG>
+
+
+
+--------------------------------------------------
+<KSCRIPT><ID> mainscript </ID>
+        <PLAY> part2 | 500 | 0 | 1 </PLAY>
+        <PLAY> part1 | 500 | 0 | 1 </PLAY>
+</KSCRIPT>
+
+------------------------
+///<KPART>  <ID> part1  </ID>
+
+
+  <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> texture256x256 </Pa>   we have seen each image stands for a 256 color palette too.
+    </Fx>
+
+    <Fx><Pa> FillRC</Pa> <Pa></Pa> <Pa>cte| 4</Pa>  </Fx> all screen to color
+
+  <Fx>
+
+
+   <Fx><Pa>MapRectSprite </Pa>
+                <Pa>  </Pa>
+                <Pa> texture256x256 </Pa>
+                <Pa>CTE|0</Pa>            the x1
+                <Pa>CTE|0.1</Pa>                y1
+                <Pa>CTE|0.5</Pa>                x2
+                <Pa>CTE|0.5</Pa>                y2 RectSpriteangle where to draw
+
+                <Pa>COS|35|3.6|20</Pa>          the x,y coordinates on texture
+                <Pa>SIN|30|4.6|29</Pa>         of the first corner.
+
+                <Pa>CTE|128</Pa>                the x,y...
+                <Pa>SIN|30|-2.5|29</Pa>         of the 2nd corner
+
+                <Pa>COS|35|-4|30</Pa>           of the 3rd
+                <Pa>SIN|108|4.6|30</Pa>
+
+                <Pa>CTE|128</Pa>                of the 4rth.
+                <Pa>CTE|128</Pa>
+            </Fx>
+
+    <Fx><Pa>MapRectSprite </Pa>
+                <Pa> </Pa>
+                <Pa>    texture256x256 </Pa>
+                <Pa>CTE|0.5</Pa>
+                <Pa>CTE|0.1</Pa>
+                <Pa>CTE|1</Pa>
+                <Pa>CTE|0.5</Pa>
+
+                <Pa>CTE|128</Pa>
+                <Pa>SIN|30|-2.5|29</Pa>
+
+                <Pa>COS|221|4.6|20</Pa>
+                <Pa>SIN|30|2.6|20</Pa>
+
+                <Pa>CTE|128</Pa>
+                <Pa>CTE|128</Pa>
+
+                <Pa>COS|221|5|30</Pa>
+                <Pa>SIN|100|2.6|20</Pa>
+            </Fx>
+
+    <Fx><Pa>MapRectSprite </Pa>
+                <Pa> </Pa>
+                <Pa>    texture256x256 </Pa>
+                <Pa>CTE|0</Pa>
+                <Pa>CTE|0.5</Pa>
+                <Pa>CTE|0.5</Pa>
+                <Pa>CTE|0.8</Pa>
+
+               <Pa>COS|35|-4|30</Pa>
+                <Pa>SIN|108|4.6|30</Pa>
+
+                <Pa>CTE|128</Pa>
+                <Pa>CTE|128</Pa>
+
+                <Pa>COS|35|-9|10</Pa>
+                <Pa>SIN|220|2.5|20</Pa>
+
+               <Pa>CTE|128</Pa>
+                <Pa>SIN|212|2|20</Pa>
+
+
+            </Fx>
+
+    <Fx><Pa>MapRectSprite </Pa>
+                <Pa> </Pa>
+                <Pa>    texture256x256 </Pa>
+                <Pa>CTE|0.5</Pa>
+                <Pa>CTE|0.5</Pa>
+                <Pa>CTE|1</Pa>
+                <Pa>CTE|0.8</Pa>
+
+                <Pa>CTE|128</Pa>
+                <Pa>CTE|128</Pa>
+
+                <Pa>COS|221|5|20</Pa>
+                <Pa>SIN|100|2.6|20</Pa>
+
+                <Pa>CTE|128</Pa>
+                <Pa>SIN|212|2|20</Pa>
+
+                <Pa>COS|221|3|20</Pa>
+                <Pa>SIN|222|2.9|30</Pa>
+
+            </Fx>
+
+///</KPART>
+--------------------------
+///<KPART>  <ID> part2  </ID>
+
+
+  <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> txt4 </Pa>   we have seen each image stands for a 256 color palette too.
+    </Fx>
+
+    <Fx><Pa> FillRC</Pa> <Pa></Pa> <Pa>cte| 24</Pa>  </Fx> all screen to color
+
+
+ <Fx><Pa>Maprect </Pa>
+                <Pa> </Pa>
+                <Pa>    txt4 </Pa>
+                <Pa>4CTE|0.1|0.1|0.9|0.9</Pa>
+
+                <Pa>cos|128|0.2|120</Pa>
+                <Pa>sin|128|0.2|120</Pa>
+
+                <Pa>COS|128|0.39|11|120</Pa>
+                <Pa>SIN|128|0.39|120</Pa>
+
+                <Pa>cos|128|0.3|128</Pa>
+                <Pa>SIN|128|0.3|128</Pa>
+
+                <Pa>COS|128|0.15|120</Pa>
+                <Pa>SIN|128|0.15|120</Pa>
+
+            </Fx>
+
+///</KPART>
+----------------------

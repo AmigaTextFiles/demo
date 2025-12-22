@@ -1,0 +1,136 @@
+;**************************************************************************
+;*                                                                        *
+;*              Installer Script For Scene-Tool PowerART 1,02             *
+;*                                                                        *
+;*       Copyright by Eugene Sobolev aka aGGreSSor^tPA, 01.01.2003        *
+;*                                                                        *
+;**************************************************************************
+
+;--------------------------------------------------------------------------
+
+(procedure Install
+(copylib  (prompt #prompt_copy "\n\nPowerART" )
+          (help @copylib-help)
+          (confirm "average")
+          (source "C/PowerART")
+          (dest "C:")
+          (optional "oknodelete" "force")
+)
+
+(copyfiles (prompt #prompt_copy "\nHiTech russian scene font\n"
+                                "Русский сценовый шрифт HiTech\n\n" )
+           (help @copylib-help)
+           (confirm "average")
+           (source "Fonts/HiTech.font")
+           (dest "FONTS:")
+           (optional "oknodelete" "force")
+)
+
+
+(makedir ("FONTS:HiTech/"))
+(copyfiles (prompt #prompt_copy "\nHiTech font directory content\n"
+                                "Содержимое директории шрифта HiTech\n\n" )
+         (help @copylib-help)
+         (confirm "average")
+         (source "Fonts/HiTech/8")
+         (dest "FONTS:HiTech")
+)
+
+(makedir ("ENVARC:TextView/"))
+(copyfiles (prompt #prompt_copy "\nTextView prefs for ANSI-code file\n"
+                                "Настройки TextView для просмотра ANSI\n\n" )
+         (help @copylib-help)
+         (confirm "average")
+         (source "PREFS/ENV-Archive/TextView/TextView.prefs")
+         (dest "ENVARC:TextView")
+)
+)
+
+(procedure Remove
+
+(delete "C:PowerART")
+(delete "FONTS:HiTech/8")
+(delete "FONTS:HiTech")
+(delete "FONTS:HiTech.font")
+(delete "ENVARC:TextView/TextView.prefs")
+(delete "ENVARC:TextView")
+)
+
+; -> Main Script
+
+(if (< (/ (getversion) 65536) 37)
+    (abort "\nYou must have Kickstart V37+ or greater to use this installation"
+           " package and to run \"PowerART 1.02\".\n\n"
+           "Чтобы инсталлировать и использовать пакет \"PowerART 1,02\","
+           " вам потребуется Kickstart V37+ или лучше.")
+)
+
+(message
+   "\nPowerART 1.02 \n"
+   "Power Articles convertor for CLI (only!)\n"
+   "© Eugene Sobolev, 2002-2003\naka aGGreSSor^team PowerAmiga\n\n"
+   "This script will install\n"
+   "PowerART, custom font HiTech/8\n"
+   "and TextView prefs for comfortable\n"
+   "read ANSI-code docunent.\n\n"
+   "They should work with cpu mc68000\n"
+   "and V37+ (OS2.x or more).\n"
+)
+
+
+(welcome)
+
+; ** Ask to Install Or Remove
+
+(set askflag (askbool
+                (prompt "\nDo you want to install or remove "
+                        "\"PowerART 1.02\"?\n\n"
+                     "Вы хотите инсталлировать или удалить "
+                        "\"PowerART 1,02\"?"
+)
+                (help "")
+                (choices "Install" "Remove")
+             )
+)
+
+(if askflag
+    (Install)                       ;Start Install Procedure
+    (Remove)                        ;Start Remove Procedure
+)
+
+
+
+(message
+   "         __      __         __           \n"
+   "      __/ //_ __/ //_______/ //_         \n"
+   "      \_   _|_\_        \__    |         \n"
+   "  ______|  \    /  \___/   \   |______   \n"
+   "  |_ 01 |   |  ||    | |   |_  | 03  _|  \n"
+   "    \___|______||____| |_______|____/asd \n"
+   "   _/                               \_   \n"
+   "  ||  t e a m   p o w e r a m i g a  ||  \n"
+   "  ||---------------------------------||  \n"
+   "  || PowerART 1.02 is CLI-convertor  ||  \n"
+   "  ||  #?.pa articles to ANSI-code,   ||  \n"
+   "  ||   plain text and AmigaGuide!    ||  \n"
+   "  ||                                 ||  \n"
+   "  `------------------------(01/01/03)-'  \n"
+)
+
+(if askflag
+(message
+   "\n\n\nINSTALL PACKAGE COMPLETE!\n\n"
+   "ИНСТАЛЛЯЦИЯ ПАКЕТА ЗАВЕРШЕНА!\n"
+)
+
+(message
+   "\n\n\nREMOVE PACKAGE COMPLETE!\n\n"
+   "УДАЛЕНИЕ ПАКЕТА ЗАВЕРШЕНО!\n"
+)
+
+)
+
+(exit
+   (quiet)
+)
+

@@ -1,0 +1,9 @@
+; Boing Ball Fullscreen
+stack 300000
+copy >NIL: env:mesa/noclamp ram:
+copy >NIL: env:glut/force_fs ram:
+setenv mesa/noclamp 1
+setenv glut/force_fs 1
+Planet data/Boing.bmp
+copy >NIL: ram:force_fs env:glut
+copy >NIL: ram:noclamp env:mesa

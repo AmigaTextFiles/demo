@@ -1,0 +1,54 @@
+============================================
+Boosts Kickstart speed on 68040 or 68060
+Author : simon@studio.woden.com (Simon N Goodwin)
+============================================
+
+SUMMARY
+This free utility makes operating system code a lot faster by 
+copying Kickstart - the built-in part of the Amiga's operating 
+system - into fast memory. It does this dynamically and can be 
+activated or deactivated at any time. It has been tested on CPU 
+accelerators made by Commodore, GVP, MacroSystem and 
+Phase Five and written with compatibility and reliability in mind.
+
+First Aminet Release: 3rd May 1998.
+
+Unsolicited comment from an early user:
+"Thanks for writing QuickROM. I'm amazed at how much better 
+my 4000 with Cyberstorm Mach-II is working! Disk access is 
+much faster, as well as FTP downloads. There's one site that I 
+thought was just slow, but after installing QuickROM, the 
+downloads fly. The only problem is that when I run QuickROM 
+from the workbench instead of CLI, it gurus, while still speeding 
+up the system. That doesn't really matter, though, because it 
+works fine in my user startup."  - Dave Wright
+
+Second Aminet Release: 21st May 1998.
+In response to this and other comments I've added a Workbench-
+friendly version (QuickROM_WB) which can be put into 
+Wbstartup or run at any time by clicking on the icon, and added 
+installation instructions.  - Simon N Goodwin
+
+REQUIREMENTS
+Any Amiga with Fast Memory and a 68040 or 68060 processor: 
+LC, XC or MC version - as a MMU Memory Management Unit is 
+required. Up-to-date SetPatch with CPU libraries, Enforcer or 
+equivalent. Amiga include files to re-assemble the Workbench 
+startup code.
+
+BENEFITS
+* Boosts speed of all Kickstart ROM routines by up to 30 times.
+* Allocates RAM from the top of memory to minimise 
+fragmentation.
+* Allows de-allocation as well as allocation, freeing 516K 
+memory.
+* Full diagnostic Exec result codes for cases when it can't work.
+* Avoids undocumented 68060.library hooks, for compatibility 
+with all 68060 or 68040 systems with an MMU.
+* Designed to suit 1 Mb Kickstarts as well as Commodore 512K 
+ones.
+* Works from CLI/Shell, Opus, AREXX, and now Workbench 
+icons too.
+* Freely distributable, with full assembly language source code.
+
+Please see QuickROM.text and QuickROM.asm for more details.

@@ -1,0 +1,33 @@
+     This demo is based on the HOI AGA demo effect "My Fair Lady".
+Not only is this version slightly faster than the HOI DEMO, it is also
+programmed nicer.
+
+     Rather than taking over the machine, pounding hardware, and forcing
+you to boot with no startup... SilverFox's Twister (SFTwist) will
+multitask in a draggable Intuition Screen and cause NO enforcer or
+mungwall hits.  My demo also has more going on with a QIX running
+around the screen and 3-d stars as well.
+
+     Finally, all source code is included from the original C and ASM
+to the ".h" and ".o" files for linking.  The demo was written in SAS/c
+6.3 and CAPE 2.5 assembler.
+
+     The demo can be run from either the workbench or CLI and will exit
+when you press any key while the screen is activated (clicking the
+mouse buttons will only blank the mouse).  Even though the demo
+executable is very small, it requires a lot of memory to run (about
+700 K) and therefore will only run on 1 meg machines.  When you first
+run the demo, the 3-d stars will be absent until computations for
+the rotation have finished.  You can monitor the computation progress
+by the speed of the QIX.  After about 3 seconds on an '040 machine
+or 15-20 seconds on a 1200, the demo will begin for real.
+
+     The demo requires the freely distributable iff.library by
+Christian Weber to run.  It is included in the archive.  By starting
+the demo from the CLI with a single argument, you can load in your
+own 320x200 1-bitplane graphic into the demo.  I suggest you try the
+included picture "GIRL1.IFF" :)\<-8  (smiley beating off with his
+left hand).
+
+Adisak Pochanayon
+SilverFox Software

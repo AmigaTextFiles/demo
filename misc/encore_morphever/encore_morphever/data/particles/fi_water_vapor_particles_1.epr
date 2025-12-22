@@ -1,0 +1,48 @@
+{
+	"enc_info": {
+		"data_type": "ENCPAR",
+		"version": "2.0"
+	},
+	"max_num_particles": 200,
+	"num_create_particles": 1,
+	"sorting_type": "disabled",
+	"shape_type": "plane_billboard",
+	"life_time": 4,
+	"particles_per_sec": 4,
+	"update_freq": 60,
+	"spread": 0.06,
+	"locked_position_axis": false,
+	"texture_frames_matrix": [
+		1, 1
+	],
+	"texture_file_name": "fi_water_vapor_particles_1_tex",
+	"layer_1": {
+		"blending": "additive",
+		"depth_mask": false,
+		"depth_test": false,
+		"color_keys_gray": [
+			0,
+			0.17,
+			0
+		],
+		"color_key_times": [
+			0,
+			1,
+			4
+		],
+		"size_keys": [
+			0.25,
+			0.6
+		],
+		"size_key_times": [
+			0,
+			4
+		],
+		"texture_keys": [
+			0
+		],
+		"texture_key_times": [
+			0.0
+		]
+	}
+}

@@ -1,0 +1,58 @@
+»CL8:»SML:--------------------------------------
+             »CL9:»BIG:PPC notes
+»CL8:»SML:--------------------------------------
+
+»CL0:At the time of writing, the future of
+the PPC is not very clear. »CL1:Phase5» say
+that they are not going to develop new
+boards until »CL1:AI» unveils »CL1:their» plans.
+Also, development of »CL1:ppc.library» is
+halted. The only developments going on
+come from »CL1:H&P» on the software side,
+and from »CL1:Escena» on Hardware.
+»CL1:H&P» developed a software 68k emulator
+some months ago. This opens the
+posibility of PPC only accelerators,
+without 68k. These boards would be
+clearly cheaper and could carry L2
+caches & DIMM memories (at the moment,
+the only announced board that will
+follow this scheme is Escena ZorroIII
+dual G3 accelerator). »CL7:(Now things are
+different, but we see what get
+materialised... Troda)
+
+»CL0:As far as I know, the 68k emulation
+could support MMU emulation as well.
+»CL7:(Update, supporting. At least this Sam
+Jordan one. Full 040/FPU/MMU... Troda)»
+It means that any cache/MMU hacking
+you make could reflect on a PPC board
+later - another reason to avoid
+killing caches!! Surely some of you
+think that all these warnings are
+exagerated, but think about it this
+way: 68k series haev been dead since
+'94; there are still possibilities of
+new amigas from several sources, and
+all them are open to substitute 68k
+with emulation. Also, all of them will
+have faster memory and bigger caches.
+It's worth noting that the H&P 68k
+emulator is (still) not based on
+dynamic compilation, but on a classic
+interpretative emulation. This means
+no problems or slow downs on ATC.
+»CL7:(This will change soon... Troda)
+
+»CL0:From »CL1:Capsule», we want to encourage
+anybody that want to experiment with
+complex algorithms and don't fear
+learning new assemblers to go PPC and
+support it. But take into account that
+your 'investment' could have a short
+life... Personally, I think any money
+invested in amiga products is money
+well spent, but I know that most
+people can't afford that kind of
+prices.

@@ -1,0 +1,19 @@
+FailAt 21
+
+Version >NIL: exec.library 37
+If WARN
+   Echo "You need Kickstart 2.0 or higher."
+   Skip END
+EndIf
+
+Echo "Installing libraries, fonts and devs...*n"
+
+Copy sys/libs ALL hd0:LIBS
+Copy sys/fonts ALL hd0:FONTS
+Copy sys/devs/DataTypes ALL hd0:Devs/DataTypes
+
+Echo "*nFinished!"
+
+Lab END
+Wait 4
+EndCLI >NIL:

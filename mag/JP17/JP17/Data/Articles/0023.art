@@ -1,0 +1,38 @@
+!GP2x Update
+Selectanovel
+12
+µJCµF2Amiga handheld on GP2x - Update
+µF1Played by Selectanovel
+
+µJEµF0µC1Some time has passed since the last issue of JP - and there have been some interesting developments on the cool Gamepark 2x.
+
+µF1If you have read my review on the GP2x in last JP, you might remember my comprehensive moaning about the bad Amiga emulation, compared to the one of Sega's Megadrive, which even runs full speed on an underclocked cpu - even though Megadrive and A500 not really differ in what they can, with most Megadrive ports even looking slightly better than on our wired girlfriend.
+
+30-year old software developer Alister Roberts aka µC5CriticalµC1 from Harrogate, England, took his time to do a little workaround on his port of µC5UAE4AllµC1 and released the 0.6.4 version in November last year. Finally, it is possible to save to disk, which now is adding sense to playing games like MadTV or The Patrician that take longer than just a short round. Speed has increased dramatically. Still it is necessary to overclock to max. 266 Mhz in order to play games like Turrican or Stunt Car Racer, but in that case they work perfectly at close to full speed, while it is possible to clock down during the game for not so cpu demanding parts.
+
+I had the pleasure to ask Critical, who is a member of the gp32x.com community, some questions about his project.
+
+µC5Novel:µC1 How come you produce an Amiga-Emulator for the GP2x? Do you have a feeling of obligement towards the Amigascene or is the reason rather the "because I can" type?
+
+µC5Critical:µC1 It's very important to note that it's not my emulator. It's the work of many people who worked on UAE, and more recently µC5ChuiµC1 who produced the Dreamcast and Linux release that is uae4all. All I did was fiddle around with it so I could use it on my GP2X. I wanted to have an Amiga emulator because the Amiga was my favourite machine for so many years.
+
+µC5Novel:µC1 Which features will be added to uae4allgp2x in the future? What is the current state of development? Will there be AGA support and a possibility to use HDF files?
+
+µC5Critical:µC1 Well, the most requested features are save states and button remapping. I think those will happen this year sometime. I'm not really interested in AGA support. HDF support could happen.
+
+µC5Novel:µC1 Batteryconsumption was fairly high when I tested it. Will it be possible to code the emulation so efficient in a sense that the processor can be underclocked at fullspeed, thus increasing battery time?
+
+µC5Critical:µC1 The Amiga was a very powerful machine in its day, despite its relatively low CPU clock speed. If the drawing code was optimised for the GP2X, I think we could get quite a lot more speed out of the emulator, but these things take time. There's always the potential to move some of the work to the other CPU too, although that's far from easy.
+
+µC5Novel:µC1 Which other projects are you working on?
+µC5Critical:µC1 I bought a house recently, and I'm changing jobs next month. Essentially, I haven't had much time to code for the GP2X for a while, but when I start my new job I hope that situation will improve over time, as it will provide a more flexible working environment.
+
+µC5Novel:µC1 Do you have any connections to the demoscene?
+
+µC5Critical:µC1 Of course I was often very impressed with the Amiga demo scene, but I never got involved. I used to write applications for the Amiga, and played lots of games.
+
+µC5Novel:µC1 Is there a favourite game of yours that you would like to recommend to the readers of Jurassic Pack for playing handheld?
+µC5Critical:µC1 My favourite games on the Amiga were Kick Off 2, Datastorm, Lemmings, Turrican II, Pinball Dreams, Lotus Turbo Challenge and Syndicate. Probably others that I've temporarily forgotten too. I'm not sure how many of them currently run on uae4all gp2x - it's a work in progress...
+
+µC5Novel:µC1 Thank you very much for the interview!
+

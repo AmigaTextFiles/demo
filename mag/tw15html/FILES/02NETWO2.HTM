@@ -1,0 +1,146 @@
+<HTML>
+<HEAD>
+<TITLE></TITLE></HEAD>
+<BODY BACKGROUND="..\bgnd.jpg" BGCOLOR="#000000" TEXT="#FFFFFF">
+<CENTER>
+<table border=0><TR><TD>
+<pre>
+<font color =#4C58DC><CENTER><FONT SIZE=5><B>A guide to..</CENTER></FONT></B>
+<font color =#4C58D0>
+<font color =#4C58C4>
+
+<font color =#4C58B8><CENTER><FONT SIZE=5><B>..alternative networking!</CENTER></FONT></B>
+<font color =#4C58AC>
+<font color =#4C58A0>
+
+<font color =#4C5888>                             By Kei/Carnage
+
+<font color =#4C5870>
+ I'm  in the middle of my 2nd year degree exams at present and I've just
+sat  my  Networks  and  Communications  exam  when  I  take a break from
+revision  to edit some articles for The Word and reach D!ck's article on
+Networking.
+
+ This  article  comments  on D!ck's article (so read it first) and gives
+you  some  (cheap) alternatives to linking machines that some of you may
+know about and some may not.
+
+ First  off, the LAN configuration that D!ck was talking about is a "BUS
+type  Thin  Ethernet"  type  LAN setup which uses NIC (Network Interface
+Cards)  slotted  into your PC which have a BNC "T-type" connector on the
+back  which connects to LAN cable (50ohm) segments together.  At the end
+of  each end of the network is another connector known as a "terminator"
+which  is  essentially  a  resistor  designed  to  absorb  signals  thus
+preventing bounce-back.  This type of LAN has a size limitation of 185m.
+There  are  other  LANS  such as TREE, STAR and RING which use different
+protocols.   Ehernet  LANS  use CSMA/CD (Carrier Sensing Multiple Access
+with  Collision  Detection) and the Medium Access Protocol (MAC) to send
+data  frames  down  the  line (boring stuff concerning encapsulation and
+synchromization which I won't go into).
+
+ D!ck  said  he  didn't  understand  the  concept of a terminator in his
+article.   Basically,  the time it takes to broadcast a message from one
+end  terminal to another and back again is known as the "Slot Time".  If
+a  collision  has  occured  then a Jamming Signal is sent to prevent any
+other  terminal from transmitting for a pre-set time before trying again
+(known  as  1-persistant).  If there are no ends to a cable segment then
+when a signal reaches the end of a cable, it wraps around and comes back
+(bounces  back),  meanwhile another station has checked that the line is
+idle and has transmitted a packet onto the cable which collides with the
+bounce  back.   All the terminator really does is absorb the signal.  To
+understand  it  more clearly, each terminal "broadcasts" a frame of data
+onto  the  cable  and as it passes through each machine on the cable (in
+both directions) they read it to see if it is addressed to them.  If not
+they ignore it.  It then at some point reaches the ends of the cable and
+must  be  removed  to  prevent  being  bounced  back otherwise you'd get
+nothing but bounce-backs forever on the cable producing noise.
+
+ Entire  streets  could  be networked D!ck, as long as they don't exceed
+185m.   You  can  use bridges, repeators and even microwave links (and I
+don't  mean  to cook dinners while playing doom!).  It get's long winded
+at times though and the only reason I know so much about networks at the
+moment  is because it is part of my degree and my job in Ipswich is as a
+network technician and support staff.  Maybe I could write some articles
+in  future  issues  about  networks  but it would be stuff like "Network
+Sniffing",  "LANS,  WANS  to DNS", "Intranets" and "TCP/IP" so if any of
+you readers are into that sort of thing then let me know!
+
+ 10Mbps/s  is  about  right  for CSMA/CD however the 2nd generation LANs
+such as FDDI can handle ten times that!
+
+ If  anyone  does  have any questions on networking or anything else you
+can  send them in to our new Q&amp;A article that we are starting soon where
+the Word staff will endeavour to answer ANY readers questions!
+
+ Where was I?....
+
+ LANS  are all well and dandy but what will you do if you have different
+computer  types  and different peripherals that are incompatible?  After
+all  The  Word readers don't all have PC's do they?  Of course there are
+Amiga  networking solutions out there at present but that's not what I'm
+going to suggest here.
+
+ At  present in my room I have 3 computers connected together.  There is
+my A1200, my PC tower and my PC laptop.  Connecting the PC's together is
+a simple matter of using a parallel cable and Windows 95's DCC software.
+But what about the Amiga?
+
+ Since  I  gave  out  my  email address in a previous issue of The Word,
+several  readers have emailed me asking "how do I connect my Amiga to my
+dad's  PC  to  copy  files  across?".  I've told them how but to save me
+typing it again and again I'll tell you how I do it.
+
+<CENTER><FONT SIZE=5><B>PC to Amiga</CENTER></FONT></B>
+
+
+
+ You  can use either a serial cable (not null-modem as it's too slow) or
+a parallel cable to connect your Amiga to a PC.  If using a serial cable
+then  I recommend Twin Express which is available from the aminet in the
+comms  directory.   This  will  give  you  an  average transfer speed of
+115,200bps  (7-wire  cable).   If  using a parallel cable then I suggest
+PC2Amiga  which  is also available from the aminet.  I think the file is
+called "PC2Am308.lha".
+ Setting  up  these  programs  couldn't  be  easier.  Just unarchive the
+archives  and  copy  the PC files to your PC (use floppy).  Then install
+them  on  both  machines,  choosing  identical  setups.   If  using Twin
+Express,  type  TWIN  COM2 on your PC and TWIN SER on the Amiga and then
+type HELP COMMANDS to get going on either machine.
+ If using PC2Amiga, you can run "PC2Amiga" on the PC which gives control
+over  to  the  Amiga  so you can turn your PC's monitor off.  Your Amiga
+should  now  have  a  drive  listing like:  DF0:  DF1:  CC0:  DH0:  DH1:
+DH2:   RAM:  A:  C:  D:  E:  .  If however you type "PC2Amres" then this
+runs  a  version  of the previous program which lets you continue to use
+the PC with PC2Amiga acting as a resident program.
+
+ The solution I use is I boot the tower as a server machine.  I then run
+an  MS-DOS  window  from  Windows 95 where I run PC2AmRes.  I then setup
+PC2Amiga   on  the  Amiga  so  it  can  detect  the  towers  drives  and
+peripherals.   Going  back  to Windows 95 I either use LAPLINK or DCC to
+initiate a setup with my laptop via parallel cable.  Once all 3 machines
+are  running  (and  my  dad's moaning about the electricity bill), I can
+transfer files till my hearts content.
+ A  typical  reason  for  me  to  do this is I've downloaded about 10 HD
+floppy  disks  worth of goodies from the Aminet at university as well as
+some  PC  software and I wish to transfer the Amiga software to my A1200
+which  does not have a HD floppy drive.  Or when writing web pages on my
+PC's  I prefer to use the Amiga for image creation and to convert IFF to
+GIF   or   JPG   then   I'll   transfer   the  files  to  the  PC's  for
+testing/formatting purposes.
+
+ LANS  are a good idea for PC users but for us Amiga guys with maybe one
+PC,  we  need  to  use  cables.  If connecting Amiga to Amiga though you
+can't go far wrong if you use PARNET and a parallel or parnet cable.
+ The best ad-hoc setup I've come across was at the last internal Carnage
+party where we had 2 Amiga's hooked up with Parallel cables and two more
+Amiga's  connected  to  them via 7-wire serial cables so we can transfer
+files  across several machines.  We used that setup to complete The Word
+issue 13.
+
+ 
+end
+</PRE>
+</TD></TR></TABLE>
+</CENTRE>
+</BODY>
+</HTML>

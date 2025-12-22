@@ -1,0 +1,143 @@
+@{d FFC768}@{xoffset 0}¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+@{xstep 355}@{font ACS-Title.font 18}Postavte si nahrávací studio@{font}
+@{xstep 455}@{c A6FFF8}@{i}Chroust/StillTeam@{ui}@{c}@{ystep -8}
+
+
+   @{xstep 5}@{font ACS-Title.font 18}U@{font}@{xstep 1}ù máte dost  "nekvalitního" osmi/çtrnácti bitového výstupu ve Vaîich skladbách ?
+Tak právë pro Vás je urçen tento çlánek.  Existuje jistá varianta, jak dosáhnout profi
+zvuku  bez  nákladných doplñkû Vaîeho poçítaçe, i kdyù tak úplnë zadarmo to také není.
+Tato  moùnost  se  jmenuje MIDI @{c FF7FB5}(Musical Instrument Digital Interface)@{c} a byla vyvinuta
+italskou firmou Roland jako digtální rozhraní pro klávesové nástroje.  Pozdëji se toto
+rozhraní  trochu  vylepîilo @{c FF7FB5}(G-MIDI)@{c} a rozîíêilo se po celém svëtë tak rychle, ùe dnes
+jiù  nepêekvapí ani na klasických nástrojích, jako napêíklad kytara çi bicí, a dokonce
+i obyçejný lidský hlas lze touto formou editovat.
+
+   Asi  si  êíkáte,  co  to tady blábolím.  Na hlasivky si pêece nikdo nebude montovat
+nëjaký  pêístroj.  Ne, na hlasivky opravdu ne.  Ale existují zaêízení jako Harmonizer,
+digitální echa a spousta dalîích doplñkû, existuje Amiga a jsou i programy, které MIDI
+podporují.   Jistë  uù  tuîíte,  kam tím míêím.  Ano, budu se Vám snaùit naznaçit, jak
+upustit  od pêíîerného bastlení MODulû, MEDulû,a kdo ví jakých jeîte ...dulû, a vyuùít
+svoji  "pêítelkyni"  ke  studiové práci.  Studiovou prací myslím to, ùe výsledkem bude
+skladba  v  digitální  podobë, ve formátu @{c FF7FB5}AIFF stereo 44.1 KHz / 16 bit@{c}, nazpívaná; ùe
+nebude  syçet,  bude  míchaná  z  vëtîího  poçtu  stop @{c FF7FB5}(minimálnë 8)@{c} a bude moùnost ji
+vytvoêit jak v @{c FF7FB5}reálném@{c} çase, tak i po @{c FF7FB5}stepech@{c}.
+
+   To  vîe, za çástku niùîí neù @{c FF7FB5}25 000 Kç@{c} bez poçítaçe, budete-li vîe kupovat nové.  Z
+osobních zkuîeností vím, ùe se takováto "sestaviçka" dá poêídit za ménë neù 17 000 Kç.
+Je  to  sice  i  tak sluîná investice, ale máte-li hudební skupinu, zcela jistë se Vám
+vrátí  v  podobë  absolutnë  çistých  nahrávek  a  v  moùnosti  pouùití  playbacku  na
+vystoupeních.   Navíc  se  dá  @{c FF7FB5}"toçit  na  kîeft"@{c} a v dneîní dobë, kdy má "kaùdá vëtîí
+prdel" svûj bigbít, to mûùe být i sluînë výnosné ;-).
+
+   Napêed  zaçneme  tím,  çím  potêebujete  vybavit  svoji  Amigu,  aby  byla  schopna
+takovýchto vëcí.  Pêedevîím zapomeñte na svoji A500 a podobné staroùitnosti.  Na práci
+se  zvukem  potêebujete  pêece jen nëco výkonëjîího (a nejen na to - díky, Michale, za
+Dooma).   Tím  výkonëjîím  samozêejmë nemyslím Pentium.  To nechte dëtem na hraní her,
+nebo  dëdeçkovi  na  úçetnictví  (nebo  na  odkládání  zubû  na noc - pozn.  Fractal).
+Minimum,  které bych vidël jako reálné, je @{c FF7FB5}A1200@{c} s @{c FF7FB5}030@{c} procesorem.  Nejlépe samozêejmë
+s  @{c FF7FB5}PPC@{c}  a @{c FF7FB5}060@{c}, ale to jsme jiù trochu v jiných dimenzích.  S pamëtí je to obdobné.  @{c FF7FB5}32
+@{c FF7FB5}MB@{c} není mnoho, ale dá se pêeùít.  Çím více, tím lépe.  Dále potêebujete mechaniku @{c FF7FB5}ZIP@{c},
+MIDI  interface  (nejlépe  od MW servisu, vyrábí-li se jeîtë - není nejhezçí, ale @{c FF7FB5}100%
+funguje@{c}).   Kvalitní  monitor  se  neztratí nikdy, a o grafické kartë, CD-ROM to platí
+také.  Tyto vëci vîak nutnë mít nemusíte.
+
+   A  co  potêebujete  dále  ?   Portastudio  Tascam (6 - 60 tis.  korun, staçí si jen
+vybrat), digitální echa Yamaha (u nás jsou známé jako stoprogramová Yamaha, tj.  asi 4
+tis.  Kç) a nëjaký syntezátor.
+
+   Spoçtete-li finance, vëc se má asi takto:
+
+               @{c FF7FB5}Studio  ............ od 6 000 Kç
+               Echa    ............ od 4 000 Kç
+               Klávesy ............ od 5 000 Kç
+               --------------------------------
+               Suma sumárum za ....   15 000 Kç@{c}
+
+   Výbëru  syntezátoru  prosím vënujte velkou pozornost.  Na nëm bude záviset výsledný
+zvuk  Vaîich  výtvorû.   Dají se sehnat relativnë laciné a pêesto kvalitní syntezátory
+@{c FF7FB5}(Kawai  Spectra  a  pod.)@{c},  které  mají  jiù  velice  sluîné zvuky a propracované MIDI
+rozhraní.   U "Rákosníkû",v elektrách a hraçkárnách nekupujte nic !!!  Jsou to vîechno
+jen  takové  hraçiçky pro pobavení, ale jinak nanic.  Nejste-li si jisti, poraðte se s
+nëkým  zkuîeným  (kontaktujte  më,  rád  pomohu).   Máte-li  vîe  pêed sebou na stole,
+nezbývá, neù vîe @{c FF7FB5}"nëjak"@{c} pospojovat a @{c FF7FB5}"nëjak"@{c} zprovoznit.
+
+   A  jak  to  vîe  bude fungovat ?  V nëjakém "chytrém" programu (studio West pouùívá
+@{c FF7FB5}Steinberg,  Bars&Pipes  a  Octamed 5@{c}) si zkomponujete Váî velký hit, který zcela jistë
+zatluçe  do  zemë  i  Kelly  Familly.   Stvoêíte  jej  pochopitelnë jako midi song, to
+znamená,  ùe  na  zvukový  výstup  poçítaçe  ani  nesáhnete  (opovaùte  se  !!!  ;-)).
+Dostanete  se  tedy  do fáze, kdy po odklepnutí çudlíku zaçne bêinkat symfoñák pêímo z
+Vaîeho  synïáku.   Následuje  fáze  çíslo  dvë, a to, ùe tento îlágr potêebujete nëjak
+nazpívat.   Zahoðte  Cvrçka  a  podobné  @{c FF7FB5}"HIFI"@{c}  zaêízení a zapnëte Tascam.  První dvë
+stereo stopy tohoto pêístroje jsou urçeny k nahrávkám zpëvu, protoùe mají pêizpûsobenu
+impedanci  na @{c FF7FB5}600 Ohmû@{c}, coù je nejbëùnëjîí impedance dynamických studiových mikrofonû.
+Na  pêístroji zezadu naleznete MIDI rozhraní na které pêipojíte echa, analogový výstup
+ech  se  zapojí  na  vstup oznaçený DELAY a do zdíêky INPUT zaîoupnete pêímo mikrofon.
+Echa  mûùete  êídit  pêímo  volbou  na nich, ale to byste nepotêebovali Amigu a hlavnë
+byste  nedocílili  vîech  efektû,  které  toto spojení umoùñuje.  Je zde totiù moùnost
+rûzných  prolínaçek  a  podobných  nesmyslû.  Napêíklad Petr Janda zpívá v jedné písni
+Olympicu  o  tom,  "jak  ten vlak je poslední" a celou dobu zpívá do çistého Hallu.  V
+okamùiku,  kdy  vyslovuje  "poslední", se zaçíná pêidávat stereo echo, a narûstá aù do
+maxima.   Jak tohoto efektu docílit ?  Není nic snaùîího.  Bars & Pipes má tuto funkci
+pêímo  implementovánu.  Vëtîina z Vás vîak asi bude pouùívat nëjaký ten tracker @{c FF7FB5}(vêele
+doporuçuji  SoundStudio)@{c}.   Tedy vëzte, ùe echa pracují na desátém midi kanálu, stejnë
+jako  bicí.   Jenomùe  o  dvë  oktávy níù.  A takové echo se v Soundstudiu chová úplnë
+stejnë,  jako jakákoliv zvuková midi nota.  Kaùdé klávese @{c FF7FB5}(tónu)@{c} je zde pêiêazen jeden
+tzv.   preset,  který  zastupuje  to  ono  konkrétní  echo  (hall, room, phaser apod.)
+hlasitost noty zadaná @{c FF7FB5}"klasickým" @{c}zpûsobem @{c FF7FB5}Cxx @{c}urçuje, s jakou intenzitou bude zmínëný
+efekt  praktikován.   SoundStudio  umoùñuje jeîtë dalîí nastavení:  Zmínëný efekt musí
+být  nëjak  omezen,  protoùe jinak by znël poêád.  Ukonçuje se opët podobnë, jako midi
+tón,  je-li  zacyklený.   Tzn.   efektem  @{c FF7FB5}C00@{c},  který donutí echa @{c FF7FB5}"zesílit"@{c} efekt aù k
+nulové  hodnotë.   Pêed  tímto  efektem  musí být zapsána nota, na které echo zaçínalo
+tento  efekt praktikovat.  Zní to trochu komplikovanë, ale v podstatë se nejedná o nic
+jiného,  neù  ùe  "ta  vozvëna  se  zapne  têeba tónem @{c FF7FB5}malé f@{c} a tím samým se musí také
+ukonçit".   Echa totiù mají vestavëný @{c FF7FB5}"vopravdový multitasking"@{c} (asi jako Windows :-Q)
+a proto pouùití jiné noty by neukonçilo pêedchozí efekt, ale naopak zaplo dalîí.  Sice
+s nulovou intenzitou, ale proç ho zapínat, kdyù tím docílíte pouze zablokování jednoho
+kanálu. Velice dobrou pomûcku nabízí SoundStudio v podobë glissû, efekt 3xx a podobnë.
+Docílíte  tím velice dobrých hallových prolínaçek.  Tento nástroj je tak mocný, ùe jej
+snad  opravdu  dokáùe  jen  Amiga.   Ne,  ùe  bych chtël pêechvalovat, ale ani na Macu
+neexistuje  soft,  který  by nëco takového dokázal.  O @{c FF7FB5}PC@{c}, se radëji ani bavit nebudu,
+protoùe  to  nedokáùe  ani  poêádnë  samplovat  (við  Fractále :-D).  Na druhou stranu
+pochybuji,  ùe  Teijo mël v úmyslu tuto funkci do Octamedu vpravit.  Octamed má vîak i
+své  stinné stránky, jako je napêíklad @{c FF7FB5}"pouze"@{c} îestnáct kanálû na MIDI.  Koupíte-li si
+napêíklad  dva  @{c FF7FB5}GM@{c} nástroje, Octamed je nedokáùe obslouùit oba najednou :-(.  Doplñkûm
+to  vëtîinou  nevadí,  protoùe  jak  uù bylo popsáno výîe, pracují v jiné oktávë, tzn.
+mohou  klidnë  pracovat  na  stejném kanále.  Tak, hudbu máme hotovou, halluje se nám,
+dopilovali  jsme  vîechny chybiçky, zbývá pêedpêedpêedposlední vëc, a to je zpëv.  Kde
+sehnat  nëjakou  ùábu, která nemá hudební hluch, má pëkný hlas a nejde jí jen o postel
+(ahoj  Adélko),  Vám  neporadím.  Kdyù ji ale seùenete, prozradím jak dál (mimochodem,
+proç  by Vám mëli v bytë krákorat pouze ùenský ?  chlapi zpívaj taky dobêe.).  Zpëv se
+zaznamená  pochopitelnë  na  Tascam.   Pêi  chybë  se  lze  velice dobêe vrátit, a lze
+
+napojovat klidnë uprostêed slova, a realtime.  Jste-li spokojeni s nahrávkou, nemusíte
+se  zpëvem  dále  zabývat.   Vëtîinou  vîak dojde i pêes veîkerou poctivost k nëjakému
+îkobrtnutí  v  hlase  (Gota do obejváku asi nedostanete), nebo prostë potêebujete hlas
+nëjak  zabarvit,  vyfiltrovat,  pokroutit.   Nezbývá neù dostat jej nëjak do poçítaçe.
+Právë  na  to  pouùijete  @{c FF7FB5}Zip@{c}.   @{c FF7FB5}Tascam@{c}  má rozhraní @{c FF7FB5}Centronics@{c}, lepîí @{c FF7FB5}SCSI@{c}.  Není nic
+snaùîího,  neù  @{c FF7FB5}Zip@{c}-a  pêipojit  a  stáhnout  si  na  nëj zpëvovou stopu.  Jak jej pak
+pêipíchnout  na Amçu nemusím snad popisovat.  Na Zipu najdete samplík ve formátu @{c FF7FB5}AIFF@{c},
+a s tím uù si pêece budete vëdët rady.  Na úpravu vêele doporuçuji skvëlý @{c FF7FB5}SoundFX@{c}.  Po
+úpravách  jej  znovu  uloùíte  za  Zip  a  to pod stejným názvem, jako byl pûvodnë !!!
+Tascam  jej  totiù  pojmenuje  dosti  exoticky  (asi jako MS-DOS pêi formátování, kdyù
+odklepnete      "jmenovku      svazku")      a     s     Vaîím     skvëlým     názvem:
+@{c FF7FB5}"Todletojeprvnístopazpëvuodjaniçkynovákû"@{c}  by  si  asi neporadil.  Naslednë na Tascamu
+zkvantizujete, tj.  zarovnáte vîechny zpëvové a nástrojové stopy tak, aby Vám zaçínaly
+ve  stejný  ças,  a mûùete se pustit do mixování.  Hotové dílko uloùíte opët na Zipa a
+jak jej dostat na CD, si snad uù poradíte. Dneska vypaluje kaùdej druhej písíçkáê.
+
+@{d FFC768}Jak to celé ukonçit ? Asi trochu upravenou vëtou opic z reklamy na Toyotu.
+
+                          @{c FF7FB5}@{f FFFA94}N i c   n e n í   n e m o ù n é .@{f}
+                                      @{f 6B54FF}A@{f} @{f 1CCEFF}M@{f} @{f 02FF88}I@{f} @{f FF6621}G@{f} @{f F7FF4C}A@{f}
+
+P.S.- Je dost moùné, ùe se Vám naskytne pêíleùitost natoçit zpëvy ve velkém studiu.
+Pak  není  od  vëci  nahrát  Váî MIDI song pêímo ve studiu do sequenceru.  Má to jeden
+háçek.  SoundStudio je schopno uloùit MIDI jen ve formátu @{c FF7FB5}SMF0@{c}, kde jsou vîechny stopy
+smíchány do sebe a sequencer je nedokáùe os sebe oddëlit.  Potêebujete minimálnë @{c FF7FB5}SMF1@{c}.
+To  dokáùeme  na Amize odstranit pêíkazem @{c FF7FB5}MidiIt@{c} (Aminet), který dokáùe @{c FF7FB5}SMF1@{c} pêevést z
+formátu  @{c FF7FB5}MED@{c}.   Bohuùel  si dokáùe poradit pouze s @{c FF7FB5}MMD0@{c} a @{c FF7FB5}MMD1@{c} !!!  Snad se to v dalîí
+verzi  zlepîí,  a nebo snad bude pêece jen nové SoundStudio, kdyù to na PC Teijovi moc
+nevyîlo ???
+              @{c FF987F}Zpracováno díky rozhovoru s
+                         Ing. Radimem Nováçkem - reùie zvuku studia West Plzeñ
+                         a    Pavlem Îtenglem  - kapelníkem skupiny Trend@{c}

@@ -1,0 +1,119 @@
+16,4,Line [%b] has been started
+17,4,Openning "%s" unit %u
+18,8,Raising DTR
+19,8,Dropping DTR
+20,2,Couldn't open '%s' unit %u
+21,7,%s
+0,4,Initializing modem...
+1,2,Modem doesn't recognize command
+2,2,Modem initialization timeout
+3,7,Modem initialized successfully
+4,2,Busy. Couldn't perform the operation.
+5,4,Attempting to establish EMSI handshake
+6,2,EMSI handshake failed
+7,2,EMSI packet has wrong CRC (%s)
+8,8,Got **EMSI%c packet
+9,8,Put **EMSI%c packet
+10,2,No character received during EMSI hanshake
+11,2,Session time limit
+12,2,Remote system doesn't respond to EMSI handshake
+13,2,Remote system doesn't react to EMSI_DAT packet
+14,2,Remote system doesn't reply with its EMSI_DAT packet
+15,7,Sending **EMSI_DAT packet
+22,2,Received string too long - discarded
+23,2,Dialing failed
+24,2,Dial timeout
+25,2,Handshake timeout
+26,2,Unrecognized EMSI packet (%s)
+27,7,Received **EMSI_DAT packet
+28,2,Corrupted EMSI_DAT packet
+29,2,Incorect EMSI_DAT packet lenght
+30,8,Unknown EMSI_DAT extra field: {%s}
+31,6,Remote address: %c%s
+32,6,AKA: %c%s, %c%s
+33,6,AKA: %c%s
+34,1,No enough memory
+35,6,System: %s, %s
+36,6,Sysop: %s
+37,6,Phone: %s
+38,6,Flags: %s
+39,6,Software: %s %s (%s)
+40,6,Remote time: %s
+41,2,ZGET-Hdr: BAD CRC
+42,8,ZGET-Hdr/%c: Z%s
+43,2,ZGET-Dat: TOO LONG
+44,8,ZGET-Dat: CURRUPTED
+45,2,ZGET-Hdr: BAD TYPE
+46,8,ZPUT-Hdr/hx: Z%s
+47,8,ZPUT-Hdr/16: Z%s
+48,8,ZPUT-Hdr/32: Z%s
+49,6,Deleting file '%s'
+50,6,Sending file '%s' (%u bytes)
+51,6,File alias is '%s'
+52,8,ZPUT-Dat/%c: %w,ZCRC%c
+53,1,%s
+54,7,Resume sending from offset %u
+55,2,Wrong requested offset of file '%s' (%u)
+56,2,ZGET: TIMEOUT
+57,2,Error reading file '%s'
+58,2,ZERR: Wrong offset
+59,6,Remote skip file '%s'
+60,6,Error updating bundle '%s'
+61,8,ZGET-Dat/%c: %w,ZCRC%c
+62,8,ZGET-Dat: BAD CRC
+63,6,Receiving file '%s', size %u bytes
+64,2,Couldn't open inbound file
+65,2,Couldn't close inbound file
+66,3,Carrier lost
+67,5,File received successfully (time %s, cps %u)
+68,5,File sent successfully (time %s, cps %u)
+69,5,Aborting operation
+70,7,%s%c
+71,2,Session time limit
+72,7,Resume receiving from offset %u
+73,2,Too many errors
+74,6, Set: %p
+75,2,Session aborted by remote system
+76,6,Creating file '%s'
+77,6,Creating poll for %s
+78,6,Async run '%s'
+79,6,Sync run '%s'
+80,6,Run '%s'
+81,6,File '%s' causes process...
+82,8,HYDRA -> PKT (format='%c', type='%c', CRC%c, len=%w)
+83,8,HYDRA <- PKT (format='%c', type='%c', CRC%c, len=%w)
+84,2,HSEND TIMEOUT
+85,6,HYDRA Remote: %s
+86,6,HYDRA Supported: %s
+87,6,HYDRA   Desired: %s
+88,6,HYDRA     Using: %s
+89,6,HRECV End of batch
+90,6,HSEND End of batch
+91,2,HRECV Bad position (rxpos %u, got pos %u)
+92,2,HRECV TIMEOUT
+93,2,HYDRA <- Bad CRC (format='%c', type='%c', CRC%c, len=%w)
+94,2,HYDRA <- Bad type (format='%c', type=%b, CRC%c, len=%w)
+95,5,HYDRA Completed
+96,6,Incoming call detected...
+97,4,Answer timeout
+98,4,Answering failed
+99,4,Remote system has busy status
+100,6,Device '%s' unit %u is busy
+101,6,Device released via OwnDevUnit
+102,6,Device obtained via OwnDevUnit
+103,6,Time event causes process...
+104,6,Expecting for: mail %u bytes, files %u bytes
+105,6,Open hours: %s, file requests: %s
+106,6,Outgoing call: %s
+107,6,Offer: %s
+108,6,No compatible protocols is with remote
+109,6,Wrong password (expected '%s', got '%s')
+110,6,Unprotected remote system produced password '%s'
+111,6,Unprotected session
+112,6,Password-protected session
+113,6,HYDRA Braindead timer expired
+114,6,Protocol HYDRA (bi-directional mode)
+115,6,HYDRA Batch is started
+116,6,Chat timeout
+117,2,Writting inbound file error
+118,2,HYDRA Packet prefix isn't implemented

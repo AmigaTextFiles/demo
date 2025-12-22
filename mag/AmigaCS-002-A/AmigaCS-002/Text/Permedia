@@ -1,0 +1,172 @@
+@{d 80FF75}                                      Permedia 2
+                                      @{c 59C134}¯¯¯¯¯¯¯¯¯¯@{c}
+  V pêipravované    nové    êadë    grafických    karet    phase   5,   CyberVisionPPC
+a BlizzardVisionPPC  bude  pouùit  jeden  z nejmodernëjîích grafických çipû Permedia2,
+vyvinutý  firmou  3Dlabs  a  vyrábëný  firmou  Texas  Instruments.  Zde jsou technické
+parametry onoho çipu...
+
+  2D Graphics Features
+  @{c 59C134}¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+   - Ultra fast Blt engine
+   - Fully featured 2D rasterizer
+     · Full primitive support (lines, boxes...)          @{p Permedia.iff 370 54}
+     · Stretch Blts
+     · Monochrome/color expansion
+     · Window clipping
+     · Font caching
+     · High speed brushes
+     · Raster operations
+             Video Features
+             @{c 59C134}¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+             - MPEG2 compatible video playback
+             - YUV 4:4:4, 4:2:2 and 4:2:0
+             - Native MPEG2 format
+             - Unlimited occluded playback windows
+             - Independent XY bilinear filtered scaling
+             - Color space conversion
+             - Rotate and mirror
+             - VideoStreams interface
+
+             3D Graphics Rendering Features
+             @{c 59C134}¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+             - Points, lines and triangles
+             - Gouraud & flat shading
+             - Sub-pixel accuracy
+             - 16-bit Z-buffer
+             - High accuracy per-pixel fog
+             - High quality alpha blending
+             - Filtered color keying
+             - Interpolated specular/diffuse lighting
+             - Stencil buffer
+             - Full scene anti-aliasing
+             - Per-pixel overlays
+             - Ordered dithering
+             - LogicOps
+             - Double and triple buffering  (full screen, per window or fast Blt)
+             - Hardware extent checking and picking
+
+             3D Geometry Setup Unit
+             @{c 59C134}¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+             - Integral 100 MFlop setup unit
+             - Reduces load on CPU and Bus
+             - OpenGL and Direct3D compatible
+             - Vertex sharing for meshes, fans and polylines
+             - High precision fixed to float conversions
+
+             3D Texture Mapping Features
+             @{c 59C134}¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+             - 100% hardware texture mapping
+             - Bilinear filtering
+             - Nearest neighbour
+             - Per-pixel perspective correction
+             - Sub-texel accuracy
+             - Palletized, RGBA and YUV textures
+             - Texture caching
+             - Color key, scale, stretch, rotate and mirror
+
+             Integral SVGA
+             @{c 59C134}¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+             - Ultra-fast DOS performance
+             - Standard VGA, SVGA and ModeX
+             - VESA 2.0 support
+
+             PCI Interface
+             @{c 59C134}¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+             - 32-bit PCI 2.1 (Master/Slave)
+             - Single cycle transfers
+             - DMA mastering
+             - Bi-endian for PC and Mac  [tj. vhodné i pro Amigu 68K i PPC]
+             - 33 MHz operation
+             - Bypass to localbuffer and framebuffer
+             - Full PCI interrupt support
+
+             AGP Interface
+             @{c 59C134}¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+             - 66 MHz operation
+             - DMA mastering
+             - Execute mode from system memory
+             - Sideband addressing
+             - 250 Mbytes/sec bandwidth
+
+             Memory Interface
+             @{c 59C134}¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+             - 64-bit synchronous memory interface
+             - SGRAM for best performance
+             - Utilize block fill and write masks
+             - SDRAM for reduced cost
+             - Two 256x32 parts per memory bank
+             - Up to 4 banks (i.e. 2, 4, 6 or 8 Mbytes)
+             - Single cycle burst reads
+             - 100 MHz memory parts
+
+             Memory Architecture
+             @{c 59C134}¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+             - Multi-function architecture
+             - Memory allocated on demand to:
+               · Front buffer
+               · Back buffer (for double buffering)
+               · Offscreen (e.g. font caching)
+               · Z-buffer (15 or 16-bit)
+               · Stencil buffer (0 or 1)
+               · Textures (allocated if required)
+             - Color formats
+               · 8, 16, 24 and 32-bit RGBA
+               · 8-bit color indexed
+             - Video formats
+               · YUV 4:4:4, 4:2:2 and 4:2:0
+             - Texture formats
+               · 4 and 8-bit palletized
+               · 8, 16, 24 and 32-bit RGBA
+               · YUV 4:4:4, 4:2:2 and 4:2:0
+
+             VideoStreams Interface
+             @{c 59C134}¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+             - Simultaneous I/O of digital video
+             - Independent of monitor output
+             - Input from common MPEG/TV decoders
+             - Output to common NTSC/PAL encoders
+             - VESA VMI compliant
+             - Input data
+               · Scaled and filtered
+               · 16-bit (8-bit simultaneous with output)
+             - Output data
+               · Gamma corrected &amp; RGB-YUV conversion
+               · 16-bit (8-bit simultaneous with input)
+               · Slave operation to encoder
+             - Hardware triple buffering support
+             - Vertical Blank Interval control
+               · Closed caption, teletext and intercast
+               · Insert or extract data from video streams
+             - Control bus options
+               · Control bus (separate to DDC bus)
+               · General purpose parallel bus
+
+
+             RAMDAC
+             @{c 59C134}¯¯¯¯¯¯@{c}
+             - Integral 230 MHz, 64-bit RAMDAC
+             - Ergonomic high resolution refresh rates
+             - Packed pixel format
+             - 8, 16, 24 and 32-bits per pixel
+             - Integral dot clock and memory PLLs
+             - Triple 8-bit D/A convertors
+             - 64x64x2-color hardware cursor
+             - Per window double buffering
+
+             Monitor and Power Management
+             @{c 59C134}¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+             - DDC1 and DDC2AB+ monitor configuration
+             - Dedicated control bus
+             - Display Power Management Signaling (DPMS)
+             - Hardware, BIOS and driver support
+
+             Package Details
+             @{c 59C134}¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+             - 256 BGA
+             - 3.3V (5V tolerant I/O)
+             - 1.5 Watts typical
+
+             High Quality Reference Drivers
+             @{c 59C134}¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+             - OpenGL and Direct 3D
+             - QuickDraw and QuickDraw 3D

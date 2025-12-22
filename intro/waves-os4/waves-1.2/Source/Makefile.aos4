@@ -1,0 +1,32 @@
+PKG=`basename $(PWD)`
+CFLAGS = -mcrt=newlib -O3 -Wall
+OBJS=waves.o
+
+ifdef WIN
+	WIN=../i386-mingw32msvc
+	BIN=waves.exe
+	CC=i586-mingw32msvc-gcc
+	CFLAGS += -I$(WIN)/include `$(WIN)/bin/sdl-config --cflags`
+	LIBS=-L$(WIN)/lib `$(WIN)/bin/sdl-config --libs`
+else
+	BIN=waves
+	CC=gcc
+	CFLAGS += `sdl-config --cflags`
+	LIBS=-mcrt=newlib `sdl-config --libs`
+endif
+
+
+all:	$(BIN)
+
+clean:
+	$(RM) $(BIN) $(OBJS)
+
+pkg:
+	$(RM) ../$(PKG).tgz
+	tar -C ../ -c $(PKG) -zf ../$(PKG).tgz
+
+$(BIN):	$(OBJS)
+	$(CC) $(LDFLAGS) -o $(BIN) $^ $(LIBS)
+
+%.o:	%.c
+	$(CC) -c $(CFLAGS) -o $@ $^

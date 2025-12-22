@@ -1,0 +1,149 @@
+Buff! bueno esto es un documento de ultima hora relativo al contenido
+de este disco, como instalar el programa en disco duro, como hacer
+DocsEd autoarranque y alguna cosilla más...
+1. Contenido:
+        Pictures/ (Dir)
+        Gráficos varios (clip-art) de God para que los uséis en vuestros
+articulos, podéis cortarlos y componer titulos con las fonts que se in_
+cluyen para dejar vuestros articulos con un toque profesional..
+        Si arrancais desde disco duro y tenéis el PPShow localizado (ej.
+en C: ...) para ver los gráficos bastará con que hagais doble click en
+los iconos correspondientes. (de nada ;-))
+        Para usarlos deberíais contar con el PowerPacker para descomprimir_
+los, aunque creo que también con el PPshow si cuando ha aparecido el gráfico
+en pantalla pulsais la 'S', podréis grabarlos como Iff descomprimido con
+solo darle una trayectoria (directorio) y un nombre de fichero... (He
+dicho CREO!, estoy escribiendo de memoria...)
+
+2. Como instalar Docs 27 en el Disco Duro:
+        Bueno, esto es bastante fácil, solo tendrás que crear un directorio
+(cualquier nombre!) en tu disco duro y copiar del disco 1:
+        Todo el directorio raiz al directorio destino.
+        directorio modules/ al directorio destino.
+        directorio libs/ al directorio Libs: de tu disco duro.(*1)
+        directorio fonts/ al directorio Fonts: de tu disco duro.
+
+        (*1)Esto es: solo las librerias que no tengas ya en tu disco duro.
+
+        Disco 2:
+        Directorio ArticlesDocs2/ al directorio destino.
+        
+        Opcional:
+        Directorio Pictures/ al disco duro. (cualquier directorio)
+
+        Para hacer todo lo arriba indicado yo recomiendo que uséis el
+dir. opus o cualquier otra herramienta de ficheros, aunque se puede hacer
+a pelo desde el Workbench o Shell (si sois muy masocas ;->), en caso
+de que tengas problemas consulta el manual de tu ordenador, y en ultima
+instancia consultame a mi (Lobo) mi dirección en los Doc's.
+
+3. Como hacer un disco (Floppy) autoarranque del DocsEd:
+        Formatea un disco con "Install boot". (Cuidado con el disco que os
+cargueis, no me hago responsable de los daños que se puedan originar de
+estas instrucciones ni de ningún programa mio).
+        Copia el dir. Fonts/ del disco 1 de Docs27 y el programa DocsEd al
+disco.
+        Copia del disco 1 de Docs27 el directorio libs: a tu disco.
+        Copia el directorio "Prefs/" de tu disco de Workbench a tu disco.
+        Copia el directorio "C:" de tu disco de Workbench a tu disco.
+        Crea el dir "S/" y un "Startup-sequence" con los siguientes datos
+dentro: 
+; Startup-sequence para DocsEd.
+Assign env: ram:
+Assign t: ram:
+Setpatch >Nil:
+Addbuffers >Nil: DF0: 20
+:DocsEd
+
+        Si estas usando el WB 1.2 o 1.3 copia del disco 1 de Docs27 el
+directorio L: a tu disco.
+
+4. Como instalar el programa DocsEd a un Disco Duro:
+        Crea un directorio, copia el DocsEd dentro, copia las "Fonts/"
+del disco 1 de Docs 27 a "Fonts:" del disco duro, copia del directorio 
+"Libs/" del disco 1 de Docs 27 el fichero "stc.library" al "libs:" 
+de tu disco duro.
+Notas sobre Docs Ed:
+Recuerda que para que puedas insertar un gráfico o una animación en
+tu texto, este deberá estar en el mismo directorio que el texto; lo
+repito (tambien está en las instr.)  para que luego no haya lios por esto.
+
+5. Hablando de otra cosa, LLFB está creando un CD con todas las
+producciones españolas creadas hasta la fecha, si tienes alguna y quieres
+verla en la recopilación enviala a:
+                                            Dardo/LLFB
+                                            Apdo. Correos 1
+                                            17310-Lloret de Mar (Girona)
+
+
+                                                     LOBO / LLFB
+
+6. Como nos ha sobrado algo se espacio y teniamos muchas contribuciones
+a base de material diverso que no eran artículos, hemos puesto donde hemos
+podido parte de este material.
+
+   Disco 1: Dir Mods - Modulo jams de Jaco/AGAS.
+            Dir Pics - Grafico manga de Leunam/TNC
+   Disco 2: Dir Catalogos - Varios catalogos ****** * traducidos por
+                            Damaso Dominguez.
+
+   Todo está comprimido con diferentes compresores.
+
+
+                                                    DARDO / LLFB
+
+Bueno, esto es todo AmigAs.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Que ya no hay mas carta, jodés...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Pentium busca calculadora "Casio" o un procesador "Z80" de Spectrum
+en buen estado para poder aprender a dividir con decimales...
+Razon:
+Intel Co.
+C/ TheJo Dio, 1.99999
+585.192939 - Wannabeaproccessorbuticantdivide (USA)
+;->

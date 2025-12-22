@@ -1,0 +1,280 @@
+{
+  "actions": [
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 8980
+          },
+          {
+            "float_values": 0.20000000298023224,
+            "interpolation": "linear",
+            "time": 7000
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 12000
+          },
+          {
+            "float_values": 0.20000000298023224,
+            "interpolation": "linear",
+            "time": 9020
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bt_scene_1"
+        }
+      ],
+      "loops": 1,
+      "name": "wiseman_alpha",
+      "start_time": 0,
+      "type": "property_float"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 2020
+          },
+          {
+            "float_values": 2.0,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bt_scene_1"
+        }
+      ],
+      "loops": 1,
+      "name": "twilight_gradient_pos_z",
+      "start_time": 34980,
+      "type": "property_float"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.02097995,
+              0.30131656,
+              -1.8530196
+            ],
+            "interpolation": "linear",
+            "time": 18480
+          },
+          {
+            "float_values": [
+              -0.02098,
+              0.30131656,
+              0.20186293
+            ],
+            "time": 20
+          },
+          {
+            "float_values": [
+              0.10460226,
+              0.06721459,
+              -1.94209003
+            ],
+            "interpolation": "linear",
+            "time": 8980
+          },
+          {
+            "float_values": [
+              0.09585752,
+              0.30462164,
+              -1.94208765
+            ],
+            "time": 20
+          },
+          {
+            "float_values": [
+              -0.19560519,
+              0.0568876,
+              -0.868424
+            ],
+            "interpolation": "linear",
+            "time": 9500
+          },
+          {
+            "float_values": [
+              -0.15067725,
+              0.23715539,
+              -0.82594383
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "camera_1"
+        }
+      ],
+      "loops": 1,
+      "name": "camera_1Action",
+      "start_time": 0,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -10.000002,
+              0.0,
+              -37.6
+            ],
+            "interpolation": "linear",
+            "time": 18480
+          },
+          {
+            "float_values": [
+              -10.000002,
+              0.0,
+              -37.6
+            ],
+            "time": 20
+          },
+          {
+            "float_values": [
+              3e-06,
+              0.0,
+              -33.000001
+            ],
+            "interpolation": "linear",
+            "time": 8980
+          },
+          {
+            "float_values": [
+              3e-06,
+              0.0,
+              -33.000001
+            ],
+            "time": 20
+          },
+          {
+            "float_values": [
+              3e-06,
+              0.0,
+              -28.800001
+            ],
+            "interpolation": "linear",
+            "time": 9500
+          },
+          {
+            "float_values": [
+              3e-06,
+              0.0,
+              -28.800001
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "camera_1"
+        }
+      ],
+      "loops": 1,
+      "name": "camera_1Action",
+      "start_time": 0,
+      "type": "rotation_xyz"
+    }
+  ],
+  "cameras": [
+    {
+      "far_clip_plane": 100.0,
+      "fov_x": 67.580139,
+      "fov_y": 37.000002,
+      "hide": false,
+      "name": "camera_1",
+      "near_clip_plane": 0.1,
+      "position": [
+        -0.02097995,
+        0.30131656,
+        -1.8530196
+      ],
+      "rotation": [
+        -10.000002,
+        0.0,
+        -37.6
+      ]
+    }
+  ],
+  "enc_info": {
+    "data_type": "ENCSCN",
+    "date": "27 Dec 2022 20:39:12",
+    "version": "2.0"
+  },
+  "loops": 1,
+  "name": "bt_scene_1",
+  "objects": [
+    {
+      "mesh_name": "bt_ground",
+      "name": "ground",
+      "order": 0
+    },
+    {
+      "mesh_name": "bt_fog_gradient",
+      "name": "fog_gradient",
+      "order": 2,
+      "position": [
+        0.0,
+        0.0,
+        1.09170997
+      ],
+      "properties": {
+        "blending": "multiply",
+        "depth_mask": 0,
+        "depth_test": 0
+      },
+      "tag": 10
+    },
+    {
+      "mesh_name": "bt_monster_1",
+      "name": "monster_1",
+      "order": 10,
+      "position": [
+        0.13,
+        0.0,
+        -2.20411777
+      ],
+      "tag": 100
+    },
+    {
+      "mesh_name": "bt_monster_2",
+      "name": "monster_2",
+      "order": 15,
+      "position": [
+        -0.16,
+        0.0,
+        -1.13418996
+      ],
+      "tag": 101
+    }
+  ],
+  "properties": {
+    "twilight_gradient_pos_z": 0.0,
+    "wiseman_alpha": 1.0
+  },
+  "time": 37000
+}

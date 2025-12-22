@@ -1,0 +1,4223 @@
+@database TheSceneGuide.guide "TheScene.guide"
+@master TheSceneGuide.guide " The Scene Guide"
+@author "Nico Barbat (Dire/Eremation)"
+@(c) "© 1995-1997 Nico Barbat"
+@$ver: "TheSceneGuide.guide 2/3 in 1997 (05-Jun-97)"
+@font microknight.font 8
+@wordwrap on
+@proportional on
+@width 80
+@help "TSG_Data1/Help!"
+@index "TSG_Data2/Main"
+
+@remark "The Scene Guide - A Guide-Document about the Amiga Scene"
+@remark "THE SCENE GUIDE (c) 1995-1997 DIRE/EREMATION (NICO BARBAT)"
+
+
+@node Main " The Scene Guide by Dire/Eremation ... Life is a party! "
+   -=\/=-=/\=-=\/=-=/\=-=\/=-=/\=-=\/=-=/\=-=\/=-=/\=-=\/=-=/\=-=\/=-=/\=-
+
+        @{b} @{u}@{bg fill} - T - H - E -   - S - C - E - N - E -   - G - U - I - D - E - @{bg background}@{uu}@{ub}
+            ____ ___ ______ _____ _____ _______ __ __ ___   _______
+Issue`s    / __//  .\\  __// _ _ \\ __ \\_  __// //  \\  \_/ _____/
+topic:    / >_ /  \_// >_ / //// // _  / / /  / // / // /\  / @{bg shine}Dire / ERM@{bg back}
+          \__/ \/\__\\__/ \/ ~ \/ \/ \/  \/   \/ \__/ \/  \/  @{bg shine} presents @{bg back}
+TG97, TP7,    ________ _  __ ____     ___  ____ ____ __  __ ____
+Ass97, SM97   \__  __// L/ // __/    /___>/ __// __//  \/ // __/
+& 32 other      / /  / _  // >_    __\\  / /_ / >_ / /\  // >_   @{bg shine} Issue 2/3 @{bg back}
+planned events: \/   \j L/ \__/    \___> \__/ \__/ \/  \/ \__/   @{bg shine}(05-Jun-97)@{bg back}
+any troubles? :)
+                           @{bg fill}@{" The Parties 1997-.... " link Partiesmain}@{bg background}
+                           @{bg fill}@{" The Parties 1988-1996 " link TSG96.guide/Partiesmain}@{bg background}
+                           @{bg fill}@{"   Party-Invitations   " link partiesplanned}@{bg background}
+                           @{bg fill}@{"      Information      " link TSG_Data1/main}@{bg background}
+
+   -=\/=-=/\=-=\/=-=/\=-=\/=-=/\=-=\/=-=/\=-=\/=-=/\=-=\/=-=/\=-=\/=-=/\=-
+   @{"  " system "ppshow TSG_Title.iff"} Title-Picture   @{"  " system "noiseplayer -p4 TSG_Module1.mod"} Title-Sound #1   @{"  " system "noiseplayer -p4 TSG_Module2.mod"} Title-Sound #2   @{"  " link addresses} Addy!
+   -=\/=-=/\=-=\/=-=/\=-=\/=-=/\=-=\/=-=/\=-=\/=-=/\=-=\/=-=/\=-=\/=-=/\=-
+   @{"  " link TSG_Data2/index1_charts} Groups-Charts   @{"  " link TSG_Data2/visitorscharts} Visitor-Charts   @{"  " link TSG_Data2/Main} The TSG-Index    @{"  " link TSG_Data1/Help!} How 2
+   -=\/=-=/\=-=\/=-=/\=-=\/=-=/\=-=\/=-=/\=-=\/=-=/\=-=\/=-=/\=-=\/=-=/\=-
+@endnode
+
+@node addresses " Important Addresses "
+@toc information
+
+   -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+   @{i}Author`s Address @{ui}
+
+      Snail-Mail     : Nico Barbat
+                       (Dire of Eremation)   <-- don`t write this
+                       Rheinaustraße 37          on the envelope!
+                       51149 Köln
+                       Germany                    @{" IFF-Advert " system "ppshow TSG_Advert.iff"}
+
+      E-Mail         : nb@netdesign.de
+
+      Phone          : +49-(0)228-311892 (Monday to Thursday only)
+      BBS-Connection : Los Endos  +49-(0)2103-52440 (Dire)
+
+       Use this address for everything concerning @{i}The Scene. @{ui}
+
+   -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+    @{" Other Addresses " link TSG_Data1/addresses_sub}   AT, distributors, swappers, other authors
+
+   -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+@endnode
+
+
+@node partiesmain " The Parties of the Scene "
+@toc main
+
+
+
+
+       ________ _  __ ____    ___ _____ _____ _______ __ ____ ___
+       \__  __// L/ // __/   /  .\\ __ \\   .\\_  __// // __//___>
+         / /  / _  // >_    / ___// _  //  \_/ / /  / // >_ _\\
+         \/   \j L/ \__/    \/    \/ \/ \/\__\ \/   \/ \__//___>
+
+
+                          @{b}1 9 9 7   -   . . . . @{ub}
+
+
+                      @{bg fill} @{b} @{u}THE PARTIES OF THE SCENE@{uu} @{ub} @{bg background}
+
+
+
+
+ @{b}Party @{ub}                      | @{b}Organiser @{ub}          | @{b}Location @{ub}| @{b}Date @{ub}
+ ============================*=====================*==========*=============
+*@{"Absolute `97               " link p160}| [unknown]           | Poland   |       May/97
+ ----------------------------+---------------------+----------+-------------
+*@{"Buz Party `97              " link p264}| [unknown]           | Poland   |       Apr/97
+ ----------------------------+---------------------+----------+-------------
+*@{"Compusphere 8              " link p252}| Galaktiska Instit.  | Sweden   |       May/97
+ ----------------------------+---------------------+----------+-------------
+*@{"Democrazy `97              " link p260}| [unknown]           | Finland  | 30-02/Jan/97
+ ----------------------------+---------------------+----------+-------------
+*@{"Distortion `97             " link p228}| [unknown]           | Norway   |    14/Feb/97
+ ----------------------------+---------------------+----------+-------------
+*@{"Hackernight `97            " link p240}| [unknown]           | Sweden   | 04-05/Apr/97
+ ----------------------------+---------------------+----------+-------------
+*@{"Icing Beta `97             " link p245}| Agony, ...          | Sweden   |       Apr/97
+ ----------------------------+---------------------+----------+-------------
+*@{"Junction Party `97         " link p243}| [unknown]           | Denmark  | 02-04/May/97
+ ----------------------------+---------------------+----------+-------------
+*@{"Rush Hours Party `97       " link p207}| Freezers, Shadows   | Poland   | 22-23/Feb/97
+ ----------------------------+---------------------+----------+-------------
+*@{"Scenery `97                " link p236}| Digital Access, ... | Australia| 31-02/Mar/97
+ ----------------------------+---------------------+----------+-------------
+*@{"Scenest Party `97          " link p235}| Impulse, Astroidea  | Hungary  | 04-06/Apr/97
+ ----------------------------+---------------------+----------+-------------
+*@{"Scene Strike 1             " link p258}| Corrosion           | Yugosl.  | 30-31/May/97
+ ----------------------------+---------------------+----------+-------------
+*@{"Scenus `97                 " link p255}| [unknown]           | Norway   |       Apr/97
+ ----------------------------+---------------------+----------+-------------
+*@{"Scream `97                 " link p229}| [unknown]           | Canada   | 30-01/May/97
+ ----------------------------+---------------------+----------+-------------
+*@{"SILIconvention `97         " link p213}| Arsenic, ...        | Germany  | 28-31/Mar/97
+ ----------------------------+---------------------+----------+-------------
+*@{"Summoning `97              " link p237}| [unknown]           | Denmark  | 12-13/Apr/97
+ ----------------------------+---------------------+----------+-------------
+*@{"Symposium & Mekka `97      " link p202}| PB,Lego,Phantasm,...| Germany  | 28-31/Mar/97
+ ----------------------------+---------------------+----------+-------------
+*@{"The Gathering `97          " link p196}| Crusaders           | Norway   | 26-30/Mar/97
+ ----------------------------+---------------------+----------+-------------
+*@{"X `97 Takeover             " link p227}| Nostalgia, Success  | Netherl. | 04-06/Apr/97
+ ----------------------------+---------------------+----------+-------------
+*@{"World of Amiga `97         " link p233}| [exposition only]   | England  | 16-18/May/97
+ ============================*=====================*==========*=============
+
+
+
+
+ @{"   Party Invitations   " link partiesplanned}  !Party-Invitations!
+
+ @{"    Unknown Parties    " link TSG96.guide/partiesunknown}
+
+ @{"  The Party Calendar   " link partiescalendar}
+
+
+                                        @{" -=O    Please support us!    O=- " link TSG_Data1/support}
+
+                                        @{" -=O  Back to the Main-Menu!  O=- " link main}
+
+
+ @{" The Parties 1988-1996 " link TSG96.guide/partiesmain}
+@endnode
+
+@node partiesplanned " Planned Parties "
+@toc PartiesMain
+
+
+@{b}
+    Planned Parties
+@{ub}
+
+     These are parties which are @{i}planned in the near future. @{ui}
+     Everyone is invited to visit these events ...
+
+
+ @{b}Party @{ub}                      | @{b}Organiser @{ub}          | @{b}Location @{ub}| @{b}Date @{ub}
+ ============================*=====================*==========*=============
+*@{"Abduction `97              " link p231}| Scoopex             | Finland  |       Jun/97
+ ----------------------------+---------------------+----------+-------------
+*@{"Amiga Domain Party `97     " link p232}| Digital Access      | Australia|       Sep/97
+ ----------------------------+---------------------+----------+-------------
+*@{"AntIQ Party `97            " link p259}| [unknown]           | Hungary  |       Aug/97
+ ----------------------------+---------------------+----------+-------------
+*@{"Drome `97                  " link p238}| Royal, B2           | Netherl. | 20-22/Jun/97
+ ----------------------------+---------------------+----------+-------------
+*@{"Euskal Party 5             " link p239}| [unknown]           | Spain    | 25-27/Jul/97
+ ----------------------------+---------------------+----------+-------------
+*@{"Gravity `97                " link p242}| Anadune             | Poland   | 30-31/Aug/97
+ ----------------------------+---------------------+----------+-------------
+*@{"Icing Remedy `97           " link p197}| Agony, ...          | Sweden   | 12-15/Jun/97
+ ----------------------------+---------------------+----------+-------------
+*@{"Intel Outside Party 4      " link p253}| Union, Cybermaniax  | Poland   | 13-14/Jul/97
+ ----------------------------+---------------------+----------+-------------
+*@{"Kindergarden Party 7       " link p244}| Acid, Arcane, Baffle| Norway   | 03-06/Jul/97
+ ----------------------------+---------------------+----------+-------------
+*@{"Motorola Inside `97        " link p257}| [unknown]           | Finland  | 27-30/Jun/97
+ ----------------------------+---------------------+----------+-------------
+*@{"Power Convention `97       " link p234}| [exposition only]   | Canada   | 19-20/Jul/97
+ ----------------------------+---------------------+----------+-------------
+*@{"Rage Party `97             " link p241}| Iris, Apollo, ...   | Hungary  | 04-06/Jul/97
+ ----------------------------+---------------------+----------+-------------
+*@{"Skenery `96                " link p254}| Zymosis, JRM, ...   | Finland  |       Sep/97
+ ----------------------------+---------------------+----------+-------------
+*@{"The Copenhagen Party `97   " link p246}| DGC                 | Denmark  | 29-06/Jun/97
+ ----------------------------+---------------------+----------+-------------
+*@{"The Party 7                " link p261}| The Silents         | Denmark  | 27-29/Dec/97
+ ----------------------------+---------------------+----------+-------------
+*@{"Wired Party `97            " link p263}| Bomb                | Belgium  | 18-20/Jul/97
+ ============================*=====================*==========*=============
+@endnode
+
+@node partiescalendar " The Party Calendar"
+@toc partiesmain
+
+
+ @{b}THE PARTY CALENDAR @{ub}
+
+
+ @{b}1988@{ub} ??? ??     Vortex 42 Party `88
+      Nov 04     Helloween Party `88
+      Dec ??     Alcatraz Copy-Party `88
+
+ @{b}1989@{ub} Jul 29     Mega Copy-Party `89
+      Aug 06-09  Digitech Summer Conference `89
+      Sep ??     Tristar Party `89
+      Nov 05     Spectre & Northstar `89
+      Dec ??     X-Mas Party `89
+
+ @{b}1990@{ub} ??? ??     CES Exposition `90
+      Jan 05     Phenomena & Censor Party
+      Feb ??     Anarchy Winter Conference `90
+      Mar ??     CeBIT `90
+      Apr 12-15  Swedish Elite Easter Conference `90
+      Jun 28-29  Summer Conference `90
+      Jun 29-01  Silents & RSI Amiga `90
+      Aug 11     Prime Party `90
+      Oct 05     No Limits & IMP 666 Party `90
+      Dec 26     X-Mas Party `90
+      Dec 26-29  Theatre & Network Party `90
+
+ @{b}1991@{ub} ??? ??     Anarchy Eastern Party `91
+      ??? ??     Awesome Party `91
+      ??? ??     Turtle Party `91
+      Feb 23     Anarchy Winter Conference `91
+      Mar 91     CeBIT `91
+      Apr 15     The Gathering `91
+      Apr 26-28  Summit Party `91
+      Jun 04     World of Commodore `91 (USA)
+      Jun 07-09  Society Summer Party `91
+      Jun 14-16  E.C.E.S. Party `91
+      Jun 28-30  Amega Party `91
+      Jul ??     Swans Party `91
+      Sep 29-30  Razor 1911 & IMP 666 Party `91
+      Oct 19     Action Conference `91
+      Nov ??     World of Commodore `91 (D)
+      Nov 16-17  Treacl Celebration `91
+      Dec 13-15  Success Party `91
+      Dec 26-28  The Party 1
+      Dec 27-28  New Year Conference `91
+
+ @{b}1992@{ub} ??? ??     Castle Conference `92
+      ??? ??     Garden Party 1
+      ??? ??     Svithiod Meditation `92
+      Feb 14-16  16 Bit Show `92
+      Mar ??     CeBIT `92
+      Mar 07-08  Magnetic Meeting `92
+      Apr ??     Eastern Conference `92 (D)
+      Apr 04     Anarchy Eastern Party `92
+      Apr 15-19  The Gathering `92
+      Apr 18     Eastern Conference `92 (B)
+      Jun 26-29  Hurricane Summer Party `92
+      Jul ??     Digital Access Party 1
+      Jul ??     Galemand`s Gilde `92
+      Jul 24-26  The Assembly `92
+      Aug 01     Prime Party `92
+      Sep 26-27  Fifth Generation and Darkness Party `92
+      Oct 10     Ami-Expo Party `92
+      Oct 24     Digital Symposium `92
+      Nov ??     Rebels Party `92
+      Nov ??     World of Commodore `92 (D)
+      Dec 04-06  World of Commodore `92 (CAN)
+      Dec 11-13  Hi-Tech Party `92
+      Dec 18     Bash 3 Party `92
+      Dec 27-29  The Party 2
+
+ @{b}1993@{ub} ??? ??     Hammering `93
+      ??? ??     Radwar Rainbow Party VII
+      ??? ??     Southern Party `93
+      Mar 27-28  CeBIT `93
+      Apr ??     Spring Party `94
+      Apr 07-10  The Gathering `93
+      Apr 09-11  Semi Party `93
+      Apr 24-25  Data-Live Conference `93
+      Apr 24-25  Garden Party 2
+      May 29-31  The Computer Crossroads `93
+      Jun ??     Holland is OK Party `93
+      Jul ??     Digital Access Party 2
+      Jul ??     South Sealand Party `93
+      Jul ??     Sun`n`Fun Party `93
+      Jul 23-25  Meltdown Party `93
+      Jul 30     Rendezvous Party `93
+      Jul 30     Galemand`s Gilde `93
+      Aug ??     Dublin Party `93
+      Aug 01-02  680X0 Convention `93
+      Aug 05-08  European Computer Conference `93
+      Aug 10-13  The Assembly `93
+      Aug 14-15  Somewhere in Holland 1
+      Aug 28     Destiny Communion `93
+      Sep 03-04  Saturne Party 1
+      Oct ??     Aggressive Party 1
+      Oct 19-21  Melon`s 2nd Birthday Party
+      Oct 23-24  Polish Autumn Party `93
+      Oct 31     Helloween Conference `93
+      Nov ??     World of Commodore `93 (D)
+      Nov 13-14  Helloween Party `93
+      Dec 27-29  The Party 3
+
+ @{b}1994@{ub} ??? ??     3S Party 1
+      ??? ??     Low Density Party `94
+      Mar ??     CeBIT `94
+      Mar 29     The Gathering `94
+      Apr ??     Eastern Conference `94 (D)
+      Apr ??     Ladojen Kokoontumis Ajot Lahti Party `94
+      Apr 01     Pearl Party `94
+      Apr 07-09  Hammering `94
+      Apr 22-24  Saturne Party 2
+      May ??     Primavera Party `94
+      May 15     Hackerance `94
+      Jun 24-26  South Sealand Party `94
+      Jul ??     Pacman Party `94
+      Aug ??     Euskal Party 1
+      Aug ??     Intel Outside Party 1
+      Aug 05-07  The Assembly `94
+      Oct 08-09  Doom`s Day Party `94
+      Oct 29-31  Wired Party `94
+      Nov 05-06  World of Commodore `94 (D)
+      Nov 12-13  Gelloween Party `94
+      Dec 27-29  The Party 4
+      Dec 27-30  Euskal Party 2
+
+ @{b}1995@{ub} ??? ??     Computer Art Festival `95
+      ??? ??     Demobit `95
+      ??? ??     IT-WO Party `95
+      ??? ??     Phoenix Party `95
+      ??? ??     Prime Party `95 - Barbeque
+      ??? ??     Radwar Rainbow Party IX
+      ??? ??     Rebellion Party `95
+      Mar ??     CeBIT `95
+      Mar ??     Gelloween Party `95
+      Mar 11-12  Primavera Party `95
+      Mar 31     Virtual Conspiracy `95
+      Apr ??     Eastern Conference `95 (PL)
+      Apr 07-09  Scenest Party `95
+      Apr 11-15  The Gathering `95
+      Apr 22-23  Black Box Symposium `95
+      May 20-21  Nexus Party `95
+      May 28     Hackerance `94
+      Jun ??     Abduction `95
+      Jun 15-18  Icing Party `95
+      Jun 16-18  Junction Party `95
+      Jul 03-08  Odyssey Party `95
+      Jul 07-09  South Sealand Party `95
+      Jul 08-10  Somewhere in Holland 2
+      Jul 20-22  Valhall Party `95
+      Jul 21-23  Posadas Party `95
+      Aug 10-13  Boozembly `95
+      Aug 10-13  The Assembly `95
+      Aug 11-15  GASP `95
+      Aug 19-20  Enlight Party `95
+      Aug 27     Party Zone III
+      Aug 28-29  Intel Outside Party 2
+      Sep ??     Bizarre Party `95
+      Sep 22     Project Party `95
+      Sep 29     Happening `95
+      Oct 06-08  Party Remedy `95
+      Oct 12-15  Euskal Party 3
+      Oct 13-15  Scenario Party `95
+      Oct 14-15  Berzan Party `95
+      Oct 21     Digital Symposium `95
+      Oct 28     Ten Years Scene Party `95
+      Nov 03-05  Computer Convention `95
+      Nov 03-05  Wired Party `95
+      Nov 10-12  Compusphere 5
+      Nov 11-12  Voyage Party `95
+      Nov 17-19  Kindergarden Party 4
+      Dec ??     Aggressive Party 2
+      Dec ??     Meltdown Party `93
+      Dec 01-03  Liquid Party `95
+      Dec 02-03  Dusk Conference `95
+      Dec 15-17  Borlänge Demo Party 1
+      Dec 15-17  Exe Party `95
+      Dec 27-29  The Party 5
+
+ @{b}1996@{ub} Jan 20-21  Juhla Party `96
+      Jan 26-28  Kindergarden Party 5
+      Feb ??     Creutz Party `96
+      Mar ??     CeBIT `96
+      Mar 02-03  Convention `96 (Germany)
+      Apr ??     Bestial Amiga Party `96
+      Apr ??     Frost Party `96
+      Apr 02-06  The Gathering `96
+      Apr 04-07  Workshop `96
+      Apr 05-08  Symposium `96
+      Apr 12-14  Scenest Party `96
+      Apr 26-28  Demolition Party 1
+      Apr 26-28  Saturne Party 3
+      May 10-12  Compusphere 6
+      May 17-19  Ludvika Positive Party `96
+      May 24-26  Icing Party `96
+      Jun 01-02  Rage Party `96
+      Jun 07-09  Abduction `96
+      Jun 14-17  Party Remedy `96
+      Jun 22-23  Polish Summer Party `96
+      Jul 05-07  South Sealand Party `96
+      Jul 07-14  Mulle Party `96
+      Jul 12-14  The Summer Computer Conference `96
+      Jul 12-14  The Summer Party `96
+      Jul 22-24  Somewhere in Huibsland `96
+      Jul 25-28  Euskal Party 4
+      Aug ??     Gigafun `96
+      Aug ??     Suspect Party `96
+      Aug 02-05  Skyscrape Gathering `96
+      Aug 03-04  Amiga Convention `96
+      Aug 16-18  The Assembly `96
+      Aug 24-25  Enlight Party `96
+      Aug 30-31  Intel Outside Party 3
+      Aug 30-01  3S Party 2
+      Aug 30-01  AntIQ Party `96
+      Sep 07-08  Bizarre Party `96
+      Sep 27-29  Skenery `96
+      Oct ??     Pie Slice `96
+      Oct ??     Berzan Party `96
+      Oct 04-06  Fudge Party `96
+      Oct 18-20  Scene Meeting `96
+      Nov ??     Demolition 2
+      Nov 01-03  Halloween `96 (Sweden)
+      Nov 01-03  Halloween `96 (France)
+      Nov 01-03  Saturne Party 4
+      Nov 01-03  TI Drome `96
+      Nov 01-03  Wired Party `96
+      Nov 08-20  Compusphere 7
+      Nov 08-10  Cache `96
+      Nov 08-10  Scenario `96
+      Nov 09-10  Gravity `96
+      Nov 15-17  Kindergarden Party 6
+      Nov 15-17  Convention `96 (Norway)
+      Dec 27-29  The Party 6
+
+ @{b}1997@{ub} Jan 30-02  Democrazy `97
+      Feb 14     Distortion `97
+      Feb 22-23  Rush Hours Party `97
+      Mar 26-30  The Gathering `97
+      Mar 28-31  SILIconvention `97
+      Mar 28-31  Symposium & Mekka `97
+      Mar 31-02  Scenery `97
+      Apr ??     Buz Party `97
+      Apr ??     Icing Beta `97
+      Apr ??     Scenus `97
+      Apr 04-05  Hackernight `97
+      Apr 04-06  X `97 Takeover
+      Apr 04-06  Scenest Party `97
+      Apr 12-13  Summoning `97
+      May ??     Absolute `97
+      May ??     Compusphere 8
+      May 02-04  Junction Party `97
+      May 16-18  World of Amiga `97
+      May 30-31  Scene Strike 1
+      May 30-01  Scream `97
+
+      -------------------------------
+
+ @{b}SOON@{ub} Jun ??     Abduction `97
+      Jun 12-15  Icing Remedy `97
+      Jun 20-22  Drome `97
+      Jun 27-30  Motorola Inside `97
+      Jun 29-06  The Copenhagen Party `97
+      Jul 03-06  Kindergarden Party 7
+      Jul 04-06  Rage Party `97
+      Jul 13-14  Intel Outside Party 4
+      Jul 18-20  Wired Party `97
+      Jul 19-20  Power Convention `97
+      Jul 25-27  Euskal Party 5
+      Aug ??     AntIQ Party `97
+      Aug 30-31  Gravity `97
+      Sep ??     Amiga Domain Party `97
+      Sep ??     Skenery `97
+      Dec 27-29  The Party 7
+@endnode
+
+
+
+-------------------
+
+
+@node p160 " Absolute `97 "
+@toc partiesmain
+
+
+@{b}
+    Absolute `97
+@{ub}
+
+    Organiser: [unknown]
+    Date     : May 1997
+    Location : Poland
+
+    @{" Intro Competition " link p160-intro}
+    @{" Other Releases    " link p160-other}
+@endnode
+
+@node p160-intro " Absolute `97 - Intro Competition "
+@toc p160
+
+   @{" Restricted ......... Army of Lovers " link d1933}
+@endnode
+
+@node p160-other " Absolute `97 - Other Releases "
+@toc p160
+
+ 1 @{" Absolute `97 Intro ....... Spedes " link d1932}
+ 2 PC: Intro ................. O`Moses
+ 3 PC: Intro ................ Creamass
+@endnode
+
+
+
+@node p196 " The Gathering `97"
+@toc Partiesmain
+
+
+@{b}
+    The Gathering `97
+@{ub}
+
+    Organiser: Crusaders
+    Date     : 26-30 March 1996
+    Location : Vikingskipet/Hamar, Norway
+
+    @{" Information       " link p196-info}
+
+    @{" Demo Competition  " link p196-demo}
+    @{" 64K Intro Compo   " link p196-40kintro}
+    @{" 4K Intro Compo    " link p196-4kintro}
+    @{" Fast Intro Compo  " link p196-fast}
+    @{" Wild Demo Compo   " link p196-wild}
+    @{" Other Releases    " link p196-other}
+@endnode
+
+@node p196-wild " The Gathering `97 - Wild Demo Competition "
+@toc p196
+
+   @{" Chriz in da hood ............. Rape " link d1931}
+@endnode
+
+@node p196-fast " The Gathering `97 - Fast Intro Competition "
+@toc p196
+
+   @{" Element ............. Contraz " link d1807}
+   @{" Food ............. Lewis Baia " link d1809}
+@endnode
+
+@node p196-other " The Gathering `97 - Other Releases "
+@toc p196
+
+   @{" Atom`s Slideshow ...................... Laan " link d1818}
+   @{" Communistical Revenge .................. RNO " link d1810}
+   @{" Digital Chips 21 .................... Apathy " link d1812}
+   @{" New Power Themo ........................ PSB " link d1788}
+   @{" The Amiga Intro .......... Digital Predators " link d1823}
+   @{" Trilobyte 4 ......................... Nuance " link d1811}
+@endnode
+
+@node p196-demo " The Gathering `97 - Demo Competition "
+@toc p196
+
+ 1 @{" Captured Dreams ......................... The Black Lotus " link d1741}
+ 2 @{" Exit Planet Dust ................................ Artwork " link d1740}
+ 3 @{" Deus Ex Machina ......................... Limited Edition " link d1738}
+ 4 @{" Eclipse ......................................... Triumph " link d1742}
+ 5 @{" Energy ............................................. Gods " link d1743}
+ 6 @{" Black Hair Tongue Disease .......................... Ward " link d1735}
+ 7 @{" Abiotic ....................................... Ephidrena " link d1744}
+ 8 @{" Needle Freak ....................................... Rape " link d1750}
+ 9 @{" Assfart .......................................... Apathy " link d1734}
+10 @{" Snack ........................................ Spaceballs " link d1737}
+11 @{" Espen Bredesen ................................... Orange " link d1745}
+12 @{" Plong ........................................... Contraz " link d1733}
+13 @{" Power Death ..................................... Procyon " link d1736}
+14 @{" Hale-Bopp ................................ Elefantklubben " link d1748}
+15 @{" PC Puke! ........................................ Procyon " link d1758}
+16 @{" Magic Milktunnel ........................... Donut Fetish " link d1759}
+17 @{" Find yourself ............... Smellon Design (TRSI & FLT) " link d1746}
+@endnode
+
+@node p196-40kintro " The Gathering `97 - 64K Intro Competition "
+@toc p196
+
+ 1 PC: Gene .............................. Fudge
+ 2 PC: Arabi from da Bronx ............... Tpolm
+ 3 PC: Face it ........................... Jello
+ 4 PC: Ocean ...................... Rectum Cauda
+ 5 PC: Skogen ..................... Rectum Cauda
+ 6 @{" Sutju .............................. Jormas " link d1749}
+ 7 PC: Prove you wrong .............. Recreation
+ 8 PC: Onion ............................. Yodel
+ 9 PC: More or less ............ Beam & Noctural
+10 PC: Dalt ............................ Proxima
+11 @{" Dual 4Kb! ........................ Subspace " link d1757}
+12 PC: Monochrome Life .................. Tundra
+13 @{" Nocturne ........................... Giants " link d1747}
+14 PC: Quick Launch .................... Extatic
+15 PC: Robo ............................ unknown
+16 @{" Ability ............................ Vector " link d1752}
+17 @{" DoorMat ......................... [unknown] " link d1739}
+@endnode
+
+@node p196-4kintro " The Gathering `97 - 4K Intro Competition "
+@toc p196
+
+ 1 @{" Brunostalgia ........... Contraz " link d1732}
+@endnode
+
+@node p196-info " The Gathering `97 - Information"
+@toc p196
+
+
+    @{b}The Gathering `97 - Information @{ub}
+
+
+    You can access information about this party from:
+
+    Internet    http://www.crusaders.no
+    Telephone   +47-(0)90119966 (Vegard Skjefstad; Arrangement)
+                +47-(0)90077162 (Andreas Lund; Network Administrator)
+                +47-(0)93054593 (Trond Michelsen; Registration)
+    E-Mail      shady@crusaders.no (Vegard Skjefstad)
+                floyd@crusaders.no (Andreas Lund)
+                mike@crusaders.no (Trond Michelsen)
+                tg97@crusaders.no (general questions and comments)
+    BBS (?)     Crusaders BBS ..................... +47-(0)22-104646
+                                                    +47-(0)22-100893
+                Infolink BBS ...................... +47-(0)22-571600
+                                                    +47-(0)22-571604
+                Spacebar BBS ...................... +47-(0)64-933499
+    Snail-Mail  Crusaders Productions
+                Stasjonsvn. 56 (Stationsveien 56)
+                2010 Strømmen
+                Norway
+
+
+    The following competitions were held:
+    Amiga Nostalgia Demo (OCS), Amiga 4K Intro, PC 4K Intro,
+    C-64 Demo, Amiga 40K Intro, 4 channel music, multichannel
+    music, Amiga & PC Fast-Intro, PC 64K Intro, Graphics,
+    Wild Demo, Amiga Demo, PC Demo.
+@endnode
+
+
+
+@node p197 " Icing Remedy `97 "
+@toc Partiesplanned
+
+
+@{b}
+    Icing Remedy `97
+@{ub}
+
+    Organiser: Agony, and others [unknown]
+    Date     : 12-15 June 1997
+    Location : Stockholm, Sweden
+
+    @{" Information       " link p197-info}
+@endnode
+
+@node p197-info " Icing Remedy `97 - Information"
+@toc p197
+
+
+    @{b}Icing Remedy `97 - Information @{ub}
+
+
+    You can access information about this party from:
+
+    World Wide Web  http://www.ir97.com/
+    BBS             Gurus Dream: +46-(0)8-282760 (282761, 282762)
+@endnode
+
+
+
+@node p202 " Symposium & Mekka `97 "
+@toc Partiesmain
+
+
+@{b}
+    Symposium & Mekka `97
+@{ub}
+
+    Organiser: Polka Brothers, Lego, Phantasm (Amiga), 
+               Smash Designs (C64), Amable (PC), Avena (Atari)
+    Date     : 28-31 March 1997
+    Location : Fallingbostel near Soltau, Germany
+
+    @{" Information       " link p202-info}
+
+    @{" Demo Competition  " link p202-demo}
+    @{" 40K Intro Compo   " link p202-40kintro}
+    @{" 4K Intro Compo    " link p202-4kintro}
+    @{" Fast Intro Compo  " link p202-fast}
+    @{" Wild Demo Compo   " link p202-wild}
+    @{" Invitation Demo   " link p202-invite}
+    @{" Other Releases    " link p202-other}
+@endnode
+
+@node p202-wild " Symposium & Mekka `97 - Wild Demo Competition "
+@toc p202
+
+ 1 PC: Megademo ......................... Ninjaforce
+ 2 PC: Chocolate Autobahn ............... Adam Parry
+ 3 PC: Osterscherzbrief .................... In-Sect
+ 4 PC: Stiftung Warentest ............ United Chonks
+ 5 @{" Bruchwurst ............................ Accept " link d1930}
+ 6 PC: X-Treme ......................... Sven Tornow
+ 7 @{" Tankstellenbande .......... Birdhouse Projects " link d1929}
+ 8 PC: Abspacken ...................... Rigor Mortis
+@endnode
+
+@node p202-fast " Symposium & Mekka `97  - Fast Intro Competition "
+@toc p202
+
+   @{" Fast Intro ............ Puzzle Productions & Depth " link d1786}
+@endnode
+
+@node p202-other " Symposium & Mekka `97  - Other Releases "
+@toc p202
+
+   @{" Miracle Chip 2 ............. Ambrosia " link d1808}
+   @{" Privilege Violation .......... Nuance " link d1814}
+@endnode
+
+@node p202-4kintro " Symposium & Mekka `97  - 4K Intro Competition "
+@toc p202
+
+ 1 @{" Extel ....................... Ambrosia " link d1755}
+ 2 @{" Abyss in Wonderland  ........... Abyss " link d1782}
+ 3 @{" Newt .................... Focus Design " link d1783}
+ 4 @{" Extreme 4K`ing ................ Nuance " link d1784}
+@endnode
+
+@node p202-demo " Symposium & Mekka `97  - Demo Competition "
+@toc p202
+
+ 1 @{" Megademo IV ......................... Artwork " link d1760}
+ 2 @{" Fear Factory ........................ Arsenic " link d1761}
+ 3 @{" Thug Life ........................... Essence " link d1762}
+ 4 @{" Paradisio .......................... Drifters " link d1763}
+ 5 @{" Smart .............................. Elven 11 " link d1764}
+ 6 @{" The Sign ............................ Scoopex " link d1765}
+ 7 @{" Partyhall ............................ Oxyron " link d1766}
+ 8 @{" Megademo! ................ Birdhouse Projects " link d1767}
+ 9 @{" Tahiti 3 ........................... Interpol " link d1768}
+10 @{" Tramp ............................. Death Row " link d1769}
+11 @{" Energy - Fraction 2 .................... Gods " link d1770}
+12 @{" Eau de Table P. ....................... Jolly " link d1771}
+13 @{" Artfire ............................... Faque " link d1772}
+14 @{" Virtual ............................. Skahn-X " link d1773}
+@endnode
+
+@node p202-40kintro " Symposium & Mekka `97  - 40K Intro Competition "
+@toc p202
+
+ 1 @{" Diskobox .................................... Abyss " link d1774}
+ 2 @{" Kenguru V1.0 .............................. Impulse " link d1775}
+ 3 @{" Changing .................................. Capsule " link d1756}
+ 4 @{" Pulp ................................. Focus Design " link d1776}
+ 5 @{" Fantasy ................................... Darkage " link d1777}
+ 6 @{" BolDür ...................................... Depth " link d1778}
+ 7 @{" 3 Years 40K Intro .......................... Jormas " link d1779}
+ 8 @{" Adagio ............................ Lightstorm Inc. " link d1780}
+ 9 @{" Neuköln ................. Grasshoppers Developments " link d1781}
+@endnode
+
+@node p202-invite " Symposium & Mekka `97  - Invitation Demo "
+@toc p202
+
+   @{" Symposium & Mekka `97 Party Invitation ...... Lego " link d1705}
+@endnode
+
+@node p202-info " Symposium & Mekka `97  - Information"
+@toc p202
+
+
+    @{b}Symposium & Mekka `97 - Information @{ub}
+
+
+    You can access information about this party from:
+
+    E-Mail      gandalf@blackbox.dame.de (Gandalf)
+                rawstyle@blackbox.dame.de, ii7349@fh-wedel.de (Raw Style)
+    WWW         http://134.28.37.10/~frank/sym97/
+                http://www.szczecin.pl/~rawstyle/sym97/
+                http://members.aol.com/sym97/
+    BBS         Black Box #1 : +49-4105-84619  (v34)
+                          #2 : +49-4105-669011 (ISDN)
+    Snail Mail  Frank Schliefer,
+                  Am Musterplatz 27, 21220 Seevetal, Germany
+                Michael Krause,
+                  Mannesallee 24, 21107 Hamburg, Germany
+
+
+
+    750 visitors attended this party.
+
+
+    The following competitions were held:
+    Amiga 4K Intro, Amiga 40K Intro, Amiga Demo,
+    PC 4K Intro, PC 40K Intro, PC Demo, Atari Demo,
+    Acorn Demo, C64 Demo, C64 4K Intro, 32K game (all systems)
+    VHS/SVHS Video Demo (all systems), 4 channel music, multichannel
+    music, C64 music, graphics (C64), graphics (all systems),
+    graphics (ansi), surprise compos.
+
+
+
+
+    A CD-Rom with all released productions from Mekka `96,
+    Symposium `96 and Symposium & Mekka `97 was released
+    for about 20 DM or less after the party.
+@endnode
+
+
+
+@node p207 " Rush Hours Party `97 "
+@toc Partiesmain
+
+
+@{b}
+    Rush Hours Party `97
+@{ub}
+
+    Organiser: Freezers, Shadows (Atari)
+    Date     : 22-23 February 1997
+    Location : Czestochowa, Poland
+
+    @{" Information       " link p207-info}
+
+    @{" Demo Competition  " link p207-demo}
+    @{" 64K Intro Compo   " link p207-64kintro}
+    @{" 4K Intro Compo    " link p207-4kintro}
+    @{" Other Releases    " link p207-other}
+    @{" Invitation Demo   " link p207-invite}
+@endnode
+
+@node p207-invite " Rush Hours Party `97 - Invitation Demo "
+@toc p207
+
+   @{" Rush Hours Party `97 Invitation Intro ......... Freezers " link d1830}
+@endnode
+
+@node p207-64kintro " Rush Hours Party `97 - 64K Intro Competition "
+@toc p207
+
+ 1 @{" Navel ............. Appendix " link d1822}
+ 2 @{" Versor ............. Anadune " link d1820}
+ 3 @{" Shendo ............. Amnesty " link d1832}
+@endnode
+
+@node p207-4kintro " Rush Hours Party `97 - 4K Intro Competition "
+@toc p207
+
+ 1 @{" Tonite ............. Picco " link d1905}
+ 2 @{" Blue ............. Amnesty " link d1834}
+
+   @{" Kaczy ................ PSB " link d1906}
+   @{" Pytajnik .......... Apathy " link d1907}
+@endnode
+
+@node p207-demo " Rush Hours Party `97 - Demo Competition "
+@toc p207
+
+ 1 @{" YON ................................. Anadune " link d1821}
+ 2 @{" Koloseum ............. Przyjaciele Stefana B. " link d1835}
+ 3 @{" Polygon Heaven ....... Przyjaciele Stefana B. " link d1792}
+ 4 @{" Trayanda ............ Dinx Project & Skid Row " link d1831}
+@endnode
+
+@node p207-other " Rush Hours Party `97 - Other Releases "
+@toc p207
+
+   @{" Molotov ........................... 7 Up " link d1839}
+   @{" Oko Do Bazy .................. WC Design " link d1836}
+   @{" Papadeo 2 ....................... Floppy " link d1833}
+   @{" Rantka ............................. PSB " link d1793}
+   @{" Salatka .................. Ocet Drinkers " link d1838}
+   @{" Szarik ............................. PSB " link d1794}
+   @{" Visible Power Preview ............. Mawi " link d1791}
+   @{" X-Files ........................... TBL2 " link d1837}
+@endnode
+
+@node p207-info " Rush Hours Party `97 - Information"
+@toc p207
+
+
+    @{b}Rush Hours Party `97 - Information @{ub}
+
+
+    You can access information about this party from:
+
+     Snail Mail  Mr.Uhu/Phuture 303, Jarek Ciszowski,
+                    Joselewicza 2/6, 42-200 Czestochowa, Poland
+                 The Founder/Scum, Darek Cierpial,
+                    Bankowa 7/18, 42-290 Blachownia, Poland
+                 The Soul/Bucket, Tomasz Dusza,
+                    Obr.Westerplatte 31/61, 42-218 Czestochowa, Poland
+     Telephone   +48-(0)34-240952 (Jarek)
+                 +48-(0)34-253312 (Tomasz)
+
+
+
+    Systems: Amiga, Atari.
+
+    The following competitions were held:
+    Demo (all systems), 64K Intro (all systems), 4K Intro (all systems),
+    4 channel music (only Amiga), multichannel music (only PC),
+    graphics (painted), graphics (raytraced), Ascii, Animation.
+    Crazy Competitions: Fast Music, masterblaster, Rave, Baloons
+    Destroying, Chest, Rope, Death Drunk, Making a snowman,
+    snowballs fighting, and others.
+@endnode
+
+
+
+@node p213 " SILIconvention `97 "
+@toc Partiesmain
+
+
+@{b}
+    SILIconvention `97
+@{ub}
+
+    Can you face it?
+
+    Organiser: Arsenic (and various others on other systems)
+    Date     : 28-31 March 1997
+    Location : Bremen, Germany
+
+    @{" Information       " link p213-info}
+
+    @{" Demo Competition  " link p213-demo}
+    @{" 40K Intro Compo   " link p213-40kintro}
+    @{" Invitation Demo   " link p213-invite}
+    @{" Other Releases    " link p213-other}
+@endnode
+
+@node p213-other " SILIconvention `97 - Other Releases "
+@toc p213
+
+   @{" Plush ............... X-Dream " link d1816}
+   @{" The Lost Farts ..... Ultimate " link d1817}
+@endnode
+
+@node p213-invite " SILIconvention `97 - Invitation Demo "
+@toc p213
+
+   @{" SILIconvention `97 Invitation ........ Arsenic " link d1751}
+@endnode
+
+@node p213-40kintro " SILIconvention `97 - 40K Intro Competition "
+@toc p213
+
+ 1 Atari: Intro ............... TNB
+ 2 @{" Painted Eggs ........ Artwork " link d1785}
+ 3 Acorn: Intro ............. Topix
+ 4 Atari: Intro .............. TSCC
+ 5 Acorn: Intro ........... Armbugs
+ 6 Atari: Intro ............... Fun
+@endnode
+
+@node p213-demo " SILIconvention `97 - Demo Competition "
+@toc p213
+
+ 1 @{" Synergy .......... Sector 7 " link d1841}
+@endnode
+
+@node p213-info " SILIconvention `97  - Information"
+@toc p213
+
+
+    @{b}SILIconvention `97 - Information @{ub}
+
+
+    You can access information about this party from:
+
+    E-Mail          siliconvention@siliconvention.com
+		    t_gietschel@mail.netwave.de
+		    joerg_tobergte@hb2.maus.de
+                    count0@mail.netwave.de
+    World Wide Web  http://www.siliconvention.com
+    Snailmail       Tino Gietschel
+		    Kattenescher Weg 18a
+		    28277 Bremen - Germany
+    BBS             ADM-Box Line 1: 0049-421-8498235 (28.8 Modem)
+                    ADM-Box Line 2: 0049-421-8498234 (X75 ISDN)
+
+
+    You can download most of all the entries from their ftp-server:
+     ftp://ftp.siliconvention.com
+
+
+    The following competitions were held:
+    Amiga:   Demo, 40Kb Intro
+    Falcon:  Demo, 96Kb Intro
+    PC:      Demo, 64Kb INtro
+    C-64:    Demo, graphics, music
+    Acorn:   Demo, Intro
+    All systems: coding, graphics, render, fake demo, 4 channel music,
+                 multichannel music, wild, surprise, netwave.
+@endnode
+
+
+
+@node p227 " X `97 Takeover "
+@toc Partiesmain
+
+
+@{b}
+    X `97 Takeover
+@{ub}
+
+
+    Organiser: Nostalgia, Success
+    Date     : 04-06 April 1997
+    Location : Eindhoven, Netherlands
+
+    @{" Information       " link p227-info}
+@endnode
+
+@node p227-info " X `97 Takeover - Information"
+@toc p227
+
+
+    @{b}X `97 Takeover - Information @{ub}
+
+
+    You can access information about this party from:
+
+    E-Mail            x97take@dds.nl
+    World Wide Web    http://www.tue.nl/X97-Takeover/
+                      http://www.hacom.nl/~jal/X97-Takeover/
+
+
+    The following competitions were held:
+    PC Demo, PC 64K Intro, PC 4K Intro, house music, music,
+    graphics, raytrace, surprise coding, surprise music,
+    surprise graphics, C64 Demo, C64 music, C64 graphics.
+@endnode
+
+
+
+@node p228 " Distortion `97 "
+@toc Partiesmain
+
+
+@{b}
+    Distortion `97
+@{ub}
+
+    Organiser: [unknown]
+    Date     : 14 February 1997
+    Location : Hysoysun, Norway
+@endnode
+
+
+
+@node p229 " Scream `97 "
+@toc Partiesmain
+
+
+@{b}
+    Scream `97
+@{ub}
+
+    Organiser: [unknown]
+    Date     : 30 May - 01 June 1997
+    Location : Quebec, Canada
+@endnode
+
+
+
+@node p231 " Abduction `97 "
+@toc Partiesplanned
+
+
+@{b}
+    Abduction `97
+@{ub}
+
+    Organiser: Scoopex, Mindprobe (PC)
+    Date     : June 1997
+    Location : Finland
+
+    @{" Information       " link p231-info}
+@endnode
+
+@node p231-info " Abduction `97 - Information"
+@toc p231
+
+
+    @{b}Abduction `97 - Information @{ub}
+
+
+    You can access information about this party from:
+
+     E-Mail          makrus@iki.fi, synapse@triplex.fipnet.fi
+     World Wide Web  http://www.hut.fi/~maurala/abduction.html
+     Snail Mail      Ilkka Jauho, Urputie 17, 96190 Rovaniemi, Finland
+     Telephone       +358-(9)60-393902 / Ilkka, +358-(9)60-393954 / Ari
+     Telefax         +358-(9)60-393902 / Ilkka
+
+
+    The following competitions were held:
+    PC Demo, PC Intro, Amiga Demo, Graphics, Music.
+
+    Amiga-Organiser is Karpow/Scoopex.
+
+
+    A CD-Rom with all released stuff ought to be released after the party.
+@endnode
+
+
+
+@node p232 " Amiga Domain Party `97 "
+@toc Partiesplanned
+
+
+@{b}
+    Amiga Domain Party `97
+@{ub}
+
+    Organiser: Digital Access
+    Date     : September 1997
+    Location : Sydney, Australia
+
+    @{" Information       " link p232-info}
+@endnode
+
+@node p232-info " Amiga Domain Party `97 - Information"
+@toc p232
+
+
+    @{b}Amiga Domain Party `97 - Information @{ub}
+
+
+    You can access information about this party from:
+
+    BBS     Midnight Caller BBS #1: (02) 869-0223, #2: (02) 869-0224
+
+
+    The following competitions will be held:
+    Demo, Music, Graphics.
+@endnode
+
+
+
+@node p233 " World of Amiga `97 "
+@toc Partiesmain
+
+
+@{b}
+    World of Amiga `97
+@{ub}
+
+    Organiser: [exposition only, partly organized by Amiga Society]
+    Date     : 17-18 May 1997
+    Location : Hammersmith, England
+
+    @{" Information       " link p233-info}
+@endnode
+
+@node p233-info " World of Amiga `97 - Information"
+@toc p233
+
+
+    @{b}World of Amiga `97 - Information @{ub}
+
+
+    You can access information about this event from:
+
+    E-Mail          su-amiga@qmw.ac.uk
+                    amigasoc@qmw.ac.uk
+    World Wide Web  http://www.qmw.ac.uk/~amiga
+
+
+    Parallel to the exposition there will be a developer`s
+    conference organized by Amiga Society (see address above).
+@endnode
+
+
+
+@node p234 " Power Convention `97 "
+@toc Partiesplanned
+
+
+@{b}
+    Power Convention `97
+@{ub}
+
+    PowerPC - The Future Is Here!
+
+    Organiser: [exposition only]
+    Date     : 19-20 July 1997
+    Location : Montreal, Canada
+
+    @{" Information       " link p234-info}
+@endnode
+
+@node p234-info " Power Convention `97 - Information"
+@toc p234
+
+
+    @{b}Power Convention `97 - Information @{ub}
+
+
+    You can access information about this event from:
+
+    E-Mail          moogy@datrox.ca
+                    tessier@moebius.qc.ca
+                    steve.pruneau@mcbbs.magicnet.com
+    World Wide Web  http://www.moebius.qc.ca/powerconv97/
+    Telephone       (514)-649-9756 (in Canada) (Frederic)
+                    (514)-933-8095 (in Canada) (Jeremy)
+    Snail Mail      Frederic Tessier, 922 Deschamps,
+                    Sainte-Julie (Quebec), J3E 1N9, Canada
+    Fidonet         Sylvain Bourcier @ 1:167/151.66
+    Amiganet        Sylvain Bourcier @ 40:600/151.66
+
+
+    The following systems will be covered:
+    BeBox, PIOS/1, A/Box, Amiga/PowerUp, PowerMacs & Clones, IBM, Motorola
+    (Operating Systems: BeOS, pOS, MacOS, Linux, Solaris, AIX, etc.)
+
+    The following competitions will be held:
+    Software Development.
+@endnode
+
+
+
+@node p235 " Scenest Party `97 "
+@toc Partiesmain
+
+
+@{b}
+    Scenest Party `97
+@{ub}
+
+    Dominator! Bring your family, bring your beauty.
+
+    Organiser: Impulse (Amiga), Astroidea (PC)
+    Date     : 04-06 April 1997
+    Location : Budapest, Hungary
+
+    @{" Information       " link p235-info}
+
+    @{" 64K Intro Compo   " link p235-40kintro}
+    @{" 4K Intro Compo    " link p235-4kintro}
+    @{" Wild Demo Compo   " link p235-wild}
+    @{" Invitation Demo   " link p235-invite}
+@endnode
+
+@node p235-invite " Scenest Party `97 - Invitation Demo "
+@toc p235
+
+   @{" Scenest Party 1997 Invitation ....... Freezers " link d1840}
+@endnode
+
+@node p235-wild " Scenest Party `97 - Wild Demo Competition "
+@toc p235
+
+   @{" Debut .................. United Fire Productions " link d1813}
+   @{" I Love Commodore .................... Lamer Crew " link d1815}
+@endnode
+
+@node p235-4kintro " Scenest Party `97 - 4K Intro Competition "
+@toc p235
+
+   @{" 4Kb Intro ........ Red Rats " link d1789}
+@endnode
+
+@node p235-40kintro " Scenest Party `97 - 64K Intro Competition "
+@toc p235
+
+ 1 @{" Kenguru V2.0 ........ Impulse " link d1790}
+
+
+   @{" Borg .............. Corrosion " link d1819}
+@endnode
+
+@node p235-info " Scenest Party `97 - Information"
+@toc p235
+
+
+    @{b}Scenest Party `97 - Information @{ub}
+
+
+    You can access information about this event from:
+
+     E-Mail              melan@hungary.net
+     Net                 42:444/100 [ErraticCW/SCENE-NET]
+     IRC                 #demoscene
+     BBS                 +36-1-2285921
+     Telephone           +36-30-542707
+     Snail Mail          MELAN, Oravecz Richárd, Kapisztrán utca 23/b,
+                         Budapest 1221, HUNGARY
+
+
+    The following competitions were held:
+    PC Demo, PC 64K Intro, Amiga 64K Intro,
+    Amiga & PC 4K Intro, graphics (painted), graphics (c64),
+    graphics (raytraced), 4 channel music, multichannel music,
+    Beethoven music (fast music), C64 music, lamer demo (c64+
+    Amiga+PC demo), wild demo, fun, quake, roleplaying game.
+
+    There were no competitors to the Amiga demo competition.
+
+
+    The released productions will available on the CD of
+    the followed Chip magazine and the followed CD Ultra!
+
+
+    The sponsors:
+
+       Chip Magazin
+       Infosign Kkt
+@endnode
+
+
+
+@node p236 " Scenery `97 "
+@toc Partiesmain
+
+
+@{b}
+    Scenery `97
+@{ub}
+
+    Amiga Domain `97 and Oz`97 - together we`ll be strong.
+
+    Organiser: Digital Access, Xtatic
+    Date     : 31 March - 02 April 1997
+    Location : Parramatta, Sydney, Australia
+
+    @{" Information       " link p236-info}
+
+    @{" Intro Competition " link p236-intro}
+    @{" Invitation Demo   " link p236-invite}
+@endnode
+
+@node p236-intro " Scenery `97 - Intro Competition "
+@toc p236
+
+ 1 @{" No Shame ........ Cydonia " link d1787}
+
+
+ This was the one and only intro in this competition.
+@endnode
+
+@node p236-invite " Scenery `97 - Invitation Demo "
+@toc p236
+
+ 1 @{" Scenery `97 Invitation ........ Cydonia & Digital Access " link d1824}
+@endnode
+
+@node p236-info " Scenery `97 - Information"
+@toc p236
+
+
+    @{b}Scenery `97 - Information @{ub}
+
+
+    You can access information about this event from:
+
+    General questions:
+       E-Mail       scenery@post1.com (general questions)
+    Amiga related questions:
+       Contact      Johnny Turbo / Digital Access (John Bus)
+       Snail Mail   PO Box 1838, Macquarie Centre 2113, Australia
+       BBS          Lucid Dreams BBS (02) 9888 9917 (Johnny Turbo)
+       Email        turbo@wr.com.au
+    PC related questions:
+       Contact      Random / Xtatic (Martin Laukkanen)
+       Telephone    (02) 9684 2478 (Australia)
+       BBS          Staesis BBS (02) 9683 2403 (Random)
+       Email        random@zip.com.au
+    World Wide Web  http://www.post1.com/~scenery
+                    http://www.techmedia.zip.com.au/scenery97.html
+                    http://www.post1.com/~xtatic
+
+    The following competitions were held:
+    PC Demo, PC 4Kb Intro, Amiga Demo, Amiga 40Kb Intro,
+    4 channel music, multichannel music, graphics (painted),
+    graphics (raytraced), graphics (ansi/ascii).
+@endnode
+
+
+
+@node p237 " Summoning `97 "
+@toc Partiesmain
+
+
+@{b}
+    Summoning `97
+@{ub}
+
+    Organiser: [unknown]
+    Date     : 12-13 April 1997
+    Location : Brande, Denmark
+@endnode
+
+
+
+@node p238 " Drome `97 "
+@toc Partiesplanned
+
+
+@{b}
+    Drome `97
+@{ub}
+
+    Organiser: Royal, B2
+    Date     : 20-22 June 1997
+    Location : Haaksbergen, Netherlands
+@endnode
+
+
+
+@node p239 " Euskal Party 5 "
+@toc Partiesplanned
+
+
+@{b}
+    Euskal Party 5
+@{ub}
+
+    Organiser: [unknown]
+    Date     : 25-27 July 1997
+    Location : Andoain, Spain
+
+    @{" Information       " link p239-info}
+
+    @{" Invitation Demo   " link p239-invite}
+@endnode
+
+@node p239-invite " Euskal Party 5 - Invitation Demo "
+@toc p239
+
+   @{" Euskal Party 5 Invitation ........ Network " link d1842}
+@endnode
+
+@node p239-info " Euskal Party 5 - Information "
+@toc p239
+
+
+    @{b}Euskal Party 5 - Information @{ub}
+
+
+    You can access information about this party from:
+
+    World Wide Web   http://www.dit.upm.es/~alba/euskal
+                     http://rigel.deusto.es/~herrero/
+
+
+    The following competitions were held:
+    Amiga Demo, Amiga 64K Intro, Amiga 4K Intro, Graphics (2D),
+    Graphics (Fast 2D), Graphics, (3D), 4 channel music, fast
+    music, multichannel music, PC Demo, PC 64K Intro, PC 4K Intro,
+    Human Demo.
+@endnode
+
+
+
+@node p240 " Hackernight `97 "
+@toc Partiesmain
+
+
+@{b}
+    Hackernight `97
+@{ub}
+
+    Organiser: [unknown]
+    Date     : 04-05 April 1997
+    Location : Skövde, Sweden
+@endnode
+
+
+
+@node p241 " Rage Party `97 "
+@toc Partiesplanned
+
+
+@{b}
+    Rage Party `97
+@{ub}
+
+    The Independence Days.
+
+    Organiser: Enlightenment, Axioma, United Force
+    Date     : 04-06 July 1997
+    Location : Budapest, Hungary
+
+    @{" Information       " link p241-info}
+@endnode
+
+@node p241-info " Rage Party `97 - Information"
+@toc p241
+
+
+    @{b}Rage Party `97 - Information @{ub}
+
+
+    You can access information about this party from:
+
+    Internet      http://www.automex.com/enlightenment
+                  http://www.automex.com/rage97
+    Telephone     Kiss Bal zs (WaRD)        +36 28 471 167
+                  Albitz G bor (Albino)     +36 1 220 36 96
+                  Preszter Bal zs (Brian)   +36 28 370 495
+    E-Mail        t_mort@ludens.elte.hu  OR  ward@automex.com (Ward)
+                  albino@automex.com (Albino)
+    BBS           SCEneT BBS                +36 1 228 59 21
+                  House of Lords            +36 28 450 027
+                  Killing Fieldz            +36 1 403 90 79
+                  Koala Landz               +36 23 354 776
+                  Babylon                   +36 29 446 230
+    Snail-Mail    Ward/Enlightenment, Kiss Bal zs, Kistarcsa,
+                  Zrinyi M u.2, 2143
+
+
+
+    The following competitions were held:
+     PC Demo, PC 64K Intro, PC 4K Intro, PC Fast Intro,
+     Invitation Intro, PC Screen Saver, C64 Demo,
+     Amiga Demo, Amiga 64K Intro, graphics, wild graphics,
+     realtime graphics, C64 graphics, Rage Logo graphics,
+     raytrace graphics, 4 channel music, multichannel music,
+     8Kb music, realtime music, rave music, c64 music, wild,
+     lamer, Independence Day (movie), brutal, fun, Quake,
+     Mortal Kombat, Sceners Kombar, Magic the Gathering.
+
+
+    A CD with the productions released on the party will be available.
+@endnode
+
+
+
+@node p242 " Gravity `97 "
+@toc Partiesplanned
+
+
+@{b}
+    Gravity `97
+@{ub}
+
+    Organiser: Anadune
+    Date     : 30-31 August 1997
+    Location : Opole, Poland
+
+    @{" Information       " link p242-info}
+
+    @{" Invitation Demo   " link p242-invite}
+@endnode
+
+@node p242-invite " Gravity `97 - Invitation Demo "
+@toc p242
+
+   @{"  Gravity `97 Invitation ..... PSB & Anadune " link d1926}
+@endnode
+
+@node p242-info " Gravity `97 - Information"
+@toc p242
+
+
+    @{b}Gravity `97 - Information @{ub}
+
+
+    You can access information about this party from:
+
+    Internet      http://www.geocities.com/SiliconValley/1895
+    E-Mail        anadune@geocities.com
+                  action@inwar.kalisz.pl
+                  andy13@hotmail.com
+    Snail-Mail    Mr.Acryl/Anadune
+                     ul.Szenwalda 8/3 46-200 Kluczbork
+
+
+    The following competitions will be held:
+    Amiga Demo, Amiga Intro, Amiga 4K Intro,
+    PC Demo, PC Intro, PC 4K Intro, graphics,
+    raytrace, 4 channel music, multichannel
+    music, video, surprise.
+@endnode
+
+
+
+@node p243 " Junction Party `97 "
+@toc Partiesmain
+
+
+@{b}
+    Junction Party `97
+@{ub}
+
+    Organiser: [unknown]
+    Date     : 02-04 May 1997
+    Location : Denmark
+@endnode
+
+
+@node p244 " Kindergarden Party 7 "
+@toc Partiesplanned
+
+
+@{b}
+    Kindergarden Party 7
+@{ub}
+
+    Welcome to the Playground!
+
+    Organiser: Alpha Flight, Delirium, Royal
+    Date     : 03-06 July 1997
+    Location : Oslo, Norway
+@endnode
+
+@node p244-info " Kindergarden Party 7 - Information"
+@toc p244
+
+
+    @{b}Kindergarden Party 7 - Information @{ub}
+
+
+    You can access information about this party from:
+
+    Telephone    Daniel Bruvoll (Acid)    Home: +47-63828821
+                                          Mobile: +47-90189390
+                 Dag Stenstad (Baffle)    Home: +47-66795921
+                                          Mobile: +47-92232702
+                 Øystein Sættem (Arcane)  Home: +47-63903366
+                                          Mobile: +47-93053236
+    EMail        kgparty@powertech.no
+                 arcane@most-wanted.com (Arcane)
+    BBS          Basic Instinct  +47-63828335   Sysop is Acid.
+    IRC          #kg97  at  IRCNet (Euroside of old EFNet)
+    WWW          http://home.powertech.no/kgparty/
+
+
+    The following competitions will be held:
+     Amiga Demo, Amiga 64K Intro, Amiga Oldschool Intro, Amiga Game,
+     4 channel music, handdrawn graphics, raytraced graphics,
+     animation, ascii logo, wild demo (nudity? :) )
+@endnode
+
+
+
+@node p245 " Icing Beta `97 "
+@toc Partiesmain
+
+
+@{b}
+    Icing Beta `97
+@{ub}
+
+    Organiser: Agony
+    Date     : April 1997
+    Location : Stockholm, Sweden
+
+    @{" Information       " link p245-info}
+
+    @{" Other Releases    " link p245-other}
+@endnode
+
+@node p245-other " Icing Beta `97 - Other Releases "
+@toc p245
+
+   @{" Boystory ................................. Keso " link d1827}
+   @{" Craze Cow Desease ....................... Craze " link d1826}
+   @{" Showbase Shape ......................... C-Lous " link d1825}
+   @{" The Tale of Sir Henry ....... Three Little Elks " link d1829}
+   @{" Xenophobia ........................... Subspace " link d1828}
+@endnode
+
+@node p245-info " Icing Beta `97 - Information"
+@toc p245
+
+
+    @{b}Icing Beta `97 - Information @{ub}
+
+
+    You can access information about this party from:
+
+    World Wide Web  http://www.ir97.com/
+    BBS             Gurus Dream: +46-(0)8-282760 (282761, 282762)
+@endnode
+
+
+
+@node p246 " The Copenhagen Party `97 "
+@toc Partiesplanned
+
+
+@{b}
+    The Copenhagen Party `97
+@{ub}
+
+    Organiser: DGC (The Danish Group of Computerfreaks)
+    Date     : 29 June - 06 July 1997 (one whole week!)
+    Location : Copenhagen, Denmark
+
+    @{" Information       " link p246-info}
+
+    @{" Invitation Demo   " link p246-invite}
+@endnode
+
+@node p246-invite " The Copenhagen Party `97 - Invitation Demo"
+@toc p246
+
+   @{" TCP `97 Invitation ....... Iris " link d1927}
+@endnode
+
+@node p246-info " The Copenhagen Party `97 - Information"
+@toc p246
+
+
+    @{b}The Copenhagen Party `97 - Information @{ub}
+
+
+    You can access information about this party from:
+
+    Snail Mail      D.G.C.
+                    Munktoftevej 16
+                    2610 Roedovre
+                    Denmark
+    Telephone       +45 44 92 93 77
+    Email           Punqtured@playlan.dk
+    World Wide Web  http://home4.inet.tele.dk/chevy/index.html
+
+
+
+
+    The following competitions will be held:
+    Amiga sponsor demo, Amiga Demo, Amiga 40K Intro,
+    PC sponsor demo, PC Demo, PC 64K Intro, Amiga & PC 4K Intro,
+    4 channel music, multichannel music, graphics, plus lots of surprises!
+@endnode
+
+
+
+@node p252 " Compusphere 8 "
+@toc Partiesmain
+
+
+@{b}
+    Compusphere 8
+@{ub}
+
+    Organiser: Galaktiska Institutet
+    Date     : May 1997
+    Location : Uddevalla, Sweden
+
+    @{" Other Releases    " link p184-other}
+@endnode
+
+@node p184-other " Compusphere 8 - Demo-Competition "
+@toc p184
+
+   @{" Boystory ...................... Keso " link d1827}
+   @{" Carlsson on the Roof ........... UNO " link d1909}
+   @{" Joys of Chaplin ............... Keso " link d1908}
+@endnode
+
+
+
+@node p253 " Intel Outside Party 4 "
+@toc Partiesplanned
+
+
+@{b}
+    Intel Outside Party 4
+@{ub}
+
+    Organiser: Union, Cybermaniax
+    Date     : 13-14 July 1997
+    Location : Wloclawek, Poland
+
+    @{" Information       " link p253-info}
+
+    @{" Invitation Demo   " link p253-invite}
+@endnode
+
+@node p253-invite " Intel Outside Party 3 - Invitation Demo"
+@toc p253
+
+   @{" Intel Outside Party 4 Invitation ....... Freezers " link d1910}
+@endnode
+
+@node p253-info " Intel Outside Party 3 - Information"
+@toc p253
+
+
+    @{b}Intel Outside Party 4 - Information @{ub}
+
+
+    You can access information about this party from:
+
+     E-Mail           jonek@zsbikmw.zsbikmw.wlocl.pl
+                      voyager@mi.com.pl
+     World Wide Web   http://www.intel.outside.4.wlocl.pl
+                      http://www.sp00lka.lublin.pl/IO4
+                      http://www.union.medianet.pl
+     Snail Mail       Mr.Root of Union, P.O.Box 23,
+                      05-807 Podkowa Lesna, Poland
+     Telephone        (022) 6447747, dom (022) 6100992 (Bartek)
+
+
+    The following competitions will be held:
+    PC Demo, PC 64K Intro, PC 4K Intro,
+    Amiga Demo, Amiga 64K Intro, Amiga 4K Intro,
+    graphics, raytraced graphics, video,
+    4 channel music, multi-channel music, fun,
+    C64 demo, raytrace and others.
+@endnode
+
+
+
+@node p254 " Skenery `97 "
+@toc partiesplanned
+
+
+@{b}
+    Skenery `97
+@{ub}
+
+    Organiser: Zymosis, Jormas, Bomb Squad
+    Date     : September 1997
+    Location : Jyväskylä (Palokka), Finland
+
+    @{" Information       " link p254-info}
+@endnode
+
+@node p254-info " Skenery `97 - Information"
+@toc p254
+
+
+    @{b}Skenery `97 - Information @{ub}
+
+
+    You can access information about this party from:
+
+    E-Mail           zymosis@niitty.3l337.com
+    World Wide Web   http://voima.jkl.fi/zymosis/
+                     http://direktor.voima.jkl.fi/skenery
+    BBS              Juju BBS +358-(0)41-378-2685
+    Telephone        941-378-1625 (Kimmo)
+                     941-378-1344 (Mikko)
+                     941-378-2011 (Santeri)
+
+
+    The following competitions will be held:
+    Demo (all systems), Intro (all systems), Fast-Intro
+    (all systems), music, graphics.
+@endnode
+
+
+
+@node p255 " Skenery `97 "
+@toc partiesmain
+
+
+@{b}
+    Scenus `97
+@{ub}
+
+    Organiser: [unknown]
+    Date     : April 1997
+    Location : Norway
+
+    @{" Other Releases    " link p255-other}
+@endnode
+
+@node p255-other " Scenus `97 - Other Releases "
+@toc p255
+
+   @{" Born Fat ................... Contraz " link d1922}
+   @{" Friendship Intro .......... Instinct " link d1921}
+   @{" October ................. Spaceballs " link d1923}
+   @{" Pieces ................... Ephidrena " link d1920}
+@endnode
+
+
+
+@node p257 " Motorola Inside `97 "
+@toc partiesplanned
+
+
+@{b}
+    Motorola Inside `97
+@{ub}
+
+    First 100% Amiga Party in Finland.
+
+    Organiser: [unknown]
+    Date     : 27-30 June 1997
+    Location : Lahti, Finland
+@endnode
+
+
+
+@node p258 " Scene Strike 1 "
+@toc Partiesmain
+
+
+@{b}
+    Scene Strike 1
+@{ub}
+
+    Scene Strike 1 runs parallel to the Creative Tech Week `97 Exposition.
+
+    Organiser: Corrosion
+    Date     : 30-31 May 1997
+    Location : Belgrade, Yugoslavia
+
+    @{" Information       " link p258-info}
+@endnode
+
+@node p258-info " Scene Strike 1 - Information"
+@toc p258
+
+
+    @{b}Scene Strike 1 - Information @{ub}
+
+
+    You can access information about this party from:
+
+    Email           corrosion@matgnet.com
+                    domin8r@galeb.etf.bg.ac.yu
+                    phuzzy@galeb.etf.bg.ac.yu
+    World Wide Web  http://www.matgnet.com/ctw
+                    http://www.matgnet.com/corrosion
+    BBS             Ecstasy        - 00-24: +381-(0)22- 53-884
+                    hUMAN RESOURCE - 23-07: +381-(0)11-669-172
+                                         username: ss-entry
+                                         password: scenestrike
+                    universe       - 00-24: +381-(0)21-741-084
+
+
+
+
+    The following competitions were held:
+    Amiga 64K Intro, Amiga Demo, PC 64K Intro, PC Demo,
+    8 Bit graphics, 24 Bit graphics, raytrace graphics,
+    protracker music, multichannel music, ascii/ansi.
+@endnode
+
+
+
+@node p259 " AntIQ Party `97 "
+@toc Partiesplanned
+
+
+@{b}
+    AntIQ Party `97
+@{ub}
+
+    Organiser: [unknown]
+    Date     : August 1997
+    Location : Hungary
+@endnode
+
+
+
+@node p260 " Democrazy `97 "
+@toc Partiesmain
+
+
+@{b}
+    Democrazy `97
+@{ub}
+
+    Organiser: [unknown]
+    Date     : 30 January - 02 February 1997
+    Location : Siilinjrvi, Finland
+@endnode
+
+
+
+@node p261 " The Party 7 "
+@toc Partiesplanned
+
+
+@{b}
+    The Party 7
+@{ub}
+
+    Organiser: The Silents
+    Date     : 27-29 December 1997
+    Location : Aars, Denmark
+@endnode
+
+@node p263 " Wired Party `97 "
+@toc Partiesplanned
+
+
+@{b}
+    Wired Party `97
+@{ub}
+
+    Organiser: Amiga: Bomb, C64: Smash Design & WOTW, PC: Imphobia & Pulpe
+    Date     : 18-20 July 1997
+    Location : Wasmes, Belgium
+@endnode
+
+
+
+@node p264 " Buz Party `97 "
+@toc partiesmain
+
+
+@{b}
+    Buz Party `97
+@{ub}
+
+    Organiser: [unknown]
+    Date     : April 1997
+    Location : Katowice, Poland
+
+    @{" Other Releases    " link p264-other}
+@endnode
+
+@node p264-other " Buz Party `97 - Other Releases "
+@toc p264
+
+   @{" Adam 12 ..................... PSB " link d1936}
+   @{" Light Army ................ Nexus " link d1726}
+   @{" Psota ....................... PSB " link d1935}
+   @{" Gravity `97 Invitation ...... PSB " link d1926}
+@endnode
+
+
+-------------------
+
+
+
+@node d1705
+@toc p202-invite
+
+
+@{b}
+    Symposium & Mekka `97 Party Invitation
+@{ub}
+
+     Producer  : Lego
+
+     Coder     : Raw Style
+     Graphician: Herr Sol
+     Sounder   : Ronny/Teklords
+     Designer  : Herr Sol
+
+     Size      : 316K
+     System    : AGA, 2Mb ChipMem
+     How2Handle: Exit (rmb)
+     Remark    : This demo was released on @{"The Party 6" link TSG96.guide/p164-other}.
+
+     Genre     : Filedemo
+
+
+     WhatIsIt? : Whatever a party invitation might look like ... this
+                 one`s design is smashing. The rest? Well, it`s only a
+                 party invitation! :) (Dire)
+
+
+     @{" Go to Symposium & Mekka `97" link p202-invite}
+@endnode
+
+@node d1726
+@toc p264-other
+
+
+@{b}
+    Light Army
+@{ub}
+
+     Producer  : Nexus
+
+     Size      : 575K
+     System    : AGA, 2Mb ChipMem
+
+     Genre     : Filedemo
+@endnode
+
+@node d1732
+@toc p196-4kintro
+
+
+@{b}
+    Brunostalgia
+@{ub}
+
+     Producer  : Contraz
+
+     Coder     : ChauplE (main), Skjeggspir, Brekke, Nightraver (add-ons)
+
+     Size      : 4K
+     System    : AGA, 2Mb ChipMem
+     How2Handle: Exit (rmb)
+
+     Genre     : Intro
+@endnode
+
+@node d1733
+@toc p196-demo
+
+
+@{b}
+    Plong
+@{ub}
+
+     Producer  : Contraz
+
+     Coder     : Skjeggspir, Zelow, Brekke, Enex
+     Graphician: Mr.Figaro, Nirvana, Dran
+     Sounder   : Fro-D
+     Designer  : Enex, Corrupt
+
+     Size      : 727K
+     System    : AGA, 2Mb ChipMem, 6Mb FastMem; 68030/50MHz recommended
+     How2Handle: If you boot with no startup-sequence, run setpatch
+                 for optimal performance.
+     Remark    : this is a bug-fixed and improved version of "Domination"
+                 released at the Kindergarden Party 6
+
+     Genre     : Filedemo
+@endnode
+
+@node d1734
+@toc p196-demo
+
+
+@{b}
+    Assfart
+@{ub}
+
+     Producer  : Apathy
+
+     Coder     : Strife
+     Graphician: Psycho
+     Sounder   : Cope
+
+     Size      : 67K
+     System    : AGA
+     How2Handle: Exit
+
+     Genre     : Intro
+
+
+     WhatIsIt? : An Intro for the 64K compo, but was delivered too
+                 late so it had to be in the demo compo. It will do
+                 a lot of calculating before starting, so don't
+                 restart the ami..  :)     (Einvind Olsen)
+@endnode
+
+@node d1735
+@toc p196-demo
+
+
+@{b}
+    Black Hair Tongue Disease
+@{ub}
+
+     Producer  : Ward
+
+     Size      : 1600K
+     System    : AGA, 2Mb ChipMem, HD, 4Mb FastMem
+     How2Handle: Exit
+
+     Genre     : HD-Demo
+@endnode
+
+@node d1736
+@toc p196-demo
+
+
+@{b}
+    Power Death
+@{ub}
+
+     Producer  : Procyon
+
+     Coder     : Demonoid Productions (DmP)
+     Graphician: Demonoid Productions (DmP)
+     Sounder   : Demonoid Productions (DmP)
+
+     Size      : 4169K
+     System    : AGA, 1,1Mb ChipMem, 3,5Mb FastMem, HD (5,1Mb free memory);
+                 68030/40MHz recommended
+     How2Handle: Exit
+
+     Genre     : HD-Demo
+@endnode
+
+@node d1737
+@toc p196-demo
+
+
+@{b}
+    Snack
+@{ub}
+
+     Producer  : Spaceballs
+
+     Size      : 710K
+     System    : HD, 4Mb FastMem, OCS+ECS+AGA
+     How2Handle: Exit
+
+     Genre     : HD-Demo
+@endnode
+
+@node d1738
+@toc p196-demo
+
+
+@{b}
+    Deus Ex Machina
+@{ub}
+
+     Producer  : Limited Edition
+
+     Coder     : PG
+     Graphician: Skutt, MRK
+     Sounder   : Radix, Jazz
+     Designer  : PG, Skize
+
+     Size      : 2060K
+     System    : AGA, 2Mb ChipMem, HD, 4Mb FastMem
+     How2Handle: Exit
+
+     Genre     : HD-Demo
+@endnode
+
+@node d1739
+@toc p196-40kintro
+
+
+@{b}
+    DoorMat
+@{ub}
+
+     Producer  : [unknown]
+
+     Designer  : Lekman, Tentacle, Dr. Death
+
+     Size      : 26K
+     How2Handle: Exit
+
+     Genre     : Intro
+@endnode
+
+@node d1740
+@toc p196-demo
+
+
+@{b}
+    Exit Planet Dust
+@{ub}
+
+     Producer  : Artwork
+
+     Coder     : Azure, Tron, Graham, Scout
+     Graphician: Fiver2, Tiberius
+     Sounder   : Skyphos, Virgill
+
+     Size      : 4200K
+     System    : required: AGA, 2Mb ChipMem, HD, 8Mb FastMem, 030/50MHz;
+                 recommended: 040/40MHz
+
+     Genre     : HD-Demo
+@endnode
+
+@node d1741
+@toc p196-demo
+
+
+@{b}
+    Captured Dreams
+@{ub}
+
+     Producer  : The Black Lotus
+
+     Coder     : Dig-it, Equalizer, Offa
+     Graphician: Danny, Louie, Rodney, Tudor
+     Sounder   : Fndr, Radix
+
+     Size      : 4671K
+     System    : AGA, 2Mb ChipMem, HD, 4Mb FastMem, 68030/50MHz
+
+     Genre     : HD-Demo
+@endnode
+
+@node d1742
+@toc p196-demo
+
+
+@{b}
+    Eclipse
+@{ub}
+
+     Producer  : Triumph
+
+     Coder     : Darkman, Smeagol
+     Graphician: Ivan Moen, Morten Johnsen
+     Sounder   : Cobolt
+
+     Size      : 4700K
+     System    : AGA, 2Mb ChipMem, 8Mb FastMem, HD, KS3.0;
+                 recommended: 040/25MHz
+
+     Genre     : HD-Demo
+@endnode
+
+@node d1743
+@toc p196-demo
+
+
+@{b}
+    Energy
+@{ub}
+
+     Producer  : Gods
+
+     Size      : 1152K
+     System    : AGA, 2Mb ChipMem, HD, 4Mb FastMem
+
+     Genre     : HD-Demo
+@endnode
+
+@node d1744
+@toc p196-demo
+
+
+@{b}
+    Abiotic
+@{ub}
+
+     Producer  : Ephidrena
+
+     Coder     : Cyberstarr, Loaderror
+     Graphician: Loaderror, Stoney, Cheetah
+     Sounder   : Goahead
+     Designer  : Cyberstarr, Loaderror, Frequent
+
+     Size      : 2051K
+     System    : AGA, 2Mb ChipMem, HD, 4Mb FastMem
+
+     Genre     : HD-Demo
+@endnode
+
+@node d1745
+@toc p196-demo
+
+
+@{b}
+    Espen Bredesen
+@{ub}
+
+     Producer  : Orange
+
+     Size      : 234K
+     System    : AGA, 2Mb ChipMem
+     How2Handle: Exit
+
+     Genre     : Filedemo
+@endnode
+
+@node d1746
+@toc p196-demo
+
+
+@{b}
+    Find yourself
+@{ub}
+
+     Producer  : Smellon Design, TRSI, Fairlight
+
+     Coder     : Celtic, Orlingo
+
+     Size      : 773K
+     System    : AGA, 2Mb ChipMem
+
+     Genre     : Filedemo
+@endnode
+
+@node d1747
+@toc p196-40kintro
+
+
+@{b}
+    Nocturne
+@{ub}
+
+     Producer  : Giants
+
+     Coder     : Wizard
+     Graphician: Orhan
+     Sounder   : Spindizzy
+
+     Size      : 61K
+     System    : AGA, 2Mb ChipMem
+
+     Genre     : Intro
+@endnode
+
+@node d1748
+@toc p196-demo
+
+
+@{b}
+    Hale-Bopp
+@{ub}
+
+     Producer  : Elefantklubben
+
+     Coder     : G^Force
+     Graphician: Hr.Stoppur, Pelefant, Rainman
+     Sounder   : Pelefant
+
+     Size      : 359K
+     System    : AGA, 2Mb ChipMem
+     How2Handle: Exit
+
+     Genre     : Filedemo
+@endnode
+
+@node d1749
+@toc p196-40kintro
+
+
+@{b}
+    Sutju
+@{ub}
+
+     Producer  : Jormas
+
+     Size      : 43K
+     System    : AGA, 2Mb ChipMem
+
+     Genre     : Intro
+@endnode
+
+@node d1750
+@toc p196-demo
+
+
+@{b}
+    Needle Freak
+@{ub}
+
+     Producer  : Rape
+
+     Coder     : Fenriz
+     Graphician: Ice, Squid
+     Sounder   : Stressball
+
+     Size      : 134K
+     System    : AGA, 2Mb ChipMem
+
+     Genre     : Filedemo
+@endnode
+
+@node d1751
+@toc p213-invite
+
+
+@{b}
+    SILIconvention `97 Invitation
+@{ub}
+
+     Producer  : Arsenic
+
+     Coder     : Axis
+     Graphician: Gizmo, Red/Icebird, Yazoo
+     Sounder   : Tommy/Avena
+
+     Size      : 511K
+     System    : ECS
+
+     Genre     : Filedemo
+@endnode
+
+@node d1752
+@toc p196-40kintro
+
+
+@{b}
+    Ability
+@{ub}
+
+     Producer  : Vector
+
+     Size      : 59K
+     System    : AGA, 2Mb ChipMem
+
+     Genre     : Intro
+@endnode
+
+@node d1755
+@toc p202-4kintro
+
+
+@{b}
+    Extel
+@{ub}
+
+     Producer  : Ambrosia
+
+     Coder     : Syntax
+     Sounder   : Trayzor
+
+     Size      : 4K
+     System    : AGA, 2Mb ChipMem
+     How2Handle: Exit
+
+     Genre     : Intro
+
+
+     WhatIsIt? : At this time Extel is the best Amiga 4K Intro I`ve
+                 ever seen ... fast vectors and light-sourced logos,
+                 tunnels and superb music. Extel rules! (Dire)
+@endnode
+
+@node d1756
+@toc p202-40kintro
+
+
+@{b}
+    Changing
+@{ub}
+
+     Producer  : Capsule
+
+     Coder     : Kustom
+     Sounder   : Estrayk
+
+     Size      : 38K
+     System    : AGA, 2Mb ChipMem
+     How2Handle: Exit
+
+     Genre     : Intro
+
+
+     WhatIsIt? : Excellent chip-sound by Estrayk, beautiful
+                 transforming landscape by Kustom. (Dire)
+@endnode
+
+@node d1757
+@toc p196-40kintro
+
+
+@{b}
+    Dual 4Kb!
+@{ub}
+
+     Producer  : Subspace
+
+     Coder     : Origo, Spite
+     Graphician: B.Mandelbrot
+     Sounder   : Mortimer Twang
+
+     System    : AGA, 2Mb ChipMem
+     How2Handle: Exit
+
+     Genre     : Intro
+@endnode
+
+@node d1758
+@toc p196-demo
+
+
+@{b}
+    PC Puke!
+@{ub}
+
+     Producer  : Procyon
+
+     Coder     : Demonoid Productions (DmP)
+     Graphician: Demonoid Productions (DmP)
+     Sounder   : Demonoid Productions (DmP)
+
+     Size      : 3425K
+     System    : AGA, 0,8Mb ChipMem, 3,5Mb FastMem, HD (3,6Mb free memory),
+                 68030/40MHz recommended
+     How2Handle: assign the demo-directory to 'PcPuke:'
+
+     Genre     : HD-Demo
+@endnode
+
+@node d1759
+@toc p196-demo
+
+
+@{b}
+    Magic Milktunnel
+@{ub}
+
+     Producer  : Donut Fetish
+
+     System    : AGA, 2Mb ChipMem
+
+     Genre     : Demo
+@endnode
+
+@node d1760
+@toc p202-demo
+
+
+@{b}
+    Megademo IV
+@{ub}
+
+     Producer  : Artwork
+
+     Size      : 2209K
+     System    : AGA, 2Mb ChipMem, HD, 4Mb FastMem
+
+     Genre     : HD-Demo
+@endnode
+
+@node d1761
+@toc p202-demo
+
+
+@{b}
+    Fear Factory
+@{ub}
+
+     Producer  : Arsenic
+
+     Size      : 2100K
+     System    : AGA, 2Mb ChipMem, HD
+
+     Genre     : HD-Demo
+@endnode
+
+@node d1762
+@toc p202-demo
+
+
+@{b}
+    Thug Life
+@{ub}
+
+     Producer  : Essence
+
+     Size      : 1400K
+     System    : AGA, 2Mb ChipMem, HD
+
+     Genre     : HD-Demo
+@endnode
+
+@node d1763
+@toc p202-demo
+
+
+@{b}
+    Paradisio
+@{ub}
+
+     Producer  : Drifters
+
+     Coder     : Zinko, Vention
+     Graphician: Clary, Tøf
+     Sounder   : Zinko
+
+     Size      : 739K + 649K + 498K
+     System    : AGA, 2Mb ChipMem, HD
+
+     Genre     : HD-Demo
+@endnode
+
+@node d1764
+@toc p202-demo
+
+
+@{b}
+    Smart
+@{ub}
+
+     Producer  : Elven 11
+
+     Coder     : Manta, Slat (main), Dip (add-ones)
+     Graphician: Mat/Vajrayana, Rio (main), Manta, Slat, Vision-X (add-ones)
+     Sounder   : Parsec
+     Designer  : Manta (main), Mat/Vajrayana, Slat, Parsec (add-ones)
+
+     Size      : 1901K
+     System    : AGA, 2Mb ChipMem, HD, 4Mb FastMem, 68020; 
+                 030/25MHz strongly recommended
+
+     Genre     : HD-Demo
+@endnode
+
+@node d1765
+@toc p202-demo
+
+
+@{b}
+    The Sign
+@{ub}
+
+     Producer  : Scoopex
+
+     Coder     : Prophet, Deck
+     Graphician: Made
+     Sounder   : Prophet, Deck
+
+     Size      : 772K + 339K; 1100K (HD-version)
+     System    : AGA, 2Mb ChipMem, HD (1905K free HD-memory); not compatible with 68060
+     How2Handle: Exit (auto)
+
+     Genre     : HD-Demo
+
+
+     WhatIsIt? : Damn fast vector routines even on a plain A1200! (Dire)
+@endnode
+
+@node d1766
+@toc p202-demo
+
+
+@{b}
+    Partyhall
+@{ub}
+
+     Producer  : Oxyron
+
+     Size      : 590K
+     System    : AGA, 2Mb ChipMem
+
+     Genre     : Filedemo
+@endnode
+
+@node d1767
+@toc p202-demo
+
+
+@{b}
+    Megademo!
+@{ub}
+
+     Producer  : Birdhouse Projects
+
+     Size      : 111K
+     System    : AGA, 2Mb ChipMem
+
+     Genre     : Filedemo
+@endnode
+
+@node d1768
+@toc p202-demo
+
+
+@{b}
+    Tahiti 3
+@{ub}
+
+     Producer  : Interpol
+
+     Size      : 435K
+     System    : AGA, 2Mb ChipMem
+
+     Genre     : Filedemo
+@endnode
+
+@node d1769
+@toc p202-demo
+
+
+@{b}
+    Tramp
+@{ub}
+
+     Producer  : Death Row
+
+     Size      : 2969K
+     System    : AGA, 2Mb ChipMem, HD, FastMem
+
+     Genre     : HD-Demo
+@endnode
+
+@node d1770
+@toc p202-demo
+
+
+@{b}
+    Energy - Fraction 2
+@{ub}
+
+     Producer  : Gods
+
+     Coder     : Odin, Xbarr
+     Graphician: Bridgeclaw, Typhoon, Xbarr
+     Sounder   : Liszt
+
+     System    : AGA, 2Mb ChipMem
+
+     Genre     : Demo
+@endnode
+
+@node d1771
+@toc p202-demo
+
+
+@{b}
+    Eau de Table P.
+@{ub}
+
+     Producer  : Jolly
+
+     Size      : 801K
+     System    : AGA, 2Mb ChipMem, HD
+
+     Genre     : HD-Demo
+@endnode
+
+@node d1772
+@toc p202-demo
+
+
+@{b}
+    Artfire
+@{ub}
+
+     Producer  : Faque
+
+     Coder     : P.A., Plaque
+     Graphician: Jack Cleveland
+     Sounder   : Parsec/Elven Eleven
+
+     Size      : 1382K
+     System    : AGA, 2Mb ChipMem, HD
+
+     Genre     : HD-Demo
+@endnode
+
+@node d1773
+@toc p202-demo
+
+
+@{b}
+    Virtual
+@{ub}
+
+     Producer  : Skahn-X
+
+     System    : AGA, 2Mb ChipMem
+
+     Genre     : Demo
+@endnode
+
+@node d1774
+@toc p202-40kintro
+
+
+@{b}
+    Diskobox
+@{ub}
+
+     Producer  : Abyss
+
+     Coder     : Pink
+     Graphician: Cyclone
+     Sounder   : Pink
+
+     Size      : 40K
+     System    : AGA, 2Mb ChipMem
+     How2Handle: Exit
+
+     Genre     : Intro
+@endnode
+
+@node d1775
+@toc p202-40kintro
+
+
+@{b}
+    Kenguru V1.0
+@{ub}
+
+     Producer  : Impulse
+
+     Coder     : EFT/Kenguru
+     Graphician: Soldier
+     Sounder   : MeloManiac
+
+     Size      : 65K
+     System    : AGA, 2Mb ChipMem
+     How2Handle: Exit
+
+     Genre     : Intro
+
+
+     WhatIsIt? : Ugly slow vectors on a plain A1200, but good to watch
+                 on better machines. Average chipmusic. The Scenest
+                 Party `97 version (V2.0) rules supreme. (Dire)
+@endnode
+
+@node d1776
+@toc p202-40kintro
+
+
+@{b}
+    Pulp
+@{ub}
+
+     Producer  : Focus Design
+
+     Size      : 42K
+     System    : AGA, 2Mb ChipMem, FastMem
+     How2Handle: Exit
+
+     Genre     : Intro
+@endnode
+
+@node d1777
+@toc p202-40kintro
+
+
+@{b}
+    Fantasy
+@{ub}
+       
+     Producer  : Darkage
+
+     Coder     : Modem
+     Graphician: Lanch, Decibel
+     Sounder   : Aud
+
+     Size      : 62K
+     System    : AGA, 2Mb ChipMem
+     How2Handle: Exit
+
+     Genre     : Intro
+@endnode
+
+@node d1778
+@toc p202-40kintro
+
+
+@{b}
+    BolDür
+@{ub}
+
+     Producer  : Depth
+
+     Coder     : Presence
+     Graphician: IB, Folcka
+     Sounder   : Trip
+
+     Size      : 40K
+     System    : OCS
+     How2Handle: Exit; execute with no setpatch and no startup-sequence
+
+     Genre     : Intro
+
+
+     WhatIsIt? : Nothing special at all. (Dire)
+@endnode
+
+@node d1779
+@toc p202-40kintro
+
+
+@{b}
+    3 Years 40K Intro
+@{ub}
+
+     Producer  : Jormas
+
+     Size      : 64K
+     System    : AGA, 2Mb ChipMem
+     How2Handle: Exit
+
+     Genre     : Intro
+@endnode
+
+@node d1780
+@toc p202-40kintro
+
+
+@{b}
+    Adagio
+@{ub}
+
+     Producer  : Lightstorm Inc.
+
+     Size      : 40K
+     System    : AGA, 2Mb ChipMem
+     How2Handle: Exit
+
+     Genre     : Intro
+@endnode
+
+@node d1781
+@toc p202-40kintro
+
+
+@{b}
+    Neuköln
+@{ub}
+
+     Producer  : Grasshoppers Developments
+
+     Coder     : Kaneda
+     Sounder   : Louszy
+
+     Size      : 35K
+     System    : AGA, 2Mb ChipMem
+     How2Handle: Exit (auto)
+
+     Genre     : Intro
+@endnode
+
+@node d1782
+@toc p202-4kintro
+
+
+@{b}
+    Abyss in Wonderland
+@{ub}
+
+     Producer  : Abyss
+
+     Coder     : Moon
+
+     Size      : 4K
+     System    : AGA, 2Mb ChipMem
+     How2Handle: Exit
+
+     Genre     : Intro
+
+
+     WhatIsIt? : Nice color-choise & quite fast. (Dire)
+@endnode
+
+@node d1783
+@toc p202-4kintro
+
+
+@{b}
+    Newt
+@{ub}
+
+     Producer  : Focus Design
+
+     Coder     : Optima
+
+     Size      : 4K
+     System    : AGA, 2Mb ChipMem, FastMem
+     How2Handle: Exit
+
+     Genre     : Intro
+@endnode
+
+@node d1784
+@toc p202-4kintro
+
+
+@{b}
+    Extreme 4K`ing
+@{ub}
+
+     Producer  : Nuance
+
+     Size      : 4K
+     System    : AGA, 2Mb ChipMem
+     How2Handle: Exit
+
+     Genre     : Intro
+@endnode
+
+@node d1785
+@toc p213-40kintro
+
+
+@{b}
+    Painted Eggs
+@{ub}
+
+     Producer  : Artwork
+
+     Coder     : Azure
+     Graphician: Fiver2
+     Sounder   : Axiom, Tiberius
+
+     Size      : 40K
+     System    : AGA, 2Mb ChipMem
+     How2Handle: Exit
+
+     Genre     : Intro
+@endnode
+
+@node d1786
+@toc p202-fast
+
+
+@{b}
+    Fast Intro
+@{ub}
+
+     Producer  : Puzzle Productions, Depth
+
+     Size      : 361K
+     System    : AGA, 2Mb ChipMem
+     How2Handle: Exit
+
+     Genre     : Filedemo
+@endnode
+
+@node d1787
+@toc p236-intro
+
+
+@{b}
+    No Shame
+@{ub}
+
+     Producer  : Cydonia
+
+     Coder     : Storm
+     Graphician: Infinity
+     Sounder   : Muse
+
+     Size      : 37K
+     System    : AGA, 2Mb ChipMem
+     How2Handle: Exit
+
+     Genre     : Intro
+@endnode
+
+@node d1788
+@toc p196-other
+
+
+@{b}
+    New Power Themo
+@{ub}
+
+     Producer  : Przyjaciele Stefana B.
+
+     Designer  : Asazel, Szarik
+
+     Size      : 22K
+     System    : AGA, 2Mb ChipMem
+     How2Handle: Exit
+
+     Genre     : Intro
+@endnode
+
+@node d1789
+@toc p235-4kintro
+
+
+@{b}
+    4Kb Intro
+@{ub}
+
+     Producer  : Red Rats
+
+     Coder     : Ruler
+
+     Size      : 3K
+     System    : AGA, 2Mb ChipMem, FPU (e.g. 881)
+     How2Handle: Exit
+
+     Genre     : Intro
+@endnode
+
+@node d1790
+@toc p235-40kintro
+
+
+@{b}
+    Kenguru V2.0
+@{ub}
+
+     Producer  : Impulse
+
+     Coder     : EFT/Kenguru
+     Graphician: Soldier
+     Sounder   : MeloManiac
+
+     Size      : 65K
+     System    : AGA, 2Mb ChipMem
+     How2Handle: Exit; run the intro after a clean-boot
+
+     Genre     : Intro
+
+
+     WhatIsIt? : Ugly slow vectors on a plain A1200, but good to watch
+                 on better machines. Average chipmusic. The Scenest
+                 Party `97 version (V2.0) rules supreme. (Dire)
+@endnode
+
+@node d1791
+@toc p207-other
+
+
+@{b}
+    Visible World Preview
+@{ub}
+
+     Producer  : Mawi
+
+     Coder     : Bay-Tek
+     Graphician: Zoltan (main), Insert & Jakko (others)
+     Sounder   : Van Ghorne
+     Designer  : CTP, Seti, KK/Case
+
+     System    : AGA, 2Mb ChipMem, 2Mb FastMem, HD
+     How2Handle: Exit
+
+     Genre     : Slideshow
+@endnode
+
+@node d1792
+@toc p207-demo
+
+
+@{b}
+    Polygon Heaven
+@{ub}
+
+     Producer  : Przyjaciele Stefana B.
+
+     Coder     : Zorka 19
+     Graphician: Lazoor, Fajerwerk
+     Sounder   : Red Ribbon
+     Designer  : Mroova, Storm/Poison
+
+     System    : AGA, 2Mb ChipMem, 4Mb FastMem, HD
+     How2Handle: Exit
+
+     Genre     : HD-Demo
+@endnode
+
+@node d1793
+@toc p207-other
+
+
+@{b}
+    Rantka - Twelve Hottest Polish Sceners On-Line Experience
+@{ub}
+
+     Producer  : Przyjaciele Stefana B.
+
+     Coder     : Zorka 19
+     Graphician: Lazoor
+
+     System    : OCS
+     How2Handle: Exit
+
+     Genre     : Filedemo
+@endnode
+
+@node d1794
+@toc p207-other
+
+
+@{b}
+    Szarik
+@{ub}
+
+     Producer  : Przyjaciele Stefana B.
+
+     Coder     : Mroova
+     Graphician: Asazel/TBL2
+     Sounder   : Klinton/Monar
+
+     System    : AGA, 2Mb ChipMem
+     How2Handle: Exit
+
+     Genre     : Filedemo
+@endnode
+
+@node d1807
+@toc p196-fast
+
+
+@{b}
+    Element
+@{ub}
+
+     Producer  : Contraz
+
+     Size      : 360K
+     System    : AGA, 2Mb ChipMem
+     How2Handle: Exit
+
+     Genre     : Filedemo
+@endnode
+
+@node d1808
+@toc p202-other
+
+
+@{b}
+    Miracle Chip 2
+@{ub}
+
+     Producer  : Ambrosia
+
+     Coder     : Zeek
+     Graphician: Cain, Drac
+     Sounder   : Bifrost/Iris, Curt Cool/Depth, Cytron/Depth,
+                 Flower/Depth, Trayzor/Ambrosia
+
+     System    : AGA, 2Mb ChipMem
+
+     Genre     : Sounddisk (file)
+@endnode
+
+@node d1809
+@toc p196-fast
+
+
+@{b}
+    Food
+@{ub}
+
+     Producer  : Lewis Baia
+
+     Size      : 277K
+     System    : AGA, 2Mb ChipMem
+
+     Genre     : Filedemo
+@endnode
+
+@node d1810
+@toc p196-other
+
+
+@{b}
+    Communistical Revenge
+@{ub}
+
+     Producer  : RNO
+
+     Size      : 43K
+     System    : AGA, 2Mb ChipMem
+
+     Genre     : Intro
+@endnode
+
+@node d1811
+@toc p196-other
+
+
+@{b}
+    Trilobyte 4
+@{ub}
+
+     Producer  : Nuance
+
+     Size      : 232K
+     System    : AGA, 2Mb ChipMem
+
+     Genre     : Filedemo
+@endnode
+
+@node d1812
+@toc p196-other
+
+
+@{b}
+    Digital Chips 21
+@{ub}
+
+     Producer  : Apathy
+
+     Size      : 213K
+     System    : AGA, 2Mb ChipMem
+
+     Genre     : Sounddisk (file)
+@endnode
+
+@node d1813
+@toc p235-wild
+
+
+@{b}
+    Debut
+@{ub}
+
+     Producer  : United Fire Productions
+
+     Size      : 154K
+     System    : AGA, 2Mb ChipMem
+
+     Genre     : Filedemo
+@endnode
+
+@node d1814
+@toc p202-other
+
+
+@{b}
+    Privilege Violation
+@{ub}
+
+     Producer  : Nuance
+
+     Size      : 227K
+     System    : AGA, 2Mb ChipMem, MC68030, 4Mb FastMem
+
+     Genre     : Filedemo
+@endnode
+
+@node d1815
+@toc p235-wild
+
+
+@{b}
+    I Love Commodore
+@{ub}
+
+     Producer  : Lamer Crew
+
+     Coder     : Poko
+
+     Size      : 896K
+     System    : AGA, 2Mb ChipMem, HD
+
+     Genre     : HD-Demo
+@endnode
+
+@node d1816
+@toc p213-other
+
+
+@{b}
+    Plush
+@{ub}
+
+     Producer  : X-Dream
+
+     Size      : 58K
+
+     Genre     : Intro
+@endnode
+
+@node d1817
+@toc p213-other
+
+
+@{b}
+    The Lost Farts
+@{ub}
+
+     Producer  : Ultimate
+
+     Size      : 13K
+     How2Handle: Exit
+
+     Genre     : Intro
+@endnode
+
+@node d1818
+@toc p196-other
+
+
+@{b}
+    Atom`s Slideshow
+@{ub}
+
+     Producer  : Laan
+
+     Coder     : Skydive
+     Graphician: Atom
+     Sounder   : Abhoth
+
+     Size      : 507K
+     System    : AGA, 2Mb ChipMem
+     How2Handle: Exit
+
+     Genre     : Slideshow
+@endnode
+
+@node d1819
+@toc p235-40kintro
+
+
+@{b}
+    Borg
+@{ub}
+
+     Producer  : Corrosion
+
+     Size      : 70K
+     System    : AGA, 2Mb ChipMem
+     How2Handle: Exit
+
+     Genre     : Intro
+@endnode
+
+@node d1820
+@toc p207-intro
+
+
+@{b}
+    Versor
+@{ub}
+
+     Producer  : Anadune
+
+     Size      : 56K
+     System    : AGA, 2Mb ChipMem
+
+     Genre     : Intro
+@endnode
+
+@node d1821
+@toc p207-demo
+
+
+@{b}
+    YON
+@{ub}
+
+     Producer  : Anadune
+
+     Size      : 1900K
+     System    : AGA, 2Mb ChipMem, HD, 4Mb FastMem
+
+     Genre     : HD-Demo
+@endnode
+
+@node d1822
+@toc p207-64kintro
+
+
+@{b}
+    Navel
+@{ub}
+
+     Producer  : Appendix
+
+     Size      : 60K
+     System    : AGA, 2Mb ChipMem
+
+     Genre     : Intro
+@endnode
+
+@node d1823
+@toc p196-other
+
+
+@{b}
+    The Amiga Intro
+@{ub}
+
+     Producer  : Digital Predators
+
+     Size      : 206K
+     System    : AGA, 2Mb ChipMem
+
+     Genre     : Filedemo
+@endnode
+
+@node d1824
+@toc p236-invite
+
+
+@{b}
+    Scenery `97 Invitation
+@{ub}
+
+     Producer  : Cydonia, Digital Access
+
+     Coder     : Storm/Cydonia
+     Graphician: Infinity/Cydonia
+     Sounder   : Cool Col J/Digital Access
+
+     Size      : 544K
+     System    : AGA, 2Mb ChipMem
+
+     Genre     : Filedemo
+@endnode
+
+@node d1825
+@toc p245-other
+
+
+@{b}
+    Showbase Shape
+@{ub}
+
+     Producer  : C-Lous
+
+     Size      : 708K (#1) + 683K (#2)
+     System    : AGA, 2Mb ChipMem, HD
+
+     Genre     : HD-Demo
+@endnode
+
+@node d1826
+@toc p245-other
+
+
+@{b}
+    Craze Cow Desease
+@{ub}
+
+     Producer  : Craze
+
+     Size      : 277K
+     System    : AGA, 2Mb ChipMem
+
+     Genre     : Filedemo
+@endnode
+
+@node d1827
+@toc p245-other
+
+
+@{b}
+    Boystory
+@{ub}
+
+     Producer  : Keso
+
+     Size      : 200K
+     System    : AGA, 2Mb ChipMem
+
+     Genre     : Filedemo
+@endnode
+
+@node d1828
+@toc p245-other
+
+
+@{b}
+    Xenophobia
+@{ub}
+
+     Producer  : Subspace
+
+     Coder     : Origo
+
+     Size      : 881K + 880K + 880K + 100K
+     System    : AGA, 2Mb ChipMem, HD
+
+     Genre     : HD-Demo
+@endnode
+
+@node d1829
+@toc p245-other
+
+
+@{b}
+    The Tale of Sir Henry
+@{ub}
+
+     Producer  : Three Little Elks (3LE)
+
+     Size      : 918K
+     System    : AGA, 2Mb ChipMem, HD
+
+     Genre     : HD-Demo
+@endnode
+
+@node d1830
+@toc p207-invite
+
+
+@{b}
+    Rush Hours Party `97 Invitation Intro
+@{ub}
+
+     Producer  : Freezers
+
+     Size      : 13K
+     System    : OCS
+     How2Handle: Exit
+
+     Genre     : Intro
+@endnode
+
+@node d1831
+@toc p207-demo
+
+
+@{b}
+    Trayanda - Where wild roses grow (Contactro)
+@{ub}
+
+     Producer  : Dinx Project, Skid Row
+
+     Coder     : Oster/DXP, Sachy/DXP^SR
+     Graphician: Dr.D/DXP, Sebax/DXP
+     Sounder   : XTD/Mystic
+     Designer  : Sachy/DXP^SR, Tinner/DXP
+
+     Size      : 1609K
+     System    : AGA, 2Mb ChipMem, HD; 68030 recommended
+     How2Handle: Exit, MT
+
+     Genre     : HD-Demo
+@endnode
+
+@node d1832
+@toc p207-64kintro
+
+
+@{b}
+    Shendo
+@{ub}
+
+     Producer  : Amnesty
+
+     Size      : 62K
+     System    : AGA, 2Mb ChipMem
+     How2Handle: Exit
+
+     Genre     : Intro
+@endnode
+
+@node d1833
+@toc p207-other
+
+
+@{b}
+    Papadeo 2
+@{ub}
+
+     Producer  : Floppy
+
+     Coder     : Zig
+
+     Size      : 1200K
+     System    : AGA, 2Mb ChipMem, 4Mb FastMem, HD (4Mb free memory)
+     How2Handle: Exit
+     Remark    : special version for Amiga computers with no fast
+                 processor unit is available too (1100K)
+
+     Genre     : HD-Demo
+@endnode
+
+@node d1834
+@toc p207-4kintro
+
+
+@{b}
+    Blue
+@{ub}
+
+     Producer  : Amnesty
+
+     Coder     : Hasid
+
+     Size      : 8K
+     System    : AGA, 2Mb ChipMem
+     How2Handle: Exit
+
+     Genre     : Intro
+@endnode
+
+@node d1835
+@toc p207-demo
+
+
+@{b}
+    Koloseum
+@{ub}
+
+     Producer  : Przyjaciele Stefana B.
+
+     Coder     : Mroova, Zorka 19
+     Graphician: 100% Bawelny
+     Sounder   : Captain Jack :)
+     Designer  : Mroova, Zorka 19
+
+     Size      : 1694K
+     System    : AGA, 2Mb ChipMem, 4Mb FastMem
+     How2Handle: Exit
+
+     Genre     : Intro
+@endnode
+
+@node d1836
+@toc p207-other
+
+
+@{b}
+    Oko Do Bazy
+@{ub}
+
+     Producer  : WC Design
+
+     Size      : 91K
+
+     Genre     : Intro
+@endnode
+
+@node d1837
+@toc p207-other
+
+
+@{b}
+    X-Files
+@{ub}
+
+     Producer  : TBL2
+
+     Size      : 568K
+     System    : AGA, 2Mb ChipMem
+
+     Genre     : Filedemo
+@endnode
+
+@node d1838
+@toc p207-other
+
+
+@{b}
+    Salatka
+@{ub}
+
+     Producer  : Ocet Drinkers
+
+     Size      : 159K
+     System    : AGA, 2Mb ChipMem
+
+     Genre     : Filedemo
+@endnode
+
+@node d1839
+@toc p207-other
+
+
+@{b}
+    Molotov
+@{ub}
+
+     Producer  : 7 Up
+
+     Size      : 68K
+     System    : AGA, 2Mb ChipMem
+
+     Genre     : Intro
+@endnode
+
+@node d1840
+@toc p235-invite
+
+
+@{b}
+    Scenest Party 1997 Invitation
+@{ub}
+
+     Producer  : Freezers
+
+     Size      : 24K
+     System    : OCS
+     How2Handle: Exit
+
+     Genre     : Intro
+@endnode
+
+@node d1841
+@toc p213-demo
+
+
+@{b}
+    Synergy
+@{ub}
+
+     Producer  : Sector 7
+
+     Size      : 2554K
+     System    : AGA, 2Mb ChipMem, 6Mb FastMem
+     How2Handle: drive down the screen mode to PAL if you use a graphics card
+
+     Genre     : HD-Demo
+@endnode
+
+@node d1842
+@toc p239-invite
+
+
+@{b}
+    Euskal Party 5 Invitation
+@{ub}
+
+     Producer  : Network
+
+     Genre     : Filedemo
+@endnode
+
+@node d1905
+@toc p207-4kintro
+
+
+@{b}
+    Tonite
+@{ub}
+
+     Producer  : Picco
+
+     Coder     : ALN!
+     Sounder   : Grogon
+
+     Size      : 4K
+     System    : AGA, 2Mb ChipMem
+     How2Handle: Exit (lmb)
+
+     Genre     : Intro
+
+
+     WhatIsIt? : Fantastic demo routines packed into a 4K Intro. (Dire)
+@endnode
+
+@node d1906
+@toc p207-4kintro
+
+
+@{b}
+    Kaczy
+@{ub}
+
+     Producer  : Przyjaciele Stefana B.
+
+     Size      : 4K
+     System    : ECS
+     How2Handle: Exit (auto)
+
+     Genre     : Intro
+@endnode
+
+@node d1907
+@toc p207-4kintro
+
+
+@{b}
+    Pytajnik
+@{ub}
+
+     Producer  : Apathy
+
+     Coder     : Zeeball
+
+     Size      : 4K
+     System    : ECS
+     How2Handle: Exit (lmb)
+
+     Genre     : Intro
+@endnode
+
+@node d1908
+@toc p252-other
+
+
+@{b}
+    Joys of Chaplin
+@{ub}
+
+     Producer  : Keso
+
+     Size      : 79K
+     System    : AGA, 2Mb ChipMem
+
+     Genre     : Intro
+@endnode
+
+@node d1909
+@toc p252-other
+
+
+@{b}
+    Carlsson on the Roof
+@{ub}
+
+     Producer  : UNO
+
+     Size      : 286K
+     System    : AGA, 2Mb ChipMem
+
+     Genre     : Filedemo
+@endnode
+
+@node d1910
+@toc p253-invite
+
+
+@{b}
+    Intel Outside Party 4 Invitation
+@{ub}
+
+     Producer  : Freezers
+
+     Size      : 75K
+     System    : AGA, 2Mb ChipMem
+
+     Genre     : Filedemo
+@endnode
+
+@node d1920
+@toc p255-other
+
+
+@{b}
+    Pieces
+@{ub}
+
+     Producer  : Ephidrena
+
+     Coder     : Loaderror
+     Graphician: Loaderror
+     Sounder   : Frequent
+
+     Size      : 489K
+     System    : AGA, 2Mb ChipMem, 4Mb FastMem
+     Remark    : 2 versions available: for 060 and 020-040 processors
+
+     Genre     : Filedemo
+@endnode
+
+@node d1921
+@toc p255-other
+
+
+@{b}
+    Friendship Intro
+@{ub}
+
+     Producer  : Instinct
+
+     Coder     : Punisher
+     Graphician: Squid, Punisher
+     Sounder   : Enigmus H.
+
+     Size      : 68K
+     System    : AGA, 2Mb ChipMem
+
+     Genre     : Intro
+@endnode
+
+@node d1922
+@toc p255-other
+
+
+@{b}
+    Born Fat
+@{ub}
+
+     Producer  : Contraz
+
+     Size      : 4K
+     System    : AGA, 2Mb ChipMem
+     How2Handle: Exit (auto)
+
+     Genre     : Intro
+@endnode
+
+@node d1923
+@toc p255-other
+
+
+@{b}
+    October
+@{ub}
+
+     Producer  : Spaceballs
+
+     Size      : 462K
+     System    : AGA, 2Mb ChipMem
+
+     Genre     : Filedemo
+@endnode
+
+@node d1926
+@toc p242-invite
+
+
+@{b}
+    Gravity `97 Invitation
+@{ub}
+
+     Producer  : Przyjaciele Stefana B., Anadune
+
+     Coder     : Mroova, Zorka19
+     Graphician: Kasziuk, Skafander
+     Sounder   : Team 17
+
+     Size      : 942K
+     System    : AGA, 2Mb ChipMem, HD, a bit FastMem
+     Remark    : Demo was released on the @{"Buz Party `97" link p264}
+
+     Genre     : HD-Demo
+@endnode
+
+@node d1927
+@toc p258-invite
+
+
+@{b}
+    TCP `97 Invitation
+@{ub}
+
+     Producer  : Iris
+
+     Size      : 367K
+     System    : OCS
+
+     Genre     : Filedemo
+@endnode
+
+@node d1929
+@toc p202-wild
+
+
+@{b}
+    Tankstellenbande
+@{ub}
+
+     Producer  : Birdhouse Projects
+
+     Size      : 112K
+     System    : AGA, 2Mb ChipMem
+
+     Genre     : Filedemo
+@endnode
+
+@node d1930
+@toc p202-wild
+
+
+@{b}
+    Bruchwurst
+@{ub}
+
+     Producer  : Accept
+
+     System    : AGA, 2Mb ChipMem
+
+     Genre     : Filedemo
+@endnode
+
+@node d1931
+@toc p196-wild
+
+
+@{b}
+    Chriz in da hood
+@{ub}
+
+     Producer  : Rape
+
+     Size      : 8890K + 5417K + 356K
+     System    : AGA, 2Mb ChipMem, 4Mb FastMem, HD
+
+     Genre     : HD-Demo
+@endnode
+
+@node d1932
+@toc p160-intro
+
+
+@{b}
+    Absolute `97 Intro
+@{ub}
+
+     Producer  : Spedes
+
+     System    : AGA, 2Mb ChipMem
+
+     Genre     : Intro
+@endnode
+
+@node d1933
+@toc p160-intro
+
+
+@{b}
+    Restricted
+@{ub}
+
+     Producer  : Army of Lovers
+
+     Size      : 779K
+     System    : AGA, 2Mb ChipMem, HD
+
+     Genre     : HD-Demo
+@endnode
+
+@node d1935
+@toc p264-other
+
+
+@{b}
+    Psota
+@{ub}
+
+     Producer  : Przyjaciele Stefana B.
+
+     Coder     : Dr.Starup-Sequence
+     Graphician: Rak, Skafander
+     Sounder   : Prawierrevisq
+
+     System    : Aga, 2Mb ChipMem; FastMem offers an extra effect
+
+     Genre     : Filedemo
+@endnode
+
+@node d1936
+@toc p264-other
+
+
+@{b}
+    Adam 12
+@{ub}
+
+     Producer  : Przyjaciele Stefana B.
+
+     Coder     : Kau Kryzoni na Serze
+     Graphician: Danny, Louie, Rodney, Made, Ra (??)
+     Sounder   : Sztetke Retke
+
+     System    : AGA, 2Mb ChipMem
+
+     Genre     : Filedemo
+@endnode

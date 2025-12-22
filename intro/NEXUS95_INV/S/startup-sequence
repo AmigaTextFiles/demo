@@ -1,0 +1,17 @@
+type c:big.txt
+
+ASK "DO YOU HAVE MORE THAN 512KB CHIPMEM ?(Y/N) :"
+IF WARN
+ echo "YOU HAVE MORE THAN 512KB CHIPMEM !"
+ echo ""
+ echo ""
+ echo "...LOADING ENCHANCED VERSION !"
+ Nexus1024.EXE
+ELSE
+ echo "YOU CHOSE THE 512KB CHIPMEM VERSION !"
+ echo ""
+ echo ""
+ echo "...SKIPPING ZOOM-EFFECT !"
+ Nexus512.EXE
+ENDIF
+

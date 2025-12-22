@@ -1,0 +1,1802 @@
+@database x-files.guide
+@$VER: x-files 2.0 (06.12.1995)
+@author "big-rat"
+@(c) "copyright © 1995 by big-rat ; all rights reserved."
+@width 80
+@wordwrap
+
+@node main "the x-files"
+
+                         @{fg shine} big-rat / EthiC & SYNDiCATE@{fg text}
+
+                                    presents
+             __/\\
+             \\   \\/\\__         __________  ____   __________________
+              \\  /   /   ___   \\_   ____/:/    \\  \\_  ______  _____/
+               \\    /   /__/   /   ___/::/    _/__/   _)__/_____  \\
+               /  _ \\         /    /  :::\\     | /    |  \\     /   \\
+              /   /  \\        \\   /   ::::\\______\\________\\________/
+             /___/\\  /         \\_/    MaX!
+                   \\/
+                            - the monthly news-mag -
+                          - issue #2 : december 1995 -
+
+                         @{"         introduction         " link "introduction"}
+                         @{"  copyright and distribution  " link "copyright"}
+                         @{"           credits            " link "credits"}
+                         @{"          greetings           " link "greets"}
+                         @{"     groups in this issue     " link "issuegroups"}
+                         @{"           wanted             " link "wanted"}
+                         @{"        future plans          " link "futureplans"}
+                         @{"      contact-addresses       " link "contact"}
+
+                         @{"           the news           " link "news"}
+
+@endnode
+
+@node introduction "x-files - introduction"
+
+                              introduction
+
+ok, you have survived the first issue of x-files and so you had to get
+the second issue, because you want to stay informed... :-)
+
+the response was not as big as i have hoped, but for a first issue it
+was not bad.
+
+there are some changes in this issue:
+
+ - if you go to the group-selection via first-letter, then :
+
+   - if there are information about groups, the letter is marked with
+     a  @{b}.@{ub}  on every side of the gadged.
+
+     it will look like this :       .@{"  E  " link e}. 
+
+
+   - if there are @{b}new@{ub} information about groups, the letter is marked
+     with a  @{b}:@{ub}  on both sides of the gadged.
+
+     it will look like this :       :@{"  E  " link e}:
+
+
+   - if you have selected a sub-page via a first-letter, there you can
+     also see which group has @{b}new@{ub} information to present.
+     if there are changes or new information about one of the groups in
+     the list, you can see this by the  @{b}:@{ub}  on both sides of the
+     gadget.
+
+     it will look like this :       :@{" ethic " link "ethic"}:
+
+
+   if you want to now if there are information about some groups, you don't
+   have to look under every single letter now. look for the .'s and the :'s
+   and you will know if there are changed news or if there is everything
+   unchanged.
+
+
+ - now you can use your own font to look at the x-files. it was only a test,
+   that i have defined the topaz.font. i forgot to take it out of the
+   ready-to-release version
+
+ - small "secret" part included... try to find it. it's not real hidden,
+   but it's funny !!!
+
+ok, these are the changes for this issue. if you have some ideas to make
+x-files more comfortable for you, then send me your ideas and i will tra to
+build them in.
+
+you can also send me a message to tell me if you like or hate the x-files,
+or if you only want to talk with me about anything. :-)
+
+
+now a request from me to :
+
+if you are an ascii-artist, please make me an x-files (only small letters if
+possible) logo and send it to one of my addresses or search for me in some
+boards, mostly in berlin / germany...
+
+
+ok, thanx for now and see ya soon...
+
+
+                                big-rat
+
+@endnode
+
+@node copyright "x-files - copyright and distribution"
+
+                          copyright and distribution
+
+
+        copyright:
+
+        copyright © 1995 by big-rat ; all rights reserved.
+
+
+        distribution:
+        
+        the x-files are freeware, so they can be copied by everyone as
+        long as the contents are unchanged.
+
+        if you want to obtain the latest issue of x-files, you can send
+        me an e-mail via internet and i will mail you the latest issue
+        uuencoded to you e-mail-address.
+
+                         @{"      contact-addresses       " link "contact"}
+
+@endnode
+
+@node credits "x-files - credits"
+
+                                   credits
+
+
+           the whole work on the x-files was done by @{b}big-rat@{ub}, except:
+
+                     front ascii-logo   by   Malcolm X
+
+                     file_id.diz-logo   by   Magix / Tarkus Team
+@endnode
+
+@node greets "x-files - greetings"
+
+                         thanx and greets are going to:
+
+Argon / Prodigy
+ Beatnik / TRSI, Syndicate
+  Bloodrock / TRSI, Syndicate
+   Byteandi / TRSI
+    Cooper
+     Death Angel / Syndicate
+      Delta-X
+       DCSL / Tarkus Team
+        DDT / Accession
+         Dr. Dre / TRSI
+          Fly
+           Fuzzy / TRSI
+            Gandalf / Phantasm
+             Hammer
+              heron / Ethic, Syndicate
+               Hunter
+                Ice
+                 Lloyd
+                  Lucas / Ethic
+                   Madstop / Ethic
+                    Magic Max / Ethic
+                     Magix / Tarkus Team
+                      Murdoc / Neon
+                       Nero / Ethic
+                        Psycho / Honey
+                         Radiosity / Hoodlum
+                          Ramses / Remedy
+                           Raw Style / Lego
+                            Siegel / TRSI
+                             Roi Danton
+                              Smirnoff
+                               Spin / Abyss
+                                Spy / TRSI
+                                 Stingray / Ethic
+                                  Strider / TRSI, Syndicate
+                                   Stylez / Contra, Syndicate, Neon
+                                    Tactica / Puzzle
+
+and all members of :
+
+        Abyss  -  Ethic  -  Lego  -  Matrix  -  Mystic  -  Phantasm
+     Spaceballs  -  Syndicate  -  The Silents  -  Tarkus Team  -  TRSI
+
+@endnode
+
+@node issuegroups "groups in this issue"
+
+abyss
+ accession
+  avocado
+   axis
+    balance
+     bomb
+      contra
+       eltech
+        ethic
+         honey
+          intoxicate
+           lego
+            lemon.
+             mad elks
+              masque
+               massive
+                matrix
+                 mirage 
+                  mystic
+                   parallax
+                    passion
+                     prodigy
+                      puzzle
+                       scoopex
+                        spaceballs
+                         spoon
+                          syndicate
+                           tarkus team
+                            the black lotus
+                             trsi-innovations
+
+@endnode
+
+@node wanted "wanted"
+
+for the x-files i'm searching for up-to-date news:
+
+with news i mean:
+
+            - memberlists (with username and function (and land if possible))
+            - newcommers (with old group if possible)
+            - "go-away'ers" (with reason like new group, kicked, left scene))
+            - general news about groups (like next releases, planed projects
+                                         planned parties, and so on...)
+            - information about parties (like invitations, results, reports,
+                                         visitor-lists)
+            - news about everything that's worth interesting
+
+i can not check every news i get. so it is possible, that an error appears in
+the x-files. don't blame me for this, but please mail me the error with the
+correction and i will fix it immediately.
+
+i am also searching for ascii-logos for x-files. 
+
+so, if you have news, corrections, comments, suggestions, ideas or anything
+else worth mentioning, then contact me at:
+
+                         @{"      contact-addresses       " link "contact"}
+@endnode
+
+@node futureplans "future plans"
+
+         - i want to make a real news-disk-mag out of x-files, not only
+           an amiga-guide-mag...
+
+         - i want to present more news and information... :-)
+@endnode
+
+@node contact "x-files - contact-addresses"
+
+
+if you want to reach me, send me a letter to:
+
+                         big-rat / EthiC & SYNDiCATE
+                                 Kai Hoepner
+                                 Niedstr. 16
+                                12159  Berlin
+                                   Germany
+
+or send me an e-mail to :
+
+                 Internet : bigrat@fub46.zedat.fu-berlin.de
+                     Fido : Kai Hoepner @ 2:2410/309.14
+
+
+or reach me on some boards in germany but mostly in berlin / germany....
+
+@endnode
+
+@node © "secret part"
+
+
+
+                                big-rat says :
+
+           ________      ____          ____        ______   _______
+        __/    ___/   __/    |__    __/    |______(__  __)_/   ___/ sYz!
+        |      _/_____|      __/____|      |     _|(-\\/-)|_     |_______
+        |      |      |      |      |     _|     \\__¯`'¯__/     |      |
+        |      |      |      |      |     \\_      |/    \\|      |      |
+        |__    :      ___    :      _______|      _`^^^^'___    :      |
+           \\__________|  \\__________|      |______|______|  \\__________|
+
+
+                            · R · U · L · E · Z ·
+
+@endnode
+
+
+@node news "x-files - news"
+
+
+
+        :@{"  A  " link a}:    :@{"  B  " link b}:    .@{"  C  " link c}.     @{"  D  " link d}     :@{"  E  " link e}:
+
+         @{"  F  " link f}      @{"  G  " link g}     :@{"  H  " link h}:    .@{"  I  " link i}.     @{"  J  " link j} 
+
+         @{"  K  " link k}     :@{"  L  " link l}:    :@{"  M  " link m}:     @{"  N  " link n}      @{"  O  " link o} 
+
+        :@{"  P  " link p}:     @{"  Q  " link q}      @{"  R  " link r}     :@{"  S  " link s}:    .@{"  T  " link t}.
+
+         @{"  U  " link u}      @{"  V  " link v}      @{"  W  " link w}      @{"  X  " link x}      @{"  Y  " link y} 
+
+         @{"  Z  " link z}      @{"  #  " link num}   :@{" parties " link "parties"}:
+@endnode
+
+
+@node a "a"
+
+         :@{"   abyss   " link "abyss"}:
+         :@{" accession " link "accession"}:
+         :@{"  avocado  " link "avocado"}:
+          @{"   axis    " link "axis"}
+@endnode
+
+@node b "b"
+
+         :@{" balance " link "balance"}:
+         :@{"  bomb   " link "bomb"}:
+@endnode
+
+@node c "c"
+
+          @{" contra " link "contra"}
+@endnode
+
+@node d "d"
+@endnode
+
+@node e "e"
+
+         :@{" eltech " link "eltech"}:
+         :@{" ethic  " link "ethic"}:
+
+@endnode
+
+@node f "f"
+@endnode
+
+@node g "g"
+@endnode
+
+@node h "h"
+
+         :@{" honey " link "honey"}:
+
+@endnode
+
+@node i "i"
+
+          @{" intoxicate " link "intoxicate"}
+@endnode
+
+@node j "j"
+@endnode
+
+@node k "k"
+@endnode
+
+@node l "l"
+
+          @{"  lego  " link "lego"}
+         :@{" lemon. " link "lemon."}:
+@endnode
+
+@node m "m"
+
+         :@{" mad elks " link "madelks"}:
+          @{"  masque  " link "masque"}
+         :@{" massive  " link "massive"}:
+         :@{"  matrix  " link "matrix"}:
+          @{"  mirage  " link "mirage"}
+         :@{"  mystic  " link "mystic"}:
+@endnode
+
+@node n "n"
+@endnode
+
+@node o "o"
+@endnode
+
+@node p "p"
+
+         :@{" parallax " link "parallax"}:
+         :@{" passion  " link "passion"}:
+         :@{" prodigy  " link "prodigy"}:
+          @{" puzzle   " link "puzzle"}
+@endnode
+
+@node q "q"
+@endnode
+
+@node r "r"
+@endnode
+
+@node s "s"
+
+         :@{"  scoopex   " link "scoopex"}:
+          @{" spaceballs " link "spaceballs"}
+         :@{"   spoon    " link "spoon"}:
+         :@{" syndicate  " link "syndicate"}:
+@endnode
+
+@node t "t"
+
+          @{"   tarkus team    " link "tarkusteam"}
+          @{" the black lotus  " link "theblacklotus"}
+          @{" trsi-innovations " link "trsi-i"}
+@endnode
+
+@node u "u"
+@endnode
+
+@node v "v"
+@endnode
+
+@node w "w"
+@endnode
+
+@node x "x"
+@endnode
+
+@node y "y"
+@endnode
+
+@node z "z"
+@endnode
+
+@node num "#"
+@endnode
+
+@node parties "parties"
+
+         :@{"   Mekka 1996   " link "mekka1996"}:
+          @{" Symposium '96  " link "symposium96"}
+          @{" The Party 1995 " link "party5"}
+
+@endnode
+
+@node abyss "abyss"
+
+ Abyss
+
+     Alloy            -    mascot
+     Bartman          -    coder
+     Dexter           -    coder
+     Dreamer          -    sounder
+     Jumping Pixel    -    graphician
+     Luka             -    sounder
+     Moon             -    coder
+     Neurodancer      -    sounder, sysop
+     Pink             -    sounder, coder
+     Poet             -    coder
+     Qwerty           -    swapper
+     SMC              -    coder
+     Spin             -    coder
+     Sting            -    swapper
+     Toxic            -    graphician
+     Tyshdomos        -    graphician
+
+@endnode
+
+@node accession "accession"
+
+ Accession
+
+     Accident
+     Brainiac
+     D-Ream
+     DDT
+     Diablo
+     Illuminator
+     Iron Code
+     Longplay
+     MadBoy
+     MATH
+     MrT
+     Obitus
+     Palex
+     PowerSlave
+     Raiden
+     Shocker
+     Silva
+     Target
+     The Kid
+     TVR
+     WyreHead
+     X-Ray
+     ZeR0
+
+ - DDT was busted for pirated cdrom business.
+
+ - Longplay/Accession will be leading if DDT has to go to jail.
+
+ - if you want to get in contact with any member of this group, you can reach
+   them via internet. send e-mail to accession@cute.fi. every member will get
+   the mail.
+
+@endnode
+
+@node avocado "avocado"
+
+ Avocado
+
+     Addict         -    coder                                -    finland
+     Apache         -    sysop                                -    finland
+     Base           -    swapper                              -    germany
+     Cro            -    coder                                -    australia
+     Devistator     -    swaper, graphician, ascii-artist     -    england
+     Enzyme         -    organizer, sounder, swapper          -    finland
+     Felix          -    swapper                              -    norway
+     John Harder    -    graphician, swapper, ascii-artist    -    finland
+     KML            -    swapper, trader                      -    finland
+     Moon           -    coder                                -    austria
+     Pozz           -    graphician, swapper                  -    sweden
+     Realitor       -    coder, swapper                       -    england
+     Sixpack        -    swapper, editor                      -    norway
+     Stevie         -    ascii-artist, swapper                -    sweden
+     Substance      -    organizer, sounder, swapper          -    finland
+     Zandax         -    swapper, sounder                     -    finland
+
+ - K!nky renamed to Avocado.
+
+ - Avocado is pure AGA!
+
+ - Lithium is retired until police returns his Amiga.
+
+ - Bracus & Casper are retired during their studies.
+
+ - Miro is retired until he gets a new Amiga.
+
+ - Grand is retired.
+
+ - Svos was kicked.
+
+ - Blade was kicked.
+
+ - Woober was kicked.
+
+ - Beholder was kicked.
+
+ - Madman was kicked.
+
+ - Rockeronic was kicked.
+
+ - All the A500 members were kicked.
+
+ - Dutch devision were kicked.
+
+ - Belgian devision were kicked.
+
+ - Turkish devision were kicked.
+
+ - Whole Polish devision were kicked.
+
+ - KML started modemtrading.
+
+@endnode
+
+@node axis "axis"
+
+ Axis
+
+     Anthony      -    coder         -    netherlands
+     Celtic       -    coder         -    netherlands
+     Clary        -    swapper       -    france
+     Hollywood    -    sounder       -    united kingdom
+     Iso          -    sounder       -    netherlands
+     LoWLiFe      -    graphician    -    netherlands
+     Nik          -    coder         -    united kingdom
+     Rodney       -    graphician    -    sweden
+     Stelios      -    coder         -    greece
+     Steroid      -    swapper       -    netherlands
+     Subi         -    sounder       -    united kingdom
+
+@endnode
+
+@node balance "balance"
+
+ Balance
+
+ - a new swedish devision was founded.
+
+ - Fizban (coder) has left the scene.
+
+ - Vegard has left them and has joined Melon Design.
+
+ - Cyboman has left them and has joined Ambrosia.
+
+ - Deelite has joined as doublemember (Razor 1911).
+
+@endnode
+
+@node bomb "bomb"
+
+ Bomb
+
+ - Clawz has changed his handle into Claws.
+
+ - Genghis and Claws have joined Impact Studios (PC) as doublemember.
+
+ - Made (graphician) has joined from from Scoopex.
+
+@endnode
+
+@node contra "contra"
+
+ Contra
+
+     H2o       -    ascii-artist
+     mESS      -    ascii-artist
+     Mogue     -    ascii-artist
+     Rapid     -    ascii-artist
+     sTYLEz    -    ascii-artist
+     Treach    -    ascii-artist
+
+@endnode
+
+@node eltech "eltech"
+
+ Eltech
+
+     BLIND MAN       -    sysop                             -    united kingdom
+     C-RAD           -    sounder                           -    united kingdom
+     COSHER          -    coder                             -    norway
+     D-CODE          -    graphician, trader                -    united kingdom
+     DR. DEATH       -    sounder, swapper                  -    norway
+     DR. OCTAVE      -    sounder                           -    united kingdom
+     HAMPO           -    swapper                           -    united kingdom
+     HELLRAZOR       -    raytracer                         -    norway
+     HURRICANE       -    swapper                           -    norway
+     INFERNO         -    ascii-artist, sounder             -    united kingdom
+     JESTA           -    coder, swapper                    -    united kingdom
+     LITHIUM         -    organizer, swapper                -    united kingdom
+     LOOPY           -    sysop                             -    united kingdom
+     LOZ             -    coder, graphician                 -    united kingdom
+     MAZE            -    sounder, swapper                  -    norway
+     MIC FLAIR       -    organizer, trader                 -    united kingdom
+     MR. ORANGE      -    graphician                        -    united kingdom
+     MUSE            -    sounder, sysop                    -    australia
+     ORION           -    coder                             -    united kingdom
+     PINK PANTHER    -    sysop                             -    norway
+     PREACHER        -    coder, graphician                 -    norway
+     QUACKERS        -    coder, sysop                      -    united kingdom
+     REALITOR        -    coder, swapper                    -    united kingdom
+     SCREECH         -    sounder                           -    united kingdom
+     SKINNER         -    organizer, swapper                -    norway
+     SPLASH          -    /X-coder, sysop                   -    norway
+     VIOLATOR        -    trader                            -    united kingdom
+     WADE            -    organizer, graphician, swapper    -    united kingdom
+
+ - Permanent Vacation BBS is back online.
+
+ - hELLRAZOR joined as raytracer.
+
+ - cOSHER joined as coder.
+
+ - sKINNER left the modem scene due to financial troubles.
+
+ - lITHIUM was busted for the use of 0800 numbers.
+
+ - Flamestrike BBS goes offline due to sPLASH`S army service.
+
+ - dR.dEATH joins Apollo as doublemember.
+
+@endnode
+
+@node ethic "ethic"
+
+ Ethic
+
+     big-rat        -    organizer, editor (x-files), internet    -    germany
+     Bitbuster      -    coder                                    -    germany
+     Castor         -    sounder                                  -    germany
+     Cosy           -    coder                                    -    germany
+     cOZMO          -    raytracer                                -    germany
+     Cueball        -    coder, raytracer                         -    germany
+     Hawk Hunter    -    sysop                                    -    germany
+     heron          -    graphician                               -    germany
+     LuCaS          -    modem-organizer, editor, sysop           -    germany
+     Madstop        -    leader, coder                            -    germany
+     Magic Max      -    co-leader, sysop                         -    germany
+     mETA           -    sounder, raytracer                       -    germany
+     Mr.U           -    coder                                    -    germany
+     Nero           -    graphician                               -    germany
+     Nowawes        -    sounder                                  -    germany
+     Pollux         -    sounder                                  -    germany
+     Riker          -    trader                                   -    germany
+     sPICE          -    raytracer                                -    germany
+     Starbuck       -    raytracer                                -    germany
+     Stingray       -    trader                                   -    germany
+     Tumor          -    raytracer                                -    germany
+
+- heron joined from Syndicate as graphician and is now doublemember of
+  Ethic and Syndicate.
+
+@endnode
+
+@node honey "honey"
+
+ Honey 
+
+     BAFFLE            -    sysop
+     BEVERAGE          -    coder
+     BLACK LINE        -    sysop, coder, trader
+     COUNT-ZERO        -    ascii-artist, sysop
+     DARTAGNAN         -    ascii-artist
+     DEFECT            -    trader
+     DIABLO            -    sysop, trader
+     DISTLER           -    sysop, coder
+     DIZ'NEE           -    trader
+     EXNER             -    trader
+     FLEA              -    sounder
+     GANN              -    coder
+     GOZZ              -    ascii-artist
+     H2O               -    sysop, ascii-artist
+     HENCE             -    coder
+     HUZ               -    trader
+     KURGAN            -    trader
+     LAZ               -    graphics
+     MADDOX            -    coder
+     MARDUK            -    trader
+     MISFIT            -    ascii-artist
+     MODE              -    trader
+     MOZART            -    trader
+     NIVEK             -    sounder
+     OUTCAST           -    trader
+     PAD               -    graphics, ascii-artist
+     PSYCHO            -    sysop
+     PULSE             -    graphician
+     QEN               -    sounder
+     SCARFACE          -    ascii-artist, trader
+     SHAM              -    graphician
+     SLOWRIDER         -    trader
+     SPROCKET          -    trader
+     STAIN             -    trader
+     STYLEWARS         -    sysop, trader
+     THE CAT KILLER    -    trader
+     TITO              -    coder
+     U-MAN             -    ascii-artist, sysop
+     ZIZ               -    sysop
+
+@endnode 
+
+@node intoxicate "intoxicate"
+
+ Intoxicate
+
+     chRiSTbaNE    -    ascii-artist
+     haWkiNS       -    coder
+     manGAR        -    ppe supporter, sysop
+     nEophytE      -    coder
+     phOS4         -    ascii-artist, sysop
+     shAQ          -    trader
+     shoT          -    ascii-artist
+     shy guy       -    trader, sysop
+     trAUma        -    sounder
+     yoDA          -    trader
+
+@endnode
+
+@node lego "lego"
+
+ Lego
+
+     BAILEY         -    coder
+     DECCA          -    swapper, informant
+     DOC HOLIDAY    -    musician
+     DSN            -    graphician
+     MAXIMILIAN     -    coder
+     NOSE           -    graphician, raytracer
+     RAWSTYLE       -    coder, musician
+     SOL            -    graphician
+     SIRE           -    ascii-artist
+     TROOPER        -    sysop, graphician
+     TWICE          -    coder
+     TWILIGHT       -    musician
+
+@endnode
+
+@node lemon. "lemon."
+
+ Lemon.
+
+     Astro       -    RAW-editor
+     Blazor      -    coder
+     Dan         -    coder
+     Del         -    coder
+     Facet       -    graphician
+     Spaceman    -    sounder
+     Supernao    -    sounder
+
+ - they were refounded. Facet and co. thought that the groups that they were
+   in ( Spaceballs & Virtual Dreams ) had not the things Lemon. has had:
+           regular contact with each other and fun and friendship.
+
+@endnode
+
+@node madelks "mad elks"
+
+ Mad Elks
+
+ - they were refounded.
+
+ - Iron/ex-TRSI is organizer and will soon bring out a new pack
+   ('2 Fuck da Glenz-pack').
+
+ - General Lee has joined from Surprise! Prod.
+
+ - Action has joined from Energy.
+
+ - Alice has joined from Picco as "swapperess".
+
+ - they are searching for more members.
+
+@endnode
+
+@node masque "masque"
+
+ Masque
+
+     fade one         -    graphician    -     amiga
+     fuzzel           -    coder         -     pc
+     lord chaos       -    coder         -     pc
+     peachy           -    graphician    -     amiga/pc
+     romeo knight     -    sounder       -     amiga
+     vogue            -    sounder       -     pc
+     wayne mendoza    -    coder         -     amiga/pc
+     16-beat          -    sounder       -     amiga
+
+@endnode
+
+@node massive "massive"
+
+ Massive
+
+  Felix        -    main-organizer, swapper           -    norway
+  Hysteric     -    swapper                           -    france
+  Jummen       -    co-organizer, swapper             -    sweden
+  Marl         -    graphician, swapper               -    norway
+  Maze         -    sounder, ascii-artist, swapper    -    norway
+  Moon         -    coder                             -    austria
+  Pay          -    ascii-artist, swapper             -    sweden
+  Substance    -    sounder, swapper                  -    finland
+
+@endnode
+
+@node matrix "matrix"
+
+ Matrix
+
+     Astray        -    sounder
+     Budweiser     -    sysop, trader
+     Dr.Sharon     -    coder
+     Gravedancer   -    ascii-artist, editor
+     mESS          -    ascii-artist
+     Shadow        -    graphician (on trial)
+     Skyphos       -    coder, sounder, co-leader
+     Stingray      -    trader, co-leader
+     Stone         -    internet-organizer, supplier
+     X-Modus       -    leader, ascii-artist
+
+ - Lucas has left.
+
+@endnode
+
+@node mirage "mirage"
+
+ Mirage
+
+     BLO       -    sounder
+     DANNY     -    graphician
+     JACK      -    coder, internet-organizer
+     JAKE      -    sysop (No Vegetables)
+     PROTEC    -    coder
+     RETEP     -    sysop (Mass Appeal)
+     TOMCAT    -    raytracer
+
+@endnode
+
+@node mystic "mystic"
+
+ Mystic
+
+     BARTESEK      -    sounder
+     CBM80         -    coder
+     CHARON        -    coder
+     GUNMAN        -    graphician, swapper
+     JACKAL        -    graphician
+     JEZO          -    graphician
+     LARSEN        -    coder
+     MARS          -    swapper
+     MSS           -    coder
+     NINJA         -    swapper
+     RESET         -    graphician
+     TEDY          -    coder
+     TRASH HEAD    -    swapper
+     THE KNIGHT    -    swapper
+     XTD           -    sounder, organizer
+
+ - The Knight has joined from Obsession.
+
+@endnode
+
+@node parallax "parallax"
+
+ Parallax
+
+     Allah       -    ???
+     Bandog      -    coder
+     Debug       -    coder
+     Hijack      -    ???
+     Legend      -    sounder
+     Metal       -    ???
+     Mike        -    ???
+     Mistral     -    graphician
+     Sardiini    -    ???
+     Simply      -    coder
+     Top-Azz     -    ???
+     Tukan       -    graphician
+     Warthog     -    ???
+     Yolk        -    sounder
+
+@endnode
+
+@node passion "passion"
+
+ Passion
+
+     Blizzart       -    graphician
+     Boogeyman      -    coder
+     Cutcreator     -    sounder
+     Cybrush        -    graphician
+     Decoy          -    swapper
+     Jake           -    sounder
+     Pearl          -    editor
+     Prowler        -    graphician
+     Ramesa         -    sounder
+     Silicon        -    graphician
+     Subject        -    sounder
+     The Colonel    -    trader
+     The Whistle    -    coder, sounder
+     Webster        -    sysop
+     X-Man          -    trader
+     Zarch          -    trader
+
+ - Zarck & X-Man have joined from Triflex & Addonic.
+
+ - Pearl has stopped swapping.
+
+@endnode
+
+@node prodigy "prodigy"
+
+ Prodigy
+
+     Argon          -    trader                -    germany
+     Centory        -    supplier              -    united kingdom
+     Cyquest        -    trader                -    germany
+     Diddl          -    supplier              -    germany
+     Generation     -    sysop                 -    germany
+     Hitpoint       -    cracker               -    germany
+     Jake           -    sysop, trader         -    netherland
+     Mercury        -    sysop                 -    germany
+     Metal Force    -    sysop, cracker        -    denmark
+     Nitro          -    main-organizer        -    germany
+     Nostromo       -    spreader, supplier    -    germany
+     Picard         -    sysop                 -    usa
+     Rastaman       -    trader                -    germany
+     Razor          -    main-organizer        -    germany
+     S.U.X.         -    supplier              -    germany
+     Skeleton       -    sysop                 -    usa
+     Stargate       -    trader                -    germany
+     The Best!      -    cracker               -    germany
+
+@endnode
+
+@node puzzle "puzzle"
+
+Puzzle
+
+  Archangel    -    sounder            -    norway
+  Fazion       -    coder              -    denmark
+  Firebird     -    party-organizer    -    denmark
+  Jedi         -    sysop              -    norway
+  Kreon        -    coder              -    denmark
+  Mickey       -    coder              -    denmark
+  Phonetic     -    raytracer          -    denmark
+  Relief       -    sounder            -    denmark
+  Robotnik     -    coder              -    denmark
+  SCA          -    coder              -    denmark
+  Selector     -    coder              -    denmark
+  Tactica      -    graphician         -    denmark
+
+@endnode
+
+@node scoopex "scoopex"
+
+ Scoopex
+
+ - Akiro & Dr. Poop have joined.
+
+ - Spycatcher & NHP have rejoined from TRSI.
+
+ - Mel'o'dee, Cocoon, Jojo, Darkman, Merlin, Trifox und Triton were kicked.
+
+ - Splatterhead (swapper) has joined from Flying Cows.
+
+ - NTSC has joined from Hoodlum as trainer-maker, coder and supplier.
+
+ - Mad Butcher has joined as hardware supplier.
+
+ - Made has left them and has joined Bomb.
+
+@endnode
+
+@node spaceballs "spaceballs"
+
+spaceballs
+
+     Danny          -    graphician
+     Dope           -    coder
+     Jobbo          -    coder
+     Kingpin        -    swapper, sysop
+     KR'33          -    swapper
+     Lizard         -    sounder, organizer
+     Lone Starr     -    coder
+     Lord Helmet    -    ???
+     Shortie        -    coder
+     Tim            -    coder
+     Vinnie         -    sounder
+     Yoghurt        -    organizer
+
+@endnode
+
+@node spoon "spoon"
+
+ Spoon
+
+ - Rip is for 3,5 month in Israel. So the demo "9" will be finished if he
+   is back (one module is missing now).
+
+ - Subsonic has joined as sounder and graphician.
+
+@endnode
+
+@node syndicate "syndicate"
+
+ Syndicate
+
+     Airworx        -    sounder, sysop                 -    germany
+     Beatnik        -    coder                          -    germany
+     big-rat        -    organizer, editor (x-files)    -    germany
+     Bloodrock      -    coder, sounder                 -    germany
+     Booker         -    sysop                          -    germany
+     Death Angel    -    sysop                          -    germany
+     Doc            -    coder                          -    germany
+     heron          -    graphician                     -    germany
+     HNK            -    sounder                        -    germany
+     Lychesis       -    grapphician                    -    germany
+     Marauder       -    coder, graphician              -    germany
+     Modulator      -    sounder, coder                 -    germany
+     Mtm            -    coder                          -    germany
+     Specter        -    coder, graphician              -    germany
+     Strider        -    coder                          -    germany
+     Stylez         -    graphician, ascii-artist       -    germany
+     URAN 235       -    ideas-supplier, coder          -    germany
+     Yankee         -    sysop
+
+ - heron joined Ethic as graphician and is now a doublemember from Ethic
+   and Syndicate.
+
+@endnode
+
+@node tarkusteam "tarkus team"
+ 
+ Tarkus Team
+
+     DCSL
+     Earl Of Lennox
+     Gucky
+     iAN
+     Karpow
+     MAGiX
+     Spider
+     Stargate
+     Voice & Mutant
+ 
+@endnode
+
+@node theblacklotus "the black lotus"
+
+ The Black Lotus
+   
+  amiga section:
+
+     Axm              -    graphician
+     Equalizer        -    coder
+     Fishbone         -    graphician
+     Gizmo            -    coder
+     HitMan           -    sysop
+     I-GO             -    coder
+     Kajiu            -    sounder
+     Ken              -    coder
+     Offa             -    coder
+     Overlord         -    trader, ascii-artist
+     Noy              -    coder
+     Rubberduck       -    coder
+     Sag              -    coder, sounder
+     Skyhigh          -    coder
+     Snorpax Tudor    -    graphician
+     Shark            -    sysop
+
+
+  pc section:
+
+     Hokke            -    coder
+     Exon             -    coder
+     Wox              -    coder
+     Jesse            -    coder
+
+@endnode
+
+@node trsi-i "trsi-innovations"
+
+ TRSI-Innovations
+
+     Beatnik    -  coder  -  TRSI/F-Innovation
+     Bloodrock  -  coder  -  TRSI/F-Innovation
+     ByteAndi   -  coder  -  TRSI/X-Innovation
+     CøRteX     -  coder  -  TRSI/X-Innovation
+     Dr.Dre!    -  coder  -  TRSI/X-Innovation
+     Fuzzy      -  coder  -  TRSI/T-Innovation
+     SieGeL     -  coder  -  TRSI/X-Innovation
+     Spy        -  coder  -  TRSI/X-Innovation
+     Strider    -  coder  -  TRSI/F-Innovation
+
+@endnode
+
+@node symposium96 "symposium '96"
+
+ SYMPOSIUM '96
+
+ The Symposium '96 will be held on Eastern 1996 (5th to 8th April)
+ in Hamburg / Germany.
+ It will be organized by the following groups :
+
+     Polka Brothers
+     Phantasm
+     Lego
+     Avena (Falcon)
+     Absence (Falcon)
+     Oxyron (C64)
+
+ The organizers of the 680XX Convention, the BBX Symposium '95 and the
+ Fried Bits parties have met again to set a new standard in German demo
+ scene festivals.
+
+
+ What:
+ ~~~~~
+ An event for creative computer freaks on Amiga, PC, Falcon, C64
+ and Archimedes.
+
+
+ Compos:
+ ~~~~~~~
+ - Demo Competition (all systems)
+ - Intro Competition (PC, Amiga, Falcon)
+ - Coding Competition (PC, Amiga, Falcon)
+ - Graphics Competition
+ - Module Competition (ProTracker)
+ - Multichannel Competition (Executable)
+ - Video Competition (PAL VHS/SVHS)
+ - Wild Competition (any hardware)
+
+
+ Prizes:
+ ~~~~~~~
+ Sponsored hardware and software from known companies all around the world.
+
+
+ Facilities:
+ ~~~~~~~~~~~
+ Place for about 1000 people, large video beam, dolby surround sound system
+ and many other things known from other parties.
+
+@endnode
+
+@node party5 "The Party 1995"
+
+ The Party 1995
+
+ Introduction
+ ~~~~~~~~~~~~
+ Awarded as "Most important scene event in 1994" we are proud to invite
+ you to the 5th anniversary of the original scene party; The Party.
+
+
+ Where & When
+ ~~~~~~~~~~~~
+ The Party 1995 will be held in Scandinavia's largest Hall & Conference
+ complex; "Dronning Margrethe Hallen", which is located in Fredericia in
+ the middle of Denmark. The Party will be held from Wednesday 27th of
+ December at 10:00 CET to Friday 29th of December at 12:00 CET.
+
+
+ Facilities
+ ~~~~~~~~~~
+ - Room for 4000 people!
+ - A quiet, seperate hall for sleeping.
+ - All info about what's going on will be published on a large bulletin
+   board near The Information and on the big screen.
+ - A cafeteria and a kiosk will be open all day. Fair prices.
+ - Extremely  **powerful**  PA equipment (20.000 watt) and a 1000 x 800 cm
+   high quality screen.
+ - The Party 1995 T-Shirts will be sold at The Information.
+
+
+ Events
+ ~~~~~~
+ - 50 hours non-stop activities.
+ - 9 main competitions with great prizes.
+ - Laser Matic - The laser game!
+ - Lots of computergame competitions with fine prizes.
+ - Traditional party-events like: Body-crashing and DiskOs.
+ - Live concerts at the stage.
+ - Enormous RAVE-Party!
+ - Giant Magic Card tournament.
+ - Conferences with Escom and Amiga Technologies.
+ - Plus much more...
+
+
+ Competitions
+ ~~~~~~~~~~~~
+ - Main competitions and prizes:
+
+   Amiga Demo     Pc Demo
+   1. $3500       1. $3500
+   2. $1500       2. $1500
+   3. $750        3. $750
+   4. $500        4. $500
+   5. $250        5. $250
+
+   Music Compo    Gfx Compo
+   1. $700        1. $700
+   2. $400        2. $400
+   3. $300        3. $300
+   4. $200        4. $200
+   5. $100        5. $100
+
+ Also great prizes for WiLD-, Intro- and C-64-Demo compos - more info soon.
+ Note! The prizes may be both cash and hardware.
+
+
+ Entrance price
+ ~~~~~~~~~~~~~~
+ - Due to the extra facilities, events, competitions and prizes the entrance
+   fee will be dkk 250.
+
+
+ Please note
+ ~~~~~~~~~~~
+ - We will not accept anybody selling food, disks etc. without our permission.
+ - Alcohol and drugs are not allowed at the party place. If we find any it
+   will be confiscated and NOT given back.
+ - Intoxicated people will be thrown out or handed over to the police.
+ - We will not accept any racist signs or acting, weapons etc.
+ - People who cause any damages will ofcourse have to pay for it.
+ - We take no responsibility for illegal swapping, software etc.
+
+
+ Adresses
+ ~~~~~~~~
+ Party place:
+                Dronning Margrethe Hallen
+                Vester Ringvej 101
+                7000 Fredericia
+                Denmark
+
+ Organizers:
+                The Party 1995
+                Postbox 755
+                9100 Aalborg
+                Denmark
+
+ The Party-Phone -for information and registration:  (+45) 98 625859
+
+ Modem Registration:  Mainline BBS (+45) 98 153062  &  (+45) 98 153562
+
+ Net Registration:
+
+ - Internet:   -> theparty@cybernet.dk <-
+ - Fidonet:         -> 2:238/67.1 <-
+
+ Furthermore a diskmag will be released with detailed information, and soon
+ you can surf onto our World Wide Web site on the internet, where there will
+ be info updates and any crazy suprises we can come up with.
+
+
+
+                          R E G I S T R A T I O N
+      _______________________________________________________________
+     |                                                               |
+     |  Yes, we are coming to The Party 1995                         |
+     |                                                               |
+     |  Name / Handle.......................:                        |
+     |  Group & Country.....................:                        |
+     |  Number of persons coming............:                        |
+     |  Number of computers.................:   _Amiga  _Pc   _C-64  |
+     |  Do you want to reserve tables.......:   _Yes    _No          |
+     |_______________________________________________________________|
+
+Fill in this form and (e)mail it to any of the registration addresses above.
+
+@endnode
+
+@node mekka1996 "Mekka 1996"
+
+ MEKKA 1996
+
+ Mekka 1996 will be organized by - amable -
+
+ 29th - 31st of March 1996  in  HITTFELD / GERMANY
+
+  I. Introduction / About Mekka '96
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   No long introduction... There will be a new Demo-Party in germany.
+   We do not expect it to be GiGANTIC or GREAT ... we want it to be small
+   and special. We try to connect a little group of talented guys, cheap
+   entrance fees and some kewl prices for the Compos.
+   
+   The main intention of MeKKa is, to create a GATHERING , with some WiRED
+   attenders who'll make it to THE PARTY of the year.
+   [Sorry... don't know how to insert "Assembly" in this ;)]
+
+   We expect you to go on a pilgrimage to demo-Mekka'96 and have fun you
+   never thought about.
+
+
+  II. Where and When
+  ~~~~~~~~~~~~~~~~~~
+   The Party will be held near Hamburg, the second largest city in Germany.
+   We will rent a congress center with room for about 700 persons and 500
+   computers.
+   First we thought of renting the "Congress Center Hamburg" ... But we
+   could not know how many guys will enter the arena -> so we've decided
+   to use the smaller room! We do NOT expect more than 700 guys to attend...
+   really ;)!
+
+   Date    : Friday 29 to Sunday 31 of March 1996
+             The doors will be opend on Friday at 18h [6pm]
+
+   Location: Veranstaltungszentrum "BURG" Seevetal in Hittfeld/Germany
+             That's very close to Hamburg.
+
+   The center lies between 3 motorways so it's the easiest way to get there
+   by car/bus, but to come by train and airplane will be possible too
+   although it is more expansive.
+
+
+  III. Costs
+  ~~~~~~~~~~
+   As you know Mekka will be held the first time in 1996. To calculate how
+   many people we have to expect please registrate. Therefor you will get
+   a reserved table for your computer(s). The earlier you reserve the better
+   will be the place of the table reserved for you in the party-room (to read
+   about registering scroll down a bit).
+
+   Entrance fee:
+   .............
+   You pay in advance  : DM 25,- / person (about 17 US-Dollars)
+   You are registered  : DM 30,- / person (about 21 US-Dollars)
+   Without registration: DM 35,- / person (about 25 US-Dollers)
+
+   The organisation is NON-COMMERCIAL!!! As usual the entrace-fee will be
+   distributed among the winners of the competitions.
+
+   We will be able to change foreign currency into german deutschmarks
+   during the hole party. Please concider that our exchange-rate may not
+   be very good.
+
+   The Price includes:
+   ~~~~~~~~~~~~~~~~~~~
+     - a table where you can place your computer
+     - electricity
+     - access to the party-network (if we get a network, see below)
+     - the oxigen you wast at the party-place ;)
+
+   If you don't bring a computer you are not entitled to get a table 
+   [There will be enough chairs]
+
+
+  IV. Features
+  ~~~~~~~~~~~~
+   We have not listed all of the features yet but here a list of the most
+   important points:
+
+     - The party-place is mostly one big hall !
+
+     - There will be a big screen of 5,5 * 3,7 meters !
+
+     - There is a very nice SOUND SYSTEM available in the "BURG"!
+
+     - Public voting for everybody ;)
+
+     - There'll be a big "MAGIC-THE GATHERING"-Compo!
+       Organiser : Ratzkartoffel/X-PoSuRe [reach him in our BBS]
+
+     - Sleepin' : suXX ... ;) ... there are two little rooms reserved for
+       tired guys ! QUIET rooms !
+
+
+  V. Competitions
+  ~~~~~~~~~~~~~~~
+
+   -=­ General Competition-Rules ­=-
+
+     - The Rules may change until the final invitation-text.
+
+     - At least one of the Competitors must be present.
+
+     - We must have all entries until Deadline (see below).
+
+     - If there are too (and I really mean toooooooooooo) many entries we
+       will make a preselection.
+
+     - The entry must be released at the party - not at any time before.
+       [Please release a "final"-Version of your productions at the Party]
+
+     - There are only PC-Competitions.
+
+   -= Demo/Intro Competition-Rules ­=-
+
+     - The Competition-PC will have following configuration:
+
+        Prozessor       : i486DX2-66 (maybe better)
+        RAM             : 8 MByte
+        Videocard       : PCI-Board with fast Videocard and 2 MB RAM
+        Soundboard      : - Gravis Ultrasound with 1 MByte RAM
+                          - Creative SoundBlaster 16 ASP
+        Operating System: DOS 6.2
+        Memory Configs. : anything possible with HIMEM.SYS or EMM386.EXE
+        Max. Base-Mem   : 600 KByte (= 614400 Bytes)
+
+     - The production should support a GUS or/and SB!
+
+     - No precalculated animations are allowed.
+
+     - 1oo% VGA-Register-Compatible Videomode MUST BE SUPPORTED.
+
+     - Additional you can use VESA 2.0-Videomodes too! Look for UNIVBE51!
+
+     - Your can test your production up to 3 times on our PC to fix the
+       latest hardware-problems.
+
+
+   -=­ Demo ­=-
+
+     - Maximum size: 4 MByte (= 4194304 Bytes)
+
+     - Only the first 15 min. of the Demo will be shown on the big screen.
+
+
+   -=­ Intro 64KB ­=-
+
+     - Maximum size: 64 KByte (= 65536 Bytes)
+
+     - Only the first 10 min. of the Intro will be shown on the big screen.
+
+
+   -=­ Intro 4KB ­=-
+
+     - Maximum size: 4 KByte (= 4096 Bytes)
+
+     - Sound (Adlib or whatever you want) is possible too.
+
+     - Only the first 5 min. of the Intro will be shown on the big screen.
+
+
+   -=­ Music 4ch ­=-
+
+     - Maximum size: 512 KByte (= 524288 Bytes)
+
+     - Allowed format: Must be playable with latest Cubic!
+
+     - Module will be played with the latest Cubic-Player on a PC defined
+        in the "Demo/Intro Competition-Rules".
+
+     - MIDI is not allowed
+
+     - Only the first 4 min. will be played during the competition.
+
+
+   -=­ Music Multichannel ­=-
+
+     - Maximum size: 1 MByte (= 1048576 Bytes)
+
+     - Allowed formats: Must be playable with latest Cubic!
+
+     - If your prefered Module-Format is not in the list above you must
+       bring the right module-player too.
+
+     - MIDI is not allowed
+
+     - Only the first 5 min. will be played during the competition.
+
+
+   -=­ Graphic ­=-
+
+     - Maximum 640x480 and 256 colors
+
+     - Allowed formats: GIF, BMP, PCX
+
+     - We must get two versions of this final graphic. One with and one
+       without the sign of the gfx-artist.
+
+     - The picture must be pixel hand-drawn - scans and calculated pictures
+       are not allowed.
+
+     - We need at least two significant steps of the picure.
+
+
+   -=­ ANSi ­=-
+
+     - No animations are allowed.
+
+     - Not more than 200 Lines!
+
+     - Will probably be shown with AcidView
+
+
+   -=­ 3D-Object ­=-
+
+     - Don't know the rules yet. They will follow in the very next version
+       of this invitation-file.
+
+     - We don't really know if we should make this compo!?
+
+
+   -=­ Surprise ­=-
+
+     - We will have some surprise-competitions at the party too.
+
+     - Hey! Please stop reading this part. If we would tell you something
+       about this compo it won't be a surprise any longer! ;)
+
+
+  VI. Prizes
+  ~~~~~~~~~~
+   The prizes depend on the number of attenders.
+
+     - At least 8.000,- DM will be given.
+       There will be both, hard- and softwareprices.
+
+  
+  VII. Voting
+  ~~~~~~~~~~~
+   There will be 1oo% public voting.
+
+     - This does not concer the surprise-competitions!
+
+     - If there are less than 200 attenders at the Party, there will be a
+       jury of known guyz having a weight of 3o%!
+       We DO NOT WANT A JURY and hope enough freaks are comming! 
+
+
+  VIII. Network
+  ~~~~~~~~~~~~~
+   Many parties in the last time had a party-network and we are trying to
+   have one too. It has a lot of advantages e.g.
+
+     - voting will be more easier and secure and
+
+     - all the entries of the competition will be stored on the server and
+       will be free to download a competition is finished.
+
+   We do NOT guarantee the network, but we will try very hard to get one!
+
+
+  IX. CD-ROM
+  ~~~~~~~~~~
+   We think that a CD-ROM is not the most important feature of a Party (!)
+   but we hope to have a Party-CDROM anyhow. We will try hard too!
+
+
+  X. T-Shirt
+  ~~~~~~~~~~
+   Nearly every party has a Party T-Shirt. We will produce a T-Shirt too...
+
+   It will be a very HIGH-Quality-shirt. It'll be designed by a well known
+   local guy, who already designed VERY kewl shirts.
+
+   You'll love it but remeber... it's limited!!!
+
+
+  XI. Sponsors
+  ~~~~~~~~~~~~~
+   We have not finished the conversation with all of our sponsors so we are
+   not able to give you a list of them yet.
+
+     - We can tell you that one of our sponsors will be a well known
+       international software-producer! [NOT MS! ;) ]
+
+   The complete list of sponsors will be released in a few days!
+
+
+  XII. Registration
+  ~~~~~~~~~~~~~~~~~
+   There are a lot of reasons why you should registrate. If you send the
+   registration form back to us you will
+
+     - save money because of a reduced entrace-fee (see above),
+
+     - get a better table (next the stage and the projector) and
+
+     - help us to calculate how many people we have to expect.
+
+   If not we cannot guarantee a free table for your computer.
+
+   PLEASE CHOOSE A PASSWORD for protecting your registration and your
+   directory on the party-server (if we get one, see above). Nobody else
+   but you will have access to your handle.
+
+         TNX in advance!
+
+
+   IF YOU WANT TO PAY IN ADVANCE :
+   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   YOU COULD PAY THE TICKETS IN ADVANCE.  
+   Please transfer the entrance-fee to one of the following bank-accounts 
+   (DM 25,- FOR EACH PERSON on the reservation-form):
+
+     Name of the Bank : Kreissparkasse Harburg
+     Bank-Nr (BLZ)    : 207 500 00
+     Account-Nr (Kto) : 211 00 888
+
+     Name of the Bank : Volksbank Neu Wulmstorf
+     Bank-Nr (BLZ)    : 207 691 71
+     Account-Nr (Kto) : 107 273 000
+
+     Please attach this line to your money order:  
+     "M96"-HANDLE-PASSWORD-REALNAME     [german: "Verwendungszweck"]
+
+   YOU ALSO HAVE TO FILL OUT THE REGISTRATION-FORM, too. Send it to one of
+   the following adresses:
+
+     Fido       : 2:240/5097
+     BBS        : ++49-4168-911042  V.34     FARMERS INN!
+                  ++49-4168-911041  X.75   SYSOP : Hardball
+                 
+                  - Use HANDLE="Mekka" and PASSWORD="Mekka" for fast login!
+                  - A registration-door will be installed!
+
+     Snail-Mail : Malte Kanebley
+                  - Mekka'96 -
+                  Im Dorfe 3
+                  21629 Neu Wulmstorf
+                  - GERMANY -
+
+   IF YOU DO NOT WANT TO PAY IN ADVANCE BUT TO REGISTER:
+   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   Please cut the registration form, fill it out and send it back to the
+   adress above.
+
+ ----------------------------------------------------------------------------
+ ----------------- cut here -------- cut here -------- cut here -------------
+
+   - Fill out this form in CAPITAL LETTERS!
+
+   - PLEASE try to pay in advance!
+
+   Name    : _________________________
+
+   Handle  : _________________________ [leave free if you don't have one]
+
+   Group   : _________________________ [leave free if you are not in a crew]
+
+   Country : _________________________ [you are comming from]
+
+   Password: _________________________ 
+
+   [Your passwort is only important, if you've paid in advance]
+
+   Address where we could contact you: _____________________________________
+
+                                       _____________________________________
+
+     (Possible is your Snail-, Fido-, InterNet- or CompuServe-mailaddress)
+
+   Number of Computers   : ______
+
+   Number of MTG-Players : ______
+
+   Number of Persons     : ______ [you + the persons listed below]
+
+   Please list all the Names/Handles of the Persons comming with you:
+
+   _________________________________________________________________________
+
+   _________________________________________________________________________
+
+   _________________________________________________________________________
+
+   _________________________________________________________________________
+
+   _________________________________________________________________________
+
+
+   NOTE: Only persons who are on this registration-form will get the reduced
+         entrace-fee. We have all names/handles stored in the computer!
+         The main reason of
+
+ ----------------- cut here -------- cut here -------- cut here -------------
+ ----------------------------------------------------------------------------
+
+  
+  XIII. Trips to Mekka'96
+  ~~~~~~~~~~~~~~~~~~~~~~~
+   There are no trips planned at the moment. Please contact us if you:
+
+     - want to organise a trip to Mekka'96.
+
+     - are seaching for someone who could take you along.
+
+     - have room in your car/bus.
+
+   If so you will get a few lines from this part of the file to insert your
+   message.
+
+
+  XIV. Organisers / Contacts
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~
+   Malte Kanebley                      (Hardball/amable - SysOp/Organising)
+   ........................................................................
+   Voice      : Reg'd guys will get it.
+   FidoNet    : 2:240/5097
+   BBS        : ++49-4168-512     ZYX     FARMERS INN!
+                ++49-4168-911041  X.75   SYSOP : Hardball
+                ++49-4168-911042  v.34     amable WHQ
+   Snail-Mail : Malte Kanebley
+                Im Dorfe 3
+                21629 Neu Wulmstorf / Germany
+
+
+   Jan Tegtmeier                               (StarCode - Code/Organising)
+   ........................................................................
+   Voice      : ++49-40-60671199
+   Fax        : ++49-40-6065669
+   FidoNet    : 2:240/5311.45
+   InterNet   : PV80090@PH80090.HH.eunet.de
+   CompuServe : 102404,2435
+   Snail-Mail : Jan Tegtmeier
+                Reinckeweg 9
+                22399 Hamburg / Germany
+
+
+   Also organisers are:
+   
+   CLiMAX/amable
+   
+   Landru/amable
+   
+   Ratzkartoffel/X-PoSuRe
+   
+
+  XV. Disclaimer
+  ~~~~~~~~~~~~~~
+   - We are not responsible for your equipment you bring to the party:
+     keep an eye on it.
+
+   - We are not responsible for possible accidents during the party.
+
+   - We are not interested in trouble making-people and will throw them out.
+
+   - Drugs are not allowed at the party-place.
+
+   - You have to pay for everything you damage.
+
+   - You have to bring your own wires with you. There is only one power-
+     connection for each table/computer.
+
+   - Ofcause hackes, cracked or illegal programs are not allowed.
+
+   - Racism is not allowed.
+
+   - You are unter German law and everthing that's forbidden outside the
+     party-place will be forbidden inside too!
+
+@endnode

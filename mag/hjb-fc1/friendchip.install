@@ -1,0 +1,31 @@
+; $VER: fRiENDCHiP! (c) by Haujobb.
+; HD-Installer Script written by Jazz/Haujobb.
+
+(set #introduction
+(cat "\n\n\n\n\nF R i E N D C H i P\n"
+     "\nharddrive installation script\n"))
+(message #introduction)
+(welcome)
+(set FCDir "friendchip1")
+(set default-dest
+     (tackon (askdir (prompt "Where would you like to install Friendchip?\n"
+                             "A drawer called '" FCDir "' will be created.")
+                     (help @askdir-help)
+                     (default @default-dest)
+                     (newpath)
+)
+     FCDir
+)
+)
+(set @default-dest default-dest)
+(makedir @default-dest
+         (infos)
+)
+(copyfiles
+	(prompt "Friendchip will now be installed...\n")
+	(source "")
+	(dest @default-dest)
+	(pattern "FRIENDCHIP#?")
+	(files)
+	(infos)
+)

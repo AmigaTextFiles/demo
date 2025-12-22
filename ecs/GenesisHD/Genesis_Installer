@@ -1,0 +1,64 @@
+(complete 0)
+
+(message 
+  "\n----------------------------------------"
+  "\n· Welcome to LLFB's \"Genesis\" HD Installer ·"
+  "\n----------------------------------------"
+  "\n\nAt last!! Genesis is here!"
+  "\nReleased at Euskal Party 5"
+  "\n(c) 1993 - 1997 !!"
+  "\n\n\n\n\n\nInstaller made by 007 & Skid / Ozone"
+  "\n\nGreetings to all our cool friends on LLFB"
+)
+
+(complete 2)
+
+(set @default-dest
+(askdir
+     (prompt ("Where do you want to install Genesis? A drawer will be created there."))
+     (help @askdir-help)
+     (default "Ram:")
+)
+)
+
+(set #dest (tackon @default-dest "Genesis"))
+
+(makedir #dest
+	(help @makedir-help)
+)
+
+(copyfiles (dest #DEST) (source "Loader"))
+
+(complete 5)
+
+(message ("\n\nInsert Genesis disk 1 into df0:"))
+                (working "\nPlease Wait... Reading disk 1 !")
+        (if
+                (= 0 (run ("disk2file 0 %s" (tackon #dest "Genesis.Disk1"))))
+        )
+
+(complete 25)
+
+(message ("\n\nInsert Genesis disk 2 into df0:"))
+                (working "\nPlease Wait... Reading disk 2 !")
+        (if
+                (= 0 (run ("disk2file 0 %s" (tackon #dest "Genesis.Disk2"))))
+        )
+
+(complete 50)
+
+(message ("\n\nInsert Genesis disk 3 into df0:"))
+                (working "\nPlease Wait... Reading disk 3 !")
+        (if
+                (= 0 (run ("disk2file 0 %s" (tackon #dest "Genesis.Disk3"))))
+        )
+
+(complete 75)
+
+(message ("\n\nInsert Genesis disk 4 into df0:"))
+                (working "\nPlease Wait... Reading disk 4 !")
+        (if
+                (= 0 (run ("disk2file 0 %s" (tackon #dest "Genesis.Disk4"))))
+        )
+
+(complete 100)

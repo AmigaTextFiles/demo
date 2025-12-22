@@ -1,0 +1,250 @@
+Global M68K Construktors
+	_INIT_1_DOS_c__DOSBase
+	_INIT_5_RememberTicks
+	_INIT_8_startup_c
+Global M68K Destruktors
+	_EXIT_4_free
+	_EXIT_1_DOS_c__DOSBase
+	_EXIT_0_Main
+No Global PPC Construktors
+No Global PPC Destruktors
+
+M68K Code
+
+
+  Hunk #0 ( Far Public ) 13308 Bytes (0x33fc)
+  _exit = 132 (0x84) referenced 3 times
+    File Övrigt:Programmering/StormC/StormSYS/startups/startup.o
+  _main = 180 (0xb4) referenced 2 times
+    File Övrigt:Programmering/Projekt/Radiation/main.o
+  _wbmain = 212 (0xd4) referenced 2 times
+    File Övrigt:Programmering/Projekt/Radiation/main.o
+  _INIT_8_startup_c = 244 (0xf4) unused, maybe local
+    File Övrigt:Programmering/Projekt/Radiation/startup.o
+  _message = 272 (0x110) referenced 1 times
+    File Övrigt:Programmering/Projekt/Radiation/startup.o
+  _shutdown = 334 (0x14e) referenced 4 times
+    File Övrigt:Programmering/Projekt/Radiation/startup.o
+  _startup = 826 (0x33a) referenced 1 times
+    File Övrigt:Programmering/Projekt/Radiation/startup.o
+  _playsong = 2364 (0x93c) referenced 1 times
+    File Övrigt:Programmering/Projekt/Radiation/sound.o
+  _stopsong = 2530 (0x9e2) referenced 1 times
+    File Övrigt:Programmering/Projekt/Radiation/sound.o
+  _startdemo = 2636 (0xa4c) referenced 1 times
+    File Övrigt:Programmering/Projekt/Radiation/demo.o
+  _maketpalette = 6516 (0x1974) referenced 1 times
+    File Övrigt:Programmering/Projekt/Radiation/palette.o
+  _fadedownpal = 6618 (0x19da) referenced 1 times
+    File Övrigt:Programmering/Projekt/Radiation/palette.o
+  _fadeuppal = 6692 (0x1a24) referenced 1 times
+    File Övrigt:Programmering/Projekt/Radiation/palette.o
+  _deinitpalette = 6766 (0x1a6e) unused, maybe local
+    File Övrigt:Programmering/Projekt/Radiation/palette.o
+  _initpalette = 6796 (0x1a8c) unused, maybe local
+    File Övrigt:Programmering/Projekt/Radiation/palette.o
+  _setpalen = 6844 (0x1abc) referenced 1 times
+    File Övrigt:Programmering/Projekt/Radiation/palette.o
+  _loadpalette = 7214 (0x1c2e) referenced 1 times
+    File Övrigt:Programmering/Projekt/Radiation/palette.o
+  _deinitchunky = 7376 (0x1cd0) referenced 1 times
+    File Övrigt:Programmering/Projekt/Radiation/picture.o
+  _initchunky = 7416 (0x1cf8) referenced 1 times
+    File Övrigt:Programmering/Projekt/Radiation/picture.o
+  _deinitbitmap = 7454 (0x1d1e) unused, maybe local
+    File Övrigt:Programmering/Projekt/Radiation/picture.o
+  _initbitmap = 7484 (0x1d3c) unused, maybe local
+    File Övrigt:Programmering/Projekt/Radiation/picture.o
+  _loadchunkypic = 7548 (0x1d7c) referenced 1 times
+    File Övrigt:Programmering/Projekt/Radiation/picture.o
+  _loadtable = 7672 (0x1df8) unused, maybe local
+    File Övrigt:Programmering/Projekt/Radiation/picture.o
+  _loadbmap = 7804 (0x1e7c) unused, maybe local
+    File Övrigt:Programmering/Projekt/Radiation/picture.o
+  _loadilbmap = 8016 (0x1f50) unused, maybe local
+    File Övrigt:Programmering/Projekt/Radiation/picture.o
+  _timerinitstart = 8228 (0x2024) referenced 1 times
+    File Övrigt:Programmering/Projekt/Radiation/timer.o
+  _newfunctimer = 8288 (0x2060) referenced 1 times
+    File Övrigt:Programmering/Projekt/Radiation/timer.o
+  _timerdiff = 8354 (0x20a2) referenced 1 times
+    File Övrigt:Programmering/Projekt/Radiation/timer.o
+  _dbuffwaitdraw = 8380 (0x20bc) referenced 1 times
+    File Övrigt:Programmering/Projekt/Radiation/dbuff.o
+  _dbuffdispnew = 8430 (0x20ee) referenced 1 times
+    File Övrigt:Programmering/Projekt/Radiation/dbuff.o
+  _c2p1x1_8_c5_bm = 8536 (0x2158) referenced 1 times
+    File Övrigt:Programmering/Projekt/Radiation/c2p.o
+  _TurboBltBitMap = 10148 (0x27a4) referenced 1 times
+    File Övrigt:Programmering/Projekt/Radiation/turbocpy.o
+  _checkmouse = 10208 (0x27e0) referenced 1 times
+    File Övrigt:Programmering/Projekt/Radiation/mouse.o
+  _drawtunnel = 10228 (0x27f4) referenced 1 times
+    File Övrigt:Programmering/Projekt/Radiation/tunnel.o
+  _memcpy = 10256 (0x2810) referenced 1 times
+    File Övrigt:Programmering/StormC/Lib/storm020.lib
+  _memset = 10296 (0x2838) referenced 1 times
+    File Övrigt:Programmering/StormC/Lib/storm020.lib
+  _malloc = 10368 (0x2880) referenced 1 times
+    File Övrigt:Programmering/StormC/Lib/storm020.lib
+  _free = 10788 (0x2a24) referenced 1 times
+    File Övrigt:Programmering/StormC/Lib/storm020.lib
+  _EXIT_4_free = 10984 (0x2ae8) unused, maybe local
+    File Övrigt:Programmering/StormC/Lib/storm020.lib
+  _rand = 11106 (0x2b62) referenced 1 times
+    File Övrigt:Programmering/StormC/Lib/storm020.lib
+  _INIT_5_RememberTicks = 11152 (0x2b90) unused, maybe local
+    File Övrigt:Programmering/StormC/Lib/storm020.lib
+  _clock = 11176 (0x2ba8) referenced 2 times
+    File Övrigt:Programmering/StormC/Lib/storm020.lib
+  _Close = 11352 (0x2c58) referenced 2 times
+    File Övrigt:Programmering/StormC/Lib/amiga.lib
+  _Open = 11372 (0x2c6c) referenced 2 times
+    File Övrigt:Programmering/StormC/Lib/amiga.lib
+  _Read = 11400 (0x2c88) referenced 2 times
+    File Övrigt:Programmering/StormC/Lib/amiga.lib
+  _Seek = 11428 (0x2ca4) referenced 1 times
+    File Övrigt:Programmering/StormC/Lib/amiga.lib
+  _AllocMem = 11456 (0x2cc0) referenced 1 times
+    File Övrigt:Programmering/StormC/Lib/amiga.lib
+  _CloseLibrary = 11480 (0x2cd8) referenced 1 times
+    File Övrigt:Programmering/StormC/Lib/amiga.lib
+  _CreateMsgPort = 11500 (0x2cec) referenced 1 times
+    File Övrigt:Programmering/StormC/Lib/amiga.lib
+  _DeleteMsgPort = 11516 (0x2cfc) referenced 1 times
+    File Övrigt:Programmering/StormC/Lib/amiga.lib
+  _FindTask = 11536 (0x2d10) referenced 1 times
+    File Övrigt:Programmering/StormC/Lib/amiga.lib
+  _FreeMem = 11556 (0x2d24) referenced 1 times
+    File Övrigt:Programmering/StormC/Lib/amiga.lib
+  _GetMsg = 11580 (0x2d3c) referenced 2 times
+    File Övrigt:Programmering/StormC/Lib/amiga.lib
+  _OpenLibrary = 11600 (0x2d50) referenced 1 times
+    File Övrigt:Programmering/StormC/Lib/amiga.lib
+  _SetTaskPri = 11624 (0x2d68) referenced 1 times
+    File Övrigt:Programmering/StormC/Lib/amiga.lib
+  _WaitPort = 11648 (0x2d80) referenced 2 times
+    File Övrigt:Programmering/StormC/Lib/amiga.lib
+  _AllocBitMap = 11668 (0x2d94) referenced 1 times
+    File Övrigt:Programmering/StormC/Lib/amiga.lib
+  _FreeBitMap = 11696 (0x2db0) referenced 1 times
+    File Övrigt:Programmering/StormC/Lib/amiga.lib
+  _LoadRGB32 = 11716 (0x2dc4) referenced 1 times
+    File Övrigt:Programmering/StormC/Lib/amiga.lib
+  _WaitBlit = 11740 (0x2ddc) referenced 1 times
+    File Övrigt:Programmering/StormC/Lib/amiga.lib
+  _WaitTOF = 11756 (0x2dec) referenced 1 times
+    File Övrigt:Programmering/StormC/Lib/amiga.lib
+  _AllocScreenBuffer = 11772 (0x2dfc) referenced 1 times
+    File Övrigt:Programmering/StormC/Lib/amiga.lib
+  _ChangeScreenBuffer = 11800 (0x2e18) referenced 2 times
+    File Övrigt:Programmering/StormC/Lib/amiga.lib
+  _CloseScreen = 11824 (0x2e30) referenced 1 times
+    File Övrigt:Programmering/StormC/Lib/amiga.lib
+  _CloseWindow = 11844 (0x2e44) referenced 1 times
+    File Övrigt:Programmering/StormC/Lib/amiga.lib
+  _EasyRequest = 11864 (0x2e58) referenced 1 times
+    File Övrigt:Programmering/StormC/Lib/amiga.lib
+  _FreeScreenBuffer = 11892 (0x2e74) referenced 1 times
+    File Övrigt:Programmering/StormC/Lib/amiga.lib
+  _OpenScreenTags = 11916 (0x2e8c) referenced 1 times
+    File Övrigt:Programmering/StormC/Lib/amiga.lib
+  _OpenWindowTags = 11940 (0x2ea4) referenced 1 times
+    File Övrigt:Programmering/StormC/Lib/amiga.lib
+  _SetPointer = 11964 (0x2ebc) referenced 1 times
+    File Övrigt:Programmering/StormC/Lib/amiga.lib
+  main() = 11996 (0x2edc) referenced 2 times
+    File Övrigt:Programmering/StormC/StormSYS/lib/stormcstartup020.lib
+  main(int,char **) = 12004 (0x2ee4) referenced 2 times
+    File Övrigt:Programmering/StormC/StormSYS/lib/stormcstartup020.lib
+  wbmain(WBStartup *) = 12012 (0x2eec) referenced 2 times
+    File Övrigt:Programmering/StormC/StormSYS/lib/stormcstartup020.lib
+  main(int,char *) = 12020 (0x2ef4) referenced 1 times
+    File Övrigt:Programmering/StormC/StormSYS/lib/stormcstartup020.lib
+  _EXIT_0_Main = 12500 (0x30d4) unused, maybe local
+    File Övrigt:Programmering/StormC/StormSYS/lib/stormcstartup020.lib
+  _INIT_1_DOS_c__DOSBase = 12552 (0x3108) unused, maybe local
+    File Övrigt:Programmering/StormC/StormSYS/lib/stormcstartup020.lib
+  _EXIT_1_DOS_c__DOSBase = 12584 (0x3128) unused, maybe local
+    File Övrigt:Programmering/StormC/StormSYS/lib/stormcstartup020.lib
+  _InitModules = 12648 (0x3168) referenced 1 times
+    File Övrigt:Programmering/StormC/StormSYS/lib/stormcstartup020.lib
+  _CleanupModules = 12716 (0x31ac) referenced 2 times
+    File Övrigt:Programmering/StormC/StormSYS/lib/stormcstartup020.lib
+  LibBaseC::LibBaseC(char *,unsigned long,short) = 12812 (0x320c) referenced 1 times
+    File Övrigt:Programmering/StormC/StormSYS/lib/stormcstartup020.lib
+  LibBaseC::~LibBaseC() = 13268 (0x33d4) referenced 1 times
+    File Övrigt:Programmering/StormC/StormSYS/lib/stormcstartup020.lib
+
+PowerPC Code
+
+
+Data
+
+
+  Hunk #1 ( Far Public ) 364 Bytes (0x16c)
+  _SysBase = 0 (0x0) referenced 17 times
+    File Övrigt:Programmering/StormC/StormSYS/startups/startup.o
+  _ExecBase = 36 (0x24) unused, maybe local
+    File Övrigt:Programmering/Projekt/Radiation/startup.o
+  _IntuitionBase = 40 (0x28) referenced 10 times
+    File Övrigt:Programmering/Projekt/Radiation/startup.o
+  _GfxBase = 44 (0x2c) referenced 5 times
+    File Övrigt:Programmering/Projekt/Radiation/startup.o
+  _AslBase = 48 (0x30) unused, maybe local
+    File Övrigt:Programmering/Projekt/Radiation/startup.o
+  _DosBase = 52 (0x34) unused, maybe local
+    File Övrigt:Programmering/Projekt/Radiation/startup.o
+  _MEDPlayerBase = 56 (0x38) referenced 1 times
+    File Övrigt:Programmering/Projekt/Radiation/startup.o
+  _demoscreen = 60 (0x3c) referenced 2 times
+    File Övrigt:Programmering/Projekt/Radiation/startup.o
+  _demowindow = 64 (0x40) unused, maybe local
+    File Övrigt:Programmering/Projekt/Radiation/startup.o
+  _demorport = 68 (0x44) unused, maybe local
+    File Övrigt:Programmering/Projekt/Radiation/startup.o
+  _screennr = 72 (0x48) referenced 2 times
+    File Övrigt:Programmering/Projekt/Radiation/startup.o
+  _initialpal = 76 (0x4c) unused, maybe local
+    File Övrigt:Programmering/Projekt/Radiation/startup.o
+  _emptypointer = 132 (0x84) unused, maybe local
+    File Övrigt:Programmering/Projekt/Radiation/startup.o
+  _sng = 164 (0xa4) unused, maybe local
+    File Övrigt:Programmering/Projekt/Radiation/sound.o
+  _musicmod = 168 (0xa8) unused, maybe local
+    File Övrigt:Programmering/Projekt/Radiation/sound.o
+  _palette = 236 (0xec) unused, maybe local
+    File Övrigt:Programmering/Projekt/Radiation/palette.o
+  _bitmap1 = 276 (0x114) unused, maybe local
+    File Övrigt:Programmering/Projekt/Radiation/picture.o
+  _starttime = 280 (0x118) unused, maybe local
+    File Övrigt:Programmering/Projekt/Radiation/timer.o
+  _stoptime = 284 (0x11c) referenced 1 times
+    File Övrigt:Programmering/Projekt/Radiation/timer.o
+  _funkctime = 288 (0x120) referenced 1 times
+    File Övrigt:Programmering/Projekt/Radiation/timer.o
+  _funketime = 292 (0x124) referenced 1 times
+    File Övrigt:Programmering/Projekt/Radiation/timer.o
+  _fdifftime = 296 (0x128) unused, maybe local
+    File Övrigt:Programmering/Projekt/Radiation/timer.o
+  _DOSBase = 300 (0x12c) referenced 9 times
+    File Övrigt:Programmering/StormC/StormSYS/lib/stormcstartup020.lib
+  _not_open__LibBaseC = 312 (0x138) referenced 1 times
+    File Övrigt:Programmering/StormC/StormSYS/lib/stormcstartup020.lib
+  ___init_table68k = 320 (0x140) referenced 2 times
+    File <Internal Assembled>
+  ___exit_table68k = 344 (0x158) referenced 1 times
+    File <Internal Assembled>
+
+BSS
+
+
+  Hunk #2 ( Far Public ) 3648 Bytes (0xe40)
+  _screenbuffers = 0 (0x0) referenced 2 times
+    File Övrigt:Programmering/Projekt/Radiation/startup.o
+  _screenbufferports = 8 (0x8) referenced 1 times
+    File Övrigt:Programmering/Projekt/Radiation/startup.o
+  _newpalette = 16 (0x10) unused, maybe local
+    File Övrigt:Programmering/Projekt/Radiation/palette.o
+
+END

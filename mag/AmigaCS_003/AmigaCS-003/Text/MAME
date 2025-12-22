@@ -1,0 +1,162 @@
+@{i}@{d FFC9AE}      @{c FF9D26}Také jste si nëkdy posteskli, ùe si na Amize
+     nemûùete zahrát staré hry, které jste hrávali
+      na hracích automatech?  Také jste si êíkali,
+      co ùe je na tëch hrách tak sloùitého, ùe je
+             nelze pêekonvertovat na Amigu?@{c}@{ui}
+
+
+  Naîtëstí se naîel çlovëk, který si tyto otázky poloùil
+také,  ale  narozdíl  od nás vîech se s tím rozhodl nëco     @{p MameLogo.png 420 0}
+udëlat.   Je to Ital (a pak, ùe jsou Italové flákaçi :-)
+a jmenuje se @{c FFF12E}Nicola Salmoria@{c}.  Nejdêíve si naprogramoval
+nëkolik  samostatných  emulátorû pro hry LadyBug, Mr.DO!
+a Pengo a multiemulátor pro hry PacMan.  To bylo v lednu
+roku   1997.   O  mësíc  pozdëji  se  rozhodl,  ùe  tyto
+jednotlivé  emulátory  slouçí do jednoho a pêidá podporu
+dalîích  her.  Tak vznikl velkolepý projekt celému svëtu
+známý pod názvem @{c FFF12E}MAME@{c}.
+
+  V souçasné dobë v tom jiù Nicola není sám, koordinaci projektu pêevzal Mirko Buffoni
+a  do  MAME  pêíspívá  pêes 100 lidí z celého svëta.  Pokud nëkomu z vás pêipadá jméno
+Nicola  Salmoria  povëdomé, tak vëzte, ùe je to bývalý(?) amigista, který stál u zrodu
+takových projekû jako napêíklad HexEd, StatRAM v3.0, PrintManager 2.0 a NewIcons.
+
+  A   teð   k   meritu   vëci.    MAME  znamená      @{p MAME-Commando.png 355 40}
+@{c FFF12E}MultipleArcadeMachineEmulator@{c}     a    je    to
+v podstatë emulátor hardware, který se pouùíval
+a pouùívá  v  hracích  automatech  známých snad
+vîem  elektronicko-herním  nadîencûm  z  poutí.
+Emuluje nëkolik typû procesorû @{c EEA883}(MC68000, M6502,
+M6805,  M6809,  Z80,  I8039,  I80286  a dalîí),
+zvukových   çipû   (YM2203,   YM3812,   YM2151,
+VLM5030,  TMS5220, SN76489, SN76496, AY-3-8910,
+NESPSG  a  dalîí)@{c} a grafických podpûrných çipû.
+Komunikaci  mezi  vlastními  emulátory ªùeleza"
+a samotnými  hrami  zajiîïuje  systém  driverû,
+které jsou specifické pro tu kterou hru.
+@{p MAME-GreenBeret.png 0 4}                                       V  souçasné  dobë je MAME ve verzi 0.33-beta6
+                                     a podporuje  @{c FFF12E}604@{c}  (!)  her.  Poslední oficiální
+                                     release (non-beta) je verze 0.31 s podporou 478
+                                     her.   Zdrojový kód MAME (psaný v çistém @{c EEA883}GNU C@{c})
+                                     je  volnë îiêitelný (ostatnë jako celý projekt)
+                                     a  tudíù  je  ho  moùno  portovat na libovolnou
+                                     platformu.    V  souçasné  dobë  exitují  porty
+                                     vytvoêené     pro     DOS,    Woknous,    Unix,
+                                     AcornArchimedes,  Mac  a  bohudík  (nebo  moùná
+                                     i bohuùel  ...   viz  dále) také pro Amigu (68k
+                                     i PPC).   Porty  vznikají  samozêejmë  s menîím
+                                     (Win,  Unix,  Acorn,  Mac)  çi  vëtîím  (Amiga)
+                                     zpoùdëním  za  hlavním  projektem (DOS).  Proto
+                                     docházi k tzv.  rozsynchronizování jednotlivých
+  portû.   Pro  DOS,  Win, Unix, Acorn a Mac je nejvyîîí verze jiù zmiñovaná beta 6,
+  kdeùto  pro  Amigu je k dispozici ªpouze" beta 5, která podporuje ªjenom" 583 her.
+  Nëkdo se mûùe cítit ochuzen o tëch 21 her, které podporuje beta 6 navíc, ale veête
+  Tomu,  ùe beta je pouze beta a pêináîí s sebou ne vùdy jen samá vylepîení.  V beta
+  6  nefunguje napêíklad @{c EEA883}Commando@{c}, @{c EEA883}Nibbler@{c} a nëkolik dalîích her (resp.  ony fugují,
+  ale  musí  se  provést  pêejmenovaní ev.  nahrazení nëkterých souborû).  Ovîem vëc
+  o kterou  se  cítím  ochuzen  já  je ta, ùe poslední oficiální release na Amigu je
+  0.30, kdeùto na ostatní platformy (jak jsem jiù uvedl) 0.31.  Oficiální releasy se
+  oproti  betám  liîí  v tom, ùe vîechny podporované hry fungují a povëtîinou o nëco
+  rychleji  neù  v beta verzích, coù je zpûsobeno odstranëním tzv. debug kódu, který
+  pouùívají vývojáêi pro ladëní svých driverû pro hry.
+
+  Amiga  port  MAME  vytváêí @{c FFF12E}Mats Eirik Hansen@{c} z Norska a produkuje kód ve verzích pro
+procesory  030,  040,  060  a  PPC.   Oproti ªstandardnímu" DOS MAME má Amiga port GUI
+pouùívající  @{c EEA883}MUI@{c}  (aï  ùijou  zkratky  :-).   Já  osobnë  MAME provozuji v práci na PC
+(K6/200,  32  MB  RAM),  jelikoù  na  mé  030/50/AGA  je  to totálnë o niçem.  Opravdu
+doporuçuji  vîem co mají 030 a 040 aby MAME radîi ani nezkouîeli, protoùe z toho budou
+mít  tak  akorát  dalîí komplex.  A veête mi, ùe já co se týçe rychlostí programû jsem
+VELMI tolerantní (napê.  provozování LightWave na A500, hraní Quaka na 030 atd), tudíù
+êíkám-li  ªnezkouîejte  to",  tak to radîi opravdu nezkouîejte :-).  O provozování 060
+verze  mi dal Shaman jenom kusé zprávy (no têeba sem nëco sám dopíîe :-).  @{i}@{c EDEE88}[co sem mám
+psát?   -  na 060/60 a CGX se dá vëtîina her dobêe hrát :-)...pozn.Shaman]@{c}@{ui}.  Osobnë si
+myslím,  ùe 060 s grafickou kartou je minimum na provozovaní MAME na Amize.  PPC verzi
+jsem  vidël  jen  zbëùnë, ale rychlostí më nijak neuchvátila.  Ohlednë PPC je tu dalîí
+problém.  @{c FFF12E}PPC verze@{c} je urçena pro @{c EEA883}PowerUp@{c} (phase5) a nikoli pro WarpUp (H&P).  Jako by
+autor nevëdël, ùe WarpUp je jiù (více ménë)
+standard   pro  PPC  programy.   Kaùdopádnë
+u vîech  Amiga  verzí  je problém s emulací
+zvuku  (êíkal Shaman...  já to na 030 ovîem
+nejsem    schopen   objektivnë   posoudit).
+Rychlost (çi spíîe pomalost) Amiga portu je
+také  (podle  mého  názoru)  z  velké çásti
+zpûsobena   naprostou   absencí   jakékoliv        @{p MAME-Galaxians.png 330 36}
+optimalizace    vzhledem    k   specifickým
+vlastnostem  Amigy  (mám na mysli napêíklad
+to,  ùe  emulace  procesorû  Motorola by se
+dala  êeîit nëjak rafinovanëji, neù je tomu
+v  originálních zdrojácích).  Ono to prostë
+vypadá  tak,  ùe  autor  Amiga portu prostë
+vzal  zdrojáky, pêidal nëjaký startup amiga
+kód,  GUI,  odstranil  tuto  a  tamto  a pêekompiloval  v kompileru çtyêikrát, pokaùdé
+s optimalizací  pro  jiný typ procesoru.  Bylo by dobré kdyby se této (urçitë nároçné)
+práce chopil nëkdo ponëkud zbëhlejîí.  Zkouîel jsem ukecávat Shamana, ale ten mi êekl,
+ùe  se  mu  do toho nechce.  No snad se mi ho jeîtë podaêí pêemluvit :-)).  Nebo se do
+toho  pustím  sám, ale to potom oçekávejte dalîí verzi za nëkolik let (musím se nauçit
+Cçko, koupit si BoXeRa, PPC atd.) :-)))).
+
+  Shrnul  bych  to  asi  takhle.   Momentálnë je lepîí MAME hrát na PC (na slabîí vëci
+staçí  i  P75  -  existuje i optimalizovaná verze pro Pentium a AMD s cca 20% nárûstem
+výkonu), neù s tím trápit chudinku Amigu.  Na ostatních platformách (kromë PC a Amigy)
+jsem  MAME bohuùel nevidël.  Urçitë zajímavé by bylo zkusit MacMAME pod ShapeShifterem
+eventuelnë  Fusionem.   Odváùí-li  se  to  nëkdo  vyzkouîet, aï  mi  potom  napíîe své
+zkuîenosti. @{i}@{c EDEE88}(má to lepîí zvuky, ale jinak je pomalejîí... pozn.Shaman)@{c}@{ui}
+
+  A  málem  bych  zapomnël  na krmivo pro MAME.  Jedná se o soubory, které pêedstavují
+ROMky  vygrabované pêímo z herních boardû jednotlivých automatû.  Jsou volnë k sehnaní
+na  Internetu  (s  jistými  licençními  pojednáními)  a je jich neuvëêitelné mnoùství.
+Velikostnë  se  pohybují  v  rozmezí  jednotek kB (ty nejjednoduîîí - @{c EEA883}Asteroids@{c}, @{c EEA883}Space@{c}
+@{c EEA883}Invaders@{c}   atd.)   pêes  desítky  aù  stovky  kB
+(@{c EEA883}Galaxian@{c},   @{c EEA883}MoonPatrol@{c},  @{c EEA883}Commando@{c},  @{c EEA883}GreenBeret@{c},
+@{c EEA883}MoonCresta@{c},  @{c EEA883}Phoenix@{c}  atd.), jednotky MB (@{c EEA883}Double
+Dragon@{c}  atd.)  aù  po  desítky  MB  (novëjîí hry
+z boardû  CPS1  od  Capcomu  - @{c EEA883}FinalFight@{c}, @{c EEA883}1941@{c},
+@{c EEA883}Strider@{c}, @{c EEA883}UN Squadron@{c} atd.).  Kdyù uù jsme u toho       @{p MAME-DoubleDragon.png 356 6}
+Capcomu  tak  musím  jeîtë vzpomenout excelentní
+emulátor  CPS1 boardû, který se zove @{c EEA883}Callus@{c} a je
+pouze  pro  DOS  a  Win.  Jelikoù od nëho nejsou
+uvolnëny  zdrojáky,  zêejmë  se v nejbliùîí dobë
+nedá  oçekávat  portace  na jiné platformy.  Pod
+ním  si  na  PC  mûùete  (i bez 3Dfx :-)) zahrát
+skvëlé  hry.   Napêíklad jiù zmínëné @{c EEA883}FinalFight@{c},
+@{c EEA883}1941@{c},    @{c EEA883}Strider@{c}    a   @{c EEA883}UN   Squadron@{c}   a   dále
+@{c EEA883}Caddilacs&Dinosaurus@{c},  @{c EEA883}Mercs@{c},  @{c EEA883}Street  Fighter  II@{c}  atd.   a hlavnë  naprosto nejlepîí
+ªtepaçku"  vîech  dob  @{c EEA883}Punisher@{c}.   Pozitivní  vëc  u WinCalluse je moùnost hrát hru po
+Internetu   (vyzkouîeno   v praxi   s  @{i}uF0nem@{ui}  a  @{i}dEfOrem@{ui}),  moùnost  ukládání  pozice
+a ªnahrávání  filmu"  tzn. uloùení  vaîí hry do souboru s moùností následného pêehrátí
+(ideální prostêedek na to, jak se pochlubit svým znamým napêíklad tím, ùe jste dohráli
+1941 na jednu minci).  To jsem ale trochu odboçil.  Prostë vîe co potêebujete k tomuto
+nostalgickému gamesení naleznete na Internetu.
+
+  Na  závër  jeîtë nëkolik internetových adres týkajících se aï uù MAME samotného, tak
+emulátorû (arcade, poçítaçû i konzolí) obecnë.
+
+                                      @{f FFE354}* Snappy *@{f}
+@{i} @{c EEA883}e@{c}mulátorový@{c EEA883}a@{c}@{c EEA883}h@{c}erní@{c EEA883}m@{c}aniak@{c EEA883}A@{c}migumilující@{c EEA883}g@{c}amesící@{c EEA883}a@{c}@{c EEA883}e@{c}mulující@{c EEA883}j@{c}ak@{c EEA883}d@{c}oma@{c EEA883}t@{c}ak@{c EEA883}p@{c}êeváùnë@{c EEA883}v@{c}@{c EEA883}p@{c}ráci@{c EEA883}n@{c}ervy
+   @{c EEA883}p@{c}êitom@{c EEA883}n@{c}içící@{c EEA883}j@{c}ak@{c EEA883}r@{c}odinë@{c EEA883}a@{c}@{c EEA883}o@{c}kolí@{c EEA883}t@{c}ak@{c EEA883}v@{c}îem@{c EEA883}c@{c}o@{c EEA883}s@{c}e@{c EEA883}b@{c}ëhem@{c EEA883}h@{c}raní@{c EEA883}a@{c}@{c EEA883}e@{c}mulování@{c EEA883}o@{c}citnou@{c EEA883}v@{c}@{c EEA883}j@{c}eho@{c EEA883}b@{c}lízkosti@{ui}
+                                 @{c FFF12E}@{i}Python fon Schamberk@{ui}@{c}
+
+
+              @{c B7FF9C}Oficiální MAME page - http://www.media.dsi.unimi.it/mame/
+              Amiga port - http://www.stud.ntnu.no/~matsha/projects.html
+               Sbírka emulátorû a ROMek - http://www.davesclassics.com
+              Sbírka ROMek s obrázky a hodnocením - http://www.emux.com
+       Novinky o emulátorech kaùdý den - http://www.classicgaming.com/emunews/
+                   @{c B7FF9C}Emulators CZ - http://www.jaap.cz/~krajicek/emul
+             Amiga Emulation Central - http://www.classicgaming.com/aec/@{c}
+
+
+                          @{l MAME-ROMs}  ZDE JE SEZNAM FUNKÇNÍCH HER @{l}
+
+
+
+@{c EDEE88}P.S.:@{c} jednou si moùná koupím PééCéé :-((( ... ale to jenom na emulátory :-)))
+
+@{c EDEE88}P.P.S.:@{c}  greetz to pals ...  Jofa&Slunce, Human Factor&bosorka, Boris, SmallPaul,
+Hans, LadzoPadzo, Kyshias, Kolben, El Greko, Fred Brooker (aka Phil Haloran (aka PJ
+(aka Eliot))), jabba, crash, bati, turb0, ventor, jfk, buh, sir dan, cracknel & others
+
+@{c EDEE88}P.P.P.S.:@{c}  greetz to Un*x talk pals ...  Trixie, Fakir (aka Lenin)
+
+@{c EDEE88}P.P.P.P.S.:@{c}  greetz to IRC pals ...  uF0, Schizzy, Shaman^UL, FiDo1, pekr, -alien-,
+factor6, rh0, rexhelion, DNA, 8SVX, fatal, (s)Exie, dEfOr, ute, TyNyT, lvy & others

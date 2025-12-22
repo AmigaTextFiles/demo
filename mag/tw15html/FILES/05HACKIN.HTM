@@ -1,0 +1,215 @@
+<HTML>
+<HEAD>
+<TITLE></TITLE></HEAD>
+<BODY BACKGROUND="..\bgnd.jpg" BGCOLOR="#000000" TEXT="#FFFFFF">
+<CENTER>
+<table border=0><TR><TD>
+<pre>
+
+<CENTER><FONT SIZE=5><B>The Hacking Elite</CENTER></FONT></B>
+
+
+
+Unix gives hackers a crack at systems 
+By Larry Lange, August 26, 1996
+Electronic Engineering Times, p62
+----
+
+   Las Vegas: Many of the hacking elite were on the Internet
+   long before the World Wide Web was a gleam in the eye of
+   inventor Tim Berners Lee. And these folks know the
+   best-kept secret of gaining access to-and control
+   of-someone else's electronic property: Unix.
+
+   Developed in the days of governmental and academic
+   cooperation and collaboration, the Unix operating system
+   began as a powerful way of remotely logging on to other
+   computers. As such, it helped spawn the network that
+   eventually became the Internet. The early Unix gurus
+   weren't thinking about criminal activity; most were
+   scientists and engineers who exploited the breakthrough
+   simply to work collaboratively on projects, proud of the
+   open standards they had built into the OS.
+
+   But the advent of the Web has spawned a Gold Rush
+   mentality among corporations, many of which are
+   accustomed to the PC environment and are thus cobbling
+   together Unix-based networks managed by overhyped and
+   underwhelming security systems.
+
+   The result: Despite the seemingly mandatory corporate use
+   of such programs as firewalls, the U.S. Secret Service
+   reports that "Web tampering has become more visible and
+   more reported in the past 12 months." An expert
+   underground Web cracker who goes by the handle +ORC noted
+   with apparent glee: "With each company that connects to
+   the Net, new frontiers are created for crackers to
+   explore."
+
+   Indeed, even as many old-line hackers of the sort who
+   gathered here recently for the DefCon convention go
+   legit, some starting cyber-security companies of their
+   own, Internet-security experts look with trepidation to
+   the next, more threatening wave of cybercrime.
+
+   "Hacking as we know it is dying," DefCon founder Dark
+   Tangent, a.k.a. Jeff Moss, told EE Times at the
+   conference. "Everything is specialized today. There's
+   wireless, IP, ISDN, NT -- it gets crazy." As he edges
+   into his mid-20s, Moss said he has wearied of the
+   lifestyle and concedes the technology as well. "I'm not
+   going to rewrite a Unix kernel," he said.
+
+   Moss said the next wave of hacking will be fraught with
+   "industrial espionage, data manipulation and every
+   conceivable type of electronic fraud, to the point where
+   corporations won't be able to cope."
+
+   Why are corporations so vulnerable, and how do hackers or
+   crackers -- those doing patently illegal computer
+   activity, as opposed to pranks -- get in? For starters,
+   said Web cracker +ORC, the "sysops [system operators] are
+   not firewall administrators, and many of them know
+   nothing about the software they use."
+
+   The firewall solution works by examining the Internet
+   protocol (IP) packets that travel between the server and
+   client. Packets that go through the firewall, such as
+   Web-browsing requests, can reveal to a remote site
+   essential information about a network's configuration --
+   such as the IP address -- that, in turn, can be used to
+   break into that network.
+
+   "If a site has a firewall," said +ORC, "decisions have
+   been made as to what is allowed across it. These
+   decisions are always incomplete, and given the
+   multiplicity of the Net, there are always loopholes a
+   cracker can capitalize on."
+
+   The screened-host-gateway firewall is a fairly easy type
+   to crack, said +ORC. Since the bastion host in that kind
+   of firewall is protected from the outside net by the
+   screening router, the router is generally configured to
+   allow only traffic from specific ports on the host. "But
+   if the router allows a service such as Usenet news
+   traffic to reach the bastion host," +ORC said, "this
+   filtering can be easily cracked," since it relies on a
+   remote machine's IP address, which can be forged.
+
+   "Most sites configure their router such that any
+   connection initiated from the inside net is allowed to
+   pass, by examining the SYN and ACK bits of Transmission
+   Control Protocol [TCP] packets," explained +ORC. "The
+   start-of-connection packet will have both bits set, and
+   if this packet's source address is internal -- or seems
+   to be internal -- the packet is allowed to pass, and
+   you're in."
+
+   Sniffer approach
+
+   Another way hackers gain access is by using so-called
+   "sniffer" software to capture passwords.
+
+   A sniffer is a network-monitoring tool that enters a
+   system and detects the first 120 keystrokes of a newly
+   opened Internet session -- i.e. a user's host, account
+   and password information.
+
+   Though holes in Unix programs have been probed, patched
+   and plugged, crackers still find that many corporations
+   allow easy access through Anonymous FTP, Telnet, rlogin,
+   Mount, Finger and sendmail programs. A reading of this
+   naive software company promo at DefCon brought down the
+   house:"Yes! We offer the new, more secure version of
+   sendmail!"
+
+   Since by default, sendmail -- or the Simple Mail Transfer
+   Protocol (SMTP) -- accepts a message from any incoming
+   connection, the sender of such a message can appear to
+   have originated anywhere. "Therefore, any claim of
+   identity will be accepted," said +ORC. "Thus, you can
+   forge a message's originator."
+
+   As the technology gets more complex, the hackers get
+   smarter. Renowned Java hacker Yobie Benjamin sums it up:
+   "No matter what you do, and no matter how much you spend
+   to protect your systems, if somebody wants to get in
+   there bad enough, they will."
+
+   As a typical representative of the teen hacker going
+   straight, Christian Valor -- known in the hacker
+   community as Se7en -- said specialization is fraying the
+   once tight-knit community.
+
+   "There's cellular, Internet, encryption -- all have
+   different standards and different skills," he said. "It's
+   not like it used to be when I'd get root access [to a
+   system using Unix]. I was a master."
+
+   Valor, who has had numerous run-ins with the law, said
+   he's tired of that lifestyle. "I don't want to hide
+   anymore. I've been doing this for 12 years."
+
+   Outlaw skills
+
+   As old-school hackers like Valor go straight, many are
+   bringing the skills they developed as outlaws into the
+   system (see Aug. 19, page 4). DefCon founder Moss, for
+   example, is dipping a toe in Web-site design. "I'm going
+   to give a shot at a content-creation business-even if it
+   fails, I'll still be young enough to recover." Meanwhile,
+   however, his DefCon T-shirts were doing a brisk business
+   at the conference.
+
+   With the look of a young corporate security consultant,
+   Moss, an ex-law student, said he started DefCon four
+   years ago "as a way to meet the people on the other side
+   of the screen from Internet Relay Chat and Usenet
+   groups." He chose Las Vegas as the ideal location because
+   "even if it gets screwed up, we can still salvage a good
+   time."
+
+   But the stakes have changed for Moss and DefCon. In fact,
+   this convention could only find booking at the
+   ultra-lavish Monte Carlo hotel, because it had just
+   opened; Moss has been banned from every other place in
+   town because of his crowd's past hacking pranks and rowdy
+   behavior.
+
+   The commercialization of hacking began with a bold move a
+   few years ago by onetime hacker king Erik Bloodaxe (Chris
+   Goggans), who spun 180 degrees to form Computer Security
+   Technologies Inc., Austin, Texas. Goggans has also worked
+   on security for Dell Computer Corp. and UUNet.
+
+   Perhaps the legendary hacker group l0pht is the best
+   example of the thin line between cybercriminal and
+   corporate comer. Several members spoke at DefCon, notably
+   Death Vegetable, administrator of the Cult of the Dead
+   Cow and media poster boy for Internet bomb postings (he
+   was raked over by the national press after a juvenile
+   downloaded his postings, made a bomb and accidentally
+   blew off several fingers); and Mudge, the brilliant
+   encryption cracker who devised the S/Key Cracker's
+   Toolkit and posted it on the Net, much to the chagrin of
+   Bellcore, S/Key's owners. S/Key is an Internet
+   password-protection scheme.
+
+   Even these bad boys of the Internet are going legit: l0pht
+   is a fledgling Internet services provider, offering FTP,
+   Unix-shell and Web-page accounts to corporations and
+   consumers alike.
+
+   But even though l0pht is quickly building a mainstream
+   following, the group maintains scads of hacking and
+   cracking information on their site (www.l0pht.com). In
+   the same way, the world of semi-innocent hacking and
+   phreaking will probably live on indefinitely.
+
+
+end
+</PRE>
+</TD></TR></TABLE>
+</CENTRE>
+</BODY>
+</HTML>

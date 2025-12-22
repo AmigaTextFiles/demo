@@ -1,0 +1,2354 @@
+@database HousePool_02.guide
+@master HousePool_02.guide
+@$VER: 1.02 (15.08.1995)
+@author "HousePool® Media International"
+@(c) "Copyright ©1995 HOUSEPOOL® MEDIA INTERNATIONAL"
+
+@node "MAIN" "HousePool® Juli/August 1995 - Ausgabe 02   Inhaltsverzeichnis            "
+
+                 @{b}H o u s e P o o l ® - The Raver´s Voice@{ub}
+                 ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+                 Das @{"interaktive" link "Magazin" 0} House- & Techno-Magazine
+
+                    @{u}AUSGABE : 02 (Juli/August 1995)@{uu}
+
+
+ ALLGEMEINES:
+  @{" Über HousePool®              " link "About" 0}     Warum ? Wieso ? Wer ? Was ?
+  @{" Interaktivität !             " link "Interaktivität" 0}     Aufbau und Zweck dieses Mags.
+  @{" © Copyright                  " link "Copyright" 0}     Rechtliche Bestimmungen - WICHTIG !
+  @{" Impressum                    " link "Impressum" 0}     HousePool Infoboard !
+  @{" Version/System               " link "Version" 0}     Anforderungnen & Versionen von HousePool
+
+ AKTUELLES:
+  @{" Editorial 02                 " system "PPShow HousePool_02:HP_02-Bilder/EDITORIAL.ilbm"}     Unser Vorwort an Euch !
+  @{" The News Compiler            " link "NewsCompiler" 0}     Aktuelle Quickies zum abheben !
+  @{" The Trends - Hot & Spicy     " link "Trends" 0}     Die Tops, Flops und unser Quote !
+  @{" E-R-I-T-A-S                  " link "ERITAS" 0}     Sweet little lies !
+  @{" Der Kommentar                " link "Kommentar" 0}     Aktuelle Redaktionsmeinung !
+
+ BERICHTE:
+  @{" Plädoyer für die Ehrlichkeit " system "PPShow HousePool_02:HP_02-Bilder/PLÄDOYER.ilbm"}     Von Marketing und Hypes !
+  @{" Revoluzzer oder unerwünscht? " system "PPShow HousePool_02:HP_02-Bilder/REVOLUZZER.ilbm"}     Kriminalisierung überall ?
+  @{" Die betrogenen Raver         " system "PPShow HousePool_02:HP_02-Bilder/BETROGEN.ilbm"}     Raver = Goldene Kuh ?
+  @{" Wirschaftswunder Techno - II " system "PPShow HousePool_02:HP_02-Bilder/TECHNOLAND.ilbm"}     Die Spezies "DeeJay" !
+
+ PROFILE/INTERVIEWS:
+  @{" Shapes : Profil - Person     " link "Shapes1" 0}     Diesmal : Allrounder MOBY
+  @{" Shapes : Profil - Shop       " link "Shapes2" 0}     Diesmal : Important Recordshop
+  @{" Shapes : Profil - Label      " link "Shapes3" 0}     Diesmal : Energized Records
+
+ EINGEMACHTES:
+  @{" HousePool®-Plattentips       " link "Plattentips" 0}     Empfehlungen und runde Sachen !
+  @{" HousePool®-Charts            " link "HPPlatten" 0}     Eure & unsere Charts !
+  @{" HousePool®-Sound Factory     " link "SoundFactory" 0}     House- & Home-made Tunes !
+  @{" HousePool®-Filofax           " link "Dates" 0}     Standards & Raves & Clubs !
+  @{" HousePool®-Techno-Café       " link "ForumGeneralis" 0}     Meinungen & Diskussionen !
+
+ PRÄSENTATION (Media Line):
+  @{" BFBS-Experience              " link "Experience" 0}     Steve Mason Playlist und mehr !
+  @{" VIVA-Housefrau               " link "VIVA-HF" 0}     Themen & Review & News !
+  @{" Media Line 1 - TV Standards  " link "TVDates" 0}     Wöchentliche TV-Standards !
+  @{" Media Line 2 - Radio Stand.  " link "RadioDates" 0}     Wichtige Radio-Dates !
+            
+ SCHLUßSTRICH:
+  @{" Credits & Honours            " link "Credits" 0}     Wir bedanken uns bei...!
+  @{" Vorschau - Nächste Ausgabe   " link "Preview" 0}     Was die nächste Ausgabe bringt !
+  @{" HousePool® FeedBack          " link "Feedback" 0}     Was wir von Euch wollen !
+  @{" HousePool® Zukunftspläne     " link "Futureplans" 0}     Was kommt auf uns zu ?
+
+
+ © 1995 / @{"Copyright" link "Copyright" 0} HousePool® Magazin/HousePool® Media International
+                    @{u}Alle Rechte vorbehalten.@{uu}
+
+@endnode
+
+@node "Magazin" "HousePool® Juli/August 1995 - Ausgabe 02   Interaktives Magazin          "
+
+ HOUSEPOOL® - Das interaktive House/Techno-Magazin für den Amiga !
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  @{" Interaktivität               " link "Interaktivität" 0}     Aufbau und Zweck !!
+
+  @{" Animation starten            " system "PPShow HousePool_02:HP_02-Bilder/HousePool.ppanim"}     HousePool®-Vorspann
+  @{" Hintergrundmusik             " system "run PowerPlayer HousePool_02:HP_02-Songs/MMD1.The_HP-Anthem window"}     Startet HousePool®-Theme/Titelmusik
+  @{" Musik ausschalten            " system ""}     Geht leider noch nicht !
+
+  @{" Sound-Factory                " link "SoundFactory" 0}     Neue Tracks und Remixe !
+
+@endnode
+
+@node "About" "HousePool® Juli/August 1995 - Ausgabe 02   Über HousePool®               "
+
+ HOUSEPOOL® : Wir über uns !
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Wie viele andere Dinge auch fing alles mit einem  gemütlichen Kneipen-
+  abend an ......
+  Plötzlich  war  die  Idee  nach  einem  etwas  anderen  Techno-Magazin
+  geboren.  Innerhalb  kürzester  Zeit  war  ein  Name  gefunden und das
+  Konzept  stand zunächst  einmal. Und nun können wir in die Welt hinaus
+  schreien: WIR SIND ENDLICH DA !!!
+
+  Nun wie entsteht HousePool®:
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Die HousePool-Redaktion besteht z.Z.  lediglich aus  zwei Leuten,  die
+  sich seit  geraumer Zeit  kennen und bis jetzt der  harte Kern  dieses
+  Magazins sind.
+
+  HousePool® entsteht  vollständig  auf diversen  Amigas. Demnächst wird
+  aber im Zuge der Expansion auch eine  HTML-Version  entstehen, die auf
+  fast allen Computersystem laufen wird. Ein  WWW-Homepage  im  Internet
+  ist ebenfalls in Vorbereitung.
+
+  Aber was ist HousePool® genau ?
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Nun, HousePool® soll ein in jeder Hinsicht interaktives  Magazin  sein
+  bzw.  mit  Eurer Hilfe  werden.  Es  soll  allen  Ravern, Housern, und
+  sonstigen Techno-Begeisterten ein  Forum  bieten  um  ihre  Meinungen,
+  Artikel  oder  Werke in Form von Songs verbreiten zu können. Ebenfalls
+  soll es andere  konventinelle  Techno-Magazine  ergänzen, aber keines-
+  falls ersetzen, da dies zur Zeit weder  technisch noch  personell noch
+  finanziell realisierbar wäre. Ihr seid also  angesprochen dieses Maga-
+  zin zu fördern und weiterzuentwickeln.
+  Somit besteht die etwas undergroundigere Möglichkeit über House/Techno
+  zu berichten die sich von vielen doch stark kommerziell ausgerichteten
+  Medien und Veröffentlichungen abheben soll.
+
+  Wir investieren viel  Arbeit, Zeit & Geld in dieses Magazin. Damit wir
+  (das Redaktionsteam) zumindestens von  einigen Lesern auch faire Aner-
+  kennung erwarten können ist  dieses Magazin  als GIFTWARE konzipiert -
+  bei Gefallen  könnt Ihr uns also  ein Geschenk  schicken (Originalität
+  zählt, also laßt Euch was einfallen) oder natürlich Geld (auch irgend-
+  wie originell ?).
+
+  Schreibt und  schickt  uns:
+  Eure  Meinungen, Leserbriefe, Vorschläge, Geld, Geschenke und was Euch
+  sonst noch einfällt.
+
+  Es entsteht alle zwei Monate und wird über Internet/AMINET verteilt.
+
+  Ein Vertrieb über Public-Domain-Händler ist ebenfalls in Planung.
+
+  Für weitere Informationen lest bitte auch:
+
+  @{" FEEDBACK                     " link "Feedback" 0} @{" ZUKUNFTSPLÄNE                " link "Futureplans" 0}
+  @{" COPYRIGHT                    " link "Copyright" 0} @{" INTERAKTIVITÄT               " link "Interaktivität" 0}
+
+  VIELEN  DANK  für  Euer  Interessen  und  für  Eure  hoffentlich  rege
+  Beteiligung ! Ich hoffe IHR enttäuscht uns nicht !
+
+@endnode
+
+@node "Interaktivität" "HousePool® Juli/August 1995 - Ausgabe 02   Interaktivität !              "
+
+ HOUSEPOOL® : Interaktivität ???
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+
+  Interaktivität   -   ein   Schlag-    und    Modewort    in    unserer
+  Multimedia-Gesellschaft.  Aber  bei  uns wird  alles  anders. Denn bei
+  HousePool® seid Ihr die treibende Kraft. Und wir sind eine der wenigen
+  rein elektronischen Magazine zum Thema House & Techno.
+
+  Wie schon erwähnt und versprochen seid Ihr, unsere Leser, angesprochen
+  dieses  Magazin zu gestalten und zu entwickeln. Bei uns kann JEDERMANN
+  Artikel  schreiben,  Diskussionen  führen,  kostenlose   Kleinanzeigen
+  aufgeben, Musikstücke veröffentlichen und vieles mehr.
+
+  DON´T FORGET:  HousePool is the raver´s voice !
+
+  Ihr seid die Szene und wir Eure lautstarke Stimme. Zusammen können wir
+  etwas bewgen in dieser mittlerweile recht tristen Szene.
+
+  Der  andere  Gesichtspunkt  der  Interaktivität  ist   die   Art   der
+  Realisierung   der   Benutzeroberfläche.  Es  ist  hauptsächlich  eine
+  AmigaGuide-Datei, die bei Bedarf Songplayer und Bildanzeiger  aufruft.
+  So  hat man ein interaktives und virtuelles Magazin mit kinderleichter
+  Bedienung.
+
+@endnode
+
+@node "Version" "HousePool® Juli/August 1995 - Ausgabe 02   Version                       "
+
+ HOUSEPOOL®-Versionen
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Beginnend mit dieser Ausgabe von  HousePool®  sind  einige  Änderungen
+  beschlossen  worden.  Eine  davon  ist das nochmals verbesserte Layout
+  eine  andere  ist  die  das  bald  mehrere  Versionen  von  HousePool®
+  verfügbar sein werden.
+
+  So wird es möglich die interaktive Form unseres  Magazins  auf  nahezu
+  alle  bekannten  Computersysteme  umzusetzen.  Für  den  Amiga wird es
+  darüber  hinaus  weiter   die   Möglichkeit   der   bisher   bekannten
+  Amigaguide-Version  geben, die auch in Zukunft das Ausgangsprodukt für
+  alle weiteren Konvertierungen sein wird. Für PC, Mac,  Acorn,  ST  und
+  Unix  wird  HousePool ins HTML-Format umgewandelt, so daß es mit wenig
+  Aufwand durch einen gängigen WWWBrowser  wie  z.B.  Mosaic,  Netscape,
+  Lynx    o.ä.   möglich   ist   HousePool®   auf   diesen   doch   sehr
+  unterschiedlichen Systemen laufen zu lassen.
+
+  @{" AMIGAGUIDE (AMIGA)           " link "AmigaSystem" 0}     Exklusive Amiga-Version
+  @{" HTML-Version (WWW-Browser)   " link "HTMLVersion" 0}     Für PC, Mac, ST, u.a.
+  @{" WWW-HomePage (WWW-Browser)   " link "WebHomepage" 0}     Direkt & Online Site im Web
+
+@endnode
+
+@node "AmigaSystem" "HousePool® Juli/August 1995 - Ausgabe 02   Amiga-System                  "
+
+ HOUSEPOOL® und das AMIGA-System:
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Dieses  HousePool®-Magazin entsteht z.Z. ausschließlich (100%) auf dem
+  Amiga. Dazu kommen diverse Modelle zum Einsatz.
+
+  MINDEST-AUSSTATTUNG des AMIGA:        EMPFOHLENE AUSSTATTUNG:
+  * 1 Amiga (OCS-Grafik)                * 1 Amiga (ECS/AGA-Grafik)
+  * 0.5 MByte Chip-RAM                  * 1 MByte Chip-RAM
+  * 1.0 MByte Total-RAM (Chip&Fast)     * 2 MByte Total-RAM (Chip&Fast)
+  * Betriebssystem AmigaOS 1.3 (v34)    * Betriebssystem AmigaOS 3.x
+  * Commodore Amigaguide-Package        * Amigaguide.Library Version 39
+                                        * Festplatte
+
+  Systembeispiele:                      Systembeispiele:
+  * A500/A2000 (ältere Modelle)         * A500+/A2000D/A3000
+                                        * A600/A1200/A4000
+
+  HousePool® läuft auf:
+   * Allen AMIGA-Computern, die obige Voraussetzungen erfüllen.
+   * Betriebssystem AmigaOS 1.3, 2.0, 2.1, 3.0, 3.1
+   * OCS, ECS, AGA Grafikchipsätzen
+   * Grafikkarten mit WB-Emulation (??)
+
+@endnode
+
+@node "HTMLVersion" "HousePool® Juli/August 1995 - Ausgabe 02   Hypertext Markup Language     "
+
+ HOUSEPOOL® im systemunabhängigen HTML-Format:
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Ab Oktober -  also  mit  Ausgabe  03  bzw.  04  -  ist  HousePool  als
+  HTML-Version verfügbar.
+
+  Damit  ist  es ziemlich einfach HousePool auf alle gängigen Systeme zu
+  portieren, da HTML-Seiten völlig hardwareunabhängig sind. Zum  Betrieb
+  wird  ein  WWW-Browser  benötigt, der auch die WWW-Seiten des Internet
+  anzeigen kann. Diese  Web-Seiten  sind  nämlich  auch  im  HTML-Format
+  aufgebaut  -  praktisch  oder  ?? Solche WWW-Browser sollten auf allen
+  Systemen vorhanden sein. Bekannte Vertreter dieser Spezies heißen z.B.
+  NetScape  (Mac & PC), Mosaic, AMosaic (Amiga), IBrowser (Amiga), Lynx,
+  etc...
+
+  Somit kann man auf jedem beliebigen Rechner mit entsprechendem Browser
+  -  also  auf  allen  Amiga,  PC,  Mac,  Acorn und ST HousePool benutzt
+  werden.
+
+  Zudem wird für alle Nachzügler, die die ersten Ausgaben bzw. alle  vor
+  der  dann  aktuellen  Ausgabe  erschienenen  noch  nicht  haben,  eine
+  spezielle Edition erscheinen, die alle wesentlichen  Bestandteile  der
+  vorherigen  Ausgaben  nochmals  zusammenfaßt,  damit  wir eine größere
+  Leserschaft erreichen und somit nicht nur Amiga-User  die  Möglichkeit
+  haben,  HousePool zu nutzen. Diese Edition wird Ende Oktober verfügbar
+  sein.
+
+@endnode
+
+@node "WebHomePage" "HousePool® Juli/August 1995 - Ausgabe 02   Online im World Wide Web      "
+
+ HOUSEPOOL® goes online...:
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Was andere Magazine nur werbewirksam  verkaufen  und  nicht  einhalten
+  machen  wir  wahr:  Wir sind  circa  ab  Oktober im World Wide Web mit
+  eigener Homepage  vertreten.  Es  wird  in  etwa  zeitgleich  mit  der
+  HTML-Version erscheinen.
+
+  In Zukunft könnt ihr dann HousePool auch online im Internet lesen.
+
+  Neben den aktuellen Ausgaben wird dort dann auch die HousePool Edition
+  zu   finden   sein,    die    die    Schwerpunkte    der    vorherigen
+  Amiga-only-Versionen  nochmals  aufgreift, damit Nicht-Amiga-User auch
+  die Möglichkeit haben, Versäumtes nachzuholen.
+
+  Unsere  Web-HomePage  wird  voraussichtlich   folgenden   URL   haben:
+  HTTP://sx1.hrz.Uni-Dortmund.de/userpages/carma/housepool/...
+
+  So - watch out for it & be surprised !!
+
+@endnode
+
+@node "Copyright" "HousePool® Juli/August 1995 - Ausgabe 02   © Copyright                   "
+
+ HOUSEPOOL & die rechtlichen Aspekte:
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Das Magazin, der Name `HousePool`, das HousePool®-Logo die Bilder, die
+  Animation, die   Reportagen, die   Berichte, und alle weiteren journa-
+  listischen  und  kreativen  Bestandteile  dieser Veröffentlichung sind
+  kreatives bzw. geistiges Eigentum des  Verfassers  und  somit urheber-
+  rechtlich geschützt !
+  Die in dieser Ausgabe veröffentlichten Songs sind  geistiges  Eigentum
+  der jeweiligen Autoren und somit ebenfalls urheberrechtlich geschützt.
+
+  Für eventuelle Abdrucke, Nachdrucke - auch in  Auszügen - insbesondere
+  bei  kommerzieller Nutzung wird die Genehmigung der Redaktion bzw. der
+  Autoren benötigt. Eine  öffentliche und/oder  kommerzielle Nutzung der
+  hier veröffentlichten Songs bedürfen der Genehmigung der Autoren.
+
+  Der Vertrieb sowie die Weitergabe/Verbreitung dieses Magazins über die
+  Computernetze   Internet,   Aminet,   CompuServe,  FidoNet,  und  alle
+  vergleichbaren  Netze  sowie  über  PublicDomain-Händler  ist  hiermit
+  ausdrücklich  erlaubt, soweit der Diskettenpreis bei PD-Händlern NICHT
+  den Wert von  3,00  DM  übersteigt.  Der  Einsatz  und  Vertrieb  über
+  CD-ROM-Distributoren (insbesondere Aminet-CDs/Fish-CDs/Meeting-Pearls)
+  ist ebenso ausdrücklich erlaubt !
+  Der Vertrieb muß allerdings das  gesamte Paket  enthalten - also  alle
+  Programme, Daten, Readme´s und auch alle anderen benötigten Dateien
+  (z.B.  Libs), soweit dies aus rechtlichen Gründen möglich ist !!
+  Alle Distributoren auf deren Produkten (Disketten,CD-ROM und alle wei-
+  teren Datenträger) das  HousePool®-Magazin erscheint erklären sich mit
+  diesen Bestimmungen einverstanden.
+
+  Das  HousePool®-Magazin  ist  GIFTWARE.  Das  bedeutet  für  Euch, daß
+  Verbreitung/Kopieren  streng  erwünscht  ist,  daß  Ihr  uns  aber als
+  Anerkennung ein Geschenk oder Geld schicken solltet !
+
+  Die  Rechte  für  eingesandte  Artikel  und  Soundfiles/Songs   liegen
+  grundsätzlich  bei  den Autoren ! Somit geben eingesandte Artikel auch
+  die Meinung der Autoren und nicht unbedingt die Meinung der  Redaktion
+  wieder !
+  AUSNAHME: Die Redaktion  erlaubt  sich evtl.  eingesandten  Songs  und
+            Artikel auf ein bedarfsgerechtes Format  zu  transformieren.
+            Das beinhaltet  sinngemäßes Kürzen,  Zusammenfassen  und die
+            Konvertierung in ein anderes Datenformat !
+  EBENSO:   Die Redaktion übernimmt  KEINE Haftung  für die eingesandten
+            Beiträge  zum Magazin. Es  besteht  KEIN Rechtsanspruch  auf
+            Veröffentlichung.
+
+  Bei Remixen  und  Reworks  von  Fremdsongs  setzt  die  Redaktion  ein
+  Einverständnis    des/der    Autoren    voraus.    Alle   Rechte   der
+  Ursprungsversion bleiben erhalten. Der Autor und der Titel werden  bei
+  der  Remix-Version  ebenfalls  angegeben. Es findet keine kommerzielle
+  Nutzung dieses Materials statt ! Ich hoffe das Ihr damit einverstanden
+  seid, da ich finde , daß dies dem Sinn der Sache entspricht und keinen
+  ein Schaden insbesondere in finanzieller Weise entsteht !
+
+  Ebenso erlaubt die Redaktion das Remixen von  eigenen  Songs / Tracks.
+  Bitte haltet Euch aber daran auch Originalautor und -Titel anzugeben.
+
+  WICHTIG - WICHTIG - WICHTIG - WICHTIG - WICHTIG - WICHTIG - WICHTIG:
+  Alle Einsendungen unterliegen den oben aufgeführten Regelungen und ein
+  Einverständnis der Autoren wird damit vorrausgesetzt !
+
+@endnode
+
+@node "Impressum" "HousePool® Juli/August 1995 - Ausgabe 02   Impressum                     "
+
+ @{b}HousePool® Impressum@{ub}
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  HousePool® ist @{i}ein computerbasiertes House/Techno-Magazin@{ui}.
+  HousePool® ist @{i}umweltschonend und 100%-recycligfähig@{ui}.
+  HousePool® ist @{"interaktiv" link "Interaktivität" 0}.
+  HousePool® ist @{i}erfrischend und erfrischend anders@{ui}.
+  HousePool® ist @{i}kritisch, unbequem und umfassend@{ui}.
+  HousePool® ist @{i}finanziell unabhängig und überparteilich@{ui}.
+  HousePool® ist @{i}lauffähig auf allen@{ui} @{"AMIGA®-Computern" link "AmigaSystem" 0}.
+
+
+  @{b}Herausgeber:@{ub}                HousePool® Media International
+
+  @{b}Technische Leitung:@{ub}         Carsten Marmulla
+
+  @{b}Inhaltliche Leitung:@{ub}        Carsten Wiehle
+
+  @{b}Künstlerische Leitung@{ub}:      Carsten Wiehle
+                              Carsten Marmulla
+
+  @{b}Konzeption & Organisation:@{ub}  Carsten Marmulla
+                              Carsten Wiehle
+
+  @{b}Layout:@{ub}                     Carsten Marmulla
+
+  @{b}Redaktionsteam:@{ub}             Carsten Wiehle (cawi)
+                              Carsten Marmulla (cm)
+
+  @{b}Freie Mitarbeiter:@{ub}          Toshie
+
+  @{b}Titelmusik & Tracks:@{ub}        Carsten Wiehle
+                              Carsten Marmulla
+
+  @{b}Musikalische Beiträge:@{ub}      The Lords Of Groove (Fireland)
+                              DJ Tomcat (Blue Carrot)
+                              Jonas v.d. Lught (Blue Carrot)
+                              Step5 (Fulcolingas)
+
+  @{b}Post-Adresse:@{ub}               @{i}HousePool Magazin
+                              POSTLAGERND Herne 1
+                              44621 Herne / Deutschland@{ui}
+
+  @{b}Electronic Mail:@{ub}            carma.bbs@SX1.HRZ.Uni-Dortmund.DE
+
+  @{b}WWW-Online-Homepage:@{ub}        ab Oktober verfügbar !!
+
+
+  @{b}HousePool® wird über Internet/AmiNet verteilt@{ub}.
+  HousePool® erscheint@{b} @{i}@{ub}monatlich@{b}@{ui} in deutscher Sprache@{ub}.
+  Z.Zt. sind allerdings zweimonatige Doppelausgaben die Regel !
+
+  Zu gesetzlichen Bestimmungen und Regelungen siehe @{"Copyright" link "Copyright" 0} !
+  Die abgedruckten Artikel freier Mitarbeiter geben nicht unbedingt auch
+  die Meinung der Redaktion wieder !
+
+@endnode
+
+@node "NewsCompiler" "HousePool® Juli/August 1995 - Ausgabe 02   News-Compiler             "
+
+ @{b}HousePool® NEWS-Compiler !@{ub}
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Brandaktuelle  Quickie-Neuheiten und  Nachrichten,  Gerüchte, Ankündi-
+  gungen und Statements aus der Szene !!
+
+  Neue Wahrheiten, neue Gerüchte und andere News
+
+  * Neuste "Errungenschaft" von Harthouse sind Carsten "Plank" Bleekmann
+  und  Jürgen  Driessen  (Acrid Abeyance,Ascorbin Acid,etc.). Vor kurzem
+  ist  ihr  neues  Projekt  "Assign"  auf  Harthouse  erschienen.  Titel
+  "Thirtyone  years"...  *  Steve  Mason  hat  vor kurzem eine neue Maxi
+  veröffentlicht. Zusammen mit Tony Crooks hat  er  den  Titel  "Shallow
+  grave" unter dem Projektnamen "Steve Mason Experience" auf Rainforrest
+  Rec. herausgebracht. Mittlerweile wurde diese Platte  von  Hyper  Hype
+  lizensiert  und  ist  damit  in Deutschland leichter erhältlich. Zudem
+  steht von Uns-Stevie die erste Soloproduktion an  (wahrscheinlich  auf
+  Highland  Beats Rec.). * Der von uns freudig angekündigte erste Herner
+  Rave war nicht nur ein riesen Reinfall für alle  Beteiligten,  sondern
+  auch eine riesengroße, geplante Sauerei !!! Ein scheiß Abfuck-Rave !!!
+  Von so etwas distanzieren wir uns natürlich (und sehr, sehr weit !)!!!
+  Ehrlich  gesagt  hatten  wir soetwas schon befürchtet. Für alle die da
+  waren (wohl meist Bravo-Alibi-Raver, die ich schon  am  Nachmittag  am
+  Bahnhof  sichtete)  ein  ernst gemeintes "Sorry, folks !"... * Der von
+  uns mit großer Skepsis erwartete "Century  Summer  Rave"  im  Bochumer
+  Tarm-Center  war ein riesen Erfolg. Entgegen unserer Befürchtungen von
+  Bravo-Proll-Mega-Pillen-Ravern umgeben zu sein erfüllten sich Gott sei
+  Dank  nicht (oder sie hatten sich zumindest gut getarnt). Entgegen den
+  bisherigen mega-großen "Century Raves" war dieser Rave im  Tarm-Center
+  nicht  nur  kleiner,  sondern qualitativ auch besser. Neben noch recht
+  unbekannten DJ´s waren vor allem our man Steve "The living experience"
+  Mason,  Charly  Lownoise & Mental Theo, Hooligan, Quicksilver ("Bingo,
+  Bongo",   hehe),   Paul   Elstak   incl.   MC   und   ,trotz    seines
+  Mainstreem-Sounds,  DJ  Thoka garanten für einen unterhaltsamen Abend.
+  Nachdem die meisten People sofort  nach  Lownoise  &  Theo´s  Live  PA
+  verschwunden  waren  (entweder  waren  es  nur Hardcore-Heads oder nur
+  Hip-Raver), hatten die richtigen Party-people erst einmal viel  Platz,
+  um  zu  guter  Musik  von  Steve  Mason,  der bis morgens auflegte, zu
+  tanzen. * DJ Tom von DJ Tom & Norman,  Arpeggiators,  Fanatic  Cracks,
+  etc.  hat  sich umbenannt. Seit geraumer Zeit heißt er wie sein Label:
+  Tom Wax. Bei sovielen DJ´s, die Tom heißen kein Wunder... * Ab  sofort
+  gibt  es  in  der  "Kulissse" der Bochumer Großdiskothek "Tarm-Center"
+  jeden Freitag "Tarm goes House" mit DJ  Quicksilver  ("Bingo  bongo").
+  We´ll  see...  *  AWex  goes Charts. AWex, bestehend aus den bekannten
+  Underground-Produzenten  Thorsten  Adler   und   DJ   Tom   Wax   (aka
+  Arpeggiators),  genießen  immer  noch  große  Aufmerksamkeit. Zu ihrem
+  bereits etwas angestaubtem Clubknaller "It´s our future" gibt es jetzt
+  ein  zweites  Video, das natürlich mainstream orientiert ist, denn das
+  Ding soll ja in die Charts. Trotzdem ich find´s geil  ohne  Ende...  *
+  Und  noch  ´mal  AWex:  Nachdem  das neue Video nun ausgestrahlt wird,
+  erscheinen bald wohl noch mehr  Remixe  u.a.  von  Norman  Feller  aka
+  Watchman. We´ll see... * Eye Q, die erste: Es kommt wieder Bewegung in
+  das Frankfurter Toplabel Eye Q. Am  25.8.  erscheint  die  neue  Earth
+  Nation-Maxi  "Terra  incognita"...  * Eye Q, die zweite: Sven Väth hat
+  eine neue Maxi draußen. In Zusammenarbeit mit  Stevie  B-Zet  entstand
+  das  Projekt  "Astral  Pilot" mit dem Titel "Electro acupuncture"... *
+  Eye Q, die dritte: Eye Q, Harthouse,etc. sind  im  Internet.  Adresse:
+  http://www.eye-q.com/ ... * Die Eins live Treibhaus-Sendung wird jetzt
+  angeblich mittwochs um 0.00 h wiederholt,  allerdings  nur  einstündig
+  (????). Na ja, wenn das mal stimmt... * Der Vollmond geht auf über dem
+  Land der Wichtigen: Important Records featured  zusätzlich  zu  seinen
+  vier   bereits  bestehenden  Labels  nun  noch  ein  Hardtrance-Label.
+  "Full-Moon-Productions" heißt dieses Baby. Geleitet wird das Label von
+  DJ  Bim...  *  Es  gibt  was neues von Star Wash. Die Nachfolge-Single
+  erscheint demnächst und auch das Album "Up wash"  folgt  sogleich.  Na
+  wen´s  interessiert... * Gerüchten zufolge ist das Love Boat auf Grund
+  gelaufen. Angeblich  aus  sicherheitstechnischen  Gründen  wurden  die
+  Veranstaltungen für dieses Jahr abgesagt... * Kölns House-DJ Christian
+  Linder  verkauft  uns   Ruhrpott-Housern   neuerdings   im   Important
+  Recordshop die neuesten Houseplatten...
+
+@endnode
+
+@node "Trends" "HousePool® Juli/August 1995 - Ausgabe 02   Die Trends                    "
+
+ @{b}HOUSEPOOL® Trends !!@{ub}
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Aktuelle Trends beurteilt vom HousePool®-Magazin:
+  [Vorplazierungen in Klammern]
+
+  @{b}@{u}Die HousePool®-INs (Tops des Monats)@{ub}@{uu}
+  +01 [+03]   Groupies, Girlies & Lolitas - just for fun !
+  +02 [NEU]   Sex on the streets - just for more fun !
+  +03 [+01]   Offenheit & Toleranz - Techno rulez !
+  +04 [NEU]   HousePool-The raver´s voice - Wir werden
+              immer besser !!!
+  +05 [+06]   Deep-Magazin - bestes konventionelles Techno-Mag
+  +06 [+07]   Eins-Live Treibhouse
+  +07 [NEU]   Techno goes online - der Trend Internet !
+
+  @{b}@{u}Die HousePool®-OUTs (Flops des Monats)@{ub}@{uu}
+  -01 [NEU]   Deutsche Post AG - Flexibilität ist schwer
+  -02 [-01]   Altbewährte Schubladen-Denken - typisch deutsch !
+  -03 [-02]   Clubschließungen ohne Ende - wohin nur ?
+  -04 [-05]   Kriminalisierung der Techno-Szene - warum nur ?
+  -05 [NEU]   Love (on) Boat(s) - der Sturz ins kalte Wasser !
+  -06 [-04]   Ausschlachtung von Techno und seinen Idealen -
+              die Kommerz-Falle !
+  -07 [-07]   Medien-Hypes (Gabber, Jungle & jetzt House) -
+              so besser nicht !!
+
+  @{b}@{u}Der HousePool®-`Quote des Monats`:@{ub}@{uu}
+  Carsten sagt einer Redaktionssitzung ca. alle 5 Minuten:
+      "Sag` mal, wo sind hier eigentlich die Frauen ???"
+
+@endnode
+
+@node "ERITAS" "HousePool® Juli/August 1995 - Ausgabe 02   E-R-I-T-A-S                   "
+
+ E-R-I-T-A-S !
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Ihr fragt Euch jetzt sicherlich - was zum Henker ist ERITAS ?? Haha  !
+  ERITAS  klingt  zwar lateinisch,ist es aber nicht ! Es ist einfach nur
+  die verzweifelte Suche nach einer gut klingenden  Headline  für  diese
+  Rubrik  -  denn  ERITAS  ist  nicht  mehr  und  nicht  weniger aus die
+  HousePool® eigene SATIRE-Seite !!
+
+  @{" Die ravenden Gummibärchen    " system "PPShow HousePool_02:HP_02-Bilder/SATIRE-RGB.ilbm"}
+
+@endnode
+
+@node "Kommentar" "HousePool® Juli/August 1995 - Ausgabe 02   Der Kommentar                 "
+
+ @{b}HousePool® - Der KOMMENTAR :@{ub}
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+ HousePool® kommentiert ein aktuelles Thema.
+
+  Nun, normalerweise verreiße ich an dieser Stelle ja  irgendwelche  VÖs
+  oder  andere Ausfälle von Kollegen und Konkurrenten und diverse andere
+  Dinge, die mir kurz vor Redaktionsschluß vor die Augen kommen.
+
+  Doch diesmal ist alles  anders  und  so  kommt  es,  das  sich  dieser
+  Kommentar  auf  das  aktuelle Thema schlechthin konzentriert. Und zwar
+  auf unser Magazin. HousePool kommentiert HousePool sozusagen. Wie  Ihr
+  vielleicht  gemerkt  habt,  haben  wir es nicht geschafft unsere erste
+  Ausgabe rechtzeitig ins Netz zu bringen. Deshalb möchte  ich  mich  an
+  dieser  Stelle zunächst dafür entschuldigen. Ihr ahnt ja nicht, was es
+  heißt mit möglichst wenig personellem Aufwand ein großes  Projekt  wie
+  eben  so  ein  neues  interaktives House-/Techno-Magazin von heute auf
+  morgen zu realisieren. Zudem kamen immer Rückschläge  hinzu,  so  z.B.
+  die  freundliche  Absage  unserer heißgeliebten Post auf die Nachfrage
+  nach einem Postfach. Ebenso bedurfte es einiger Überredungskünste  und
+  etlicher  Laufarbeit,  bis  ein  Internet-Zugang beschafft war. Dieser
+  konnte dann natürlich das ganze Paket dann nicht befriedigend ins Netz
+  bringen.  Aber  dank  einiger  hilfreicher Unterstützung hatten wir es
+  nach langer nervenaufreibender Zeit endlich  geschafft  und  HousePool
+  Issue  Nº  01  war released. Was mir da nur noch zu hoffen bleibt ist,
+  daß es überhaupt jemand gelesen hat und daß man es  nur  wegen  seiner
+  nicht  mehr  vorhandenen Aktualität vernachlässigt hat. Diese Welt ist
+  schrecklich schnellebig und die Konkurrenz schläft  leider  auch  nie.
+  Wenn  Ihr  bis  hier  hin  durchgehalten  habt,  dann  kann  ich  Euch
+  versprechen, daß in Zukunft alles besser wird und daß  es  hoffentlich
+  gelingt  diese  Ausgabe  rechtzeitig ins Aminet zu bringen (und sei es
+  persönlich).
+
+  In diesem Sinne verabschiede ich mich für diesmal und wünsch Euch noch
+  viel Spaß mit HousePool Issue Nº 02.
+                                                                    (cm)
+
+@endnode
+
+@node "Shapes1" "HousePool® Juli/August 1995 - Ausgabe 02   Shapes 1 - Profil Person      "
+
+  Shapes I - Profil Person
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Diesmal: Multiaktivist und Allrounder Moby
+
+  MOBY - ein Name, der mittlerweise zu Techno gehört  wie  viele  andere
+  und  das, obwohl alles ganz anders anfing. Einer der US-amerikanischen
+  Export-Musiker, die in der Heimat kaum bekannt sind, dafür  aber  umso
+  bekannter in Europa sind.
+
+  Der heute 29-jährige fing bereits früh an sich für Musik jeder Art  zu
+  interessieren.  So  spielte  er  mit 9 Jahren schon Gitarre. Doch Moby
+  sprang erst viel später auf den Techno-Zug auf. Zunächst versuchte  er
+  sich   in  verschiedenen  anderen  Musik-Richtungen,  so  sammelte  er
+  Erfahrungen in R´n´R-Bands, Punk-Bands und Raggae-Formationen bevor er
+  sich  dann als DJ für Industrial begeisterte. Erst 1987 fing er an auf
+  House und Techno abzufahren. Gleichzeitig drehte  Moby  mit  Bekannten
+  Kurz-Schwarz/Weiß-Filme,  in denen er zumeist die Hauptrolle übernahm.
+  Also wirklich ein wahrer Multiaktivist.
+
+  Doch auch auf seiner neuen LP  findet  man  diverse  Stilarten  -  von
+  Techno  bis  hin  zu  ruhigen  Balladen  und  härterer  Rockmusik. Der
+  Vegetarier und  strikter  Drogengegner,  dessen  Bekanntheitsgrad  mit
+  seiner  wohl  jedermann  bekannten  Hymne  "Go", die auf dem Twin Peak
+  Theme aufbaute merklich anstieg, hat  auch  harte  Erfahrungen  machen
+  müssen -sowohl auf beruflicher als auch auf privater Ebene.
+
+  Privat kam er schon sehr früh mit Drogen in Kontakt,  aber  es  gelang
+  ihm  nach  exzessiven  7 Jahren damit aufzuhören und seitdem meidet er
+  strikt jegliche Drogen (jede Form von Alkohol) und auch Fleisch.
+
+  Beruflich wurde er von jeher immer angefeindet  und  gehörte  nie  zum
+  richtig  harten Kern der Techno-Szene war aber trotzdem immer eine Art
+  Pionier, da er es wie kaum  ein  anderer  schaffte  seine  Songs  sehr
+  melodiös  und  mit  positiven  vibes  erscheinen  zu lassen, so daß zu
+  seinem Publikum nicht nur strikte Technos gehörten. Für  die  richtige
+  Szene  war  dies  aber  schon  zu  popig,  zu  kommerziell und zu sehr
+  mainstream. Aber Moby störte das wenig und  er  folgte  strikt  seinem
+  Weg.  So  ist  er  eigentlich  heute  auch immer noch kompromißlos und
+  eigenwillig ohne jedoch seine Massen-Kompatibilität abgelegt zu haben.
+  So werden seine Videos beinahe täglich auf VIVA und MTV ausgestrahlt.
+
+  Er hatte aber auch einige Rückschläge: So mußte er für die  Verwendung
+  der  Twin-Peaks-Samples  in seinem Durchbruchserfolg "Go" nachträglich
+  die Lizenzgebühren zahlen  was  dem  Erfolg  des  Liedes  zwar  keinen
+  Abbruch tat, die Geldbörse des Künstlers aber rapide schrumfen lies.
+
+  Neben seinen Hits wie "Go", "Next is the E", "Everytime you touch  me"
+  und  natürlich  "Feeling  so real" sind besonders seine Live-Auftritte
+  recht eindrucksvoll. Hier bekommt man wirklich "Energy" zu sehen.  Sie
+  sind  fast  schon  legendär. Moby ist im wahrsten Sinne des Wortes ein
+  Performer. Er spielt zwar kaum einen Ton live, dafür unterhält er sein
+  Publikum  aber  bestens  und  dadurch  wird es auch nie langweilig. Er
+  improvisiert auch gern und macht aus  seinen  Gefühlen  beim  Auftritt
+  keinen  Hehl.  So  kam  es  schon  vor,  daß  er  aus Verärgerung sein
+  Equipment demolierte oder ins Publikum warf, wild auf  der  Tanzfläche
+  abtanzte wie kein anderer vor und nach ihm und das er sich spontan zum
+  Stage-diving entschließt.
+
+  Moby ist halt open-minded im eigentlichen Sinn dieses Wortes  und  man
+  würde sich mehr von solch starken Persönlichkeiten in der Techno-Szene
+  wünschen.
+
+  Projekte:
+  Moby, Voodoo People.
+
+@endnode
+
+@node "Shapes2" "HousePool® Juli/August 1995 - Ausgabe 02   Shapes 2 - Profil Shop       "
+
+  Shapes II - Record-Shop-Profil
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Diesmal: Important Raveworld
+
+  Important - der Name ist Programm. Jeder hier kennt den Shop und  noch
+  mehr  Leute  die Labels. Important Raveworld, ein kleiner Shop am Ende
+  der Essener Einkaufsstraße, würde man glatt übersehen, wenn man  nicht
+  wüßte, wo er zu finden ist. Aber keine Angst, er macht sich selbst auf
+  sich aufmerksam. Das pennetrante  "BumBum",  das  trotz  geschlossener
+  Ladetür nach außen dringt, ist nicht zu überhören - sehr zum Leidwesen
+  des Besitzers des benachbarten Lampengeschäfts. Regelmäßiger Ärger war
+  früher  an  der  Tagesordnung  -  besonders  Samstags, wenn der größte
+  Andrang an Vinyljunkies herrschte. Raver  sind  halt  wie  eine  Horde
+  gefräßiger Heuschrecken....
+
+  Im Raveworld findet man alles, was man braucht. Jeder Geschmack ist in
+  ausreichender  Zahl  vertreten.  Es gibt natürlich auch alle wichtigen
+  Techno-Mags frisch vom Presswerk. CD´s sind allerdings nicht  so  sehr
+  vertreten,  da  Shop-Besitzer  Udo  Welcker  CD´s seit jeher (wohl aus
+  beruflichen Gründen) gehaßt hat. Eine Zeit lang hat er es  bei  keiner
+  Gelegenheit  unerwähnt  gelassen.  ´War schon irgendwie lustig. Na ja,
+  Leute, ein Besuch im Raveworld lohnt sich jedenfalls, solange  ihr  in
+  dem kleinen Laden einen stabilen Kreislauf habt.
+
+  P.S.: Meist sind sogar DJ Plank (Acrid Abeyance,Ascorbin  Acid,  etc.)
+  und DJ Webster (Liquid Bass) im Raveworld.
+
+
+  Adresse:    Important Raveworld
+  ¯¯¯¯¯¯¯¯    Viehofer Straße 23
+              45127 Essen
+              Fax: 0201-207897
+
+@endnode
+
+@node "Shapes3" "HousePool® Juli/August 1995 - Ausgabe 02   Shapes 3 - Profil Shop        "
+
+  Shapes III - Label-Profil
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Diesmal: Energized Rec.
+
+  Energized Rec. - wie kennt Ihr nicht ? Kennt Ihr doch ! Ich  sag´  nur
+  "Disco  fans".  Halt,  halt,  halt  !!  Nicht  gleich "Kommerzscheiße"
+  schreien. Sie machen schließlich mehr als  kommerzielle  Chartstürmer,
+  mal davon abgesehen, daß "Disco fans" nie als ein solcher geplant war.
+  Das Label existiert nun schon seit ungefähr 2 1/2 Jahren und Energized
+  haben viel mehr gemacht als nur Star Wash´s "Disco fans" !
+
+  Zustande kam das Label weil die beiden Energized-Köpfe  Andreas  Weber
+  und  Cet  Merlin durch ihrige bisherigen Aktivitäten von Labels, A&R´s
+  etc. dermaßen enttäuscht waren und sich von  ihnen  betrogen  fühlten.
+  Man  beschloß  ein  eigenes Label zu machen, um unabhängig zu sein und
+  vollständige  Kontrolle  über  jeden   Track   zu   haben,   inklusive
+  Cover-Gestaltung  usw.. Letzteres ist ja nichts neues und bewegt viele
+  Leute selbst ein Label zu machen.
+
+  Energized ziehen ihr Ding durch, sind aber für alle Stilrichtungen des
+  Techno  offen.  Hört  man  sich ihre Releases an, stellt man fest, daß
+  jedes Energized-Projekt für  einen  eigenen  Techno-Stil  steht.  Nach
+  eigener  Aussage  des  musikalischen  Kopfes Cet Merlin entstehen alle
+  Tracks mehr oder weniger spontan und zufällig - aber das gekonnt. Ihre
+  bisher größten Erfolge Space Frog "Lost in space Vol. 2" und natürlich
+  Star Wash´s "Disco fans".
+
+  Kleine Auswahl der Projekte auf Energized Rec.:
+  Star Wash, Space Frog, Rotten Duck, Trancebreaker, BajRam, u.a.
+
+@endnode
+
+@node "HPPlatten" "HousePool® Juli/August 1995 - Ausgabe 02   HousePool®-Platten            "
+
+ Die HousePool®-Platten:
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  @{" HousePool®-Plattentips       " link "Plattentips" 0}     Die Redaktion empfiehlt !
+  @{" HousePool®-Vinyl & CD Charts " link "HPChartsKonv" 0}     Die neuen Scheiben in Chart-Form !
+  @{" HousePool®-MODs/MEDs Charts  " link "HPChartsDigi" 0}     Digitale Tracks !
+
+@endnode
+
+@node "Plattentips" "Plattentips"
+
+  Record-Art - Die Plattentips
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Record-Art ist der ultimative Guide  durch  die  wichtigen  und  guten
+  Neuerscheinungen der letzten beiden Monate ! Doch solltet Ihr Euch die
+  vor einem Kauf  selbst  anhören  -  denn  wir  übernehmen  für  nichts
+  Garantie.
+
+
+  Norman - "Bad pulse E.P." [Suck  Me  Plasma]
+  Norman "The big deal" Feller strikes back !!! Und wie  !!  AWex  meets
+  Fanatic  Cracks ! Diese 3-Track-EP beinhaltet die geilsten Tracks, die
+  ich in letzter Zeit gehört habe. Alle drei sind sowohl rave- als  auch
+  clubtauglich.  Nach  dem  Opener  "Bad  pulse" werden die Tracks immer
+  abgedrehter und aber halten trotzdem das hohe Niveau dieser Maxi!
+
+  DJ Timo Maas - "The final excess"  [LiTime]
+  Ei, ei, was haben wir denn hier  auf  blauem  Vinyl?  Eigentlich  eine
+  gelungene  Platte,  allerdings  etwas kitschig und kommerziell. Zuviel
+  Süßstoff verdirbt eben die Zähne. Zum abfeiern reicht´s aber allemal.
+
+  Transport  23 -
+       "Liquid  dreams"  &  "Wonderful  world"  [Ugly  Frog Productions]
+  Zwei EP´s, die das gesamte Können und die musikalische Bandbreite  des
+  Produzenten    zeigen.    Die    einzelnen    Tracks   klingen   etwas
+  zusammengewürfelt. Man hätte sich  wohl  besser  auf  einen  Stil  pro
+  Platte festgelegt und diesen dafür konsequent durchziehen sollen.
+
+  Wax Scientists - "It´s time for house" [Phuture Wax]
+  It´s time for house, yeah ! Tom Wax und Norman Feller haben mit dieser
+  ein  geiles  Agehteil  erschaffen  !  Beidseitiger Wahnsinn auf dieser
+  Platte !
+
+  Quicksilver - "Bingo bongo" [Underdog]
+  "Bingo  bongo"  dröhnt  es  schon   seit   geraumer   Zeit   aus   den
+  Sound-Systemen  beinahe  aller  Clubs.  DJ  Quicksilver aus Bochum hat
+  damit wohl DEN definitiven Hit gelandet  und  wohl  nun  auch  als  DJ
+  großen  Bekanntheitsgrad  erlangen.  Nicht  nur  Steve  Mason ist ganz
+  verrückt nach diesem Teil. Geil, geiler - einfach total bingo bongo !
+
+  DOOF - "Born again E.P." [Matsuri]
+  Nicht doof, nur intelligent. Kurzgesagt: Geil ohne Ende... .
+
+  Bad Man - "Lover man" [Prolekult]
+  Definitiver Floorburner ! Wer die anderen Sachen von Baby  Doc  &  The
+  Dentist mag, wird an dieser Platte nicht vorbeikommen.
+
+  Genecom - "Silicon EP" [Planet Rhythm]
+  Die Label-Side vergessen wir mal ganz schell  und  kommen  lieber  zur
+  B-Seite,  weil´s  besser  isch, gell ?! Zweimal schöner, interessanter
+  und nicht langweilig werdender Techno. Gut und weiter so !
+
+  Cherry Moon Trax 3 - "The house of house" [Bonzai]
+  Eigentlich ist nur  "Conflictation"  interessant,  weil  klasse.  Beim
+  ersten  Hören  zwar  etwas  ungewohnt und kaum etwas gemeinsam mit dem
+  Vorgängerhit, aber schon beim zweiten Anhören wirkt dieses Teilchen so
+  vehement, daß man beinahe süchtig danach wird.
+
+  DMD Allstars 2 - "DMD Allstars Vol. 2" [DMD]
+  Alle  Monate  wieder  gibt   der   Dancemusic-Vetrieb   DMD   (d´mania
+  Distribution)  eine  Compilation-EP  mit  einigen  ihrer  Künstler mit
+  zumeist unveröffentlicheten Tracks heraus. Diesmal sind hier Legend  B
+  ("Lost   in   love  (´95  Acid  Remix)")/3  Lanka,  R-Damski  ("Liqiud
+  knife")/Overdrive und die Lords Of Octagon ("Open da house")/Energized
+  Rec.  vertreten.  Für jeden Geschmack ist etwas dabei. Auch wenn´s nur
+  die Ausschußtracks der genannten Acts sein sollten - gut.
+
+  Steve Mason Experience - "Shallow grave" [Rainforrest/Hyper Hype]
+  Wow - ein Killertrack mit Gruselfeeling. Am  besten  gefällt  mir  der
+  Carl Cox-Remix.
+
+  Organic Tea - "Simple music" [Dos Or Die]
+  Wer Quicksilver´s "Bingo bongo" mag wird an  diesem  Track  wohl  auch
+  gefallen  finden,  obwohl  hier kein witziges Sample wie "Bingo bongo"
+  vorkommt.   Producer   Tommaso    De    Donatis,    Co-Producer    des
+  Quicksilver-Releases,  legt  hier  ein  klasse  Stück  Vinyl  vor, das
+  garantiert keinen internationalen Vergleich scheuen muß !
+
+  Technohead - "I wanna be a hippy" [Mokum]
+  Die einen hassen es, die anderen lieben es. Bei den zahlreichen  Mixen
+  dürfte eigentlich für jede Party der schnellen Beats etwas dabei sein,
+  auch wenn man nicht auf Gabba abfährt. In  den  Niederlanden  war  das
+  Ding  angeblich  schon  die Nummer eins der Verkaufcharts. Wunder über
+  Wunder.
+
+  Angel Heart - "Come on let´s work" [Dos Or Die]
+  Sehr gute und gut gemachte Partyplatte. Mehr als solide.
+
+  Moby - "Into the blue" & "Into the blue Remixes" [Mute]
+  Nun macht er endgültig Popmusik ! Daran ist nichts schlimmes, denn das
+  Stück  ist  gut.  Eine  wunderschöne, melancholische Ballade. Moby von
+  einer bekannten, aber dennoch ungewohnten Seite.  Am  besten  gefallen
+  mir  jedoch  die  Steve Mason & P.E.T.E.-Remixe (auf jeder Maxi einen,
+  tolle Verkaufsstrategie).
+
+  Wax Tracks One - "Pure madness" [Tetsuo]
+  Der Name ist Programm. Einer DER Partyhits der  nächsten  Zeit  !!  So
+  watch out, Tom Wax is getting mad !!!
+
+  Cygnus X - "The orange theme Remixes" [Eye Q]
+  War  der  Original-Mix  schon  geil  und  sehr  beliebt,  wird  dieses
+  Re-Release  wohl  wieder  für Aufregung sorgen. Obwohl der Orginal-Mix
+  immer noch am besten ist, halten die Remixe das  den  hohen  Standart,
+  interpretieren den Track aber auf eine völlig eigene Weise. Gut.
+
+@endnode
+
+@node "HPChartsKonv" "HousePool® Juli/August 1995 - Ausgabe 02   Vinyl/CD-Charts               "
+
+ RECORD-CORNER -- ON THE EDGE
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  - Die HousePool® Top 13 -
+      (Neuerscheinungen)
+
+  001 Norman - "Bad Pulse"
+  002 Quicksilver - "Bingo bongo"
+  003 Organic Tea - "Simple music"
+  004 Wax Tracks One - "Pure madness"
+  005 DOOF - "Born again E.P."
+  006 Steve Mason Experience - "Shallow grave"
+  007 DMD Allstars 2 - "DMD Allstars Vol. 2"
+  008 Wax Scientists - "It´s time for house"
+  009 Cherrymoon Trax 3 - "The house of house"
+  010 Bad Man - "Lover man"
+  011 Genecom - "Silicon EP"
+  012 Moby - "Into the blue"
+  013 Cygnus X - "The orange theme Remixes"
+
+
+  RECORD-CORNER -- LESER CHARTS
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Patrick Becker
+  (Keine Reihenfolge !)
+
+  Kleine Boiz              - Eine kleine Nachtmusik
+  Emmanuel Top             - Turkich bazar / Cosmic event
+  M / Bonzai               - Razzia 2
+  Quick Reverse            - God's reason
+  Q-TEX                    - Equazion part 4
+  DJ E-RIK & DJ TACTIC     - The flying dutchman EP
+  Sons of Ilsa             - Die Zipfelmuetze ...
+  Lenny Dee VS Speedfreak  - Limited 02
+  WINX                     - How's the music ? (2x12")
+  Steroid                  - Out Here We Are ...
+
+@endnode
+
+@node "HPChartsDigi" "HousePool® Juli/August 1995 - Ausgabe 02   MODs/MEDs-Charts              "
+
+ HousePool´s Digital Charts
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  (001) NEU  The Lords of Groove:"HousePool Anthem" (Fireland)
+  (002) NEU  RetroTRAX & Rob Fox:"HouseBeat" (RetroTRAX Records)
+  (003) NEU  Orange Sun:"Bonzai Warrior" (Fireland)
+  (004) NEU  Step5:"Rave O Lution" (Fulcolingas)
+  (005) NEU  The Bassrider:"Put ur handz up" (Blue Carrot)
+
+ HousePool´s Leser Digital Charts
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Patrick Becker
+  ( Keine Reihenfolge ! )
+
+  Frankfurt Connection  - 125716 Bytes (PT)   Animal/Defect
+  GO!94'CLUB.vs.HC-MIX  - 364274 Bytes (PT)   KPMC/ULD
+  Revenge of the 101    -  87884 Bytes (PT)   LFO (?)/Phuture 303
+  The deceit 6          - 548936 Bytes (PT)   ?/?
+  Real Lovesong         - 706092 Bytes (OKTA) ?/?
+  '95-Raver's-Megamix   - 710366 Bytes (PT)   D.A.X./RaveBusters
+  Feel_the_bass!        - 183240 Bytes (PT)   D.A.X./RaveBusters
+  Injected              - 154994 Bytes (PT)   ?/RaveBusters
+  The hyper on acid     - 347988 Bytes (MED)  Voodoo/RaveBusters
+  Take Off - Tom K. Mix - 400032 Bytes (PT)   Tom K./RaveBusters
+  SequencerKiller       - 292190 Bytes (OKTA) HardSequencer/Recall
+
+
+  Ihr seid gefragt, schickt uns Eure Chart-Vorschläge !
+
+@endnode
+
+@node "SoundFactory" "HousePool® Juli/August 1995 - Ausgabe 02   Sound-Factory                 "
+
+ HousePool - Sound-Factory
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Das hier ist eine der geilsten Ecken des Magazins , DENN:
+
+   - hier findet ihr die neuesten Tunes/Trax aus der Szene !
+   - die schönsten Einsendungen von EUCH - unseren Lesern !
+   - die besten Remixe & Reworx von alt-bekannten bzw. von
+     brandneuen Tunes/Trax !
+
+ Diesmal dabei:
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+   @{" Über HousePool Anthem        " link "SFSong1" 0} @{" Abspielen HousePool Anthem   " system "run Powerplayer HousePool_02:HP_02-Songs/MMD1.The_HP-Anthem window"}
+   @{" Über Rave O Lution           " link "SFSong2" 0} @{" Abspielen Rave O Lution      " system "run Powerplayer HousePool_02:HP_02-Songs/MOD.Rave_O_Lution window"}
+   @{" Über Put ur handz up         " link "SFSong3" 0} @{" Abspielen Put ur handz up    " system "run Powerplayer HousePool_02:HP_02-Songs/MMD1.Put_ur_handz_up window"}
+
+   @{" Musik auswählen (FileReq)    " system "run Powerplayer"}
+
+@endnode
+
+@node "SFSong1" "HousePool® Juli/August 1995 - Ausgabe 02   Sound-Factory/Song-1          "
+
+ Original Song:
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Titel   : The HousePool Anthem            Dateityp   : MMD1/4 Kanal
+  Autor   : The Lords of Groove:            Dateilänge : 213202 Bytes
+              Rob Fox & Rave ManiaK
+  Version : Gathering Cut by DJ Tomcat      Herkunft   : Blue Carrot (D)
+
+  Yes ! Das ist unser Titelsong/Theme/Anthem ! Absolut treibender Sound,
+  der uplifted und Dance-Feeling aufkommen läßt.
+
+  WETTBEWERB: Euch gefällt der Song nicht ? Ihr könnt das besser ?  Dann
+              an die Arbeit ! Remixed das Ding und schickt es zu uns und
+              auf  der  nächstmöglichen Ausgabe  ertönt  dann vielleicht
+              schon Euer Sound !!
+
+@endnode
+
+@node "SFSong2" "HousePool® Juli/August 1995 - Ausgabe 02   Sound-Factory/Song-2          "
+
+ Original Song:
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Titel   : Rave O Lution                   Dateityp   : PT/4 Kanal
+  Autor   : Step5                           Dateilänge : 131788 Bytes
+  Version : Original vom 11.05.1995         Herkunft   : Fulcolingas (D)
+
+  Mein allerserstes Mod , das man(frau) sich einigermassen anhören kann.
+  Entstanden  in  4  Stunden unter Zuhilfenahme eines Kasten Ur-Pils und
+  eines Päckchen  Zigaretten während der Vorfeiern zu meinem GeburtsTag.
+  Fand damals bei meinen Kollegen relativ grossen Anklang ...
+
+@endnode
+
+@node "SFSong3" "HousePool® Juli/August 1995 - Ausgabe 02   Sound-Factory/Song-3          "
+
+ Original Song:
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Titel   : Put ur handz up                 Dateityp   : MMD1/4 Kanal
+  Autor   : The Bassrider/Jonas v.d. Lught  Dateilänge : 147396 Bytes
+  Version : Original Rave Mix               Herkunft   : Blue Carrot (D)
+
+  Ein Blue Carrot-Release. Wie schon gewohnt  ein  kleiner  Slammer  mit
+  irrer  Hihat-Spur, minimaler Aufbau mit ein paar recht experimentellen
+  Samples und einem netten Vocal. Also einfach mal reinhören.
+
+@endnode
+
+@node "Experience" "HousePool® Juli/August 1995 - Ausgabe 02   Experience Playlist           "
+
+ The Steve Mason Experience (BFBS London)
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  @{" The Experience               " link "ExperienceAbout" 0}     Über die Sendung !
+  @{" Experience Termine           " link "RadioDates" 0}     Sendezeiten und Frequenzen
+  @{" Nächste Dates                " link "PartyDates" 0}     Wo und wann legt er auf ?
+
+  @{" Mason Playlist 27/05/95      " link "ExperiencePL01" 0}     Was hat er aufgelegt !
+
+@endnode
+
+@node "ExperienceAbout" "HousePool® Juli/August 1995 - Ausgabe 02   The Experience                "
+
+ HousePool® präsentiert:
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+ BFBS : Steve Mason - The Experience
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  The Experience - Das spricht schon für sich !!
+  Die neuesten Tracks jede Woche von einem der besten DJs Europas. Steve
+  Mason   -  nach  Carl  Cox  -  der  wohl  berühmteste  und  zeitgleich
+  bekannteste UK-Export-Star der Techno/Rave-Szene - mixt jede  Woche  2
+  Stunden  die  geilsten  Tracks  von  House und Acid über einige wenige
+  Breakbeat/Jungle-Tracks bis hin zu einprägsamen Techno  und  Rave  ein
+  unvergeßliches Programm.
+
+  Also hört einfach mal rein und Ihr seid eine  EXPERIENCE  reicher  und
+  den meisten Leute um Wochen voraus !
+
+  Ein Grund mehr warum BFBS London - das British Forces Radio - auch  in
+  Deutschland weiterbestehen sollte !!
+
+  @{" Termine " link "RadioDates" 0}
+
+@endnode
+
+@node "ExperiencePL01" "HousePool® Juli/August 1995 - Ausgabe 02   Experience-Playlist 18/02/95  "
+
+ HousePool präsentiert : Mason´s Playlists ?
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Habt Ihr Interesse an seinen Playlists ?
+  Sollen wir Euch diese präsentieren ?
+  Schreibt uns ob und wie dieses Geschehen könnte !!
+
+  Als kleines - leider veraltetes - Beispiel haben wir einen kleinen
+  Appetitmacher bereits eingebaut !
+
+  BFBS :"THE STEVE MASON EXPERIENCE" Playlist - 27/05/1995 (22./1995)
+   ____________________________________________________________________
+  | Song/Track            | Project                | Label             |
+   ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+    Lucky People Center     Sundance                 Beverage Records
+    Cherry Moon             Trax III                 Bonzai
+    Wavemen                 The Chase                First Impression
+    The Shadowman           Technostalgic            Urban Sound of
+                                                     Amsterdam
+    Voidmex                 Orchid`s Paw             Choci`s Chwns
+    Mantra to the Buddha    EP (hardfloor rmx)       TEC
+    Men from del Bosca      Havaing it at Boscoland  Boscoland
+    Special Acid Edition    Acid Energy              X-Trax
+    Reunification           Tension (f.e.o.s. rmx)   U.P.B.
+    Floorplay               Universal Language       Transient
+                            (DJ Big Al`s Trade RMX)
+    Paragliders             Phi                      Superstition
+    Yves de Ruyter          EP                       Bonzai 95083
+
+  |¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|
+  |  "Keep it locked, crew ! - There`s lots more in the 2nd hour !!"   |
+  |____________________________________________________________________|
+  | Song/Track            | Project                | Label             |
+   ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+    Compuded                EP                       Edge 1 (1992)
+    [no credits]            EP                       Edge 16
+    S. Mason + T. Crooks    Shallar grave            Rainforest
+    Armed response          Work                     Lunatec
+    Synergy                 The Crystal Gazer        Blackhand
+    The Swarm               Hum in my blood          Strategy
+    Quickreverse            EP                       Bonzai 95082
+    Shimmon + Wolfson       Do you want              Jamm Records
+    Love groove             Dirty laugh              Millennium
+                            (suspicious rmx)
+
+@endnode
+
+@node "VIVA-HF" "HousePool® Juli/August 1995 - Ausgabe 02   VIVA-HouseFrau                "
+
+ HousePool® präsentiert:
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+ Die VIVA-`Housefrau`-en:
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  @{" VIVA Housefrau               " link "VIVAAbout" 0}     Was ist das ?
+  @{" Themenvorschau               " link "VIVAVorschau" 0}     Was kommt ?
+  @{" Housefrau News               " link "VIVANews" 0}     Was ist neu ?
+
+ Exklusiv ! Die Playlists:
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  @{" Housefrau Review 05/05/95    " link "VIVAReview" 0} @{" Housefrau Review 12/05/95    " link "VIVAReview" 4}
+  @{" Housefrau Review 19/05/95    " link "VIVAReview" 16} @{" Housefrau Review 26/05/95    " link "VIVAReview" 28}
+  @{" Housefrau Review 02/06/95    " link "VIVAReview" 39} @{" Housefrau Review 09/06/95    " link "VIVAReview" 56}
+  @{" Housefrau Review 16/06/95    " link "VIVAReview" 67} @{" Housefrau Review 23/06/95    " link "VIVAReview" 84}
+  @{" Housefrau Review 30/06/95    " link "VIVAReview" 99} @{" Housefrau Review 07/07/95    " link "VIVAReview" 114}
+  @{" Housefrau Review 14/07/95    " link "VIVAReview" 123} @{" Housefrau Review 21/07/95    " link "VIVAReview" 134}
+  @{" Housefrau Review 28/07/95    " link "VIVAReview" 145}
+
+@endnode
+
+@node "VIVAAbout" "HousePool® Juli/August 1995 - Ausgabe 02   VIVA Housefrau                "
+
+ HousePool® präsentiert:
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+ VIVA-TV :  `Housefrau`
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  WAAAAASSSS ??? Ihr kennt Housefrau nicht ??? Nun  Housefrau  ist  eine
+  auf    House   &   Techno   ausgerichtete   Spezialsendung   auf   dem
+  24-Stunden-RundumdieUhr-Videoclip-Sender VIVA.
+
+  Housefrau wird moderiert von den Housefrauen (=VJ`s) Mate Galic (Acid)
+  und  Sabine  Christ  (House).  Gezeigt werden House-,Trance-,Acid- und
+  Techno-Videos   von   prinzipbedingt   meist   `kommerziellen`   Acts.
+  Allerdings  bleibt man von Dancefloor-Acts verschont ! Wegen Mangel an
+  Videos werden auch schon mal ältere Videos  gezeigt,  was  aber  nicht
+  unbedingt ein Nachteil sein muß.
+
+  Ebenfalls interessant sind die Schwerpunkt-Reportagen  über  z.B.  die
+  lokale  Szene  einer  Stadt,einem neuen Project (z.B. Hands on Yello),
+  oder von großen  Events  und  Raves  (MayDay,  Love  Parade,  etc...).
+  Hervorzuheben  und  etwas  `undergroundiger`  als  die Videos sind die
+  Plattentip (`von führenden Housefrauen empfohlen`), die bei Mate  aber
+  meist   abstract-acid-lastig   und   bei   Sabine  house-lastig  sind.
+  Studiogäste gibt es natürlich auch. Es war so ziemlich jeder schon da:
+  von  `Kommerz-Künstlern`  vom  Schlage Marc`Oh über Dee-Lite,Hooligan,
+  Westbam,Hardsequencer,Jam&Spoon bis hin zu Steve Mason,Moby  und  erst
+  kürzlich CARL COX - der 10 Minuten mit 3 Plattentellern mixte !
+
+  Wie Ihr also seht eine durchaus sehenswerte Sendung - die  es  schafft
+  auch  in  der `kommerziellen Landschaft` nicht allzu MainStream-lastig
+  ist. Absoluter Hammer jeder Sendung - die Frage :  Welche  Frisur  hat
+  Mate denn diesmal ??
+
+  Also schaut einfach mal rein !!
+
+  P.S.: VIVA-TV gibt es zur Zeit  nur  über  Kabel  oder  über  Satellit
+        (einer dieser vielen ASTRA-Satelliten !!) zu empfangen !
+
+        Housefrau  sucht  übrigens  DRINGEND   neue   Videos   aus   dem
+        Techno-Bereich  (z.B.  Gabber-Hardcore-Trance-House-Acid-Cosmic-
+        Breakbeat-Jungle-etc...and all other nice stuff.......) !!!
+
+@endnode
+
+@node "VIVAVorschau" "HousePool® Juli/August 1995 - Ausgabe 02   Housefrau-Themenvorschau      "
+
+ COMING SOON !
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Sorry ! - Wieder nichts drin hier !
+  Aber wir arbeiten dran ! Ehrlich !
+
+  Vielleicht in der nächsten Ausgabe !!! Also fördert dieses Magazin und
+  Ihr seid künftig immer auf dem neuesten Stand !!
+
+@endnode
+
+@node "VIVANews" "HousePool® Juli/August 1995 - Ausgabe 02   Housefrau News                "
+
+ Neues bei HOUSEFRAU ?
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Durch Terminprobleme konnten wir leider  die  HOUSEFRAUEN  noch  nicht
+  ausquetschen.  In  der  nächsten  Ausgabe wir es hier aber schon nicht
+  mehr so leer hier sein.
+
+@endnode
+
+@node "VIVAReview" "HousePool® Juli/August 1995 - Ausgabe 02   Housefrau Reviews                "
+
+05.05.95: (54)
+
+    Thema:   MayDay Special (Zusammenfassung)
+
+12.05.95: (55)
+
+    Thema:   Paris Special (Sabine)
+    Videos:  DJ Eric Sneo - Forces of nature
+             Laurent Garnier - Astral dreams
+             The Bloom Of Gutter - The world of illusory desires
+             Formic Acid - Eternia
+             LFO - Tied up
+             Recall-A-Rena - Unit (RMX´94)
+             Aurora Borealis - The milky way
+             Laurent Garnier - Go to sleep
+
+19.05.95: (56)
+
+    Thema:   Club Convention München / Evolution rave Schweiz
+    Videos:  DJ Jo - Space harmony (Gary D. RMX) / No Respect
+             DJ Hell - Eat my house / Disko B.
+             Patrick Lindsey - No soul / Harthouse
+             Yves Deruyter - Calling earth / Bonzai
+             The Bloom Of Gutter - The world of illusory desires
+             Aqualite - The Wavemaker / Suck Me Plasma !
+             Laibach - War / Intercord
+             Workshop - I wish I had u / Ladomat
+
+26.05.95: (57)
+
+    Thema:   Rave & Cruise Report
+    Videos:  AWex - It´s our future / Plastic City
+             Bucketheads - The Bomb
+             The Orb - Oxbow lakes
+             Andreas Dorau - Stoned faces don´t lie (Ilsa Gold RMX)
+             Sequencial - Sea shells
+             Synesthasia - Reptile / Harthouse
+             Sven Väth - La esperanza / Eye Q
+
+02.06.95: (58)
+
+    Thema:   Time Warp (Mannheim) / 1.Munich Union Move
+    Gast:    Ata & Heiko (Delirium) / Claude Young
+    Videos:  AWex - It´s our future / Plastic City
+             Towa Tei - Technova
+             Ongaku - Mihon / Ongaku
+             Quench - Be good to me
+             Andreas Dorau - Die Sonne
+    Platten: Freaky Chackra - Low down motivator / Astral Werks UK
+             Tata Box Inhibitors - Stabilizer / Touché
+             Ocra-Alpha - Invisible / Collide
+             Deep Level - Murray Walker / Just Create Rec.
+             Underworld - Born Slippy / Junior Boys Own
+             Air Liquide - Stropoplastics
+             Model 500 - Deep space
+
+09.06.95: (59)
+
+    Gast:    Juan Atkins (Live Mix) / Dr. Motte
+    Videos:  Marusha - Deep / Low Spirit
+             Celvin Rotane - I believe
+             Hardsequencer - Sound transformation
+             Robert Görl - Happy gathering
+             3 Phase feat. Dr. Motte - Der Klang der Familie
+             Popcorn - Tap-moi-la
+             Oval - Do while
+
+16.06.95: (60)
+
+    Thema:   Cubic 95 Rave Schweiz / Best of Housefrau
+    Gast:    Locust
+    Videos:  Jam & Spoon - You gotta say yes to another excess
+             AWex - It´s our future
+             Yves Deruyter - Calling earth
+             DJ Hell - Eat my house
+             Marusha - Deep
+             Winx - Don´t laugh
+    Platten: Olex / Street City Rec.
+             Future Funk - Dark side of the moon / Delirium
+             Robert Hood / M-Plant Rec. 04
+             Nico - Live wire / Whistle 3 UK
+             Speedy J - Doublepack / Plus 8
+             Chemical Brothers - Leave home / Junior Boys Own
+
+23.06.95: (61)
+
+    Gast:    DJ BBM (Live Mix)
+    Videos:  2 N Won - Legal reason for a trip
+             Air Liquide - Zeitgeber
+             IO - Libre
+             Future Sound of London - Amoeba
+             Subsurfing - The number readers
+             Moby - Into the blue
+    Platten: White jazz - Strange fruit / NTA
+             Miss Jahroon - Turn me on / Jinx
+             Last sector / Fish Tank 01 UK
+             Transmisson From The Planet Dog / Planet Dog UK
+             Scan X - Intrinsic mind EP / F-Communication
+
+30.06.95: (62)
+
+    Gast:    Code IV (Peter live)
+    Videos:  Members of Shockwave - Gabber disco Vol. 1-5
+             Cosmic Baby - Talking drums live
+             DJ Tomcraft & Mephisto - This is no house
+             Urban Trance Plant - Music drops down
+             Future Sound of London - Snake hips
+             [UNKNOWN CREDITS (Sorry)]
+    Platten: Dharma - Selaon / Music now
+             Cari Lekebush - Live and direct / Hybrid 08
+             El Mal - Citrus / Ifach
+             Skintrade - Undromraxess / Soma UK
+             Psylocybin - Delicate substance / Missile 04
+
+07.07.95: (63)
+
+    Thema:   Marusha-Special
+    Videos:  Marusha - Deep
+             Casper Hauser - Black & white
+             DJ Tomcraft & Mephisto - This is no house
+             Kotai - Ring Ring
+             Cenith X - Feel
+
+14.07.95: (64)
+
+    Thema:   Love Parade Special (Rückblick)
+    Videos:  Yves Deruyter - Yves Day
+             Liquid - Sweet harmony
+             Deee-Lite - Picnic in the park
+             Opus III - It´s a fine day
+             Jay-Dee - Plastic dreams
+             Westbam - Celebration Generation
+             Atlantic Ocean - Waterfall
+
+21.07.95: (65)
+
+    Thema:   San Francisco Music Festival
+             Teutonic Techno Temple/Parade
+    Videos:  Laika - Marimba Song
+             DJ Cam - Dieu reconnaitra les siens
+             New Order - Blue Monday (Hardfloor RMX)
+             Goldie - Inner city life
+             Locust - Penetration
+             Moby - Into the blue (Spiritual Mix)
+
+28.07.95: (66)
+
+    Thema:   Report Safe Rave (Security-Team)
+    Gast:    DJ Pauli (Live mix)
+    Videos:  Evolution - The experience of taking a step into
+             Biochip C - Inside (Chapter 2)
+             Techohead - I wanna be a hippy
+             Kraftwerk - Music non stop
+             Keim - Keim 3.2
+             Kemel - Antifaras
+
+@endnode
+
+@node "ForumGeneralis" "HousePool® Juli/August 1995 - Ausgabe 02   Techno Café                   "
+
+ Ein herzliches WILKOMMEN zum ...
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+                          T E C H N O - C A F É
+                     Das HousePool® Diskussionsforum
+
+  Forum Generalis hat keine tiefere Bedeutung gehabt  und  hat  bei  uns
+  abgedankt - Techno-Café hört sich auch viel lebendiger an, oder ??
+
+  Das  Techno-Cafe  ist  eigentlich ein Cafe wie jedes andere auch. Auch
+  hier könnt  Ihr  Euch  mit  anderen  Leute  über  verschiedene  Themen
+  unterhalten und diskutieren. Ihr könnt auch selbst ein Thema vorgeben.
+  Ihr müßt uns nur schreiben. Hier sollen also  in  naher  Zukunft  rege
+  Diskussionen  geführt  werden  und hier werden auch Eure Meinungen und
+  Leserbriefe veröffentlicht !!
+
+  Wir wollen Euch die  Möglichkeit  für  ein  umfassendes  Meinungsforum
+  bieten. Welches Magazin hat Euch sowas schon angeboten ?
+
+  Klar  sowas gibt es auch in Mailboxen und in diversen Netzen - aber da
+  viele Leute keinen Zugang, keine Lust,  kein  Geld  oder  aus  anderen
+  Gründen  dieses  nicht  nutzen  bzw.  können,  wollen  wir  Euch Forum
+  generalis anbieten und hoffen das Ihr es annehmt !
+
+  Wie könnt Ihr nun mitmachen ??
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Schickt uns einfach eine Diskette mit Euren Beiträgen,
+          ODER schickt es uns an unsere EMail-Adresse
+          ODER schreibt uns auf postalischem Wege !!
+
+  Hope to see you and you and you and .......... !!
+
+
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+
+  Patrick Becker aus Völklingen:
+
+  Hallo HousePool©-Team ...
+
+  ... zuerst einmal ein paar Worte zu der Erstausgabe von HousePool:
+
+  Das Design bzw. die Aufmachung des Magazins (Guide / deutsch) ist euch
+  bis  auf  einen  kleinen  Bug  gut gelungen (Die Texte ART-Records und
+  ClubAdressen wurden von MultiView nicht erkannt ???).
+  Wenn das monatliche Erscheinungsdatum eingehalten werden kann ,  haben
+  die    Amiga-User    endlich    eine   gute   und   relativ   aktuelle
+  Informationsquelle in Sachen House und Techno.
+
+  Falls ihr einmal vorhaben solltet, das Mag in  englisch herauszugeben,
+  lasst  uns  nicht  so  gut  englischsprechenden  Leute  nicht haengen
+  (bitte). Ist dann zwar "etwas" Mehrarbeit, aber die deutschsprachigen
+  Leser werden's euch mit Treue danken.
+
+  Ist es eigentlich  moeglich, dass sich Record Stores selbst ein  wenig
+  vorstellen koennen ?
+
+  Wie waere es denn , wenn ihr euch in Sachen Radio- bzw. TV-Termine mit
+  dem   Autor   des  "Ravers  Radio+TV  Guide"  (Cheetah@IUS.gun.de)  in
+  Verbindung setzt zwecks Veroeffentlichung des Guides im  HousePool©  ?
+  Waere doch eine grosse Arbeitserleichterung fuer euch .
+
+  Anbei ist auch noch ein kleines Mod-File von mir ( Hoffentlich sagt es
+  euch  zu  :-) ) . Mein Pseudo,  unter dem ich diese  Tracks verbreche,
+  ist STEP 5 ...
+
+  So , dass waers mal fuer heute ... Jetzt  muss ich  nur noch  zusehen,
+  dass ich irgendwo noch etwas "GIFT" fuer euch finde .
+
+  Flying away ...
+
+  - RaveBusters 4ever --------------------- STEP5@groenld.sb.sub.de ----
+
+  "Oh mein Gott , es ist SchlumpfenTechno !!!" (Kunze)
+
+
+  Hi, Patrick,
+
+  erstmal ein herzliches Dankeschön für deinen Brief, über den  wir  uns
+  sehr gefreut haben. Dank auch für das ganz besondere "GIFT" (haben wir
+  sofort wieder in "HousePool" investiert) und für Dein Modul,  das  uns
+  trotz  Deiner  Skeptis  erfreut  hat  und  deshalb  in  dieser Ausgabe
+  veröffentlicht wird.
+
+  Hoffentlich bist Du nicht zu enttäuscht,  daß  unsere  zweite  Ausgabe
+  erst  mit  einmonatiger  Verspätung  erscheint, aber wir müssen leider
+  zugeben, daß wir uns mit unseren ehrgeizen Zielen, die wir uns  selbst
+  gesteckt  haben,  für  den Anfang etwas viel vorgenommen haben. Unsere
+  Redaktion   ist   leider   noch   zu   klein,   um   eine   monatliche
+  Erscheinungsweise  pünktlich einzuhalten. Ihr glaubt gar nicht was für
+  Leute einem Steine in den Weg legen. Aber das ist ein anderes Thema.
+
+  Das mit dem BUG in der ersten Ausgabe tut  uns  leid,  aber  es  mußte
+  damals  schnell  gehen um überhaupt noch halbwegs aktuell zu sein. Wir
+  hoffen das es mit dieser Ausgabe keine Probleme gibt.
+
+  Nun aber zu Deinen Anregungen: Ob wir "HousePool - The raver´s  voice"
+  einmal  in englischer Sprache herausgeben werden, steht ja nicht nicht
+  fest. Es hängt davon ab wieviel Feedback aus  anderen  Ländern  kommt,
+  aber  natürlich  wird  es dann auch möglich sein eine deutschsprachige
+  Version herauszugeben - Ihr müßt uns allerdings genug Texte  zusenden,
+  damit  wir  nicht  auch  noch alle Texte selbst schreiben müssen, denn
+  zwei Version bedeuten einen sehr großen Zeitaufwand,  den  wir  (noch)
+  nicht leisten können. Also helft uns !!
+
+  Natürlich können sich  Record-Stores  auch  selbst  vorstellen  -  das
+  SOLLEN  sie  sogar  !!  Oder Ihr stellt sie vor ! Befragt doch einfach
+  Euren Record-Dealer dazu - is´ ja schließlich auch eine  gute  Werbung
+  für ihn.
+
+  P.S.: Danke für Deinen Tip mit dem "Ravers Radio+TV Guide" !
+
+
+                                                              (die Red.)
+
+
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+
+  STEIN DER WEISEN:
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Ja, ja, Leute  ein  heißen  Thema  steht  an.  Viel  diskutiert,  viel
+  zusammengedichtet  und  viel erfunden. Das von uns gewählte Thema wird
+  auch in dieser Form bei der Popkomm  ´95  diskutiert.  Wir  haben  uns
+  entschlossen dieses Thema im  selben Wortlaut zu übernehmen, da wir es
+  nicht besser hätten formulieren können. Also, jetzt seid  Ihr  ´dran !
+  Schreibt  uns  (egal  auf welchem Wege). Unsere Adressen findet Ihr ja
+  bekanntlich im Impressum. Macht mit ! Es geht um unsere Lieblingsmusik
+  und  für viele  um die Zukunft. Schreibt uns Eure  Hoffnungen, Träume,
+  Wünsche, welche Entwicklung  IHR für Techno & House erhofft hattet und
+  erhofft, etc.,etc..
+
+  Unser Thema ist diesmal:
+
+  Techno ´95 -
+     Von der musikalischen Revolution zum Strohfeuer der Branche ?
+
+
+  Unsere Adressen entnehmt bitte: @{"FEEDBACK" link "Feedback" 31}
+
+@endnode
+
+@node "Dates" "HousePool® Juli/August 1995 - Ausgabe 02   Termine/Events                "
+
+  Ihr wollt wissen was zur Zeit abgeht in Sachen House & Techno ?
+  Dann seid Ihr hier GOLDRICHTIG !!
+
+  Mit unseren 6 Infolines bieten wir auf allen Gebieten  mehr  als  alle
+  anderen.  Ob  Fernsehen, Radio, Party, Raves, Club-Programme, Label- &
+  Shop-Adressen bis hin zu der neuen Sparte mit Internet-Web-Adressen.
+
+  @{" Infoline 1 - TeVee Dates     " link "TVDates" 0}     Was gibts in der Glotze ?
+  @{" Infoline 2 - Radio Dates     " link "RadioDates" 0}     Was bringen die Wellen ?
+  @{" Infoline 3 - Party Dates     " link "PartyDates" 0}     Programme & Events & Party
+
+  @{" Infoline 4 - Clubs & Discos  " link "ClubDisco" 0}     Adressen und Programm !
+  @{" Infoline 5 - Labels & Shops  " link "LabelShop" 0}
+  @{" Infoline 6 - Internet / WWW  " link "Internet" 0}
+
+@endnode
+
+@node "TVDates" "HousePool® Juli/August 1995 - Ausgabe 02   TeleVision Termine            "
+
+ HousePool® empfiehlt:
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+ Wichtige Televison-Termine
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  * VIVA-TV : Housefrau , VJ`s Mate Galic & Sabine Christ
+    House- & Techno-Videos, Plattentips, Interviews & Berichte !
+    Über Kabel und Satellit (Astra) zu empfangen !
+    Freitag: 22.00-23.00, Samstag: 13.00-14.00 (Wdh.)
+    Mittwoch: 00.00-01.00 (Wdh.)
+
+  * VIVA-TV : Trance , VJ Mate Galic
+    Chill-out, Trance- / House- / Techno-Videos (meist ältere !)
+    Über Kabel und Satellit (Astra) zu empfangen !
+    Sonntag: 02.00-03.00
+
+  * MTV : Party-Zone , VJ Simone
+    2 Std. Vorbereitung  auf das  Wochenende mit  neuen  Techno-
+    Videos, Reportagen & Interviews !
+    Über Kabel und Satellit (Astra) zu empfangen !
+    Satellit nur mit Dekoder !!! MTV ist verschlüsselt !
+    Samstag: 00.00-02.00
+
+  * MTV : Dance , VJ Simone
+    ½ Std. Dance & Techno-Videos !
+    Über Kabel und Satellit (Astra) zu empfangen !
+    Satellit nur mit Dekoder !!! MTV ist verschlüsselt !
+    Donnerstag: 18.00-18.30
+
+  * MTV : Dance , VJ Simone
+    1 Std. Dance- & Techno-Videos !
+    Über Kabel und Satellit (Astra) zu empfangen !
+    Satellit nur mit Dekoder !!! MTV ist verschlüsselt !
+    Samstag: 17.00-18.00
+
+  * MTV : Chill-Out-Zone
+    Chill-Out- und Trance-Videos !
+    Über Kabel und Satellit (Astra) zu empfangen !
+    Satellit nur mit Dekoder !!! MTV ist verschlüsselt !
+    Sonntag: 02.30
+
+@endnode
+
+@node "RadioDates" "HousePool® Juli/August 1995 - Ausgabe 02   Radio Termine                 "
+
+ HousePool® empfiehlt:
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+ Radio-Termine Deutschland:
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  * BFBS : The Steve Mason Experience
+    2 Std. neueste Scheiben im Mix von DJ Steve Mason
+    Samstag: 01.00-03.00, Samstag: 18.00-20.00
+
+  * 1-LIVE : Treibhouse
+    2 Std. pure House (Detroit,Chicago,etc..)
+    DJs Ingo Sänger & Steffen Irlinger
+    Sonntag: 00.00-02.00
+
+ Radio-Termine Lokal:
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  AACHEN:       * Radio Euro Aachen: Dance Station (UKW 89.0 MHz)
+                  Samstag: 19.00-21.00
+                * Radio Fautas: Friday Night Jam (UKW 96.7 MHz)
+                  Freitag: 20.00-22.00
+
+  BAYERN:       * BR2: Rave Trax
+                  jeden 2. Freitag: 17.00-18.00
+
+  BERLIN:       Kiss FM Berlin: (UKW 99.0 MHz)
+                * House Traxx: DJ Niplz
+                  Montag: 23.00-01.00
+                * Nightlife: DJ Pete
+                  Montag: 01.00-06.00
+                * Steve Mason Experience
+                  Dienstag: 21.00-23.00
+                * Wow what´s that ?
+                  Mittwoch: 01.00-06.00
+                * DJ Special mit div. Club-DJs
+                  Mittwoch: 23.00-01.00
+                * Brain candy: Ellen Alien
+                  Donnerstag: 21.00-23.00
+                * ED 2000,Ambient
+                  Freitag: 01.00-03.00
+                * Nightlife: DJ Pete
+                  Freitag: 03.00-06.00
+                * Club Mix
+                  Samstag: 01.00-07.00
+                * Party Time
+                  Samstag: 21.00-01.00
+                * The Basis Mix
+                  Sonntag: 01.00-08.00
+                * ED 2000
+                  Montag: 00.00-03.00
+
+  BREMEN:       * Radio 107.1 Bremen: Tiefenrausch
+                  DJs: Dayen Hegemann, Patrick Mytanz,Malte Janssen
+                  jeden 2.Freitag: 14.00-15.00
+
+  BOCHUM:       * Ruhrwelle Bochum 105.0: Radio Rave Wave
+                  DJs: Dio & Dosti
+                  jeden 2.Samstag: 19.00-20.00
+                  jeden 3.Freitag: 18.00-18.30
+                * Ruhrwelle Bochum 105.0: Radio Ravenous
+                  jeden 1.& 4.Montag: 19.00
+
+  ESSEN:        * Radio Essen: Rave Radio
+                  Freitag: 19.00-20.00
+
+  FRANKFURT/M:  * HR3: Clubnight
+                  DJs: Dag, Sven Väth, Heinz Felber, Lady D, Chilly T.
+                  Samstag: 21.00-24.00
+
+  GELSENKIRCHEN:* Radio Emscher-Lippe 96.1: Backstage
+                  DJs: Jürgen Lipertowicz, H.W. Balzuweit, M. Kellner
+                  jeden 3.Mittwoch: 19.04-20.00
+
+  HAMBURG:      * Radio Loud & Clear: The phuture sound strikes back
+                  jeden 1.,3.,5.Samstag: 21.00-22.00
+                  jeden 1.,3.,5.Montag: 14.00-15.00
+                * Radio N-Joy: Boris Dlugosch in the Mix
+                  Samstag: 23.00-00.00
+
+  HAMM:         * Radio Hamm: Object 105
+                  jeden 2.,4.Dienstag: 18.00-19.00
+
+  HERNE:        * Radio Herne 90.8: Radio HIV
+                  DJ: Spacekid
+
+  HESSEN:       * Radio RPR
+                  DJ: Uwe Wagenknecht
+                  Samstag: 18.00-21.00
+
+  ISERLOHN:     * Radio MK Iserlohn: P.U.M.P.
+                  DJs: Carsten Becker, Stefan Borgmann
+                  Freitag: 21.00-22.00
+
+  NIEDERRHEIN:  * Antenne Niederrhein: Dream FM
+                  Freitag: 18.00-19.00
+                * Hitradio Dancestation
+                  Mittwoch: 20.00-24.00
+                * Radio Rave Experience
+                  jeden 3.Sonntag: 19.04-20.00
+
+  HERFORD:      * Radio Rave Channel
+                  DJ: Polo, Frankey P.
+                  Mittwoch: 18.05-19.00
+
+  NÜRNBERG:     * N1: Club Nacht
+                  DJs: Oliver Pankotsch, Liquid, Martinez
+                  Samstag: 00.00-03.00
+                  Samstag: 21.00-03.00
+                  Sonntag: 20.00-21.00
+
+  RECKLINGHSN.: * Radio Turntable: Turntable
+                  jeden 1.,3.Donnerstag: 18.00-20.00
+
+  SACHSEN:      * Radio NRJ Sachsen: Stunde Null
+                  DJs: Raik & Mad Max
+                  Donnerstag: 18.00
+
+@endnode
+
+@node "PartyDates" "HousePool® Juli/August 1995 - Ausgabe 02   Der Party/Event-Guide         "
+
+11.08. European Hardcore United - Part II The Hardcore Experience
+       Fantasy
+       Preis: 33.-
+       Start: 20.00 h
+       DJ´s: Gizmo, Dark Raver, Paul Elstak, Reanimator, Bass D, &
+             King Matthew, Darien Kelly, Distortion, Panic, Lars,
+             Dreamer, Hell Raver, Jim Sparxx, Kwick, Chio, Mike Oh´man,
+             Criminal, Andy, D-Nox, Sly Flynn
+       Live: Rotterdam Terror Corps & Reanimator & MC R.A.W.
+
+11.08. Elfentanz
+       Depot
+       Preis: ?
+       Start: 22.00 h
+       DJ´s: R.A. Wilson, Soluna, Mista B., Nathalie de Bora,
+             Elfenkind, u.a.
+
+11.08. Planet Cycber Pop
+       Preis: 12.-
+       Start: 22.00 h
+       DJ´s: David Holmes, Dennis Siemion, Yang Huan
+
+11.08. Tribehouse
+       Preis: ?
+       Start: 23.00 h
+       DJ´s: Massimo, Hooligan
+
+11.08. Phuture Club
+       Preis: ?
+       Start: 22.00 h
+       DJ´s: Red
+
+11.08. Club Night
+       Diskopolitan Club
+       Roonburg
+       Preis: ?
+       Start: 22.00 H
+       DJ´s: Oliver Bondzio, Christian Kohr, Henri
+
+12.08. Poison Club
+       Preis: ?
+       Start: ?
+       DJ´s: King-O, Huskee, L"Michele, Nathalie de Bora, D-Nox
+
+12.08. Label Party
+       Dockland
+       Preis: ?
+       Start: ?
+       DJ´s: The Stickmen, John Acquaviva, Ramin
+
+12.08. House Club
+       Rave Club
+       Preis: ?
+       Start: 22.00 h
+       DJ´s: Christian Linder, Nathalie de Borah
+
+13.08. Ascension Rave
+       Tarm-Center
+       Preis: ?
+       Einlaß: 20.00 h; Start 21.00 h
+       DJ´s: Mark´Oh, Hooligan, Mario de Bellis, Gary D., Mate Galic,
+             Celvin Rotane, Moguai, Oliver Bondzio
+       Live: Para-Dizer, Angel Heart, Gorze
+
+16.08. Star Club
+       Max
+       Preis: 10.-
+       Start: 21.30 h
+       DJ´s: Alex Morph
+
+17.08. Eröffnungsparty zur Popkomm - The Age Of The DJ Mixer
+       E-Werk
+       Preis: 35.- / 40.-
+       Start: 21.00 h
+       DJ´s: Westbam, Marusha, Dick, u.a.
+       Live: RMB, Raver´s Nature, Genlog, Meteor Seven
+
+17.08. Work Out - Popkomm
+       Tarm-Center Frechen
+       Preis: 25.-
+       Start: 20.00 h
+       DJ´s: Carl Cox, Daz Sound, Colin Dale, Trevor Rockcliffe,
+             Eric Powell, u.a.
+
+18.08. Definition Of House
+       House Of Unique
+       Preis: ?
+       Start: 23.00 h
+       DJ´s: Mike Dunn, Cajmere, Dajae, Chris B., René
+
+18.08. Disko 2000
+       Diskopolitan Club
+       Roonburg
+       Preis: ?
+       Start: 22.00 h
+       DJ´s: Christian Kohr, Blake Baxter
+
+18.08. X-Treme - The Summer Eyperience
+       Druckluft
+       Preis: ?
+       Start: 22.00 h
+       DJ´s: Andry Nalin
+
+18.08. Planet Cyber Pop
+       Preis: 12.-
+       Start: 22.00 h
+       DJ´s: Jeff Mills, Yang Huan
+
+18.08. Phuture Club
+       Preis: ?
+       Start: 22.00 h
+       DJ´s: Celvin Rotane
+
+18.08. Tribehouse
+       Preis: ?
+       Start: 23.00 h
+       DJ´s: Mario de Bellis, Steffen
+
+18.08. Deep Space Happening
+       Groove Chamber
+       Preis: 12.-
+       Start: 22.00 h
+       DJ´s: Dennis Simion, Chase, Reflex DJ-Team
+
+18.08. From Here To Enlightment
+       Preis: ?
+       Start: ?
+       DJ´s: Serge Souque, Lando, Marc v.d. Vlught
+       Live: Total Eclipse
+
+19.08. Work & Fresh Fruit Popkomm-Party
+       Vanity
+       Preis: ?
+       Start: 23.00
+       DJ´s: Erick-E, Groovemaster K
+       Live: The Yoki Boys, Pantera Dansers
+
+19.08. House Club
+       Rave Club
+       Preis: ?
+       Start: 22.00 h
+       DJ´s: Andry Nalin, Gordon, FrankD
+
+19.08. Freudenhaus
+       House Of Unique
+       Preis: ?
+       Start: ?
+       DJ´s: Daniel Klein, Boris Dlugosch, TBA, René
+       Live: Deep City, Universe Fancy Dancers
+
+19.08. M.A.S.H. - Suicide Is Painless
+       Farina Factory
+       Preis: 15.- / 20.-
+       Start: 22.00 h
+       DJ´s: Frankie Feliciano, Marquez Wyatt, Paul Cooper,
+             Roland Casper, Dr. Atmo
+
+19.08. New York´s House Legend
+       Dockland
+       Preis: ?
+       Start: ?
+       DJ´s: Pierre
+       Live: Lavette
+
+19.08. Paradise City
+       Phillippshallen Köln, Widdersdorferstraße
+       Preis: 35.- (VVK !)
+       Start: 19.00 h
+       DJ´s: Hooligan, Mike Dunn, Steve Mason, Tanith, Jens Lissat,
+             George Morel, Miss Djax, Frankie Jones, Roland Casper,
+             Paul Cooper, Massimo, Groovemaster K., u.a.
+       Live: O. Lieb, Lush, Mr. Oz, Angel Heart, Monolith
+
+19.08. Poison Club
+       Preis: ?
+       Start: ?
+       DJ´s: King-O, Miro Morir, L"Michele, Miss Yetti, D-Nox
+
+20.08. Sunday Dance Club
+       Rave Club
+       Preis: ?
+       Start: 1700 h
+       DJ´s: Kethama, H.A.N.Z.
+
+23.08. Star Club
+       Max
+       Preis: 10.-
+       Start: 21.30 h
+       DJ´s: King-O
+
+24.08. Closed Society
+       Raskalnikov
+       Preis: ?
+       Start: 21.00 h
+       DJ´s: Thomas Geier, Redd, Ralf K., Feldi
+
+25.08. Schlampen In The House
+       Phuture Club
+       Preis: ?
+       Start: 22.00 h
+       DJ´s: Miss Yetti, Miss Nique, Andrea Sarti
+
+25.08. Planet Cyber Pop
+       Preis: 10.-
+       Start: 22.00 h
+       DJ´s: Christian Linder, Dennis Siemion
+
+25.08. House Of Unique-Night
+       House Of Unique
+       Preis: ?
+       Start: 23.00 h
+       DJ´s: Jaspa Jones, René
+
+25.08. Tribehouse
+       Preis: ?
+       Start: 23.00 h
+       DJ´s: Joey Beltram, Striking Man
+
+25.08. Rave Club´s TTClub - DEEP Release Party
+       Rave Club
+       Preis: ?
+       Start: 22.00 h
+       DJ´s: U.W.E., FrankD, Red, Kethama
+
+25.08. Club Night
+       Diskopolitan Club
+       Roonburg
+       Preis: ?
+       Start: 22.00 h
+       DJ´s: s. 11.08.
+
+26.08. Specials - Planet House & Natural Vibes
+       Index
+       Preis: ?
+       Start: 23.00 h
+       DJ´s: Jaspa Jones, Jean-Claude, Delicious, PPX, MisJah,
+             Carlos Trygon, Groovehead, u.a.
+
+26.08. House Of Unique
+       Preis: ?
+       Start: 23.00 h
+       DJ´s: Wilfried, René
+
+26.08. Digital Overdose ´95
+       Sporthallen Zuid, Amsterdam, Ijsbaanpad 19
+       Preis: 50.- / 55.-
+       Start: 21.00 h
+       DJ´s: 28 DJ´s
+       Live: 8 Acts
+
+26.08. X-Treme - The Summmer Experience
+       Druckluft
+       Preis: ?
+       Start: 22.00 h
+       DJ´s: Jose, Christian K.
+
+26.08. House Club
+       Rave Club
+       Preis: ?
+       Start: 22.00 h
+       DJ´s: Chris Dis, FrankD
+
+26.08. Westcoast House Nite
+       Dockland
+       Preis: ?
+       Start: ?
+       DJ´s: Neon Leon, Ra Soul, Cutmaster Jay, Hen B
+
+26.08. Poison Club
+       Preis: ?
+       Start: ?
+       DJ´s: King-O, L"Michele; Franco, D-Nox
+
+26.08. Techno Tiefgaragen Party
+       Tiefgarage am Bahnhof Unna
+       Preis: 19.-
+       Start: 0.00 h
+       DJ´s: Oliver Bondzio, Deg, Nathalie de Bora, Moguai, Gulliver
+
+26.08. Ten Dance Club Tour 1995
+       Cosmic Club
+       Preis: ?
+       Start: ?
+       DJ´s: Jens Mahlstedt, Paul van Dyk, Abyss, Erik Rug, Lars Nielsen
+
+26.08. Master Project - The Highlight Rave
+       Unihalle Wuppertal
+       Preis: 35.- bzw. 43.-
+       Start: 20.00 h
+       DJ´s: Buzz Fuzz, Pierre Morgan, Perplexer, Jens Lissat,
+             Miss Djax, Mario de Bellis, u.a.
+       Live: Komakino, Sunbeam, Genlog
+
+30.08. Star Club
+       Max
+       Preis: 10.00
+       Start: 21.30 h
+       DJ´s: Quicksilver
+
+30.08. X-Treme - The Summer Experience
+       Druckluft
+       Preis: ?
+       Start: 22.00 h
+       DJ´s: Greg, Henrik
+
+01.09. The Magic Race - Part I
+       Magic III
+       Preis: 25.- (+5.- Mindestverzehr)
+       Start: ?
+       DJ´s: Steve Mason, Paul Cooper, Roland Casper, Bass D. &
+             King Matthew, Cello XL, u.a.
+       Live: Kamasutra, Genetic Atmosfere, House Attack
+
+02.09. Chicago´s No.1
+       Dockland
+       Preis: ?
+       Start: ?
+       DJ´s: Mike Dunn, Cutmaster Jay, Hen B
+
+02.09. Mysticland - The Second Adventure
+       Cosmic Club
+       Preis: 29.- (CTS) bzw, 35.-
+       Start: 22.00 h (inkl. After Hour)
+       DJ´s: Steve Mason, Kid Paul, Tanith, Pascal F.E.O.S., Dr. Motte,
+             Claus Bachor, Lars Nielsen, Oliver Cosimo, Prime, Guy,
+             Dee Kay, Cutmaster Jay, Melanie di Tria
+       Live: Oliver Lieb, Alpha Helixs
+
+08.09. Neukult Ambience Club
+       Preis: 15.-
+       Start: ?
+       DJ´s: Bazelift, Pascal F.E.O.S., Olli, Dr. Atmo
+
+15.09. Cosmic Club
+       Preis: ?
+       Start: ?
+       DJ´s: Carl Cox
+
+16.09. Atlantis Rave
+       The Legendary Wave 16, Atlantic City
+       Preis: ?
+       Start: ?
+       DJ´s: Smell Attack, Fieldbottle, Jungleboss, Rough Expert,
+             Body Collapse, u.a.
+
+07.10. Cinderella´s Castle
+       Burg Kufstein
+       Preis: 46.- (VVK)
+       Start: 20.00 h
+       DJ´s: Marusha, Hardsequencer, Tanith, Charly Lownoise &
+             Mental Theo, Cirillo, Paul Cooper, Tom Novy, Hitch Hiker,
+             Armand van Helden, George Morell, Felix Houzer,
+             Terry Belle, Dr, Motte, u.a.
+       Live: Raver´s Nature, Charly Lownoise & Mental Theo, AWex,
+             Space Navigator
+
+@endnode
+
+@node "ClubDisco" "HousePool® Juli/August 1995 - Ausgabe 02   Club/Disco Adressen           "
+
+ HousePool® Collection: CLUB- & DISCO-ADRESSEN:
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  42 dp: Hohenstaufenring 25 , Köln
+  AIRPORT: Gattingerstr. 17, Würzburg
+  ALABAMAHALLE: Domagstr. 33 , München
+  ALIEN CLUB: Viktoriastr. (DB Gelände) , Bochum
+  AUFSCHWUNG OST: Sandershäuserstr. 34 , Kassel
+  BABALU-CLUB: Leopoldstr. 19, München
+  BALUGA-BAR: Lincolnstr., Hamburg
+  BORSIG: Borsigallee 33, FFM
+  BREAK-BASE: Im Studio der Zeche Bochum
+  CLUB URANUS: Sielkamp 5, Braunschweig
+  COSMIC CLUB: Am Hawerkamp 31 , Münster
+  CULT CLUB: Graf-Gottfried-Str., Arnsberg
+  DELUXE: Am Konvent 2, Neuss
+  DEPOT: Am Schiffahrter Damm, Münster
+  DER CLUB: Wirichsbongardstr., Aachen
+  DISCOTHEK BAMBU: Sierksdorferstr. 1-3, Neustadt
+  DISKOPOLITAN CLUB: Roonstr. 33, Köln Zentrum
+  DOCKLAND: Hafenweg 17 , Münster
+  DORIAN GRAY: Flughafen FFM
+  DRUCKLUFT: direkt hinter dem HBf Oberhausen
+  E-WERK: Großboerenstr. 81 , Berlin
+  EDK: Gerhardstr. 5, Hamburg
+  EFX-CLUB: Conventstr. 8-10, Hamburg
+  FADE OUT CLUB: Glogauerstr. 2, Berlin
+  FANTASY: Koppelweg 11, 48249 Dülmen
+  FARINA FACTORY: Vogelsangerstraße, Köln-Ehrenfeld
+  FAR OUT: Eggerstedtstr. 13 , Kiel
+  FLANELL: Wilhelmstr. 17, Wiesbaden
+  FLUGHAFEN RIEM: Hesseloherstr. 13 , München
+  FRONT: Heidenkampsweg 32, Hamburg
+  GLASHAUS: Auf dem Quellsiek 9, Bad Salzuflen
+  GATE ONE: Riders Café , Leinenweberstr. 4 , Lübeck
+  GLASPALAST: Hünxer Str. 81 , Dinslaken
+  GLORIA: Apostelstr. 11, Köln
+  GROOVE CHAMBER: Steinfurt-Borghorst
+  HERTZ: Reichsstrasse, Saarbrücken
+  HOUSE: Schiffbrück 8-9, Flensburg
+  HOUSE BAZAR: Gasthausstr. 10, Mönchengladbach
+  HOUSE OF UNIQUE: Hohenzollernring 89-93, Köln
+  INDEX: Rudolf-Diesel-Str. 1 , Weilerswist
+  KASERNE: Zeughaus 5, Zürich/Schweiz
+  KATAKOMBEN: Königstr., Krefeld
+  KESSELHAUS: Lenneperstr. 61, Wipperfürth
+  KLANGWERK: Niedernberger 17, Aschaffenburg
+  LOVE STATION (in Live-Station): HBf Dortmund
+  LULU: Hohenzollernring, Köln
+  LUNA PARK (incl. KATAKOMBEN, KÖNIGSBURG, etc.): Königstr. 8 , Krefeld
+  MAGIC III: Industriestr. 16, Selm
+  MEXX: Arsenalstr., Schwerin
+  MODELL TRAUMWELT: Am Pferdemarkt , Essen
+  MR. ANGEL: Rathausplatz, Karben
+  MUSIC HALL: Göttinger Str. 14, Hannover
+  MUSIKPARK SKALA: Haidkamp 1, Legden
+  MUSIKTHEATER: Angersbachstr. 10, Kassel
+  NAUTIC CLUB: Standallee 12b, Timmendorfer Strand
+  NEONS: Hallerstr. 66 , Bielefeld-Steinhagen
+  NEUKULT AMBIENCE CLUB: Alteburgerstr. 26, Köln
+  NEW YORK FACTORY: Obere Königstr. 4, Kassel
+  OCTAGON: Industriestr. 15, Eltmann
+  OPERA DANCE HALL: Lange Reihe 2-8, Leipzig
+  OSHOS: Hohenzollernring 92, Köln
+  PANZERHALLE: An der Krim, Mainz
+  PETIT PRINCE: Hohenzollernring 92, Köln
+  PHUTURE CLUB: Emscherstr. 71, Landschaftspark Duisburg-Nord
+  PLANET: Kortumstr. 134 , Bochum
+  PLASTIQUE: Heuserstr. 18-22 , Duisburg
+  POISON CLUB: Konrad-Adenauer-Platz 14 , Düsseldorf (HBF)
+  PRISMA: Wüstenhöferstr. 234 , Essen
+  PSYCHO THRILL: Kaiserpassagen, Bonn
+  PULVERTURM: Schließheimerstr. 393, München
+  RAHU-CLUB: Kurt-Schumacher-Platz 1 , Bochum
+  RAKETE: Blackbox Cinedom , Köln
+  RASKALNIKOV: Oberhausen
+  RATINGER HOF: Ratinger Str., Düsseldorf
+  RAVECLUB: Hamminkelner Landstr. 92, Wesel
+  RE-BASE: Flämsche Str., Kiel
+  ROTE LIEBE: Rüttenscheider Stern 3 , Essen
+  ROXY: Beatengasse 1, Zürich/Schweiz
+  RUHR ROCK HALLEN (Ex-Musikzirkus): Im Spähenfelde 51 , Dortmund
+  SAM´S: Südring 15, Bochum
+  SLAM-CLUB: Kaiserpassagen, Bonn
+  SOUND GARDEN: Bremer Str. 24-26, Dortmund
+  SPEKTRUM: Westring 227b , Castrop-Rauxel
+  SPIRIT: Helle 9 , Dortmund
+  STAHLWERK: Ronsdorferstr., Düsseldorf
+  STAR CLUB: Hamm
+  STARKSTROM (Fun Factory): Pavillon Str. 39, Saarlouis
+  TANZPALAST: Otto-Hahn-Str. 17, Kitzingen
+  TARM-CENTER: Rombacher Hütte 6-8 , Bochum
+  TARM-CENTER: Werner-von-Siemens-Str. 7-9, Frechen
+  TEMPEL: Domagstr. 33 , München
+  TOR 3: Ronsdorfer Str. , Düsseldorf
+  TRESOR: Yorkstr. 44 , Berlin
+  TRIBEHOUSE: Bockholterstr. 102-104 , Neuss
+  TUNNEL CLUB: Freiheit 70 , Hamburg
+  TUNNEL: Herdentorsteinweg 38 , Bremen
+  TURBINENHALLE: Im Lipperfeld 2 , Oberhausen
+  TWILIGHT ZONE: Große Packhofstr., Hannover
+  ULTRASCHALL: Türginger Str. 400 , München
+  UNIT: Nobistor 24 , Hamburg
+  VANITY: Mittelstr. 12-14, Köln
+  VILLAGE: Westenhellweg 85 , Dortmund
+  WÜRFEL: Brückenstr., Zittau-Ost
+  XL CLUB: Steintor 65, Bremen
+  X-DREAM: Ecke St. Johanner Str. / Trierer Str., Saarbrücken
+  X-RAY: Wittenbergstr. 87 , Bochum
+
+  Diese Aufzählung erhebt keinerlei Anspruch auf Vollständigkeit !
+  Mehr Adressen in den nächsten Ausgaben !
+
+@endnode
+
+@node "LabelShop" "HousePool® Juli/August 1995 - Ausgabe 02   Label/Shop Adressen           "
+
+ HousePool® Label- & Shopadressen:
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Wir wollen anders sein, deshalb möchten  wir  an  dieser  Stelle  eine
+  Auswahl von Label-Adressen, Record-Shop und anderen wichtigen Adressen
+  präsentieren, die Euch das Leben ein wenig  erleichtern  könnten.  Von
+  nun  an  wisst  Ihr  also,  wohin Ihr Demo-Tapes, Beschwerden, Lob und
+  Bestellungen schicken könnt.
+
+  Schickt uns  doch  auch  die  Euch  bekannten  Adressen,  da  es  eine
+  SchweineArbeit ist von vielen Labels & Shops die Adressen zu bekommen.
+
+  [Legende: T-Telefon  F-Fax  M-Mailbox  V-Voicemail  I-ISDN-Anschluß]
+
+  ATRIUM RECORDSHOP:
+    Südwall 27, 47798 Krefeld,
+    T:02151/802871, F:02151/803894
+  DELIRIUM RECORDS:
+    Johannisstraße 25, 66111 Saarbrücken
+    T:0681/3908256, F:0681/3908257
+  DOS OR DIE RECORDINGS:
+    Rheinstr. 136, 47798 Krefeld,
+    T:02151/8163-0, F:02151/8163-23
+  EYE Q RECORDS:
+    Strahlenberger Str. 125a, 63067 Offenbach,
+    T:069/829740-0, F:069/829740-11
+  HARDWAX:
+    Galerie "Gasse am Markt", St.Johanner Markt 20,66111 Saarbrücken
+    T:0681/32001, F:0681/32002
+  HARTHOUSE FRANKFURT:
+    Strahlenberger Str. 125a, 63067 Offenbach,
+    T:069/885633, F:069/8003336
+  IMPORTANT RAVEWORLD:
+    Viehofer Str. 23, 45127 Essen,
+    T+F:0201/207897
+  IMPORTANT RECORDS:
+    Viehofer Str. 30, 45127 Essen,
+    T+F:0201/207897
+  LOW SPIRIT:
+    Giesebrechtstr. 16, 10629 Berlin
+  MAYDAY Veranstaltungs- & Musikproduktion-GmbH:
+    Giesebrechtstr. 16, 10629 Berlin,
+    I:030/327916-0
+  OVERDRIVE/BEATDISASTER RECORDS:
+    Postfach 4251, 64351 Reinheim,
+    F:06162/84918
+  PLANET HOUSE BOOKINGS:
+    T+F:02133/478231 (Jean-Claude)
+  SUCK ME PLASMA!:
+    Norsk-Data-Str. 3, 61352 Bad Homburg,
+    F:06172/946966
+  TETSUO HARD CORPS:
+    Norsk-Data-Str. 3, 61352 Bad Homburg,
+    F:06172/946968
+
+@endnode
+
+@node "Internet" "HousePool® Juli/August 1995 - Ausgabe 02   Internet/Web Adressen         "
+
+ EXKLUSIV !!
+ ¯¯¯¯¯¯¯¯¯¯¯
+ HousePool® - Internet/Web Collection
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+ Subject                     Internet-URL
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+ TECHNO-SERVER BERLIN        HTTP://www.techno.de/
+ MTV                         HTTP://www.mtv.com/
+                             MAILTO:mtvtext@euro.demon.co.uk (Videotext)
+ VH-1                        HTTP://www.vh1.de/
+ EYE Q (Label)               HTTP://www.eye-q.com/
+ LOW SPIRIT (Label)          HTTP://www.low-spirit.de/
+                             MAILTO:low-spirit@techno.de
+ SONY MUSIC                  HTTP://www.music.sony.com/music/
+                                    musicIndex.html
+ HYPERREAL                   HTTP://www.hyperreal.com/
+ FRONTPAGE (Magazin)         HTTP://www.techno.de/FrontPage/
+ DEEP (Magazin)              MAILTO:deep@newswire.gun.de
+                             MAILTO:100450.511@COMPUSERVE.com
+ DATA POOL                   HTTP://www.techno.de/datapool/
+                             MAILTO:datapool@techno.de
+ PARTYSAN (Dates)            HTTP://www.partysan.de/user/gunafa/
+ DERAVE                      HTTP://wsiserv.informatik.uni-tuebingen.de/
+                                    ~damian/derave/
+ ENVELOPE ONLINE             HTTP://info.archlab.tuwien.ac.at/~envelope/
+                                    index.html
+ HOUSEPOST                   HTTP: (???)
+ PATRICK GRUBAN              HTTP://muc.de/~patrick/
+                             MAILTO:patrick@muc.de
+ X-LETTER (München)          HTTP://muc.de/~patrick/x-letter/
+ RAVE CITY                   HTTP://rave.city.de/
+ TECHNO-FAN-PAGE             HTTP://cleopatra.ivwuni-kl.de:8001/~riege/
+                                    techno/techno.info
+ TECHNO-NET                  HTTP://www.contrib.net/planetcom/technet/
+                                    techno.net.home.html
+ TECHNOPOLIS                 HTTP://www.artcom.de/~tim/technopolis/
+ WICKED WORLD/TECHNO-HOUSE   HTTP://132.252.28.30/hschmitz/wicked/
+                                    wicked.html
+ CHROME                      HTTP://www.xs4all.nl/~chrome/
+ ID & T                      HTTP://www.dance.nl/id&t/index.html
+ RAVE-SITE                   HTTP://vis-next.iiic.ethz.ch/students/
+                                    rritler/
+ RAVE IN FRANCE              HTTP://www.sct.fr/cyber/urave.html
+ YELLO                       HTTP://newton.space.net/yello/
+ STATION ROSE                HTTP://www.well.com/www/gunafa/
+                                    station-rose.html
+ RAVER´S TV & RADIO GUIDE    MAILTO:cheetah@ius.gun.de
+ DIGITAL OVERDOSE            HTTP://www.pulse.nl/overdose/
+ MUSIC RESEARCH              HTTP://www.teleport.com/~arcana/
+                                    music_research/
+
+
+ HOUSEPOOL® Online           NEU !! Ab Oktober auch im WWW !!
+                             HTTP://sx1.hrz.uni-dortmund.de/userpages/
+                                    carma/housepool/
+                             MAILTO:carma.bbs@sx1.hrz.uni-dortmund.de
+
+  Wie sieht es bei Euch aus ?? Habt Ihr auch  interessante  Web-Adressen
+  oder  eMail-Adressen aus der Techno-Welt. Schickt Sie uns !! Natürlich
+  kann obige Liste nur eine winzig kleine Auswahl bieten,  daher  erhebt
+  sie keinerlei Anspruch auf Vollständigkeit !
+
+@endnode
+
+@node "Preview" "HousePool® Juli/August 1995 - Ausgabe 02   Vorschau                      "
+
+ Das findet Ihr in der nächsten Ausgabe:
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  PREMIERE: HousePool Leser-Umfrage !!!
+
+  SPECIAL:  London UK im HousePool-Test
+
+  SOWIE:  Ralf Hildenbeutel im HousePool-Portrait !
+          Neueste Plattentips, Charts, News & Songs !!
+
+  UND:    Hoffentlich weiteres Feedback von Euch !!
+          Also schreiben, schreiben, schreiben, ... !!
+          Damit die Sache ins Rollen kommt !
+
+  Und natürlich vieles, vieles mehr....
+
+  HOUSEPOOL® behält sich Änderungen aus aktuellem Anlaß vor.
+
+  HOUSEPOOL® - Ausgabe 03 - September/Oktober erscheint Anfang Oktober.
+
+@endnode
+
+@node "Feedback" "HousePool® Juli/August 1995 - Ausgabe 02   FEEDBACK                      "
+
+ @{b}Was Ihr uns schicken könnt bzw. sollt@{ub}:
+
+  * Kritiken, Anregungen & Verbesserungsvorschläge
+  * Soundmodule (MED/OMED,ST-/NT-/PT-Modules)
+    ABER: Bitte achtet auf die Größe der Dateien (<400 kB !)
+    DENN: Das Magazin soll als Archiv nicht größer als  ca. 800 kB sein,
+          damit es noch auf eine Amiga-DD-Disk paßt (880 kB) !!
+          Es soll möglichst auch auf alten Rechnern laufen, die nur 0.5
+          oder 1.0 MByte ChipRAM haben.
+          Bitte nicht einfach ganze Lieder samplen !!
+  * Artikeleinsendungen (als freie Autoren !!)
+  * Leserbriefe & Forumsbeiträge
+  * Diskussionen & Meinungen zum aktuellen HousePool-Thema
+  * Kleinanzeigen (Kostenlos !)
+  * Dates: TV & Radio, Events, Clubs etc...
+  * Chart-Vorschläge (Vinyl/CD & MODs/MEDs) !
+
+  Alles was darüber hinaus geht, könnt Ihr uns natürlich auch  schicken.
+  Initiative  und  Kreativität  ist  gefragt !
+
+  Bitte  vergeßt  nicht  einen  Absender  (Stadt/Land)  zu  hinterlassen
+  (Organisatorische  Gründe  !?!).  Schreibt  auch auf Diskette und/oder
+  Brief  Eure  Adresse,  da  wir  auch  bei   uns   ein   redaktionelles
+  Bermuda-Dreieck haben. :-)
+
+  Wie Ihr sicher schon gelesen habt, ist unser Magazin GIFTWARE. Schickt
+  uns  also kein Gift, sondern ein keines Geschenk oder - die beste Wahl
+  - Geld, denn wir haben nicht nur Zeit, Arbeit und viel Mühe in  dieses
+  Magazin  gesteckt, sondern eben auch obig Genanntes (Geld) - also wäre
+  es nur fair, wenn wir einen kleinen  Anerkennungsbeitrag erhalten wür-
+  den !! Den Betrag überlassen wir Euch - Vielen Dank !
+
+  Ihr könnt uns sowohl auf postalischem Wege - mit der gelben Post - als
+  auch über Electronic Mail erreichen. Eine  interaktive WWW-Homepage im
+  InterNet ist in der Vorbereitung.
+
+  @{b}Also hier ist die Adresse@{ub}:
+
+    SnailMail: HousePool Magazin
+               POSTLAGERND Herne 1
+               44621 Herne (Deutschland)
+
+    EMail:     carma.bbs@SX1.HRZ.Uni-Dortmund.DE
+
+@endnode
+
+@node "Futureplans" "HousePool® Juli/August 1995 - Ausgabe 02   Zukunftspläne                 "
+
+ @{b}Zukunftspläne / Erweiterungen@{ub}:
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  * Bei  entsprechender  Nachfrage  gibt  es  eventuell  eine  englisch-
+    sprachige Version dieses Magazins.
+  * MIDI-Projekte (MIDI-Songs direkt abspielbar)
+  * Umfangreicherer Club-, Disco- & Party-Guide
+  * Gescante Flyer
+  * Kooperation mit konventinellen  Techno-Magazinen  z.B. zwecks Photos
+  * Werbeforum für Lokal-Radios, VIVA-TV, Techno-Magazine
+
+  * Konvertierung auf andere Rechnersysteme bei ausreichender Nachfrage
+  * Einspeisung als HTML-Dokument in WWW-Server
+
+  Die beiden letzten Punkte sind schon beschlossen. Da beide Punkte sich
+  auf eine HTML-Version von HousePool beziehen sind diese wohl  fast zur
+  gleichen Zeit verfügbar. Die  HTML-Disk-Version  wird  lediglich einen
+  WWW-Browser (z.B.Mosaic/Netscape/Lynx) benötigen und wird zunächst als
+  Spezial-Version mit einer  Artikelsammlung der bisherigen Ausgaben er-
+  scheinen. Beides wird wohl im Herbst (ca. Oktober) realisiert werden.
+
+  Ihr seht also - wir haben ehrgeizige Pläne ! ABER  das  ganze  Projekt
+  hängt natürlich von EUCH ab - Ihr seid nun gefragt durch umfangreiches
+  @{"Feedback" link "Feedback" 0} dieses Projekt weiter zu beleben.
+  Bitte sendet uns auch Eure  Meinung  zu  diesem  Magazin  und  zu  den
+  geplanten Erweiterungen.Anregungen von Eurer Seite sind natürlich auch
+  herzlich willkommen !
+  Und nochmal : WIR brauchen Eure Unterstützung !!
+
+@endnode
+
+@node "Credits" "HousePool® Juli/August 1995 - Ausgabe 02   Credits                       "
+
+  Wir bedanken uns herzlichst bei allen die es ermöglicht  haben  dieses
+  neue Magazin in dieser Form zu erstellen !
+
+ @{b}Besonderen Dank an@{ub}:
+
+  COMMODORE® INTERNATIONAL/CBM® DEUTSCHLAND GmbH (R.I.P.)
+    - Für die technische Vorraussetzungen, den besten Multimedia-Computer
+      (=AMIGA®), AmigaGuide®-System, den Installer und andere Gimmicks !!
+  ESCOM® AG DEUTSCHLAND/AMIGA TECHNOLOGIES GmbH
+    - Für den Deal um die Amiga-Rechte, Zukunftspläne und Weitblick !
+  EUROPRESS SOFTWARE Ltd. & FRANÇOIS LIONET
+    - Für AMOS Professional und AMOSPro Compiler
+  ABF , TEIJO KINNUNEN & RAY BURT-FROST
+    - Für OctaMED (der genialste Tracker & MIDI-Tracker auf dem AMIGA®)
+      und für den OctaMEDPlayer 5.10 sowie die Previews auf OMed v6 !!
+  DIETMAR EILERT
+    - Für Super-Texteditor GOLDED - Ohne den wär das hier nicht möglich.
+      Vielen Dank für die schnelle Registrierung !!!
+  NICO FRANÇOIS & RAFAEL D´HALLEWEYN
+    - Für PPShow, die Powerpacker.library und weitere gute Software !
+  WILLIAM E. SORENSEN
+    - Für PPGuide, den PD-AmigaGuide-Anzeiger !!
+  MIRKO LUKAS
+    - Für ShowGuide - der Freeware-Guide-Anzeiger mit XPK-Support.
+  STEPHAN FUHRMANN
+    - Für den PowerPlayer, der so  circa alles abspielt. PowerPlayer ist
+      ShareWare ! Also zahlt die Share - es lohnt sich !
+  LOUISIANA, DORTMUND
+    - Für freundlich-feuchte Bedienung bei Redaktionssitzungen.
+
+
+  Und Euch Lesern/Usern die trotz  oder  gerade wegen  der  Neuheit  uns
+  unterstützen und dieses Magazin zu etwas Besonderem und Herausragendem
+  machen können !!
+
+@endnode
+

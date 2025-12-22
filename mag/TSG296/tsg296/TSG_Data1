@@ -1,0 +1,1518 @@
+@database TSG_Data1 "The Scene Guide - Information"
+@master TheSceneGuide.guide " The Scene Guide"
+@author "Nico Barbat (Dire/Eremation)"
+@(c) "© 1995-1996 Nico Barbat"
+@$ver: "TheScene.guide 2/3 in 1996 (19-Apr-96)"
+@font topaz.font 8
+@wordwrap on
+@proportional on
+@width 80
+@help "Help!"
+@index "TSG_Data2/main"
+
+
+@remark "THE SCENE GUIDE is (c) 1995-1996 DIRE/EREMATION (NICO BARBAT)"
+
+
+
+@node main " The Information Corner"
+@toc main
+
+     @{b}Everything About and Around @{i}The Scene@{ui}@{ub}
+
+          @{"  " link whatisit}  What is it?          ________________________
+          @{"  " link help!}  Help-Pages!          \______________________/
+
+          @{"  " link support}  Support it!           __________________
+          @{"  " link credits}  The Credits           \________________/
+
+          @{"  " link greets}  Greetings!!
+          @{"  " link author}  Who`s Dire?               @{"  " system "ppshow TSG_Title.iff".......} Title-Picture
+          @{"  " link history}  The History               @{"  " system "noiseplayer -p4 TSG_Module1.mod"} Title-Sound 1
+          @{"  " link copyrights....}  Legal Stuff               @{"  " system "noiseplayer -p4 TSG_Module2.mod"} Title-Sound 2
+          @{"  " link packagecontent}  LHA-Content               @{"  " link TheSceneGuide.guide/main} ----> Parties
+
+          @{"  " link orderupdate}  Get the update   __________________________
+          @{"  " link orderstuff}  Get the demos!   \________________________/
+
+          @{"  " system "ppshow TSG_Advert.iff"}  IFF-Advert_Dire/Erm
+          @{"  " link addresses}  Important Addresses
+
+
+          @{" BACK TO THE PARTIES-MAIN-MENU " link TheSceneGuide.guide/main}
+@endnode
+
+!!!
+
+@node Help! "Help Me!"
+@toc information
+
+
+  @{b}The Help Pages@{ub}
+
+
+
+     @{"  " link helppage1}  How to handle Multiview
+
+     @{"  " link helppage2}  Meanings of Short Forms
+
+     @{"  " link helppage3}  Meanings of the Entries
+
+
+
+     @{" BACK TO THE PARTIES-MAINMENU " link TheSceneGuide.guide/main}
+@endnode
+
+@node helppage1 " How to handle Multiview "
+@toc help!
+
+  @{b}How to handle Multiview@{ub}
+
+  Using Multiview (or any other guide-shower) is easy. If you
+  have found the way up to this page, I am sure that you know
+  how to handle this utility. Anyway, here`s a small descrip-
+  tion of the buttons you can click in the upper side.
+
+  Contents   shows the Contents of the part of the guide where
+             you are at the moment of clicking
+
+  Index      loads the index part (productions, parties, system)
+
+  Help       leads you to this text you are reading now
+
+  Retrace    brings you back to the page which you have read before
+
+  Browse <   leads your way back through the guide, i.e.
+             shows the last node
+
+  Browse >   leads your way on through the guide, i.e.
+             shows the next node
+@endnode
+
+!!!
+
+@node helppage2 " The Meanings of the Short Forms "
+@toc help!
+
+
+
+
+  @{b}The Meanings of the Short Forms of ... @{ub}
+
+
+
+      @{" .......... Group-Names " link helppage2-1}
+
+      @{" ... System-Information " link helppage2-2}
+@endnode
+
+@node helppage2-1 " The Meanings of the Short Forms of Group-Names"
+@toc helppage2
+
+
+ @{b}Groups` Indecees (Short Forms) @{ub}
+
+
+ This list was supplied by @{b}Under Pressure@{ub} as
+ @{b}Group Abreviations@{ub} (issue 2). Thanks, Punk!
+
+
+
+ 100%  -  100%
+ 2K    -  2000 A.D.
+ 3LE   -  THREE LITTLE ELKS
+ 4WD   -  4WARD
+ 5D    -  5TH DYNASTY
+ 5THG  -  FIFTH GENERATION
+ 6C    -  6 CREW
+
+ A     -  ALDI
+ AA    -  AEROSOL ATTACK
+ AAP   -  ANTI ABYSS POSSE
+ ABN   -  ABNORMAL
+ ABR   -  AMBROSIA
+ ABS   -  ABUSE
+ ABS!  -  ABSOLUTE!
+ AC!   -  ARTCORE
+ ACC   -  ACCESSION
+ ACC   -  ACCUMMULATORS
+ ACID  -  ANSI CREATORS IN DEMAND
+ ACME  -  ACME
+ ACS   -  ACCESS
+ ACT   -  ACT
+ AD    -  ALIANCE DESIGN
+ ADR   -  ANDROMEDA
+ ADT   -  ADROIT
+ AF    -  AGNOSTIC FRONT
+ AFL   -  ALPHA FLIGHT
+ AGS   -  AEGIS
+ AGT   -  ALMAGEST
+ AGY   -  AGONY
+ AL    -  ARCLITE
+ ALF   -  ANTI LAMER FOUNDATION
+ ALM   -  ALARM
+ AM    -  ART MANIA
+ AMB   -  AMBIANCE
+ AMCR  -  AMIGA CIRCLE
+ ANH   -  ANAHEIM
+ ANL   -  ANALOG
+ ANR   -  ANARCHY
+ ANTH  -  ANATHEMA
+ APC   -  APOCALYPSE
+ APD   -  APPENDIX
+ APL   -  APPLAUSE
+ APL   -  APPOLO
+ APT   -  APATHY
+ APX   -  APEX
+ ARS   -  ARISE
+ ASG   -  ASGARD
+ ASN   -  ASCII NORGE
+ ASU   -  ASCII UNLIMITED
+ AT!   -  ATRE
+ ATM   -  ATOMIC
+ ATX   -  ANTHROX
+ ATW   -  ARTWORK
+ ATZ   -  ALCATRAZ
+ AVC   -  AVOCADO
+ AVG   -  AVENGERS
+ AVL   -  AVALON
+ AVT   -  AVANTGARDE
+ AXIS  -  AXIS
+ AYS   -  ABYSS
+ AV    -  ARTISTIC VOYAGE
+ AZK!  -  AZKINESS
+
+ BASS  -  BASS
+ BB    -  BAD BROTHERS
+ BB    -  BONZAI BROS.
+ BCD   -  BLACK CODE DESIGN
+ BDZ   -  BANANA DEZIGN
+ BF    -  BIZZARE FASCINATION
+ BF    -  BLACK FISHY
+ BG    -  BATMAN GROUP
+ BGR   -  BAGGER POSSE
+ BLC   -  BALANCE
+ BLD   -  BLOOD
+ BLOT  -  bLACKOUT!
+ BLH   -  BACKLASH
+ BLN   -  BLUNA
+ BLZ   -  BLAZE
+ BNK   -  BLANK
+ BNL   -  BANAL PROJECTS
+ BNX   -  BRONX
+ BNZ   -  BONZAI
+ BP    -  BIRDHOUSE PROJECTS
+ BJ    -  BLACK JACK
+ BOMB  -  BOMB
+ BOOM  -  BOOM DESIGN
+ BORG  -  BORG
+ BRN   -  BRAINS
+ BS    -  BOMB SQUAD
+ BSA   -  BUSINESS SOFTWARE ALLIANCE
+ BST   -  BAD SECTORS
+ BTD   -  BOMB TO DISNEYLAND
+ BTL   -  BEATLESS
+ BVS   -  BEAVERS
+ BW    -  BODYWORKS
+ BZR   -  BIZZARE ARTS
+
+ C!    -  CONTRA
+ C!S   -  C-LOUS
+ CC    -  COCAINE COURIERS
+ CDR   -  CADAVER
+ CF    -  CYBERFORCE
+ CFN   -  CAFFEINE
+ CIR   -  CIRCLE
+ CL    -  CLONE
+ CLE   -  CYCLONE
+ CLI   -  CLIQUE
+ CLS   -  CLASSIC
+ CLX   -  COMPLEX
+ CMA   -  COMA
+ CN    -  CARRILION
+ CNF   -  CONFUSION
+ CNCD  -  CARRILION & CYBERIAD
+ CNS   -  CENSOR
+ CP    -  COSMIC PIRATES
+ CRB   -  CRYPTOBURNERS
+ CRE   -  CREAM
+ CRI   -  CRIONICS
+ CRS   -  CORROSSION
+ CRX   -  CRUX
+ CRY   -  CRY
+ CRZ   -  CRAZE
+ CS!   -  CAUSTIC STYLE
+ CSL   -  CRYSTAL
+ CST   -  COAST
+ CT    -  CYBERTECH
+ CTN   -  CITRON.
+ CTY   -  CENTURY
+ CTX   -  CYTAX
+ CVX   -  CONVEX
+
+ D-29  -  D-29
+ D4M   -  DUAL FORMAT
+ DC    -  DUAL CREW
+ DCD   -  DECADE
+ DCN   -  DECISION
+ DCS   -  DUAL CREW SHINING
+ DCT   -  DECENT
+ DD    -  DREAM DESIGN
+ DEV   -  DEJA VU
+ DFC   -  DEFIANCE
+ DFM   -  DEFORM
+ DG    -  DIGITAL GRAFFITI
+ DGN   -  DRAGNET
+ DJ    -  DEFJAM
+ DKS   -  DARKNESS
+ DLM   -  DELIRIUM
+ DLN   -  DELON
+ DLT   -  DELIGHT
+ DMG   -  DAMAGE
+ DMN   -  DAMIAN
+ DMS   -  DAMONES
+ DPL   -  DUPLO
+ DPZ   -  DEEP ZONE
+ DR    -  DRACS
+ DRD   -  DREAMDEALERS
+ DRD   -  DRUID
+ DRED  -  DRED
+ DS    -  DUCKSQUAD
+ DS!   -  DIVINE STYLERS
+ DSL   -  DIESEL
+ DSR   -  DESIRE
+ DST   -  DISASTER
+ DTC   -  DYTEC
+ DTH   -  DEPTH
+ DTL   -  DIGITAL
+ DTY   -  DESTINY
+ DVN   -  DIVINE
+ DVS   -  DEVOIUS DEZIGNS
+ DZN   -  DEZIGN
+
+ E^D   -  EPSILON DESIGN
+ EDG   -  EDGE
+ EFT   -  EFFECT
+ ELT   -  ELTECH
+ EMB   -  EMBRYO
+ EMF   -  ELECTROMOTIVE FORCE
+ EMT   -  EMT DESIGN
+ ENY   -  ENEMY
+ EP    -  ENDLESS PIRACY
+ EQX   -  EQUINOX
+ ER    -  ERROR
+ ERM   -  EREMATION
+ ER0   -  E-ROTIK
+ ESC   -  ESCAPE
+ ESC   -  ESSENCE
+ ESK   -  ESKIMOS
+ ETC   -  ETHIC
+
+ F^I   -  FIRE & ICE
+ FATE  -  FATE
+ FB    -  FUNKY BUDDHAS
+ FC    -  FUTURE CREW
+ FCI   -  FLYING COWS INC.
+ FCS   -  FOCUS DESIGN
+ FCY   -  FACULTY
+ FFI   -  FOR FUN INC.
+ FIX   -  FIX LTD.
+ FLD   -  FLOOD
+ FLT   -  FAIRLIGHt
+ FNZ   -  FUNZINE
+ FP    -  FACET'S PUSSY
+ FRS   -  FREEZERS
+ FSN   -  FUSION
+ FTH   -  FAITH
+ FTL   -  FATAL
+ FTP   -  FUCK THE PROTECTION
+ FTU   -  FATAL UNITY
+ FUCK  -  FUCK
+
+ G^S   -  G^STYLE
+ GBS   -  GHOSTBUSTERS
+ GCS   -  GRAVEYARD SPREADING CORPORATION
+ GDS   -  GODS
+ GDW   -  GARDEN DWARFS
+ GGT   -  GIGATRON
+ GHD   -  GRASHOPPERS DEVELOPMENT
+ GJA   -  GANJA
+ GNX   -  GENERATION X
+ GNT   -  GENETIC
+ GOD   -  GLOBAL OVERDOSE
+ GRC   -  GRACE
+ GRT   -  GROTESTICLE
+ GTC   -  GENETIC
+ GTS   -  GIANTS
+
+ H!    -  HEAD!
+ HALO  -  HALO
+ HBD   -  HYBRID
+ HBS   -  HUMBUGS
+ HBT   -  HALF BRAINS TEAM
+ HCC   -  HEAVY COOL CRACKS
+ HD    -  HARDCORE DESIGN
+ HF    -  HELLFIRE
+ HJB   -  HAUJOBB
+ HLM   -  HOODLUM
+ HMN   -  HUMANE
+ HMR   -  HEMOROIDS
+ HMS   -  HUMANS
+ HNG   -  HANGOVER
+ HNY   -  HONEY
+ HOS   -  HOUSE OF STYLE
+ HSY   -  HERESY
+ HTA   -  HERETIA
+ HTL   -  HOTLINE
+ HZN   -  HORIZON
+
+ I^C   -  INDEPENDANT CONNECTION
+ I486  -  IGITT 486
+ IA    -  INTERACTIVE
+ IC    -  INDICTION COURIERS
+ IC    -  INNER CIRCLE
+ ICE   -  INSANE CREATORS ENTERPRISE
+ ICL   -  INCAL
+ IL    -  ILLEGAL
+ ILS   -  ILLUSION
+ IFN   -  INFERNO
+ IFT   -  INFECT
+ IHS   -  INHUMANS
+ IMN   -  IMUNE
+ IMP   -  IMPULSE
+ INF   -  INFINITY
+ INS   -  INSANE
+ INT   -  INTENSITY
+ INV   -  INVESTATION
+ IPL   -  INTERPOL
+ IRIS  -  IRIS
+ ISC   -  ISCH CREW
+ ITC   -  IFFTIC
+ ITR   -  INTRUDERS
+ ITS   -  INTENSE
+
+ J&C   -  JULLIET & CASE
+ JFF   -  JUST FOR FUN
+ JM    -  JUNIOR MAFIA
+ JRM   -  JORMAS
+ JS    -  JETSET
+ JWS   -  JEWELS
+
+ K!    -  KEKS DESIGN
+ KESO  -  KESO
+ KFS   -  KEFRENS
+ KGB   -  KGB
+ KGD   -  KINGDOM
+ KKY   -  KINKY
+ KLS   -  KILLERS
+ KRF   -  KRAFTED
+ KRS   -  KARSINA
+ KTS   -  KATARSIS
+
+ L     -  LEGEND
+ LA    -  LAST AID
+ L&P   -  LORD & PERFECTION
+ LBD   -  LADYBIRD DESIGNING
+ LBO   -  LIMBO
+ LCD   -  LCD
+ LED   -  LIMITED EDITION
+ LEGO  -  LEGO
+ LGC   -  LOGIC
+ LGN   -  LEGION
+ LMN   -  LAMEON
+ LNS   -  THE LOONS
+ LOVE  -  LOVE
+ LPS   -  LAST POETS SOCIETY
+ LQD   -  LIQUID
+ LRX   -  LYRIX
+ LSC   -  LISCENSE
+ LSD   -  LSD
+ LST   -  LOST
+ LTX   -  LATEX
+ LXD   -  LATEX DESIGN
+
+ M!    -  MOTION
+ M22   -  MOMENT 22
+ M'S   -  MO'S SOUL
+ M12   -  MAJIC 12
+ MBL   -  MOBILE
+ MD    -  MAD DOGS
+ MDR   -  MADOR
+ MFB   -  MUFFBUSTERS
+ MGE   -  MIRAGE
+ MGS!  -  MEGASTYLE
+ MLN   -  MELON
+ MLW   -  MELLOW
+ MNC   -  MANIACS
+ MNK   -  MONK
+ MST   -  MYSTIC
+ MSV   -  MASSIVE
+ MTH   -  MYTH
+ MTU   -  MANITOU
+ MTV   -  MOTIVE
+ MTX   -  MATRIX
+
+ N&B   -  NUT & BOLT
+ NAH   -  NAH-KOLOR
+ NCE   -  NUANCE
+ ND    -  NEW DEAL
+ NDS   -  9 DESIGN
+ NDS   -  NORDSEE
+ NE    -  NEON
+ NEO   -  N!
+ NGC   -  NEW GENERATION CREW
+ NGHT  -  NIGHTCROWLERS
+ NJY   -  N-JOY
+ NJSMC -  NEW JACK SWING MASTER CREW
+ NLD   -  NEW LINE DESIGN
+ NLM   -  NAPALM
+ NMR   -  NIGHTMARE
+ NMS   -  NEMESIS
+ NOVA  -  NOVA
+ NPL   -  NEOPLASIA
+ NRG   -  ENERGY
+ NSE   -  NOISE
+ NTR   -  NEUTRON
+ NTW   -  NOTWIST
+ NVX   -  NERVE AXIS
+ NXS   -  NEXUS
+ NXS   -  NOXIOUS
+
+ OBC   -  OBSCENE
+ OBS   -  OBSESSION
+ OGN   -  ORIGIN
+ OMA   -  ORGANIZATION OF MIGHTHUNGRY ASCII-ARTISTS
+ OPS   -  OOPS!
+ ORB!  -  ORB
+ ORCA  -  ORCA
+ ORG   -  ORGASM
+ ORN   -  ORION
+ ORS   -  OSIRIS
+ OS!   -  OFFSPRING
+ OTL   -  OUTLAWS
+ OTT   -  OVER THE TOP
+ OVL   -  OVERLORDS
+ OXG   -  OXYGENE
+ OXY   -  OXYRON
+ OZF   -  OZONE FREE
+ OZN   -  OZONE
+
+ P     -  PANTERA
+ P!    -  PROTEST
+ P^A   -  PRO ARTS
+ P^D   -  PIONEER DESIGN
+ P303  -  PHUTURE 303
+ PAR   -  PARANOIMIA
+ PB    -  POLKA BROS.
+ PDS   -  PARADISE
+ PDX   -  PARADOX
+ PDY   -  PRODIGY
+ PGS   -  PROGRESS
+ PHN   -  PHANTASM
+ PHUN  -  PHUN
+ PIA   -  PIRATES IN ACTION
+ PLC   -  POLICE
+ PLE   -  PROLINE
+ PLS   -  PLEASURE
+ PLS   -  PULSE
+ PLT   -  PLATIN
+ PLX   -  PERPLEX
+ PMC   -  PURE METAL CODERS
+ PMK   -  PIMOK
+ PP    -  PYGMY PROJECTS
+ PRC   -  PRINCIPES
+ PRX   -  PROXIMA
+ PSG   -  PRESTIGE
+ PSK   -  PSYKOTROPE
+ PSN   -  PASSION
+ PST   -  PARASITE
+ PSV   -  PASSIVE
+ PSW   -  PASSWORDS
+ PWA   -  PIRATES WITH ATTITUDE
+ PWS   -  POWERSOUND
+ PZL   -  PUZZLE
+
+ QSR   -  QUASAR
+ QTX   -  QUARTEX
+
+ RBS   -  REBELS
+ RCL   -  RECALL
+ RD    -  RAVE DESIGN
+ RD    -  REAL DESTRUCTION
+ RDC   -  RADIANCE
+ RDY   -  REMEDY
+ RDZ   -  ROADHOGZ
+ REA   -  REAL
+ REV   -  REVOLUTION
+ RGE   -  RAGE
+ RIOT  -  RIOT
+ RJ    -  RAM JAM
+ RKM   -  REKTUM
+ RLG   -  RELIGION
+ RMK   -  ROMKIDS
+ RNG   -  RENEGADE
+ RNO   -  RAVE NETWORK OVERSCAN
+ RTR   -  RETIRE
+ RYL   -  ROYAL
+ RZR   -  RAZOR 1911
+
+ S     -  SONIK
+ S2    -  S2
+ S7    -  SECTOR 7
+ S!P   -  SURPRISE PRODUCTIONS
+ S8    -  SHINING 8
+ SAD   -  SCEPTIC AMIEXPRESS DESIGN
+ SAF   -  SOLDIERS AND FLOWERS
+ SAP   -  SAPHIRE
+ SB    -  SUBURBAN BASE
+ SCL   -  SCANDAL
+ SCP   -  SCORPIO
+ SCS   -  SCALARIS
+ SCT   -  SUSPECT
+ SCX   -  SCOOPEX
+ SD    -  SMELLON DESIGN
+ SDC   -  SIM DRAKE CODEX
+ SDC   -  SYNDICATE
+ SDM   -  SYNDROME
+ SDX   -  SARDONYX
+ SEL   -  SELFESTEEM
+ SHD   -  SCHRIMPS DESIGN
+ SHR   -  SOFTWARE RUNNERS FROM HELL
+ SHT   -  SHOOT
+ SKB   -  SUCK KUCK BROTHERS
+ SKS   -  SKULLS
+ SL    -  SENTINEL
+ SLC   -  SILICON LTD.
+ SMF   -  SMURF
+ SNK   -  SNEAKERS
+ SNT   -  SANITY
+ SOS   -  SAVE OUR SOULS
+ SOX   -  SCORNTRAX
+ SP!   -  SPLAT!
+ SPB   -  SPACEBALLS
+ SPD   -  SPEDES
+ SPN   -  SPOON
+ SPR   -  SUPREME
+ SPT   -  SPIRIT
+ SPY   -  SPEEDY
+ SPX   -  SIMPLEX
+ SR    -  SKID ROW
+ SSF   -  SUB SONIC FORCE
+ SSN   -  SESSION
+ ST    -  SUPER TEAM
+ STA   -  STONE ARTS
+ STB   -  STATIC BYTES
+ STL   -  StELLAR
+ STN   -  SATURNE
+ STS   -  SAINTS
+ SUP   -  SUPERIORS
+ SVG   -  SAVAGE
+ SVR   -  SAVIOUR
+ SX    -  SUPPLEX
+ SXI   -  SUNFLEX INC.
+
+ T80   -  TRASH 80
+ TAF   -  THE AMAZING FAMILY
+ TAI   -  TAI
+ TAU   -  TAURUS
+ TBL   -  THE bLACK LOTUS
+ TCE   -  THE CHASE
+ TCE   -  TRANCE
+ TCLT  -  THE CULT
+ TDD   -  THE DARK DEMON
+ TDD   -  THE DATA DIVISION
+ TDS   -  DOODLES ^ SHOCK
+ TECH  -  TECH
+ TEDG  -  THE EDGE
+ TEK   -  THE ELECTRONIC KNIGHTS
+ TEX   -  THE EXTERMINATORS
+ TFD   -  THE FANTASTIC DUO
+ TFF   -  THE FUN FACTORY
+ THC   -  THC CRU
+ THG   -  TECHNOLOGY
+ TILT  -  TILT
+ TJS   -  TROJANS
+ TLL   -  THE LOWLIFES
+ TLT   -  TALENT
+ TMG   -  THE MAGIZ GUILD
+ TRPS  -  TURNIPS
+ TRSI  -  TRISTAR & RED SECTOR INC.
+ TRZ   -  TRISTAR & ZENITH
+ TSB   -  THE SPECIAL BROTHERS
+ TSL   -  THE SILENTS
+ TSN   -  TENSION
+ TT    -  TARKUS TEAM
+ TVK   -  THE VIKINGS
+ TWB   -  THE WARNER BROS.
+ TWE   -  THE WAVE
+
+ UC    -  UPPERCLASS
+ UCF   -  UNITED CRACKING FORCE
+ UDO   -  UDO
+ UNA   -  UNITED ARTZ
+ UNL   -  UNLIMITED
+ UNS   -  URANUS
+ UNN   -  UNION
+ UP!   -  UNDER PRESSURE
+ US    -  UNIVERSAL SOLDIERS
+
+ VCM   -  VACUUM
+ VCT   -  VECTORS
+ VD    -  VIRtUAL dREAMS
+ VDO   -  VOODOO
+ VEGA  -  VEGA
+ VF    -  VISION FACTORY
+ VNA   -  VENUS ART
+ VNL   -  VENAL
+ VNM   -  VENOM
+ VRT   -  VIRTUAL
+ VSG   -  VISAGE
+ VSH   -  VANISH
+ VSN   -  VISION
+ VTR   -  VENTURE
+ VTY   -  VANITY
+
+ WL    -  WHITE LABEL
+ WL!   -  WHALE
+ WOA   -  WARRIORS OF ART
+ WOT   -  WORLD OF TWIST
+ WTN   -  WOTAN
+ WVR   -  WAVERIDERS
+ WW    -  WAREN WAREN
+
+ XMS   -  XYMOS
+ XTE   -  XTENSION
+ XTR   -  X-TRADE
+
+ YDL   -  YODEL
+
+ Z     -  ZOMBIES
+ ZOMO  -  ZOMO
+
+ -T    -  TWISTED
+ -Z    -  ZENITH
+@endnode
+
+@node helppage2-2 " The Meanings of the Short Forms of System-Information"
+@toc helppage2
+
+
+
+    @{b}The Meanings of the Short Forms of System-Information @{ub}
+
+
+      AGA   new chipset system (A1200/A4000)
+      ECS   enhanced chipset system
+      OCS   original chipset system
+      Inc.  Incorporated
+      inc.  inclusive
+      Ltd.  Limited
+      Mem   Memory
+      MT    multi-tasking
+@endnode
+
+!!!
+
+@node helppage3 " Meanings of the Entries "
+@toc help!
+
+  @{b}The meanings of the Entries@{ub}
+
+
+    [Name of the Production]
+
+     Producer  : Name of the producing Group
+
+     Coder     : Name of the Programmer
+     Graphician: Name of the Graphician
+     Sounder   : Name of the Musician
+     Designer  : Name of the Designer, Ascii-Maker, Raytracer, a.s.o.
+     Editor    : Name of the Main-Editor
+
+     Size      : this is the size of the product in its form in the nets
+     System    : lists up the configuration used by the production
+                 (AGA, HD, Memory, Kickstart-version, OS-version);
+                 HD-installable means that a HD is not required
+                 (in opposition to a simple remark "HD")
+     Secr. Part: explains what to do to reach the secret part
+     How2Handle: describes how to use the demo (Relo, Exit, KillAga),
+                 how to fix it or install it on harddisk, a.s.o.
+     Remark    : anything else to be added
+
+     Genre     : What is the Production exactly?
+                 (Diskdemo, Filedemo, Intro, Sounddisk, Slideshow)
+@endnode
+
+!!!
+
+@node credits " Credits "
+@toc information
+
+
+
+  @{b}The Credits@{ub}
+
+
+
+  All texts are written and copyrighted in 1995-1996 by
+
+     @{b}Nico Barbat (Dire/Eremation). @{ub}
+
+
+
+
+  Without @{i}your @{ui}help, @{i}The Scene @{ui}would not exist.
+  Therefore I would like to thank all those who
+  supported me in realizing this project, i.e.:
+
+
+  - @{i}Sascha Iwanow (Tiger of Slope) @{ui}for a dozen of
+    lists, reports, descriptions, for his very big
+    software-list, especially for collecting the
+    latest news on all important productions and for
+    being a good friend :^)
+
+
+  - @{i}Lars Sobiraj (Ghandy of Gods) @{ui} and @{i}Exon of Riot
+    (Maik Nieke) @{ui}for many texts from their BBS Los Endos
+
+  - @{i}Curt Cool of Depth (Frank E. Larsen) @{ui} for sending
+    many reports about the latest events; keep `em coming, pal!
+
+  - @{i}Anders Bakkevold @{ui}for his Amiga-Guide-Text
+    "Amiga CD-Rom Guide V1.5" including many addresses
+    and for uploading @{i}The Scene @{ui}into the Aminet
+
+  - @{i}Wizard of Subject @{ui}for his software-list in guide-
+    style (Demos of the World) with useful party-results
+
+  - @{i}Pascal Weitten (Brainwasher of Eremation) @{ui}for
+    a vast amount of information-texts
+
+  - @{i}Jean-Guy Speton @{ui}for his Eurodemo-Guide
+    with much valuable information
+
+  - @{i}Dirk Wiemer (Chaos! of Desire) @{ui}for information
+    about Desire and Desire`s subgroups
+
+  - @{i}Michael Kaufmann (Mic of Slope) @{ui}for a few
+    pieces of information about various parties
+
+  - @{i}Chris of Gods @{ui}for his report about
+    the French scene and French productions
+
+  - @{i}Decoy of Passion (Danni Hansen)@{ui} for
+    several services of information delivery
+
+  - @{i}Edwin van Rijn (MSW of Effect) @{ui}for
+    actual News and Juhla Party `96 Results
+
+  - @{i}Marc Moysich (Celeborn of The Dark Demon) @{ui}for
+    information about TDD and Action
+
+  - @{i}Big-Rat of Ethic @{ui}for his X-File-Guide
+    including new party-invitations
+
+  - @{i}Lord of Absolute @{ui}for various reports and results
+
+  - @{i}DMG of Deja Vu @{ui}for The Party 5 Report
+
+  - @{i}Murk of Stellar @{ui}for his report about Stellar demos
+
+  - @{i}Oxbab of Oxygene @{ui}for his report about Oxygene demos
+
+  - @{i}Easy Rider of Mystic @{ui}for corrections about the
+    Intel Outside Parties 1994 and 1995
+
+  - @{i}Nowar of Silicon PC @{ui}for detailed corrections
+    and party news in 1996
+
+  - @{i}Napoleon of Dreamdealers @{ui}for the GASP 95 Report
+
+  - @{i}Ignanz Kellerer @{i} for the AmigaFAQ-Guide
+    including all Aminet Sites
+
+  - @{i}Ramirez of Illusion @{ui}for Woc 94 + Nexus 95 corrections
+
+  - @{i}Punk of UP @{ui}for the Groups Abreviations article
+    and the hidden parts supply written with @{i}Maze of Eltech @{ui}
+
+
+
+  - @{i}Ralph Seichter @{ui}for Agix V1.2
+
+  - @{i}Stefan Boberg @{ui}for Lha Evaluation V1.51
+
+  - @{i}Nico François @{ui}for PPShow V4.0
+
+  - @{i}Jolyon Ralph @{ui}for Noiseplayer V4,0
+
+  - @{i}Syn-T-Size of DRD^TDD @{ui} for the "Dark-Clouds"-Module (#1)
+
+  - @{i}Axis of Eremation @{ui} for the "Erematix"-Module (#2)
+
+  - @{i}Martin Huttenloher @{ui}and @{i}Ryan Thomas @{ui} for
+    the beautiful icons
+
+  - @{i}Nicolas Foltzenlogel (Photos of Erematiom) @{ui}
+    for the gfx-advert and the part of the title-picture
+@endnode
+
+!!!
+
+@node greets " Greetings and Thanks "
+@toc information
+
+
+@{b}I would like to greet my contacts and friends worldwide, namely:@{ub}
+
+ Adder/Subject, Angelwings/Syndrome, Blitter/X-Trade, Curt Cool/Depth,
+ Decoy/Passion,  Device/Parallax,  Exon/Riot,  Ghandy/Gods, Iro/Depth,
+ Masterix/Disk Charge,  Mic/Slope,  Mike/Mystic, Mystra/indi, Suicyco/
+ Spasm, Tiger/Slope, WDS/Netzwerk, Yogi/Syndrome, all other scene-mem-
+ bers whome I know or not, and of course all members of Eremation ...
+
+
+
+@{b}Thanks to the following for making my editing life more beautiful: @{ub}
+
+ Escom, Telefunken, Philipps, Coca Cola, Chio Chips, Ritter Sport,
+ Citroen, Volvo, NAD+Mission+Sansui,  Groenemeyer, Rolling Stones,
+ The Doors, Bap, Jackson, Commitments, Manhatten Icecream, Nestlé,
+ Helene Productions, Fishermen`s Friend, Uli Stein, Amiga Magazin,
+ Amiga Joker, Sensible Software, a.s.o. ...
+
+
+@{b}And some "kisses" to all my "pals" in the real, hard life: @{ub}
+
+ - Iris @{i}"Stop saying <$h!t>" @{ui}Vahsen
+ - Roman @{i}"I`m Always On Tour" @{ui}Barbat
+ - Michael @{i}"I wanna earn much money" @{ui}Park
+ - Philipp @{i}"I`m working on a new motorcycle" @{ui}Imhof
+ - Sascha @{i}"Did you know that I broke my leg again?" @{ui}Iwanow
+ - Tanja @{i}"I`m blonde, talk slow" @{ui}Schnitzler
+ - Kerstin @{i}"I have no idea what to do next" @{ui}Mai
+ - Heléne @{i}"I don`t know you, but this will change someday" @{ui}Gjörde
+ - Lars @{i}"I`m looking for a job again" @{ui}Sobiraj
+ - Matthias @{i}"I`m studying ecology, and what then?" @{ui}Hauschild
+ - Sascha @{i}"I`m the guy who`s doing military service" @{ui}Voss
+ - Thomas @{i}"I`m the very best in Kick Off" @{ui}Böhlefeld
+ - Michael @{i}"I`m here, I`m there, I`m everywhere" @{ui}Kaufmann
+ - Noèl @{i}"We have only shit in our heads." @{ui}Köthe
+
+ - ... and to all others who won`t read this anyway. ;)
+
+
+ @{bg fill}Thanks to all who supported me in this work.@{bg background}
+@endnode
+
+!!!
+
+@node aminet
+@toc information
+
+ @{b}Getting the stuff from the Aminet @{ub}
+
+ If you have access to the Internet and to the FTP (file transfer
+ protocol) you can easily get all the latest demos being released
+ by ftp`ing  to of the  sites listed below.  If you have problems
+ with ftp, just @{"ask me" link addresses} for helping you.
+
+ You can find the latest update of @{i}The Scene @{ui}in the @{i}@{"Aminet" link aminet}@{ui},  too,
+ at @{i}docs/hyper. @{ui}Thanks to @{i}Anders Bakkevold @{ui}for this feature! :)
+
+ Jump to these sites:
+
+
+ COUNTRY      FTP-SITE                 IP-Address      Path         Files
+ ------------------------------------------------------------------------
+ USA (MO)     ftp.wustl.edu            128.252.135.4   pub/aminet/    ALL
+ USA (CA)     ftp.cdrom.com            192.216.222.5   pub/aminet/   9000
+ USA (TX)     ftp.etsu.edu             192.43.199.20   pub/aminet/   5000
+ USA (WI)     ftp.netnet.net           198.70.64.3     pub/aminet/  10000
+ Scandinavia  ftp.luth.se              130.240.18.2    pub/aminet/  10000
+ Switzerland  ftp.eunet.ch             146.228.10.16   pub/aminet/   5500
+ Switzerland  ftp.math.ethz.ch         129.132.104.6   pub/aminet/   1000
+ Switzerland  litamiga.epfl.ch         128.178.151.32  pub/aminet/    300
+ Germany      kelly.uni-paderborn.de   131.234.128.206 pub/aminet/    ALL
+ Germany      ftp.uni-paderborn.de     131.234.2.42    pub/aminet/    ALL
+ Germany      ftp.uni-erlangen.de      131.188.3.2     pub/aminet/   7000
+ Germany      ftp.uni-oldenburg.de     134.106.40.9    pub/aminet/   2500
+ Germany      ftp.uni-kl.de            131.246.9.95    pub/aminet/   1500
+ Germany      ftp.uni-stuttgart.de     129.69.18.15    cd  aminet    4500
+ Germany      ftp.uni-siegen.de        141.99.128.1    pub/aminet/   1500
+ Germany      ftp.cs.tu-berlin.de      130.149.17.7    pub/aminet/   4000
+ Germany      ftp.stud.fh-heilbronn.de 141.7.1.41      pub/aminet/    600
+ Germany      ftp.tu-chemnitz.de       192.108.33.193  pub/aminet/   4000
+ Germany      ftp.rz.uni-wuerzburg.de  132.187.1.2     pub/aminet/    700
+ UK           ftp.doc.ic.ac.uk         155.198.1.40    pub/aminet/    ALL
+ UK           micros.hensa.ac.uk       148.88.8.84     pub/aminet/   8500
+
+ ... or ...
+
+ Finland      ftp.funet.fi             unknown         unknown    unknown
+ USA          ftp.isca.uiowa.edu       unknown         unknown    unknown
+ USA          ftp.hawaii.edu           unknown         unknown    unknown
+ USA          ftp.cso.uiuc.edu         unknown         unknown    unknown
+ Germany      ftp.dfv.rwth-aachen.de   unknown         unknown    unknown
+
+
+ Thanks to Ignanz Kellerer for the information about the exact sites from
+ his FAQ-guide.
+@endnode
+
+!!!
+
+@node history " History "
+@toc information
+
+
+
+ @{b}The History@{ub}
+
+
+ Version : V1.0 (1/1 in 1995)
+ Released: 11th November 1995 (Amiga Exposition `95)
+ Size    : 336.516K
+ Comment : the first public release
+
+ Version : 1/3 in 1996
+ Released: 24th January 1996
+ Size    : 483.731K
+ Numbers : informationon about 143 parties and 1158 productions
+ Comment : improved the lay-out a lot, especially the overview
+           of the parties (main-table); included an index part
+           (thanks to Ralph Seichter for his Agix V1.2);  cor-
+           rected some mistakes and  cleaned up  some trouble-
+           making links; added an install-script, Read-Me-Text
+           and a few nice icons and, of course, added much in-
+           formation about new and old productions & parties!
+
+ Version : 2/3 in 1996
+ Released: 19th April 1996
+ Size    : 519 Kb
+ Numbers : informationon about 173 parties and 1263 productions
+ Comment : improved the lay-out a little bit more; included two
+           nice sound-modules and a beautiful title-picture,...
+
+
+
+
+ @{b}The Future@{ub}
+
+  The  guide  will be updated about every 4th month, so there will
+  be  3  issues  in  a  year,  one  in January (after The Party in
+  Denmark),  one  in  May  (after The Gathering) and one in August
+  after the big parties (see the calendar for the exact dates).
+
+  I have  much more texts  which will be  used in  this guide,  so
+  expect The Scene to  grow a lot in the future  (this  depends on
+  your support too!). Then again, more information will be pressed
+  into  each party, like visitors, prices, extra events and so on.
+  Plus I want to add the party  where a production was released to
+  each of its description  (if you click from index you don`t know
+  exactly when it was released) ... and I have a lot more ideas.
+
+  As soon as possible  we will include  a short description of the
+  productions  (e.g. what happens in the demo, what music-style is
+  offered in the sounddisk, etc.) ... be surprised or be dead! :-b
+
+  I have seen 2 guide-viewers  in the near past,  but one was ugly
+  and the other did not display  this guide correctly,  reason un-
+  known.  Could someone please send me a nice guide-viewer??
+
+  I would like someone to create a nice  installer-script  for the
+  original Commodore Installer and probably someone who could code
+  a small intro for @{i}The Scene.@{ui}
+@endnode
+
+!!!
+
+@node orderstuff " Where can I order these demos? "
+@toc information
+
+
+           @{b}WHERE CAN I GET THIS DAMN STUFF FROM?@{ub}
+
+
+ The  most of the productions listed in @{i}The Scene @{ui}can be found in
+ the  @{"Aminet" link aminet}.   Meanwhile the  Aminet  administrators and several
+ distributors  are selling CDs  containing this material as well,
+ such as the Aminet CDs or the Euro-Demo-CDs  from Almathera.
+ --> @{"(PD-Distributors)" link pddistributors}.
+
+ To avail exact information about these CDs try to get the guide-
+ text called  @{i}"Amiga CD-Rom Guide V1.5". @{ui} It can be  found in the
+ @{"Aminet" link aminet} at docs/hyper or can be ordered directly from the author
+ @{"Anders Bakkevold" link addresses_sub}.
+
+ If you, by chance, can`t get your hands on a demo you would like
+ to  call  your  own,  you can contact us for getting information
+ like  addresses of distributors or exact net sites.  If possible
+ (i.e.   if we have the wanted production) we are also willing to
+ copy this for you, but please notice that we are no cheap source
+ for getting demos from.  So if you would like to receive a demo,
+ then  send  the  disks  being  needed for it plus the stamps for
+ sending  your  letter  back.  And please notice that the maximum
+ disk  number  we  will  copy  for  you  is  5 disks (except if a
+ production needs more disks, like Suburban Base`s musicdisk) ...
+ We  are  sorry  for these conditions, but we are no millionaires
+ and  we  don`t want to hang loose behind our computers the whole
+ day.  :)
+
+ We  also  plan to release about 2,5Gb of the best scene stuff on
+ CDs  for  a  price  of  25 DM each.  If you want to order one of
+ those  CDs  or  request a catalogue, don`t hesitate to send me a
+ short mail. @{"(Author`s Address)" link addresses}.
+@endnode
+
+!!!
+
+@node orderupdate " Where can I get the next update of The Scene from?"
+@toc information
+
+
+
+
+            @{u}@{b}Where can I get the next update of @{i}The Scene @{ui}from?@{uu}@{ub}
+
+
+ @{b}With the Snail-Mail @{ub}
+
+ If you want to get the next update of @{i}The Scene@{ui} please send 3 DM
+ (or  2  US$) (foreigners send 4DM/3US$) and you will soon find a
+ brand  new disk with the latest update in your mailbox.  (On the
+ other hand, you could also send support (information) and get it
+ for free :)
+
+ @{"Author`s Address" link addresses}.
+
+
+
+ @{b}Through Data-Transfer on BBSs @{ub}
+
+ If you own a modem,  but have no access to the @{"Aminet" link aminet},  you can
+ always find  the latest update of @{i}The Scene @{ui}on Germany`s fastest
+ and best demo-board,  "Los Endos",  hosted by Ghandy of Gods and
+ Exon of Riot. Just call Los Endos under +49-(0)2103-52440.
+
+
+
+ @{b}In the Aminet @{ub}
+
+ You can find the latest update of @{i}The Scene @{ui}in the @{i}@{"Aminet" link aminet}@{ui},  too,
+ at @{i}docs/hyper. @{ui}Thanks to @{i}Anders Bakkevold @{ui}for this feature! :)
+@endnode
+
+!!!
+
+@node support " How to support The Scene "
+@toc information
+
+
+
+
+                   @{b}How to support @{i}The Scene@{ub}@{ui}
+
+
+
+ This  guide  needs your help!  As I am not able to get all scene
+ releases  at all I have to relay on the support and help of you.
+ I  am  always  in search for further and concrete information or
+ corrections  of  the  old  entries  plus  information  about new
+ productions  or  parties  (like  your  own lists, party reports,
+ competition results, reviews, articles or what so ever).  If you
+ send information (at least  2Kb of plain ascii) you will get the
+ next updated version for free (please send a disk) and your name
+ will be added to the honorable credits! @{"[Author`s Address]" link addresses}
+@endnode
+
+!!!
+
+@node author " About the Author"
+@toc information
+
+
+  @{b}About the Author@{ub}
+
+  Anybody interested in this? I don`t think so, but who cares? :^)
+
+
+  @{i}Real Life:@{ui}
+  - born 26th of July 1975 in Gelsenkirchen, Germany (yes, Schalke!)
+  - "high school" till June 1995
+  - study of Communication, Scandinavistics and Politics in Bonn
+  - hobbies: "my girl", nightlife (discos, café`s, ... fun ;-) ),
+    Amiga, Inline-Skating, Volleyball, Football (1.FC Köln!),
+    2CV (Ducks), gotcha, and much other crap you may have fun with
+
+  @{i}Scene Career:@{ui}
+  - first Amiga (A500) in May 1988, just played some odd games
+  - first contact with the scene, December 1989, after seeing some
+    great demos from various parties
+  - mid 1990 built up an own group called Heavysoft with an old friend,
+    but nothing was released from us .. just a bunch of "lamers" ;)
+  - mid 1992: joined The Dark Demon as editor and swapper, first steps
+    as a sounder
+  - 1993: bought a standard A1200 for less money
+  - mid 1993: joined Ascii Unlimited, a quite well-known group
+    consisting of editors only, members were Tango/Balance,
+    Telemach/Defekt, Khul/Infect, Nimrod/Raw-staff and me
+  - early 1995: joined Eremation, a well-known French group,
+    the organizers of the GASP `95 Party
+  - productions I took part in till today: Midnite Mess 2+3,
+    Outlaw 1+2, The Jungle 5-7, Cypress Packs, Cool Tool Packs
+    and various other magazines and productions
+
+
+  - SOON-COMING PRODUCTIONS FROM eREMATION:
+     - a sounddisk
+     - Outlaw 3 (diskmag)
+     - Traders` Dope 1 (message-box)
+     - and some other things. Look out!
+@endnode
+
+!!!
+
+@node addresses " Important Addresses "
+@toc information
+   -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+   @{i}Author`s Address @{ui}
+
+      Snail-Mail     : Nico Barbat
+                       (Dire of Eremation)   <-- don`t write this
+                       Rheinaustraße 37          on the envelope!
+                       51149 Köln
+                       Germany                    @{" IFF-Advert " system "ppshow TSG_Advert.iff"}
+
+      Internet E-Mail: nicolai@cip1.ikp.uni-bonn.de
+      Local CE E-Mail: dire@anabolik.dssd.sub.org
+      Phone/Fax/Data : +49-(0)2203-13751
+      BBS-Messages   : leave me a mail in these BBSs (user=dire):
+                       Los Endos       +49-(0)2103-52440
+                       Midnite         +49-(0)2203-ELITE
+
+       Use this address for everything concerning @{i}The Scene. @{ui}
+   -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+   -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+    @{" Other Addresses " link addresses_sub}   AT, distributors, swappers, other authors
+
+   -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+@endnode
+
+@node addresses_sub " Other Addresses"
+@toc addresses
+   -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+                      @{" [PD-Distributors] " link pddistributors}
+
+   -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+    If you are searching for a production from this list, you can
+    try to get it from  Tiger/Slope.  His scene-collection  comes
+    to a number of about 3000 disks including all big productions
+    (only demos, diskmags, sounddisks, slideshows).  Also contact
+    him for list-swapping and the PD-packs-series Cypress ...
+
+      Snail-Mail       : Sascha "Tiger" Iwanow
+                         Nachtigallenweg 4
+                         51373 Leverkusen
+                         Germany
+      Phone            : +49-(0)214-65929
+
+   -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+   Use this address to get the "Amiga CD-Rom Guide V1.5"  with de-
+   tailed information about all important Amiga-Demo-CDs.
+
+      Snail-Mail     : Anders Bakkevold
+                       Jaablomveien 9
+                       5500 Haugesund
+                       Norway
+      E-Mail         : anders.bakkevold@norway.bbs.no
+      Phone          : +47-(0)52-735003
+
+   -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+    These boys and girls are looking forward to get in touch with
+    a few more friendly swapping contacts ...
+
+    ------------------   -------------------   ------------------
+    Curt Cool of Depth   Ghandy of Gods        Lisa Taylor
+    Frank E. Larsen      Lars Sobiraj          16 Hilltop Rise
+    Fruevej 29           Mindener Straße 5     Worlingham,Beccles
+    2860 Søborg          40227 Düsseldorf      Suffolk, NR34 7BU
+    Denmark              Germany               Great Britain
+    ------------------   -------------------   ------------------
+    Masterix of D.C.     Yogi of Syndrome      Tiger of Slope
+    Martin Johansson     Stephane Paravigna    Sascha Iwanow
+    Gustav III:s väg 4   35RueDesTablesClaud   Nachtigallenweg 4
+    69532 Laxå           69001 Lyon            51373 Leverkusen
+    Sweden               France                Germany
+    ------------------   -------------------   ------------------
+
+   -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+    To get the absolute latest news about  the upcoming new Amiga
+    generation  you should  try to  contact the  Public Relations
+    site of Amiga Technologies at:
+
+        Snail-Mail : Gilles Bourdin / Public Relations
+                     AMIGA Technologies
+                     Berliner Ring 89
+                     64625 Bensheim
+                     Germany
+        Telephone  : +49-(0)6252-709-195
+        Telefax    : +49-(0)6252-709-520
+        E-Mail     : gbo@amiga.de
+
+   -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+@endnode
+
+@node copyrights " Copyrights, Trademarks, Disclaimers"
+@toc information
+
+
+ @{u}@{b}Copyrights@{uu}@{ub}
+
+  The guide-document called @{i}The Scene @{ui}is @{i}copyrighted by
+  Nico Barbat (Dire/Eremation) in 1995-1996. @{ui}
+
+  @{i}The Scene @{ui}is @{i}what-ever-you-like-ware. @{ui}This means that
+  if you use (read) this guide, you do not have any ob-
+  ligations.  Anyway it  would be nice if I would get a
+  little surprise from you to show me that I shall con-
+  tinue my work on @{i}The Scene, @{ui}like a chocolate, condom,
+  sweets, a few pennies, an E-Mail, or whatever you may
+  think of :)
+
+  You are @{i}allowed @{ui}to use, copy and spread this guide as
+  long as you are keeping it in its @{i}original form. @{ui}
+
+  You`re @{i}not (!) allowed @{ui}to change anything in the text
+  nor change the @{"content of the original lha-package" link packagecontent}.
+
+  If you want to include @{i}The Scene @{ui}in your (commercial)
+  PD-series or on your CDs  and release it for the pub-
+  lic for commercial reasons,  I advice you  to ask for
+  my written permission.  We can talk about it,  I just
+  want to be asked before you use it. @{"Author`s Address" link addresses}
+
+  "AGIX V1.2" (05-Aug-94) Copyright © Ralph Seichter.
+  "The Scene Guide" (1995-1996) Copyright Nico Barbat.
+
+
+ @{u}@{b}Trademarks@{uu}@{ub}
+
+  "Amiga" is or has been a registered trademark (tm) of
+  CBM, Commodore-Amiga, Amiga Technologies and Escom.
+
+
+
+ @{u}@{b}Disclaimer@{uu}@{ub}
+
+  @{i}The Scene @{ui}is provided "as is". Please notice that the
+  author of @{i}The Scene @{ui}can`t be held responsible for any
+  damage on your  hard- or software  or for the loss of
+  data caused by the usage of @{i}The Scene @{ui}(though I can`t
+  imagine how a guide-document  could cause troubles to
+  your system).
+
+
+
+  Please note:  I won`t hesitate to take up legal steps
+  against anybody who breaks these rules heavily! Don`t
+  say you haven`t been warned!
+@endnode
+
+@node packagecontent " The Content of the original LHA-package of The Scene"
+@toc coyprights
+
+   @{b}
+ The content of the original lha-packages of @{i}The Scene @{ui}looks like this:
+   @{ub}
+ @{i}(It is not allowed to change anything from this package!) @{ui}
+
+
+ ---------------------------------------------------------------
+
+
+ @{b}File-Name:@{ub} @{i}TSG296.lha                                 214290@{ui}
+
+ @{b}Contents :@{ub}  TSG296/TSG_Adverts/Ad_Dire^Erm_18x80        1353
+             TSG96/TSG_Adverts/Ad_Dire^Erm_18x80.info    827
+             TSG296/TSG_Adverts/Ad_Dire^Erm_20x39         799
+             TSG296/TSG_Adverts/Ad_Dire^Erm_20x39.info    827
+             TSG296/TSG_Adverts.info                     1193
+             TSG296/file_id.diz                           310
+             TSG296/c/More                               8180
+             TSG296/c/PPShow                             5180
+             TSG296/c/Noiseplayer                       19660
+             TSG296/ReadMe                                767
+             TSG296/ReadMe.info                          2043
+             TSG296/TheSceneGuide.guide                462691
+             TSG296/TheSceneGuide.guide.info             1586
+             TSG296/TSG_Data1                           44146
+             TSG296/TSG_Data2                           84473
+             TSG296/TSG_Advert.iff                      18140
+             TSG296/TSG_Advert.iff.info                  2682
+             TSG296/TSG_Install                          2216
+             TSG296/TSG_Install.info                     1842
+             TSG296/TSG_Module1.mod                     19352
+             TSG296/TSG_Module2.mod                     32252
+             TSG296/TSG_Title.iff                       24872
+             TSG296.info                                 1193
+                                                            ======
+                                                            794846
+
+
+ ---------------------------------------------------------------
+
+
+ @{b}File-Name:@{ub} @{i}Scene196.lha                                   139309@{ui}
+
+ @{b}Contents :@{ub}  TheScene196/Adverts/Ad_Dire^Erm_18x80            1353
+             TheScene196/Adverts/Ad_Dire^Erm_18x80.info        827
+             TheScene196/Adverts/Ad_Dire^Erm_20x39             799
+             TheScene196/Adverts/Ad_Dire^Erm_20x39.info        827
+             TheScene196/Adverts.info                         2273
+             TheScene196/file_id.diz                           371
+             TheScene196/More                                 8180
+             TheScene196/PPShow                               5180
+             TheScene196/ReadMeFirst.txt                      1503
+             TheScene196/ReadMeFirst.txt.info                  827
+             TheScene196/TheScene.guide                     483731
+             TheScene196/TheScene.guide.info                  3986
+             TheScene196/TheScene_Advert.iff                 18140
+             TheScene196/TheScene_Install                     1755
+             TheScene196/TheScene_Install.info                1842
+             TheScene196.info                                 2273
+                                                            ======
+                                                            533867
+
+
+ ---------------------------------------------------------------
+
+
+ @{b}File-Name:@{ub} @{i}Scene195.lha                                   85821@{ui}
+
+ @{b}Contents :@{ub}  Addy_Dire1.txt                                  1353
+             Addy_Dire2.txt                                   799
+             Addy_Dire3.iff                                 18140
+             file_id.diz                                      402
+             TheScene.guide                                336516
+                                                           ======
+                                                            85821
+
+
+ ---------------------------------------------------------------
+
+
+ And once again: Don`t change anything from this package, please!
+
+ @{" [ Back to the copyrights-pages! ] " link copyrights}
+@endnode
+
+!!!
+
+@node pddistributors "PD-Distributors"
+@toc addresses
+
+
+ Here are a few addresses of distributors where you
+ can order scene-productions for a @{i}low @{ui}price ...
+
+
+  @{b}Almathera @{ub}
+
+   Snail-Mail ... Almathera Soft- and Hardware
+                  Challenge House
+                  618 Mitcham Road
+                  Croydon
+                  CR9 3AU
+                  Great Britain
+   E-Mail ....... almathera@cix.compulink.co.uk (Distribution)
+                  jralph@cix.compulink.co.uk (technical inquiries)
+   Telephone .... +44-(0)181-6870040
+   Released ..... e.g Demo CD 1+2, Euroscene 1
+
+
+  @{i}Schatztruhe @{ui}
+
+   Snail-Mail ... Stefan Ossowski`s Schatztruhe
+                  Gesellschaft für Software mbH
+                  Veronikastraße 33
+                  45131 Essen
+                  Germany
+   E-Mail ....... stefano@tchest.e.eunet.de
+   Telephone .... +49-(0)201-788778
+   Telefax ...... +49-(0)201-798447
+   Released ..... e.g. Aminet CD 1-11
+
+
+  @{b}Fred Fish @{ub}
+
+   Snail-Mail ... Amiga Library Services
+                  610 N. Alma School Road, Suite 18
+                  Chandler, AZ 85224
+                  USA
+   Released ..... Fish-Series
+
+
+  @{i}Nordlicht @{ui}
+
+   Snail-Mail ... Nordlicht Amiga PD Service
+                  Alter Fischpfad 10
+                  26506 Norden
+                  Germany
+   Telephone .... +49-(0)4931-167222
+
+
+  PD-distributors:  if you want to see your address in this section,
+  please consider sending your latest offers for scene-stuff.  We`ll
+  then decide if your offers are of a good condition (low price) and
+  publish them here, if this is the case.
+@endnode
+
+!!!
+
+@node whatisit " What is <The Scene>? "
+@toc information
+
+
+  @{b}What is @{i}The Scene? @{ui}@{ub}
+
+
+   This  guide  was  written  and  compiled for the purpose to unite all
+   releases from the important Amiga-Scene-Parties into one list, mainly
+   as a small orientation  for  everybody  who collects or searches  for
+   special productions  or  for  productions  from special groups or who
+   wants to gather information  (like hardware requirements, single pro-
+   ducers or what so ever) about a special production. I hope this guide
+   is helpful for at least some of you :)
+
+   This guide does not include:
+     - pack series (rarely own group`s file demos collections)
+     - mag-parts of any pack series
+     - any productions including nazi-propaganda
+     - sounddisks just playing a module with no code and GFX
+     - cheat disks, doc disks or solution disks
+     - games or game-clones
+     - tools or tool-clones
+     - the most of those ugly hardcore demos and slideshows
+     - various private module or slideshow collections
+     - any stuff (PD-series) from commercial PD-distributors.
+
+   Productions in this guide are only pure ...
+     - file demos (dentros)
+     - disk demos (megademos, trackmos)
+     - intros
+     - packmenu previews
+     - diskmags
+     - sounddisks
+     - slideshows.
+
+   I hope that you can find use for this guide and that you are thinking
+   about @{"supporting me" link support} in the further development. Thanks in advance!
+@endnode

@@ -1,0 +1,30 @@
+Instructions for running Saxonia
+
+To make it simple, load Saxonia, press left mousebutton to get past the
+scroller in the start and then press the deletekey for help.
+The helpkey gives you the menu.
+
+If the mag doesn't run (which I have heard is the case on some computers),
+I cannot really tell what causes this, as I have never been able to get
+it to happen on my computer. Try to set the vbr-register to zero (by using
+degrader or simply this piece of code in assembler
+
+zerovbr:
+	movea.l 4.w,a6
+	jsr     -$96(a6)
+	moveq   #0,d7
+	movec   d7,vbr
+	jsr     -$9C(a6)
+	moveq   #0,d0
+	rts
+
+This will set the vbr-register at zero. You can also use the program
+nullvbr to do this. It's spread with Saxonia to do this. I coded it for
+certain purposes (mostly getting older demos to work, easier checking pieces
+of code and such) and it's quite helpful. Also try to remove any patches,
+even though I have quite a few running myself.
+
+
+Have fun
+
+Rumrunner/VOID

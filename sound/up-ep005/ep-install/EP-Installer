@@ -1,0 +1,415 @@
+
+;$VER: Up Rough EP Install-script 1.1 (25-Sep-00) ©2000 Up Rough
+
+;****************************************************************************************
+;*                                   File Information                                   *
+;*======================================================================================*
+;*                                                                                      *
+;*         Installation script used to copy/update UPEP main files and copy EPs.        *
+;*                                                                                      *
+;*==========+=============+=============================================================*
+;* YY/MM/DD |     Who     |                          Description                        *
+;*==========+=============+=============================================================*
+;* 00/09/25 |   Nemonic   | Removed ptreplay.library n some other stuff.                *
+;*----------+-------------+-------------------------------------------------------------*
+;* 00/07/25 |   Nemonic   | Temp fix for the font...its now copied every time. What     *
+;*          |             | should be done later is that it should be ver checked....   *
+;*----------+-------------+-------------------------------------------------------------*
+;* 00/06/06 |   Nemonic   | Copied some strings from the ver SPOT had edited ;)         *
+;*----------+-------------+-------------------------------------------------------------*
+;* 00/05/26 |   Nemonic   | Libraries...NEWWpA8...UPEPFont...bla bla...yada yada..      *
+;*----------+-------------+-------------------------------------------------------------*
+;* 00/05/12 |   Nemonic   | Lots of UPEP* changed to EP*.                               *
+;*----------+-------------+-------------------------------------------------------------*
+;* 00/05/02 |   Nemonic   | Got somtn that works pretty good.                           *
+;****************************************************************************************
+
+(user 2)            ; User must be expert...even if the user in question isn't one ;p
+
+;****************************************************************************************
+;*                                    Error handling                                    *
+;****************************************************************************************
+
+(onerror
+
+    (if (> @ioerr 0)
+        (
+            (message
+
+                ((cat "An error has occurred during installation.\n"
+                      "Please check the log file to understand the error."))
+            )
+        )
+    )
+
+    (exit (quiet))
+)
+
+;****************************************************************************************
+;*                       Check if we are running under correct OS                       *
+;****************************************************************************************
+
+(welcome)
+
+(if (< (/ (getversion) 65536) 39)
+    (
+        (abort "Incorrect OS version (software requires OS 39 or better)!")
+    )
+)
+
+;****************************************************************************************
+;*                            Set the destination directory                             *
+;****************************************************************************************
+
+(if (exists "EP:" (NOREQ))
+    (
+        ; The assign EP: exists...user must have a previous installation
+
+        (set @default-dest (getassign "EP"))
+        (set previnstall 1)
+    )
+    ; ELSE
+    (
+        ; EP: doesn't exist...ask user if there is a previous installation
+
+        (set previnstall
+            (askbool
+
+                (prompt (cat "Couldn't find the EP: assign!\n"
+                             "Have ya got a previous installation of Up Rough EP on your HD?"))
+
+                (help @askbool-help)
+
+                (choices
+
+                    "Yea"
+                    "No"
+                )
+
+                (default 1)
+            )
+        )
+
+        (if (= previnstall 1)
+            (
+                ; User answered yes to that question
+                ; Now he/she have 2 specify where its installed
+
+                (set @default-dest
+
+                    (askdir
+
+                        (prompt "Then show me where ya got it:")
+
+                        (help @askdir-help)
+
+                        (default @default-dest)
+                    )
+                )
+            )            
+        )
+    )
+)
+
+;****************************************************************************************
+;*  If first install, create all needed dirs and copy the icons...and some other stuff  *
+;****************************************************************************************
+
+(if (= previnstall 0)
+    (
+        ; Ask where user want UPEP installed
+
+        (set @default-dest
+
+            (askdir
+
+                (prompt "Where do ya want da EP to be installed (a drawer will be created):")
+
+                (help @askdir-help)
+
+                (default @default-dest)
+            )
+        )
+
+        ; Create all directories
+
+        (makedir (tackon @default-dest "UpRoughEP"))
+        (makedir (tackon @default-dest "UpRoughEP/Data"))
+        (makedir (tackon @default-dest "UpRoughEP/EPs"))
+
+        ; Set @default-dest to our newly created directory
+
+        (set @default-dest (tackon @default-dest "UpRoughEP"))
+
+;        ; Let the user select what type of icons to use
+;
+;        (set icontype
+;
+;            (askchoice
+;
+;                (prompt "What type of icons do ya wanna use?")
+;
+;                (help @askchoice-help)
+;
+;                (choices
+;
+;                    "OS3.5"
+;                    "Old style"
+;                )
+;
+;                (default 1)
+;            )
+;        )
+
+        ; Copy the icons
+
+        (copyfiles
+
+;            (source (tackon "Icons/" (select icontype "3.5" "Old")))
+            (source "Icons/")
+
+            (dest @default-dest)
+
+            (pattern "#?.info")
+
+            (optional "fail")
+        )
+
+        ; Copy the font, some libraries and C: commands
+
+        (set copythis
+
+            (askoptions
+
+                (prompt (cat "Select what stuff to copy to your SYS: partition...\n"
+                             "The ones that are checked as default are requiered!!!"))
+
+                (help @askoptions-help)
+
+                (choices
+
+                    "UPEPFont (FONTS:)"
+                    "dbplayer.library V2.0 (LIBS:)"
+;                    "ptreplay.library V6.6 (LIBS:)"
+                    "NewWPA8 V1.4 (C:) (for AGA users!)"
+                )                
+
+;                (default 7)
+                (default 3)
+            )
+        )
+
+        (set showdocstxt 0)
+        (set docstxt "See the Docs/ dir for more info on...\n\n")
+
+        (if (BITAND copythis 1)  ; Copy the font?
+            (
+                (copyfiles
+
+                    (source "Fonts/")
+
+                    (dest "FONTS:")
+
+                    (all)
+
+                    (optional "fail")
+                )
+            )
+        )
+
+        (if (BITAND copythis 2)  ; Copy dbplayer.library?
+            (
+;                (copylib
+;
+;                    (prompt "dbplayer.library...")
+;
+;                    (help @copylib-help)
+;
+;                    (source "Libs/dbplayer.library")
+;
+;                    (dest "LIBS:")
+;
+;                    (optional "force" "askuser")
+;
+;                    (confirm "expert")
+;                )
+
+                (copyfiles
+
+                    (source "Libs/dbplayer.library")
+
+                    (dest "LIBS:")
+
+                    (optional "fail")
+                )
+
+                (set showdocstxt 1)
+                (set docstxt (cat docstxt "dbplayer.library (whole arc. avail. on aminet)\n"))
+            )
+        )
+
+;        (if (BITAND copythis 4)  ; Copy ptreplay.library?
+;            (
+;                (copylib
+;
+;                    (prompt "ptreplay.library...")
+;
+;                    (help @copylib-help)
+;
+;                    (source "Libs/ptreplay.library")
+;
+;                    (dest "LIBS:")
+;
+;                    (optional "force" "askuser")
+;
+;                    (confirm "expert")
+;                )
+;
+;                (set showdocstxt 1)
+;                (set docstxt (cat docstxt "ptreplay.library (whole arc. avail. on aminet)\n"))
+;            )
+;        )
+
+;        (if (BITAND copythis 8)  ; Copy NewWPA8?
+        (if (BITAND copythis 4)
+            (
+                (copyfiles
+
+                    (source "C/NewWPA8")
+
+                    (dest "C:")
+
+                    (optional "fail")
+                )
+
+                (set showdocstxt 1)
+                (set docstxt (cat docstxt "NewWPA8 (whole arc. avail. on aminet)\n"))
+            )
+        )
+
+        (if (= showdocstxt 1)
+            (
+                (message (docstxt))
+            )
+        )
+
+        ; Ask if EP: should be added 2 user-startup...and add it if wanted
+
+        (startup "UpRoughEP"
+
+            (prompt (cat "Do you want the line\n\n"
+                         "assign EP: \"" @default-dest "\"\n"
+                         "\nto be added to ya \"s:user-startup\" file?\n"
+                         "Since you SHOULD use the enclosed scripts to start EP "
+                         "(where the assign is taken care of) there is no need to "
+                         "add this line to your user-startup. But it's up to you. "
+                         "If you don't want it added then select \"Skip this part\"."))
+
+            (help @startup-help)
+
+            (command "Assign EP: \"" @default-dest "\"\n")
+        )
+    )
+)
+
+;****************************************************************************************
+;*                              Copy/Update the main files                              *
+;****************************************************************************************
+
+; A little procedure to make version copying easier...really should be a built in
+; function that did the same (I dont wanna use copylib for ordinary files)....BAH!
+
+(procedure upepvercpy #srcfile
+    (
+        (set upepvcpyfile 1)
+
+        (if (exists (tackon @default-dest #srcfile) (NOREQ))
+            (
+                (if (<= (getversion #srcfile) (getversion (tackon @default-dest #srcfile)))
+                    (
+                        ; The new file isn't newer than the old
+
+                        (set upepvcpyfile 0)
+                    )
+                )
+            )
+        )
+
+        (if (= upepvcpyfile 1)
+            (
+                (copyfiles
+
+                    (source #srcfile)
+
+                    (dest @default-dest)
+
+                    (optional "fail")
+                )
+            )
+        )
+    )
+)
+
+; Copy/Update EP, EP.guide, Prefs, PrefsMUI and Start
+
+(upepvercpy "EP")
+(upepvercpy "EP.guide")
+(upepvercpy "EP.guide.info")
+(upepvercpy "Prefs")
+(upepvercpy "Prefs.info")
+(upepvercpy "PrefsMUI")
+(upepvercpy "PrefsMUI.info")
+(upepvercpy "Start")
+(upepvercpy "Start.info")
+
+; Copy Data/EPLogo.up and Data/EPLogoPal.up
+
+(copyfiles
+
+    (source "Data/")
+
+    (dest (tackon @default-dest "Data"))
+
+    (choices "LogoPal.up" "Logo.up")
+
+    (optional "fail")
+)
+
+(copyfiles
+
+    (source "Fonts/")
+
+    (dest "FONTS:")
+
+    (all)
+
+    (optional "fail")
+)
+
+;****************************************************************************************
+;*                  Let the user choose the EPs to copy...then copy em                  *
+;****************************************************************************************
+
+(copyfiles
+
+    (prompt "Select EP(s) to install this time...")
+
+    (source "EPs/")
+
+    (dest (tackon @default-dest "EPs"))
+
+    (help @copyfiles-help)
+
+    (all)
+
+    (confirm "expert")
+
+    (optional "fail")
+)
+
+;****************************************************************************************
+;*                                         Exit                                         *
+;****************************************************************************************
+
+(exit)
+

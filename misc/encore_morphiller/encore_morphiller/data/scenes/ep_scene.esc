@@ -1,0 +1,108 @@
+{
+  "cameras": [
+    {
+      "far_clip_plane": 100.0,
+      "fov_x": 49.134342,
+      "fov_y": 28.841546,
+      "hide": false,
+      "name": "camera_2",
+      "near_clip_plane": 0.1,
+      "position": [
+        0.0,
+        1.1182363,
+        -1.65181172
+      ],
+      "rotation": [
+        -29.999998,
+        180.000005,
+        1.6e-05
+      ]
+    },
+    {
+      "far_clip_plane": 100.0,
+      "fov_x": 49.134342,
+      "fov_y": 28.841546,
+      "hide": false,
+      "name": "camera_1",
+      "near_clip_plane": 0.1,
+      "position": [
+        -1.50161588,
+        0.9551152,
+        -1.14223921
+      ],
+      "rotation": [
+        -19.805695,
+        -141.041016,
+        -0.0
+      ]
+    }
+  ],
+  "enc_info": {
+    "data_type": "ENCSCN",
+    "date": "22 Jun 2023 11:14:46",
+    "version": "2.0"
+  },
+  "name": "lu_scene",
+  "objects": [
+    {
+      "mesh_name": "ep_butterfly_left_wing",
+      "name": "butterfly_left_wing",
+      "position": [
+        -0.01,
+        0.09723953,
+        0.03893428
+      ],
+      "rotation": [
+        -79.999998,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "mesh_name": "ep_butterfly_right_wing",
+      "name": "butterfly_right_wing",
+      "position": [
+        0.01,
+        0.09723953,
+        0.03893428
+      ],
+      "rotation": [
+        -79.999998,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "mesh_name": "ep_butterfly_torso",
+      "name": "butterfly_torso",
+      "position": [
+        0.0,
+        0.09723953,
+        0.03893428
+      ],
+      "rotation": [
+        -79.999998,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "mesh_name": "ep_butterfly_legs",
+      "name": "butterfly_legs",
+      "position": [
+        0.0,
+        0.09723953,
+        0.03893428
+      ]
+    },
+    {
+      "mesh_name": "ep_processor",
+      "name": "processor",
+      "position": [
+        -0.00014672,
+        -0.00136222,
+        -0.00076754
+      ]
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+
+(set app-name "Apatia by Venture")
+
+(if(<(/(getversion)65536)39)
+(abort "Apatia needs at least OS3.0\n"))
+(complete 0)
+
+(message
+	(cat	"\n\n\n\n\n\nWelcome to Apatia Installation Script.\n"
+			"(c)1997 Venture. All rights reserved."
+	)
+)
+
+
+(if(not(exists("ENVARC:Venture")))
+(makedir("ENVARC:Venture")))
+(copyfiles
+	(prompt	"Copying config file into ENVARC:Venture")
+	(help		#copy)
+	(source	"apt/apatia.config")
+	(dest		"ENVARC:Venture")
+	(nogauge)
+)
+
+(if(not(exists("FONTS:UFOLarge")))
+(makedir("FONTS:UFOLarge")))
+(copyfiles
+	(prompt	"Copying fonts into your FONTS: directory")
+	(help		#copy)
+	(source	"fonts/UFOLarge.font")
+	(dest		"FONTS:")
+)
+(copyfiles
+	(prompt	"Copying fonts into your FONTS: directory")
+	(help		#copy)
+	(source	"fonts/UFOLarge/15")
+	(dest		"FONTS:UFOLarge")
+)
+
+(complete 5)
+
+(set vxpka (/(getversion "libs:xpkarchive.library")65536))
+(set vxpkm (/(getversion "libs:xpkmaster.library")65536))
+(set vxpkc (/(getversion "libs:compressors/xpkMASH.library")65536))
+(set rxpka (-(getversion "libs:xpkarchive.library")(* vxpka 65536)))
+(set rxpkm (-(getversion "libs:xpkmaster.library")(* vxpkm 65536)))
+(set rxpkc (-(getversion "libs:compressors/xpkMASH.library")(* vxpkc 65536)))
+
+(set vxpka1 (/(getversion "libs/xpkarchive.library")65536))
+(set vxpkm1 (/(getversion "libs/xpkmaster.library")65536))
+(set vxpkc1 (/(getversion "libs/xpkMASH.library")65536))
+(set rxpka1 (-(getversion "libs/xpkarchive.library")(* vxpka1 65536)))
+(set rxpkm1 (-(getversion "libs/xpkmaster.library")(* vxpkm1 65536)))
+(set rxpkc1 (-(getversion "libs/xpkMASH.library")(* vxpkc1 65536)))
+
+(set upd
+	(askchoice(choices "Update" "Dont")
+		(default 0)
+		(help "Xpkarchive.library by Matthias Meixner is required by the main program.")
+		(prompt ("\nCurrently installed xpkarchive.library: \n\nVersion : %ld.%ld\nVersion to install : %ld.%ld\n" vxpka rxpka vxpka1 rxpka1))
+	)
+)
+(copylib
+	(prompt	"Copying xpkarchive.library.")
+	(source	"libs/xpkarchive.library")
+	(dest		"libs:")
+)
+
+(complete 10)
+
+(set upd
+	(askchoice(choices "Update" "Dont")
+		(default 0)
+		(help "Xpkmaster.library by Urban Dominik Mueller, Bryan Ford,  Christian von Roques, Dirk Stoecker is required by the xpkarchive.library.")
+		(prompt ("\nCurrently installed xpkmaster.library: \n\nVersion : %ld.%ld\nVersion to install : %ld.%ld\n" vxpkm rxpkm vxpkm1 rxpkm1))
+	)
+)
+(copylib
+	(prompt	"Copying xpkmaster.library.")
+	(source	"libs/xpkmaster.library")
+	(dest		"libs:")
+)
+
+(complete 15)
+
+(if(not(exists("libs:compressors")))
+(makedir("libs:compressors")))
+
+(set upd
+	(askchoice(choices "Update" "Dont")
+		(default 0)
+		(help "xpkMASH.library by Zdenek Kabelac is required by the xpkmaster.library.")
+		(prompt ("\nCurrently installed xpkMASH.library: \n\nVersion : %ld.%ld\nVersion to install : %ld.%ld\n" vxpkc rxpkc vxpkc1 rxpkc1))
+	)
+)
+(copylib
+	(prompt	"Copying xpkMASH.library.")
+	(source	"libs/xpkMASH.library")
+	(dest		"libs:compressors")
+)
+
+(complete 20)
+
+(set icons
+	(askchoice(choices "Arist" "Be" "IconoGFX" "MWB" "NewIcons")
+		(default 4)
+		(help "\nArist icons (drawer only) are (c) by Aristotelis Grammatikakis from Iraklio of Crete in Greece. Apatia (tool) and Setup icons are taken from NewIcons package (look -> NewIcons).\n\nBe icons are grabbed from BeBox.\n\nIconoGFX icons are (c) Tom Ekström. They are taken from IGFX package.\n\nMWB icons are ugly.\n\nNewIcons icons are taken from various packages by different authors (mostly from AESIcons). ")
+		(prompt ("Which set of icons would you prefer?"))
+	)
+)
+
+(if(= icons 0)(set ic "icons/art"))
+(if(= icons 1)(set ic "icons/be"))
+(if(= icons 2)(set ic "icons/igfx"))
+(if(= icons 3)(set ic "icons/mwb"))
+(if(= icons 4)(set ic "icons/ni"))
+
+(complete 25)
+
+(set direk
+	(askdir
+		(prompt "Please select a place where you want to install Apatia.\nDrawer for it will be created there.")
+		(help "Just tell me where to put this production.")
+		(default "ram:")
+	)
+)
+
+(if
+	(not(exists(tackon direk "Apatia_Drawer")))
+		(makedir(tackon direk "Apatia_Drawer")
+	)
+)
+
+(copyfiles
+	(prompt	"Copying Apatia files into " direk)
+	(source	(tackon ic "Apatia_Drawer.info"))
+	(dest		direk)
+	(infos)
+)
+
+(set direk(tackon direk "Apatia_Drawer"))
+
+(complete 30)
+
+(copyfiles
+	(prompt	"Copying Apatia files into " direk)
+	(source	"apt/apatia")
+	(dest		direk)
+)
+
+(complete 40)
+
+(copyfiles
+	(prompt	"Copying Apatia files into " direk)
+	(source	(tackon ic "Apatia.info"))
+	(dest		direk)
+	(infos)
+)
+
+(complete 45)
+
+(copyfiles
+	(prompt	"Copying Apatia files into " direk)
+	(source	"apt/apt.xar")
+	(dest		direk)
+)
+
+(complete 90)
+
+(copyfiles
+	(prompt	"Copying Apatia files into " direk)
+	(source	"apt/setup")
+	(dest		direk)
+)
+
+(complete 95)
+
+(copyfiles
+	(prompt	"Copying Apatia files into " direk)
+	(source	(tackon ic "Setup.info"))
+	(dest		direk)
+	(infos)
+)
+
+(complete 100)

@@ -1,0 +1,109 @@
+<MAIN> mainscript |0|1</MAIN>
+<HROBOT> theRobot </HROBOT>
+
+<World3D> robotworld </World3D> 
+<World3D> invworld </World3D>
+
+<KIMG> i_face | data/wodk.iff </kimg>
+
+<t3dmapping> t_face | i_face  </t3dmapping>
+
+<lwo3d> o_robot | robotworld |0|0|0|0|0|0|1|1|1 | data/robotface.lwo |1 | t_face   </lwo3d>
+
+<lwo3d> o_robot_n | invworld |0|0|0|0|0|0|1|1|1 | data/robotface.lwo |1 | t_face </lwo3d>
+<lwo3d> o_robot_m1 | invworld |0|0|0|0|0|0|1|1|1 | data/robotface.lwo |2 | t_face </lwo3d>
+<lwo3d> o_robot_m2 | invworld |0|0|0|0|0|0|1|1|1 | data/robotface.lwo |3 | t_face </lwo3d>
+<lwo3d> o_robot_e1 | invworld |0|0|0|0|0|0|1|1|1 | data/robotface.lwo |4 | t_face </lwo3d>
+<lwo3d> o_robot_e2 | invworld |0|0|0|0|0|0|1|1|1 | data/robotface.lwo |5 | t_face </lwo3d>
+  
+<KCAM> the_camera |0|0|-2|0|0|0|0.5  </KCAM>
+--------------------------------- script definition ----
+<KSCRIPT>
+  <ID> mainscript </ID>
+  <PLAY> mainpart | 2160000 |0|1</PLAY>
+</KSCRIPT>
+--------------------------------
+<KPART> <ID> mainpart </ID>
+   <Fx>
+   <Pa>ProcessRobot</Pa>
+   <pa>theRobot</pa>
+   <pa>re|0 </pa>
+   </Fx>
+
+   <Fx><Pa>BindPalette</Pa>
+        <Pa>  bounce |0|100|719000|0|1</Pa>
+
+        <Pa>CTE|0</Pa>
+        <Pa>CTE|0</Pa>
+        <Pa> i_face </Pa>
+        <Pa> i_face</Pa>
+
+        <Pa>CTE|0</Pa>
+        <Pa>CTE|0</Pa>
+        <Pa>i_face</Pa>
+        <Pa>i_face</Pa>
+
+        <Pa>CTE|0</Pa>
+        <Pa>CTE|0</Pa>
+        <Pa>i_face</Pa>
+        <Pa>i_face</Pa>
+    </Fx>
+ 
+    <Fx><Pa>fillrc</Pa>
+        <Pa></Pa>
+        <Pa>cte|0</Pa>
+    </Fx>
+
+    <Fx><Pa> Set3DObject </Pa>
+        <Pa> o_robot </Pa>
+
+        <Pa> 3cte |0|0|0  </Pa>
+
+        <Pa> aff |0.0|0.00</Pa>
+        <Pa> aff |0.0|0.00</Pa>
+        <P a> aff |0.0|0.002</Pa>
+        <Pa> cos |1.0|0.2|0.05</Pa>
+        <Pa> 3cte|14|10|10 </Pa>
+    </Fx>
+
+    <Fx><Pa> clone3dshape </Pa>
+        <Pa> o_robot  </Pa>
+        <Pa> o_robot_n </Pa>
+    </Fx>
+
+    <Fx><Pa> VertexAddMorph </Pa> mouth1
+        <Pa> o_robot  </Pa>
+        <Pa> o_robot_n </Pa>
+        <Pa> o_robot_m1 </Pa>
+        <Pa> rbmouth | theRobot |-0.5 |0.7|0 </Pa>  rate
+    </Fx>
+
+    <Fx><Pa> VertexAddMorph </Pa> mouth2
+        <Pa> o_robot  </Pa>
+        <Pa> o_robot_n </Pa>
+        <Pa> o_robot_m2 </Pa>
+        <Pa> rbmouth | theRobot |1.2 |0|1 </Pa>  rate
+    </Fx>
+    <Fx><Pa> VertexAddMorph </Pa> eye1
+        <Pa> o_robot  </Pa>
+        <Pa> o_robot_n </Pa>
+        <Pa> o_robot_e1 </Pa>
+        <Pa> rbeye | theRobot |0 |1.2|0  </Pa>  rate
+    </Fx>
+   <Fx><Pa> VertexAddMorph </Pa> eye2
+        <Pa> o_robot  </Pa>
+        <Pa> o_robot_n </Pa>
+        <Pa> o_robot_e2 </Pa>
+        <Pa> rbeye | theRobot |0 |1.2|1  </Pa>  rate
+    </Fx>
+
+  <Fx><Pa> Draw3DWorld </Pa>
+           <Pa>   </Pa>
+           <Pa> robotworld </Pa>
+           <Pa> the_camera  </Pa>
+           <Pa> cte|0 </Pa>
+           <Pa> cte|0.25 </Pa>
+           <Pa> cte|200</Pa>
+     </Fx>
+
+</KPART>

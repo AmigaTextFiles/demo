@@ -1,0 +1,48 @@
+================================================
+HFRemove
+================================================
+
+Requirements
+Hardware: CPU : 68000, RAM : 512 Kb, HD : Prg : No FMS : Yes, 
+OS: 3.x
+Software: Device :  fmsdisk.device (v3.0), Command : Assign
+
+Usage
+Simply double-click the icon to start. After that a window will be 
+opened, where you can select and remove a fms-device, if 
+mounted. The program can be left by clicking the menuitem 'Quit' or 
+by clicking on the CLOSEGADGET. The menuitem 'About' will give 
+you some information. The menuitem 'Info' outs the diskname of the 
+actual device. This is very useful, if more devices were mounted and 
+you just know their names, but not which device has what name, 
+because the system just displays the disk-names.
+
+The menuitem 'HFMount' let's you start the HFM program, with it 
+you can mount the units. You can specify the path of this tool, by 
+editing the tooltypes and alter the 'HFMount' type. Default is C:HFM.
+(Example: HFMount=C:HFMount) The menuitem 'Sleep' let you 
+iconify the program. The program isn't useless in this mode ! Take 
+the icon of a dms, lha or lzx archive and let it drop onto the appicon 
+and select the device or dir. It will be unpacked automatically ! You 
+can also take more than one archive !
+
+Background
+Once a day I discovered the HFM-archive and was very enthuiastic 
+in using virtual floppies on my HD. So i decided to use this program 
+in my system. But the concept had one disadvantage - i wasn't able 
+to remove these disks from system again whithout using a shell and 
+many commands and chars. So i wrote a little cli command, which 
+should do all the work in one cycle. But i still had to use a shell, 
+what i didn't like as a satisfied workbench user. So i created a gui 
+for the command and HFRemove v1.0 was born. But i didn't like the 
+split into two seperate programs and one of them 
+(IFMSDR-Command) was written in a basic, what wasn't an 
+advantage, neither for the size nor for the memory usage. So i 
+decided to link these two parts in one program - and i think i did the 
+work well - in version 1.1 of HFRemove...
+
+Autor : Jens Weyer, Am Mühlgraben 23, 66453 Gersheim,      
+GERMANY
+email: stealth@sol.de
+stealth-idsd@geocities.com
+http://www.geocities.com/SiliconValley/Lakes/1204/

@@ -1,0 +1,24 @@
+; Operation Vark written on 27th March 1990, by VARK of nobody in particular
+OPOppshow OPOVark
+Copy OPOmusic ram:
+Copy Noiseplayer ram:
+Dsound -2 -b65535 OPO1.sam
+ram:Noiseplayer -p1 ram:OPOmusic
+OPOppshow OPO1.pic
+OPOppshow OPO2.pic
+OPOppshow OPO3.pic
+OPOppshow OPO4.pic
+OPOppshow OPO5.pic
+OPOppshow OPO6.pic
+OPOppshow OPO10.pic
+OPOppshow OPO7.pic
+OPOppshow OPO12.pic
+OPOppshow OPO8.pic
+OPOppshow OPO9.pic
+OPOrun OPOppshow OPO11.pic
+wait 2
+Dsound -2 -f -b65535 OPO2.sam
+Dsound -2 -f -b65535 OPOend1.sam
+wait 2
+reset
+

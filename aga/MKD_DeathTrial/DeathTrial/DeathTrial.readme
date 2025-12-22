@@ -1,0 +1,80 @@
+Short:    DeathTrial by Mankind: AGA/CGX warpos PPC demo ask Ahi +dbplayer
+Author:   Mankind
+Uploader: krabob@online.fr
+Type:     demo/aga
+
+------------------------------------------------------------
+History:
+¯¯¯¯¯¯¯
+version		   0.0		-the ukonx 2000 release
+version patched to 0.1		-ahi requester bug fix.		
+future:	CGX window will be added in a short patch.
+        the CGX modulo <>320 bugg will be corrected.
+you can "version" the executable file.
+------------------------------------------------------------
+ ...........................
+ :                         :
+.:____.             ._  ._ :_______.__._.__ ._.
+|      \  ____  ____| |_| ||__  .__|  \_|  \| |
+|  |\   \/  o \/ _  \ ._| |_  | |  °  / | ° \ |
+|  |_\   ! ___|  \| | |_|   \ | |  |  \ | |\ \|__.
+|_______/\____\\__\_|\__|_|\_\|_|__|___L|__|__\__|
+ :M...a...n...K...i...n...D:               ...[tX]
+
+ >http://tex.mankind.free.fr
+ :
+ :
+ :......Code : Krabob
+        Gfx  : Krabob, Tex
+        Msx  : Tex..........
+                           :
+                           :
+                           :
+ ..........................:
+
+ >The Mankind amazing demo group is proud to  present
+ DEATHTRIAL 2000 (at least) after 4 years of work.
+
+ you need that minimal config to run:
+ -an amiga with a powerPC proc !
+ -Warpos v14 (it may be run on v7..tell me that!)
+ -AHI   the well-known sound handler.
+ -digiboosterplayer.library (get that on aminet or in ProgearSpec by mkd)
+ ... so only free PD stuff.
+ oh yes,it also need:
+ -something like 18Mo free space to run.(i'll make less next time :-)
+
+ hope you've got it.
+
+ That's all ! Works with AGA and CGX !
+ and got special optimisation for the both.
+ (cgx... mmmm...is very much quick than aga.)
+
+ IMPORTANT NOTE ABOUT THE preferences:
+ you can skip the ugly prefs window by setting
+ screenid and ahiid in the tooltypes.
+ see the ".info" information for more... information.
+
+ IMPORTANT NOTE about the cybergraphics screen width modulo:
+ DeathTrial does not take care of the cgx modulo,
+ it's always 320. so SET 320 as width to 15bit srceen,
+ 328 is bad.It does ugly modulo ripping.
+ Check http://tex.mankind.free.fr for future patch.
+
+ we forgot to greet Kiki prod. they should be.
+
+ Special thanks to the PPC asm coders in the scene,
+ and particulary sorpion/slc and pescanov/capsule
+ for their sharp support.thanks also to deemphasis/ukonx
+ and noe/venus art (it guess it's him.) for the ham c2p.
+ Finnaly... one of us get the time for finnishing something !
+
+ MankinD....
+    ... The WIde Screen erUpts with AbsUrdities...
+                            (frank zappa)
+
+ You really got a fucking face... Uncle fucker.
+ (T'as vraimment une gueule de merde, et nique ton onnncle.)
+                            (Terence & filip.)
+
+    (c) MKD in whytookey.

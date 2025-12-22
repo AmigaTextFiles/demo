@@ -1,0 +1,148 @@
+            ________________________________
+           .\                              /.
+           ¦¯ T---------------ASK--------I ¯¦
+           ¦      _________            _____¦__              _________
+        ___¦______\____   /____________\   ___/____    ______\       /
+       /_____            /             /    ______/---/       \     /
+       \\/          _  ·/·      _    ·/·  _          ·\·   _       /
+        \___________\---\       \----/----/____________\---/      /
+           ¦  ______     \_______\_____     ¦             /______/
+   ________¦__\    /       \  ____    /  ___¦____
+  /____       /   /_________\_\/  ___/---\  ____/______ __ ________
+  \\/       _   ·/·     _    /__________/ \______      \\_\\______/---/
+   \________\----\      \---/          /·              ·\·            \
+           ¦      \      \            /-------/__________\--------/____\
+           ¦    ___\______\               __¦_____    	       az0!/l124
+        ___¦____\___  _/____________ _____\____  /
+       /___          ·\·      _   ·/·     ______/\
+       \\/        _  / \      \---/               \
+        \_________\--\  \      \ /_________\-------\
+           ¦             \______\           ¦
+           ¦                                ¦
+ A-N---T----------------------Y---D-R------E-SIAR-------------Z0---------4
+ B----------Y T-----------------AS----------------------K----------------I
+ A-T A------M---I-G--------A S---------------H-----O----W------9---------8
+           ¦_                              _¦
+           ·/______________________________\·
+
+	T A S K I  ------------> "AntyDresiarz issue 4" BUG FIXER
+
+                       7.07.1998, version 0.02
+
+  Program  ten  poprawia  bîëdy  i  niedociâgniëcia  w czwartej czëôci
+magazynu   AntyDresiarz.    Bîëdy   wystëpujâce  w  pierwotnej  wersji
+(AmigaShow  Edition)  zaistniaîy  bâdz  to z braku czasu lub gapiostwa
+ludzi   go  montujâcych.   Jak  zapewne  wiele  osób  sië  juû  o  tym
+przekonaîo,  ûe o czymô zawsze mimowolnie sië zapomni lub zrobi trochë
+úle.   Pragniemy  wysunâê takûe podziëkowania dla osób, które zwróciîy
+nam  uwagë na zaistniaîe defekty.  W miarë moûliwoôci postaraliômy sië
+usunâê braki za pomocâ tegoû FIX'a.
+
+Wykonujë on nastëpujâce poprawki:
+
+-  zostaîy wyeliminowane wszelkie nielegalne odwoîania do pamiëci, nie
+   powodowaîy  one zwiechy magazynu, ale nie wyglâdaîy zbyt elegancko.
+   Moûna sprawdziê sobie np:  Enforcerem.
+
+- poprawiono rozpoznawanie wersji cybergraphics.library
+
+- opisy artykuîów zmieniajâ sië takûe przy chodzeniu miëdzy artykuîami
+  za pomocâ kursorów (nie tylko przy wchodzeniu z menu)
+
+- opisy artykuîów nie znikajâ po najechaniu na inny element magazynu,
+  np:  gadgety, bâdz linki.
+
+- dodano hot helpa do gadgetów, funkcja gadgetu opisywana jest po
+  najechaniu naï myszkâ
+
+- wyeliminowanie czëôciowo migotania zegarka
+
+- poprawiono justowanie artykuîu Marka Pampucha pt "AntyStresiarz",
+  przepraszamy autora za zaistniaîâ sytuacjë.  Panie Marku, mamy
+  nadziejë, ûe sië Pan nie pogniewa.
+
+- poprawiono braki we wstëpniaku miëdzy innymi nie wspomnieliômy
+  w creditzach o Mustafie/MST^Cruel, który wykonaî obrazek tytuîowy.
+  Bijemy pokîony, przpraszamy Mustafë i przy najbliûszym kontakcie
+  na odleîoôê nie dalszâ niû rzut beretem, stawiamy pifko jako
+  zadoôêuczynienie.
+
+- poprawiono kilka opisów do artykuîów, gdzie zdaûyîy sië literówki
+
+- zmieniono koncepcjë odtwarzania kilku gadgetów oraz zwolniono ich
+  animacjë
+
+- poprawiono sprawy zwiâzane z powrotem z artykuîu do menu (wraca tam,
+  gdzie weszliômy)
+
+  Moûliwe, ûe dokonaliômy wiëcej drobnych zmian, ale nie warto chyba o
+nich wspominaê.
+
+  Pragniemy  poprosiê  Was  o  support  w postaci artykuîów.  Niestety
+piszecie  ich  coraz  mniej.   Jeûeli  artków  jest maîo, to i magazyn
+wychodzi  rzadko,  bâdz  zaprzestaje sië jego wydawania, czego sobie i
+Wam nie ûyczymy.
+
+  Poszukujemy  szczególnie  ludzi  chëtnych  do  poprowadzenia  dziaîu
+scenowego, gotowych rozszerzyê go do jakiejô rozsâdnej wielkoôci.
+
+
+						       TASKI 5.07.1998
+			     (signature compatible with the year 2000)
+
+
+
+Wymagania:	Amiga z AGA lub CGX
+		2MB pamiëci (2MB Chip dla AGA)
+                Dysk twardy z 10MB wolnego miejsca
+		zainstalowane (i dziaîajâce) AHI v4.0
+		narrator.device z WB1.3
+
+Zalecana konf:  Amiga z kartâ graficznâ zgodnâ z CGX
+                karta muzyczna zgodna z AHI
+                8 MB Fast RAMu
+                procesor 030 50 MHz
+
+                            !!! Uwaga !!!
+
+                   *** Zanim uruchomisz magazyn ***
+
+  Przed  uruchomieniem  magazynu  bez skryptu konieczne jest wykonanie
+rozkazu  ADDAUDIOMODES  REFRESH,  aby  uruchomiê AHI.  Jeûeli nie masz
+tego  zrobionego  w  startup-sequence, wykonaj to lub wpisuj za kaûdym
+razem przed magazynem.
+
+                    *** Problemy z czcionkami ***
+
+  Jeûeli  macie  jakiekolwiek  problemy  z  czcionkami  (np:  w trybie
+interlace),  proponujë przegraê je do katalogu FONTS:  waszej partycji
+startowej.
+
+            *** Coô dla uûytkowników goîych Amig 1200 ***
+
+  Uûytkownicy  "goîych"  Amig  1200  powinni odpalaê AntyDresiarza bez
+sekwencji startowej z uruchomionymi poniûszymi komendami:
+  SetPatch
+  Asssign ENV: RAM:
+  Assign T: RAM:
+
+  Jeûeli  mimo  to  dresiarz  nie  chce  sië  odpaliê, to zaîaduj plik
+PREFS.PRE  do  dowolnego  edytora  ASCII, odszukaj linië TEMPDIR=ram:,
+nastëpnie  zamieï  jâ  na  np:   TEMPDIR=dh0:   .   Spowoduje  to,  ûe
+AntyDresiarz bëdzie sobie zakîadaî roboczy katalog na twardym dysku, a
+nie  w  pamiëci.   Po wyjôciu z AntyDresiarza katalog roboczy zostanie
+oczywiôcie usuniëty.
+
+                     *** Supportujcie nas !!! ***
+
+  Raporty  o  ewentualnych  bîëdach, sugestie oraz oczywiôcie artykuîy
+proszë podsyîaê pod poniûy adres:
+
+Paplo/Taski
+Paweî Filipczak
+ul.Herbsta 18/25
+76-200 Sîupsk
+Polska
+
+paplo@kki.net.pl
+taski@puma.tu.koszalin.pl

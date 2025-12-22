@@ -1,0 +1,301 @@
+
+; Real 3D Installer Script V3
+; ---------------------------
+
+; Real 3D Volumes
+; ---------------
+
+(set r3disk1 "Real3D_V3_Disk1:")
+(set r3disk2 "Real3D_V3_Disk2:")
+(set r3disk3 "Real3D_V3_Disk3:")
+(set r3disk4 "Real3D_V3_Disk4:")
+
+; Program used for compression/uncompression
+; ------------------------------------------
+
+(set r3comp "lharc")
+(set r3pfix ".lzh")
+
+; Procedure used for uncompression
+; --------------------------------
+
+(procedure r3uncomp
+    (set r3lha ("ram:%s -m -x x %s" r3comp r3disk))
+    (set r3ci (cat r3curritem r3pfix))
+    (working "Installing " r3curritem)
+    (if (<> (run (cat r3lha r3ci)) 0)
+        (message "Error while uncompressing " r3ci)
+    )
+)
+
+; Ask Disk procedure
+; ------------------
+
+(procedure r3askdisk
+    (askdisk
+        (prompt "Please insert " r3disk " in any drive...")
+        (dest (substr r3disk 0 (- (strlen r3disk) 1)))
+        (help @askdisk-help)
+    )
+)
+
+; Fetch System Configuration
+; --------------------------
+
+(set r3version    (/ (getversion) 65536))
+
+
+; Ask the destination directory
+; -----------------------------
+
+(set version (/ (getversion) 65536))
+
+(if (exists "R3D2:" (noreq))
+    (
+    (if (= 1 (askbool
+            (prompt "Real 3D Version 2 found\nThe old Real 3D V2 will be overwritten by Real 3D V3")
+            (help "If you select Yes, the old version will be overwritten.")
+            (choices "Continue" "Cancel")
+            (default 1))
+        )
+
+        (   (set @default-dest "R3D2:")
+	    (set r3dest1 "R3D2:")
+	    (run "delete r3d2:examples all")
+        )
+
+        (   
+            (exit)
+        )
+    ))
+
+    (   
+        (message "ERROR: Cannot find Real 3D Version 2\n"
+                 "If you have installed Real 3D V2, please check\n"
+                 "that your s:user-startup file contains the following\n"
+                 "line:\n\n"
+                 "    assign r3d2: xxxx\n\n"
+                 "where 'xxxx' is the home directory of Real 3D V2\n\n"
+                 "If you don't have Real 3D Version 2 installed\n"
+                 "you either have to install it first or buy\n"
+                 "the complete V3"
+        )
+    
+        (abort "Real 3D Update from V2 to V3 failed\n")
+    )
+)
+
+(set @execute-dir r3dest1)
+
+; Copy r3comp to ram:
+; -------------------
+
+(set error (trap 4 
+    (copyfiles 
+        (source (tackon r3disk1 r3comp) 
+        (dest   "ram:")))
+    )
+)
+(if (> error 0) (message ("Dos Error %ld detected" @ioerr)))
+
+
+; Ask languages to install
+; ------------------------
+
+; (set r3locale
+;    (askoptions 
+;        (prompt  "Choose languages you would like to install")
+;        (choices "English"
+;                 "Deutch"
+;                 "Italiano"
+;                 "Francais"
+;                 "Espanol"
+;                 "Netherlands"
+;                 "Svenska"
+;                 "Suomi"
+;        )
+;        (help   "By installing only one language you can save some disk space\n"
+;        )
+;    )
+; )
+
+
+; Ask items to install
+; --------------------
+
+(set r3items
+    (askoptions 
+        (prompt  "Choose parts you would like to install")
+        (choices "Real 3D V3"
+                 "Utilities"
+                 "Support Material"
+                 "Examples"
+                 "Online Help"
+		 "Demos"
+        )
+        (help   "Real 3D V3 - \nInstalls Real 3D main program\n\n "
+    
+            "Utilities - \n"
+            "Installs Real 3D utilities such as Display, "
+            "Delta Converter/Player, DXF Converter etc.\n\n"
+            
+            "Support Material - \nThis installs support material "
+            "such as objects, material libraries, bitmap textures etc.\n\n"
+            
+            "Examples -\nAnimation and other tutorial examples presented "
+            "in the manual\n\n"
+            
+            "Online Help -\nInstalls Commodore shared library 'AmigaGuide.library' "
+            "to LIBS: drawer, 'AmigaGuide' hypertext browser and Real 3D "
+            "help documents.\n\n"
+
+	    "Demos -\nIFF and JPEG images and delta animations "
+            "created with Real 3D\n\n"
+        )
+    )
+)
+
+
+; Install Disk 1
+; --------------
+
+(set r3disk r3disk1) (r3askdisk)
+
+(if (IN r3items 0) ; Real 3D V3
+(   (set r3curritem "Real") (r3uncomp)
+))
+
+; Install Disk2
+; -------------
+
+(set r3disk r3disk2) (r3askdisk)
+
+(if (IN r3items 1) ; Utilities
+    (   (set r3curritem "DeltaConvert") (r3uncomp)
+        (set r3curritem "DeltaToIFF") (r3uncomp)
+        (set r3curritem "Display") (r3uncomp)
+    )
+)
+
+(if (IN r3items 2) ; support material
+(   (makedir (tackon r3dest1 "classes")) ; Empty drawers need this
+    (set r3curritem "classes") (r3uncomp)
+
+    (set r3curritem "s") (r3uncomp)
+    (set r3curritem "environments") (r3uncomp)
+    (set r3curritem "macros") (r3uncomp)
+    (set r3curritem "materials") (r3uncomp)
+    (set r3curritem "RPL") (r3uncomp)
+    (set r3curritem "gui") (r3uncomp)
+    (set r3curritem "startup") (r3uncomp)
+    (set r3curritem "projects") (r3uncomp)
+    (set r3curritem "v3samples") (r3uncomp)
+))
+
+(if (IN r3items 4) 
+(   (set r3curritem "help") (r3uncomp)
+))
+
+(if (IN r3items 5) ; Demo stuff 
+(
+   (set r3curritem "Deltas") (r3uncomp)
+))
+
+; Install Disk3
+; -------------
+
+(set r3disk r3disk3) (r3askdisk)
+
+(if (IN r3items 2) ; the rest of support material
+(
+    (copyfiles (source (tackon r3disk "textures/GRAD1.JPG")) (dest (tackon r3dest1 "Textures")))
+    (copyfiles (source (tackon r3disk "textures/GRAD2.JPG")) (dest (tackon r3dest1 "Textures")))
+    (copyfiles (source (tackon r3disk "textures/GRAD3.JPG")) (dest (tackon r3dest1 "Textures")))
+    (copyfiles (source (tackon r3disk "textures/GRAD4.JPG")) (dest (tackon r3dest1 "Textures")))
+    (copyfiles (source (tackon r3disk "textures/GRAD5.JPG")) (dest (tackon r3dest1 "Textures")))
+    (copyfiles (source (tackon r3disk "textures/GREYCOL.JPG")) (dest (tackon r3dest1 "Textures")))
+    (copyfiles (source (tackon r3disk "textures/MIX1.JPG")) (dest (tackon r3dest1 "Textures")))
+    (copyfiles (source (tackon r3disk "textures/MIX2.JPG")) (dest (tackon r3dest1 "Textures")))
+    (copyfiles (source (tackon r3disk "textures/MIX3.JPG")) (dest (tackon r3dest1 "Textures")))
+    (copyfiles (source (tackon r3disk "textures/MIX4.JPG")) (dest (tackon r3dest1 "Textures")))
+    (copyfiles (source (tackon r3disk "textures/MIX5.JPG")) (dest (tackon r3dest1 "Textures")))
+    (copyfiles (source (tackon r3disk "textures/MIX6.JPG")) (dest (tackon r3dest1 "Textures")))
+    (copyfiles (source (tackon r3disk "textures/MIX7.JPG")) (dest (tackon r3dest1 "Textures")))
+
+    (set r3curritem "textures/lights") (r3uncomp)
+    (set r3curritem "textures/panels") (r3uncomp)
+))
+
+(if (IN r3items 5) ; Demo stuff 
+(
+   (set r3curritem "Images") (r3uncomp)
+))
+
+(copyfiles 
+	(source (tackon r3disk "v3.readme"))
+	(dest r3dest1))
+(copyfiles 
+	(source (tackon r3disk "v3.readme.info"))
+	(dest r3dest1))
+
+(if (IN r3items 0) ; Real 3D V3
+(
+    (set r3curritem "libs") (r3uncomp)
+))
+
+
+; Install Disk4
+; -------------
+
+(set r3disk r3disk4) (r3askdisk)
+
+(if (IN r3items 2) ; the rest of support material
+(
+    (set r3curritem "objects")  (r3uncomp)
+))
+
+(if (IN r3items 3)
+(   (set r3curritem "examples") (r3uncomp)
+))
+
+
+; Cleanup 
+; -------
+
+(delete ("RAM:%s" r3comp))
+
+; Modify Startup-sequence
+;------------------------
+
+(set error 1)
+(until (= error 0)
+   (
+      (set error (trap 4
+         (startup "Real3D_V3"
+            (prompt ("The assign R3D3 has been created"))
+            (command ("assign R3D3: %s" r3dest1))
+            (help   "Real 3D uses one logical assign R3D3 to find its files."
+                    "Installer will add this assign to your user-startup script\n"
+            )
+         )
+      ))
+      (if (> error 0)
+         (if (or (= @ioerr 222) (or (= @ioerr 223) (= @ioerr 224)))
+            (message "Startup file is write protected. Use protect "
+                    "to write enable the file, and select Proceed" )
+            ;else other type of error
+            (
+                (message "Non-Standard startup sequence detected. You must add "
+                     "the following line by hand.\n\n"
+                     "    assign R3D3: " r3dest1 "\n"
+                )
+                (set error 0)
+            )                
+         )         
+      )   
+   )
+)
+
+(makeassign "R3D3" r3dest1)
+
+(complete 100)

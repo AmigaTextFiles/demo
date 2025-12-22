@@ -1,0 +1,118 @@
+LWSC
+1
+
+FirstFrame 100
+LastFrame 130
+FrameStep 1
+PreviewFirstFrame 1
+PreviewLastFrame 130
+PreviewFrameStep 1
+FramesPerSecond 30.000000
+
+LoadObject G:\UP\demo\main\blo\ljus1.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  8
+  293.5 0 -363.5 0 0 0 1.354 1 0.6059999
+  0 0 0 0 0
+  115 0 -362 0 0 0 1.354 1 0.6059999
+  17 0 0 0 0
+  -102 0 -439.5 0 0 0 1.354 1 0.6059999
+  24 0 0 0 0
+  -95.45526 0 -479.4509 0 0 0 1.354 1 0.6059999
+  47 0 0 0 0
+  215.9841 0 -535.8181 0 0 0 1.354 1 0.6059999
+  75 0 0 0 0
+  226.9835 0 -539.3892 0 0 0 1.354 1 0.6059999
+  97 0 0 0 0
+  349.2653 0 -539.4825 0 0 0 1.354 1 0.6059999
+  111 0 0 0 0
+  370.6897 0 -549.902 0 0 0 1.354 1 0.6059999
+  130 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+LoadObject G:\UP\demo\main\blo\ljus1.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  5
+  293.5 0 -363.5 0 0 0 1.354 1 0.6059999
+  0 0 0 0 0
+  115 0 -362 0 0 0 1.354 1 0.6059999
+  17 0 0 0 0
+  -102 0 -439.5 0 0 0 1.354 1 0.6059999
+  24 0 0 0 0
+  -172 0 -526.5 0 0 0 1.354 1 0.6059999
+  75 0 0 0 0
+  -134 0 -529.5 0 0 0 1.354 1 0.6059999
+  130 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+AmbientColor 255 255 255
+AmbIntensity 0.250000
+
+AddLight
+LightName Light
+ShowLight 1 7
+LightMotion (unnamed)
+  9
+  1
+  -2 2 -2 45 35 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LightColor 255 255 255
+LgtIntensity 1.000000
+LightType 0
+ShadowType 1
+
+ShowCamera 1 7
+CameraMotion (unnamed)
+  9
+  1
+  7.5 10 -643.2 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ZoomFactor 3.200000
+Resolution 1
+CustomSize 320 200
+PixelAspectRatio 2
+SegmentMemory 22000000
+Antialiasing 0
+AdaptiveSampling 1
+AdaptiveThreshold 16
+FilmSize 2
+FieldRendering 0
+MotionBlur 0
+DepthOfField 0
+
+SolidBackdrop 1
+BackdropColor 0 0 0
+ZenithColor 0 40 80
+SkyColor 120 180 240
+GroundColor 50 40 30
+NadirColor 100 80 60
+FogType 0
+DitherIntensity 1
+AnimatedDither 0
+
+RenderMode 2
+RayTraceEffects 0
+ClipRayColors 0
+DataOverlayLabel  
+FullSceneParamEval 0
+
+ViewMode 5
+ViewAimpoint 0.000000 0.000000 0.000000
+ViewDirection 0.031416 -0.324631 0.000000
+ViewZoomFactor 1.887519
+GridNumber 10
+GridSize 100.000000
+ShowMotionPath 1
+ShowBGImage 0
+ShowFogRadius 0
+ShowRedraw 0
+ShowSafeAreas 0
+ShowFieldChart 0

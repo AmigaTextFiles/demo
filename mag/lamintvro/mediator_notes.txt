@@ -1,0 +1,4 @@
+Remember, for 68k/warp3d apps you must set ENV:Mediator/MMU to YES ! it can be possible to work with MMU=No over some 
+manipulation with warp3d drivers, but best way just set MMU to YES.
+
+Remember, if you have 'flicking' of warp3d/68k stuff, you must set jumper WAIT to CLOSE state

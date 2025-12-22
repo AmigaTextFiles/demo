@@ -1,0 +1,234 @@
+»CL9:--------------------------------------------------------------------------------
+»CL8:                  »BIG:The Official EuroChart Developer Docs»
+»CL9:--------------------------------------------------------------------------------
+»CL1:
+   Welcome to "»CL0:The Official EuroChart
+Developer Docs»". This text is written
+by me the coder,for thoose people who
+wants to know whats  behind the Euro-
+Chart surface. The things thats going
+to be  covered in  this doc  are such
+stuff as clipart sizes & nr of colors
+in the different parts of the EC. The
+used text formatting codes etc...
+»CL7:
+The source code of the EuroChart goes
+around  »CL6:6100» lines of  assembler code
+(replayer not included).
+»CL7:None of  the old  original  EuroChart
+code have been used...
+Please note that »CL6:no assigns» are needed
+
+
+
+
+to run »CL6:The EuroChart»  from your hard-
+drive...
+»CL1:
+Its »CL0:99,99% system  friendly» (the only
+thing who hits the  hardware directly
+is the module  replayer routine). The
+music routines  will  try to allocate
+the audio  channels each  time one of
+the included  modules starts  to play
+(if allocation fails it will keep its
+silence.) & dealloc  them as soon the
+module pauses/stops.
+»CL7:
+Its screen is dragable & will even be
+shown in  doublePal  if possible  (No
+need to use screen promotors here»CL6::-)»).
+»CL1:All the clipart  is loaded as standard
+iff-ilbm files. That also goes for the
+gallery section...
+»CL7:
+By the way... Windows »CL6:vs» Workbench
+coding I can only say one thing »CL6:Windows
+suxx» (I've tried  it for a while on my
+PC). Its  one big mess,  everything in
+it fills atleast  5-10 times more than
+on the Amiga. The BMP gfx format suxx.
+Each pxl  allmost always  gets a long-
+word ($00RRGGBB), it  can also contain
+a color table  like an iff  ilbm file,
+but thats hardly  never used. Its all-
+most ok (except  the empty  byte) as a
+true color  format. But totally »CL6:stupid»
+if you're only using 256 or 16 colors,
+of course they're proud of it.
+
+»CL1:All windows pop to front as soon they'
+re touched (try to  use a doc text to-
+gether with  the application).  If you
+dont like their  »CL0:infamous» "Start" bot-
+tom, bad  luck, its almost  impossible
+to use  the drawer  windows as  on the
+Amiga because they dont  got their own
+screen & you will have to minimize all
+the program windows  to ever see them.
+They all share the same screen,proper-
+ly another »CL0:genius  idea» by »CL0:Bill Gates».
+& for all  you graphicians  out there,
+just  try to  use a  standard  palette
+requester (Oh yes, they did managed to
+make it that »CL0:bad»).
+»CL7:
+I can only  say one  more thing,  just
+try to program Windows  programs & you
+will discover  why it atleast  takes a
+»CL6:100MHz» pentium. & try to program Amiga
+system friendly code to see why it on-
+ly needs  a »CL6:14MHz» 68020  to run better
+»CL6::-)»...
+»CL0:
+NB: »CL1:Have you ever seen an Amiga emula-
+tor on  the PC (I  have, on  my 150MHz 
+Pentium) It goes like a 1-3 MHz Amiga,
+even the mousepointer  »CL0:flickers» across
+the screen (what else on a lame PC)...
+Well, back to the subject...
+»CL7:
+First  some  important about  all  the
+clipart  sizes, the width  should all-
+ways be on »CL6:16 pixels boundaries»(eg:16,
+32,64,112...160...256 etc). The reason
+to this is because the system blitting
+routines I use,demand the data at »CL6:word»
+sizes.  Like the  picture in  the next
+column.
+
+
+
+       »PIC:Develop01»
+
+
+
+
+
+
+»CL1:
+In the  »CL0:best» situation  it looks  like
+below.  (Word  aligned  anyway,  black
+right side thanks to some drawing pro-
+grams save methods).
+         »PIC:Develop02»
+
+
+
+
+
+»CL7:
+In the »CL6:worst» times it all crashes in a
+»CL7:guru... (Not word aligned).
+
+»CL1:But  now  lets look at  the  different
+parts of the »CL0:EuroChart».
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+»CL8:       The EuroChart Section»CL7:
+The pictures  shouldn't extend  128*50
+pixels  in up  to 7  bitplanes  (1-128
+colors). Said in an  another way, they
+should be small...
+»CL1:
+Like this »CL0:fabulous» picture below...
+
+       »PIC:Develop00»
+
+
+»CL7:
+                         € This is a
+                           »CL6:fabulous»
+                           picture!
+
+              ‚
+       Its »CL6:128*50» pixels
+
+
+»CL8:         The EuroNews Section»CL7:
+The largest clipart size is »CL6:640*189» in
+up to 7 bitplanes  (1-128 colors). But
+of course  they shouldn't  be at  this
+size (They should be 639*188 »CL6::-)»).
+»CL4:
+            Developer Info»CL1:
+The topbar size is            640*27*6
+The bottom area               640*93*6
+Background pattern sizes      64*189*5
+»CL7:
+Gadgets in the  bottom area can be any
+size. (System routines rulez!!!).
+»CL4:
+About columns»CL1:
+The column  width is  suggested  to (&
+should be)38 chars for the small font,
+the big  font about  25 chars.  Theres
+room for 20  lines of  text. This goes
+for both fonts...
+»CL4:About only 1 column»CL7:
+Currently  if you  only want  1 column
+you need  to write  the (max 80 chars)
+column as the 1. column & then let the
+2. column consist of blank chars (Just
+hit the <»CL6:return»> key 20 times).
+»CL4:
+  Control Codes For Use In Articles
+
+»CL5:BIG: »CL7:This is the »BIG:»CL5:large» font
+»CL5:SML:»CL1: & this is the »CL5:small» font
+»CL5:DEF:»CL7: Gives the »CL5:small» font & this »DEF:color
+»CL5:PiC:»CL1: Followed  by a  clipart  filename
+     shows the clipart at the »CL0:P»iC: pos
+     Use the '…' character to end file
+     name with (EG: »CL0:…PiC:BolDyr.iff…»).
+»CL5:…»CL7:    Standing  on its  own it  used to
+     undo last  setting (color as well
+     as current font type).
+
+»CL4:              ColorCodes
+  »CL0:CL0: Color 0         »CL1:CL1: Color 1
+  »CL2:CL2: Color 2         »CL3:CL3: Color 3
+  »CL4:CL4: Color 4         »CL5:CL5: Color 5
+  »CL6:CL6: Color 6         »CL7:CL7: Color 7
+  »CL8:CL8: Color 8         »CL9:CL9: Color 9
+»CL1:
+By the way, all codes  must start with
+a '»CL0:…»' character.
+
+
+
+
+
+
+
+
+
+
+
+»CL8:         The EuroGallery Section»CL1:
+The pictures largest sizes are »CL0:640*134»
+pixels in 1-7 planes (1-128 colors).
+»CL4:
+            Developer Info»CL7:
+The topbar size is            640*27*6
+The bottom area               640*93*6
+»CL1:
+Gadgets in the bottom area can be any
+size. (Long live  system routines»CL0::-)»).
+
+»CL7:The Text area in bottom area should be
+able to contain »CL6:3» lines of text(around
+386*38 pixels).

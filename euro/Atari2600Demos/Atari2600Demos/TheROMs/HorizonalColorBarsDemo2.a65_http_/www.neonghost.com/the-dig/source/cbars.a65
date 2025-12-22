@@ -1,0 +1,345 @@
+;  ------------------------------------------------------------------------
+;   * Subject: Re: [stella] Color test
+;   * From: "Philipp Graf" <ut3h@rz.uni-karlsruhe.de>
+;   * Date: Sun, 7 May 2000 23:40:42 +0200
+;  ------------------------------------------------------------------------
+
+; http://www.biglist.com/lists/stella/archives/0005/msg00039.html   - bin
+; http://www.biglist.com/lists/stella/archives/0005/msg00066.html   - source
+
+;---------------------------
+;--      color bars       --
+;---------------------------
+;- (C) Philipp "Spin" Graf -
+;-   created 1. May 2000   -
+;---------------------------
+;-  compilable with as65   -
+;---------------------------
+
+   include "vcs.h"
+
+   ;---- variable region
+
+   bss
+   org $80
+
+Offset            ds 1
+
+   ;---- code at $f000 instead of $1000 !?
+   code
+   org $f000
+
+Start
+   ;---- global system initialization
+
+   sei           ;set irq disable
+   cld           ;clear decimal mode
+
+   ldx #$ff      ; Set stack to $ff
+   txs
+
+ lda #0
+.loop
+   sta 0,x
+ dex
+ bne .loop
+
+   ldx #0        ;set all ports to input
+   stx SWACNT
+   stx SWBCNT
+
+   ;---------------------------
+
+Main
+
+   ;-- reserved for init stuff
+   lda #1
+   sta CTRLPF        ;reflected playfield
+   lda #0
+   sta COLUPF        ;black playfield
+
+MainLoop
+
+   ;-  Enter VSYNC
+   lda #2
+   sta WSYNC
+   sta VSYNC
+   sta WSYNC
+   sta WSYNC
+
+   ;-- prepare VBLANK
+ lda  #44
+ sta  TIM64T
+   lda  #0
+
+   ;-- leave VSYNC
+ sta  WSYNC ; Third line of VSYNC.
+ sta  VSYNC ; (0)
+
+   ;-- 'game logic' here in vblank
+
+   ldy #192/4        ;line counter
+
+   inc Offset        ;do 'scrolling'
+   lda Offset
+   and #$1f
+   sta Offset
+   tax
+
+.vblwait
+ lda INTIM         ;Wait for end of VBlank
+ bne .vblwait
+
+ sta WSYNC
+ sta VBLANK  ;End VBLANK
+
+.mainloop
+
+   ;-- LINE 1
+   inx               ;increment scroll value
+
+   lda Box1,y
+   sta PF0
+
+   lda Table,x       ;get color
+
+   sta COLUBK        ;and write them...
+   adc #$10
+   sta COLUBK
+   adc #$10
+   sta COLUBK
+   adc #$10
+   sta COLUBK
+   adc #$10
+   sta COLUBK
+   adc #$10
+   sta COLUBK
+   adc #$10
+   sta COLUBK
+   adc #$10
+   sta COLUBK
+   adc #$20
+   sta COLUBK
+   adc #$10
+   sta COLUBK
+   adc #$50
+   sta COLUBK
+
+   sty WSYNC         ;wait for next hsync
+
+   ;-- LINE 2
+   inx               ;increment scroll value
+
+   lda Box1+4,y
+   sta PF1
+   sta PF1
+
+   nop
+
+   lda Table,x       ;get color
+
+   sta COLUBK        ;and write them...
+   adc #$10
+   sta COLUBK
+   adc #$10
+   sta COLUBK
+   adc #$10
+   sta COLUBK
+   adc #$10
+   sta COLUBK
+   adc #$10
+   sta COLUBK
+   adc #$10
+   sta COLUBK
+   adc #$10
+   sta COLUBK
+   adc #$20
+   sta COLUBK
+   adc #$10
+   sta COLUBK
+   adc #$50
+   sta COLUBK
+
+   sty WSYNC         ;wait for next hsync
+
+   ;-- LINE 3
+   inx               ;increment scroll value
+
+   lda Box1+8,y
+   sta PF2
+   sta PF2
+
+   nop
+
+   lda Table,x       ;get color
+
+   sta COLUBK        ;and write them...
+   adc #$10
+   sta COLUBK
+   adc #$10
+   sta COLUBK
+   adc #$10
+   sta COLUBK
+   adc #$10
+   sta COLUBK
+   adc #$10
+   sta COLUBK
+   adc #$10
+   sta COLUBK
+   adc #$10
+   sta COLUBK
+   adc #$20
+   sta COLUBK
+   adc #$10
+   sta COLUBK
+   adc #$50
+   sta COLUBK
+
+   sty WSYNC         ;wait for next hsync
+
+   ;-- LINE 4
+   inx               ;increment scroll value
+   txa
+   and #$f
+   tax
+
+   nop
+   nop
+   nop
+
+   lda Table,x       ;get color
+
+   sta COLUBK        ;and write them...
+   adc #$10
+   sta COLUBK
+   adc #$10
+   sta COLUBK
+   adc #$10
+   sta COLUBK
+   adc #$10
+   sta COLUBK
+   adc #$10
+   sta COLUBK
+   adc #$10
+   sta COLUBK
+   adc #$10
+   sta COLUBK
+   adc #$20
+   sta COLUBK
+   adc #$10
+   sta COLUBK
+   adc #$50
+   sta COLUBK
+
+   dey
+   sty WSYNC         ;wait for next hsync
+
+   beq .out
+   jmp .mainloop
+
+.out
+   ;enter overscan
+ lda #2
+ sta VBLANK
+
+ ldx #30
+.oloop
+   sta WSYNC
+ dex
+ bne .oloop
+
+   jmp MainLoop
+
+   ;-- color table
+   align 256
+Table
+   db $0,$2,$4,$6,$8,$A,$C,$E,$E,$C,$A,$8,$6,$4,$2,$0
+   db $0,$2,$4,$6,$8,$A,$C,$E,$E,$C,$A,$8,$6,$4,$2,$0
+
+Box1
+   db %00011000
+   db %00011000
+   db %01111110
+   db %01111110
+   db %01000010
+   db %01000010
+   db %01000010
+   db %00000000
+   db %00000000
+   db %01000010
+   db %01000010
+   db %01000010
+   db %01111110
+   db %01111110
+   db %00011000
+   db %00011000
+
+   db %00011000
+   db %00011000
+   db %00000000
+   db %00000000
+   db %00111100
+   db %00111100
+   db %00100100
+   db %00000000
+   db %00000000
+   db %00100100
+   db %00111100
+   db %00111100
+   db %00000000
+   db %00000000
+   db %00011000
+   db %00011000
+
+   db %00011000
+   db %00011000
+   db %01111110
+   db %01111110
+   db %01000010
+   db %01000010
+   db %01000010
+   db %00000000
+   db %00000000
+   db %01000010
+   db %01000010
+   db %01000010
+   db %01111110
+   db %01111110
+   db %00011000
+   db %00011000
+
+   db %00011000
+   db %00011000
+   db %00000000
+   db %00000000
+   db %00111100
+   db %00111100
+   db %00100100
+   db %00000000
+   db %00000000
+   db %00100100
+   db %00111100
+   db %00111100
+   db %00000000
+   db %00000000
+   db %00011000
+   db %00011000
+
+;** OUT OF CYCLES
+
+   ; end of rom: pointers to start. seems to be the reset vector and some
+   ; interrupt vector???
+   org $fffc
+   dw Start
+   dw Start
+
+;      ______________________________________________
+;      «¤»¥«¤»§«¤»¥«¤»§«¤»¥«¤»§«¤»¥«¤»§«¤»¥«¤»§«¤»¥«¤
+;      ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+;	Source code unearthed at:
+;
+;	The Dig! - Stella Archive Excavation
+;	http://www.neonghost.com/the-dig/index.html
+;      ______________________________________________
+;      «¤»¥«¤»§«¤»¥«¤»§«¤»¥«¤»§«¤»¥«¤»§«¤»¥«¤»§«¤»¥«¤
+;      ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯

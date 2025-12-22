@@ -1,0 +1,70 @@
+; $VER: Installation de Néophyte
+;
+;       Installer script pour  Néophyte.
+;
+;(C) ??/01/97  Code Mom
+;              Conneries Beb
+;
+
+(complete 0)
+
+(set #welcome           (cat "Bienvenue dans l'installation de Néophyte\n\n\n\nN'oubliez pas, ce Fanzine est PQ_ware\nS'il vous plait n'oubliez pas\n(Une feuille suffit)\n\n\n\n\n© 1997 Néophyte"))
+
+(message #welcome)
+(welcome)
+
+
+(complete 0)
+
+
+(set DEST-DIR
+  (askdir
+    (prompt "Bon, on l'installe où Néophyte ?\nOn va créer un répertoire Néophyte...")
+    (help " On choisie un répertoire où l'on va créer le rép. Néophyte")
+    (default "RAM:")
+    (disk)
+  )
+)
+
+(
+      (makedir (tackon DEST-DIR "Néophyte") (infos))
+      (set DEST-DIR (tackon DEST-DIR "Néophyte"))
+)
+
+
+
+(copyfiles
+   (all)
+   (infos)
+   (help @copyfiles-help)
+   (source "")
+   (dest DEST-DIR)
+)
+
+
+(complete 97)
+
+(copyfiles
+   (prompt "MedPlayer.library")
+   (help "Non rien...")
+   (source "Libs/MedPlayer.library")
+   (dest "Libs:")
+
+)
+
+
+(complete 100)
+
+(message
+  (cat
+    "\n"
+    "Et voila, c'est terminé.\n"
+
+    "Néophyte : \n\n\n"
+    "    (Mom)                      (Beb)    \n"
+    "Moreno Olivier             Angiono Bertrand\n"
+    "10 rue Jean Amigoni        28 rue des Bonnais\n"
+    "38120 St Egrève            38120 St Egrève\n"
+    ""
+  )
+)

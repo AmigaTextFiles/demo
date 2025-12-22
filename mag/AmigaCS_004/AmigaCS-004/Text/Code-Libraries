@@ -1,0 +1,303 @@
+@{xoffset 35}¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+@{xstep 290}@{font ACS-Title.font 18}Sdílené knihovny v SAS/C@{font}
+@{xstep 425}@{c A6FFF8}@{i}Sir/Torture@{ui}@{c}@{ystep -8}
+
+
+
+  @{xstep 4}@{font ACS-Title.font 18}O@{xstep 1}@{font}d verze 6.0 SAS/C umoùnuje vytváêet sdílené knihovny.  Pêesnëji, on to
+umoùñuje  jiù  od  verze  5.0,  ale nyní je ten proces mnohem spolehlivëjîí
+a lépe  dokumentován.   Podívejme  se  nyní  na  jednotlivé  kroky potêebné
+k vytvoêení  nové  knihovny.   Nejdêíve  udëlám  krátký  souhrn  a pak bude
+praktická ukázka.
+
+  Pêi  vytváêení  sdílené knihovny nejprve musíte pêirozenë napsat zdrojový
+kód  pro  vîechny  funkce  které má obsahovat.  Kód mûùete rozdëlit do více
+souborû,  stejnë  jako  kdyù vytváêíte linkovací knihovny, ale navíc musíte
+specifikovat  registry  skrz  které  bude  kaùdá funkce pêijímat parametry.
+Toho docílíte pouùitím klíçových slov SASu __asm a register __xx.
+
+  Dalîím  krokem  je  napsání  tzv.   .fd  souboru  pro  knihovnu,  coù  je
+jednoduchý  ASCII  soubor,  který popisuje poêadí a parametry pro funkce ve
+vaîí  knihovnë.   Abychom  ze  zdrojového  textu získali fungující .library
+souborek,  staçí  nyní  vaîe  zdrojáky  zkompilovat  a  slinkovat s tím, ùe
+pouùijete nëkteré parametry.  Jedná se o následující parametry:
+
+@{c 84FF57}Pro kompiler:
+Parametr                        Komentáê
+-------------------------------------------------------------------@{c}
+@{c FF4247}LIBCODE @{c}                        Povinný
+@{c FF4247}SAVEDS@{c}                          pêípadnë mûùete v textu pouùívat __saveds
+
+@{c 84FF57}Pro linker (slink)
+Parametr                        Komentáê
+-------------------------------------------------------------------@{c}
+@{c FF4247}FROM LIB:libent.o LIB:libinit.o@{c} Povinné, jsou to startup moduly (zastávají
+                                pro knihovnu podobnou funkci jako c.o)
+@{c FF4247}LIBPREFIX <_prefix>@{c}             Povinný, prefix pro knihovní funkce
+@{c FF4247}LIBFD <filename.fd> @{c}            Povinný, .fd soubor pro knihovnu
+@{c FF4247}LIBIDE <id> @{c}                    Volitelný, knihovní ID êetëze
+@{c FF4247}LIBVERSION <version@{c}@{c FF4247}>@{c}            Volitelný, verze knihovny
+@{c FF4247}LIBREVISION <revision> @{c}         Volitelný, revize knihovny
+
+Nakonec je nutné pouùít program @{i}FD2Pragma,@{ui} který je dodáván v balíku SAS/C,
+abychom  z .fd souboru vytvoêili include soubor, v kterém je pomocí @{i}#pragma@{ui}
+direktiv  pro  preprocessor popsána knihovna a její volání (tento soubor je
+potêebný abyste mohli pouùívat vaîi knihovnu v C).
+
+Pêíklad:
+Êeknëme,  ùe  chceme knihovnu, ve které budou têi funkce pojmenované One(),
+Two() a Three(), vîechny pêijímající jen jeden argument.
+
+Funkce dëlají následující:
+
+  · Funkce One() jenom vrátí hodnotu argumentu.
+  · Funkce  Two()  se  pokusí  otevêít  "topaz  8"  font pomocí funkce
+    z graphics.library OpenFont() a vrátí dvojnásobek hodnoty argumentu,
+    pokud uspëje.  Jinak vrátí nulu.
+  · Funkce Three() blikne obrazovkou pomocí DisplayBeep() z intuition.library,
+    a vrátí trojnásobek hodnoty argumentu.
+
+Takùe:     Napíîeme   následující   program   (zatím   pêedpokládejme,   ùe
+graphics.library a intuition.library jsou jiù otevêeny):
+
+@{c A1E2FF}#include "graphics/text.h"
+#include "proto/graphics.h"
+#include "proto/intuition.h"
+
+int __asm PR_One(register __d1 int a)
+{
+   return (a);
+}
+
+int __asm PR_Two(register __d1 int a)@{c}
+@{c A1E2FF}{
+   struct TextFont *tf;
+   struct TextAttr ta = { "topaz.font", 8, 0, 0 };
+
+   if (tf = OpenFont(&ta))
+   {
+      CloseFont(tf);
+      return (a * 2);
+   }
+   else
+   {
+      return (0);
+   }
+}
+
+int __asm PR_Three(register __d1 int a)
+{
+   DisplayBeep(NULL);@{c}
+@{c A1E2FF}   return (a * 3);
+}
+@{c}
+
+Prefix PR_ pêed jmény funkcí mûùe být uùiteçný, jak bude ukázano dále.
+Nicménë je naprosto libovolný, takùe mûùeme pouùít jakýkoli jiný prefix.
+
+Klíçová  slova  __asm  a  register êíkají kompilátoru, ùe naîe funkce budou
+pêijímat  argumenty  v  registrech a ne na zásobníku - __d1 v naîem pêípadë
+znamená,  ùe  má  být  pouùit  CPU registr D1.  Kaùdý parametr naîí budoucí
+knihovny  musí  mít  specifikován odpovídající registr pomocí register __dn
+(nebo __an) - n je çíslo od 0 do 7.
+Mimochodem  je  doporuçeno  pouùívat Dn registry pro çíselné argumenty a An
+registry pro pointry apod.
+
+Kdyù jsme tedy napsali kód knihovny, musíme také vytvoêit .fd soubor
+s popisem kaùdé funkce a jejích parametrû.
+
+V naîem pêípadë napíîeme následující:
+
+@{c 94DFFF}##base _TestBase
+##bias 30
+One(n)(D1)
+Two(n)(D1)
+Three(n)(D1)
+##end@{c}
+
+Název TestBase jsme pouùili jako název báze knihovny. Pro náî úçel není
+dûleùité chápat význam direktivy ##bias. Staçí êíct, ùe její hodnota je v
+témëê vîech pêípadech 30.
+Pêedpokládejme, ùe jsme uloùili tento .fd soubor pod názvem test_lib.fd.
+
+K samotnému vytvoêení knihovny musíme nyní zkompilovat a zlinkovat náî kód.
+Kompilace se dëlá jako obvykle, jen musíme pêidat pêepínaçe @{u}LIBCODE@{uu} a
+@{u}SAVEDS@{uu} do SCOPTIONS çi do pêíkazové êádky.
+
+Napêíklad, pokud se náî zdrojový kód jmenuje Test.c, zkompilujeme ho pomocí
+
+@{i}SC LIBCODE SAVEDS [dalîí moùné pêepínaçe] Test.c@{ui}
+
+a získáme, pokud kompilace probëhla bez chyb soubor Test.o.
+
+Parametr SAVEDS mûùe být vynechán, ale jen v tom pêípadë, ùe kaùdá naîe
+funkce knihovny bude mít pêed svým názvem direktivu __saveds, tedy
+napêíklad:
+
+@{c 94DFFF}int __saveds __asm PR_One(register __d1 int a)@{c}
+
+Tato  alternativa  je  vhodná,  kdyù  by  náî  kód  obsahoval hodnë lokálnë
+slouùících  funkcí  -  v  takovém  pêípadë by pouùití globálního SAVEDS pêí
+volání kompileru znamenalo tvorbu pêebyteçného kódu, protoùe lokální funkce
+__saveds nepotêebují.
+
+Linkování musí být provedeno následujícím pêíkazem:
+
+@{i}SLink FROM LIB:libent.o LIB:libinit.o Test.o TO LIBS:test.library
+      LIB LIB:sc.lib LIBPREFIX _PR_ LIBFD test_lib.fd
+@{ui}
+kde test.library je jméno naîí nové knihovny.
+
+Jak vidíte, po @{c 94DFFF}LIBPREFIX@{c} musíme uvést prefix který pouùíváme pro knihovní
+funkce (samozêejmë pokud takový prefix existuje). V naîem pêípadë je to
+prefix PR_ s jedním podtrùítkem navíc, protoùe tu kompilátor vùdy pêidá do
+objektových souborû (nezapomeñte, nyní pouùíváme linker, který pracuje s
+objektovými moduly a ne se zdrojovými soubory.)
+
+Vîimnëte si (viz. výîe), ùe prefix který pouùíváte ve zdrojovém souboru se
+NESMÍ objevit v .fd souboru, a navíc, pokud nepouùíváte ùádný prefix,
+stejnë musíte uvést '_' za @{c 94DFFF}LIBPREFIX @{c}(pêirozenë bez apostrofû).
+
+Uùiteçnost prefixu spoçívá v tom, ùe umoùñuje psát assemblerové moduly s
+takzvanými stubs, funkcemi, které slouùí jako rozhraní mezi céçkovskými a
+knihovními funkcemi. Jejich çinnost spoçívá v naplnëní odpovídajících registrû
+ze stacku. Bez prefixu by nebylo moùné pojmenovat stub funkce stejnë jako
+skuteçné funkce.
+Tato vlastnost je sice nyní jiù zbyteçná, neboï SAS/C umí zacházet s knihovními
+funkcemi pêímo pomocí preprocesorové instrukce #pragma, ale prefix mûùe být
+uùiteçný k snadnému "vizuálnímu" odliîení veêejných a interních, lokálnë
+pouùívaných, funkcí.
+
+Ale vraïme se nyní k naîemu pêíkazu pro linker.
+Po LIBFD musíte uvést jméno vámi vyrobeného .fd souboru, v naîem pêípadë
+test_lib.fd.
+
+Pak pêirozenë mohou následovat dalîí parametry, jako obvyklé NOICONS, SMALLCODE
+atd.
+
+Pokud vîe probëhlo OK, test.library bude vytvoêeno v LIBS:
+
+
+Náî pêíklad zatím není zcela kompletní, neboï jsme neotevêeli dvë pouùívané
+systémové  knihovny  (graphics  a intuition) potêebné ke správné práci naîí
+test.library.   Mohli  bychom vyêeîit tento problém tím, ùe bychom zaêadili
+kód pro zavírání a otevírání potêebných knihoven do funkcí Two() a Three(),
+ale to by zbyteçnë zpomalilo a zvëtîilo naîí knihovnu.  Mnohem chytêejîí je
+zajistit,  aby potêebné knihovny byly otevêené jednou na zaçátku, a zavêeny
+jednou na konci.
+
+Pro tento úçel mûùeme vyuùít vlastnosti SAS/C - dovoluje totiù pêedefinovat
+dvë interní funkce : @{c 94DFFF}__UserLibInit() @{c}a @{c 94DFFF}__UserLibCleanup()@{c}, které jsou
+automaticky volány kdyù se naîe knihovna otvírá a zavírá.
+
+@{c 94DFFF}__UserLibInit() @{c}je volána kdyù je knihovna otevírána pomocí @{c 94DFFF}OpenLibrary()@{c},
+@{c 94DFFF}__UserLibCleanup() @{c}kdyù je knihovna zavêena pomocí @{c 94DFFF}CloseLibrary()@{c}.
+
+Takùe otevêeme potêebné knihovny (a pêípadnë jakékoli dalîí zdroje)
+uvnitê @{c 94DFFF}__UserLibInit()@{c} a zavêeme (pêíp. odalokujeme) vîechno uvnitê
+@{c 94DFFF}__UserLibCleanup()@{c}.
+
+Pravidlo je takové, ùe @{c 94DFFF}__UserLibInit()@{c} vrací hodnotu 0 pokud vîechny akce
+probëhly v poêádku a proto dovolí dokonçení otevêení knihovny. Pokud nevrátí
+nulu, znamená to chybu - knihovna se neotevêe. @{c 94DFFF}__UserLibCleanup()@{c} nevrací
+ùádnou hodnotu a proto musí být deklarována jako VOID.
+
+Obë funkce pêijímají jen jeden argument, pointr na knihovnu která má být
+otevêena (resp. zavêena) v registru A6.
+
+Takùe, pro dokonçení naîeho pêíkladu, napíîeme dalîí modul se jménem napê.
+UserLib.c:
+
+@{c 94DFFF}#include "exec/libraries.h"
+#include "proto/exec.h"
+
+struct Library *GfxBase;
+struct Library *IntuitionBase;
+
+
+@{c 94DFFF}int __asm __UserLibInit(register __a6 struct Library *libbase)
+{
+   GfxBase = OpenLibrary("graphics.library",0L);
+   IntuitionBase = OpenLibrary("intuition.library",0L);
+
+   if (GfxBase && IntuitionBase)
+   {
+      return (0);
+   }
+   else
+   {
+      if (GfxBase) CloseLibrary(GfxBase);
+      if (IntuitionBase) CloseLibrary(IntuitionBase);
+      return (1);
+   }
+}@{c}
+
+@{c 94DFFF}void __asm __UserLibCleanup(register __a6 struct Library *libbase)
+{
+   if (GfxBase) CloseLibrary(GfxBase);
+   if (IntuitionBase) CloseLibrary(IntuitionBase);
+}
+@{c}
+Zkompiluje tento modul stejnë jako pêedtím a slinkujeme:
+
+@{i}SLink FROM LIB:libent.o LIB:libinit.o UserLib.o Test.o
+      TO LIBS:test.library LIB LIB:sc.lib LIBPREFIX _PR_
+      LIBFD test_lib.fd
+@{ui}
+Nyní bude naîe knihovna pracovat správnë.
+
+Pokud vaîe knihovna nepotêebuje alokovat nëjaké zdroje, nemusíte
+pêedefinovávat @{c 94DFFF}__UserLibInit() @{c}ani @{c 94DFFF}__UserLibCleanup()@{c}, jejich standardní
+verze jsou jiù obsaùeny v libinit.o, který je vùdy pêilinkován ke knihovnë.
+
+Jak  uù  bylo  poznamenáno,  mûùete  také  pouùít  parametry Slinku
+@{u}LIBVERSION@{uu} a @{u}LIBREVISION@{uu} pro nadefinování çísla verze a podverze.
+LIBID mûùe obsahovat version string.
+
+Napêíklad:
+
+@{i}SLink [...] LIBVERSION 43 LIBREVISION 114 LIBID "test 43.114 (25.9.98)"@{ui}
+
+Závëreçným krokem bude vytvoêení include souboru s #pragma direktivami
+pomocí utility FD2Pragma.
+
+@{i}FD2Pragma test_lib.fd test_pragmas.h@{ui}
+
+Nyní jiù mûùete pouùívat knihovnu ve vaîich programech standardní
+metodou. Napêíklad:
+
+@{c 94DFFF}[...]@{c}
+
+@{c 94DFFF}#include "exec/libraries.h"
+#include "proto/exec.h"@{c}
+@{c 94DFFF}#include "test_pragmas.h"
+
+struct Library *TestBase;
+
+main(void)
+{
+   [...]
+
+   TestBase = OpenLibrary("test.library",0L);
+
+   if (TestBase)
+   {
+      printf("%d * 3 = %d\n",4,Three(4));
+
+      [...]
+
+@{c 94DFFF}      CloseLibrary(TestBase);
+   }
+}
+
+[...]@{c}
+
+A  poslední  poznámka:   slinkováním  s  modulem  libinit.o  (jako  v naîem
+pêíkladë) získáte knihovnu, která bude mít pouze jednu kopii globálních dat
+(promënných)  sdílených  vîemy  programy,  které  knihovnu  otevêou.  Pokud
+chcete  pro  kaùdé  otevêení novou kopii globálních dat, slinkujte knihovnu
+s modulem libinitr.o místo libinit.o.
+
+
+@{b}@{c 3BFF07}Sir/Torture@{ub}@{c}
+@{c 2E71FF}originál: Massimo Tantignone <tanti@intercom.it>@{c}

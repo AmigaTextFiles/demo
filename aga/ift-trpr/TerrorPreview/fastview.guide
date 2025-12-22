@@ -1,0 +1,716 @@
+@database FastView.guide
+@author "John Hendrikx"
+@(c) "Copyright © 1995 John Hendrikx"
+@$VER: FastView.guide 1.51 (3.6.95)
+@node Main "FastView Help"
+
+                         @{b}FastView 1.51@{ub}
+
+               Copyright © 1994, 1995, John Hendrikx
+                       All rights reserved
+
+                     Release date 3 June 1995
+
+                            SHAREWARE
+
+                           User Manual
+
+    @{" Introduction         " link Introduction} What can I do with FastView?
+    @{" Feature List         " link Features} What features does FastView have?
+    @{" Requirements         " link Requirements} Will it run on my system?
+
+    @{" Registration         " link Registration} How should I register FastView?
+
+    @{" Usage from CLI       " link UsageCLI} How do I use FastView from CLI?
+    @{" Usage from Workbench " link UsageWB} How do I use FastView from Workbench?
+
+    @{" Future               " link Future} What the future will bring...
+    @{" Known bugs           " link Bugs} Things I should know...
+    @{" How to reach me      " link About} How can I reach the author?
+    @{" Acknowledgements     " link Ack} Who does the author want to thank?
+    @{" History              " link History} What's new in this version?
+
+@endnode
+
+@node Introduction "FastView: Introduction"
+
+FastView is a program which shows IFF, GIF, BMP, PCX and JPEG
+pictures on your screen.  Of course many programs exist for this
+task, but this one is special because it is very fast and was
+designed with both OCS/ECS and AGA users in mind.  For example:
+FastView can show HAM8 and IFF24Bit pictures on OCS/ECS machines
+in HAM which was one of the things I missed in all the other
+viewing-programs I've seen.
+
+JPEG pictures are shown using the Tower JPEG Codec Class by
+Christoph Feck.
+
+
+@{b}COPYRIGHT NOTICE@{ub}
+
+FastView software and documentation are Copyright (C) 1995 by John
+Hendrikx.  All rights reserved.
+
+The JPEG codec is Copyright (C) 1994 Christoph Feck,
+TowerSystems.  All Rights Reserved.  It is based in part on the
+work of the Independent JPEG Group.
+
+
+@{b}DISCLAIMER@{ub}
+
+FastView has proven to be stable in everyday use. @{" The author " link About}
+is not responsible for any loss of data, damages to software or
+hardware that may result directly or indirectly from the use of this
+program.  The author reserves the right to make changes to the
+software or documentation without notice.
+
+The JPEG codec is provided "AS-IS" and subject to change without
+prior notice; no warranties are made.  All use is at your own risk.
+No liability or responsibility is assumed.
+
+
+@{b}PREFACE@{ub}
+
+This program is shareware, it is *not* public domain.  This means
+that if you use this program longer than a period of two weeks
+you'll have to send @{" The author " link About} 20 DM, 20 Guilders, 10 UK Pounds
+or 15 US Dollars to become a registered user.  See @{" Registration " link Registration} for more
+details.
+
+None of the files of the FastView package may be modified or left out
+without permission of the author.  Crunching or archiving is allowed only
+if none of the FastView files get modified by it.
+
+FastView may be distributed freely in Public-Domain collections
+such as Fred Fish's Amiga Library.  You may charge a fee to
+recover distribution costs.  The fee for diskette distribution
+may not be more than the cost to obtain a public domain diskette
+from Fred Fish.
+
+@endnode
+
+
+@node Features "FastView: Features"
+
+ - Displays any IFF ILBM picture (even HAM8 or 24Bit pictures) in HAM on
+   OCS/ECS machines.  Of course if the picture doesn't need to be rerendered
+   in HAM it will use a normal OCS/ECS screenmode.  On AGA machines FastView
+   will show the pictures if possible in upto 256 colors or in HAM8
+
+ - Displays GIF pictures of 17 or more colors in HAM on OCS/ECS machines.
+   If less colors are used HIRES-INTERLACED will be used.  On AGA machines
+   GIFs always get displayed in upto 256 colors
+
+ - Uncompressed BMP pictures in 2, 16 or 256 colors and 24-bit BMP pictures
+   are supported
+
+ - Handles EGA and VGA PCX pictures (from 2 to 256 colors and 24-bit)
+
+ - JPEG pictures are supported via the Tower JPEG Codec Class by Christoph
+   Feck.  FastView will display both grayscale and color JPEGs in HAM6
+   or HAM8 depending on your machine.
+
+ - AmigaDOS patterns (wildcards) are supported
+
+ - Runs from CLI and Workbench
+
+ - Optional Dithering of rerendered pictures (ie. pictures which are
+   converted from 256 colors to HAM6, or from 24Bit to HAM8 etc...)
+
+ - If multiple pictures were specified on the command line FastView will
+   automatically load and decode the next picture while you're still
+   viewing the previous one
+
+ - Optional (Down)Scaling of rerendered pictures to fit screen
+
+ - On OCS/ECS machines FastView tries to recognize pictures with B&W
+   palettes and will display these in HIRES-INTERLACED instead of HAM
+
+ - FastView has the ability to pick an ideal set of colors for pictures
+   rendered to HAM6 or HAM8.  It can store these colors in the picture's
+   comment so they can be used next time you view the same picture to get
+   very high quality pictures
+
+ - Very fast conversion to HAM/HAM8
+
+ - FastView can save your pictures as IFF files
+
+ - Keyboard can be used to scroll picture (or the mouse of course)
+
+ - Coded in 100% Assembler (only 24K in size!)
+
+@endnode
+
+
+@node Requirements "FastView: System requirements"
+
+FastView should run on any Amiga system with at least 512K RAM and
+one disk drive.  FastView requires Kickstart V2.04 or higher to run.
+
+FastView is Kickstart 3.0 compatible and aware.  It will use some V39
+functions when available.
+
+Should you have any trouble running FastView on your machine, please
+@{" contact me " link About} with the full specifications of your machine,
+that is Kickstart version, model, expansion boards etc...
+
+@endnode
+
+
+@node Registration "Registration: How to register FastView"
+
+This program is shareware, it is *not* public domain.  This means
+that if you use this program longer than a period of two weeks
+you'll have to send @{" The author " link About} 20 DM, 20 Guilders, 10 UK Pounds
+or 15 US Dollars to become a registered user.
+
+Please only send cash, eurocheques or postal money orders (Dutch Guilders
+only!) to the following address:
+
+        Until 31 March 1996:
+
+            John Hendrikx
+            Figarostraat 36
+            3208 PD  Spijkenisse
+            The Netherlands
+
+        After 31 March 1996:
+
+            John Hendrikx
+            Maasboulevard 74
+            3207 RC  Spijkenisse
+            The Netherlands
+
+@endnode
+
+
+@node About "FastView: About the author and the program"
+
+FastView has been created using the Devpac Assembler and CygnusED on an
+Amiga 2000 with a 68030/22 and 7 MB of memory.  The source code for
+FastView is now over 100K in size.
+
+If you have suggestions or remarks about this program, or if you find any
+bugs, please let me know.
+
+When sending in bug reports, please state exactly under what
+circumstances the bug occurred, what equipment was used and what
+happened.  If possible also try to give me enough information to
+reproduce the bug (like the picture file which caused the bug).
+It is very difficult to find bugs when you don't know exactly
+what happened.
+
+Write to one of the following addresses:
+
+        Fido     : 2:286/407.8
+        AmigaNet : 39:153/201.8
+        NLA Net  : 14:101/200.8
+
+        UUCP     : john.hendrikx@grafix.xs4all.nl
+
+        SnailMail until 31 March 1996:
+
+                   John Hendrikx
+                   Figarostraat 36
+                   3208 PD  Spijkenisse
+                   The Netherlands
+
+        SnailMail after 31 March 1996:
+
+                   John Hendrikx
+                   Maasboulevard 74
+                   3207 RC  Spijkenisse
+                   The Netherlands
+
+I will also try to put the latest available version of FastView on the
+following BBS (this may change without further notice):
+
+        Grafix Attack (Kees Huizer, Vlaardingen)
+        Tel. +31104745816 (MT 14K4)
+             +31104741062 (ZyXEL 19K2)
+             +31104744682 (Tron 28K8)
+
+        Magic filename: FVIEW
+
+        Fido Node  2:286/407
+        AmyNet    39:153/201
+        NLA Node  14:101/200
+
+@endnode
+
+@node UsageWB "FastView: Usage from Workbench"
+
+There are 3 ways to use FastView from the Workbench:
+
+1) Simply double-click on the FastView icon and it will come up with a
+   File requester which allows you to select the pictures you want to view.
+   You may select multiple pictures by holding down shift during selection.
+
+2) You can view pictures by using extended selection: Select the FastView
+   icon and select, while holding down the shift key, the pictures you want
+   to view.  Double-click (while still holding down shift) on the last
+   picture you want to view to start FastView.
+
+3) You may use FastView as the default tool for your pictures.  To set the
+   default tool to FastView for a picture, simply select the picture's icon
+   and choose Icons/Information from the Workbench menu.  Set the default
+   tool field to FastView and save this setting.  Now you can simply
+   double-click on the picture to view it with FastView.  Selecting
+   multiple pictures is also allowed, as long as the last picture you've
+   selected has the default tool set to FastView.
+
+The FastView icon can have several Tool Types which control the way FastView
+operates.  Most of these ToolTypes work similair compared with their
+CLI counterparts.  Here are the Tool Types available which also are available
+in the CLI:
+
+   DITHER             NOBESTMODEID
+   NOLACE             POINTER
+   SCALE              ROM
+   INFO               SCREENMODE
+   MAKECOMMENT        WAITFORPIC
+
+For more information about the function of each tooltype please refer to
+the @{" Usage from CLI " link UsageCLI} section.
+
+There is also one Workbench specific ToolType:
+
+   DEFAULTDIR
+
+This ToolType allows you to set the dir which FastView will list
+in the File Requester when you start FastView by simply
+double-clicking on it (Method 1, see above).
+
+@endnode
+
+@node UsageCLI "FastView: Usage from CLI"
+
+There is nothing to it really.  Just start it from the CLI or install
+it in your favourite Directory utility.
+
+Command line:
+
+ FILES/M,DITHER/S,NOLACE/S,SCALE/S,DELAY/K/N,INFO/S,WAITFORPIC/S,ROM/S,
+ NBMI=NOBESTMODEID/S,MAKECOMMENT/S,POINTER/S,SAVE/K,DEBUG/S,MULTISAVE/S,
+ SM=SCREENMODE/K
+
+or:
+
+ [FILES][=]<string(s)> [DITHER] [NOLACE] [SCALE] [DELAY[=]<number>]
+ [INFO] [WAITFORPIC] [ROM] [(NBMI/NOBESTMODEID)] [MAKECOMMENT]
+ [POINTER] [SAVE[=]<string>] [DEBUG] [MULTISAVE]
+ [(SM/SCREENMODE)[=]<string>]
+
+
+FILES/M
+ 
+This argument is not required.  If you don't specify any files FastView
+will pop up a file requester where you can select which pictures you want
+to view.  You can use AmigaDOS patterns (wildcards) to make viewing
+multiple pictures easier.  You can add as many names/patterns on the
+command line as you want, and all pictures will be viewed in the order you
+specified.  (Note:  Patterns matching multiple pictures will be shown in a
+somewhat random order) In case you're viewing multiple pictures the Right
+Mouse button will act as an abort function, thus it will enable you to exit
+FastView completely at any time.  Left Mouse button will continue to the
+next picture.
+
+
+DELAY/K/N
+
+Using this option you can turn FastView into a slideshow.  It allows you to
+set the number of seconds each picture will be displayed.  Note that
+FastView will automatically load the next picture in the background while
+you're still viewing the current picture, which makes slideshows look much
+better.
+
+
+DITHER/S
+
+Specify this on the command line if you want to add a simple form of
+dithering to the (rerendered) pictures.  This will slow down FastView by
+about 50%.
+
+
+NOLACE/S
+
+Specify this to make sure FastView doesn't use interlaced displays.
+
+
+SCALE/S
+
+When you specify this on the command line FastView will scale down
+(rerendered) pictures so they will fit on your screen, while keeping the
+aspect ratio intact.
+
+
+INFO/S
+
+Add this to the command line if you want the filename of the picture you're
+viewing to be displayed at the top of the display.
+
+
+WAITFORPIC/S
+
+When used in conjunction with the DELAY keyword WAITFORPIC will ensure that
+the picture being decoded in the background is fully decoded before
+FastView switches to the next picture.  This should make slideshows look a
+bit better.
+
+
+ROM/S
+
+This will make FastView use ROM functions (WritePixelLine8) to draw the
+pictures instead of poking directly into the screen's bitmap.  This is only
+partially implemented and for now will only work on IFF24Bit pictures, JPEG
+and GIF pictures.  Comments from graphics card users on this function are
+welcomed!
+
+
+NOBESTMODEID/S or NBMI/S
+
+This switch will disable the use of FastView's BestModeID
+routine.  This is a completely rewritten version of the
+BestModeID found in V39 kickstarts and should work much better.
+Another bonus is that this routine functions from Kickstart 2.0
+and up.
+
+You can try this switch if FastView picks the 'wrong' screenmode
+to display your picture.  Normally this shouldn't happen, so if
+it does check your DEVS:Monitors drawer and see if there are any
+monitors in there your system can't display correctly, if so
+remove these monitors, reboot and try again.  If the problem
+persists try the DEBUG option and send me its output and some
+information about the problem.  See DEBUG for more information.
+
+
+MAKECOMMENT/S
+
+If you specify this keyword FastView will automatically calculate the
+optimal palette for the pictures you're viewing and store this palette in
+the comment of those pictures.  Next time you view a picture FastView will
+use the palette stored in the comment which should ensure you get a bit
+higher quality pictures.  This only works for pictures which are displayed
+in either HAM6 or HAM8.
+
+
+POINTER/S
+
+Specify this on the command line if you don't want FastView to blank the
+mouse pointer after decoding the pictures.
+
+
+SAVE/K
+
+This keyword enables you to save a single picture as an IFF file.  This
+turns FastView in a very simple conversion utility.  Simply specify the
+name of the picture after the keyword and the first picture which is viewed
+is saved as an IFF file using the specified name.  Don't forget the DITHER
+option, it often makes the rendered picture (and thus also the picture it
+saves) look a lot better.
+
+If you want to save an entire dir of pictures then specify
+MULTISAVE on the command line as well.  This will change the
+behaviour of the SAVE keyword.  When using MULTISAVE you should
+specify the extension which should be appended to the name of the
+files you're viewing using the SAVE keyword.  Example:
+
+  FastView foo.gif bar.gif SAVE=.iff MULTISAVE
+
+This line would result in FastView displaying both pictures and saving
+them as 'foo.gif.iff' and 'bar.gif.iff'.
+
+
+DEBUG/S
+
+If you have problems with FastView picking the wrong ScreenMode you might
+want to set this option and post me the results.  Using this option you get
+a list of all ScreenModes FastView considers to be good enough to display
+your picture.  The final line contains the ScreenMode FastView found to
+be the best available.
+
+
+MULTISAVE/S
+
+This will allow you to save multiple pictures, using the SAVE
+keyword to specify the extension to be appended to the names of
+the pictures, see the SAVE keyword for more information.
+
+
+SCREENMODE/K or SM/K
+
+People owning VGA monitors or owners of graphics cards may want
+to tell FastView which ScreenModes it is allowed to choose from
+when looking for the best ScreenMode to display a certain
+picture.  You can do this with the SCREENMODE option.  It accepts
+a string which specifies which ScreenMode(s) FastView may choose
+from.  This string may contain AmigaDOS patterns (wildcards) for
+maximum flexibility.  Examples:
+
+  ScreenMode="DBL#?"
+
+This will allow FastView only to pick DBLPAL or DBLNTSC modes (ie,
+ScreenModes which start with 'DBL'.
+
+  ScreenMode="~(#?low#?)" 
+
+Using this ScreenMode string FastView will never select any ScreenModes
+which contain the word 'low'.  This means modes like "PAL:Low Res"
+and "MULTISCAN:Extra-Low Res" won't be picked.
+
+
+Keys while viewing pictures:
+
+ Arrow keys or the Numeric Keypad can be used to scroll the screen
+
+ Holding shift while scrolling will use larger steps
+ Holding alt while scrolling scrolls one pixel at the time
+
+ Space, Enter  - Skip to next picture
+ Escape        - Exit FastView completely
+
+@endnode
+
+@node Future "FastView: Future"
+
+Here is a list of things I want to add to FastView later:
+
+ A NOVIEW keyword which will turn FastView into a CLI utility to convert
+ and save pictures in IFF format, without you having to view the actual
+ picture(s).
+
+ The possibility to load/decode more than one picture while the user is
+ viewing the current one
+
+ Support for the IFF PBM format produced by DPaint 2 enhanced (pc version)
+
+If you have suggestions for new features which you think would be
+nice to have in FastView, don't hesitate to contact me about
+them.
+
+@endnode
+
+@node Bugs "FastView: Known bugs"
+
+While you're viewing a picture and you switch back to another screen the
+FastView screen/window will get deactivated which will break the Delay
+function.  This is because FastView won't receive IntuiTicks messages
+from Intuition while its window is deactivated, and so can't tell when
+the Delay time is over.
+
+FastView doesn't check the result of CloseScreen().  If you use another
+program like Lens which opens a window on the FastView screen and you
+accidently exit FastView while the window is still open, FastView will
+simply forget about the screen (leaving it opened) and exit.
+
+@endnode
+
+@node History "FastView: History"
+
+Aug 20 1994 - V0.90 - Added GIF decoding
+Aug 24 1994 - V0.91 - Speeded up HAM conversion routine by almost 20%;
+                      Speeded GIF conversion by about 5%; LMB now also
+                      exits the viewer when displaying a GIF
+Aug 25 1994 - V0.92 - Handles interlaced GIFs; Uses LoRes HAM if picture
+                      is smaller than 320x256; Displays B&W pictures in
+                      Hires 16 colors instead of HAM
+Aug 26 1994 - V0.93 - Almost doubled IFF displaying speed thanks to the
+                      BackFill-Hooks (Other picture types will also
+                      benefit from this)
+Aug 27 1994 - V0.94 - Displays uncompressed IFFs
+Aug 31 1994 - V0.95 - Finally figured out how to convert HAM8 to 24Bit
+                      (it turned out IFF-HAM8 has its control-bits as
+                      bit 6 and 7...); Added Dithering for pictures
+                      which are converted to HAM or B&W
+              V0.96 - Now outputs info about the picture; Possible to
+                      specify multiple pictures on command line and RMB
+                      now exits completely when viewing multiple
+                      pictures; Uses BusyPtr while decoding; Blanks
+                      mouse after decoding
+              V0.97 - Added IFF 24bit decoding using fixed HAM palette;
+                      Also added NOINTERLACE command line option
+Sep  5 1994 - V0.98 - Added variable (Down)Scaling; Now centers picture
+                      if it is too small (this avoids the trash at the
+                      right-edge due to Hardware limitations)
+Sep  8 1994 - V0.99 - No longer crashes when a BadCode is encountered
+                      in a GIF file
+Sep 16 1994 - V0.99 - Fixed color-selecting algorithm -- it now does
+                      very good color-selecting
+Sep 17 1994 - V1.00 - Added AGA support (hopefully) and made it Kick2.04
+                      compatible
+Sep 18 1994 - V1.01 - Added intelligent ViewMode selection if CAMG chunk
+                      is missing from an IFF file
+Sep 19 1994 - V1.02 - Fixed small bug which caused uncompressed HAM8
+                      pictures not to be displayed
+Sep 20 1994 - V1.03 - Fixed problem with IFF pictures which weren't
+                      exactly the same width as the screen; Added
+                      rendering to HAM8 for AGA machines
+Sep 25 1994 - V1.04 - Fixed Enforcer hit when no palette was found in
+                      picture; Added Wildcard support
+Sep 29 1994 - V1.05 - Fixed LoadRGB4 code; Fixed bugs in Wildcard
+                      support which caused memory freed twice errors;
+                      Fixed HAM8 support
+Oct  3 1994 - V1.06 - Added simple local-colormap handling code to GIF
+                      decoder; When initial codesize was too small or
+                      too big GIF decoder crashed, bug fixed
+Oct  4 1994 - V1.07 - Added Delay keyword; Added keyboard support while
+                      viewing/decoding picture
+Oct 12 1994 - V1.08 - FastView now automatically loads and decodes the next
+                      picture in the background for nicer slideshows and
+                      faster viewing; Fixed small bugs which caused
+                      small uncompressed IFF files to be displayed
+                      incorrectly
+Oct 14 1994 - V1.09 - Finally IFF24->HAM8 works; Removed some more bugs
+Oct 20 1994 - V1.10 - Added file requester
+Nov 14 1994 - V1.11 - Fixed enforcer hit (reported by: Richard Hartmann)
+
+Nov 24 1994 - V1.13 - RGB to HAM/HAM8 conversion now 10% faster
+Nov 25 1994 - V1.14 - Sometimes crashed when running low on ChipRam when
+                      viewing large pictures -- fixed
+              V1.15 - Uses BestModeID under V39+ to pick the best display
+                      type; Added INFO switch on command line which will
+                      print the name of the picture at the top of screen
+              V1.16 - Separate 68000 and 68020 versions available
+Nov 28 1994 - V1.17 - Fixed bug causing excessive HAM-fringing effects
+                      while viewing HAM8 pictures (reported by: Edmund
+                      Vermeulen)
+Dec  1 1994 - V1.18 - Fixed bug causing excessive HAM-fringing effects
+                      on Kickstart 2.0 (reported by: Remco van Hooff);
+                      Fixed bug with ASL requester causing the CurrentDir
+                      of the CLI it was started from to be modified
+                      (reported by: Jan van den Baard); Fixed bug
+                      causing interlaced-GIF's to be screwed up while
+                      using the INFO switch (reported by: Martijn
+                      Hoogesteger); Fixed INFO-text color-pick bug
+              V1.19 - DELAY was ignored when there was no memory for
+                      the 2nd screen -- fixed (reported by: Arthur
+                      Pijpers)
+Dec  6 1994 - V1.20 - Fixed bug in IFF decoder when multiple FORM's are
+                      encountered in an IFF file (reported by: Jan van
+                      den Baard)
+              V1.21 - Added 'WaitForPic' option.  When using the delay
+                      option to create a slideshow, WaitForPic will make
+                      sure the picture in the background is ready before
+                      switching to that picture (requested by: Arthur
+                      Pijpers)
+Dec  8 1994 - V1.22 - Fixed bug with GIF's containing a local colormap.
+                      This bug crept in in V1.13 (reported by: Arthur
+                      Pijpers)
+Dec 22 1994 - V1.23 - Fixed bug which a division by zero by BestModeIDA().
+              V1.24 - FastView now correctly skips the masking bitplane
+                      sometimes found in IFF files.
+Dec 31 1994 - V1.25 - Small bug fixed created by 1.24, FastView
+                      accidentaly treated pictures with a transparent
+                      color as pictures with a mask.
+Jan  4 1995 - V1.26 - Fixed aspect ratio when using BestModeID().
+Jan  9 1995 - V1.27 - Added JPEG support using the Tower JPEG Codec Class
+                      by Christoph Feck.
+Jan 22 1995 - V1.28 - Added a command line switch to disable BestModeID.
+                      Also fixed a problem with WShell.  Names which are
+                      too long to display above the picture are shortened.
+              V1.29 - Significantly improved quality of pictures rendered
+                      in HAM6 and HAM8.
+Jan 23 1995 - V1.30 - Added GrayScale support for JPEG pictures.
+Feb 28 1995 - V1.31 - FastView can now store color information of the
+                      picture in the comment.  The 2nd time the same
+                      picture is viewed it will look better due to the
+                      precalculated colors
+Mar  2 1995 - V1.32 - ASL requester now uses a bit more normal values
+                      for its initial window-size (requested by: Edmund
+                      Vermeulen); FastView now checks if the user
+                      specified a path, and copies this in the path field
+                      of the requester (requested by: Edmund Vermeulen);
+                      Added an option to not blank the mouse
+Mar  5 1995 - V1.33 - Hopefully improved BestModeID code a bit; Added a
+                      IFF saving routine (requested by: Benbuck Nason)
+Mar 16 1995 - V1.34 - FastView now has an icon (thanks to Edmund
+                      Vermeulen) and can be started from Workbench.
+                      Several Tool Types are supported to help control
+                      FastView from the Workbench
+Apr 14 1995 - V1.35 - Multiselecting FastView plus some pictures will now
+                      cause FastView to display the selected pictures
+                      (requested by: Edmund Vermeulen); FastView now has
+                      an install script (thanks to Edmund Vermeulen)
+              V1.36 - FastView now pops up the file requester again after
+                      viewing some pictures (requested by: Edmund
+                      Vermeulen)
+              V1.37 - When using the ROM option FastView now uses
+                      WritePixelLine8() instead of WritePixel()
+Apr 16 1995 - V1.38 - Fixed several sneaky bugs which could cause trash
+                      at the right-border of a picture
+Apr 18 1995 - V1.39 - FastView now supports 2, 16 and 256 color
+                      (uncompressed) BMP pictures as well as 24-bit BMP
+                      pictures
+              V1.40 - FastView now supports EGA and VGA PCX files; Fixed
+                      small bug causing B&W JPEG pictures to be trashed
+                      on AGA
+Apr 21 1995 - V1.41 - Added ROM and WAITFORPIC tooltypes; Fixed bug which
+                      caused a crash when a picture is too big to
+                      display; When using Delay and WaitForPic FastView
+                      didn't exit after showing you the last picture
+May  2 1995 - V1.42 - Some pictures weren't saved correctly under AGA,
+                      fixed; Fixed enforcer hit when passing NULL as the
+                      path for the ASL requester under V40 (works fine
+                      for V39 and earlier)
+May  4 1995 - V1.43 - Added DEBUG option; When you select no files in
+                      the ASL requester FastView assumes you want to view
+                      the entire directory
+May  5 1995 - V1.44 - Specifying MULTISAVE on the commandline together
+                      with SAVE will save all pictures viewed as IFF
+                      pictures using the name you specified after SAVE as
+                      the extension
+May 18 1995 - V1.45 - Removed a bug in the 68000 version of FastView which
+                      caused some GIF pictures to be trashed; FastView no
+                      longers specifies Workbench as the public screen to
+                      pop-up on
+              V1.46 - FastView now uses a custom routine to replace
+                      BestModeID.  This routine will hopefully work correct
+                      with graphics cards and/or Kick 2.0; Added SCREENMODE
+                      keyword which allows you to specify the name of the
+                      monitor you wish to use (supports AmigaDOS patterns)
+May 19 1995 - V1.47 - Fixed some problems with my new BestModeID code, and
+                      added a SCREENMODE ToolType; Added DEFAULTDIR ToolType
+May 25 1995 - V1.48 - Fixed stupid bug causing an enforcer hit
+May 26 1995 - V1.49 - Fixed bug causing crashes when exiting FastView which
+                      was started from Workbench; Fastview now checks for
+                      Ctrl + C and exits when it receives one
+May 30 1995 - V1.50 - Fixed bug, ROM ToolType now works; Fixed bug which
+                      caused some pictures to be saved wrong; Fixed bug
+                      which caused pictures to be saved with wrong palette
+Jun  3 1995 - V1.51 - No longer picks Graphics-card screenmodes for HAM
+                      pictures; FastView now will run without monitor
+                      drivers (previously you had to use the NBMI option)
+
+@endnode
+
+@node Ack "FastView: Acknowledgments"
+
+Thanks to all who registered so far:
+  Folkert de Gans           Øyvind Falch
+  Vincent Zee               Glenn J. Shutts
+  Martijn Hoogesteger       Bill Bennett
+  R. Veenman                Stephan Lichtendahl
+  Tom de Ruyter             Robert Guezen
+  Henk Siemer               Romen Patzner
+
+Thanks to Michael Zucchi for creating ZGif which inspired me to write
+this program!
+
+Thanks to Edmund Vermeulen for the installer script and the
+FastView icon.
+
+Thanks to Romen Patzner for creating a nice MagicWB icon for FastView.
+
+Thanks to Jan van den Baard, Richard Hartmann, Remco van Hooff,
+Martijn Hoogesteger, Jim McKinney, Benbuck Nason, Raymond
+Penners, Arthur Pijpers, Romen Patzner, Maarten Ploeg, Edmund
+Vermeulen, Richard de Vos and Vincent Zee for bug reports and
+suggestions!
+
+Thanks to Christoph Feck for creating the Tower JPEG Codec Class which
+made it very easy for me to add JPEG support in FastView!
+             _
+          _ //
+Thanks to \\X/ Amiga for being the best computer ever!
+
+@endnode

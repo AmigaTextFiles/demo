@@ -1,0 +1,44 @@
+
+
+IFTP61A V0.1 by Smack/Infect 07-09-95
+
+P61A (c) Jarno Paananen
+
+
+
+This little program is a player for P61A modules. It can be started from
+CLI with some command line arguments and installs the playing routines
+together with the music module as a background process in the multitasking
+system. You can start/stop the music whenever you want by restarting the
+program with the appropriate option.
+
+
+some examples for usage:
+
+1) iftp61a p61.module install   ;load module, install player
+   iftp61a play                 ;start installed music
+   iftp61a quit                 ;stop music, free mem and other resources
+
+2) iftp61a p61.mod1             ;load module, install player, start playing
+   iftp61a                      ;no argument -> report player status
+   iftp61a p61.mod2 install     ;load module, quit player, install new player
+   ...
+
+
+Limitations:
+  -P61A modules with delta-packed samples are _NOT_ supported
+  -stopping the player means removing its process from memory,
+   there is no chance restarting it, you must reinstall the player
+
+Future:
+  -volume control, rewind/forward, pause/continue... (maybe some time?)
+
+
+
+
+HISTORY:
+
+ V0.1
+ (070995) -first working version (no release!)
+          -options available: INSTALL, PLAY, QUIT
+

@@ -1,0 +1,28 @@
+================================================
+Memory defragmentizer/AllocP superset
+Author:   thor@math.tu-berlin.de (Thomas Richter)
+Version:  1.22
+Requires: OS 2.0 at least
+================================================
+
+Several people reported instabilities when running PoolMem. I can't 
+reproduce any of these crashes here at my system, thus if you find 
+a REPRODUCABLE crash, please, please let me know!
+
+NEWS FLASH: Found serious bug in XiPaint that caused crashes 
+with PoolMem, check below for details.
+
+1.22:
+PoolMem merges now automatically all adjacent memory lists of the 
+same type. 
+
+About PoolMem:
+If you run a lot of programs without resetting the system, you'll 
+usually find that the main memory of the computer is getting 
+"messed up", split in lots of tiny memory "snippets" that are more or 
+less useless due to their tinyness. It may happen that you can't start 
+an application even though enough memory is available - because 
+this memory is too fragmentated to be of any use. That's the point 
+where PoolMem tries to help you: It manages the main memory in a 
+way such that it can't get fragmentated too easely. It replaces also 
+the function of AllocP, which is therefore obsolete.

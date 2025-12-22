@@ -1,0 +1,1271 @@
+@DATABASE ASCII-Manual
+@AUTHOR Written by The Problem Stories Dept. '95
+@REMARK The ASCII-Editor, ASCII-Tracer and the ASCII-Config
+@REMARK program are produced by The Problem's Coding Dept.
+@FONT topaz.font 8
+
+@NODE Main "The Complete Guide To ASCII-Editing"
+
+@{fg shine}@{b}Welcome to the ASCII Guide!@{fg text}
+
+This guide is the manual for three programs from The Problem. Choose one
+here:
+
+ @{"  " LINK ASCII-Edit} @{b}The ASCII-Editor
+
+ @{"  " LINK ASCII-Config} The ASCII-Config Program
+
+ @{"  " LINK ASCII-Trace} The ASCII-Tracer@{ub}
+
+
+ @{"  " LINK ASCII-Format} The ASCII Text Format
+ @{"  " LINK Script-Format} The Script Format
+ @{"  " LINK Guide-Format} The Guide Format
+ @{"  " LINK Bugs} Bugs 
+
+* This guide was created with help from the ASCII-Editor.
+@ENDNODE
+
+@NODE ASCII-Edit "The ASCII Editor"
+
+@{fg shine}@{b}The Problems' ASCII Editor@{fg text}
+
+Create  ASCII  text  files,  Scripts or even AmigaGuide databases that look
+like  professional  documentation  with ease!  This program was designed to
+make  it  easier  to include 'complicated' ASCII drawings inside textfiles.@{ub}
+                       @{fg shine}@{u}            @{uu}     
+@{fg text}On startup you will   @{fg shine}|@{bg fill}@{fg text}@{u}o| Tools    @{bg back}@{uu}|     
+be presented with a   @{fg shine}|@{fg fill}@{"T1" LINK TOOL1}@{"T2" LINK TOOL2}@{"T3" LINK TOOL3}@{fg text}@{"GB" LINK GetBsh}|    
+window  that  looks   @{fg shine}|@{fg fill}@{"T4" LINK TOOL4}@{"T5" LINK TOOL5}@{"T6" LINK TOOL6}@{fg text}@{"PB" LINK UseBsh}|    
+quite like  the one   @{fg shine}|@{fg fill}@{"T7" LINK TOOL7}@{"T8" LINK TOOL8}@{fg text}@{"DM" LINK DRAWMODE}@{"* " LINK TGad}|    
+you see here:         @{fg shine}|@{fg text}@{" | | | | | " LINK Col}|    
+                      @{fg shine}|@{fg text}@{"@|Front" LINK FrontBack}@{"CLR" LINK CLR}|    
+                      @{fg shine}|@{fg text}@{" Fix " LINK Fix}@{"Undo " LINK Undo}|    
+                      @{fg shine}|@{fg text}@{"Load " LINK Load}@{"Save " LINK Save2}|    
+                      @{fg shine}|@{fg text}@{"Redrw" LINK Redraw}@{"Quit " LINK Quit}|    
+                      @{fg shine}+@{fg text}------------+
+
+
+* Extra functions of ASCII-Edit can be accessed through the @{"Menus" LINK Menus}.
+
+@{b}NOTE:@{ub}
+You can NOT load in SCRIPT files. Be sure to save a project file of all
+your work, specially when you want to continue it at later stage!
+@ENDNODE
+
+@NODE Menus
+@{fg shine}@{b}The Project Menu@{fg text}
+- New@{ub}    : Initialize a new project.
+- @{b}Load@{ub}   : @{"  " LINK Load}
+- @{b}Save@{ub}   : @{"  " LINK Save2}
+- @{b}Undo@{ub}   : @{"  " LINK Undo}
+- @{b}About@{ub}  : The About Requester that tells you what you are working with.
+- @{b}Quit@{ub}   : Quit the Editor (not recommended for unexperienced users!)
+
+@{fg shine}@{b}The Options Menu@{fg text}
+- Draw Mode@{ub}  : @{"  " LINK DRAWMODE} 
+
+- @{b}Display@{ub}  - Redraw         : @{"  " LINK Redraw}
+           - XFlip          : Mirror the entire project horizontally.
+           - YFlip          : Mirror the entire project vertically.
+           - Fill Screen    : Allows you to fill foreground or background.
+           -  As AmigaGuide : Check  this  item  to  force the  display  to
+                              AmigaGuide  style.   AmigaGuide  leaves  room
+                              between every line so it can draw its buttons.
+
+- @{b}Change Colour@{ub} :  Brings up a window you can use to Replace or Swap
+                   all  appearances of one colour by onother colour.
+
+- @{b}Recol Hidden Chars@{ub} : If  the front colour and back colour of a
+                                character  is  the  same, you can not see
+                                it.   This function allows you to rapidly
+                                change the front/back colour of all those
+                                hidden characters or kill them.                              
+
+@{fg shine}@{b}The Tools Menu@{fg text}
+- @{b}Freehand...@{ub} : Brings up a window where you can decide what happens
+                         when you draw using the Freehand Tool
+                         (the first tool, top left)
+
+- @{b}Draw Box...@{ub} : Brings up a window where you can decide what happens
+                         when you draw using the Draw Box Tool
+                         (the second tool in the second row from the top)
+
+- @{b}Airbrush@{ub} : Use this to set the size and speed of the AirBrush tool.
+
+- @{b}Text@{ub}    - Font Style : Use  this  to activate @{b}Bold@{ub}, 
+                                  @{u}Underlined@{uu} and/or @{i}Italic@{ui} modes
+                                  for the foreground data.
+                   - Search     : Brings up a window in which you can perform
+                                  several   search   actions   (like  search,
+                                  replace etc.
+                   - Find Next  : Use this, it's fun!
+                   - Replace Next : Dito, though it's slightly less fun. 
+
+- @{b}Brush@{ub}    - Show    : Shows the current brush
+           - XFlip   : Mirrors brush horizontally
+           - YFlip   : Mirrors brush vertivally
+           - Free    : Removes current brush from memory
+           - Options : Brings  up  the Brush Options window where you can
+                       choose what brush information you want to use when
+                       pasting.   Also  you can XFlip or YFlip the brush,
+                       Invert  its  colours  or  Swap  its background and
+                       foreground  colours,  Save the brush or Load a new
+                       brush.
+@ENDNODE
+
+@NODE TOOL1 "Freehand Tool"
+
+@{fg shine}@{b}The Freehand Tool@{fg text}
+
+The Freehand Tool is used to draw onto the screen as you would in any other
+paint package.  You can change the way the Freehand Tool works by selecting
+one  of the Special Freehand modes from the Tools/Freehand...  menu.  There
+is  one  normal  freehand  mode,  two  special modes and a combined special
+mode.@{ub}
+
+*  In  the  foreground  the  Freehand  Tool  uses  the character, currently
+displayed in the @{"Brush Display" LINK TGad} in the Tools window.
+
+* In background mode it will change a single character's background colour.
+
+* The way a character responds to a freehand drawing action depends on the
+settings in the @{"Drawmode" LINK DRAWMODE} window.
+@ENDNODE
+
+@NODE TOOL2 "Fill Line Tool"
+
+@{fg shine}@{b}The Fill Line Tool@{fg text}
+
+This  tool  will  perform  a floodfill, but in a special way.  It will only
+fill  up horizontal lines in either foregound or background mode, using the
+settings from the @{"Drawmode" LINK Drawmode} window.@{ub}
+
+*  In  foreground  mode  it  will fill the selected line in the foreground,
+using the activated colour(drawmode) and the current brush character.
+
+*  In  background  mode  it  will  fill the selected line in the background
+changing it's colour depending on the settings in the drawmode window.
+@ENDNODE
+
+@NODE TOOL3 "Airbrush Tool"
+
+@{fg shine}@{b}The Airbrush Tool@{fg text}
+
+The Airbrush Tool will act like you are painting with a spraycan that is
+filled with text. You can change the behaviour of the Airbrush Tool in the
+Tools/Airbrush... menu option.@{ub}
+
+* In the foreground this tool will spray the current brush character, using
+the  current  colour(drawmode)  using  the  speed and radius you set in the
+Airbrush window.
+
+* In background mode it will spray in the background, not changing any text
+in  the  foreground.   What  exactly happens depende on the settings in the
+@{"Drawmode" LINK DRAWMODE} window.
+
+*  In  the Tools menu, you can use the Airbrush...  option to set the speed
+and the size of the Airbrush Tool.
+@ENDNODE
+
+@NODE TOOL4 "Straight Line Tool"
+
+@{fg shine}@{b}The Straight Line Tool@{fg text}
+
+Use  this tool to draw straight line from one point to another in a similar
+way to other paint packages.  To draw a line simply click and hold the left
+mousebutton  at the starting position and then drag the mouse to the ending
+position.  Then release the mousebutton and the line is drawn.@{ub}
+
+*  In the foreground the Line Tool uses the current brush character, colour
+and/or drawmode settings.  It will not affect the background colours on the
+screen.
+
+*  In the background this tool uses the current colour/drawmode settings to
+change the background.
+@ENDNODE
+
+@NODE TOOL5 "Draw Box Tool"
+
+@{fg shine}@{b}The Draw Box Tool@{fg text}
+
+The Box tool can be used to draw a box, either open or filled in either the
+foreground  or  the background.  There are two ways of drawing boxes useing
+this  tool.   You can toggle between them using the Tools/Draw Box...  menu
+option.@{ub}
+
+*  To draw an open Box, activate the Box Tool by clicking on the upper half
+of the button, to draw a filled box click on the lower half.
+
+*  In  foreground mode the Box Tool uses the current brush character or the
+special  mode (depending on the settings in the Tools/Draw Box...  option).
+The  result  also depends on the settings in the Drawmode window and/or the
+currently activated colour.
+
+*  In  background mode this tool only works if the special Draw Box mode is
+turned  off  (see  above).  It uses the current colour/drawmode settings to
+change the background.
+@ENDNODE
+
+@NODE TOOL6 "Draw Ellipse Tool"
+
+@{fg shine}@{b}The Draw Ellipse Tool@{fg text}
+
+The  Ellipse  tool can be used to draw an ellipse, either open or filled in
+either the foreground or the background.@{ub}
+
+*  To  draw  an  open ellipse, activate the Ellipse Tool by clicking on the
+upper half of the button, to draw a filled ellipse click on the lower half.
+
+*  In  foreground  mode  the Ellipse Tool uses the current brush character.
+The  result  depends  on  the  settings  in  the Drawmode window and/or the
+currently activated colour.
+
+* In background mode this tool uses the current colour/drawmode settings to
+change the background.
+@ENDNODE
+
+@NODE TOOL7 "Text Edit Tool"
+
+@{fg shine}@{b}The Text Edit Tool@{fg text}
+
+Use  this  tool to edit foreground text using the keyboard.  This tool does
+not  depend  on  wether you are in foreground or background mode, it always
+works  in  foreground  mode  since  background  text  hasn't  been invented
+yet.@{ub}
+
+*  Note  that  the Text Edit Tool does not perform any action that involves
+moving  text  around.   This  is  to prevent you from destroying previously
+drawn foreground 'graphics'.
+
+Therefore  you will always be in overwrite mode.  Insert mode would require
+shifting text to the right if you insert something in the midle of a line.
+
+The  Backspace  key  DOES delete the character preceding the cursor, but it
+will not shift the rest of the line to the left.
+
+The Delete key WILL delete the character at cursor position but it will NOT
+shift the rest of the line to the left.
+
+The  Return key will return the cursor to the starting position at the next
+line, but you can not insert lines by pressing Return.
+
+*  To  move text around you'll have to pick it up as a brush and then go to
+the  Brush  Options  window  (via the Tools/Brush/Options menu) and set the
+Brush pasting mode to 'Front Only'.  Then paste your text down wherever you
+want it.  (Be sure you are in the 'Normal' drawmode)
+@ENDNODE
+
+@NODE TOOL8 "Clear Tool"
+
+@{fg shine}@{b}The Clear Tool@{fg text}
+
+Actually  this  is  the  same  as  the freehand tool, but instead of adding
+foreground  or  background information, you can use the Clear Tool to erase
+background AND foreground information.  This tool does not depend on wether
+you are in foreground or background mode.@{ub}
+
+* Note that the Clear Tool clears the background to the currently activated
+colour.  The foreground info is removed.
+@ENDNODE
+
+@NODE Fix
+
+@{fg shine}@{b}The Fix Button@{fg text}
+
+Press  this  when  you are satisfied with what you created so far.  This will
+update  the  Undo  buffer.  After you Fixed the changes you can not Undo them
+anymore.   Any  Undo action after this will restore your project to the state
+it was in when you last pressed Fix.
+@ENDNODE
+
+@NODE Undo
+
+@{fg shine}@{b}The Undo Feature@{fg text}@{ub}
+
+Use  this  function  to  undo  everything you changed since the last time you
+pressed  the  @{"Fix" LINK Fix} button.  You can change the name of the Undo file in the
+ASCII-Edit Configuration editor.
+@ENDNODE
+
+@NODE COL
+
+@{fg shine}@{b}The Colour Gadgets@{fg text}
+
+These  are the 8 colours you can use.  Simply select one by clicking on it.
+Activating  a  colour,  sets that colour to be the currently used colour in
+the  area  you  are  editing  in (Foreground or Background).@{ub}
+
+*  Active  colours  are  only used if the settings in the Colourmode window
+   allow this.
+@ENDNODE
+
+@NODE FrontBack
+
+@{fg shine}@{b}The Front/Back switch@{fg text}
+
+This  switch  is  used  to toggle between foreground (Front) and background
+(Back)  modes.   In  foreground  mode all tools will draw using the current
+ascii  character  and  colour(mode).   In  background  you  can  change the
+fieldcolour of any character on the screen using any tool.
+@ENDNODE
+
+@NODE CLR
+
+@{fg shine}@{b}Clear Project@{fg text}@{ub}
+
+In the window that appears, select what information you want to clear.  The
+projects' size will not change (even when you choose 'All').  To change the
+size, you must initialize a new project using the Project menuoption New.
+@ENDNODE
+
+@NODE Redraw
+
+@{fg shine}@{b}Redraw@{fg text}
+
+This simply forces ASCII Edit to redraw the entire screen.@{ub}
+@ENDNODE
+
+@NODE DRAWMODE
+
+@{fg shine}@{b}The Draw Mode Window@{fg text}
+
+Selecting this feature  brings  up  a  window titled 'Draw Mode'.  Use this
+window  to  determine what happens to the screen if you draw something.  Be
+aware  that  the  drawing mode works for Background or Foreground, although
+some are only useful in foreground mode.@{ub}
+
+The CycleGadget can be used to select one of the following modes:
+
+@{b}Normal (Use Active)@{ub}
+This  means  that the currently activated colour will be used when you draw
+something using one of the tools.
+
+@{b}Invert Bg or Fg@{ub}
+When you draw something, you won't be adding any new characters.  What will
+happen  is that the colour of all characters you use are inversed.  This is
+done  by substracting the number of the colour at the drawing position from
+the  maximum  number  of  colours  available  (8).   You may use the 'Use x
+Colours' CycleGadget' to change the maximum number of colours used for this
+inverse  mode  (you  can  still  use  all  8 colours, but the outcome of an
+inverse calculation will be different).
+
+@{b}Swap Bg<->Fg@{ub}
+When  drawing,  you  won't  be  adding  any  new characters.  In stead, all
+characters  you  touch  will  have  their foreground and background colours
+swapped.
+
+@{b}Recoulour To Active@{ub}
+This  is  one  of  the  most  usefull  draw  modes!  In stead of adding new
+characters  by  drawing, only the colour of the existing characters will be
+changed.
+
+@{b}Erase Bg or Fg@{ub}
+This wil erase all characters that you touch when drawing.
+@ENDNODE
+
+@NODE BackFront
+
+@{fg shine}@{b}The Area Switch@{fg text}
+
+Use this CycleGadget to switch between the two working areas.
+
+Back  :@{ub}   Background  mode.   In this mode you will be able to draw in the
+background area of the screen.  This means that only 'Fieldcolours' will be
+affected  by  the  drawing operations.  All foreground text will remain the
+same as it was, so you can edit background without damaging the foreground.
+
+@{b}Front :@{ub}  Foreground mode.  Or Textmode if you like.  All drawing operations
+will  take  place  in the foreground area.  The foreground area can contain
+any  ASCII  character, the empty space in each character will be considered
+to  be background (so a Space will have no effect on the foreground, except
+that it will erase the old character if there is one).
+
+*  The Text tool will always be in foreground mode (of course).
+
+*  The  Replace  Colour function from the Options menu will only operate in
+   the activated area. (Front/Back)
+
+*  The  settings  of this CycleGadget have no effect on the brushtools, for
+   that you need to select the Brush Options item form the Options menu.
+   (Left-Amiga B)
+
+*  All tools will only operate in the activated area.
+@ENDNODE
+
+@NODE GetBsh
+
+@{fg shine}@{b}Pick Up A Brush@{fg text}
+
+Press this to activate the Brush Grabbing feature.  Now, while holding down
+the  left  mouse  button,  draw a box around the area you want to grab as a
+brush.   This  will  pick  up  all  information inside the box (Foreground,
+Background, Colours, Fontstyles, everything)@{ub}
+
+*  After  grabbing, the 'Use Brush'  tool is automatically activated in the
+   Tools window.
+@ENDNODE
+
+@NODE UseBsh
+
+@{fg shine}@{b}Paste Current Brush@{fg text}
+
+Press  this  to  activate the Use Brush tool.  This is only useful when you
+have  already  grabbed  a  brush once.  When activated you can use the last
+grabbed brush which will be in memory until you pick up a new one.@{ub}
+
+If you don't want to use all the brushs' information to paste down, use the
+Brush  Options feature from the Options menu.  If there is a brush, it will
+be  displayed  in  the  top left corner of the Edit window, surrounded by a
+black  border with the title 'Brush'.  A window will appear (Brush Options)
+where   you  can  decide  what  brush  information  to  use.   (Background,
+Foreground or Both) Also from this window you can XFlip or YFlip the brush, Invert
+its colours or Swap its Background and Foreground colours.
+
+@{b}IMPORTANT:@{ub}
+Be aware that the currently activated Background Colour will not be visible
+in  the brush if it is pasted down.  If you picked up a brush with black in
+it,  and  you  have  activated  black  as  the background colour then, when
+pasting  down  the  brush somewhere, all the black will be ignored.  If you
+want  black  to  be displayed when the brush is pasted, you should activate
+another background colour, and then paste the brush.  You may always change
+the background colour.
+@ENDNODE
+
+@NODE TGad
+
+@{fg shine}@{b}The Brush String Display@{fg text}
+
+In  this  display  you can see which character is currently used as a brush
+for  all  the  tools  (except for the Text tool, and the Paste Brush Tool).@{ub}
+
+You  can change it pressing any key on the keyboard during editing.  If you
+are  in  Background  mode  this display will show a cursor in the currently
+activated colour.
+@ENDNODE
+
+@NODE Load
+
+@{fg shine}@{b}The Load Window@{fg text}
+
+After  selecting  Load, you will be presented with a filerequester.  Use it
+to  select  a file.  ASCII-Edit will try to determine what type of file you
+have selected.  The following types are known:
+
+Custom Project files@{ub} (.proj)
+If you selected a project file, a requester will ask if you are sure.  Note
+that  loading a project means that all current information will be lost (if
+you didn't save it)!
+
+@{b}Custom Brush files@{ub} (.BSH)
+When  a brush file was selected it will be loaded as such.  ASCII-edit will
+automatically  activate  the 'Use Brush' tool in the tools window.  You can
+then  paste the brush anywhere you want it.  It will remain in memory until
+you pick up a new brush, or load onther one.
+
+@{b}AmigaGuide files@{ub} (.Guide)
+Selecting an AmigaGuide database will bring up a window where you can
+select a node. For more info about this window, read @{"Loading Guides" LINK LoadGuide}.
+
+@{b}Textfiles (ASCII)@{ub}
+If  the  selected  file  was none of the above, it will be loaded as a text
+file.   A  window  will pop up.  Use this to select which area to load.  If
+the  file does not contain colour information (escape-codes), you can enter
+a default colour in this window.  Unknown escape codes will be ignored.
+
+
+@{b}NOTE:@{ub}
+Text  and  Guide  files will be Merged into the current project if you load
+front  or  back only.  This way you can load in the foreground of one file,
+and the background of another.
+But  if  you  load  a guides' foreground and background (both), the project
+will  be  adjusted  in  size,  which  means  that it will be cleared before
+loading (se no merging there).
+@ENDNODE
+
+@NODE Save2
+
+@{fg shine}@{b}The Save Window@{fg text}@{ub}
+
+This  brings  up  the  save  window.   Use  the  CycleGadget  to select the
+fileformat (Project, ASCII, Script or AmigaGuide) and use the checkboxes to
+select  what to save.  The settings of these checkboxes will not affect the
+Project fileformat!
+@ENDNODE
+
+@NODE Quit
+
+@{fg shine}@{b}Quit@{fg text}
+
+This  will  quit  the  program.  You can also press the close gadget of the
+window (or select Quit from the Project menu in the Ascii-Editor).@{ub}
+@ENDNODE
+
+
+
+
+
+
+@NODE ASCII-Trace "The ASCII Tracer"
+
+@{fg shine}@{b}The Problems' ASCII Tacer@{fg text}
+
+You  can  use this program to convert any IFF ILBM picture to an ASCII Edit
+Project.   After  startup  you  will  be presented with the window as shown
+below.  Click the buttons for more information.@{ub}
+
+                           @{fg shine}@{u}                            @{uu}
+                          |@{bg fill}@{fg text}@{u}  | ILBM_2_ASCIIEdit     |  @{bg back}@{uu}|
+                          @{fg shine}|                            @{fg text}|
+                          @{fg shine}|   @{fg text}Convert: @{"    Screen    " LINK ScreenBox} |
+                          @{fg shine}|                            @{fg text}|
+                          @{fg shine}| <Room for errormessages>   @{fg text}|
+                          @{fg shine}|                            @{fg text}|
+                          @{fg shine}|                            @{fg text}|
+                          @{fg shine}| @{fg text}@{"Convert" LINK Convert}  @{" Save " LINK Save}  @{" Exit " LINK Quit} |
+                          @{fg shine}|@{fg text}____________________________|
+
+
+Pictures  will  be  converted to Background-only projects, which means that
+there  will  be  no  text  in  the  file.  You can add text using the ASCII
+Editor.   This  is a Beta-Test version of the ASCII Tracer.  Do NOT SPREAD!
+Try it, and you're an EX-Problem member!
+@ENDNODE
+
+@NODE ScreenBox
+
+@{fg shine}@{b}The Screen/Box Switch@{fg text}
+
+Use this CycleGadget to select either "Screen" or "Box" mode:@{ub}
+
+
+@{b}Screen:@{ub} Convert the loaded ILBM entirely, resizing it to fit the window.
+@{b}Box   :@{ub} You can draw a box around the area you want to convert. The
+            contents of the box will be sized to fit the window.
+@ENDNODE
+
+@NODE Convert
+
+@{fg shine}@{b}Converting An Image@{fg text}
+
+Pressing  this button will bring up a filerequester in which you may select
+the  source  IFF  ILBM  picture.   ASCII  text  can  contain no more than 8
+colours,  so  ASCII  Trace  will only use 8 colours.  If a picture contains
+more,  they  are simply looped around (colour 8 to 0, colour 9 to 1, colour
+10 to 2 etc.)@{ub}
+
+After  selecting  a  picture  a  window the size of the screen will appear.
+Resize  this  window to the size you want the project to be.  In the middle
+of  this  window  you  can  see  the  width and height in characters.  When
+finished, press the 'Done' button in the top left corner.
+
+A  window  showing  the  loaded  picture appears.  If you selected Box-mode
+rather  than  Screen-mode,  you  may  now draw a box around the part of the
+picture  you  want  to convert, else the conversion will start immediately.
+When  the  conversion  is  finished you will be back at the startup screen.
+You can now save the project using the Save button.
+@ENDNODE
+
+@NODE Save
+
+@{fg shine}@{b}Saving A Project@{fg text}@{ub}
+
+After pressing the save button, you will be presented with a filerequester.
+Use  this to select a savename for your project.  The file will be saved in
+ASCII  Edits'  custom  Project  format,  so  you can load it into the ASCII
+Editor for further editing.
+@ENDNODE
+
+
+
+
+
+@NODE ASCII-Config "The ASCII-Config Editor"
+
+ @{fg shine}@{u}                                                                          @{uu}
+|@{bg fill}@{fg text}@{u}  | ASCII Editor Configuration                                         |  @{bg back}@{uu}|
+@{fg shine}|@{fg text}  Activated Tool: @{" 1    " LINK CONF_NMBR}   Default Mode: @{"@|Foreground" LINK CONF_CYCL} Horizontal: @{" -  " LINK CONF_TEXT} |
+@{fg shine}|@{fg text}Activated Colour: @{" 1    " LINK CONF_NMBR}        Display: @{"@|  Normal  " LINK CONF_CYCL}   Vertical: @{" |  " LINK CONF_TEXT} |
+@{fg shine}|@{fg text}   Project Width: @{" 77   " LINK CONF_NMBR} Airbrush Speed: @{"@|   Fast   " LINK CONF_CYCL}    Corner1: @{" +  " LINK CONF_TEXT} |
+@{fg shine}|@{fg text}  Project Height: @{" 29   " LINK CONF_NMBR}    Open Window: @{"@| No Window" LINK CONF_CYCL}  Diagonal1: @{" /  " LINK CONF_TEXT} |
+@{fg shine}|@{fg text}   Airbrush Size: @{" 2    " LINK CONF_NMBR}  Freehand Type: @{"@|  Normal  " LINK CONF_CYCL}  Diagonal2: @{" \  " LINK CONF_TEXT} |
+@{fg shine}|@{fg text}    Default Path: @{" Work:" LINK CONF_PATH}       Box Type: @{"@|  Normal  " LINK CONF_CYCL}    Corner2: @{" X  " LINK CONF_TEXT} |
+@{fg shine}|@{fg text}       Undo File: @{" Clips" LINK CONF_UNDO}                                    Brush: @{" *  " LINK CONF_TEXT} |
+@{fg shine}|                                                                          @{fg text}|
+@{fg shine}|@{fg text} @{"    Save    " LINK CONF_SAVE} @{"    Quit    " LINK CONF_QUIT} @{" (C)1995 by The Problem Coding Dept.        " LINK CONF_INFO}|
+@{fg shine}|@{fg text}@{u}                                                                          @{uu}|
+@ENDNODE
+
+@NODE CONF_INFO "Configuration Editor (information bar)"
+
+@{fg shine}@{b}The Information Bar@{fg text}
+
+This  textgadget will display information on every button.  This only works
+when this info is in the config-file (preceeded by a semi-column ';')@{ub}
+
+To show info, simply press any button in the window, and there it is!
+@ENDNODE
+
+
+@NODE CONF_NMBR "Configuration Editor (default numbers)"
+
+@{fg shine}@{b}The Numeric Default Settings@{fg text}
+
+The  first column of gadgets are for setting the default numeric variables.
+To  change,  simply click the gadget and type a new value.  If the value is
+too high it will be changed to the maximum value.  If your value is too low
+or otherwise invalid, the lowest possible value will be automatically set.
+
+1. @{fg shine}Activated Tool:@{fg text}@{ub}
+Can  be  a  value ranging from 1 to 10.  On startup of the ASCII Editor the
+tool with the specified number is already activated. In the information bar
+you can see which tool you activate after you filled in a number. The
+following tools are available:
+@{fg fill}
+        1 = Freehand                    6 = Draw Box    
+        2 = Fill Line                   7 = Draw Ellipse
+        3 = Airbrush                    8 = Paste Brush 
+        4 = Pick Brush                  9 = Text Edit   
+        5 = Straight Line               10= Clear       
+
+@{b}2. @{fg shine}Activated Colour:@{fg text}@{ub}
+Can  be  a  value  ranging  from  0 to 7, specifying which colour should be
+active on startup.
+
+@{b}3. @{fg shine}Project Width:@{fg text}@{ub}
+The default width of the project (in characters).  The minimum value is 77,
+the maximum is 250
+
+@{b}4. @{fg shine}Project Height:@{fg text}@{ub}
+The  default  height  of  the  project (the maximum nnumber of lines).  the
+minumum value is 29, the maximum is 250.
+
+@{b}5. @{fg shine}Airbrush Size:@{fg text}@{ub}
+A  value  ranging  from  1  to  10  which  sets the 'size' parameter of the
+Airbrush Options window in ASCII-Edit.
+@ENDNODE
+
+@NODE CONF_CYCL "Configuration Editor (cyclegadget defaults)"
+
+@{fg shine}@{b}The Cyclegadget Defaults@{fg text}
+
+The  second  column of gadgets are for setting the default settings of some
+cyclegadgets  in  ASCII  Edit.  To change, simply click the gadget to cycle
+through the options.
+
+        @{b}@{fg shine}Default Mode:@{fg text}
+        Switch between Foreground and Background@{ub}
+        To set the Front/Back switch in the Tools window of ASCII-Edit.
+
+        @{b}@{fg shine}Display:@{fg text}
+        Switch between Normal and AmigaGuide@{ub}
+        To set the display mode in the Options/Display menu.
+
+        @{b}@{fg shine}Airbrush Speed:@{fg text}
+        Switch betweem Fast and Slow@{ub}
+        To set the Airbrush Speed switch in the Airbrush Options window.
+
+        @{b}@{fg shine}Open Window:@{fg text}
+        Cycle through No Window, Load and Init New@{ub}
+        To set which window you want to be opened on startup:
+        @{b}No Window@{ub} :will do nothing.
+        @{b}Load@{ub}      :will open the Load window after the About requester is
+                   closed.
+        @{b}Init New@{ub}  :will open the Init New window after the About requester
+                   is closed. This is the window you get when you select
+                   the Project/New menu option.
+
+        @{b}@{fg shine}Freehand Type:@{fg text}
+        Cycle through Normal, Special1, Special2 and Special1&2@{ub}
+        To set the Freehand Mode cyclegadget in ASCII-Edit.
+
+        @{b}@{fg shine}Box Type:@{fg text}
+        Switch betweem Normal and Special@{ub}
+        To set the Box Type cyclegadget in ASCII-Edit.
+@ENDNODE
+
+@NODE CONF_TEXT "Configuration Editor (text defaults)"
+
+@{fg shine}@{b}The Text Defaults@{fg text}
+
+The  rightmost  column  of  gadgets are for setting the default settings of
+some  functions  in  the  ASCII Editor that need text supplied to them.  To
+change, simply click the gadget and type the new (single character-)string.
+
+What they mean
+@{fg shine}Horizontal:@{fg text} ('-')@{ub}
+The  character you choose will be used for specialmodes in the Freehand and
+Box  tools  of  ASCII-Edit.   The  'Horizontal'  character will be used for
+drawing horizontal lines.
+
+@{fg shine}@{b}Vertical:@{fg text} ('|')@{ub}
+This  character  will  be  used  to  draw vertical lines in special drawing
+modes.  (see above)
+
+@{fg shine}@{b}Corner1:@{fg text} ('+')@{ub}
+This  character  will  be  used  to draw crossings between 'Horizontal' and
+'Vertical'  characters.   It will also be used to draw the corners of boxes
+in the special boxdrawing mode.
+
+@{fg shine}@{b}Diagonal1:@{fg text} ('/')@{ub}
+This character will be used to draw diagonal lines in freehand drawing mode
+Special2  or  Special1&2.  It will be used when the mouse moved from bottom
+left to top right or vice versa.
+
+@{fg shine}@{b}Diagonal2:@{fg text} ('\')@{ub}
+This character will be used to draw diagonal lines in freehand drawing mode
+Special2 or Special1&2.  It will be used when the mouse moved from top left
+to bottom right or vice versa.
+
+@{fg shine}@{b}Corner2  :@{fg text} ('X')@{ub}
+This  character  will  be  used  to  draw crossings between 'Diagonal1' and
+'Diagonal2' characters.
+
+@{fg shine}@{b}Brush    :@{fg text} ('*')@{ub}
+This  character  will  be the active brush used by most of the tools in the
+ASCII Editor (like Freehand, Box, Circle, Line etc.).
+@ENDNODE
+
+
+@NODE CONF_PATH "Configuration Editor (default program path)"
+
+@{fg shine}@{b}The Default Path@{fg text}
+
+Here  you  can  decide  what the default path of ASCII-Edit should be.  The
+path you enter will be used when you access a filerequester (for loading or
+saving).  It will then read the directory you specify here.@{ub}
+@ENDNODE
+
+@NODE CONF_UNDO "Configuration Editor (name of undo file)"
+
+@{fg shine}@{b}The Undo Filebuffer@{fg text}
+
+In this stringgadget you should enter the complete path and the filename of
+the  Undo  filebuffer.  When you press Fix in the ASCII Editor it will save
+the undobuffer to this file in the Project format.@{ub}
+
+Make sure that the undofile can always be accessed! It should not be on a
+floppy disk. My personal advise is to put it in the clipboard like this:
+
+                           @{b}Clips:ASCII-Edit.UNDO@{ub}
+
+If  you  type  an illegal name for the undofile (one that can't be opened),
+ASCII-Edit  will  use  the  above default.  When you quit the ASCII-Editor,
+the Undo filebuffer will be deleted.
+@ENDNODE
+
+@NODE CONF_SAVE "Configuration Editor (save config file)"
+
+@{fg shine}@{b}Saving The Configuration File@{fg text}
+
+When  you  press  this  button  the  configuration will be saved in your S:
+directory as @{u}ASCII-Edit.Config@{uu}@{ub}
+
+The  file  will be saved in a readable-by-human format.  That means you may
+edit  it  using  a text-editor.  This is NOT recommended and should only be
+done when you don't have the ASCII-Config program.
+
+When you received the complete package, one configuration file is included.
+You should copy it into your S: directory before you start working with
+ASCII-Edit or ASCII-Config. This default file looks like this:
+@{fg fill}
+#000=001  ;Activated Tool, 01-10
+#001=001  ;Activated Colour, 00-07
+#002=077  ;Project Width, 77-250
+#003=029  ;Project Height, 29-250
+#004=002  ;Airbrush Size, 01-10
+#005=001  ;Activated Mode, 00=Back, 01=Front
+#006=000  ;Display, 00=Normal, 01=As AmigaGuide
+#007=000  ;Airbrush Speed, 00=Fast, 01=Slow
+#008=000  ;Window On Startup, 00=NoWindow, 01=Load, 02=Init
+#009=000  ;Freehandtype, 00=Normal, 01=Special1, 02=Special2, 03=Special1&2
+#010=000  ;Boxtype, 00=Normal, 01=Special
+#011=-    ;Specialmode Freehand/Box Horizontal
+#012=|    ;Specialmode Freehand/Box Vertical
+#013=+    ;Specialmode Freehand/Box Corner 1
+#014=/    ;Specialmode Freehand Diagonal 1
+#015=\    ;Specialmode Freehand Diagonal 2
+#016=X    ;Specialmode Freehand Corner 2
+#017=*    ;Default Brush Character
+#018=Work:Projects/Text/TP_FilesGuide/  ;Default Directory For Filerequester
+#019=Clips:ASCII-Edit.UNDO  ;Name Of Undo-Buffer
+@{fg text}
+If  you  do  decide  to edit it by hand, please make sure you have a backup
+copy.   Furthermore  make  sure  to keep everything on the same spot; don't
+change  001  to  02,  but  change  it to 002.  ASCII-Edit does check if the
+values  are  legal,  but  if  they're  not funny things may happen.  If you
+remove  lines  from  the file it could even crash your machine.  Also don't
+remove  the  text  behind  the  data,  since  it  is used by ASCII-Config's
+Information  bar  (the text is displayed there) You may however add comment
+lines.  They must be preceded by a semi column ';'
+@ENDNODE
+
+@NODE CONF_QUIT "Configuration Editor (quit)"
+
+@{fg shine}@{b}The End@{fg text}
+
+Well,  you  could  use  this to quit without saving by clicking this button
+before clicking the Save button, or you could use this button to Quit after
+saving,  by  clicking  it  after you saved the configuration...  decide for
+yourself.
+
+
+
+
+
+@{b}@{i}PS:@{ub}
+You  could  also  ignore  this  function  by  using the close gadget of the
+ASCII-Config  window,  or  by  resetting (or turning off) your Amiga before
+quitting the program.@{ui} ...HUH? -Ed.
+@ENDNODE
+
+
+
+
+@NODE ASCII-Format "The ASCII Text Format"
+
+@{fg shine}@{b}ASCII Text@{fg text}
+
+"What is ASCII anyway?" you may ask.  Well, to put it simple:  ASCII is the
+text  you  are  now  reading.   Yes, ASCII are all those lovely letters and
+numbers  that  magically  appear  on the screen when you press the matching
+key!@{ub}
+
+Ofcourse  in  a normal textfile, you won't see more than about 80 different
+ASCII  characters, but there are 256 of those characters!  So, where is the
+rest?   You can see a lot of them by typing this in the Shell:  TYPE <file>
+where file should be any random (non-text) file.  Now you will see that the
+screen  starts  flashing  while strange-looking characters are all over the
+place...   that's them!  Some of them have special functions (like flashing
+the  screen,  scrolling  a line of text (line feed) or make the cursor jump
+forward  some  steps).  One of those special characters is character number
+27,  and  that's  the  only  character that ASCII-Edit needs to use for all
+those special texts!
+
+
+
+@{b}Escape Codes@{ub}
+
+Character 27 is called ESC(APE) and is usually attached to the Esc key on
+your keyboard. If you enter the Shell and press escape, you will see a
+funny-looking character. If you use a normal font, it should be a square
+bracket ([) with inversed colours (blank character on a black background).
+
+The ASCII format uses this code for numerous things. I will only give you a
+few (mainly the ones that ASCII-Edit uses), to find out more you could just
+experiment some.
+
+
+
+Cursor Movements...@{ub}
+
+The  syntax  is  very simple.  An excape-code starts with the ESC character
+followed  by a normal square bracket ([), then numeric value and the 'name'
+of the code you are going to use...
+
+For  example:  The code for making the cursor jump a number of steps to the
+right  (without  printing  spaces)  is  C (not c, but C!).  So, to make the
+curser move 10 characters to the right we type:
+
+@{b}  @{fg back}@{bg text}[@{fg text}@{bg back}[10C@{ub}         (@{fg back}@{bg text}[@{fg text}@{bg back} is the escape character!)
+
+
+
+That's all really. We could do the same movement to the left, using code D:
+
+@{b}  @{fg back}@{bg text}[@{fg text}@{bg back}[10D@{ub}  will do the job...
+
+
+
+To move the cursor down 10 lines: @{b}@{fg back}@{bg text}[@{fg text}@{bg back}[10B@{ub}
+
+To move it back up again        : @{b}@{fg back}@{bg text}[@{fg text}@{bg back}[10A@{ub}
+
+I used the above 2 codes to do the scrolling of the logos in the Demo and
+the installer. What I did is this:
+
+@{fg fill}1. Create a variable called $ScrollUP containing 30 escape-codes for
+   scrolling DOWN one line ( @{fg back}@{bg text}[@{fg text}@{bg back}[1B ).
+2. Put the data that should be scrolled UP on the screen.
+3. ECHO (print) the $ScrollUP variable.@{fg text}
+
+The cursor will now move down the screen very quickly on a line by line
+basis. When it reaches the bottom it will scroll everything aboveit upwards!
+(This also happens when you reach the bottom of the screen when you are
+typing directly into the shell...)
+
+To scroll stuff down the screen, I did the same thing, but now with 30
+times @{b}@{fg back}@{bg text}[@{fg text}@{bg back}[1A@{ub} ...
+
+
+
+To place the cursor on a certain line from the top, you need escapecode H:
+
+  @{b}@{fg back}@{bg text}[@{fg text}@{bg back}[10H@{ub}   will put the cursor at the start of the 10th line. Now you can
+              place it anywhere on that line using the C code (see above)
+
+
+
+@{b}Colours and Fontstyles@{ub}
+
+The  nicest  code  of  all  has got to be m (m, not M!).  You can use it to
+determine  text and field-colours (pens) and fontstyles (bold, underlined).
+It works exactly the same as the above codes with the difference being that
+you  can  not  see  the results of these codes immediately.  You only set a
+colour  for  use  until a new code is entered.  Some codes can be combined,
+other's reset the old values...
+
+If  you  type  this in the Shell:  @{b}@{fg back}@{bg text}[@{fg text}@{bg back}[1m@{ub} you will notice that the prompt
+gets  back in a @{b}bold@{ub} fontstyle.  1m means you want @{b}bold@{ub} mode turned on.  To
+turn  @{u}underline@{uu}  mode  on,  enter  4m  in stead of 1m.  Use 3m for
+Italic and 0m to reset everything to normal.
+
+@{b}NOTE:  @{fg back}@{bg text}[@{fg text}@{bg back}[0m@{ub}   will reset EVERYTHING to normal. All settings will be
+                  overrided (including colour settings).
+
+
+To change the colour of the text in the shell, use @{b}@{fg back}@{bg text}[@{fg text}@{bg back}[3{ub}@{i}#@{ui}@{b}m@{ub}.  The @{i}# @{ui}may be
+any number in the range of 0 to 7.  Normally this is set to 1 (black):
+
+  @{b}@{fg back}@{bg text}[@{fg text}@{bg back}[31m@{ub}
+
+If you don't want the character itself changing colour, but only it's field
+(background, paper, etc.) colour, use @{b}@{fg back}@{bg text}[@{fg text}@{bg back}[4@{ub}@{i}#@{ui}@{b}m@{ub}.  Again @{i}# @{ui}may be any number
+in the range of 0 to 7.  Normally this value is set to 0 (grey/blank):
+
+  @{b}@{fg back}@{bg text}[@{fg text}@{bg back}[40m@{ub}
+
+If  you change the field colour, everytime you enter a space,  you will see
+a cursorsized block in  the specified colour.  If you would want to leave a
+blank space between 2 of those coloured blocks, you don't need to reset the
+colour to 0, simply use the cursor-jumping codes.  It works for me!
+
+
+@{fg shine}@{b}ASCII-Edit's Saving Methode@{fg text}@{ub}
+(You don't need to read this. It's confusing. -Ed.)
+
+ASCII-Edit saves ASCII-Files as followes:
+If  a  foreground  colour  is  different from the one currently in use, the
+colourchange  will  be  written  to  the file as soon as the foregrounddata
+holds  a  character  other  than a space.  So if you created a project with
+this line in it:
+
+@{fg shine}I created     @{fg text}this      @{fg fill}project@{fg text}
+
+ASCII-Edit will save the line as
+
+@{b}@{fg back}@{bg text}[@{fg text}@{bg back}[32mI created    @{fg back}@{bg text}[@{fg text}@{bg back}[31mthis      @{fg back}@{bg text}[@{fg text}@{bg back}[33mproject@{ub}
+
+and NOT
+
+@{b}@{fg back}@{bg text}[@{fg text}@{bg back}[32mI created@{fg back}@{bg text}[@{fg text}@{bg back}[31m    this@{fg back}@{bg text}[@{fg text}@{bg back}[33m      project@{ub}
+
+EXCEPT  when you use Underlined.  If you use underlined the escapecode will
+follow  directly after underlined mode is turned off.  Otherwise all spaces
+lying  between  two  areas  that  contain  text  would  be underlined.  (??
+Confusing  -Ed.)  Anyway,  I  won't  go  about explaining all this.  If you
+really are that keen on knowing how ASCII-Edit saves ASCII-files, just save
+some ASCII, load it in an editor and study.
+@ENDNODE
+
+
+@NODE Script-Format "The Script Format"
+
+@{fg shine}@{b}Amiga Scripting@{fg text}
+
+If  you  already  took  a good look at the Australia project, you will have
+noticed  that  it  contains  a  large amount of script files.  Personally I
+think  scripts  are  the best thing there are when it comes to ASCII-Editor
+usage.   You  can  use  them  to  link  ASCII-text  together  or  to create
+interesting and amazing Installers...@{ub}
+
+If  you  want to see what Scripting can do for you, just take a look at the
+Australia  installer  script.  I know it has been deleted (By the installer
+itself,  pretty  clever  if  I may say so!), but there's a duplicate in the
+examples scripts directory of ASCII-Edit.  Just load it into an editor like
+CED, or use a textviewer that can display texts without responding to ASCII
+escape  codes (like dirwork) and read through it.  If you don't get an idea
+or two from that...
+
+Oh, yeah, just as clever as the installer, is the opinion poll script, with
+the  @{u}cli-menusystem@{uu}  (Menu.script, also included) I'm really proud of!  The
+menusystem  was  written  without the need for ASCII-Edit ofcourse, but all
+the  rest was created in ASCII-Edit!  Anyway, if you haven't seen it yet...
+Go  and  do  it!   NOW!   (and  remember  to  send the results back to us!)
+
+Working  on  this  project  was...   learning more about ASCII, Scripts and
+AmigaGuides than I know about working on EP's...
+
+
+
+
+                                 @{"       " LINK Anim}
+
+You  see  this button?  If you press it, you'll see how you should go about
+creating  an  ASCII-Animation,  such as the Rotating Cube Anim example that
+came  with  the  EP.   If  you don't, I'll be very angry.  I might just get
+violent  you know...  I mean, I've spend almost an entire DAY to write that
+page,  and  you are just too damn lazy to read?!  I won't accept that!  Not
+from someone like you I won't!  @{i}You hear me?!@{ui}  ....erm, sorry for that...
+@ENDNODE
+
+
+@NODE Guide-Format "The AmigaGuide Format"
+
+@{fg shine}@{b}Amiga Guide@{fg text}
+
+Amiga Guide is so good because it's so incredibly easy to read. Reading a
+manual of a large program in AmigaGuide is much easier (and faster) than
+reading a loooong ASCII text.@{ub}
+
+
+Well  you're  reading  one right now, so let's assume you know how it looks
+and  what  it  does.  The biggest disadvantage is the amount of colours you
+can  use,  namely only 4.  You can use more, but you would probably have to
+mess  around  in the palette.prefs, using the Palette program.  Well, these
+settings  can  vary with every user, and if you change something, the whole
+workbench  looks  like  it  has  been  involved  in  some  kind  of nuclear
+experiment.   That's why ASCII-Edit will only save out 4 colours.  That is,
+if you used 8 colours in ASCII-Edit to draw the image, only 4 will be saved
+(colour  4  remapped to 0, 5 to 1, 6 to 2, and 7 to 3).  I'll tell you
+exactly what ASCII-Edit does and does not do in Guide Format.
+
+
+@{fg shine}@{b}The AmigaGuide Commands@{fg text}
+
+The  format  of  the  AmigaGuide  commands is simple.  Every command always
+starts  with  a  \@.  Some commands that have an immediate effect can be put
+right after this \@.  But most commands have to be put between { and }.@{ub}
+
+For instance, to change the font to topaz size 8, you type
+
+@{b} @FONT topaz 7@{ub}
+
+And to create a button called Wanda, that links to a node (=page) called
+WandaPage, you would type:
+
+@{b} \@{" Wanda " LINK WandaPage}@{ub}
+
+
+But  I  won't go and explain all that, because ASCII-Edit has nothing to do
+with  such  commands!   So,  let's  move  on to something a bit more on the
+subject:  @{b}bold@{ub}, @{u}underline@{uu}, @{fg shine}colours@{fg text} and @{bg fill}fieldcolours@{bg back}...
+
+To  make  a word like "Hello" appear on the screen in a bold fontstyle, you
+use the b command (Yes!  The b command!), like this:
+
+@{b} \@{b}Hello@{ub}
+
+All  text after \@{b} will be bold, until you turn off bold mode again using
+\@{ub} (let's call it unbold...) So if you type:
+
+@{b} \@{b}Hello\@{ub} Hello@{ub}    you will see: @{b}Hello@{ub} Hello
+
+
+Now,  the same thing goes for underlined mode.  You can use \@{u} to turn it
+on, and \@{uu} to turn it off again.  So if you type:
+
+@{b} \@{u}Hello\@{uu} Hello@{ub}    you will see: @{u}Hello@{uu} Hello
+
+And ofcourse, the same goes for Italic, now just use \@{i} and \@{ui}. If
+you type:
+
+@{b} \@{i}Hello\@{ui} Hello@{ub}    you will see: @{i}Hello@{ui} Hello
+
+
+
+@{fg shine}@{b}Colours@{fg text}
+
+Far  more  interesting are the colours!  You saw the TP-Files.Guide?  Well,
+there  you  have  all  the  examples  of  the world of what you can do with
+AmigaGuide  in  4 colours...  The colours in the AmigaGuide format all have
+their  own  name.  There are eight names (for there are 8 pens available in
+but  as  I  said earlier, ASCII-Edit will only use four:@{ub}
+
+  @{b}ASCII-Edit #@{ub}   | @{b}Description@{ub}           | @{b}Default@{ub}   | @{b}AmigaGuide Command@{ub}
+  0 (4)          | Background colour     | Grey      | @{bg text}@{fg back}Back@{bg back}@{fg text}
+  1 (5)          | Text colour           | Black     | Text
+  2 (6)          | Highlight colour      | White     | @{fg shine}Shine@{fg text}
+  3 (7)          | Fill colour           | Blue      | @{fg fill}Fill@{fg text}
+
+A  command to change a colour looks like this:  \@{xx yyyy}; xx is either fg
+or  bg  for  background or foreground (field or textcolour), yyyy is one of
+the above colourcodes.  So, to display the phrase "We're The Problem, Gotta
+Love Us!" in white letters, you should type:
+
+ @{b}\@{fg shine}We're The Problem, Gotta Love Us!\@{fg text}@{ub}
+If  you leave out the \@{fg text} at the end, all the text that follows will
+also  be white, until you change it to another colour.  To display the same
+phrase in white text on a blue background, you should enter:
+
+ @{b}\@{fg shine}\@{bg fill}We're The Problem, Gotta Love Us!\@{fg text}\@{bg back}@{ub}
+
+If  you would leave out the \@{bg back} at the end, all following text would
+be  on  a blue background.  It couldn't be easier...  Just one more example
+to finish it.  If you would want to display this:
+
+ @{b}@{u}@{fg shine}@{bg text}Gotta@{uu} Love Us!@{ub}@{fg text}@{bg back}
+
+you would have to type in all this:
+
+ @{b}\@{b}\@{u}\@{fg shine}\@{bg text}Gotta\@{uu} Love Us!\@{ub}\@{fg text}\@{bg back}@{ub}
+
+
+
+@{i}...mmm, maybe it could have been a bit easier...@{ui} (\@{i}!!!)
+@ENDNODE
+
+
+@NODE Anim "How to create an ASCII-Animation!"
+
+@{fg shine}@{b}ASCII Animation@{fg text}
+
+Did  you  know  that you too can create an ASCII-Animation without too much
+fuzz.   Before  you  read this, first read the pages about ASCII format and
+Scripting!@{ub}
+
+Remember the Australia installer? When it started you saw a Problem logo
+appearing in vertical columns, from the center of the screen. I will now
+fully explain how this was done...
+
+
+1. Load up ASCII-Edit
+2. Select Load from the Tools window, and in the filerequester go to the
+   Examples/Projects directory. Then select the file called Logo.Proj
+3. Press the Fix button to store the current screen
+4. Go in Background mode, select colour 0 (The first one, grey) and
+   activate the Draw Box tool. Now draw boxes over the screen to remove
+   everything but the three center columns of characters. So, when you're
+   done, there's only one verticle bar left, in the center of the screen.
+5. Press the Save button and in the Save window, select the ASCII
+   fileformat. Set the ASCIISpace cyclegadget to Escape-codes. Now save it as
+   Frame1
+6. Press the Undo button. You should now have the full logo back on your
+   screen.
+7. Now remove the centre column you saved in step 5, and leave everything
+   else on screen.
+8. Press Fix to store this screen.
+9. Now again remove everything from screen, except for three columns to the
+   right of the center columns you removed before, and three columns at the
+   left of it. So, when you're done, all that's left are two columns, with an
+   empty space between them
+10. Press Save again and Save it as Frame2
+11. Press Undo. Now you should have the full loge back on screen, but
+    with some columns missing in the middle (fixed in step 8).
+12. Remove the columns you just saved (to the left and right of the center)
+    and press Fix.
+13. Repeat from step 9 until you have reached the outer left and right limits
+    of the logo. The last frame you save is an almost empty screen with only
+    the utmost left, and utmost right columns of the logo.
+14. Quit ASCII-Edit. Yes Really...
+
+
+15. Load a Text Editor a la CED that can handle escapecodes.
+16. Load  Frame1
+17. Move the cursor to the bottom of the text.
+18. If you're in CED, press ESC and the [, then 0 and then H (capital, you
+    know with Shift) so you see @{fg back}@{bg text}[@{fg text}@{bg back}[0H
+19. Select Include File from the menu and load Frame2.
+20. Repeat  from  step  17  until  all  frames are in and then save it as
+    Logo.ASCII
+
+
+21. Clear the screen and type this:
+
+SETFONT topaz 8
+TYPE Logo.ASCII
+
+Save it as Logo.ANIM in the same directory as the Logo.ASCII file Make sure
+that an Icon is saved with the file (CED:  turn on Icon Creation)
+
+22.   Leave  the  editor  to  return to Workbench.  Now go to the directory
+where  you  saved  Logo.Anim  and  look  for it's icon and press it ONES to
+select  it.  From the Icon menu, select Information.  Now enter this in the
+Tool Types area:
+
+@{b} WINDOW=CON:0/0/640/256/Logo@{ub}
+
+
+and in the Default Tool area:
+
+@{b} IconX@{ub}
+
+and the press save.
+
+
+23.   Double  click the icon and if all went well, you should be looking at
+an  animated  logo,  appearing  from  the center outwards...  If it doesn't
+work, load the Logo.ASCII file in the editor and look for errors.
+@ENDNODE
+
+@NODE Bugs "Bugs"
+
+@{fg shine}@{b}Bugs In ASCII-Edit?@{fg text}
+
+ASCII-Edit has no real bugs in it, but there are some inconveniences.
+
+1. Redraw@{ub}
+Everytime  you press a slidergadget, the entire screen redraws itself, even
+if  you  didn't  move  the  slider.  I could tell you that this is an extra
+feature  of  ASCII-Edit  in  that  you have two extra Redraw Buttons, but I
+won't.
+
+@{"  " LINK /TP-Files.guide/Contact} If you find any other bugs contact the Bug-Extermination crew!
+@ENDNODE
+
+@NODE LoadGuide "How to load a node"
+
+@{fg shine}@{b}Loading Guides...@{fg text}
+
+ASCII-Edit  can load in a node from an AmigaGuide file.  If you selected an
+AmigaGuide  from  the Load filerequester, you will see a window pop up.  In
+the window are the following things:
+
+
+List-o-nodes@{ub}
+
+In  the  listviewer  area  you  will  see  a  list  of all the nodes in the
+AmigaGuide file.  If you want to read one, simply click on it's name in the
+list.   In  the background you will see a text-only version (no colours, no
+fontstyles  etc.)  This  way  you can search for the node you would like to
+load.
+
+@{b}Textfields@{ub}
+Next  to  the  list,  are  two  textgadgets.   The top one will display the
+selected  node.   The  bottom one shows the real title of the node (the one
+between " and " in the nodes title).
+
+
+@{b}Front&Back Cyclegadget@{ub}
+
+Use  the  cyclegadget  to  select  what  you  want  to load.  If you select
+"Front&Back"  ASCII-Edit  will  load  the  complete  node and all on-screen
+information  will be lost because the projects' size will be adapted to the
+size  of the node, so remember that.  If you select Front or Back then only
+that  information  will  be inserted into the current project.  The size of
+the project will not be changed, so set it up properly first.
+
+
+@{b}Load New Button@{ub}
+
+Use  this  to  bring up a filerequester which you can use to select another
+guide.
+
+
+@{b}PREV and NEXT buttons@{ub}
+
+Press  one  of  these  to  select the following or the previous item in the
+list.
+
+
+@{b}Load Selected Button@{ub}
+
+Pressing  this, will get ASCII-Edit to load in the selected node, and close
+the "Load Guide" window.
+
+
+@{b}The Cancel Button@{ub}
+
+Pressing  this,  will  get ASCII-Edit not to load in the selected node, and
+then close the "Load Guide" window.
+@ENDNODE

@@ -1,0 +1,226 @@
+FG24 i Animacje (czyli co ma piernik do wiatraka ;)
+
+
+
+Digitalizer FG24, szlagierowy produkt Elsatu, zadomowi³  siê  na  naszym
+Amigowym  rynku juû dobre kilka lat temu. Dziêki temu sprytnemu urz±dzeniu
+moûliwe  jest  zrzucanie  do  plików  graficznych  obrazu  z  wyj¶æ  VIDEO
+wszelakiej  ma¶ci  sprzêtu  domowego  uûytku. Pocz±wszy od magnetowidu, po
+kamery,  dekodery  telewizji  satelitarnych,  i  sam±  Amigê.  Digitalizer
+potrafi  takûe odczytywaæ telegazetê oraz tworzyæ czarno-bia³e animacje (o
+kolorowych moûe taktownie nie wspomnê ;).  Jednak,  szczerze  mówi±c,  ani
+Telegazeta,  ani  zgrywanie  animacji,  nie  wychodzi  mu najlepiej. Co do
+samego teletekstu, to  juû  w  ogóle  szkoda  gadaæ,  tylko  siê  cz³owiek
+zdenerwuje, ale je¶li za¶ chodzi o tworzenie animek to s± pewne sposoby na
+zniwelowanie niedoskona³o¶ci sprzêtowych naszego wspania³ego digitalizera,
+a  takûe  dostosowanie efektów jego pracy do warunków dzisiejszego, raczej
+"nieamigowego" ¶wiatka komputerowego.
+
+
+Jak  wiadomo  kaûdemu  u¿y(szko)dnikowi digitalizera FG24, sprzêcik ten w
+dosyæ dziwny sposób zgrywa animacje. Chodzi oto, ûe przy jej odgrywaniu ma
+siê  wraûenie,  ûe  jest trochê... za szybka, lub innymi s³owy odgrywana w
+zbyt szybkim tempie. Ale to  tylko  z³udzenie,  wystarczy  zmniejszyæ  ilo
+FPSów  (klatek  na  sekundê),  ûeby  ujrzeæ  ca³±  prawdê. Bajer w tym, ûe
+digitalizer ³apie klatki z pewnym opóúnieniem  i  przez  to  umyka  mu  za
+kaûdym razem kilka "frame-ów", a w efekcie filmowa animacja przypomina tak
+naprawdê lekko przy¶pieszony slideshow, a nie "p³ynny" orygina³ na  ta¶mie
+video.  FG24  poprostu  nie nad±ûa z zapamiêtywaniem klatek i zapisywaniem
+ich do pamiêci Amigi. Niewiem coprawda jak ta sytuacja przedstawia  siê  w
+przypadku digitalizerów wyposarzonych w interface PCMCIA, ale z tego co mi
+zachodnie wiatry donios³y ;) to i tam, ten problem  jest  wci±û  aktualny.
+Jedynym  wyj¶ciem  jakie  uda³o  mi  siê  wymy¶liæ  (w czasie gor±czkowych
+poszukiwaæ leku na t± dziwn± dolegliwo¶æ  FG24)  by³o  lekkie  wspomoûenie
+jego pracy w czasie zgrywania animacji. "Trik" ten napewno nie zadzia³a na
+sygnale p³yn±cym prosto z TV, ale w po³±czeniu z dobrym magnetowidem zdaje
+egzamin.  Patent  polega  na  tym  ûeby zwolniæ odtwarzanie ta¶my w czasie
+zrzucania przez digitalizer animacji do pliku. Wiem ûe nowsze  magnetowidy
+posiadaj±  tak± funkcje (i nie tylko nowsze) - nawet takie stare graty jak
+mój Panasonic z 1988 roku maj± na pilocie przycisk "SLOW". K³opot tylko  w
+tym  ûeby  za  bardzo  nie  przydobrzyæ  i  tym  samym nie zwolniæ zbytnio
+odtwarzania ta¶my, bo wtedy z  zaprogramowanych  50  klatek,  otrzymamy  3
+sekundy  bardzo  mu³owatego  filmu  :)  Ale  to  raczej ûaden problem, raz
+ustawiona prêdko¶æ "wolnego  odtwarzania"  jest  juû  zapamiêtywana  przez
+video  i  nie  trzeba jej ustawiaæ za kaûdym razem. Chociaû tak jak mówiê,
+patent dzia³a tylko wtedy gdy nasz magnetowid  (lub  kamera),  ma  funkcje
+zwolnionego  odtwarzania  ta¶my, w innym razie, niestety trzeba obej¶æ siê
+ze smakiem :(
+
+
+Teraz   nadszed³  czas  na  prawdziwe  miêsko,  a  ten  kto  przed  chwil
+"obszed³ siê  ze  smakiem",  niech  nie  zatrzymuje   ¶linotoku,   bo   za
+chwileczkê,   juû  a  momencik,  dos³ownie  za  kilka  chwil...  zaczniemy
+uzdatniaæ Amigowe animacje, tak ûeby moûna je by³o odczytaæ nie  tylko  na
+naszej  Ami, ale takûe na emulowanym Jabolcu, jak i na blaszaku u totalnie
+ciemnego kole¿ki :)) No to do dzie³a !
+
+
+Jak  kaûdy wie, poza Amig± ûaden inny komputer (bez dodatkowych zabiegów)
+nie jest w stanie odegraæ animacji w formacie IFF-Anim.  Makówka  bardziej
+preferuje  QuickTime-y, a pecet u koleszki MPEG i kilka formatów QT. Zatem
+aby uzdatniæ nasz± Amigow± animkê, musimy przekonwertowaæ j± do którego¶ z
+ww.   formatów.  Z  grubsza  wybór  mamy  miêdzy  kompresj±  do  MPEGa,  i
+Jabolcowych QuickTime-ów (czyli popularnych MOVików). Poniûej postaram siê
+omówiæ  sposób  konwersji  Amigowych  animek na oba te (jakby nie patrzeæ,
+dosyæ  popularne)  formaty  zapisu  animacji.  Wybór   którego¶   z   nich
+tradycyjnie  pozostawiam  czytelnikom,  chociaû dla mnie jest oczywisty :)
+Ale ûeby sprawiedliwo¶ci sta³o siê za do¶æ...
+
+
+>>>> MPEG <<<<
+
+
+Je¶li chodzi o format MPEG, to ja osobi¶cie jako¶ za nim  nie  przepadam,
+moûe  gdybym  mia³  lepszy sprzêt to doceni³bym jego walory. Prawdê mówi±c
+bez Ami¶ki z conajmniej 040-tk± na pok³adzie,  nawet  niema  co  do  niego
+podchodziæ.  Na  s³abszych  maszynach wszelkie operacje z MPEGami wykonuj±
+siê w i¶cie ûó³wim  tempie.  Jednak  dziêki  temu,  zyskujemy  na  niez³ym
+stopniu  kompresji  jakim  charakteryzuje  siê  ten  format,  a  to odbija
+siê automatycznie na konwertowanych  animacjach.  Pliczek  w  IFF-Anim  po
+przerzuceniu do MPEGa, zmniejsza swoj± objêto¶æ prawie trzy krotnie (!!!).
+Jednak w tej kwestii nawet MOViki (a przynajmniej niektóre  jego  odmiany)
+nie  pozostaj±  w tyle, ale o tym póúniej. Tak wiêc je¶li zdecydowa³e¶ siê
+na konwersjê swojej animki w³a¶nie do formatu MPEG  to  koniecznie  po³±cz
+siê  z  internetem  i  ¶ci±gnij  z  Aminetu  program, a raczej zbiór wielu
+urzytecznych  narzêdzi  o  nazwie:  Anim2mpegS.  Program  znajduje  siê  w
+katalogu  gfx/conv  i  zajmuje  289 kb. Znajdziesz tam równieû inn± wersjê
+tegoû utilitka  o  nazwie  Anim2mpegB,  ale  jako¶ nie  chcia³ on  u  mnie
+poprawnie  dzia³aæ  wiec  narazie  odpada  :)  Przejdúmy  moûe  do  samego
+programu. Zasada dzia³ania jest prosta - program tnie  pierwotn±  animacje
+na  klatki,  zapisuje  je jako obrazki JPEG, a na koïcu ³±czy je za pomoc±
+kompresora MPEG. Tak  powstaje  nowa  animka,  juû  ca³kiem  zjadliwa  dla
+przeciêtnego  blaszaka. Ale niestety jest to jedyna nagroda, za mêki jakie
+przechodzi nasza Amiga w czasie kompresji swoich ANIMek na MPEGi. Tak  jak
+wspomnia³em  wcze¶niej,  jest  to proces piekielnie procesorzerny, a co za
+tym idzie czasoch³onny  na  s³abszych  motorolkach.  Nawet  moja  poczciwa
+030/50Mhz nieúle napoci³a siê w czasie tworzenia 70-cio klatkowego eMPEGa.
+Jednym s³owem, zabawa dla posiadaczy szybkiego CPU (chociaû  jak  kto¶  ma
+sk³onno¶ci masochistyczne, to czemu nie ...;).
+
+Animki  w  formacie MPEG odtwarzaæ moûna min. przy pomocy Froggera i RiVy
+(to na Amidze), a na  piecu  pierwszym  lepszym  Movie  Plyerem  (VPlayer,
+MediaPlayer, Multimedialnym Od(ku)rzaczem Systemu Îindows).
+
+ 
+>>>> QuickTime <<<<
+
+
+I  oto moi kochani zielone ¶wiat³o dla Persila... to znaczy siê dla nieco
+mniej zbajerowanych Amisiek (chociaû IMHO bez 030-tki pod  mask±  siê  nie
+obejdzie).  Przedewszystkim  duûym  plusem  konwersji  na  ten format jest
+szybko¶æ z jak± "przeûuwana" siê animacja z IFF-Anim  do  QT  movie.  Jest
+nawet  2-3  razy  szybsza w porównaniu z mozolnym pakowaniem do MPEGa. Ale
+ûeby rozpocz±æ jak±kolwiek zabawê, najpierw  poci±gnij  z  Aminetu  pakiet
+Anim2qt   (jest  w  tym  samym  katalogu  co  Anim2mpeg).  Ca³o¶æ  zajmuje
+"zaledwie" 170 kb, a po rozpakowaniu 199 :) Ale mniejsza  z  tym.  Obs³uga
+programu jest niemal identyczna jak w przypadku Anim2Mpeg, dlatego niebêdê
+siê nad tym rozpisywa³. Skupiê siê  jednak  na  bardzo  waûnym  problemie,
+który  powstaje  zaraz  po  przekonwertowaniu  Amigowej  animki  do "Quick
+Timeowego" MOVika. Sprawa napewno nie jest  tak  prosta  jak  w  przypadku
+eMPEGów,  które to odrazu po konwersji nadaj± siê do odtworzenia na kaûdym
+PupCiowanym blaszaku. Tutaj animka wychodz±ca spod rêki Anim2qt, bêdzie  w
+stanie  odegraæ  siê TYLKO  na Macintoshu i Amidze (CyberQT). Nawet "nasz"
+os³awiony Movid, wy³oûy siê przy próbie odegrania  takiej  animacji.  Ca³±
+zadyme  robi  tutaj  rodzaj  QuickTime`owego  formatu. Chodzi oto, ûe jest
+wiele róûnych rodzajów animki QT. Jedne  s±  mniej  efektowne  (Animation,
+Video), ale za to ³atwiej "odgrywalne" na s³abszych konfiguracjach, a inne
+bardziej (Cinepak, JPEG), ale zarazem ciêûkie do odczytania na  poczciwych
+030-tkach.  Problem  w tym, ûe przeciêtny pecet (bez dodatkowych nak³adek)
+potrafi odczytaæ tylko  jeden  format  animki  QT  -  "Cinepak".  A  nasza
+animacja,  niestety  jak  na z³o¶æ jest w ca³kowicie innym formacie ("JPEG
+Movie"). No i tutaj pojawia siê k³opot - co z tym fantem zrobiæ ?  S±  dwa
+sposoby.  Albo  zaczynasz  szperaæ po kompaktach pecetowych czasopismach w
+poszukiwaniu  QuickTimePlayera  któr±¶tam  wersjê  "FOR   WINDOWS",   albo
+za³±czasz  emulowanego  Macintosha  i  rekompresujesz  animke  na Cinepaka
+(format zjadliwy dla peceta). Przyznam siê szczerze, ûe  duûo  ³atwiejszym
+rozwi±zaniem   jest   tutaj   odnalezienie   i  instalacja  QTPlayera  pod
+blaszakiem. Program zajmuje niezbyt wiele miejsca na twardym dysku (4 MB w
+porywach   do   7MB),  a  co  najwaûniejsze  odczytuje  wszystkie  formaty
+QuickTime-ów. Do tego jest prawie na kaûdym kompakcie magazynu  NET,  WWW,
+CHIP   i   tego  rodzaju  mlodzierzowych  pisemkach  :))  Dlatego  z  jego
+znalezieniem nie powinno byæ a¿ tak strasznego problemu. Ale....
+
+
+Je¶li  wybierzesz  drugi  wariant,  to  odpalaj Jabolca i bierzemy siê do
+roboty. Teraz wszystko zaleûy  od  oprogramowania,  jakim  dyspomujesz  na
+emulowanym  Macintoshu.  Najlepiej ûeby znalaz³o siê tam takie cudeïko jak
+MoviePlayer lub DesktopMovieFat. Z tym  ostatnim  to  najmniejszy  k³opot,
+programik jest shareware i leûy sobie pod adresem:
+
+
+ftp://ftp.leo.org/pub/comp/os/macintosh/leo/quicktime/desktop-movie-150.si
+t
+
+
+Zajmuje dok³adnie 102 kb, a ¶ci±ga siê ca³kiem przyjemnie. Mimo  wszystko
+lepiej  w  roli  "rekompresora"  sprawuje siê MoviePlayer. Dlatego na jego
+przyk³adzie  omówiê  sposób  rekompresji.  OK,  bez  zbêdnych   ceregieli,
+wczytujemy na maæku MoviePlayera, potem animkê do rekompresji, nastêpnie w
+menu "File" wybieramy opcje "Export". Pojawi siê okienko, w którym klikamy
+na  przycisk  "Options".  I  w  ten  sposób dochodzimy do "ustawieï filmu"
+("Movie Settings" - jak na zrzucie  1).  Teraz  przedewszystkim  odkliknij
+gadûet  na  samym  dole  -  "Fast Start for the Internet", i wejdú do menu
+"Settings".  Tutaj  otwiera  siê  okienko  ustawieñ  kompresji  ("Compress
+Settings"  -  foto  numerek  zwei  :).  I  tu wybieramy odpowiedni format,
+oczywi¶cie  chodzi  nam  o  Cinepaka,  chociaû  w  czasie  rekompresji  na
+wolniejszych  maszynkach,  potrafi  skutecznie  zamroziæ  Jabolca,  ale co
+zrobiæ jak niema innego wyj¶cia (poza instalk± QTPlayera na  blaszaku  :).
+Wybieramy  teû ilo¶æ kolorów, tutaj teû niema co szaleæ, ustawiamy zgodnie
+z prawd± - 256 Grays. Na koniec zosta³  jeszcze  suwak  "Quality",  dziêki
+niemu  ustawiamy  jako¶æ przetwarzanej animki. Moûna spokojnie zostawiæ na
+Medium lub przeci±gn±æ do High lub Best. No i to by by³o  chyba  wszystko,
+zatem wciskamy OK i wybieramy ¶cieûkê dostêpu dla zrekompresowanej animki.
+Teraz  Jabolec  spróbuje  przerzuciæ  star±  animacje  do  Cinepaka.   Ale
+zaznaczam,  moûe siê przy tym trochê pomêczyæ. Napewno sporo czasu zejdzie
+zanim pojawi siê okienko "Exporting Movie", potem  powinno  pój¶æ  jak  po
+ma¶le, chociaû róûnie to bywa. Ale je¶li wszystko przebieg³o bez wiêkszych
+komplikacji, to moûemy siê wreszcie braæ za testowanie. Najlepiej mieæ pod
+rêk±  jakiego¶  blaszaka,  ale  testy  da  siê teû przeprowadziæ na naszym
+Movidzie,  lub  CyberQT.  Szczególnie,  ûe  ten  ostatni  pokazuje  (przed
+puszczeniem  animki)  format  w  jakim  zosta³a  skompresowana. A wiec jak
+nabazgroli co¶ takiego "Video: Radius Cinepak, 8 bit" to jeste¶my  w  domu
+:)))  Coprawda  odgrywanie animacji MOVie na Amidze zajmuje trochê procka,
+ale co tam, je¶li zyskujemy ca³kowit±  kompatybilno  z  reszt±  ¶wiata,  a
+takûe  ca³kiem  zno¶ny stopieï kompresji, to niema co narzekaæ :). Jak dla
+mnie to w obecnej chwili najlepsze  rozwi±zanie  dla  Amigowców,  chc±cych
+prezentowaæ  swoje digitalizowane animki nie tylko na Amidze, ale takûe na
+równoleg³ym ¶wiecie, zalanym przez niebiesk± masê  zagrzybia³ych  PieCyków
+:)  Napewno warto poeksperymentowaæ. Ja z uporem maniaka, polecam instalkê
+QuickTimePlayera pod Windoz±. Ma siê wtedy naprawdê  duuuûo  wiêksze  pole
+manewru, niû w przypadku go³ego peceta.
+
+
+No i w ten sposób dochodzimy do koïca moich dzisiejszych wywodów, na temat
+konwersji  Amigowych animacji do formatów MPEG i QT. Wybór, którego z nich
+pozostawiam oczywi¶cie czytelnikom,  ale  ja  osobi¶cie  obstawa³bym  przy
+QuickTime-ie.  Swoj± drog± eMPEGi teû uszy³yby w t³oku... ale ta kompresja
+- co¶ strasznego!!! :(  W³a¶cicielom  030-tek,  radzi³bym  uzbroiæ  siê  w
+cierpliwo¶æ  (oraz w wagon ciastek i torebkê herbaty :) Co innego taki QT,
+animka przerzuca siê w mgnieniu oka, no chociaû czeka nas  jeszcze  trochê
+zabawy  pod  emulowanym  Macintoshem, ale to juû szczegó³. Z tego co tutaj
+napisa³em wynika odwieczna,  komputerowa  maksyma  -  wszystko  zaleûy  od
+sprzêtu!  Jak  dysponujesz szybk± Amisi± to moûesz pokusiæ siê o kompresje
+do MPEGów, ale je¶li masz 030 on board,  albo  co  gorsza  020  to  lepiej
+skombinuj  QTPlayera  pod  blache  i  konwersuj  animke do Quick Timeowego
+MOVika :)
+
+        
+...no wiêc trzymajcie siê i do nastêpnej kompresji
+
+
+....wasz niezmordowany
+
+
+Marx ex FueGo [lM+7d]
+
+
+fUego@go2.pl
+
+
+p.s.  Jeszcze  moûe  ma³a  rada   dla   nieszczê¶ników,   nieposiadaj±cych
+magnetowidu  z moûliwo¶ci± zwalniania ta¶my. Je¶li chcecie ûeby animka QT,
+odgrywa³a siê w miarê normalnie (a nie z prêdko¶ci± samolotu  odrzutowego)
+to  zapu¶cie CEDa i w pliku "An2qt" w lini 34 zmieïcie warto¶æ fps-ów z 10
+na 5. Dziêki temu, film trochê  zwolni  i  zacznie  przypominaæ...  trochê
+szybciej  puszczany  slideshow.  :) No co? W koïcu na bezrybiu i rak ryba!
+:))

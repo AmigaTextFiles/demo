@@ -1,0 +1,83 @@
+
+Short:    Partyslide and report fresh from TG99.
+Uploader: per_kris@hig.no (tecon/planet.jazz)
+Author:   crisp@unicall.be (crisp/planet.jazz)
+Type:     demo/slide
+
+                                     _ · _
+      ···          ___ __ _ __   __ __ : __ __ _  __ _ __ ___          ···
+      :::        _.)__))      )_))   (_|_)   (((_(      ((__(._        :::
+      :::        \|                    :                     |/        :::
+      :::         :                    .                     |         :::
+      :::   ________ ___     ·      __   ________     ____   · ___     :::
+     _ __ _/    ._  \\  \_____\_____) \ _)   ._  \_ _/  _/_____)  \_ __ _
+      \\_\\_   _l/   ¯   \    \\    _  \\    l/   (_)  _)   _ _     ))_))
+      ... ./   \_._______/     \   _)   _____/         `   _\       \  ...
+      ::: |______|.      \_________\____)   \________________________\ :::
+      :::         |_ aBHO  ...                              _.         :::
+      :::         |/      :::::                             \|         :::
+      :::         :        :::::    __       ___      ___    :         :::
+ _ _________________.:::___.:::'____) \  ___(_ /_____(_ /_.__________________ _
+                   ::::.   ::::     _  \/  _._/     _._/  |
+     · pLANEt ·    `::::: :::::    _)      \|   _   \|   _|      · jAZZ ·
+ _ _________________`::::::::'_____\________\___\  __\___\  _________________ _
+      ...         .                              \/       \/ .         ...
+      :::         |_  _        ____ __ __ __ ____        _  _|         :::
+      :::          (_((___/\  _)___))_))((_((___(_  /\___))_)          :::
+      ...                   \/         ¯¯         \/                   ...
+
+
+The era of party-slides ain't over. In true style we bring you the
+atmosphere from The Gathering in this 'live'-release.
+
+Happy Easter!
+
+Planet Jazz, The Gathering 1999 Report - moments of truth
+---------------------------------------------------------
+* 99% os-legal code :-)
+
+* Multitasking with Amiga+M
+
+* It's ofcourse 100% gfxboard compatible (tested on CVision64/3D).
+
+* Defaults to PAL:Lo-Res, but userselectable screenmode with the REQ or
+  SCREENMODEREQ option. (see below). Even with GFXBoards, PAL:Lo-Res is
+  the main resolution; GFXBoard owners have to select the main screen's
+  resolution theirselves, mainly because of uniformity reasons).
+
+* GFXBoard users should note that this production is completely designed
+  for 320x256 resolutions. If you don't have this resolution (or use the
+  320x240 resolution) the screen is partially cut of. You can autoscroll
+  the main menu downwards though.
+
+* Fading is not really smooth on GFXBoards. This isn't a bug in our code
+  but a bad handling of fading in CyberGraphX. (For the coders out there
+  this means: Calling LoadRGB32 50 times in 1 second isn't quite good in
+  CyberGraphX screens).
+
+* CLI usage is as follows:
+
+  tg99slide.exe M=MODEID REQ=SCREENMODEREQ F=FORCE
+
+  MODEID 		: The mode-id of the screenmode you want to use.
+                          Enter it in decimal or hex (hex requires the $
+                          sign in front of the modeid number!)
+
+  SCREENMODEREQ		: Display a screenmode requester. This overrides
+                          the specified screenmode
+
+  FORCE			: Skip the systemcheck and try to run the report
+                          anyway. This is not advisable since unexpected
+                          things might happen!!! It is worth a try if it
+                          complains... Note that you will have to select
+                          a screenmode here (it will pop-up a screenmode
+                          requester). Make *sure* the mode you select is
+                          either an Amiga native screenmode, or when you
+                          are using CyberGraphX, that the screenmode has
+                          at least 320x256 dimensions.
+
+* This production requires 2 Mb of FAST Ram and 1 Mb of Chip. Users with
+  only 2 Mb of RAM can try depacking the main executable file (using xfd
+  for example) and run it that way. Users with only 3Mb of total ram are
+  adviced to boot without startup-sequence and run it from there (stone-
+  cracker-unpacking takes quite some memory).

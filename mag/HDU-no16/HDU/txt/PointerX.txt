@@ -1,0 +1,48 @@
+===========================================
+PointerX
+===========================================
+
+=======================
+What does it do and why ?
+=======================
+Some time in 1994, I got a program called PointerX 2.0 from a 
+magazine coverdisk, which made me think `Cool!, This program 
+makes the hands on the busy pointer spin!' However, after 
+loading the program on my 1200, it refused to animate the busy 
+pointer!
+
+So, I threw the disk back into the diskbox, and continued with 
+everyday life. That was, until one day when I was soooo bored 
+whilst waiting for a program to assemble, that I thought, `shame 
+PointerX don't work, it'd look real neat right now'. A quick 
+disassembly/fix-up later, and PointerX 3.00 was made.
+
+And since then, I've been updating PointerX the whole time.
+
+Version 4 saw more or less a complete re-write, as some features 
+were impossible to implement easily on the old framework. The 
+4.x generation brings resolution support, Choice of one or two 
+hands, Recognition of more busy pointers, better patching, lower 
+usage of memory, and probably much more to come!
+
+Some people have suggested that I shouldn't take credit for 
+PointerX However, I would like to point out, that the only remnant 
+of Steve Tibbetts PointerX 2 in my version, is the pointer graphic 
+data. (And as of v4.5 even that has changed!) EVERYTHING has 
+been recoded, now, completely from scratch, and bears very little 
+resemblance to Steve's original version. Also, I think, judging by 
+the structure of the v2.0 code, I'd say that Steve's version may 
+have been written in C. 
+
+=============
+Requirements
+=============
+To run PointerX you need...
+° Workbench 2 or above. (Yup, now even WB3 is okay!)
+° Something that sets the busy `clock' pointer
+(To test it, Load a workbench, select `execute program' and click
+back in the workbench screen ;^) 
+*NB: Since v4.1, PtrX will also replace busy pointers from several
+other programs.
+
+No other requirements whatsoever.

@@ -1,0 +1,188 @@
+
+ The aim of this script is to explain the Multi-Parameters concept...
+ What is it ?
+
+ In many effects in Karate, you need a serie of parameter like this:
+ ...
+ <Pa> cte|0 </Pa> X1 4 floats standing for the coordinates of a rectangle.
+ <Pa> cte|0 </Pa> Y1
+ <Pa> cte|1 </Pa> X2
+ <Pa> cte|1 </Pa> Y2
+ ...
+
+ or maybe sometimes only a couple of floats are needed,
+ for exemple to describe a 2D coordinates X,Y:
+ ...
+ <Pa> cte| 0.5 </Pa>  we need X here
+ <Pa> cte| 0.5 </Pa> we need Y here.
+ ...
+
+ Here, the parameter "cte" is used to give the value to be filled.
+ A lot of parameters, like "sin" or "aff" or "bounce", fill just one
+ float parameter.
+
+ But some parameters, like "2cte", stand for 2 parameters, while
+ others like "4cte" or "4cam" fill 4 parameters:
+ that mean:
+ ...
+ <Pa> 4cte |0|0|1|1</Pa>
+ ...
+ is equivalent to:
+ ...
+ <Pa> cte|0 </Pa>
+ <Pa> cte|0 </Pa>
+ <Pa> cte|1 </Pa>
+ <Pa> cte|1 </Pa>
+ ...
+ or again, equivalent to:
+ ...
+ <Pa> 2cte |0|0</Pa>
+ <Pa> 2cte |1|1</Pa>
+ ...
+
+ the MultiParameters in karate always have a name that start with the number
+ of parameter they fill.
+
+ It could just look like a simple convenience for writing, but it is much more
+ powerful than that:
+ We have seen a sprite , for exemple, need a "X1,Y1,X2,Y2" suit to know
+ where to scale its image in the screen,which a lot effects do.
+ This is quite hard to use, because when you move a sprite (like in A04 script),
+ you must put an equation for these 4 coordinates, with 4 parameters...
+
+ A very much simple use to put a sprite on the screen is to use parameter
+ "4cam": It will find the 4 rectangle coordinates for you.
+
+ So, instead of having this stupid form:
+
+    <Fx>
+        <Pa>Sprite</Pa>
+        <Pa> </Pa>
+        <Pa> imghost </Pa>
+        <Pa> sin | 0.25 | 0.7 | 0.5</pa>   4 complicated equation for the rectangle.
+        <Pa> cte | 0.25 </pa>
+        <Pa> sin | 0.75 | 0.7 | 0.5</pa>
+        <Pa> cte | 0.75 </pa>
+    </Fx>
+
+ you will have:
+
+   <Fx>
+        <Pa>Sprite</Pa>
+        <Pa> </Pa>
+        <Pa> imghost </Pa>
+        <Pa> 4cam | cameraname |1|1|0|0|3 </Pa>
+    </Fx>
+
+ 4cam need a camera object to be created with <KCAM >.
+ the meaning of the under-parameters are:
+ > 4cam | cameraobject
+        | width aspect
+        | Height aspect
+        | space coord X
+        | space coord Y
+        | space coord Z
+
+so now to move the sprite, you just have to move the camera.
+( ok... i'll do a "4camob |camera| spaceobject" multiparam one day).
+
+
+ A last note: multiparameters can fill a list of parameter of different type.
+ you could imagine:
+<fx><Pa>sprite</Pa>
+    <Pa> 6myverystrangeparamater </Pa>
+</fx>
+ where "6myverystrangeparamater" would fill "rectangle,image,float,float,float,float".
+
+
+ Some words about the camera object:
+
+ Many effects in KARATE are (and future others will be) three-dimensionnal.
+In order to organize all the views, the build-in Object builder
+<KCAM > can create cameras object. a camera knows its space position,
+the angles where it looks and the FOV (focale length) that handle
+the camera angle of view.
+
+-------------- the main script is:
+<MAIN> myscript |0|1</MAIN>
+
+------------- let's build image
+<KIMG> impacman | data/oldpac.iff </KIMG>
+<KIMG> imghost  | data/ghost1.iff </KIMG>
+<KIMG> imghost2  | data/inky.iff </KIMG>
+
+ ------------- let's build a camera object
+
+<KCAM> cam_1 |0|0|0|0|0|0|1  </KCAM>
+  the camera cam_1 has position X,Y,Z to 0 and
+  angle O1,O2,O3 to 0, focale length = 1 (90° of angle view.)
+
+
+ ---------------------------- just one part to play
+
+<KSCRIPT>
+    <ID> myscript </ID>
+    <PLAY> mypart | 99999 | 0 | 1 </PLAY>
+
+</KSCRIPT>
+
+---------------------------------------------
+
+<KPART>
+
+    <ID> mypart  </ID>
+
+ as usually, colors need to be set:
+
+    <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> impacman </Pa>
+    </Fx>
+
+----------------- screen to black
+    <Fx><Pa> FillRC</Pa>
+        <Pa></Pa>
+        <Pa> cte | 0  </Pa>
+    </Fx>
+
+
+------------- place camera in space according to a sinus movement.
+ <Fx><Pa> SetCamCoord </Pa>
+            <Pa> cam_1 </Pa>
+
+            <Pa> cos |0|0.8|1</Pa>    x
+            <Pa> cte | 0 </Pa>        y
+            <Pa> sin |-0.5|0.8|1</Pa>    z
+
+            <Pa> 3cte |0|0|0</Pa>  a multiparameter setting angle o1,o2,o3 to 0
+
+            <Pa> CTE | 0.8 </Pa>  FOV (never set 0 or negative, mathematicaly impossible.)
+            </Fx>
+
+
+-------------- display sprite  with a 4cam multiparameter
+   <Fx><Pa> Sprite </Pa>
+        <Pa></Pa>
+        <Pa> impacman </Pa>
+        <Pa> 4cam| cam_1 |1|1|-1|0|4 </Pa>  z=4,far away in front of the camera
+    </Fx>
+
+-------------- display sprite  with a 4cam multiparameter
+
+  <Fx><Pa> Sprite </Pa>
+        <Pa></Pa>
+        <Pa> imghost2 </Pa>
+        <Pa> 4cam| cam_1 |1|1| 1|0|4 </Pa>  z=4,far away in front of the camera
+    </Fx>
+
+----------------------
+   <Fx><Pa> Sprite </Pa>
+        <Pa></Pa>
+        <Pa> imghost </Pa>
+        <Pa> 4cam| cam_1 |1|1|0|0|3 </Pa>  z=3,far away in front of the camera
+    </Fx>
+
+
+
+ 
+</KPART>

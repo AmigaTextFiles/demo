@@ -1,0 +1,608 @@
+\ This is an example of hardware sprite animation
+\ using attached sprites.
+\ Jon Bryan:03-25-87
+
+anew DemoMarker
+\ If DemoMarker exists, it and all subsequent words are
+\ forgotten and a new word DemoMarker is then created
+\ which does nothing.  Handy during development.
+
+DECIMAL
+
+31415821    constant random.b
+100000000   constant random.m
+here        variable random.seed random.seed !
+
+: random  ( --- n1 )
+  random.seed  @ random.b m*
+  swap 1 + swap                      \ double numbers in low high format
+  random.m m/mod
+  drop
+  dup random.seed ! ;
+
+: choose ( n1 --- n1 ) \ 
+  random m* random.m m/mod
+  swap drop ;
+
+256 CONSTANT ScanBufSize
+CREATE ScanBuf ScanBufSize ALLOT
+
+: SpriteLine   ( -- addr1\addr2 )
+   ScanBuf ScanBufSize INFILE @ READ.TEXT 1- ( trim delim )
+   ScanBuf + DUP 16 - ;
+
+: ?SpritePixel   ( character\base -- value )
+   DIGIT NOT  ERROR" Illegal Sprite Color" ;
+
+: OR_SpritePlanes   ( number\address -- )
+   SWAP  2 /MOD     ( separate the two bits)
+   SWAP  16 SCALE   ( slide the low-order bit up a word)
+   OR               ( put them back together)
+   OVER @  2*       ( move the stored value one place left)
+   OR  SWAP !       ( and OR the new bits into place.) ;
+
+: DoSimplePlanes   ( image\height -- )
+   0 DO  SpriteLine
+       DO  IC@ 4 ?SpritePixel OVER  OR_SpritePlanes
+       LOOP  4+
+   LOOP  DROP ;
+
+: ImageSize   ( height -- height\#bytes )   DUP 4* 8+ ;
+
+: Sprite   ( height -- )
+   ImageSize
+   CREATE  HERE
+     LOCALS|  image  size  height  |
+     size ALLOT  image size ERASE
+     image 4+ height  DoSimplePlanes ;
+
+structure AttachedSprite
+   simpleSprite STRUCT:  +asEvenSprite
+   simpleSprite STRUCT:  +asOddSprite
+structure.end
+
+: OR_AttachedPlanes   ( char\even sprite\odd sprite -- )
+   LOCALS|  odd  even  |
+   DUP 4/  odd OR_SpritePlanes    \ shift the two MSB's
+   3 AND  even OR_SpritePlanes ;  \ mask the two lowest bits
+
+: aImageSize   ( height -- height\offset\total size )
+   ImageSize DUP 2* ;     \ for two sprites
+
+: DoAttachedPlanes   ( image\height\offset -- )
+   LOCALS| offset |
+   0 DO  SpriteLine
+       DO  IC@ 16 ?SpritePixel   \ allows characters 0-F
+         OVER DUP offset +  OR_AttachedPlanes
+       LOOP   4+   \ increment the pointer 
+   LOOP  DROP ;
+
+: Attached   ( height -- )
+   aImageSize
+   CREATE  HERE
+   LOCALS|  image  size  offset  height  |
+     offset 2+ W,      \ lay down offset to "attached" image
+     size ALLOT  image 2+ size ERASE     \ reserve the space
+     128 image 2+ offset + !             \ set "attach" bit
+     image 6+ height offset  DoAttachedPlanes ;
+
+: +EvenImage   ( addr1 -- addr2 )   2+ ;
+
+: +OddImage   ( addr1 -- addr2 )   DUP W@ + ;
+
+struct AttachedSprite Ball
+  15 Ball +asEvenSprite +ssHeight W!
+  15 Ball +asOddSprite  +ssHeight W!
+structend
+
+: MakeBall   ( name ( height -- )
+   Attached           \ CREATE is imbedded here
+   DOES>   ( -- )
+     ViewAddress +vViewPort @  SWAP 2DUP
+     Ball +asEvenSprite  SWAP +EvenImage  ChangeSprite
+     Ball +asOddSprite   SWAP +OddImage   ChangeSprite ;
+
+\ The values for the following images were derived with a
+\ combination of an equation gleaned from "Graphics and Image
+\ Processing" by Theo Pavlidis and "Calibrated Eyeball."
+
+15 MakeBall 0Ball
+   0000007777000000
+   0000754444570000
+   00A6544334456A00
+   0086544334456800
+   0B876544445678B0
+   0B987665566789B0
+   ECA9877777789ACE
+   EDBA99888899ABDE
+   EEDCBBAAAABBCDEE
+   0FEEDCCCCCCDEEF0
+   0FFEEEEEEEEEEFF0
+   00FFFEEEEEEFFF00
+   00FFFFFFFFFFFF00
+   0000FFFFFFFF0000
+   000000FFFF000000
+
+15 MakeBall 1Ball
+   0000000000000000
+   0000087777800000
+   0009544334459000
+   00A6544334456A00
+   0097654444567900
+   0B987665566789B0
+   0DA9877777789AD0
+   0EBA99888899ABE0
+   0EDCBBAAAABBCDE0
+   0FEEDCCCCCCDEEF0
+   00FEEEEEEEEEEF00
+   00FFFEEEEEEFFF00
+   000FFFFFFFFFF000
+   00000FFFFFF00000
+   0000000000000000
+
+15 MakeBall 2Ball
+   0000000000000000
+   0000000000000000
+   0000009779000000
+   0000964334690000
+   0009654334569000
+   0009766556679000
+   00B9877777789B00
+   00CA99888899AC00
+   00ECBAAAAAABCE00
+   000EDDCCCCDDE000
+   000FEEEEEEEEF000
+   0000FFFFFFFF0000
+   000000FFFF000000
+   0000000000000000
+   0000000000000000
+
+15 MakeBall 3Ball
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000009779000000
+   0000A743347A0000
+   0000965445690000
+   000A87777778A000
+   000CA988889AC000
+   000EDBAAAABDE000
+   0000EEEDDEEE0000
+   0000FFFFFFFF0000
+   000000FFFF000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+
+15 MakeBall 4Ball
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000009669000000
+   0000075335700000
+   0000976556790000
+   0000B987789B0000
+   0000EDBBBBDE0000
+   00000FEEEEF00000
+   000000FFFF000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+
+15 MakeBall 5Ball
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000009669000000
+   0000096336900000
+   00000B9779B00000
+   00000EDCCDE00000
+   000000FFFF000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+
+\ The following word allows the creation of arrays of
+\ "execution vectors."
+
+: VECTOR:   ( name ( -- )
+   [COMPILE] :
+   DOES>   ( n -- )
+     SWAP 2* + W@EXECUTE ;
+
+VECTOR: ChangeBall   ( n -- )
+   0Ball 1Ball 2Ball 3Ball 4Ball 5Ball ;
+
+struct SimpleSprite Shadow
+  18 Shadow +ssHeight W!
+structend
+
+: MakeShadow   ( name ( height -- )
+   Sprite
+   DOES>   ( n -- )
+     ViewAddress +vViewPort @ Shadow ROT ChangeSprite ;
+
+\ These simple sprites are a bit taller than the ball
+\ sprites.  That way they both use the same x,y
+\ coordinates and no offsets are necessary.
+
+18 MakeShadow 0Shadow
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000222222220000
+   0222222222222220
+   2222222222222222
+   2222222222222222
+   0222222222222220
+   0000222222220000
+
+18 MakeShadow 1Shadow
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000022222200000
+   0022222222222200
+   0222222222222220
+   0022222222222200
+   0000022222200000
+   0000000000000000
+   0000000000000000
+
+18 MakeShadow 2Shadow
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000022222200000
+   0002222222222000
+   0022222222222200
+   0002222222222000
+   0000022222200000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+
+18 MakeShadow 3Shadow
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000222222220000
+   0002222222222000
+   0000222222220000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+
+18 MakeShadow 4Shadow
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000022222200000
+   0000222222220000
+   0000022222200000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+
+18 MakeShadow 5Shadow
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000002222000000
+   0000022222200000
+   0000002222000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+   0000000000000000
+
+VECTOR: ChangeShadow   ( vector -- )
+   0Shadow 1Shadow 2Shadow 3Shadow 4Shadow 5Shadow ;
+
+: FreeBall   ( -- )
+   Ball +asEvenSprite +ssNum W@ FreeSprite
+   Ball +asOddSprite  +ssNum W@ FreeSprite ;
+
+: FreeShadow   ( -- )   Shadow +ssNum W@ FreeSprite ;
+
+: Consecutive?   ( n\n -- )   - -1 = ;
+ 
+: ?Balls   ( f -- )
+   Ball +asEvenSprite +ssNum W@
+   Ball +asOddSprite  +ssNum W@
+   Consecutive? NOT DUP
+   IF  Freeball FreeShadow  THEN
+   ERROR" Unable to allocate sprites" ;
+
+: GetShadow   ( -- )
+   Shadow 7 GetSprite 7 = NOT DUP
+   IF  FreeShadow  THEN
+   ERROR" Unable to allocate sprites" ;
+
+: GetBall   ( -- )
+   GetShadow
+   7 4 DO
+     Ball +asEvenSprite I    GetSprite  I =
+     Ball +asOddSprite  I 1+ GetSprite  I 1+ =  AND
+     IF  LEAVE  ELSE  FreeBall FreeShadow  THEN
+   2 +LOOP  ?Balls ;
+
+\ Under 1.1 Kickstart, moving the even sprite moves them
+\ both, but according to reports that has changed on 1.2
+
+: MoveBallSprite   ( x\y -- )
+   ViewAddress +vViewPort @
+   LOCALS|  viewport  y  x  |
+   viewport Ball +asEvenSprite  x y  MoveSprite
+   viewport Ball +asOddSprite   x y  MoveSprite ;
+
+: MoveShadowSprite   ( x\y -- )
+   Viewaddress +vViewPort @  Shadow  2SWAP  MoveSprite ;
+
+\ Executing this definition will set up the colors for the
+\ ball.  It will also change one color of the mouse cursor.
+
+: 19-31.Greys   ( -- )   \ Only for registers 19 through 31
+   ViewAddress +vViewPort @  32
+   16 3 DO
+        1- 2DUP  I I I  SetRGB4
+   LOOP  2DROP ;
+
+\ These values were derived from a combination of geometry
+\ and fudging them until they worked.
+
+15500 CONSTANT Xviewpoint
+13200 CONSTANT Yviewpoint
+  500 CONSTANT Zmin
+24575 CONSTANT Zmax    ( 4096 / will return a value 0-5 )
+  319 CONSTANT Xmin
+38465 CONSTANT Xmax
+ 1152 CONSTANT Ymin
+11712 CONSTANT Ymax
+19392 CONSTANT Xcenter
+ 6400 CONSTANT Ycenter
+   64 CONSTANT Gravity
+   32 CONSTANT HalfGrav
+  128 CONSTANT TwoGrav
+   95 CONSTANT Spring
+      VARIABLE Zvel
+      VARIABLE Zpos
+      VARIABLE Xvel
+      VARIABLE Yvel
+
+: Perspective   ( coord\center\viewpoint -- new coord )
+   LOCALS|  viewpoint  center  |
+   center -
+   viewpoint DUP Zpos @ + */
+   center + ;
+
+: Ycrt   ( y -- y1 )
+   Ycenter Yviewpoint Perspective -6 SCALE ( 64 / ) ;
+
+: Xcrt   ( x -- x1 )
+   Xcenter Xviewpoint Perspective -6 SCALE ;
+
+: Zcrt   ( -- vector )   Zpos @ -12 SCALE ( 4096 / ) ;
+
+: MoveBall   ( x\y -- x\y )
+   2DUP  LOCALS|  y  x  |
+   x Xcrt  Ymax Ycrt  OVER  y Ycrt  Zcrt DUP
+   WaitTOF  ChangeBall  ChangeShadow
+   MoveBallSprite  MoveShadowSprite ;
+
+: ClipX   ( x\y -- x1\y )   SWAP Xmax MIN Xmin MAX SWAP ;
+
+: ClipY   ( y -- y1 )   Ymax MIN Ymin MAX ;
+
+: ClipZ   ( -- )   Zpos @ Zmax MIN Zmin MAX Zpos ! ;
+
+: ClipToWindow   ( x\y -- x1\y1 )   ClipX ClipY ClipZ ;
+
+: -YvelAdjust   ( y -- y )
+   Yvel @ DUP * OVER Ymin - TwoGrav * - SQRT NEGATE Yvel ! ;
+
+: YvelAdjust   ( y -- y )
+   Yvel @ DUP * OVER Ymax - TwoGrav * - SQRT Yvel ! ;
+
+: AdjustVelocity   ( y -- y )
+   DUP Ymin <              \ off the top of the screen
+   IF  -YvelAdjust
+   ELSE  DUP Ymax >        \ off the bottom
+     IF  YvelAdjust  THEN
+   THEN ;
+
+    VARIABLE Yrem          \ Storage for velocity remainders
+    VARIABLE Xrem
+    VARIABLE Zrem
+    VARIABLE FrictionCoef  \ Friction parameters
+999 CONSTANT Air           \ 0.1% friction loss in the air
+990 CONSTANT Surface       \ 1.0% friction when rolling
+
+: Friction   ( addr of remainder\velocity -- velocity1 )
+   1000 *                    \ Scale up the velocity
+   OVER @ +                  \ add the last remainder
+   FrictionCoef @  1000 */
+   1000 /MOD                 \ break out the new remainder
+   SWAP ROT ! ;              \ and save it away
+
+: NewY   ( y -- y1 )
+   Yrem Yvel @  Friction  DUP Gravity + Yvel !
+   HalfGrav +  + AdjustVelocity ;
+
+: NewX   ( x\y -- x1\y )
+   SWAP Xrem Xvel @  Friction  DUP Xvel !  +  SWAP ;
+
+: NewZ   ( -- )
+   Zrem Zvel @  Friction  DUP Zvel !  Zpos @ + Zpos ! ;
+
+: DoMove   ( x\y -- x1\y1 )
+   NewZ NewX NewY  ClipToWindow  MoveBall ;
+
+: Blip ;   \ Just as soon as I figure out sound!
+
+: Reflect   ( addr -- )
+   DUP @ Spring 100 */  NEGATE SWAP ! ;
+
+: Enough?   ( addr -- f )   @ ABS  Halfgrav <  NOT ;
+
+: Stopped?   ( y -- y\f )
+   DUP Ymax -  Xvel @ OR  Yvel @ OR  Zvel @ OR  NOT ;
+
+: Front/Back   ( -- )
+   Zpos @ DUP Zmin = SWAP Zmax = OR
+   IF  Zvel Enough?
+     IF  Blip  THEN  Zvel Reflect
+   THEN ;
+
+: Sides   ( x\y -- x\y )
+   OVER DUP Xmin = SWAP Xmax = OR
+   IF  Xvel Enough?
+     IF  Blip  THEN  Xvel Reflect
+   THEN ;
+
+: Top/Bottom   ( y -- y )
+   DUP Ymin = OVER Ymax = OR
+   IF  Yvel Enough?
+     IF  Blip
+     ELSE  Surface FrictionCoef !
+     THEN  Yvel Reflect
+   THEN ;
+
+: Bounce   ( x\y -- x\y )   Front/Back Sides Top/Bottom ;
+
+: DrawBackground   ( -- )
+   GINIT  rport 1 SetApen ( same color as border )
+     2  10 moveto  201  69 drawto
+     2 188 moveto  201 128 drawto
+   637  10 moveto  438  69 drawto
+   637 188 moveto  438 128 drawto
+   438  69 drawto  201  69 drawto
+   201 128 drawto  438 128 drawto ;
+
+\ define a custom screen with 2 bit planes
+struct NewScreen  BounceScreen
+   BounceScreen InitScreen   \ copy default values
+   2  BounceScreen +nsDepth W!  ( # bit planes )
+   CUSTOMSCREEN BounceScreen +nsType W!
+structend
+
+\ A non-movable, non-sizable window
+struct NewWindow  BounceWindow
+   BounceWindow InitWindow   \ copies default values
+   0   BounceWindow +nwLeftEdge W!
+   8   BounceWindow +nwTopEdge  W!
+   640 BounceWindow +nwWidth    W!
+   190 BounceWindow +nwHeight   W!
+   WINDOWCLOSE ACTIVATE |  BounceWindow +nwFlags !
+   fCLOSEWINDOW  MOUSEBUTTONS |
+   BounceWindow +nwIDCMPFlags !
+   CUSTOMSCREEN BounceWindow +nwType W!
+structend
+
+: CleanupBouncer ( -- )   \ do when fCLOSEWINDOW detected
+    FreeShadow FreeBall
+    CurrentWindow @ CloseWindow
+    CurrentScreen @ CloseScreen  ginit ;
+
+: goodbye ( -- )  \ bye if executing turnkey, abort if not
+       ?turnkey  IF  bye  ELSE  abort  THEN ;
+
+: BouncerEvents   ( -- )  \ process IDCMP events
+   GetEvent
+   CASE
+     fCLOSEWINDOW  OF  CleanupBouncer goodbye  ENDOF
+   ENDCASE ;
+
+: InitVelocities   ( -- )
+   Air FrictionCoef !
+   0 Xrem ! 0 Yrem ! 0 Zrem !
+   8000 Choose Xvel !
+   4000 Choose Yvel !
+   4000 Choose Zvel ! ;
+
+: Initialize
+   GetBall  Xmax Choose  Ymax Choose  ( first X and Y )
+   0"  Animation of an Attached Sprite in Multi-Forth "
+   BounceScreen +nsDefaultTitle !
+   BounceScreen OpenScreen  verifyscreen
+   CurrentScreen @ BounceWindow  +nwScreen !
+   BounceWindow OpenWindow  verifywindow
+   DrawBackground  19-31.Greys  ;
+
+: Bouncer   ( -- )
+   Initialize
+   BEGIN  InitVelocities
+     BEGIN
+       BouncerEvents  DoMove Bounce Stopped?
+     UNTIL
+   AGAIN ;
+
+: tst0   ( x\y -- )
+   initialize 2DROP
+   BEGIN  zmax 1+ zmin
+     DO  I zpos !  BouncerEvents MoveBall
+     10 +LOOP
+     zmin zmax
+     DO  I zpos !  BouncerEvents MoveBall
+     -10 +LOOP
+   AGAIN ;
+
+: tst1   ( x\y -- )
+   initialize 2DROP  BEGIN  BouncerEvents MoveBall  AGAIN ;
+

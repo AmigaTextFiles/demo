@@ -1,0 +1,109 @@
+
+                                    SQSH
+     A LZ based cruncher with special algorithms for 8 bit sample data
+                                Version 1.10
+                      Copyright 1994 by John Hendrikx
+
+
+
+                             License/Disclaimer
+                             ------------------
+
+   This  library  may  be  freely  distributed, as long as it is kept in its
+original,  complete,  and  unmodified  form.  It may not be distributed in a
+commercial package of any kind without my permission.
+
+   This  program  is  distributed  in  the  hope that it will be useful, but
+WITHOUT  ANY  WARRANTY; without even the implied warranty of MERCHANTABILITY
+or FITNESS FOR A PARTICULAR PURPOSE.
+
+
+                                Installation
+                                ------------
+
+    You'll  need  to install the XPK package first to use this library.  The
+XPK  package  should  be available on most Bulletin Board Systems, so try to
+get it there.
+
+    If  you already have the XPK package installed, then to add this library
+to  your  system  simply  copy  the  xpkSQSH.library from the 68000 or 68020
+subdirectory to your LIBS:Compressors/ dir.
+
+
+
+                                Description
+                                -----------
+
+    SQSH  is an XPK packer sublibrary which implements an optimized LZ based
+algorithm combined with a 8 bit delta compression algorithm.
+
+    This packer was especially made for packing 8 bit Samples and ProTracker
+style  modules.   It's  NOT  a lossy compression library, so NO quality-loss
+will occur when packing Samples with this library.
+
+    SQSH  is  pretty fast at decompression (300K/s on A3000) so is very well
+suited  to compress Modules and Samples since these will typically be packed
+once  and  unpacked  many  times.  It's slow at compression (25K/s on A3000)
+mainly  because  every  part of the file has to be checked twice to see what
+the better compression method would be.
+
+    In  order  to  achieve  reasonable  compression  of other types of files
+(Executables,  Textfiles) this packer will scan a long range (about 20K) for
+identical  byte  sequences and if it finds any, it outputs offset and length
+instead  of the bytes themselves.  Scanning such a long range for duplicates
+is  a  CPU-intensive  process.   I have tried to make it as fast as possible
+(about 25K/s on A3000) but NUKE proves it can be done faster :-)
+
+    In  the archive also is included a 68000 version of this library.  Sorry
+all  you  68000  users  for  the long delay, but I only received one message
+asking  me  for  a  68000  version.   It was Edmund Vermeulen who eventually
+convinced me to program the 68000 version.
+
+
+                                 Statistics
+                                 ----------
+
+    As  I  don't own a A3000 and xBench, I cannot give results which you can
+compare  with  the  other XPK libraries.  But I can offer you some results I
+got  on  my own machine (that is a A2000 with a 22Mhz 68030 GVP with 6 Mb of
+60ns 32bit ram)
+
+          Frequency     Original    SQSH = Squash          LhA
+        ------------------------------------------------------------
+        Sample 15 KHz     732984    418144 (43.0%)    510377 (30.4%)
+        Sample 20 KHz     979990    532512 (45.7%)    664365 (32.2%)
+        Sample 25 KHz    1219832    634488 (48.0%)    805746 (33.9%)
+        Sample 30 KHz    1465864    728656 (50.3%)    940955 (35.8%)
+        Sample 35 KHz    1710140    815652 (52.3%)   1066660 (37.6%)
+        Sample 40 KHz    1959924    898416 (54.2%)   1186449 (39.5%)
+        Sample 45 KHz    2208002    976340 (55.8%)   1294084 (41.4%)
+        Sample 50 KHz    2456810   1048384 (57.3%)   1389138 (43.5%)
+        Sample 55 KHz    2725502   1144420 (58.0%)   1506860 (44.7%)
+
+ --------------------------------------------------------------------------
+                              |     ** SQUASH **     |      ** LHA **
+ FileName           Original  |    %    Pack  Unpack |    %    Pack  Unpack
+                  (in bytes)  |          K/s    K/s  |          K/s    K/s  
+ --------------------------------------------------------------------------
+ Intuition (AutoDoc)  283460  |  60.9%  18.7  369.1  |  66.7%  31.9  247.2
+ MUI.guide             80052  |  58.7%  22.9  312.7  |  65.0%  26.3  211.3
+ AmigaVision          594712  |  42.4%  22.1  276.6  |  48.7%  18.4  206.7
+ VirusChecker          42380  |  30.2%  26.0  197.1  |  38.0%  20.8  153.3
+ Mod.February symph   240420  |  27.8%  29.7  335.4  |  24.2%  25.0  166.5
+ Mod.Infinite finit   180950  |  41.6%  28.5  353.4  |  38.7%  20.7  182.2
+ Mod.Began in Africa  197038  |  41.5%  31.2  356.3  |  37.1%  21.6  194.3
+ Mod.Poing             94530  |  35.1%  15.7  329.7  |  33.8%  27.2  171.0
+ Mod.Resonance 2      188354  |  43.5%  29.2  375.4  |  35.9%  21.9  182.1
+ Mod.Tranze seven     215872  |  43.5%  28.5  351.4  |  36.3%  22.4  189.1
+ OnlyWithYou.8SVX    1219832  |  48.0%  30.2  385.5  |  33.9%  29.4  180.2
+ --------------------------------------------------------------------------
+
+
+
+                              Contact Address
+                              ---------------
+
+   FIDO:   2:285/813.8           SNAIL:  John Hendrikx
+    AMY:  39:153/201.8                   Figarostraat 36
+    NLA:  14:101/200.8                   3208 PD   Spijkenisse
+                                         The Netherlands      

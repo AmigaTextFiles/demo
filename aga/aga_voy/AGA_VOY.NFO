@@ -1,0 +1,94 @@
+
+
+
+                      G A L A H A D  P R E S E N T S 
+                      - - - - - - -  - - - - - - - - 
+
+                    Razor 1911's VOYAGE Demo, AGA Fixed
+                    -----------------------------------
+
+
+
+
+  AGA Fix Minimum Requirements: A1200 with Hardrive and 1 Meg of Fast ram
+  -----------------------------------------------------------------------
+
+Well this is a bit of a diversion for me really.  Plenty of people asked me
+if I was prepared to fix a few of the good demo's out there, and this being
+one of them, I was asked quite a lot for it.  So finally, I got off my arse
+and did it..... and not a pretty picture either!
+
+Problems:
+---------
+
+1) There was a spot of decryption for the block loader for the demo.  I
+have absolutely NO idea why anyone would want to encrypt a demo loader, but
+it was, and now its fixed, because it didn't decrypt at all on 020+
+machines.
+
+2) Copperlist problem on A4000 030+ machines.  On boot up, the picture of
+with the guy wearing the blue mask had a completely wrong colour palette.
+
+3) The demo used the old trick of putting the blitter wait before the blit
+to save some time.  Of course, not every single other blitsize pointer had
+a blitwait before it, so inevitably, the demo crashed.
+
+4) Copperlist problems on A1200, A4000 machines in later parts of the demo.  
+Just a BPLCON3 Problem, that took quite a while to locate!
+
+5) Loader problem.  Allthough the loader works fine on 020 and 030, I am
+utterly convinced it would fuck up on 040 and 060, so to be safe, I have
+fixed that as well!
+
+Other than that, it should work fine.  This demo will run on any AGA Amiga,
+from A1200 up to the A4000.  
+
+  Now, Some of these problems would not have affected the final outcome of
+this demo, because from now on, I will endeavor to make them all hard drive
+installable.
+
+
+To install to your hard drive:
+------------------------------
+
+1) Copy the files 'Voyage_AGA' and 'Razor1911(Voyage).Galahad' into a
+directory on your harddrive (simple!)  Both of the files MUST be in the
+same directory otherwise the demo won't load.
+
+
+---------------------------------------------------------------------------
+
+                      I M P O R T A N T  N O T I C E
+                      - - - - - - - - -  - - - - - -
+
+ If you want to run this AGA fix on your A1200 with 2 meg of chip ram, and
+                  don't own Fast ram...... Tough shit!  
+
+ Lets get one thing straight.  An A1200 with just 2 meg of ram is NOT the
+  minimum acceptable base machine anymore.  All the morons out there that
+   insist that the A500 or a A1200 with 2 meg of chip ram is enough are
+ KILLING the Amiga.  I am sick and tired of having to cater for those that
+can't be bothered spending a bit of money on getting their machines up to a
+level where everyone can benefit.  If you really want the Amiga to survive,
+start by improving your Amiga.  It needn't get to PC proportions where you
+are upgrading your machine every two minutes and still being behind, but fo
+christs sake, get some fast ram, and then the A1200 will get a new lease of
+life, because there is a hell of a lot more that can be done with an Amiga
+                              with fast ram.
+
+Any Demo fix in the future will require that you have a hard drive and fast
+ ram.  So if you REALLY want to see some of your old favourites, you'll do
+                    something about it..... if not..!!
+
+-----------------------------------------------------------------------------
+
+
+Galahad's Proverb: The only thing in this life that is certain is
+                   uncertainty...... and I aint to sure about that either!
+
+
+
+
+
+
+END.

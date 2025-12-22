@@ -1,0 +1,147 @@
+--- scenery ---------------------------------------------------------------
+
+          µµ,µ
+         Ø¹¬MØ
+        JØ   Ø
+        ¬Ø&,       JMØ&    µØM&    ¶ØWØ&     µØM&    ¶ØØ1  ¬Ø@ ¶Ø¹
+          ¶Ø&,    J1 ¬¶    Ø  Ø1   JØ¹¬Ø1    Ø  Ø1   JØ¹    ¶& J1
+           ¬MØ,   Ø1      JØM¶¶¹   JØ  Ø1   JØM¶¶¹   JØ     JØ J¹
+         ,   Ø1   Ø1      JØ       JØ  Ø1   JØ       JØ      Ø1Ø
+        J&   Ø¹   ¶Ø, µ   ¬Ø&  ,   JØ  Ø1   ¬Ø&  ,   JØ      ¶Ø1
+        J@ØwØ¹    ¬MØØ¹    ¶ØØ@    JØ, Ø&    ¶ØØ@    JØ,     ¬Ø¹
+                                                             J@
+                                                            µØ¹
+                     (c) Glenn Lunder 1996-2001            ¬¶¹
+
+
+SCENERY - amiga version 1.10 (may 2001)
+
+www:    http://exotica.fix.no/info/scenery
+e-mail: sceneryamiga@yahoo.com
+post:   Glenn Lunder,
+        N-1970 Hemnes,
+        Norway.
+
+
+--- How to read Scenery ---------------------------------------------------
+
+THIS section will hopefully answer any question you may have about how to
+read Scenery. It explains the various shortcodes used in the entries, and
+the system we use to organize the information. Below is what any entry in
+the main part of Scenery might look like:
+
+Cool Group (CLG, http://www.coolgroup.org, 199x-199x)
+-----------------------------------------------------
+NOR> Cool Norwegian (code), Cool Painter (gfx), Cool Musician (music).
+HOL> Cool Gfxian (gfx, ex Cool Graphics Team, new 02/97).
+???> The Guy From Another Place (code gfx music ascii sysop 'BBS').
+
+Here is where you'll find the group's history and any other significant
+information. If it's a group that's been around, with some tradition, expect
+me to go on endlessly and get terribly nostalgic :D
+  199x - This is a summary of the year's events for the group.
+
+· Demo Name (1997, 01.01, AGA 4MB HD Multifile Slideshow).
+  code: Coder, gfx: Artist, music: Musician.
+  3rd at The Party 199x intro/demo/slideshow/whatever competition.
+  review: Seeing as this is just a dummy example and not a real review, I
+  won't bother with writing anything remotely comprehensible here. So hrjs!
+· GLE tested A1200/030-50/2mb chip, 4mb fast/3.0.
+
+The heading perhaps needs extra explanation. The basic format is this:
+
+  Demo Name (year, dd.mm, requirements description).
+
+And here are some of the codes you'll encounter:
+
+-- graphics
+
+  ECS   The production works fine with OCS/ECS chipsets (½mb chip assumed).
+  AGA   The production requires the AGA chipset (2mb chip assumed).
+  CYB   The production requires/supports CyberGfx compatible 24-bit
+        graphics.
+  P16   The production requires/supports Picasso 16 compatible 24-bit
+        graphics.
+  020   The production requires a 68020 or higher processor. With AGA
+        productions, this is a given, so this coded will only appear on
+        OCS/ECS productions.
+  030   The production requires a 68030 or higher processor.
+  040   The production requires a 68040 or higher processor.
+  060   The production requires a 68060 or higher processor.
+  PPC   The production requires a PowerPC processor.
+
+-- memory
+
+  ½MB   The production requires ½MB fast ram.
+  1MB   The production requires 1MB fast ram.
+  2MB   The production requires 2MB fast ram.
+  4MB   The production requires 4MB fast ram.
+  8MB   The production requires 8MB fast ram.
+  16MB  The production requires 16MB fast ram.
+  32MB  The production requires 32MB fast ram.
+
+-- misc
+
+  FPU   The production requires a Floating Point Unit maths coprocessor.
+  HD    The production requires Hard Disk installation.
+
+
+What follows are some of the 'codes' you'll encounter while reading the
+party section, and their meaning. The first two letters usually signify the
+platform, thus:
+
+64      - commodore 64
+ac      - acorn archimedes
+am      - amiga
+at      - atari
+java    - java (platform independent)
+lx      - linux
+pc      - pc
+psx     - playstation
+
+And they are always followed by one of these:
+
+demo    - demo
+intro   - intro
+4k      - 4k intro
+40k     - 40k intro
+64k     - 64k intro
+game    - games
+-dos    - (pc only) demo, dos based.
+-3d     - (pc only) demo, 3d accelerated.
+
+And finally these are some other codes you're likely to find...
+
+anim    - animated graphics.
+ansi    - ansi (pc 16 color textmode) graphics.
+ascii   - ascii (amiga iso) graphics.
+gfx     - graphics, usually meaning hand-pixeled.
+gfx24b  - graphics, 24bit, usually meaning hand-pixeled.
+raytrac - graphics, usually meaning raytraced.
+rayanim - raytraced animation.
+
+4chmus  - 4channel music
+chipmus - chip music
+mp3     - mp3 music
+multich - multichannel music
+wild    - wild demo
+
+
+
+--- winners  --------------------------------------------------------------
+
+For purely statistical reasons, here are the 'demo of the year' winners...
+
+1988 - D.O.C "Demons Are Forever" (germany).
+1989 - Red Sector Inc. "Megademo" (germany).
+1990 - Scoopex "Mental Hangover" (finland).
+1991 - Phenomena "Enigma" (sweden).
+1992 - Spaceballs "State of the Art" (norway).
+1993 - Kefrens "Desert Dream" (denmark).
+1994 - Andromeda "Nexus 7" (norway).
+1995 - Artwork "Greenday" (germany).
+1996 - The Black Lotus "Tint" (sweden/holland).
+1997 - The Black Lotus "Captured Dreams" (sweden/holland).
+1998 - Mellow Chips/TRSI "Rise" (finland).
+1999 - Haujobb "Mnemonics" (germany).
+2000 - Haujobb "Megademo 2000" (germany/denmark).

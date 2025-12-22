@@ -1,0 +1,201 @@
+»CL8:»SML:--------------------------------------
+   »CL9:»BIG:A Performance Code Example
+»CL8:»SML:--------------------------------------
+
+»CL0:Now, I just want to give you an
+example of how data cache and burst
+can touch performance. For this
+example, a 040/060 CPU will show
+dramatic changes in performance, while
+030 will perform more regularly. I
+suppose you have made the usual
+rotozoom sometime, an Add or Addx
+based one, working in chunky, with
+C2P.
+
+The first thing I want to say is that
+CHIP memory is »CL1:NOT» cached. Yes, a 68k
+can have different cache models for
+different memory chunks, read more in
+the MMU section. The main reason is
+that where only the CPU works upon
+fast memory, in CHIP you have the
+blitter manipulating data, and other
+DMA consumers reading memory. And you
+wouldn't want, for example, the
+display showing data that in reality
+is still not in memory, but only in
+data cache, now would you?
+
+So, prepare yourself a rotozoom,
+following these observations:
+»CL1:-» Use a CPU C2P (a CPU only C2P
+  because putting the blitter to work
+  would easily invalidate our speed
+  tests), a 16 colors one would be a
+  good option, but anyone will
+  probably show the changes in
+  performance.
+»CL1:-» Align your chunky buffer to 16. That
+  is, reserve for example (320*200)+16
+  and then make: »CL4:Chunky=(reserved
+  memory+16) AND $fffffff0» This will
+  ensure your buffer is aligned with
+  the data cache, so the speeds will
+  not change every time you run the
+  test.
+»CL1:-» Use a good rotozoomer, unrolled a
+  bit. Something like this will be
+  good enough.
+
+»CL4:   rept 8
+   Move.w D2,D4
+   Move.b D3,D4
+   Move.b (A0,D4.l),(A1)+
+   Add.l D0,D2
+   Addx.l D1,D3
+   endr
+
+»CL7:(Well, but Luis special 040/060
+rotozoomer code is about 4x
+faster...Troda ;)
+
+»CL1:-»CL0: Ensure your timing routines are
+  working OK, and always time the same
+  number of iterations. For example,
+  make loop 100 times and take the
+  measure.
+
+So, now that you have everything OK,
+let's see how cache settings
+touch performance...
+First disconnect the rotozoom and time
+only the C2P. The C2P reads the chunky
+buffer and drops it to chip, so BURST
+access fits OK.
+If you have a 030, time it with &
+without data burst. You will notice a
+small increase with databurst,
+probably around 10%.
+If you have 040 or 060 datacache and
+databurst are hardwired; if you
+disable both you will see a decrease
+in performance.
+
+Now, let's go for something more
+interesting...
+Set the rotozoom to 1:1 aspect ratio
+and angle=0.
+If you did it correctly, the texture
+should appear on screen exactly as was
+made. Now, disconnect the C2P so you
+can time only the rotozoom.
+Obviously, with ratio 1:1 and angle 0,
+the rotozoom will read pixels
+0,1,2,3,4....etc...
+If you think about it, you will see
+the rotozoom works as copy function
+now, so again data burst will help.
+When the rotozoom asks memory for
+pixel 0, the cache line needs to be
+filled with pixels 0-15. That's ok
+because these pixels are going to be
+used.
+»CL1:But what happens when angle=90?»
+The rotozoomer reads the pixels
+0,256,512,768,ect...When pixel 0 is
+asked, it enters the cache and is
+fastly forwarded to the CPU. The data
+burst will however also fill the whole
+data cache line with pixels 1-15. But
+the next pixel required by the
+rotozoom is pixel 256! The same thing
+happens for every pixel drawn, causing
+a big bottleneck! Try with and without
+burst and you will see the difference.
+»CL7:(On 030 the cache will never be used,
+as it only holds 16 lines. 060 should
+however be able to use the burst
+better (16×256=4096) -Cytron)»
+Now, put the rotozoom to spin (not too
+fast) with databurst; you will notice
+those changes in speed depending on
+angle.
+
+Now let's see another way of data
+cache causes speed changes. Set an
+aspect ratio like 1:16, that is,
+texture will appear as very near,
+every texture pixel looking very big
+on screen.
+Obviously, now every texture pixel
+will be recalled lots of times from
+memory, so datacache help a lot
+greatly increasing speed.
+The same can be accomplished with any
+ratio using smaller textures that fit
+the cache, something like 2048 or 4096
+bytes. If you have a 040 or a 060 you
+can make a fast test masking the index
+of the rotozoom.
+
+»CL4:   rept 8
+   Move.w D2,D4
+   Move.b D3,D4
+   Andi.w #$7ff,D4 »CL5:; Now texture is
+                   ; 8*256 instead of
+                   ; 256*256
+»CL4:   Move.b (A0,D4.l),(A1)+
+   Add.l D0,D2
+   Addx.l D1,D3
+   endr
+
+»CL0:Far from optimised ;) but you will see
+a big difference in speed vs. the
+256x256 texture!
+»CL7:(Yeah, but Luis has shown me what he
+can, and his rotozoom does for
+320x256x4bpl unbeliable 158fps on
+060/73 ;) Troda)»
+
+»CL0:Let's draw some conclusions from this:
+
+»CL1:-» If you have a 030, the best thing is
+  to disable databurts on rotozoom and
+  enable it on the C2P. The datacache
+  can remain set on the whole routine.
+»CL1:-» With a 060, eg., data cache+burst is
+  OK in C2P, but will cause great
+  speed troubles on rotozoom; on the
+  other hand, disabling them will
+  reduce performance to memory speed
+  level, and this is not a great deal.
+
+There are several solutions/tricks
+than can be used on 040/060, but none
+of them make much sense on 030. I will
+leave the experimentation up to you.
+If you have understand all I have
+described until now, you are in a good
+position to come with some ideas. »CL7:(For
+example a diferent texture pixels
+ordering to avoid... Troda) (Azure has
+done exactly this resulting in a speed
+increase of 25% -Cytron)
+
+»CL0:Probably you have observed that the
+rotozoom innerloop has two memory
+accesses: reading the pixel and
+writing it to the chunky buffer.
+While reading pixels tends to be very
+random, writting them is fully
+sequential, so it would be favoured by
+burst transfers. Wouldn't be cool to
+have different cache models for
+different memory areas? Then texture
+memory could remain un-cached and
+chunky buffer could be cached and
+bursted.
+This is possible, but it has its trade
+offs... More about this in the MMU
+section.

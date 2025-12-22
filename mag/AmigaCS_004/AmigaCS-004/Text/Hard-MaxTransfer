@@ -1,0 +1,88 @@
+@{xoffset 21}@{d C2FF8F}¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+@{xstep 356}@{font ACS-Title.font 18}Co to je MaxTransfer?@{font}
+@{xstep 442}@{c A6FFF8}@{i}Shaman/Abort@{ui}@{c}@{ystep -8}
+
+
+ @{xstep 2}@{font ACS-Title.font 18}P@{font}rotoùe dodnes lidi pêesnë nevëdí co to vlastnë ta záhadná hodnota MaxTransfer
+v '@{b}Advanced   Options@{ub}'   @{c 4EEE9A}HDToolBoxu@{c}  je  a  jak  ji  správnë  nastavit,  je  zde
+vyçerpávající  a  pêesná  odpovëð  podepêená  informacemi  @{c C2EE56}Mika  Sinze@{c}, bývalého
+systémového inùenýra Commodore-Amiga.
+
+
+                                 @{c 4EEE9A}Popis problému@{c}
+                                 @{c 4EEE9A}¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+  Dûvody,  proç  hodnë  IDE diskû má problémy s MaxTransferem jsou v zásadë dva.
+Oba  dva  souvisí s interním firmwarem disku a neefektivností MS-DOSu a Windows.
+Abychom  porozumëli  tëmto  dûvodûm  musíme  nejdêíve  vysvëtlit jak MaxTransfer
+pracuje.
+
+
+  Amigácký  IDE  (resp."SCSI") ovladaç naçítá z disku více jak jeden sektor (512
+bajtû)  vùdy,  kdy  je  to  jen  moùné.   To  je výhodné jednak proto, ùe se tím
+redukuje  mnoùství  pêíkazû, které se musí poslat disku, ale hlavnë se tak mûùou
+naçíst  vîechny  sektory  naráz  bëhem  jediné  otoçky  disku.   To  je *mnohem*
+rychlejîí,  neù  çíst  sektory po jednom a díky tomu çekat na kaùdý sektor celou
+otoçku  disku.   Inteligentní  firmware  moderních  diskû tuto nevýhodu çásteçnë
+napravuje díky interní cache, proto se na PC toto zpomalení aù tolik neprojevuje
+(k çemuù také pêispívají velikosti clusteru >512B).
+
+  V  IDE  normë je jako poçítadlo sektorû pouùita 8-bitová hodnota.  Specifikace
+IDE  normy  êíká, ùe mûùe nabývat hodnot od 1 do 256.  Dobêe, ale jak zapsat 256
+do  8-bitové  hodnoty?  Jednoduîe - protoùe je nesmysl ùádat po disku 0 sektorû,
+specifikace IDE êíká, ùe 0 znamená 256.
+
+  A právë tato vyjímka je první problém, který se projevuje u vëtîiny IDE diskû.
+Tyto   disky  (resp. jejich  firmware)  zkrátka  neumëjí  obslouùit  hodnotu  0.
+V lepîím pêípadë se celý pêenos neprovede nebo çastëji se data nëkterého sektoru
+pêepíîí  pseudonáhodnými hodnotami @{c C2EE56}BEZ OZNÁMENÍ CHYBY@{c}!!!  Na ùádost Commodore se
+nëkteêí  výrobci  diskû podívali do zdrojových kódû mikrokontrolerû a ve vëtîinë
+pêípadû potvrdili tuto chybu.
+
+  Dobrá, ale proç se tato chyba projevuje pouze na Amize?  Je to proto, ùe PC je
+hlavní  uùivatel  diskû  a  po dlouhou dobu nepouùíval multi-sector çtení/zápis.
+Jakmile  se  na PC zaçaly pouùívat diskové cache (vçetnë SmartDrive od MS) poêád
+mëly  divné  omezení  na  64KB  (velikost  segmentu  x86 procesorû), takùe nikdy
+nepêenáîely více jak 128 sektorû najednou (= 64KB).
+
+  Druhým,  jeîtë  zajímavëjîím  problémem je fakt, ùe hodnoty 128-255 také obças
+nefungují.   Proç?   Pokud  pouùíváme  znaménkovou aritmetiku (byte-signed) tyto
+hodnoty  pêedstavují  záporná  çísla!   Výsledek  je ten, ùe firmware v disku je
+naprosto zmaten a dëlá nepêedvídatelné vëci.  Wow!!!
+
+  Proç  se  ale  ani  na  tuto  chybu  nepêiîlo  dêíve?  Protoùe PC nemëlo vëtîí
+velikosti  clusteru  neù  32KB.  Ve skuteçnosti pouze NT podporovaly 64K cluster
+a to musí být partition vëtîí neù 2GB - kolik takových diskû donedávna bylo?
+
+
+                                    @{c 4EEE9A}Náprava
+                                    ¯¯¯¯¯¯¯@{c}
+
+  V kaùdém  pêípadë  je  na  Amize (která naîtëstí nemá velikost bloku vëtîí neù
+32KB)  nejbezpeçnëjîí  nastavit velikost @{c C2EE56}MaxTransferu@{c} tak, aby se nikdy neùádalo
+více  jak  127 sektorû v jediném IDE pêíkaze.  To zajistí hodnota tësnë pod 64KB
+(128  sektorû  je  64KB).   Tato  hodnota  je  65535  (hexadecimálnë  @{c C2EE56}0000FFFF@{c}).
+V pêípadë,  ùe  váî  IDE  disk  je novëjîího data, ale poêád nesprávnë obsluhuje
+hodnotu  0  (256)  sektorû  je  bezpeçné  nastavení  131071  (hexa:   @{c C2EE56}0001FFFF@{c}).
+Defaultnë je nastaveno 00FFFFFF (tj.2047 sektorû).
+
+  Jeîtë  malé upozornëní:  systémový pêíkaz @{c C2EE56}FORMAT@{c} obsahuje nepêíjemnou chybu ve
+výpoçtu  masky.   Pokud  zatuhne  pêi  formátování,  tak  upravte MaxTransfer na
+hodnotu 0000F000, respektive na 0001F000.
+
+
+
+
+                                    @{c 4EEE9A} Závër
+                                     ¯¯¯¯¯@{c}
+
+  Je  chyba,  ùe  se MaxTransfer pojmenoval tak jak se pojmenoval.  Je chyba, ùe
+dodnes si nëkteêí lidé myslí, ùe znamená rychlost pêenosu (pochopitelnë:  velice
+nízká nastavení opravdu zpomalí disk).  Je chyba, ùe si nëkdo myslí, ùe to má co
+do  çinëní  s diskovou  cache (mnoho starých diskû mëlo jen 4KB, nové mají 256KB
+a více  a pêesto  u nich  dochází  k jedné nebo oboum z výîe uvedených chyb...).
+Tyto  chyby jsou @{f E0FF21}zákeêné@{f}, protoùe se projevují pseudonáhodnë (dle verze firmwaru
+a disku) a nëkdy se projeví aù pêi kopírování opravdu rozsáhlých souborû (záleùí
+na  fragmentaci,  rychlosti  disku,  pûvodním  obsahu  interní cache...).  Proto
+radëji  nikdy  nenechávejte  u IDE diskû nastaven defaultní MaxTransfer.  Stejnë
+není  moùné  pêenést  najednou  2047 sektorû, i kdyù moderní disky jiù bezchybnë
+vyhovují IDE standardu.

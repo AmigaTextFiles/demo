@@ -1,0 +1,391 @@
+ 
+   The BindPalette Effect.
+
+ In the B03 tutorial, we have seen how to make color effects
+when the 256 colors palette of the screen keep constant.
+ we always used still here the simple effect "SetPalette"
+ to give to the screen the colors found in an image.
+
+ KARATE provide a much more powerful command, "BindPalette",
+ that set a palette too, but
+which is able to make operations on these indexed colors
+rather than on the pixels of the screen.
+
+ It is very useful if you want to make a fade to one given color
+ to (or from) your palette,
+ but it is also possible to do more color tricks, like
+ "solarisation" of the color, which is a very nice way
+ to "bind" the palette to its negative.
+ "BindPalette" need a lot of parameters, but it has been done
+ to let the maximum possibilities.
+
+ How does it work ? here is an exemple:
+
+        <Fx><Pa>BindPalette</Pa>  1st parameter is always the name of the effect.
+
+            <Pa>sin|0.5|0.01|0.5</Pa> the rate between 0->1
+                                      There's a state "A" of the palette
+                                      and the state "B". If this parameter
+                                      is 0, its state A. If 1, it's B,
+                                      and you move between a and B.
+
+                            The folowing parameters describes the
+                            possible state of "A" and "B", BY Color
+                            Composant Red, Green,Blue.
+                            (here 255,255,255 means white
+            <Pa>CTE|0</Pa>              type of fade:0,1,2,3
+            <Pa>CTE|255</Pa>            optional color 0->255 (0)
+            <Pa> imagepalette </Pa>     palette where to fade ( "B" )
+            <Pa>imagepalette</Pa>            optional source Palette(2)
+
+            <Pa>CTE|0</Pa>              type of fade:0,1,2,3
+            <Pa>CTE|255</Pa>            optional color 0->255 (0)
+            <Pa>imagepalette</Pa>       Palette where to fade ( "B" )
+            <Pa>imagepalette</Pa>       optional source Palette(2)
+
+            <Pa>CTE|0</Pa>              type of fade:0,1,2,3
+            <Pa>CTE|255</Pa>            optional color 0->255 (0)
+            <Pa>imagepalette</Pa>       Palette where to fade ( "B" )
+            <Pa>imagepalette</Pa>       optional source Palette(2)
+        </Fx>
+
+ always consider state "A" vary according to type and "B" is
+ always the normal palette from the image.
+
+ you decide your type of fade with the INTEGER value that stands
+ for the type of blending: "->" means "blending toward"
+
+ type=0: color->paletteA
+            in state "A", all color component will be equal to "optional color"
+            (0-255)
+
+ type=1: solarisedPalA->PaletteA   state"A" is the same palette in negative,
+                                   blending is solarisation.
+
+ type=2: make a fade from oprtional paletteB to paletteA.
+           ( not coded: TO DO)
+
+Note that you must fill the "optionnal" parameters. I called them
+optionnal because according to the type, the could be used or not.
+
+---------------------------------------
+ Note: in order to save CPU, both "setpalette" and "bindpalette"
+only execute in a frame when:
+ - it has not been used in the last frame with the same values.
+
+ - and if Some other palette command have been used in other part just before.
+
+    NEVER USE SETPALETTE AND BINDPALETTE IN THE SAME FRAME OR PART !!!
+
+        -> IT IS A COMMON ERROR <- DONT.
+
+    it would do ugly random things and ... it's bad.
+    (some picasso configuration seems to take a loooots of cpu for these
+    operation, whereas it's really fast on other conf: its not our fault.
+    We are innocent. Update your drivers. )
+
+----------------------------------------------------------------
+ now let's have a demonstration !!!
+
+
+<MAIN> myscript |0|1</MAIN>              the main script to play...
+
+<KIMG> texture256x256 | data/texture1.iff </KIMG>
+
+<KIMG> impacman | data/oldpac.iff </KIMG>       These one, used for sprites
+<KIMG> imghost  | data/ghost1.iff </KIMG>       can be any-sized.
+<KIMG> imghost2  | data/inky.iff </KIMG>
+
+--------------------------------------------------
+<KSCRIPT>                           let's write a script to play.
+
+    <ID> myscript </ID>
+
+
+    <PLAY> blankpart | 25 | 0 | 1 </PLAY>
+    <PLAY> white bending | 500 | 0 | 1 </PLAY>
+    <PLAY> blankpart | 25 | 0 | 1 </PLAY>       --> let's have some short dark screen between
+    <PLAY> solarisation exemple| 800 | 0 | 1 </PLAY>
+    <PLAY> blankpart | 25 | 0 | 1 </PLAY>
+    <PLAY> darkbind | 600 | 0 | 1 </PLAY>
+    <PLAY> blankpart | 25 | 0 | 1 </PLAY>
+    <PLAY> madpalette | 600 | 0 | 1 </PLAY>
+    <PLAY> blankpart | 25 | 0 | 1 </PLAY>
+
+    <PLAY> white bending | 500 | 0 | 1 </PLAY>
+    <PLAY> blankpart | 25 | 0 | 1 </PLAY>       --> let's have some short dark screen between
+    <PLAY> solarisation exemple| 800 | 0 | 1 </PLAY>
+    <PLAY> blankpart | 25 | 0 | 1 </PLAY>
+    <PLAY> darkbind | 600 | 0 | 1 </PLAY>
+    <PLAY> blankpart | 25 | 0 | 1 </PLAY>
+    <PLAY> madpalette | 6000 | 0 | 1 </PLAY>
+  
+</KSCRIPT>
+
+--------------------------------------------------------
+///<KPART> <ID> white bending </ID>
+
+  
+
+        <Fx><Pa>BindPalette</Pa>  1st parameter is always the name of the effect.
+
+            <Pa> bounce |0|200|300|0|1</Pa> the rate between 0->1
+                                      There's a state "A" of the palette
+                                      and the state "B". If this parameter
+                                      is 0, its state A. If 1, it's B,
+                                      and you move between a and B.
+
+                            The folowing parameters describes the
+                            possible state of "A" and "B", BY Color
+                            Composant Red, Green,Blue.
+
+            <Pa>CTE|0</Pa>              type of fade:0,1,2,3
+            <Pa>CTE|255</Pa>            optional color 0->255 (0)
+            <Pa> texture256x256 </Pa>     palette where to fade ( "B" )
+            <Pa> texture256x256</Pa>            optional source Palette(2)
+
+            <Pa>CTE|0</Pa>              type of fade:0,1,2,3
+            <Pa>CTE|255</Pa>            optional color 0->255 (0)
+            <Pa>texture256x256</Pa>       Palette where to fade ( "B" )
+            <Pa>texture256x256</Pa>       optional source Palette(2)
+
+            <Pa>CTE|0</Pa>              type of fade:0,1,2,3
+            <Pa>CTE|255</Pa>            optional color 0->255 (0)
+            <Pa>texture256x256</Pa>       Palette where to fade ( "B" )
+            <Pa>texture256x256</Pa>       optional source Palette(2)
+        </Fx>
+
+    <Fx>
+        <Pa> Twirl </Pa>                some normal twirl on the background.
+        <Pa></Pa>
+        <Pa> texture256x256 </Pa>
+
+        <Pa>SIN|0|1|0.25</Pa> ofsx
+        <Pa>COS|0|1|0.25</Pa> ofsY
+
+        <Pa>SIN|0|0.1|1</Pa> start angle
+        <Pa>CTE|0</Pa>    amp. angle
+        <Pa>CTE|0</Pa>    freq angle
+
+        <Pa>CTE|0</Pa>         start dist.
+        <Pa>SIN|0|0.6|0.5</Pa> amp.dist
+        <Pa>COS|0|0.2|32</Pa> freq dist
+
+        <Pa>CTE|0</Pa> mapping type
+
+    </Fx>
+  
+
+
+    <Fx><Pa> Sprite </Pa>
+        <Pa></Pa>
+        <Pa> impacman   </Pa>
+        <Pa> 4cte|0.4|0.4|0.6|0.6 </Pa>
+    </Fx>
+
+
+
+///</KPART>
+----------------------------- a blank between effects.
+///<KPART> <ID> blankpart  </ID>
+
+    <Fx><Pa> FillRc </Pa><Pa></Pa><Pa>cte| 0 </Pa></Fx>
+
+///</KPART>
+------------------------
+///<KPART><ID> solarisation exemple  </ID>
+  
+
+        <Fx><Pa>BindPalette</Pa>  1st parameter is always the name of the effect.
+
+            <Pa> sin |0.5|0.4|0.5</Pa> the rate between 0->1
+                                      There's a state "A" of the palette
+                                      and the state "B". If this parameter
+                                      is 0, its state A. If 1, it's B,
+                                      and you move between a and B.
+
+                            The folowing parameters describes the
+                            possible state of "A" and "B", BY Color
+                            Composant Red, Green,Blue.
+ WE HAVE TYPE "1" FOR SOLARISATION
+            <Pa>CTE|1</Pa>              type of fade:0,1,2,3
+            <Pa>CTE|255</Pa>            optional color 0->255 (0)
+            <Pa> texture256x256 </Pa>     palette where to fade ( "B" )
+            <Pa> texture256x256</Pa>            optional source Palette(2)
+
+            <Pa>CTE|1</Pa>              type of fade:0,1,2,3
+            <Pa>CTE|255</Pa>            optional color 0->255 (0)
+            <Pa>texture256x256</Pa>       Palette where to fade ( "B" )
+            <Pa>texture256x256</Pa>       optional source Palette(2)
+
+            <Pa>CTE|1</Pa>              type of fade:0,1,2,3
+            <Pa>CTE|255</Pa>            optional color 0->255 (0)
+            <Pa>texture256x256</Pa>       Palette where to fade ( "B" )
+            <Pa>texture256x256</Pa>       optional source Palette(2)
+        </Fx>
+
+    <Fx>
+        <Pa> Twirl </Pa>
+        <Pa></Pa>
+        <Pa> texture256x256 </Pa>
+
+        <Pa>SIN|0|1|0.25</Pa> ofsx
+        <Pa>COS|0|1|0.25</Pa> ofsY
+
+        <Pa>SIN|0|0.1|1</Pa> start angle
+        <Pa>CTE|0.2</Pa>    amp. angle
+        <Pa>sin|0|0.8|0.9</Pa>    freq angle
+
+        <Pa>CTE|0</Pa>         start dist.
+        <Pa>cte|0</Pa> amp.dist
+        <Pa>cte|0</Pa> freq dist
+
+        <Pa>CTE|0</Pa> mapping type
+    </Fx>
+
+------------------ let's put an object builder here (it changes nothing)
+<KCAM> cam_1 |0|0|0|0|0|0|1  </KCAM>
+
+------------- place camera in space according to a sinus movement.
+ <Fx><Pa> SetCamCoord </Pa>
+            <Pa> cam_1 </Pa>
+
+            <Pa> cos |0|0.8|1</Pa>    x
+            <Pa> cte | 0 </Pa>        y
+            <Pa> sin |-0.5|0.8|1.2</Pa>    z
+
+            <Pa> 3cte |0|0|0</Pa>  a multiparameter setting angle o1,o2,o3 to 0
+
+            <Pa> CTE | 0.8 </Pa>  FOV (never set 0 or negative, mathematicaly impossible.)
+            </Fx>
+
+   
+
+
+
+///</KPART>
+------------------------
+///<KPART><ID>  darkbind  </ID>
+  
+        <Fx><Pa>BindPalette</Pa>  1st parameter is always the name of the effect.
+
+            <Pa>  bounce |0|100|500|0|1</Pa> the rate between 0->1
+                                      There's a state "A" of the palette
+                                      and the state "B". If this parameter
+                                      is 0, its state A. If 1, it's B,
+                                      and you move between a and B.
+
+                            The folowing parameters describes the
+                            possible state of "A" and "B", BY Color
+                            Composant Red, Green,Blue.
+
+ 0,0,0 means for dark
+
+            <Pa>CTE|0</Pa>              type of fade:0,1,2,3
+            <Pa>CTE|0</Pa>            optional color 0->255 (0)
+            <Pa> texture256x256 </Pa>     palette where to fade ( "B" )
+            <Pa> texture256x256</Pa>            optional source Palette(2)
+
+            <Pa>CTE|0</Pa>              type of fade:0,1,2,3
+            <Pa>CTE|0</Pa>            optional color 0->255 (0)
+            <Pa>texture256x256</Pa>       Palette where to fade ( "B" )
+            <Pa>texture256x256</Pa>       optional source Palette(2)
+
+            <Pa>CTE|0</Pa>              type of fade:0,1,2,3
+            <Pa>CTE|0</Pa>            optional color 0->255 (0)
+            <Pa>texture256x256</Pa>       Palette where to fade ( "B" )
+            <Pa>texture256x256</Pa>       optional source Palette(2)
+        </Fx>
+
+
+   <Fx><Pa> Warper </Pa>
+            <Pa> </Pa>              the rectangle where to draw (default)
+            <Pa> texture256x256 </Pa> the 256x256 texture to deform
+
+            <Pa>CTE|0.8</Pa>        a zoomx rate
+            <Pa>CTE|0.8</Pa>        a zoomy rate
+            <Pa>SIN|0|0.5|0.03</Pa> texture offset x
+            <Pa>COS|0|0.5|0.03</Pa> texture offset Y
+
+            <Pa>CTE|0.4</Pa>        amplitude of deformation
+            <Pa>CTE|0.2</Pa>        frequency of deformation
+            <Pa>SIN|0|0.4|2</Pa>    X offset of the deformation
+            <Pa>COS|0|0.6|2</Pa>    Y...
+
+            <Pa>CTE|0</Pa> mapping type
+    </Fx>
+ 
+
+
+    ----- sprite AFTER radialblur: not affected
+    <Fx><Pa> SpritePlain </Pa>                  note: SpritePlain is like
+        <Pa></Pa>                               sprite but color 0 is printed too.
+        <Pa> imghost   </Pa>                    ( and it's faster. )
+        <Pa> 4cte|0.75|0.75|0.95|0.95 </Pa>
+    </Fx>
+
+
+///</KPART>
+------------------------
+///<KPART><ID> madpalette  </ID>
+
+ sinus movement are set to the palette rate,
+ but also the RGB component !!
+
+        <Fx><Pa>BindPalette</Pa>  1st parameter is always the name of the effect.
+
+            <Pa>   sin|0.5 |1.6|0.35</Pa> the rate between 0->1
+                                      There's a state "A" of the palette
+                                      and the state "B". If this parameter
+                                      is 0, its state A. If 1, it's B,
+                                      and you move between a and B.
+
+                            The folowing parameters describes the
+                            possible state of "A" and "B", BY Color
+                            Composant Red, Green,Blue.
+
+
+
+            <Pa>CTE|0</Pa>              type of fade:0,1,2,3
+            <Pa> sin|128 |1.8|100</Pa>            optional color 0->255 (0)
+            <Pa> texture256x256 </Pa>     palette where to fade ( "B" )
+            <Pa> texture256x256</Pa>            optional source Palette(2)
+ green will solarise
+            <Pa>CTE|1</Pa>              type of fade:0,1,2,3
+            <Pa> cte|0</Pa>            optional color 0->255 (0)
+            <Pa>texture256x256</Pa>       Palette where to fade ( "B" )
+            <Pa>texture256x256</Pa>       optional source Palette(2)
+
+            <Pa>CTE|0</Pa>              type of fade:0,1,2,3
+            <Pa>  sin|128 |1.2|100</Pa>            optional color 0->255 (0)
+            <Pa>texture256x256</Pa>       Palette where to fade ( "B" )
+            <Pa>texture256x256</Pa>       optional source Palette(2)
+        </Fx>
+
+
+
+
+    <Fx>
+        <Pa> Twirl </Pa>
+        <Pa></Pa>
+        <Pa> texture256x256 </Pa>
+
+        <Pa>SIN|0|0.5|0.25</Pa> ofsx
+        <Pa>COS|0|0.4|0.25</Pa> ofsY
+
+        <Pa>SIN|0|0.1|1</Pa> start angle
+        <Pa>CTE|0.2</Pa>    amp. angle
+        <Pa>sin|0|0.4|0.9</Pa>    freq angle
+
+        <Pa>CTE|0</Pa>         start dist.
+        <Pa>cte|0</Pa> amp.dist
+        <Pa>cte|0</Pa> freq dist
+
+        <Pa>CTE|0</Pa> mapping type
+    </Fx>
+
+
+
+
+///</KPART>
+---------------------------

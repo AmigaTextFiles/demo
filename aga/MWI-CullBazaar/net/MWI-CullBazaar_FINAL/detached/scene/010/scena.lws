@@ -1,0 +1,129 @@
+LWSC
+1
+
+FirstFrame 1
+LastFrame 60
+FrameStep 1
+PreviewFirstFrame 1
+PreviewLastFrame 400
+PreviewFrameStep 1
+FramesPerSecond 10.000000
+
+LoadObject Roboczy/others/Mawi/CullBazaar/010/01.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  6
+  272.35 14.2 189.45 0 0 0 1 1 1
+  0 0 0 0 0
+  272.35 14.2 189.45 52.38999 30.29 67.98999 1 1 1
+  39 0 0 0 0
+  -53.90002 14.2 -304.55 169.26 97.86 219.66 1 1 1
+  126 0 0 0 0
+  -44.85315 8.200001 -74.97537 271.3533 156.8867 352.1533 1 1 1
+  202 0 0 0 0
+  -35.65002 14.2 -261.3 403 233 523 1 1 1
+  300 0 0 0 0
+  -35.65002 14.2 -261.3 468.6999 169.1 523 1 1 1
+  400 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+LoadObject Roboczy/others/Mawi/CullBazaar/010/01beta.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  3
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+  0 0 0 -124 -451 -201 1 1 1
+  300 0 0 0 0
+  0 0 0 -43.79999 -481.5999 -201 1 1 1
+  400 0 0 0 0
+EndBehavior 1
+ParentObject 1
+ShadowOptions 7
+
+LoadObject Roboczy/others/Mawi/CullBazaar/010/01theta.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  3
+  -4 0 -2.75 52.2 -34 0 1 1 1
+  0 0 0 0 0
+  -4 0 -2.75 414 123 451 1 1 1
+  300 0 0 0 0
+  -4 0 -2.75 336.2 231.7 451 1 1 1
+  400 0 0 0 0
+EndBehavior 1
+ParentObject 2
+ShadowOptions 7
+
+AmbientColor 255 255 255
+AmbIntensity 0.250000
+
+AddLight
+LightName Light
+ShowLight 1 7
+LightMotion (unnamed)
+  9
+  1
+  -2 2 -2 45 35 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LightColor 255 255 255
+LgtIntensity 1.000000
+LightType 0
+ShadowType 1
+
+ShowCamera 1 7
+CameraMotion (unnamed)
+  9
+  1
+  0.4181175 -0.1685371 -493.7419 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ZoomFactor 3.200000
+Resolution 1
+CustomSize 640 380
+PixelAspectRatio 2
+LimitedRegion 1
+RegionLimits 0.000000 1.000000 0.000000 1.000000
+SegmentMemory 2200000
+Antialiasing 0
+AdaptiveSampling 1
+AdaptiveThreshold 16
+FilmSize 2
+FieldRendering 0
+MotionBlur 0
+DepthOfField 0
+
+BGImage E:/a-madwizards/!1d_cull_bazaar/gfx/1bazaar_k5 karma.jpg
+SolidBackdrop 1
+BackdropColor 0 0 0
+ZenithColor 0 40 80
+SkyColor 120 180 240
+GroundColor 50 40 30
+NadirColor 100 80 60
+FogType 0
+DitherIntensity 1
+AnimatedDither 0
+
+RenderMode 2
+RayTraceEffects 0
+ClipRayColors 0
+DataOverlayLabel  
+FullSceneParamEval 0
+
+ViewMode 5
+ViewAimpoint 157.410355 0.000000 223.683960
+ViewDirection 0.300197 -0.314159 0.000000
+ViewZoomFactor 4.000000
+GridNumber 40
+GridSize 50.000000
+ShowMotionPath 1
+ShowBGImage 0
+ShowFogRadius 0
+ShowRedraw 0
+ShowSafeAreas 0
+ShowFieldChart 0

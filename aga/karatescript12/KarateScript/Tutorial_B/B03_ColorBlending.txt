@@ -1,0 +1,406 @@
+
+
+
+
+ COLOR- BLENDING
+
+ OK, now let's see some particular side of karate.
+ all KARATE68k demo only use 256 colors 8Bit screens.
+
+ this means on one frame displayed, there can be only 256
+ differents colors used by the graphics.
+this makes impossible to do colors operation such as transparencies
+as would do a 16bit or 24 bit screen, so we have to use tricks:
+
+ To resolve transparency and other color operation with 256 colors,
+demo coders often use color tables: it is a precalculation that
+provide a quick way to find the best color possible for an operation
+of pixel-color-blending
+
+you can build an object of type "colortable" with the tag: <KCOLORTABLE >
+it looks like:
+
+<KCOLORTABLE > coltabname | data/remaptable.iff |0|255|255|255    </KCOLORTABLE>
+
+---------------------------------------------------------------
+note now a new construcor:
+
+   < computecolortable> label | image label |0|255|255|255
+        </computecolortable>
+
+ that can replace this table with no need of creating an image.
+ (only the palette is used from a <kimg> created image)
+---------------------------------------------------------------------
+
+ after the name, an image file (of size 256x128 , 256 colors)
+ and 4 numbers are asked. What does this means ?
+
+ if you look the 128x256 color image remaptable.iff, you will find the image is
+a suit of "true-color" degradees remaped to the 256 colors palette we use
+in the exemple.
+ If you look at the root of the package, you will find another image
+ named ColorTableModel.iff: this one is 24 bit, and remaptable.iff is
+ in fact the same, remapped to our palette.
+ it represent in fact all the colors possible in a 15bit color mode.
+
+ In fact, KCOLORTABLE build 2 colortable, using the 128x256 you provide,
+ and makes this a lot faster than if you would have to precalculate
+ it from "start". It only takes a few seconds with a 68030, whereas a
+ complete remap would have taken 2 minutes.
+
+ It is obvious if you use different palettes in differents effect,
+ you will need at least a colortable by palette where you need to do
+ color operations.
+
+ you can use the same "remaptable.iff" for different <KCOLORTABLE >:
+why that ?
+ As I said, "colortable" object contains 2 colortable, for 2 different types
+ of operations:
+
+ - the 256 x 256 -> 256 color operation  (1)
+
+ - the 256 x 64 -> 256 color operation  (2)
+
+all karate effect using transprency need a "colortable", but some
+only use the (1) part of the table, some other need colortable type (2)
+
+ "spritetable" for example, is an effect that display
+ a sprite with transparency, and it uses 256 x256-> 256 colortable (1).
+ this means the transparency rate, and the color operation the sprite
+ do depend of the colortable, and can't be changed.
+after the table file name, the 1sy numeric parameter give the type of this
+operation: for the moment we have:
+    0: 50% transparency
+    1: persistence with decay.
+
+ this 256x256 ->256 color operation are also used in the "motionblur"
+ and "radial blur" effects.
+
+the second table operation is calculated with the 3 last numeric argument,
+which stands for a "Red,Green,Blue" color. (in the example upper, we have
+(255,255,255) which means white.
+
+the second table provide the results for a 64x256 ->256 color operation,
+it is used in effect like "SpriteLight". spritelight ask 2 more parameters
+than sprite: a colortable object, and an "alphachannel" rate.
+ the images that must be used with "...light" effects using this tables,
+must be 64 colors one, and figure a grey degradees where 0 is black
+and 63 is white. (like lightghost.iff) SpriteLight is able to make
+the sprite appear and disappear, with a transparency rate.
+ it is very convenient, because by using multiple colortable for a same
+ palette (using the same remap-image file), you can make multiple
+ color-blending.
+
+ follow a script of different parts showing one of the multiple
+application of colortables and effects that use them, like
+spritelight, spritetable, motionblur and radialblur...
+
+----------------------------------------------------------------
+let's built 2 color table:
+
+  coltab1 stands BOTH for 50% transparency and "fade to white"
+<KCOLORTABLE> coltab1 | data/remaptable.iff |0|255|255|255    </KCOLORTABLE>
+
+ coltab2 stands BOTH for "persistence with decay" and "fade to dark"
+<KCOLORTABLE> coltab2 | data/remaptable.iff |1|  0|  0|  0    </KCOLORTABLE>
+
+----------------------------------------------------------------
+
+<MAIN> myscript |0|1</MAIN>              the main script to play...
+
+<KIMG> texture256x256 | data/logofond.iff </KIMG>
+
+<KIMG> texture256x256b | data/texture2.iff </KIMG>
+
+
+<KIMG> impacman | data/oldpac.iff </KIMG>       These one, used for sprites
+<KIMG> imghost  | data/ghost1.iff </KIMG>       can be any-sized.
+<KIMG> imghost2  | data/inky.iff </KIMG>
+
+<KIMG> lightghost | data/lightghost.iff </KIMG> this one doesn't use the
+                                                same palette and will only
+                                                be used with spritelight.
+
+--------------------------------------------------
+<KSCRIPT>                           let's write a script to play.
+
+    <ID> myscript </ID>
+
+    <PLAY> motionblur_part | 500 | 0 | 1 </PLAY>
+    <PLAY> blankpart | 25 | 0 | 1 </PLAY>       --> let's have some short dark screen between
+    <PLAY> transpasprite| 400 | 0 | 1 </PLAY>
+    <PLAY> blankpart | 25 | 0 | 1 </PLAY>
+    <PLAY> radial blur part | 600 | 0 | 1 </PLAY>
+    <PLAY> blankpart | 25 | 0 | 1 </PLAY>
+    <PLAY> spritelightexample | 600 | 0 | 1 </PLAY>
+
+    <PLAY> blankpart | 25 | 0 | 1 </PLAY>
+    <PLAY> motionblur_part | 100 | 0 | 1 </PLAY>
+    <PLAY> blankpart | 25 | 0 | 1 </PLAY>
+    <PLAY> transpasprite| 400 | 0 | 1 </PLAY>
+    <PLAY> blankpart | 25 | 0 | 1 </PLAY>
+    <PLAY> radial blur part | 600 | 0 | 1 </PLAY>
+    <PLAY> blankpart | 25 | 0 | 1 </PLAY>
+    <PLAY> spritelightexample | 60000 | 0 | 1 </PLAY>   ad lib...
+
+</KSCRIPT>
+
+--------------------------------------------------------
+///<KPART> <ID> motionblur_part </ID>
+
+    <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> texture256x256 </Pa>   we have seen each image stands for a 256 color palette too.
+    </Fx>
+
+    <Fx>
+        <Pa> Twirl </Pa>                some normal twirl on the background.
+        <Pa></Pa>
+        <Pa> texture256x256 </Pa>
+
+        <Pa>SIN|0.5|1|0.25</Pa> ofsx
+        <Pa>COS|0.5|1|0.25</Pa> ofsY
+
+        <Pa>SIN|0|0.1|1</Pa> start angle
+        <Pa>CTE|0</Pa>    amp. angle
+        <Pa>CTE|0</Pa>    freq angle
+
+        <Pa>CTE|0</Pa>         start dist.
+        <Pa>SIN|0|0.6|0.5</Pa> amp.dist
+        <Pa>COS|0|0.2|32</Pa> freq dist
+
+        <Pa>CTE|0</Pa> mapping type
+
+    </Fx>
+    ------ we throw the motionblur effect.
+    <Fx><Pa> MotionBlur  </Pa>
+            <Pa></Pa> default rec
+            <Pa> coltab1   </Pa>        50% transparency with precedent frame.
+    </Fx>
+    ---- this sprite will be displayed after:this means the motion blur will not affect it.
+
+    <Fx><Pa> Sprite </Pa>
+        <Pa></Pa>
+        <Pa> impacman   </Pa>
+        <Pa> 4cte|0.4|0.4|0.6|0.6 </Pa>
+    </Fx>
+
+
+
+///</KPART>
+----------------------------- a blank between effects.
+///<KPART> <ID> blankpart  </ID>
+
+    <Fx><Pa> FillRc </Pa><Pa></Pa><Pa>cte| 0 </Pa></Fx>
+
+///</KPART>
+------------------------
+///<KPART><ID> transpasprite  </ID>
+
+    <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> texture256x256 </Pa>   we have seen each image stands for a 256 color palette too.
+    </Fx>
+
+    <Fx>
+        <Pa> Twirl </Pa>
+        <Pa></Pa>
+        <Pa> texture256x256 </Pa>
+
+        <Pa>SIN|0.5|1|0.25</Pa> ofsx
+        <Pa>COS|0.5|1|0.25</Pa> ofsY
+
+        <Pa>SIN|0|0.1|1</Pa> start angle
+        <Pa>CTE|0.2</Pa>    amp. angle
+        <Pa>sin|0|0.8|0.9</Pa>    freq angle
+
+        <Pa>CTE|0</Pa>         start dist.
+        <Pa>cte|0</Pa> amp.dist
+        <Pa>cte|0</Pa> freq dist
+
+        <Pa>CTE|0</Pa> mapping type
+    </Fx>
+
+------------------ let's put an object builder here (it changes nothing)
+<KCAM> cam_1 |0|0|0|0|0|0|1  </KCAM>
+
+------------- place camera in space according to a sinus movement.
+ <Fx><Pa> SetCamCoord </Pa>
+            <Pa> cam_1 </Pa>
+
+            <Pa> cos |0|0.8|1</Pa>    x
+            <Pa> cte | 0 </Pa>        y
+            <Pa> sin |-0.5|0.8|1.2</Pa>    z
+
+            <Pa> 3cte |0|0|0</Pa>  a multiparameter setting angle o1,o2,o3 to 0
+
+            <Pa> CTE | 0.8 </Pa>  FOV (never set 0 or negative, mathematicaly impossible.)
+            </Fx>
+
+
+-------------- display sprite  with a 4cam multiparameter
+   <Fx><Pa> SpriteTable </Pa>
+        <Pa></Pa>
+        <Pa> impacman </Pa>
+        <Pa> 4cam| cam_1 |1.5|1.5|-1|0|4 </Pa>  z=4,far away in front of the camera
+        <Pa> coltab1   </Pa>  50% transpa
+    </Fx>
+
+-------------- display sprite  with a 4cam multiparameter
+
+  <Fx><Pa> SpriteTable </Pa>
+        <Pa></Pa>
+        <Pa> imghost </Pa>
+        <Pa> 4cam| cam_1 |1.5|1.5| 1|0|4 </Pa>  z=4,far away in front of the camera
+        <Pa> coltab1   </Pa>
+    </Fx>
+
+----------------------
+   <Fx><Pa> SpriteTable </Pa>
+        <Pa></Pa>
+        <Pa> imghost2 </Pa>
+        <Pa> 4cam| cam_1 |1.5|1.5|0|0|3 </Pa>  z=3,far away in front of the camera
+        <Pa> coltab1   </Pa>
+    </Fx>
+
+
+
+
+
+
+
+///</KPART>
+------------------------
+///<KPART><ID>  radial blur part  </ID>
+
+    <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> texture256x256 </Pa>   we have seen each image stands for a 256 color palette too.
+    </Fx>
+
+
+   <Fx><Pa> Warper </Pa>
+            <Pa> </Pa>              the rectangle where to draw (default)
+            <Pa> texture256x256b </Pa> the 256x256 texture to deform
+
+            <Pa>CTE|0.8</Pa>        a zoomx rate
+            <Pa>CTE|0.8</Pa>        a zoomy rate
+            <Pa>SIN|0|0.5|0.03</Pa> texture offset x
+            <Pa>COS|0|0.5|0.03</Pa> texture offset Y
+
+            <Pa>CTE|0.4</Pa>        amplitude of deformation
+            <Pa>CTE|0.2</Pa>        frequency of deformation
+            <Pa>SIN|0|0.4|2</Pa>    X offset of the deformation
+            <Pa>COS|0|0.6|2</Pa>    Y...
+
+            <Pa>CTE|0</Pa> mapping type
+    </Fx>
+  
+    <Fx><Pa>RadialBlur</pa>
+        <Pa>  </Pa>     rectangle by default.
+        <Pa> coltab2 </Pa>              "persistence with decay" is very handy with radialblur.
+        <Pa> sin|0.5|0.8|0.2 </Pa>  X center of the radial blur.
+        <Pa> sin|0.5|0.6|0.2</Pa>   Y
+        <Pa>cte|0.92</Pa>           Width zooming strength [0,1]
+        <Pa>cte|0.92</Pa>           Height zooming strength [0,1]
+    </Fx>
+
+
+    ----- sprite AFTER radialblur: not affected
+    <Fx><Pa> SpritePlain </Pa>                  note: SpritePlain is like
+        <Pa></Pa>                               sprite but color 0 is printed too.
+        <Pa> imghost   </Pa>                    ( and it's faster. )
+        <Pa> 4cte|0.75|0.75|0.95|0.95 </Pa>
+    </Fx>
+
+
+///</KPART>
+------------------------
+///<KPART><ID> spritelightexample  </ID>
+
+    <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> texture256x256 </Pa>   we have seen each image stands for a 256 color palette too.
+    </Fx>
+
+    <Fx>
+        <Pa> Twirl </Pa>
+        <Pa></Pa>
+        <Pa> texture256x256 </Pa>
+
+        <Pa>SIN|0.5|0.5|0.25</Pa> ofsx
+        <Pa>COS|0.5|0.4|0.25</Pa> ofsY
+
+        <Pa>SIN|0|0.1|1</Pa> start angle
+        <Pa>CTE|0.2</Pa>    amp. angle
+        <Pa>sin|0|0.4|0.9</Pa>    freq angle
+
+        <Pa>CTE|0</Pa>         start dist.
+        <Pa>cte|0</Pa> amp.dist
+        <Pa>cte|0</Pa> freq dist
+
+        <Pa>CTE|0</Pa> mapping type
+    </Fx>
+
+------------- place camera in space according to a sinus movement.
+ <Fx><Pa> SetCamCoord </Pa>
+            <Pa> cam_1 </Pa>
+
+            <Pa> cos |0|0.8|1</Pa>    x
+            <Pa>  sin |-0.5|0.8|0.6</Pa>        y
+            <Pa> sin |-0.5|0.8|1.2</Pa>    z
+
+            <Pa> 3cte |0|0|0</Pa>  a multiparameter setting angle o1,o2,o3 to 0
+
+            <Pa> CTE | 0.8 </Pa>  FOV (never set 0 or negative, mathematicaly impossible.)
+            </Fx>
+
+
+   <Fx><Pa> SpriteLight </Pa>
+        <Pa></Pa>
+        <Pa> lightghost </Pa>
+        <Pa> 4cam| cam_1 |1|1|-0.5|0|4 </Pa>
+        <Pa> coltab2   </Pa> to dark
+        <Pa> sin |0.5|2.8|0.3</Pa>
+
+    </Fx>
+
+-------------- display sprite  with a 4cam multiparameter
+
+    <Fx><Pa>SpriteLight</Pa>
+            <Pa> </Pa>
+            <Pa> lightghost </Pa>
+            <Pa> 4cam| cam_1 |1.5|1.5|-1|-0.5|2 </Pa>  z=4,far away in front of the camera
+            <Pa> coltab1   </Pa>
+            <Pa>  sin |0.5|3.0|0.3 </Pa>
+
+            </Fx>
+-------------- display sprite  with a 4cam multiparameter
+
+  <Fx><Pa> SpriteLight </Pa>
+        <Pa></Pa>
+        <Pa> lightghost </Pa>
+        <Pa> 4cam| cam_1 |1.5|1.5| 1|0.5|4 </Pa>  z=4,far away in front of the camera
+        <Pa> coltab1   </Pa> to white
+        <Pa> sin |0.5|1.4|0.4</Pa>
+    </Fx>
+
+----------------------
+   <Fx><Pa> SpriteLight </Pa>
+        <Pa></Pa>
+        <Pa> lightghost </Pa>
+        <Pa> 4cam| cam_1 |1.5|1.5|0|0|3 </Pa>  z=3,far away in front of the camera
+        <Pa> coltab2   </Pa> to dark
+
+        <Pa> sin |0.5|1.5|0.4</Pa>
+
+    </Fx>
+
+
+
+
+
+
+
+///</KPART>
+---------------------------

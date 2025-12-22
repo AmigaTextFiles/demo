@@ -1,0 +1,105 @@
+                          ___  ____ __________________
+                         /¯¯¯\/¯¯¯¯\¯¯¯¯¯¯¯\¯¯¯\¯¯¯¯¯¯\
+                        /     \ o   \ O    /    \  ___/
+                       /   O   \    /     /  O _/  |¯¯
+                      /         \ o \    /     \   |
+                      \____n____/___/___/ \__n__|__|
+                       ¯¯¯¯¯¯¯¯¯¯¯¯¯ ¯¯¯   ¯¯¯¯¯¯¯¯¯
+
+                 uvadi dne 20.12.1998 ctvrte cislo diskmagu
+
+
+       AA      MM    MM  III   GGGGG      AA           CCCCC    SSSSS
+      AAAA     MMM  MMM  III  GG   GG    AAAA         CC   CC  SS   SS
+     AA  AA    MM MM MM  III  GG        AA  AA        CC        SS
+    AA    AA   MM    MM  III  GG  GGG  AA    AA       CC         SS
+    AAAAAAAA   MM    MM  III  GG   GG  AAAAAAAA       CC           SS
+    AA    AA   MM    MM  III  GG   GG  AA    AA       CC   CC  SS   SS
+    AA    AA   MM    MM  III   GGGGG   AA    AA        CCCCC    SSSSS
+
+
+                          s t a l a   r e d a k c e
+                          ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+
+                   Jaroslav Pokorny  -  Shaman/Abort          q___p
+                    Jaromir Rozmara  -  JR/Abort              /o.O\
+       q___p             Marek Hron  -  Wolf/Abort            \\_//
+       /o.O\         Radek Hrdlicka  -  Lahve/HLA             /¯U¯\
+       \\_//             Petr Skala  -  Schizzy/Abort       ,/\___/\,
+       /¯U¯\            Lukas Skala  -  LuSk/Abort          ¯ _|'|_ ¯
+     ,/\___/\,         Michal Kovar  -  Fractal/StillTeam     ¯¯ ¯¯
+     ¯ _|'|_ ¯           Jiri Jandl  -  Chroust/StillTeam
+       ¯¯ ¯¯
+   _____________________________________________________________________
+   ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+
+  DiskMag  AmigaCS  je  plne systemovy, pracuje na vlastni verejne obrazovce
+a chodi   perfektne   pod   CyberGraphX   (nadefinujte  si  v CGXMode  rezim
+640x256x8).   AmigaCS pouziva pro veskerou grafiku systemove datatypy, proto
+muze  pouzivat libovolny format grafiky.  Avsak z duvodu znacne uspory mista
+i kvalitniho  ditheringu byl vybran moderni a perspektivni format PNG, proto
+je potreba nainstalovat prilozeny PNG datatype.
+
+
+  Pozadavky diskmagu:
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  - Amiga s CPU 68020 a vyssim
+  - AGA grafika nebo CyberGraphX kompatibilni graficka karta
+  - AmigaOS 3.0 a vyssi
+  - nainstalovany PNG datatype (prilozen v archivu)
+  - max. 3 MB volneho mista na harddisku
+
+  Pametove naroky
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  · na AGA bez FASTky :  volnych 1.8 MB CHIP  (upgradujte!)
+  · na AGA s FASTkou  :  volnych 1.2 MB CHIP a cca. 1 MB FAST
+  · pod CyberGraphX   :  volnych 0.1 MB CHIP a cca. 2 MB FAST
+
+  Instalace PNG datatypu:
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  - jednoduse rozbalte archiv 'png-datatype.lha' z adresare 'Extras'
+    na vas systemovy disk (tj. do adresaru 'SYS:Classes/DataTypes'
+    a 'SYS:Devs/DataTypes') a restartujte Amigu.
+    [png.datatype 43.3 (16.12.95) - ©1995 Cloanto Italia srl.]
+
+  Zname chyby
+  ¯¯¯¯¯¯¯¯¯¯¯
+  - zavirani WB sice muze usetrit nejakou CHIPku, ale tato funkce nepracuje
+    se vsemi patchi (MCP) a utilitami korektne; neni to chyba diskmagu!
+  - pokud se vam do vyberu screenmode/hudby vykresluje pattern, tak se
+    jedna o znamou chybu systemu 3.0 (gadtools.library V39). Ve verzi 40
+    gadtools.library (AmigaOS 3.1) je chyba opravena. V pripade, ze vam
+    tato chyba hodne vadi, staci smazat soubory Gfx/BackFill#?.
+  - FastIPrefs & spol. zpusobuje problemy s patternem v LISTVIEW gadgetach
+    (naprava: smazat FastIPrefs, smazat vse v ENVARC:Sys, nastavit
+    preference znova preferencnimi programy z WB 3.x).
+
+   _____________________________________________________________________
+   ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+
+                              Kontaktni adresy
+                              ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+    _____                                                         _____
+   ||O_| |   E-MAIL:  shaman@area93.cz                           | |_O||
+   | (o) |      WWW:  http://sun.ujep.cz/~pokorny/amigacs.html   |,---,|
+   |  ¯ .|      FTP:  ftp.tnet.cz/Amiga   (login: anonymous)     ||   ||
+    ¯¯¯¯¯    AMINET:  demo/mag/AmigaCS_###.lha                    ¯¯¯¯¯ 
+
+   _____________________________________________________________________
+   ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+
+                                 ,       , 
+                                 |\_____/|
+                                 |_ ___ _|    
+                         .······.|¯(o o)¯|.······.
+                        ·        \  ¯Y¯  /        · 
+                       ·       _  \vV¯Vv/  _       ·
+                       |   O()(_)  \^^^/  (_)()O   |
+                       ·   ''  '    ¯¯¯    '  ''   ·
+                       '.            _  ___       .'
+                         ·       /\B(¯)R¯|¯      ·
+                          '·     ¯¯  ¯   '     .'
+                            '·               .'
+                              '·.         .·'
+                                 '·.   .·'
+                                    '·'

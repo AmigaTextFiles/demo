@@ -1,0 +1,21 @@
+Short:        Plasma SDL effect (with sources)
+Author:       mibin@tin.it (Michele Bini), Morphos port by Fabrizio "Lanch" Bartoloni
+Uploader:     lanch@tiscali.it (Fabrizio Bartoloni)
+Type:         demo/intro
+Version:      1.0
+Architecture: ppc-morphos;
+
+Plasma demo by Bini Michele <mibin@tin.it>, Aug 1998. Public domain.
+Coding time: ~5 hours.
+
+TODO:
+ - timing (currently the demo only runs at full speed).
+ - better support for non-palettized displays?
+ - mmx optimizations? (the main task of the code is summing three tables,
+and mmx instructions could help).
+
+Note from porting author: I remember having seen this effect already ported
+ inside an archive called SDL-demos.lha with several SDL effects taken from
+ the demo section of www.libsdl.org but this one is provided with sources,
+  readme and is linked against latest PowerSDL thus offering much more options
+  like being iconified or promoted to a new screen.

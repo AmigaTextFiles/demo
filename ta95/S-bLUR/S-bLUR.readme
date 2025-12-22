@@ -1,0 +1,78 @@
+BLUR, a 40k Intro by SONiK Clique
+---------------------------------
+
+System Requirements:
+	AGA, MC68020+
+
+General Crap:
+	Runs at reasonable framerate even with an ordinary A1200 without
+	fastmem, though fastmem makes it run smoother. The coding is not
+	really astonishing, but please note that almost all the routines
+	were made in >2< weeks. (Thanks to Murk for lending me his A1200)
+
+	This production is NOT FREEWARE! Contact us for further info.
+
+
+A few words about the routines [Blaah...]:
+
+Gouraud Shaded Doughnut:
+	This is an old routine but it was however fast enough for our
+	needs, even though it lacked some major optimizations. 32 colors
+	and 64 polygons are used for this piece of plastic. [NO Chunky!]
+
+Vortex:
+	Runs in 320x256 copperscreen and involves a slight exponential
+	motion BLUR. The blur is quite hard to see and I'm not so sure
+	why it is there, but maybe it smoothens the effect just a little
+	bit.. (?) The rotating crap is a 64 colored julia fractal which
+	is calculated before starting the actual intro.
+
+Another Keftales rerun (?):
+	Actually these are Cassini's curves with two focal points and
+	motion blur. Sorry about the ugly colors, they WERE supposed
+	to be changed.. (?!)
+
+Phong-Shaded Vector:
+	Well, what can I say? There are only 16 colors because when the
+	intro was practically completed, I didn't have the time nor the
+	interest to replace the routine with a 256 colored version anymore.
+	(the latter version would have been almost as fast but twice as nice)
+	However phong shading hasn't been one of the most usual effects
+	in Amiga productions, at least until now.
+
+Blurred-Gouraud Doughnut:
+	This is a simple gouraud shaded Doughnut but as the intro
+	has to correspond to its name.... well.. :-)
+
+The End Part:
+	Nothing else but a beautiful background pattern, of course
+	calculated between the gouraudpart and the endpart.
+
+Player used:
+	The Player 6.1A by GURU / Sahara Surfers. This version worked fine on
+	the compo machine, but may cause problems on a normal A4000. We _may_
+	release a fix if there's need for one [email us!].
+
+
+				Truly Yours,
+
+						Deflector / SONiK Clique
+						skivisaa@vipunen.hut.fi
+
+---
+Short notes from Murk:
+
+	Nothing special to say about the overal layout/design or whatever
+	you want to call it. The graphics were produced especially for this
+	project and are drawn without rasters to save space. I did all the
+	graphics on my good 'ol B2000, but we ran out of time to add some
+	nice AGA shades.. Sorry!
+
+	The design is made to fit the music, but we did not work 'close
+	together' with Oxide, since that's for lammmas. If you want to
+	contact me / send comments, try this e-mail ad:
+
+	an942400@shsibm.shh.fi or snail-mail to: P.O.Box 43 FIN-02181 Espoo
+
+
+[EOF]

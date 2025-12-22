@@ -1,0 +1,10 @@
+interpol:c/assign c: interpol:c
+
+type tahiti_interpol
+makedir ram:env
+assign env: ram:env
+copy interpol:tahiti.data ram:
+copy interpol:c/algomusic.exe ram:
+copy interpol:tahiti ram:
+run ram:algomusic.exe BPM 170 ACID BREAKBEAT QUIET FOREVER
+ram:tahiti -quiet -loop -dither hiresham ram:tahiti.data

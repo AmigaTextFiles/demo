@@ -1,0 +1,61 @@
+Short:    The Castle by Loonies, 2nd at MS02
+Author:   psycho@loonies.dk
+Uploader: psycho@loonies.dk
+Type:     demo/aga
+Requires: AGA/CGX/P96, 16 mb fast, FPU
+
+
+
+
+                                The Castle
+
+                                by Loonies
+
+                       2nd at the Mekka-Symposium 2002
+
+                          final release version
+
+Credits
+=======
+
+Code:  Psycho, Blueberry
+Music:  Booster
+3D:  Maytz, Laika
+Textures:  Farfar, Maytz
+
+
+
+Requirements
+============
+
+FPU, 060 highly recommended
+---------------------------
+Has been reported to run fine on 040s, however the movements are really
+designed for smooth 25 fps operation.
+
+
+AGA or CGX/P96
+--------------
+On real 060 Amigas AGA gives the best and most stable framerate(*),
+so only use the CGX version if neccesary (or you got a *really* fast
+(or emulated) machine).
+
+
+1 MB chip ram, 16 MB fast ram (for the aga version)
+-----------------------------
+The more chipram the smoother operation(*), so if it is skipping frames
+try on a clean boot (really only applies to 060s).
+
+
+(*) We are introducing a "multibuffer" queue-like system instead of a simple
+double or triplebuffer. This makes it possible to save up frames in the fast
+parts of the scenes and using them in the slower parts. This effectivily
+turns our 25 fps requirement from a worst case to an average case requirement.
+The queue is allocated in chip ram, the longer the queue the better it works.
+
+
+
+Additional info
+===============
+
+http://www.loonies.dk

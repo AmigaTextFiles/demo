@@ -1,0 +1,46 @@
+;A1200 shop demos compilation  v0.03 (ntsc) - ALPHA release #3
+; by Christopher S Handley,  Email: ela95csh@sheffield.ac.uk
+
+;Thanks to everyone who has helped!  Esp. Stu, Noah, Rich & 'Spudboy' :)
+
+SetPatch <>Nil:
+Avail <>Nil: FLUSH
+
+-BrainCell <>Nil:    ;1
+Avail <>Nil: FLUSH
+-Siesta <>Nil:       ;2
+-Blur <>Nil:         ;4
+-Eq_TBL              ;6
+-Shocked? <>Nil:     ;5
+-S-bLUR <>Nil:       ;3
+
+Avail <>Nil: FLUSH
+C-Show <>Nil: _Intro
+Run <>Nil: SpriteLA Ball.spdat
+Wait 30
+C-Show <>Nil: _Sw
+Wait 30
+C-Show <>Nil: _Why
+Wait 30
+C-Show <>Nil: _Clown
+Wait 10
+
+C-Show <>Nil: _Intro
+Wait 30
+C-Show <>Nil: _Sw
+Wait 30
+C-Show <>Nil: _Why
+Wait 30
+C-Show <>Nil: _Clown
+Wait 10
+
+C-Show <>Nil: _Intro
+Wait 30
+C-Show <>Nil: _Sw
+Wait 30
+C-Show <>Nil: _Why
+Wait 30
+C-Show <>Nil: _Clown
+Wait 15
+
+Reset

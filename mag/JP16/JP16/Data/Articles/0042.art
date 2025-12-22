@@ -1,0 +1,70 @@
+!Game Review
+by d!RT!E
+12µF0µC4µJCµI0430µJEµF2
+Desert Racing of BardosµF0µC5
+It was announced as a new Highlight at APC-TCPs website:
+
+µF1µC4 "With Desert Racing of Bardos we'll show you a racing game that you have never seen on the Amiga before. Use different components for your car depending on your money, drive through amazing animated landscapes and bring your AGA Amiga to boil. In the single or multiplayer modes you'll not only have the possibilty of tuning the performance but also other things..."µC1 I like action games, the screenshots looked good and I was banned by:µC4 "Get Desert Racing of Bardos and experience an exciting arcade racing game without getting envious to the PC world..."
+
+µC1So I bought the game online...
+
+The CD-ROM arrived very fast and looked a bit homegrown, the cover also. I installed the game although its possible to run it directly from CD. I started the CGX-Version because I am a proud owner of an AMiGA with PCi system and want to enjoy the game on gfx-card... A requester appears for choosing the screen resolution. Everything feels good but then the most disturbing thing happend: the game runs slow as hell. It took me ages to escape back to AmigaOS because I had to wait for the menu with the "Exit" or reboot. I thought: "ok, maybe it's because of my config" and started the game in AGA Mode. This time I disabled the intro in the tooltypes of the game icons and chose a small season. Now the rotating loader diskanimation began to annoy me... 
+
+The game started. With "F" I enabled the frames per second display and what I saw there was not funny. 4-5 fps although I have a 060 in here and the games minimum requirements were 030. This can`t be true an arcade RACING game running at 5 fps - unbelievable.
+µI0431
+At AMiGA NEWS and AMiGA.org comments I read that I am not the only guy who experienced this problem. I read about a patch which should be available for the demoversion. Oh no... I bought "banana-ware", a product which is ripening at the consumer. Instead of playing I had to test out configs and write mails to Andreas Magerl.
+
+Andreas is the friendly guy from APC-TCP (APC-TCP is a software distributor, became 14 years old in may 2006)
+
+He wrote: µC4At the moment we test the graphics card patch. Unfortunately this patch does not work on all users' machines (I attached the patch here). It will take until end of next week to finish the same patch for the full version. Simultaneously we search the failure which still causes the problems at some machines. But on a 060 the game should run marvellous. What is your config exactly?
+
+µC1The patched demoversion was much faster concerning the loading and the animations were running faster. I believe they are running even faster than on AGA. The in game graphic feels faster too. But I still don't manage to get above 10fps not even when using the low-quality mode (without trees, additional objects and blocky voxel grafics). The game play was far better when one use the steering assistent. But its a pity that one crashes hard and the car stopps everytime you hit a small pylon or shrubbery. This is very unrealistic. It would be better to change the hard crashes to amercements or few damages at the car. If one hit a big stone or a tree a full crash is a must of course.
+
+Finnally Andreas sended me the patched fullversion and I still dont get more than 10-11 fps. Which is not ok for an arcade racing game in my opinion. It seems the voxelengine is not optimized very well or the amiga processor is too slow...
+µI0432
+Ok to summ it up: The game runs fast and fine on winuae. But this is an Amiga game and the minimum requirements were low. Some people said that it runs "well" on their unexpanded A1200 with 030 but I dont believe that they will have more than 10fps. For me 10fps were too few especially in touch with advertisements like this: "Get Desert Racing of Bardos and experience an exciting arcade racing game without getting envious to the PC world...". Yes it runs fast but then it has to run on a PC :D. It feels like Ralf Schmidt has coded it on Winuae.
+
+The idea of a voxelracing game is good because one can have a real offroad feeling. But the idea to use the consumers as betatesters is not a good one. Why did APC-TCP  not test it themselves? And if they test it how can they write sentences like above in their advertisements without doing patches before they release the game? Why has the community to wait for patches until the game is at least playable (it does not make fun yet, at least on real AMiGA). 
+
+µBCµC2Some user comments:µC1
+
+µC3ReTroViRuS - 2006-01-10µC1
+This is how games look in 2005? Give me a break! This looks just like "Turbo Racer 3D" and the equally bad "Wheels On Fire".
+
+µC3Reynolds - 2006-01-20µC1
+I can't understand why this game can't be written directly to PPC? On the other hand Shadow of third moon show how voxellandscapes can move on 68K CPUs, but this... and a lot of loading... dunno...
+
+µC3mailman - 2006-02-27µC1
+I have played only the demo and I quite like it but I wouldn't buy this game because it is not adequate to my configuration. I own PPC and the game doesn't support it. It's a pity. 
+
+On WinUAE you can easily play and have a good fun. But I am not going to buy a game for Amiga in which I am able to play on my PC which emulates Amiga. This is ridiculous. Why the hell the author have forgotten to add the support for at least PowerPC (not mention AmigaOS 4.0 or MorphOS)?
+
+µC3mailman - 2006-01-10µC1
+Unfortunately the most important thing is that on minimum requirements game is not playable. On WinUAE you can have quite fun if you tolerate some strange behaviours.
+
+
+
+
+rm34 did some intresting speedtest using OS3.9+BB1+BB2.... turn da page please!
+
+
+
+
+µC3rm34µC1
+My suffering continues. I tested the fullversion and the patch with the following configs:
+µJL
+1. A1200 + BPPC mit 68060 128MB + Mediator + Voodo + Picasso96
+- AGA : Max. 8 FPS
+- CGX : Max. 8 FPS
+
+2. A1200 + BPPC mit 68040 64MB+ Winner Z4 + CV64/3D + Cybergrafx
+- AGA : Max. 5 FPS
+- CGX : Max. 5 FPS
+
+3. A1200 + BPPC mit 68040 128MB+ BVision + Cybergrafx
+- AGA : Max. 5 FPS
+- CGX : Max. 5 FPS
+
+4. A1200 + 1230IV 32MB (without Graficscard or other expansions)
+- AGA : Max. 2 FPS
+

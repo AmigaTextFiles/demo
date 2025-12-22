@@ -1,0 +1,51 @@
+@{d 96FF6E}             SAS/C - Pouùívání funkcí volaných pêed a po vykonání main()
+             @{c 00CC09}¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+  Pokud  slinkujete  váî program s nëkterým s dodávaných startup modulû, (c.o, cres.o,
+...),  tak  mûùete  zadefinovat  funkce, které budou volány pêed voláním funkce main()
+jako souçást inicializace, a funkce, které budou volány po ukonçení funkce main().
+
+  Jména  tëchto  funkcí  musí  zaçínat  na  _STI  (pro  inicializaçní)  nebo _STD (pro
+terminaçní.  Linker pak tyto funkce vyhledá a zaêídí jejich zaêazení do startup.  Tyto
+funkce nemají ùádné parametry a nevrací ùádné hodnoty:
+
+     void _STImyinit(void)
+     {
+       /* your code here */
+     }
+     void _STDmyterm(void)
+     {
+        /* your code here */
+     }
+  Pokud  slink  najde alespoñ jednu autoinicializaçní funkci, tak vytvoêí pole pointrû
+na  funkce  pro  tyto  funkce.   Pole  se jmenuje __ctors (jako "constructors") a jeho
+poslední  poloùka  je  vùdy  NULL.   Funkce __fpinit pak projede tuto tabulku a zavolá
+vîechny  funkce  pêedtím  neù  skoçí  do  main().   Podobnë  to  funguje  i pro funkce
+autoterminaçní, pro ty linker vytváêí pole __dtors ("destructors").  Funkce, která pak
+toto pole pouùije se jmenuje _fpterm().
+
+    Struktura volání vypadá tedy takto:
+
+1) __fpinit()                a) pêipraví se floating point operace
+                             b) volají se funkce v __ctors
+
+2) __main()                  a) Inicializace I/O
+                             b) volá se main()
+                             c) Cleanup I/O
+
+3) __fpterm()                a) Cleanup floating point
+                             b) volají se fce v __dtors
+@{d 96FF6E}
+4) __MemCleanup()            a) dealokuje se pamëï alokovaná v programu (napê.
+                                pomocí malloc() )
+
+
+  Pokud  slink  nenajde ùádnou _STI ani _STD funkci, pak nahrazuje jakoukoli referenci
+na  __ctors a __dtors jako longword nula.  Pokud si chcete tedy napsat vlastní startup
+module, tak pêed pêístupem na __ctors (__dtors) je otestujte na nulu.
+
+  Ve vaîich _STI a _STD nepouùívejte level 1 a level 2 I/O fce (jako fopen() a open())
+-  nebyly  jeîtë inicializovány.  Mûùete pouùít Open() atd..  (AmigaOS).  Mûùete ovîem
+pouùívat malloc, free - standardní ANSI alokaçní rutiny.
+
+
+                                     @{c 00CC09}Sir/Torture@{c}

@@ -1,0 +1,187 @@
+--------  the < mesh3d> 3d object constructor
+
+< mesh3d> label | father | (9 parameters:position:rotations,scale)|
+       vertex | x,y,z | x,y,z | x,y,z | ... |
+       poly,TextureLabel |p0,p1,p2,p3 | p0,p1,p2 | p0,p1,p2 | p0,p1,p2,p3,p4 |... |
+       poly,OtherTexture |p0,p1,p2 | p0,p1,p2 |... |
+       vertexUV |u,v|u,v|...
+       </mesh3d>
+
+  It uses a whole 3D object geometry description to create an object.
+  After the classic  label/father/matrix parameters, you use the
+  name 'vertex' to start the vertex list: then you give a list
+  of coordinates x,y,z in the object's origin. you create as many vertexes
+  as you need, and you finish your vertex list by starting a polygon list,
+  with the name 'poly,texture', where texture is a texture label already defined
+  before, and that will be applied on all the following defined polygons.
+
+   To define polygons you just give a serial of vertex numbers rounding
+   the polygon CLOCKWISE. Polygons are only visible on ONE SIDE, the
+   other is invisible. The first vertex is numbered '0'.
+   If you defined 5 vertexes just before, they are numbered from 0 to 4.
+   Referencing a non-existing vertex occurs an error.
+     Minimum number of vertex rounding a polygon is 3. (it makes triangles.)
+   You can define polygon like quadrangle or 'n-gones' IF these vertex are
+   more or less on the same plane in space, and IF this 'n-gone' is convex:
+   (convex means you can't draw a straight line between 2 point in the polygon,
+   and have it going out of the polygon.), or it will make strange things.
+   Triangles are always convex.
+
+   It is possible to start many polygon list with another texture, within
+  the same mesh3d, by re-using keyword |poly,..|
+
+   If you use texture mapping on your object, you might want to define
+  an UV coordinate (coord on the texture) for your existing vertex list.
+   keyword 'vertexUV' start a list of  |u,v| coordinates cooresponding
+   to those defined in the vertex list.
+   Note 'vertexUV' list is completely optional. if you don't use it,
+   < mesh3d> will create default UV coordinate with a planar X,Y projection.
+
+   Trick: yes, you can perfectly imagine a third-party converter to make
+    objects as text-based < mesh3d>
+
+-------------- the < plane3d> 3d object constructor
+
+< plane3d> label | father | (9 parameters:position:rotations,scale)|
+	       Width| Height | NumberOfSubdivisionX | NumberOfSubdivisionY |
+	       u1|v1|u2|v2| TextureSide1 |TextureSide2 </plane3d>
+
+ 'plane3d' creates a flat rectangular object (no, not the things in the airports.)
+  on the X,Y plane. You can subdivise it into a grid if parameters NumberOfSubdivisionX
+  and NumberOfSubdivisionY are greater than 1. It will use more polygon, and
+  will not change the object's aspect, except texture mapping that could appear
+  more 'perspective-corrected'. (but it is slower)
+
+  You give dimensions with 'Width' and 'Height' parameters, the object's
+  origin will be the middle of the rectangle. You specify
+  a corresponding UV rectangle (u1,v1,u2,v2) on the texture, for texture mapping.
+  (0.0|0.0|1.0|1.0 will take all the 256x256 texture.)
+
+   You provide 2 textures, one fore each side. If one is invalid, the side is hidden.
+
+  Many tricks are possible with < plane3d>, you can use 1x1 grid with
+  < t3dmappingsprite> it will make a sprite that can rotate.
+
+-----------------
+ 
+
+ 
+
+-------- about < t3dmapping>:
+ 
+<kimg> image256x256 | data/oldpacanim.iff </kimg>
+<t3dmappingSprite> myTextureMapping | image256x256  </t3dmappingSprite>
+
+
+ <World3D> world1 </World3D>
+
+<KIMG> i_lightmapRed  | data/lightmapred.iff </kimg>
+<KIMG> i_lightmapgrey | data/lightmapgrey.iff </kimg>
+<t3dFlatLightMap> tLightMapRed   | i_lightmapRed  </t3dFlatLightMap>
+<t3dFlatLightMap> tLightMapGrey  | i_lightmapGrey </t3dFlatLightMap>
+
+<mesh3d> door |world1|0|0|0|0|0|0|1|1|1|
+       vertex | -5,0,3| -1,0,3 | 1,0,3 | 5,0,3 | -5,0,-3| -1,0,-3 | 1,0,-3 | 5,0,-3 |
+                -3,0,1| -1,-0.5,1.5 | 1,-0.5,1.5 | 3,0,1 | -3,0,-1| -1,-0.5,-1.5| 1,-0.5,-1.5 | 3,0,-1 |
+                -3,-4,1| -1,-2,1 | 1,-2,1 | 3,-4,1 | -3,-4,-1| -1,-2,-1 | 1,-2,-1 | 3,-4,-1 |
+       poly, tLightMapRed | 0,1,9,8 | 1,2,10,9 | 2,3,11,10 | 3,7,15,11 | 15,7,6,14 |
+       13,14,6,5|12,13,5,4|0,8,12,4 |9,10,14,13 |
+       poly, tLightMapGrey | 20,21,13,12|20,23,22,21|22,23,15,14 |
+       poly, tLightMapRed | 21,17,9,13 | 21,22,18,17|18,22,14,10|
+       poly, tLightMapGrey | 19,18,10,11|19,16,17,18|17,16,8,9 |
+       poly, tLightMapGrey | 16,20,12,8 | 16,19,23,20 | 23,19,11,15
+       </mesh3d>
+
+
+<World3D> worldForPlane </World3D>
+<plane3d> pacplane | worldForPlane |0|0|0|0|0|0|1|1|1|
+                0.75  | 0.75 | 3|2 |
+                0.0|0.0|0.33|0.3| myTextureMapping | myTextureMapping </plane3d>
+
+<plane3d> pacplane2 | worldForPlane |0|0|0|0|0|0|1|1|1|
+                1.0  | 1.0 | 2|2 |
+                0.66|0.0|1.0|0.3| myTextureMapping | myTextureMapping </plane3d>
+
+
+
+
+--------------------------------- other constructions ----
+
+<MAIN> mainscript |0|1</MAIN>
+<KCAM> the_camera |0|-4|-4|0|0.1|0|0.25  </KCAM>
+<KCAM> cam2 |0|0|-1|0|0|0|0.4  </KCAM>
+
+<KSCRIPT>
+    <ID> mainscript </ID>
+    <PLAY> mainpart | 6000 | 0 | 1 </PLAY>
+</KSCRIPT>
+
+<KPART>
+    <ID> mainpart </ID>
+    note: no use to clear the background, the room cube do so.
+
+    <Fx><Pa>setpalette</Pa>		set the screen palette
+        <Pa> i_lightmapRed </Pa>
+    </Fx>
+
+    <Fx><Pa>fillrc</Pa>  clear the background
+        <Pa>  </Pa>   default screen rectangle.
+        <Pa> cte | 63 </Pa>
+    </Fx>
+
+
+    <Fx><Pa> SetCamTarget </Pa>
+            <Pa> the_camera </Pa>
+
+            <Pa> sin|0|0.3|4 </Pa>    x camera
+            <Pa> sin|-3|0.2|2 </Pa>    y
+            <Pa> cos|0|0.3|4 </Pa>    z
+
+            <Pa> 3cte |0|-1|0 </Pa>  target
+           
+            <Pa>cte|0 </Pa> angle rotation z axis
+            <Pa> cte|0.25 </Pa> fov
+            </Fx>
+ 
+    <Fx><Pa> Set3DObject </Pa>   make the plane turn around...
+    	    <Pa> pacplane  </Pa>
+    	    <Pa> 3cte |-0.65|-0.55|0</pa> position
+    	    <Pa> sin |0|0.61|0.25 </Pa>  rotations
+    	    <Pa> cte |-0.25</Pa>
+    	    <Pa> sin |0.25|0.8|0.2</Pa>
+
+    	    <Pa> 3cte|1|1|1 </Pa> scale
+    </Fx>
+   <Fx><Pa> Set3DObject </Pa>   make the plane turn around...
+    	    <Pa> pacplane2  </Pa>
+    	    <Pa> 3cte |1.4|-1.4|1</pa> position
+    	    <Pa> aff |0|0.02 </Pa>  rotations
+    	    <Pa> aff |0|0.012</Pa>
+    	    <Pa> aff |0|0.01</Pa>
+
+    	    <Pa> 3cte|1|1|1 </Pa> scale
+    </Fx>
+
+
+
+     <Fx><Pa> Draw3DWorld </Pa>
+           <Pa>   </Pa>
+           <Pa> world1 </Pa>
+           <Pa> the_camera  </Pa>
+           <Pa> cte|0 </Pa>
+           <Pa> cte|0.25 </Pa>
+           <Pa> cte|200</Pa>
+     </Fx>
+
+     <Fx><Pa> Draw3DWorld </Pa>
+           <Pa>   </Pa>
+           <Pa> worldForPlane </Pa>
+           <Pa> cam2 </Pa>
+           <Pa> cte|0 </Pa>
+           <Pa> cte|0.25 </Pa>
+           <Pa> cte|200</Pa>
+     </Fx>
+
+  
+</KPART>
+

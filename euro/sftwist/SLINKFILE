@@ -1,0 +1,21 @@
+FROM lib:cback.o
+     SFox.o
+     SFasm.o
+     MStars.o
+     med_modplayer.o
+     med_reloc.o
+     MOD.o
+
+LIBRARY
+  lib:sc.lib
+  lib:amiga.lib
+
+TO SFTwist
+
+NODEBUG
+SMALLCODE
+SMALLDATA
+NOICONS
+
+DEFINE
+  ___main=___tinymain

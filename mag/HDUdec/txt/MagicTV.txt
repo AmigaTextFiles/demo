@@ -1,0 +1,52 @@
+==============================================
+Short:    Use MagicWB on a TV *WITHOUT FLICKER*
+Author:   nc2@st-andrews.ac.uk (Neil Crawforth)
+Requires: 8-colour interlaced Workbench, AGA chipset
+==============================================
+
+This is an evaluation version of MagicTV, a program designed to
+VIRTUALLY ELIMINATE interlace flicker when using a TV, to allow 
+more A1200 users to use MagicWB, NewIcons etc.  It is currently 
+limited to running on an 8-colour Workbench screen only.
+
+Background:
+Interlace flicker is caused because an interlaced screen is displayed 
+in two parts - first the even numbered lines are scanned across the 
+TV screen, then the odd numbered lines.  If there is a horizontal line 
+on the screen, one pixel high, then it will be displayed in one of the 
+two scans but not the other, and so it will flicker.  MagicTV gives every 
+pixel in one scan a counterpart in the other, preventing this flicker.  
+No resolution is lost, and, unlike less effective flicker fixers, no contrast
+is lost.
+
+I developed the system over two years ago, to be able to run a 
+16-colour interlaced Workbench with my TV.  I still use that program
+today, without problems (other than those mentioned below).  MagicTV
+is a new version of that, designed for public release, with the aim of 
+giving people with low-end A1200 setups the chance to use MagicWB.
+
+Installation:
+*  Select a hires, interlaced, 8-colour screenmode for your Workbench.
+*  Take a couple of headache pills, or double-click on the MagicTV icon.
+*  Be amazed for a few seconds, or e-mail me if it doesn't work.
+*  Drag MagicTV into your WBStartup drawer.
+
+Features:
+*  Runs as a Commodity.  
+*  Allows the Workbench screen to be closed.
+*  Automatically adjusts to palette changes.
+*  Written in E!
+*  Pretty small.
+
+Problems:
+* Changes mouse pointer colours.  Change your pointer to suit them.
+* Causes problems with playing animations, and AMOS programs 
+   (weird flicker every half second, due to MagicTV LockPubScreen()ing
+    the Workbench screen).
+
+
+E-mail me if MagicTV does not work on your system, or if you wish to 
+register as a user (I'll send you a copy of all updates to MagicTV), 
+or just to acknowledge the hard work that has gone into MagicTV...
+
+Neil Crawforth, 1997

@@ -1,0 +1,157 @@
+                      Mixing Assembly and C on Amiga
+                         by Kas1e (kas1e@yandex.ru)
+                          edited by Browallia/Nukleus
+
+This article is a compiling of talks from http://ada.untergrund.net,~~my experience with
+mixing Assembly and~~~~C~~~and~~~~some~~~~talks with Frank Wille.~~Someone recalled that 'Kufa'
+tried ~~to ~~make ~this ~kind ~of ~article ~for ~JP, but ~as ~we ~all can see, there is ~~nothing
+yet (maybe someday there will be?)~~~So,~~anyway,~~~~~i just want to fill this empty place
+by something interesting with help of those ppl :)
+ 
+For ~easy ~understanding ~of ~this ~article, you ~must ~know the basics of C ~coding on
+amiga, ~and ~some ~assemblers ~(like ~PPC ~and ~68k, ~but ~x86 will ~be ~ok ~too). ~It ~would
+also be good if you know what "ABIs" are.
+
+Sometimes it's necessary to do something~~~~in~~~assembly (for example for some speed
+-up tricks and for some critical areas of coding), and of ~course, it can be ~done ~in
+pure 68k or PPC assembly,~without any C code.~~But will it be necessary to make all
+stuff in assembly for the demoscene today? Well,~~~~for 68k,~~~sometimes,~~~~(or maybe for
+many times, in fact of slow CPUs) yes. For ppc ? I don't think so.
+
+But ~without ~too ~much ~imagination, just ~think ~of ~how much time we can save and
+still perform the task good. Of course I'm ~not ~that~ skilled ~demomaker ~to ~talk about
+it, but..
+
+While I'm working ~on ~this article, I wanted to write pros and cons of C coding on
+the ~Amiga, ~but ~Kufa ~said ~on ~'ada' ~forum ~pretty ~the ~same. ~Well, ~and ~I ~just ~put ~it
+here:
+---
+Some tasks that can be quicker to code in c/c++:
+
+ - serialisation: your ~engine ~loads ~iff, ~tga, ~jpeg, ~lightwave, ~3ds, ~etc, converts ~it
+   into it's own format, and save it in a stream. This way you can modify files
+   and try without converting/etc, and you can use the generated stream once
+   your done, with only few lines of code.
+
+ - loading lightwave/3ds files, if you dont want to convert them before, same
+   goes for graphics file loading
+
+ - high level maths: imagine you want to transform a 3D point from world view
+   to camera view, just to use it's 'z' value as a parameter. In c++ this is only
+   one line of code, even though it's not the fastest.
+
+ - effects parameters generation: pretty nice to tweak c/c++ code for splines
+   etc, no need to worry about registers allocation and stuff
+
+ - profiler: count the amount of calls to a routine, so you can build statistics
+   and know what to optimize in asm
+
+ - scripting engine
+
+As I ~already ~said, all ~this ~can ~be ~done ~in ~asm, will ~take some more time to code,
+but will indeed be faster.
+----
+
+And, I totally agree with him. Assembler will be faster,~~~~will be more 'elegant'~~~~maybe,
+and will solve some 'critical' problems on 68k machines (do not know what kind ~of
+demoscene ~stuff ~must ~be ~made ~on ~pure ~asm ~on ~PPC machines, in ~fact ~of speed,
+but it can be possible too of course. for example - for fun).
+
+But ~~assembly, ~it's ~~also ~a ~~harder ~~way ~(especially ~for~ newbees), which ~may ~loose
+some or your valueble time. It's always an issue ~about ~assembler ~and ~C, which ~is
+the best, why, for what purpose it should be used and so on, but I hope we can
+all agree with it: ~good ~prods ~can ~only ~be ~made ~by ~humans, a compiler ~only helps
+with ~it. ~In ~this ~fact ~I ~~don't ~see ~any ~reasons ~fucked ~up ~totally ~in C, or Assembly.
+Both languages are good,~~~~and both have their right place for~~~~~where they should~~~~be
+used..
+
+Now, let's make a concrete example of mixing those two powerfull languages.~~~~As~~~~a
+base we take C as 'high level' language,~~~~and~~~~as addition an Assembler can~~~~be~~~~used
+if you want to do something on it.
+
+What~~~C~~~~compilers we have on Amiga today~~~(I mean good ones)? On classic,~~~~~there's
+vbcc and sasc. Sometimes ~it's also gcc/stormc (stormc is basically gcc, with some
+adaptation to Amiga).~~~But the first one provides a better and faster code. On aos4
+and morphos,~~~~two compilers are used everywhere:~~~~vbcc~~~(again, big thanks to Frank)
+and gcc.
+
+As ~ASM ~compilers ~we ~have ~on ~68k: phxass ~(very ~good ones, also by Frank) and
+some dev packets like: asmone/asmpro, devpac, and so om (i ~prefered phxass). On
+PPC ~machines ~we ~have ~gcc ~and ~vbcc ~(it ~means ~'as' ~and ~'vasm' ~~translators ~~from
+asm).~~Also it should be mentioned that there is not only vasmppc,~but also vasm68k,
+which ~is ~nearly ~100% ~compatible ~to ~PhxAss, ~with ~the ~advantage ~that it ~has ~less
+bugs, optimizes better, and is portable (can be used as a cross-assebmler).
+  
+So,~~~how can~~~~we~~~~do~~~~this~~~~'mixing'?~~~~I know about three standard methods,~~~and a fourth
+which can be called a 'hack'.
+
+In ~the ~first ~one, ~you ~just ~compile ~an object file from pure asm source, with some
+declaration of asm fucntions. Like this (sasc/phxass):
+
+°PROGDIR:data/clips/mixing0.raw°15°   
+After this,~~~~you just use this function from C code (also with declarations),~~~~like this:
+
+°PROGDIR:data/clips/mixing1.raw°9°   
+Or just like this:
+
+°PROGDIR:data/clips/mixing2.raw°2°   
+And on the linking stage, you just add the asm-object file, like this:
+
+AmigaShell:> phxass quiet funcs.s 
+AmigaShell:> sc link test.c funcs.o
+AmigaShell:> test 
+ 
+You ~~~also ~~must~~ have ~~a ~~look ~~at ~~SDI-headers ~~(e.g. ~~SDI_compiler.h), ~~which ~~contains
+macros to write portable code for all known Amiga compilers.
+
+For a second one, you can put the assembler code into the C code, by some kind
+of ~compiler ~specific 'tags' called __asm(). Instructions are separated by an '\n'. The
+last instruction doesn't need any. For example how it~~~~will look on vbcc with ~mixing
+of ppc assembler:
+
+void f(void)
+{
+     __asm("\tli\t3,0");
+}
+
+In PPC-mode you have to specifiy the~~~~registers by number. So there the "3" means
+"r3". ~~But ~~~of ~~~course, ~~it ~~~depends ~~on ~~the ~~~ABI. ~~The ~~~V.~4-ABI ~~~doesn't ~~~need ~~~leading
+underscores ~~in ~~front ~~of ~~label ~~names, ~~so ~~it ~~requires ~~numbers ~~instead ~~of ~~register
+names (otherwise you cannot use a C variable with the name "r3").
+
+For the ~PowerOpen-ABI ~(WarpOS) you are allowed to use the real register names
+instead of numbers. A variable "r3" would be labeled "_r3" in the assembler source
+(as in the Amiga68k-ABI). And 68k example:
+
+void f(void)
+{
+     __asm("\tmoveq\t#0,d0");
+}
+
+Nothink special,~~~just need to know right syntax.~~~Third way,~~~it's using~~~~~assembler inline
+functions. We just define a function like this on 68k:
+
+int doubleval(__reg("d0") int x) = "\tadd.l\td0,d0"; 
+ 
+Or PPC:
+
+int doubleval(int x) = "\tadd\t3,3,3";
+
+Then ~use ~the function where ever you want. The compiler will not ~call ~a function,
+but ~insert ~~the ~~assembler ~code ~as ~inline. ~(it's ~very ~helpfull ~if ~you ~do, ~for ~example,
+200.~000 or 300.~000 memcpy() )
+ 
+result = doubleval(x);
+
+We ~could ~also ~write ~(__reg("r3") int x), ~but ~the ~PPC ~V.~4-ABI ~and ~PowerOpen-ABI
+require ~that ~the ~first integer argument passed is r3, the second ~is r4, etc., so we
+don't need to.
+
+And ~~the ~~last ~~way, ~~is ~~somekind ~~of ~~'hack', ~~like ~~creating ~~a ~~full ~~asm ~~program ~~~with
+compilng/linking, then converting it into hex decimal C format like "\x10\x20\x30",~~~~~and
+only ~use ~some ~system ~function ~with ~pointer at this piece of code. Example would
+be pretty big to put in an article, so, try to make it itself.
+
+Of ~course, last ~way is ~pretty unusable in ~real life, ~and I don't ~think ~that someone
+in the ~demoscene find that stuff necessary, but, as one more way it will be ~good
+to know about (if you still didn't know it of course).¤

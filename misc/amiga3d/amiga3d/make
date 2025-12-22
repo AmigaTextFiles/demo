@@ -1,0 +1,37 @@
+.Key file
+;           Compile a C program                       Version 1.02
+failat 65535
+if not exists df1:examples/<file$t1>.c
+echo "File examples/<file$t1>.c does not exist.  Try again."
+skip END
+endif
+
+copy df1:examples/<file$t1>.c ram:<file$t1>.c
+
+if not exists ram:<file$t1>.c
+echo "File <file$t1>.c not copied to ram: Error..."
+skip END
+endif
+
+echo "-- compiling <file$t1>..."
+
+df1:c/lc1 -oram: -idf1:include/ -idf1:include/lattice/ ram:<file$t1>
+df1:c/lc2 -oram: ram:<file$t1>
+
+delete ram:<file$t1>.c
+
+if not exists ram:<file$t1>.o
+echo "File ram:<file$t1>.o does not exist. Error..."
+skip END
+endif
+
+copy ram:<file$t1>.o df1:examples/<file$t1>.o
+
+if not exists df1:examples/<file$t1>.o
+echo "File ram:<file$t1>.o not copied to df1:examples/
+skip END
+endif
+
+delete ram:<file$t1>.o
+
+LAB END

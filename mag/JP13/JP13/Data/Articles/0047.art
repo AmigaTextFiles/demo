@@ -1,0 +1,94 @@
+!cpu/fpu issues
+by Pezac/Nature
+11
+µJCµF0µC0
+- --- --------------------- --- -
+CPU/FPU Issues
+- --- ------------------------- --- -
+µF1µC1
+by Peter Mattsson aka µC2Pezac/NatureµC4
+
+
+This text is an upcoming article for #amycoders website
+
+
+
+
+Abbreviations
+-------------
+
+0x0 = MC680x0
+88x = MC6888x
+FPU = Floating Point Unit
+mulx = mulu and muls
+divx = divu and divs
+µJE
+µC2FPU's
+-----
+
+µC4Motorola made two models of external FPU's for the 0x0 family, namely 881 and 882 of which the 882 is the faster and more common. To speed up things Motorola put the FPU inside the 040 and 060. 881 and 882 was external units outside the main CPU and therefore not as fast as wanted but on the other hand could contain many functions.
+
+
+
+
+
+µC2040/060 Support Libraries
+---------------------------
+
+µC4For space and/or size reasons some less frequently used FPU instructions were not included in the internal FPU in 040 and 060. Examples of left out instructions: fsin, fscale. To still be compatible with ordinary 88x code, support libraries must be used with 040 and 060. The library catches all tries to run instructions not supported in the FPU and emulates them with the integer part of the CPU. In AmigaOS this library is used by running a SetPatch version that is aware of 040/060 FPU emulation and initializes the emulation with one or two libraries in LIBS:
+
+µC2Oxypatcher/Cyberpatcher
+--------------------------
+
+µC4As I explained earlier unsupported FPU instructions are emulated on 040/060. However the emulation is very slow, it was just coded to give exactly the same result and it seems speed was not a concern. It's easy to think that "ok, so it's twice the speed of the 88x or some more!" but let me say again that it's very slow. You may get away with using one or two per frame but if you use it like a normal instruction in a loop the result will not be fun. But there is sort of a cure for this slowdown, programs that does the same job as the support libraries but a bit faster. A well known program is Oxypatcher which is said to be faster than Cyberpatcher, a more cleaned up and reliable variant from Phase5. Remember, these programs work on top of the normal support libraries so don't remove them. A warning: the patchers emulation might not be 100% true to the orginial emulation code. For example it came to my attention that Oxypatcher does funny stuff with fsin, even making certain use working when it shouldn't. My advice is to not develop stuff with these patchers running.
+
+
+µC264bit Integer Mul/Div
+----------------------
+
+µC4The last years I and the other coders in my group have discovered some strange things regarding the CPU and FPU that one could possibly fall into. I think the most common of these strange things is the use of 64bit integer mul/div instructions (mulx.l, divx.l). As I wrote earlier some FPU instructions are emulated in 040/060 but on top of that these 64bit instructions are left out too, but only in the 060. So what you get is a routine which is slower on 060 than on 030 when using these instructions! The mentioned patchers above will also cure this problem but a better way would maybe be to rewrite the code to use only 32bit mul/div or using the FPU instead.
+
+
+
+
+µC2Extended precision FPU instructions with immediate source
+------------------------------------------------------------
+
+µC4The next obvious thing to tell about are the FPU instructions which use extended precision and immediate source. An example:
+
+µC1 fdiv.x #7,fp0
+
+µC4These instructions will be emulated in 060 and as you use them many times in one routine the code will run very slow. Again the patchers will fix this problem but rewriting the code would possibly be the best solution.
+µC2Special use of mulx.l
+----------------------
+
+µC4This one is not so common, in fact I think we are the only ones who fell into this trap. But I write about it here because it can happen to everyone who doesn't read the 0x0 manual very close.
+
+With 64bit integer mul/div the instruction format looks like this:
+
+µC1 mulx.l dx,dy:dz
+µC1 divx.l dx,dy:dz
+
+
+µC4With the divx instruction you have an option of setting the same destination registers like:
+
+µC1divx.l d0,d1:d1
+
+µC4In this case you only get the quotient. But strange errors appear if you try to do the same with mulx. The 0x0 manual tells us that if the same destination registers are used, the result will be "undefined". "Yeah so you have a non-working routine and you just find and change that mulx and that's the end of that story". This could be true depending on which processor you're coding on. The assembler won't complain about this instruction (which I find strange when it's an illegal instruction just like it complains about overflow in moveq for example) and now comes the thing with this trap: the result will be correct in 030/060 and only incorrect in 040! The reason for this is hidden inside Motorola but you just can't blame them because the 0x0 manual says that it will not work, meaning all processors.
+
+
+µC2FPU rounding
+-------------
+
+µC4When converting float values to integer, some kind of rounding must be made in the FPU. You can control what type of rounding that should be made. If you don't set it yourself maybe some other program changed it before yours. This is important to realize because in some situations you could end up with a value that you didn't expect. A critical example of this is using a converted value in a dbra-loop and getting zero instead of one.
+
+
+
+µC2Tips
+-----
+
+µC4Here are some tips when developing stuff:
+
+- Don't develop with a patcher running all the time. As explained above, a code snippet could work fine with the patcher but fail without.
+
+- If you suspect that you are using emulated instructions or just want to see if there is any, run the code with a patcher running and look in the log of the patcher if it catched any instructions.

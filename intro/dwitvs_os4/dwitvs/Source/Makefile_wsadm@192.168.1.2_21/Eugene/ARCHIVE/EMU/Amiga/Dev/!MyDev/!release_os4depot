@@ -1,0 +1,6 @@
+sdlmove:	dwitvs.c
+	ppc-amigaos-gcc `sdl-config --cflags --libs` -lm -w -lpthread dwitvs.c -o ../dwitvs -lSDL
+	ppc-amigaos-strip --strip-unneeded --remove-section .comment ../dwitvs
+
+clean:
+	rm sdlmove

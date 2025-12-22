@@ -1,0 +1,88 @@
+@{d 68FF94}   @{c 6CFF0F}Party, navod pre programatorov, @{c F7FF1E}kriticka@{c} @{c 6BFF17}cast programu je napisana v assembleri
+   ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+
+
+       Program Party;
+       Uses Vine, Zakus, Condoms;
+          {$I Variable.Pas}
+
+
+          Procedure Prepare;
+           Begin
+           Find(House);
+           Buy(Bottles);
+           Buy(Zakus);
+           Call(Friends);
+           Call(Girls);
+          End; { Prepare }
+
+@{d 68FF94}          Procedure Drinks;
+           Begin
+            Open(Bottles);
+            Repeat
+             Drink(Next(Gramms100));
+             Zakus := Eat(Next(Foods));
+            Until TwoViewInEyes;
+           End; { Drinks }
+
+
+          Procedure Dances; 
+           Begin
+            Music := True;
+            Call(OneGirl);
+            Go(DancingRoom);
+            With Music.Jump Do 
+             Begin
+              If Girl(Drink)>Normal(Drink) Then 
+@{d 68FF94}               Begin
+                Touch(AssOfGirl);
+                Touch(BrestOfGirl);
+               End                         Else 
+              Begin
+               Go(DrinkingRoom);
+               Let`s(Girl) := Drinks(More);
+               Return(DancingRoom);
+              End;
+             End;
+           End; { Dances }
+
+
+         Procedure Fuck( Who : Sex );
+           Var
+           HowMany: LongInt;
+          Begin
+           If Who<>Girl Then Write('Are yor sodomite ??!');
+@{d 68FF94}           Find(DarkRoom);
+           Close(Door_and_windows);
+           If Not Find(BedInRoom) Then BedInRoom := AnyTable;
+           HowMany := 0;
+           Repeat
+            Call(Next(Who));
+            Delete(DressOf(Who));
+            Kiss(Lips,Brest,OtherPartsOfBody);
+             Repeat
+              Asm
+               PUSH YourPenis
+               POP  YourPenis
+              End;
+             Until YouHaveOrgasm;
+            Inc(HowMany);
+            If (HowMany mod 15 = 0) then Write('You are BIG man !!!');
+           Until YourPenisStay;
+          End; { Fuck }
+@{d 68FF94}        Begin { Party - Main Program }
+           Prepare;
+           Drinks;
+           If Who(Drink)>Normal(Drink) Then
+           Who := FaceDown;
+           Dances;
+           Fuck(Girls);
+           Go(AtHomes);
+          End. { Main Program }
+
+
+
+        @{c 6CFF0F}Myslim, ze toto tu este nebolo.  Aj ked skoda, ze to je v Pascale :-)
+                                       - DNA -
+
+     [A to mám jako pêepsat do Céçka?  Udëlej to radîi v REBOLU!  - pozn. Shaman]@{c}

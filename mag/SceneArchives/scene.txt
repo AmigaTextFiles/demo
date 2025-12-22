@@ -1,0 +1,164 @@
+                     Scene Archives Search Utility v1.09
+                     ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+
+                        Written By: Tony Hasselbacher
+
+    Welcome to "Scene Archives Search Utility" (now refered to as SASU).. 
+
+IMPORTANT: if you want DMS to extract from CD #3, you HAVE to type in the
+following:-
+    
+        assign Scene3: "Scene Archives 3:"
+    
+Sorry for this, but the CD was not named good :(.. 
+
+What is SASU?
+¯¯¯¯¯¯¯¯¯¯¯¯¯
+
+    Well, basically, SASU will help you to locate any item that you are after.
+Simply  type  in  a  keyword  (ie,  a Demo Name, or Group Name, or even a Disk
+Number!),  and  the  program  will  search  and  find any relating data.  Then
+double-click  on  the required item, and if you have any of The Scene Archives
+handy, it'll try to find the file you are after, and you'll be able to extract
+that  item to disk (if it is a DMS), or else to a directory on your Hard Drive
+(if it is a LZX file).  There is also some information on the demo presented.
+
+
+Installing:
+¯¯¯¯¯¯¯¯¯¯¯
+
+    I  recommend that you should just copy SASU to a directory on your HD.  So
+then  it  is  easily  accessible.   Just  copy  these  files  to  your HD on a
+directory:-
+
+            Scene
+            Scene.info
+            scene.data1
+            scene.data2
+
+    Also  you  might  have  to  install  the new version of NList.mcc, as this
+program  was written for v0.85.  It is included on this CD.  Also this program
+was written under MUI v3.8.
+
+
+Options
+¯¯¯¯¯¯¯
+
+    There are 2 Search Options, and they Are:-
+
+        Search Criteria: What field do you want to search under ? 
+                            - Demo Name  = Searchs only for the Name.
+                            - Group Name = Searchs only for that Groups Prods.
+                            - Disk Num.  = See What is on a Specific Disk.
+                            - Demo+Group = Search for Demo and Group Names
+
+        Search Options:  What type of Sort?
+                            - Full       = Will search for ever occurence of
+                                           the specified Keyword.
+                            - Simple     = This just looks for the Keyword 
+                                           only.
+                            - Range Search = This is a special search that
+                                             will show everything that is 
+                                             in a certain Range of Disks.
+
+To Use Range Search
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+
+    The way you use the Range Search is like this.. 
+    1 - Make sure that the Disk Nuber is selected in the Search Criteria
+        Section.
+    2 - In the Keyword, type in the two numbers you want to search for. For
+        Example. if you want to find out what is between Disks #7566 and Disk 
+        #7600, somply type "7566 7600" in the Search Keyword (of course with
+        out the "'s!!).. For another example, type the following :-
+                    4534 4765 
+        in the Search Keyword entry, and then see what happens..
+    3 - And press Search.
+
+
+Updates:
+¯¯¯¯¯¯¯¯
+
+    SASU  will  be regularily updated.  All the updates will appear on Aminet.
+Just search for "SASU", and you'll find it..
+
+
+What are the Scene Archives?
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+
+    The  Scene  Archives  is  a massive collection of Amiga Scene Productions,
+currently  it  spans  Eleven  CD's,  with  around  1000 disks on each CD..  So
+basically  10440  disks  are  currently  in the Set.  I hope to have The Scene
+Archives #12 out at around Christmas 2001.
+
+    If   you   want   to   get   the  Scene  Archives,  please  E-Mail  me  at
+hweight@ii.net  Or visit the WWW page at http://move.to/trip ..
+    
+    Or alternatively, you can write to me at :-
+
+            Tony Hasselbacher
+            96 Robinson Road
+            Morley  WA  6062
+            Australia
+
+Thanks
+¯¯¯¯¯¯
+    I wish to thank HY Wong, for he's great testing.
+    Also To Gilles Masson, for he's great help with getting NList to work :)
+
+
+Credits
+¯¯¯¯¯¯¯
+    The Scene Archives is © 1995 to 2001, Tony Hasselbacher
+    SASU is © 1998-2001, by Tony Hasselbacher
+    This uses NList.mcc © 1996 to 1998 by Gilles Masson
+
+
+SASU History
+¯¯¯¯¯¯¯¯¯¯¯¯
+v1.09:  [24 Feb 2001]
+        - There are now 16933 Entries
+        - Fixed a nasty Bug when you Searched under "All" , it would display a
+          lot of garbage in the list.  
+        - Changed the All Search so it ONLY Searches for demo and Group. And
+          also changed the Label for this Button.
+        - Got rid of the pesky CD requestor, so that if SASU sees the Needed
+          CD already mounted onto the system, it will automatically look for
+          the file.  If the CD is not mounted in the system, it will then
+          prompt for the required CD.
+        - Now has prober inplementation of disks that are over the 10000
+          number.
+        - Added so that CD #11 is working in SASU.
+        - Finally added an Install Script :) 
+
+v1.08:  (13-Mar-00)
+        - Added so that CD #10 worked.
+        - General Bug Fixes
+    (10-May-00) - Newest Database with 16363 Entries from Disks #1 to #9939.
+
+
+v1.07:  (09-Jan-00)
+        - Implemented a Range Search.  Thanks to Kai Weber for the idea.
+        - The Database now stands at 15824 entries. 
+        - Planning had started for SASU2.. :) .. With more features and
+          things. .
+
+v1.06:  (19-Oct-99)
+        - Updated Index to 14401 Entries
+        - Added Support for "The Scene Archives #9".
+        - Fixed up a few spelling mistakes/inconsistancies.
+
+v1.05:  (14-April-99)
+        - Fixed up the slow loading time 
+        - It now decompresses LZX archives internally
+        - Fixed a few miscellaeouns bugs.
+        - Fixed the DMS problem of DMS failing when it tried to extract from
+          Scene Archives #3.  YOU HAVE TO DO THIS:
+                    assign Scene3: "scene archives 3:"
+          this should fix the problem
+
+v1.00:
+        - Initial Release
+        - Has initial database of 10974 Entries
+
+

@@ -1,0 +1,45 @@
+/************************************************
+*****   Bilder von der Classic Computing 2010 ***
+*****   Autor: Miriam Schinagl ******************
+*****   Datum: 03.10.2010 ***********************
+*************************************************/
+
+@BGPIC 1, "Start.jpg"
+@BGPIC 2, "BG.jpg"
+
+DisplayBGPic(1)
+Wait(60)
+DisplayBGPic(2)
+
+Function p_Nextpic()
+    LoadBrush(1, pic .. ".jpg")
+    DisplaybrushFX(1,180,150,#HSTRIPES16,50)
+EndFunction
+
+Function p_Back()
+    If pic = 0
+    pic = lastpic
+    Else
+    pic = pic - 1
+    EndIf
+    p_NextPic()
+EndFunction
+
+Function p_Forward()
+    If pic = lastpic
+    pic = 0
+    Else
+    pic = pic + 1
+    Endif
+    p_NextPic()
+Endfunction
+ 
+MakeButton (1, #SIMPLEBUTTON, 20, 700, 180, 700, {OnMouseUp = p_Back})
+MakeButton (2, #SIMPLEBUTTON, 800, 700, 990, 740, {OnMouseUp = p_Forward})
+
+lastpic = 36
+pic = 0
+p_NextPic()
+Repeat
+    WaitEvent
+Forever

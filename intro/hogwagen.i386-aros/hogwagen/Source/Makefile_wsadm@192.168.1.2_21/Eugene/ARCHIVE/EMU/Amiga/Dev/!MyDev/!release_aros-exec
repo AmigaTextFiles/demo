@@ -1,0 +1,6 @@
+sdlmove:	hogwagen.c
+	i386-aros-gcc -lm -w hogwagen.c -o ../hogwagen -lSDL
+	i386-aros-strip --strip-unneeded --remove-section .comment ../hogwagen
+
+clean:
+	rm sdlmove

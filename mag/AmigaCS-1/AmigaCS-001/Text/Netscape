@@ -1,0 +1,65 @@
+@{d 32DBBC}                                       @{c A6FFF3}Nechï skape?
+                                       ~~~~~~~~~~~~@{c}
+  
+  Na americkou firmu @{c A6FFF3}Netscape@{c} dopadla tvrdë pëst softwarové krize.  Açkoliv v loñském roce
+dosáhla  zisku  pêes  osm  miliónû  doláçû,  za první çtvrtletí to dotáhla k propadu mínus
+osmaosmdesát  melounû.   Jak  je  moùné, ùe tato kdysi vlajková loð ve vývoji software pro
+internet  (Navigator, Communicator, Netcaster ...), se dnes potácí nëkde u pomyslného dna?
+Na  vinë  jsou  pravdëpodobnë pêíliî optimistické výhledy, na jejichù základë firma znaçnë
+investovala  a  pêedevîím  v první êadë masívní nástup sraçky v Netových kruzích profláklé
+pod  krycím oznaçením Micro$oft @{c A6FFF3}Explorer@{c}.  Následný pokles prodeje produktû firmy Netscape
+tyto investice nemohl ani zdaleka pokrýt.
+
+  Jak  chce  tyto  potíùe  firma  êeîit?   Vypadá to, ùe znaçnë razantnë.  Do konce bêezna
+tohoto  roku  propustí 300 zamëstnancû (coù je zhruba desetina z celkového poçtu) pêeváùnë
+pracujících  na  javových  projektech;  pro  zajímavost  -  @{c A6FFF3}Netscape@{c} vyvíjel javovou verzi
+Navigatora  pro  17  platforem(!).   Dále  ukonçil  spolupráci  s Novellem na pêenos svého
+software právë na systémy Novellu, tzv.  projekt Novonyx.  A @{c A6FFF3}Netscape@{c} udëlal jeîtë jeden -
+ponëkud  pêekvapivý  -  krok:   novou  verzi  svého  Communicatoru, programu integrujícího
+@{d 32DBBC}klienty  pro  mail,  news, FTP a web, ve verzi 5.0 hodlá poskytovat zcela bezplatnë vîem -
+individálním  i  firemním  uùivatelûm  a navíc 31.  bêezna UVOLNÍ ZDROJOVÝ KÓD.  Amigovský
+port je tedy in spe.
+
+  Co  to  pro  nás, amigoidní formy ùivota, znamená?  Jistë, na Amize vegetují têi podobné
+programy  (IBrowse, Voyager, AWeb), které si v posledních verzích zaçínají i nesmële tykat
+s Javou; proç tedy nëco dalîího?  Jednoduîe kvûli tëmto výhodám:
+
+ - pure Java podle specifikací firmy Sun (výhledovë 100% kompatibilita)
+ - Javascript
+ - nový standard HTML 4.0
+ - koncept "cascading sheets", tj. pêi naçítání se tabulky zobrazují prûbëùnë, nikoliv aù
+   po kompletním naçtení (çastý dûvod zhroucení uùivatele)
+ - koncept pluginû
+ - vëtîina www stránek na Netu je pro prohlíùeçe Nescape pêímo optimalizována (ruku na
+   srdce: zkouîeli jste se podívat na jednu tutéù stránku kaùdým amigovským prohlíùeçem?)
+ - integrování více klientû (tato výhoda je diskutabilní)
+
+@{d 32DBBC}  A  çím  za  to  budeme platit?  Protoùe zdrojový kód jeîtë nebyl uvolnën, mûùu uvést jen
+drby, které na konferencích prosákly, a které se mi jeví jako pravdëpodobné:
+
+- program  bude  *znaçnë*  velký. Jiù Navigator ve verzi 3.0 zabíral pod systémem ELF (coù
+  není  zrovna  velký poùíraç resources) kolem 6 Megs. Pêestoùe amigovský systém pracuje s
+  resources  úspornëji,  nezmenîí  se  výsledná  velikost  nijak  závratnë.  Zdrojový tvar
+  Communicatoru zabírá pêes 10  Megs...  
+- program bude *dosti* pomalý. Nebude optimalizován pro hostitelský systém, protoùe první
+  portace  budou  pravdëpodobnë  êeîeny  pêes  iXnet/iXemul. Pro majitele nadupaných maîin
+  tento argument padá.
+- program pravdëpodobnë pojede pod MUI (fui!)
+
+  Uvolnëný  program se z ochranných dûvodû nebude jmenovat ani @{c A6FFF3}Netscape@{c}, ani Communicator;
+kvûli  tomu  snad nikdo breçet nebude.  Horîí jsou poslední (zatím neoficiální) informace:
+nebude  integrován  Secure  Socket  Layer (chránëný pêenos dat) a patrnë ani Java, protoùe
+tyto  komponenty  jsou  vlastnictvím  têetích stran a firma Netscape není certifikována je
+zveêejñovat  k  volnému pouùití.  A to je citelná nevýhoda.  Vývoj nebude zastêeîen ùádnou
+skupinou  lidí,  která by podobu a uvedení jednotlivých verzí koordinovala.  Kaùdý si bude
+@{d 32DBBC}se  zdrojovými kódy moci dëlat cokoliv.  Netscape sice slibuje, ùe bude uvádët informace o
+tom,  çemu  a  od  koho  se  dá  vëêit,  ale  vîechno  asi neuhlídá.  Netscape navíc hodlá
+potencionálním  vývojáêûm  a  distributorûm vloùit do administrativní licence klauzuli, ùe
+vîechna pohodiçka skonçí, jakmile by Micro$oft zaçal prodávat svûj Explorer.
+
+A jeîtë jedna dësuplná zpráva na konec:
+William S. Gates oznámil, ùe Micro$oft pracuje na prohlíùeçi dalîí(?) generace, který bude
+dëlat vëci, jaké jsme jeîtë nevidëli(!!!)
+  Pêed exhortami jeho chrañ nás, ó Pane ... ;-)
+
+                                       @{c A6FFF3}- schizzy -@{c}

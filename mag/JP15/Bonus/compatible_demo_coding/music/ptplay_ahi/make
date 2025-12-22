@@ -1,0 +1,8 @@
+;sc resopt nover noerrhigh noicon cpu 68030 math 68882 opt opttime optinlocal optinline optsched optpeep optrdep=2 optdep=2 optcomp=3 code=near data=fo strsect=code nostkchk nochkabort strmer smcode smdata params=r nochkabort inc/global.c       inc/global.o
+;sc resopt nover noerrhigh noicon cpu 68030 math 68882 opt opttime optinlocal optinline optsched optpeep optrdep=2 optdep=2 optcomp=3 code=near data=fo strsect=code nostkchk nochkabort strmer smcode smdata params=r nochkabort inc/audio.c        inc/audio.o
+;sc resopt nover noerrhigh noicon cpu 68030 math 68882 opt opttime optinlocal optinline optsched optpeep optrdep=2 optdep=2 optcomp=3 code=near data=fo strsect=code nostkchk nochkabort strmer smcode smdata params=r nochkabort inc/ptplay.c       inc/ptplay.o
+;sc resopt nover noerrhigh noicon cpu 68030 math 68882 opt opttime optinlocal optinline optsched optpeep optrdep=2 optdep=2 optcomp=3 code=near data=fo strsect=code nostkchk nochkabort strmer smcode smdata params=r nochkabort inc/entries_68k.c  inc/entries_68k.o
+
+sc resopt nover noerrhigh noicon cpu 68030 math 68882 opt opttime optinlocal optinline optsched optpeep optrdep=2 optdep=2 optcomp=3 code=near data=fo strsect=code nostkchk nochkabort strmer smcode smdata params=r nochkabort main.c main.o
+slink from LIB:c.o main.o inc/global.o inc/audio.o inc/ptplay.o inc/entries_68k.o TO ptplay lib LIB:scm881.lib LIB:scnb.lib LIB:amiga.lib
+

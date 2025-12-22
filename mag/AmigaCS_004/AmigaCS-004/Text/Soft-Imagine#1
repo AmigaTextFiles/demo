@@ -1,0 +1,152 @@
+@{d DFFFBF}@{xoffset 0}¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+@{xstep 380}@{font ACS-Title.font 18}Jak na Imagine 5.0 (1.díl)@{font}
+@{xstep 455}@{c D2FF91}@{i}Fractal/StillTeam@{ui}@{c}@{ystep -8}
+
+
+  @{xstep 0}@{font ACS-Title.font 18}T@{font}ak më  Shaman  zase ukecal, abych napsal nëco o Imaginu.  No moc se mi nechce, ale
+takovýmu  roztomilýmu  stvoêení se nedá odmítnout (...kdyù je nasraçky ;-).  Tak tedy.
+Pokud  si v tomto bodë êíkáte, ùe uù to tu nëkolikrát bylo, tak máte absolutnë pravdu.
+Je  tëùké  psát  o  programu,  který  je tak rozsáhlý a nabízí tolik funkcí, ùe ani po
+pëtileté praxi je çlovëk zcela neovládá.  Takùe hurá do toho.
+
+  Imagine  je  traceovací program, který na rozdíl od 3D studia nebo Truespace vyuùívá
+100%  raytracing.   To znamená, ùe veîkeré grafické "výjevy" nejsou vytvoêené nëjakými
+pochybnými  FAKE  efekty, ale jsou podloùeny fyzikálními zákonitostmi.  Tak se vyhnete
+napê.   ponëkuð  synteticky  vyhlíùejícím  výsledkûm  jako u 3D studia.  Za kvalitu se
+pochopitelnë  platí  a touto devizou je jako vùdycky - ças.  Takùe jaká konfigurace je
+na  to  têeba?   Upêímë êeçeno, je to fuk.  Já jsem v Imaginu zaçínal na A500 - trvalo
+to, ale obrázky byly.  Pak jsem poçítal na holé A1200.  To uù bylo lepîí, ale taky nic
+moc.   S verzí 4 pêiîel poùadavek na matematický koprocessor.  Takùe dvanda s turbínou
+se neztratí.  Osobnë mám 30/50 FPU a i kdyù by to nëkdy mohlo bejt rychlejîí, v zásadë
+si nestëùuju.
+
+@{c D2FF91}@{u}Takùe co na nás vykoukne, kdyù to rozchodíme?@{uu}@{c}
+
+Je  tu  @{c F9FF3A}Project  editor@{c}, ve kterém zadáváte základní parametry, jako velikost obrázku,
+jeho  barevná  hloubka  (poçítejte  zásadnë  ve  24bit - vyhnete se problémûm), zpûsob
+výpoçtu  a  rûzné  speciální  efekty, jako motion blur nebo 3D glasses.  Odtud se také
+spouîtí samotný výpoçet.
+
+@{c F9FF3A}Action  editor@{c} slouùí k nastavení poçtu snímkû animace, globálních parametrû (globální
+osvëtlení,  mlha,  barevné  pêechody  pozadí), objektová nastavení (rotace, translace,
+velikost,  efekt)  a  konfigurace  pomocných  objektû  (svëtla,  pomocné záchytné osy)
+a nastavení kamery.
+
+@{c F9FF3A}Scene  editor@{c} je vlastnë stëùejní editor, ve kterém pêipravujete podklady pro výpoçet.
+@{c F9FF3A}Action  editor@{c}  je  vlastnë  jeho doplñkový bratêíçek (v první verzi tomu tak skuteçnë
+bylo).  Mimochodem jméno editoru je velmi trefné.  V zásadë si mûùete pêedstavit, jako
+byste  mëli  pêed  sebou prázdné jeviîtë a aranùovali kulisy.  Hýbete s objekty, které
+jsou  oznaçovány  jako  Actors (herci), posouváte svëtla, mëníte nastavení kamery nebo
+záchytných  bodû  -  mûùete prostë vîe.  Oproti reálnému divadlu má vîak Imagine jednu
+nespornou  výhodu.   Objekty  (actors)  vám  nemûùou  kecat  do toho, kde chtëjí stát.
+A pokud by kecat zaçaly (o çemù pochybuju), mûùete jim dát výpovëð funkcí Delete.
+
+@{c F9FF3A}Detail  editor@{c}  slouùí  k  tvorbë  objektû.   Buðto  je sestavíte z pêedvolených (tzv.
+@{c F9FF3A}primitivû@{c})  -  (ze  zaçátku  se  k tomuto êeîení uchylte - není to ostuda) nebo mûùete
+objekt  vytvoêit  bod po bodu.  Ano.  Analogie s metodou pixel by pixel je tu více neù
+zêejmá  :).   Nastavujete  zde veîkeré vlastnosti objektu.  Bëhem své dlouholeté praxe
+jsem nenarazil na vlastnost, která by se nedala nastavit (snad kromë poloçasu rozpadu)
+-  @{c F9FF3A}ATRIBUTE@{c}  requester  je  podle  më  nejsilnëjîí zbraní Imaginu, kterou  stále  kosí
+i takové  giganty,  jakými  je  napêíklad  Lightwave  (ten  má  ale zas spoustu jiných
+pêedností - nikde není psáno, ùe nemûùete tyto programy kombinovat :)).
+
+@{c F9FF3A}Spline   editor @{c}  je   takovou   zvláîtností.    Podle   vytvoêených   kêivek  vytvoêí
+ploînë-extrudovaná tëlesa typu bevelovaného písma nebo futuristických log.
+Pokud  jste  zastánci  organických tvarû (asteroidy, zadky, kozy :), bude se vám líbit
+@{c F9FF3A}Forms   editor@{c},  který  podle  klíçových  pozic  bodû  na  kouli  dokáùe  extrapolaçnë
+aproximovat body okolní.  Je tu jistá analogie s magnetismem, ale nemá cenu zabíhat do
+hloubky.
+
+Poslední na seznamu je @{c F9FF3A}Cycle editor@{c}.  Je to takový preprocesor pro stage editor, pokud
+hodláte  pouùívat  cyklické animace.  Ovîem cyklické ve smyslu kloubových záleùitostí.
+Chûze,  let mouchy nebo bëh psa se zde dá krásnë rozfázovat pomocí klíçových bodû a ve
+stage editoru jen nastavíte, kolikrát se má daný cyklus v animaci opakovat.
+
+@{u}@{c D2FF91}Rady pana chytrýho:@{c}@{uu}
+
+Neçekejte,  ùe  Imagine  udëlá  práci  za vás.  Nespoléhejte na ùádné pluginy a efekty
+a (za  to  më  asi budete nenávidët nejvíc) pokud je to jen trochu moùné, nepouùívejte
+matematické  textury  napodobující  organické  struktury  - naopak je vêele doporuçuji
+v pêípadech,  kdy  aproximujete sobëpodobné (fraktálové) struktury (kamení, tráva, rez
+apod.).   Pokud budete dëlat pêesný opak toho, co tu êíkám, moùná se vám povede udëlat
+jeden  nebo  dva  hezké obrázky, ale ostatní uù budete jen kopírovat, protoùe nebudete
+mít  dostatek  vlastní  invence.   Spousta  lidí  si  myslí, ùe raytracing je lamerská
+záleùitost  a  ùe to zvládne kaùdý.  Jasnë.  Kaùdý dokáùe posadit kouli na îachovnici,
+ale  tomu  se  nedá  êíkat  grafika.   Spoléháním  na  cizí výtvory (textury, objekty,
+pluginy)  budete napodobovat manýry PC-3Dstudio lamerû, kteêí si myslí, ùe kdyù najdou
+na  CDçku  objekt  krávy a potáhnou jí texturou rezatého plechu (která se na tom CDçku
+také  pêirozenë  nachází),  ùe je to jejich výtvor.  Takoví lidé dëlají 3D grafice jen
+ostudu.
+
+@{u}@{c D2FF91}Zásady:@{c}@{uu}
+
+- Textury  se nekradou a pokud moùno nescanují - textury se kreslí ruçnë (pochopitelnë
+  pokud  se  jedná  o  fotky  nebo  çásti  strojû,  tam  platí  nëco  jiného  - mluvím
+  o originální osobité tvorbë).
+
+- Pouùívat  cizí  objekty  je  pro  profesionála zahanbující a pokud jiù nëjaký takový
+  pouùijete,  tak  je  pouùívejte  jen  v  krajní  nouzi nebo pokud potêebujete reálné
+  podklady (viz moje obrázky s modelem obliçeje).
+
+- Neù  zaçnete  dëlat finální obrázek, vyzkouîejte si rûzná nastavení svëtel a kamery.
+  Nedá  se  to zobecnit, ale zaçáteçník by mël udëlat minimálnë deset "pokusníkû", aby
+  zjistil,  co které nastavení dëlá.  Záleùí na mnoùství detailû, ale v 90% staçí jako
+  preview  rozliîení 160x128.  S pêibývajícími zkuîenostmi mûùe tëchto náhledû ubývat.
+  Napê.   mûj obrázek Dullblob byl dëlán pouze s jedním preview.  Coù ovîem neznamená,
+  ùe to staçí.  Moùná, kdybych jich udëlal 15, dopadlo by to lépe.
+
+- Pokud  se  do své kompozice zamotáváte, máte spoustu svëtel a objektû a poêád se vám
+  to  nezdá,  vëzte,  ùe v jednoduchosti je síla.  Umaùte vîechna svëtla aù na jediné,
+  umaùte  duplicitní  objekty  a  zkuste  jednoduîîí  výjev  (pokud  se chystáte dëlat
+  StarWars, neposlouchejte më :).
+
+- Zaçínáte-li  se  uçit  jednotlivé  editory, vyvarujte se uçení stylem, dneska udëlám
+  menu  OBJECT  a  zítra  udëlám  FUNCTION.   Funkce editoru jsou spolu úzce provázány
+  a nelze  je  od  sebe exaktnë oddëlovat jakýmkoli "úêednickým" systémem.  Jedinë tak
+  získáte GLOBÁLNÍ pêehled, jak se které funkce chovají a budete schopni vymýîlet jiné
+  kombinace  (jak s oblibou êíkám "VOCHCÁVAÇKY"), o kterých autoêi programu nemëli ani
+  tuîení.  Pak budete schopni vymodelovat cokoli.
+
+- Máte @{c D2FF91}Amigu @{c} a @{c D2FF91}multitasking@{c}. Pomáhejte si jinými programy.  Kdyù uù jsem u toho, tak
+  Imagine má pochopitelnë Arexxový port :).
+
+- Jestli zjistím, ùe pouùíváte Imagine for @{c F5664E}Windows@{c}, tak vás @{f FF0402}ZABIJU@{f} !
+
+@{u}@{c D2FF91}Chci dëlat hezký obrázky!@{c}@{uu}
+
+Je  velkým omylem myslet si, ùe vîechno je v talentu.  Tam je sice hodnë, ale urçující
+jsou  vëdomosti.   U  nastavování  kamery  se  velmi  vyplatí  znalost optiky (alespoñ
+v základním   mëêítku)   a   vêele   doporuçuji  znalost  fotogrametrie  a  základních
+geometrických  pouçek.   K  tomu  se  nejlépe  hodí  napê. skripta  doc.Çerného vydaná
+nakladatelstvím  ÇVUT  v  Praze  s  názvem  Konstruktivní geometrie, kde najdete nejen
+základní  pojmy,  jako je afinita, perspektiva, konstrukce perspektivy atd., ale têeba
+i analytická vyjádêení nëkterých geometrických problémû.
+
+Nebojte  se  sáhnout  i  do klasické literatury a zjistit, jak nahlíùel na perspektivu
+têeba takový Leonardo Da Vinci.  Mûùete udëlat sebelepîí objekt, ale pokud ho nebudete
+umët  nasvítit a správnë zakomponovat, nikdy nebudete spokojeni.  Je to paradoxní, ale
+nejlepîí  uçitel  Imaginu není jeho manuál, ale klasiçtí malíêi a grafici (nejlépe 18.
+a  19. století).  I kdyù je grafika v zásadë umëní, má svûj êád a systém, který se buð
+musí  striktnë  dodrùovat,  aby se vytvoêila perfektnë vyváùená kompozice anebo naopak
+absolutnë potlaçit, aby vzniklo dílko s novým náhledem na problém vizualizace.
+
+Nëjaké  takové  êeçi jako: @{i}ªCo tak asi ty starý dëdkové mohli vëdët o renderingu?º@{ui} jen
+svëdçí  o zabednënosti toho, kdo si to myslí a ten samozêejmë nemá sebemenîí nadëji na
+úspëch.   Pokud si tedy vezmete inspiraci têeba z renesançních autorû, nemëjte faleîný
+dojem,  ùe  vykrádáte  nápady.  Naopak.  Vy si v této fázi zaçínáte uvëdomovat, jak to
+vlastnë  funguje  a vychytáváte stëùejní prvky obrazu.  A pokud se vám toto osvëdçuje,
+tak  vám  garantuji, ùe jste na dobré cestë, aby se vám práce daêila, jelikoù postupem
+çasu zjistíte, ùe se necháváte inspirovat çím dál míñ a pêevaùují vaîe nápady.
+
+A  jeîtë  jedna dûleùitá vëc.  @{c D2FF91}MUSÍ VÁS TO BAVIT!@{c}  Jakmile k tomu sedáte s averzí, tak
+od toho klidnë zase odejdëte.  Je jasné, ùe ze zaçátku z toho asi srandy kopec nebude,
+ale  v takovém pêípadë se staçí nechat "nadchnout" nëjakým filmem nebo obrázkem nëkoho
+jiného.
+
+Takùe  tato  první  çást  byla,  spíîe  neù  popisem Imaginu, takovým letmým úvodem do
+raytracingu a 3D grafiky jako takové.  Pêíîtë uù pûjdeme konkrétnë na Imagine a povíme
+si nëco o funkcích @{c F9FF3A}Detail editoru@{c}, o který bývá obecnë nejvëtîí zájem.
+
+Pêíîtë "na seçtenou" se tëîí
+
+@{c 7FAEFF}-Fractal/StillTeam@{c}

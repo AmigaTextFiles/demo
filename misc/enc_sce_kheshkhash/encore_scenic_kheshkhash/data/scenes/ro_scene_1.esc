@@ -1,0 +1,316 @@
+{
+  "actions": [
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "int32_values": 0,
+            "time": 3000
+          },
+          {
+            "int32_values": 1,
+            "time": 3000
+          },
+          {
+            "int32_values": 2,
+            "time": 3000
+          },
+          {
+            "int32_values": 3,
+            "time": 3000
+          },
+          {
+            "int32_values": 4,
+            "time": 3000
+          },
+          {
+            "int32_values": 5,
+            "time": 3000
+          },
+          {
+            "int32_values": 6,
+            "time": 3000
+          },
+          {
+            "int32_values": 7,
+            "time": 3000
+          },
+          {
+            "int32_values": 8,
+            "time": 3000
+          },
+          {
+            "int32_values": 9,
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "ro_scene_1"
+        }
+      ],
+      "loops": 1,
+      "name": "credit",
+      "start_time": 2000,
+      "type": "property_int32"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.01575321,
+              1.47545099,
+              0.65584648
+            ],
+            "interpolation": "linear",
+            "time": 7980
+          },
+          {
+            "float_values": [
+              0.11990958,
+              2.62387848,
+              0.96990639
+            ],
+            "time": 20
+          },
+          {
+            "float_values": [
+              -0.9074772,
+              2.02230668,
+              0.7962746
+            ],
+            "interpolation": "linear",
+            "time": 8980
+          },
+          {
+            "float_values": [
+              -1.52759993,
+              2.26219606,
+              0.08781919
+            ],
+            "time": 20
+          },
+          {
+            "float_values": [
+              -0.02978017,
+              1.66211092,
+              -1.1241051
+            ],
+            "interpolation": "linear",
+            "time": 8980
+          },
+          {
+            "float_values": [
+              0.12610379,
+              0.47577247,
+              -0.53545189
+            ],
+            "time": 20
+          },
+          {
+            "float_values": [
+              1.15688992,
+              0.44970024,
+              0.0631123
+            ],
+            "interpolation": "linear",
+            "time": 10500
+          },
+          {
+            "float_values": [
+              1.18199003,
+              2.46095657,
+              -0.13720997
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "camera_1"
+        }
+      ],
+      "loops": 1,
+      "name": "camera_1Action",
+      "start_time": 0,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -56.89756,
+              -17.024622,
+              -10.192481
+            ],
+            "interpolation": "linear",
+            "time": 7980
+          },
+          {
+            "float_values": [
+              -56.897556,
+              -11.866897,
+              -10.192481
+            ],
+            "time": 20
+          },
+          {
+            "float_values": [
+              -38.634334,
+              -29.923352,
+              29.209017
+            ],
+            "interpolation": "linear",
+            "time": 8980
+          },
+          {
+            "float_values": [
+              -43.386312,
+              -105.411778,
+              -20.139719
+            ],
+            "time": 20
+          },
+          {
+            "float_values": [
+              -18.062078,
+              -171.68567,
+              21.61161
+            ],
+            "interpolation": "linear",
+            "time": 8980
+          },
+          {
+            "float_values": [
+              -37.578288,
+              -181.925094,
+              23.194054
+            ],
+            "time": 20
+          },
+          {
+            "float_values": [
+              -2.288036,
+              90.000009,
+              -29.77804
+            ],
+            "interpolation": "linear",
+            "time": 10500
+          },
+          {
+            "float_values": [
+              -56.649368,
+              75.621075,
+              -18.548062
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "camera_1"
+        }
+      ],
+      "loops": 1,
+      "name": "camera_1Action",
+      "start_time": 0,
+      "type": "rotation_xyz"
+    }
+  ],
+  "cameras": [
+    {
+      "far_clip_plane": 100.0,
+      "fov_x": 54.362152,
+      "fov_y": 28.800001,
+      "hide": false,
+      "name": "camera_1",
+      "near_clip_plane": 0.1,
+      "position": [
+        -0.01575321,
+        1.47545099,
+        0.65584648
+      ],
+      "rotation": [
+        -56.89756,
+        -17.024622,
+        -10.192481
+      ]
+    }
+  ],
+  "enc_info": {
+    "data_type": "ENCSCN",
+    "date": "16 Nov 2022 22:37:27",
+    "version": "2.0"
+  },
+  "loops": 1,
+  "name": "ro_scene_1",
+  "objects": [
+    {
+      "material": {
+        "diffuse_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          0.82
+        ]
+      },
+      "mesh_name": "ro_floor",
+      "name": "floor",
+      "order": 0
+    },
+    {
+      "mesh_name": "ro_walls",
+      "name": "walls",
+      "order": 1,
+      "tag": 100
+    },
+    {
+      "mesh_name": "ro_frame_1",
+      "name": "frame_1",
+      "order": 3,
+      "tag": 102
+    },
+    {
+      "material": {
+        "diffuse_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "ro_poppy",
+      "name": "poppy",
+      "order": 4,
+      "tag": 103
+    },
+    {
+      "mesh_name": "ro_frame_2",
+      "name": "frame_2",
+      "order": 2,
+      "tag": 101
+    },
+    {
+      "mesh_name": "ro_mirrored_top",
+      "name": "mirrored_top",
+      "order": -20
+    },
+    {
+      "mesh_name": "ro_lamp",
+      "name": "lamp",
+      "order": 4,
+      "tag": 103
+    }
+  ],
+  "properties": {
+    "credit": 0
+  },
+  "time": 36500
+}

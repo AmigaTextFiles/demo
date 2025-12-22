@@ -1,0 +1,6199 @@
+{
+  "actions": [
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "int32_values": 0,
+            "time": 40
+          },
+          {
+            "int32_values": 1,
+            "time": 2600
+          },
+          {
+            "int32_values": 2,
+            "time": 1200
+          },
+          {
+            "int32_values": 3,
+            "time": 840
+          },
+          {
+            "int32_values": 4,
+            "time": 1160
+          },
+          {
+            "int32_values": 5,
+            "time": 1280
+          },
+          {
+            "int32_values": 6,
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "Title scene"
+        }
+      ],
+      "loops": 1,
+      "name": "bullet_on_target",
+      "start_time": 18920,
+      "type": "property_int32"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 3000,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bullet_crash"
+        }
+      ],
+      "loops": 1,
+      "name": "bullet_crashAction",
+      "start_time": 35440,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.5,
+              0.309958,
+              13.913801,
+              -0.5,
+              0.309958,
+              13.913801,
+              -0.5,
+              0.309958,
+              13.913801
+            ],
+            "interpolation": "bezier",
+            "time": 1520
+          },
+          {
+            "float_values": [
+              -0.244532,
+              1.51892,
+              4.25007,
+              -0.343425,
+              1.51892,
+              7.990954,
+              -0.148242,
+              1.51892,
+              0.60763
+            ],
+            "interpolation": "bezier",
+            "time": 1480
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -5.0,
+              0.0,
+              0.0,
+              -5.0,
+              0.0,
+              0.0,
+              -5.0
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bullet_crash"
+        }
+      ],
+      "loops": 1,
+      "name": "bullet_crashAction",
+      "start_time": 35480,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 3000,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bullet_12"
+        }
+      ],
+      "loops": 1,
+      "name": "bullet_12Action",
+      "start_time": 33040,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.5,
+              0.31285,
+              13.921204,
+              -0.5,
+              0.31285,
+              13.921204,
+              -0.5,
+              0.31285,
+              13.921204
+            ],
+            "interpolation": "bezier",
+            "time": 1520
+          },
+          {
+            "float_values": [
+              0.337927,
+              0.647378,
+              6.805813,
+              0.012146,
+              0.647378,
+              9.560221,
+              0.655135,
+              0.647378,
+              4.123889
+            ],
+            "interpolation": "bezier",
+            "time": 1480
+          },
+          {
+            "float_values": [
+              1.147043,
+              -0.168449,
+              -0.005,
+              1.147043,
+              -0.168449,
+              -0.005,
+              1.147043,
+              -0.168449,
+              -0.005
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bullet_12"
+        }
+      ],
+      "loops": 1,
+      "name": "bullet_12Action",
+      "start_time": 33080,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 3000,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bullet_11"
+        }
+      ],
+      "loops": 1,
+      "name": "bullet_11Action",
+      "start_time": 32120,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.314771,
+              13.918859,
+              0.0,
+              0.314771,
+              13.918859,
+              0.0,
+              0.314771,
+              13.918859
+            ],
+            "interpolation": "bezier",
+            "time": 1520
+          },
+          {
+            "float_values": [
+              0.400239,
+              0.640074,
+              6.804666,
+              0.249077,
+              0.640074,
+              9.55861,
+              0.547423,
+              0.640074,
+              4.123194
+            ],
+            "interpolation": "bezier",
+            "time": 1480
+          },
+          {
+            "float_values": [
+              0.764528,
+              0.124823,
+              -0.005,
+              0.764528,
+              0.124823,
+              -0.005,
+              0.764528,
+              0.124823,
+              -0.005
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bullet_11"
+        }
+      ],
+      "loops": 1,
+      "name": "bullet_11Action",
+      "start_time": 32160,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 3000,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bullet_10"
+        }
+      ],
+      "loops": 1,
+      "name": "bullet_10Action",
+      "start_time": 30840,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.5,
+              0.309034,
+              13.912047,
+              -0.5,
+              0.309034,
+              13.912047,
+              -0.5,
+              0.309034,
+              13.912047
+            ],
+            "interpolation": "bezier",
+            "time": 1520
+          },
+          {
+            "float_values": [
+              -0.095475,
+              0.676405,
+              6.801334,
+              -0.251126,
+              0.676405,
+              9.553931,
+              0.05608,
+              0.676405,
+              4.121174
+            ],
+            "interpolation": "bezier",
+            "time": 1480
+          },
+          {
+            "float_values": [
+              0.28703,
+              0.089453,
+              -0.005,
+              0.28703,
+              0.089453,
+              -0.005,
+              0.28703,
+              0.089453,
+              -0.005
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bullet_10"
+        }
+      ],
+      "loops": 1,
+      "name": "bullet_10Action",
+      "start_time": 30880,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 3000,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bullet_9"
+        }
+      ],
+      "loops": 1,
+      "name": "bullet_9Action",
+      "start_time": 29720,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.5,
+              0.310709,
+              13.910812,
+              0.5,
+              0.310709,
+              13.910812,
+              0.5,
+              0.310709,
+              13.910812
+            ],
+            "interpolation": "bezier",
+            "time": 1520
+          },
+          {
+            "float_values": [
+              0.214417,
+              0.934166,
+              6.800731,
+              0.324025,
+              0.934166,
+              9.553083,
+              0.107694,
+              0.934166,
+              4.120809
+            ],
+            "interpolation": "bezier",
+            "time": 1480
+          },
+          {
+            "float_values": [
+              -0.054237,
+              0.111042,
+              -0.005,
+              -0.054237,
+              0.111042,
+              -0.005,
+              -0.054237,
+              0.111042,
+              -0.005
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bullet_9"
+        }
+      ],
+      "loops": 1,
+      "name": "bullet_9Action",
+      "start_time": 29760,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 3000,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bullet_8"
+        }
+      ],
+      "loops": 1,
+      "name": "bullet_8Action",
+      "start_time": 27440,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.5,
+              0.309179,
+              13.91238,
+              -0.5,
+              0.309179,
+              13.91238,
+              -0.5,
+              0.309179,
+              13.91238
+            ],
+            "interpolation": "bezier",
+            "time": 1520
+          },
+          {
+            "float_values": [
+              0.6513,
+              0.807659,
+              6.801497,
+              0.6513,
+              0.807659,
+              9.55416,
+              0.6513,
+              0.807659,
+              4.121273
+            ],
+            "interpolation": "bezier",
+            "time": 1480
+          },
+          {
+            "float_values": [
+              -1.208716,
+              -0.133977,
+              -0.005,
+              -1.208716,
+              -0.133977,
+              -0.005,
+              -1.208716,
+              -0.133977,
+              -0.005
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bullet_8"
+        }
+      ],
+      "loops": 1,
+      "name": "bullet_8Action",
+      "start_time": 27480,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 3000,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bullet_7"
+        }
+      ],
+      "loops": 1,
+      "name": "bullet_7Action",
+      "start_time": 25160,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.311707,
+              13.912479,
+              0.0,
+              0.311707,
+              13.912479,
+              0.0,
+              0.311707,
+              13.912479
+            ],
+            "interpolation": "bezier",
+            "time": 1520
+          },
+          {
+            "float_values": [
+              -0.262222,
+              0.802253,
+              6.801547,
+              -0.161186,
+              0.802253,
+              9.554229,
+              -0.3606,
+              0.802253,
+              4.121304
+            ],
+            "interpolation": "bezier",
+            "time": 1480
+          },
+          {
+            "float_values": [
+              -0.510868,
+              -0.118475,
+              -0.005,
+              -0.510868,
+              -0.118475,
+              -0.005,
+              -0.510868,
+              -0.118475,
+              -0.005
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bullet_7"
+        }
+      ],
+      "loops": 1,
+      "name": "bullet_7Action",
+      "start_time": 25200,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 3000,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bullet_6"
+        }
+      ],
+      "loops": 1,
+      "name": "bullet_6Action",
+      "start_time": 23000,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.5,
+              0.314732,
+              13.912801,
+              0.5,
+              0.314732,
+              13.912801,
+              0.5,
+              0.314732,
+              13.912801
+            ],
+            "interpolation": "bezier",
+            "time": 1480
+          },
+          {
+            "float_values": [
+              -0.234042,
+              0.776436,
+              7.059635,
+              0.048746,
+              0.776436,
+              9.740179,
+              -0.524473,
+              0.776436,
+              4.306644
+            ],
+            "interpolation": "bezier",
+            "time": 1520
+          },
+          {
+            "float_values": [
+              -0.967981,
+              0.023521,
+              -0.005,
+              -0.967981,
+              0.023521,
+              -0.005,
+              -0.967981,
+              0.023521,
+              -0.005
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bullet_6"
+        }
+      ],
+      "loops": 1,
+      "name": "bullet_6Action",
+      "start_time": 23040,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 3000,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bullet_5"
+        }
+      ],
+      "loops": 1,
+      "name": "bullet_5Action",
+      "start_time": 21720,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.5,
+              0.314561,
+              13.917416,
+              -0.5,
+              0.314561,
+              13.917416,
+              -0.5,
+              0.314561,
+              13.917416
+            ],
+            "interpolation": "bezier",
+            "time": 1480
+          },
+          {
+            "float_values": [
+              -0.088397,
+              0.971858,
+              7.061994,
+              -0.088397,
+              0.971858,
+              9.743426,
+              -0.088397,
+              0.971858,
+              4.30809
+            ],
+            "interpolation": "bezier",
+            "time": 1520
+          },
+          {
+            "float_values": [
+              -0.728981,
+              0.055037,
+              -0.005,
+              -0.728981,
+              0.055037,
+              -0.005,
+              -0.728981,
+              0.055037,
+              -0.005
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bullet_5"
+        }
+      ],
+      "loops": 1,
+      "name": "bullet_5Action",
+      "start_time": 21760,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 3000,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bullet_4"
+        }
+      ],
+      "loops": 1,
+      "name": "CubeAction",
+      "start_time": 20560,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.500764,
+              0.313417,
+              13.918649,
+              0.500764,
+              0.313417,
+              13.918649,
+              0.500764,
+              0.313417,
+              13.918649
+            ],
+            "interpolation": "bezier",
+            "time": 1480
+          },
+          {
+            "float_values": [
+              0.138888,
+              0.836752,
+              7.062623,
+              0.283174,
+              0.836752,
+              9.744293,
+              -0.009297,
+              0.836752,
+              4.308475
+            ],
+            "interpolation": "bezier",
+            "time": 1520
+          },
+          {
+            "float_values": [
+              -0.248578,
+              -0.116549,
+              -0.005,
+              -0.248578,
+              -0.116549,
+              -0.005,
+              -0.248578,
+              -0.116549,
+              -0.005
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bullet_4"
+        }
+      ],
+      "loops": 1,
+      "name": "CubeAction",
+      "start_time": 20600,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 2920,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bullet_3"
+        }
+      ],
+      "loops": 1,
+      "name": "bullet_3Action",
+      "start_time": 19800,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.5,
+              0.315145,
+              13.913847,
+              -0.5,
+              0.315145,
+              13.913847,
+              -0.5,
+              0.315145,
+              13.913847
+            ],
+            "interpolation": "bezier",
+            "time": 1440
+          },
+          {
+            "float_values": [
+              -0.042486,
+              0.73244,
+              7.064367,
+              -0.225813,
+              0.73244,
+              9.744109,
+              0.145934,
+              0.73244,
+              4.310187
+            ],
+            "interpolation": "bezier",
+            "time": 1480
+          },
+          {
+            "float_values": [
+              0.452527,
+              -0.07122,
+              -0.005,
+              0.452527,
+              -0.07122,
+              -0.005,
+              0.452527,
+              -0.07122,
+              -0.005
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bullet_3"
+        }
+      ],
+      "loops": 1,
+      "name": "bullet_3Action",
+      "start_time": 19840,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 2600,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bullet_2"
+        }
+      ],
+      "loops": 1,
+      "name": "bullet_2Action",
+      "start_time": 18920,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.312964,
+              13.914129,
+              0.0,
+              0.312964,
+              13.914129,
+              0.0,
+              0.312964,
+              13.914129
+            ],
+            "interpolation": "bezier",
+            "time": 1280
+          },
+          {
+            "float_values": [
+              0.34558,
+              0.894544,
+              7.083881,
+              0.209319,
+              0.894544,
+              9.759043,
+              0.4861,
+              0.894544,
+              4.325121
+            ],
+            "interpolation": "bezier",
+            "time": 1320
+          },
+          {
+            "float_values": [
+              0.709053,
+              -0.105795,
+              -0.005,
+              0.709053,
+              -0.105795,
+              -0.005,
+              0.709053,
+              -0.105795,
+              -0.005
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bullet_2"
+        }
+      ],
+      "loops": 1,
+      "name": "bullet_2Action",
+      "start_time": 18960,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 3000,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bullet_1"
+        }
+      ],
+      "loops": 1,
+      "name": "bullet_1Action",
+      "start_time": 15920,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.5,
+              0.30869,
+              13.914025,
+              0.5,
+              0.30869,
+              13.914025,
+              0.5,
+              0.30869,
+              13.914025
+            ],
+            "interpolation": "bezier",
+            "time": 1480
+          },
+          {
+            "float_values": [
+              0.836044,
+              0.93869,
+              7.060261,
+              0.699362,
+              0.93869,
+              9.741041,
+              0.976419,
+              0.93869,
+              4.307028
+            ],
+            "interpolation": "bezier",
+            "time": 1520
+          },
+          {
+            "float_values": [
+              1.210035,
+              0.121172,
+              -0.005,
+              1.210035,
+              0.121172,
+              -0.005,
+              1.210035,
+              0.121172,
+              -0.005
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "bullet_1"
+        }
+      ],
+      "loops": 1,
+      "name": "bullet_1Action",
+      "start_time": 15960,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 0,
+            "uint8_values": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "neon_butterfly"
+        }
+      ],
+      "loops": 1,
+      "name": "neon_butterflyAction",
+      "start_time": 38400,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -4.150949,
+              0.560921,
+              -17.30201,
+              -4.150949,
+              0.560921,
+              -17.30201,
+              -4.150949,
+              0.560921,
+              -17.30201
+            ],
+            "interpolation": "bezier",
+            "time": 7560
+          },
+          {
+            "float_values": [
+              8.061968,
+              7.776389,
+              -75.995094,
+              8.061968,
+              7.776389,
+              -75.995094,
+              8.061968,
+              7.776389,
+              -75.995094
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "neon_butterfly"
+        }
+      ],
+      "loops": 1,
+      "name": "neon_butterflyAction",
+      "start_time": 49920,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              75.187303,
+              0.0,
+              -0.0,
+              75.187303,
+              0.0,
+              -0.0,
+              75.187303,
+              0.0,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 960
+          },
+          {
+            "float_values": [
+              18.944168,
+              -0.164612,
+              0.227172,
+              18.944168,
+              0.0,
+              0.227172,
+              18.944168,
+              -0.987674,
+              0.227172
+            ],
+            "interpolation": "bezier",
+            "time": 6600
+          },
+          {
+            "float_values": [
+              22.650909,
+              -6.789199,
+              -0.0,
+              22.650909,
+              -6.789199,
+              -0.0,
+              22.650909,
+              -6.789199,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "neon_butterfly"
+        }
+      ],
+      "loops": 1,
+      "name": "neon_butterflyAction",
+      "start_time": 49920,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 0,
+            "uint8_values": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "title_logo_9"
+        }
+      ],
+      "loops": 1,
+      "name": "title_logo_9Action",
+      "start_time": 38400,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 0,
+            "uint8_values": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "title_logo_8"
+        }
+      ],
+      "loops": 1,
+      "name": "title_logo_8Action",
+      "start_time": 38400,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 0,
+            "uint8_values": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "title_logo_7"
+        }
+      ],
+      "loops": 1,
+      "name": "title_logo_7Action",
+      "start_time": 38400,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 0,
+            "uint8_values": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "title_logo_6"
+        }
+      ],
+      "loops": 1,
+      "name": "title_logo_6Action",
+      "start_time": 38400,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 0,
+            "uint8_values": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "title_logo_5"
+        }
+      ],
+      "loops": 1,
+      "name": "title_logo_5Action",
+      "start_time": 38400,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 0,
+            "uint8_values": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "title_logo_4"
+        }
+      ],
+      "loops": 1,
+      "name": "title_logo_4Action",
+      "start_time": 38400,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 0,
+            "uint8_values": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "title_logo_3"
+        }
+      ],
+      "loops": 1,
+      "name": "title_logo_3Action",
+      "start_time": 38400,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 0,
+            "uint8_values": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "title_logo_2"
+        }
+      ],
+      "loops": 1,
+      "name": "title_logo_2Action",
+      "start_time": 38400,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 0,
+            "uint8_values": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "title_logo_1"
+        }
+      ],
+      "loops": 1,
+      "name": "title_logo_1Action",
+      "start_time": 38400,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 1000,
+            "uint8_values": 0
+          },
+          {
+            "time": 8480,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_hole"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_holeAction",
+      "start_time": 38440,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 1000,
+            "uint8_values": 0
+          },
+          {
+            "time": 40,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_01"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_01Action",
+      "start_time": 38440,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -5.000056,
+              0.0,
+              0.0,
+              -5.000056,
+              0.0,
+              0.0,
+              -5.000056
+            ],
+            "interpolation": "bezier",
+            "time": 1000
+          },
+          {
+            "float_values": [
+              -2.087433,
+              3.679099,
+              -8.639301,
+              -2.087433,
+              3.679099,
+              -8.639301,
+              -2.087433,
+              3.679099,
+              -8.639301
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_01"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_01Action",
+      "start_time": 38480,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -0.0,
+              0.0,
+              0.0,
+              -0.0,
+              0.0,
+              0.0,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 1000
+          },
+          {
+            "float_values": [
+              135.701406,
+              0.0,
+              56.956654,
+              135.701406,
+              0.0,
+              56.956654,
+              135.701406,
+              0.0,
+              56.956654
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_01"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_01Action",
+      "start_time": 38480,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.15,
+              0.15,
+              0.15
+            ],
+            "interpolation": "linear",
+            "time": 1000
+          },
+          {
+            "float_values": [
+              0.01,
+              0.01,
+              0.01
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_01"
+        },
+        {
+          "name": "wall_back_crashed_18"
+        },
+        {
+          "name": "wall_back_crashed_17"
+        },
+        {
+          "name": "wall_back_crashed_16"
+        },
+        {
+          "name": "wall_back_crashed_15"
+        },
+        {
+          "name": "wall_back_crashed_14"
+        },
+        {
+          "name": "wall_back_crashed_13"
+        },
+        {
+          "name": "wall_back_crashed_12"
+        },
+        {
+          "name": "wall_back_crashed_11"
+        },
+        {
+          "name": "wall_back_crashed_10"
+        },
+        {
+          "name": "wall_back_crashed_09"
+        },
+        {
+          "name": "wall_back_crashed_08"
+        },
+        {
+          "name": "wall_back_crashed_07"
+        },
+        {
+          "name": "wall_back_crashed_06"
+        },
+        {
+          "name": "wall_back_crashed_05"
+        },
+        {
+          "name": "wall_back_crashed_04"
+        },
+        {
+          "name": "wall_back_crashed_03"
+        },
+        {
+          "name": "wall_back_crashed_02"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_piecesAction",
+      "start_time": 38480,
+      "type": "diffuse_color_rgb"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 1000,
+            "uint8_values": 0
+          },
+          {
+            "time": 40,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_18"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_18Action",
+      "start_time": 38440,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -5.000056,
+              0.0,
+              0.0,
+              -5.000056,
+              0.0,
+              0.0,
+              -5.000056
+            ],
+            "interpolation": "bezier",
+            "time": 1000
+          },
+          {
+            "float_values": [
+              -3.555303,
+              2.509279,
+              -9.192722,
+              -3.555303,
+              2.509279,
+              -9.192722,
+              -3.555303,
+              2.509279,
+              -9.192722
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_18"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_18Action",
+      "start_time": 38480,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -0.0,
+              0.0,
+              0.0,
+              -0.0,
+              0.0,
+              0.0,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 1000
+          },
+          {
+            "float_values": [
+              108.210769,
+              0.0,
+              163.183724,
+              108.210769,
+              0.0,
+              163.183724,
+              108.210769,
+              0.0,
+              163.183724
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_18"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_18Action",
+      "start_time": 38480,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 1000,
+            "uint8_values": 0
+          },
+          {
+            "time": 40,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_17"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_17Action",
+      "start_time": 38440,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -5.000056,
+              0.0,
+              0.0,
+              -5.000056,
+              0.0,
+              0.0,
+              -5.000056
+            ],
+            "interpolation": "bezier",
+            "time": 1000
+          },
+          {
+            "float_values": [
+              -5.399742,
+              0.225788,
+              -9.828992,
+              -5.399742,
+              0.225788,
+              -9.828992,
+              -5.399742,
+              0.225788,
+              -9.828992
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_17"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_17Action",
+      "start_time": 38480,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -0.0,
+              0.0,
+              0.0,
+              -0.0,
+              0.0,
+              0.0,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 1000
+          },
+          {
+            "float_values": [
+              0.0,
+              141.262259,
+              -0.0,
+              0.0,
+              141.262259,
+              -0.0,
+              0.0,
+              141.262259,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_17"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_17Action",
+      "start_time": 38480,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 1000,
+            "uint8_values": 0
+          },
+          {
+            "time": 40,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_16"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_16Action",
+      "start_time": 38440,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -5.000056,
+              0.0,
+              0.0,
+              -5.000056,
+              0.0,
+              0.0,
+              -5.000056
+            ],
+            "interpolation": "bezier",
+            "time": 1000
+          },
+          {
+            "float_values": [
+              -4.926155,
+              -1.427766,
+              -9.548907,
+              -4.926155,
+              -1.427766,
+              -9.548907,
+              -4.926155,
+              -1.427766,
+              -9.548907
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_16"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_16Action",
+      "start_time": 38480,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -0.0,
+              0.0,
+              0.0,
+              -0.0,
+              0.0,
+              0.0,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 1000
+          },
+          {
+            "float_values": [
+              19.60539,
+              125.782715,
+              -9.439089,
+              19.60539,
+              125.782715,
+              -9.439089,
+              19.60539,
+              125.782715,
+              -9.439089
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_16"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_16Action",
+      "start_time": 38480,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 1000,
+            "uint8_values": 0
+          },
+          {
+            "time": 40,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_15"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_15Action",
+      "start_time": 38440,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -5.000056,
+              0.0,
+              0.0,
+              -5.000056,
+              0.0,
+              0.0,
+              -5.000056
+            ],
+            "interpolation": "bezier",
+            "time": 1000
+          },
+          {
+            "float_values": [
+              -2.772964,
+              -1.525842,
+              -10.033495,
+              -2.772964,
+              -1.525842,
+              -10.033495,
+              -2.772964,
+              -1.525842,
+              -10.033495
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_15"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_15Action",
+      "start_time": 38480,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -0.0,
+              0.0,
+              0.0,
+              -0.0,
+              0.0,
+              0.0,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 1000
+          },
+          {
+            "float_values": [
+              -51.503899,
+              70.755412,
+              -0.0,
+              -51.503899,
+              70.755412,
+              -0.0,
+              -51.503899,
+              70.755412,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_15"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_15Action",
+      "start_time": 38480,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 1000,
+            "uint8_values": 0
+          },
+          {
+            "time": 40,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_14"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_14Action",
+      "start_time": 38440,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -5.000056,
+              0.0,
+              0.0,
+              -5.000056,
+              0.0,
+              0.0,
+              -5.000056
+            ],
+            "interpolation": "bezier",
+            "time": 1000
+          },
+          {
+            "float_values": [
+              -3.68415,
+              -2.013714,
+              -8.16101,
+              -3.68415,
+              -2.013714,
+              -8.16101,
+              -3.68415,
+              -2.013714,
+              -8.16101
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_14"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_14Action",
+      "start_time": 38480,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -0.0,
+              0.0,
+              0.0,
+              -0.0,
+              0.0,
+              0.0,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 1000
+          },
+          {
+            "float_values": [
+              0.0,
+              130.492335,
+              -36.048717,
+              0.0,
+              130.492335,
+              -36.048717,
+              0.0,
+              130.492335,
+              -36.048717
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_14"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_14Action",
+      "start_time": 38480,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 1000,
+            "uint8_values": 0
+          },
+          {
+            "time": 40,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_13"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_13Action",
+      "start_time": 38440,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -5.000056,
+              0.0,
+              0.0,
+              -5.000056,
+              0.0,
+              0.0,
+              -5.000056
+            ],
+            "interpolation": "bezier",
+            "time": 1000
+          },
+          {
+            "float_values": [
+              0.0,
+              -3.067967,
+              -8.732483,
+              0.0,
+              -3.067967,
+              -8.732483,
+              0.0,
+              -3.067967,
+              -8.732483
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_13"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_13Action",
+      "start_time": 38480,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -0.0,
+              0.0,
+              0.0,
+              -0.0,
+              0.0,
+              0.0,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 1000
+          },
+          {
+            "float_values": [
+              -128.911256,
+              0.0,
+              0.0,
+              -128.911256,
+              0.0,
+              0.0,
+              -128.911256,
+              0.0,
+              0.0
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_13"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_13Action",
+      "start_time": 38480,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 1000,
+            "uint8_values": 0
+          },
+          {
+            "time": 40,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_12"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_12Action",
+      "start_time": 38440,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -5.000056,
+              0.0,
+              0.0,
+              -5.000056,
+              0.0,
+              0.0,
+              -5.000056
+            ],
+            "interpolation": "bezier",
+            "time": 1000
+          },
+          {
+            "float_values": [
+              1.710883,
+              -3.289451,
+              -9.783254,
+              1.710883,
+              -3.289451,
+              -9.783254,
+              1.710883,
+              -3.289451,
+              -9.783254
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_12"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_12Action",
+      "start_time": 38480,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -0.0,
+              0.0,
+              0.0,
+              -0.0,
+              0.0,
+              0.0,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 1000
+          },
+          {
+            "float_values": [
+              -136.074293,
+              0.0,
+              20.199526,
+              -136.074293,
+              0.0,
+              20.199526,
+              -136.074293,
+              0.0,
+              20.199526
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_12"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_12Action",
+      "start_time": 38480,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 1000,
+            "uint8_values": 0
+          },
+          {
+            "time": 40,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_11"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_11Action",
+      "start_time": 38440,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -5.000056,
+              0.0,
+              0.0,
+              -5.000056,
+              0.0,
+              0.0,
+              -5.000056
+            ],
+            "interpolation": "bezier",
+            "time": 1000
+          },
+          {
+            "float_values": [
+              2.500092,
+              -3.124478,
+              -9.022079,
+              2.500092,
+              -3.124478,
+              -9.022079,
+              2.500092,
+              -3.124478,
+              -9.022079
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_11"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_11Action",
+      "start_time": 38480,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -0.0,
+              0.0,
+              0.0,
+              -0.0,
+              0.0,
+              0.0,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 1000
+          },
+          {
+            "float_values": [
+              -124.431239,
+              0.0,
+              52.28461,
+              -124.431239,
+              0.0,
+              52.28461,
+              -124.431239,
+              0.0,
+              52.28461
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_11"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_11Action",
+      "start_time": 38480,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 1000,
+            "uint8_values": 0
+          },
+          {
+            "time": 40,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_10"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_10Action",
+      "start_time": 38440,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -5.000056,
+              0.0,
+              0.0,
+              -5.000056,
+              0.0,
+              0.0,
+              -5.000056
+            ],
+            "interpolation": "bezier",
+            "time": 1000
+          },
+          {
+            "float_values": [
+              4.67206,
+              -1.44942,
+              -9.142861,
+              4.67206,
+              -1.44942,
+              -9.142861,
+              4.67206,
+              -1.44942,
+              -9.142861
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_10"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_10Action",
+      "start_time": 38480,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -0.0,
+              0.0,
+              0.0,
+              -0.0,
+              0.0,
+              0.0,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 1000
+          },
+          {
+            "float_values": [
+              0.0,
+              -133.975035,
+              48.0725,
+              0.0,
+              -133.975035,
+              48.0725,
+              0.0,
+              -133.975035,
+              48.0725
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_10"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_10Action",
+      "start_time": 38480,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 1000,
+            "uint8_values": 0
+          },
+          {
+            "time": 40,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_09"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_09Action",
+      "start_time": 38440,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -5.000056,
+              0.0,
+              0.0,
+              -5.000056,
+              0.0,
+              0.0,
+              -5.000056
+            ],
+            "interpolation": "bezier",
+            "time": 1000
+          },
+          {
+            "float_values": [
+              5.162937,
+              0.0,
+              -10.336722,
+              5.162937,
+              0.0,
+              -10.336722,
+              5.162937,
+              0.0,
+              -10.336722
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_09"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_09Action",
+      "start_time": 38480,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -0.0,
+              0.0,
+              0.0,
+              -0.0,
+              0.0,
+              0.0,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 1000
+          },
+          {
+            "float_values": [
+              0.0,
+              -126.710528,
+              -0.0,
+              0.0,
+              -126.710528,
+              -0.0,
+              0.0,
+              -126.710528,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_09"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_09Action",
+      "start_time": 38480,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 1000,
+            "uint8_values": 0
+          },
+          {
+            "time": 40,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_08"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_08Action",
+      "start_time": 38440,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -5.000056,
+              0.0,
+              0.0,
+              -5.000056,
+              0.0,
+              0.0,
+              -5.000056
+            ],
+            "interpolation": "bezier",
+            "time": 1000
+          },
+          {
+            "float_values": [
+              4.437363,
+              1.39811,
+              -9.295815,
+              4.437363,
+              1.39811,
+              -9.295815,
+              4.437363,
+              1.39811,
+              -9.295815
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_08"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_08Action",
+      "start_time": 38480,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -0.0,
+              0.0,
+              0.0,
+              -0.0,
+              0.0,
+              0.0,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 1000
+          },
+          {
+            "float_values": [
+              0.0,
+              -125.273743,
+              -32.951824,
+              0.0,
+              -125.273743,
+              -32.951824,
+              0.0,
+              -125.273743,
+              -32.951824
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_08"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_08Action",
+      "start_time": 38480,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 1000,
+            "uint8_values": 0
+          },
+          {
+            "time": 40,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_07"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_07Action",
+      "start_time": 38440,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -5.000056,
+              0.0,
+              0.0,
+              -5.000056,
+              0.0,
+              0.0,
+              -5.000056
+            ],
+            "interpolation": "bezier",
+            "time": 1000
+          },
+          {
+            "float_values": [
+              4.510475,
+              2.112601,
+              -9.288965,
+              4.510475,
+              2.112601,
+              -9.288965,
+              4.510475,
+              2.112601,
+              -9.288965
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_07"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_07Action",
+      "start_time": 38480,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -0.0,
+              0.0,
+              0.0,
+              -0.0,
+              0.0,
+              0.0,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 1000
+          },
+          {
+            "float_values": [
+              71.890856,
+              -100.651163,
+              -0.0,
+              71.890856,
+              -100.651163,
+              -0.0,
+              71.890856,
+              -100.651163,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_07"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_07Action",
+      "start_time": 38480,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 1000,
+            "uint8_values": 0
+          },
+          {
+            "time": 40,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_06"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_06Action.001",
+      "start_time": 38440,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -5.000056,
+              0.0,
+              0.0,
+              -5.000056,
+              0.0,
+              0.0,
+              -5.000056
+            ],
+            "interpolation": "bezier",
+            "time": 1000
+          },
+          {
+            "float_values": [
+              4.489155,
+              2.849542,
+              -10.276245,
+              4.489155,
+              2.849542,
+              -10.276245,
+              4.489155,
+              2.849542,
+              -10.276245
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_06"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_06Action.001",
+      "start_time": 38480,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -0.0,
+              0.0,
+              0.0,
+              -0.0,
+              0.0,
+              0.0,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 1000
+          },
+          {
+            "float_values": [
+              112.199306,
+              -104.555498,
+              -0.0,
+              112.199306,
+              -104.555498,
+              -0.0,
+              112.199306,
+              -104.555498,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_06"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_06Action.001",
+      "start_time": 38480,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 1000,
+            "uint8_values": 0
+          },
+          {
+            "time": 40,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_05"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_05Action",
+      "start_time": 38440,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -5.0,
+              0.0,
+              0.0,
+              -5.0,
+              0.0,
+              0.0,
+              -5.0
+            ],
+            "interpolation": "bezier",
+            "time": 1000
+          },
+          {
+            "float_values": [
+              3.054325,
+              2.209014,
+              -8.323062,
+              3.054325,
+              2.209014,
+              -8.323062,
+              3.054325,
+              2.209014,
+              -8.323062
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_05"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_05Action",
+      "start_time": 38480,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -0.0,
+              0.0,
+              0.0,
+              -0.0,
+              0.0,
+              0.0,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 1000
+          },
+          {
+            "float_values": [
+              26.44757,
+              -122.452396,
+              -28.295606,
+              26.44757,
+              -122.452396,
+              -28.295606,
+              26.44757,
+              -122.452396,
+              -28.295606
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_05"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_05Action",
+      "start_time": 38480,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 1000,
+            "uint8_values": 0
+          },
+          {
+            "time": 40,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_04"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_04Action",
+      "start_time": 38440,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -5.000056,
+              0.0,
+              0.0,
+              -5.000056,
+              0.0,
+              0.0,
+              -5.000056
+            ],
+            "interpolation": "bezier",
+            "time": 1000
+          },
+          {
+            "float_values": [
+              4.20625,
+              1.102962,
+              -7.63296,
+              4.20625,
+              1.102962,
+              -7.63296,
+              4.20625,
+              1.102962,
+              -7.63296
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_04"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_04Action",
+      "start_time": 38480,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -0.0,
+              0.0,
+              0.0,
+              -0.0,
+              0.0,
+              0.0,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 1000
+          },
+          {
+            "float_values": [
+              0.0,
+              -145.125974,
+              -0.0,
+              0.0,
+              -145.125974,
+              -0.0,
+              0.0,
+              -145.125974,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_04"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_04Action",
+      "start_time": 38480,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 1000,
+            "uint8_values": 0
+          },
+          {
+            "time": 40,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_03"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_03Action",
+      "start_time": 38440,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -5.000056,
+              0.0,
+              0.0,
+              -5.000056,
+              0.0,
+              0.0,
+              -5.000056
+            ],
+            "interpolation": "bezier",
+            "time": 1000
+          },
+          {
+            "float_values": [
+              0.0,
+              3.999789,
+              -8.752128,
+              0.0,
+              3.999789,
+              -8.752128,
+              0.0,
+              3.999789,
+              -8.752128
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_03"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_03Action",
+      "start_time": 38480,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -0.0,
+              0.0,
+              0.0,
+              -0.0,
+              0.0,
+              0.0,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 1000
+          },
+          {
+            "float_values": [
+              140.789269,
+              0.0,
+              -0.0,
+              140.789269,
+              0.0,
+              -0.0,
+              140.789269,
+              0.0,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_03"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_03Action",
+      "start_time": 38480,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 1000,
+            "uint8_values": 0
+          },
+          {
+            "time": 40,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_02"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_02Action",
+      "start_time": 38440,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -5.000056
+            ],
+            "interpolation": "linear",
+            "time": 1000
+          },
+          {
+            "float_values": [
+              -1.085358,
+              4.381426,
+              -9.098252
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_02"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_02Action",
+      "start_time": 38480,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              -0.0
+            ],
+            "interpolation": "linear",
+            "time": 1000
+          },
+          {
+            "float_values": [
+              153.232193,
+              -0.191138,
+              20.788398
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back_crashed_02"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_back_crashed_02Action",
+      "start_time": 38480,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 320,
+            "uint8_values": 0
+          },
+          {
+            "time": 2680,
+            "uint8_values": 1
+          },
+          {
+            "time": 320,
+            "uint8_values": 0
+          },
+          {
+            "time": 560,
+            "uint8_values": 1
+          },
+          {
+            "time": 320,
+            "uint8_values": 0
+          },
+          {
+            "time": 440,
+            "uint8_values": 1
+          },
+          {
+            "time": 320,
+            "uint8_values": 0
+          },
+          {
+            "time": 840,
+            "uint8_values": 1
+          },
+          {
+            "time": 320,
+            "uint8_values": 0
+          },
+          {
+            "time": 960,
+            "uint8_values": 1
+          },
+          {
+            "time": 320,
+            "uint8_values": 0
+          },
+          {
+            "time": 1840,
+            "uint8_values": 1
+          },
+          {
+            "time": 320,
+            "uint8_values": 0
+          },
+          {
+            "time": 1960,
+            "uint8_values": 1
+          },
+          {
+            "time": 320,
+            "uint8_values": 0
+          },
+          {
+            "time": 2400,
+            "uint8_values": 1
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "cannon_flash"
+        }
+      ],
+      "loops": 1,
+      "name": "cannon_flashAction",
+      "start_time": 15920,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 0.5,
+            "time": 3000
+          },
+          {
+            "float_values": 0.0,
+            "time": 880
+          },
+          {
+            "float_values": -0.5,
+            "time": 760
+          },
+          {
+            "float_values": 0.5,
+            "time": 1160
+          },
+          {
+            "float_values": -0.5,
+            "time": 1280
+          },
+          {
+            "float_values": 0.5,
+            "time": 2160
+          },
+          {
+            "float_values": 0.0,
+            "time": 2280
+          },
+          {
+            "float_values": -0.5,
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "cannon_flash"
+        }
+      ],
+      "loops": 1,
+      "name": "cannon_flashAction",
+      "start_time": 15960,
+      "type": "position_x"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 320
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "time": 2680
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 320
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "time": 560
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 320
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "time": 440
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 320
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "time": 840
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 320
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "time": 960
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 320
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "time": 1840
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 320
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "time": 1960
+          },
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 320
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "cannon_flash"
+        }
+      ],
+      "loops": 1,
+      "name": "Material.001Action",
+      "start_time": 15960,
+      "type": "diffuse_color_rgb"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "wall_back"
+        }
+      ],
+      "loops": 1,
+      "name": "wall_backAction",
+      "start_time": 38440,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 17720,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "cannon_3"
+        }
+      ],
+      "loops": 1,
+      "name": "cannon_3Action",
+      "start_time": 12440,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.5,
+              0.0,
+              15.376781,
+              -0.5,
+              0.0,
+              15.376781,
+              -0.5,
+              0.0,
+              15.376781
+            ],
+            "interpolation": "bezier",
+            "time": 200
+          },
+          {
+            "float_values": [
+              -0.5,
+              -0.07,
+              15.7768,
+              -0.5,
+              -0.07,
+              15.7768,
+              -0.5,
+              -0.07,
+              15.7768
+            ],
+            "interpolation": "bezier",
+            "time": 400
+          },
+          {
+            "float_values": [
+              -0.5,
+              0.0,
+              15.3768,
+              -0.5,
+              0.0,
+              15.3768,
+              -0.5,
+              0.0,
+              15.3768
+            ],
+            "interpolation": "bezier",
+            "time": 1320
+          },
+          {
+            "float_values": [
+              -0.5,
+              0.0,
+              15.3768,
+              -0.5,
+              0.0,
+              15.3768,
+              -0.5,
+              0.0,
+              15.3768
+            ],
+            "interpolation": "bezier",
+            "time": 200
+          },
+          {
+            "float_values": [
+              -0.5,
+              -0.07,
+              15.7768,
+              -0.5,
+              -0.07,
+              15.7768,
+              -0.5,
+              -0.07,
+              15.7768
+            ],
+            "interpolation": "bezier",
+            "time": 400
+          },
+          {
+            "float_values": [
+              -0.5,
+              0.0,
+              15.3768,
+              -0.5,
+              0.0,
+              15.3768,
+              -0.5,
+              0.0,
+              15.3768
+            ],
+            "interpolation": "bezier",
+            "time": 5120
+          },
+          {
+            "float_values": [
+              -0.5,
+              0.0,
+              15.3768,
+              -0.5,
+              0.0,
+              15.3768,
+              -0.5,
+              0.0,
+              15.3768
+            ],
+            "interpolation": "bezier",
+            "time": 200
+          },
+          {
+            "float_values": [
+              -0.5,
+              -0.07,
+              15.7768,
+              -0.5,
+              -0.07,
+              15.7768,
+              -0.5,
+              -0.07,
+              15.7768
+            ],
+            "interpolation": "bezier",
+            "time": 400
+          },
+          {
+            "float_values": [
+              -0.5,
+              0.0,
+              15.3768,
+              -0.5,
+              0.0,
+              15.3768,
+              -0.5,
+              0.0,
+              15.3768
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "cannon_3"
+        }
+      ],
+      "loops": 1,
+      "name": "cannon_3Action",
+      "start_time": 19800,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 17720,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "cannon_2"
+        }
+      ],
+      "loops": 1,
+      "name": "cannon_2Action",
+      "start_time": 12440,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.5,
+              0.0,
+              15.376781,
+              0.5,
+              0.0,
+              15.376781,
+              0.5,
+              0.0,
+              15.376781
+            ],
+            "interpolation": "bezier",
+            "time": 200
+          },
+          {
+            "float_values": [
+              0.5,
+              -0.07,
+              15.7768,
+              0.5,
+              -0.07,
+              15.7768,
+              0.5,
+              -0.07,
+              15.7768
+            ],
+            "interpolation": "bezier",
+            "time": 400
+          },
+          {
+            "float_values": [
+              0.5,
+              0.0,
+              15.3768,
+              0.5,
+              0.0,
+              15.3768,
+              0.5,
+              0.0,
+              15.3768
+            ],
+            "interpolation": "bezier",
+            "time": 4040
+          },
+          {
+            "float_values": [
+              0.5,
+              0.0,
+              15.3768,
+              0.5,
+              0.0,
+              15.3768,
+              0.5,
+              0.0,
+              15.3768
+            ],
+            "interpolation": "bezier",
+            "time": 200
+          },
+          {
+            "float_values": [
+              0.5,
+              -0.07,
+              15.7768,
+              0.5,
+              -0.07,
+              15.7768,
+              0.5,
+              -0.07,
+              15.7768
+            ],
+            "interpolation": "bezier",
+            "time": 400
+          },
+          {
+            "float_values": [
+              0.5,
+              0.0,
+              15.3768,
+              0.5,
+              0.0,
+              15.3768,
+              0.5,
+              0.0,
+              15.3768
+            ],
+            "interpolation": "bezier",
+            "time": 1840
+          },
+          {
+            "float_values": [
+              0.5,
+              0.0,
+              15.3768,
+              0.5,
+              0.0,
+              15.3768,
+              0.5,
+              0.0,
+              15.3768
+            ],
+            "interpolation": "bezier",
+            "time": 200
+          },
+          {
+            "float_values": [
+              0.5,
+              -0.07,
+              15.7768,
+              0.5,
+              -0.07,
+              15.7768,
+              0.5,
+              -0.07,
+              15.7768
+            ],
+            "interpolation": "bezier",
+            "time": 400
+          },
+          {
+            "float_values": [
+              0.5,
+              0.0,
+              15.3768,
+              0.5,
+              0.0,
+              15.3768,
+              0.5,
+              0.0,
+              15.3768
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "cannon_2"
+        }
+      ],
+      "loops": 1,
+      "name": "cannon_2Action",
+      "start_time": 15920,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 17720,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "cannon_1"
+        }
+      ],
+      "loops": 1,
+      "name": "cannon_1Action",
+      "start_time": 12440,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              15.376781,
+              0.0,
+              0.0,
+              15.376781,
+              0.0,
+              0.0,
+              15.376781
+            ],
+            "interpolation": "bezier",
+            "time": 200
+          },
+          {
+            "float_values": [
+              0.0,
+              -0.07,
+              15.7768,
+              0.0,
+              -0.07,
+              15.7768,
+              0.0,
+              -0.07,
+              15.7768
+            ],
+            "interpolation": "bezier",
+            "time": 400
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              15.3768,
+              0.0,
+              0.0,
+              15.3768,
+              0.0,
+              0.0,
+              15.3768
+            ],
+            "interpolation": "bezier",
+            "time": 5640
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              15.3768,
+              0.0,
+              0.0,
+              15.3768,
+              0.0,
+              0.0,
+              15.3768
+            ],
+            "interpolation": "bezier",
+            "time": 200
+          },
+          {
+            "float_values": [
+              0.0,
+              -0.07,
+              15.7768,
+              0.0,
+              -0.07,
+              15.7768,
+              0.0,
+              -0.07,
+              15.7768
+            ],
+            "interpolation": "bezier",
+            "time": 400
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              15.3768,
+              0.0,
+              0.0,
+              15.3768,
+              0.0,
+              0.0,
+              15.3768
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "cannon_1"
+        }
+      ],
+      "loops": 1,
+      "name": "cannon_1Action",
+      "start_time": 18920,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "walls"
+        }
+      ],
+      "loops": 1,
+      "name": "wallsAction",
+      "start_time": 38440,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "encore_logo_1_6"
+        }
+      ],
+      "loops": 1,
+      "name": "encore_logo_1_6Action",
+      "start_time": 44040,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "encore_logo_1_5"
+        }
+      ],
+      "loops": 1,
+      "name": "encore_logo_1_5Action",
+      "start_time": 44040,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "encore_logo_1_4"
+        }
+      ],
+      "loops": 1,
+      "name": "encore_logo_1_4Action",
+      "start_time": 44040,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "encore_logo_1_3"
+        }
+      ],
+      "loops": 1,
+      "name": "encore_logo_1_3Action",
+      "start_time": 44040,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "encore_logo_1_2"
+        }
+      ],
+      "loops": 1,
+      "name": "encore_logo_1_2Action",
+      "start_time": 44040,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "encore_logo_1_1"
+        }
+      ],
+      "loops": 1,
+      "name": "encore_logo_1_1Action",
+      "start_time": 44040,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              2.183198,
+              0.17618,
+              -1.534448,
+              2.183198,
+              0.17618,
+              -1.534448,
+              2.183198,
+              0.17618,
+              -1.534448
+            ],
+            "interpolation": "bezier",
+            "time": 6960
+          },
+          {
+            "float_values": [
+              -2.157677,
+              0.203831,
+              -0.80988,
+              -2.157677,
+              0.203831,
+              -1.534448,
+              -2.157677,
+              0.203831,
+              -0.601671
+            ],
+            "interpolation": "bezier",
+            "time": 2000
+          },
+          {
+            "float_values": [
+              -2.090124,
+              0.198618,
+              1.178241,
+              -2.157677,
+              0.198618,
+              0.856944,
+              -2.022571,
+              0.198618,
+              1.499539
+            ],
+            "interpolation": "bezier",
+            "time": 2000
+          },
+          {
+            "float_values": [
+              0.64377,
+              0.198618,
+              1.499539,
+              -0.233936,
+              0.198618,
+              1.499539,
+              1.521476,
+              0.198618,
+              1.499539
+            ],
+            "interpolation": "bezier",
+            "time": 2000
+          },
+          {
+            "float_values": [
+              2.406188,
+              0.163148,
+              -0.531967,
+              2.406188,
+              0.163148,
+              -0.242671,
+              2.406188,
+              0.163148,
+              -1.399857
+            ],
+            "interpolation": "bezier",
+            "time": 6000
+          },
+          {
+            "float_values": [
+              1.863341,
+              0.285199,
+              -1.399857,
+              2.406188,
+              0.285199,
+              -1.321724,
+              1.139547,
+              0.285199,
+              -1.504033
+            ],
+            "interpolation": "bezier",
+            "time": 8000
+          },
+          {
+            "float_values": [
+              -1.620933,
+              0.142806,
+              -1.504033,
+              -0.539936,
+              0.21146,
+              -1.504033,
+              -2.010091,
+              0.11809,
+              -1.504033
+            ],
+            "interpolation": "bezier",
+            "time": 2880
+          },
+          {
+            "float_values": [
+              -2.360177,
+              0.067455,
+              -0.074669,
+              -2.360177,
+              0.067455,
+              -0.748757,
+              -2.360177,
+              0.067455,
+              0.075128
+            ],
+            "interpolation": "bezier",
+            "time": 640
+          },
+          {
+            "float_values": [
+              -2.276511,
+              0.067475,
+              0.375076,
+              -2.357744,
+              0.067455,
+              0.19697,
+              -1.870351,
+              0.067575,
+              1.265606
+            ],
+            "interpolation": "bezier",
+            "time": 4480
+          },
+          {
+            "float_values": [
+              0.050785,
+              0.08178,
+              3.613674,
+              0.050785,
+              0.067475,
+              3.613674,
+              0.050785,
+              0.093019,
+              3.613674
+            ],
+            "interpolation": "bezier",
+            "time": 3520
+          },
+          {
+            "float_values": [
+              0.0,
+              0.326011,
+              3.073485,
+              0.0,
+              0.326011,
+              3.613674,
+              0.0,
+              0.326011,
+              2.214095
+            ],
+            "interpolation": "bezier",
+            "time": 5600
+          },
+          {
+            "float_values": [
+              0.0,
+              0.326011,
+              -1.852215,
+              0.0,
+              0.326011,
+              -0.468796,
+              0.0,
+              0.326011,
+              -5.162541
+            ],
+            "interpolation": "bezier",
+            "time": 13400
+          },
+          {
+            "float_values": [
+              0.0,
+              0.415455,
+              -7.023854,
+              0.0,
+              0.415455,
+              -7.023854,
+              0.0,
+              0.415455,
+              -7.023854
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "camera_1"
+        }
+      ],
+      "loops": 1,
+      "name": "camera_1Action",
+      "start_time": 0,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -7.506976,
+              -174.358556,
+              -0.0,
+              -7.506976,
+              -174.358556,
+              -0.0,
+              -7.506976,
+              -174.358556,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 6960
+          },
+          {
+            "float_values": [
+              -7.506976,
+              -119.598962,
+              -0.0,
+              -7.506976,
+              -174.358556,
+              -0.0,
+              -7.506976,
+              -103.863449,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 2000
+          },
+          {
+            "float_values": [
+              -7.506976,
+              -35.409036,
+              -0.0,
+              -7.506976,
+              -57.250789,
+              -0.0,
+              -7.506976,
+              -13.567281,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 2000
+          },
+          {
+            "float_values": [
+              -7.506976,
+              -7.708015,
+              -0.0,
+              -7.506976,
+              -35.197631,
+              -0.0,
+              -7.506976,
+              19.781602,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 2000
+          },
+          {
+            "float_values": [
+              -7.506976,
+              105.414776,
+              -0.0,
+              -7.506976,
+              85.872676,
+              -0.0,
+              -7.506976,
+              164.041118,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 6000
+          },
+          {
+            "float_values": [
+              -5.895783,
+              164.041118,
+              -0.0,
+              -6.751114,
+              145.580155,
+              -0.0,
+              -4.755346,
+              188.655726,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 8000
+          },
+          {
+            "float_values": [
+              -2.201798,
+              211.968405,
+              -0.0,
+              -3.533289,
+              170.988895,
+              -0.0,
+              -1.722462,
+              226.721026,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 2880
+          },
+          {
+            "float_values": [
+              -1.076087,
+              270.289327,
+              0.0,
+              -1.41399,
+              249.054215,
+              0.0,
+              -0.475372,
+              308.04063,
+              0.0
+            ],
+            "interpolation": "bezier",
+            "time": 5120
+          },
+          {
+            "float_values": [
+              3e-06,
+              360.00001,
+              -0.0,
+              3e-06,
+              360.00001,
+              -0.0,
+              3e-06,
+              360.00001,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 3520
+          },
+          {
+            "float_values": [
+              3e-06,
+              360.00001,
+              -0.0,
+              3e-06,
+              360.00001,
+              -0.0,
+              3e-06,
+              360.00001,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 5600
+          },
+          {
+            "float_values": [
+              3e-06,
+              360.00001,
+              0.0,
+              3e-06,
+              360.00001,
+              0.0,
+              3e-06,
+              360.00001,
+              0.0
+            ],
+            "interpolation": "bezier",
+            "time": 13400
+          },
+          {
+            "float_values": [
+              3e-06,
+              360.00001,
+              0.0,
+              3e-06,
+              360.00001,
+              0.0,
+              3e-06,
+              360.00001,
+              0.0
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "camera_1"
+        }
+      ],
+      "loops": 1,
+      "name": "camera_1Action",
+      "start_time": 0,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "encore_logo_1"
+        }
+      ],
+      "loops": 1,
+      "name": "encore_logo_1Action",
+      "start_time": 44040,
+      "type": "hide"
+    }
+  ],
+  "cameras": [
+    {
+      "far_clip_plane": 100.0,
+      "fov_x": 49.134342,
+      "fov_y": 28.841546,
+      "hide": false,
+      "name": "camera_1",
+      "near_clip_plane": 0.1,
+      "position": [
+        2.183198,
+        0.17618,
+        -1.534448
+      ],
+      "rotation": [
+        -7.506976,
+        -174.358556,
+        0.0
+      ]
+    }
+  ],
+  "enc_info": {
+    "data_type": "ENCSCN",
+    "date": "30 Mar 2020 13:21:49",
+    "version": "2.0"
+  },
+  "loops": 1,
+  "name": "Title scene",
+  "objects": [
+    {
+      "hide": true,
+      "name": "bullet_crash",
+      "position": [
+        -0.5,
+        0.309958,
+        13.913801
+      ]
+    },
+    {
+      "hide": true,
+      "name": "bullet_12",
+      "position": [
+        -0.5,
+        0.31285,
+        13.921204
+      ]
+    },
+    {
+      "hide": true,
+      "name": "bullet_11",
+      "position": [
+        0.0,
+        0.314771,
+        13.918859
+      ]
+    },
+    {
+      "hide": true,
+      "name": "bullet_10",
+      "position": [
+        -0.5,
+        0.309034,
+        13.912047
+      ]
+    },
+    {
+      "hide": true,
+      "name": "bullet_9",
+      "position": [
+        0.5,
+        0.310709,
+        13.910812
+      ]
+    },
+    {
+      "hide": true,
+      "name": "bullet_8",
+      "position": [
+        -0.5,
+        0.309179,
+        13.91238
+      ]
+    },
+    {
+      "hide": true,
+      "name": "bullet_7",
+      "position": [
+        0.0,
+        0.311707,
+        13.912479
+      ]
+    },
+    {
+      "hide": true,
+      "name": "bullet_6",
+      "position": [
+        0.5,
+        0.314732,
+        13.912801
+      ]
+    },
+    {
+      "hide": true,
+      "name": "bullet_5",
+      "position": [
+        -0.5,
+        0.314561,
+        13.917416
+      ]
+    },
+    {
+      "hide": true,
+      "name": "bullet_4",
+      "position": [
+        0.500764,
+        0.313417,
+        13.918649
+      ]
+    },
+    {
+      "hide": true,
+      "name": "bullet_3",
+      "position": [
+        -0.5,
+        0.315145,
+        13.913847
+      ]
+    },
+    {
+      "hide": true,
+      "name": "bullet_2",
+      "position": [
+        0.0,
+        0.312964,
+        13.914129
+      ]
+    },
+    {
+      "hide": true,
+      "name": "bullet_1",
+      "position": [
+        0.5,
+        0.30869,
+        13.914025
+      ]
+    },
+    {
+      "hide": true,
+      "name": "neon_butterfly",
+      "position": [
+        -4.150949,
+        0.560921,
+        -17.30201
+      ],
+      "rotation": [
+        75.187303,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "title_logo_9",
+      "name": "title_logo_9",
+      "position": [
+        4.049501,
+        0.0,
+        -17.242138
+      ],
+      "properties": {
+        "blending": "additive"
+      }
+    },
+    {
+      "hide": true,
+      "mesh_name": "title_logo_8",
+      "name": "title_logo_8",
+      "position": [
+        3.042673,
+        0.0,
+        -17.242138
+      ],
+      "properties": {
+        "blending": "additive"
+      }
+    },
+    {
+      "hide": true,
+      "mesh_name": "title_logo_7",
+      "name": "title_logo_7",
+      "position": [
+        2.294362,
+        0.0,
+        -17.242138
+      ],
+      "properties": {
+        "blending": "additive"
+      }
+    },
+    {
+      "hide": true,
+      "mesh_name": "title_logo_6",
+      "name": "title_logo_6",
+      "position": [
+        1.74706,
+        0.0,
+        -17.242138
+      ],
+      "properties": {
+        "blending": "additive"
+      }
+    },
+    {
+      "hide": true,
+      "mesh_name": "title_logo_5",
+      "name": "title_logo_5",
+      "position": [
+        0.731902,
+        0.0,
+        -17.242138
+      ],
+      "properties": {
+        "blending": "additive"
+      }
+    },
+    {
+      "hide": true,
+      "mesh_name": "title_logo_4",
+      "name": "title_logo_4",
+      "position": [
+        -0.528387,
+        0.0,
+        -17.242138
+      ],
+      "properties": {
+        "blending": "additive"
+      }
+    },
+    {
+      "hide": true,
+      "mesh_name": "title_logo_3",
+      "name": "title_logo_3",
+      "position": [
+        -1.440156,
+        0.0,
+        -17.242138
+      ],
+      "properties": {
+        "blending": "additive"
+      }
+    },
+    {
+      "hide": true,
+      "mesh_name": "title_logo_2",
+      "name": "title_logo_2",
+      "position": [
+        -2.47694,
+        0.0,
+        -17.242138
+      ],
+      "properties": {
+        "blending": "additive"
+      }
+    },
+    {
+      "hide": true,
+      "mesh_name": "title_logo_1",
+      "name": "title_logo_1",
+      "position": [
+        -3.817039,
+        0.0,
+        -17.242138
+      ],
+      "properties": {
+        "blending": "additive"
+      }
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.15,
+          0.15,
+          0.15,
+          1.0
+        ],
+        "specular_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "wall_back_crashed",
+      "name": "wall_back_crashed_hole",
+      "position": [
+        0.0,
+        0.0,
+        -5.0
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.15,
+          0.15,
+          0.15,
+          1.0
+        ],
+        "specular_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "wall_back_crashed_01",
+      "name": "wall_back_crashed_01",
+      "position": [
+        0.0,
+        0.0,
+        -5.000056
+      ],
+      "properties": {
+        "face_visibility": "front_back"
+      }
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.15,
+          0.15,
+          0.15,
+          1.0
+        ],
+        "specular_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "wall_back_crashed_18",
+      "name": "wall_back_crashed_18",
+      "position": [
+        0.0,
+        0.0,
+        -5.000056
+      ],
+      "properties": {
+        "face_visibility": "front_back"
+      }
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.15,
+          0.15,
+          0.15,
+          1.0
+        ],
+        "specular_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "wall_back_crashed_17",
+      "name": "wall_back_crashed_17",
+      "position": [
+        0.0,
+        0.0,
+        -5.000056
+      ],
+      "properties": {
+        "face_visibility": "front_back"
+      }
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.15,
+          0.15,
+          0.15,
+          1.0
+        ],
+        "specular_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "wall_back_crashed_16",
+      "name": "wall_back_crashed_16",
+      "position": [
+        0.0,
+        0.0,
+        -5.000056
+      ],
+      "properties": {
+        "face_visibility": "front_back"
+      }
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.15,
+          0.15,
+          0.15,
+          1.0
+        ],
+        "specular_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "wall_back_crashed_15",
+      "name": "wall_back_crashed_15",
+      "position": [
+        0.0,
+        0.0,
+        -5.000056
+      ],
+      "properties": {
+        "face_visibility": "front_back"
+      }
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.15,
+          0.15,
+          0.15,
+          1.0
+        ],
+        "specular_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "wall_back_crashed_14",
+      "name": "wall_back_crashed_14",
+      "position": [
+        0.0,
+        0.0,
+        -5.000056
+      ],
+      "properties": {
+        "face_visibility": "front_back"
+      }
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.15,
+          0.15,
+          0.15,
+          1.0
+        ],
+        "specular_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "wall_back_crashed_13",
+      "name": "wall_back_crashed_13",
+      "position": [
+        0.0,
+        0.0,
+        -5.000056
+      ],
+      "properties": {
+        "face_visibility": "front_back"
+      }
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.15,
+          0.15,
+          0.15,
+          1.0
+        ],
+        "specular_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "wall_back_crashed_12",
+      "name": "wall_back_crashed_12",
+      "position": [
+        0.0,
+        0.0,
+        -5.000056
+      ],
+      "properties": {
+        "face_visibility": "front_back"
+      }
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.15,
+          0.15,
+          0.15,
+          1.0
+        ],
+        "specular_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "wall_back_crashed_11",
+      "name": "wall_back_crashed_11",
+      "position": [
+        0.0,
+        0.0,
+        -5.000056
+      ],
+      "properties": {
+        "face_visibility": "front_back"
+      }
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.15,
+          0.15,
+          0.15,
+          1.0
+        ],
+        "specular_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "wall_back_crashed_10",
+      "name": "wall_back_crashed_10",
+      "position": [
+        0.0,
+        0.0,
+        -5.000056
+      ],
+      "properties": {
+        "face_visibility": "front_back"
+      }
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.15,
+          0.15,
+          0.15,
+          1.0
+        ],
+        "specular_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "wall_back_crashed_09",
+      "name": "wall_back_crashed_09",
+      "position": [
+        0.0,
+        0.0,
+        -5.000056
+      ],
+      "properties": {
+        "face_visibility": "front_back"
+      }
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.15,
+          0.15,
+          0.15,
+          1.0
+        ],
+        "specular_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "wall_back_crashed_08",
+      "name": "wall_back_crashed_08",
+      "position": [
+        0.0,
+        0.0,
+        -5.000056
+      ],
+      "properties": {
+        "face_visibility": "front_back"
+      }
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.15,
+          0.15,
+          0.15,
+          1.0
+        ],
+        "specular_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "wall_back_crashed_07",
+      "name": "wall_back_crashed_07",
+      "position": [
+        0.0,
+        0.0,
+        -5.000056
+      ],
+      "properties": {
+        "face_visibility": "front_back"
+      }
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.15,
+          0.15,
+          0.15,
+          1.0
+        ],
+        "specular_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "wall_back_crashed_06",
+      "name": "wall_back_crashed_06",
+      "position": [
+        0.0,
+        0.0,
+        -5.000056
+      ],
+      "properties": {
+        "face_visibility": "front_back"
+      }
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.15,
+          0.15,
+          0.15,
+          1.0
+        ],
+        "specular_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "wall_back_crashed_05",
+      "name": "wall_back_crashed_05",
+      "position": [
+        0.0,
+        0.0,
+        -5.0
+      ],
+      "properties": {
+        "face_visibility": "front_back"
+      }
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.15,
+          0.15,
+          0.15,
+          1.0
+        ],
+        "specular_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "wall_back_crashed_04",
+      "name": "wall_back_crashed_04",
+      "position": [
+        0.0,
+        0.0,
+        -5.000056
+      ],
+      "properties": {
+        "face_visibility": "front_back"
+      }
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.15,
+          0.15,
+          0.15,
+          1.0
+        ],
+        "specular_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "wall_back_crashed_03",
+      "name": "wall_back_crashed_03",
+      "position": [
+        0.0,
+        0.0,
+        -5.000056
+      ],
+      "properties": {
+        "face_visibility": "front_back"
+      }
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.15,
+          0.15,
+          0.15,
+          1.0
+        ],
+        "specular_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "wall_back_crashed_02",
+      "name": "wall_back_crashed_02",
+      "position": [
+        0.0,
+        0.0,
+        -5.000056
+      ],
+      "properties": {
+        "face_visibility": "front_back"
+      }
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "specular_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "cannon_flash",
+      "name": "cannon_flash",
+      "position": [
+        0.5,
+        0.0,
+        15.0
+      ],
+      "properties": {
+        "blending": "additive"
+      }
+    },
+    {
+      "material": {
+        "diffuse_color_rgba": [
+          0.15,
+          0.15,
+          0.15,
+          1.0
+        ],
+        "specular_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "wall_back",
+      "name": "wall_back",
+      "position": [
+        0.0,
+        0.0,
+        -5.0
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "specular_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "cannon_1",
+      "name": "cannon_3",
+      "position": [
+        -0.5,
+        0.0,
+        15.376781
+      ],
+      "properties": {
+        "face_visibility": "front_back"
+      },
+      "rotation": [
+        12.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "specular_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "cannon_1",
+      "name": "cannon_2",
+      "position": [
+        0.5,
+        0.0,
+        15.376781
+      ],
+      "properties": {
+        "face_visibility": "front_back"
+      },
+      "rotation": [
+        12.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "specular_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "cannon_1",
+      "name": "cannon_1",
+      "position": [
+        0.0,
+        0.0,
+        15.376781
+      ],
+      "properties": {
+        "face_visibility": "front_back"
+      },
+      "rotation": [
+        12.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "mesh_name": "walls",
+      "name": "walls"
+    },
+    {
+      "mesh_name": "encore_logo_1_6",
+      "name": "encore_logo_1_6",
+      "position": [
+        1.110897,
+        -0.007001,
+        0.0
+      ],
+      "properties": {
+        "blending": "additive",
+        "face_visibility": "front_back"
+      }
+    },
+    {
+      "mesh_name": "encore_logo_1_5",
+      "name": "encore_logo_1_5",
+      "position": [
+        0.732324,
+        -0.00774,
+        0.0
+      ],
+      "properties": {
+        "blending": "additive",
+        "face_visibility": "front_back"
+      }
+    },
+    {
+      "mesh_name": "encore_logo_1_4",
+      "name": "encore_logo_1_4",
+      "position": [
+        0.339317,
+        -0.016757,
+        0.0
+      ],
+      "properties": {
+        "blending": "additive",
+        "face_visibility": "front_back"
+      }
+    },
+    {
+      "mesh_name": "encore_logo_1_3",
+      "name": "encore_logo_1_3",
+      "position": [
+        -0.156284,
+        -0.018053,
+        0.0
+      ],
+      "properties": {
+        "blending": "additive",
+        "face_visibility": "front_back"
+      }
+    },
+    {
+      "mesh_name": "encore_logo_1_2",
+      "name": "encore_logo_1_2",
+      "position": [
+        -0.625907,
+        -0.023072,
+        0.0
+      ],
+      "properties": {
+        "blending": "additive",
+        "face_visibility": "front_back"
+      }
+    },
+    {
+      "mesh_name": "encore_logo_1_1",
+      "name": "encore_logo_1_1",
+      "position": [
+        -1.115848,
+        -0.007381,
+        0.0
+      ],
+      "properties": {
+        "blending": "additive",
+        "face_visibility": "front_back"
+      }
+    },
+    {
+      "mesh_name": "encore_logo_1",
+      "name": "encore_logo_1",
+      "properties": {
+        "blending": "additive",
+        "face_visibility": "front_back"
+      }
+    }
+  ],
+  "properties": {
+    "bullet_on_target": 0
+  },
+  "time": 57520
+}

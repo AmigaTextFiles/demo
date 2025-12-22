@@ -1,0 +1,28 @@
+==========================================
+ File2Disk V1.0 by Andreas Falkenhahn 1997
+==========================================
+1. What`s the use of this program?
+ 
+This program writes diskimages back to disk. It`s important 
+that the diskimage size is 901120. This is the standard. DMS 
+uncrunched images aren`t supported yet. This program is the 
+opposite of Disk2File.
+
+
+2. How to use this program
+File2Disk can only be used by Shell. There`re the following pa-
+rameters:  File2Disk diskimage unit
+
+Diskimage is the image created with Disk2File or a similar pro-
+gram. Unit is the unit where to write the image to. 0 means 
+DF0:, 1 means DF1:...
+
+ 
+3. Contacting to author
+If you found bugs or have suggestions or just wanna tell me 
+something, don`t hesitate to contact:
+
+Andreas Falkenhahn
+An der Trift 2
+36132 Eiterfeld-Arzell
+email: softwarefailure@dame.de

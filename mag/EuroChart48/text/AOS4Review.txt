@@ -1,0 +1,632 @@
+ecnew.font,8
+«»
+«ac»«c1»
+The Micro-AmigaOne and Amiga OS4 Developer Prerelease (Update 1)«»
+«»
+«c3»By Jeremy Reimer«»
+«al»«»
+«»
+«c4»Introduction«»
+«»
+«as»
+«c2»
+The Amiga computer was a machine ahead of its time. When it was released in 
+1985, its color screen (4096 colors in HAM mode!), four-channel sampled stereo 
+sound, preemptive multitasking GUI, and custom chips to accelerate both sound 
+and graphics made the year-old Macintosh seem antiquated and the PC positively 
+Paleolithic. Steve Jobs was reported to be extremely worried about the Amiga, 
+but fortunately for him and Apple, Commodore had absolutely no idea what they 
+were doing.«»
+«»
+Many jokes have been made about Commodore being unable to sell water to a dying 
+man in the desert, and sadly, these jokes were not that far from the truth. 
+After a showy introduction at the Lincoln Center, which included pop star 
+Deborah Harry and artist Andy Warhol, Commodore stopped all production and 
+advertising of the Amiga 1000, in anticipation of the imminent release of the 
+new 2000 and cost-reduced 500 models. These didn't appear until 1987, and much 
+early momentum was lost. Commodore continued to make terrible mistakes, suffered 
+financially from declining C-64 sales, and eventually went bankrupt in April 
+1994.«»
+«»
+The Amiga, by this time, had carved out a small but devoted niche, especially in 
+digital video. The Video Toaster, closely tied to the Amiga hardware, replaced 
+hundreds of thousands of dollars worth of TV editing equipment for under 
+US$8,000. Bundled with this hardware was Lightwave, a 3D modeling and rendering 
+program that was used to make the pilot and first season of Babylon 5 (in the 
+remaining seasons, they continued to use Lightwave, but this time on Alpha and 
+Intel computers).«»
+«»
+Third-party developers, not willing to wait for the protracted Commodore 
+bankruptcy to resolve itself, developed add-ons for the Amiga giving it access 
+to the new 24-bit SVGA graphics cards coming from the PC world, freeing the 
+dependence on the now-aging custom graphics chips, as well as PowerPC upgrade 
+cards that worked like massive coprocessors for applications rewritten to 
+support them.«»
+«»
+However, the lack of a new Amiga computer hurt the platform greatly. Commodore 
+was bought at liquidation by Escom AG, a German PC firm who wanted only the 
+Commodore brand name and logo, and had no interest in the Amiga. Escom itself 
+went bankrupt a few years later, and the Amiga was briefly bought out by set-top 
+manufacturer VISCorp, before they too filed for liquidation.«»
+«»
+Its third owner was none other than Gateway Computers, who were interested 
+mainly in Commodore's old patent portfolio, but claimed to be interested in 
+resurrecting the platform. However it became increasingly clear that Gateway was 
+never going to do anything with the Amiga, so a consortium of investors calling 
+themselves Amino Development bought out the rights to the Amiga hardware and OS 
+in 1999. The new company was called Amiga, Inc., the same name as the original 
+group headed by Jay Miner that had started the computer company in 1982 before 
+Commodore bought them out. Amiga had come full circle!«»
+«»
+In the heady days of the dot-com boom, Amiga Inc. had all sorts of grandiose 
+plans for resurrecting the platform. A new OS based on QNX, then Linux, as well 
+as a Java-like "Amiga Anywhere" development environment or AmigaDE were 
+proposed. Of these three, only the last ever came to fruition before Amiga Inc. 
+ran out of money when the bubble burst. There had been some talk of a new, 
+PowerPC-based version of the classic AmigaOS, version 4.0, but as Amiga, Inc. 
+had no more resources, everyone assumed it was dead. WIRED magazine even gave 
+OS4 a special vaporware award, beating out even Duke Nukem Forever!«»
+«»
+But an amazing thing was happening. Three companies were actually working on a 
+new Amiga platform. One, bplan Gbmh (formed from the ashes of Phase 5, an Amiga 
+accelerator card company) was originally going to be a licensee of Amiga Inc. 
+and produce hardware to run OS4. They had a falling-out with the moribund Amiga 
+Inc., merged with Thendic to became Genesi, and decided instead to produce both 
+the hardware and an "Amiga-like" OS themselves. These were released as the 
+PegasosPPC motherboard and MorphOS in late 2001.«»
+«»
+A second company, Eyetech UK, was to be the second licensee of OS4. Eyetech had 
+been an Amiga hardware and add-on distributor, and formed a partnership with a 
+Taiwanese company to produce modified Teron PowerPC motherboards. The third 
+company, Hyperion Entertainment, was hired by Amiga, Inc. to write OS4 itself. 
+As Amiga, Inc. had no money, Hyperion signed a contract that would give them the 
+rights to OS4 if Amiga, Inc. went bankrupt. Hyperion was a small company that 
+produced ports of Windows games for the Macintosh, Amiga and Linux
+market.«»
+«»
+The first AmigaOne motherboards were released in 2002, but there was no OS4 to 
+go with them, so they shipped with Debian PPC Linux instead. Was Hyperion too 
+small a company to manage this massive task, the first operating system project 
+they had ever attempted? While MorphOS gained a small but dedicated following, 
+AmigaOne owners anxiously awaited any kind of news. Finally, after an agonizing 
+18-month wait, the first Developer Prerelease CD of OS4 was shipped to AmigaOne 
+owners worldwide. Eyetech, meanwhile, had announced a new batch of AmigaOne 
+motherboards, this time coming in the tiny mini-ITX form factor. An update to 
+OS4 was delivered to coincide with their release. The prospect of exploring a 
+brand new operating system plus the possibilities of doing hardware design 
+around a tiny, low-power motherboard were too much for me and I bit the bullet 
+and ordered an AmigaOne Micro with OS4 on November 2004.«»
+«»
+«c4»«al»The motherboard«»
+«as»«c2»«»
+The AmigaOne Micro "C" model measures 17cm x 17cm and contains an 800MHz IBM PPC 
+750FX or GX CPU (commonly known as the G3). This CPU is on a removable daughter 
+card so it can be replaced with a G4 (PPC 74xx) module (800MHz ones are 
+available now, faster ones are in development, including a 1.5GHz G4 from 
+Freescale). It comes with 256MB of PC-133 RAM onboard, plus an extra SO-DIMM 
+slot. Onboard graphics are provided by a Radeon 7000 with 32 megabytes of 
+memory.«»
+«»
+Sound (Cmedia), 10/100 Ethernet (3com) and two USB 1.1 ports are also onboard, 
+as well as PS/2 connectors for a mouse and keyboard, serial, parallel and game 
+ports. Motherboard ribbon connectors are provided for one extra serial and two 
+extra USB ports.«»
+«»
+The motherboard is a modified Teron Mini design. It uses a VIA 82C686B 
+northbridge chipset and an Artica-S southbridge. It has a single PCI slot and 
+two IDE connectors, one for standard IDE cables, the other for laptop-sized 2.5" 
+drives. There is no connector for a floppy drive.«»
+«»
+The BIOS for the motherboard is called UBoot, and was written by Hyperion 
+themselves. It allows both menu-based and command-line interaction, and is quite 
+powerful. It includes a built-in bootloader that allows the user to select 
+multiple operating systems, such as OS4, Debian Linux, SUSE Linux, and Yellow 
+Dog. Apparently you can even run Mac OS X on top of Debian using the program 
+"Mac On Linux" although I have not tested this out personally.«»
+«»
+The price for the motherboard varies depending on the dealer you are purchasing 
+from (yes, there still Amiga dealers in existence!) but is around US$700. This 
+includes the motherboard with CPU, 256 megabytes of RAM, and a licensed copy of 
+OS4, the final version of which will be shipped out to owners when it is 
+finished. While this is clearly much higher than equivalent PC or even Macintosh 
+hardware prices, one has to remember that economies of scale come into play at 
+the low volumes of a project like this. Basically, these are "early adopter" 
+prices.«»
+«»
+«c4»«al»Hardware compatibility«»
+«»«as»«c2»
+OS4 runs only on Eyetech AmigaOne boards, including the ATX form factor AmigaOne 
+XE-G3 and XE-G4 models, and the new Micro AmigaOne "C" model that is reviewed in 
+this article. Many people have asked whether or not they can install OS4 on 
+their Macintosh, since both use PowerPC hardware. The answer is no, as OS4 
+requires a custom ROM embedded on all AmigaOne motherboards in order to boot. 
+This was done under agreement between Eyetech and Hyperion, in order to cut down 
+on piracy and to reduce the number of hardware combinations that Hyperion needed 
+to test and support. However, Hyperion is working on versions of OS4 for classic 
+Amigas (such as the A1200) that have been enhanced with PowerPC upgrade boards 
+such as the Blizzard and Cyberstorm.«»
+«»
+The reason Eyetech and Hyperion chose to go with PowerPC-based motherboards over 
+x86-based ones mostly comes down to compatibility: there are many applications 
+for the Classic Amiga that were enhanced with PowerPC code to run on the various 
+accelerator boards mentioned previously. The goal is to be able to run all of 
+these apps without recompiling or modification under OS4. However there are some 
+other advantages to this choice, such as the extremely low power draw of chips 
+like the IBM 750FX (less than 10W under maximum load!)«»
+«»
+As far as add-on cards, the AmigaOne comes with standard PCI slots and the XE-G3 
+and XE-G4 come with an AGP slot for adding graphics cards. Currently OS4 
+supports only ATI Radeon cards and 3DFX Voodoo cards, but a driver for NVIDIA 
+GeForce cards is in the works. Most Soundblaster and C-Media sound cards are 
+supported, as are about a half-dozen models of Ethernet cards. Wireless PCI 
+cards using the Prism chipset are supported thanks to an OS4 driver ported over 
+from Linux. For a complete hardware compatibility list, click here.«»
+«»
+OS4 came on a single, self-booting CD-ROM. Installation was quite 
+straightforward. Complete instructions along with screenshots were provided from 
+Hyperion at this website. Older AmigaOnes required a firmware update to UBoot, 
+but my A1 Micro already came with the latest version of UBoot installed, so I 
+did not have to go through that step.«»
+«»
+The installer, like all Amiga installers, allows three levels of interaction: 
+Beginner, Intermediate and Advanced. Advanced mode merely allows the 
+confirmation of some of the hardware drivers, for example the Radeon driver, 
+whereas the other modes install them automatically. The only confusing part was 
+the need to check the new partition as bootable in the partition manager. This 
+could probably be done automatically in future releases, at least in beginner 
+and intermediate modes.«»
+«»
+There is a single reboot involved if you have repartitioned a blank hard drive. 
+The only technical input that was required (apart from partitioning) was the 
+refresh rate of my monitor; however, the default setting would have worked even 
+if I did not know how to do this. I was prompted for my location, allowed to set 
+up my keyboard and mouse preferences and set my time zone. Interestingly, unlike 
+OS X, there is an option for both Canadian/French and Canadian/English! The 
+whole process was remarkably painless and took less than half an hour. The 
+installation guide was also available on the CD for those without an Internet 
+connection or who didn't want to print it out.«»
+«»
+«c4»«al»The OS4 environment«»
+«»«as»«c2»
+OS4 boots remarkably quickly. From a cold boot, including waiting for power up, 
+BIOS messages, straight to a usable desktop took slightly over 30 seconds. A 
+"warm boot," which bypasses the BIOS startup and merely reloads the operating 
+system, takes slightly over 10 seconds. (You initiate the warm boot by holding 
+down Ctrl and tapping the left and right Windows keys.) From there you are 
+presented with the minimalist OS4 desktop.«»
+«»
+«c4»«al»AmiDock«»
+«»«as»«c2»
+The first thing you notice when you boot to the OS4 desktop is the Dock-like 
+floating bar on the right hand side of the screen. This is called AmiDock, but 
+hold the phone to Apple's lawyers: this is a refined version of the same AmiDock 
+that was released with OS 3.9, the last update to the "Classic" Amiga OS that 
+Amiga, Inc. released in 2000.«»
+«»
+AmiDock can be resized, hidden, moved to any edge of the screen, and the 
+transparency of the background is adjustable as well. Icons do not bounce, but 
+they do glow briefly when you click them. Program icons can be dragged onto the 
+dock, but not dragged off, for that you must right click the dock and select 
+"Edit..." to enter the AmiDock properties dialog.«»
+«»
+Another new feature of the Dock is the ability to run small applets called 
+"Dockies." These are icons similar to the docklings of Mac OS X 10.0 that can be 
+dragged to the Dock and perform special features, such as a clock that shows the 
+current time, a screen magnifier, or even a sub-dock object that opens other 
+docks inside it. New Dockies are being written all the time.«»
+«»
+«c4»«al»Mousing«»
+«»«as»«c2»
+The default mouse pointer is a red arrow, as it was on the very first Amiga. 
+This is often easier to spot than a black (Macintosh) or white (Windows) 
+pointer, but the user can change the mouse pointer to any image and color they 
+want, using the built-in pointer editor. Scrollbars on windows are on the right 
+hand side by default, and are proportional. Like in NeXTstep, the up and down 
+scroll arrows are next to each other right below the scroll bar. However, these 
+don't get much use when one has a scroll wheel, which in this release works only 
+with USB mice, but in the final release will work on PS/2 mice as well.«»
+«»
+«c4»«al»Desktop and drawers«»
+«»«as»«c2»
+There are two icons on the OS4 desktop by default. One is the icon representing 
+your hard disk, which looks like a drive with a little red and white Boing ball 
+in front of it. The other is the RAM Disk icon. AmigaOS has always had a built-
+in RAM disk, long before it ever had virtual memory, and many applications 
+assume its presence. Items in the Clipboard, for example, will appear
+here.«»
+«»
+Clicking on your hard disk icon opens up the "root directory" of the Amiga file 
+system. By default, there are nine folders (called "Drawers" in Amiga jargon) 
+available. Devs contains things like printer drivers, Ethernet drivers, and 
+something called "Datatypes," which was a pretty unique Amiga invention. 
+Datatypes allow new file formats to be added to the OS that all applications can 
+then recognize and use. So, for example, if you had an old graphics viewer that 
+came out before PNG files existed, all you have to do is add the PNG datatype to 
+the OS and now this app can load, display and save PNG files.«»
+«»
+The next drawer is called Internet, and performs much the same functionality as 
+Network Connections in Windows. Clicking "New Connection" will bring up the 
+Internet Connection wizard, allowing the user to set up dial-up, LAN or router-
+based internet access. Except that on an Amiga, there really is a
+wizard!«»
+«»
+Next comes the MUI Drawer. MUI stands for Magic User Interface and is a set of 
+libraries developed as an add-on to classic AmigaOS and ported to OS4. MUI 
+allows all kinds of customizations., allowing the user of MUI applications to 
+change the appearance and behavior of all kinds of aspects of the GUI, from 
+scrollbar preferences to popup bubble help to the default behavior of
+screens.«»
+«»
+AmigaOS has always supported running applications on separate screens. The idea 
+was that you could open up new applications using any resolution and color depth 
+you wanted, sort of the way games on Windows open up a new screen at the 
+resolution you have specified for that particular game. On the Amiga, all 
+applications have this ability.«»
+«»
+One feature of the original custom Amiga graphics chips was that you could 
+"pull" down screens with the mouse to see screens that were behind them. This 
+feature, called "draggable screens," was never duplicated by any graphics card 
+manufacturer since, so sadly it is not available on the AmigaOne. However, you 
+can still switch between screens using the Left-Amiga-N and Left-Amiga-M control 
+keys (The left and right Windows key substitute for the left and right Amiga 
+keys on the classic Amiga keyboard. Keyboards without a right Windows key can 
+map the Right Mouse Button key to perform the same function.)«»
+«»
+Another interesting feature of AmigaOS is the way menus work. Like the 
+Macintosh, programs use a single menubar at the top of the screen, but it is 
+hidden by default until the user moves to the Workbench titlebar and holds down 
+the right mouse button. However, if you click the right mouse button anywhere 
+else on the screen, the application's full menu list is available from a popup 
+menu. In terms of Fitt's Law, this is even more efficient than a top menubar, 
+but for people who prefer using the menubar, there is a system setting to turn 
+this off and have the right mouse button only pop up contextual menus that are 
+relevant to the object clicked on.«»
+«»
+The next icon is Prefs, the equivalent of the Control Panel or System Settings. 
+Here you can adjust settings for the mouse, joystick, sound output, printers, 
+USB, video modes, and miscellaneous Workbench features. (Workbench is the name 
+of the AmigaOS shell, its Windows equivalent would be Windows Explorer) You can 
+also manage fonts from this area. OS4 supports Bitstream, classic Amiga and 
+TrueType fonts, and supports anti-aliasing, but not subpixel AA rendering (aka 
+Cleartype)«»
+«»
+After Prefs comes Storage, which is kind of a duplicate of Devs, then System, 
+which contains some utilities like Find (a Search tool), Format, GrimReaper (a 
+program crash analyzer), and the AmigaDOS shell.«»
+«»
+«c4»«al»AmigaDOS shell«»
+«»«as»«c2»
+The shell is fairly standard, with command history and tab completion. AmigaDOS 
+commands, however are not quite DOS commands and not quite Unix commands. Jay 
+Miner once wrote that he wished AmigaDOS could have changed its commands to be 
+more like DOS commands, as he felt it would have helped new users out.
+«»
+For example, the COPY command's syntax is COPY FROM sourcedir/file TO 
+destdir/file. Instead of cd .. to go up one directory, the command is cd /. The 
+directory command is dir, but a single-column directory is list. Over the years, 
+many Amigans who use multiple systems have created an elaborate system of 
+aliases to make the AmigaDOS commands more closely resemble DOS or Unix ones.
+«»
+One nifty feature that you can see in the above screenshot is that any file that 
+you have downloaded shows the full URL of the downloaded file on the right hand 
+side in single-column view. This is very handy whenever someone asks you "where 
+did you find that file?" Just copy and paste! The standard Amiga cut and paste 
+shortcuts are right-Amiga-C and Right-Amiga-V, so they work everywhere, even in 
+the shell.«»
+«»
+«c4»«al»AmigaOS4 architecture«»
+«»«as»«c2»
+The original AmigaOS was designed to work on a 7.14MHz 68000. While it was small 
+and fast and supported full preemptive multitasking, there was no memory 
+management hardware (or MMU) to support virtual memory and memory protection. 
+Fatal crashes were common and every Amiga user got to know the funny error 
+message in the flashing orange box: "Software failure. Guru Meditation. Press 
+left or right mouse button to continue." (Neither button ever did anything 
+useful at that point.)«»
+«»
+Unfortunately, just as happened with the classic Macintosh OS, a large software 
+base arose that assumed that it could have full control over the machine, and 
+adding full protected memory was basically impossible without either breaking 
+tons of legacy applications or becoming completely unstable or both, as Apple's 
+doomed Copland project realized. Apple eventually solved the problem by brute 
+force, loading a complete copy of the old operating system in a virtual machine 
+every time the user needed to run a Classic application in OS X.«»
+«»
+Hyperion realized that with the current state of the Amiga applications market, 
+asking developers to write for a completely new operating system was 
+unrealistic. After all, if you are going to do that, you might as well write for 
+the Windows market and have your old users run old Amiga applications in an 68k 
+Amiga emulator such as the excellent WinUAE. Instead, Hyperion decided to 
+rewrite the old Exec kernel from AmigaOS 3.1 in PPC code, supporting virtual 
+memory and memory protection, but leave the memory protection features turned 
+off by default. This allows application developers to easily port their old 68k 
+Amiga apps to PPC and 4.0 native code, often with a single recompile. The 
+current plan is to introduce memory protection for OS4 apps in version 4.1. 
+However, the kernel can watch for illegal memory accesses and when it finds 
+them, it displays a "Grim Reaper" dialog that allows the user to kill the 
+offending application.«»
+«»
+Legacy Amiga applications, such as games, that were written to access the old 
+custom chipset hardware directly, will not run in OS4.0. However, a port of 
+WinUAE for OS4, called E-UAE, has been produced that will allow these games to 
+be run as well. So-called "system friendly" legacy Amiga applications, the kind 
+that were able to use PC-based graphics cards, run directly from the OS4 shell. 
+The operating system launches a 68020 emulator seamlessly in the background when 
+the application's icon is double-clicked. In this release of the OS, the 
+emulator is interpretive only, and provides the speed of about a 50MHz 68040 on 
+the 800Mhz AmigaOne hardware.«»
+«»
+As many legacy Amiga applications were designed to run well on a 12MHz 68020 
+(the CPU of the popular Amiga 1200), this is often fast enough for undemanding 
+apps. However, a JIT-compiled 68020 emulator engine called Petunia has been 
+completed and is now in beta-testing. This will be included in the full release 
+of OS4. The JIT adds a six- to seven-fold speedup to emulated
+applications.«»
+«»
+Legacy apps run under the assumption that they have full access to system 
+memory, and buggy applications can currently take down the entire system, 
+similar to 16-bit Windows applications under the Windows 9x series. Applications 
+that have already been programmed to take advantage of a PPC add-on card will be 
+supported through the use of the WarpUP library, however, this is still being 
+beta tested and was not available in this release of OS4.«»
+«»
+«c4»«al»AmigaOS features and applications«»
+«»«as»«c2»
+This prerelease of AmigaOS4 does not come with many applications by default. 
+There is NotePad, for simple documents, a graphical port of Emacs, a graphical 
+de-archiver shell called Unarc, AmiPDF for PDF viewing, PlayCD to play audio 
+CDs, and on the install CD but not installed by default is a demo version of the 
+web browser iBrowse. The demo has a 30-minute time limit for browsing, but is 
+friendly enough to allow the user to exit and restart for another 30 minutes. 
+The full version of iBrowse supports features such as tabbed browsing.«»
+«»
+Another Amiga web browser, AWEB, has been open-sourced and has been recompiled 
+for OS4. It is a fast and highly configurable browser. Every keystroke and menu 
+option can be defined by the user. However, both iBrowse and AWEB are quite 
+dated by current browser standards. Neither browser supports CSS, for example, 
+which on many websites merely degrades the appearance somewhat, but on some 
+sites messes up the formatting completely. Also, some poorly-coded Javascript 
+code will sometimes cause problems with AWeb and iBrowse.«»
+«»
+However, help is on the way. The AWEB team has taken the KHTML code (the same 
+code that Apple used as the core of their Safari browser) and is working on 
+integrating it with the AWEB interface. The iBrowse team is also working on a 
+CSS-compatible rendering engine for the next update of their browser. There is 
+also an effort underway to port Firefox and Mozilla, and a bounty of over 
+US$9,000 has been raised for the first coder who is able to do so. So far, the 
+porting process has been extremely slow, but as more people buy AmigaOnes and 
+OS4, it is likely to improve.«»
+«»
+Flash support is somewhat limited. A legacy Amiga OS 3.x Flash viewer/player is 
+available, and someone has already recompiled it for OS4, although the OS4 
+version does not yet support sound. QuickTime support and a DivX player have 
+been demonstrated on a more recent build of OS4, but I have not had a chance to 
+test them myself.«»
+«»
+For chatting purposes, WookieChat is a nice, basic free IRC application that has 
+been recompiled for OS4 and works well. For more advanced features there is 
+AMIRC, which is still a Classic application but runs very quickly on OS4. Mail 
+can be read with classic applications such as YAM, and Usenet news by apps such 
+as New York and NewsRog. FTP support is built into the shell, and Classic 
+versions of graphical FTP utilities are available, although the one I tried, 
+AmiFTP, did not work on this release of OS4. There are also messenger 
+applications that can use the AIM, MSN and ICQ networks.«»
+«»
+MP3 files can be played by a number of Amiga players, such as AMPlifier and 
+AmigaAMP. These two mimic WinAMP's functionality and can even use WinAMP skins. 
+While they are both 68k applications, someone has helpfully updated the 
+mpega.library used to decode MP3 files to PPC code.«»
+«»
+Installing these applications showed the flexibility of OS4 when it comes to 
+moving from a Classic environment both apps launched and played seamlessly, 
+and all I had to do to update the decoder engine is drag and drop the new 
+mpega.library file into the Libs: directory. I was still playing MP3s, but I no 
+longer had the performance hit from emulating a 68020 to decode them.«»
+«»
+Video files can be played using multiple player programs. The program AMP2 will 
+play most video formats, including DivX, although I was only able to test it 
+with MPEG1 video files. DVPlayer will play DVDs and MPEG2 files.«»
+«»
+Text editing is handled expertly with the well-renowned CygnusEd, which runs 
+very quickly even in emulated mode. Desktop publishing can be done with 
+Pagestream, a classic Amiga application that is still being updated today, 
+including an OS4-native version currently in the works. Graphics manipulation 
+can be handled by several Classic Amiga programs including Photogenics (a 
+Photoshop clone), fxpaint and ImageFX (the latter is currently available in PPC-
+enhanced version, but a true OS4 version is not available yet).«»
+«»
+The one really sore spot in the applications department is in Word Processing 
+and Office-style programs. The legendary Final Writer does not currently work 
+under this build of OS4, and neither does AmigaWriter. Papyrus software has 
+announced an Amiga version of its office suite but as they do not offer a demo 
+version I was unable to test it for this review. There has been talk of porting 
+over OpenOffice, but the gargantuan task of moving over hundreds of megabytes of 
+strange source code has so far proven too daunting for Amiga
+enthusiasts.«»
+«»
+OS4-native games are quite rare at this point, although the porting of the Linux 
+SDL graphics and sound library has allowed a ton of 2D sidescroller ports. An 
+OS4 version of Freespace 1 is available from Hyperion today, and they expect to 
+port the rest of their Amiga game library (which includes titles like Shogo, 
+SiN, and others) as soon as they can. Quake I and II have been ported, along 
+with other old classics like Duke Nukem 3D. Emulators such as MAME, the Ultima 7 
+emulator Exult, the LucasArts emulator SCUMMVM and the PlayStation emulator FPSE 
+have also been ported to OS4.«»
+«»
+«c4»«al»Tools«»
+«»«as»«c2»
+After System comes the Tools drawer, full of small utilities like the partition 
+manager, calculator, Trash can, Dockies (mentioned earlier) and Commodities. 
+Commodities are small utilities that change the default behavior of Workbench. 
+They can be loaded by double clicking on their icons, or loaded in a startup 
+script.«»
+«»
+«c4»«al»Windowing«»
+«»«as»«c2»
+Windows in AmigaOS work somewhat differently to those in other windowing 
+operating systems. The windowing system in AmigaOS is called Intuition, and was 
+developed in 1985. The widget in the upper left side of each window is a 
+standard close widget, but the two on the right are not what they would
+seem.«»
+«»
+The first alternates the window size and position between the last two settings 
+the user has selected. This is sort of like the "green" widget in OS X. The 
+second, however, is unique to AmigaOS, but those of you who have used desktop 
+publishing programs will understand it instantly. It alternates between "Push to 
+back" and "Pull to Front." Windows can be moved up and down the stack in this 
+way, which is somewhat surprising the first time you use it, but quickly becomes 
+a natural way of working. Windows can be selected with a left mouse click and 
+they become active (the titlebar and window frame turn from grey to blue) and 
+usable even if they aren't at the front. However, sometimes you want to pull a 
+window to the front when the widgets aren't visible, and that's where the 
+Commodities come in.«»
+«»
+Activating the commodity Click To Front will make any window pop to the front of 
+the stack with a double left click. You can click anywhere on the window, not 
+just the titlebar. Another Commodity, AutoPoint, mimics the default behavior of 
+X Windows by automatically shifting the window focus whenever the mouse hovers 
+over a new window. Still more commodities control the behavior of right clicking 
+(discussed earlier) and the function keys.«»
+«»
+After the Tools drawer is Utilities, which for now contains just a clock, the 
+native PDF viewer AmiPDF, the Postscript clone Ghostscript, Notepad, and 
+Multiview, a graphics and text viewer integrated into the Workbench. The last 
+drawer is WBStartup, which along with text-based startup scripts, allows the 
+user to automatically run applications and utilities when Workbench
+starts.«»
+«»
+The icons are nicely drawn and fairly minimalist. All Amiga icons have two 
+states, one closed and one opened, so a drawer icon will appear open if the 
+window is open somewhere. OS4 adds a halo effect (nothing to do with iPods, 
+sorry!) around selected and opened icons as well. Apple users who marveled at OS 
+X's ability to use huge, oversized icons will be interested to know that said 
+feature actually originated in AmigaOS 1.2, circa 1985. It remains in AmigaOS to 
+this day, allowing application vendors to create large, attractive icons that 
+stand apart from the standard system ones.«»
+«»
+An interesting feature of Workbench is that it does not automatically show all 
+files in a directory. Only files that have a second file with an .info extension 
+present will show up in Workbench windows by default. This allows application 
+installers to present a clean window with only the necessary files visible for 
+the user. On a per-drawer basis, the user can turn "Show All Files" on. Now all 
+files appear as icons in the drawer, with the formerly hidden files semi-
+transparent.«»
+«»
+«c4»«al»Performance«»
+«»«as»«c2»
+Many people, upon reading the hardware specs of the Micro Amiga One, will feel 
+that the performance (800MHz PowerPC 750FX, SDR RAM) is far below modern gear. 
+This is true to a certain extent, but it does not give the whole picture. 
+AmigaOS was originally written for a 7.14 MHz 68000, and the last Classic 
+version released by Commodore, 3.1, was optimized for a 12 MHz 68020 platform. 
+According to Hyperion, over 90% of the OS code has been converted from 68k to 
+PPC, and the only code yet to be translated (serial port code, AREXX macro 
+routines), does not typically impact on performance.«»
+«»
+Because the OS is so small (About 60MB on disk for a complete install), it fits 
+very nicely in 256MB of RAM, with room for several applications, most of which 
+have a similarly small memory footprint. This means that you can run the OS and 
+multitask between several applications without ever swapping to the disk. In 
+fact, although the new ExecSG kernel in OS4 supports virtual memory, it appears 
+to be turned off in this build.«»
+«»
+Running the OS and all its apps completely in memory provides a very different 
+user experience than one is used to from modern operating systems. Switching 
+applications is instantaneous, as is switching screens (providing you are 
+running separate screens at the same monitor resolution, otherwise you have to 
+wait for your monitor to resync).«»
+«»
+Scrolling is about as fast as on my 2.4GHz P4 PC. While the PC clearly blows 
+away the AmigaOne on pure CPU performance (for example, unarchiving files, or 
+ripping to MP3), for general use they "feel" about the same. The A1 feels much 
+faster than my 733MHz Pentium 3 running XP, and makes my poor 500MHz G3 iBook 
+running OS X feel like a pig stuck in molasses.«»
+«»
+There are some areas in which the OS is slower than modern operating systems 
+such as OSX and Windows — the TCP/IP stack in particular seems rather slow at 
+this point in time. A completely unscientific test had an FTP download taking 
+over twice as long on my AmigaOne as on my PC (although to be fair, the PC was 
+being used as a router for the Amiga, so I do not consider these timings 
+strictly accurate). However, this is still a beta OS and things should improve 
+over time.«»
+«»
+Of course all this speed is addictive and fun, but the lack of proper memory 
+protection (and the fact that this is a beta OS with many issues still to be 
+worked out) can be extremely annoying. The saving grace is that with a three-
+finger salute (Ctrl-Windows-Windows) the operating system can be back up again 
+in less than ten seconds. I liken OS4 at this point to the dune buggy in Half 
+Life 2 - it's a blast to drive, but you're going to flip it over often.«»
+«»
+«c4»«al»Conclusions«»
+«»«as»«c2»
+I was not a classic Amiga owner in the old days, although I was aware of the 
+existence of the platform. It was my desire to learn more about the history of 
+Commodore and the Amiga that led me to Panorama, the Vancouver chapter of the 
+Commodore Computer Users Club, which still exists to this day. One of the club 
+members donated a fully loaded Amiga 500 with 30 megabyte hard drive to me, 
+along with a huge stack of old Amiga magazines to help me with my research for 
+my book I had decided to write about the computer and its history.«»
+«»
+Playing with the old Amiga was fun, but hearing about the new AmigaOne and OS4 
+really piqued my interest. The sheer audacity of attempting to revive a platform 
+that everyone in the world had long-since pronounced dead and buried is 
+interesting in itself, but as I began to play with a friend's A1 at club 
+meetings I realized something else, something that perhaps has allowed the new 
+mystery company KMOS to find investors that allowed it to purchase the moribund 
+Amiga, Inc. outright.«»
+«»
+The AmigaOS is small (tiny, even!) fast, and Internet-ready, yet already has a 
+large library of supported applications, exactly what is needed for the next 
+generation of cell phones and other handheld devices. I have been playing around 
+with Compact Flash to IDE adapters, and have installed the OS (as you can see 
+from the screenshots, the OS plus all the applications and data I was testing 
+took up only 377 megabytes) onto a 512MB compact flash card for a prototype 
+wireless tablet I am developing.«»
+«»
+Will Amiga, Inc. and KMOS succeed where Be, Inc. and so many others have failed? 
+It is perhaps too soon to tell, but the story has been more than interesting 
+thus far.«»
+«»
+At the moment OS4 is not pretending to be anything more than an enthusiast OS 
+for a niche market. Both Eyetech and Hyperion have other projects that have 
+bankrolled them this far (peripherals for Eyetech and game ports for Hyperion), 
+and they do not expect A1/OS4 sales to fund their companies any time soon. In 
+speeches around the world, Alan Redhouse of Eyetech always opens by saying that 
+everyone always asks them: "Why are you doing this?" And the answer he gives, 
+with a smile, is "We don't know!" There is an infectious enthusiasm among Amiga 
+users, who have waited almost a decade for a new Amiga, and are very excited to 
+have one.«»
+«»
+However, as cell phones, PDAs and living room set-top media boxes become more 
+prevalent in the future, there is a chance that the A1 and OS4 could find a 
+profitable niche. I have used PDAs that have similar CPU and RAM capacities as 
+my AmigaOne and they do not provide the same speed and functionality that is 
+already available in OS4. OS4 feels like a full desktop, yet has the resource 
+requirements of a handheld. There is a chance, albeit a small one, that the 
+Amiga might play a small role in this arena.«»
+«»
+Clearly, OS4 as it stands today is not ready for general public consumption. 
+There are many rough edges with this version of the OS, stability is still an 
+issue, and the web browsing situation clearly needs to be improved. For Classic 
+Amiga owners with a large library of older applications that they would like to 
+run on more modern hardware, it is almost a no-brainer, but it has less to offer 
+"switchers" from the PC or Macintosh camps at this point in time.«»
+«»
+However, a curious thing happened as I began writing this article on my 
+AmigaOne. I found I was switching less and less from the A1 back to the PC, and 
+I was enjoying my typical PC using experience (browsing, writing and chatting on 
+IRC) more than I typically did. Had I succumbed to a particularly virulent form 
+of Amiga madness? Perhaps, but it is a madness that I recognize from days gone 
+by and thought was gone forever: the sheer joy of computing and the fun of 
+discovering a new platform.«»
+«»
+«c4»«al»Postscript«»
+«»«as»«c2»
+Just prior to publication, Hyperion announced that the second major update of 
+OS4 was available for registered owners to download. I have not had a chance to 
+test this out yet, but I am told it adds support for mass-storage USB devices 
+(such as digital cameras) and includes an update to the kernel, display drivers 
+and many other subsystems, as well as a bundled PPC movie player called
+MooVid.«»
+«»
+«e»

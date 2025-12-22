@@ -1,0 +1,942 @@
+
++---------------------------------------+
+|       Slach Party 4 Invitation        |
++---------------------------------------+
+
+
+
+---------------------------------------------
+Objects
+
+<KCOLORTABLE> coltab1 | data/ctable.iff |0|200|200|255    </KCOLORTABLE>
+<KCOLORTABLE> coltab2 | data/ctable.iff |1| 255|  30|  30    </KCOLORTABLE>
+-----------------------------------------------------
+a music
+<KDBM> DBMmusic | data/Unisonfc1.DBM  </KDBM>
+
+---------------------------------------------
+<MAIN> mainscript |0|1</MAIN>              the main script to play...
+
+<KIMG> logodonf | data/logodonf.iff </KIMG>
+
+<KIMG> text1 | data/text1.iff </KIMG>
+
+<KIMG> IMfl1 | data/flare1.iff </KIMG>
+
+
+
+<KIMG> bascule | data/combine.iff </KIMG>
+<KIMG> imfenetre | data/fenetre.iff </KIMG>
+
+<BMFONT> bmft |data/fonts1.iff|32|32|8|abcdefghijklmnopqrstuvwxyz0123456789    !?'[],-.</bmfont>
+
+<KTEXT> ttext2 | so you can see </KTEXT>
+
+<KCAM> cam_1 |0|0|0|0|0|0|1 </KCAM>
+
+
+<KRECT> introrec |0|0|1|1||0|0|1|1| </KRECT>
+
+<KRECT> grannyback |0|0.0|1|0.8||0.1|-0.1|0.9|0.9| </KRECT>
+<KRECT> grannyrec |0.14|0.0|0.86|0.8||0.1|-0.1|0.9|0.9| </KRECT>
+
+
+
+<KRECT> textrec |0|0.8|1|1| |0|0.8|1|1| </KRECT>
+ 
+--------------------------------------------------
+<KSCRIPT><ID> mainscript </ID>
+
+    <PLAY> start_part | 700 | 0 | 1 </PLAY>   775 -> the last 75 are ench.
+    <PLAY> scene_part | 10000 | 0 | 1 </PLAY>
+
+</KSCRIPT>
+--------------------------------------------------
+///<KSCRIPT><ID> grannyscriptback </ID>
+
+    <PLAY> grannyback_part1 | 2400 | 0 | 1 </PLAY>
+
+    <PLAY> grannyback_part2 | 1200 | 0 | 1 </PLAY>
+    <PLAY> grannyback_part4 | 200 | 200 | 1 </PLAY>
+
+
+    <PLAY> grannyback_part3 | 1500 | 0 | 1 </PLAY>
+
+    <PLAY> grannyback_part4 | 1500 | 0 | 1 </PLAY>
+
+
+    <PLAY> grannyback_part1 | 500 | 0 | 1 </PLAY>
+
+    <PLAY> grannyback_part2 | 500 | 0 | 1 </PLAY>
+
+    <PLAY> grannyback_part3 | 500 | 0 | 1 </PLAY>
+
+    <PLAY> grannyback_part4 | 500 | 0 | 1 </PLAY>
+
+    <PLAY> grannyback_part1 | 500 | 0 | 1 </PLAY>
+
+    <PLAY> grannyback_part2 | 1500 | 0 | 1 </PLAY>
+
+    <PLAY> grannyback_part3 | 1500 | 0 | 1 </PLAY>
+
+    <PLAY> grannyback_part4 | 1500 | 0 | 1 </PLAY>
+
+    <PLAY> grannyback_part1 | 500 | 0 | 1 </PLAY>
+
+    <PLAY> grannyback_part2 | 1500 | 0 | 1 </PLAY>
+
+    <PLAY> grannyback_part3 | 1500 | 0 | 1 </PLAY>
+
+    <PLAY> grannyback_part4 | 1500 | 0 | 1 </PLAY>
+
+</KSCRIPT>
+///
+///<KSCRIPT><ID> grannyscriptfront </ID>
+    <PLAY> grannyfront_part0 | 150 | 0 | 1 </PLAY>  chaining
+
+    <PLAY> grannyfront_part1 | 500000 | 0 | 1 </PLAY>
+
+</KSCRIPT>
+///
+///<KSCRIPT><ID> textscript </ID>
+
+    <PLAY> text_part1 | 700 | 0 | 1 </PLAY>
+    <PLAY> text_part2 | 1200 | 0 | 1 </PLAY>
+    <PLAY> text_part3 | 300 | 0 | 1 </PLAY>
+    <PLAY> text_part3b | 100 | 0 | 1 </PLAY>
+    <PLAY> text_part4 | 300 | 0 | 1 </PLAY>
+    <PLAY> text_part5 | 500 | 0 | 1 </PLAY>
+    <PLAY> text_part6 | 500 | 0 | 1 </PLAY>
+
+
+    <PLAY> text_part1 | 700 | 0 | 1 </PLAY>
+    <PLAY> text_part2 | 1200 | 0 | 1 </PLAY>
+    <PLAY> text_part3 | 300 | 0 | 1 </PLAY>
+    <PLAY> text_part3b | 100 | 0 | 1 </PLAY>
+    <PLAY> text_part4 | 300 | 0 | 1 </PLAY>
+    <PLAY> text_part5 | 500 | 0 | 1 </PLAY>
+    <PLAY> text_part6 | 500 | 0 | 1 </PLAY>
+
+
+    <PLAY> text_part1 | 700 | 0 | 1 </PLAY>
+    <PLAY> text_part2 | 1200 | 0 | 1 </PLAY>
+    <PLAY> text_part3 | 300 | 0 | 1 </PLAY>
+    <PLAY> text_part3b | 100 | 0 | 1 </PLAY>
+    <PLAY> text_part4 | 300 | 0 | 1 </PLAY>
+    <PLAY> text_part5 | 500 | 0 | 1 </PLAY>
+    <PLAY> text_part6 | 500 | 0 | 1 </PLAY>
+
+    <PLAY> text_part1 | 700 | 0 | 1 </PLAY>
+    <PLAY> text_part2 | 1200 | 0 | 1 </PLAY>
+    <PLAY> text_part3 | 300 | 0 | 1 </PLAY>
+    <PLAY> text_part3b | 100 | 0 | 1 </PLAY>
+    <PLAY> text_part4 | 300 | 0 | 1 </PLAY>
+    <PLAY> text_part5 | 500 | 0 | 1 </PLAY>
+    <PLAY> text_part6 | 500 | 0 | 1 </PLAY>
+    <PLAY> text_part1 | 700 | 0 | 1 </PLAY>
+    <PLAY> text_part2 | 1200 | 0 | 1 </PLAY>
+    <PLAY> text_part3 | 300 | 0 | 1 </PLAY>
+    <PLAY> text_part3b | 100 | 0 | 1 </PLAY>
+    <PLAY> text_part4 | 300 | 0 | 1 </PLAY>
+    <PLAY> text_part5 | 500 | 0 | 1 </PLAY>
+    <PLAY> text_part6 | 500 | 0 | 1 </PLAY>
+
+   
+</KSCRIPT>
+///
+--------------------------------------------------------
+///<KPART> <ID> granny_macro </ID>
+
+<KTABLE> grant_defr | 0,0 | 600,0.0 | 800,0.1 |2200,0.1|2400,-0.5|2500,-0.5
+            |2600,0|2800,1 |3000,0.1 |3500,0.1|3600,0.2|3700,0|4000,0 </KTABLE>
+
+<KTABLE> grant_ampl | 0,0.0 | 3000,0 |3400,0.4 |3500,-0.4|3600,0|3800,0|
+                        4000,0.2 | 4200,0.2|4400,0 </KTABLE>
+
+
+    <Fx>
+        <Pa> Twirl </Pa>
+        <Pa> grannyrec </Pa>
+        <Pa> bascule </Pa>
+
+        <Pa>cte|0.5|1|0.25</Pa> ofsx
+        <Pa>cte|0.48|1|0.25</Pa> ofsY
+
+        <Pa>SIN|0|1.1|0.4</Pa> start angle
+        <Pa> aftmod | grant_defr |0|0</Pa>    amp. angle
+        <Pa>sin|0|0.8|0.6</Pa>    freq angle
+
+        <Pa>sin|0|0.8|0.01</Pa>         start dist.
+        <Pa>aftmod|grant_ampl|0|0</Pa> amp.dist
+        <Pa>cte|8</Pa> freq dist
+
+        <Pa>CTE|1</Pa> mapping type
+    </Fx>
+
+
+
+///</KPART>
+
+--------------------------------------------------------
+///<KPART> <ID> grannyback_part1 </ID>
+
+--------------------------------------------
+    <Fx><Pa> Warper </Pa>
+            <Pa> grannyback  </Pa>
+            <Pa> text1 </Pa>
+
+            <Pa>CTE|0.5</Pa>        a zoomx rate
+            <Pa>CTE|0.5</Pa>        a zoomy rate
+            <Pa>SIN|0|0.1|0.03</Pa> texture offset x
+            <Pa>COS|0|0.1|0.03</Pa> texture offset Y
+
+            <Pa>CTE|0.1</Pa>        amplitude of deformation
+            <Pa>CTE|0.8</Pa>        frequency of deformation
+            <Pa>SIN|0|0.2|2</Pa>    X offset of the deformation
+            <Pa>COS|0|0.15|2</Pa>    Y...
+
+            <Pa>CTE|0</Pa> mapping type
+    </Fx>
+
+    <Fx>    <Pa> Sprite</Pa>
+            <Pa> grannyback </Pa>
+            <Pa> imfenetre </Pa>
+            <Pa>bounce|200|300|2500|-0.4|-0.1</Pa>
+            <Pa>CTE|0.1</Pa>
+            <Pa>bounce|200|280|2500|-0.2|0.3</Pa>
+            <Pa>CTE|0.5</Pa>
+    </Fx>
+
+
+
+///</KPART>
+--------------------------------------------------------
+///<KPART> <ID> grannyback_part2 </ID>
+
+--------------------------------------------
+    <F x><Pa> FillRC </Pa><Pa> grannyrec  </Pa><Pa> cte| 0 </Pa>
+    </Fx>
+
+
+   <Fx><Pa> setcamcoord  </Pa>
+        <PA> cam_1 </Pa>
+        <PA> 2cte|0|0</Pa>
+        <PA> aff|0|4 </Pa>
+
+        <PA> aff|0|0.001 </Pa>
+        <PA> aff|0|0.003 </Pa>
+        <PA> aff|0|0.002 </Pa>
+        <PA> cte|0.3 </Pa>
+    </Fx>
+
+<Fx><Pa> Tunnel </Pa>
+            <Pa>grannyback</Pa>
+            <Pa> text1</Pa>
+            <Pa> cam_1</Pa>     camera
+
+            <Pa>CTE|2</Pa>          ceiling dist.
+            <Pa>CTE|0.25</Pa>          zoomtxtV
+
+            <Pa>CTE|0</Pa>          ?
+            <Pa>CTE|0</Pa>          ?
+            <Pa>CTE|0</Pa> mapping type
+            </Fx>
+
+
+
+    <Fx>    <Pa> Sprite</Pa>
+            <Pa> grannyback </Pa>
+            <Pa> imch1 </Pa>
+            <Pa>bounce|200|300|800|-0.4|-0.1</Pa>
+            <Pa>CTE|0.2</Pa>
+            <Pa>bounce|200|280|800|-0.2|0.3</Pa>
+            <Pa>CTE|0.4</Pa>
+    </Fx>
+
+
+
+///</KPART>
+--------------------------------------------------------
+///<KPART> <ID> grannyback_part3 </ID>
+
+--------------------------------------------
+    <F x><Pa> FillRC </Pa><Pa> grannyrec  </Pa><Pa> cte| 0 </Pa>
+    </Fx>
+  
+  <Fx><Pa> Warper </Pa>
+            <Pa> grannyback  </Pa>              the rectangle where to draw (default)
+            <Pa> text1 </Pa> the 256x256 texture to deform
+
+            <Pa>CTE|0.1</Pa>        a zoomx rate
+            <Pa>CTE|0.8</Pa>        a zoomy rate
+            <Pa> aff |0|0.04 </Pa> texture offset x
+            <Pa>COS|0|0.5|0.3</Pa> texture offset Y
+
+            <Pa>CTE|1.2</Pa>        amplitude of deformation
+            <Pa>CTE|0.5</Pa>        frequency of deformation
+            <Pa>SIN|0|0.4|0</Pa>    X offset of the deformation
+            <Pa>aff|0|0.00</Pa>    Y...
+
+            <Pa>CTE|0</Pa> mapping type
+    </Fx>
+
+
+    <Fx>    <Pa> Sprite</Pa>
+            <Pa> grannyback </Pa>
+            <Pa> imch1 </Pa>
+            <Pa>bounce|400|500|800|-0.5|-0.1</Pa>
+            <Pa>CTE|0.2</Pa>
+            <Pa>bounce|400|580|800|-0.3|0.3</Pa>
+            <Pa>CTE|0.4</Pa>
+    </Fx>
+
+
+   <Fx>    <Pa> Sprite</Pa>
+            <Pa> grannyback </Pa>
+            <Pa> imch2 </Pa>
+            <Pa>bounce|200|300|700|1.2|0.8</Pa>
+            <Pa>CTE|0.2</Pa>
+            <Pa>bounce|200|280|700|1.4|0.950</Pa>
+            <Pa>CTE|0.4</Pa>
+    </Fx>
+
+
+///</KPART>
+
+--------------------------------------------------------
+///<KPART> <ID> grannyback_part4 </ID>
+
+--------------------------------------------
+    <Fx><Pa> FillRC </Pa><Pa> grannyback  </Pa><Pa> cte| 0 </Pa>
+    </Fx>
+
+
+ <Fx><Pa>MultiZoomLight</Pa>
+            <Pa> grannyback  </Pa>
+            <Pa>IMfl1</Pa>
+
+            <Pa>CTE|11</Pa>          nbpartc
+            <Pa>CTE|0.5</Pa>        xcent
+            <Pa>CTE|0.5</Pa>        ycent
+            <Pa>CTE|12</Pa>        zFar
+            <Pa>CTE|1.5</Pa>        zNear
+
+            <Pa>CTE|0</Pa>        xc space
+            <Pa>CTE|0</Pa>        yc space
+
+            <Pa>CTE|1</Pa>          FOV
+
+            <Pa>CTE|0.5</Pa>   Xsize rate
+            <Pa>CTE|0.5</Pa>   Ysize rate
+
+            <Pa>AFF|0|0.1</Pa>        Z move
+            <Pa>CTE|0.7</Pa>            Ray
+            <Pa>CTE|0.0000</Pa>           forceX
+            <Pa>CTE|0.0000</Pa>           forceY
+            <Pa> coltab1  </Pa>
+            <Pa>cte|1|6|0</Pa>
+            </Fx>
+
+ <Fx><Pa>MultiZoomLight</Pa>
+            <Pa> grannyback  </Pa>
+            <Pa>IMfl1</Pa>
+
+            <Pa>CTE|13</Pa>          nbpartc
+            <Pa>CTE|0.5</Pa>        xcent
+            <Pa>CTE|0.5</Pa>        ycent
+            <Pa>CTE|12</Pa>        zFar
+            <Pa>CTE|1.5</Pa>        zNear
+
+            <Pa>CTE|0</Pa>        xc space
+            <Pa>CTE|0</Pa>        yc space
+
+            <Pa>CTE|1</Pa>          FOV
+
+            <Pa>CTE|0.5</Pa>   Xsize rate
+            <Pa>CTE|0.5</Pa>   Ysize rate
+
+            <Pa>AFF|0|0.1</Pa>        Z move
+            <Pa>CTE|0.7</Pa>            Ray
+            <Pa>CTE|0.0000</Pa>           forceX
+            <Pa>CTE|0.0000</Pa>           forceY
+            <Pa> coltab2  </Pa>
+            <Pa>cte|1|6|0</Pa>
+            </Fx>
+
+
+  <Fx><Pa> RadialBlur </Pa>
+                <Pa> grannyback </Pa>
+                <Pa> coltab1 </Pa>
+                <Pa> cte |0.5  </Pa>
+                <Pa> cte|0.5 </Pa>
+                <Pa> cte|0.5|1.5| 0.03</Pa>
+                <Pa> cte| 0.5</Pa>
+    </Fx>
+
+
+  <F x><Pa> MotionBlur </Pa>
+                <Pa> grannyback </Pa>
+                <Pa> coltab1 </Pa>
+    </Fx>
+
+  
+
+
+///</KPART>
+--------------------------------------------------------
+
+///<KPART> <ID> grannyfront_part1 </ID>
+
+--------------------------------------------
+
+
+///</KPART>
+--------------------------------------------------------
+///<KPART> <ID> grannyfront_part0 </ID>
+--------------------------------------------
+
+------------------------------------
+<KTABLE> zzbc1 | 0,0 | 150,-14 </KTABLE>
+
+    <Fx><Pa> setcamcoord  </Pa>
+        <PA> cam_1 </Pa>
+        <PA> 2cte|0|0 </Pa>
+        <PA> aft | zzbc1 | 0 | 0 </Pa>
+        <PA>  4cte|0|0|0|1  </Pa>        o1 o2 o3 fov
+    </Fx>
+
+    <Fx><Pa> SetRect  </Pa>
+        <PA> introrec  </Pa>
+        <PA> 4cam |cam_1|2|2|0|0|2  </Pa>
+        <Pa> 4cte |0|0|1|1 </Pa>
+    </Fx>
+
+    <Fx><Pa> Playpart  </Pa>
+        <PA> start_part  </Pa>
+        <PA> aff|700|1  </Pa>
+    </Fx>
+
+///</KPART>
+--------------------------------------------------------
+
+///<KPART> <ID> scene_part </ID>
+
+    <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> imfenetre </Pa>   we have seen each image stands for a 256 color palette too.
+    </Fx>
+
+    <Fx><Pa> PlayScript  </Pa>
+        <Pa> grannyscriptback  </Pa>
+        <Pa> aff|0|1  </Pa>
+    </Fx>
+
+------------------------------------
+    <Fx><Pa> PlayPart </Pa><Pa> granny_macro  </Pa><Pa> aff| 0|1 </Pa>
+    </Fx>
+
+    <Fx><Pa> PlayScript  </Pa>
+        <Pa> textscript  </Pa>
+        <Pa>aff|0|1  </Pa>
+    </Fx>
+-------------------------------------------
+    <Fx><Pa> PlayScript  </Pa>
+        <Pa> grannyscriptfront  </Pa>
+        <Pa> aff|0|1  </Pa>
+    </Fx>
+
+
+///</KPART>
+
+--------------------------------------------------------
+///<KPART> <ID> text_part1 </ID>
+--------------------------------------------
+    <Fx><Pa> FillRC </Pa><Pa> textrec  </Pa><Pa> cte|0 </Pa>
+    </Fx>
+
+--------------- display scroltext
+<KTEXT> txts1 | the slach party 4 invitation </KTEXT>
+
+<KTABLE> mvttxtx1 | 0,1|100,1 | 800,-2.5  </KTABLE>
+
+    <F x><Pa> setcamcoord  </Pa>
+        <PA> cam_1 </Pa>
+        <PA> bounce|0|150|400|-4|3</Pa>    -4 3
+        <PA> cte |3|1.5|1   </Pa>
+        <PA> bounce|0|200|400|-1|-12</Pa>
+        <PA>  4cte|0|0|0|1  </Pa>        o1 o2 o3 fov
+    </Fx>
+   <Fx><Pa> DisplayTextPlain </Pa>
+        <Pa> textrec </Pa>
+        <Pa> bmft </Pa>
+        <Pa> txts1 </Pa>
+        <Pa> cte | 1000 </Pa> number of char before return.
+        <Pa> cte | 140 </Pa> max number of char to draw.
+        <Pa> cte | 0  </Pa> char start offset
+
+        <Pa>    aft |mvttxtx1|0|0 </Pa>
+        <Pa> cte |0.1</Pa>
+        <Pa>    aft |mvttxtx1|0|0.0625 </Pa>
+        <Pa> cte|0.9</Pa>
+    </Fx>
+
+
+  <F x><Pa> RadialBlur </Pa>
+                <Pa> introrec </Pa>
+                <Pa> coltab1 </Pa>
+                <Pa> aft| xradtx|0|0  </Pa>
+                <Pa> sin|0.5 |0.4|0.4 </Pa>
+                <Pa> sin| 0.90|1.4|0.08</Pa>
+                <Pa> cte| 0.95</Pa>
+    </Fx>
+
+///</KPART>
+--------------------------------------------------------
+///<KPART> <ID> text_part2 </ID>
+--------------------------------------------
+    <Fx><Pa> FillRC </Pa><Pa> textrec  </Pa><Pa> cte|0 </Pa>
+    </Fx>
+
+--------------- display scroltext
+<KTEXT> txts2 |
+this year in+
+  bordeaux  +
+   france   +
+            +
+ 8-11 august+
+    2002    </KTEXT>
+
+
+<KTABLE> mvttxty1 | 0,-1|100,0.75|250,0.75|400,2.25 | 600,2.25   </KTABLE>
+<KTABLE> mvttxtz1 | 0,-0.1|600,-0.1|1000,-6   </KTABLE>
+
+    <Fx><Pa> setcamcoord  </Pa>
+        <PA> cam_1 </Pa>
+        <PA> cte|0.50</Pa>
+        <PA> aft|mvttxty1|0|0  </Pa>
+        <PA> aft|mvttxtz1|0|0 </Pa>
+        <PA>  4cte|0|0|0|1  </Pa>        o1 o2 o3 fov
+    </Fx>
+   <Fx><Pa> DisplayTextPlain </Pa>
+        <Pa> textrec </Pa>
+        <Pa> bmft </Pa>
+        <Pa> txts2 </Pa>
+        <Pa> cte | 14 </Pa> number of char before return.
+        <Pa> cte | 1400 </Pa> max number of char to draw.
+        <Pa> cte | 0  </Pa> char start offset
+
+        <Pa> 4cam|cam_1|0.09|0.5|0|0|1</Pa>
+    </Fx>
+
+--------------------------
+<KTEXT> txts2b | amiga </KTEXT>
+
+<KTABLE> mvttxtxb | 0,1|700,1 |900,0.39   </KTABLE>
+<KTABLE> mvttxtxbz | 0,0| 1100,0|1200,0.9   </KTABLE>
+    <Fx><Pa> setcamcoord  </Pa>
+        <PA> cam_1 </Pa>
+        <PA> aft|mvttxtxb|0|0</Pa>
+        <PA> cte|0  </Pa>
+        <PA> aft|mvttxtxbz|0|0 </Pa>
+        <PA>  4cte|0|0|0|1  </Pa>        o1 o2 o3 fov
+    </Fx>
+   <Fx><Pa> DisplayTextPlain </Pa>
+        <Pa> textrec </Pa>
+        <Pa> bmft </Pa>
+        <Pa> txts2b </Pa>
+        <Pa> cte | 14 </Pa> number of char before return.
+        <Pa> cte | 1400 </Pa> max number of char to draw.
+        <Pa> cte | 0  </Pa> char start offset
+
+        <Pa> 4cam|cam_1|0.08|1|0|0|1</Pa>
+    </Fx>
+
+
+--------------------------
+<KTEXT> txts2c | demo </KTEXT>
+
+<KTABLE> mvttxtxc | 0,-0.55|700,-0.55 |900,-0.1   </KTABLE>
+
+    <Fx><Pa> setcamcoord  </Pa>
+        <PA> cam_1 </Pa>
+        <PA> aft|mvttxtxc|0|0</Pa>
+        <PA> cte|0  </Pa>
+        <PA> aft|mvttxtxbz|0|0 </Pa>
+        <PA>  4cte|0|0|0|1  </Pa>        o1 o2 o3 fov
+    </Fx>
+   <Fx><Pa> DisplayTextPlain </Pa>
+        <Pa> textrec </Pa>
+        <Pa> bmft </Pa>
+        <Pa> txts2c </Pa>
+        <Pa> cte | 14 </Pa> number of char before return.
+        <Pa> cte | 1400 </Pa> max number of char to draw.
+        <Pa> cte | 0  </Pa> char start offset
+
+        <Pa> 4cam|cam_1|0.1|1|0|0|1</Pa>
+    </Fx>
+
+
+  <F x><Pa> RadialBlur </Pa>
+                <Pa> introrec </Pa>
+                <Pa> coltab1 </Pa>
+                <Pa> aft| xradtx|0|0  </Pa>
+                <Pa> sin|0.5 |0.4|0.4 </Pa>
+                <Pa> sin| 0.90|1.4|0.08</Pa>
+                <Pa> cte| 0.95</Pa>
+    </Fx>
+
+///</KPART>
+--------------------------------------------------------
+///<KPART> <ID> text_part3 </ID>
+--------------------------------------------
+    <Fx><Pa> FillRC </Pa><Pa> textrec  </Pa><Pa> cte|0 </Pa>
+    </Fx>
+
+--------------------------
+<KTEXT> txts3a | ! contest ! </KTEXT>
+
+    <Fx><Pa> setcamcoord  </Pa>
+        <PA> cam_1 </Pa>
+        <PA> cte|0.5</Pa>
+        <PA> cte|0  </Pa>
+        <PA> cos|0|1.5|0.5 </Pa>
+        <PA>  4cte|0|0|0|1  </Pa>        o1 o2 o3 fov
+    </Fx>
+   <Fx><Pa> DisplayTextPlain </Pa>
+        <Pa> textrec </Pa>
+        <Pa> bmft </Pa>
+        <Pa> txts3a </Pa>
+        <Pa> cte | 14 </Pa> number of char before return.
+        <Pa> cte | 1400 </Pa> max number of char to draw.
+        <Pa> cte | 0  </Pa> char start offset
+
+        <Pa> 4cam|cam_1|0.1|1|0|0|1</Pa>
+    </Fx>
+
+ 
+
+  <Fx><Pa> RadialBlur </Pa>
+                <Pa> textrec </Pa>
+                <Pa> coltab1 </Pa>
+                <Pa> cte |0.5  </Pa>
+                <Pa> sin|0.5 |0.4|0.4 </Pa>
+                <Pa> cte| 0.97</Pa>
+                <Pa> cte| 0.97</Pa>
+    </Fx>
+
+///</KPART>
+--------------------------------------------------------
+///<KPART> <ID> text_part3b </ID>
+--------------------------------------------
+    <Fx><Pa> FillRC </Pa><Pa> textrec  </Pa><Pa> cte|0 </Pa>
+    </Fx>
+
+--------------------------
+
+
+    <Fx><Pa> setcamcoord  </Pa>
+        <PA> cam_1 </Pa>
+        <PA> cte|0.5</Pa>
+        <PA> cte|0  </Pa>
+        <PA> cos|0|3|0.5 </Pa>
+        <PA>  4cte|0|0|0|1  </Pa>        o1 o2 o3 fov
+    </Fx>
+   <Fx><Pa> DisplayTextPlain </Pa>
+        <Pa> textrec </Pa>
+        <Pa> bmft </Pa>
+        <Pa> txts3a </Pa>
+        <Pa> cte | 14 </Pa> number of char before return.
+        <Pa> cte | 1400 </Pa> max number of char to draw.
+        <Pa> cte | 0  </Pa> char start offset
+
+        <Pa> 4cam|cam_1|0.1|1|0|0|1</Pa>
+    </Fx>
+
+
+
+  <Fx><Pa> RadialBlur </Pa>
+                <Pa> textrec </Pa>
+                <Pa> coltab1 </Pa>
+                <Pa> cte |0.5  </Pa>
+                <Pa> sin|0.5 |0.4|0.4 </Pa>
+                <Pa> sin|0.8|3| 0.15</Pa>
+                <Pa> cos|0.8|2|0.15</Pa>
+    </Fx>
+
+///</KPART>
+
+--------------------------------------------------------
+///<KPART> <ID> text_part4 </ID>
+--------------------------------------------
+    <Fx><Pa> FillRC </Pa><Pa> textrec  </Pa><Pa> cte|0 </Pa>
+    </Fx>
+
+--------------------------
+<KTEXT> txts4a | -first prize- </KTEXT>
+
+    <F x><Pa> setcamcoord  </Pa>
+        <PA> cam_1 </Pa>
+        <PA> cte|0.5</Pa>
+        <PA> cte|0  </Pa>
+        <PA> cte|0 </Pa>
+        <PA>  4cte|0|0|0|1  </Pa>        o1 o2 o3 fov
+    </Fx>
+   <Fx><Pa> DisplayTextPlain </Pa>
+        <Pa> textrec </Pa>
+        <Pa> bmft </Pa>
+        <Pa> txts4a </Pa>
+        <Pa> cte | 14 </Pa> number of char before return.
+        <Pa> cte | 1400 </Pa> max number of char to draw.
+        <Pa> cte | 0  </Pa> char start offset
+
+        <Pa> cte|0</Pa>
+        <Pa> sin|0.5|1.5|0.4</Pa>
+        <Pa> cte|0.0769</Pa>
+        <Pa> sin|0.5|1.5|-0.4</Pa>
+    </Fx>
+
+  <Fx><Pa> MotionBlur </Pa>
+                <Pa> textrec </Pa>
+                <Pa> coltab1 </Pa>
+    </Fx>
+
+
+  <F x><Pa> RadialBlur </Pa>
+                <Pa> textrec </Pa>
+                <Pa> coltab1 </Pa>
+                <Pa> cte |0.5  </Pa>
+                <Pa> sin|0.5 |0.4|0.4 </Pa>
+                <Pa> cte| 0.97</Pa>
+                <Pa> cte| 0.97</Pa>
+    </Fx>
+
+///</KPART>
+
+--------------------------------------------------------
+///<KPART> <ID> text_part5 </ID>
+--------------------------------------------
+    <Fx><Pa> FillRC </Pa><Pa> textrec  </Pa><Pa> cte|0 </Pa>
+    </Fx>
+
+--------------------------
+<KTEXT> txts5a | 1 pegasos ! </KTEXT>
+
+<KTABLE> pegazz | 0,-10 |100,0 |110,-0.2|120,-0|130,-0.2 |140,-0.1|150,-0.2 |400,-0.2|500,0.9 </KTABLE>
+
+    <Fx><Pa> setcamcoord  </Pa>
+        <PA> cam_1 </Pa>
+        <PA> cte|0.5</Pa>
+        <PA> cte|0  </Pa>
+        <PA> aft|pegazz|0|0 </Pa>
+        <PA>  4cte|0|0|0|1  </Pa>        o1 o2 o3 fov
+    </Fx>
+   <Fx><Pa> DisplayTextPlain </Pa>
+        <Pa> textrec </Pa>
+        <Pa> bmft </Pa>
+        <Pa> txts5a </Pa>
+        <Pa> cte | 14 </Pa> number of char before return.
+        <Pa> cte | 1400 </Pa> max number of char to draw.
+        <Pa> cte | 0  </Pa> char start offset
+
+        <Pa> 4cam|cam_1|0.1|1|0|0|1</Pa>
+
+        < Pa> cte|0</Pa>
+        < Pa> sin|0.5|1.5|0.4</Pa>
+        < Pa> cte|0.0769</Pa>
+        < Pa> sin|0.5|1.5|-0.4</Pa>
+    </Fx>
+
+  <F x><Pa> MotionBlur </Pa>
+                <Pa> textrec </Pa>
+                <Pa> coltab1 </Pa>
+    </Fx>
+
+
+  <Fx><Pa> RadialBlur </Pa>
+                <Pa> textrec </Pa>
+                <Pa> coltab1 </Pa>
+                <Pa> cte |0.5  </Pa>
+                <Pa> cte|0.5 </Pa>
+                <Pa> sin|0.95|1.5| 0.03</Pa>
+                <Pa> cte| 0.97</Pa>
+    </Fx>
+
+///</KPART>
+
+
+--------------------------------------------------------
+///<KPART> <ID> text_part6 </ID>
+--------------------------------------------
+    <Fx><Pa> FillRC </Pa><Pa> textrec  </Pa><Pa> cte|0 </Pa>
+    </Fx>
+
+--------------------------
+<KTEXT> txts6 | slach.fr.st </KTEXT>
+
+<KTABLE> slzz | 0,0.8 |150,-0.2  </KTABLE>
+
+<KTABLE> slzy | 0,0 |425,0|500,-1.2  </KTABLE>
+
+    <Fx><Pa> setcamcoord  </Pa>
+        <PA> cam_1 </Pa>
+        <PA> cte|0.5</Pa>
+        <PA> aft|slzy|0|0  </Pa>
+        <PA> aft|slzz|0|0 </Pa>
+        <PA>  4cte|0|0|0|1  </Pa>        o1 o2 o3 fov
+    </Fx>
+   <Fx><Pa> DisplayTextPlain </Pa>
+        <Pa> textrec </Pa>
+        <Pa> bmft </Pa>
+        <Pa> txts6 </Pa>
+        <Pa> cte | 14 </Pa> number of char before return.
+        <Pa> cte | 1400 </Pa> max number of char to draw.
+        <Pa> cte | 0  </Pa> char start offset
+
+        <Pa> 4cam|cam_1|0.1|1|0|0|1</Pa>
+
+        < Pa> cte|0</Pa>
+        < Pa> sin|0.5|1.5|0.4</Pa>
+        < Pa> cte|0.0769</Pa>
+        < Pa> sin|0.5|1.5|-0.4</Pa>
+    </Fx>
+
+  <F x><Pa> MotionBlur </Pa>
+                <Pa> textrec </Pa>
+                <Pa> coltab1 </Pa>
+    </Fx>
+
+
+  <F x><Pa> RadialBlur </Pa>
+                <Pa> textrec </Pa>
+                <Pa> coltab1 </Pa>
+                <Pa> cte |0.5  </Pa>
+                <Pa> cte|0.5 </Pa>
+                <Pa> sin|0.95|1.5| 0.03</Pa>
+                <Pa> cte| 0.97</Pa>
+    </Fx>
+
+///</KPART>
+
+
+--------------------------------------------------------
+///<KPART> <ID> start_part </ID>
+
+    <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> imfenetre </Pa>   we have seen each image stands for a 256 color palette too.
+    </Fx>
+
+---------------     throw the music
+    <Fx><Pa> PlayDBM</Pa>
+        <Pa> DBMmusic   </Pa>
+    </Fx>
+
+--------------------------------------------
+    <Fx><Pa> FillRC </Pa><Pa> introrec  </Pa><Pa> cte| 0 </Pa>
+    </Fx>
+
+------------------------------------
+    <Fx><Pa> setcamcoord  </Pa>
+        <PA> cam_1 </Pa>
+        <PA> 2cte|0|0 </Pa>
+        <PA> bounce|0|75|20000|0|-2</Pa>
+        <PA>  4cte|0|0|0|1  </Pa>        o1 o2 o3 fov
+    </Fx>
+
+    <Fx><Pa> SpritePlain  </Pa>
+        <PA> introrec  </Pa>
+        <PA> logodonf </Pa>    -4 3
+        <PA> 4cam |cam_1|1|1|0|0|0  </Pa>
+    </Fx>
+
+--------------- display scroltext
+<KTEXT> ttexts1 | mankind </KTEXT>
+
+    <Fx><Pa> setcamcoord  </Pa>
+        <PA> cam_1 </Pa>
+        <PA> bounce|0|150|400|-4|3</Pa>    -4 3
+        <PA> cte |3|1.5|1   </Pa>
+        <PA> bounce|0|200|400|-1|-12</Pa>
+        <PA>  4cte|0|0|0|1  </Pa>        o1 o2 o3 fov
+    </Fx>
+   <Fx><Pa> DisplayTextPlain </Pa>
+        <Pa> introrec </Pa>
+        <Pa> bmft </Pa>
+        <Pa> ttexts1 </Pa>
+        <Pa> cte | 1000 </Pa> number of char before return.
+        <Pa> cte | 14 </Pa> max number of char to draw.
+        <Pa> cte | 0  </Pa> char start offset
+        <Pa> 4cam |cam_1|1|1.5|0|0|0</Pa>                X1 Y1 X2 Y2 of 1st caracter.
+    </Fx>
+--------------- display scroltext
+<KTEXT> ttexts2 | ukonx wipe </KTEXT>
+
+    <Fx><Pa> setcamcoord  </Pa>
+        <PA> cam_1 </Pa>
+        <PA> bounce|50|200|450|10|5</Pa>    -4 3
+        <PA> cte |1|1.5|1   </Pa>
+        <PA> bounce|50|250|450|-1|-12</Pa>
+        <PA>  4cte|0|0|0|1  </Pa>        o1 o2 o3 fov
+    </Fx>
+   <Fx><Pa> DisplayText </Pa>
+        <Pa> introrec </Pa>
+        <Pa> bmft </Pa>
+        <Pa> ttexts2 </Pa>
+        <Pa> cte | 1000 </Pa> number of char before return.
+        <Pa> cte | 14 </Pa> max number of char to draw.
+        <Pa> cte | 0  </Pa> char start offset
+        <Pa> 4cam |cam_1|1|1.5|0|0|0</Pa>                X1 Y1 X2 Y2 of 1st caracter.
+    </Fx>
+--------------- display scroltext
+<KTEXT> ttexts3 | lucis magia </KTEXT>
+
+    <Fx><Pa> setcamcoord  </Pa>
+        <PA> cam_1 </Pa>
+        <PA> bounce|100|250|500|-5|5</Pa>    -4 3
+        <PA> cte |-1|1.5|1   </Pa>
+        <PA> bounce|100|300|500|-1|-12</Pa>
+        <PA>  4cte|0|0|0|1  </Pa>        o1 o2 o3 fov
+    </Fx>
+   <Fx><Pa> DisplayTextPlain </Pa>
+        <Pa> introrec </Pa>
+        <Pa> bmft </Pa>
+        <Pa> ttexts3 </Pa>
+        <Pa> cte | 1000 </Pa> number of char before return.
+        <Pa> cte | 14 </Pa> max number of char to draw.
+        <Pa> cte | 0  </Pa> char start offset
+        <Pa> 4cam |cam_1|1|1.5|0|0|0</Pa>                X1 Y1 X2 Y2 of 1st caracter.
+    </Fx>
+
+--------------- display scroltext
+<KTEXT> ttexts4 | -present- </KTEXT>
+
+    <Fx><Pa> setcamcoord  </Pa>
+        <PA> cam_1 </Pa>
+        <PA> bounce|150|300|550|6|4</Pa>    -4 3
+        <PA> cte |-3|1.5|1   </Pa>
+        <PA> bounce|150|350|550|-1|-12</Pa>
+        <PA>  4cte|0|0|0|1  </Pa>        o1 o2 o3 fov
+    </Fx>
+   <Fx><Pa> DisplayTextPlain </Pa>
+        <Pa> introrec </Pa>
+        <Pa> bmft </Pa>
+        <Pa> ttexts4 </Pa>
+        <Pa> cte | 1000 </Pa> number of char before return.
+        <Pa> cte | 14 </Pa> max number of char to draw.
+        <Pa> cte | 0  </Pa> char start offset
+        <Pa> 4cam |cam_1|1|1.5|0|0|0</Pa>                X1 Y1 X2 Y2 of 1st caracter.
+    </Fx>
+
+
+<KTABLE> xradtx | 0,1 | 150,0.1 | 200,0.9 | 250,0.1 | 350,0.95 |400,0.05|550,1  </KTABLE>
+
+  <Fx><Pa> RadialBlur </Pa>
+                <Pa> introrec </Pa>
+                <Pa> coltab1 </Pa>
+                <Pa> aft| xradtx|0|0  </Pa>
+                <Pa> sin|0.5 |0.8|0.4 </Pa>
+                <Pa> sin| 0.90|1.4|0.08</Pa>
+                <Pa> cte| 0.95</Pa>
+    </Fx>
+
+///</KPART>

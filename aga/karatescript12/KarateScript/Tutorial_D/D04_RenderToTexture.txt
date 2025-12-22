@@ -1,0 +1,201 @@
+
+ Here come a special feature of karate, called 'texture rendering'.
+ It provides a way to draw effect on texture instead of screens.
+
+ Note it is build-in, the constructors are not in a plugin.
+
+ - On one hand, we can create objects of type 'image',
+    by exemple with < kimg>. Then we can use these images
+    in effects.
+
+ - On the other hand, we can create objects of rectangle type, where to draw
+  effects on, with < krect>. Previously, all rectangle was took in a hierarchy
+  where the 'root' default rectangle was always the root.
+
+  Karate make possible the creation of ANOTHER root rectangle:
+ The difference will be that all effects drawn on this rectangle (and all of
+ its sons) will not be directly visible on the screen, but drawn on a 'image'
+ object.
+
+
+ We have two new constructors:
+
+< imgempty> imagelabel | pixel width| pixel height | color at start </imgempty>
+
+ It provides a way to create an empty 'image' object, like < kimg>, with
+ pixel dimensions. You specify a color (in the 256 color palette) for all pixels
+ at start.
+ Don't forget some effect need a 256x256 pixel image.
+
+
+< auxrect> rectanglelabel | image-where-to-fix-this-new-root-rectangle </auxrect>
+
+ 'auxrect' create another root rectangle, which will render on the image
+ it is attached. The image must be created before in the script.
+ the 'setrect' command will not affect it, but can affect its sons.
+
+
+ So now, how do we use a rectangle created with 'auxrect' in real time ?
+  Easy: everything will be usually done in '2 pass':
+
+ - pass1: render an effect on the image, using the rectangle attached to it.
+ - pass2: render an effect on a classic rectangle, using this image.
+
+ It does not look complicated, but it open a looot of cool tricks.
+ Do not forget the speed of karate is about the number of pixel drawn,
+ so you can use little images for the first pass.
+  A Lot of deformation effect need a 256x256 image, but you can imagine
+ creating a 256x256 image for rendering, attaching a rectangle to it,
+ then create a new rectangle that will only render a quarter of it
+ ( 0|0|0.5|0.5 ), then the render will apply on 128x128 pixels, that's faster.
+ then some defomation effect can only use this 128x128 part of the texture.
+
+ last word: Note the 'MotionBlur' effect can't apply to auxrect rectangles.
+  (because it does not manage double buffering.)
+
+   
+
+--------------------------------------------------------------------
+<MAIN> myscript |0|1</MAIN>              the main script to play...
+
+<imgempty> renderimage | 256 | 256 | 65 </imgempty>
+<auxrect> TextureRectangle | renderimage  </auxrect>
+
+<KIMG> impacman | data/oldpac.iff </KIMG>
+
+--------------------------------------------------
+<KSCRIPT>                           let's write a script to play.
+
+
+    <ID> myscript </ID>
+
+    <PLAY> part1 | 400 | 0 | 1 </PLAY>
+    <PLAY> part2 | 1200 | 0 | 1 </PLAY>
+
+</KSCRIPT>
+--------------------------------------------------------
+<KPART>
+
+    <ID> part1 </ID>
+
+    <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> impacman </Pa>   we have seen each image stands for a 256 color palette too.
+    </Fx>
+
+
+ First draw some effect on the rectangle:
+
+<KCAM> cam_1 |0|0|0|0|0|0|1  </KCAM>
+ <Fx><Pa> SetCamCoord </Pa>
+            <Pa> cam_1 </Pa>
+
+            <Pa> sin |0|10.8|0.9</Pa>
+            <Pa> sin |0|9.8|0.9</Pa>
+            <P a> rnd|-1|1</Pa>    x
+            <P a> rnd|-1|1</Pa>  y
+            <Pa> sin |-0.5|0.8|1.4</Pa>    z
+            <Pa> 3cte |0|0|0</Pa>
+            <Pa> CTE | 0.5 </Pa>  FOV
+            </Fx>
+
+             
+   <Fx><Pa> Sprite </Pa>
+        <Pa> TextureRectangle </Pa>
+        <Pa> impacman </Pa>
+        <Pa> 4cam| cam_1 |0.25|0.25|0|0|2 </Pa>  z=4,far away in front of the camera
+    </Fx>
+
+ Then draw a deformation effect using this image, on the screen default rectangle:
+  
+   <Fx>
+        <Pa> Twirl </Pa>
+        <Pa></Pa>
+        <Pa> renderimage  </Pa>
+
+        <Pa>SIN|0|1|0.25</Pa> ofsx
+        <Pa>COS|0|1|0.25</Pa> ofsY
+
+        <Pa>SIN|0|0.1|1</Pa> start angle
+        <Pa>CTE|0</Pa>    amp. angle
+        <Pa>CTE|0</Pa>    freq angle
+
+        <Pa>CTE|0</Pa>         start dist.
+        <Pa>SIN|0|0.6|0.25</Pa> amp.dist
+        <Pa>COS|0|0.2|32</Pa> freq dist
+
+        <Pa>CTE|0</Pa> mapping type
+    </Fx>
+
+
+
+</KPART>
+--------------------------------------------------------
+<KPART>
+
+    <ID> part2 </ID>
+
+    <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> impacman </Pa>   we have seen each image stands for a 256 color palette too.
+    </Fx>
+
+
+<World3D> world1 </World3D> create an empty world.
+<t3dFlat> texture0 | 16  </t3dFlat> color number.
+<t3dFlat> texture1 | 17  </t3dFlat>
+<t3dFlat> texture2 | 18  </t3dFlat>
+<cube> our_cube | world1 |0|0|0|0|0|0|1|1|1 |texture0 |texture1 |texture2 |texture1 |texture2| texture0 </cube>
+<KCAM> cam_2 |0|0|-3|0|0|0|0.5  </KCAM>
+
+ First draw some effect on the rectangle:
+
+    <Fx><Pa>fillrc</Pa>  clear the screen background to color 24.
+        <Pa> TextureRectangle </Pa>   default screen rectangle.
+        <Pa> cte | 24 </Pa>
+    </Fx>
+
+    <Fx><Pa> Set3DObject </Pa>      make the cube rotate all the time on the 3 axis:
+        <Pa>  our_cube </Pa>        (note our_cube is attached to world1.)
+
+        <Pa> 3cte |0|0|0  </Pa>     set at position 0,0,0
+
+        <Pa> aff |0.4|0.006 </Pa>   rotation: make angles follow affine curve.
+        <Pa> aff |0.6|0.01</Pa>
+        <Pa> aff |0.8|0.00</Pa>
+
+        <Pa> 3cte|1|1|1 </Pa>       scale always set to 1,1,1.
+    </Fx>
+    <Fx><Pa> Draw3DWorld </Pa>
+          <Pa> TextureRectangle </Pa>
+          <Pa> world1 </Pa>
+          <Pa> cam_2 </Pa>
+          <Pa> cte|0 </Pa>
+          <Pa> cte|0.25 </Pa>
+          <Pa> cte|20</Pa>
+      </Fx>
+ 
+ Then draw a deformation effect using this image, on the screen default rectangle:
+
+   <Fx>
+        <Pa> Twirl </Pa>
+        <Pa></Pa>
+        <Pa> renderimage  </Pa>
+
+        <Pa>cte|0.5</Pa> ofsx
+        <Pa>cte|0.5</Pa> ofsY
+
+        <Pa>SIN|0|0.1|1</Pa> start angle
+        <Pa>CTE|0</Pa>    amp. angle
+        <Pa>CTE|0</Pa>    freq angle
+
+        <Pa>CTE|0</Pa>         start dist.
+        <Pa>SIN|0|0.6|0.25</Pa> amp.dist
+        <Pa>COS|0|0.2|32</Pa> freq dist
+
+        <Pa>CTE|0</Pa> mapping type
+    </Fx>
+
+
+
+</KPART>

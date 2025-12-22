@@ -1,0 +1,182 @@
+»CL8:»SML:--------------------------------------
+       »CL9:»BIG:Avoid Cache Problems!
+»CL8:»SML:--------------------------------------
+
+»CL0:If there's a problem which has damaged
+the scene coder's image,  (and the
+demo scene in general),  it has to be
+cpu cache's problem.
+If the change from ECS to AGA was bad,
+an innocent coding issue like CPU
+upgrading has resulted on an ugly mess
+of incompatible demos, patches, and
+headache problems.
+
+See, from the demos of TP6, 3 of the
+first ones still refuse to work on
+many ordinary amigas, only because
+they have 040 or 060 (which are old
+CPUs today, to say the least). The
+main bug producers are the VBR
+registers (this problem tends to
+dissapear today) and the Code & Data
+Caches lack of info. 
+
+So what are these caches, and how they
+work? Data&Code Caches are tiny
+memories inside the processor, much
+faster than normal memory. Whenever an
+instruction or some data is asked by
+the CPU, these caches store a copy of
+it. If the CPU needs it again, the
+cache will provide it faster, leaving
+the memory bus free. These are the 68k
+& PPC caches:
+
+»CL8:Now, I will briefly describe the 68k &
+PPC caches:
+»CL9:- 68000 -» No one :)
+»CL9:- 68010 -» In fact there is a VERY
+          small code cache. »CL7:(Can store
+          a move+dbf instruction,
+          AFAIR - Cytron)
+»CL9:- 68020 -»CL8: 256 bytes of code cache.
+»CL9:- 68030 -»CL8: 256 bytes of code cache and
+          256 of data cache. Data
+          burst and code burst can be
+          enabled or disabled
+          independently of code&data
+          caches. Usually you will
+          find databurst disabled,
+          which is ok for general
+          processing. (See later for
+          understanding Burst)
+»CL9:- 68040 -»CL8: 4096 of data, 4096 of code. 
+          Either you choose
+          DataCache+Databurst or none
+          of both. Equally for code.
+»CL9:- 68060 -»CL8: Like 040, but with 8192
+          bytes caches.
+»CL9:- PPCs  -»CL8: Like 040 & 060, but 603e has
+          16384 bytes caches, 604e &
+          750 having 32768 ones.
+          Sometimes they als come with
+          Level 2 caches (see later),
+          especially on Macintosh.
+          Also, PPC caches are more
+          efficient than 68k ones
+          because of the LRU (least
+          recently used) philosophy
+          used to manage them.
+
+»CL0:Well, maybe you think »CL1:"OK, but why
+should I care?".
+
+»CL0:Well, you »CL9:SHOULD», as some coding
+techniques will malfunction on cached
+CPUs, and I am referring to code
+decompression or creation
+(automodifying code). This happens
+because the code and data cache are
+TOTALLY independent! Any change in the
+data cache will not have any
+reflection in the code cache. As long
+as the code and data are in separated
+memory adresses, there's no problem,
+but try figuring out what happens when
+you store new code in memory:
+Imagine you have to decrunch some code
+and run it. You call, say, a
+Stonecracker decruncher, and then jump
+(jmp (Ax)) to the code, right? Wrong!
+You forget that there is a data cache
+in between, so maybe the new data
+which was supposed to be written to
+memory, is still in the cache. When
+you jump to this memory address, the
+new code is not there, so the whole
+thing crashes as in the memory there
+is only trash. (any non-fixed
+CrunchMania executable will crash by
+this same reason on 040/060)
+
+Or, let's imagine you want to modify
+code; imagine you have made a fast
+loop for rotating points in 3d, but
+you ran out of registers. You want to
+add a traslation to rotated
+coordinates but you don't have
+registers. Maybe, you think about
+doing this:
+»CL4:add.w #$0000,D0  »CL5:; x=x+xo
+»CL4:add.w #$0000,D1  »CL5:; y=y+yo
+»CL4:add.w #$0000,D2  »CL5:; z=z+zo
+
+»CL0:Then, before entering the loop, you
+substitute the »CL4:#$0000» values by the
+translation ones in memory, doing what
+is called »CL9:AUTOMODIFYING CODE» »CL7:(I've
+also heard the term SMC - Self
+Modifying code - take your pick! -
+Cytron)».
+
+»CL1:Is that a problem?»CL0: Yes!: Your writes
+to memory are cached, so when the CPU
+enters the rotating code, it still
+will read the »CL4:#$0000» from memory, or
+the values you put a frame before!
+
+»CL0:Problems of this kind can be seen in
+"»CL1:Contrast »/»CL1: Oxygene»" or "»CL1:Shaft7» /»CL1:
+Bomb»", between others. »CL1:Viper», »CL1:Oxbab»,
+»CL1:Jamie», and many others had used (and
+sometimes abused) such methods, which
+seem to be very popular in France.
+(BTW, that automodifying code example
+is unnecesary, there are alternative
+methods to optimize these problems
+without using code modification).
+
+68k CPU's have a special register,
+CACR, which handles caches; so that
+you can disable/enable caches, or
+flush/clear them.
+For example, if you have
+created/modifyed/decrunched/loaded new
+code, you can ensure it is present in
+memory, by clearing data cache. Also,
+you must ensure code cache doesn't
+already store the same memory area.
+Clearing the code cache will delete
+all code stored, so the CPU will have
+to load the new code from memory.
+
+Writing to CACR with the MOVEC
+instruction is not a good idea. The
+CACR is not equal in all 68k. For
+example, the ones in 060 and 030 are
+different. Some coders have written
+directly to it, so that the production
+runs as desired on 030, but not on
+060; for example, »CL1:Scorpion »/»CL1: Silicon»
+made different version of MIME demo,
+and in each one he had different
+MOVEC's. »CL7:(and still no-one of these
+versions working on my 060, Troda)»
+The best way of handling 68k caches,
+in my opinion, is calling the OS
+functions from exec:
+
+»CL4:- CacheClearU()» - clear all caches
+»CL4:- CacheControl(cacheBits, cacheMask)»
+
+You can simply use »CL4:CacheClearU()» after
+creating/modifying/decrunching/loading
+new code in memory. This will prevent
+all the problems mentioned above from
+occuring. Just write:
+
+»CL4:   Move.l $4.w,a6
+   Jsr -636(a6)   »CL5:; CacheClearU
+
+»CL0:CacheControl is explained later.

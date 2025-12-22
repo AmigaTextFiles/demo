@@ -1,0 +1,541 @@
+
+
+                            PPShow 4.0 User Manual
+
+                                 Feb 17, 1994
+
+
+
+Preface
+=======
+
+The programs and files in this distribution are freely distributable, but are
+also copyright (c) Nico François.  They may be freely distributed as long as
+no more than a nominal fee is charged to cover time and copying costs.
+   No commercial usage is permitted without written permission from the
+author.  Everything in this distribution must be kept together, in original
+unmodified form.
+   The above is generally known as freeware.
+
+   If you have suggestions or remarks about this program, or if you find
+any bugs, please let me know.
+
+   Contacting the author:
+
+     FidoNet:  2:292/603.10 (Nico Francois)
+
+     Internet: nico@augfl.be
+
+     Mail:     Nico François
+               Corbielaan 13
+               B-3060 Bertem
+               BELGIUM
+
+   If you can please use e-mail.  That way you'll stand a much better chance
+of getting a reply quickly.
+
+   PPShow 4.0 requires AmigaDOS Release 2 (Kickstart & Workbench 2.0) or
+higher to run.
+
+   24-bit to HAM8/HAM6 rendering routines and IFF24 parsing and decoding
+written by Rafael D'Halleweyn.
+
+   Chunky to planar routine based on a routine by Chris Green (who based his
+routine on one of Richard Addison).
+
+   This software is based in part on the work of the Independant JPEG Group.
+
+
+Contents
+========
+
+1. An introduction
+
+2. Usage
+
+3. Features
+
+4. Note on crunching
+
+
+1. An introduction
+==================
+
+   PPShow was written to complement one of my other utilities, PowerPacker
+(a command and data cruncher).  It is used to show normal IFF ILBM files or
+ILBM files crunched with PowerPacker.  The decrunching is done automatically
+so the user doesn't have to know if a file is crunched or not.  From version
+3.0 PPShow will now also play standard Opcode 5 animations. The ANIM Opcode 5
+format is used by most ANIM generating programs, including DPaint IV.
+
+   From version 4.0 on PPShow also plays ANIM Opcode 7 and ANIM Opcode 8
+animations.  It will also show GIF, JPEG and IFF24 bit pictures.  If your
+Amiga doesn't have the color capability to display a GIF (ECS machines) PPShow
+will show the GIF in 16 grayscales.  JPEGs and IFF24 pictures will be shown in
+HAM8 or in HAM6 (if your Amiga doesn't support HAM8).
+
+   PPShow uses 'powerpacker.library' and 'reqtools.library', so make sure
+these are present in your Libs: directory.  Double-click 'Install_libs' for
+an automatic installation.
+
+
+2. Usage
+========
+
+   PPShow can be used in several different ways.
+
+- First of all via the CLI:
+
+   If you enter 'PPShow ?' you will get a standard AmigaDOS usage template,
+enter 'PPShow ??' for more information.  You use PPShow like this:
+
+   PPShow {<file>|<dir>|-c} [ALL] [LO] [HI] [SHI] [PROD] [L=LACE]
+          [NL=NOLACE] [HAM] [TIME s] [CYCLE] [NO=NOOVERSCAN] [NOMOUSE]
+          [A2024 [15Hz]] [PAL] [NTSC] [VGA] [SUPER72] [LOOP] [NOFLICKER]
+          [MO=MAXOSCAN] [J=JIFFIES n] [T=TIMES n] [R=REPEAT] [NOANIM]
+
+   The program will by default load the specified ILBM file or ANIM file and
+display/play it.  If the file was crunched using PowerPacker 2.0 or higher
+PPShow will first decrunch it for you.  If the file was encrypted you will be
+prompted for the password.  You may specify more than one file on the command
+line and you may even use wildcards, PPShow will show all files one at a time,
+double buffering the display.
+
+   If you specify "-c" as a filename ('PPShow -c') PPShow will show you the
+contents of the clipboard (if it contains an ILBM).  ANIM files will not be
+played from the clipboard.
+
+   If you enter PPShow without options, you will be presented with a
+file requester.  Entering PPShow with a directory instead of a file as an
+argument will also get you a requester, but it will be positioned in the
+directory you specified.
+
+   There are several command line options:
+
+     ALL        : Enter subdirectories, show all pictures/animations.
+     LO         : Force screen to open in LORES        mode.
+     HI         :   ''    ''    ''   ''   HIRES         ''
+     SHI        :   ''    ''    ''   ''   SUPERHIRES    ''
+     PROD       :   ''    ''    ''   ''   PRODUCTIVITY  ''
+     LACE       : Force interlace on.
+     NOLACE     : Force interlace off.
+     HAM        : This switch is used to select HAM mode when no CAMG chunk
+                  is found.  If you don't specify this switch PPShow will
+                  assume a 6 plane screen is extra-halfbrite. Note that this
+                  switch does not force HAM mode, it merely instruct PPShow
+                  to use HAM mode in case of doubt.
+     TIME s     : Display pictures for 's' seconds.
+     CYCLE      : Start cycling automatically.
+     NOOVERSCAN : Disable overscan.
+     NOMOUSE    : No mouse pointer.
+     LOOP       : Display all pictures in a loop, press CTRL-D to abort.
+     PAL        : Use 'pal.monitor'.
+     NTSC       : Use 'ntsc.monitor'.
+     VGA        : Use 'multiscan.monitor'. Please note that when using VGA,
+                  LO puts the screen in EXTRALORES, HI in LORES and SHI in
+                  PRODUCTIVITY (same as PROD).
+     SUPER72    : Use 'Super72.monitor'.
+     A2024      : Use 'a2024.monitor'.
+     15Hz       : Put A2024 monitor into 15Hz, rather than 10Hz.
+     NOFLICKER  : Kickstart 3.0 only.  If possible use a non-interlaced
+                  monitor mode ('DoublePAL.monitor' or 'DoubleNTSC.monitor').
+     MAXOSCAN   : Use VIDEO_OSCAN instead of MAX_OSCAN.  Video overscan
+                  offers the maximum possible overscan, but is not as system
+                  friendly.
+     JIFFIES n  : Set a delay between frames in jiffies.  A jiffie is 1/50s
+                  (PAL) or 1/60s (NTSC).  During animation playback you may
+                  press F1 to F10 to control animation playback speed.  Press
+                  Return to use the default speed.
+     TIMES n    : Set number of times to play the animation.
+     REPEAT     : Select repeat mode instead of loop mode (see below).
+     NOANIM     : Don't play animations, just display the first frame.
+     DATATYPES  : Always use datatypes.
+
+   The difference between loop mode and repeat mode is the following: in
+loop mode PPShow expects the last two frames of the animation to be the same
+as the first two frames, this makes looping easy and above all fast (DPaint
+saves animations like this).  Some animations are not like this however and
+if you want these to loop correctly you must select repeat mode (REPEAT),
+PPShow will then simply restart the animation when it finishes (note that
+there may be a small hickup when the animation repeats because the first frame
+takes longer to draw than the rest).
+
+   PPShow can be made resident so it doesn't have to be loaded every time
+you use it, use the c: Resident command for this.  You can't make PPShow
+resident when it is crunched!!  The file is supplied as an uncrunched command
+file with the pure bit set.  PPShow is reentrant as well, so you can run it
+from several CLI's at the same time.  (Not that this is very useful, but it's
+possible :-)
+
+   Examples:
+
+    o PPShow dh0:pics/HAMpicWithoutCAMG.pic HAM
+
+    o PPShow dir/#?.pic TIME 5 LOOP
+
+       Show all files in directory 'dir' with a '.pic' suffix for 5 seconds
+       and loop until user presses CTRL-D.
+
+    o PPShow PICS:~(#?.info) NOOVERSCAN
+
+       Show all files on 'PICS:' NOT ending in '.info'. Disable overscan.
+
+
+- Via the WorkBench:
+
+   There are three different ways of using PPShow via the workbench: you
+can set the default tool of the (crunched) ILBM/ANIM file to 'PPShow', you
+can single click the PPShow icon and then extend-select one or more icons
+(use shift click, double-clicking the last one) or you can double-click the
+PPShow icon and specify a filename using the file requester.
+   You set the default tool by single clicking the icon of the picture and
+selecting 'Information' from the 'Icons' menu.  You will get a window with
+several gadgets in it, click in the string gadget where it says 'Default tool'
+and enter ':ppshow'.  PPShow should be in the root directory of your disk for
+this to work, if e.g.  it's in the system directory you should enter
+':system/ppshow'.  Last of all select the 'Save' gadget.
+
+   Following tooltypes are recognized by PPShow (in the pictures' icon, not
+PPShow's icon):
+
+     HAM        : See CLI option.
+     TIME=s     : Display picture for 's' seconds.
+     CYCLE      : Start cycling automatically.
+     NOOVERSCAN : Disable overscan.
+     NOMOUSE    : No mouse pointer.
+     LORES      : Force screen to open in LORES        mode.
+     HIRES      :   ''    ''    ''   ''   HIRES         ''
+     SUPERHIRES :   ''    ''    ''   ''   SUPERHIRES    ''
+     PROD       :   ''    ''    ''   ''   PRODUCTIVITY  ''
+     LACE       : Force interlace on.
+     NOLACE     : Force interlace off.
+     PAL        : Use 'pal.monitor'.
+     NTSC       : Use 'ntsc.monitor'.
+     VGA        : Use 'multiscan.monitor'. Please note that when using VGA,
+                  LO puts the screen in EXTRALORES, HI in LORES and SHI in
+                  PRODUCTIVITY (same as PROD).
+     SUPER72    : Use 'Super72.monitor'.
+     NOFLICKER  : Kickstart 3.0 only.  If possible use a non-interlaced
+                  monitor mode.
+     MAXOSCAN   : Use VIDEO_OSCAN instead of MAX_OSCAN.  Video overscan
+                  offers the maximum possible overscan, but is not as system
+                  friendly.
+     JIFFIES=n  : Set a delay between frames in jiffies.  A jiffie is 1/50s
+                  (PAL) or 1/60s (NTSC).  During animation playback you may
+                  press F1 to F10 to control animation playback speed.  Press
+                  Return to use the default speed.
+     TIMES=n    : Set number of times to play the animation.
+     REPEAT     : Select repeat mode instead of loop mode (see below).
+
+NOTE: - Follow these steps to make a simple slideshow that runs by double-
+        clicking an icon:  Make a script file containing something like the
+        following line: 'PPShow #?.pic TIME 10 LOOP'.  Set this script's
+        default tool to 'c:IconX' and enter 'WINDOW=CON://///AUTO' in its
+        tooltypes.  Put the script in a directory containing pictures (all
+        ending in '.pic'!).  If you now double-click this scripts icon the
+        slideshow will start, press ESC or CTRL-D to end.
+      - PPShow will add '.pp' to the filename when the file wasn't found.
+        This is very useful in the Workbench enviroment: you can make an
+        icon for 'house.pic' but name the file 'house.pic.pp'.  Now the
+        WorkBench will show an icon with 'house.pic' as name, but if you
+        doubleclick it 'house.pic.pp' will be displayed. (As long as there
+        is no 'house.pic' file in the directory!)
+      - Drag as many monitor icons to the WbStartup or Monitors drawer as
+        your monitor allows.  For example: if you have a multiscan monitor
+        drag pal, ntsc and multiscan.monitor to your Monitors drawer.  If
+        you do this you will have maximum ease of use of PPShow.
+
+
+3. Features
+===========
+
+   - PPShow fully supports the 16.8 million colors and HAM8 mode of the AGA
+     (AA) chip set of the Amiga 4000 and Amiga 1200.
+
+   - Uses asynchronous I/O for very fast viewing, even from floppy or CD-ROM.
+
+   - Abort PPShow by pressing 'Q', CTRL-C or the right mouse button.  Press
+     CTRL-D to abort everything and to break a script.
+
+   - PPShow offers full overscan and monitor support: PAL, NTSC, VGA,
+     SUPER72 and A2024.
+
+   - Big pictures are opened on an autoscroll screen.  Simply run the mouse
+     pointer off the edge of the screen to scroll around.
+
+   - PPShow can be used as a simple slideshow tool.  It supports wildcards
+     and an ALL switch to simplify this.
+
+   - Deluxe Paint color cycling is supported, press <TAB> to (de)activate.
+     Up to 8 cycles are supported.
+
+   - Press 'M' to toggle the mouse pointer on/off.
+
+   - Plays ANIM Opcode 5, Opcode 7 and Opcode 8 animations.
+
+   - Supports a change of the color palette during the animation.  Special
+     care has been taken to eliminate color-flashing as seen in many other
+     animation players (including the now obsolete PPAnim :-).
+
+   - Press 'S' or the left mouse button to start/stop the animation.  Press
+     'N' to advance a frame (when stopped).
+
+   - Reads the 'DPAN' IFF chunk DPaint saves with animations to find the
+     rate at which to play the animation.  Note that user options override
+     this rate (JIFFIES=n).
+
+   - Supports datatypes (Workbench 3.0 or higher).
+
+
+4. Note on crunching
+====================
+
+   A lot of IFF ILBM files are already crunched with the standard ByteRun1
+compression.  PowerPacker will crunch these files even further (most of the
+time) but will not crunch them as well as uncrunched ILBM files.  So save IFF
+files uncrunched (if you can, e.g. with PixMate) before crunching them, this
+way you will get the best crunching results.
+
+
+                        As always, I hope you find this program useful!
+
+
+                              PROGRAM HISTORY:
+
+*****************************************************************************
+VERSION 1.0
+
+     First release.
+
+*****************************************************************************
+VERSION 1.1
+
+     Decrunching is about 40% faster (accidently used slow decruncher in 1.0)
+     Screen now pops to front when picture is ready to be viewed, not before.
+     File requester used when arp.library is available.
+     'L' command added to load other pictures without restarting PPShow.
+
+*****************************************************************************
+VERSION 1.1a
+
+     The Guru isn't with me lately, after using a slow decruncher in 1.0
+       by accident I now used a fast but faulty decruncher in 1.1. It
+       sometimes didn't decrunch correctly, this has now been fixed. The
+       decruncher is still 40% faster than the 1.0 one. (and it's 2 bytes
+       shorter :^D )
+
+*****************************************************************************
+VERSION 1.2
+
+     Rewrote cycling routine in assembly, so less overhead when cycling.
+     Uses the all new powerpacker.library => shorter code.
+     Starting PPShow from the CLI with a directory as an argument now puts
+       up the requester positioned in that directory. Extremely useful once
+       you get used to this :^)
+     If you are running Workbench 2.0 PPShow will use the asl.library
+       instead of the arp.library (for the file requester).
+     Fixed serious bug: memory wasn't freed when an IFF error occured.
+     No longer tries to display small brushes (intuition doesn't like very
+       small screens :( )
+
+*****************************************************************************
+VERSION 2.0
+
+     PPShow requires Kickstart 2.0 to run.  Sorry to all the 1.2 and 1.3
+       users, just consider this program as another reason to upgrade :-)
+
+     File requester from arp.library is no longer supported.
+     PPShow now uses reqtools.library (also by moi) for its requesters.
+       Among other things this means a much better file requester than
+       before (with a buffer).  Asl is no longer used, sorry Commodore :-)
+     Printing of screen removed, has anybody ever used this ? :-)
+     Improved command line format, follows AmigaDOS standard. (old option
+       '-h' is no longer supported!).
+     IFF decrunching rewritten in assembly: much faster and shorter.
+     Shows pictures saved in DPaint with stencil on. In other words: supports
+       IFF picture masking.
+     No longer quits when you press any key, you have to press 'Q', CTRL-C,
+       or right mouse button; CTRL-D aborts PPShow and breaks scripts.
+     Color cycling is now automatically switched on (except for brushes).
+     Mouse pointer visibility can be toggled.
+     Possibility to automatically stop displaying after a specified number
+       of seconds.
+     Many new command line options: change display resolution, switch off
+       overscan, disable auto-cycling, etc.
+     Several options may be set using Workbench tooltypes.
+     From Workbench, if you single-click PPShow and shift double-click a
+       drawer icon, PPShow will open up the file requester in that drawer.
+     If you use 'PPShow <file>' or extend-select <file> from Workbench and
+       you invoke the file requester, it will be positioned in the directory
+       <file> is in.
+     The file requester will appear on the picture screen if possible.
+     Canceling the file requester no longer quits PPShow.
+     The file requester will filter out the .info files.
+     Can be used as a simple slideshow program: supports wildcards and
+       multiple files on command line, also possible to loop the slideshow.
+       Picture switching is double buffered.  Multiple extended selection
+       from Workbench is also supported.
+     Overscan now done using Kickstart 2.0 display clips.
+     Supports all new ECS display modes (ECS Denise only) and all monitors.
+     Will switch to PAL or NTSC monitor automatically (ECS Agnus only).
+     PPShow will now show very large screens without problem, AUTOSCROLL is
+       switched on so the screen automatically scrolls when you move the
+       mouse pointer off the edge.
+     Screen no longer has an invisible dragbar.  Use meta-dragging (left
+       Amiga key + mouse) to drag the screen.
+     Directories are expanded to their full pathnames on startup.
+     PPShow now returns a returncode of 20 in case of an error or if ended
+       by CTRL-D.
+     Error reporting improved: when started from CLI, errors are printed
+       on the console; when started from Workbench, a requester is used.
+     All these great new features and PPShow grew only about 1K in size :-)
+
+     Release 12-Jan-92
+     ~~~~~~~~~~~~~~~~~
+     Now distributed with release 1.0c of reqtools.library.
+     Install script fixed.
+
+*****************************************************************************
+VERSION 2.1
+
+     Uses Workbench 2.0's iffparse.library for best IFF support.
+     Displays SHAM (Sliced HAM), DHAM (Dynamic HAM) and DRES (Dynamic Hires,
+       DigiView 4.0 and MacroPaint) files.
+     Executes TurboGIF (by Steve Borden) or any other GIF viewer (set by var
+       ENV:GIFVIEWER) if it encounters a GIF file.
+     Will hunt for ILBM pictures in all IFF files.  E.g. shows first picture
+       of animation files.
+     Is able to show the contents of the clipboard (if filename is "-c").
+     Allows you to scroll big pictures by holding down the left mouse button
+       and dragging.  This also works for SHAM, DHAM and DRES pictures.
+       PPShow will update the copper list these pictures require while
+       scrolling.
+     PPShow will no longer abort upon encountering a file that is not IFF, or
+       not IFF ILBM.  It will try to show the next file in the wildcard/list.
+     When using a wildcard directories will be ignored, instead of bringing
+       up the file requester.
+
+*****************************************************************************
+VERSION 2.2
+
+     Version number skipped because of a fake 2.2 version of PPShow.
+
+*****************************************************************************
+VERSION 2.3
+
+     Support added for Kickstart 3.0 and the new graphics modes of the AGA
+       chip set.  PPShow fully supports palettes of up to 16.8 milion colors
+       and the HAM8 mode.  Color cycling in 16.8 million colors is not yet
+       supported.
+     On Kickstart 3.0 and pictures with enough colors PPShow will pick four
+       colors for the GUI (file requester).  If not enough colors are
+       available or on Kickstart 2.0 the palette will be temporarily reset
+       when needed.
+     Maximum overscan used is now OSCAN_MAX instead of OSCAN_VIDEO.  This is
+       much more system friendly.
+     New switch added for Kickstart 3.0 users: NOFLICKER.  Will try to use a
+       non-interlaced display mode to show the picture (DBLPAL or DBLNTSC).
+     Release 2.0c of reqtools.library included.
+
+*****************************************************************************
+VERSION 3.0
+
+     MAJOR NEW FEATURE: PPShow now plays ANIM Opcode 5 animations.
+       o Supports all Amiga screen modes (including the new AGA ones).
+       o Supports a change of the palette during the animation.
+       o Animates in an Intuition screen (draggable).
+       o 'S' or the left mouse button starts/stops the animation, 'N'
+         advances a frame (when stopped).
+       o Supports the 'DPAN' IFF chunk DPaintIV saves with animations to
+         find the animation playback rate.
+       o Allows for an optional playback delay in jiffies (JIFFIES switch).
+         During animation playback pressing F1 to F10 changes the playback
+         speed. Pressing Return will use the default playback speed.
+       o Supports looping and repeating anims (REPEAT switch).
+       o TIMES switch to set number of times animation should be played back.
+       o Animation is played back on a standard Intuition screen.
+     New MAXOSCAN switch to select VIDEO_OSCAN overscan.  Useful to get the
+       maximum overscan out of DoublePAL and DoubleNTSC.
+     Now also recognizes LORES, HIRES, SUPERHIRES, PROD, LACE, NOLACE, PAL,
+       NTSC and VGA tooltypes, was well as the new MAXOSCAN, REPEAT, TIMES
+       and JIFFIES tooltypes.
+     Fixed bug: pressing Right Mouse Button when PPShow was used with LOOP
+       and TIME keywords no longer allowed you to end PPShow by pressing
+       Esc.  Fixed.
+     Release 2.1a of reqtools.library included.
+
+*****************************************************************************
+VERSION 3.0a
+
+     Several causes of memory loss found and fixed.  All of these popped up
+       when using PPShow to display/play several pictures/animations in a row
+       with or without the LOOP switch.
+     Decrunch color changed to DECR_NONE.  No more flashing pictures when you
+       use PPShow as a slideshow program :-)
+     Standard wait pointer (system wait pointer on 3.0) is set when loading
+       the next picture/animation.
+     Bug fix: it was not possible to stop PPShow when you used LOOP switch
+       on non-iff files.
+
+*****************************************************************************
+VERSION 4.0
+
+     PPShow now supports ANIM Opcode 7 and Opcode 8 anims.  These are _MUCH_
+       faster animation formats than ANIM Opcode 5, especially the longword
+       versions.  PPShow does _not_ (yet) support ANIM 7 or ANIM 8 files
+       without a BODY chunk in the first frame.
+     Uses asynchronous I/O to read non-powerpacked files.  Much faster!
+     Supports datatypes (if available), use the new DATATYPES switch to force
+       datatypes use.
+     PPShow will now also show IFF 24-bit pictures, GIFs and JPEGs.  Thanks
+       to Rafael D'Halleweyn for writing the IFF24 parsing/decoding and
+       24bit to HAM rendering routines.
+     If the file requester is used PPShow will keep going back to it until
+       it is canceled.
+     File requester will now open with a size about equal to the full height
+       of the screen it appears on.
+     Multi-selection in now possible in the file requester.
+     Greatly improved animation playback memory requirements.  No longer
+       loads pictures or animations in one contiguous memory block.  If the
+       picture or animation is not crunched with PowerPacker the file will be
+       loaded in smaller segments and memory will be allocated when needed.
+     No longer supports GIFVIEWER environment variable (removed because of
+       builtin GIF and datatypes support).
+     Removed 'l' shortcut to load a new picture/animation.
+     Removed SHAM, DHAM and DRES support.  Added PCHG (Palette CHanGe)
+       support for *true* "multi-palette" pictures.
+     Mouse is no longer blanked by default.  Press 'm' to blank the mouse or
+       use the new NOMOUSE switch.
+     New SUPER72 command line option and tooltype to force PPShow to use the
+       Super72 monitor (Workbench 2.1/3.0 and up only).
+     Replaced NOCYCLE switch with CYCLE switch (which does exactly the
+       opposite :-)
+     Bug fix: ILBM pictures with a mask (stencil) did not load properly.
+     Bug fix: JIFFIES 0 was not the fastest playback speed possible.
+     Fixed bug in animation routine causing some animations to show rubbish
+       during playback.
+     Release 1.6 (36.10) of powerpacker.library included.
+     Release 2.2a (38.1210) of reqtools.library included.
+
+     Release 17-Feb-94
+     ~~~~~~~~~~~~~~~~~
+     Bug fix: GIF and JPEG viewing now actually work on Kickstart 2.0
+       machines :)
+
+*****************************************************************************
+
+PPShow 4.0 written by Nico François (Yes, Nico is my first name :-)
+           24-bit to HAM8/HAM6 routines and IFF24 parsing and decoding
+           by Rafael D'Halleweyn,
+           thanks to Ives Aerts, Peter Stuer, Roger Nordin and Magnus
+                     Holmgren for all the suggestions and beta-testing.
+
+
+"Sometimes people can be oh so dense" - The Pixies
+
+
+(c) 1991-1994 Nico François
+
+                                   //
+                       Thanks to \X/ Amiga for being the best computer ever!
+

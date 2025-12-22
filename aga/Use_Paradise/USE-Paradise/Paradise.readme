@@ -1,0 +1,75 @@
+Short:    Paradise, 3rd at Ukonx Y2K
+Uploader: crisot@wanadoo.fr
+Authors:  The Universe Team!
+Type:     Demo/Aga
+Distribution: EVERYWHERE :)
+Requirement: CGX V3+, AHI V4+
+
+
+HAVE A LOOK AT UNIVERSE WEBSITE:
+http://crisot.free.fr/universe
+
+Soon in english. (french for now)
+
+	   Welcome to:
+
+	PARADISE!,   The ReadMe
+
+	 Done by UNIVERSE for the Ukonx Y2K
+
+Importante notes!
+
+	This is not the party version... This is even not the version
+	found on Universe's Website... It is a new version allowing you
+	to choose the Ahi audio mode... It is A BIT (1%???) optimised, too
+	THIS VERSION IS NOW PROMOTABLE for multi CGX-Card users and MAYBE
+	for P96 (test and report me, PLEASE!!!!! See the end of the ReadMe)
+
+	SO => KILL THE OLD VERSION FROM YOUR HARD AND INSTALL THIS NOW!
+
+Hardware requirement:	(Not Included at all!)
+
+	A GFX card supported by CGX V3 or CGX V4... Prefered BVisionPPC or
+	CVisionPPC... It run like a shit on a Z2 or Z3 card! (faster on a
+	040/25 + Bvision than on a 060/50 + CVision64/3D, Zorro 2.)
+
+	Maybe P96 (see: "ABOUT P96:")
+
+	Runs on 68020+, but don't try running the demo on somethink less
+	than a 68040 (4 ko Cache optimised code).
+
+	An Amiga with 16 Mb of Fast Ram (Demo use +/- 9 mo).
+
+Software Requirement:
+
+	dbplayer.library v2.0 (included)... Copying it in Libs: is not a
+	"Must be done".
+
+	Cgx3 or Cgx4... you MUST define a 320*Y 16 bit mode where Y is
+	between 200 and 240...
+
+	Ahi V4... Now you can choose the audio mode, but if you don't
+	have a sound card and only a 68040, use Paula FAST14bits mono.
+	(Music is mono, anyway!)
+
+Brain requirement:	(Not Included too!)
+
+	This demo is a sh*t :) (not really finished, some routines are
+	buggy and 3 times too slow. Will NOT be solved)
+
+ABOUT P96 and Promotion for multi gfx-cards users: (VERY IMPORTANT!)
+
+	Try too run the demo with CGX Emulation... If it doesn't work, try to
+	use a screen-promotor... I have done this new version of Paradise
+	specialy to be promoted. About promotion, VERY IMPORTANT: You have
+	to promote to a 320*200*16 or 320*240*16 screen mode... DON'T USE
+	a screen mode MORE than 240 height... AND, once you have selected
+	your 320*200 or 320*240 screen, change the "height" gadget to 480.
+	ALLWAYS! (don't use "default" height)...
+
+	Promotion works PERFECTLY under CGX, The demo run fine in 320*240*16
+	(with "height" gadget set to 480, don't forget!) on my BVision,
+	promoted by "ModePro"...
+
+	Maybe it can works under P96, but the colors may be false (mode used is
+	RGB16)... TEST IT AND REPORT ME IF IT WORKS PLZ!!!

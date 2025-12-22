@@ -1,0 +1,783 @@
+@database FastJPEG.guide
+@$VER: FastJPEG.guide 1.10 (26.2.94)
+
+This is a document in the AmigaGuide format.  To read it, use either
+AmigaGuide, MultiView, or any other AmigaGuide compatible hypertext
+browser.
+
+@node main "FastJPEG Documentation - Contents"
+
+---------------------------------------------------------------------------
+                               FastJPEG 1.10
+
+                 A fast JPEG picture viewer for the Amiga
+            Copyright © 1993,1994 Christoph Feck, TowerSystems
+                           All Rights Reserved.
+
+                        Dedicated to Stefan Schulz
+                            I hope you like it
+---------------------------------------------------------------------------
+
+   @{" Introduction      " link Introduction}                  What is FastJPEG?
+   @{" Features          " link Features}                  What makes FastJPEG so special?
+   @{" Requirements      " link Requirements}                  What systems will FastJPEG run on?
+
+   @{" Installation      " link Installation}                  Before using FastJPEG.
+   @{" Usage             " link Usage}                  How to use FastJPEG.
+   @{" Tips & Hints      " link Tips}                  Some useful notes.
+
+   @{" Known Bugs        " link Bugs}                  What does not work?
+   @{" History           " link History}                  What is new in this version?
+   @{" Acknowledgments   " link Acknowledgments}                  Who I want to thank.
+
+   @{" Disclaimer        " link Disclaimer}                  Short: Use it at your own risk!
+   @{" Copyright         " link Copyright}                  About legal issues.
+   @{" License           " link License}                  What you have to agree on.
+
+   @{" Support           " link Support}                  What I will do for you.
+   @{" Author            " link Author}                  Where you can reach me.
+
+@endnode
+
+
+
+@node Introduction "FastJPEG Documentation - Introduction"
+
+Introduction
+************
+
+FastJPEG (or abbreviated: FJPEG) is nothing less - but also nothing more -
+than a fast JPEG picture viewer.  Let me claim that it is the fastest JPEG
+viewer freely available for the Amiga.
+
+Besides being fast, it has many other advantages.  Just tale a look at the
+list of @{" features " link Features}.
+
+An important goal was to not trade quality for speed.  In fact, FastJPEG is
+both fast and has an excellent quality.  Most other JPEG viewers either
+produce ugly pictures, or need ages to perform the conversion to HAM mode.
+
+The key to the improved quality is a technique called `dithering', where
+colors not displayable on the Amiga are approximated by giving neighboring
+pixels similar colors, which the eye then mixes to the desired one.
+
+A common variety of this method is the `Floyd-Steinberg' error dispersion
+algorithm, which is very time intensive, but produces the best pictures.
+
+FastJPEG does not use this method, as it would drastically reduce
+performance.  The dithering method used in FastJPEG, however, produces
+pictures of similar quality.
+
+I wrote and released this program for the Amiga community, which has
+deserved such a program.  For too many months we have been forced to use an
+ugly looking viewer, the name of which has momentarily slipped my mind...
+
+I have not written this for me.  I prefer TowerView, which is window based,
+and is a real application.  I will release TowerView when it is ready, but
+this will take longer than I had originally envisioned, because the `To Do'
+list currently grows faster on the end, than it shrinks on the top.
+
+If you are interested in a preview, you can get the file `TV_Preview.lha',
+which is on any Aminet ftp site.
+
+@endnode
+
+
+
+@node Features "FastJPEG Documentation - Features"
+
+Features
+********
+
+- It's free!
+
+- Special AGA version included (for HAM8 mode).
+
+- Both a Shell and Workbench interface.
+
+- Keyboard and mouse control.
+
+- ASL file and screenmode requesters supported.
+
+- Reentrant (resident loadable).
+
+- Only 27 Kbytes in size.
+
+- Excellent quality, even in standard HAM.
+
+- Carefully selected color palettes and conversion algorithms.
+
+- Dithering to increase the number of apparent colors.
+
+- Smoothing, if the image width is halved to fit on the screen.
+
+- Minimal `fringing'.
+
+...and of course:
+
+- It's fast!
+
+@endnode
+
+
+
+@node Requirements "FastJPEG Documentation - Requirements"
+
+Requirements
+************
+
+FastJPEG runs on any Amiga.  Bigger pictures might require 1 Mbyte memory,
+especially if you have some other programs running in the background.
+
+Most features of FastJPEG are only available if you have OS 2.0 or newer.
+This documentation assumes that you are running OS 2.0 or better, so some
+notes might not apply to you, if you still use OS 1.3.
+
+There is a special AGA version included, which performs the conversion to
+HAM8 mode.  This version requires a 68020 processor (or better), at least
+OS 3.0, and - surprise - the AGA chip set.
+
+@endnode
+
+
+
+@node Installation "FastJPEG Documentation - Installation"
+
+Installation
+************
+
+Choose either FJPEG_ECS (the OCS/ECS version) or FJPEG_AGA (the AGA
+version) and rename it to FJPEG.  This is required, because icons or Shell
+scripts will refer to the name "FJPEG" on most systems.  You can rename it
+by selecting either FJPEG icon, and selecting the `Rename' command from the
+Icon menu.  After deleting the trailing four characters, press the RETURN
+key.
+
+FastJPEG runs fine from both harddisk and floppy disk.  If you want to copy
+it to another drawer, just move the icon onto it.  It is adviced that you
+place it into the path searched by the Workbench and Shell, such as "C:" or
+"SYS:Utilities/".  This way you can avoid absolute path names in icons or
+the configuration file for your favorite file manager.
+
+
+Deinstallation
+**************
+
+In case you want to get rid of FastJPEG (why would you?), just delete it.
+
+@endnode
+
+
+
+@node Usage "FastJPEG Documentation - Usage: Contents"
+
+Usage
+*****
+
+This part of the documentation has several chapters.  If you press the
+`Contents' button in one of these chapters, you will get back here first.
+Pressing it again sets you back to the main contents.
+
+   @{" Starting FastJPEG " link Start}                  How to get FastJPEG started.
+   @{" - from Workbench  " link Workbench}                  Starting via icon.
+   @{" - from Shell      " link Shell}                  Starting via command line.
+
+   @{" Running FastJPEG  " link Running}                  What happens after start?
+   @{" Program Options   " link Options}                  Controlling FastJPEG's behavior.
+   @{" Configuration     " link Config}                  Setting default program options.
+
+   @{" Keyboard Control  " link Keyboard}                  Using FastJPEG without a mouse.
+   @{" Errormessages     " link Errors}                  If something went wrong...
+
+@endnode
+
+
+
+@node Start "FastJPEG Documentation - Usage: Starting FastJPEG"
+@toc Usage
+@next Running
+
+Starting FastJPEG
+*****************
+
+FastJPEG can be started in two ways:
+
+- @{" from the Workbench " link Workbench}, by double clicking on its icon, then selecting the
+   file you wish to view in the ASL file requester, or
+- @{" from the Shell " link Shell}, by entering the command "FJPEG" in a Shell window, and
+   optionally the name of the picture you want to display.
+
+For details, please refer to the specific section.
+
+FastJPEG supports multiple arguments, meaning that you can either select
+more than one file or name on the command line at one time.
+
+If you started the AGA version on an ECS system, you will get the error
+message `Requires OS 3.0'.  Use the FJPEG_ECS program in this case.
+
+@endnode
+
+
+
+@node Workbench "FastJPEG Documentation - Usage: from Workbench"
+@toc Usage
+
+Starting from Workbench
+***********************
+
+There are three ways to start FastJPEG from the Workbench:
+
+- Double-click on the FJPEG icon, and select the files in the ASL file
+  requester.  You can select multiple files.
+
+- Enter "FJPEG" as the default tool in the icons of your JPEG pictures (use
+  `Information' from the Icon menu to do this).  You can now run it by
+  double-clicking on the icons.
+
+- Click on the FJPEG icon, then hold down the `Shift' key, and select all
+  JPEG files you wish to view.  Use double click on the last icon to run
+  it.
+
+@endnode
+
+
+
+@node Shell "FastJPEG Documentation - Usage: from Shell"
+@toc Usage
+
+Starting from Shell
+*******************
+
+FastJPEG takes as the arguments the names of the JPEG pictures you wish to
+view.  You can specify any amount of filenames on the command line, it will
+show them one by one in that order.  Filenames containing spaces must be
+enclosed in double quotes.  If you don't give any names, FastJPEG will open
+an ASL file requester from where you can select the files.
+
+You can also specify valid AmigaDOS patterns here.  For information on
+building patterns, check your AmigaDOS manual.  The simplest is probably
+the #? wildcard, which replaces any character sequence.  As an example:
+
+    FJPEG #?.jpg
+
+This will show any files with the extension `jpg'.  Using such a pattern is
+faster than letting FastJPEG examine all files.
+
+@endnode
+
+
+
+@node Running "FastJPEG Documentation - Usage: Running FastJPEG"
+@toc Usage
+@prev Start
+
+Running FastJPEG
+****************
+
+After FastJPEG has been started, it processes each argument you supplied.
+It will check if the argument is a valid JPEG file (JFIF or raw JPEG), and
+if it is, start displaying it on a custom screen.
+
+If the picture loaded correctly, just press the left mouse button or a key
+to proceed with the next picture.  Pressing the right mouse button quits
+FastJPEG without processing any remaining arguments.  Keyboard addicts can
+use either `Escape', `Q', or `Ctrl-C'.  Note that the clicks or keys have
+to be invoked while the current screen is active (the one which is rendered
+into).  Only Ctrl-C works in the Shell window, too.
+
+If you have a three button mouse, pressing the middle button causes the
+program to proceed with the next argument, ignoring any remaining matching
+names from the current pattern, or any remaining files from your selection
+in the ASL file requester.  On systems with two-button mice, the same can
+be archieved by pressing the `N' key, or the left mouse button together
+with the `Shift' key.
+
+Note:  Version 1.0 of FastJPEG had a bug in the handling of the right mouse
+button.  It did not abort entirely, but just skipped the current pattern.
+Since this functionality was not really useless either, it has been moved
+to the middle button.
+
+@endnode
+
+
+
+@node Options "FastJPEG Documentation - Usage: Program Options"
+@toc Usage
+
+Program Options
+***************
+
+This section lists all options available for changing the default behavior
+of FastJPEG.  As of program version 1.10, the only way to use these options
+is to enter them on the command line in the Shell window.  Future versions
+might offer Workbench `ToolType' support and/or configuration files.
+
+There are two kinds of options: switches and options taking an argument.
+To enable a switch (indicated by an /S after the name), enter its name on
+the command line.  The other options (they are listed with a /K behind
+their name) need an argument.  You can place either an equal sign or a
+space between the option name and the argument.  /N denotes numerical
+arguments.
+
+Although all option names are listed in mixed case for better readability,
+they are not case sensitive.  If you must view a file with the same name
+as one of the options, put double quotes around the filename.
+
+
+Display Options
+===============
+
+    ScreenMode/K or SM/K
+	Name of the screenmode to use for the display.  You must enclose
+	the name in double quotes, if it contains spaces.  Example:
+
+		ScreenMode="NTSC:Low Res Laced"
+
+	If you enter "?" as the name, the OS 2.1 ASL screenmode requester
+	pops up, allowing you to select a mode.  If you omit this option,
+	FastJPEG uses a default screenmode.
+
+    Grey/S or Gray/S
+	Force greyscale display.
+
+    Dirty/S
+	Do not use dithering.  Gives faster but lower quality results.
+
+
+Slideshow Options
+=================
+
+    Repeat/K/N
+	Number of cycles through the list of pictures.  Defaults to 1.
+
+    Forever/S
+	Endless loop.  Shows the pictures until you abort manually.
+
+    Delay/K/N
+	Timeout in seconds after each picture.  If you don't specify this,
+	FastJPEG will wait for a mouse click, or key press.
+
+
+Diagnostic Options
+==================
+
+    Quiet/S
+	No Shell output.
+
+    Time/S
+	Print out time after completion.
+
+    Info/S
+	Only print size info, no display.
+
+    Test/S
+	Much like Info, but tests the entire file.  Also, if there was any
+	wrong file, the return code will be set to 5 (WARN).
+
+
+Other Options
+=============
+
+    NoBusy/S
+	Do not show the busy pointer.
+
+    Pointer/S
+	Do not blank the mouse pointer.
+
+    Hide/S
+	Decode pictures in background.  If the picture is complete, the
+	screen will be put to the front.
+
+    LowMem/S
+	If you set the `Hide' option, FastJPEG will leave the old screen
+	on display, while the new one is opened in background.  Use this
+	option to disable this.
+
+@endnode
+
+
+
+@node Config "FastJPEG Documentation - Usage: Configuration"
+@toc Usage
+
+Configuration
+*************
+
+The current version of FastJPEG only provides a limit way of configuration.
+
+An environment variable can be set with the "Setenv" command to override
+the default screenmode.  Examples (note the quotation marks):
+
+    Setenv FJPEG_SCREENMODE "NTSC:Low Res Laced"
+
+    Setenv FJPEG_SCREENMODE 0x11004
+
+    Setenv FJPEG_SCREENMODE "?"
+
+If you want the "Setenv" command to be executed on every startup, place it
+somewhere in the S:User-startup script.  The environment variable is also
+checked if you start FastJPEG from the Workbench.  A screenmode specified
+on the command line overrides the mode found in the environment variable.
+
+@endnode
+
+
+
+@node Keyboard "FastJPEG Documentation - Usage: Keyboard Control"
+@toc Usage
+
+Keyboard Control
+****************
+
+Following is a summary of the actions you can control using the keyboard.
+Note that they only have effect on the screen which is currently rendered
+into.
+
+Cursor keys:        Scrolling around (normal speed).
+Alt+Cursor keys:    Scrolling around (slow).
+Shift+Cursor keys:  Scrolling around (fast).
+
+Spacebar:           Hold on current picture when using the `Delay' option.
+
+Ctrl+C, Q, Esc:     Abort FastJPEG (same as right mouse button).
+
+N:                  Next argument (same as middle mouse button).
+
+Any other key:      Show next picture (same as left mouse button).
+
+@endnode
+
+
+
+@node Errors "FastJPEG Documentation - Usage: Errormessages"
+@toc Usage
+
+Errormessages
+*************
+
+If there is an error, FastJPEG will display a requester, or print the
+message into the Shell window.  Currently, the following messages can
+appear:
+
+"Not enough memory"     - Should be pretty self explanatory.
+"Can't open screen"     - The picture is too big to fit into Chip RAM.
+"Can't open file"       - The file was not found.  Check the file name.
+                          With OS 2.0, the exact reason will be printed
+                          into the Shell window instead.
+"Can't read file"       - There was a DOS error while reading.
+"Not a JPEG file"       - You can only view JPEG files with FastJPEG.
+                          Formats such as IFF-ILBM or GIF are not
+                          supported.
+"Error in JPEG file"    - The JPEG code reported any error, such
+                          as corrupted file, or unsupported modes.
+
+@endnode
+
+
+
+@node Tips "FastJPEG Documentation - Tips & Hints"
+
+Tips & Hints
+************
+
+Identifying JPEG Files
+======================
+
+If you want to use FastJPEG together with a file type detection utility or
+a file manager, you need to know how JPEG files can be identified.
+
+Every JPEG file starts with the two `magic bytes' 255/216 (FF/D8 in hex).
+The characters "ÿØ" represent these two bytes.  To type them use "Alt-k"
+then "y", and "Shift-Alt-o".
+
+If the file type detection is based on filename patterns, use the pattern
+#?.j[pf]#? as it matches the following extensions (all seen for JPEGs):
+
+    .jpeg    .jpg    .jpe    .jfif    .jff
+
+
+Viewing Pictures Fast
+=====================
+
+FastJPEG is already quite fast, but the speed can still be increased:
+
+Use `Hide', if you have no Fast RAM, and render into 4 Hires (ECS), or 8
+Hires (AGA) bitplanes.  Rendering in the background is faster.
+
+Enable the `Dirty' option to gain more speed.  The quality, however, can
+significantly decrease on ECS machines.  The difference should be marginal
+on AGA machines.
+
+Specify a `Lores Laced' type screemode instead of a `Hires Laced' one.
+FastJPEG will scale the picture according to the aspect of the screenmode.
+
+Use `Grey' to force greyscale output.  This is faster than color output,
+and can be used as a preview.
+
+Some users have noticed a speed difference when using the ECS version over
+the AGA version.  Try it out.  (Note that the ECS version is not limited to
+Lores HAM, but can not display HAM8 or 256 greyscales).
+
+
+Other Notes
+===========
+
+FastJPEG is reentrant, and thus can be loaded resident in memory with the
+`Resident' command.
+
+The AGA version can be used to display JPEG pictures on graphicboards.
+Most cards, however, are not able to display HAM8 and FastJPEG will fall
+back to greyscale display.
+
+The screen is a `quiet' screen, having neither a title bar nor a window
+border, so that you can use one of your preferred screen grabbers to
+capture the rendered picture to a file.  I recommend using `QuickGrab' by
+Steve Hines, because it is able to deal with interleaved bitmaps.
+
+Even though the screen seems to have no title bar, it is still `there'.
+You can drag and depth arrange it using the mouse like any other screen.
+
+@endnode
+
+
+
+@node Bugs "FastJPEG Documentation - Known Bugs"
+
+Known Bugs
+**********
+
+My AGA beta testers have reported to me, that with the `Extra Lores' type
+screenmodes the pictures come up grey.  This is a bug in the display
+database of the OS, and can not be fixed by me.
+
+FastJPEG is not able to display `multiple scan' files.  This will probably
+never be fixed.
+
+@endnode
+
+
+
+@node History "FastJPEG Documentation - History"
+
+History
+*******
+
+Version 1.10, released on 26-Feb-94:
+- Fixed the bug where pressing right mouse button did not abort FastJPEG.
+  It continued processing remaining arguments instead.
+- No longer quits, if you click into the screen to activate it.
+- Fixed memory loosing bug.  If there was an error in the JPEG file, it
+  didn't always free already allocated memory.
+- No longer double buffers, unless `Hide/S' is specified.
+- Now prints filenames along with DOS error messages.
+- AGA version no longer pokes bitplanes.  Uses OS functions instead.
+- Added `Quiet/S' option, to suppress shell output.
+- Added simple slideshow support.  `Forever/S' wraps to the first picture,
+  `Repeat/K/N' allows setting a repeat count, and `Delay/K/N' controls the
+  timeout after each picture.
+- Added `Hide/S' option, which opens screens in the background, and pops
+  them to front if rendering is completed.
+- Added `Time/S' option, which prints conversion time (unless `Quiet/S' is
+  specified).
+- Added `Info/S' option, which just prints picture size.  This option
+  overrides all other options.  `Test/S' tests the entire file.
+- Added `NoBusy/S' option, which disables busy pointer sprite.
+- Added `Pointer/S' option, which disables blanking of pointer sprite.
+  In conjunction with `NoBusy/S', no pointer changes occur.
+- Added `LowMem/S' option, which disables double buffering.
+- Added greyscale support.  You can force greyscale output with `Grey/S'.
+- Added keyboard control.  Cursor keys can be used for scrolling, ESC and
+  Q abort, N skips to next argument, any other key shows next picture.
+- ASL file requester supported.  Pops up if started without any files.
+- Added screenmode support.  `ScreenMode/K' is used to specify the name
+  of the screenmode to use.  Optionally, a hex identifier can be given.
+  "ScreenMode=?" will pop up the OS 2.1 screen mode requester.  This
+  option overrides the screenmode specified in the environment variable
+  `FJPEG_SCREENMODE'.  Choosing a mode incapable of HAM forces greyscale
+  output.
+- Improved HAM conversion speed.  Also added a `Dirty/S' option.
+- Added asynchronous file reading.
+
+Version 1.0, released on 15-Dec-93:
+- First public release.
+
+@endnode
+
+
+
+@node Acknowledgments "FastJPEG Documentation - Acknowledgments"
+
+Acknowledgments
+***************
+
+First, I must state that this program is based in part on the work of the
+Independent JPEG Group.  Without their priceless work, FastJPEG would not
+even exist.  Special thanks to Tom for guiding me to the right places for
+possible optimizations.
+
+Thanks to all beta testers:
+
+- Frank Grimm, for his endless critique and suggestions.
+
+- Viljo Viitanen, for spending his nights testing on his A1200 ;)
+
+- Osma Ahvenlampi, for spellchecking the documentation and for testing on
+  his 68010 Amiga.
+
+- Daniel Oberlin, for finding bugs and testing on his A4000.
+
+Further testing was done by Rick Gideon, Scott Ellis, and Jason N. Lee.
+Thanks to all of them!
+
+Last, but not least, I wish to thank everyone who mailed me and made
+suggestions for improvements.  Without them, FastJPEG wouldn't evolve.
+
+@endnode
+
+
+
+@node Disclaimer "FastJPEG Documentation - Disclaimer"
+
+Disclaimer
+**********
+
+Standard disclaimer:
+
+THERE IS NO WARRANTY FOR THIS PROGRAM TO THE EXTENT PERMITTED BY APPLICABLE
+LAW.  EXCEPT WHERE OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDER AND/OR
+OTHER PARTIES PROVIDE THE PROGRAM "AS IS" WITHOUT WARRANTY OF ANY KIND,
+EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.  THE
+ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU.
+SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY
+SERVICING, REPAIR OR CORRECTION.
+
+IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING WILL
+ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MAY REDISTRIBUTE THE PROGRAM
+AS PERMITTED ABOVE, BE LIABLE TO YOU FOR DAMAGES, INCLUDING ANY GENERAL,
+SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR
+INABILITY TO USE THE PROGRAM (INCLUDING BUT NOT LIMITED TO LOSS OF DATA OR
+DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD PARTIES
+OR A FAILURE OF THE PROGRAM TO OPERATE WITH ANY OTHER PROGRAMS), EVEN IF
+SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH
+DAMAGES.
+
+@endnode
+
+
+
+@node Copyright "FastJPEG Documentation - Copyright"
+
+Copyright
+*********
+
+FastJPEG 1.10 is Copyright © 1993,1994 Christoph Feck, TowerSystems.  All
+Rights Reserved.  It is released under the concept of `Freeware'.  It has
+never been, nor will it ever be in the `Public Domain'.
+
+The archive may only be distributed in unmodified form.  No files may be
+added, changed or removed.  You may not charge for this archive, other than
+the cost of the media and duplication fees, as long as they don't exceed
+the fees taken by Fred Fish.  Distribution is allowed in all forms, such as
+BB systems, floppy or compact disks, and ftp sites.
+
+Any inclusion in a commercial, semi-commercial or Shareware distribution
+requires the written permission of the author.
+
+@endnode
+
+
+
+@node License "FastJPEG Documentation - License"
+
+License
+*******
+
+These are the conditions you must agree on before and while using FastJPEG:
+
+You may copy and distribute verbatim copies of the program's executable
+code and documentation as you receive it, in any medium, provided that you
+conspicuously and appropriately publish only the original, unmodified
+program with all copyright notices and disclaimers of warranty intact and
+including all the accompanying documentation, example files and anything
+else that came with the original archive.
+
+Except where otherwise stated in this documentation, you may not copy
+and/or distribute this program without the accompanying documentation and
+other additional files that came with the original.  You may not copy
+and/or distribute modified versions of this program.
+
+You may not copy, modify, sublicense, distribute or transfer the program
+except as expressly provided under this license.  Any attempt otherwise to
+copy, modify, sublicense, distribute or transfer the program is void, and
+will automatically terminate your rights to use the program under this
+license.  However, parties who have received copies, or rights to use
+copies, from you under this license will not have their licenses terminated
+so long as such parties remain in full compliance.
+
+By copying, distributing and/or using the program you indicate your
+acceptance of this license to do so, and all its terms and conditions.
+
+Each time you redistribute the program, the recipient automatically
+receives a license from the original licensor to copy, distribute and/or
+use the program subject to these terms and conditions.  You may not impose
+any further restrictions on the recipients' exercise of the rights granted
+herein.
+
+You may not disassemble, decompile, re-source or otherwise reverse-engineer
+the program.
+
+You agree to cease distributing the program and data involved if requested
+to do so by the author.
+
+@endnode
+
+
+
+@node Support "FastJPEG Documentation - Support"
+
+Support
+*******
+
+No software is perfect.  If there are any new versions available, perhaps
+because there is a bug fixed or a feature was added, I will announce it in
+the international Usenet newsgroup comp.sys.amiga.announce, and will upload
+it to the Aminet ftp sites.  I will also send new versions to Fred Fish, to
+let him publish it in his wonderful Amiga software library.
+
+I'm open to suggestions and comments.  Also, if you have problems with
+FastJPEG, you can contact me to ask for help.  However, you cannot expect
+me to do everything.  You get the support for free, and I must keep an eye
+on my CS studies, so if you don't get a reply within a week or two, I'm
+probably busy writing exams.
+
+@endnode
+
+
+
+@node Author "FastJPEG Documentation - Author"
+
+Author
+******
+
+To send suggestions, bug reports, comments, flames, etc., you can contact
+me at one of the following addresses.  Even though FastJPEG is free, I
+certainly won't refuse any kind of donations, being a poor student :)
+
+    Christoph Feck
+    TowerSystems
+    Balbierstrasse 6
+    D-67663 Kaiserslautern
+    Germany
+
+    Email: feck@informatik.uni-kl.de
+    IRC: Pepo (frequently on #amiga and #amigager)
+
+Happy viewing and thanks for your time reading this!
+
+3k// Christoph Feck, TowerSystems
+\\X/ Amiga - Intuition inside.
+
+@endnode
+
+

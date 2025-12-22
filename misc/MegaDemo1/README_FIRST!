@@ -1,0 +1,52 @@
+Short:    A large multi-part demo written i AMOS      
+Uploader: danielb@ifi.uio.no (Daniel Bryde)
+Author:   danielb@ifi.uio.no (Daniel Bryde)
+Type:     demo/mega
+Requires: 1 MB ram
+Version:  1.0
+
+This is a demo written in AMOS Pro, lasting approx. 15 min.
+It has several parts. It should work fine with all amigas, I
+think. It was made using an old A500 KS 2.0, and I haven't tried
+running it on anything else. I hope the speed of
+f.ex. an A1200 won't make the timing wrong. The demo is 
+compiled, but if you want the source-code, you can email me 
+(danielb@ifi.uio.no) and I can uuencode it or something, 
+if you are interested. 
+
+INSTRUCTIONS:
+-------------
+First you will obviously need an empty disk.
+Extract the archive using 'lha'. You have to copy certain
+system files to the disk to make it work. These are:
+
+c/Echo
+c/endcli
+c/Run
+
+(If I don't remember wrong, only WB1.3/1.2 users will need those above,
+ you will get an error code anyway if they are needed.)
+
+devs/narrator.device
+
+(I have used the WB2.0 version of the narrator.device, the WB1.3
+ version is only half size or something and creates worse speech,
+ but should also work, I think.) 
+
+libs/diskfont.library
+libs/translator.library
+
+Now you will have to relabel the disk as 'DEMO1'.
+Finally to make the disk bootable, you should use the 'install df0:'
+command. One thing: The main program expects to find the data-files
+in specific directories. Make sure the directory-structure from
+the archive is restored on the disk. (I don't remember the option in 
+lha, or if it is a default option)
+
+I would appreciate feedback, even if you think this is thrash!
+My email address is found above. 
+
+PS: The last parts of the demo are the best ones, as the first parts
+contain things I made long time ago. 
+
+Daniel

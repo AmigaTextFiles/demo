@@ -1,0 +1,105 @@
+short:    TFWID Venus Art PPC demo from Intel Outside V
+uploader: bjsebo/venus art (bjsebo@delta.ii.tuniv.szczecin.pl)
+author:   Venus Art
+type:     Demo/aga
+requires: CGFX or AGA,ppc.library,dbplayer.library,PPC processor,AHI
+
+
+                ............. .....   .....
+                :Virtual    : :...:   :   :..  .................
+                :Beauty     :......   :.....:  :.....          :..
+       __   ____:Experience_________  :    ____       __:____  ______:   __
+  ___ |  |_|   __     __        |_:_ _| ___|___  |  ___  ||   __  |_| _|_ __
+ _|  ||         |     ||        ||  |________ |  | |___|      ||____    _| |_
+ |   ¯¯   __ _________||        ¯¯   __   |_| |  |___|   ____ |    |__      |
+ |________||____|      |_____________| |______|      |___|  |_|       |_____|
+       :      :       :                                .......    :az0!/l124
+       :......:       :..........  ...                 :.    :....:
+         We Brake For Nobody!  :....: v e n u s  a r t :
+		
+                  This software is milennium compatible.
+
+
+                   Once again we're back with new demo!
+                     An Intel Outside V presentation.
+                                Placed 2nd
+
+done by:
+	Noe    - 3D engine programming.
+	BJSebo - Ideas, additional programming, sound replayer.
+	Wierza - 16bit Sound
+	Zoltan - some 3D objects
+	Def    - some of the textures
+
+
+This time for PowerPC processor only.(68k version will be done in future maybe)
+
+Requirements:
+	SOFTWARE:
+		° ppc.library v46.15 (and don't ask me for WarpUP version - no way)
+		° AHI in version 4 (at least)
+	 	° dbplayer.library v2.0 (included)
+		° xpkmaster.library and sublibraries.
+		° MUI (for preference editor)
+
+NOTE: None of the files were crunched.You can crunch everything
+	    In Files/ directory with any xpk cruncher.
+
+	HARDWARE:
+		° PPC Processor (603/240 at least)
+		° 22 Mb of memory.
+		  ^^^^^^^^^^^^^^^
+		  !!! sorry about that ;)
+
+Before you start the demo please run VA3D_Prefs program and select yours
+preferable screen mode and ahi mode. Note that:
+	° Double buffering will cause big slowdown due to
+	  context switching
+	° the same thing will happen if online fps counter
+	  will be set on (if fps counter work ;)
+	° I dont know if direct cgfx memory access will work 
+	  use on your own risk.
+	° PPC timer is faster - so fast than sometimes some scenes
+	  are shown too fast ;) I will try to fix this later.
+
+Preferencces are saved in env: directory, so you dont have to run prefs
+program every time you want to see the demo.
+
+                      ------ T H E  S T O R Y ------
+
+                            I've been abducted.
+                       Those little green creatures 
+                           Took me to their ship
+                             I remember a room
+                       That looks like a laboratory.
+                 They made some strange experiments on me
+                         I think I fall asleep...
+                             I had a dream...
+
+                              I was flying...
+                       I saw giants flying machines
+                             And ancient city
+                        I was dreaming about priest
+                           That gave me wings...
+
+                              Than I woke up
+                          There was no one around
+                              I found a door
+                   And I escaped throught long corridor
+
+                             I took their ship
+                     Now I can tell you this story...
+                            ------       ------
+
+
+
+                          Softare & Hardware Used:
+
+LightWave 5.5(pc) & 5(amiga)	- modeling and animation control
+SoftImage (sgi)			- additional modeling
+VirtuaWorld3D (amiga)		- modeling and edition of scene 
+VirtuaLight3D (amiga) 		- Radiosity LightMapping calculations
+SASCPPC 7.0 (beta22)		- compiling executables
+VirtuaArt3D Libraries		- without this library none of
+				  the Virtua Art series program 
+				  will work (including main executable)

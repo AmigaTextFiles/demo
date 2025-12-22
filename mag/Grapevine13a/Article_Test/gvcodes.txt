@@ -1,0 +1,231 @@
+
+{5  ARTICLE TO DEMONSTRATE THE CONTROL
+
+{5       CODES USED IN GRAPEVINE
+
+
+{6             NORMAL TEXT
+
+{1Colour 1 - White
+{2Colour 2 - Red
+{3Colour 3 - Green
+{4Colour 4 - Blue
+{5Colour 5 - Light Green
+{6Colour 6 - Yellow
+
+{1When a colour is selected, the text
+stays that colour until another colour
+is selected, or until another page is
+started, in which case it defaults to
+white coloured normal font.
+
+
+{6               FLASHING
+{1
+Add a{{7 to make the text flash, this
+command flashes one line, or
+characters until it finds another
+flash command,
+
+{7{2Colour 2
+
+Or you can {7Flash {7individual
+characters!
+
+
+{6            DOUBLE HEIGHT
+
+{1This is turned on with{{9, it must be
+followed with a blank line!
+
+
+{9        THIS IS DOUBLE HEIGHT
+
+
+{8{9THIS IS THE 2ND FONT IN DOUBLE HEIGHT
+
+
+The double height command MUST be used
+on every line it it needed.
+
+You can colour and flash it as
+described above.
+
+
+
+
+
+{6             SECOND FONT
+{1
+This is turned on with{{8, it MUST be
+turned on EVERY line, this is used for
+sub-headings etc.
+
+{8ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijkl
+{8mnopqrstuvwxyz1234567890!"£$%^&*()_+-
+{8=\\[]:@;#><,.
+
+It can be coloured, flashed and put in
+double height as described!
+
+You can mix the normal and second font
+eg.
+
+{8Hello {8there {8its {8easy!
+
+
+
+
+
+{6          DOUBLE WIDTH FONT
+{1
+This is used mainly for titles etc, it
+MUST be turned on every line.  It is
+turned on with{{A, note that it MUST
+be a capital A, and every character
+followed with a space
+
+eg. D O U B L E
+
+Which looks like
+
+{A             D O U B L E
+
+
+
+{6           DOUBLE SIZE FONT
+
+{1This font is used for titles. It MUST
+be turned on every line it is needed.
+It must have each character followed
+by a space and must be followed with a
+blank line eg
+
+{9{A       T H I S   I S   B I G !
+
+
+And you can colour or flash it!
+
+
+
+
+{9{4Summary Of Codes
+
+
+{1 1 - White
+{2 2 - Red
+{3 3 - Green
+{4 4 - Blue
+{5 5 - Green
+{6 6 - Yellow {1
+{7 7 - Flashing {2
+{8 8 - 2nd Font {3
+{9 9 - Double Height Font {6
+
+{A A - D o u b l e  W i d t h  F o n t
+{9{A 9 { A - D o u b l e  H e i g h t
+
+{9{A 9 { A - &  W i d t h  F o n t
+
+
+{1All commands must be preceded with a
+{6 { {1the key on the right of the {6P
+{1hold {6Shift {1then press the key.
+
+
+{9{4 How To Convert Text To The Right
+
+{9{4           Format
+
+
+{1Load Protext. Load the file
+
+{6ruler.protext
+
+{1from the {6Article_Test dir {1found on
+most Grapevine disks e.g. Grapevine 11
+disk 1
+
+A ruler should now appear at the top
+of the screen & you should see the
+command
+
+{6pl 22
+zm
+
+{1Now load the article you want to
+convert by selecting {6merge file
+
+{1from the file menu. Make sure the
+cursor is below the ruler.
+
+Select {6document mode {1from the
+{6option menu
+
+{1Now move the cursor below the ruler
+to where the text begins. Go into
+command mode by pressing {6ESC
+{1Now type :
+
+{6format
+
+{1your file should now be converted to
+the correct format, with a right hand
+margin of 39 characters.
+
+You will need to tidy up your doc by
+inserting/deleting a few spaces.
+
+Once you have tidied up your doc &
+included any character codes it's time
+to save your doc. The doc has to be
+saved in ASCII format. To do this
+go to the command mode (press ESC) &
+type
+
+{6sa filename
+
+{1You will now see a requester asking if
+you want to print, skip or ESC the doc.
+{6Print {1the doc by pressing space.
+Your document won't be printed but
+saved as ASCII. You will need to
+{6Print {1each page. This is how
+Protext saves a file in ASCII format.
+To be on the safe side make sure you
+make a back-up of your doc by saving
+it in the normal way.
+
+If you want to test your doc to see
+how it will look in Grapevine then
+you will need to load the article
+tester command {6Grapevinetest
+{1from the {6article_test dir {1on
+Grapevine 11 disk 1. The easiest way
+to do this is from CLI.
+
+Type
+
+{6Article_Test/Grapevinetest filename
+
+{1I found it easier to copy the
+{6Grapevinetest {1command to my articles
+disk & then run it from there.
+
+If you are still confused then load
+this doc {6 codes1 {1into {6Protext
+{1that should clear up any or all
+
+{2{7{9{A C o n f u s i o n ! ! ! ! ! !
+
+{1A printout would also be
+
+{6{7{9{A V e r y  H e l p f u l ! ! !
+
+
+{1Original doc by {3Pazza of LSD.
+{1Additional text by {6Dynamo of
+Cyanide.
+
+{1end.
+

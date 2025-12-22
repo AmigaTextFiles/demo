@@ -1,0 +1,57 @@
+| Requirements
+`---------------
+
+Hardware requirements: AGA, 020+, FPU, 8 MB fastmem
+ - Only viewable on 060 though, too much muls and fpu code :)
+ - Run SetPatch before starting the intro
+
+
+| Info
+`-------
+
+Use OxyPatcher for some speedup!
+
+Tested on:
+ - A1200/Blizzard1260
+
+If the intro runs super slow (like 1 fps) try removing your PCMCIA card
+Try the uncrunched exe if the normal one fails, which uses NatCracker =)
+
+
+| Credits 
+`----------
+
+Yomat:     Spline-code
+           Camera-code
+           Triangle filler
+           Complex mathfunctions
+           C2P (Chunky to planar)
+
+Pezac:     Raycaster
+           Effects
+           Text-engine
+           Intro system
+           Technical design
+
+Pipe:      Texture packer
+           Endpart
+           Executable cruncher
+
+C-Frog:    Music
+
+Malmis:    Textures
+           Technical design
+
+Rex:       3d modelling
+           Scene design
+
+
+| Special thanks to
+`--------------------
+
+ Scicco/Scarab, for being an absolute friend met through the scene and
+  for him always being helpful and friendly!
+
+ Psycho/Loonies, for letting us use his optimized c2p in the developing
+  system for ham8 effects. The developer system works with a system screen
+  and our own c2p didn't work with the system on :)

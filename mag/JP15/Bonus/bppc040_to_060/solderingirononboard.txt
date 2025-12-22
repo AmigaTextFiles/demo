@@ -1,0 +1,148 @@
+
+                          Soldering iron on board 
+                                     or 
+                       migrating from 040 to 060 on a bppc
+                             by kas1e@yandex.ru
+
+
+
+
+[ Introduction ]
+
+
+After the introduction of 68060 boards, the Amiga world was integrating ppc cpu's
+to our machines. But the implementation was't done as good and easy to use as
+possible. As a result we got boards with two different cpu's: 68k and ppc. For
+example, with the Acorn hardware it was the same scheme: Arm + x86 on one board.
+So, all the 68k software does work as before, and new software was developed to
+use the PPC. For this purpose the ppc.library was loaded into the flash memory of
+the board, but this library was _REALLY_ crap. Anyway, nowadays we can use WOS
+(warp os), which not so stable as 68k kernels, but surely it's the best choice
+for ppc on classical Amigas.
+
+"Blizzard PPC (c) phase5 digital product, 1997" - label of company which produced
+ppc boards for the classic a1200. Some different versions of boards were sold:
+
+bppc603e  with 040 and with 060
+bppc603e+ with 040 and with 060 (+ means scsi interface)
+
+
+By the way, for A4000 models the board was called 'CyberStorm'. This accelerator
+offered the most powerful ppc cpu - 604. Well, cpu clock for a1200 boards (603e) can be
+in range from 160 to 180 for ppc (by default I mean) and from 25(040) to 50(060)mhz
+(by default, too). 
+
+
+
+[ Let's have some fun ! ]
+
+Some time ago I had a Blizzard 060, and I just killed it by doing my experiments
+with my soldering gun. So, I was thinking that the CPU was dead, too. But only
+the power of the blizzard board was damaged, the cpu itself was still alive.
+Also, I had a blizzard ppc 603e from phase5, but with the slow 040 cpu on board.
+By default the 040 was only powered with the speed of 25 mhz. Of course I speeded
+it up to 33 mhz by oscillator resoldering. For 040, oscillator on 50mhz gives us
+25mhz (because for 040 multiplier 'divide/2' must be set, 66mhz oscil - 33mhz). In
+any case 040 is not a 060 and the best choice is to have a fast ppc and a fast 68k
+cpu's on one board :)
+
+Next, by resoldering a bit the smd resistors I made a speedup of the ppc clock,
+from 160mhz to 266mhz. But AmigaOs still worked slowly, 68k apps worked slowly,
+etc, etc. So, I thought about resoldering my 060 cpu from my old dead board and
+put it to bppc. But bppc doesn't tender any socket. Bppc for 040 has 5.0v for
+the cpu and devide/2 resistors are set!
+
+
+So. First you need a SOCKET for your cpu. Phase5/dce didn't create sockets for
+1200 boards, maybe due to money problems. Maybe because of other reasons but
+anyway, we don't have sockets for the cpu and must install it on one. Yes,
+it's possible to solder cpu directly on board, but who gives us a warranty that
+it will work properly?
+ 
+Well, I took the socket from an old i486 pc motherboard. This socket was a bit big,
+and therefore had two free lines of pins, but who cares of course. Another case is
+to take the socket from the old Amiga board from A3000/A4000 (take a look at
+azine.jpg, in the bonus directory, this is a pic from azine #4 about this kind of
+work). 
+
+Afterwards, we must resolder the old 040 cpu from board. It's mostly difficult
+and hard work. Under the cpu there are located some little resistors and it can
+become a problem by resoldering the cpu because you may damage the resistors
+underwards. So please be patient and work slowly, very slowly :) 
+
+Next step is, soldering socket to board, or the 060 cpu directly. 
+
+Next, to change voltage coil from 5v to 3.3v positon (look at voltage.jpg in the
+how-to directory)
+
+Next, change devide resistor place (look at multiplier.jpg in the how-to dir)
+
+That's all. Hardware work is finished. In the end, you must boot your Amiga with
+no startup-sequence from hd or from a floppy disk and REWRITE FLASH with the NEW
+060 flash !!
+
+So, for saving your soul you need an emergency disk with flash update (check our 
+links links section at the end) and be sure that hdd will work :) I rewrote my
+flash from hdd without any problems. 
+
+As I said, at the end of the article you can find urls and the download link for
+the archive FlashUpdates-300399.lha  (We didn't put it into the bonus dir as in
+fact it alone has a size of 1mb). Don't worry, it is the LATEST update available.
+You need to run the file blizppc060update of course. And _REMEMBER_, if you
+stop/break/poweroff Amiga while updating, be sure, that you just killed your board.
+
+So, take care :)
+
+
+
+
+
+So, let's repeat the steps again:
+
+hardware work:
+
+1. remove the 040, put the 060 on a socket or directly.
+2. change divide resistor to new position.
+3. change black coil to new position (from 5v to 3.3v)
+
+
+software work:
+
+4. Switch on Amiga and update the flash.
+
+
+
+[ the end ]
+
+So, that is it. I already work with my new bppc x 266 / 060 x 66 mhz board, and
+AT LEAST, I can _work_ with my Amiga. Of course 060 x 300 mhz would be much better,
+because of divx problems with the classic board, but .. who cares :) 
+
+In end of the article I also give you some links obout discussion about migrating from
+040 to 060 on bppc boards. Good luck! And be aware that in case you kill your board by
+following our instructions - it will your problem!!! You cannot hold us responsible for
+any damage you caused on your own!
+ 
+Anyway, you're naturally invited to send to me some questions about that matter via
+email etc., etc.
+
+See you!
+
+
+
+
+links:
+http://www.amiga.org/modules/myalbum/photo.php?lid=2281
+http://www.amiga.org/modules/newbb/viewtopic.php?topic_id=23066&post_id=298479&order=0&viewmode=flat&pid=298344&forum=8#forumpost298479
+http://www.amiga.org/modules/newbb/viewtopic.php?topic_id=26895&forum=8#forumpost333353
+http://amigaworld.net/modules/newbb/viewtopic.php?topic_id=15732&forum=2
+
+
+flash update:
+
+here: http://vgr.tc3net.com/dce/pub/ppc/FlashUpdates-300399.lha
+or here: http://phase5.a1k.org/files/FlashUpdates-300399.lha
+or just here: http://www.google.com/search?q=FlashUpdates-300399.lha
+
+
+And once again - Good luck :)

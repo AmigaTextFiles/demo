@@ -1,0 +1,46 @@
+Short:    funny starfield in window w/gradient (68k and PPC/MOS)
+Uploader: karibu@gmx.net (Christian Rosentreter)
+Author:   karibu@gmx.net (Christian Rosentreter)
+Type:     demo/intro
+Requres:  CGX3, fast 68k and/or MorphOS/CGX5
+
+
+oldscool: starfield,1.0_________________________________________
+
+(c)2003 tokai - christian rosentreter.
+freely redistributable.
+
+
+
+archive_content_
+
+    starfield.68k     - executable for AmigaOS, 680x0
+    starfield.mos     - executable for MorphOS, PowerPC
+    starfield.readme  - this file
+
+
+
+description_
+
+    just a small fun test thing which I've wrote to try
+    out some stuff (and to learn some things too :) ).
+    
+    the 68k version is propably very useless (slow like
+    hell... even with fast morphos 68k emulation), it's
+    only compiled to show the speed differences between
+    68k and ppc. 
+
+    anyway... the _whole_ thing is propably useless... but
+    hey: it was fun to code it. :)  the frame is redrawn
+    25 times in a second (i hope)... always with rebuild
+    the whole gradient in background (a real speed 
+    killer).
+
+    anyway.... special greets fly out to ultragelb! :)
+
+    -- tokai
+
+
+
+EOF_____________________________________________________________
+    

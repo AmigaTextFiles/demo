@@ -1,0 +1,57 @@
+<HTML>
+<HEAD>
+<TITLE>TW16</TITLE></HEAD>
+<BODY BACKGROUND="..\bgnd.jpg" BGCOLOR="#000000" TEXT="#FFFFFF">
+<CENTER>
+<table border=0><TR><TD>
+<pre>
+<font color =#FFDCFF></PRE><CENTER><FONT FACE=ARIAL SIZE=5><B><I>Blitz Fix</CENTER></FONT></B></I><PRE>
+<font color =#FFE8FF>
+<font color =#FFF4FF>
+<font color =#FFF44C>                                   By
+<font color =#FFD04C>                          BootBlock/TerraForm
+<font color =#FFFFFF>
+Tut  tut  tut.   I  told  D!ck  about  the error in the _READFONTPREFS{}
+statement  for  Blitz  2  in  issue #14, but as usual, he didn't listen.
+Pah.
+<font color =#FFB8FF>
+Anyway, here's the "fixed" version ....
+<font color =#FFFF58>
+  Statement _READFONTPREFS{}
+   SHARED scfont.w
+    pref$  = "ENV:Sys/font.prefs" : fail=0
+
+    If Exists(pref$)=518
+      filepos.l=AllocMem_(518,1|65536)
+      rf.b=ReadFile(0,pref$)
+      If rf=-1
+        ReadMem 0,filepos,518 : CloseFile 0
+        scfont=Peek.w(filepos+386)
+      Else
+        fail=0
+      EndIf
+      FreeMem_ filepos.l,518
+    Else
+      fail=True
+    EndIf
+
+    If FindTask_(Chr$(171)+" IPrefs "+Chr$(187))=0 Then fail=-1
+    If fail=-1 Then scfont$="topaz.font" : scfont=8
+  End Statement
+
+<font color =#FFFFFF>
+The  line "If FindTask_ ..." checks to see if IPrefs is running, if not,
+then  obviously  the font prefs in the ENV:Sys/font.prefs won't be used,
+so  you can bet a 8-point font will be.  This "fix" just takes that into
+account.  Oh, and it's smaller, as it uses ROM calls.  Ta ta!
+
+<font color =#FFFF4C>
+!-TrF-!
+
+
+end
+</PRE>
+</TD></TR></TABLE>
+</CENTRE>
+</BODY>
+</HTML>

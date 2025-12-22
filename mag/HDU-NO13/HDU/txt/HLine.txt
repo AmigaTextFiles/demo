@@ -1,0 +1,174 @@
+==============================================  
+Historyline 1914-18  A1200 HD Launcher , Hints & Cheats
+==============================================
+
+This ancient  Blue Byte game had been in deep coma on my hard 
+disk for some time  because  it could  only be  run from the   Early 
+Startup Shell  by  emulating the ECS chipset. It is a magnificent 
+strategy game for its time with a quite tough AI and it drives you 
+crazy with its generosity for the computer player. It is very 
+addictive too - for the dedicated strategist! Read  below  about 
+how to make the computer player a sitting duck !
+
+First how to run it from Workbench by double clicking its icon:
+Let us assume that you have HD-installed the game with the 
+installer script that came with the seven disk pack. See what 
+happens when you try to double-click the Program  or  Intro  icons. 
+All you get is a scrambled screen and horrible sounds... Because 
+this game was made for the A500 system and would not run on a 
+A1200 without degrading it.
+
+I have tried it with Killaga , ECSLaunch , etc. None of them could 
+run the game. Recently, after many trials I have managed to 
+configure a start script  with TUDE (The Ultimate Degrader & 
+Enhancer by N.O.M.A.D)  that launches  HL14-18  from 
+Workbench in a jiffy! TUDE  is PD-ware and is available from  
+Aminet  (util/misc/tude.lha  26 K ).
+
+Now if you want to run this cool strategy game from your hard disk  
+and from Workbench  (and kick some  French, German or English 
+ass under the  Great War) copy the  TUDE  program , 20132 bytes 
+,(only the executable, not the icon files) to some place in your path 
+,(e.g. C:), and copy the Start icon, which is included in this archive, 
+to  HL14-18  drawer. Now there is a little trick to play here : There 
+is a file named BBStart within the c subdirectory within HL14-18 
+directory. It is used by the  Start script and it must be in the same 
+directory as the  Start  icon. So just drag it (copy) out to the 
+HL14-18 root directory.That's it, just click and enjoy.
+
+The start script  (read TUDE!) hardresets the Amiga whenever you 
+chose to quit the game, so you come back to a fresh Workbench 
+screen instead of the gray AmigaDOS screen.
+
+A few lines of advice here :
+The game uses the German keyboard layout. So if you are asked 
+to press (Y) to confirm something during the game just press (Z) 
+instead. Keyboard response is very sluggish (I don't know if it is 
+my Amiga or the game program) but  very often you have to press 
+a key  a  few  times to get  response. Especially when you will type 
+a level password,  you will have to enter it  twice to get it accepted.
+
+Now about how to CHEAT and make the computer player croak :
+You need a Hex Editor to edit soma data files.
+   
+1-If you choose to play the game as GERMANY against computer:
+The first and most important thing to do is make a copy of the 
+MAP sub-directory in the HL14-18 drawer and rename the "Copy 
+of  Map" as  "Map_org". So if you make a mistake in editing you 
+can always make a new copy from the Map_org drawer.
+
+*You can make your army stronger (and the opponent weaker)  by 
+HEX-editing some data files in the MAP subdirectory. The files to 
+edit have (.SHP) as extension. 00.SHP  to  23.SHP  are levels for 
+human player as  AXIS against computer player as ENTENTE, 
+24.SHP to 47.SHP are for human as  ENTENTE,  48.SHP  to 
+71.SHP are levels for two human players against each other.
+
+*You will get 7 Armoured Cars at your HQ by increasing the value 
+of the byte at the position (hex) 33 by one -e.g. if it is 04 make it 
+05 ,(09 to 0A,0B to 0C etc) This applies to all  (.SHP) files from 
+00.SHP to 23.SHP. This will help you to stand against the usual 
+enemy surge at the begining of the level.Do not increase this 
+value with more than 1 otherwise the map wouldn't load.
+ 
+*You can increase or decrease the  "resources income"  of the two 
+sides by first  starting a level and writing down the values that the 
+stores and factories have and then hexediting them in the 
+respective .SHP file. For example if one of your stores has 15 (0F) 
+resources,you can change this to 255 by overwriting  0F with FF. 
+Or if your opponent has "too much geld" you can take him down a 
+bit too. Thus you can create new units or refurbish cutdown units 
+rightaway which otherwise require much time to accumulate the 
+necessary amount. But do not go in excess with this Robin  
+Hooding , the game might become  "too easy to play".
+
+The most ingenious feature of this game is that; when you repair a 
+unit, which has been cut down to e.g. 1 man (vehicle or weapon) 
+but has increased its experiece points to e.g. 6, retains its 
+experience (or hitpoints -denoted by the sign beside their 
+numbers) after the repair.Those with cross sign (6 hp) are almost 
+invincible! So you multiply your power by repairing the 
+experienced units rather than creating new ones! I think this is the 
+key to success in this game if you are going to play it without 
+cheating.Tell you what, it is absolutely impossible to win any level 
+beyond level 5 without cheating or trying it hundreds of times. It is 
+like playing chess with 50-80 pieces against an unfair 
+computer.Normaly the computer allocates more units to the 
+computer player, gives them the most favorable positions,and 
+gives him more resources than the human player. OK,if you think 
+that this is the main point in computer games, go on playing 
+without cheat.
+
+By the way ,in order to "have seven armoured cars at your 
+headquarters cheat" function, you have to reset your computer 
+after a completed level. It seems to function from coldstart only, 
+especially when new types of units are introduced or some 
+messages shown at the start of a new level.
+
+2- If you choose to play the game as FRANCE against the 
+computer:
+*I have not yet discovered a trick to put extra units in the HQ, but 
+editing the French XX.SHP files are much easier and 
+straightforward. Files to edit are from 24.SHP to 47.SHP :
+
+Just edit the byte at position 43(hex). The highest value you can 
+put here is 255 (FF). So you get 255 resources right at your 
+Headquarters to start with. You can also edit the stores and the 
+factories as well.
+
+3-If you will play againts a friend :
+First of all you need a "Mouse-joystick swicth" plugged in the 
+mouse port for the mouse control in the game is absolutely 
+useless (but the mouse functions OK in the Menu screens). So 
+both players use own joystick. Edit the .SHP files 48 t0 71 in the 
+same manner as the previous ones :  Position 33 for German HQ  
+and  position 43 for French HQ.
+
+This HD patch and cheats have been successfully tested on:
+A1200 Blizzard 1230IV 50Mhz 16Mb HD 2.5" Hitachi 2.1 Gb
+A1200 Blizzard 1220 28Mhz 4Mb HD 3.5" WD 210 Mb
+Monitors: Amiga M1538S , Commodore 1084S
+
+Level Codes:
+These codes are copied from "The Cheat Collection" by Dirk 
+Stoecker available from Aminet/game/hint. All of them are correct.
+
+1 Player: GERMAN
+01 PULSE     07 ORKAN        13 GOTHA        19 COBRA
+02 CIVIL        08 FRONT        14 BALON        20 ATLAS
+03 MOUSE      09 RATIO        15 PAUSE        21 AMPER
+04 VENOM     10 PARTS        16 ELITE        22 RHEIN
+05 NOISE      11 PLANE        17 INFRA        23 CANDL
+06 RIGHT      12 FLAME        18 HILLS        24 STERN
+
+1 Player: ALLIED
+01 BATLE      07 BUMMM        13 SIGNS        19 BLADE
+02 GOOSE      08 LEVEL        14 HOUSE        20 ZORRO
+03 SPORT       09 TOXIN        15 SIGMA        21 STONE
+04 BIMBO       10 PRINC        16 SEVEN        22 MOSEL
+05 TEMPO       11 CLEAN        17 ZOMBI        23 ORDER
+06 BARON       12 XENON        18 MOVES        24 SODOM
+
+2 Players:
+01 TRACK      07 VIRUS        13 GRAND        19 SPELL
+02 HUSAR       08 BISON        14 ROYAL        20 CAMEL
+03 BEAST       09 DRUCK        15 WATER        21 FLAGS
+04 PLATE       10 TROLL        16 SKILL        22 STORY
+05 LIGHT       11 UBOOT        17 SKULL        23 SCOUT
+06 SCROL       12 DROID        18 AUDIO        24 GREEN
+
+If  you succesfully use this patch on your  Amiga  or if you have 
+difficulties with running other games from harddisk, please drop 
+me a line at my  e-mail  address below.I might have solutions for 
+other game-problems too.
+
+Let me remind you that TUDE which does a perfect job with my 
+hardware and its present configuration might not function for 
+yours.In that case you will have to experiment with TUDE's 
+parameters (tooltypes) in the Start script. Just type "tude help" att 
+the Shell prompt to get a short description of TUDE's arguments. 
+Or download tude.lha from Aminet and read Tude.doc for a 
+deeper study. I  take  up no responsibility if it does not  function on 
+your  computer  or causes any kind of harm.
+
+temel.bahadir@goteborg.mail.telia.com

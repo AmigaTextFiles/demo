@@ -1,0 +1,3237 @@
+{
+  "actions": [
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 960
+          },
+          {
+            "float_values": 3.0,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "highways_scene"
+        }
+      ],
+      "loops": 1,
+      "name": "wheels_speed_factor",
+      "start_time": 5800,
+      "type": "property_float"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 1600
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "highways_scene"
+        }
+      ],
+      "loops": 1,
+      "name": "highway_1_uv_speed",
+      "start_time": 9400,
+      "type": "property_float"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 0,
+            "uint8_values": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "butterfly_2"
+        }
+      ],
+      "loops": 1,
+      "name": "butterfly_1Action.003",
+      "start_time": 17440,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              19.897551,
+              214.018753,
+              -8.610416,
+              19.897551,
+              214.018753,
+              -8.610416,
+              19.897551,
+              214.018753,
+              -8.610416
+            ],
+            "interpolation": "bezier",
+            "time": 440
+          },
+          {
+            "float_values": [
+              21.159094,
+              214.263428,
+              -7.690951,
+              20.783855,
+              214.018753,
+              -8.267231,
+              21.568443,
+              214.53035,
+              -7.062283
+            ],
+            "interpolation": "bezier",
+            "time": 480
+          },
+          {
+            "float_values": [
+              21.879885,
+              215.741226,
+              -5.47346,
+              21.879885,
+              215.548157,
+              -6.085733,
+              21.879885,
+              215.950378,
+              -4.810164
+            ],
+            "interpolation": "bezier",
+            "time": 520
+          },
+          {
+            "float_values": [
+              21.516483,
+              215.950378,
+              -4.477811,
+              21.832363,
+              215.950378,
+              -4.477811,
+              21.200603,
+              215.950378,
+              -4.477811
+            ],
+            "interpolation": "bezier",
+            "time": 520
+          },
+          {
+            "float_values": [
+              20.261694,
+              215.701874,
+              -4.716112,
+              20.773314,
+              215.950378,
+              -4.477811,
+              19.750074,
+              215.453369,
+              -4.954413
+            ],
+            "interpolation": "bezier",
+            "time": 520
+          },
+          {
+            "float_values": [
+              18.895561,
+              214.478287,
+              -6.561109,
+              18.895561,
+              214.478287,
+              -6.561109,
+              18.895561,
+              214.478287,
+              -6.561109
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "butterfly_2"
+        }
+      ],
+      "loops": 1,
+      "name": "butterfly_1Action.003",
+      "start_time": 17480,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -74.05759,
+              -103.945302,
+              4.463755,
+              -74.05759,
+              -103.945302,
+              4.463755,
+              -74.05759,
+              -103.945302,
+              4.463755
+            ],
+            "interpolation": "bezier",
+            "time": 240
+          },
+          {
+            "float_values": [
+              -76.364186,
+              -122.423915,
+              4.504311,
+              -74.997752,
+              -113.718292,
+              4.463755,
+              -78.869314,
+              -138.384222,
+              4.578665
+            ],
+            "interpolation": "bezier",
+            "time": 440
+          },
+          {
+            "float_values": [
+              -84.968687,
+              -170.307926,
+              5.489395,
+              -82.935954,
+              -157.682895,
+              4.504311,
+              -87.186217,
+              -184.080688,
+              6.564032
+            ],
+            "interpolation": "bezier",
+            "time": 480
+          },
+          {
+            "float_values": [
+              -87.186217,
+              -188.62596,
+              26.007783,
+              -87.186217,
+              -173.923841,
+              26.007783,
+              -87.186217,
+              -205.778423,
+              26.007783
+            ],
+            "interpolation": "bezier",
+            "time": 560
+          },
+          {
+            "float_values": [
+              -69.109015,
+              -255.123575,
+              6.847121,
+              -75.29035,
+              -230.265812,
+              12.026805,
+              -63.369204,
+              -278.205763,
+              2.037415
+            ],
+            "interpolation": "bezier",
+            "time": 520
+          },
+          {
+            "float_values": [
+              -56.491077,
+              -311.621261,
+              -0.0,
+              -56.491077,
+              -311.621261,
+              -0.0,
+              -56.491077,
+              -311.621261,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "butterfly_2"
+        }
+      ],
+      "loops": 1,
+      "name": "butterfly_1Action.003",
+      "start_time": 17480,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 0,
+            "uint8_values": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "butterfly_1"
+        }
+      ],
+      "loops": 1,
+      "name": "butterfly_1Action",
+      "start_time": 17440,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              18.785229,
+              214.698166,
+              -7.095808,
+              18.785229,
+              214.698166,
+              -7.095808,
+              18.785229,
+              214.698166,
+              -7.095808
+            ],
+            "interpolation": "bezier",
+            "time": 440
+          },
+          {
+            "float_values": [
+              19.244392,
+              214.715073,
+              -5.543601,
+              18.9764,
+              214.715073,
+              -6.002419,
+              19.536747,
+              214.715073,
+              -5.043073
+            ],
+            "interpolation": "bezier",
+            "time": 480
+          },
+          {
+            "float_values": [
+              20.241161,
+              214.678543,
+              -4.672812,
+              19.871674,
+              214.678543,
+              -4.82234,
+              20.641439,
+              214.678543,
+              -4.510823
+            ],
+            "interpolation": "bezier",
+            "time": 520
+          },
+          {
+            "float_values": [
+              21.211876,
+              215.189102,
+              -4.510823,
+              20.905708,
+              215.189102,
+              -4.510823,
+              21.518044,
+              215.189102,
+              -4.510823
+            ],
+            "interpolation": "bezier",
+            "time": 520
+          },
+          {
+            "float_values": [
+              21.809601,
+              214.998215,
+              -6.020124,
+              21.809601,
+              214.998215,
+              -5.284151,
+              21.809601,
+              214.998215,
+              -6.756098
+            ],
+            "interpolation": "bezier",
+            "time": 520
+          },
+          {
+            "float_values": [
+              20.740023,
+              215.251602,
+              -8.28107,
+              20.740023,
+              215.251602,
+              -8.28107,
+              20.740023,
+              215.251602,
+              -8.28107
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "butterfly_1"
+        }
+      ],
+      "loops": 1,
+      "name": "butterfly_1Action",
+      "start_time": 17480,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -61.981754,
+              -185.093742,
+              -10.058937,
+              -61.981754,
+              -185.093742,
+              -10.058937,
+              -61.981754,
+              -185.093742,
+              -10.058937
+            ],
+            "interpolation": "bezier",
+            "time": 240
+          },
+          {
+            "float_values": [
+              -61.981754,
+              -151.858273,
+              -10.058937,
+              -61.981754,
+              -160.998774,
+              -10.058937,
+              -61.981754,
+              -135.100677,
+              -10.058937
+            ],
+            "interpolation": "bezier",
+            "time": 440
+          },
+          {
+            "float_values": [
+              -71.774162,
+              -126.944175,
+              -13.624119,
+              -67.739808,
+              -137.156605,
+              -10.058937,
+              -76.175269,
+              -115.803344,
+              -17.513408
+            ],
+            "interpolation": "bezier",
+            "time": 480
+          },
+          {
+            "float_values": [
+              -83.637545,
+              -97.050957,
+              -29.903087,
+              -83.637545,
+              -117.984469,
+              -29.903087,
+              -83.637545,
+              -72.62853,
+              -29.903087
+            ],
+            "interpolation": "bezier",
+            "time": 560
+          },
+          {
+            "float_values": [
+              -59.117603,
+              -6.815167,
+              -0.748914,
+              -59.117603,
+              -29.804316,
+              -8.204822,
+              -59.117603,
+              14.531897,
+              6.174429
+            ],
+            "interpolation": "bezier",
+            "time": 520
+          },
+          {
+            "float_values": [
+              -68.976509,
+              18.751212,
+              7.646255,
+              -64.894495,
+              -1.90531,
+              4.536446,
+              -70.860515,
+              28.284992,
+              9.081552
+            ],
+            "interpolation": "bezier",
+            "time": 240
+          },
+          {
+            "float_values": [
+              -74.077629,
+              55.79099,
+              11.1243,
+              -74.077629,
+              55.79099,
+              11.1243,
+              -74.077629,
+              55.79099,
+              11.1243
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "butterfly_1"
+        }
+      ],
+      "loops": 1,
+      "name": "butterfly_1Action",
+      "start_time": 17480,
+      "type": "rotation_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 0,
+            "uint8_values": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "highway_8_fade"
+        }
+      ],
+      "loops": 1,
+      "name": "highway_8_action.001",
+      "start_time": 17600,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 0,
+            "uint8_values": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "traffic_light_green"
+        }
+      ],
+      "loops": 1,
+      "name": "traffic_light_green_action",
+      "start_time": 17440,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.15,
+              0.15,
+              0.15
+            ],
+            "interpolation": "linear",
+            "time": 120
+          },
+          {
+            "float_values": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "traffic_light_green"
+        }
+      ],
+      "loops": 1,
+      "name": "Material.005Action",
+      "start_time": 18800,
+      "type": "diffuse_color_rgb"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 0,
+            "uint8_values": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "traffic_light_yellow"
+        }
+      ],
+      "loops": 1,
+      "name": "traffic_light_yellow_action",
+      "start_time": 17440,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              0.15,
+              0.15,
+              0.15
+            ],
+            "interpolation": "linear",
+            "time": 120
+          },
+          {
+            "float_values": [
+              1.0,
+              0.85,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 480
+          },
+          {
+            "float_values": [
+              1.0,
+              0.85,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 120
+          },
+          {
+            "float_values": [
+              0.15,
+              0.15,
+              0.15
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "traffic_light_yellow"
+        }
+      ],
+      "loops": 1,
+      "name": "Material.004Action",
+      "start_time": 18200,
+      "type": "diffuse_color_rgb"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 0,
+            "uint8_values": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "traffic_light_red"
+        }
+      ],
+      "loops": 1,
+      "name": "traffic_light_red_action",
+      "start_time": 17440,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "linear",
+            "time": 120
+          },
+          {
+            "float_values": [
+              0.15,
+              0.15,
+              0.15
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "traffic_light_red"
+        }
+      ],
+      "loops": 1,
+      "name": "Material.003Action",
+      "start_time": 18800,
+      "type": "diffuse_color_rgb"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 0,
+            "uint8_values": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "traffic_light_stand"
+        }
+      ],
+      "loops": 1,
+      "name": "traffic_light_stand_action",
+      "start_time": 17440,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 13400,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "road_sign"
+        }
+      ],
+      "loops": 1,
+      "name": "road_sign_action",
+      "start_time": 0,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 8200,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "background_flares_2"
+        }
+      ],
+      "loops": 1,
+      "name": "background_flares_2_action",
+      "start_time": 4600,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 5240,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "background_flares_1"
+        }
+      ],
+      "loops": 1,
+      "name": "background_flares_1_action",
+      "start_time": 0,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": -188.653427,
+            "interpolation": "linear",
+            "time": 2640
+          },
+          {
+            "float_values": 52.848373,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "slogan"
+        }
+      ],
+      "loops": 1,
+      "name": "slogan_action",
+      "start_time": 8360,
+      "type": "position_z"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 2640,
+            "uint8_values": 0
+          },
+          {
+            "time": 40,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "slogan"
+        }
+      ],
+      "loops": 1,
+      "name": "slogan_action",
+      "start_time": 8320,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              1.0,
+              0.389566,
+              0.016679
+            ],
+            "interpolation": "linear",
+            "time": 1320
+          },
+          {
+            "float_values": [
+              0.1,
+              0.5,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "slogan"
+        }
+      ],
+      "loops": 1,
+      "name": "slogan_matAction",
+      "start_time": 9000,
+      "type": "diffuse_color_rgb"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 0,
+            "uint8_values": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "dodge_8"
+        }
+      ],
+      "loops": 1,
+      "name": "dodge_8_action",
+      "start_time": 17040,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              37.335426,
+              210.0,
+              30.889997
+            ],
+            "interpolation": "linear",
+            "time": 920
+          },
+          {
+            "float_values": [
+              7.422159,
+              210.0,
+              -20.936993
+            ],
+            "interpolation": "linear",
+            "time": 2800
+          },
+          {
+            "float_values": [
+              -48.003239,
+              210.0,
+              -116.912666
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "dodge_8"
+        }
+      ],
+      "loops": 1,
+      "name": "dodge_8_action",
+      "start_time": 17080,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 0,
+            "uint8_values": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "highway_8"
+        }
+      ],
+      "loops": 1,
+      "name": "highway_8_action",
+      "start_time": 17040,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 560,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "dodge_7"
+        }
+      ],
+      "loops": 1,
+      "name": "dodge_7_action",
+      "start_time": 17040,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              9.572741,
+              180.0,
+              52.403984
+            ],
+            "interpolation": "linear",
+            "time": 520
+          },
+          {
+            "float_values": [
+              30.967005,
+              180.0,
+              -38.642944
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "dodge_7"
+        }
+      ],
+      "loops": 1,
+      "name": "dodge_7_action",
+      "start_time": 17080,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 560,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "highway_7"
+        }
+      ],
+      "loops": 1,
+      "name": "highway_7_action",
+      "start_time": 17040,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 2240
+          },
+          {
+            "float_values": [
+              0.9,
+              0.9,
+              0.9
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "highway_7"
+        }
+      ],
+      "loops": 1,
+      "name": "highway_7_matAction",
+      "start_time": 17720,
+      "type": "diffuse_color_rgb"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 880,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "dodge_6"
+        }
+      ],
+      "loops": 1,
+      "name": "dodge_6_action",
+      "start_time": 16440,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -46.908741,
+              150.0,
+              -19.286547
+            ],
+            "interpolation": "linear",
+            "time": 840
+          },
+          {
+            "float_values": [
+              111.84462,
+              150.0,
+              -0.753667
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "dodge_6"
+        }
+      ],
+      "loops": 1,
+      "name": "dodge_6_action",
+      "start_time": 16480,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 1760,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "highway_6"
+        }
+      ],
+      "loops": 1,
+      "name": "highway_6_action",
+      "start_time": 15840,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 2640
+          },
+          {
+            "float_values": [
+              0.8,
+              0.8,
+              0.8
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "highway_6"
+        }
+      ],
+      "loops": 1,
+      "name": "highway_6_matAction",
+      "start_time": 17320,
+      "type": "diffuse_color_rgb"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 1400,
+            "uint8_values": 0
+          },
+          {
+            "time": 280,
+            "uint8_values": 1
+          },
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 800,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "dodge_5"
+        }
+      ],
+      "loops": 1,
+      "name": "dodge_5_action",
+      "start_time": 15080,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              105.097069,
+              120.0,
+              53.767609
+            ],
+            "interpolation": "linear",
+            "time": 1360
+          },
+          {
+            "float_values": [
+              -33.922333,
+              120.0,
+              -26.481003
+            ],
+            "time": 360
+          },
+          {
+            "float_values": [
+              123.892365,
+              120.0,
+              64.602448
+            ],
+            "interpolation": "linear",
+            "time": 760
+          },
+          {
+            "float_values": [
+              -31.061108,
+              120.0,
+              -24.951683
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "dodge_5"
+        }
+      ],
+      "loops": 1,
+      "name": "dodge_5_action",
+      "start_time": 15120,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 2960,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "highway_5"
+        }
+      ],
+      "loops": 1,
+      "name": "highway_5_action",
+      "start_time": 14640,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 3960
+          },
+          {
+            "float_values": [
+              0.7,
+              0.7,
+              0.7
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "highway_5"
+        }
+      ],
+      "loops": 1,
+      "name": "highway_5_matAction",
+      "start_time": 16000,
+      "type": "diffuse_color_rgb"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 600,
+            "uint8_values": 0
+          },
+          {
+            "time": 800,
+            "uint8_values": 1
+          },
+          {
+            "time": 1200,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "dodge_4"
+        }
+      ],
+      "loops": 1,
+      "name": "dodge_4_action",
+      "start_time": 14840,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              84.520485,
+              90.0,
+              -61.316326
+            ],
+            "interpolation": "linear",
+            "time": 560
+          },
+          {
+            "float_values": [
+              24.968142,
+              90.0,
+              41.996746
+            ],
+            "time": 840
+          },
+          {
+            "float_values": [
+              79.034363,
+              90.0,
+              -51.617905
+            ],
+            "interpolation": "linear",
+            "time": 1160
+          },
+          {
+            "float_values": [
+              -6.273325,
+              90.0,
+              96.161026
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "dodge_4"
+        }
+      ],
+      "loops": 1,
+      "name": "dodge_4_action",
+      "start_time": 14880,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 3880,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "highway_4"
+        }
+      ],
+      "loops": 1,
+      "name": "highway_4_action",
+      "start_time": 13720,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 5000
+          },
+          {
+            "float_values": [
+              0.6,
+              0.6,
+              0.6
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "highway_4"
+        }
+      ],
+      "loops": 1,
+      "name": "highway_4_matAction",
+      "start_time": 14960,
+      "type": "diffuse_color_rgb"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "interpolation": "linear",
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 1120,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 840,
+            "uint8_values": 1
+          },
+          {
+            "interpolation": "linear",
+            "time": 760,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 560,
+            "uint8_values": 0
+          },
+          {
+            "interpolation": "linear",
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "dodge_3"
+        }
+      ],
+      "loops": 1,
+      "name": "dodge_3_action",
+      "start_time": 13560,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -44.026558,
+              60.0,
+              31.863443
+            ],
+            "interpolation": "linear",
+            "time": 1080
+          },
+          {
+            "float_values": [
+              108.466072,
+              60.0,
+              -56.043755
+            ],
+            "time": 880
+          },
+          {
+            "float_values": [
+              -31.731909,
+              60.0,
+              24.935879
+            ],
+            "interpolation": "linear",
+            "time": 1280
+          },
+          {
+            "float_values": [
+              68.810661,
+              60.0,
+              -33.033611
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "dodge_3"
+        }
+      ],
+      "loops": 1,
+      "name": "dodge_3_action",
+      "start_time": 13600,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 5080,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "highway_3"
+        }
+      ],
+      "loops": 1,
+      "name": "highway_3_action",
+      "start_time": 12520,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 5960
+          },
+          {
+            "float_values": [
+              0.5,
+              0.5,
+              0.5
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "highway_3"
+        }
+      ],
+      "loops": 1,
+      "name": "highway_3_matAction",
+      "start_time": 14000,
+      "type": "diffuse_color_rgb"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 2600,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "dodge_2"
+        }
+      ],
+      "loops": 1,
+      "name": "dodge_2_action",
+      "start_time": 11800,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -35.766125,
+              30.0,
+              -157.388504
+            ],
+            "interpolation": "linear",
+            "time": 2560
+          },
+          {
+            "float_values": [
+              83.337921,
+              30.0,
+              48.583065
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "dodge_2"
+        }
+      ],
+      "loops": 1,
+      "name": "dodge_2_action",
+      "start_time": 11840,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 1
+          },
+          {
+            "time": 6360,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "highway_2"
+        }
+      ],
+      "loops": 1,
+      "name": "highway_2_action",
+      "start_time": 11240,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 7320
+          },
+          {
+            "float_values": [
+              0.4,
+              0.4,
+              0.4
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "highway_2"
+        }
+      ],
+      "loops": 1,
+      "name": "highway_2_matAction",
+      "start_time": 12640,
+      "type": "diffuse_color_rgb"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 40,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "highway_1"
+        }
+      ],
+      "loops": 1,
+      "name": "highway_1_action",
+      "start_time": 17600,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "interpolation": "linear",
+            "time": 7960
+          },
+          {
+            "float_values": [
+              0.3,
+              0.3,
+              0.3
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "highway_1"
+        }
+      ],
+      "loops": 1,
+      "name": "highway_1_matAction",
+      "start_time": 12000,
+      "type": "diffuse_color_rgb"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -9.846439,
+              -9.846439,
+              -9.846439
+            ],
+            "interpolation": "bezier",
+            "time": 3200
+          },
+          {
+            "float_values": [
+              -9.846439,
+              -9.846439,
+              -9.846439
+            ],
+            "interpolation": "bezier",
+            "time": 1240
+          },
+          {
+            "float_values": [
+              -9.846439,
+              -9.846439,
+              -9.846439
+            ],
+            "interpolation": "bezier",
+            "time": 960
+          },
+          {
+            "float_values": [
+              -21.471148,
+              -18.389244,
+              -23.910994
+            ],
+            "interpolation": "bezier",
+            "time": 760
+          },
+          {
+            "float_values": [
+              -24.767083,
+              -24.336487,
+              -26.920061
+            ],
+            "interpolation": "bezier",
+            "time": 4560
+          },
+          {
+            "float_values": [
+              -26.920061,
+              -24.767083,
+              -27.73215
+            ],
+            "interpolation": "bezier",
+            "time": 1720
+          },
+          {
+            "float_values": [
+              -43.816645,
+              -34.787814,
+              -54.945202
+            ],
+            "interpolation": "bezier",
+            "time": 2120
+          },
+          {
+            "float_values": [
+              -80.000001,
+              -79.999999,
+              -80.000002
+            ],
+            "interpolation": "bezier",
+            "time": 1080
+          },
+          {
+            "float_values": [
+              -80.000002,
+              -80.000002,
+              -80.000002
+            ],
+            "interpolation": "bezier",
+            "time": 920
+          },
+          {
+            "float_values": [
+              -80.000003,
+              -80.000003,
+              -80.000003
+            ],
+            "interpolation": "bezier",
+            "time": 1040
+          },
+          {
+            "float_values": -62.999996,
+            "time": 40
+          },
+          {
+            "float_values": -15.972695,
+            "interpolation": "linear",
+            "time": 2320
+          },
+          {
+            "float_values": -11.197396,
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "camera_1"
+        }
+      ],
+      "loops": 1,
+      "name": "camera_1_action",
+      "start_time": 0,
+      "type": "rotation_x"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.0,
+              -0.0,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 3200
+          },
+          {
+            "float_values": [
+              -0.0,
+              -0.0,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 1240
+          },
+          {
+            "float_values": [
+              -0.0,
+              -0.0,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 960
+          },
+          {
+            "float_values": [
+              -0.0,
+              -0.0,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 760
+          },
+          {
+            "float_values": [
+              34.107646,
+              34.107646,
+              34.107646
+            ],
+            "interpolation": "bezier",
+            "time": 4560
+          },
+          {
+            "float_values": [
+              16.939726,
+              29.057687,
+              12.368916
+            ],
+            "interpolation": "bezier",
+            "time": 1720
+          },
+          {
+            "float_values": [
+              -0.0,
+              -0.0,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 2120
+          },
+          {
+            "float_values": [
+              -0.0,
+              -0.0,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 1080
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "bezier",
+            "time": 920
+          },
+          {
+            "float_values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "interpolation": "bezier",
+            "time": 1040
+          },
+          {
+            "float_values": 9.670001,
+            "time": 40
+          },
+          {
+            "float_values": -0.0,
+            "interpolation": "linear",
+            "time": 2320
+          },
+          {
+            "float_values": 0.0,
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "camera_1"
+        }
+      ],
+      "loops": 1,
+      "name": "camera_1_action",
+      "start_time": 0,
+      "type": "rotation_z"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              207.411234,
+              207.411234,
+              207.411234
+            ],
+            "interpolation": "bezier",
+            "time": 3200
+          },
+          {
+            "float_values": [
+              245.817689,
+              207.411234,
+              260.700179
+            ],
+            "interpolation": "bezier",
+            "time": 1240
+          },
+          {
+            "float_values": [
+              316.03553,
+              282.216969,
+              342.21764
+            ],
+            "interpolation": "bezier",
+            "time": 960
+          },
+          {
+            "float_values": [
+              395.799026,
+              375.549755,
+              411.829698
+            ],
+            "interpolation": "bezier",
+            "time": 760
+          },
+          {
+            "float_values": [
+              414.774903,
+              414.288129,
+              417.2088
+            ],
+            "interpolation": "bezier",
+            "time": 4560
+          },
+          {
+            "float_values": [
+              417.2088,
+              417.2088,
+              417.2088
+            ],
+            "interpolation": "bezier",
+            "time": 1720
+          },
+          {
+            "float_values": [
+              377.2973,
+              402.592523,
+              350.237293
+            ],
+            "interpolation": "bezier",
+            "time": 1840
+          },
+          {
+            "float_values": [
+              281.370381,
+              334.864367,
+              241.831344
+            ],
+            "interpolation": "bezier",
+            "time": 1360
+          },
+          {
+            "float_values": [
+              149.722364,
+              215.799526,
+              105.023106
+            ],
+            "interpolation": "bezier",
+            "time": 920
+          },
+          {
+            "float_values": [
+              9.793032,
+              80.308401,
+              -69.919998
+            ],
+            "interpolation": "bezier",
+            "time": 1040
+          },
+          {
+            "float_values": -240.379874,
+            "time": 40
+          },
+          {
+            "float_values": -326.168553,
+            "interpolation": "linear",
+            "time": 2320
+          },
+          {
+            "float_values": -332.889924,
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "camera_1"
+        }
+      ],
+      "loops": 1,
+      "name": "camera_1_action",
+      "start_time": 0,
+      "type": "rotation_y"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              3.268118,
+              4.537596,
+              -22.45314,
+              3.268118,
+              4.537596,
+              -22.45314,
+              3.268118,
+              4.537596,
+              -22.45314
+            ],
+            "interpolation": "bezier",
+            "time": 1000
+          },
+          {
+            "float_values": [
+              5.18801,
+              3.519937,
+              -16.562321,
+              5.18801,
+              3.519937,
+              -18.825573,
+              5.18801,
+              3.519937,
+              -10.225216
+            ],
+            "interpolation": "bezier",
+            "time": 2800
+          },
+          {
+            "float_values": [
+              -1.964189,
+              3.519937,
+              -0.592896,
+              -1.964189,
+              3.519937,
+              -10.662074,
+              -1.964189,
+              3.519937,
+              3.722466
+            ],
+            "interpolation": "bezier",
+            "time": 1200
+          },
+          {
+            "float_values": [
+              12.523868,
+              4.574543,
+              14.669803,
+              6.725779,
+              3.519937,
+              14.669803,
+              16.389259,
+              5.277613,
+              14.669803
+            ],
+            "interpolation": "bezier",
+            "time": 800
+          },
+          {
+            "float_values": [
+              22.666796,
+              7.738365,
+              6.298525,
+              17.90526,
+              4.574543,
+              8.90982,
+              26.714102,
+              10.427614,
+              4.078925
+            ],
+            "interpolation": "bezier",
+            "time": 680
+          },
+          {
+            "float_values": [
+              34.778843,
+              22.534786,
+              2.043542,
+              34.387611,
+              21.728239,
+              2.043542,
+              36.735008,
+              26.567526,
+              2.043542
+            ],
+            "interpolation": "bezier",
+            "time": 4600
+          },
+          {
+            "float_values": [
+              36.735008,
+              26.567526,
+              2.043542,
+              36.735008,
+              22.534786,
+              2.043542,
+              36.735008,
+              27.374073,
+              2.043542
+            ],
+            "interpolation": "bezier",
+            "time": 880
+          },
+          {
+            "float_values": [
+              34.778843,
+              43.976967,
+              2.043542,
+              34.778843,
+              35.867348,
+              2.043542,
+              34.778843,
+              54.298302,
+              2.043542
+            ],
+            "interpolation": "bezier",
+            "time": 1120
+          },
+          {
+            "float_values": [
+              34.778843,
+              74.693626,
+              2.043542,
+              34.778843,
+              61.98196,
+              2.043542,
+              34.778843,
+              86.043327,
+              2.043542
+            ],
+            "interpolation": "bezier",
+            "time": 1000
+          },
+          {
+            "float_values": [
+              34.778843,
+              105.410286,
+              2.043542,
+              34.778843,
+              93.568054,
+              2.043542,
+              34.778843,
+              117.252518,
+              2.043542
+            ],
+            "interpolation": "bezier",
+            "time": 1000
+          },
+          {
+            "float_values": [
+              34.778843,
+              135.359024,
+              2.043542,
+              34.778843,
+              123.36689,
+              2.043542,
+              34.778843,
+              147.351166,
+              2.043542
+            ],
+            "interpolation": "bezier",
+            "time": 1000
+          },
+          {
+            "float_values": [
+              34.778843,
+              166.843597,
+              2.043542,
+              34.778843,
+              152.27829,
+              2.043542,
+              34.778843,
+              181.408905,
+              2.043542
+            ],
+            "interpolation": "bezier",
+            "time": 1000
+          },
+          {
+            "float_values": [
+              34.778843,
+              209.974197,
+              2.043542,
+              34.778843,
+              188.53862,
+              2.043542,
+              34.778843,
+              221.120697,
+              2.043542
+            ],
+            "interpolation": "bezier",
+            "time": 520
+          },
+          {
+            "float_values": [
+              36.646667,
+              244.647568,
+              2.645194
+            ],
+            "time": 40
+          },
+          {
+            "float_values": [
+              28.983671,
+              218.263062,
+              9.234255
+            ],
+            "interpolation": "linear",
+            "time": 2320
+          },
+          {
+            "float_values": [
+              23.302896,
+              216.232285,
+              0.012936
+            ],
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "camera_1"
+        }
+      ],
+      "loops": 1,
+      "name": "camera_1_action",
+      "start_time": 0,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "time": 8400,
+            "uint8_values": 0
+          },
+          {
+            "time": 2640,
+            "uint8_values": 1
+          },
+          {
+            "time": 800,
+            "uint8_values": 0
+          },
+          {
+            "time": 0,
+            "uint8_values": 1
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "dodge_1"
+        }
+      ],
+      "loops": 1,
+      "name": "dodge_1_action",
+      "start_time": 0,
+      "type": "hide"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              11.546217,
+              0.0,
+              -0.0,
+              11.546217,
+              0.0,
+              -0.0,
+              11.546217,
+              0.0,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 3040
+          },
+          {
+            "float_values": [
+              11.546217,
+              0.0,
+              -110.498138
+            ],
+            "time": 2680
+          },
+          {
+            "float_values": [
+              11.546217,
+              0.0,
+              59.936993
+            ],
+            "interpolation": "linear",
+            "time": 760
+          },
+          {
+            "float_values": [
+              11.546217,
+              0.0,
+              -137.835892
+            ],
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "dodge_1"
+        }
+      ],
+      "loops": 1,
+      "name": "dodge_1_action",
+      "start_time": 5320,
+      "type": "position_xyz"
+    }
+  ],
+  "cameras": [
+    {
+      "far_clip_plane": 2000.0,
+      "fov_x": 49.134342,
+      "fov_y": 28.841546,
+      "hide": false,
+      "name": "camera_1",
+      "near_clip_plane": 1.0,
+      "position": [
+        3.268118,
+        4.537596,
+        -22.45314
+      ],
+      "rotation": [
+        -9.846439,
+        207.411234,
+        -0.0
+      ]
+    }
+  ],
+  "enc_info": {
+    "data_type": "ENCSCN",
+    "date": "26 Jul 2020 14:09:31",
+    "version": "2.0"
+  },
+  "loops": 1,
+  "name": "highways_scene",
+  "objects": [
+    {
+      "hide": true,
+      "name": "butterfly_2",
+      "position": [
+        19.897551,
+        214.018753,
+        -8.610416
+      ],
+      "rotation": [
+        -74.05759,
+        -103.945302,
+        4.463755
+      ]
+    },
+    {
+      "hide": true,
+      "name": "butterfly_1",
+      "position": [
+        18.785229,
+        214.698166,
+        -7.095808
+      ],
+      "rotation": [
+        -61.981754,
+        -185.093742,
+        -10.058937
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "hw_highway_8_fade",
+      "name": "highway_8_fade",
+      "order": 181,
+      "position": [
+        -118.875244,
+        210.0,
+        -216.528076
+      ],
+      "properties": {
+        "blending": "multiply"
+      },
+      "rotation": [
+        0.0,
+        30.000001,
+        0.0
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.15,
+          0.15,
+          0.15,
+          1.0
+        ],
+        "specular_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "hw_traffic_light_lamp",
+      "name": "traffic_light_green",
+      "position": [
+        20.226292,
+        214.134094,
+        -6.6888
+      ],
+      "rotation": [
+        0.0,
+        30.000001,
+        0.0
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          0.15,
+          0.15,
+          0.15,
+          1.0
+        ],
+        "specular_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "hw_traffic_light_lamp",
+      "name": "traffic_light_yellow",
+      "position": [
+        20.226292,
+        215.084091,
+        -6.6888
+      ],
+      "rotation": [
+        0.0,
+        30.000001,
+        0.0
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          1.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "specular_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "hw_traffic_light_lamp",
+      "name": "traffic_light_red",
+      "position": [
+        20.226292,
+        216.034088,
+        -6.6888
+      ],
+      "rotation": [
+        0.0,
+        30.000001,
+        0.0
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "hw_traffic_light_stand",
+      "name": "traffic_light_stand",
+      "position": [
+        20.006226,
+        211.173981,
+        -7.069964
+      ],
+      "rotation": [
+        0.0,
+        30.000001,
+        0.0
+      ]
+    },
+    {
+      "material": {
+        "diffuse_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "specular_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "hw_backdrop_fill",
+      "name": "backdrop_fill",
+      "position": [
+        -2.09836,
+        -0.20029,
+        -0.0
+      ],
+      "properties": {
+        "blending": "additive"
+      }
+    },
+    {
+      "material": {
+        "diffuse_color_rgba": [
+          0.5,
+          0.5,
+          0.5,
+          1.0
+        ],
+        "specular_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "hw_backdrop_hole",
+      "name": "backdrop_hole",
+      "position": [
+        -2.09836,
+        -0.20029,
+        -0.0
+      ]
+    },
+    {
+      "mesh_name": "hw_road_sign",
+      "name": "road_sign",
+      "order": 115,
+      "position": [
+        15.55,
+        0.0,
+        -45.0
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "hw_background_flares_2",
+      "name": "background_flares_2",
+      "position": [
+        2.661033,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "mesh_name": "hw_background_flares_1",
+      "name": "background_flares_1"
+    },
+    {
+      "mesh_name": "hw_dodge_1_light",
+      "name": "dodge_1_light",
+      "position": [
+        11.546217,
+        0.0,
+        -0.0
+      ],
+      "properties": {
+        "blending": "additive"
+      }
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          1.0,
+          0.389566,
+          0.016679,
+          1.0
+        ],
+        "specular_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "hw_slogan",
+      "name": "slogan",
+      "order": 111,
+      "position": [
+        7.772452,
+        0.0,
+        -188.653427
+      ],
+      "properties": {
+        "blending": "additive"
+      }
+    },
+    {
+      "mesh_name": "hw_dodge_shadow",
+      "name": "dodge_1_shadow",
+      "position": [
+        11.546217,
+        0.0,
+        -0.0
+      ],
+      "properties": {
+        "blending": "multiply"
+      }
+    },
+    {
+      "hide": true,
+      "mesh_name": "hw_dodge",
+      "name": "dodge_8",
+      "order": 183,
+      "position": [
+        37.335426,
+        210.0,
+        30.889997
+      ],
+      "rotation": [
+        0.0,
+        30.000001,
+        0.0
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "specular_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "hw_highway_1",
+      "name": "highway_8",
+      "order": 180,
+      "position": [
+        5.167711,
+        210.0,
+        -1.679371
+      ],
+      "rotation": [
+        0.0,
+        30.000001,
+        -0.0
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "hw_dodge",
+      "name": "dodge_7",
+      "order": 173,
+      "position": [
+        9.572741,
+        180.0,
+        52.403984
+      ],
+      "rotation": [
+        0.0,
+        346.73999,
+        0.0
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "specular_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "hw_highway_1",
+      "name": "highway_7",
+      "order": 170,
+      "position": [
+        14.710594,
+        180.0,
+        -19.873116
+      ],
+      "rotation": [
+        0.0,
+        166.739589,
+        0.0
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "hw_dodge",
+      "name": "dodge_6",
+      "order": 163,
+      "position": [
+        -46.908741,
+        150.0,
+        -19.286547
+      ],
+      "rotation": [
+        0.0,
+        263.368789,
+        -0.0
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "specular_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "hw_highway_1",
+      "name": "highway_6",
+      "order": 160,
+      "position": [
+        -6.095081,
+        150.0,
+        -25.999048
+      ],
+      "rotation": [
+        0.0,
+        83.369002,
+        0.0
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "hw_dodge",
+      "name": "dodge_5",
+      "order": 153,
+      "position": [
+        105.097069,
+        120.0,
+        53.767609
+      ],
+      "rotation": [
+        0.0,
+        60.000002,
+        -0.0
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "specular_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "hw_highway_1",
+      "name": "highway_5",
+      "position": [
+        57.134895,
+        120.0,
+        39.486202
+      ],
+      "properties": {
+        "0rder": 150
+      },
+      "rotation": [
+        0.0,
+        60.000002,
+        -0.0
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "hw_dodge",
+      "name": "dodge_4",
+      "order": 143,
+      "position": [
+        84.520485,
+        90.0,
+        -61.316326
+      ],
+      "rotation": [
+        0.0,
+        149.999997,
+        -0.0
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "specular_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "hw_highway_1",
+      "name": "highway_4",
+      "order": 140,
+      "position": [
+        92.669777,
+        90.0,
+        -52.19265
+      ],
+      "rotation": [
+        0.0,
+        329.999989,
+        -0.0
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "hw_dodge",
+      "name": "dodge_3",
+      "order": 133,
+      "position": [
+        -44.026558,
+        60.0,
+        31.863443
+      ],
+      "rotation": [
+        0.0,
+        299.999995,
+        0.0
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "specular_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "hw_highway_1",
+      "name": "highway_3",
+      "order": 130,
+      "position": [
+        18.542004,
+        60.0,
+        -17.207581
+      ],
+      "rotation": [
+        0.0,
+        120.000003,
+        -0.0
+      ]
+    },
+    {
+      "hide": true,
+      "mesh_name": "hw_dodge",
+      "name": "dodge_2",
+      "order": 123,
+      "position": [
+        -35.766125,
+        30.0,
+        -157.388504
+      ],
+      "rotation": [
+        0.0,
+        -149.999997,
+        0.0
+      ]
+    },
+    {
+      "hide": true,
+      "material": {
+        "diffuse_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "specular_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "hw_highway_1",
+      "name": "highway_2",
+      "order": 120,
+      "position": [
+        68.49044,
+        30.0,
+        -0.0
+      ],
+      "rotation": [
+        0.0,
+        30.000001,
+        -0.0
+      ]
+    },
+    {
+      "material": {
+        "diffuse_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "specular_color_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "mesh_name": "hw_highway_1",
+      "name": "highway_1",
+      "order": 110
+    },
+    {
+      "mesh_name": "hw_dodge",
+      "name": "dodge_1",
+      "order": 113,
+      "position": [
+        11.546217,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "mesh_name": "hw_dodge_wheels",
+      "name": "dodge_1_wheels_front",
+      "position": [
+        11.546217,
+        0.705086,
+        -2.847946
+      ]
+    },
+    {
+      "mesh_name": "hw_dodge_wheels",
+      "name": "dodge_1_wheels_back",
+      "position": [
+        11.546217,
+        0.705086,
+        2.673085
+      ]
+    }
+  ],
+  "properties": {
+    "highway_1_uv_speed": 1.0,
+    "wheels_speed_factor": 1.0
+  },
+  "time": 19960
+}

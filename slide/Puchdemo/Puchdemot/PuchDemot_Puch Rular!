@@ -1,0 +1,18 @@
+;  PUCHSCRIPT Modell Buggigt som fan antar jag.
+;$ver: Senaste!
+failat 21
+
+cd anim
+mysticview LISTFILE fillistan PRESETFILE /mysticprefs bgcolor=000000 scropenmode=custom scrwidth=320 scrheight=256 depth=8 winsizemode=full backdrop=yes sortmode=none slideshow=yes slidedelay=15
+if warn
+echo "Megafel!! Progget Mysticview ligger inte i stigen. Fixa det på nåt sätt! Gurka svingpjatt börvärde."
+quit
+endif
+
+cd /
+cd bilder
+mysticview LISTFILE fillistan PRESETFILE /mysticprefs bgcolor=000000 scropenmode=custom scrwidth=320 scrheight=256 depth=8 winsizemode=full backdrop=yes sortmode=none slideshow=no
+
+
+
+;--- THE END

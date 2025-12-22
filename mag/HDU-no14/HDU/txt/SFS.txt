@@ -1,0 +1,96 @@
+===========================================
+Short:    Smart Filesystem 4th BETA version
+Author:   hjohn@xs4all.nl
+Version:  0.85
+===========================================
+
+This filesystem is BETA -- this means it is not finished and
+may potentially destroy all your data.
+
+USE AT YOUR OWN RISK!
+
+For more information, see 
+http://www.xs4all.nl/~hjohn/SFS
+
+-----------
+What's new?
+-----------
+4 August 1998, changes for version 0.85:
+- Requesters which ask for a SFS disk to be inserted will now be
+retried automatically when a disk is actually inserted.
+- SFS now guarantees data is commited atleast every 20 
+seconds, even if the disk is being accessed continuously.
+- BUGFIX : The filesystem no longer gets confused when it thinks 
+a disk is inserted twice. This fixes problems with    
+omniscsi.device.
+- BUGFIX : Renaming a file to an empty name with the workbench 
+now returns 'object name invalid' instead of 'object not found'. 
+- BUGFIX : Creating a dir with the same name as a file no longer 
+deletes the file.
+- BUGFIX : 100 character limit is now enforced, instead of 
+allowing you to create names of any length.
+- Copyback mode added to internal caching system. This helps a 
+lot to speed up small write operations. I also tweaked the cache     
+system a bit for performance.
+- BUGFIX : Creating files larger than 32 MB using SetFileSize() 
+now works correctly. This fixes a problem with creating large     
+file disks using Shapeshifter.
+- BUGFIX : Write protection status is now checked each time a 
+disk is inserted, not just at startup.
+- BUGFIX : Reading directories has been made a bit more robust 
+which will fix problems with some programs.
+- Error messages returned by SFS when there was an error 
+accessing the device are improved.
+- Included SFScheck in the archive -- this is a program to check 
+the structure of your SFS disk.  It will report any errors it finds but 
+won't make any modifications. Read its docs and use it reguraly if 
+you value your data!
+
+-----------
+Introduction
+-----------
+Smart Filesystem is a new filesystem for your Amiga. A 
+filesystem's main purpose is to store files on a disk in such a way 
+that they can be located and used quickly.  How this is done is up 
+to the filesystem.  The way information is stored on your disk has 
+a large impact on speed and space efficiency, and so these 
+factors can vary a lot from filesystem to filesystem. Smart 
+Filesystem was created to provide you with an alternative to the 
+Fast Fileystem. Smart Filesystem makes more efficient use of 
+your disk space, has better performance in most areas and will 
+allow for new features never seen before in an Amiga filesystem.
+
+-----------
+Features
+-----------
+* Fast reading of directories.
+* Fast seeking, even in extremely large files.
+* Blocksizes of 512 bytes up to 32768 bytes (32 kB) are 
+supported.
+* Supports large partitions. The limit is about 2000 GB, but it can 
+be more depending on the blocksize.
+* Support for partitions larger than 4 GB or located (partially)    
+beyond the 4 GB barrier on your drive.  There is support for the 
+New Style Devices which support 64 bit access, the 64-bit    
+trackdisk commands and SCSI direct.
+* The length of file and directory names can be 100 characters.
+* The size of a file is limited to slightly less than 2 GB.
+* Modifying data on your disk is very safe.  Even if your system is 
+resetted, crashes or suffers from powerloss your disk will not be 
+corrupted and will not require long validation procedures before 
+you will be able to use it again.  In the worst case you will only 
+lose the last few modifications made to the disk.
+* There is a built-in configurable read-ahead cache system which 
+tries to speed up small disk accesses. This cache has as a 
+primary purpose to speed up directory reading but also works very 
+well to speed up files read by applications which use small 
+buffers.
+* Disk space is used very efficiently.
+* Supports Notification and Examine All.
+* Supports Soft links (hard links are not supported for now).
+* Using the SFSformat command you can format your SFS 
+partition with case sensitive or case insensitive file and directory 
+names. Default is case insensitive (like FFS).
+
+For more information, see http://www.xs4all.nl/~hjohn/SFS or read
+the included documentation.

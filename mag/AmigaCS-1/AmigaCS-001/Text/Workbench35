@@ -1,0 +1,65 @@
+                           @{c 89FF00} Jaké CPU bude v budoucích Amigách?@{c}
+                           @{c 89FF00}¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+   Tyto   Q&A  (otázky&odpovëdi)  zaslal  Joe  Torre  (Amiga,  Inc.)  koncem  ledna  Petru
+Tyschtchenkovi (Amiga International).
+
+        @{c 498800}************************************************************************@{c}
+
+@{c 89FF00}Q. Jaké CPU se nejspíîe pouùije v budoucích Amigách, 680x0 nebo PPC?@{c}
+A. Oba  dva.  Nové  Amigy  budou  mít  680x0  kvûli  sluçitelnosti,  PPC kvûli  rychlosti.
+Flexibilita  architektury Amigy dovoluje pouùít PPC çipy pro výpoçetnë nároçné úlohy, jako
+je  rendering,  (de)komprese,  (de)kódování apod. Procesor 680x0 poskytne 100% softwarovou
+kompatibilitu, PowerPC poskytne potêebný výkon. Çím více z nás upgraduje na 680x0+PPC, tím
+bude víc a víc programû, co vyuùijí sílu PPC.
+
+@{c 89FF00}Q. Bude potêeba k bëhu Workbenche 3.5 PowerPC akcelerátor?@{c}
+A. Urçitë ne. Upgrade systému bude pro existující stroje, stejnë jako pro nové. Pêejeme si
+maximalizovat  hodnotu  a  dosah Workbenche 3.5, aby vîichni uùivatelé mohli upgradovat na
+tuto verzi.
+
+
+@{c 89FF00}Q. Proç bude WB 3.5 chodit pouze na 680x0, kdyù na PPC by urçitë bëùel rychleji?@{c}
+A. Kvûli  podpoêe  souçasné  Amiga-komunity.  Aï  uù  bude  AmigaOS portován  na jakýkoliv
+procesor  bude  rychlejîí,  çím  rychlejîí  bude  daný  procesor.  Ale pro trh je dûleùitý
+pêedevîím  ças.   Nainstalovat  PPC  akcelerátor  trvá  maximálnë  20  minut, ale portovat
+operaçní  systém  pro PPC je práce na celý rok.  Upgrade WB3.5 bude pro stovky tisícû dnes
+pouùívaných  Amig  na bázi procesoru 680x0, aï jiù s PPC koprocesorem, nebo bez nëj.  Více
+uùivatelû radëji vyuùije 680x0 upgrade dêíve, neù PPC upgrade pozdëji.
+
+
+@{c 89FF00}Q. Bude tedy PPC verze AmigaOS?@{c}
+A. Budou  vydávány  licence na portování AmigaOS na Alpha, PPC, MIPS apod. Tyto  procesory
+mohou  být ideální pro prûmyslové (neamigovské) aplikace. Takovéto portované systémy budou
+bezpochyby velice rychlé, zvláîtë v porovnání s ostatními, dnes pouùívanými systémy. Avîak
+tyto   systémy   nemohou   být   povaùovány  jako  Amiga-kompatibilní,  pokud  neposkytují
+kompatibilitu s chipsetem a 680x0 emulací.
+
+
+@{c 89FF00}Q. A co procesor Motorola ColdFire?@{c}
+A. ColdFire  je  s  680x0 êadou kompatibilní ménë  neù  na 30%.  Oproti tomu nabízí nízkou
+cenu  a  vysoký  výkon.   U  ColdFire  je zredukována instrukçní sada, která sice procesor
+zrychlí,  ale  postrádá  vîechny bitové operace, které jsou pro AmigaOS kritické.  Pouùití
+ColdFire   by   vyùadovalo   kompletní  pêepsání  çi  pêekompilování  AmigaOS  a  bylo  by
+nekompatibilní s existujícími komerçními programy a také celým archivem Aminet.
+
+
+@{c 89FF00}Q. Bude Amiga Inc. vyrábët nové Amigy?@{c}
+A. Ne,  Amiga, Inc.  nebude vyrábët nové stroje. Nové stroje pêíjdou od spoleçností, které
+dostanou  licence  od  Amiga  International.  Petro byl velmi úspëîný v prodeji licencí na
+Amiga   technologii.  Podívejte  se  na  stránku  »http://www.amiga.de«  na  dlouhý  výpis
+spoleçností,  které  budou  vyrábët  nové  modely  Amig.  Tyto  spoleçnosti pêinesou Amize
+vylepîení  jako  RTG,  AHI, PPC, WideSCSI i PCI! Napiîte tëmto spoleçnostem, co by jste si
+pêáli  mít v nových Amigách.  Oni budou vyrábët pouze takové Amigy, které si budete pêát a
+které budete kupovat.
+
+@{d B5FFDF}
+   Co  to  vîechno  znamená?   Osobnë  si  myslím,  ùe Gateway2000 nehodlá uvolnit pûvodnë
+slibované  finance  ani  na  najmutí týmu 20-30 specialistû na vývoj nové Amigy.  Mateêská
+spoleçnost se tedy zjevnë snaùí pêesunout veîkeré náklady (i odpovëdnost) na bedra têetích
+spoleçností.
+
+   V  tom  by nebylo nic tak îpatného, têetí spoleçnosti jsou obvykle k zákazníkovi mnohem
+blíùe,  ale  je tu nesmírné riziko têíîtëní vývoje a nekompatibility klonû mezi sebou.  Na
+oficiální prohláîení si budeme muset poçkat do února.
+
+                                          @{c 89FF00}Shaman@{c}

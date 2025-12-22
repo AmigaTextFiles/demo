@@ -1,0 +1,5 @@
+#!/bin/bash
+
+###  -lfreetype2
+
+i386-aros-gcc -o ../BoingDemo ./boing.c ./scrollText.c ./sprite.c -lSDL_mixer -lSDL_image -lSDL_draw -lSDL -ltiff -ljpeg -lpng_nostdio -lSDL_ttf -lmikmod -lwebp -lpng -lft2 -lttf -lz -lm -lamiga 

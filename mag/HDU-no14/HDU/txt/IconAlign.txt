@@ -1,0 +1,31 @@
+===========================================
+Short:    Arranges Workbench icons orderly
+Author:   olk@johann.nbg.sub.org (Oliver Knorr)
+Requires: AmigaOS 2.04
+===========================================
+
+If you ever tried the "Clean Up" feature of Workbench and were 
+not satisfied with the result, this program might help you.
+
+In my opinion, "Clean Up" has several problems:
+* often it changes the order of the icons in a random way instead 
+of just aligning them
+* it always tries to align icons in vertical columns first
+* horizontal aligned icons are aligned at their top edge instead of 
+their bottom edge, which gives you non-aligned filenames if the      
+icons have different sizes
+* you can only clean up all icons in a window at once
+* you can not give a starting position for the alignment
+
+IconAlign has none of these problems. It allows you to specify a 
+starting icon that remains unchanged and a number of other 
+icons that will be aligned according to the starting icon. You can 
+have either horizontal or vertical alignment at your choice and 
+optionally equal distances between the icons in the other 
+dimension (which will also sort the icons in the order you have 
+named them). Horizontal alignment is at the bottom edge of the 
+icons (to give you aligned filenames), vertical aligment is 
+centered (like "Clean Up").
+
+IconAlign is not as easy to use as "Clean Up", but it will give 
+much nicer results.

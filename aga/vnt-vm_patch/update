@@ -1,0 +1,7 @@
+cd data/gfx
+copy doodie_friend.xpk /
+delete #?
+cd /
+delete gfx
+xpk -m HFMN tekst.eng
+rename tekst.eng tekst.xpk

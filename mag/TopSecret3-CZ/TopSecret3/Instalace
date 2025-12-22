@@ -1,0 +1,50 @@
+echo " "
+echo " "
+Echo "Instalace fy. *e[32mAdventronic System v2.0*e[0m"
+Echo "-------------------------------------"
+Echo " "
+Echo "Napis cestu, kam se ma Top Secret 3  nainstalovat:"
+SET >nil: DH ?
+CD $DH
+echo ""
+Echo "Instaluji Top Secret..."
+Echo " "
+MakeDir TOP_SECRET3
+CD TOP_SECRET3/
+copy >nil: df0:C to DH0:C
+Echo "7% hotovych..."
+Copy >nil: df0:DEVS to DH0:DEVS
+Echo "14% hotovych..."
+Copy >nil: df0:LIBS to DH0:LIBS
+MakeDir Fonts
+Echo "21% hotovych..."
+Copy >nil: df0:Fonts to Fonts/ all
+MakeDir Grafika
+Echo "28% hotovych..."
+Copy >nil: df0:Grafika/ to grafika/ all
+MakeDir Recenze
+Echo "35% hotovych..."
+Copy >nil: df0:Recenze/ to Recenze/ all
+MakeDir Hudba
+Echo "42% hotovych..."
+Copy >nil: df0:Hudba/ to Hudba/ all
+Echo "49% hotovych..."
+MakeDir Program 
+Copy >nil: df0:Program/ to Program/ all
+Copy >nil: df0:CtiMne! to ""
+Echo "56% hotovych..."
+Copy >nil: df0:CtiMne!.info to ""
+Echo "62% hotovych..."
+Copy >nil: df0:Intro to ""
+Echo "68% hotovych..."
+Copy >nil: df0:Intro.info to ""
+Echo "74% hotovych..."
+Copy >nil: df0:TopSecret to ""
+Echo "80% hotovych..."
+Copy >nil: df0:Topsecret.info to ""
+Echo "86% hotovych..."
+Copy >nil: df0:TS to ""
+Echo "93% hotovych..."
+Copy >nil: df0:Ikona/TOP_SECRET3.info to $DH
+Echo "100% hotovych..."
+Echo "*nInstalace dokoncena!"

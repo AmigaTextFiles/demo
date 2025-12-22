@@ -1,0 +1,34 @@
+This file contains any messages produced by compilers while
+running configure, to aid debugging if configure makes a mistake.
+
+configure:563: checking for a BSD compatible install
+configure:616: checking whether build environment is sane
+configure:673: checking whether make sets ${MAKE}
+configure:719: checking for working aclocal
+configure:732: checking for working autoconf
+configure:745: checking for working automake
+configure:758: checking for working autoheader
+configure:771: checking for working makeinfo
+configure:792: checking host system type
+configure:813: checking target system type
+configure:835: checking for gcc
+configure:948: checking whether the C compiler (gcc  ) works
+configure:964: gcc -o conftest    conftest.c  1>&5
+configure:990: checking whether the C compiler (gcc  ) is a cross-compiler
+configure:995: checking whether we are using GNU C
+configure:1004: gcc -E conftest.c
+configure:1023: checking whether gcc accepts -g
+configure:1059: checking for c++
+configure:1091: checking whether the C++ compiler (c++  ) works
+configure:1107: c++ -o conftest    conftest.C  1>&5
+configure:1133: checking whether the C++ compiler (c++  ) is a cross-compiler
+configure:1138: checking whether we are using GNU C++
+configure:1147: c++ -E conftest.C
+configure:1166: checking whether c++ accepts -g
+configure:1200: checking for working const
+configure:1254: gcc -c -g -O2  conftest.c 1>&5
+configure:1337: checking for sdl-config
+configure:1372: checking for SDL - version >= 1.1.0
+configure:1457: gcc -o conftest -g -O2 -noixemul -I/usr/include/SDL   conftest.c  -L/usr/lib -noixemul -lSDL -lc -lm -lc 1>&5
+configure:1538: checking for OpenGL support
+configure:1551: gcc -c -g -O2 -noixemul -I/usr/include/SDL  conftest.c 1>&5

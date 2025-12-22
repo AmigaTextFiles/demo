@@ -1,0 +1,282 @@
+With the development of Deluxe Paint, Electronic Arts
+(EA)  introduced  the  ×031ILBM×  standard  for  graphics.
+If  the  symbol  for   every   true     æ14æ
+Amigian   is   the Boingball...  If   
+every  true Amiga soul is summoning   
+the abstract spirit... Then, for me
+Deluxe   Paint   is   definety  the   
+concrete bible!                       
+Time for starting this interview with 
+one of the coders behind Deluxe Paint 
+×008                                      
+Erik:  Hi  Dallas! Nice of you to taking the time for
+this interview. Can you please describe yourself. You
+may   paint   a   portrait   as   well   (=×
+
+Dallas:  I'm  basically  a  40  year-old   multimedia
+software engineer and musician who lives in the Santa
+Cruz  mountains  close  to  Apple  Computer  with his
+daughter  Michelle,  wife  Masumi and a West Highland
+White   Terrier   named   Terri.
+×008Erik:  How did you got in touch with Electronic Arts?×
+
+Dallas:  A recruiter contacted me. At the time, I was
+working  for  a  Xerox  PARC  spinoff called Metaphor
+Computer Systems in their Text and Graphics division.
+EA  already knew me through the tools and utilities I
+had  released  through  Fred  Fish,  who maintained a
+large  library  of  open-source Amiga software. Up to
+that  point,  the  most  popular  Amiga program I had
+written  was  a  shareware  hex  editor called NewZAP
+which   actually   paid   for   my   first   Amiga.
+
+×008
+Erik:  Thats nice news! Via Fred Fish, did you get in
+contact   to   other   Amiga   friends?×
+
+Dallas:  Yes,  people were very good about supporting
+shareware  and improving other people's code. Most of
+the programs that Fred Fish distributed were released
+as  public domain, which shows what a great community
+spirit  there  was. I lived not far from the original
+Amiga,  Inc.  offices  in  Los  Gatos, so between the
+tools,  the  Devcons,  the  First  Amiga Users' Group
+meetings  and  the shows, I met a lot of great people
+and   most   of   the   original   creators.
+
+×008
+Erik:  Do  you  still use the Amiga, or at least have
+you   used   'your   own'   painting   program?×
+
+Dallas:  Interestingly,  I  had  written   a   Deluxe
+Paint-inspired  program  while  at  Metaphor, and had
+already  interviewed   for   two   paint   programmer
+positions  before working there! Paint was kind of in
+my  blood,  it was the most exciting thing to do, and
+nearly everything I've done since has been either art
+or   music-releated.
+
+I  do  break  out  DPaintV on Cloanto's Amiga Forever
+once  in  awhile  to  satisfy my Amiga fix. The paint
+program  I  use  most  often  these  days  is   Corel
+Photo-Paint,  which  was  good enough to make me jump
+ship  around  1996.  Few   paint   programs   support
+animation;  I  still  like  this  one and try to keep
+abreast   of   updates.
+
+×008
+Erik:  How  was  it  to  work  at  EA?   Your   team?×
+
+Dallas: I worked in the Tools division, which created
+everything  that  wasn't  a  game - this included the
+æ09æ           Deluxe (Paint, Music,Video, etc) series of
+           multimedia   products   and   the   Studio
+           (Studio/8, Studio/24) line of art products
+           for  the  Mac  and  Windows.  My team  got
+           smaller  and  smaller  as    EA    started
+           abandoning   productivity  apps   for  the
+           greener  grass  of  titles  for  the  Sega
+Genesis  and what would  later  become the  EA Sports 
+franchise.   Our  team  was  quite  special,  (and at
+times,  quite  difficult) but it was also a very hard
+time  because  we  knew the end was near. By the time
+DPaint  V  shipped,  all  that was left of Tools were
+myself,  co-author  Lee  Ozer,  and   a   couple   of
+producers.  Deluxe  Paint  life  support,  basically.
+
+I don't think that EA could ever have a small product
+team  like  that  again,  considering the millions it
+costs  to  create a product today. Trip Hawkins, EA's
+founder,  left to start 3DO during this time and in a
+lot  of  ways  that was the dividing line between the
+>original<   company   and   now.
+
+×008
+Erik:  So you would be suprised if EA developes a new
+version  for Amiga OS 4.0? Or maybe sells the license
+to   someone   else   for   new   development?×
+
+Dallas:  That  would  be  up to EA UK, I think. Every
+once  in  a  while  I  hear  rumors that somebody has
+approached  the  Legal  Dept  at EA's US headquarters
+about  licensing DPaint in some way, but they tend to
+get  swept  under  the  rug because they've forgotten
+what  it  was all about. With enough money anything's
+possible,  but it would take persistence and legwork.
+
+×008
+Erik:  When  you  started with Deluxe Paint IV, which
+was  the  first  version  with  AGA,  how much of the
+project  time  was  analysing,  designing, coding and
+testing?×
+
+Dallas: I came in on the tail end of Deluxe Paint IV,
+working  on  the  4.1  patch.  It was a great time to
+work,  because  the  Amiga 3000 had just shipped with
+Amiga  OS  2.0,  and  we had a prerelease motherboard
+containing  the  unreleased  AAA chipset (think A3000
+with  AGA  and  a  DSP  socket).  It  was called >The
+Plywood<,  because  it  was  screwed  onto a piece of
+plywood  along  with  a  power supply and kept hidden
+inside   a   cardboard   box.
+
+I'm  happy  to  say  that  very little time was spent
+designing,  because  both Lee and I knew exactly what
+we wanted from Day One – to get DPaint ported over to
+Amiga  OS  2.0/3.0,  add  ECS  and  AGA  support, and
+(particularly  for  me)  make  the program gracefully
+handle  images  created  on  different platforms. The
+entire process took about six months, and helped make
+the   A1200   a   very   successful   release.
+
+×008
+Erik:  The  creator  of Deluxe Paint, Dan Silva, made
+the first 3 Deluxe Paints. Did you get any picture of
+him   how   he   was   like?×
+
+Dallas:  I  only  saw Dan three times; twice at First
+Amiga  Users  Group  meetings,  and once when he came
+back  to  say  -hi-  while  working  at  Autodesk. My
+impression  was  of  this  tall, amazingly tanned guy
+with  partially  Greek  or Middle-Eastern features. I
+was  introduced  as  the new Deluxe Paint programmer,
+and  when we met he just kinda stared at me and I got
+the  impression  he  was thinking “who’s this guy and
+what's  he  doing  to  my  baby?” Very protective. Or
+maybe  he  was thinking of coming back to EA, I don't
+know!
+
+×008
+Erik:  Did some from the team implemented some hidden
+messages  in  Deluxe  Paint  IV  or  V  (until  today
+unknown?)   :-)×
+
+Dallas:  Not  that I can recall, lol! No easter-eggs,
+at  least  from IV on. The closest thing to a >public
+secret<  we  had  was  the  serial  number encryption
+mechanism,  and   a   story   that   Lee   Ozer   had
+booby-trapped  the source code so we could tell where
+it  came   from   in   case   any   of   it   leaked.
+
+×008Erik:  Which  piece  of  software, algorithm, tool of
+Deluxe   Paint   are   you   most   proud   of?×
+                                          æ11æ
+Dallas:  There  are  a  number  of  things
+that  I was especially  fond  of,  such as
+the Airbrush  in  DpaintV,  the  4.5   AGA
+screen  &  mode  requester,  AnimPrinting,
+things  like  that. Some of  the less-sexy
+features were  actually   quite  difficult
+to   do  -   like   the   >best choice< - 
+algorithm   for   determining   what Amiga
+mode could best open  an  arbitrary image,
+per-frame  palettes,  and  integrating the
+ASL requester library into   the  product.
+                                          
+My  personal   best was  writing  the  DPV
+Player   utility    that    replaced   the
+(essentially    unchanged   since  version
+three) original. The original was based on
+a stripped-down  version of DPaint, and if
+you consider that the new one was less than half the 
+size, several times  as  fast,  ARexx-automatable, 
+and could stream from  disk  -  it  was  really  
+quite an achievement.
+
+In  a  way,  I was trying to out-do Apple's QuickTime
+and  Video  For  Windows, both of which were in their
+infancy  and  getting a whole lot of media attention.
+Mac  users   were   thrilling   over   these   little
+postage-stamp size animations while we were streaming
+full-screen  full-motion  video  on the Amiga. It was
+great.
+
+×008
+Erik:  One thing I didn't like with Deluxe Paint, was
+that  there  was no big UNDO-buffer. With other words
+you  could just go back one step back. Was this never
+up   in   discussion   when   developing?×
+
+Dallas:  Not  really!  We were very much in tune with
+our  beta  testers,  and took customer feedback quite
+seriously  but  >unlimited  Undo<  was  an   uncommon
+feature  around 1993 and wasn't high on people's wish
+lists.  Today with more memory and hard disk space to
+work with, it would be a >must< feature. More testers
+were   demanding  ×031ARexx×,   ARexx  possibly  for  the
+futurism  inherent  in  the  idea  and partly to play
+catch-up  with  other products. But when it was done,
+how   many   people   used   it   really?
+
+×008
+Erik:  Well ARexx was quite popular in the mid of the
+80's.  In fact I started to code it aswell. Do you by
+the  way find any other coding languages interesting?
+Perhaps   still   coding   sometimes?×
+
+Dallas:  Ah, I guess that after C++ the new languages
+I  tinkered  with  were  scripting   languages   like
+JavaScript  and  Perl.  I  got  sucked  into  Windows
+programming  from  Windows '95 on, and that's a world
+in  itself.  After leaving Electronic Arts I earned a
+master's degree in Music Engineering (DSP) and helped
+develop  another  popular product, SONAR, for a music
+sequencer  company  called Cakewalk in Massachusetts.
+
+×008
+Erik:  If  Im  not  wrong, you actually got DP IV AGA
+when buying an A1200. Due to the Software piracy, did
+this   affect   your   salary?   :-)×
+
+Dallas: Not at all! Commodore licensed the right from
+EA  to  bundle  DeluxePaint 4.5 AGA with the original
+A1200s  for  $1.5 million (US) . At the time that was
+considered  quite  a coup, because C= was threatening
+to  go  with  Personal  Paint if we didn't agree. And
+Personal   Paint   is   still   around!
+
+Besides that, of course there was a lot of piracy but
+I'm  told  that  we  had  50%  market penetration for
+Deluxe  Paint back in those days which is phenomenal.
+And  on  top  of  that, Deluxe Paint wasn't even copy
+protected   for   most   of   its   lifetime.
+
+Electronic Arts used to maintain an in-house list for
+the benefit of the producers describing every program
+that  EA ever sold and how much money it made, sorted
+by  revenue.   It  wasn't  until 1994 thatæ13æ
+Deluxe Paint dropped  off  the  first page
+of that list – quite an accomplishment! It
+was EA's success with cartridge titles for
+the Sega Genesis  that  finally knocked us
+off.                                      
+                                          
+×008                                          
+Erik:  Wow,  that  was  intresting!  Must have given 
+you/your team  satisfaction!   Have you  by the  way 
+heard about the Demoscene?×
+
+Dallas: You mean all the Euro-kids who coded up those
+great looking underground graphic demos? I was in awe
+of that, I'd sit there with my Amiga Action Replay at
+home  disassembling Copper lists to see how they were
+done.  The  thing  was  though,  that  they were very
+finicky  and  often  broke on anything other than the
+most  generic  Amiga  systems.  A  lot  of the coders
+seemed  to  have  this  Atari  ST mindset whereby the
+first  thing  you  do  when writing a demo is open up
+your  Hardware  Reference  Manual  and  blow away the
+operating system. Trying to write flashy demos on the
+Amiga  that  run  in a system-safe way is very hard -
+much harder than banging on the bare metal, actually.
+
+×008
+Erik:  Thanks a lot for this interview Dallas. Do you
+have any last words to those people still using Amiga
+and/or   Deluxe   Paint?×
+
+Dallas:  Visit   www.AmigaForever.com   and   support
+Cloanto's  efforts at keeping the Classic Amiga alive
+through  emulation.  They've   done   an   absolutely
+wonderful  job  at keeping that current, and I'm very
+grateful   to   them   for   it.   Paint   on!

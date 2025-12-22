@@ -1,0 +1,33 @@
+
+Fit & Bandwagon present at MI'04
+
+C H R Y S L E R
+
+The source version (originally for AGA+060 Amigas)
+
+Marq, Neckfreak       code
+Yzi, Pete             additional code
+Roz                   music
+
+Thanks to Tohe/Zenon & jPV/RNO
+
+The video material is taken from Days of our Years (1955), a trilogy
+of accidents and their effects on railroad workers and their families.
+Provided by http://www.archive.org/movies/prelinger.php, an Internet
+archive for public domain films. 
+
+Compiled for AmigaOs 4 by Varthall/Up Rough (varti01@hotpop.com)
+
+Changes:
+- removed initial mixing frequency choice, 44100 Hz is now default
+- removed fullscreen support, runs by default in windowed mode due
+to a bug in the SDL library
+- if the window can't be opened, it shows an error message and exit
+
+Run it on a 32bit Workbench screen. On a 16bit one it uses shades
+of white instead of yellow, funny :)
+
+See
+http://www.kameli.net/fit/ 
+http://bandwagon.doesntexist.com/
+http://www.anioni.com/pseudotoad/

@@ -1,0 +1,540 @@
+V3.0
+
+
+EVENT mod.-+death-stars+-
+SOUND play "OVDC:OverDaCodeDrawer/mod.-+death-stars+-" volume 64 pan 0 period 350 loops 1 fadein 2
+END
+
+EVENT Logo_Agoa.256
+PICTURE "OVDC:OverDaCodeDrawer/Logo_Agoa.256"
+END
+
+EVENT Agoa.Explosion.Hires.anim
+ANIM "OVDC:OverDaCodeDrawer/Agoa.Explosion.Hires.anim" 50 1 disk
+GOTO Psk.Explosion.Hires.iff
+END
+
+EVENT Psk.Explosion.Hires.iff
+PICTURE "OVDC:OverDaCodeDrawer/Psk.Explosion.Hires.iff"
+WIPE sun speed 5
+END
+
+EVENT Psk.Explosion.Hires.anim
+ANIM "OVDC:OverDaCodeDrawer/Psk.Explosion.Hires.anim" 50 1 disk
+WIPE backgammon north speed 5
+GOTO Present.iff
+END
+
+EVENT Present.iff
+PICTURE "OVDC:OverDaCodeDrawer/Present.iff"
+WIPE xword speed 5
+PAUSE 3
+GOTO OVDC.iff
+END
+
+EVENT OVDC.iff
+PICTURE "OVDC:OverDaCodeDrawer/OVDC.iff"
+WIPE chest speed 5
+PAUSE 5
+END
+
+EVENT Sat1fin.iff
+PICTURE "OVDC:OverDaCodeDrawer/Sat1fin.iff"
+WIPE windmill speed 5
+PAUSE 5
+END
+
+EVENT Sat1.anim
+ANIM "OVDC:OverDaCodeDrawer/Sat1.anim" 25 1 disk
+END
+
+EVENT Sat1fin+.iff
+PICTURE "OVDC:OverDaCodeDrawer/Sat1fin+.iff"
+PAUSE 5
+END
+
+EVENT gouraudfaceshading
+PICTURE "OVDC:OverDaCodeDrawer/gouraudfaceshading"
+WIPE excrawl south speed 5
+PAUSE 5
+END
+
+EVENT GoureauFaceShading.anim
+ANIM "OVDC:OverDaCodeDrawer/GoureauFaceShading.anim" 25 4 disk
+PAUSE 5
+END
+
+EVENT wildisvidi
+PICTURE "OVDC:OverDaCodeDrawer/wildisvidi"
+WIPE checker south speed 5
+PAUSE 5
+END
+
+EVENT City.Rotate.Big.anim
+ANIM "OVDC:OverDaCodeDrawer/City.Rotate.Big.anim" 20 1 disk
+END
+
+EVENT MainStaff.iff
+PICTURE "OVDC:OverDaCodeDrawer/MainStaff.iff"
+WIPE derreck north speed 5
+PAUSE 5
+END
+
+EVENT 1oragesEnjoy.iff
+PICTURE "OVDC:OverDaCodeDrawer/1oragesEnjoy.iff"
+WIPE hugedots speed 1
+TABS 100 200 300 400 500
+MARGINS on 32 607
+FONT A64.font 8
+COLOR 252 11 11 11 11 0 252 11 0 252 244 249 202 222 252
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 7 1 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 30 30 ""
+PAUSE 5
+END
+
+EVENT Dancing.anim
+ANIM "OVDC:OverDaCodeDrawer/Dancing.anim" 24 6 disk
+END
+
+EVENT feelthedots
+PICTURE "OVDC:OverDaCodeDrawer/feelthedots"
+WIPE corner southeast speed 5
+PAUSE 5
+END
+
+EVENT 3DSphereMapped2.anim
+ANIM "OVDC:OverDaCodeDrawer/3DSphereMapped2.anim" 26 2 disk
+END
+
+EVENT 3dmotion
+PICTURE "OVDC:OverDaCodeDrawer/3dmotion"
+WIPE smallblend north speed 5
+PAUSE 5
+END
+
+EVENT 3DMotion.anim
+ANIM "OVDC:OverDaCodeDrawer/3DMotion.anim" 12 1 disk
+END
+
+EVENT poulephong
+PICTURE "OVDC:OverDaCodeDrawer/poulephong"
+WIPE rollodex south speed 5
+PAUSE 5
+END
+
+EVENT poulephong.anim
+ANIM "OVDC:OverDaCodeDrawer/poulephong.anim" 14 1 disk
+END
+
+EVENT d.bidule.iff
+PICTURE "OVDC:OverDaCodeDrawer/d.bidule.iff"
+PAUSE 5
+END
+
+EVENT pomme.anim
+SOUND volume 7 fade 15
+ANIM "OVDC:OverDaCodeDrawer/pomme.anim" 15 1 disk
+WIPE push north damped speed 5
+PAUSE 10
+END
+
+EVENT mod.experimental
+SOUND play "OVDC:OverDaCodeDrawer/mod.experimental" volume 64 pan 0 period 350 loops 1
+END
+
+EVENT glougloufx
+SOUND volume 64
+PICTURE "OVDC:OverDaCodeDrawer/glougloufx"
+WIPE strangepush speed 5
+PAUSE 5
+END
+
+EVENT watereffect.anim
+ANIM "OVDC:OverDaCodeDrawer/watereffect.anim" 6 1 disk
+END
+
+EVENT mangezdesspins
+PICTURE "OVDC:OverDaCodeDrawer/mangezdesspins"
+WIPE lowflipcoin speed 5
+PAUSE 5
+END
+
+EVENT BN-Mania!.IFF
+PICTURE "OVDC:OverDaCodeDrawer/BN-Mania!.IFF"
+WIPE xword speed 5
+PAUSE 8
+END
+
+EVENT bn.anim
+ANIM "OVDC:OverDaCodeDrawer/bn.anim" 14 1 disk
+END
+
+EVENT Dragon.iff
+PICTURE "OVDC:OverDaCodeDrawer/Dragon.iff"
+PAUSE 10
+END
+
+EVENT mafandnadness
+PICTURE "OVDC:OverDaCodeDrawer/mafandnadness"
+WIPE wallpaper south speed 5
+PAUSE 5
+END
+
+EVENT "maf-neuneu.anim"
+ANIM "OVDC:OverDaCodeDrawer/maf-neuneu.anim" 14 1 disk
+END
+
+EVENT FIN.iff
+PICTURE "OVDC:OverDaCodeDrawer/FIN.iff"
+WIPE cube north speed 5
+PAUSE 10
+END
+
+EVENT gokou-kamehameha.anim
+ANIM "OVDC:OverDaCodeDrawer/gokou-kamehameha.anim" 50 1 disk
+WIPE ccccut speed 5
+END
+
+EVENT e.bidule.iff
+PICTURE "OVDC:OverDaCodeDrawer/e.bidule.iff"
+PAUSE 5
+END
+
+EVENT face.eagle
+PICTURE "OVDC:OverDaCodeDrawer/face.eagle"
+TABS 50 100 150 200 250
+MARGINS on 16 303
+FONT A64.font 6
+COLOR 15 0 0 0 0 0 15 0 0 15 13 11 7 9 15
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 7 1 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 15 15 "         E A G L E  /  A G O A - H O N O O"
+PAUSE 3
+END
+
+EVENT face.bug
+PICTURE "OVDC:OverDaCodeDrawer/face.bug"
+TABS 50 100 150 200 250
+MARGINS on 16 303
+FONT A64.font 6
+COLOR 15 0 0 0 0 0 15 0 0 15 13 11 7 9 15
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 7 1 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 15 15 "              M R . B U G  /  A G O A"
+PAUSE 3
+END
+
+EVENT face.coolcoyote
+PICTURE "OVDC:OverDaCodeDrawer/face.coolcoyote"
+TABS 50 100 150 200 250
+MARGINS on 16 303
+FONT A64.font 6
+COLOR 15 0 0 0 0 0 15 0 0 15 13 11 7 9 15
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 7 1 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 15 15 "            C O O L   C O Y O T E "
+PAUSE 3
+END
+
+EVENT face.guille
+PICTURE "OVDC:OverDaCodeDrawer/face.guille"
+TABS 50 100 150 200 250
+MARGINS on 16 303
+FONT A64.font 6
+COLOR 15 0 0 0 0 0 15 0 0 15 13 11 7 9 15
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 7 1 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 15 15 "         G U I L L E  /  S Y N D R O M E"
+PAUSE 3
+END
+
+EVENT face.leon
+PICTURE "OVDC:OverDaCodeDrawer/face.leon"
+TABS 50 100 150 200 250
+MARGINS on 16 303
+FONT A64.font 6
+COLOR 15 0 0 0 0 0 15 0 0 15 13 11 7 9 15
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 7 1 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 15 15 "\t\\t\L E O N  ( D I E S E L )"
+PAUSE 3
+END
+
+EVENT face.maf
+PICTURE "OVDC:OverDaCodeDrawer/face.maf"
+TABS 50 100 150 200 250
+MARGINS on 16 303
+FONT A64.font 6
+COLOR 15 0 0 0 0 0 15 0 0 15 13 11 7 9 15
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 7 1 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 15 15 "     M A F  /  S Y N D R O M E - S I L I C O N"
+PAUSE 3
+END
+
+EVENT face.phase
+PICTURE "OVDC:OverDaCodeDrawer/face.phase"
+TABS 50 100 150 200 250
+MARGINS on 16 303
+FONT A64.font 6
+COLOR 15 0 0 0 0 0 15 0 0 15 13 11 7 9 15
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 7 1 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 15 15 "               P H A S E  /  A G O A"
+PAUSE 3
+END
+
+EVENT face.plug
+PICTURE "OVDC:OverDaCodeDrawer/face.plug"
+TABS 50 100 150 200 250
+MARGINS on 16 303
+FONT A64.font 6
+COLOR 15 0 0 0 0 0 15 0 0 15 13 11 7 9 15
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 7 1 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 15 15 "                P L U G  /  P S K"
+PAUSE 3
+END
+
+EVENT face.sloody
+PICTURE "OVDC:OverDaCodeDrawer/face.sloody"
+TABS 50 100 150 200 250
+MARGINS on 16 303
+FONT A64.font 6
+COLOR 15 0 0 0 0 0 15 0 0 15 13 11 7 9 15
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 7 1 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 15 15 "              S L O O D Y  /  R D L"
+PAUSE 3
+END
+
+EVENT face.twice
+PICTURE "OVDC:OverDaCodeDrawer/face.twice"
+TABS 50 100 150 200 250
+MARGINS on 16 303
+FONT A64.font 6
+COLOR 15 0 0 0 0 0 15 0 0 15 13 11 7 9 15
+ATTRIBUTES remap kerning
+STYLE 0 3 4 3 6 1 1 7 1 1 13 0 2 5 1 0 4 4 3
+TEXTWIPE dump speed 1
+TEXT 15 15 "               T W I C E  /  A G O A"
+PAUSE 3
+END
+
+EVENT presents.anim
+ANIM "OVDC:OverDaCodeDrawer/presents.anim" 5 1 disk
+END
+
+EVENT EndingsCredits
+PICTURE "OVDC:OverDaCodeDrawer/EndingsCredits"
+WIPE sun speed 5
+PAUSE 5
+END
+
+EVENT Credits.iff
+PICTURE "OVDC:OverDaCodeDrawer/Credits.iff"
+WIPE stretch south speed 5
+PAUSE 5
+END
+
+EVENT Credits2.iff
+PICTURE "OVDC:OverDaCodeDrawer/Credits2.iff"
+WIPE ants speed 10
+PAUSE 5
+END
+
+EVENT Credits3.iff
+PICTURE "OVDC:OverDaCodeDrawer/Credits3.iff"
+WIPE flipover south speed 5
+PAUSE 5
+END
+
+EVENT Credits4-.iff
+PICTURE "OVDC:OverDaCodeDrawer/Credits4-.iff"
+WIPE derreck north speed 5
+PAUSE 5
+END
+
+EVENT Credits5.iff
+PICTURE "OVDC:OverDaCodeDrawer/Credits5.iff"
+WIPE sweep speed 5
+PAUSE 5
+END
+
+EVENT Credits6.iff
+PICTURE "OVDC:OverDaCodeDrawer/Credits6.iff"
+WIPE center speed 5
+PAUSE 5
+END
+
+EVENT Greets
+PICTURE "OVDC:OverDaCodeDrawer/Greets"
+WIPE diagonal southeast speed 5
+PAUSE 5
+END
+
+EVENT Cred-vide
+PICTURE "OVDC:OverDaCodeDrawer/Cred-vide"
+PAUSE 1
+END
+
+EVENT crd12
+PICTURE "OVDC:OverDaCodeDrawer/crd12"
+PAUSE 1
+END
+
+EVENT crd11
+PICTURE "OVDC:OverDaCodeDrawer/crd11"
+PAUSE 1
+END
+
+EVENT crd10
+PICTURE "OVDC:OverDaCodeDrawer/crd10"
+PAUSE 1
+END
+
+EVENT crd9
+PICTURE "OVDC:OverDaCodeDrawer/crd9"
+PAUSE 1
+END
+
+EVENT crd8
+PICTURE "OVDC:OverDaCodeDrawer/crd8"
+PAUSE 1
+END
+
+EVENT crd7
+PICTURE "OVDC:OverDaCodeDrawer/crd7"
+PAUSE 1
+END
+
+EVENT crd6
+PICTURE "OVDC:OverDaCodeDrawer/crd6"
+PAUSE 1
+END
+
+EVENT crd5
+PICTURE "OVDC:OverDaCodeDrawer/crd5"
+PAUSE 1
+END
+
+EVENT crd4
+PICTURE "OVDC:OverDaCodeDrawer/crd4"
+PAUSE 1
+END
+
+EVENT crd3
+PICTURE "OVDC:OverDaCodeDrawer/crd3"
+PAUSE 1
+END
+
+EVENT crd2
+PICTURE "OVDC:OverDaCodeDrawer/crd2"
+PAUSE 1
+END
+
+EVENT crd1
+PICTURE "OVDC:OverDaCodeDrawer/crd1"
+PAUSE 1
+END
+
+EVENT crd1.anim
+ANIM "OVDC:OverDaCodeDrawer/crd1.anim" 16 1 disk
+END
+
+EVENT Cred-vide.1
+PICTURE "OVDC:OverDaCodeDrawer/Cred-vide"
+PAUSE 1
+END
+
+EVENT crd-14
+PICTURE "OVDC:OverDaCodeDrawer/crd-14"
+PAUSE 1
+END
+
+EVENT crd-13
+PICTURE "OVDC:OverDaCodeDrawer/crd-13"
+PAUSE 1
+END
+
+EVENT crd-12
+PICTURE "OVDC:OverDaCodeDrawer/crd-12"
+PAUSE 1
+END
+
+EVENT crd-11
+PICTURE "OVDC:OverDaCodeDrawer/crd-11"
+PAUSE 1
+END
+
+EVENT crd-10
+PICTURE "OVDC:OverDaCodeDrawer/crd-10"
+PAUSE 1
+END
+
+EVENT crd-9
+PICTURE "OVDC:OverDaCodeDrawer/crd-9"
+PAUSE 1
+END
+
+EVENT crd-8
+PICTURE "OVDC:OverDaCodeDrawer/crd-8"
+PAUSE 1
+END
+
+EVENT crd-7
+PICTURE "OVDC:OverDaCodeDrawer/crd-7"
+PAUSE 1
+END
+
+EVENT crd-6
+PICTURE "OVDC:OverDaCodeDrawer/crd-6"
+PAUSE 1
+END
+
+EVENT crd-5
+PICTURE "OVDC:OverDaCodeDrawer/crd-5"
+PAUSE 1
+END
+
+EVENT crd-4
+PICTURE "OVDC:OverDaCodeDrawer/crd-4"
+PAUSE 1
+END
+
+EVENT crd-3
+PICTURE "OVDC:OverDaCodeDrawer/crd-3"
+PAUSE 1
+END
+
+EVENT crd-2
+PICTURE "OVDC:OverDaCodeDrawer/crd-2"
+PAUSE 1
+END
+
+EVENT crd-1
+PICTURE "OVDC:OverDaCodeDrawer/crd-1"
+PAUSE 1
+END
+
+EVENT crd-1.anim
+ANIM "OVDC:OverDaCodeDrawer/crd-1.anim" 17 1 disk
+END
+
+EVENT greets6
+SOUND volume 0 fade 2
+PICTURE "OVDC:OverDaCodeDrawer/greets6"
+PAUSE 3
+EXIT
+END

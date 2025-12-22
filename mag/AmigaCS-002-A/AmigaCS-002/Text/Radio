@@ -1,0 +1,52 @@
+@{d FFF0B3}                            @{c FFC373}Bezdrátový pêenos dat s Amigou@{c}
+                           @{c FFC373}¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+  Vlastním takovou obyçejnou vysílaçku, co koupíte na kaùdým rohu.  No a jednou takhle
+poslouchám  co  se  tam  dëje, jako v tom éteru, a mimo tëch normálních kecû je slyîet
+i záhadné  pípání.   Jako  kdyù  pípá  ruská  druùice,  nebo  se nahrává program do ZX
+Spectra.   Tak  se  po  tom  pídím  a  no  a nebudu Vás napínat, je to pêenos dat mezi
+poçítaçi, tak nëjak bez drátu.  Samozêejmë, ùe tady v okolí jsou jen samý PCmani.  Tak
+hledám, jestli je nëco i na Amigu.  A ono je.
+
+  To  co slyîím tady vîude je tzv. Packet a je k tomu potêeba nëjaká ta vysílaçka, pak
+ten  modem.   Ten  se  dá koupit, nebo postavit.  Plánky a návody naleznete na Aminetu
+a to vçetnë softu.
+
+                               @{c FFC373}A jak to tedy funguje?@{c} 
+ 
+  Tak  pêednë  musím  êíci, ùádná pêevratná rychlost.  Teoreticky lze dosáhnou 1200Bd,
+ale ve skuteçnosti tak moùná 300Bd.  Ale packet není urçen pro velké objemy dat.  Spíî
+je  urçen  na  pokec  a  to i na delîí vzdálenosti, neù je dosah vysílaçky.  Jak je to
+moùné?   Jednoduîe, jednotlivé stanice, které jsou po trase fungují jako retranslaçní.
+V  praxi  to  vypadá  tak,  ùe  zadám napê.  "Connect to Pepa via Fanda".  Na Fandu se
+dovolám, ale na Pepu ne.  Ale chci si pokecat s Pepou.  A tak Fandûv Packet umoùní aby
+data proudily pêes nëj, aniù by o tom vëdël.
+
+  A  co  to  vîechno  umí?  Mohu komunikovat soubëùnë s více takto postiùenými jedinci
+najednou.   Mohu  posílat  text  a soubory pomocí rûzných protokolû.  Nëkterý soft lze
+pouùít i jako BBS, mûùete mít vlastní adresu.  Dálkovë lze ovládat çásteçnë poçítaç na
+který jste se spojili, mazat nebo spouîtët z hardisku soubory a mnoho dalîího.
+
+                                    @{c FFC373}A zkuîenosti?@{c}
+
+  Celkem  to  jde.  S PCçkama se spojím celkem dobêe.  S programem AmiCom nejsou témëê
+problémy.  Jediný menîí problém je zatím s çeîtinou.  Ale vëtîinou si vîichni povídají
+bez  diakritiky,  jako  na FIDU nebo na BBS.  Je vidët, ùe programy se kterýmy jsem se
+setkal,  pochází  z  Nëmecka.  Existuje tam nëjaká konverze znakových sad pro pêenosem
+textu  mezi  PC a Amigou, ale samozêejmë to nefunguje têeba pro Kameníky.  Takùe obças
+chaozz.  Pêi binárním pêenosu je vîechno OK.  To se ty poçítaçe domluví bez problémû.
+
+                                  @{c FFC373} Kde to sehnat?@{c} 
+
+  Packet  lze  kopit  hotový  napê.   u  Konráda  pod názvem PC-COM obj.ç.  256528-33.
+A software je na Aminetu v îuplíku comm/misc pod názvem @{$ AmiCom.iff}AmiCom@{$} v poslední verzi.
+
+                                      @{c FFC373}Dovëtek?@{c} 
+
+  To  o  çem  jsem  tady  mluvil,  je  samozêejmë  asi  ten nejlevnëjîí a nejpomalejîí
+bezdrátový  pêenos  dat mezi poçítaçi.  Existají i dalîí systémy, ruzné TNC, KISS a já
+nevím  co vîechno.  Ale systém co pouùívám je nenároçný, nestojí mnoho a taky se s ním
+dá vyblbnout.
+
+                                        @{c FFC373}TETREF@{c}
+
+             Zde je @{s SYS:Utilities/Multiview Pics/Schema.iff}schéma zapojení@{s} (potêebujete @{c FFC373}SYS:Utilities/Multiview@{c})

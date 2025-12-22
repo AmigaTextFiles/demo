@@ -1,0 +1,91 @@
+!Blueberry
+Ghandy
+71
+µJCµF0µC4- --- ---------------------------- --- -
+Interview with Blueberry of Loonies
+- --- -------------------------------- --- -
+µF1µC1
+done by Ghandy of mOOdS pLAtEAU & Scarab
+
+
+
+µC2µJEHi Blueberry, please introduce yourself!
+  
+
+µC4OK, my name is Aske Simon Christensen. I was born on the 13th of October, 1976 in Silkeborg, Denmark. Right now I am living alone in a small, wooden house in the northern part of Aarhus. If all goes well, I will hand in my Ph.d. thesis in computer science this Summer.
+
+
+µC2How did you come to the name Blueberry, what`s the story behind it?
+
+µC4Many years ago, as a small kid, I was on summer vacation in Sweden in a place with lots and lots of blueberries. Ever since then, I have been quite fond of them. So I simply chose that for my alias back in 1991.
+Contrary to what some people might think, it has no connection whatsoever to the cartoon character with the same name. I knew nothing about that back then.
+
+
+µC2In which productions did you take part? Most people know you lately from various Loonies productions and last but not least from Deep Pan - the final slice.  What did we miss inbetween?
+
+µC4There are all the Efreet 4ks: Peanut, Splat II and Perspiration, to mention the main ones. I guess Peanut was a bit of a groundbreaker in the 4k area back in 1996. Most 4ks until then had only very few effects and simple or no music.
+
+
+µC2How did it happen that Efreet came to an end and you joined Loonies instead?
+
+µC4Well, Efreet didn't really come to an end as such. It was just very focused on small intros and didn't have the capacity for demos (like, no real graphicians in there). So I joined Loonies in 1998 to take part in some bigger projects as well.
+
+I chose Loonies (among the various danish groups active at the time) because they were a group whose demos usually had some theme or concept to them, rather than just showing off a couple of effects. It has been exciting to be part of building up the Loonies name to what it is today.
+
+µI0032
+µC2I`d like to know as many details as possible about the true winner demo at BP05!
+
+µC4You should ask Psycho about those. I haven't been involved in the development of Multiverse. It just uses my 3D rendering code (as does basically every Loonies production since 1999). Of interesting, new things I think there are mainly the reflection map in the beginning and the skybox engines, like the depth-of-field skybox for the greetings, and the multi-layered skybox in the endpart.
+
+But these are all Psychos code. I have been primarily focused on our 4k, Noxie. Noxie grew out of two things: First, I had never before done any voxel effects, so I wanted to try that. The voxel engine in Noxie is true 3D voxel with sprite-based rendering (it just draws a suitably sized blob of identically colored pixels at each voxel position).
+
+This results in quite blocky images, especially when the voxels are big - and they have to be, since a 68060 can only pull so many voxels with a decent framerate - so I added some blur and random dither so make it look more smooth. The random dither also gives the illusion of having more colors than the 256 actually shown on the screen.
+
+The engine is designed for flying around in big, static objects, which is more or less exactly what is happening in Noxie.
+
+Second, I had made a new sound engine, originally with the intent of producing synthesized speech in a 4k (a goal which I didn't quite reach - this time). I made a GUI for editing the sound parameters and gave that to Maytz, and through his playing around with the tool, it turned out that this sound engine could be used to create all sorts of interesting sounds I hadn't imagined.
+
+The result can be heard in Noxie. Obviously, the dark mood of his music inspired the look of the intro.
+
+
+
+µC2How did it happen that you began coding?
+  
+µC4I had been programming some BASIC on my Commodore 16 when I was about 11. When I aquired my first Amiga (an Amiga 500 with 512k memory extension - whee!) in 1990, I of course wanted to do some programming on that as well (though the games were really addictive).
+
+First I tried out AmigaBasic, but I quicky figured out that anyone who was making anything serious on the Amiga was programming in C. So I needed a C compiler.
+
+My main source of software at the time was Toastmaster/Bacteria (or whatever group he was in at the time) who was living close by. I asked him if he had a C compiler, and he told me that C was a bad language and I should be coding asm instead. So he gave me the brand-new AsmOne 1.02 and I was hooked.
+
+I went to the library and got myself a book about 68000 programming and read it during the summer of 1992. I released my first demo, called The Bottle, in October 1993.
+
+
+
+µC2If you think about a new effect. Is it the math behind that catches your interest or are you at first thinking how it will look like?
+  
+µC4I tend to think primarily about the technical aspects of my demo routines - how they can be made to be fast or small (whichever is relevant). I have rarely been much involved in the design of our demos, except in the cases where I am the only coder (e.g. Kunto, Ikanim, Noxie).
+
+In any case, for me the starting point in any design is always the music. When I hear good demo music, I start getting ideas for how things should look, and how they should be timed to the music. There is nothing that motivates me more for demo coding than having some good piece of music to code for.
+
+
+
+µC2You wrote me that you`re not a regular mag reader - why? What`s missing in all those mags then that you would like to read?
+  
+µC4Well, I wouldn't know, since I don't read them, would I?  :)
+
+µC4I think the problem is that I have only a limited amount of time to spend on scene activity, and I prefer to spend that time on making demos and watching demos.
+
+All the sourrounding things can be interesting, but they just easily take up a lot of time. I have become a fairly active pouet.net reader, though I rarely write anything myself.
+
+
+
+µC2So what are your current projects? Working on anything interesting?
+
+µC4I am currently working together with Mentor/TBC on an executable cruncher for Windows, specifically targeted towards 4ks. Our aim is to make a cruncher that produces self-contained and compatible EXE files (no dropping!) while having a compression efficiency that is competitive with (and hopefully superior to) the CAB droppers everybody use this days. The current status of the project indicates that we will succeed in achieving this goal.
+
+µC4From a demoish point of view, I am playing a bit with various ideas for my next 4k, though I am not working on anything concrete yet. I might do a PC 4k for a change (this new D3DX API certainly is very tempting), but that doesn't mean I have left the Amiga.
+
+µC4The Amiga itself might be dead, but the Amiga scene, though aging and shrinking, is most definitely alive.
+
+
+µC2/Aske

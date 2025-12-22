@@ -1,0 +1,17 @@
+Short:        VampireDemo2D
+Author:       flype
+Uploader:     Renaud Schweingruber (renaud schweingruber gmail com)
+Type:         demo/misc
+Version:      0.6h
+Architecture: m68k-amigaos
+
+This is a demo of what can be easily achieved with SAGA chipset from AC68080.
+
+VampireDemo2D uses Picasso96 system to open and initialize screen then writes directly into video buffer by installing it's own triple buffer. Graphics are prepared to target a 16Bit R5G6B5 screen.
+
+Sources are included for reference. 
+
+Thread on Apollo-Core discussing VampireDemo2D :
+http://www.apollo-core.com/knowledge.php?b=2&note=1821&order=&x=0
+
+Written with Devpac 3.18 on a Vampire :-) !obv

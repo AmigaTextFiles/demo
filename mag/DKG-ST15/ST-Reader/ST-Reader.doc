@@ -1,0 +1,260 @@
+   ._______    ______    ________ ___ _____  ______   _______   _________
+ .-|   _   \  _\____ \  _\__    /    /    / _\____ \ |  ____/_ |  _     /_-.
+ |:|   \    \_     /  \_   /    \_   \    \      /  \_  \     \_  /____/ /:|
+ `-|_________/_________/___\_____/____\    \ ________/_________/________/--'
+  <------------------------------------\____\------------------------lm!-->
+
+				PRESENTS:
+
+	    SHOWTIME article/adverts reader 1.5a by Modem/Darkage
+
+ 			* (based on the previous source by Randy/Ram Jam)
+
+
+
+What is & distribution notice:
+
+ShowTime is a diskmagazine published by Darkage group, with the demo scene as
+subject, and it has also the only CHART alive.
+This utility is able to display showtime articles to test them, but you have
+to edit articles manually with a text editor like cynus ed.
+In the current version it is not possible to place any cliparts within
+the articles, but this will be done by the coder himself, as it isnt that
+hard to include afterwards.
+Cliparts must have the max size of 320x180 in Hires and can use 15 colours.
+Mark the place, where the cliparts should be included. In this case, consider
+that the 15 text colours available will be the ones of clipart, and not the
+default ones!!!!
+The text print system is based on the original one by MASE/Ram Jam, but is
+recoded and enhanced. The "official" suffix for ShowTime files is ".st".
+STread is an utility coded especially for Darkage members that wants to adjust
+the design of articles directly, freeing much time to poor Ram Jam coders that
+receive only plain ascii texts to adjust.
+But, since many article writers like to design their own articles directly,
+I decided to release it also to not Darkagers, but the only use of this
+utility must be the design of articles for SHOWTIME.
+You can send articles, adverts, clip arts to:
+
+				Darkage
+			       Po. Box 8
+	              06049 Spoleto 1 (PG) Italy
+	                   info@darkage.it
+	               http://scene.darkage.it
+
+Contact me for bug report:
+
+	Modem/Darkage
+	Paolo D'Urso
+	Via Cacciatori delle Alpi, 45
+	06049 Spoleto (PG)
+	Italy
+	pdurso@darkage.it
+
+
+Requirements:
+
+This utility needs a 68020+ and AGA chipset, like ShowTime, and also the
+reqtools.library in libs:
+
+
+How to start:
+
+Run this utility from cli/shell, and will appear the file requester to select
+a showtime (.st) article. If the st format is wrong, the article will be not
+load, and error message(s) will be written in the shell window: look at them!
+If you quit, you can choose another file to load (or the same updated in
+multitasking with an editor), or quit definitely selecting "Cancel" in the
+requester.
+
+
+Instructions:
+
+Ok, now you have read about the Viewer, but how do I write articles or
+adverts for Showtime ?
+To edit a ShowTime article you must start from a normal ascii text, without
+TABS (use spaces instead), and you can choose between two columns of text
+or fullpage, I will explain later how to do that.
+You can use all characters, including the special ALT+xx ones, like ²³¢¼½°©ð,
+except for 16x16 and 24x24 fonts, that have only normal characters.
+You can select the colour and the font type/size, but not load the cliparts,
+that is easy for me to apply manually, just reserve the space and give me the
+clipart (15 colours hires, max 320x180, when colour0 is "transparent").
+Also adverts can be tested, the routine is the same, only consider that in
+this part (DIARY) the background is blue and the color 02 will FLASH: to
+simulate this, press the MAG<->DIARY swap button in the panel.
+I added also the option to convert the article to ASCII only and save it.
+Keys: Q to Quit, -> and <- to swap pages.
+
+-   -	-   -	-   -	-   -	-   -	-   -	-   -	-   -	-   -	-   -
+
+Well, the commands are:
+
+{               -> To change font and color
+}               -> To end text
+
+-The } command don't need comments.
+-The { command has a special syntax, which must be used to get a pleasant
+ result.
+
+ {Ncc  -> N=font number, cc=colour 00-07
+
+Examples:
+
+{100  Font number 1, color 00
+{005  Font number 0, color 05
+
+These fonts are available:
+
+{000  Font num. 0.		8x8 normal
+{100  Font num. 1.		8x8 Bold (bold)
+{200  Font num. 2.		8x8 fine (fine)
+{300  Font num. 3.		16x16 fine (an 8x16 spaced)
+{400  Font num. 4.		16x16 full
+{500  Font num. 5.		8x8 fine n.2
+{600  Font num. 6.		24x24 normal style
+{700  Font num. 7.		24x24 style "cowboy"
+{800  Font num. 8.		24x24 style "modern"
+
+-   -	-   -	-   -	-   -	-   -	-   -	-   -	-   -	-   -	-   -
+
+About colors, there are 15 available (range 00-14):
+
+{000        Colour 00	White (use this for the main text..)
+{001        Colour 01	lighter blu
+{002        Colour 02	lighter green  (will flash in diary-adverts part)
+{003        Colour 03	yellow
+{004        Colour 04	green
+{005        Colour 05	blu
+{006        Colour 06	gray
+{007        Colour 07	pink
+{008        Colour 08   lighter white
+{009        Colour 09   red
+{010        Colour 10	orange
+{011        Colour 11	violet
+{012        Colour 12	brown
+{013        Colour 13	dark pink
+{014        Colour 14	red/blu
+
+
+-   -	-   -	-   -	-   -	-   -	-   -	-   -	-   -	-   -	-   -
+
+Now you know how to use fonts and colours for your text, but
+if you still need an example, here is one small text:
+
+                                            <- This indicates 38 chars per
+-------------------------------------       line, including the "return" !
+{304How to paint with {303DPaint {304...
+
+{000Ever tried to paint with {003DPaint {000?
+Its so easy, just start the progam
+and use a brush of your own....  }
+
+--------------------------------------
+The text will start with a 16x16 charset and a green colour, the
+"DPAINT" is highlighted in yellow. Afterwards I changed to the
+normal charset (8x8 with colour white) and write most of the text,
+just highlighting the "DPaint" again (the questionmark is white
+again!!!). The last thing is the closing waved bracket, which indicates
+the end of the article.
+
+Showtime offers you two modes for your articles/adverts, one or two
+columns to be used. If you write articles with 38 chars or less per
+line, you will get two columns, but remember that a RETURN on an
+editor will also be a character and used in the display, so dont wonder,
+if you will get a messy article, if you forget that!
+Each column is 38x21, you might check the "design" in order to make the
+article more readable and dont cut half of a schedule to another page.
+
+The second mode works with 78 chars per line (full page), if you want this
+mode in your articles, you must extend the last line of each page
+(line 21) with more than 38 chars (if your line does not have that many
+chars in there, use SPACEs to make it larger !!!!!!!). You have to repeat
+this for every new page.... This sounds annoying, but gives us the
+opportunity to mix both styles in one article (for example, you might
+use a plain text with 38 chars per line and use a schedule with 78
+lines then. Afterwards you continue with the 38 mode and write the rest
+of the article.
+
+Anyway, if you write an article for SHOWTIME, first write it with your
+editor and check, if it does fit into the restrictions and re-edit it
+(if it doesnt look good).
+The last thing you should do is adding the colours, although that will
+virtually scrap the design with the 38 or 78 lines it will work, as the
+colour-changing chars wont affect the normal text design at all !!!!
+
+-   -	-   -	-   -	-   -	-   -	-   -	-   -	-   -	-   -	-   -
+Here is an example of 38/78 columns mode:
+
+
+If you write max 38 columns  the  text
+will  be draw  in 2 columns, like now!
+
+
+Well,  but is also  possible to write  a max of  78 columns,  in full page: to
+hevitate the 2 columns routine you have to exceed  the  38th column at the end
+of the page, so ShowTime will understand that is not the  case to draw another
+column:
+
+This is the last line, so EXCEED the 38th column to hevitate the 2nd column!
+
+
+Ok, is all for now!  But remember that
+spaces placed over the 38th line in  a
+2 column article  can  cause BUGS!! So
+check every  time if  there are spaces
+over the 38th column!!
+
+
+-   -	-   -	-   -	-   -	-   -	-   -	-   -	-   -	-   -	-   -
+
+IMPORTANT: There are no ckeckings about overwriting texts, especially for
+16x16 and 24x24 fonts, so BE SURE YOU ARE NOT WRITING OVER THE SCREEN BOTTOM,
+or probably Streader will cause a guru meditation.
+
+NOTE: There is a bug that I was lazy to fix in time: if you read through the
+      text until the last page, everything seems to be fine, but if you then
+      switch back pages, sometime the colour of the first lines is
+      different to its normal state. This is because the last colour from
+      the previous read page is applied to the start of actual page...
+      To fix it place a color command {xXX in the first line of every page.
+      I think this is not a "bug", if you remember to redefine txt colour
+      every start of page, when it is required.
+
+-   -	-   -	-   -	-   -	-   -	-   -	-   -	-   -	-   -	-   -
+
+
+History:
+
+News from 1.0 to 1.1:   Now is possible to use all the 15 colours, instead
+			of only 8. The range is 00 - 14.
+			On the 8x8 fonts now all the ¹²³¢¼½¾·«»-å°©®þ¤µ¡ø
+			characters are usable, so you can use ansi logos
+			(especially adverts) with alt+xx characters.
+			NOTE: you can't use { } § , because are commands.
+			{ and } are for text, § is used for cliparts, don't
+			insert any § in your texts!!!
+
+News from 1.1 to 1.2:   Added a filerequester using reqtools.library.
+			So is needed reqtools.library in libs: dir...
+
+News from 1.2 to 1.3:   Now there is a font n.5, added a st format checker
+			that display errors like "out of color", "out of
+			font", "you forgot } at the end"... added the
+			mag<->diary background palette swapping, added
+			an st->ascii converter.
+
+News from 1.3 to 1.4:   Removed the showtime logo and background scaled to 4
+                        colors instead of 16, just to make the exe file
+                        smaller and save space. You can use the 1.3 version
+                        if you like the logo!
+
+News from 1.4 to 1.5:   Fixed the background and set it again to 16 colours.
+                        Removed those ugly grey lines between the panels.
+                        Optimized the init routine. Now you can draw articles
+                        big also up to 50 pages! (update made by Modem/Darkage)
+
+News from 1.5 to 1.5a:  Fake multitasking added (asked by Ghandy), now you can
+                        hear modules played with Hippoplayer while executing
+                        the STreader. Reduced the right side of the magpanel.
+
+Signed: Modem/Darkage

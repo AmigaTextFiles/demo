@@ -1,0 +1,143 @@
+                               MiniGL coding 
+                         by kas1e (kas1e@yandex.ru)
+                         corrected by Zardoz/AMiGR   
+
+For ~anyone ~interested ~in ~writing ~hardware ~accelerated code for graphics cards, I
+am also  beginning a short  series about  MiniGL coding. As you  can ~read ~in my
+"Warp3D Coding" ~article,~~~Warp3D is a low-level API. Anybody who has some ~expe-
+rience with  graphics ~coding knows ~~that an easy way to work ~with GFX ~data is
+to use OpenGL. It saves ~you the "leg work" of writing things like ~a ~maths ~engine,
+for ~working ~with ~matrices ~for example, or having to think about how to write dbl-
+buffering ~~~functions and other time  consuming aspects and instead lets you ~focus
+on actually drawing your graphics to the screen.
+
+Before we go ~~on, ~~jump over to ~~Wikipedia ~and take a look at what they ~~have ~~to
+say about OpenGL: http://en.wikipedia.org/wiki/OpenGL.
+
+In other words,~~OpenGL is a ~high-level ~API which uses low-level drivers in the end
+(like ~~Warp3D ~~drivers). But ~~of ~~course ~~OpenGL ~~can ~~also ~~work ~~in ~~software ~~mode,
+which ~means ~that ~the ~CPU ~does ~all the calculations. The best solution for Amigas
+is to~~~~use OpenGL with HW support.~~~~Classic and modern Amigas alike would ~suffer,
+to ~varying ~~degrees, ~by ~~using ~~software ~~mode, due ~~to ~~the ~~speed ~~that ~their ~CPUs
+operate at.
+
+The first~~~~OpenGL implementation for Amigas we will look at is called StormMesa,~~~~by
+Haage and Partner. (http://www.haage-partner.de/download/Amiga/StormMesa/).         
+
+°PROGDIR:data/clips/stormmesa.raw°6°   
+StormMesa ~~~only ~~~supports ~~~old ~~~graphics ~~~chips ~~~in ~~~HW (hardware) ~~mode, ~~(like ~~the
+Permedia2 cards), Other cards (like the Voodoo cards)~~~~are not supported and work
+only~~~~in~~~~software mode. For example, if you have a ~Voodoo3 on ~your classic Amiga,
+all StormMesa programs will be rendered by the CPU,~~~~~so will probably only produce
+around 2-3fps.~~~~On a BlizzardVision it will be over 15 to 20fps due to the fact ~that
+StormMesa is programmed to directly access the hardware.
+
+As another example, some of the old PPC ~demos ~from ~Encore ~use ~the ~StormMesa
+libs~~~and~~~while they run pretty well on~~~~BVision, they run like a slideshow on Voodoo
+cards.~~The reason for this is that Haage and~~~Partner ~stopped developing StormMesa
+for the Amiga~~~~in~~~~1999 and all~~~~PCI~~~~solutions, like the Mediator, G-Rex ~and Prometheus,
+were developed after StormMesa development ceased.
+
+The ~second ~implementation ~of ~OpenGL ~on ~the ~Amiga ~to ~be ~discussed, is TinyGL.
+You ~can ~read ~about ~it on the MorphOS support site, at http://3d.~morphos-team.~net
+To ~summarise, ~TinyGL ~only ~works ~in ~HW ~mode ~on ~~MorphOS, ~while ~older ~versions
+can ~~work ~~on ~~AOS ~~~also, ~but ~~~only ~~~in ~~~software ~~~mode ~~and ~~~do ~~~not support many
+extended ~OpenGL~ features. Well, ~MorphOS is OK, but we ~want ~to ~support all the
+Amiga harware and OSes don't we?
+
+The third and ~final ~implementation in our discussion is MiniGL. MiniGL still has some
+bugs and is missing some~~~~(a lot)~~~~features of OpenGL but it is works with Warp3D
+drivers, and~~~as~~~~such works fine in Hardware mode on classic machines, as well ~as
+on ~~~MorphOS ~and ~~~AmigaOS4. This ~means ~you can ~~~create ~68k ~~binaries, ~which ~will
+work on MorphOS, AmigaOS3, AmigaOS4 and even WinUAE in HW mode.
+
+Of course there were other attempts~~~~to~~~~bring OpenGL to Amiga but most of these
+projects were practically dead before they even started.
+
+So, let's talk about MiniGL. What is it exactly? It's ~not ~a ~shared ~library which you
+can put into ~the ~LIBS: ~directory ~and use functions from, like warp3d.~library. It is a
+link library, which you~~~~link into your program during~~~~the~~~~linking stage.~~~In other ~words,
+it ~is ~a ~library ~of ~functions ~that ~use warp3d.~library ~and ~provide ~~you ~with ~OpenGL
+functions. If you browse the MiniGL sources,~~you can find tons of ~interesting ~stuff,
+like context.c, where double-buffering and~~~~warp3d context creation ~are implemented.
+
+If you read the ReadMe file from the MiniGL archive, you will find this note:
+------
+MiniGL ~is ~a ~3D ~API ~which is ~compatible~ to ~OpenGL(tm). It implements ~a subset of
+that API and was designed for speed, therefore it directly interfaces ~with Warp3D
+This also means that there is currently no~~~~software mode.~~~Due to the~~~~speed~~~~issues,
+there are certain restrictions regarding the features and functions available.
+------
+Pretty ~clear ~and ~understandable, I think. Also MiniGL is Open Source, which ~means
+you can modify and update~~~~it if you want.~~~For example,~~if you want to mix Warp3D
+and MiniGL functions,~~~~you can make some changes and use them,~~~~at your own risk
+:-) In the next issue, I hope to write an article all about this. 
+ 
+So, what articles can be found about MiniGL? I know only of some little articles in
+Amiga Magazine, ~an ~actual ~printed publication, the ~MiniGL ~Yahoo ~group, ~which ~has
+been dead for the last 2 years,~~~and documentation,~~~~including examples,~~~in the MiniGL
+archive itself. 
+
+°PROGDIR:data/clips/am_nehe7.raw°10°   
+One of the~~~~biggest problems for all~~~who want~~~~to~~~write some code that uses MiniGL
+is problem of actually building the library. Yes, it might sound funny but~~~~~it~~~~is~~~~not ~so
+easy ~to ~build ~MiniGL. ~Basically, ~the ~problem ~is ~~the ~~mess ~~of ~~conflicting ~~commands
+from ~GeekGadgest ~and ~Amiga ~native ~building ~environments. For ~example, you might
+try to do: make -f makefile.~vbcc68k, and "make" will respond with a nice ~"unknown
+command" message,~~~while everything is fine with "smake" from~~~~the~~~~SasC distribution,
+for ~~~example. ~~~Another ~~~example ~~~~is ~~~~the ~~~"~join~" ~~~~binary, ~~~the ~~~GG ~~~version ~~~~of ~~~~which
+is ~different ~and ~incompatible ~versus ~~the ~~Amiga-native ~~version. In ~~other ~~words, ~~all
+the ~boring ~crap ~one ~needs ~to ~know ~in order to compile MiniGL, while simple for a
+seasoned ~programmer, ~might ~~scare ~a ~beginner, ~who ~~just ~wants ~to ~~try ~and ~write
+some code.
+
+So, why ~is ~MiniGL ~only ~distributed ~as source code instead of binary stub-libs? It's
+good question. Question for ~developers, ~who think ~that if someone really wants to
+do ~~~some ~~~'OpenGL' ~~~programming, ~~~he/she ~~~has ~~~to ~~~know ~~~how ~~~to ~~compile ~~libraries.
+Something ~else ~that seems a little strange to me, why didn't Hyperion (the creator
+of MiniGL) create a shared minigl.~~~library,~~~like,~~~for example,~~~~warp3d.~library? I think that
+they have their reasons.~~~Anyway,~~~for anyone who wants to use MiniGL but cannot
+compile it, I have included 68k and WOS link libraries for vbcc as a bonus.
+
+So, you ~have ~libs ~and ~you have vbcc. How can you start? The easy way to see
+how it works is to just setup vbcc,grab the libs from~~~the~~~bonus directory,~~download
+the ~minigl_examples ~archive, compile ~your ~program ~and ~run ~it. API descriptions ~can
+be found in the~~~~"Docs"~~~~directory from the minigl distribution.~~~~Some of the basic OGL
+functions ~are ~already ~~implemented ~~and ~can ~be ~used ~just ~like ~the ~original ~OpenGL
+ones ~(glPushMatrix, glRotated, glGenTextures and so on) but ~there ~also ~are ~MiniGL
+specific functions, which can be found in documentation, like:
+ 
+ mglInit()/mglTerm()  - ~open/close the libraries used, like Warp3D and Intuition.
+ mglCreateContext() - ~create a rendering context for MiniGL. In reality it opens
+                     a Display/Window, creates a Warp3D context, sets some
+                    states and so on.
+ mglMainLoop()     ~~~- ~a mechanism similar to X or GLUT. You can read about it
+                   ~~~~~in the "Functions" doc.
+
+So, how do you structure your MGL program?~~~First,~~if you want to draw something
+on ~the ~screen ~or ~window, ~you ~must ~call ~~MGLInit() ~and ~mglCreateContext() ~before
+you start to draw. Of course, pre-calculations and so on can be done ~before.~~~~~You
+can either go the hard way and do all key handling, frame moving and ~loops your-
+self, or take the easy way out and use a mechanism similar to X or ~GLUT, where
+you ~have ~a ~main ~loop ~provided ~by ~the ~library, and define ~some ~callback ~functions
+that ~are ~called ~on ~special ~events. For example, the function that ~will ~be called ~on
+every ~frame ~is ~~set ~~up ~~by ~~mglIdleFunc(your_function), ~the ~~key-handler ~~function ~~by
+mglKeyFunc(your_function) and in the end you just use the ~mglMainLoop() ~function.
+ 
+In other words, the program should look something like this: 
+ 
+°PROGDIR:data/clips/minigl_code_test.raw°16°  
+The ~Nehe7 ~example ~from ~the ~MiniGL ~Yahoo ~group ~was ~done in this way, as well
+as some examples from the MiniGL distribution. I have also included some examples
+for you~~~~in the bonus directory.~~~To see what can be done by MiniGL in real life,~~~you
+can ~watch ~the ~Encore ~demos, ~like ~"By Night" ~(2003) ~or ~"Sulaco" (2002). ~Both ~are
+WarpOS ~demos ~and ~use ~MiniGL. Sulaco ~was ~the ~first ~MiniGL production from this
+group and it was and still is very nice, I have to say.
+
+°PROGDIR:data/clips/encore.raw°8°   
+You can find some more information about these demos,~~~~including videos and amiga
+native binaries, from the Amiga Demoscene Archive, at http://ada.untergrund.net.
+ 
+Well,~~~~~I think that this is enough for a first step and I hope that you can now see
+the ~power ~of ~OpenGL ~and ~3D ~hardware ~accelerated ~code in ~general. I ~also ~hope
+that this little article has helped motivate you to start writing some code! :-)¤

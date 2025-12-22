@@ -1,0 +1,530 @@
+»SML:»CL9:--------------------------------------
+»SML:»CL8:            »BIG:Coder's Course
+»SML:                »BIG:Part 1
+»SML:»CL9:--------------------------------------
+»CL4:           By Cytron/Depth
+
+»CL0:OK, all you dear »CL1:"I've seen a lot of
+demos and want to code"»-sceners, I'm
+offering you a nice little
+assemblercourse for free. I guess that
+there are loads of those already, but
+as I learned coding pretty easy
+myself, I thought that my approach
+might be a good one. The approach is
+simply »CL1:getting into all the good sides
+of Amiga right away» - let the
+assembler do the understanding for you
+in the beginning, and just code
+something. And don't worry about
+copper, blitter, c2p, etc.. Just learn
+to control simple methods right away,
+and make a few small things that
+demomnstrate that 'I can do it', and
+makes you want to go further into it!
+ANYWAY, that was my appoach 6 months
+ago, and I've coded 3 demos already.
+Besides, I'm working on a 4k. So, this
+is what YOU can do in 3 months from
+now! Anyway, let's get started with...
+
+  »CL8:The simple mathematical stuff,
+  that ALL sceners should know!:
+»SML:»CL1:Hexadeciaml representation:»CL0: When
+writing $FE it simply means 254,
+namely 16*$F+$E = 16*15+14=254.
+
+»CL1:Signed/Unsigned:» When viewing at a
+number as signed, The most significant
+bit determines the sign.. If set, the
+number is negative and the number is
+all the other bits inverted plus 1.
+This is easier to see than to explain:
+eg., signed words:
+
+»CL1:       $FE65 = -$019B = -   411
+       $3444 =  $3444 =   13380
+       $FF56 = -$00AA = -   170
+       $8645 = -$79BB = - 31163
+       $5634 =  $5634 =   22068
+       $0064 =  $0064 =     100
+       $C000 = -$4000 = - 16384
+       $FFFF = -$0001 = -     1
+»
+
+»CL8:          »BIG:The registers:
+»SML:»CL9:--------------------------------------
+»CL0:The MC68xxx contains »CL1:16 registers, 8
+data- and 8 address-registers (d0-d7
+and a0-a7)». The difference between
+the two types of registers will be
+
+
+
+
+explained later in this chapter.
+From now on, aX will mean an
+addressregister and dX will mean a
+dataregister. The registers are
+32-bit, simply meaning that a register
+contains 32 bits of data, that is up
+to $FFFFFFFF. When using commands
+that refer to registers, one has to
+specify which part of the register is
+being used. Let's look at the three
+ways of 'looking at' a register, 
+»CL1:eg. if d0 = $FE673C41, then
+d0 as longword is $FE673C41
+d0 as word     is     $3C41
+d0 as byte     is       $41
+»It's as simple as that!
+When using this principle in an
+assembler, one simply writes »CL1:d0.l»,
+»CL1:d0.w», or »CL1:d0.b» (Omitting this will      
+usually make the assembler             
+
+                      »CL8:The basic instructions for this part: 
+                      »BIG:      move, add, sub, muls/mulu  
+»SML:»CL9:--------------------------------------------------------------------------------
+»CL0:All of these instructions have the following usage:
+»CL1:    command a,b  »CL0:      means do the command from a to b.
+
+eg.»CL4: move.w  d1,d2 »CL5:   ; move the contents in d1 as word to d2 as word.
+»CL4:    add.b   d7,d0  »  ; add d7.b to d0.b. Please note that only the byte in
+                     ; d0 is affected, no matter what the result of the add is.
+»CL4:    sub.w   d0,a0  »  ; subtract d0 from a0. (Remeber to check the note
+                     ; about addressregisters later)
+»CL4:    mulu.w  d0,d0 »   ; multiply d0.w Unsigned with itself and put it in d0.l
+                     ; (this one is special, since we're multiplying) 
+»CL4:    muls.w  d3,d2 »   ; multiply d3.w with d2.w both viewed upon as SIGNED,
+                     ; and store the result in d2.l signed.
+»CL0:interpretate it as d0.w, but »CL1:PLEASE»
+get used to »CL1:ALWAYS» writing the
+extensions. The code get's easier to     
+grasp that way!)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+»CL8:                   »BIG:Regarding address/dataregisters:»SML:
+»CL9:              -----------------------------------------------
+»CL0:Addressregisters are mainly used to    The simplest addressing modes:
+point onto some memory, not to perform When wanting to read/write from/to
+arithmetic instruction upon.           memory, the smartest approach is to
+Therefore, only add, sub and move      store the source/destination-address
+works with addressregisters.. And it's in an address-register, and then
+a little more complex than that. So,   writing to the memory from there. To
+for now, just leave the                demonstrate this, I'll make a little
+adressregisters when doing             example that will also show you the
+arithmetical instructions.             IMMEDIATE priciple:
+
+»CL4:Start: move.l   #30,d0   »CL5:; Moves 30 into d0. d0 = $0000001E
+»CL4:       lea      Space,a0 »; Let a0 point at Space
+»CL4:       move.b   d0,(a0)  »; move d0 as byte into Space. Space = $1E000000
+»CL4:       move.w   d0,(a0)  »; move       d0 as word into Space. Space = $001E0000
+»CL4:       move.l   d0,(a0)  »; hehe...                     Space = $0000001E
+»CL4:       rts               »; Return to assembler
+»CL4:Space: dc.l     0        »; When this is assembled, Space = $00000000
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+»CL0:As you see, using »CL1:(aX)» means »CL1:AT» the
+address stored in aX.
+You might also mark that I've used an
+immidiate move. I've moved the number
+30 into d0. »CL1:(You might wonder why I've
+moved as longword. The reason is that
+I clear the entire register, so that I
+know for sure that d0.l = $0000001E)»
+
+  »CL8:»BIG:Let's start up our assembler:
+»CL9:»SML:--------------------------------------
+»CL0:It's time for you to experiment a
+little bit yourselves. Being in an
+assembler and watching what happens is
+the fastest way to learn anything. I
+will strongly recommend you to use
+»CL1:AsmOne 1.29», as this assembler is
+very straightforward and has a
+brilliant singlestepdebug feature
+(What a great word!). These examples
+apply for AsmOne 1.29. They might work
+in other assembler as well, but I
+wouldn't know!
+
+Type the little program, I've made, in
+your assembler (Escape of course
+toggles between editing the source and
+controlling the whole thing). Now try
+this:
+
+»CL2:a»
+
+The thing should now assemble your
+code in hopefully report No Errors.
+When this is done, try typing
+
+»CL2:h Space»
+
+
+
+Now a lot of numbers should pop up at your screen. Like this:
+
+»CL7:0822450C 00 00 00 00 12 34 56 78 01 01 00 00 00 08 00 00 ".....4Vx........"
+0822451C 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 "................"
+0822452C 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 "................"
+»CL0:^^^^^^^^ ^^                                               ^^^^^^^^^^^^^^^^
+Address  Data as Hex. Each line contains 16 bytes of data. Data as AscII
+
+(Escape let's you out again)
+What we've just seen is the data at the label Space.
+If we change the line 
+»CL4:Space:       dc.l       0
+»to
+»CL4:Space:       dc.l       $CAFEBABE
+», our memory will (after assembling again) look like this:
+
+»CL7:08224514 »CL6:CA FE BA BE» 12 34 56 78 01 01 00 00 00 08 00 00 "Êþº¾.4Vx........"
+08224524 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 "................"
+08224534 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 "................"
+»
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+»CL0:As you can see, The memory has now been changed.
+Now let's try writing:
+
+»CL2:h Start
+
+»CL7:08224500 20 3C 00 00 00 1E 41 F9 08 22 45 14 10 80 30 80 " <....Aù."E..`0`"
+08224510 20 80 4E 75 CA FE BA BE 12 34 56 78 01 01 00 00 " `NuÊþº¾.4Vx...."
+08224520 00 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 "................"
+
+»CL0:Now, we're at another location in memory close to the other one (you can see
+CAFEBABE someplace!)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+While we're in this HEX-viewer, try pressing »CL1:RAMIGA+d» (Disassemble).
+
+Now we get:
+
+»CL7:08224500 203C0000001E         MOVE.L      #$0000001E,D0
+08224506 41F908224514         LEA         $08224514,A0
+0822450C 1080                 MOVE.B      D0,(A0)
+0822450E 3080                 MOVE.W      D0,(A0)
+08224510 2080                 MOVE.L      D0,(A0)
+08224512 4E75                 RTS
+08224514 CAFE                 DC          $CAFE
+08224516 BABE                 DC          $BABE»
+^^^^^^^^ ^^^^^^^^^^^^^^       ^^^^^^^^^^^^^^^^^^^^^^
+Address  Instruction as Code  Instruction 
+         
+In other words, this is what the computer gets out of our little
+program. You should note that the       »CL7:LEA        $08224514,A0»
+moves exactly the address we wanted (The label Space) into a0.
+Now let the real fun begin.. (Escape).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Let's singlestepdebug our little
+program! Type:
+
+»CL2:ad»
+, which means assemble/debug.
+
+»CL1:Whoaa...» You're in the 'editor', and a
+black line is on the first line in the
+program. The contents of all registers
+are to the right.
+Now try pressing arrow down. And see,
+that d0 contains 0000001E.
+Do this until you've reached the
+
+»CL4:move.w       d0,(a0)»
+, then press escape. Now examine
+what's on »CL1:Space» (h Space for the slow
+ones of you!!). It should definately
+not be CAFEBABE anymore! Great!
+
+Finally, try just pressing
+
+»CL2:a
+j»
+
+And the entire program runs to the end
+»CL1:(until rts is encountered)». Now again
+examine »CL1:Space».
+This isn't very hard, I know!
+So know let's try generating a little
+table.
+
+
+
+
+
+
+
+For this we need to learn a little bit
+about »CL1:branching». Let's introduce...
+»CL8:                             »BIG:The bxx command(s):
+»CL9:»SML:                    -----------------------------------------
+»CL0:The »CL1:bxx» is not ONE command, it's loads
+of commands. Let's make little
+example:
+
+»CL4:Start: move.b    #$80,d1
+       move.b    #$80,d0
+       sub.b     d0,d1
+       beq       Stop
+       move.l    #$DEADBEEF,d0
+Stop:  rts
+»
+Before you run this program, let me
+ask you? Does d0 contain $DEADBEEF
+after this program has been run? :-)
+
+OK... As you might hvae guessed, the
+»CL1:beq» command means »CL1:branch to the label
+Stop if the result was zero.»
+
+
+What actually happens is that the
+computer has got a »CL1:FLAGREGISTER»,
+containing information about the
+result of the last arithmetic
+operation.
+The flags are:
+»CL1:  Z (Zero)
+  N (Negative)
+  C (Carry)
+  V (oVerflow)»
+Explaining the use of this would bore
+you to death, I think. The only
+intersting things to say are perhaps
+that
+- the carry flag is set if an addition
+or multiplication hs a result bigger
+than can be in the register.
+- the V-flag is used on signed values.
+What is much more important is that the flags can be seen »CL1:BENEATH» the
+registers when »CL1:singlestepping». Try singlestepping the little program and
+watch the flags, as you move numbers into registers »CL1:(Note: $80.b = -$80),»
+and as you subtract. The many types of branching depend on the flags as this:
+»CL4:beq »CL5:(EQual):           » Z-flag set.
+bne »CL5:(Not Equal):       » Z-flag not set.
+bmi »CL5:(MInus):           » N-flag set.
+bpl »CL5:(PLus):            » N-flag not set.
+bcs »CL5:(Carry Set):       » C-flag set.
+bcc »CL5:(Carry Clear):     » C-flag not set.
+bvs »CL5:(oVerflow Set):    » V-flag set.
+bvc »CL5:(oVerflow Clear):  » V-flag not set.
+blt »CL5:(Less Than):       » V-flag the same as N-flag AND Z-flag not set.
+ble »CL5:(Less or Equal):   » V-flag the same as N-flag.
+bge »CL5:(Greater Than):    » V-flag not the same as N-flag AND Z-flag not set.
+bgt »CL5:(Greater or Equal):» V-flag not the same as N-flag
+blo »CL5:(LOwer):           » C-flag set.
+bls »CL5:(Lower or Same):   » C-flag set OR Z-flag set
+bhs »CL5:(Higher or Same):  » C-flag not set.
+bhi »CL5:(HIgher):          » C-flag not set OR Z-flag set
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+»CL0:As you see, this can get rather
+complicated. Some of these commands
+are supposed to be used after the      
+»CL1:cmp»-command (compare). But for now,    
+let's just stick to »CL1:beq» and »CL1:bne». These 
+two can take us a long way! »CL1:They can   
+make us do loops!»
+
+Before we begin, let me introduce you
+to a quite handy adressing mode:
+»CL4:       move.X       something,(aX)+
+       move.X       something,-(aX)
+»This is extremely neat, »CL1:as it will add/subtract either 1,2, or 4 to/from
+aX every time some data has been written to it.»
+
+eg:»CL4:    add.w   d0,(a0)+»CL5: ; add d0.w to the location of a0 and then add 2 to a0
+»CL4:       sub.b   d1,-(a1)» ; subtract 1 from a1 and then
+                        ; subtract d1.b from the location of a1.
+»CL4:       move.l  #0,(a2)+ »; move $00000000 to the location of a2 and then
+                        ; add 4 to a2.
+»CL0:Our first decent program will make a
+square table (word-size) of the
+numbers 0-255. This isn't hardcoded,
+as I might confuse you a bit by smart
+optimizing!                             
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                               »BIG:»CL8:Let's do it!:
+»SML:»CL9:-------------------------------------------------------------------------------
+»CL4:Squares:     move.w  #0,d0          »CL5: ; The number, we're at
+»CL4:             lea     SquareTable,a0  »; Find our table.
+»CL4:Loop:        move.w  d0,d1
+             mulu.w  d1,d1          » ; The square. Unsigned!
+»CL4:             move.w  d1,(a0)+   »     ; Move the square into the table,
+                                     ; then add 2 to a0
+»CL4:             add.w   #1,d0       »    ; The next number
+»CL4:             cmp.w   #256,d0      »   ; Are we finished?
+»CL4:             bne     Loop          »  ; If not, then loop.
+»CL4:             rts
+SquareTable: dcb.w   256,0      » ; Declare 256 words as 0
+
+
+»CL0:You should try to test if the program
+has done what it should by simply
+checking if the SquareTable consists
+the 256 squares after jumping. (a, j,
+h SquareTable).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+And by all means, try
+singlestepdebugging it and watch what
+happens in the registers!               
+
+This concludes the first lesson of
+coding. I hope that some of you are
+inspired to make something out of
+coding now. Or at least to stay tuned
+here. Coding isn't as hard as it
+seems. Stay tuned for the next lesson,
+where we will go further into
+adressing and perhaps take a brief
+look at some optimizingmethods plus
+some more assembler-specific tricks.

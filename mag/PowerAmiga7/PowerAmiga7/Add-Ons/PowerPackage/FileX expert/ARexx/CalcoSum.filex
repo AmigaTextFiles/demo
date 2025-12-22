@@ -1,0 +1,15 @@
+/* Special Automated Sequence For Fix IFF Images */
+
+options results
+
+address 'FILEX'; GETATTR FILE FILELEN
+
+nm = reverse(d2x(result-8))
+
+do while length(nm) ~= 8
+ nm = nm || '0'
+end
+
+nm = reverse(nm); setbytes 4 nm; save
+
+exit

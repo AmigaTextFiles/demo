@@ -1,0 +1,55 @@
+Short:        Menace crack intro (source)
+Author:       mscarano@libero.it (Massimiliano Scarano)
+Uploader:     mscarano libero it (Massimiliano Scarano)
+Type:         demo/intro
+Version:      1.0 20190324
+Architecture: m68k-amigaos
+Distribution: Aminet
+
+  (c) 2019   Massimiliano Scarano   mscarano@libero.it
+  Support my projects for Amiga with a PayPal donation thanks.
+  PayPal donate to mscarano@libero.it
+
+  This package contains the source code and data of Menace crack intro
+  (demo/intro/menace_cracktro_v1_0.lha).
+  The intro was coded by Massimiliano "AlienTech" Scarano for the Amiga demo group VOID
+  and presented at Revision 2019, where it was ranked 7th at the "Amiga Intro 64 KB" competition.
+  Here is the official recording, it is the 1st entry at about 1:30:
+  https://www.youtube.com/watch?v=cjfLrv9jGHw
+
+
+
+  This intro shows how to make direct programming of the Commodore Amiga hardware using a mix of C and Assembly.
+  It is designed like in the late 80s / early 90s.
+  It consists of the following "old-school" effects:
+  - sine scroller (blitter)
+  - color bars (copper)
+  - MOD music (paula)
+  The Player Playroutine P6112 assembled with PhxAss V4.40.
+  Compiled with SAS/C 6.58 and Includes release 40.13 (AmigaOS 3.1).
+  Source code supplied for educational purpose only.
+
+
+
+  It should work on any PAL Amiga, with a Motorola 68000 cpu and OCS chipset,
+  512 KB Chip ram and 512 KB real Fast ram (not the so called slow ram),
+  and whatever OS (Kickstart + Workbench) version.
+  Tested OK:
+  - Amiga Forever 2013 (WinUAE, cycle exact emulation)
+  - Amiga Forever 7 (WinUAE, cycle exact emulation)
+
+
+
+  Version history:
+  - V1.0 20190324, first public release
+
+
+
+  Notes:
+  - The intro should run at constant full frame rate (50 Hz),
+    the screen is updated every frame.
+  - Commodore Includes 40.13 were distributed with SAS/C 6.51.
+  - RAW gfx format consists of all rows of the 1st bitplane, followed by all rows of the 2nd bitplane and so on.
+  - Build with:
+    > phxass p61.s
+    > sc link Menace_cracktro_V1_?_YYYYMMDD.c p61.o

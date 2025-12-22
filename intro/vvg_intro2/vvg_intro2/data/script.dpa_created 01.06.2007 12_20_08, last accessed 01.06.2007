@@ -1,0 +1,152 @@
+DPA_Script
+
+#define RENDER_TO_TEXTURE 1
+#define GET_RENDER_TEXTURE 2
+#define SET_RENDER_TEXTURE 3
+
+
+SoundTrack
+{
+	SS_FileName "data/track.ogg"
+}
+
+
+Channel 0
+{
+
+	Scene "Intro"
+
+}
+
+
+
+Channel 1
+
+{
+	
+	Scene "Fl_Particles"
+	
+	Event { E_TimeLabel 34000 E_Message 1 }
+	
+	Event { E_TimeLabel 32000 E_Message 2 }
+
+}
+
+
+
+
+Channel 4
+
+{
+
+	Scene "LeviMorph"
+}
+
+Channel 5
+{
+	Scene "Float"
+}
+
+Channel 6
+{
+	Scene "Tunnel"
+}
+
+Channel 7
+{
+	Scene "Stars"
+}
+
+Channel 8
+{
+	Scene "KOLO"
+}
+
+Channel 9
+{
+ Scene "Boom"
+}
+
+Channel 10
+{
+ Scene "Greetz"
+}
+
+Options
+{
+	ShowFps false
+	EnableDebugConsole false
+	EnableWideScreenFactor 15
+}
+
+SequenceTrack
+{
+	Lenght 120000
+	PlaySound true
+	Track
+	     {
+		    D_Time 0,10300
+ 
+		    { 
+
+					1
+
+		    }
+
+		    D_Time 10300,20500
+	            {
+
+					4
+
+		    }
+
+		    D_Time 20500,41000
+	            {
+
+					7
+
+		    }
+
+		    D_Time 41000,48000
+	            {
+
+					5
+
+		    }
+		    
+		    D_Time 48000,61750
+	            {
+
+					8
+
+		    }
+		
+                    D_Time 61750,80000
+	            {
+
+					9
+
+		    }
+
+                    D_Time 80000,110000
+	            {
+
+					10
+
+		    }
+
+                    D_Time 110000,120000
+	            {
+
+					9
+
+		    }
+
+
+
+	      }
+}
+
+DPA_Script
+
+

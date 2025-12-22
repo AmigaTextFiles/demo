@@ -1,0 +1,53 @@
+Section "Files"
+    RgbPath	"/usr/lib/X11/rgb"
+
+    FontPath	"/usr/lib/X11/fonts/misc/:unscaled"
+    FontPath	"/usr/lib/X11/fonts/75dpi/:unscaled"
+    FontPath	"/usr/lib/X11/fonts/Speedo/"
+    FontPath	"/usr/lib/X11/fonts/Type1/"
+    FontPath	"/usr/lib/X11/fonts/misc/"
+EndSection
+
+Section "Module"
+    Load "xie.so"
+EndSection
+
+Section "ServerFlags"
+    DontZoom
+EndSection
+
+Section "Keyboard"
+    Protocol	"Standard"
+    AutoRepeat	500 5
+    XkbDisable
+    XkbKeymap "amiga(usa1)"  # United States
+EndSection
+
+Section "Pointer"
+    Protocol	"BusMouse"
+    Device	"/dev/mouse"
+EndSection
+
+Section "Monitor"
+    Identifier	"Generic Monitor"
+    VendorName	"Datas"
+    ModelName	"Unknown"
+    HorizSync   31.5  # typical for a single frequency fixed-sync monitor
+    VertRefresh 60  # typical for a single frequency fixed-sync monitor
+EndSection
+
+Section "Device"
+   Identifier	"Linux Frame Buffer Device"
+EndSection
+
+Section "Screen"
+    Driver      "FBDev"
+    Device      "Linux Frame Buffer Device"
+    Monitor     "Generic Monitor"
+    DefaultColorDepth 4
+    SubSection "Display"
+        Depth       1
+        Modes       "default"
+        #Virtual     1280 960
+    EndSubSection
+EndSection

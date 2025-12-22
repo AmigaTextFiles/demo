@@ -1,0 +1,10 @@
+IF VAL $playing EQ 2
+  SP STOP
+  SETENV playing 0
+ELSE
+  IF VAL $playing GT 0
+    SP STOP
+  ENDIF
+  SETENV playing 2
+  SP "Mod.Spring'95" NOWINDOW
+ENDIF

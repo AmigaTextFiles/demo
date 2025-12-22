@@ -1,0 +1,126 @@
+@{d BEFFA8}                            @{c 7DEE56}Jak programovat kompatibilnë?@{c}
+                       @{c 74DD4F}Jak zajistit 100% systémovost programû?@{c}
+                     @{c 6BCC49}Jak se pêipravit na nový AmigaOS 4.0 a 5.0?@{c}
+                      @{c 62BB43}Jak odstranit závislost na hardware a CPU?@{c}
+
+  Tyto otázky si budeme  asi  brzo pokládat.  Upozorñuji, ùe následující text je urçen
+pouze  programátorûm.   Pêedpokládám  zkuîenosti  s programováním v jazyce C a alespoñ
+základní pêehled o knihovnách, strukturách a principech programování AmigaOS.
+
+@{c 74DD4F}1. Pêekladaç@{c}
+
+  V dneîní  dobë  má  cenu  pouùívat pouze 2 pêekladaçe.  Prvním je "dvorní" pêekladaç
+@{c BCEE40}SAS/C  6.58@{c},  ve  kterém  byla  napsána  vëtîina systému a jehoù vývoj byl jiù bohuùel
+ukonçen.   Tento  pêekladaç jiù nelze nikde koupit - poslední zásoby byly vyprodány po
+10  USD/kus bez manuálû zhruba pêed pûl rokem.  Druhou volbou je @{c BCEE40}StormC@{c}, nyní ve verzi
+3.0,  který  se  rychle vyvíjí a podporuje WarpUP.  Nevýhodou je vysoká cena a bohuùel
+i  nëkolik  nedostatkû.   Zapomeñte  na staré pêekladaçe @{c BCEE40}DiceC@{c}, @{c BCEE40}ManxC@{c}, @{c BCEE40}MaxxonC@{c}, @{c BCEE40}NorthC@{c}
+a @{c BCEE40}LatticeC@{c}  -  jinak  vás  çeká PEKLO NA ZEMI.  Úplnë staçí, kdyù chcete pêekompilovat
+program  napsaný  pûvodnë v DiceC pomocí SAS/C.  Dostanete víc chyb a varování, neù má
+váî  program  êádkû.   Proto  je  lepîí  se  nechat hned od zaçátku od pêekladaçe 'víc
+buzerovat',  neù  dopustit bezmeznou benevolenci pêekladaçe jakým je DiceC.  Çlovëk si
+na pêísná ANSI pravidla çasem zvykne.
+
+ @{i} @{c BCEE40}Aï jiù se rozhodnete pro SAS/C nebo StormC, proveðte následující kroky:@{c}@{ui}
+
+  · pouùívejte pouze çisté ANSI C, zapomeñte na veîkerá C++ rozîíêení
+  · zapnëte v pêekladaçi striktní dodrùování ANSI C
+  · zapnëte vîechna varování pêekladaçe v nejstriktnëjîím reùimu
+  · upravte program, aby neobsahoval ùádné chyby a varování
+    (vím, ùe se to lehce êekne a pêitom je to hodnë ohavná práce...)
+  · pêepiîte pêípadné funkce napsané v assembleru do C
+  · upravte váî program pro AmigaOS 3.x a vyuùijte jeho nové tagové funkce
+  · dbejte, aby byl kaùdý váî vëtîí program rozdëlen do nezávislých modulû
+    (nepsané pravidlo êíká, ùe jeden zdrojový kód nemá být delîí neù 1000 êádkû
+     -- linker není v C jen pro okrasu!)
+  · izolujte çásti závislé na systému a obecnë pêenositelné funkce
+  · nepouùívejte __chip, __fast, volejte AllocVec() s pêísluînými flagy
+  · vùdy testujte návratové kódy funkcí - napê. kaùdá alokace pamëti mûùe selhat!
+  · pêi programování vùdy pouùívejte Enforcer a Mungwall a 'stresové' utility
+    EatMem a EatCycles
+  · testujte alokaci a vracení pamëti/prostêedkû utilitou MemMon
+
+@{c 74DD4F}2. Hardware@{c}
+
+  Zákazem  ç.1 je nepêistupovat pêímo k hardware.  Zapomeñte na OCS/ECS/AA.  Zapomeñte
+na  CIA,  PAULU,  COPPER i GAYLE!  Zapomeñte na jakoukoliv absolutní adresu!  Testujte
+myî  pomocí  IDCMP  signálû, ne çtením bitu z CIA.  Tisknëte pomocí printer.device, ne
+pêímým  zápisem  do  CIA.   Kreslete  pomocí  graphics.library,  ne  pêímým zápisem do
+bitplánû.   Poçítejte  ças pomocí timer.device.  Pêehrávejte zvuk pomocí audio.device.
+Testujte klávesnici pomocí keyboard.device nebo IDCMP signálû.  Çtëte a zapisujte data
+výhradnë  pomocí  funkcí  dos.library  atd...
+
+  Hardware,  který  známe  úplnë  zmizí,  nezûstane z nëj vûbec nic.  OS jiù nesmí být
+zakázán  a  opëtovnë  oùiven.   Ani  to  nezkouîejte,  nový  AmigaOS vám to nedovolí -
+jednoduîe  zemêete,  nic nebude fungovat, vaîe tëùko nabyté zkuîenosti se souçasným HW
+vám budou v budoucnu nanic.  Pêistupovat k hardware znamená nekompetenci!
+
+@{c 74DD4F}3. Báze knihoven@{c}
+
+  Zapomëñte,  ùe  existuje  nëco jako báze knihovny.  Nové API mûùe mít naprosto jinou
+strukturu  vektorû  funkcí.   Datová çást bází knihoven jednoduîe nebude ani ke çtení!
+Báze knihoven v novém systému nemusí vûbec interpretovat nëjakou adresu.  Nepouùívejte
+hrûzy  typu  SysBase->ThisTask, pouùijte místo toho funkci FindTask(NULL).  Neukazujte
+svou  neschopnost  çtením  IntuitionBase->MouseX nebo IntuitionBase->ActiveScreen.  Na
+knihovny  se  odkazujte  jen obecnë jako 'struct *Library', ne 'struct *IntuitionBase'
+nebo  'struct *GfxBase'.   Ostatnë vëtîina IntuitionBase v roce 1991 zmizela.  Dovolím
+si ocitovat skuteçnë dobrý komentáê k této struktuêe:
+
+    @{c BCEE40}/* I told you this was private.
+     * The data beyond this point has changed, is changing, and
+     * will continue to change.@{c}
+     @{c BCEE40}*/@{c}
+
+  Jako   souçást  tohoto  problému  otevírejte  pomocí  OpenLibrary()  i  exec.library
+(tzv.SysBase).   Nepêistupujte  k  adrese  $00000004 - v novém systému nemusí být tato
+adresa  vûbec  pêístupná.   Také  nepêistupujte  ani  neprohledávejte  List  struktury
+systému, zvláîtë ne Execu - na vîecho pêibydou nové dotazové funkce.  Nemëñte prioritu
+procesû - v novém systému bude zcela nový scheduler.
+
+
+@{c 74DD4F}4. API@{c}
+
+  Funkce  knihoven  projdou  zásadní  modernizací.   Exec  se kompletnë zmëní, vîechny
+low-level  funkce  budou odstranëny, proto je jiù teð nepouùívejte!  To se týká hlavnë
+funkcí  Alloc/FreeTrap(),  SetExcept(),  SetIntVector(),  SetFunction(), SuperState(),
+UserState(),  Supervisor(),  GetCC(),  ale  i  funkcí Enable(),  Disable(),  Forbid(),
+Permit(),  SetTaskPri().  Také je v exec.library nëkolik dësivých hrûz minulosti, jako
+AllocAbs(),  SetSR(), OldOpenLibrary().  Pokud tyto funkce vûbec budou implementovány,
+nejspíîe skonçí rovnou v alertu...
+
+
+@{c 74DD4F}5. Memory protection@{c}
+
+  Nezapisujte  do  struktur  systému.   Pokud  moùno  ani  z nich  nic neçtëte.  Pokud
+existuje   funkce   systému   na   çtení/nastavení  poloùky  struktury,  pouùijte  ji.
+Nepêistupujte nikdy pêímo k RastPortu, pouùijte funkce jako SetAPen(), SetDrMd(), nebo
+nejradëji  obecné  funkce  SetRPAttr()/GetRPAttr().   Nikdy  nezapisujte do základních
+struktur  systému jako Task, Window, Screen, Layer, RastPort, BitMap.  V novém systému
+budou  nejspíîe  pouze  pro  çtení.   Také  k  tëmto strukturám pêistupujte pouze pêes
+ukazatele.  Nikdy je nevkládejte jako vloùené struktury.
+
+  Komunikaci  mezi  procesy  maximálnë  omezte, zjednoduîte a izolujte od zbytku kódu.
+Nový  OS  bude  obsahovat  kompletnë  nový  message-system.   Také nemëñte GUI objekty
+vytvoêené  intuition  nebo  gadtools  -  pokud  je to nezbytné, napiîte vlastní BOOPSI
+objekt.   Nehrabejte se ve strukturách intuition.library (struct Menu, struct Gadget),
+vîe se dá vytvoêit/nastavit/pêeçíst funkcemi NewObject/SetAttrs/GetAttr().
+
+
+@{c 74DD4F}6. Závër@{c}
+
+  Hardware,  Exec i OS jaký známe kompletnë zmizí - zûstane jen API, resp. jen nëkteré
+çásti  z nëj.   Drùte se tëchto zásad a pomalu upravujte vaîe stávající programy podle
+nich  -  çasu  je  dost.   Jedinë tak budete mít na novém OS îanci, ùe bëhem relativnë
+krátké  doby  pêekompilujete  vaîe  programy  do  nativního  kódu  a nebudete se muset
+spokojit s pomalou emulací.
+
+
+@{c 74DD4F}7. Dodatek@{c}
+
+  @{c BCEE40}Podle   nejçerstvëjîích  informací  je  i  to  zbyteçné.   Kompatibilita  na  úrovni
+zdrojových  kódû nebude v AmigaOS 4/5 vûbec podporována.  Vîe budete muset napsat celé
+znova  v C++,  z pûvodního  systému  nezûstane  vûbec  nic - proto klidnë své zdrojáky
+nechte tak jak jsou, nebo je rovnou smaùte...  stejnë jako tento çlánek :-)))@{c}
+
+                                      - @{c 74DD4F}ShAmaN@{c} -
+PS: Poslední fámy hovoêí o vzkêíîení AmigaOS 3.5, takùe moùná to k nëçemu bude...

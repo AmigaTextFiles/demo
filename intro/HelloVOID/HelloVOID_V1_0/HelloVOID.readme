@@ -1,0 +1,58 @@
+Short:        HelloVOID demo
+Author:       mscarano@libero.it (Massimiliano Scarano)
+Uploader:     mscarano libero it (Massimiliano Scarano)
+Type:         demo/intro
+Version:      1.0 20180225
+Architecture: m68k-amigaos
+Distribution: Aminet
+
+  (c) 2018   Massimiliano Scarano   mscarano@libero.it
+  Support my projects for Amiga with a PayPal donation thanks.
+  PayPal donate to mscarano@libero.it
+
+  Coded by Massimiliano "AlienTech" Scarano for the Amiga demo group VOID.
+
+
+
+  This demo shows how to make direct programming of the Commodore Amiga hardware using C language.
+  It is designed like in the early 90s.
+  It consists of the following "old-school" effects:
+  - sine scroller (blitter)
+  - 2D stars (hardware sprites)
+  - MOD music (paula)
+  The Player Playroutine P6112 assembled with PhxAss V4.40.
+  Compiled with SAS/C 6.58 and Includes release 40.13 (AmigaOS 3.1).
+  Source code supplied for educational purpose only.
+
+
+
+  Both .exe and .adf supplied.
+  It should work on any PAL Amiga, with a Motorola 68000 cpu and OCS chipset,
+  and whatever OS (Kickstart + Workbench) version.
+  Tested OK:
+  - Amiga Forever 2013 (WinUAE)
+  - Minimig V1.1 OCS, 68SEC000 / 7.09 MHz (Normal), 512 KB Chip, 0 KB Fast, Kickstart 1.3
+  - Minimig V1.1 OCS, 68SEC000 / 7.09 MHz (Normal), 512 KB Chip, 512 KB Fast, Kickstart 1.3
+  - Minimig V1.1 ECS, 68SEC000 / 49.63 MHz (Turbo), 1 MB Chip, 512 KB Fast, Kickstart 1.3
+
+
+
+  Version history:
+  - V1.0 20180225, first public release
+
+
+
+  Notes:
+  - My Minimig configuration:
+    Bootloader   BYQ100413
+    FPGA core    FSB150520
+    ARM Firmware AYQ100818
+  - The demo should run at constant full frame rate (50 Hz),
+    the screen is updated every frame.
+  - Commodore Includes 40.13 were distributed with SAS/C 6.51.
+  - RAW gfx format consists of all rows of the 1st bitplane, followed by all rows of the 2nd bitplane and so on.
+  - Build with:
+    > phxass p61.s
+    > sc link HelloVOID_V1_?_YYYYMMDD.c p61.o
+  - Run the following on a very fast Amiga to enjoy a 1 pixel sine scroller:
+    > HelloVOID.exe turbo

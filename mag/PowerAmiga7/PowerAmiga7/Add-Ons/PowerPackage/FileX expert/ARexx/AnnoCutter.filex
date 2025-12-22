@@ -1,0 +1,93 @@
+/* Cut Annotation Info From File & Recalc Sum */
+
+   if ~show(libraries,'rexxtricks.library') then
+      if ~addlib('rexxtricks.library',9,-30,38) then
+         quit('Cannot open rexxtricks.library!',10)
+
+options results
+
+address 'FILEX'
+
+REQUESTRESPONSE BUTTONS '"Multi|Single"' PROMPT '"What Mode Launch?"'
+
+ select
+      when rc == 0 then call core
+      when rc == 1 then call mult
+    otherwise nop
+ end
+
+exit
+
+
+mult:
+GETATTR FILE PATH; pat = result
+
+call write('TRUE')
+
+if getdir(pat,'~(#?.info)',fil,'FILES','NAME') then
+
+ do i=1 to fil.0
+   open pat || '/' || fil.i force  
+  call core
+ end
+
+call write('FALSE')
+return
+
+
+core:
+
+ POSITION SOF
+
+ find quiet text 'ANNO'
+
+ if rc = 5 then do
+  REQUESTNOTIFY '"ANNO header not found!"'; return
+ end
+ 
+ call mark(1)
+ column 4; call getta(4)
+ column x2d(byte)+4; call getta(1)
+
+ if byte ~= '00' then cursor left; cut
+
+ GETATTR FILE FILELEN
+
+ nm = d2x(result-8)
+ nm = reverse(nm)
+
+ do while length(nm) ~= 8
+  nm = nm || '0'
+ end
+
+ nm = reverse(nm); setbytes 4 nm; save
+
+ call mark(0)
+
+return
+
+
+write:
+parse arg mode
+
+seta.OVERWRITE = mode; SETATTR APPLICATION FROMSTEM seta
+
+return
+
+getta:
+parse arg bits
+
+GETATTR VIEW CURSORPOS; off = result; GETBYTES off bits; byte = result
+return
+
+mark:
+parse arg mode
+
+GETATTR VIEW MARK
+
+ select
+      when mode == 1 then IF result ~= TRUE THEN SETBLOCKMARK
+      when mode == 0 then IF result = TRUE THEN SETBLOCKMARK
+    otherwise nop
+ end
+return

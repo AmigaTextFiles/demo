@@ -1,0 +1,86 @@
+
+;----------------------------
+
+;try to figure out a place where the user usually installs his games
+(if (exists "Demos:" (noreq) )
+    (set @default-dest "Demos:")
+    (if (exists "SYS:Demos" (noreq) )
+        (set @default-dest "SYS:Demos")
+        (if (exists "Work:Demos" (noreq) )
+            (set @default-dest "Work:Demos")
+            (set @default-dest "RAM:")
+        )
+    )
+)
+
+(set @default-dest
+(askdir
+	(prompt ("Where should %s installed ?\nA drawer \"%s\" will automatically created." @app-name @app-name))
+	(help @askdir-help)
+	(default @default-dest)
+	(disk)
+)
+)
+
+(set #dest (tackon @default-dest @app-name))
+
+(copyfiles
+	(help @copyfiles-help)
+	(source "CTRL")
+	(dest #dest)
+	(infos)
+)
+
+(copyfiles
+	(help @copyfiles-help)
+	(source "IsoHD")
+	(dest #dest)
+	(infos)
+)
+
+(copyfiles
+	(help @copyfiles-help)
+	(source "IsoHD_2MB")
+	(dest #dest)
+	(infos)
+)
+
+(copyfiles
+	(help @copyfiles-help)
+	(source "IsoHD.exe")
+	(dest #dest)
+	(infos)
+)
+
+(copyfiles
+	(help @copyfiles-help)
+	(source "IsoHD.readme")
+	(dest #dest)
+	(infos)
+)
+
+(set #CI_drive "DF0:")
+
+(makedir #dest
+	(help @makedir-help)
+	(infos)
+)
+
+;----------------------------
+
+(message ("\nInsert Iso disk 1 into drive %s " #CI_drive))
+
+	(if
+		(= 0 (run ("disk2file %ld \"%s/Iso.Disk1\"" #CI_unit #dest )))
+		("")
+		(abort "\"disk2file\" must be in your PATH !")
+	)
+
+(message ("\nInsert Iso disk 2 into drive %s " #CI_drive))
+
+	(if
+		(= 0 (run ("disk2file %ld \"%s/Iso.Disk2\"" #CI_unit #dest )))
+		("")
+		(abort "\"disk2file\" must be in your PATH !")
+	)
+

@@ -1,0 +1,392 @@
+                           BACKSTAB LIBRARY V1.0
+                           ---------------------
+
+
+DISCLAIMER		I accept no responsibility of ANY kind of
+			damage caused by the usage of this library.
+
+			If you use this library in your programs,
+			you should either include this library
+			package or notify about the usage to be
+			free of responsibility.
+
+			If the user knows about the usage of this
+			library s/he accepts responsibility for
+			all damages caused by the library directly
+			or consequently or by any other way.
+
+
+DISTRIBUTION		The library is freely distributable.
+
+			All public domain / shareware programs using
+			this library should notify about the usage or
+			include the newest available version of the
+			library with their program(s).
+
+			Commercial products using this library need
+			to notify about the usage in the documentation
+			at minimum!
+
+
+
+                              Brief description
+
+Backstab.library is quite a small library that will help you take over the
+machine in OS legal ways. You call a function and you have a right to hit
+the Amiga hardware. And when you're done, you call another routine to turn
+the system back on again.
+
+
+
+                                   History
+
+The first version of backstab.library was finished in 6.12.1993. The idea for
+the library was taken from a message in InterNet where the writer asked why
+there wasn't a library like this circulating. I am working on a hardware
+hitting game that needed to access all possible devices to be able to use hard
+drives as well. There is a way to do that but then you need to downgrade on
+the speed of your code. The alternate way was to take over the system and
+return back when system was needed. The routines I had for takeover were
+quite ideal to the purpose, but they were a bit buggy and incomplete. I began
+to rewrite and now after 3 days the routines are working quite OK. 
+
+Version history:
+
+V1.0	-	Routines are working, no bugs noticed yet. Much room to
+		improve.
+
+
+                                  The Idea
+
+Many coders in the Amiga scene are able to take over the machine in a fairly
+legal way, although I've seen *AGA* intros that won't work if I don't use
+an utility fixing the bug (for example 'runshit'). What can backstab.library
+offer other than system takeover, which can be done by many coders nowadays?
+
+The idea is *not only* to help people take over the machine, but also give
+them a sort of a 'guarantee' that the code will work in the future generation
+OS's as well. This should be the case because the library functions can be
+updated if there's need to do so. And even the oldest demos using
+backstab.library should work on the future machines.
+
+To face the fact, hardware and machines change. There's *no* way to make a
+demo or an intro OS legal in the future, I think. The only logical solution
+is to be able to upgrade the takeover routines and that's exactly what the
+library does.
+
+Shortly: backstab.library = future compatibility :).
+
+
+                            The library routines
+
+The routines that are used in the library V1.0 are almost exactly the same as
+my previous OS takeover routines. They are ofcourse improved, and at the
+moment the only real bad point I see is the CIA handling. This is a bug that
+should be corrected as quickly as possible, so anyone with a CIA
+store/restore knowledge, bring your info to the public! Ofcourse there are
+minor bad points (like master int. always disabled), but they are a very
+small price compared to compatibility!
+
+The library is quite small at the moment, ~3 kb and after running it will take
+around 4 kb, I think. So the size shouldn't be a problem for your demo/intro.
+Here a list of the current library routines. If there will be a future
+version of the backstab.library, it should be downwards compatible. For
+example if people needed more input regs, the 31st bit of the D0 should
+indicate that all regs from D1-D7 are used for input etc...
+
+The thumb rule is that the routines should work under any configuration and
+be downwards compatible (not bug compatible though ;-).
+
+For a better understanding on how the routine really work, check the
+source code!
+
+
+--- D0-D4 = TakeOverSystem(Flags, D0)	-30
+
+Takes over system in as legal way as possible. Things that happen (no order):
+	.   (AGA) hardware register flush
+	.   (AGA) sprite resolution fix (>= V39)
+	.   VBR is reset to zero, the zeropage will always be in $000-$400
+	.   Stores and resets as many chipregs as possible (DMACON, INTENA,
+	    INTREQ, ADKCON). All possible bits in these registers are zeroed!
+	.   Blitter is stolen from OS: OwnBlitter(), WaitBlit()*2 and own
+	    illegal waitblit for .maximum. certainty!
+	.   Sound channels are reserved (OS resets them as well. good for
+	    future compatibility)
+	.   Caches are disabled if the 'nocache' flag is set (>KS2)
+
+	All possible bits from regs DMACON, INTENA, INTREQ and ADKCON are
+	cleared as you return from this routine !!!
+
+
+Input:		D0	flags
+
+		Bit	Function
+		----------------
+		0	nocaches - disables all types of caches (for time
+			during program)
+		1	supervisor - returns in supervisor mode
+
+		Rest of the bits are reserved, do NOT rely on them being
+	        zero because of the possible future flags. Be sure to have
+		all the unused flags cleared.
+
+Output:		All are full longword values.
+
+		D0	zero if takeover ok, nonzero if error occurred.
+		D1	chipset type (0 = ocs, 1 = ecs, 2 = aga)
+		D2	kickstart version number (e.g. V39 = 39)
+		D3	CPU type (0...4: 000, 010, 020, 030, 040)
+		D4	math co-processor types:
+				bit 0	68881 commands are available
+				bit 1	68882 commands are available
+				bit 2	68040 math commands are available
+
+
+--- ReturnToSystem()			-36
+
+Returns system to the original state:
+
+	.   View (=copper) is fixed back
+	.   AGA sprite resolutions are restored
+	.   $000-$400 is returned to the pre-takeover state, VBR is set back
+	    to the original value
+	.   Chipregs are restored
+	.   Blitter is released: illegal waitblit, WaitBlit()*2,
+	    DisOwnBlitter().
+	.   Illegal sound reset: DMAs are turned off and volumes are set to
+	    zero. Sound channels are released
+
+
+
+--- ActivateSystem()			-42
+
+Swaps back to system without restoring the system view (copper 1 intact).
+Allows user to use DOS loading routines to load extra files etc...
+
+
+
+--- DeactivateSystem()			-48
+
+Back to program after ActivateSystem().
+
+NOTE! Master interrupt bit (bit 14 of INTENA) will ALWAYS be disabled after
+coming back from this routine!!
+
+
+--- D0-D4 = FullTakeOver(flags, D0)	-54
+
+Takes over the system storing nothing, used for a demo/intro that will reset
+afterwards. The things that the routine handles are the same as
+TakeOverSystem(), as well as the outputs.
+
+[the library 1.0 stores some 'unnecessary' things but that is only done
+ for memory saving]
+
+
+--- DoReset()				-60
+
+Reset the system. The reason this routine is included is that the A1200 Exec
+reset routine is _not_ fully working. This routine should be able to 'patch'
+the Exec routine to work under any config. Ofcourse a patch routine for Exec
+might be better, but I thought that why not include the routine here? Will be
+easier for the user.
+
+
+[the routine in 1.0 is *not* patched, I don't have info on how to make a legal
+ reset under older (hardware bugged?) versions of A1200]
+
+
+--- FlushCaches()			-66
+
+Flushes caches (if KS higher or same than V37 = KS2.04). If the flush fails,
+returns -1 in D0 as error code. A succesful flush will return 0 in D0.
+
+[Will find a way how to fix these under 1.2/1.3 as well, most probably a copy
+ from KS3.0 routines...]
+
+
+                       What are you allowed to trash?
+
+
+METHOD I
+   TakeOverSystem() - [ ActivateSystem() - DeactivateSystem() ] - ReturnToSystem()
+
+	.   All graphics hardware
+	.   Blitter hardware
+	.   Sounds
+	.   Diskloaders - with some reservations, like it would be nice if
+	    you returned the head, side and direction to the original state.
+	    The trackdisk might get some r/w errors after this otherwise.
+	    Ofcourse the ReturnToSystem() could fix this...
+	-   CIA is a problem at the moment, cannot really store them either.
+	    Anyone know how to fix?
+
+
+METHOD II
+   FullTakeOver() - Reset()
+
+	.   all above
+	.   CIA trash is ok
+	.   disk drives can be really trashed, no need to restore
+
+	trash _whatever_ you want :-)
+
+
+I suggest that if you are uncertain about returning to DOS, don't return.
+Most people don't mind having to reboot after a demo, and this will give you
+a chance to trash CIAs even with this version of the library. But it would
+be nice if you mentioned about resetting afterwards in a textfile.
+
+A big limitation is also that _always_ when you call backstab.library from your
+program, the interrupt master bit (bit 14 of INTENA) will return cleared. The
+library will force it down at the beginning to take care of possible
+interrupts and it's impossible to get the value without having a chance
+for an interrupt in the middle of reading.
+
+A possibility would be to use the 'longword vacuum' in the 68000 family, i.e.
+two word instructions are executed before any interrupts are checked for. Placing
+commands <move.w $dff01c,d0> and <move.w #$4000,$dff09a> in the same longword
+could do the trick. Ofcourse you need to preload regs to make it fit in one long,
+but it is possible. The thing is that I don't know if this works on all CPUs
+that exist, so I haven't used it. Setting the master interrupt bit shouldn't be
+too demanding in any case :-).
+
+
+                    Example code using backstab.library
+
+	incdir	include:
+	include	backstab.i
+	include	exec/exec_lib.i
+
+	move.l	4.w,a6			;Open backstab.library. If fails, exit
+	lea	bks_n(pc),a1		;the whole program
+	moveq	#0,d0			;
+	jsr	_LVOOpenLibrary(a6)	;
+	tst.l	d0			;
+	beq.s	.error			;
+
+	move.l	d0,a6			;TakeOverSystem(D0)
+	moveq	#1<<bs_nocache,d0	;(flags in the example; NoCache)
+	jsr	_LVOSystemTakeOver(a6)	;
+	tst.l	d0			;
+	bne.s	.error_takeover		;
+
+	move.l	a6,-(sp)		;run the program
+	jsr	actual_program		;
+	move.l	(sp)+,a6		;
+					;
+	jsr	_LVOReturnToSystem(a6)	;ReturnToSystem()
+.error_takeover:
+	move.l	a6,a1			;Close backstab.library
+	move.l	4.w,a6			;
+	jsr	_LVOCloseLibrary(a6)	;
+.error:
+	rts				;
+
+bks_n:	dc.b	'backstab.library',0	;
+	even
+
+actual_program:
+	... write your own hardware hitting program here ...
+
+
+It's actually that easy. If you copy that piece of code you'll be able to hit
+the hardware in almost any way you want. And it won't take you more than 5
+minutes to fix a program to work with backstab.library, either.
+
+
+Be warned, though. Using programs that use backstab.library without device
+waiting might corrupt your disk if you had a write operation going on as you
+ran the program. Always run from a state where a write operation is not
+possible. Also, don't run two programs using backstab.library at the exactly
+same time, this might cause some problems.
+
+
+                                    Notes
+
+If you have any ideas or knowledge of how to develop this library further,
+contact me and I will do what I can.
+
+Much of the OS knowledge has come from HowToCode7 (Comrade J/SAE, Carl-Henrik
+Skårstedt [Asterix/Movement]) and Jukka Marin.
+
+The Commodore has done a *great* job with the OS, especially > 2.04. But I
+think Commodore made a mistake when they didn't include some sort of routines
+to allow demos hit the hardware. Ofcourse it fights against the basic idea of
+multitasking, but it's almost impossible to squeeze the last drop of power out
+of the Amiga without taking over the OS...
+
+In any case, a slight inconvenience calling the backstab.library is certainly
+worth the effort because your code will be compatible, I'm sick and tired of
+intros (even the AGA intros!) not working on my A1200, or then I need AGA
+program fixer to make it work, ReloKick etc... This solution is quite simple
+and quite effective.
+
+Also, if you make a demo and use this library, please include the library and
+sources/includes in the package as well (for the people who don't have the
+library, and also for disclaimer. you don't want to be responsible for my code,
+right ? :-).
+
+
+                        Possible future improvements
+
+.   Devices should be waited for. At the moment there's no waiting as I
+    didn't know how to do it really legally. An option would be a 2-3 sec
+    delay but that began to irritate me later on.. A solution for trackdisk
+    drives would be to force the motor off as taking over, but that won't
+    do with the more advanced devices?
+
+
+.   CIA storing! If someone is able to do this, I'd really preciate if he
+    could write a letter to me and tell me how to do it. This is a problem
+    I've had for a long time, and CIA resources didn't help me. The idea
+    would be to be able to take over the timers even if they were in use, not
+    allocating them! Ofcourse programs can be run, but the CIA hitting ones
+    will not come back correctly.
+
+
+.   No interrupt master bit requirement. Any guarantees for the longword
+    'suck-in' to be working in future as well?
+
+
+.   SystemTakeOver() could preferably return the CPU and math co-proc
+    speeds (in MHz) in some regs as well. Not very essential, though.
+
+
+.   2 new flag bits: require PAL, require NTSC. If the user is running from
+    the wrong frequency it would be best to ask for him to quit or run
+    anyway. If the user had ECS-chipset or higher, there should be an
+    option for $dff1dc hack to force PAL or NTSC. However, if PAL/NTSC
+    was not _required_, the program should be run no matter what chipset
+    he had.
+
+
+.   ReturnToSystem() resets trackdisk so that drive DMA access becomes legal
+    once again. A more legal drive DMA wait would be great as well!
+
+
+
+                                    The end
+
+The library may be spread as Public Domain as long as no files are missing.
+The archive should include following files:
+
+	backstab.library		;the library itself
+	backstab_lib.i			;include files for some assemblers
+	backstab_lib.s			;source code for a 680x0 assembler
+	backstab.txt			;this text file
+
+INCLUDE ATLEAST THE backstab.txt or the DISCLAIMER part of it in any productions
+you do! As the library takes packed (with LHA) around 17kb, it shouldn't be
+a big problem to include it in any case. If you _really_ need to cut down on
+the size, don't leave out the disclaimer or you accept the responsibility of
+all damages your program might do, even if the bug might be in the
+backstab.library.
+
+			To contact me:		Sami Vaarala
+						Sotkapolku 4
+						96910  ROVANIEMI
+						Finland
+
+						tel. +358 60 62084

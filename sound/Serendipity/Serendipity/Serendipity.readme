@@ -1,0 +1,33 @@
+Short:    Music production, with full sources   
+Uploader: tmg296@ecs.soton.ac.uk (Tristan Greaves)
+Author:   tmg296@ecs.soton.ac.uk (Tristan Greaves)
+Type:     demo/sound 
+Version:  2.0 
+
+Serendipity was a music production that was released by Perception back
+in 1994, on disk.
+
+It features six quality music modules which are selectable from a simple
+menu system. Alternatively, you can load the modules in your favourite
+player.
+
+This production is fully system friendly and multitasking and should run
+on any Amiga system, as long as you have at least 1 megabyte of chip
+memory.
+
+The full assembler source code is provided, along with all the data files
+that you need to compile the production for yourself. Serendipity was
+created using Devpac 3.04.
+
+The source code is very simple, but does demonstrate good error handling
+using assembler, and creating this sort of production in a system-friendly 
+and multitasking way.
+
+History
+-------
+
+v1.0 - The original disk based release back in 1994.
+
+v2.0 - This release. The music modules are now loaded from PROGDIR:,
+       so you no longer need to make an ASSIGN especially for Serendipity.
+       All the source codes also included in the distribution.

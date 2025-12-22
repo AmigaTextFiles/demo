@@ -1,0 +1,60 @@
+; Install Script for Paradisio! From Drifters! By Zinko (Je Suis Lent! ;)
+;
+
+(COMPLETE 0)
+(message "\nDRIFTERS\n"
+         "INVITES YOU TO\n\n"
+         "PARADISIO!\n\n"
+         "This installer will create a drawer in your chosen\n"
+         "destination directory called Paradisio.")
+
+; Ask where to install Paradisio
+   (set @default-dest "Drifters:")
+   (set dest1
+      (askdir
+         (prompt "\nSelect the location to install the Paradisio.\n")
+         (help "Choose a destination partition or directory"
+                 " to install Paradisio. The Installer will"
+                 " create a directory called 'Paradisio' in the"
+                 " location directory you choose and then install"
+                 " Paradisio to it."
+         (default @default-dest)
+         )
+      )
+   )
+  
+(set @default-dest (tackon dest1 "DFT-Paradisio"))
+(set datadest (tackon dest1 "DFT-Paradisio/"))
+
+(makedir @default-dest (safe) (infos))
+
+
+; Copying Paradisio to directory...
+
+(complete 10)
+
+; Joining Paradisio...
+
+(makeassign "Paradisko" datadest)
+
+(working "Joining The Demo-Files...")
+(run "join Paradisio.000 Paradisio.001 Paradisio.002 to Paradisko:Paradisio.exe")
+   
+   (copyfiles (source "Paradisio.icon")
+              (dest @default-dest)
+              (newname "Paradisio.info"))
+
+
+   (copyfiles (source "Paradisio.nfo")
+              (dest @default-dest))
+              
+   (copyfiles (source "Paradisio")
+              (dest @default-dest))
+              
+
+(run "assign Paradisko: remove")
+
+(complete 100)
+
+(exit "\n The Installation was successful.\n\nYou can find Paradisio\nin " datadest"\n\nNow go and enjoy the party!"
+      (quiet))

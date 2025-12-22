@@ -1,0 +1,56 @@
+Short: agatunnel - hypnotic color cycling effects
+Type: gfx/aga
+Author: ex-grahn@mdstud.chalmers.se (Jörgen Grahn)
+Uploader: ex-grahn@mdstud.chalmers.se
+
+Many years ago, when a friend of mine had convinced me
+to buy a used Amiga, I got my hands on a small
+program named Tunnel. It was originally a demo program
+for some Modula-2 system; thus source code in Modula-2
+was included. The program was so cool, my brother and I
+used to turn off the light in the room and watch the
+psychedelic colours flickering by.
+
+The program didn't work on my new AGA Amiga - there was
+no synchronization and the colours shift much too fast.
+I wrote this quick hack to produce a similar effect,
+but enhanced to make use of all the 24 color bits of AGA.
+
+The 'tunnel' is a very simple effect, but it is cheaper
+than hallucinogen drugs - unless there are Psilocybin
+mushrooms growing where you live anyway ;-)
+
+On the other hand, watching ambient videos on MTV late at night
+is rather cheap too...
+
+As it is, AGATunnel will open a screen in the same resolution
+as the Workbench and make some simple colour cycling effects,
+giving the impression of a moving multi-color tunnel.
+Stop the program by feeding it a CONTROL-C signal
+(with the C:Break command for example).
+
+This is a quick hack, but it's fun to watch. Some caveats:
+
+	It is 3.0-only, CLI/Shell-only and AGA-only
+
+	The number of bitplanes and speed of the color cycling
+	is hard-coded. If you want to change it, you have to
+	recompile the program.
+
+	The speed is hard-coded with respect to my own
+	machine, an A4000/030. The effects _may_ look a
+	bit strange in some screenmodes on A1200s and A4000s.
+	I don't know.
+
+	The program looks ugly while it draws the initial
+	tunnel. Once again, this isn't high-quality software.
+
+	The algorithms for generating the color sequence
+	could be enhanced, giving a much cooler effect.
+
+This archive is in the Public Domain. Do what you want with it.
+
+Jörgen Grahn
+Wetterlinsgatan 13E
+S-521 34 Falköping
+SWEDEN

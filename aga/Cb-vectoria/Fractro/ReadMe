@@ -1,0 +1,52 @@
+
+
+ INTRO,DENTRO,FUCKTRO - that all you could see...
+
+        But I hope you've never seen FRACTRO
+                                    ~~~~~~~~~
+                 I made it, because I wanted to try to make a 4K-intro.
+
+
+This is a non-AGA intro for MC68000. You can run it:
+ 1) from Shell    - type "fractro.exe" (but you have to be in PAL).
+ 2) from icon.AGA - for owners of multiscan monitors or if you work in NTSC
+                      or VGA (script contains killAGA)
+ 3) from icon.OCS
+
+
+Tested: A1200  6MB RAM
+        A500   1MB RAM
+
+
+
+Special greets to:  Mr. Quido
+                    Michael Blajic
+                    Abbe
+                    Jofa & Trixie
+
+Normal greets to: All coders in Opava
+
+
+                                        coded at 12-Jun-96 
+                                        by Little Green
+                                        in Opava, Cz
+
+      Feel The Power Of Pure Code !
+
+
+
+A pro Cechy:
+  Prvni efektik (takove ty ozrane pismenka) by vypadal pekne hnusne, kdybych
+to kresli z obycejnych fill-lajn. Proto jsem kazdou caru nahradil osmi
+jinyma podle algoritmu na rekurzivni presouvani prostredniho bodu
+od nejakeho Norberta Weinera podle RND generatoru
+(neboli er en degeneratoru  (add.w  $dff006,RND) ).
+  Druhy kousek je tzv. snehova vlocka nejake Helgy von Koch, kdy se  na 
+misto druhe tretiny usecky postavi rovnostranny trojuhelnik. V prvni vlocce
+ven, ve druhe dovnitr.
+  No a ta mapa je delana na uplne stejnem principu jako efektik 1 (ale je
+synteticka, protoze tam je nekde chyba).
+  
+Ptate se, odkud jsem tak chytrej? 
+    Mno, Michael mi pujcil chytrou knizku, jinak by me nenapadlo tohleto
+cele vubec delat.

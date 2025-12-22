@@ -1,0 +1,61 @@
+;Ver$ - ZiPPY-X-DEMo v1.0 ßeta - By Gareth Murfin of |Gaz§ting®| enterprises.
+;Ver$ - Requires 020 & 6 Meg.. - FPU enhanced and AGA enhanced - obviously ;)
+;Assigns are set up here as well as all files copied to their places
+Assign ZiPPY: ""
+run >nil: zippy:zippybits/Play16 Zippy:zippybits/DeeNee.sNd
+zippy:zippybits/vt zippy:zippybits/Hello.iff >NiL:
+run >nil: zippy:zippybits/Play16 ZiPPY:Zippybits/INTeL.WaV
+run >nil: zippy:zippybits/DsOund -m -2 -w -v25 ZiPPY:Zippybits/Resevoir
+copy zippy:zippybits/Say SYS:C
+copy zippy:zippybits/libs/translator.library LIBS:
+copy zippy:Zippybits/accents/american.accent SYS:LOcale/accents
+echo .·.·.·.·.·.·.·.·.·.·.·.The ZiPPY-X-DEMo By Gareth Murfin.·.·.·.·.·.·.·.·.·.·.
+echo .......................«--------------»«---------------».....................
+echo [---------------------------------------------------------------------------]
+echo [- Hello & welcome 2 the ZiPPY-X-DEMo!!!!! It is produced by Gareth Murfin -]
+echo [-- and is suitable for all AGA Amiga's.  I recommend  a 68030 CPU or above --]
+echo [- and about 6 meg of ram. It should run smoothly and produce some pumping -]
+echo [---------------------- audio and visual effects! --------------------------]
+say -s200 'hello and welcome to the ZiPPY-X-DEMo. It is produced By Gareth Murfin and is suitable for all Aiy Gee Aiy AmigaZ, I recommend a 68030 SEE P U or above and about 6 MEG RAM. It should run smoothly and produce some pumping visual and audio effects!
+run >nil: zippy:zippybits/DsOund -m -2 -w -v25 ZiPPY:Zippybits/Resevoir
+say -s200 -p300 hahahahaha. ENJOY. THIS. MUSIC. DEMMO. Hahahahahaha.
+echo [-------------- Enjoy this Music demo By Gareth Murfin 1997 Jan! -----------]
+echo [--- Also Look out for |DWaRFx| v1.x ßeta - The AmIRC RedDwarf Scripts! ----]
+echo [--- Produced on a regular basis by Gareth Murfin these RedDwarf scripts ---]
+echo [--- Give you MORE power than an IRCOP - NoW Includes Kryton speech mode! --]
+say -s110 -p70 OK. I am now loading the Zippy-X-Demo into yor Ram memory
+echo [---------------------------------------------------------------------------]
+echo [--------------- Gareth Murfin would like 2 thank the RedNeX! --------------]
+say -s80 -p190 LET THE SHOW BEGIN!
+run >nil: zippy:zippybits/vt zippy:zippybits/Black.iff
+run >nil: Zippy:zippybits/Dsound -m -2 -w Zippy:zippybits/Gaz.iff
+wait 2
+run >nil: zippy:zippybits/vt delay 20 ZIPPY:zippybits/Gareth.anim
+wait 25
+run >nil: zippy:zippybits/vt delay 30 ZiPPY:zippybits/ring.anim
+wait 30
+run >nil: zippy:zippybits/player dir=ZIPPY:zippybits play=cottoneyejoe nowindow
+run >nil: zippy:zippybits/vt delay 29 ZIPPY:zippybits/Scape.anim
+wait 31
+run >nil: zippy:zippybits/vt delay 10 Zippy:zippybits/Shape.anim
+wait 11
+run >nil: zippy:zippybits/play16 zippy:zippybits/ZiPPY.Wav
+run >nil: zippy:zippybits/vt delay 20 zippy:zippybits/SpinSter.anim
+wait 20
+run >nil: zippy:zippybits/play16 zippy:zippybits/ZiPPY.WAV
+run >nil: zippy:zippybits/Vt delay 8 zippy:zippybits/spinzip.anim
+wait 9
+run >nil: zippy:zippybits/vt delay 13 zippy:zippybits/Amiga.anim
+wait 13
+run >nil: zippy:zippybits/Vt delay 12 zippy:zippybits/Sky.anim
+wait 13
+run >nil: zippy:zippybits/vt delay 19 zippy:zippybits/Credits.anim
+wait 20
+run >nil: zippy:zippybits/play16 zippy:zippybits/INTEL.wav
+Wait 3
+run >nil: zippy:zippybits/Play16 Zippy:zippybits/DeeNee.sNd
+vt Zippy:zippybits/Bye.iFF >NiL:
+run >nil: zippy:zippybits/Play16 ZiPPY:Zippybits/INTeL.WaV
+run >nil: zippy:zippybits/vt delay 12 zippy:zippybits/SMaLLDoG.anim
+wait 14
+run >nil: zippy:zippybits/StarBlank SECONDS=1 CX_POPuP=No

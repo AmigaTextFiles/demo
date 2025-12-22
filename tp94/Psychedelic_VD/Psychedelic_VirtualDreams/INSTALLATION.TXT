@@ -1,0 +1,37 @@
+************ INSTRUCTIONS TO INSTALL PSYCHEDELIC FOR HD USERS!!!***********
+
+ok, here is what you have to do:
+
+- add line to assign psychedelic: to your psychedelic dir in the user-startup
+     example    assign psychedelic: demos:psy
+
+- copy files from all 3 disks to your psychedelic: directory
+     example    copy df0:#? demos:psy for each disk
+
+- reset your computer!
+
+- type psychedelic:psy to run the demo from CLI or make an icon for it!
+
+     now you should have a running version of psychedelic on your HD!
+
+ WHATS WRONG IF DEMO DOES NOT RUN?
+
+
+ - not enough memory:
+     if you run the demo from 2M chip machine, it needs around 1.8M free
+     memory. try booting without startup sequence, and assign then
+     psychedelic: and type psychedelic:psy
+
+ - not AGA machine
+     buy AGA machine. preferrable take some FAST type memory too.
+
+ - not MC68020EC+ processor
+     if you have AGA you'll have this too. if not, buy an AGA machine.
+
+ - something else happens (like does not work on a4000 or something)
+     mail doctor skull at
+	skull@freenet.hut.fi and tell the problem. You should get a fix
+	fairly soon. Or then not. Go to your friends computer and see
+	it anyway :) (it's internet, ofcourse!)
+
+That should quite do it! Any problems, mail me at the above address.

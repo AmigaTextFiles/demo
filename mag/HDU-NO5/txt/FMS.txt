@@ -1,0 +1,28 @@
+==========================================
+ FILE BASED TRACKDISK SIMULATOR
+==========================================
+
+What does it do and why ?
+-------------------
+A friend of mine recently got a CD-Rom drive, and had a few 
+CD's on which the archives were stored using DMS or some 
+other track-packer.  I found out about FMS  off  of  AmiNet.   
+FMS  allows  you to Un-DMS or whatever direct to your 
+hard-disk by providing a FF0:  device, which acts like a virtual 
+floppy disk.
+
+I installed the device, and used it, which seemed great.  Some 
+time later, I decided  to  do  some experiments with fms-
+disk.device and find out if I could make it faster. Well. If you  
+use DiskSpeed or some similiar program, you'll see that I've  
+managed to decrease the CPU usage, whilst slightly increas-
+ing performance on most tests. In addition to this, my device is 
+also quite a bit smaller.
+
+As well as unmashing CD archives, FMS is useful perhaps for.
+People creating floppy based distributions, where they can 
+quickly fill up the FFx: with all required files, and then DISK-
+COPY FFx: Dfx:
+
+About installation, requirements and other useful stuff please 
+consult documentation.

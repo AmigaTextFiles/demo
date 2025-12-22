@@ -1,0 +1,44 @@
+short:    Digi Booster replayer as Shared library (v2.0)
+uploader: Sebastian Jedruszkiewicz(bjsebo@delta.ii.tuniv.szczecin.pl)
+author:   Sebastian Jedruszkiewicz(bjsebo@delta.ii.tuniv.szczecin.pl)
+type:     util/libs
+requires: AHI v4.0 
+replaces: util/libs/dbplayer.lha
+
+ This is shared library that contains some functions for playing Digi 
+Booster modules. Version 2.0.
+ See dbplayer.guide for more info.
+
+History:
+	v2.0    -       replayer was rewritten to gain some more
+		        speed.
+		-       DBM_StartModule() was rewritten (requester
+			can be now opened with -1 given as
+			audiomodeID. This enables possibility
+			of using AHI_DEFAULT_ID.
+
+WARNING!
+	Version 2.0 may be not compatible with older versions...
+
+	v1.3	-	new function DBM_GetModuleAttrA() was added
+			See docs for more info.
+		-	function DBM_WaitPosition was renamed to
+			DBM_CheckPositon.
+		-	assembler includes added
+
+	v1.2 (not publicly released)
+		-	some speedup made in player code
+		-	added missing #if statement in
+			includes for ppc
+		-	Added includes for BlitzBasic.Those files
+			was made by Scott Beardwood 
+			(scott@online.u-net.com)
+			Thanks a lot.
+		- 	new function DBM_Get7Command() was added
+			See docs for more details.
+		- 	Addeed includes for assembler.
+		
+	v1.1    -	not publicly released
+
+	v1.0	-	first public release
+

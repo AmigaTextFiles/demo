@@ -1,0 +1,126 @@
+@{d F7DCFF}                       @{c E491FF}Váùení pêíznivci Amigy a Abortu zvláîtë!@{c}
+
+  Pokud  se nedostaví negativní ohlasy (mno, moùné je vîechno ;-), chtël bych tímto na
+stránkách  AmigaCS  rozjet  menîí  seriálek  vënovaný emulacím rûzných kompû na naîich
+miláçcích  (resp.   milenkách).   Vynechám  notoricky  známé  a  vîude moùnë propírané
+emulátory  PleÇek  a  MekIntoîû  a  zamëêím  se  spíîe  na osmibiïáky.  Ostatnë z této
+kategorie  se  rekrutuje  znaçná  çást  uùivatelû  Aminy  (vznikající  PPC klony emoîû
+naznaçují, ùe tato oblast není zdaleka tak mrtvá, jak by se dalo çekat).
+
+  @{i}A  jelikoù  kaùdé  pravidlo  má  svoji  výjimku,  úvodním  çlánkem  budiù recenze na
+emulátory piçítaçû Atari ST. Nuùe, jedeme:@{ui}
+
+
+                                       @{c E491FF}Atari ST
+                                       ~~~~~~~~@{c}
+
+  Poslední  zprávy zvëstují, ùe Atari jako znaçka zaùívá jeîtë horîí agónii, neù svého
+çasu  Amiga. Náî "vëçný rival" byl sestêelen a hoêí, neboï ho firma JTS (vlastník práv
+a  prûmyslového  patentu)  prodala  svëtovému  gigantu  v oblati výroby hraçek - firmë
+Hasbro.  Tu  urçitë  znáte z pêitroublých reklam, kupêíkladu "My little ponny". Zêejmë
+chce Hasbro montovat Jaguáry i do mluvících panenek ... ;-)
+
+  Nu, dosti ironie. Açkoliv byly îestnáctibitové stroje (odtud zkratka ST) firmy Atari
+postaveny  na  stejných  procesorech  Motorola  jako Amigy, pêíliî emulátorû se v této
+oblasti  neurodilo.  Pêesnëji  êeçeno  dva.  Jako  první se mi dostal do ruky emulátor
+nazvaný  Medusa  ve verzi 1.2. Byl vyvinut jeîtë v dobách slávy A500 (staçil mu systém
+1.3  a  pûl  mega pamëti) a na ní také jakù takù fungoval (çastëji padal neù nepadal).
+Nepotêeboval  externí  ROMku,  byla  v  nëm  totiù  "zadrátovaná";  bohuùel se jednalo
+o nëmeckou  mutaci.   Pozoruhodný je fakt, ùe aç obsahujíc 192 kB ROM, je celý program
+velký jen 209 kB.  Programátorský minimalismus...
+
+Ani proîmejdëním exáçe se mi nepodaêilo zjistit, kdo je tvûrcem tohoto emulátoru (zato
+se  tam  dozvíte,  ùe  jakýsi  Dave  Staug  miluje  Beu Halbigovou a jistý Jim nëjakou
+Jeneane).  A  jeîtë  jedna zajímavost: pokud si v menu GEMu vyberete About, vyskoçí na
+vás  okénko s nápisem "TOS 10/90 by Milan Votava" - malý çeský cracking...
+Medusa  byla  velice rychle odsouzena k zapomenutí, protoùe nëmecká firma Maxon pêiîla
+koncem  roku 1990 na trh se svým emulátorem Chameleon (aï jsme styloví - Chamäleon ;-)
+Nejprve  ve  verzi  êímská  I a jelikoù ta byla pravdëpodobnë velice chybová (më se ji
+napêíklad  nepovedlo  rozchodit vûbec), o rok pozdëji se objevila verze êímská II. Obë
+dvë  bylo  moùno  rozjet i pod systémem 1.3, minimální poùadavek na pamëï se zvýîil na
+jeden   MB.   Pêedností  tohoto  produktu  je,  ùe  ho  bez  problémû  spustíte  i  na
+akcelerovaných  amigách se systémem 3.1 a AGA çipy (bylo mi referováno, ùe na 68040 se
+program  hroutí - díky, uF0une). Kdybyste se k nëmu náhodou dostali a nevëdëli, jak ho
+rozhýbat, je zde malý návod:
+
+  Program   se   distribuoval   na  jedné  disketë,  na  které  se  zároveñ  nacházela
+i licencovaná  192  kB  ROMka, jako na potvoru zase v nëmecké mutaci (co také çekat od
+Maxona,  ùe?   ;-).   Pêíprava  bootovací  diskety pro start operaçního systému TOS je
+velice  jednoduchá.   Obyçejnou  DD  disketu  zformátujete  pod  CrossDOSem  na 720 kB
+a zkopírujete na ni soubor TOS.IMG (najdete ho zabalený v archivu ROM_TOS.LHA).
+Dále  je moùno pêipojit klasický atarácký harddisk (a bootovat z nëho). Maxon pêibalil
+drivery  pro  tyto disky: Combitec, Golem (SCSI a ST506), A.L.F. SCSI (2 a 3), Oktagon
+500,  Next  Generation SCSI 2 a BOIL3 Nucleus. Dost exotické, naîtëstí je moùno zvolit
+generický  driver  OMTI  a  ten  pomocí  pêiloùeného programu Conf upravit podle svého
+gusta.  Ovîem to je vëc pro ty, kteêí "do toho vidí" - musíte nastavit nëkolik údajû o
+diskové  geometrii  (cylindry,  hlavy, step rate atd.). Koneçnë, takto lze upravovat i
+maxonovské drivery, ty na disketë poznáte podle koncovky .HDD.
+Teoreticky  by  îlo  pouùít  partition vaîeho amigovského harddisku pro TOS (filedisky
+Chameleon  nezvládá)  ale  jsa  technický  ignorant,  drùel  jsem se hesla "quieta non
+movere" a veîkeré experimentování na dané téma si radîi rovnou zakázal. Takùe sorry...
+
+  Pêejdëme  rovnou  k  programu,  kterým  se  celá emulace startuje. Jsou to zároveñ i
+jakési  preference a na disketë jej najdete pod kryptickou zkratkou MI (MultiInSTall).
+Po cvaknutí na ikonku se otevêe @{$ MI.png}okénko@{$} s pëkným obrázkem velblouda (bûhví proç ;-) a s
+pêehrîlí  gadgetû.  Význam  gadgetu  Info  je  jasný - vypíîou se nezbytné informace o
+autorech programu. Pokud máte pêipojený atarácký harddisk a chcete ho vyuùívat, musíte
+si  naklapnutím  gadgetu  HD-Driver  vybrat  jeho  ovladaç.  Jestli ovîem budete jenom
+pouùívat  vestavënou  disketovou  mechaniku,  nechte  tento  gadget nevyplnëný. String
+gadgetem  v  sekci Options nastavíte velikost emulované RAMky (standardnë je nastaveno
+1024 kB; pokud vloùíte ménë neù 256 kB, emulaci vûbec nespustíte). Dvojicí gadgetû X a
+Y  mûùete  ovlivnit  velikost  zobrazeného  screenu (pêednastaveno 640x400).
+Chameleon  umoùñuje  spustit  nëkolik  (pêesnëji  êeçeno:  aù  osm) emulací najednou a
+pêepínat  mezi  nimi.  Slouùí  k  tomu  sloupeçek  gadgetû  oznaçených jako ST + çíslo
+instance  a  gadgety  GO!, kterými se pêísluîná instance spouîtí. Úçel tëchto fines mi
+zûstal utajen, protoùe pokaùdé se mi vîechny instance vystínovaly a bylo moùno spustit
+jenom  jednu  emulaci.  Asi  më nëkdo nahoêe nemá rád...
+Gadgetû  Overtake a FastTOS si nevîímejte (u FastTOSu jsem ùádné "urychlení" neshledal
+a  volba  Overtake,  vypínající emulaçní instance, mi kromë toho pokaùdé ohavnë zpizdí
+obraz.)  Celou  konfiguraci  si  gadgetem  Save mûùete uloùit na disketu jako soubor s
+názvem  Chameleon.SET  (program  si  ji pêi startu sám automaticky naçte) nebo stiskem
+gadgetu Exit ukonçit.
+
+  Teð  mûùete  s  klidem kliknout na gadget GO! (s nejvyîîí pravdëpodobností ho budete
+mít  pêístupný  pouze pro jednou instanci) a tëîit se na emulaçní hrátky. Obrazovka se
+zbarví  tmavë  modêe  a pokud jste uù do disketové mechaniky vloùili bootovací disketu
+pro TOS, zaçne si ji emulátor naçítat; pokud jste tak neuçinili, budete k tomu vyzváni
+stylizovaným  obrázkem  diskety  a  nápisem  "TOS.IMG Utilities". Po chvilce bootování
+provázených  charakteristickým  "drncáním" se vás program zeptá na rozliîení obrazovky
+(zde  doporuçuju  zvolit klávesou F3 monochromatický HiRes), otestuje bootblok diskety
+na  viry  a  otevêe  @{s SYS:Utilities/MultiView Pics/TOS.png SCREEN}obrazovku@{s}  grafické  nadstavby  - GEMu. Od této chvíle se zpët do
+systému  Amigy nedostanete jinak neù resetem, vaîe Amiga se prostë zmënila v ST a nedá
+se ani pêepínat kombinací kláves LAmiga-M (podle mne zásadní chyba).
+
+  K  emulaci  bych êekl, ùe je velice stabilní. Fungovaly vîechny programy i hry které
+jsem  testoval  (a které se veîly na jednu 720 kB disketu ;-), pokud nevyuùívaly pêímo
+blitter, v tom pêípadë se ovîem hroutily. Emulátor dokáùe vyuùívat FastRAM, detekuje a
+pouùije  jednotku  FPU.  Testy  provádëné programem GEMBench prokázaly pêímo ðábelskou
+rychlost  emulace - Atari ST na mojí konfiguraci (A1200,030/50,FPU,32MB RAM) se jevilo
+asi   dvakrát   rychlejîí  neù  originální  Falcon  (ve  výpoçetním  výkonu  více  neù
+têiapûlkrát).  Pro  ilustraci  uvádím  srovnání  s  modely @{l STE}STE@{l} a @{l Falcon}Falcon@{l}. Ukazatel myîi
+pravdëpodobnë  vyuùívá amigovský sprite, protoùe jeho pohyb je krásnë plynulý. Dokonce
+i  klávesnice  pêi stisku pëknë pocvakává, tak jak má. Na druhé stranë jako nedostatek
+mi  pêipadá  skuteçnost,  ùe  výmënu diskety musíte systému sdëlit jeho pêebootováním.
+Naîtëstí je to operace velmi rychlá a provedete ji - svëte, ùasni! - akordem zoufalého
+uùivatele:  Control-Alt-Del. Ono tëch podobností s MS-DOSem je ostatnë více, ale na to
+pêijdete sami.
+
+
+  Moje  závëreçné  resumé:  açkoliv  se  jedná  o program témëê archaický, je to stále
+poslední  vyvinutý  a solidnë fungující emulátor Atari ST. Subjektivnë se domnívám, ùe
+také  jeden  z  nejrychlejîích  emulátorû,  co  byly  na Amigu napsány. Na STçka stále
+existuje velké mnoùství dobrého softu; obdobu Aminetu pro Atari (i kdyù zdaleka ne tak
+obsáhlou) najdete na serverech:
+
+  @{c E491FF}ftp://ftp.funet.fi/pub/atari
+  ftp://ftp.wustl.edu/systems/atari/umich.edu@{c}
+
+  Pro  nëkoho je to moùnost jak si nostalgicky zavzpomínat na své kompjûtrové poçátky.
+Na disketë programátoêi najdou jeîtë malý bonus od firmy Maxon: vývojový balík RCT pro
+programování  gadgetû  a  requestrû  (sdílená  knihovna  a  "includes"  pro  jazyky C,
+KickPascal,  Modula,  GFA  Basic  (?),  Amiga  Basic (??) a Assembler. Tímto vývojovým
+prostêedím byl ostatnë vytváêen "vzhled" pêeváùné vëtîiny aplikací firmy Maxon.
+
+  Tím  povaùuju  téma  za  vyçerpané  a dá-li Bûh, v dalîím çísle se potkáme u emulace
+osmibitových Atari XL/XE.
+                                                      @{c E491FF}- schizzy -@{c}

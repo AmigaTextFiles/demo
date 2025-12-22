@@ -1,0 +1,341 @@
+
+
+##################################################################
+##                                                              ##
+##        D O C U M E N T  T O   'FASTINTRO-MAKER V2.2'         ##
+##                                                              ##
+##################################################################
+##                                                              ##
+## FASTINTRO-MAKER (F.I.M.) V2.2 IS SHAREWARE !! IF YOURE GONNA ##
+## USE IT, SEND ME A SHARWARE-FEE OF  DM 10  OR  US$ 7 DOLLAR   ##
+##                                                              ##
+## MICHAEL BIALAS, FREIBURGERSTR.2, 6200 WIESBADEN, DEUTSCHLAND ##
+##                                                              ##
+##################################################################
+##                                                              ##
+## ALL USERS, WHO WILL PAY THEIRE SHAREWARE-FEE AND WANT TO GET ##
+## THE LATEST VERSION OF F.I.M., SHOULD INCLUDE US$ 3 DOLLAR OR ##
+## DM 5,- FOR DISK AND POSTAGE.                                 ##
+## I DO NOT PAY ANY POSTAGE & DISK-COSTS ANYMORE !!!!           ##
+##                                                              ##
+##################################################################
+##                                                              ##
+## V1.0 (08.09.92)  first public release (FishDisk/Kickstart).  ##
+##                                                              ##
+## V1.1 (29.11.92)  Errors in Intro-Copperlist removed.         ##
+##                                                              ##
+## V1.2 (03.12.92)  Filerequester changed. Will remind the last ##
+##                  selected Path.                              ##
+##                                                              ##
+## V1.3 (09.12.92)  Bug in IntroFileheader found and removed.   ##
+##                                                              ##
+## V1.4 (12.12.92)  Jinx8 & Byte8 Font installed. Little bug,   ##
+##                  when printing a big text on screen removed. ##
+##                                                              ##
+## V1.5 (13.12.92)  CrunchDemo-Function removed and Intro       ##
+##                  BG/FG-Sinus-Effect installed                ##
+##                                                              ##
+## V1.6 (14.12.92)  BootsaveFunction installed. After Boot-     ##
+##                  writing the Diskbitmap will be updated.     ##
+##                                                              ##
+## V1.7 (09.01.93)  MusicModul-Load/CheckFunktion installed.    ##
+##                                                              ##
+## V1.8 (11.01.93)  MusicReplayer for SonicArranger-Modules     ##
+##                  installed. Modul-FilenameOutput installed.  ##
+##                                                              ##
+## V1.9 (13.01.93)  Some tricky Bugs removed. Open TD.Device    ##
+##                  ErrorRequester installed. BootsaveFunct.    ##
+##                  disabled.                                   ##
+##                                                              ##
+## V2.0 (17.01.93)  ErrorRequester (overwrite existing File?)   ##
+##                  installed.                                  ##
+##                                                              ##
+## V2.1 (19.01.93)  S.A.Replay removed, ProtrackerReplay Rout.  ##
+##                  installed. (S.A.Replay crashed sometimes)   ##
+##                  (ErrorReport received from Stafan Stand)    ##
+##                                                              ##
+## V2.2 (20.01.93)  ModulCheck&UserRequest for ProtrackerClone  ##
+##                  and updated version installed.              ##
+##                                                              ##
+##################################################################
+##                                                              ##
+##    F.I.M. WAS WRITTEN & TESTED UNDER THE FOLLOWING CONFIG    ##
+##    ------------------------------------------------------    ##
+##    AMIGA2000 - 1MBCHIP/8MBFAST - OS2.04/1.3 - 68000/68030    ##
+##                                                              ##
+##################################################################
+
+
+-----------------------------------------------------------------------------
+Introdution
+-----------------------------------------------------------------------------
+
+What is 'FASTINTRO-MAKER' (also called: F.I.M.)?
+
+'F.I.M.' is a Demo/IntroMaker or Letterwriter.
+Because of using SystemRoutines of the new Amiga OS2.0, the Mainprogram
+(F.I.M.) will only run under Kickstart 2.x.
+The final created Intros/Demos are running without problems under
+Amiga-Kick 1.2/1.3/2.x (from Cli and Workbench)
+
+
+FASTINTRO-MAKER V2.2 REQUIRES AMIGA-OS2.0 + ASL.LIBRARY
+
+
+-----------------------------------------------------------------------------
+Distribution-Info
+-----------------------------------------------------------------------------
+
+It is allowed to distribute `F.I.M.` in anyway (Disks/BBS`s...), when no
+change is made to the original Files.
+The following files MUST BE included on/in the Distribution-Disk/Archive.
+
+FastIntroMaker_V2.2
+FastIntroMaker_V2.2.info
+FastIntroMaker.Document
+FastIntroMaker.Document.info
+FastIntroMaker.Anleitung
+FastIntroMaker.Anleitung.info
+
+
+-----------------------------------------------------------------------------
+Getting started...
+-----------------------------------------------------------------------------
+
+You can start 'F.I.M.' by double-clicking on its Workbench-Icon or from
+CLI with its Filename. If you`re using `Run FastIntroMaker_V2.2`, you are
+able to use your Cli as long as you type `Endcli`.
+
+After loading `F.I.M.`, it will open up a Window with many Gadgets which
+will be explained now.
+
+
+-----------------------------------------------------------------------------
+GadgetFunctions
+-----------------------------------------------------------------------------
+Gadget-Name        |  Gadget-Function
+-----------------------------------------------------------------------------
+LOAD NEW TEXT      |  LOAD NEW INTRO-DISPLAYTEXT.
+                   |  A new ASCII-Text will be loaded into the Text-Buffer
+                   |  and displayed on the right ScreenSide. If the Text
+                   |  includes unsupported Chars, a new one must be loaded
+                   |  or the current-One must be changed.
+                   |
+LOAD NEW PICT      |  LOAD NEW BACKGROUND-PICTURE.
+                   |  A new Picture with the IFF-Format 320×256 (8Colors)
+                   |  will be loaded into the Pic-Buffer and displayed as
+                   |  Backgroundpic in the current Intro.
+                   |  NOTE: The Pic-Format must be IFF 320×256 (8Colors).
+                   |  Other Pic-Formats are not supported in this V2.2
+                   |  Version of FastIntroMaker !!!
+                   |
+LOAD NEW MUSIC     |  LOAD NEW BACKGROUND-MUSIC MODULE. (PROTRACKER)
+                   |  A new MusicModule, wich will be played as Background-
+                   |  Music will be loaded into the Music-Buffer.
+                   |  This MusicModule should be created with PROTRACKER or
+                   |  a ClonePrg. and should not be longer as max. 32Kbyte.
+                   |  MORE INFORMATIONS TO THIS FUNKTION.... SEE ABOVE !!!
+                   |
+SAVE CURRENT INTRO |  SAVE THE CURRENT INTRO AS EXECUTABLE FILE.
+                   |  The current Intro will be saved as File. All F.I.M.-
+                   |  IntroPreferences and maybe a Icon will be included.
+                   |
+SAVE AS BOOTINTRO  |  SAVE THE CURRENT INTRO AS BOOTINTRO TO DISK.
+                   |  The current Intro will be saved as BootIntro incl.
+                   |  Bootloader/Bootblock to Disk.
+                   |  MORE INFORMATIONS TO THIS FUNKTION.... SEE ABOVE !!!
+                   |
+TEST INTRO         |  VIEW/RUN THE CURRENT INTRO.
+                   |  The current Intro will be viewed including all Prefs
+                   |  of F.I.M.
+                   |
+QUIT               |  QUIT FASTINTROMAKER !!!
+                   |  Quit F.I.M. and release all allocated Memory.
+                   |
+SAVE & QUIT        |  SAVE CURRENT INTRO & QUIT F.I.M.   .
+                   |  After saving the current Intro without any Errors,
+                   |  F.I.M. will be quited and all Memory will be released.
+-----------------------------------------------------------------------------
+FONT.............. |  Changes the Type of the current IntroText-Font.
+                   |  (Fonttype: Siesta/Byte/Jinx)
+                   |
+EXIT.............. |  Changes the Exit-Function of the runnig Intro/Demo.
+                   |  (Left/Right MouseButton or JoystickButton)
+                   |
+FG/BG/NO EFFEKT... |  Select the current Intro-(Sinus)Effect.
+                   |  NO BG/FG SINUS = Sinus Effect off.
+                   |  F-GROUND SINUS = Sinus Effect to Forderground (Text)
+                   |  B-GROUND SINUS = Sinus Effect to Background (Picture)
+                   |
+INTRO-ICON ON/OFF. |  Here you can select to include a Intro-Icon when
+                   |  saving a new Intro/Demo.
+                   |
+TEXTCOLOR......... |  Select the current Font-Display Colors.
+                   |
+TEXTSPEED......... |  Set the Text-Display Speed for all Intros/Demos.
+                   |
+-----------------------------------------------------------------------------
+Supported ASCII-Chars
+-----------------------------------------------------------------------------
+Here are all supported ASCII-Chars of F.I.M. V2.2:
+
+A-Z (Uppercase-Lowercase)
+-------------------------------------------------------
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+abcdefghijklmnopqrstuvwxyz
+
+ExtraChars1 / 0-9
+-------------------------------------------------------
+"![\]^_`{|}~ÄäÜüÖö#$%&'()*+,-./:;<=>?@ß0123456789
+
+ExtraChars2       Key-Combinations          Design/Look
+-------------------------------------------------------
+     ©                R.ALT + e          COPYRIGHT SIGN
+     °                R.ALT + 4               FAT POINT
+     ·                R.ALT + 8           SQUARE BORDER
+     ±                R.ALT + y           SQUARE FILLED
+     ø                R.ALT + o       TRIANGLE/ARROW UP
+     µ                R.ALT + u     TRIANGLE/ARROW DOWN
+     »                R.ALT + 0    TRIANGLE/ARROW RIGHT
+     «                R.ALT + 9     TRIANGLE/ARROW LEFT
+     ×                R.ALT + x             LITTLE FACE
+
+
+
+-----------------------------------------------------------------------------
+MORE INFROMATIONS.....
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Creating/Loading a new Musicmodule.....
+-----------------------------------------------------------------------------
+
+This version of F.I.M. can handle Soundmods. created with the Musicprg.
+`PROTRACKER` or a ClonePrg. like Sound/Noisetracker....
+When using a CloneMusicprg., a can`t promise the correctly Replay of the tune,
+because the Song/Sample-Effects are`nt the same in all the different versions
+of this MusicPrg..
+
+You also should note that the module may NOT be longer than MAX. 32KBYTE !!!
+
+
+The Amount of incoming Shareware-Fees and UserFeedbacks will decide if its
+necessary to release a new Version of the FastIntroMaker, wich will be able
+to handle more and bigger (KByte) SoundModul-Types.
+
+
+-----------------------------------------------------------------------------
+Creating a Demo-Text.....
+-----------------------------------------------------------------------------
+
+Well, to create a Demotext, just load your favourite Texteditor (maybe ED)
+and type some nice sentences...
+
+But remember that the Text should not include more than 31LINES. Longer Texts
+will be cutted (F.I.M. only loads in the first 31 Lines of you TextFile).
+
+Also note that the lines should not contain more than 40CHRAS. Longer lines
+will also be cutted (The Rest will be typed in the next line).
+
+Just create some Demotext and see what happens..... The Text in the Intro
+will be displayed as in the F.I.M. Text-Display on the right Screenside.
+
+To use Special-Chars, look in the upper listed Char-Tab.
+
+
+-----------------------------------------------------------------------------
+Creating a Demo-Text.....
+-----------------------------------------------------------------------------
+
+Puhhh.... to create a Demopic, just paint a Pic with your ???-Paintprg. and
+load it into F.I.M..
+
+But remember before painting.. The PictureFormat MUST be: IFF 320×256 8Colors
+Okay.... thats it......
+
+
+-----------------------------------------------------------------------------
+Saving a BootBlock-Demo to Disk.....
+-----------------------------------------------------------------------------
+
+To save the current Demo as a Bootblockdemo you`ll need a empty DOS-Disk.
+
+EMPTY.... Yes, the Disk should be empty, because F.I.M. will write the
+          Intro from the first Diskblock on. Any Files on the Disk, which
+          are located on these Blocks will be corrupted.
+
+DOS...... Finaly you`ll need a DOS-Disk, because after writing the Intro
+          to Disk, F.I.M. wants to update/remap the Disk-Bitmapblock.
+          If no DiskBitmap is available F.I.M. will pop up a ErrorRequester.
+
+
+A LITTLE EXAMPLE.....
+
+
+1).
+Take a fresh formated Disk, put it in your Diskdrive called DF0: and press
+the `SAVE BOOTINTRO` Gadget.
+
+2.)
+A Requester comes up asking you to include or leave the current MusicModule.
+When leaving the Music, the Intro will be shorter (about 32KB).
+
+3.)
+The final Requester pops up waiting for your command to install the Disk in
+DF0: (INSTALL DF0:) or to abort the whole Action (ABORT OPERATION).
+
+4.)
+When installing the Intro, look at the Drive-Lamp/LED. When the Diskdrive
+has stopped, the Disk is installed. Now you can quit F.I.M. or do anything.
+
+
+ATTENTION VIRUSKILLER:
+----------------------
+Some Viruskiller don`t allow other Progs. to install a new Bootblock on Disk.
+When installing your Intro to Disk, try to remove your active Viruskiller for
+this operation.
+
+
+-----------------------------------------------------------------------------
+Other things.....
+-----------------------------------------------------------------------------
+
+Final created Intros/Demos...
+
+All Intros created with F.I.M. should run correcty from Workbench and Cli.
+Under Kick 1.2/1.3/2.x with or without FastMem/1MB ChipMem....
+
+
+New Versions of F.I.M.... the Author.....
+
+Finally I can say: " I`ve got much fun " while creating the Version 2.2
+of the FastIntroMaker.
+And I really have the pleasure and Ideas to release a new Version of F.I.M.
+
+But...because of the smallness of Userfeedbacks (Sharewarefees/Bugreports..)
+to any Shareware-Programer, I can`t promise a new Version of F.I.M.
+
+The Amount of incoming Shareware-Fees and UserFeedbacks will decide if its
+necessary to release the new Version of the FastIntroMaker.
+
+
+-----------------------------------------------------------------------------
+Disclaimer
+-----------------------------------------------------------------------------
+
+The author cannot be held liable for the suitability or accuracy of
+`F.I.M.`. Any damage directly or indirectly caused by the use or misuse
+of `F.I.M.` is the sole responsibility of the user her/him self.
+
+Don`t get shocked...
+
+Before releasing, `FastIntroMaker V2.2` has been tested several times. Under
+correct and responsible use, `FastIntroMaker` can`t cause any damage.
+
+
+-----------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+20/1/1993 M.Bialas
+-----------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+

@@ -1,0 +1,86 @@
+@{xoffset 21}@{d A1F3FF}¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+@{xstep 394}@{font ACS-Title.font 18}@{f 6563FF}Vychladlé novinky@{f}@{font}
+@{xstep 420}@{c A6FFF8}@{i}@{f 4AEEEA}Shaman & Schizzy@{f}@{ui}@{c}@{ystep -8}
+
+
+@{f 216FEE}*@{f} Na  stránce @{i} @{c 9494FF}www.amiga.com/dev_reference/index.shtml@{c} @{ui} je koneçnë v provozu ROM
+  Kernal  Manual  (RKRM),  çásti Libraries, Devices i Hardware.  To vîe ON-LINE!
+  Jsou  zde  také  odkazy  na  @{c 9494FF}AmigaDeveloperCD@{c}  1.2  a AmigaMAIL-2 pêíklady téù
+  ONLINE.  Koneçnë skuteçná podpora!
+
+@{f 216FEE}*@{f} Právníci  @{c 9494FF}Gateway2000@{c}  nám  udëlali çáru pêes rozpoçet.  Na jejich nátlak byly
+  ON-LINE  RKRM  ze  stránky  Amiga, Inc.  zase staùeny.  Pokud jste masový vrah
+  a hledáte  vhodnou  obëï, tak máte jasno.  Oficiální zdroje ovîem tvrdí, ùe to
+  je  kvûli  autorským  právûm vydavatelství @{c 9494FF}Addison-Wesley@{c}, která pro Commodore
+  dëlala tiîtëné RKRM manuály a bude je dále vydávat upravené pro OS 3.5.
+
+@{f 216FEE}*@{f} Nový  @{c 9494FF}IDEfix@{c}  jiù umí @{c 9494FF}Joliet@{c} (@{i}Win 95/98 CDFS@{ui}).  Takùe koneçnë si pêeçtete i na
+  Amize CDçka vypálená v tomto 'toilet' souborovém systému s dlouhými názvy.
+
+@{f 216FEE}*@{f}@{c 9494FF} Carl  Sassenrath@{c}  -  táta  vîech  amigistû (@{i}jak ho nazval Wolf :-@{ui}), splnil své
+  sliby.  @{c 9494FF}REBOL 1.0@{c} byl uvolnën 1.êíjna 1998 a je@{f FFFAF8} FREE@{f}.  Bohuùel verze pro Amigu
+  byla uvolnëna jako poslední a také s nejvíce bugy :-(((
+
+
+@{f 216FEE}*@{f} @{c 9494FF}Fleecy Moss@{c} z Amiga, Inc. je çerstvým otcem!      @{p YoungestAmigan.png 390 42}
+  Zde je obrázek nejmladîího Amigisty na svëtë.
+
+
+
+@{f 216FEE}*@{f} @{c 9494FF}PreludeA1200@{c}  je  nová  zvuková  karta  do  hodinového  portu  A1200.   Byla
+  pêedstavena na veletrhu Computer'98 v Kolínë nad Rýnem.
+
+  @{u}Parametry@{uu}:
+
+	çipset CRYSTAL CS 4231A,  16 bit/44100 a 48000 Hz, full-duplex (vstup
+	a výstup zároveñ), mixování více kanálû, nastavení citlivosti vstupu,
+	4 stereo vstupy (Paula, mikrofon, CD, externí), 1 stereo výstup,
+	pêedzesilovaç mikrofonu, interní CD-audio konektor, DSP pro A-Law/
+	µ-Law/ADPCM kompresi, 100% kompatibilita s Prelude Z2, plná podpora AHI,
+	software Samplitude na CD.  Cena nebyla uvedena.
+
+
+@{f 216FEE}*@{f} Pêeportování  webovského  brousidla  @{c 9494FF}NetScape@{c}  se  vleçe  a vleçe.  Program se
+  skládá  (zjednoduîenë  êeçeno)  ze  dvou  celkû.   Prvním  je  nspr  (NetScape
+  RunTime),  coù  je  pêenositelné  jádro  zajiîïující  síïové  funkce, pêístupy
+  k souborûm etc., a které se dá bez vëtîích zásahû celkem snadno pêekompilovat.
+  Druhým  je  takzvaný  fe  (FrontEnd),  který je zodpovëdný za vlastní vizuální
+  "vzhled"  celé  aplikace.   Tato  komponenta  je odliîná pro kaùdé hostitelské
+  prostêedí  (PC,  Mac,  Unix,  Amiga...),  musí  být  tedy od základu kompletnë
+  pêepsána.  To, co pûvodnë vypadalo jako (teoreticky) nepêíliî obtíùný úkol, se
+  ukázalo  být  poêádným  @{f 82FF68}zákysem@{f}.   Zpûsobuje  to jednak gigantický rozsah kódu
+  a také  to,  ùe  je  psaný  v C++.   Z  amigovských kompilátorû SAS/C naprosto
+  nevyhovuje  (je  totiù  jen  experimentální,  nekompletní C++!), StormC++ jakù
+  takù; jako zatím nejschûdnëjîí variantou se jeví GNU C++.
+
+@{f 216FEE}*@{f} Dobrá  zpráva:  bezesporu nejlepîí editor ikon pro Amigu - @{c 9494FF}Iconian@{c} - pokraçuje
+  ve  vývoji.   Jeho  pûvodní  autor  @{c 9494FF}Chad  Randall@{c}  sice  loni  v êíjnu skonçil
+  s Amigou,  ale  zachoval  se férovë a kompletní zdrojáky pêedal nëkomu, kdo si
+  êíká  @{c 9494FF}Dominique  Dutoit@{c}  a je  z Belgie.  Ten rozhodnë nelenil a ke konci záêí
+  uveêejnil  uù  druhou vylepîenou verzi (2.98u).  Iconian se zmënil ve freeware
+  a jiù nebudete potêebovat keyfile.  Dále byly odstranëny nëkteré chyby (hlavnë
+  v editoru tooltypû), kosmeticky byl vylepîen  vzhled nëkterých  gadgetû (têeba
+  popup),   bugová  doloaddt.library  byla  nahrazena  dvëmi  jinými  knihovnami
+  (render.library  a guigfx.library - jsou i rychlejîí).  Opraveny byly problémy
+  s CGX  obrazovkami.  Iconian je také ukázkou, jak kvalitní programy lze napsat
+  v jazyce E.  Good work, Dominik!
+
+@{f 216FEE}*@{f} @{c 9494FF}MacWeek@{c}  uveêejnil informaci, ùe Gateway pêipravuje vzkêíîení nové Amigy.  Prý
+  se  pracuje  na projektu Lazarus, který má stát $1400, bude zaloùený na PPC G3
+  a bude  umoùñovat  bëh  AmigaOS,  MacOS, BeOS a také vîech CHRP systémû.  Dále
+  uvedl,  ùe  nový  AmigaOS  4  bude  mnohonásobnë  rychlejîí neù MacOS 8.5 nebo
+  Rhapsody.  @{i}@{c 9494FF}Bill McEwen@{c} z AInc vîe vyvrátil a oznaçil celý çlánek za fámu@{ui}.
+
+@{f 216FEE}*@{f} Nový   @{c 9494FF}GoldED   5.0@{c}  je  údajnë  SUPER!   Koneçnë  umí pracovat  s opravdovými
+  tabelátory,  coù  byla  vëc,  po které tolik programátorû dlouho marnë volalo.
+  Stará verze 4 byla uvolnëna jako FREEWARE.
+
+@{f 216FEE}*@{f} Tradiçnë  dobêe  neinformovaný  zdroj,  který  nechce  být jmenován, hlásí, ùe
+  nëmecká  firma  Haage  &  Partner  (Storm C, ArtStudio,...) údajnë vyvíjí nový
+ @{c 9494FF} interpret  Rexxu @{c} pro  Amigu (a opët údajnë - v C++).  Pokud je tu sharewarová
+  Regina, je to práce celkem zbyteçná.  Spíî by to chtëlo nëjaký solidní rexxový
+  kompilátor.
+
+
+
+                            @{p PiosOne.png 240 130}

@@ -1,0 +1,651 @@
+»CL1:»SML:--------------------------------------------------------------------------------
+»CL0:»BIG:                                    A FEW UNUSUAL USES FOR THE BLITTER
+»CL1:»SML:--------------------------------------------------------------------------------
+  »CL5:                             by Dr. Doom/IRIS»CL1:
+
+This  will  be  an  unstructured run-through of some of the ways you can use the
+blitter  for  more than drawing bobs.  Some of these ideas are my own, may never
+have  been  performed before, etc.  If you use them, I don't expect credit, just
+admiration,  worship  and truckloads of cash.  ;) I won't give up sourcecode for
+any  of  them,  though.   That would be too easy, and I'm not that nice a person
+after all.
+
+»CL1:--------------------------------------------------------------------------------
+»CL0:                                  RANDOM NOISE»CL1:
+»CL1:--------------------------------------------------------------------------------
+
+One  of  the  interesting  things  regarding  hardware  coding is to NOT do what
+»CL0:Commodore»CL1:  tells  you.   Take the example of »CL0:blitter filling»CL1:, for instance.  The
+hardware  reference  describes  nicely  how  blitter  fill  can  be used to fill
+»CL0:polygons»CL1:, but it doesn't say anything about what happens when you »CL0:fill»CL1: something
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+that  »CL0:isn't»CL1:  the  planar outline of a polygon.  I discovered that this is a good
+way  to  produce »CL0:random noise»CL1:.  And an »CL0:easy»CL1: one too.  Start out with some random
+bits. Then do an »CL0:exclusive fill»CL1: over and over:
+
+»CL0:1011010001010101001001111110010010011...     »CL1:- original
+»CL0:1101100001100110001110101011100011101...     »CL1:- 1st iteration
+»CL0:1001000001000100001011001101000010110...     »CL1:- 2nd iteration
+»CL0:1110000001111000001101110110000011011...     »CL1:- 3rd iteration
+»CL0:1011111110101111110110100100000010010...     »CL1:- 4th iteration
+
+You can improve the pseudo-randomness of the output by »CL0:shifting»CL1: the input, using
+the  »CL0:EOR»CL1:  product  of  two  inputs shifted independently, inserting a few »CL0:random»CL1:
+bytes at random places, and so on.  At any rate, the result is random noise done
+more  or less  without involving the  »CL0:CPU»CL1:. Oh,  and  remember that planar random
+noise is »CL0:EXACTLY»CL1: the same as  chunky random noise  -  random  bits  - it doesn't
+matter  how they're ordered!  I hate  it when coders perform  C2P conversions »CL0:on»CL1:
+random noise. Makes me mad.  »CL0:Grrr!»CL1:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+»CL1:--------------------------------------------------------------------------------
+»CL0:                             LIGHTBOBS AND SHADEBOBS
+»CL1:--------------------------------------------------------------------------------
+
+»CL1:Yes,  these  two are exactly the same routine.  As you know, »CL0:shadebobs»CL1: are drawn
+by  adding  the  pixels  of  a »CL0:bob»CL1: to the »CL0:image»CL1: without clearing the screen, and
+»CL0:lightbobs»CL1:  (aka  »CL0:lensflares»CL1:)  work the same way except the screen is cleared for
+each frame.
+
+So  how  can  the  blitter help superimpose an image onto another?  Easy enough.
+Remember  that  the  blitter  can perform any logic function on three inputs.  A
+»CL0:binary  addition»CL1:  is  just  that, a sequence of »CL0:logic functions»CL1: on three inputs.
+Let's take an example:
+
+    001001
+  »CL0:+»CL1: 100011
+
+Now,  think  back  to your days in elementary school and cut off four fingers on
+each  hand.   A binary addition is really no different from a decimal one except
+»CL0:carry»CL1:  occurs  at »CL0:2»CL1: rather than »CL0:10»CL1:.  What's more, the maximum value you get from
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+each  addition  of  »CL0:3»CL1: bits is, tadaa, »CL0:3»CL1:, meaning that the »CL0:carry»CL1: value will never
+exceed  1.   Good.   This  means  we can add binary numbers without ever needing
+anything but single binary »CL0:digits»CL1: in the process.
+
+Starting  from  the right of our example, the least significant binary digit, we
+add  »CL0:1»CL1:  and »CL0:1»CL1:.  This is »CL0:2»CL1:, which means a »CL0:carry»CL1: part of »CL0:1»CL1: and a result part of »CL0:0»CL1:.
+Next  step  is  to  add the second-least significant bits to the carry bit.  Ie.
+»CL0:1»CL1:+»CL0:0»CL1:+»CL0:1»CL1:  =  »CL0:2»CL1:, again giving a carry of»CL0: 1»CL1: and a result of »CL0:0»CL1:.  And so on.  The whole
+operation can be described like this:
+
+   »CL0:carry»CL1:        001011
+   »CL0:1st value»CL1:     001001
+   »CL0:2nd value»CL1:     101011
+           »CL0:      ------»CL1:
+   »CL0:result»CL1:        110100
+
+As  I  said, the blitter can do this for us, but it only has »CL0:one»CL1: output channel,
+and  we  need  »CL0:two»CL1:  outputs  for  each  digit.  This means that adding two »CL0:4-bit»CL1:
+numbers  requires  »CL0:8»CL1:  operations.   Fortunately,  the  blitter  can  do parallel
+additions.   Each of the operations is performed on each »CL0:bit»CL1: of the entire »CL0:blit»CL1:,
+which  in our case can mean an entire »CL0:bitplane»CL1:.  So the total number of blits we
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+need  is  the  number  of  »CL0:bitplanes»CL1:  times »CL0:two»CL1:, regardless of the »CL0:size»CL1: of these
+bitplanes.   Let's  put together a »CL0:logic function»CL1: for adding the first »CL0:two»CL1: bits.
+We  have  no »CL0:carry»CL1: here, so we only use two input channels.  Because we're doing
+»CL0:lightbobs»CL1:,  one  of  our  source  values is the »CL0:destination playfield»CL1:.  For this
+reason the blit that »CL0:modifies »CL1:each bitplane must succeed the one that calculates
+the  »CL0:carry»CL1:  input  for  the  next  plane.   So, first we need an operation which
+produces the »CL0:carry bit»CL1: for each pixel:
+
+»CL0:   channel:   a   b   c  ->  d
+
+»CL1:              0   0»CL0:      ->  0  »CL1:        (0+0 = 0 => no carry)
+     »CL1:         0   0     »CL0: ->  0
+          »CL1:    0   1»CL0:      ->  0  »CL1:        (0+1 = 1 => no carry)
+»CL1:              0   1     »CL0: ->  0
+     »CL1:         1   0»CL0:      ->  0   »CL1:       (etc.)
+          »CL1:    1   0     »CL0: ->  0
+»CL1:              1   1»CL0:      ->  1 »CL1:         (carry only occurs here)
+     »CL1:         1   1     »CL0: ->  1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+»CL1:Ie.   an  »CL0:LF»CL1:  of  »CL0:%11000000»CL1:.  Needless to say, »CL0:A»CL1: and »CL0:B»CL1: are the two sources to be
+added,  and  one  of them points to the »CL0:target's»CL1: least significant bitplane, the
+other  to  the  »CL0:bob's»CL1:  least significant bitplane (bitplane»CL0: 0»CL1:).  The output here
+must  be  stored in a »CL0:separate buffer»CL1:, cause it's a meaningless carry value only
+useful  for  adding  the  »CL0:next»CL1: bitplane.  The next step is to perform the actual
+»CL0:addition»CL1:  part.   There  is  still  no  »CL0:carry»CL1:  input,  so again we only need »CL0:two»CL1:
+channels.
+
+»CL0:   channel:   a   b   c  ->  d
+
+»CL1:              0   0»CL0:      ->  0          
+     »CL1:         0   0     »CL0: ->  0
+          »CL1:    0   1»CL0:      ->  1        »CL1:  (0+1 = 1)
+»CL1:              0   1     »CL0: ->  1
+     »CL1:         1   0  »CL0:    ->  1     »CL1:     (etc.)
+          »CL1:    1   0      »CL0:->  1
+»CL1:              1   1»CL0:      ->  0          »CL1:(1+1 = 0+carry)
+     »CL1:         1   1     »CL0: ->  0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+»CL1:Again, simple, and the resulting »CL0:LF»CL1: is »CL0:%00111100»CL1:.  The inputs are the same here,
+only the »CL0:output»CL1: has changed and now points to bitplane »CL0:0»CL1: of the»CL0: target»CL1:.
+
+So,  we've added the bob's bitplane »CL0:0»CL1: to the target's bitplane »CL0:0»CL1: and we've got a
+»CL0:carry»CL1:  plane  telling  us  on which »CL0:pixels»CL1: this addition »CL0:overflowed»CL1:.  That plane
+will  become  one  of  the  »CL0:inputs»CL1:  for  the  next  operation (carry on!), which
+calculates  the »CL0:carry»CL1: plane to be added to bitplane »CL0:2»CL1:.  The inputs have moved to
+the next bitplane of both the source and the destination.
+
+»CL0:   channel:   a   b   c  ->  d
+
+»CL1:              0   0   0»CL1:  ->  0
+     »CL1:         0   0   1»CL1:  ->  0
+          »CL1:    0   1   0»CL1:  ->  0
+»CL1:              0   1   1»CL1:  ->  1
+     »CL1:         1   0   0»CL1:  ->  0
+          »CL1:    1   0   1»CL1:  ->  1
+»CL1:              1   1   0»CL1:  ->  1
+     »CL1:         1   1   1»CL1:  ->  1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+»CL1:Ie.   »CL0:%11101000»CL1:  becomes  the »CL0:LF»CL1: for the this blit which again writes to a »CL0:carry
+plane»CL1:.   You  can't  reuse  the  same  »CL0:carry  plane»CL1: over and over cause the next
+operation  requires  the  same  »CL0:carry»CL1:  input as this one.  You need at least two
+distinct »CL0:buffers»CL1: for the »CL0:carry bits»CL1:.
+
+»CL0:   channel:   a   b   c  ->  d
+
+»CL1:              0   0   0»CL0:  ->  0
+     »CL1:         0   0   1 »CL0: ->  1
+          »CL1:    0   1   0 »CL0: ->  1
+»CL1:              0   1   1 »CL0: ->  0
+     »CL1:         1   0   0  »CL0:->  1
+          »CL1:    1   0   1 »CL0: ->  0
+»CL1:              1   1   0 »CL0: ->  0
+     »CL1:         1   1   1  »CL0:->  1
+
+»CL1:Here a »CL0:logic function»CL1: of »CL0:%10010110»CL1: adds the source to the destination along with
+the  carry  from  the  last plane, giving the output we want on bitplane »CL0:1»CL1:.  You
+repeat  the  last  two  steps  for  each bitplane that is to follow until you're
+through.   The  only  reason  the  first two operations differ is actually speed
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+»CL1:concerns.   You  could feed them an »CL0:empty»CL1: carry plane and they'd be identical to
+all  the other pairs, but then you'd have to »CL0:clear a buffer»CL1: first, and you don't
+NEED  a carry input for bitplane »CL0:0»CL1:, ie.  you don't need to use channel »CL0:C»CL1:.  Using
+channel »CL0:C»CL1: does slow down the blit after all.
+
+Once  you've  processed  the  last plane, you may be wondering why you needed to
+calculate  the »CL0:carry»CL1: here.  You don't have to do it, of course.  But it helps to
+have a carry plane indicating where the »CL0:entire»CL1: addition »CL0:overflowed»CL1: when you were
+drawing the »CL0:lightbob»CL1:.  If you »CL0:OR »CL1:this to each »CL0:target»CL1: bitplane, for instance, the
+addition becomes »CL0:saturated»CL1:.
+
+All this may seem like an awful lot of operations for drawing a simple »CL0:lightbob»CL1:.
+But  it  will  be pretty fast if you control the blitter »CL0:properly»CL1:.  I managed »CL0:12»CL1:
+lightbobs  in  one frame on the »CL0:A500»CL1:, each of a size of »CL0:48x32»CL1:, and that was just
+when  using the »CL0:CPU»CL1: to feed the »CL0:blitter»CL1:.  I've done the same using the »CL0:copper»CL1: to
+control the blitter and it easily shows »CL0:20»CL1: lightbobs, but I haven't tested it to
+the limit, so I'm not sure how far I can push it.  :) If the effect doesn't have
+to be »CL0:one-frame»CL1:, the number of bobs increases dramatically of course.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+»CL1:The  same technique can be applied to create »CL0:interference»CL1: effects and the likes,
+even »CL0:fireplasma»CL1:.
+
+»CL1:--------------------------------------------------------------------------------
+»CL0:                               CELLULAR AUTOMATA
+»CL1:--------------------------------------------------------------------------------
+
+The  blitter  can perform all kinds of »CL0:cellular»CL1: simulations.  You know, like the
+once-so-popular  game  of »CL0: Life»CL1:.   Some  of these simulations produce impressive
+»CL0:fire-»CL1:  and »CL0:plasma-»CL1:like effects.  I won't get into this, though, since I've never
+done  this kind of thing with the blitter, but it's definately possible.  I know
+for one thing that »CL0:Life»CL1: has been done countless times using only the blitter.
+
+»CL1:--------------------------------------------------------------------------------
+»CL0:                   COPPERCHUNKY BIT REORDERING AND SATURATION
+»CL1:--------------------------------------------------------------------------------
+
+I  love  »CL0:copperchunky»CL1:  screens.   I  love  them  to  death.   I love how you can
+superimpose  images onto one another with just »CL0:one»CL1: word addition per pixel.  But
+sometimes I'd like each pixel represented by »CL0:32»CL1: bits rather than »CL0:16»CL1:.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The pixel layout on a »CL0:copperscreen»CL1: invariably looks something like this:
+
+ »CL0:  bits 31-16»CL1: : some copper instruction that never changes
+ »CL0:  bits 15-12 »CL1:: unused and ignored
+ »CL0:  bits 11- 8 »CL1:: »CL0:red»CL1: component
+»CL0:   bits  7- 4 »CL1:: »CL0:green»CL1: component
+»CL0:   bits  3- 0 »CL1:: »CL0:blue»CL1: component
+
+And  the  pixel definition most coders, including myself at times, would like to
+work with, is this:
+
+»CL0:   bits 31-24 »CL1:: unusued and ignored
+»CL0:   bits 23-16 »CL1:: »CL0:red»CL1: component
+»CL0:   bits 15- 8 »CL1:: »CL0:green»CL1: component
+»CL0:   bits  7- 0 »CL1:: »CL0:blue»CL1: component
+
+Let's  say we want a colour component value of »CL0:0-15»CL1: to produce the corresponding
+output,  and  values »CL0:16-255»CL1: to produce an output of »CL0:15»CL1:.  This makes lots of room
+for »CL0:overflow»CL1: during »CL0:additions»CL1:.  Let's look first at the »CL0:saturation»CL1:.  The idea is
+that  if any bit of the »CL0:upper nybble»CL1: is set, it should cause the »CL0:lower nybble to»CL1:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+become  »CL0:%1111»CL1:.   The blitter can do this, obviously, but finding the best way to
+do  it  is tricky.  Here's one way that works at least.  It involves two »CL0:buffers»CL1:
+in   »CL0:chipmem»CL1:,  one  which  contains  »CL0:%1010000010100000...»CL1:   and  one  containing
+»CL0:%1100000011000000...»CL1:
+
+First,  use  buffer »CL0:1»CL1: as a mask to »CL0:OR»CL1: bits »CL0:7»CL1: and »CL0:6»CL1: and bits »CL0:5»CL1: and »CL0:4»CL1: of each »CL0:byte»CL1:
+together, targeting bits »CL0:6»CL1: and »CL0:4»CL1:, respectively.  Then copy bits »CL0:6»CL1: and »CL0:4»CL1: to »CL0:7»CL1: and
+»CL0:5»CL1:.  Now bit »CL0:7»CL1: = bit »CL0:6»CL1: and bit »CL0:5»CL1: = bit »CL0:4»CL1:.  So »CL0:OR»CL1: bits »CL0:7-6»CL1: with bits »CL0:5-4»CL1: using the
+»CL0:second»CL1: mask and »CL0:copy»CL1: the resulting bits »CL0:5-4 »CL1:onto bits»CL0: 7-6»CL1:.
+
+After these 4 blits, bits »CL0:7-4»CL1: will all be »CL0:1»CL1: if any of the bits was originally »CL0:1»CL1:,
+or all »CL0:0s»CL1: otherwise.  A few example runthroughs:
+
+»CL0:   bit:  7 6 5 4 3 2 1 0
+        -----------------
+»CL1:         1 0 0 1 . . . .
+         1 1 0 1 . . . .
+         1 1 1 1 . . . .
+         1 1 1 1 . . . .
+         1 1 1 1 . . . .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+»CL0:   bit:  7 6 5 4 3 2 1 0
+        -----------------
+»CL1:         0 0 0 1 . . . .
+         0 0 0 1 . . . .
+         0 0 1 1 . . . .
+         0 0 1 1 . . . .
+         1 1 1 1 . . . .
+
+This  all  works  in  »CL0:parallel»CL1:,  so  it will be pretty fast although »CL0:4 blits»CL1: ARE
+needed,  each  spanning  the  entire  buffer.   Now,  using  a  mask  buffer  of
+»CL0:%1111000011110000...»CL1:, OR bits »CL0:7-4»CL1: with bits »CL0:3-0»CL1:, and any overflowing value up to
+»CL0:255»CL1: yields an output of »CL0:15»CL1:.
+
+Then to start moving bits.  Bits »CL0:19-16»CL1: will be shifted right »CL0:8»CL1: places, bits »CL0:11-8»CL1:
+will be »CL0:shifted»CL1: »CL0:4»CL1: places and bits »CL0:3-0»CL1: will be »CL0:copied»CL1:.  Use »CL0:masks»CL1: as well here.
+
+So,  with  only another 3 blits, meaning 8 in total, a »CL0:32-bit 0RGB»CL1: screen can be
+converted  to  a »CL0: copperscreen»CL1:  with  nice »CL0:post-addition saturation»CL1: for lightbob
+effects  etc.   As  useless  as this may sound, remember that a copperscreen can
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+have  as  high a resolution as »CL0:3x3»CL1: in»CL0: full-screen»CL1:, better than that on a smaller
+screen, and perhaps better still using »CL0:sprites»CL1: and other tricks.  And of course,
+the  output of a »CL0:copperscreen»CL1: is more »CL0:accurate»CL1: than a »CL0:HAM6»CL1: one and in some cases
+better  than  a  »CL0:HAM8»CL1: screen because »CL0:HAM bugs»CL1: won't occur.  Whether or not it is
+faster  depends on a lot of things, of course.  HAM may still be "preferable" on
+AGA Amigas.
+
+»CL1:--------------------------------------------------------------------------------
+»CL0:                                 PLASMA WIPE
+»CL1:--------------------------------------------------------------------------------
+
+This  is  one  of  the  easiest  »CL0:chunky»CL1:  effects  possible.   It  requires a »CL0:map»CL1:
+determining the »CL0:order»CL1: in which the pixels of an image are to appear.  The map is
+processed  a  number  times in each of which the pixels in the »CL0:mask»CL1: with a value
+»CL0:higher»CL1:   (or   »CL0:lower»CL1:)   than  a  decreasing  (or  increasing)  value  cause  the
+corresponding  pixel  in the image to be »CL0:copied»CL1: to the »CL0:chunky screen»CL1:.  When used
+correctly it can look quite impressive.
+
+Its »CL0:planar»CL1: counterpart is of course somewhat more complicated but it can be done
+using the same principles.  You need a »CL0:map»CL1:, or »CL0:texture»CL1: if you will, same as with
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+the  »CL0:chunky»CL1: version, only (of course?) it will need to be in »CL0:planar»CL1: format.  And
+for  each  run,  you  have to »CL0:compare»CL1: the pixels of the map to your »CL0:downstepping»CL1:
+value.   Now,  unlike  regular »CL0:CPU»CL1: compares which are actually »CL0:subtractions»CL1:, the
+blitter can look at the »CL0:bits»CL1: of each pixel through a »CL0:logic function»CL1: to determine
+whether  a value is »CL0:equal to»CL1:, »CL0:lower than»CL1: or »CL0:higher than»CL1: that pixel, producing an
+output of either »CL0:0»CL1: or »CL0:1»CL1: to show whether or not the condition was met.
+
+Let's  say  the  map  has »CL0:4»CL1: bitplanes.  The highest value then, and the starting
+value  for  the  comparison,  is  15  or »CL0:%1111»CL1:.  This means that bits in the map
+pixels  to  use  must  all  be  »CL0:1»CL1:,  or  in other words, a »CL0:logical AND»CL1: of all the
+»CL0:bitplanes»CL1:  in  the map creates a mask plane of all the pixels with the value »CL0:15»CL1:.
+Easy  enough.   For  the  next  run the value will be 14, so all pixels with the
+value  14  or 15 must produce a 1 in the mask.  For a pixel to be higher than or
+equal to »CL0:%1110»CL1:, bits »CL0:3-1»CL1: must be set and bit »CL0:0»CL1: doesn't matter.  »CL0:13»CL1: requires some
+control  over the order of the blitter passes.  For a value to be higher than or
+equal  to »CL0:%1101»CL1:, bits 3-2 »CL0:AND»CL1: either bit 1 »CL0:OR»CL1: bit 0 must be set.  Each operation
+can  be described using »CL0:ANDs»CL1:, »CL0:ORs»CL1: and »CL0:parantheses»CL1:.  The full table for values 15
+through  1  looks like this (»CL0:a»CL1: means bit 3, »CL0:b»CL1: is bit 2, etc., »CL0:not»CL1: to be confused
+with blitter channels):
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+»CL0: x »CL1: = »CL0:15 »CL1:<=> »CL0:a »CL1:AND »CL0:b »CL1:AND »CL0:c »CL1:AND »CL0:d     »CL1:=»CL0: 1
+»CL0: x »CL1:>= »CL0:14 »CL1:<=> »CL0:a »CL1:AND »CL0:b »CL1:AND »CL0:c          »CL1: =»CL0: 1
+»CL0: x »CL1:>= »CL0:13 »CL1:<=> »CL0:a »CL1:AND »CL0:b »CL1:AND (»CL0:c»CL1: OR »CL0:d)    »CL1:= »CL0:1
+»CL0: x »CL1:>= »CL0:12 »CL1:<=> »CL0:a »CL1:AND »CL0:b                 »CL1:=»CL0: 1
+»CL0: x »CL1:>= »CL0:11 »CL1:<=> »CL0:a »CL1:AND (»CL0:b »CL1:OR (»CL0:c»CL1: AND »CL0:d))  »CL1:=»CL0: 1
+»CL0: x »CL1:>= »CL0:10 »CL1:<=> »CL0:a »CL1:AND (»CL0:b »CL1:OR »CL0:c)          »CL1:=»CL0: 1
+»CL0: x »CL1:>= »CL0: 9 »CL1:<=> »CL0:a »CL1:AND (»CL0:b »CL1:OR »CL0:c»CL1: OR »CL0:d)     »CL1:=»CL0: 1
+»CL0: x »CL1:>= »CL0: 8 »CL1:<=> »CL0:a                       = 1
+»CL0: x »CL1:>= »CL0: 7 »CL1:<=> »CL0:a »CL1:OR (»CL0:b »CL1:AND »CL0:c»CL1: AND »CL0:d)    »CL1:=»CL0: 1
+»CL0: x »CL1:>= »CL0: 6 »CL1:<=> »CL0:a »CL1:OR (»CL0:b »CL1:AND »CL0:c)          »CL1:=»CL0: 1
+»CL0: x »CL1:>= »CL0: 5 »CL1:<=> »CL0:a »CL1:OR (»CL0:b »CL1:AND (»CL0:c»CL1: OR »CL0:d))   »CL1:=»CL0: 1 
+»CL0: x »CL1:>= »CL0: 4 »CL1:<=> »CL0:a »CL1:OR »CL0:b                  »CL1:=»CL0: 1
+»CL0: x »CL1:>= »CL0: 3 »CL1:<=> »CL0:a »CL1:OR »CL0:b »CL1:OR (»CL0:c»CL1: AND »CL0:d)     »CL1:=»CL0: 1
+»CL0: x »CL1:>= »CL0: 2 »CL1:<=> »CL0:a »CL1:OR »CL0:b »CL1:OR »CL0:c             »CL1:=»CL0: 1
+»CL0: x »CL1:>= »CL0: 1 »CL1:<=> »CL0:a »CL1:OR »CL0:b »CL1:OR »CL0:c»CL1: OR »CL0:d        »CL1:=»CL0: 1
+
+»CL1:You  can  either figure out a clever way to represent these functions in a »CL0:table»CL1:
+or  create  a  routine  that  determines and executes each »CL0:function»CL1: based on the
+»CL0:input  value»CL1:.   As  you can see, you need only »CL0:1-3 blitter passes»CL1: to produce the
+mask, which is fast enough to produce a »CL0:25 fps»CL1: wipe on a 5-bitplane screen.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+You  may  also  have noticed that »CL0:adding»CL1: another bit to the table shown above is
+pretty easy which hints at an easy way to produce the »CL0:function»CL1: required for each
+value.
+
+»CL1:--------------------------------------------------------------------------------
+»CL0:                                   AND MORE
+»CL1:--------------------------------------------------------------------------------
+
+»CL1:The  list  of  applications  for  the Amiga's incredibly versatile blitter seems
+endless.   I  could  go on for quite a while, but you know, »CL0:deadlines»CL1:...  Aargh!
+But be imaginative, be inspired, be patient, be nurse, etc.

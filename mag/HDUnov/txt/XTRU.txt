@@ -1,0 +1,174 @@
+================================================
+XTRU v1.4 (c)1997 Iain Hammond
+XTreme Racing (XTR) (c) SILLTUNNA SOFTWARE LTD.
+================================================
+Welcome to XTreme Racing Util,
+The reason for this little utility is because some versions of XTR
+cant load track files crunched with the CrM2 format. Like us, a 
+lot of people decrunch all the track,objects...etc files to be able
+to play these, and some people probably did not even know 
+about this problem at all.
+
+This is where XTR Util comes in, it will convert all Track,Object,
+Tiles,..etc. files from CrM2 to XPKZ and back again if need be. 
+Also you can decrunch the files i.e. if you decrunch Misc/Car
+Types you can edit the default values for all the cars. XTR will 
+still load any of its game files if they happen to be decrunched, 
+but please note that this utility cant crunch any file that you
+decrunch at this time. Although it probally will in the updated version.  
+
+XTR Util has only been tested on `XTR v1.0' and `XTR v1.1b 
+`Aminet Upgrade'. It should be fine with newer versions, as we 
+don`t think that they have the same trouble with the `CrM2' format
+as the earlier ones do. The only other problem we can think of is 
+track versions. At this time it has only been tested on Version 
+2.11, 2.12, 3.00 & 3.01 tracks.
+
+If you have newer versions and XTR Util cant load them please
+do send them to us, so we can update XTRU of course only if 
+the copyright allows though.
+
+How to install XTRU
+===================
+XTRU has been developed for HD users and must be used 
+from Workbench. We have written a install script, so for a 
+easy life just click the icon.
+
+It`s Installed, What now?
+=========================
+The first time you run XTRU you will be asked to take it into your
+main XTR draw so it can find the needed files. Please note this 
+is the main XTR draw where you see the files `FrontEnd' and 
+`Race', although this is checked by XTRU just to make sure you 
+get it right. Next XTRU will evaluate all tracks you have installed, 
+if any are unplayable they are moved into the `Storage' directory. 
+
+Once XTRU has been run, a window will open with a list view and
+some gadgets. The list view is used to show info about the loaded
+track file :          
+
+Track name      : Name of loaded track
+Pack Type     : Is it crunched? If so what type
+Version       : Track version number(?)
+Objects       : These two list objects
+Extras      : used by the track
+Tiles     : Tiles used by the track
+BackGround    : Track background file
+LayOut     : Track layout file
+ World    : Track world file
+Sound FX   : Track sounds
+
+Any OBJECTS,TILES or BACKGROUND marked with a `*'
+means these files are not installed, therefore you can`t play 
+this track.
+
+If LAYOUT or WORLD are marked with `**' this means these
+files are missing but XTR will still let you play these tracks, as 
+these images are only used whilst selecting what track to play 
+on and not during the race itself. If WORLD is marked as `N/A' 
+the track does not need this file anyway.
+
+DEATHMATCH tracks do not use WORLD files.
+
+Sound FX, as far as v2.11, v2.12, v3.00 track files are concerned
+this is always `N/A' but v3.01 track show `Default.Sfx'. Maybe this
+means that there will be external sound files!?
+
+The gadgets :
+
+Load  : Load a track and view info.
+Unpack  : Unpack any XPKZ or CrM2 file.
+Pack  : Not working (yet).
+About  : About XTRU
+Quit  : Exit XTRU
+XPKZ > CrM2    : Convert Track and all Object,Tile,Background
+CrM2 > XPKZ    : Same as above but converts to XPKZ format.
+Auto Conv  : Set this to automatically convert tracks when
+Set Laps     : As you know XTR will only let you play a max
+XTR   : Start XTR game
+Print & Save   : Print or Save the info displayed in the Listview.
+
+XPKZ >< CrM2 conversion
+=======================
+When you install a new track(s) try and play on them, if XTR
+complains then load up XTRU then
+A) Check to make sure you have all objects,tiles...etc
+B) If its `Pack Type' is CrM2 convert it to XPKZ and try again.
+When you do convert the track it is changed and all the other
+files are tested to see if they are packed then converted. When
+we get a new track, we always convert it even if the track shows
+XPKZ because sometimes you will get an odd Object or Tile that
+is packed with CrM2. It only takes one and XTR will not let 
+you play on this track.
+
+
+AUTO CONVERT & INSTALL
+======================
+The `Auto Conv' gadget is used to set what conversion type
+is to be used on tracks being installed. Instalation is very easy
+just click on the `Install' gadget select the path where you find
+the directorys:
+Track/
+Objects/
+Tiles/
+etc..
+
+XTRU will install all tracks,objects and tiles etc.It will also 
+convert them to whatever the `Auto Conv' gadget is set to 
+(None,XPKZ,CrM2).Any tracks that are unplayable will moved
+into the `Storage' draw. Also when new tracks are installed all 
+tracks in the `Storage' draw are rechecked to see if they can be
+made available for playing, if so they are installed ready for XTR
+to use.
+
+Set Laps
+========
+Press on this gadget and enter a number between 1 and 127
+and press return! You can now race for 127 laps! Please note 
+dont try an alter this on the XTR Setup Menu, It will let you 
+decrease the laps but not increase them. Also while playing 
+you will notice that the lap counter will become corrrupt, this
+is ok, It just means YOU will have to keep count.
+
+Using The Remote Install feature
+================================
+XTRU can be started as a `Default Tool' from a Project Icon. 
+So people who make their own tracks can use XTRU as an 
+installer for there tracks. When XTRU is started in remote mode
+the only gadgets available are, AUTO CONV,INSTALL, ABOUT
+& QUIT. See the Install section about these gadgets. This type of
+install is the same as the normal install except XTRU will know 
+where to find the track files. 
+
+Once installed press QUIT and you will be given a choice to either
+exit or enter XTRU. An icon is supplied for inclusion with third party
+rack archives, this can be found in the ICONS draw.
+
+Registration
+============
+If you send either Iain or Andy a disk in a Jiffy + return postage
+we will send you your own personal keyfile, which will unlock the
+advanced features in the updated version when it is released. 
+
+Send bug reports and ideas (well anything really) to either :
+Snail Mail:
+Iain Hammond 
+5 WILLIAM GROOM AVENUE    
+DOVERCOURT              
+HARWICH   
+ESSEX  
+CO12 4XU
+ENGLAND
+
+Or if you prefer you can E-Mail us at "CaptainC@netcomuk.co.uk"
+========= Archive contents ========
+Original  Packed Ratio Date      Name
+--------  ------ ----- -------
+444     243 45.2% 16-Jul-97 XTRU/Icons.info
+2252     518 76.9% 12-Jul-97 XTRU/Icons/XTRU_Install.info
+444     245 44.8% 16-Jul-97 XTRU/Storage.info
+7       7  0.0% 23-Jul-97 XTRU/Storage.dum
+123502   49568 63.2% 13-Jul-97 XTRU/XTR_Util
+1814     795 56.1% 16-Jul-97 XTRU/XTR_Util.info
+11185    4662 58.3% 23-jul-97 XTRU/XTRU_readme
+-------- ------- ----- -----

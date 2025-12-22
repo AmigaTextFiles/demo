@@ -1,0 +1,114 @@
+
+            .....................................................
+            :.....:.......:......................:...:....:.....:
+            : ....:.......:  .....:.....:.....  .:.....:..:...:.:
+            : : :____________:______      ___:__:___ : ______ : :
+            : : |  ____/     :      |    |   |  |   |:|  ___/ : :
+            : : |  |  ||  -  :   -  |  :.|...|  |   |:|  _|_  :.:
+            : : |  |  ||     :   ___|    |   |  |   |-|     | : :
+            :.:.|  |  ||  |  :   |       |   :  |     |     |.:.:
+            : : |  !  ||  |  :...|....   |   :  |     |     |.: :
+            : : |     ||  |  :   |   :   |   :  |     |     | : :
+            : : |_____||__|__:___|       |___:__|_____|_____| : :
+            : :.....   :     :...............:  ....:..  : ...:.:
+            :..: : :...:......:......:......:...:.....:..:.:..: :
+            :....:.:......:...........:..........:........bÆrman:
+
+			Is half proud to present
+		
+			   The Last Inline
+			   
+	(Or: enjoying the last days of 68k + cruel metal twisting!)
+
+
+Requirements: 68020 & 8 Mb (maybe just 4)
+
+Tested on:
+- A1200 Blizzard 030.
+- A1200 Blizzard 040/40
+- A1200 BlizzardPPC 603+
+- A4000 Cyberstorm 040/40
+- UAE  Ha! :D
+- Amiga II with MMC  He!! :DD
+
+
+If you have problems running the demo on CyberStorm, try booting with
+no startup-sequence, run Setpatch and boot it.
+Optimal configuration: Cyberstorm 060 or blizzard 060. Please use
+latest 060.library for best chip memory performance.
+Please, keep in mind that general performance on blizzardPPC 040 is 
+MUCH lower than blizzard 030 due to bad memory speed and 040 forced
+burstmode. 
+The Last Inline has bugs. I supose :) . Is there any program in the world
+free of bugs? Oh, yes! it has to be this one: printf("Hello World");
+So we don't take any responsability about WB crashes, President Clinton 
+sexual affairs, Micros*ft releases, etc, etc...
+
+
+	Sooo....Here we are again with another 'low budget release' as
+somebody calls our productions...  :D
+This one was made along a month for the Euskal 6 party, held in San 
+Sebastian at end of July. Taking some scraps from Phase One and coding
+fastly we managed to bring something for the compo, and we got 2nd. place.
+Congratulations, Ramses(1st.)! But next year we will not leave you win again!
+
+	Sorry for the Last Ninja 2 scan, but we didn't find anybody
+to make us a 1024x512 16 colors picture in a pair of weeks! :)
+
+Now, some bits about the code... Despite having few time, i (Peskanov)
+have tried to make something interesting to watch.
+
+- Da Zoom : just a 16 colors zoom in a 704x352 hires+laced screen; 12 FPS
+on 030/50, with 25 FPS peaks on 060.
+
+- Da Rotozoom that Roots lacked : in roots/sanity (v2), chaos & mr. pet 
+showed us 2 of the last different ways to make a rotozoomer... But STILL 
+there are some posibilities open, due to the extremely flexibility of the
+Amiga arch.! The rotozoom i show is realtime with no precalculations,
+and it leaves 70% of CPU free at 50 Hz. Hence the Esphere mapping, just
+to show the CPU is still free!
+If I am right, this rotozoom could have been added to the Chaos one in 
+roots! Yes, BOTH at the same time at 50 Hz. on a plain 1200! The Chaos 
+rotozoom texture should have to been reduced to 16x8 (or 8x16) instead 
+of 16x16 to free some colors for this one, but anyway...
+
+- Free Camera Voxel : Voxels with free camera are 'rara avis', at least 
+on Amiga. The only ones i have seen are those (in time order):
+  -> In 'human' of Stellar.(95?) A sort of Beta from 'Toilet'. A strange
+     and blurred mountain in 8x4 res. fly throug the screen... Some time
+     ago i used to think it was an anim. Now i don't really know...
+  -> In 'Death Sentece' by Oxyron.(96) One of the best ever Amiga demos, 
+     if just only for the coding! This has the voxel i wanted to beat!
+     It has an 4x4 res. voxel, but very fast & with very good precission!
+     Maybe my Voxel looks better, but i'm sorry to say that TTS is still 
+     better than mine... Anybody to accept the match?
+  -> In 'pusherman' by Tolou.(98) Oh, hell, their coder comes from another 
+     world! Every demo from him has stranger effects than the previous 
+     ones! He has his own ways to do everything, so it's not surprising 
+     that his free voxel looks totally different and bizarre! 
+     Anyway, keep the good work man!! You are great!
+  
+  Please, if anybody knows any other free camera voxels on Amiga, send
+me a quick mail to: malemana@nexo.es   
+But notice i'm asking about VOXELS, not POLYGONS!
+
+- The 3d engine: Sucks. (yes, like in Phase One :)
+
+- Skool Daze : Don't you just hate schools? How much fun was, when i was 
+child, loading Skool Daze, renaming the teachers and giving they some 
+'lessons' :)
+No, i didn't make a c64 emulator just for this effect!  :D  Using Magic64
+and a blitz basic+asm program, i captured c64 screens every 3 frames and 
+delta-compressed them to pack an anim. On the demo, there is a decompressor
+and a c64screen-to-planar converter! Pilelined! yes, i am totally out of 
+my mind!! :P
+
+Well, that's all i have to say about this little demo. This could my last
+68k production, as i'm going power! Read the PPCSupportCampaign.txt!
+
+Especial greetings go to the coders that takes some minutes for writting
+a bit about their work, to those who take the risk of being ignored by
+innovating, and to those who still try to optimize their effects to the
+max! Long live, and happy coding!
+
+See U!

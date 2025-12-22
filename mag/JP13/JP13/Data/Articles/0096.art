@@ -1,0 +1,359 @@
+!JP Source History
+StingRay
+11µF3µC0µJE***************************************************************************
+*                          JP - a mOODS pLATEAU & sCARAB production       *
+*             /                                                           *
+*       _____.__ _                                         .___.          *
+*      /    /_____________.  _________.__________.________ |   |________  *
+*  ___/____      /    ____|_/         |         /|        \|   ._      /  *
+*  \     \/      \    \     \    /    |    :___/¯|    \    \   |/     /   *
+*   \_____________\___/_____/___/_____|____|     |____|\_____________/    *
+*     -========================/===========|______\================-      *
+*                                                                         *
+*   .---.----(*(               µC1Jurassic PackµC0                )*)---.---.   *
+*   `-./                                                           \.-'   *
+*                                                                         *
+*           CODE:     Mr.Tickle/ex Darkage (original Devotion engine)     *
+*                     StingRay/[S]carab^Scoopex (bugfixes and updates)    *
+*                     Scicco/[S]carab (multichannel sound engine)         *
+*                                                                         *
+*           GRAPHICS: Adam/DCS (original Devotion gfx)                    *
+*                     various artists like f.e. Da Freak (new panel gfx)  *
+*                                                                         *
+*           MUSIC: various artists                                        *
+*                                                                         *
+***************************************************************************
+
+                        *************************
+                        *** JP Source History ***
+                        *************************
+
+µJL
+µC119-Dec-2oo4:µC2
+
+- got a call from Ghandy, he told me that Ascii's weren't displayed correctly even if font 3 was used, this is fixed now, added a check for font #3 in the text routines, guess I will completely recode all the text routines soon.
+
+
+µC118-Dec-2oo4:µC2
+- bugfix in the intro routine, if the 8 bytes for the pointer sprite couldn't be allocated, the next routines using intuition library would crash or behave weird since a6 was still loaded with execbase.
+
+- another bugfix in the intro routine, instead of freeing the memory for the ptr sprite at the end I was calling AllocVec() again... One shouldn't code when tired I guess :)
+
+- intro routine optimized a bit
+
+- intro/outro routines moved to the includes, makes it easier the do another intro in the future
+
+- cleaned up the (un)hilightlink routines, jump tables are used here now too, also code optimizing took place there as well :)
+
+- merged AGA/RTG print routines into one global routine still the print routine is quite ugly so recoding is needed
+
+- the improvements I did to the routine which checks if 0000.art exists caused a small bug in printing this very article, at least if article had 2 columns (didn't check with single column articles), on the last page some characters from the former page were displayed again, strange...
+
+So, the old routine is back and the bug is gone! Very small bug but a bug is still a bug :)
+
+µC0"You must learn and you must train
+ For the battle you don't want
+ To defend what you love
+ That's how the war begins..."
+µC116-Dec-2oo4:µC2
+
+- the 'B' (break) command wasn't handled in the 'StripArticle' routine since I didn't know about this command when coding it :) The 'B' command is now handled correctly and the 'StripArticle' Routine is the first to use the tag table :)
+
+- cleaned up the source a bit, some routines like the file loader and iff converting are now includes
+
+- 'DOS_CheckFile' removed as it can be done with the 'DOS_GetFileSize' too
+
+- cleaned up the check for '0000.art' file
+
+- serious bug in the fileloader fixed! under certain circumstances a long read from $0 could happen due to register fuckup thus $0 was used as file buffer instead of the correctly allocated buffer
+
+- 'BlitGfx' routine removed since it was never called
+
+- fixed a bug in the new 'StripArticle' routine, text wasn't formatted to 78 chars per line any longer due to register trashing
+
+- the requester for saving the article won't be opened on the main diskmag screen any longer since sometimes it was very hard to read requester texts, depending on the used diskmag palette. I also have the uncertain feeling that opening the requester on the main screen caused random crashes sometimes.
+
+- some hours later (I've been remixing Funker Vogt's 'Final Thrill' using Logic Audio in the meantime :D) Well, no more changes today since I got a visit from a friend :)
+
+
+µC115-Dec-2oo4:µC2
+
+- created a test article to check what the "B" command does, which Tickle forgot to mention in his doc :) It is used to end a column or page, works without any problems! I also checked the 3 column mode again with this article, now it doesn't crash anymore, but it a: doesn't look good and b: still has some problems, e.g. sometimes the button graphics are trashed etc.
+
+- some redundant error messages and variables removed 
+
+- created a table with all formatting tags, will be used later in all the routines which need to check the tags. For now I will leave this source alone since I wanna play Gran Turismo 3 now :) I'll come back later this evening :D
+
+
+µC113-Dec-2oo4:µC2
+
+- all fade routines finally completely recoded since the old ones annoyed me since I got the source.
+ 
+- background can be switched on/off with 'B' key
+
+
+
+µC112-Dec-2oo4:µC2
+
+- mainloop extremely cleaned up, all handling is now done using jump tables instead of doing lot's of compares, makes the source A LOT more readable and it's much easier to add more features.
+ 
+- button handling also completely recoded, jump tables are used here as well, much shorter and cleaner code
+ 
+- slowly, very slowly, the source becomes readable, at least for me since it has been adapted to my style :)
+ 
+- sound can be switched on/off with "S" key, key for saving actual article has been changed to "W"
+ 
+- keyboard functions optimized, possible due to new handling of all controls with the jump tables
+ 
+- mouse handling "de-spaghettified" too, guess what, jump tables are used here as well :)
+ 
+- some redundant code fragments reduced, e.g. the check for xmin=40, xmax=599 has been removed since we have an old-school page flipper since ages :)
+ 
+- many routines have been made more modular, e.g. the page/article handling routines
+ 
+- things left to do:
+
+1. recode the fade routines
+2. merge the 2 (AGA/RTG) print routines into 1
+
+µC111-Dec-2oo4:µC2
+
+- keyboard check cleaned up and partly recoded, i.e. de-spaghettified :)
+ 
+- music changing is more modular now
+ 
+- music fades out before screen closes on exit
+ 
+- found the cause for the crashes upon exit, iffbuf(a4) was deallocated in the intro/outro routines but not cleared, thus the 'Freeing memory that is already free' guru, could only happen if no endpic exists
+
+
+
+µC1o8-Dec-2oo4:µC2
+
+- 'addclipart' routine optimized and IFF error check added
+ 
+- bugfix: memory for the mouse ptr was allocated AFTER intro routine, so mouse pointer remained visible, (de)allocating memory for the mouse pointer is now done in the intro routine
+ 
+- crashes still occure from time to time upon exit...
+µC1o7-Dec-2oo4:µC2
+
+- macros for file loading added
+
+
+
+
+µC1o5-Dec-2oo4:µC2
+
+- "loadart" adapted to new error handling and optimized a bit
+
+
+
+µC1o4-Dec-2oo4:µC2
+
+- seems the test article I created a long time ago was responsible for the crashes, after removing it, everything works fine
+ 
+- minor code optimising
+ 
+- Harddisk Crash (WinXP System HD), so half a day was lost reinstalling Windoze... Time to backup my UAE System...
+ 
+- to do: recode intro/exit routines (screen size will be adapted to size of picture) - recode fading routines - implement search routine
+
+
+µC1o3-Dec-2oo4:µC2
+
+- updated Mr.Tickle's e-mail address in version string :)  [pete@shagged.org]
+ 
+- added AllocVec/FreeVec patch to aid debugging 
+ 
+- got a PlayStation2 today, so no more coding for the moment :)
+
+µC1o2-Dec-2oo4:µC2
+
+- if replayer init fails, an error message is displayed now & changed error handling, all critical errors are now gone
+ 
+
+
+µC1o3-Dec-2oo4µC2
+
+- stored in 'errcode' variable which is checked after calling a routine
+ 
+- crash upon exit still not fixed, seems to be a memory (de)allocating problem...
+ 
+- macros for easier error handling added
+
+
+
+
+µC102-Dec-2oo4:µC2
+
+- started to work on the engine again
+ 
+- bugs: guru on exit screen can't be opened under certain circumstances
+ 
+- bugfix (not completely done!): engine exited without any error message if replayer couldn't be initialized
+
+
+
+
+µC114-Feb-2oo4:µC2
+
+- fixed a mysterious memleak using my very own highly advanced memory tracking routines (incredible what you can find out by simply patching AllocVec()/FreeVec()!)
+ 
+- all memory (de)allocation is now made using AllocVec()/FreeVec()
+ 
+- bug in init routine fixed, even if the music couldn't be loaded, no error was returned
+ 
+- small bug in the button init routine fixed, if an error occured, the allocated memory was not deallocated
+ 
+- code is 100% pc-relative now (RELOC32 hunks suck!)
+
+
+µC113-Feb-2oo4:µC2
+
+- iff routines completely recoded, compressed/uncompressed iff supported unfortunately my overlap decrunching/interleave 2 raw converting doesn't work correctly so there's quite a lot of memory required :/ took nearly 2 days to find out that the overlap routines were responsible for the graphics bugs...
+
+
+µC111-Feb-2oo4:µC2
+
+- music status will now be updaded when using F-Keys to change music too
+ 
+- 'loadart' routine heavily cleaned up, now there aren't any loading routines spread over the whole code anymore (sorry Tickle :D)
+ 
+- init part completely recoded, now there's just one global init/exit routine instead of dozens of 'em spread over the whole code (sorry Tickle again :P)
+
+
+
+
+µC11o-Feb-2oo4:µC2
+
+- MAJOR IMPROVEMENT: button coords will be read from 'articles/ffff.art' if this file exists to allow changing of the button positions without any need to change the code if there's no settings file found, default values will be used, if the settings file is corrupt/wrong format, a warning requester will be displayed
+ 
+- memory for article table is now allocated dynamically, no static buffer anymore, scanmart routine recoded and error check added
+ 
+- recoded the routine which selects the intro picture to display as the old code was way too ugly, 'lastpic' file is now only 1 byte instead of 2 :)
+ 
+- 'HELP' key can be used to display index just like in the good ol' time (there's no school like oldskool!)
+ 
+- current article can be saved to disk using 's' key
+
+
+µC1o9-Feb-2oo4:µC2
+
+- replaced p61 replay routine with my bugfixed one
+   
+- continued to clean up the code
+ 
+- small bug in the music status routine fixed, copied LF character instead of setting it to 0, status display is now 1 line only, i.e. no empty pages anymore
+ 
+- added a filecheck routine which just checks if a file exists or not
+ 
+- audio init optimized
+ 
+- recoded routine which calculates the maximum number of modules, it now works for more than 10 modules :)
+ 
+- emulator check added, if emulator is detected a warning requester will be displayed
+ 
+- oldschool page flipper extended, if mouse is at the top or bottom of the screen, previous/next article will be loaded
+ 
+- music.art is now handled just like any other article, i.e. title and author can be changed and will be displayed in the status display, requested by someone who didn't mention me with one single word in the credits of the last JP issue...
+
+(I didn't implement the multichannel sound engine into the gallery, I didn't code a fix for the gallery after I got to know about problems with the module replaying, I didn't spend time and money to drive to Medi to send the gallery and other JP stuff, no, that wasn't me, whoever that was, it wasn't me so of course I didn't deserve to be mentioned in the credits... sarcasm rulez!) µC3(Ghandy: Does it really? Dunno!)µC2
+
+
+µC1o8-Feb-2oo4:µC2
+
+- when displaying the music selection page, the currently played module is displayed now
+ 
+- music fades out using the current volume now
+ 
+- all music handling routines completely recoded, faster, shorter, cleaner, better -> arrogancy is a bliss :)
+ - started cleaning up the code, now using my highly optimized and flexible file loading routine which does all necessary stuff like memory allocation and decrunching on the fly, currently only used for loading the modules
+ 
+µC1"where is the little child in you
+ where is your childhood gone
+ who is the man in the mirror
+ and where is your peaceful fun..."
+
+(Funker Vogt - Remember Childhood)µC2
+
+
+
+µC1o7-Feb-2oo4:µC2
+
+- bug removed: '0000.art' (if this file exists, it will be displayed instead of the index at the beginning) was displayed twice under certain circumstances
+ 
+- check for 68020+ cpu added
+ 
+- multichannel modules now also fade out when selecting new module just like the 4 channel modules do
+  
+- volume can be changed using the +/- keys on the numeric keypad
+ 
+- watched 'Paycheck' at cinema, nice movie!
+
+µC1
+  "heldenhaft ziehen deine freunde
+  laechelnd nun an dir vorbei
+  gruessen dich auf deinem wege
+  in die unertraeglichkeit..."µC2
+
+
+  
+µC1o2-Feb-2oo4:µC2
+
+- musics can be selected using F-Keys (F1-F1o), requested by Zito (the individual who didn't even manage to send one cd to me... why do I implement his wishes into jp then?!?) µC3Ghandy: You can`t let it be picking a quarrel with Zito, can you? ;-)
+
+µC2- all external files have been moved into a single directory ("data/"), requested by guess whom... (nicht geschickte cd's sucken!)
+
+µC1"Was bleibt dir noch als stumm zu beten
+zu einem Gott den es nicht gibt..."µC2
+
+
+
+µC1o1-Feb-2oo4:µC2
+
+- added standard fixed width topaz font as requested by Zito, use font # 3 if you wanna use it.
+µC1 "  wake up all you bloody bastards
+  this is the age of suffering
+  kill your enemies kill your friends
+  celebrate your useless wars
+  this is the age of suffering..."µC2
+
+µC13o-Jan-2oo4:µC2 endpic added
+
+
+µC129-Jan-2oo4:µC2
+
+- support for multichannel modules added
+
+µC128-Jan-2oo4:µC2
+
+- converter for the panels coded, boring like hell!
+
+µC127-Jan-2oo4:µC2
+
+- modular positioning of the buttons, coords can be changed easily. Touched the source after a very long time...
+µC1
+     "I'm gonna be strong
+      I'm gonna be fine
+      Don't worry about this heart of mine..."µC2
+ 
+
+µC101-Apr-2oo3:µC2 'Fuck The Bitch' release of the source
+ 
+µC1o5-Sep-2oo2:µC2
+
+- if '0000.art' exists, it is now loaded as the first file instead of the index, requested by Zito. Messed a bit with the includes, now code doesn't have to be case sensitive anymore
+
+
+µC1o3-Sep-2oo2:µC2
+
+- added check if a native screen or an RTG screen is opened, if RTG screen detected, AGA mode is disabled. Some small code optimizing
+
+
+µC129-Aug-2oo2:µC2
+
+- old-school page switching when mouse is at the edge of the screen
+
+
+µC127-Aug-2oo2:µC2 Support for 1 titlepicture only added. 
+- Screen got a name. Source adapted to asm-one, I hate phx-ass!

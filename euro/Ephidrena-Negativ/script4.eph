@@ -1,0 +1,56 @@
+# 0 Part 1 : noise
+0 : fx name=noiselogo p=0 q=15
+0 : fader from=0 to=256 dur=250
+# 5 Part 2 : tromme 
+f4.0 : fader from=256 to=0 dur=50
+f4.5 : fx name=noiselogo p=1 q=0
+5 : fader from=0 to=256 dur=50
+5 : scroll from=0 to=2240 dur=10
+10 : set_state q=1
+10 : flasher from=256 to=0 dur=10
+14 : fader from=256 to=0 dur=50
+15 : fx name=water p=0
+15 : fader from=0 to=256 dur=50
+f19.5 : fader from=256 to=0 dur=50
+20 : fx name=hdrcopper p=0
+20 : fader from=0 to=256 dur=50
+# f24.5 : fx name=noiselogo p=0 q=5
+# 25 : fx name=water p=0
+f29 : fader from=256 to=0 dur=50
+f29.5 : fader from=256 to=0 dur=50
+f29.5 : fx name=noiselogo p=0 q=7
+30 : fx name=hdrcopper p=2
+30 : fader from=0 to=256 dur=50
+f39 : fader from=256 to=0 dur=50
+f39.5 : fx name=noiselogo p=0 q=3
+f39.5 : fader from=256 to=0 dur=50
+40 : fx name=noiselogo p=2 q=2
+40 : scroll from=0 to=1344 dur=7
+40 : fader from=0 to=256 dur=50
+f46.5 : fader from=256 to=0 dur=50
+47 : fx name=hdrcopper p=1
+.0 : fader from=0 to=256 dur=50
+f59.25 : fader from=256 to=0 dur=25
+f59.5 : fader from=256 to=0 dur=50
+f59.5 : fx name=noiselogo p=0 q=5
+60 : fx name=ccball p=0
+60 : fader from=0 to=256 dur=50
+f69.25 : fader from=256 to=0 dur=25
+f69.5 : fx name=noiselogo p=0 q=12
+f69.5 : fader from=256 to=0 dur=50
+70 : fx name=hdrcopper p=0
+70 : fader from=0 to=256 dur=100
+71 : overlay name=code x0=340 y0=119 x1=96 y1=119
+72 : overlay name=curr x0=96 x1=-276
+73 : overlay name=rloader x0=340 y0=119 x1=96 y1=119
+74 : overlay name=curr x0=96 x1=-276
+75 : overlay name=music x0=340 y0=119 x1=96 y1=119
+76 : overlay name=curr x0=96 x1=-276
+77 : overlay name=frequent x0=340 y0=119 x1=96 y1=119
+78 : overlay name=curr x0=96 x1=-276
+f79.25 : fader from=256 to=0 dur=25
+f79.5 : fx name=noiselogo p=0 q=31
+f79.5 : fader from=256 to=0 dur=50
+80 : fx name=dust p=1 q=0
+.0 : fader from=0 to=256 dur=100
+f107 : fader from=256 to=0 dur=50

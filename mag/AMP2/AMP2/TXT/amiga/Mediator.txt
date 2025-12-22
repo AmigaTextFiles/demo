@@ -1,0 +1,145 @@
+Mediator PCI 1200
+
+
+Odkâd siëgam pamiëciâ jednâ z ujemnych stron posiadania Amigi byî niewielki
+wybór, ûe o cenach nie wspomnë, kart graficznych, muzycznych, sieciowych,
+tudzieû innych urzâdzeï peryferyjnych, które bez wiëkszych komplikacji mogîyby
+wspóîpracowaê z tym komputerem. O ile jeszcze na poczâtku lat
+dziewiëêdziesiâtych (ubiegîego tysiâclecia ;) sytuacja byîa jeszcze do
+zniesienia, bo mimo wszystko pojawiaîy sië nowe propozycje sprzëtowe
+konstruowane specjalnie z myôlâ o uûytkownikach Amigi, ba momentami moûna byîo
+odnieôê wraûenie, ûe z biegiem czasu sprawy przybiorâ korzystny obrót, to po
+upadku firmy Commodore staîo sië jasne, ûe byîy to tylko zîudzenia.
+
+Przez szereg kolejnych lat Amiga praktycznie staîa w miejscu, i to zarówno pod
+wzglëdem sprzëtowym, jak i softwarowym. Tym stwierdzeniem naraziîem sië
+zapewne wielu osobom, dlatego teû naleûy sië kilka sîów wyjaônienia. Prawdâ
+jest, ûe we wspomnianym wyûej okresie pojawiîy sië karty PPC, coraz
+powszechniejsze stawaîy sië karty GFX, MSX i wiele innych akcesoriów. Problem
+jednak w tym, ûe wzglëdu na zmniejszajâcy sië popyt, ich ceny wciâû rosîy,
+a oferowane moûliwoôci pozostawaîy daleko w tyle za ôwiatowâ czoîówkâ.
+W efekcie, w krótkim okresie czasu, udaîo sië przekroczyê granicë absurdu
+w dziedzinie moûliwoôci/koszt. Podobnie sprawa wyglâdaîa z oprogramowaniem -
+specjalnych fajerwerków nie zauwaûono - staîo sië ono jedynie bardziej
+"przyjazne" dla systemu operacyjnego. Nie trzeba byîo wiëc byê prorokiem, by
+przewidzieê zaîamanie amigowskiego rynku.
+
+Ci, którzy pozostali przy Amidze, z coraz wiëkszâ zazdroôciâ spoglâdali
+w kierunku tanich jak barszcz akcesoriów do pecetów. Tych jednak w ûaden
+sposób nie moûna byîo nawet podîâczyê do naszych komputerów, ûe
+o wykorzystaniu ich do czegokolwiek nie wspomnë.
+
+Pierwszym, ûe tak sië wyraûë, namacalnym ôwiateîkiem w tunelu, byî projekt
+Grzegorza Kraszewskiego, który miaî postaê slotu PCI podîâczanego do zîâcza
+Expansion Port w Amidze 1200. Niestety, nie udaîo doprowadziê sië tego pomysîu
+do koïca. I kiedy wydawaîo sië, ûe o tanich kartach PCI w Amidze moûna
+zapomnieê, pojawiî sië Mediator PCI 1200 skonstruowany przez firmë Elbox
+z Krakowa.
+
+Mediator PCI 1200 okazaî sië pîytâ rozszerzeï do Amigi 1200 znajdujâcej sië
+w obudowie tower, zawierajâcâ cztery sloty PCI (kompatybilne ze standardem
+2.1), pracujâce z taktowaniem 33 MHz. Mimo trudnych poczâtków (chroniczny brak
+sterowników, zaô te, które byîy, do najlepszych nie naleûaîy - np. sterownik
+do S3 ViRGE-a pod CyberGraphX-a), z biegiem czasu oferta Mediatorów stopniowo
+rozszerzaîa sië, równieû o modele do tzw. "duûych" Amig. Takûe iloôê
+dostëpnych sterowników powoli rosîa. Nie bez znaczenia byî tu fakt pojawienia
+sië konkurencyjnych rozwiâzaï w postaci G-Rex-a oraz Prometheus-a.
+PROGDIR:GFX/amiga/mediator
+
+Nie namyôlajâc sië dîugo, jeszcze we wrzeôniu 2000 roku zamówiîem Mediatora.
+Po upîywie niecaîego miesiâca mogîem sië cieszyê nowym nabytkiem do Amigi
+1200. Niemniej byîy teû pewne minusy. Ale po kolei. Pierwsze problemy
+wystâpiîy podczas montaûu pîyty rozszerzeï. Mianowicie Mediator skîadaî sië
+z dwóch czëôci - pîyty ze slotami PCI oraz maîej przelotki zakîadanej na
+Expansion Port, do której z kolei podîâczaîo sië kartë turbo oraz samâ pîytë
+rozszerzeï. Otóû przelotka ta byîa na tyle wysoka, ûe po umieszczeniu karty
+Apollo 1240 po prostu nie moûna byîo zaîoûyê górnej pokrywy w obudowie
+Infinitiv. Jakby tego byîo maîo wyjôcie wideo (SVGA) w karcie graficznej (S3
+ViRGE) zawadzaîo o krawëdú tylnej ôcianki obudowy. Cóû byîo poczâê - uûyty
+zostaî pilnik i w efekcie obudowa nie prezentowaîa sië po tej operacji juû tak
+piëknie jak wczeôniej. Nie byî to jednak koniec problemów "sprzëtowych".
+Kolejna niespodzianka spotkaîa mnie przy podîâczaniu zasilania. Otóû jednâ
+z zalet Mediatora jest w miarë sprawne rozwiâzanie problemu zasilania,
+a dokîadnie spadku napiëcia prâdu w wyniku jego przejôcia przez pîytë gîównâ
+Amigi. Mianowicie zasilanie podîâcza sië wprost do pîyty rozszerzeï, dziëki
+czemu znacznemu skróceniu ulegajâ ôcieûki, którymi biegnie prâd do niezwykle
+prâdoûernej, jak to byîo w moim przypadku, karty turbo (Apollo 1240 z 64 MB
+FastRAM-u), a takûe do kart umieszczonych w slotach PCI. Pech polegaî jednak
+na tym, ûe Mediator wymagaî standardowych wtyczek zasilania typu AT -
+oznaczanych zwykle jako P8 i P9, a takich nie uôwiadczy sië w obudowach typu
+Infinitiv. Nie namyôlajâc sië dîugo w jednâ dîoï chwyciîem lutownicë, w drugâ
+zaô ACS z kwietnia 1997 roku, gdzie znalazîem rozpiskë zasilania Amigi oraz
+peceta i po kilkunastu minutach byîo po krzyku. Niemniej fakt pozostaje
+faktem, ûe wîâczajâc po raz pierwszy Amigë po tak partyzanckich przeróbkach
+nieco sië spociîem.
+
+Kolejnym krokiem byîo zainstalowania biblioteki pci.library oraz (jedynego
+w ogóle wówczas dostëpnego) sterownika do karty graficznej (S3 ViRGE)
+i systemu CyberGraphX. Tu na szczëôcie nie byîo niespodzianek poza jednâ.
+Okazaîo sië mianowicie, ûe doîâczony sterownik wcale nie korzystaî z procesora
+graficznego znajdujâcego sië na karcie GFX i w efekcie wszystkie operacje
+graficzne byîy liczone na wysîuûonej motorolce 68k. Jakie to miaîo
+konsekwencje chyba nie muszë opisywaê. Wspomnë tylko, ûe szybkoôê wypisywania
+tekstu w konsoli byîa mniejsza niû na ukîadach AGA... Jedymi plusami takiego
+rozwiâzania byîa moûliwoôê pracy w rozdzielczoôci 800 x 600 pikseli w 16
+bitach przy znacznie wiëkszej niû do tej pory (w Multiscan-ie) czëstotliwoôci
+odôwieûania ekranu.
+
+Na szczëôcie po jakimô czasie Elbox dostarczyî nowy sterownk do S3 ViRGE-a,
+z tym, ûe pracujâcy pod kontrolâ systemu Picasso96. Wprawdzie Picasso96
+wyraúnie ustëpowaî jakoôciâ CyberGraphX-owi (i tak jest nadal), to jednak
+wykorzystanie procesora graficznego karty GFX przez ów sterownik sprawiîo, ûe
+wreszcie poczuîem sië zadowolony z zakupu Mediatora.
+
+Niedîugo po tym Elbox wypuôciî równieû sterownik do kart graficznych VooDoo 3
+(w róûnych odmianach: Banshee, 2000, 3000) oraz 4 i 5 - jednak te ostatnie
+pracowaîy w trybie emulacji VooDoo 3. Krakowskiej firmie udaîo sië teû
+porozumieê z autorami Warp3D, dziëki czemu gry uûywajâce OpenGL-a mogîy
+wreszcie pokazaê na co je staê na VooDoo. Pojawiîy sië takûe dîugo zapowiadane
+sterowniki do karty muzycznej (SB 128) oraz kart sieciowych (10 i 100 Mbps).
+Niestety, za te ostatnie sterowniki trzeba byîo dodatkowo zapîaciê.
+
+Po jakimô czasie wpadîy w moje rëce karty: muzyczna SB 128 i sieciowa (oparta
+na ukîadzie Realtek). Kupiîem wiëc w Krakowie upgrade do Mediatora, który
+skîadaî sië z dwóch ukîadów programowalnych, które naleûaîo samodzielnie
+zamontowaê na pîycie rozszerzeï w pustych miejscach po wyjëciu starych
+scalaków, a takûe pîyty CD ze sterownikami. Po zainstalowaniu wszystkiego co
+trzeba i jak trzeba zostaîem zaskoczony po raz kolejny. Okazaîo sië
+mianowicie, ûe na moim S3 ViRGE-u "nie wyrabia" Sound Blaster. Nie pomogîy tu
+zmiany ustawieï AHI. Po prostu, po wîâczeniu dúwiëku na SB, prawie natychmiast
+nastëpowaîo zamroûenie ekranu i nie pozostawaîo mi nic innego, jak tylko
+wykonanie resetu. Skonsultowaîem sië wiëc z Elbox-em, jednak odpowiedú jakâ
+uzyskaîem, nie byîa zbyt pocieszajâca: naleûy wymieniê kartë graficznâ na
+VooDoo, gdyû DMA Mediatora uûywa pamiëci znajdujâcej sië na karcie GFX, a ta
+w przypadku S3 ViRGE-a jest zbyt wolna. Cóû, skoïczyîo sië na zakupie VooDoo 3
+2000...
+
+Muszë przyznaê, ûe z VooDoo 3 wpiëtego do Mediatora byîem bardzo zadowolony.
+Mimo, ûe konstrukcja tej karty GFX nie naleûaîa juû wtedy do najnowszych, to
+jednak z jeszcze bardziej przestarzaîâ Amigâ 1200 spisywaîa sië nadzwyczaj
+dobrze. Ba, wreszcie moûna byîo cieszyê sië z uûywania kart muzycznych,
+sieciowych oraz telewizyjnych, choê muszë przyznaê, ûe po wpakowaniu we
+wszystkie cztery sloty Mediatora kart PCI znów pojawiîy sië problemy
+z zasilaniem...
+
+Pora na krótkie podsumowanie. Uwaûam Mediatora PCI 1200 za udane urzâdzenie,
+które pozwoliîo przeûyê Amidze 1200 kilka kolejnych lat. Mimo wielu
+poczâtkowych problemów ze sterownikami produkt Elboxu staî sië
+najpopularniejszym i najlepiej oprogramowanym mostkiem. Owszem, wiele mu
+brakuje, jednak biorâc pod uwagë realia rynku amigowego sporo równieû naleûy
+mu wybaczyê. Zaznaczyê tu takûe naleûy, ûe spora czëôê zapowiedzi Elboxu
+zwiâzanych wîaônie z Mediatorem, po których wiele sobie obiecywano, nie
+zostaîa zrealizowana. Na przykîad jednym z minusów Mediatora do dnia
+dzisiejszego nadal pozostaje niewielki transfer danych miëdzy pamiëciâ
+komputera a kartami PCI wahajâcy sië w granicach 8-9 MB/s. Jest to jednak
+ograniczenia samej pîyty gîównej Amigi 1200, gdyû konkurencyjne rozwiâzania,
+czyli G-Rex oraz BlizzardPPC z BVision, nie mogâ sië pochwaliê lepszymi
+osiâgami. Rozwiâzaniem tego problemu miaî byê od wielu juû lat zapowiadany
+przez Elbox Shark, czyli karta turbo z procesorem G3 instalowana w jednym ze
+slotów PCI Mediatora. Taka konstrukcja pozwoliîaby odciâê sië w znaczym
+stopniu od przestarzaîej Amigi 1200 zarówno systemowi operacyjnemu (pod
+warunkiem, ûe pracowaîby natywnie na procesorze PPC), jak i programom. To
+jednak jak na razie pozostaje w sferze marzeï, planów, projektów i obiecanek.
+
+
+Gucio

@@ -1,0 +1,19 @@
+
+; It's the "Boring as HelloWorld" test script..
+
+loadbuffer "hd1:frame.iff",0 ; load iff directly to back-buffer coz we
+                             ; don't want to store it anywhere..
+                             ; also load its palette as palette #0..
+
+setoffset -255 ; set rgb-offset to black for fade-in..
+
+showbuffer 0 ; show back-buffer using palette 0.. you don't have to specify
+             ; a palette if you're already using one you want..
+
+fadeoffset 0,1 ; fade in palette to palettes original colours slowly then..
+wait 2         ; wait 2 seconds..
+
+fadeoffset 255,1 ; fade-out to white..
+leftmouse        ; wait for leftmouse then..
+
+fadeoffset -255,3 ; fade-out quickish..

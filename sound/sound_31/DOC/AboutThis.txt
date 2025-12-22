@@ -1,0 +1,387 @@
+    ___________/\_____________ ____________/\___________   
+   /   __________/________    \      \__      \_______  \     
+   \________   \__/     \ ____/        /        /   \    \    
+    /      /    \        \/           /        /     \    \
+   /      /     /\        \_       __/      __/       \   /
+   \___________/  \_______/ \_____/   \____/  \_______/__/
+ 
+         !SPOON - THE GROUPING GROUP OF ALL GROUPS!
+
+                     Doc for Sound #3
+
+This file contains the text that didn't quite make it into the 
+editorial.  This file also reflects the (sorry)  state of mind 
+of the coder :)
+
+LEGAL DEPARTMENT :
+
+ Sound 3 IS NOT, AND WILL NEVER BE PUBLIC DOMAIN.
+
+ Sound 3 IS  COPYRIGHTED  BUT FREELY  DISTRIBUTABLE  SOFTWARE.
+
+              THIS IS ALSO KNOWN AS FREEWARE
+
+ YOU  ARE ALLOWED TO SPREAD THE PACKAGE FREELY, AS LONG AS YOU 
+ DO NOT CHARGE  MORE THAN  A REASONABLE FEE TO COVER EXPENSES.
+ SINCE THIS  IS  HARD TO GRASP  FOR  SOME  DEALERS IN GERMANY,
+ I DECLARE THAT NO GERMAN PD DISTRIBUTORS ARE ALLOWED TO CARRY 
+ THIS PROGRAM IN THEIR LIBRARIES.
+ THE ONLY EXCEPTIONS ARE :
+   
+   AMIGA MAGAZIN PD-DISKS, IF THEY SHOULD DESIRE TO DISTRIBUTE 
+   THIS.
+
+   THE VARIOUS SITES IN THE 'AMINET' INTERNET-AMIGA-NETWORK
+
+ IT IS ALSO ALLOWED FOR THE FOLLOWING TO PUT SOUND ON CD-ROM :
+
+   FRED FISH ON HIS FRESH FISH AND OTHER FISH CD'S
+
+   AMINET ON THE AMINET CD'S
+
+ OTHER DISTRIBUTORS MUST CONTACT SPOON FOR A LICENSE.
+
+ IT IS EXPRESSIVELY FORBIDDEN FOR THE GERMAN PD LIBRARY :
+
+  MALLANDER SOFTWARE
+
+ TO DISTRIBUTE SOUND, AND ALL OTHER SPOON RELEASES, AS THEY MOT
+ ONLY CHARGE WAY TO MUCH FOR PD STUFF, BUT ALSO SELL VARIOUS
+ SCENE RELEASES FOR HIGH PROFITS AND SELL DISKS WITH RIPPED GFX
+
+ NORMAL SCENE RELATED SWAPPERS ARE OFCOURSE NOT ONLY ALLOWED
+ BUT ENCOURAGED TO SPREAD THIS PRODUCT....
+
+ REMEMBER,  THAT  THE  COPYRIGHT  FOR  SOUND  LIES  WITH  JOHN 
+ 'SHAYERA' HINGE AND CHRISTINE  HANSEN (CHRISTINE DE LA QUEEN) 
+ OF THE DEMO GROUP SPOON,BUT THE COPYRIGHT FOR THE MUSIC, LIES 
+ WITH THE INDIVIDUAL MUSICIANS THEMSELVES.  
+ THEREFOR,  IF  YOU  LIKE  THE MUSIC, AND WOULD LIKE TO USE IT 
+ OTHER  THAN FOR  PRIVATE LISTENING, THEN  CONTACT US, AND  WE 
+ WILL PUT YOU IN TOUCH WITH THE AUTHOR, AND  USUALLY HE OR SHE 
+ WILL ALLOW YOUR USE OF THE MUSIC.
+
+ THIRD PARTY COPYRIGHTS : 
+ THE PLAYER V6 IS COPYRIGHT JARNO PAANANEN.
+ TRACKERPACKER V3.1 IS COPYRIGHT CRAZY CRACK
+ RNC DECRUNCHER IS COPYRIGHT ROB NORTHERN COMPUTING LTD.
+
+
+This  program has  been written entirely in 'C' except for the 
+following :
+       The Decruncher (RNC V2.08 (mode 2))
+       The Replayers  (The Player V6.1A)
+                      (Tracker Packer V3.1)
+        
+The source for Sound 3 is divided into these modules :
+ Main.c :
+                Opens global stuff, calls GFX routines, etc...
+                Portable to any C-compiler (& therefor compu-
+                ter :) )
+                There is some native (Amiga-OS) stuff in this, 
+                but this will be  fairly  easy to port (I hope
+                /suspect :)
+
+ FileSupport.c :
+                This is an abstractionlayer for IO routines,
+                So the main program has an easy way to load 
+                files into the correct memory...
+                Making it a little easier to port..
+
+ GFXSupport.c :
+                Implementation specific graphics routines..
+                Currently 1 version :
+                 One for Native AGA Amiga's
+                 This allocates screens, loads, and  decrunches 
+                 screen data, and handles gadgets etc..
+
+
+ IntroSequence.c :
+                This run the  Spoon  intro sequence, ie. shows 
+                some nice pictures. (Amiga-OS dependant)
+
+ OnBoardGFX.c :
+                This contains the 'onboard' graphics, gadgets 
+                and stuff, which is too small to deserve sepa-
+                rate loading.. (more or less Amiga Dependant ;)
+
+
+ TIGFX.c :
+                More onboard gfx...
+
+ HL_GFX.c:
+                Even more onboard gfx... ;)
+
+ Texts.c :
+                This  contains  ModuleInfo's, Rules text,  and 
+                the dreaded Editorial...
+                I don't  change this  so often, so it's better 
+                to leave it  in a separate file, and save com-
+                pilation time..
+
+ ReplayerStub.c :
+                This module interfaces Sound #3 to the 2 dif-
+                ferent replayers that we use...
+
+ P612.o :
+                This is a version of The Player V6.1 by Guru / 
+                Sahara Surfers adapted to work with C programs 
+                (Parameter calls etc..) (Amiga dep....)
+                For all you rippers out there (HI ;)
+                This is The Player V610.2 !! 
+
+ TP3.o :
+                This is Tracker Packer V3.1 by Crazy Crack..
+                I was forced to include this extra replayer,
+                when I found out that P612 didn't handle the
+                Pattern Loop (E6X) as good as I wanted...
+
+ Amongst  the response to Sound #1, several  people  (swappers 
+ mostly) have complained  that  Sound wasn't a 'one file' pro-
+ gram, but that would be a real pain in the ***!!!
+ I would have to make it either with overlays, since it  isn't 
+ feasible to load ALL of the stuff (300Kb gfx & 500 Kb msx) at 
+ once  AND leave space for  buffers,  spare screens etc... and 
+ frankly, I know zilch about overlays..
+ Or make it as 2 files..
+ A main program and one large datafile, like  some diskmags do 
+ it...  I have thought about this, but I find it  much  easier 
+ to do it with my current system of separate files...
+
+ Actually, as this program grows and grows, it has rapidly grown
+ to a size that simply won't fit one DD disk, and therefor I
+ consider the debate of onefile (and disk) closed.... ;)
+
+ There is also the reason that I am quite happy with my current
+ disk system which makes it easy for me to do HD install, and
+ I can't be bothered to write a whole new setup .....
+
+ The response to Sound #2 has also made us change quite a lot
+ inside the program :
+
+ Among the big changes is the handling of the Extra screens
+ It is now handled from one general screen, with a set of gadgets
+ and a 'mutal exclude' system...
+ Since the standard Gadget code in intuition.library doesn't quite
+ support this, I have had to make my own...
+ This takes quite some hopes, and knocking on wood's to make it
+ work, but it seems to do so :)
+ This became even more knocking on wood, when I implemented the
+ text printing, which has to handle which text to plot, which
+ page of it, and if there is more pages etc.. etc...
+
+ Still some people have asked for lesser files in Sound :
+ Keep on dreaming pals...
+ I have thought about using a similar system to the Diskmag ROM,
+ but it would have to be a 3-file system :
+  Main, Disk1File, Disk2File, and I much prefer my own layout..
+
+ Another (small) addition, are the socalled 'file_id.diz' files..
+ These are small identification marks, used for BBS'es, and the
+ only reason they weren't present in Sound 2, was that due to
+ some delay's I was forced to rush the delivery of the final version
+ and forgot some small files. (hd-installer included ;)
+ Now thanx to Slurry/Black Fishy, we have a nice File_ID.DIZ to
+ use, with  a (more or less) readable ansii layout...
+ Many thank you's for that Slurry !!!
+
+ Some people have suggested that we should include some 'flashy' code,
+ to make this look more like music disks such as 'Mirror' and 'JesterDay'
+ For the moment, this will NOT be done, since the concept behind
+ Sound is more like some of the DiskMags, mmeaning this is a general
+ Music disk, with a small HitList, and NOT a full fledged Spoon-
+ Music Disk, and therefor we do not intend to do the extra work, that
+ it would require to include some flashy code every issue !!
+ The long time goal for Sound, is to release an issue every 2 months
+ so the overhead needed for new flashy code every issue would make my
+ (the coder's) life a nightmare....
+ The Flashy code should come with the intro which b.t.w is something
+ any group can contribute to...
+ If you want your intro on Sound, then contact either CDLQ or SHAYERA
+ with a rough outline of your intro, and we will contact you stating
+ if we accept it, and for which issue of Sound it would appear
+ (The last so your GFX can reflect this..)
+ We would appreciate it if the intro mentions Sound and Spoon, but
+ we wont accept intro's that slags neither Spoon nor other sceners !!
+
+
+ Sound #3 is developed on the following configuration :
+
+ Coders machine :
+  Commodore Amiga A1200, 2Mb Chip memory, AGA chipset
+  Microbotics MBX1200z, 4Mb Fast Memory, 14MHz 68881
+  Kickstart V 3.0 (39.106)
+  Workbench V 3.0 (39.29)
+  X-tra diskdrive,of suspect manufacturing:) (6 years/no err's)
+  Quantum Prodrive ELP120 120 Mb 3½" HD
+
+ Main responsible person's (and gfx'ers) machine :
+  Commodore Amiga A1200, 2Mb Chip memory, AGA chipset
+  Kickstart V 3.0 (39.106)
+  Workbench V 3.0 (39.29)
+  X-tra diskdrive
+
+ As you can see, Amiga developers doesn't neccessarily have to have
+ exotic machines to do proper work :)
+
+ Tested on :
+  A1200, No FastRam, Kick 3
+  A1200, 2 Mb Chip, 4 Mb FastRam, Kick 3
+  A4030, 2 Mb Chip, 4 Mb Fast, Kick 3 (Thanx Bagger)
+  A4040, 2 Mb Chip, A lot of Fast, Kick 3 (Thanx to Silents DK)
+
+ Tools used in the creation of Sound #3 so far :
+
+ SAS/C Amiga C/C++ compiler V6.55
+  (I hope SAS Institure reconsiders their dropping the Amiga..
+   it will be irritating to port this to eg. Maxon C/C++ 3)
+
+ Cygnussoft CED 3.5
+  (Miles beyond SAS/C's SE editor :)
+
+ HiSoft Devpac Amiga Assembler V3.04
+  (The best for serious system programming)
+
+ Electronic Arts Deluxe Paint V4.5 (AGA)
+  (It's old, It's slow, but it is trustworthy :)
+
+ Cloanto's Personal Paint V6
+  (Why can't DPaint use Sound's legal system font ??)
+
+ PicCon V2.5 (Registered Version :)
+  (This program is REALLY great, go out and register it today)
+
+ ExoticRipper V2.29 (Registered)
+
+ ProPack 2.08 by Rob Northen Computing
+
+ The Player V6.1A (610.2) -  22.05.95 by Guru / Sahara Surfers
+  (The best for both speedy replay, and good diskspace saving)
+
+ TrackerPacker V3.1 by Crazy Crack.
+  Not as good in the space saving, but it supports 2 commands
+  that The Player doesn't ...
+
+ Directory Opus V4.12 by Innovatronics
+  (I've tried V5... Therefor I use V4 ;)
+
+ ImageFX V2.1 by Nova Design Inc.
+  This is a VERY smart Image Manipulation package...
+
+ Special Hardware used :
+
+ Commodore Amiga CD32+FMV,
+  to keep my mind distracted while I work :)
+
+ Special thanks so far :
+
+ The AD&D 2nd. Ed. Crowd,  for taking my mind of off things at
+  least once in the week...
+
+ Guru / Sahara Surfers for keeping on updating The Player, and 
+  making it more powerful with each revision...
+
+ The Polkapartment for supplies of tools, ideas and fun....
+
+ Tulle from the Polkapartment for lending me a CD player
+ when my CD32 went buttoms up....
+
+ The Dreamline apartment for YOU KNOW WHAT...
+
+ The SubAcid apartment for SAS/C update, and other stuff...
+
+ Slurry / Black Fishy for supplying tools and our file_id.diz
+
+ Pixart / TTM for Quality Control.....
+
+ Look out for other forthcoming Spoon productions :
+  WHY?, HOW?, WHAT? : The confusion trilogy...
+  A series of intro's with a special meaning....
+  
+
+ If you are interested in joining Spoon (and you should be !!)
+ Then  send us some examples of your work.. Coders should con-
+ tact me (Shayera)  All  others contact  Christine de La Queen 
+ (adress elsewhere on this disk)
+
+ We are searching for :
+        Coders (AGA experience preferred)
+        SFX    (Protracker, or PT compatible (Fast/Take/Scream 
+               etc.. 4 channels .MOD)
+
+ Well put up people  from Saudi Arabia or Kuwait are very wel-
+ come, and can contact us concerning our special economic sup-
+ port member program (ESMP)  (We promise nice long letters and 
+ cheap membership :) (ok, just kidding, but don't hold back if 
+ you want to support us ;)
+
+
+ Questions, bug reports etc, to :
+
+  John 'SHAYERA' Hinge of SPOON
+
+  Silkeborgvej 220 B, 1
+
+  DK-8230 Åbyhøj
+
+  Denmark
+
+ email : nomachine-nowhere-noplace@thevoid.gov
+ www   : don't hold your breath :)
+
+ actually you can reach Spoon via FidoNet :
+  Duffy/Spoon :
+   Rikard Bosnjakovic @ 2:203/316.100
+
+ Make  a note of which  Spoonie the  message is for, and Duffy 
+ will forward the message (he better... ;)
+
+ You can also reach our coder Indigo on Internet :
+
+ u952470@daimi.aau.dk
+
+
+ Advert :
+
+ If you are an official representative from a software company 
+ seeking  new employees, then I can be contacted  at the above 
+ address... I am fluent in 68K Assembler, and 'C', and,as this 
+ program shows,I am not afraid of working in big projects with 
+ modular builds.  This  has  been a good excercise in managing 
+ such a project,and I feel pretty confident about my abilities 
+ when it comes to coding on the Commodore Amiga series of mini 
+ computers.  I  have  also  some  experience  in   coding  the 
+ Commodore  64, but this is probably  not  of any significance 
+ here in 1995 :)
+ I have a solid foundation in 'system progamming' as Sound 3
+ shows, and I am also known for being a very fast learner.
+ This means that I am willing to work on eg. Intel or PowerPC
+ based systems, but as I haven't got such a system myself, I
+ would have to need a small period of time to learn it, but
+ I would be willing to do this, as long as I don't have to have
+ too much to do with Windows !! (I would much prefer OS/2 WARP)
+
+
+  1995, the revolution is coming... 
+  Spoon... We always eat our cornflakes
+
+ ; Musical distractions used while doing Sound 3 :
+
+  Nitzer Ebb    : Big Hit (This Is SOOOOO Great !!!)
+  The Overlords : All the naked people
+  Kim Wilde     : The singles collection 1981-1993
+  Abba          : Gold, Even more Gold
+  Moby          : Everything is Wrong
+  Betty Boo     : GRRR! It's Betty Boo
+  Beethoven,L.V.: Trios opus 70. no. 1&2 - Variations of Judas Maccabaeus
+  The Beatles   : Revolver
+  Queen         : The Miracle
+  Queen         : Greatest Flix I+II (VideoCD... FMV rulez)
+  Yakida        : Pride (Great while I am waiting for the new
+                         Ace of Base Album....)
+  Ace of Base   : Happy Nation (US version)
+  J M Jarre     : Chronologie
+  F Mercury     : The Freddie Mercury Album
+  Enya          : Watermark
+  Erasure       : I say I say I say
+  

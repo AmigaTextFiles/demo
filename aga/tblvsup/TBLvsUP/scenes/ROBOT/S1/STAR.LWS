@@ -1,0 +1,100 @@
+LWSC
+1
+
+FirstFrame 1
+LastFrame 60
+FrameStep 1
+PreviewFirstFrame 1
+PreviewLastFrame 270
+PreviewFrameStep 1
+FramesPerSecond 30.000000
+
+LoadObject D:\download\kennastuff\demo\main\robot\s1\star.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  6
+  0.1750021 0 2.849998 0 0 38.1 1 1 1
+  0 0 0 0 0
+  2.400003 0 9.874997 0 0 -61.89999 1 1 1
+  25 0 0 0 0
+  2.925004 0 10.725 0 0 -175.1 1 1 1
+  104 0 0 0 0
+  2.100003 0 7.824995 0 0 -265.9 1 1 1
+  157 0 0 0 0
+  2.450004 0 9.674994 0 0 -337.6001 1 1 1
+  217 0 0 0 0
+  2.925005 0 7.649994 0 0 -433 1 1 1
+  270 0 0 0 0
+EndBehavior 1
+LockedChannels 24
+ShadowOptions 7
+
+AmbientColor 255 255 255
+AmbIntensity 1.000000
+
+AddLight
+LightName Light
+ShowLight 1 7
+LightMotion (unnamed)
+  9
+  2
+  -2 2 -2 45 35 0 1 1 1
+  0 0 0 0 0
+  -66.07501 2 -3.725001 45 35 0 1 1 1
+  90 0 0 0 0
+EndBehavior 1
+LightColor 255 255 255
+LgtIntensity 1.000000
+LightType 0
+ShadowType 1
+
+ShowCamera 1 7
+CameraMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ZoomFactor 3.200000
+Resolution 1
+CustomSize 320 200
+PixelAspectRatio 2
+SegmentMemory 22000000
+Antialiasing 0
+AdaptiveSampling 1
+AdaptiveThreshold 16
+FilmSize 2
+FieldRendering 0
+MotionBlur 0
+DepthOfField 0
+
+BGImage D:\download\kennastuff\demo\main\robot\back.TGA
+SolidBackdrop 1
+BackdropColor 0 0 0
+ZenithColor 0 40 80
+SkyColor 120 180 240
+GroundColor 50 40 30
+NadirColor 100 80 60
+FogType 0
+DitherIntensity 1
+AnimatedDither 0
+
+RenderMode 2
+RayTraceEffects 0
+ClipRayColors 0
+DataOverlayLabel  
+FullSceneParamEval 0
+
+ViewMode 5
+ViewAimpoint 0.000000 0.000000 0.000000
+ViewDirection -0.609119 0.043634 0.000000
+ViewZoomFactor 0.623826
+GridNumber 0
+GridSize 5.000000
+ShowMotionPath 1
+ShowBGImage 1
+ShowFogRadius 0
+ShowRedraw 0
+ShowSafeAreas 0
+ShowFieldChart 0

@@ -1,0 +1,78 @@
+ ·____+____.____·_____.________+___·   .
++ \__ \\ _ \\ __\\__  \\      // _/ +       (Released on April 14th 1996)
+. / / // / // \.¯+/ ' // / / // /   .  .    __      ____   __   __    ____
+ / / // / // /¯_·/ / // / / / \ \ ·  ·     /  \ /\/\\__ \ /  \ /  \ /\\__ \
+ \  /.\/\ \\ ¯¯// /\// /\/\//¯¯ /  .  +   / / // / // / // / // / // // ' /
+. ¯¯CDN .¯¯·¯¯¯.¯¯. ·¯¯.· + ¯¯¯¯.    . . / /\/ >  // / // / // / // // / /__
+  Packing Class & Kicking Arse!   ·      \__/  \_/ \__/ \__/ \/\/ \/ \/\/ \/
+ + . ·   . + .  ·  .   . ·  ·  .   . + .  ---------------------------------
+
+
+Requirements
+------------
+Any AGA Amiga with 2meg chip, and a hard disk. Fast ram is taken
+advantage of, but isn't required.
+
+
+
+Installation
+------------
+Pretty simple this one.. copy all the files to one directory and execute
+the file called "Dreams". A HD is required - of course you could *try*
+running it from a floppy disk, but I don't envy your chances of succeeding.
+In any case, the program will first look in PROGDIR: followed by Dreams:
+
+If this is to run on 2 meg machine, first hold down both mouse buttons
+on startup, disable all unnecessary disk drives and partitions, and
+boot with no startup sequence.
+
+
+
+CLI Options
+-----------
+
+SystemInts      Uses system interrupts (AddIntServer, SetIntVector)
+                instead of hardware hitting interrupts
+
+Multitask       Enables multitasking, and blitter queueing. From the
+                main menu use Left-Alt+Control, or Left-Amiga+Control
+                to switch back to the system (to return to the slideshow,
+                press the same key combination a second time). This option
+                automatically selects 'SystemInts'
+
+HWBlit          Cancels blitter queueing (this is usually set by default,
+                but can be used in combination with 'Multitask')
+
+Quiet           Skips all all sound output. Along with 'SystemInts' or
+                'Multitask' this allows you to play some different music
+                in the background
+
+SkipIntro       Skips the introduction sequence
+
+MultiLoad       Forces pictures to be loaded as they are seen, even if
+                there's enough memory to load everything at once.
+
+SkipLoadView0   Skips LoadView(0), WaitTOF, WaitTOF (for those of us that
+                actually notice a two frame delay on startup.. :) )
+
+
+
+Music
+-----
+If you like, different music can be loaded by specifying the path/filename
+of a P61 module (better known as "The Player 6.1a" which is available
+through Aminet) in parentheses.
+
+For example:       Dreams (RAM:SpaceDebris) Multiload
+would read a P61 module called "SpaceDebris" from RAM: before starting.
+The intro timing changes slightly if external music is read. The original
+music's memory is purged in this case (as it is with 'Quiet'), so if you're
+short on memory, smaller music could help.
+
+
+
+ · .  +    . ·  ·     .    ·   +   ·   .   ·  .  ·  .   ·   .   ·  .  · +  ·
++   .   ·    . .   · .  .    ·   .       +   .   +   .  ·   .  . · . ·  · .
+. ·  . ·  .·     +    .  .  ·  ·   .  ·     ·   ·   .    . .  .  +     . · ·
+ . + .  ·  . · ·   .· +   .  .   .   ·  + .  ·  · + .  ·  . . . ·  ·  .  .·
+. ·  . ·  . . ·  +  . .  .  ·  ·   .  ·  .  · .  ·   . · .   .  .  + .  . .

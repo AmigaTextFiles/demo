@@ -1,0 +1,10 @@
+IF VAL $playing EQ 4
+  SP STOP
+  SETENV playing 0
+ELSE
+  IF VAL $playing GT 0
+    SP STOP
+  ENDIF
+  SETENV playing 4
+  SP "Mod.The-Euromayer" NOWINDOW
+ENDIF

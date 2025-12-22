@@ -1,0 +1,9 @@
+.
+if NOT EXISTS envarc:amigapositive/
+  makedir envarc:amigapositive
+endif
+
+if NOT EXISTS env:amigapositive/ap15.prefs
+ ap-prefs
+endif
+AP15.exe

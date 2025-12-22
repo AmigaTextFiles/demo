@@ -1,0 +1,182 @@
+
+--------------------------------------- < Sprite3D> ob3d constructor:
+
+ < Sprite3D> construct special 3D objects that are only 2D images you put
+ in the 3D scene, always turned toward you. It is also known in a 3D vocable
+ as 'billboards'.
+
+ You can perfectly fake classic 'sprite' effect as 3D, with parameter 4cam,
+ but < Sprite3D> is far better, as:
+
+ - everything is drawn with only 'Draw3DWorld'
+ - the sprite is 'sorted in depth' with other polygons:
+   it means it will be perfectly hidden if an object come in front of it.
+
+
+
+ < Sprite3D> label | father |x|y|z|o1|o2|o3|sx|sy|sz|
+            width | height | ImageLabel
+            | (optionnal colortable) | (optional colorrate [0,1])
+            </Sprite3D>
+
+ note the rotations and scale in the matrix parameters (o1,sx) are not used,
+ and are just there because every ob3d start like this.
+
+ Color 0 is transparent. If you specify a colortable and a rate between [0,1]
+ in the last parameter, you can use a 64 grey color image to make
+ a 'SpriteLight' equivalent.
+
+-------------------------------------  < CloneToSprite3D> ob3d constructor:
+
+  Very similar to < Sprite3D>, but create an object with many sprites
+ attached to it, using another object's vertex positions.
+ So the constructor only have one more parameter: the model object to use.
+
+ < CloneToSprite3D> label | father |x|y|z|o1|o2|o3|sx|sy|sz|
+            ob3dModel | width | height | ImageLabel
+            | (optionnal colortable) | (optional colorrate [0,1])
+            </CloneToSprite3D>
+
+-----------------------
+<KCAM> the_camera |0|0|-5|0|0|0|0.8  </KCAM>
+
+<MAIN> myscript |0|1</MAIN>
+
+<KSCRIPT>
+    <ID> myscript </ID>
+    <PLAY> part_sprites | 800 | 0 | 1 </PLAY>
+    <PLAY> part_lights | 1600 | 0 | 1 </PLAY>
+
+</KSCRIPT>
+----------------------------
+<world3d> world_sprite  </world3d>
+<world3d> world_invisible  </world3d>
+<KIMG> i_lightmapGrey | data/lightmapgrey.iff </kimg>
+<t3dFlatLightMap> tLightMapGrey  | i_lightmapGrey </t3dFlatLightMap>
+
+<KIMG> impacman | data/oldpac.iff </KIMG>
+<KIMG> imghost  | data/ghost1.iff </KIMG>
+<KIMG> imghost2  | data/inky.iff </KIMG>
+
+-----------------------
+<cube> cube1 | world_sprite |0|0|0|0|0|0|1|1|1|
+         tLightMapGrey|tLightMapGrey|tLightMapGrey|tLightMapGrey|tLightMapGrey|tLightMapGrey
+         </cube>
+
+<CloneToSprite3D> SpriteSet1 | cube1 |0|0|0|0|0|0|1|1|1|
+            cube1|0.5|0.75| imghost2  </CloneToSprite3D>
+-----------------------
+<sphere> invsphere | world_invisible |2|0|4|0|0|0|1|1|1|
+         4 | 8 | 4.5| 0|0.0|0.0|1|1|||||</sphere>
+<CloneToSprite3D> SpriteSet2 | world_sprite |0|0|0|0|0|0|1|1|1|
+            invsphere|1.2|1.2| imghost  </CloneToSprite3D>
+
+-----------------------
+<Sprite3D> pac3d | world_sprite |0|0|0|0|0|0|1|1|1|
+            1|1| impacman  </Sprite3D>
+
+
+----------------------------------
+<KPART> <ID> part_sprites </ID>
+
+    <Fx><Pa>setpalette</Pa>  set the screen palette
+        <Pa> i_lightmapGrey </Pa>   we have seen each image stands for a 256 color palette too.
+    </Fx>
+
+    <Fx><Pa>fillrc</Pa>  clear the screen background to color 24.
+        <Pa>  </Pa>   default screen rectangle.
+        <Pa> cte | 24 </Pa>
+    </Fx>
+
+    <Fx><Pa> Set3DObject </Pa>  make the tore rotate all the time on the 3 axis:
+        <Pa>  cube1 </Pa>
+        <Pa> 3cte |0|0|0  </Pa>
+
+        <Pa> aff |-0.01|0.005</Pa>
+        <Pa> aff |0.1|0.006</Pa>
+        <Pa> aff |0.0|0.007</Pa>
+
+        <Pa> 3cte|1|1|1 </Pa>  scale
+    </Fx>
+
+    <Fx><Pa> Set3DObject </Pa>
+        <Pa>  pac3d </Pa>
+        <Pa> cos|0|0.4|2</Pa>
+        <Pa> cte|0  </Pa>
+        <Pa> sin|0|0.4|2</Pa>
+
+        <Pa> 3cte|0|0|0 </Pa> rot.
+        <Pa> 3cte|1|1|1 </Pa> scale
+    </Fx>
+
+    <Fx><Pa> Set3DObject </Pa>
+        <Pa>  SpriteSet2 </Pa>
+        <Pa> 3cte|0|0|0 </Pa>
+        <Pa> cte|0 </Pa>        rot.
+        <Pa> aff |-0.01|0.005</Pa>
+        <Pa> cte|0 </Pa>
+        <Pa> 3cte|1|1|1 </Pa> scale
+    </Fx>
+
+ 
+
+    <Fx><Pa> Draw3DWorld </Pa>
+        <Pa>   </Pa>
+        <Pa> world_sprite </Pa>
+        <Pa> the_camera </Pa>
+        <Pa> cte|0 </Pa>
+        <Pa> cte|1 </Pa>
+        <Pa> cte|200</Pa>
+    </Fx>
+
+</KPART>
+----------------------------------
+<world3d> world_lights  </world3d>
+
+<KIMG> imFlare  | data/flare1.iff </KIMG>
+
+<tore> tore1 | world_lights |0|0|5|0|0|0|1|1|1|
+        16 | 10 | 2|1 | 0|0.0|0.00|1|0.5 |tLightMapGrey|tLightMapGrey|tLightMapGrey|tLightMapGrey </tore>
+
+<KColorTable> coltab1 | data/remaptable.iff |0|255|255|32    </KCOLORTABLE>
+
+<CloneToSprite3D> lightset | tore1 |0|0|0|0|0|0|1|1|1|
+            tore1|0.2|0.2| imFlare |coltab1|0.8 </CloneToSprite3D>
+
+
+
+
+<KPART> <ID> part_lights </ID>
+
+    <Fx><Pa>setpalette</Pa>  set the screen palette
+        <Pa> i_lightmapGrey </Pa>   we have seen each image stands for a 256 color palette too.
+    </Fx>
+
+    <Fx><Pa>fillrc</Pa>  clear the screen background to color 24.
+        <Pa>  </Pa>   default screen rectangle.
+        <Pa> cte | 24 </Pa>
+    </Fx>
+
+    <Fx><Pa> Set3DObject </Pa>  make the tore rotate all the time on the 3 axis:
+        <Pa>  tore1 </Pa>
+        <Pa> cte |0  </Pa>
+        <Pa> bounce |0|100|1500|8|0  </Pa>
+        <Pa> cte |0  </Pa>
+        <Pa> aff |-0.01|0.005</Pa>
+        <Pa> aff |0.1|0.006</Pa>
+        <Pa> aff |0.0|0.007</Pa>
+
+        <Pa> 3cte|1|1|1 </Pa>  scale
+    </Fx>
+
+    <Fx><Pa> Draw3DWorld </Pa>
+        <Pa>   </Pa>
+        <Pa> world_lights </Pa>
+        <Pa> the_camera </Pa>
+        <Pa> cte|0 </Pa>
+        <Pa> cte|1 </Pa>
+        <Pa> cte|200</Pa>
+    </Fx>
+
+</KPART>
+----------------------------------

@@ -1,0 +1,158 @@
+@{d 77FDEA}                                  @{c 17D8BD} Úvod do CyberGraphX
+                                  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+  @{c 17D8BD}Úçel@{c}
+  @{c 17D8BD}¯¯¯¯@{c}
+  CyberGraphX  slouùí  jako rozîíêení systémové grafické knihovny pro nejrûznëjîí grafické
+karty.  CyberGraphX  vzniknul,  protoùe Commodore jiù nestaçil vyvinout grafickou knihovnu
+plnë  podporující  RTG  (ReTargetableGraphics - pêesmërovatelnou grafiku). Systém 3.0 sice
+pêedstavuje  první krok v tomto smëru (dají se pêidávat monitory a nové grafické reùimy do
+databáze,  pêibylo  nëkolik  nových  funkcí  pro  tento  úçel, vývojáêi byli upozornëni na
+problematiku  bitmap), ale grafická knihovna poêád nepodporovala jiný grafický výstup, neù
+OCS/ECS/AGA  çipset.  Dokonce  ani  pod nejnovëjîím systémem 3.1 není moùno plnë systémovë
+pêidat vlastní grafickou kartu do systému).
+
+  CyberGraphX  patchuje  vëtîinu  z  pûvodních  funkcí  grafické  knihovny,  çímù umoùñuje
+transparentnë integrovat libovolné grafické karty do systému. Navíc pêidává nëkolik nových
+funkcí  pro  pêímou  podporu  15/16/24/32  bitových  obrazovek,  které  nejsou dostupné ve
+standardní  grafické  knihovnë.  CyberGraphX  podporuje  pouze grafické knihovny V39 a V40
+(systém 3.x).
+@{d 77FDEA}
+  Nyní  je  moùno  otevêít  obrazovky  hlubîí  neù  256 barev, pêiçemù tyto zûstavají plnë
+kompatibilní s intuitionem. Skoro kaùdá funkce graphics.library mûùe být pouùita na takové
+obrazovce,  vyjma  nëkterých  speciálních  pouùití  blitteru,  které  závisí  na planárním
+uspoêádání   dat.   Navíc  jsou  tyto  obrazovky  zpëtnë  8-bitovë  (myîleno  256-barevnë)
+kompatibilní. Skoro kaùdá standardní 8-bitová aplikace bude chodit i na tëchto 15/16/24/32
+bitových obrazovkách. Samozêejmë mûùete pouùít vîechny dalîí vlastnosti takových obrazovek
+- pokud je umí vyuùít i CyberGraphX.
+
+  Moùná,  ùe  s  pêíîtí  verzí  graphics.library se CyberGraphX stane zbyteçností, ostatnë
+autoêi  systému  v to poêád doufají. Ale dnes je cybergraphics.library jediná moùnost, jak
+plnë  vyuùít  truecolorovou  grafiku ve vaîich aplikacích, v plnë systémovém prostêedí a s
+minimální námahou.
+
+  Systém  CyberGraphX  není  myîlen  jako  náhrada za originální grafický/intuition systém
+(jako  je napêíklad EGS). Proto zde také není potêeba speciální ovladaç pro nativní çipset
+OCS/ECS/AGA,  protoùe  veîkerá  funkçnost  originálního  çipsetu  je jiù pokryta v pûvodní
+grafické knihovnë.
+@{d 77FDEA}
+  CyberGraphX  má  úplnë  jiný  cíl  neù  EGS.  V  porovnáním  s ním mu sice chybí nëkteré
+moùnosti, ale na druhou stranu je to nejsystémovëjîí rozîíêení grafiky pro poçítaçe Amiga.
+Lze  se po právu domnívat, ùe Commodore by se vydal stejným smërem, samozêejmë s rozdílem,
+ùe by grafická knihovna nebyla patchovaná, ale obsahovala by obdobné funkce pêímo v sobë.
+
+  Na  pravou  míru  by  se  mël  uvést  i  çasto  pouùívaný  termín "emulace workbenche na
+grafických  kartách".  V  podstatë se totiù o ùádnou emulaci nejedná, workbench stále bëùí
+ten  samý  z ROM, dokonce ani není patchovaný. Workbench poêád volá stejné funkce grafické
+knihovny,  u  kterých  je  jen  díky  CyberGraphX  rozîíêena funkçnost. Znova a dûraznë je
+potêeba êíct, ùe CyberGraphX není emulace workbenche, jako jsou napê. DOpus 5 nebo Scalos.
+
+  @{c 17D8BD}Bitmapy a CyberGraphX
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+  Pêed  systémem  3.x neexistovala standardní metoda pro vytváêení bitmap. Vîe záleùelo na
+programátorovi  aplikace - od alokace pamëti pro strukturu bitmapy, pêes alokaci ukazatelû
+na bitplány s postupným voláním funkce AllocRaster(), aù po inicializaci struktury bitmapy
+funkcí InitBitMap().
+@{d 77FDE9}
+  Bohuùel,  nëkteêí  programátoêi  se  neobtëùovali  ani s pouùíváním tëchto elementárních
+funkcí  AllocRaster()  a  InitBitMap(),  nýbrù jednoduîe (resp. spíî sloùitë :-) alokovali
+bitmapy  pomocí  vîeobecné funkce pro alokaci pamëti AllocMem() a inicializovali strukturu
+bitmapy vlastními, jednoúçelovými hodnotami.
+
+  Protoùe  zde  byl  pouze  jeden  formát  bitmapy,  nebyl  problém  s  pêímým  zápisem do
+alokovaných  bitplánû.  Dokonce  nebyl  ani  problém  se  zmënou obsahu struktury bitmapy,
+protoùe  aplikace  mëla  úplnou  kontrolu  nad  umístëním  a obsahem této struktury a k ní
+pêiêazených bitplánû.
+
+  Do  systému  3.x  pêibyly  dvë  nové funkce pro podporu vytváêení a odstrañování bitmap:
+AllocBitmap()  a  FreeBitmap().  Tëmito funkcemi byl uçinën první krok k umoùnëní i jiných
+formátû  bitmap.  Pêedtím  nebyl  vcelku  problém  pêímo ukládat data do bitplánû, nebo se
+zabývat  strukturou  dat v popisu bitmapy. K získání údajû o bitmapë pêibyla dalîí funkce:
+GetBitmapAttr().  Díky  této  funkci  mûùete  získat  informace  o îíêce, výîce, hloubce a
+dalîích  nastaveních bitmapy. To byl dalîí krok k RTG cíli. Pokud funkce GetBitmapAttr(bm,
+BMA_FLAGS)  nevrátí hodnotu BMF_STANDARD, tak pêístup k takové bitmapë jiù nesmí být pêímý
+@{d 77FDE9}a  mûùe  být  k  ní  pouze  pêistupováno  pêes  rastport a vîeobecné kreslící funkce, nebo
+pouùitím standardních volání blitteru v grafické knihovnë.
+
+  Bohuùel,  opët  mnoho  programû  nerespektuje  ani  tyto  zásady  ustanovené  jiù firmou
+Commodore,  ani  nekontroluje  flag  BMF_STANDARD  pod systémem 3.0 a vyîîím. Dodnes mnoho
+programû  pouùívá  metody  popsané  na  zaçátku této kapitoly. To je hlavní dûvod, proç si
+rûzné  grafické  systémy,  CyberGraphX  nevyjímaje, musí stále sloùitë zahrávat s konverzí
+planar  do chunky, protoùe hardware v pozadí jiù planární grafiku têeba vûbec nepodporuje.
+To  vede  çasto  k  dramatickým  ztrátám  rychlosti, které by vûbec neexistovaly, pokud by
+aplikace volala standardní kreslící funkce.
+
+  Takùe pokud bëùíte pod systémem 3.x, pouùívejte funkce AllocBitmap()/FreeBitmap() vîude,
+kde  je  to  jen  moùné.  Tato metoda vám pêinese v mnoha pêípadech velké zlepîení výkonu,
+pokud bude pouùita na grafických adaptérech têetích výrobcû. Nezapomínejte pêidat ukazatel
+na friend-bitmapu, kdykoliv potêebujete alokovat kompatibilní bitmapové struktury.
+
+  S  CyberGraphX  musíte  pêidat  flag  BMF_MINPLANES do volání AllocBitmap(). Je to kvûli
+standardnímu picture.datatype, který pêekvapivë nekontroluje BMF_STANDARD a pêímo zapisuje
+@{d 77FDE9}do  bitplánu  i  kdyù alokovaná bitmapa není planární... Pouùití BMF_MINPLANES v prostêedí
+bez  CyberGraphX  zûstává  poêád  kompatibilní  a nemëlo by vést k ùádným problémûm. Pokud
+pouùijete  BMF_MINPLANES  v  prostêedí  s  CyberGraphX,  alokuje se chunky bitmapa. Chunky
+bitmapa  se  alokuje,  také pokud uvedete jako friend-bitmap jinou chunky bitmapu. Zpûsob,
+jakým  pêímo pêistupovat k datûm v takové bitmapë je uveden níùe. Pêesto nepêedpokládejte,
+ùe chunky-bitmapa má nëjaký pevnë definovaný formát. Vîe si musíte nejdêíve zjistit pomocí
+speciální funkce cybergraphics.library.
+
+  Metoda  alokace chunky bitmap pomocí friend-bitmapy byla navíc rozîíêena, aby bylo moùno
+alokovat  konkrétní  pixlové  formáty  pod CyberGraphX. S CyberGraphX totiù nejsou bitmapy
+omezeny  pouze  na planární nebo 8-bit chunky data (tento formát ostatnë nebyl k dispozici
+ani  se  standardním  çipsetem).  Je  moùné  alokovat  pixlové formáty bitmap nezávisle na
+konkrétním  zaêízení  a  standardní 15/16/24/32 bitovë hluboké bitmapy. Proto byly pêidány
+nové  bity  ve 32bitovém slovë flagû funkce AllocBitmap(). Pokud zadáte bit BMB_SPECIALFMT
+(hodnota 128 = 0x80 - chybí v nëkterých verzích include/cybergraphics.h!), potom horních 8
+bitû   z  32bitového  slova  obsahuje  informaci  o  formátu  pixelû  poùadované  bitmapy.
+K dispozici jsou následující pixlové formáty:
+
+@{d 77FDE9}  PIXFMT_LUT8, PIXFMT_RGB15, PIXFMT_BGR15, PIXFMT_RGB15PC, PIXFMT_BGR15PC,
+  PIXFMT_RGB16, PIXFMT_BGR16, PIXFMT_RGB16PC, PIXFMT_BGR16PC, PIXFMT_RGB24,
+  PIXFMT_BGR24, PIXFMT_ARGB32, PIXFMT_BGRA32, PIXFMT_RGBA32.
+
+  Mnoho  z  tëchto  formátû  je  závislých  na  konkrétním zaêízení a nemëlo by být obecnë
+pouùíváno.  Doporuçené  formáty  jsou  pouze  PIXFMT_LUT8,  PIXFMT_RGB16,  PIXFMT_RGB24  a
+PIXFMT_ARGB32.
+
+  Jakmile  je bitmapa alokována, mûùete ji libovolnë pêipojit k rastportu a provádët na ní
+kreslící   funkce.   Není   vîak   moùné   pêipojit  tuto  bitmapu  k  obrazovce  pouùitím
+SA_CustomBitmap   ve   volání   OpenScreenTagList()!   To   je  zpûsobeno  zcela  odliînou
+architekturou grafických karet oproti nativnímu çipsetu.
+
+  Není  dovoleno  pêímo  zapisovat  do  dat  bitmapy,  pokud tuto bitmapu nemáte uzamçenu.
+Umístëní  a  obsah  dat  bitmapy se v multitaskovém prostêedí mûùe a bude mënit a je pouze
+platné,  pokud  je  bitmapa  uzamçena  pouùitím  funkcí LockBitmapTags()/UnLockBitmap(). K
+funkci LockBitmapTags() byste mëli zadat taglist, který bude obsahovat platné ukazatele na
+longwordy,  které  se  naplní  platnými daty v pêípadë, ùe funkce nevrátí nulu. Do bitmapy
+@{d 77FDE9}mûùete pêímo pêistupovat, jen pokud toto funkce nevrátí nulu! Poté naçtëte bázovou adresu,
+do které mûùete pêímo zapisovat, pomocí tagu LBMI_BASEADDRESS. Hodnota vrácená pomocí tagu
+LBMI_PIXFMT  obsahuje  informaci,  jaký  barevný model (pixelový formát) musíte pouùít pro
+pêímé  kreslení  do  bitmapy.  Musíte  poçítat se vîemi moùnými variantami! Dalîí tagy vám
+poskytnou  informace  o  rozloùení dat bitmapy, takùe byste jiù nemëli mít ùádný problém s
+pêímým  zápisem do bitmapy. Pamatujte, ùe vîechny tyto hodnoty platí do doby, neù zavoláte
+párovou  funkci  UnLockBitMap().  Poté jiù musíte bitmapu znovu uzamknout, abyste obdrùeli
+aktuální  data.  Nezamykejte bitmapu na delîí dobu, neù na jeden snímek. Místo toho mûùete
+pouùívat standardní volání grafické knihovny pro kopírování bitmapy do jiné bitmapy pomocí
+blitteru. Kopírování truecolorových bitmap do indexované chunky bitmapy (256 barev = LUT8)
+zatím není podporováno.
+
+
+  @{c 17D8BD}Pêíklad alokace chunky bitmapy
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+  V  tomto pêíkladë se alokuje 256 barevná chunky bitmapa, do které se nakopíruje statická
+planární bitmapa (pêevod p2c probëhne automaticky díky systému CyberGraphX).
+
+@{d 77FDE9}[...]
+struct Library *CyberGfxBase;
+struct BitMap *chunkybm;
+static struct BitMap planarbm = { ... blablabla ... };
+WORD width = XXXX, height = YYYY;
+
+[...]
+if (chunkybm = AllocBitMap(width, height, 8, 128|(PIXFMT_LUT8<<24), NULL)) {
+    BltBitMap(&planarbm, 0, 0, chunkybm, 0, 0, width, height, 0xC0, 0xFF, NULL);
+    [...]
+}
+[...]
+
+                                    @{c 17D8BD}Shaman@{c}

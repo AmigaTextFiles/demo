@@ -1,0 +1,24 @@
+==============================================
+Short:    No longer non validated disks!
+Author:   thor@einstein.math.tu-berlin.de (Thomas Richter)
+Version:  1.22
+Requires: OS 2.04
+==============================================
+Keeps disks valid from accidential resets by catching the reset 
+signal and writing the bitmap information first. Read the guide first, 
+or view a HTML version at
+http://www.math.tu-berlin.de/~thor/thor/index.html
+
+Thomas Richter
+________________________
+New in this version:
+- I added another safety check for the device node scanning on 
+startup, so   DiskSafe will now detect non-filing devices safely.
+- Fixed a possible bug in the startup code.
+- Added a possible enforcer hit of the ResetList program. Included 
+the new binary and the updated source.
+- Included a new swedish (svenska) translation of the guide. 
+Thanks again to Johan "S.Duvan" Alfredsson and Henrik "Puh" 
+Nilsson.
+________________________
+May 1998, Thomas

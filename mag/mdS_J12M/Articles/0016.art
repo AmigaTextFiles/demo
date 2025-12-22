@@ -1,0 +1,118 @@
+!Multiplatform Demos
+Model/Up Rough
+12
+
+µJCµF2Multiplatform Demomaking
+µF1µC4
+Divided by µC2ModelµC4
+
+µJEThe scene in its present state is divided into the high-tech end on the PC-Windows side and the many lower-tech scenes like Amiga, C64, GBA, Playstation and so on. Every platform has its own style, culture and attitude as people with specific preferences are drawn to specific hardware. This is natural behaviour and nothing to complain about, but the problem is that the borders are mostly closed between the platforms. This has two consequences, stagnation and extinction.
+
+Stagnation is when all demos begin to look the same as most people on that platform think the same way and no new influences can cross the borders. Extinction is when people leave a scene because they see an either-or situation, will you stick with Amiga or move on to PC if you have to choose?
+
+Here comes my point: Multiplatform demomaking is about not having to choose a platform. All demos can be watched on (almost) all machines, you can stick with whatever machine you like most and still be part of the whole, of the global scene. You might hold on to the culture and society of your platform, but you might exchange impressions with people you else never would have reached. Imagine discussing your favourite demos on IRC with some guy and finding out he is a Mac scener! He might have a background in illustration business and he might join your group as graphician. This is exactly what I pointed at in my previous article µC3µA0010"Hacking is dead - Long live art!"µC4, being part of a global art-centered creative scene attracts me more than squeezing some more frames per second from my particular machine.
+
+The rest of this article has a more practical approach. This is a comparing review of methods to release demos on multiple platforms and is primarily directed to coders.
+
+µC1Method: Java demosµC4
+
+Java programs are half-compiled and platform-independent. With Java 3D et cetera, there are many tools for graphics and sound. It is exciting that they can be made applets and watch them online on any web browser and even on mobile phones. However, performance is an issue here.
+
+ Performance     o....
+ Compatibility   ooooo
+ Coder friendly  oooo.
+ User friendly   oooo.
+ Appeal          o....
+ (There is something lame about Java.)
+ Rating:         3.0
+
+µC1Method: Portable demosµC4
+
+There are a lot of good multiplatform libraries to use in demos, which make the same code compilable on all platforms. You might use SDL for display and timing, SDL_image for pictures, OpenGL for 3d graphics and fmod for music. You can't use assembly code, but libraries are optimized and 3d cards make this issue uninteresting. The major drawback is the shared libraries the user must have installed.
+
+ Performance    oooo.
+ Compatibility  oooo.
+ Coder friendly oo...
+ (Having one of each machine!)
+ User friendly  oooo.
+ (Must have the shared libs)
+ Appeal         ooooo
+ (Why not?)
+ Rating:        3.8
+
+µC1Method: Portable demos with supportµC4
+
+Suppose that most sceners support the multiplatform movement and install the latest SDL and OpenGL. Also suppose that group members have different machines, so each platform is represented and can be compiled on.
+
+ Performance    oooo.
+ Compatibility  oooo.
+ Coder friendly oooo.
+ User friendly  ooooo
+ Appeal         ooooo
+ (Why not?)
+ Rating:        4.4
+
+µC1Method: Scripts and viewersµC4
+
+This is a modification of portable demos. If you want to make lots of demos that use the same set of routines, you might make each demo a package with script, graphics and music, which is opened with a viewer. You only have to make the viewer once on each platform and it may use any amount of assembly and machine-specific optimization. However, it is hard work getting it right since you almost have to invent a new programming language.
+
+ Performance    ooooo
+ Compatibility  ooooo
+ Coder friendly .....
+ (The work!)
+ User friendly  oooo.
+ (Must use "open with" each time)
+ Appeal         ooo..
+ (Isn't it limiting?)
+ Rating:        3.4
+
+µC1Method: Scripts and standard viewerµC4
+
+Now suppose that someone makes a good "demo-viewer" like mentioned above, it might resemble Flash but not be so lame. It would be made separately for each platform to get maximum optimization, but follow a common standard. Also it should adapt resolution and detail level automatically to get good framerate on any machine. The only backside would be the lameness in not having coded anything...
+
+ Performance    ooooo
+ Compatibility  ooooo
+ Coder friendly ooooo
+ (No work at all)
+ User friendly  ooooo
+ (Just double click)
+ Appeal         o....
+ (Lame?)
+ Rating:        4.2
+
+µC1Method: Distribution of moviesµC4
+
+Demos are already largely distributed as captured divx movies, making them viewable on most machines. However the movies are very bulky files, 50MB for any demo, so only broadband owners will want to download them and only few will want them lying around on the harddisk. But of course you can burn a dozen of them on a cheap CDR. But then again, are you motivated to that? I propose that someone starts a mailorder distribution that sells CDRs with demo-divx collections, like in the good old PD-disk days!
+
+ Performance    ooooo
+ Compatibility  ooooo
+ Coder friendly ooooo
+ User friendly  o....
+ (Bulkiness, or mailorder)
+ Appeal         o....
+ (A "second-hand" feeling about movies of demos)
+ Rating:        3.4
+
+µC1Method: Wild demosµC4
+
+They can only be movies and the fun part is that you can use any machines, techniques, live footages and manipulations in the making. However, there is a money-centric touch to this as it roughly equals serious animation business.
+
+ Performance    ooooo
+ Compatibility  ooooo
+ Coder friendly ooooo
+ User friendly  o....
+ (Bulkiness, or mailorder)
+ Appeal         oooo.
+ Rating:        4.0
+
+Now for the final comparison. (Note that these are my subjective ratings!)
+
+µJCµC34.4 Portable demos + support
+4.2 Scripts and standard viewer
+4.0 Wild demos
+3.8 Portable demos
+3.4 Scripts and viewers
+3.4 Distribution of movies
+3.0 Java demos
+
+µJEµC4There are two really good solutions topping the chart, but they require more support from the scene and are not realistic yet. In the meantime, why not "go wild" or release portable demos spreading the message?

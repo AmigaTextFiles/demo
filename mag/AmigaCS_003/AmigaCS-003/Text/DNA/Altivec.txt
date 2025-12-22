@@ -1,0 +1,40 @@
+@{d C7FFF3}
+Aj keby sa @{c 7DDDFF}Mick Tinker@{c} vo vîetkom mýlil, v jednom má urçite pravdu - PowerPC procesory
+sú  naozaj  dobré, a vo vîetkom (o hustote integrácie a malej spotrebe ani nehovoriac)
+môùu smelo konkurovaï súçasným Intel Pentium II çipom...
+
+Asi  by  bolo zaujímavé spoznaï aj názory iných ãudí na túto tému (budúcnosï PowerPC),
+ale do uzávierky tretieho çísla ACS sa to uù nepodarilo.  Akokoãvek, nedávno aj Haynie 
+potvrdil kvality technológie AltiVec.
+
+
+@{c 7DDDFF}DNA:  Ço si myslíî o Motorola AltiVec technológii?@{c}
+
+@{c 7DDDFF}Dave:@{c} Veãmi dobrá vec.  Urýchlenie môùe byï 8-násobné a 16-násobné,  dokonca aù 80-100
+      násobné,  závisí  na konkrétnych operáciách.  Je to veãmi elegantná, univerzálna
+      vektorová jednotka; nie nieço 'vhackované' ako MMX, prípadne tak straîne viazané
+      na îpecifické video operácie ako Sun VIS technológia,  alebo  podobné rozîírenie
+      od   Alphy.    Potencionálne,  PPC  s  dobre  vyuùitou  AltiVec  jednotkou  bude
+      najrýchlejîie  CPU  vôbec.  Samozrejme,  stále je tu veãké AK -- kompilátor musí
+      byï schopný Altivec vyuùiï.  Avîak,  vektorizujúce komplilátory existujú uù dosï
+      dlho.   A  toto  je  urçite  lepîie  zvládnutá  problematika  ako,  dajme  tomu,
+      optimalizácia  na  novú Intel architektúru.  Taktieù je moùné - hoci neviem, ako
+      efektívne  -  softvérovo 'emulovaï'  AltiVec na starîích PPC procesoroch pomocou
+      "trap"  inîtrukcií.  Veãmi  podobné  floating point operáciám na 680x0 systémoch
+      bez FPU jednotiek...
+
+
+@{c 7DDDFF}DNA:  Hoci neviem, ako je AltiVec implementovaný, pripadá mi to ako veãmi çistý
+      design (nakoniec, je to Motorola).  Najlepîie ale je, ùe AltiVec jednotka
+      je úplne paralelná k ostatným jednotkám procesoru...   [ naráùka na MMX ]@{c}
+
+@{c 7DDDFF}Dave:@{c} Vlastne,  je  to  to  najlepîie  od Applu a Motoroly.  Ale, samozrejme, Motorola
+      AltiVec  implementovala.   Po  kaùdej  stránke  je to veãmi dobrá technológia --
+      Apple  malo,  a  stále  má  niektoré veãmi dobré myîlienky.  Ich realizácia síce
+      vyùaduje dosï veãa çasu, ale väçîinou i tak v pohode nakope ten nevyhnutný odpad
+      od   Microsoftu  ("still  generally  kick  ass  over  the  inevitable  Microsoft
+      knockoff").   Na  druhej  strane,  Motorola zvyçajne výborne zaçína.  Technicky,
+      Motorola  zaçína  tak  dobre, ùe Intel sa vôbec nechytá, dokonca s tými vîetkými
+      peniazmi, ço majú.  V marketingu a podnikovej stratégii sú slabîí, ale keð príde
+      na hardcore technologické otázky, pred nikým sa neklañajú.
+

@@ -1,0 +1,49 @@
+Specyfikacje artykuîu dla maga:
+
+Linia 1: Tytuî
+Linia 2: Autor
+Linia 3: Nazwa obrazka z gëbâ autora
+
+Szukany jest ciâg "&start"
+
+Kaûdy akapit musi byê ograniczony dwiema instrukcjami:
+
+&float
+i
+&endfloat
+
+Dla kaûdego akapitu przyjâê moûna inny podkîad, font etc. Sîuûâ do tego polecenia:
+
+&bg   - podkîad (podkîady: float_shine, float_dark, float_normal i z dodanâ 2 (drugi zestaw))
+&font - font (fonty: big, small, normal, normal2, title, sign)
+
+Kolory tekstu zmienia sië wpisujâc Esc (Escape) + numer, przy czym:
+
+3 - biaîy
+5 - niebieski
+b - bold
+i - italic
+n - normal
+c - wycentrowany
+r - wywalony na prawo
+l - na lewo
+
+Oprócz akapitów stosowaê teû moûna:
+
+&rectangle - trójwymiarowa linia oddzielajâca akapity
+&image     - obrazek wczytany przez datatajpy 
+&image
+ARULEZ.iff
+
+Nowe opcje:
+
+&column
+
+	Tworzy dwie horyzontalne kolumny, w których umieszczony moûe byê
+&image lub &label (na razie tylko :)
+
+
+Artykuî MUSI byê zakoïczony poleceniem
+
+&end
+

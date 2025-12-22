@@ -1,0 +1,151 @@
+
+                HousePool® - The raver´s voice Issue Nº 02
+                ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+
+                   Willkommen zum HousePool®-Magazin !!
+
+
+             Dies ist die deutsche Installationsanleitung für
+                 HousePool-Issue 02 mit zusätzlichen Tips.
+
+
+VORAUSSETZUNGEN:
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+    Da HousePool bisher lediglich als  Amiga-Version  verfügbar  ist,  wird
+    lediglich folgendes benötigt:
+    - Amiga mit mindestens AmigaOS 1.3 (besser 2.x/3.x)
+    - ausreichend Speicherplatz (mind. 1 MB/besser 1½-2 MB)
+    - Amigaguide.Library
+    - Powerpacker.Library
+    - ReqTools.Library (nur bei Filerequestern)
+    Diese Libraries werden nicht mitgeliefert, können  aber  von  jedermann
+    als  zusätzliches  Paket  dem HousePool-Magazin beigefügt werden. Diese
+    Libraries sollten sich aber sowieso bei fast  jedem  Amiga-User  finden
+    lassen und so fanden wir es überflüssig diese beizulegen, da dies unser
+    Archiv nur unnötig vergrößert hätte.
+
+ENTPACKEN:
+¯¯¯¯¯¯¯¯¯¯
+    Das LHA-Entpacken ist anscheinend geschafft und ein eigenes Verzeichnis
+    somit  automatisch  angelegt.  (.../HousePool_02/) Falls beim Entpacken
+    Probleme auftraten versucht es einfach nochmals.
+    Bester Aufruf:   Lha -ax x HousePl2.lha <Zielverzeichnis:>
+
+INSTALLATON:
+¯¯¯¯¯¯¯¯¯¯¯¯
+    Für  das  reibungslose  Funktionieren  sollte  sich  jede  Ausgabe  vom
+    HousePool-Magazin   in   einem  seperaten  Verzeichnis  befinden.  Dies
+    geschieht   normalerweise   beim   ordnungsgemäßen    Entpacken   auto-
+    matisch (s.o.).
+
+    Durch die doch recht beachtliche Größe ist es äußerst ratsam, HousePool
+    auf  eine Festplatte oder ähnliche Massenspeicher zu installieren. Eine
+    Installation auf Disketten ist ebenfalls möglich, erfordert  aber  mehr
+    Aufwand.
+
+    Deshalb hier kurz einige Vorschläge für eine Disketten-Installation:
+    A) Bei viel RAM (mind. 2 MB):
+       Zunächst HousePl2.lha wie oben beschrieben in die RAM: entpacken !
+       Dann zwei Disketten formatieren.
+       Das HP_02-Songs-Verzeichnis auf eine Diskette kopieren.
+       Das restliche Paket auf die andere Diskette kopieren.
+       Beide Disketten können einen beliebigen Namen tragen.
+       Dann in der Shell folgenden Assign vornehmen:
+
+       Assign HousePool_02: <Song-Diskette:>/HousePool_02/
+       Assign HousePool_02: <andere Diskette:>/HousePool_02/ ADD
+       (Dies geht allerdings erst ab AmigaOS 2+ !!)
+
+    B) Bei wenig RAM (bis 1,5 MB):
+       Zunächst zwei Disketten formatieren !!
+       HousePl2.lha ins RAM: kopieren !
+       Auf folgende Weise entpacken:
+
+       Lha -ax x ram:HousePl2.lha HousePool_02/HP_02-Songs/ df0:
+
+       Auf die nächste Disk dann folgendes entpacken:
+
+       Lha -ax x ram:HousePl2.lha HousePool_02/HP_02-Bilder/ df0:
+       Lha -ax x ram:HousePl2.lha HousePool_02/ df0:
+
+       Dann wie oben die beiden Assigns anlegen.
+
+STARTEN ÜBER STANDARD-SKRIPT:
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+    Zum fehlerfreien Lauf des Magazins ist es notwendig  einen  Assign  auf
+    das HousePool_02-Verzeichnis zu legen, deshalb startet man HousePool am
+    besten über das beiliegende StartMe!-Skript  (auch  mit  Icon  von  der
+    Workbench  möglich).  Dort  wird auch die Animation und das Musik-Theme
+    gestartet. Nach Verlassen der Guide-Datei wird auch der  Assign  wieder
+    entfernt, so daß der gesamte Speicherplatz wieder freigegeben wird.
+
+STARTEN ÜBER MULTIVIEW o.ä.:
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+    Natürlich kann HousePool aber auch ohne  diese  Skript-Datei  gestartet
+    werden.    Dazu    lediglich    einen    Assign   auf   das   angelegte
+    HousePool_02-Verzeichnis legen:
+
+    Assign HousePool_02: <.../HousePool_02/>
+
+    Danach  kann  dann  die  Guide-Datei  in  jeden   beliebigen   Anzeiger
+    eingeladen  werden, wie z.B. MultiView, AmigaGuide, PPGuide, Showguide,
+    etc... Die Songs wie auch die Animation müssen  aber  nachträglich  aus
+    der Guide-Datei geladen werden. Dies geschieht automatisch beim Klicken
+    auf die entsprechenden Buttons.
+
+STARTEN BEI WENIG RAM:
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+    Falls der Amiga weniger als 1,0 MB RAM hat und evtl. noch einige andere
+    Programme, Tasks, oder Libraries benutzt werden und somit Speicherplatz
+    verbrauchen, kann es sein, das nicht das ganze Potential von HousePool®
+    genutzt werden kann.
+    Dann empfiehlt es sich nicht benötigte Programme u.ä. zunächst  mal  zu
+    beenden.  Falls  dies  immer noch nicht ausreicht, z.B. auf 512k-Amigas
+    sollte man HousePool direkt aus der  Startup-Shell  starten  und  nicht
+    erst die Workbench® laden. Dann folgendermaßen vorgehen:
+
+    A) Bei Kickstart Release 1.3 (Version 34.x):
+       Beim Booten von einer Workbench-Disk oder Festplatten-PArtition beim
+       Hochbooten Ctrl-D drücken bis ein ***Break erscheint.
+       Dann in der Kommando-Zeile folgendes eingeben:
+
+       Execute <HousePool_02-Verzeichnis>/HousePool_02-StartMe!
+
+    B) Bei Kickstart/AmigaOS 2.x & 3.x (Version 36.x-40.x):
+       Beim Neustart des Amigas beide Maustasten drücken um ins StartupMenu
+       zu gelangen. Dort die Option Startup-Sequence `disablen` bzw. `Start
+       without Start-Seq...` anklicken.
+       Dann von einem beliebigen Boot-Device starten und in der Shell  dann
+       folgendes eingeben:
+
+       <HousePool_02-Verzeichnis>/HousePool_02-StartMe!
+       ODER:
+       Execute <HousePool_02-Verzeichnis>/HousePool_02-StartMe!
+
+ZUKUNFT:
+¯¯¯¯¯¯¯¯
+    In naher Zukunft wird wohl auch ein Installer-Skript mitgeliefert. Doch
+    bis jetzt hatten wir uns mehr auf den Inhalt konzentriert.
+    So watch out !!
+
+ADRESSEN:
+¯¯¯¯¯¯¯¯¯
+    Bei Fehlern, Problemen, Anregungen oder Einsendungen:
+
+    Post-Adresse:    HousePool Magazin
+                     Postlagernd Herne
+                     44621 Herne / Deutschland
+
+    Elektronisch:    carma.bbs@sx1.hrz.uni-dortmund.de
+
+
+    HousePool-Magazin ist GIFTWARE ! Also schickt  bei  Gefallen  Geschenke
+    oder  Geld  oder  sonstiges. Damit bereichern wir uns nicht, sondern es
+    dient nur dazu unsere Kosten zu decken und  den  Rest  investieren  wir
+    sofort wieder.
+
+
+    Viel Spaß wünscht Euch nun noch...
+                                        das HousePool-Team !!
+
+

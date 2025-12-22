@@ -1,0 +1,109 @@
+- credits:
+
+Robin: all coding and the ideas,
+Keres: all graphics except memberlist picture,
+Voice: music in main part of SG2.
+
+- requirements:
+
+You should have some AGA machine (A1200, A4000) with 4MB free space on hard
+disk. You can't run SG2 from disks, sorry for that. When you will have the
+problems with running SG2 because of memory (A1200 with no fast), kill
+useless devices like CC0:, DF0: and other partitions from BootMenu and boot
+with no startup-sequence. To run the demo you should have at least 1888000
+bytes of CHIP memory free as one block, of course. The people who had got
+any FAST memory should not have any problems!
+
+Technical info about Silicon Graphics 2 by W.F.M.H.
+
+1. Introduction part.
+
+The idea was taken from NewTek's Video Toaster demo tape. There were the
+animations, in SGII you can see it realtime ( as always in WFMH demos). The
+strange samples with strange voices are done by Thorgal.
+
+2. Iris operating system.
+
+It's really simple method of drawing lightsourced objects. I wrote this part
+1.5 year ago and I think I was first with this idea, but WFMH is not normal
+scene group which produced many shitty stuff so just now you may see this.
+Sorry, maybe it's my fault. Backing to techniques, the screen is in 256
+colors mode with no normal chunky to planar routine.
+
+3. Realtime mapping with static map of lightsource.
+
+It's my own idea on which I spend most time writing SGII. I improved two
+mapped objects: ball and human faces. I planned also add calculating
+realtime reflections, but I had to improve other parts too... Also you can
+see the mapped tunnel without lighting.
+
+Copper chunky mode is of course used with pixels size 2x2. In tunnel part
+pixels are 3x3.
+
+4. Gourard style vectors.
+
+The idea was taken from Musashi (only idea ...) who open my mind on screen
+with 24bit graphics. To make it faster I dropped ZBuffer idea, but it's
+really not necessary with simple objects. The 4000/40 25Mhz shows it all at
+one frame, so check it out there. Pixels size is 3x3.
+
+5. Doom clone.
+
+This is freshest part in SGII, so it's not so optimized as others. Pure
+A1200 is not possible to calculate it fast, because of square roots used in
+shading model based on angle. I get out simple lenght-light model, because
+of its weak shading. The textures are 128x128, but it's possible to take
+256x128 ones. They are converted from 24b originals in 512x512 resolution.
+Screen is 96x128 copper chunky 2x2 pixels.
+
+Notice, also that you can run SG2 on A1200 with no fastram. Altough when
+fastram is available, it's used as well.
+
+Greets, thanks and other stuff.
+
+I wanted to thank following guys:
+Miîek "Thorgal" Smyk for his ideas, patience and using his love: 4000/40. He
+also traced many objects I need.
+Marcin Orîowski, because he didn't disturb me with any code. Well, thanks
+anyway.
+
+Author of music: Voice/Appendix for quality and speed. The original was
+taken from CD of Members of Mayday: "We are different". Unfortunately, it
+was not possible to contact them, so you are listening it on your own risk.
+Author of graphics: Keres/WFMH for his really professional work. He has only
+2MB of RAM, so I think using Brilliance was made his brain full of suicidal
+tendencies. WFMH memberlist was drawn by him into Boris Valejo's scanned
+picture.
+
+MadBart/Appendix for really hot stuff and freshest demos which made me back
+to hard work.
+
+Musashi for his thinking.
+ESCOM for their cash.
+Rage Against the Machine and Dog Eat Dog for coolest music for real coders.
+
+Stuff used:
+
+Real v.3.11, Art Department Professional, ImageFX, Picture Converter v.2.5, Brilliance, True Brilliance, Pixel3D Pro, Imploder, AsmOne v.1.25, The Player 6.1A.
+
+And now we want to say farewell to scene. Yes, it's hard decision, but I  think we are to old for fun with demos. The life is hard, we have to earn
+to feed our families... It's a joke of course! The truth is simple. We
+are tired with polish demos which make A4000/40 crashed.
+
+Make your stuff working on all computers, not only A1200 with no fast !!!
+
+The most funny effect is when module is playing 2 times to fast, specially F.C.I. demos are corrupted with that bug (they are all corrupted, hi Pleksa!).
+
+It's silly for instance, to not use fast memory by set hunk CODE to chip, or
+use CHIP (or CHEAP) memory for chunky buffer. Guys, try to think, little more. And one more advice, do you really think, that the steal of other coder's idea is that what make you bigger ? What for is to make the same effects as all others ? Try to improve something, guys.
+
+I think, that's it folks. Marek Pampuch rulez.
+
+	Andrzej "Robin" Piasecki
+	ul.Ks.Zofii 12/7
+	Szczecin
+	Poland
+
+	E-Mail : robin@felix.univ.szczecin.pl
+
+

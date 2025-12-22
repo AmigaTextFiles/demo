@@ -1,0 +1,84 @@
+Short:    Rampage by TEK
+Author:   banana, bifat, fuszy, iraner, magician, seal
+Type:     demo/track
+Requires: 1mb, 68000, ocs
+
+
+
+                               rampage
+    
+                             A500 trackmo
+    
+                      by The Electronic Knights
+    
+                    original, trackloaded version
+    
+                     originally released in 1994
+
+
+
+     credits
+     -----------------------------------------------------------
+     
+     code                                                  bifat
+                                                           fuszy
+                                                          iraner
+     
+     design                                                bifat
+                                                           fuszy
+                                                          banana
+                                                          
+     graphics                                               seal
+                                                          banana
+                                               magician / trygon
+
+     music                                                banana
+
+
+
+     how to get started
+     -----------------------------------------------------------
+   
+     1. insert an amiga-formatted DD disk into df0:
+
+        if the disk was previosly formatted in msdos mode or
+        other alien formats, you should format it first.
+
+     2. use the trackdisk installer included to the archive
+        to install the disk image:
+   
+        tracksave rampage 0
+
+     3. if no errors occured, shut down applications and press
+        ctrl-amiga-amiga to run
+     
+     
+
+     known problems
+     -----------------------------------------------------------
+   
+     requires an amiga custom chip set, i.e. won't work on
+     Draco systems, for instance. this demo is known to crash
+     on amigas with a crappy memory architecture, e.g.
+     a4000/040/25
+
+     TEK demos are known to crash UAE very badly.
+     do not watch demos on emulators, get an amiga instead.
+
+
+  
+     note
+     -----------------------------------------------------------
+     
+     what the heck are those 'AGA-fixed' versions of rampage
+     going around? there is no need to 'AGA-fix' this demo,
+     because the startup code knows very well how to disable AGA
+     completely, radically, mercilessly.
+
+
+
+     copyright notes
+     -----------------------------------------------------------
+
+     copyright © 1994 by TEK - all rights reversed.
+     no fees may be charged for distribution.

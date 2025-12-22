@@ -1,0 +1,209 @@
+What happened to the diskmags?
+By Rumrunner/VOID
+l
+
+I have often found myself wondering what has happened to all the diskmags
+that have disappeared throughout the years. Strangely enough I have found
+something many of these have in common. And no, it's not just a lack of
+support, atleast not concerning those who went out a couple of years ago.
+
+If we consider the biggest diskmag ever to have hit the Amigascene, namely
+Grapevine by LSD, we can take a look at what happened. This mag started out
+as a little messagebox, with a rather simple user-interface. It all
+consisted of a textscreen, a coppereffect in the background and capability
+of changing textscreens back and forth with left and right mousekey. It
+was presented by some images being shown before the "mag" itself started.
+
+Then, with issue five or six, it became a diskmag as we know it today. The
+code was a very stable one and had support for cliparts and other handy
+features, including the wellknown "hidden message" thingy. When you pressed
+escape, you could try to type different, let's call them passwords and
+you got a little text when you typed a correct one. For those who have not
+checked out this, I can reveal that passwords are usually such as pazza,
+monthy python and torch, the handles of the men behind the mag. However,
+there were no mousesupport, the mag was fully handled by the keyboard,
+almost like one of the current mags, guess which one, hehe (although we
+are most likely to have mousesupport for the next issue if I get around to
+updating the code).
+
+This code had some troublesome sides. It expected to find the files in the
+correct path from the root of the disk or whatever you ran it from, thus
+making it difficult to run from harddrive. Copying everything to ram: or
+rad: solves this problem ofcourse.
+
+In issue seven or eight, the code was much improved, it had search
+functions, better/more graphics and mousesupport, although I must admit
+that I never miss that when viewing the old mags, I sit in my chair with
+the keyboard on my lap and have no problem using it (the keyboard, that is)
+but ofcourse, it's nice to have a choice, after all mice are a part of
+the Amiga, and has been so since the very start. Also, there are ofcourse
+some tasks that are easier performed with the mouse. Anyway, in case you
+didn't know the password-function from the old code is still present, but
+you never get to see any line saying "type password" in this new code. I
+have a feeling that there are many who are used to today's mags who have
+pressed escape to exit the mag, only to find out that this doesn't exit
+the mag, and you cannot navigate before pressing enter or return. This is
+the "secret" function working. Supposedly, in this new code, there are
+more articles to be found if you enter the correct code, but I must admit
+that I have never searched for these. And while on the subjects of secret
+parts or whatever you would like to call such a feature in a diskmag, I
+know that atleast the old code had a function which was supposed to only
+be available for members who had another password. This is the only case
+where I have heard about a kind of internal newsletter included in a
+mag spread to the public. Or perhaps it's just a kind of joke, I have never
+looked for these passwords.
+
+This new code was used for some issues before it was further updated, I
+think that this happened for issue fourteen. This was not a big update
+though, as most of what was changed was the topline and one thing that's
+convenient on computers faster than the Amiga 500, changing articles with
+the arrowkeys works better. The old code switches between articles too
+quickly to be able to stop at the one you want to load most of the time.
+LSD claimed that this code was all new, and for all I know it might be
+true, however, these two changes are the ones a user would experience,
+and I have never disassembled the code to see what is really different.
+That's not important however, the code does it's job in a very decent way.
+
+Some features were included into the code ever since Grapevine turned into
+a real diskmag, and some of them were very much appreciated at the time
+most people used disks, the mag loaded as many articles as possible to
+memory, thus you wouldn't have to load in one and one, waiting for the load
+to finish. I know only one other mag that for sure did this, more about
+that later.
+
+Right, that's it for Grapevine, I would also like to say a little about
+another English diskmag, Stolen Data from Anarchy. As somebody most
+certainly already know, this mag started out as a complement to a papermag,
+the code for the first issues were very simple. A module played in the
+background, you had some nice copperbars to look at in the background, and
+you flipped through pages using the arrowkeys or the F-keys. F-keys only
+directed you to a certain page, if for instance a coding tutorial started
+at page 24, you could either flick to this page with the arrows or press
+for instance F4. This system worked well until the issue where there were
+more than ten articles. Then the system came up a little short. There were
+more articles on each F-key, you had to select the nearest "shortcut" and
+then flick to the start of the article. When many articles started to get
+published, Anarchy even split up the mag in several parts, every issue
+from the first one came with a menu, the first issues usually had some
+demos you also could start from this menu, just like any other packmenu.
+In the later issues with this first code, there were several mags to
+start, this way the problem of too many articles in such a simple engine
+was solved for a while.
+
+Later, a very nice recode was done, at least I liked it. This code is
+perhaps the one which reminds the most of Saxonia 1, you had ofcourse a
+menu where every article was listed and you loaded the desired one by
+entering the number of that article. Articles scrolled just like Saxonia 1,
+but over a bigger part of the screen, and there was a backgroundpicture.
+Long articles were split up, so I guess that the coders solved the scrolling
+the same way I did, printed more than there were space for on the screen
+and changed the bitplane-adresses as the user scrolled.
+
+The mag was now trackloaded and the loader was fast, and is also compatible
+with faster processors, so there's no cpu-timing in the loaderroutine.
+One peculiarity is that even though the mag is trackloaded, you can also
+access the files in a filesystem. There's a slight chance that only the
+magengine itself was trackloaded and that the articles were loaded by
+using dos.library, however I don't think so, as this system is most likely
+to be very unfriendly on faster processors. So my best guess is that the
+coder wrote a file allocation table where the system expects to find it
+and put the real position of the file in question in. If somebody knows
+more about this than me, they are welcome to make contact and tell about
+this, or even better, write an article for next Saxonia.
+
+Right, this magcode had it's downsides, there were no cliparts, and the
+articles were poorly sorted by type.
+
+Then came issue eight of the mag with a completely new code, similar to
+Raw's code in many aspects, some differencies in the scrolling however.
+The authors claimed that they had an advantage now compared to the previous
+code, as the mag was now fileloaded instead of trackloaded. However, issue
+nine had more or less the same code as issue eight, but was now again
+trackloaded and stayed so throughout issue ten, the last one released.
+
+What's interesting about all these changes are that trackloaded, fileloaded,
+new/old code and whatever, there were always loadermenus in front of the
+mag, sometimes also even an intro. There were in the later issues also
+small slideshows and musicdisks (or rather musicboxes), which is the reason
+why issue nine and ten came on two disks, quite out of the ordinary for a
+mag that didn't have more articles than what was there.
+
+There's one more mag I want to describe shortly before coming to the point
+of the article, this is the mag Deadlock. It started out as a Dimension X
+and Rapier production, then became a pure Dimension X-production, before
+it ended up in the hands of Anathema. The code was mostly the same all of
+the time, but trackloaded in the first issues and fileloaded in the later
+ones. It was a nice code, and I liked that they had put the menubuttons
+in the top-panel instead of in the bottom-one (although they changed this
+in the later issues), like I always say, why follow the standard?
+There was support for cliparts, and this mag too loaded as many articles
+as possible into memory, atleast the last of the trackloaded issues did.
+
+I think that the more common mags among sceners today, like Raw and
+Upstream are known by most people so I don't need to describe these. The
+only other mag that I can imagine perhaps need some description is
+Oepir-Risti by Citron, and let's say that they had an excellent code,
+except that article-splitting was done in a not to userfriendly way.
+The pages scrolled and long articles were split up, upon scrolling past
+the last page of first, second or whatever part, the next one was
+automatically put in place, but you couldn't go back to the previous part
+in any other way than starting from the very first page of the article.
+Except from that, the code was very decent and a pleasure to use as a
+reader.
+
+Now, the main point I wanted to make with this article, is that all the
+mentioned mags, and perhaps also those I haven't mentioned, like ICE and
+McDisk, have something in common.
+
+Let's start with a close lookup on Grapevine. This grew into the biggest
+mag ever seen on the Amigascene, with over three-hundred articles in
+every issue. The maineditor, Pazza, even wrote in a textfile following
+one issue that he already had over 400k worth of articles for the next
+issue 1 packed0 . Every maineditor nowadays must be drooling enough
+to short-circuit the keyboard just by thinking of this. So, articles
+were obviuosly not a problem, the mag came on three disks since way back
+all the way until issue 21. This was not a small issue however. But what
+I noticed in one of the articles were that the makers had big plans for
+the next issue, aga-support, new crunchers and other new features. Pazza
+also left his position as maineditor before this issue.
+
+Think about what I already have said about Stolen Data and take a look at
+what most editorials said. Sorry for delay was quite frequent. The mag
+even had an editorial team as they called it, so it seems that something
+must have been up, since even then they had problems.
+
+When we take a closer look at Deadlock, it seems that there were problems
+all along here. The mag started out as a Rapier and Dimension X production
+before Rapier disappeared. Some articles reveal that the relationship
+between the groups were not all too good. Anathema took over the mag later.
+One thing that should be said about this mag is that the code stayed most
+the same all the time, a thing I liked a lot since it the code worked well
+and stood out from all the other mags. The sad part for me was when they
+moved the controls to the bottom of the screen, but that's another story.
+
+Right, take a look now, when did most mags disappear? It's quite clear that
+the biggest chance of pulling the oars in is when radical changes happen.
+Grapevine had plans, Stolen Data must have had lots of plans considering
+all their changes, and Deadlock became the production of another group.
+We can compare this to the first EuroChart issues which came from the one
+and only Crusaders. When Dr Awesome quit his position as main-editor (if we
+can use that name for the production back then, when it was almost a pure
+chart), the production got problems and the only way of keeping releases
+coming was handing the work over to another group.
+
+Raw also experienced changes during the last issues. Lord Helmet quit as
+maineditor and Astro took over. He had quite some work to do in order to
+keep up the mag's fame which it got from Lord Helmet.
+
+
+
+If there's one advice I can give, it must be not to do too much in one time,
+as this is tiresome work, sometimes, one might not see an end to all the
+work, and it's easy to say that there's no point in continuing. I have plans
+for Saxonia but I prefer to do them one at a time, that way, I can also
+spend some of my life on other things. And I don't get tired of it. It's
+better to use a code that lacks some functionality than never completing a
+new code. If you don't have any cliparts, it better to release the mag
+without than waiting forever. And three articles are better than none.
+
+ 

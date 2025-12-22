@@ -1,0 +1,513 @@
+@database ep.guide
+@$VER: UPRoughEP Guide 1.7 (22-jan-01) ©2000-2001 Up Rough Soundsystem
+@master Stooner:UpRough/UPRoughEP/EP.guide
+@author "spot and mnemonic"
+@font upepfont.font 8
+@index index
+@width 80
+
+@node "main" "'em pimps are bakk!"
+@font upepfont.font 8
+
+
+ @{u} f r e s h   p h o n k e e   u p r o u g h   s o u n d s y s t e m - 2 k 1 !@{uu}
+
+
+
+
+
+
+
+                           @{"::" link "introduction" 0} @{fg shine}i n t r o d u k t i o n@{fg text}
+
+                           @{"::" link "requirements" 0} @{fg shine}r e q u i r e m e n t s@{fg text}
+
+        
+
+                           @{"::" link "installation" 0} @{fg shine}i n s t a l l a t i o n@{fg text}
+
+                           @{"::" link "usage" 0}               @{fg shine}u s a g e@{fg text}
+
+                           @{"::" link "questions" 0}                 @{fg shine}f u c k@{fg text}
+
+        
+
+                           @{"::" link "history" 0}         @{fg shine}h i s t o r e e@{fg text}
+
+                           @{"::" link "future" 0} @{fg shine}w h a t   t o   c o m e@{fg text}
+
+                           @{"::" link "contact" 0} @{fg shine}    c o n t a c t   u s @{fg text}
+
+
+
+
+
+
+
+
+ @{u} f r e s h   p h o n k e e   u p r o u g h   s o u n d s y s t e m - 2 k 1 !@{uu}
+@endnode
+
+@node "introduction" "what the fuck is this shit uh?"
+@font upepfont.font 8
+
+@{bg shine} introdukktion@{bg back}
+
+
+ see... we were kinda bored by our current group, three little elks, so
+ me (@{b}spot@{ub}) together with @{b}blade@{ub}, @{b}plus8@{ub} and @{b}skope@{ub}, made @{b}up@{ub} our cloudy minds
+ and formed this fly crew "@{b}up rough soundsystem@{ub}".
+ the idea was to kinda play it kool and release @{i}lotsa@{ui} moosik.
+ most coders are so lazy nowadays anyway (Nem: "Ouch...that hurts" ;), so
+ tryin' to kick as a demokru just ain't fun enuff.
+
+-so whas'nu'bout that? there's already loadsa kru's doin' just that!
+
+-yea... is it?
+
+ see, they just release lame @{i}lha-lzx-zip-rar-arj-suckdick-whatever@{ui} packs.
+ most of the kru's are also movin' towards the hitech bitch scene,
+ releasin' cd's and mp3's and pc-shit n'n'and...  stuff! @{b}fuck them!@{ub}
+
+ @{b}let's get real@{ub} and bring that feelin' back!
+
+                                                                    /@{i}spot@{ui}
+
+
+
+
+@endnode
+
+@node "requirements" "a little bit of this, a little bit of that..."
+@font upepfont.font 8
+
+@{bg shine} requirements@{bg back}
+
+ @{fg shine}C@{fg text} os 3.0+
+
+ @{fg shine}C@{fg text} 68020+
+
+ @{fg shine}C@{fg text} aga and/or cgx v41+
+
+ @{fg shine}C@{fg text} dbplayer.library v2+
+
+@{fg shine}memory:@{fg text} differz from time to time, depending on the size of the data.
+
+  @{fg shine}@{b}note:@{ub}@{fg text} this is just what the main task requires. the effects and
+        intros in ep:s may require other software/hardware.
+
+
+
+
+@endnode
+
+@node "installation" "how do i get this shit to rock?"
+@font upepfont.font 8
+@{bg shine}
+ installation@{bg back}
+
+ @{u}install script@{uu}
+
+ you @{b}should@{ub} use the installer! 
+
+ @{u}manual@{uu}
+
+ you should @{b}always@{ub} use the install script to install/update the @{b}ep@{ub}
+ main filez and to copy new @{b}ep's@{ub} to ya drive. but if the
+ install script doesn't work for some reason...here's how to do it
+ yaself...
+
+ @{fg shine}1@{fg text} make a dir called uprough (or somethang) somewhere on ya drive.
+
+   (skip if u have a previous installation...)
+
+ @{fg shine}2@{fg text} copy the files ep, ep.guide, eplogo.up, eplogopal.up,
+   prefs, prefsmui and start to the directory.
+
+   (@{b}important@{ub}: if ya got a previous installation, check the
+   version of ep, ep.guide, prefs, prefsmui and start before ya copy 'em.
+   @{b}always@{ub} use the @{b}latest version@{ub} of these files!)
+
+ @{fg shine}3@{fg text} copy the icons ya wanna use from the icons/ directory.
+
+ @{fg shine}4@{fg text} copy the ep:s ya wanna install from the eps/ directory.
+
+ @{fg shine}5@{fg text} if ya want you can add the lines:
+
+   ;begin ep
+   assign ep: "<the directory u chose in 1.>"
+   ;end   ep
+
+   to your user-startup. but they @{b}ain't@{ub} needed if ya use the
+   scripts to start da ep's.
+
+ @{fg shine}6@{fg text} done!
+
+
+
+
+@endnode
+
+@node "usage" "aaahhh...so that's how i do it!"
+@font upepfont.font 8
+
+
+
+@{bg shine}      the executable@{bg back}
+
+
+  @{i}da ep executable chills with da followin' arguments...@{ui}
+
+  @{fg shine}?@{fg text}           display a help text.
+  @{fg shine}prefswin@{fg text}    open da prefs window.
+  @{fg shine}mui@{fg text}         use @{b}mui@{ub} for le sweet prefs window. if ya don't use the scripts,
+              make sure the stack got a cool value.... at least > 4096.
+              if ya use the scripts ya don't have to worry 'bout that stack shit.
+              so... use da script's... damn!
+
+
+
+
+@{bg shine}          da scripts@{bg back}
+
+
+  @{fg shine}start@{fg text}       used to start ep. accepts same arguments as the ep
+              executable but instead of "?" help is used. this script takes
+              care of the ep: assign, stack etc etc...thats why ya really should
+              use it.
+
+  @{fg shine}prefs@{fg text}       prefs opens the prefs window (same as doin' start prefswin).
+
+  @{fg shine}prefsmui@{fg text}    prefs opens the mui prefs window (start prefswin mui).
+
+
+  @{fg shine}note@{fg text}        you can use all da scripts without execute because the s flag
+              is set.  (if it isn't, do: protect <scriptfile> +s)
+              but why start em from cli?
+
+              use the nice icons and start 'em from ya pimpbench...
+
+
+
+
+@{bg shine}    the prefs window@{bg back}
+
+
+  @{fg shine}screenmode@{fg text}  opens a screenmode requester that let's ya chose screenmode to
+              run in.
+
+  @{fg shine}ep dir@{fg text}      select directory where the ep ya wanna have a look at this time
+              resides.
+
+  @{fg shine}dragsymbm@{fg text}   drag method for the symbol.
+
+  @{fg shine}playmode@{fg text}    @{b}next@{ub}   = play modules from start to end.
+              @{b}random@{ub} = play modules in random order.
+              @{b}loop@{ub}   = loop modules.
+
+  @{fg shine}cpudraw@{fg text}     use the cpu for drawing routines. on cgx this means direct cgx
+              and for aga this is not added yet.
+
+  @{fg shine}winmode@{fg text}     run in a window on the workbench. yuh must run da wb on a cgx
+              screen with a depth > 8 and a size > 640x480.
+
+  @{fg shine}crossfade@{fg text}   crossfades da paper doll when a part is exchanged. this requires
+              a truecolour screen.
+
+  @{fg shine}fademodule@{fg text}  fades out modules.
+   
+  @{fg shine}showintro@{fg text}   show the ep intro?
+
+  @{fg shine}showeffect@{fg text}  show the effect?
+
+  @{fg shine}save@{fg text}        save the current preferences to a prefs file.
+
+
+
+
+@{bg shine}     the main window@{bg back}
+
+
+  @{fg shine}module gadgets@{fg text}  lmb, change module.
+
+  @{fg shine}symbol gadgets@{fg text}  lmb, change the current symbol in the symbol box.
+
+  @{fg shine}symbol box@{fg text}      lmb, drag the symbol with the mouse. release button to drop
+                  da symbol.
+
+  @{fg shine}text box@{fg text}        lmb, show next text part (wrap if last).
+                  rmb, show previous text part (wrap if first)
+                  if a wrap occurs and it is the welcome txt thats showing, then
+                  da first module is started.
+                  a doubleclick in the textbox makes the writer plot the text faster.
+
+  @{fg shine}f1 - f10@{fg text}        change the module.
+
+  @{fg shine}+ / -@{fg text}           volume up / down.
+
+  @{fg shine}up arrow@{fg text}        same as pressing rmb on txt box or if symbol currently is
+                  beeing draged (not with the mouse), move the symbol up 8
+                  pixels.
+
+  @{fg shine}down arrow@{fg text}      same as pressing lmb on txt box or if symbol currently is
+                  beeing draged (not with the mouse), move the symbol down 8
+                  pixels.
+
+  @{fg shine}left arrow@{fg text}      same as pressing the left symbol gadget or if symbol
+                  currently is beeing draged (not with the mouse), move the
+                  symbol left 8 pixels.
+
+  @{fg shine}right arrow@{fg text}     same as pressing the right symbol gadget or if symbol
+                  currently is beeing draged (not with the mouse), move the
+                  symbol right 8 pixels.
+
+  @{fg shine}space@{fg text}           same as pressing the symbol box but draging is made with
+                  keyboard instead of mouse. or if symbol currently is beeing
+                  draged, dropp it.
+
+  @{fg shine}s@{fg text}               open a filerequester to save the module currently playing.
+
+  @{fg shine}q and esc@{fg text}       quit
+
+
+
+
+
+
+@endnode
+
+@node "questions" "questions?"
+@font upepfont.font 8
+
+@{bg shine} questions@{bg back}
+
+
+
+    @{fg shine}when i press the "screenmode" gadget a error message appears saying@{uu}
+    somethang bout no modes available...whats the deal with that?@{fg text}
+
+    ep simply couldn't find any screenmode(s) that was suitable to run on.
+    (ie a screenmode with a size greater or equal to 640x480x6.)
+
+    aga users: make sure that yuh have executed setpatch!
+
+    @{fg shine}why doesnt the screenmode requester show any cybergraphics modes when i
+    boot without startup-sequence?@{fg text}
+
+    because cybergraphics isn't running! copy envarc:cybergraphx to
+    env:cybergraphx. and run ya monitor file from devs:monitors/.
+
+    @{fg shine}when i run the prefs window in mui mode a message appears saying
+    "couldn't open muimaster.library v11+"...now what?@{fg text}
+
+    make sure u've got mui version 3.0 or better (newest atm is 3.8). if u
+    run withpout starup-sequence, make sure mui: is assigned to its proper
+    place and that yuh've assigned "assign libs: mui:libs add".
+
+    @{fg shine}i think the doll flickers when it crossfades if i've got direct cgx on.@{fg text}
+
+    well, this is because only 1/4 of the "crossfade cgx" is updated at a
+    time. when no direct cgx is used, this is made in a buffer and when the
+    4:th update is done the buffer is written to the screen. on direct cgx
+    the gfx is written pixel for pixel when it's processed.
+
+    @{fg shine}seems like i ain't got enuff memory, what can i do to save some...?@{fg text}
+
+    @{fg shine}C@{fg text} boot without startup-sequence.
+    @{fg shine}C@{fg text} disable all partitions not needed.
+    @{fg shine}C@{fg text} decrease the buffers for the partition(s) with addbuffers.
+    @{fg shine}C@{fg text} disable the effect and the intro.
+    @{fg shine}C@{fg text} run in the lowest screenmode possible.
+    @{fg shine}C@{fg text} cross ya fingaz.... and keep 'em that way untill it's all over!
+
+    @{fg shine}i can't get 'lowtech' ep going! it hangs while initializing the effect!@{fg text}
+
+    you are runnig the ep under aga, and the effect requires quite a bit of
+    chipmem! do the following to free as much memory as possible;
+
+    @{fg shine}C@{fg text} boot without startup-sequence.
+    @{fg shine}C@{fg text} disable all partitions not needed.
+    @{fg shine}C@{fg text} decrease the buffers for the partition(s) with addbuffers.
+    @{fg shine}C@{fg text} disable the effect and the intro.
+    @{fg shine}C@{fg text} run in the lowest screenmode possible.
+    @{fg shine}C@{fg text} cross ya fingaz.... and keep 'em that way untill it's all over!
+
+    @{fg shine}i found this weird bug, and it ain't mentioned here!@{fg text}
+
+    tell us about it! try to be as accurate as possible, and don't
+    forget to describe your amiga setup!
+    mail to @{i}spot@uprough.com
+
+@endnode
+
+@node "history" "the past and present"
+@font upepfont.font 8
+
+@{bg shine} history@{bg back}
+
+
+@{bg shine}@{u}                                                                                                                                                                                        @{bg back}@{uu} 
+                                           
+ @{fg shine}007 @{b}another day ep@{ub}@{fg text}
+
+ @{i}featuring bwad bwad skope!@{ui}
+
+ @{fg shine}C@{fg text} ep (exe)    v1.1                        
+ @{fg shine}C@{fg text} ep.guide    v1.7 small layout changes.                      
+ @{fg shine}C@{fg text} ep-install  v1.1                        
+ @{fg shine}C@{fg text} prefs       v1.0                        
+ @{fg shine}C@{fg text} prefsmui    v1.0                        
+ @{fg shine}C@{fg text} start       v1.0                        
+ @{fg shine}C@{fg text} intro       v1.1
+                                           
+ @{fg shine}C@{fg text} @{b}big@{ub} updates to the "ep" mainfile. "s"aving is enabled again. the save
+   function is a bit hungry for memory, so make sure that you have some free
+   when "s"aving the mods to your drive.                               
+                                           
+ @{fg shine}C@{fg text} a @{b}jukebox@{ub} mode is also added, no need to manually change tjoon anymore,
+   @{b}let the ep do the hard work for ya!@{ub}                    
+
+ @{fg shine}C@{fg text} previously released ep's doesn't support the new jukebox mode, don't worry 
+   though, we will soon release updates for them!
+                                           
+ @{fg shine}C@{fg text} these changes effects all ep's !!!        
+                                           
+@{bg shine}@{u}                                                                                                                                                                                        @{bg back}@{uu}
+
+ @{fg shine}006 @{b}technical knockout ep@{ub}@{fg text}
+
+ @{i}elusive vs qwan@{ui}
+                                           
+ @{fg shine}C@{fg text} ep (exe)    v1.0
+ @{fg shine}C@{fg text} ep.guide    v1.6
+ @{fg shine}C@{fg text} ep-install  v1.1
+ @{fg shine}C@{fg text} prefs       v1.0
+ @{fg shine}C@{fg text} prefsmui    v1.0
+ @{fg shine}C@{fg text} start       v1.0
+ @{fg shine}C@{fg text} intro       v1.1
+                                           
+@{bg shine}@{u}                                                                                                                                                                                        @{bg back}@{uu}
+
+ @{fg shine}005 @{b}lowtech ep@{ub}@{fg text}
+
+ @{i}aggressive detroit release from qwan!@{ui}
+                                           
+ @{fg shine}C@{fg text} ep (exe)    v1.0
+ @{fg shine}C@{fg text} ep.guide    v1.5
+ @{fg shine}C@{fg text} ep-install  v1.1
+ @{fg shine}C@{fg text} prefs       v1.0
+ @{fg shine}C@{fg text} prefsmui    v1.0
+ @{fg shine}C@{fg text} start       v1.0
+ @{fg shine}C@{fg text} intro       v1.1
+
+                                           
+@{bg shine}@{u}                                                                                                                                                                                        @{bg back}@{uu}
+                                                                                        
+ @{fg shine}004 @{b}mixagrip ep@{ub}@{fg text}
+
+ @{i}smooth house music by mortimer twang!@{ui}
+                                           
+ @{fg shine}C@{fg text} ep (exe)    v1.0
+ @{fg shine}C@{fg text} ep.guide    v1.4 minor layout update.
+ @{fg shine}C@{fg text} ep-install  v1.1 minor update.
+ @{fg shine}C@{fg text} prefs       v1.0
+ @{fg shine}C@{fg text} prefsmui    v1.0
+ @{fg shine}C@{fg text} start       v1.0
+ @{fg shine}C@{fg text} intro       v1.1
+                                           
+ @{b}big@{ub} updates to da mainfile. all known bugs should be gone now. thanx to         
+ k-p koljonen for letting us use his replayer sources from hippoplayer!!!      
+                                           
+@{bg shine}@{u}                                                                                                                                                                                        @{bg back}@{uu}
+                                           
+ @{fg shine}003 @{b}aggression session ep@{ub}@{fg text}
+                                           
+ @{i}fresh skope is on da top! (fo' sho') four tracks of nastee drum'n'bass.
+ includes a bonus release by mortimer twang!@{ui}
+                                           
+ @{fg shine}C@{fg text} ep (exe)    v1.0
+ @{fg shine}C@{fg text} ep.guide    v1.3
+ @{fg shine}C@{fg text} ep-install  v1.0
+ @{fg shine}C@{fg text} prefs       v1.0
+ @{fg shine}C@{fg text} prefsmui    v1.0
+ @{fg shine}C@{fg text} start       v1.0
+ @{fg shine}C@{fg text} intro       v1.1
+
+@{bg shine}@{u}                                                                                                                                                                                        @{bg back}@{uu}
+                                           
+ @{fg shine}002 @{b}elektrocity ep@{ub}@{fg text}
+
+ @{i}the second in da series of hi-quality musicdisks.  i.e no lame zip-archive.
+ three (3) bad elektro-grooves by qwan.@{ui}
+                                           
+ @{fg shine}C@{fg text} ep (exe)    v1.0
+ @{fg shine}C@{fg text} ep.guide    v1.2
+ @{fg shine}C@{fg text} ep-install  v1.0
+ @{fg shine}C@{fg text} prefs       v1.0
+ @{fg shine}C@{fg text} prefsmui    v1.0
+ @{fg shine}C@{fg text} start       v1.0
+ @{fg shine}C@{fg text} intro       v1.1 small bugfix
+                                           
+@{bg shine}@{u}                                                                                                                                                                                        @{bg back}@{uu}
+                                           
+ @{fg shine}001 @{b}tropic fish ep@{ub}@{fg text}
+
+ @{i}the first in our series of hi-quality musicdisks.  i.e no lame zip-archive. 
+ this one holds some bwaad detroit pieces by da guest supastar ronny!    
+ supports cgx/aga@{ui}
+                                           
+ @{fg shine}C@{fg text} ep (exe)    v1.0  first public release
+ @{fg shine}C@{fg text} ep.guide    v1.1  first public release
+ @{fg shine}C@{fg text} ep-install  v1.0  first public release
+ @{fg shine}C@{fg text} prefs       v1.0  first public release
+ @{fg shine}C@{fg text} prefsmui    v1.0  first public release
+ @{fg shine}C@{fg text} start       v1.0  first public release
+ @{fg shine}C@{fg text} intro       v1.0  first public release
+                                           
+@{bg shine}@{u}                                                                                                                                                                                        @{bg back}@{uu}
+
+@endnode
+
+@node "future" "future..."
+@font upepfont.font 8
+
+@{bg shine} future@{bg back}
+
+ @{b}ppc@{ub} & @{b}warp3d@{ub} support in the main task.
+
+ possible to @{b}iconify@{ub} the panel to an appicon.
+
+ @{b}faster@{ub} symbol draging
+
+ @{b}much improved gui@{ub} i.e. easier for you lamaz to understand! 
+
+ @{b}any ideas?@{ub} fucking @{i}do@{ui} contact us! we have had like
+   two written comments about this shit, ya want us to stop
+   this shit right now? ...not that we would though!
+
+   send ya comments to @{b}spot@uprough.com@{ub}
+
+@endnode
+
+@node "contact" "wanna reach for the stars huh?"
+@font upepfont.font 8
+
+@{bg shine} contact@{bg back}
+
+ @{i}for ep/up rough related shit.@{ui}
+
+ @{fg shine}spot@{fg text}            spot@uprough.com  
+
+ @{i}for music related stuff.@{ui}
+
+ @{fg shine}elusive@{fg text}         p@fett.net
+ @{fg shine}mortimer twang@{fg text}  mt@uprough.com
+ @{fg shine}skope@{fg text}           skope@uprough.com
+ @{fg shine}teis@{fg text}            teis@moplayaz.com
+ @{fg shine}qwan@{fg text}            qwan@bboy.com
+
+ @{i}psst!... missing an ep? better not tell anyone! hurry! leech it from;@{ui}
+
+ @{fg shine}www.uprough.com@{fg text} or @{fg shine}the yard!@{fg text} 
+
+@endnode

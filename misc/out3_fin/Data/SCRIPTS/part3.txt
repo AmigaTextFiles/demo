@@ -1,0 +1,166 @@
+
+<KCAM> cam_1 |0|0|0|0|0|0|1  </KCAM> camera (x,y,z,o1,o2,o3,FOV)
+
+<KTABLE> move1 | 0,-0.1 | 100,0 | 150,0 | 250, -0.1 </KTABLE>
+<KTABLE> move2 | 0,1.1 | 100,0.91 | 150,0.91 | 250, 1 </KTABLE>
+<KTABLE> move3 | 0,0.5 | 50,0.2 | 200,0.2 | 250,0.5 </KTABLE>
+<KTABLE> move4 | 0,0.5 | 50,0.8 | 200,0.8 | 250,0.5 </KTABLE>
+
+<KTABLE> paltab2 | 0,1 | 230,1 | 250,0 </KTABLE>
+
+<KRECT> rect_2 | 0.7 | 0.645 | 0.95 | 0.805 |  | 0.7 | 0.645 | 0.95 | 0.805 | </KRECT>
+<KRECT> rect_3 | 0.7 | 0.62 | 0.95 | 0.83 |  | 0.7 | 0.62 | 0.95 | 0.83 | </KRECT>
+<KRECT> rect_4 | 0.695 | 0.615 | 0.953 | 0.835 |  | 0.695 | 0.615 | 0.953 | 0.835 | </KRECT>
+
+
+<KPART>
+  <ID> Part3 </ID>
+
+  <Fx>
+      <Pa>setpalette</Pa>
+      <Pa>texture1</Pa>
+  </Fx>
+
+  <Fx>
+      <Pa>BindPalette</Pa>
+      <Pa> aft | paltab2 | 0 | 0 </Pa>
+      <Pa>CTE|0</Pa>              type of fade:0,1,2,3
+      <Pa>CTE|255</Pa>            optional color 0->255 (0)
+      <Pa>texture1</Pa>     palette where to fade ( "B" )
+      <Pa>texture1</Pa>            optional source Palette(2)
+      <Pa>CTE|0</Pa>              type of fade:0,1,2,3
+      <Pa>CTE|255</Pa>            optional color 0->255 (0)
+      <Pa>texture1</Pa>       Palette where to fade ( "B" )
+      <Pa>texture1</Pa>       optional source Palette(2)
+      <Pa>CTE|0</Pa>              type of fade:0,1,2,3
+      <Pa>CTE|255</Pa>            optional color 0->255 (0)
+      <Pa>texture1</Pa>       Palette where to fade ( "B" )
+      <Pa>texture1</Pa>       optional source Palette(2)
+  </Fx>
+
+
+  <Fx>
+      <Pa> setcamcoord  </Pa>
+      <PA> cam_1 </Pa>
+      <PA> 2cte|0|0</Pa>
+      <PA> aff|0|4 </Pa>
+
+      <PA> aff|0|0.001 </Pa>
+      <PA> aff|0|0.003 </Pa>
+      <PA> aff|0|0.002 </Pa>
+      <PA> cte|0.3 </Pa>
+   </Fx>
+
+   <Fx>
+      <Pa> Tunnel </Pa>
+      <Pa> mainscreen </Pa>
+      <Pa> texture1  </Pa>
+      <Pa> cam_1</Pa>     camera
+
+      <Pa>CTE|5</Pa>          distance to edges.
+      <Pa>CTE|0.1</Pa>          zoom texture V
+
+      <Pa>CTE|0</Pa>          -not defined yet. set 0-
+      <Pa>CTE|0</Pa>          -not defined yet. set 0-
+      <Pa>CTE|0</Pa>          mapping type 0=normal.
+   </Fx>
+
+   <Fx><Pa> motionblur </Pa>
+         <Pa> mainscreen </Pa>
+         <Pa> table2 </Pa>
+   </Fx>
+
+   <Fx><Pa> sprite </Pa>
+      <Pa> mainscreen </pa>
+      <Pa> logo1 </Pa>
+      <Pa> rnd | 0.12 | 0.13 </Pa>
+      <Pa> aft | move3 | 0 | 0 </Pa>
+      <Pa> rnd | 0.92 | 0.93 </Pa>
+      <Pa> aft | move4 | 0 | 0 </Pa>
+   </Fx>
+
+
+//screen in screen
+
+    <Fx><Pa>fillrc</Pa>
+        <Pa> rect_4</Pa>
+        <Pa> cte | 150 </Pa>
+    </Fx>
+
+
+    <Fx><Pa>fillrc</Pa>
+        <Pa> rect_3 </Pa>
+        <Pa> cte | 0 </Pa>
+    </Fx>
+
+   <Fx>
+      <Pa> Tunnel </Pa>
+      <Pa> rect_2 </Pa>
+      <Pa> texture1  </Pa>
+      <Pa> cam_1</Pa>     camera
+
+      <Pa>CTE|5</Pa>          distance to edges.
+      <Pa>CTE|0.1</Pa>          zoom texture V
+
+      <Pa>CTE|0</Pa>          -not defined yet. set 0-
+      <Pa>CTE|0</Pa>          -not defined yet. set 0-
+      <Pa>CTE|0</Pa>          mapping type 0=normal.
+   </Fx>
+
+   <Fx><Pa> sprite </Pa>
+      <Pa> rect_2 </pa>
+      <Pa> logo1 </Pa>
+      <Pa> cte | 0.125 </Pa>
+      <Pa> aft | move3 | 0 | 0 </Pa>
+      <Pa> cte | 0.925 </Pa>
+      <Pa> aft | move4 | 0 | 0 </Pa>
+   </Fx>
+
+   <Fx><Pa> sprite </Pa>
+      <Pa> rect_2 </pa>
+      <Pa> pic1 </Pa>
+      <Pa> aft | move1 | 0 | 0 </Pa>
+      <Pa> cte | 0.2</Pa>
+      <Pa> aft | move1 | 0 | 0.1</Pa>
+      <Pa> cte | 0.8</Pa>
+   </Fx>
+
+   <Fx><Pa> sprite </Pa>
+      <Pa> rect_2 </pa>
+      <Pa> pic1 </Pa>
+      <Pa> aft | move2 | 0 | 0.1 </Pa>
+      <Pa> cte | 0.2</Pa>
+      <Pa> aft | move2 | 0 | 0</Pa>
+      <Pa> cte | 0.8</Pa>
+   </Fx>
+
+
+
+// left and right sprites
+
+   <Fx><Pa> sprite </Pa>
+      <Pa> mainscreen </pa>
+      <Pa> pic1 </Pa>
+      <Pa> aft | move1 | 0 | 0 </Pa>
+      <Pa> cte | 0.2</Pa>
+      <Pa> aft | move1 | 0 | 0.1</Pa>
+      <Pa> cte | 0.8</Pa>
+   </Fx>
+
+   <Fx><Pa> sprite </Pa>
+      <Pa> mainscreen </pa>
+      <Pa> pic1 </Pa>
+      <Pa> aft | move2 | 0 | 0.1 </Pa>
+      <Pa> cte | 0.2</Pa>
+      <Pa> aft | move2 | 0 | 0</Pa>
+      <Pa> cte | 0.8</Pa>
+   </Fx>
+
+
+
+
+
+
+</KPART>
+
+

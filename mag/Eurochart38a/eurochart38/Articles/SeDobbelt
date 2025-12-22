@@ -1,0 +1,291 @@
+»CL8:»SML:--------------------------------------
+             »CL9:»BIG:Scandoublers
+»CL8:»SML:--------------------------------------
+
+          »CL4:  by Troda/Pegas
+
+»CL0:When I changed my old »CL1:C=1084S» to a
+scandoubler for »CL1:CV3D» card (Phase5) &
+VGAmonitor, I found that many,
+especially new demos&games were not
+working with it. They look really
+terrible, depending on the type of
+bug, there are green lines, various
+types of distortion, flickering and so
+on. When there are just some lines,
+mainly where nothing useful is going
+on, the demo is still watchable such
+as in »CL1:Thug Life» (though ugly), but
+when the whole screen is flickering
+terribly, it is quite hard to find
+out, what is actually going on (for
+example the last routine from »CL1:My
+Kingdom», part two). And in the
+third phase of this bug, the display
+is totally stretched (something
+similar to bad modulo), trashed and
+flickering horribly, and my quality
+EIZO monitor is even producing a loud
+squeaky noise.
+
+The »CL1:OnScreenDisplay» menu is also
+trashed, when I pop it up to see what
+horizontal and vertical frequencies
+the screen is using - why the monitor
+is producing noise (which is kind of
+weird, because on Eizo monitors, it
+works in such a way that when a signal
+is out of valid range, the excessing
+frequencies are shown with big red
+digits). I have lived with this
+problem for about three years and I
+notice that there are problems mainly
+with recent demos and games - almost
+all the old ones work fine. I keep
+wondering why and ask everyone,
+but i'm unsuccesful, no-one are able
+to tell me, why many scandoublers are
+having this kind of sync problems.
+These problems doesn't just exist with
+»CL1:Phase5 CV3D» scandoublers (which,
+BTW, is able to work even without »CL1:CV3D»
+- it only needs a videoslot), but also
+the »CL1:Micronik» internal scandoubler for
+a1200 have exactly the same sync
+problems and I bet that after testing,
+the number of these scandoublers
+having problems grow rapidly. There
+are also scandoublers, that never
+cause any that "out of sync", such as
+»CL1:Amiga300»0 internal scandoubler+FliFi,
+the external scandoubler for Amiga4000
+- mostly used with »CL1:CV64», and PIV»CL1:»
+internal scandoubler with »CL1:FliFi». The
+fact is that the PIV FliFi is working
+this well is not a miracle, this thing
+works basicaly (very simplified!) as a
+grabbing device which grabs every
+frame and then allows its chip (Cirrus
+one) to display it as a normal RTG
+display, which means that we can set as
+high a refresh rate, as the chip
+allows - suppose 160Mhz pal is enough
+for everyone for sure, yes? =) (you
+know, this is impossible on chips like
+the »CL1:S3» ones or »CL1:Permedia2», simply
+because Permedia2 isn't fast enough to
+process as much data as Cirrus and as
+necessary to process palhi-res
+overscan in time ((that is ~57MB/sec,
+so...))
+Because I was unsuccesful finding
+someone, who could tell me why
+somethings are out of sync on some
+scandoublers, I asked my friend Zeleny
+for help, since he is a coder and some
+of his testing sources were also
+causing out of sync problems. We
+started with the intro Encore/Floppy,
+in which the last (credits + 2D
+bumpmap with year of relase) routine
+is trashed by one green line, making
+funny skew of written words. After
+quickly disassembling and hacking the
+source, Zeleny showed me, what was
+causing the problem: »CL9:A »CL2:c»CL3:o»CL4:l»CL5:o»CL6:r »CL0:bit!
+
+»CL0:AFAIK, »CL1:CBM» defined that to must be
+enabled for correct output, and,
+IIRC, on »CL1:Amiga1000» (old times (tm) =)
+without this bit, the display is
+trashed...(don't shoot me, if I
+misremember). That can explain, why
+old demos andgames don't having these
+"out of sync" probems. But with the
+"new" AA chipscoders seem to be
+ignoring the old docs and think that
+when the code is working on their pal
+monitor, then it must be working on
+everything...But it seems some
+scandoublers rely on this bit, so then
+please always, no matter if this is an
+empty screen, or empty screen space,
+»CLA:»ALWAYS» set this bit.
+              »PIC:128x51»
+
+
+
+
+
+
+Now something about how to fix/hack an
+already compiled product. Since coders
+mainly, with few exceptions for who I
+must salute, don't like to even hear,
+that their demo should be recompiled
+and fixed (what a pity, these killing
+own work them!), it is necessary to
+find a way to fix/hack the old
+productions as well. Since »CL1:Zeleny» is a
+bit into resourcing (he created two
+demos from resourced code, »CL1:Sanorin» and
+»CL1:Tesla»), he showed me the way and fixed
+some demos for me, and I am now able
+to fix others as well. Surely this is
+unauthorized modification of someone
+else's code - hacking if you like, but
+if this produces the correct signal
+and make things look right on screen, I
+DON'T care.
+
+In the copperlist the color bit must
+be present in Bplcon as bit 9
+enabled. In hexa this can be spotted
+ as "010002" while "02" is a "00" when
+the display mode is bugged in the
+original. Then start FileX and disable
+string search and go for it.
+
+But make sure that the file, that you
+are going to edit is DEPACKED. We soon
+realize, that there are too many byte
+sequences like "010000", so how can
+you locate the copperlist in, say, a
+5.5MB file? (depacked
+»CL1:Goa/TBLexecutable»)? The copperlist
+must end with "fffffffe", so - search
+for that. Also a black background is
+"01800000" - that should also help.
+The copperlist looks like a table
+(sometimes a bit longer) of values
+like "01A80000" or "01860310" and
+similar, always starting at an even
+position. This start "010000" are
+should be also "010080" or similar...
+Experiment - so back up the file!
+
+When demo/game can't start, you have
+modified source =))) 
+
+When crash, you have modified a
+datasegment, which causes an unxpected
+problem. 
+
+When the colours are different, you
+have changed the copper, but not its
+Bplcon start =) 
+
+When resolution or modulo are bad, you
+have changed Bplcon, but in the wrong
+byte ;) etc...
+
+Some things can't be fixed, because I
+can't find the necessary copperlist.
+These bytes could be in weird places
+as well, as in »CL1:Smart!»/»CL1:Elven11»(Hi,
+»CL1:Manta»!) which has its copperlists in a
+datafile...! But I found it =^))))
+Things, I can't fix are two flicks
+during loading in »CL1:Relic»/»CL1:NerveAxis»
+(Hi unfriendly »CL1:Schlott»!), flick before
+endscroll in »CL1:G-Force», some screens in
+the intro for the »CL1:SlamTilt» game and
+surely a few others, which I can't
+remember at the moment.
+
+(oh, yes, I fixed all »CL1:ThugLife»/»CL1:Jamie»,
+except one upper line in the
+endscroll, so) These copperlists are
+probably very well hidden (and small),
+or created "on the fly" and colour
+definitions stored in other ways,
+sometimes when are RTG output as well
+supported - »CL1:Dreizehn»/»CL1:Oxyron» is a good
+example, but I must salute »CL1:Oxyron»
+coders, that they have fixed this
+bug...! (thanks, »CL1:Graham» and »CL1:Dante»!)
+
+What demos/games have this problem? As
+I'm not much into games, I only
+remember »CL1:SlamTilt», which I have been
+unable to play for years (!) and
+hi-scores info from »CL1:Pinball Illusions»,
+some empty screen copperlists from
+»CL1:Brian The Lion» game and no more.
+Probably because I delete things ASAP,
+when they are not working, so. Same
+applies to demos, with few exceptions
+=)
+
+
+At least, from demos, what I own I get
+problems with these: »CL1:Atome», »CL1:Makaveli»,
+»CL1:ThugLife» and »CL1:Ride»/»CL1:Jamie Skarla»,
+»CL1:Relic»/»CL1:NerveAxis», »CL1:EraserHead»/»CL1:Maq» (Hi,
+unfriendly coder!), »CL1:Dreizehn»/»CL1:Oxyron»,
+»CL1:Goa»/»CL1:TBL», »CL1:Manipulations»/»CL1:Venus Art»,
+»CL1:Mnemonic» and»CL1: Abiotic»/»CL1:Ephidrena» (Hi
+»CL1:Loaderror», extremly clean code, nice
+to hack!), »CL1:G-force»/»CL1:PygmyProjects»,
+»CL1:Arte», »CL1:Roots» and »CL1:Roots final»/»CL1:Sanity»,
+»CL1:My Kingdom», »CL1:Superautodrome» and
+»CL1:Torque»/»CL1:Scoopex», »CL1:Dose»/»CL1:MellowChips»,
+»CL1:Cliches»/»CL1:ArtificalPeople» (»CL1:Kalsu»),
+»CL1:Encore»/»CL1:Floppy», »CL1:Impact»/»CL1:Puzzle» (IIRC),
+»CL1:BlackHairTongueDisease»/?,
+»CL1:Smart!»/»CL1:Elven11» + many others, which I
+deleted at first sight, so...Enough
+to care? If you are still not
+persuaded, watch »CL1:Ride»/»CL1:Jamie» on
+scandoubler!!!
+As we logicaly can expect, in the near
+future will everyone have a
+scandoubler, so please take care at
+this annoying bug. At least, it's for
+free and the demo length is the same,
+so the »CL1:"this are only 4k intro, we
+need every byte..."» doesn't count...
+
+
+»CL9:Lexicon:
+»CL7:CV3D »CL8:- »CL7:CyberVision64/3D; a graphic
+       card by Phase5,using ViRGE
+       chip, optionally scandoubler,
+       monitor switcher intergated
+»CL7:CV64 »CL8:- »CL7:CyberVision64; an graphic card
+       by Phase5, using Trio64 chip,
+       internal monitor switcher for
+       adding external scandoubler
+»CL7:PIV »CL8:- »CL7:PicassoIV; an graphic card by
+      VillageTronic, intergrated best
+      scandoubler with programble (!)
+      FlickerFixer, up to 160Mhz
+      refresh =)
+»CL7:Scandoubler »CL8:-»CL7: device which doubles
+              horizontal sync signal
+              from 15kHz to 31kHz so
+              that we can see pal
+              (15kHz) on a VGA
+              compatible monitor
+»CL7:FliFi »CL8:-»CL7: Flicker fixer, device what
+        eliminates flickering of
+        interlaced display, making pal
+        hi-res interlaced usable
+»CL7:RTG »CL8:-»CL7: ReTargableGraphic; graphic, what
+      are "ReTargeted" to GFX card,
+      such as PIV, there are word CGX
+      not fully right, since there are
+      more patches for using graphic
+      cards, at least p96 one...
+»CL7:CGX »CL8:- »CL7:CyberGraphX; an one of two main
+      RTG standards
+»CL7:p96 »CL8:- »CL7:Picasso96; another RTG standard,
+      IMO better and also compatible
+      with CGX "standard" as well, but
+      is faster and better
+
+»CL0:For any questions or hints (or
+demonstrating source for this bug =)
+or scandoubler testing don't hesitate
+to contact me: »CL4:Troda» of »CL4:PAGAS», Pavel
+Narozny, »CL4:troda@cbnet.cz 

@@ -1,0 +1,678 @@
+
+
+Welcome to [Snoopy 2.0 (January 1,1994)] - written by G.Kurz in 1994
+
+
+;-----------------Startup-Sequence--------------;
+
+;----run <>NIL: blizkick ..bla..bla..
+
+Lock( "c:blizkick", $FFFFFFFE ) = YES
+UnLock( $1D879B00 )
+CurrentDir( $1D879918 ) = YES
+Close( $1D877529 ) = YES
+Close( $1D877537 ) = YES
+CurrentDir( $1D81B8D8 ) = YES
+UnLock( $1D879B12 )
+Close( $1D879AB7 ) = YES
+Close( $1D8789BB ) = YES
+;----SetPatch QUIET
+
+Lock( "SetPatch", $FFFFFFFE ) = NO
+CurrentDir( $1D81B8D8 ) = YES
+CurrentDir( $1D81B87E ) = YES
+UnLock( $1D879918 )
+Lock( "SetPatch", $FFFFFFFE ) = YES
+UnLock( $1D877528 )
+LoadSeg( SetPatch ) = YES ($1D87B759)
+Lock( "SetPatch", $FFFFFFFE ) = YES
+UnLock( $1D877528 )
+CurrentDir( $1D81B8D8 ) = YES
+Lock( "LIBS:icon.library", $FFFFFFFE ) = YES
+UnLock( $1D877522 )
+Open( "LIBS:icon.library", $3ED ) = YES
+Close( $1D877523 ) = YES
+Lock( "LIBS:workbench.library", $FFFFFFFE ) = YES
+UnLock( $1D877522 )
+Open( "DEVS:AmigaOS ROM Update", $3ED ) = NO
+Lock( "DEVS:NSDPatch.cfg", $FFFFFFFE ) = YES
+UnLock( $1D87969C )
+Open( "DEVS:NSDPatch.cfg", $3ED ) = YES
+Close( $1D8796E9 ) = YES
+UnLock( $1D87753A )
+
+;----C:Version >NIL:
+
+CurrentDir( $1D81B8D8 ) = YES
+Lock( "C:Version", $FFFFFFFE ) = YES
+UnLock( $1D877536 )
+LoadSeg( C:Version ) = YES ($1D87B759)
+Lock( "C:Version", $FFFFFFFE ) = YES
+UnLock( $1D877536 )
+CurrentDir( $1D81B8D8 ) = YES
+Open( "NIL:", $3EE ) = YES
+LoadSeg( LIBS:version.library ) = YES ($1D87939D)
+Close( $1D877537 ) = YES
+UnLock( $1D87755A )
+
+;----C:AddBuffers >NIL: DF0: 15
+
+CurrentDir( $1D81B8D8 ) = YES
+Lock( "C:AddBuffers", $FFFFFFFE ) = YES
+UnLock( $1D87755A )
+LoadSeg( C:AddBuffers ) = YES ($1D879343)
+Lock( "C:AddBuffers", $FFFFFFFE ) = YES
+UnLock( $1D87755A )
+CurrentDir( $1D81B8D8 ) = YES
+Open( "NIL:", $3EE ) = YES
+Close( $1D877537 ) = YES
+UnLock( $1D877576 )
+UnLock( $0 )
+
+;----C:MakeDir RAM:T RAM:Clipboards RAM:ENV RAM:ENV/Sys
+
+CurrentDir( $1D81B8D8 ) = YES
+Lock( "C:MakeDir", $FFFFFFFE ) = YES
+UnLock( $1D87755A )
+LoadSeg( C:MakeDir ) = YES ($1D87B859)
+Lock( "C:MakeDir", $FFFFFFFE ) = YES
+UnLock( $1D87755A )
+CurrentDir( $1D81B8D8 ) = YES
+Lock( "ENV:", $FFFFFFFE ) = NO
+UnLock( $1D87755B )
+UnLock( $1D87755B )
+UnLock( $1D87755B )
+UnLock( $1D87755B )
+UnLock( $1D877576 )
+
+;----C:Copy >NIL: ENVARC: RAM:ENV ALL NOREQ
+
+(here come tons of env, so I stripped it, because the list was too large for my taste :-).
+
+CurrentDir( $1D81B8D8 ) = YES
+Lock( "C:Copy", $FFFFFFFE ) = YES
+UnLock( $1D87755A )
+LoadSeg( C:Copy ) = YES ($1D87C8F7)
+Lock( "C:Copy", $FFFFFFFE ) = YES
+UnLock( $1D87755A )
+CurrentDir( $1D81B8D8 ) = YES
+Open( "NIL:", $3EE ) = YES
+Lock( "ENVARC:", $FFFFFFFE ) = YES
+CurrentDir( $1D879398 ) = YES
+CurrentDir( $1D81B8D8 ) = YES
+CurrentDir( $1D879398 ) = YES
+CurrentDir( $1D81B8D8 ) = YES
+Lock( "RAM:ENV", $FFFFFFFE ) = YES
+CurrentDir( $1D879398 ) = YES
+CurrentDir( $1D81B8D8 ) = YES
+CurrentDir( $1D87A394 ) = YES
+Open( "cdda_plan", $3ED ) = YES
+CurrentDir( $1D81B8D8 ) = YES
+CurrentDir( $1D87962F ) = YES
+Open( "cdda_plan", $3EE ) = YES
+CurrentDir( $1D81B8D8 ) = YES
+Close( $1D87C25D ) = YES
+Close( $1D87A3A7 ) = YES
+CurrentDir( $1D87962F ) = YES
+CurrentDir( $1D81B8D8 ) = YES
+CurrentDir( $1D879398 ) = YES
+CurrentDir( $1D81B8D8 ) = YES
+CurrentDir( $1D87A394 ) = YES
+Open( "cdid_path", $3ED ) = YES
+CurrentDir( $1D81B8D8 ) = YES
+CurrentDir( $1D87962F ) = YES
+Open( "cdid_path", $3EE ) = YES
+CurrentDir( $1D81B8D8 ) = YES
+Close( $1D87C267 ) = YES
+Close( $1D87A3A7 ) = YES
+
+ ....strip tons of envs......
+
+UnLock( $1D879398 )
+UnLock( $1D87A395 )
+UnLock( $1D879BE9 )
+Close( $1D87755B ) = YES
+UnLock( $1D877576 )
+
+;----Resident >NIL: C:Assign PURE
+
+Open( "NIL:", $3EE ) = YES
+Lock( "C:Assign", $FFFFFFFE ) = YES
+UnLock( $1D879398 )
+LoadSeg( C:Assign ) = YES ($1D87F21B)
+Close( $1D87755B ) = YES
+UnLock( $0 )
+
+;----Resident >NIL: C:Execute PURE
+
+Open( "NIL:", $3EE ) = YES
+Lock( "C:Execute", $FFFFFFFE ) = YES
+UnLock( $1D879398 )
+LoadSeg( C:Execute ) = YES ($1D87C8F7)
+Close( $1D87755B ) = YES
+UnLock( $0 )
+
+;----Assign >NIL: ENV: RAM:ENV
+
+Open( "NIL:", $3EE ) = YES
+Lock( "RAM:ENV", $FFFFFFFE ) = YES
+Close( $1D87755B ) = YES
+UnLock( $0 )
+
+;----Assign >NIL: T: RAM:T
+
+Open( "NIL:", $3EE ) = YES
+Lock( "RAM:T", $FFFFFFFE ) = YES
+Close( $1D87755B ) = YES
+UnLock( $0 )
+
+;---Assign >NIL: CLIPS: RAM:Clipboards
+
+Open( "NIL:", $3EE ) = YES
+Lock( "RAM:Clipboards", $FFFFFFFE ) = YES
+Close( $1D87755B ) = YES
+UnLock( $0 )
+
+;----Assign >NIL: REXX: S:
+
+Open( "NIL:", $3EE ) = YES
+Lock( "S:", $FFFFFFFE ) = YES
+Close( $1D87755B ) = YES
+UnLock( $0 )
+
+;----Assign >NIL: PRINTERS: DEVS:Printers
+
+Open( "NIL:", $3EE ) = YES
+Lock( "DEVS:Printers", $FFFFFFFE ) = YES
+Close( $1D87755B ) = YES
+UnLock( $0 )
+
+;----Assign >NIL: KEYMAPS: DEVS:Keymaps
+
+Open( "NIL:", $3EE ) = YES
+Lock( "DEVS:Keymaps", $FFFFFFFE ) = YES
+Close( $1D87755B ) = YES
+UnLock( $0 )
+
+;----Assign >NIL: LOCALE: SYS:Locale
+
+Open( "NIL:", $3EE ) = YES
+Lock( "SYS:Locale", $FFFFFFFE ) = YES
+Close( $1D87755B ) = YES
+UnLock( $0 )
+
+;----Assign >NIL: LIBS: SYS:Classes ADD
+
+Open( "NIL:", $3EE ) = YES
+Lock( "SYS:Classes", $FFFFFFFE ) = YES
+Close( $1D87755B ) = YES
+UnLock( $0 )
+
+;----Assign >NIL: HELP: LOCALE:Help DEFER
+
+Open( "NIL:", $3EE ) = YES
+Close( $1D87755B ) = YES
+UnLock( $0 )
+
+;----C:SmartCrash <>NIL: USEREQTOOLS xen_win.font 11
+
+CurrentDir( $1D81B8D8 ) = YES
+Lock( "C:SmartCrash", $FFFFFFFE ) = YES
+UnLock( $1D879110 )
+LoadSeg( C:SmartCrash ) = YES ($1D87F539)
+Lock( "C:SmartCrash", $FFFFFFFE ) = YES
+UnLock( $1D879110 )
+CurrentDir( $1D81B8D8 ) = YES
+Open( "NIL:", $3ED ) = YES
+Open( "*", $3EE ) = YES
+LoadSeg( LIBS:reqtools.library ) = YES ($1D87FE8D)
+LoadSeg( LIBS:locale.library ) = YES ($1D8B340F)
+LoadSeg( LIBS:diskfont.library ) = YES ($1D8B461F)
+Open( "FONTS:xen_win.font", $3ED ) = YES
+Close( $1D87C1C7 ) = YES
+LoadSeg( FONTS:xen_WIN/11 ) = YES ($1D8B58A7)
+Close( $1D87755B ) = YES
+Close( $1D879111 ) = YES
+UnLock( $1D879122 )
+
+;----C:SegTracker <>NIL:
+
+CurrentDir( $1D81B8D8 ) = YES
+Lock( "C:SegTracker", $FFFFFFFE ) = YES
+UnLock( $1D879110 )
+LoadSeg( C:SegTracker ) = YES ($1D87B891)
+Lock( "C:SegTracker", $FFFFFFFE ) = YES
+UnLock( $1D879110 )
+CurrentDir( $1D81B8D8 ) = YES
+Open( "NIL:", $3ED ) = YES
+Open( "*", $3EE ) = YES
+Close( $1D87755B ) = YES
+Close( $1D879111 ) = YES
+UnLock( $1D879122 )
+Open( "vì,v", $3ED ) = YES
+Open( "*", $3EE ) = YES
+CurrentDir( $1D87F656 ) = YES
+
+;----cd libs:warp-os
+
+Lock( "C:", $FFFFFFFE ) = YES
+Lock( "libs:warp-os", $FFFFFFFE ) = YES
+UnLock( $1D87F878 )
+CurrentDir( $1D87F656 ) = YES
+Close( $1D87F7F5 ) = YES
+UnLock( $1D81B8D8 )
+Close( $1D87B791 ) = YES
+UnLock( $1D87F656 )
+UnLock( $0 )
+
+;----loadlib powerpc.library
+
+CurrentDir( $1D879110 ) = YES
+Lock( "loadlib", $FFFFFFFE ) = NO
+CurrentDir( $1D879110 ) = YES
+CurrentDir( $1D81B87E ) = YES
+Lock( "loadlib", $FFFFFFFE ) = YES
+UnLock( $1D879122 )
+LoadSeg( loadlib ) = YES ($1D87F639)
+Lock( "loadlib", $FFFFFFFE ) = YES
+UnLock( $1D879122 )
+CurrentDir( $1D879110 ) = YES
+LoadSeg( powerpc.library ) = YES ($1D8B6937)
+LoadSeg( LIBS:warp.library ) = NO ($0)
+LoadSeg( warp.library ) = YES ($1D87F583)
+LoadSeg( LIBS:warpHW.library ) = NO ($0)
+LoadSeg( warpHW.library ) = YES ($1D87FCA7)
+UnLock( $1D87B758 )
+
+;----BindDrivers
+
+CurrentDir( $1D879110 ) = YES
+Lock( "BindDrivers", $FFFFFFFE ) = NO
+CurrentDir( $1D879110 ) = YES
+CurrentDir( $1D81B87E ) = YES
+Lock( "BindDrivers", $FFFFFFFE ) = YES
+UnLock( $1D87F570 )
+LoadSeg( BindDrivers ) = YES ($1D8B6535)
+Lock( "BindDrivers", $FFFFFFFE ) = YES
+UnLock( $1D87F570 )
+CurrentDir( $1D879110 ) = YES
+Lock( "SYS:Expansion", $FFFFFFFE ) = YES
+CurrentDir( $1D87B778 ) = YES
+Open( "Disk.info", $3ED ) = YES
+Close( $1D87B78B ) = YES
+CurrentDir( $1D879110 ) = YES
+UnLock( $1D87B778 )
+UnLock( $1D87B766 )
+
+;----C:Mount >NIL: DEVS:DOSDrivers/~(#?.info)
+
+CurrentDir( $1D879110 ) = YES
+Lock( "C:Mount", $FFFFFFFE ) = YES
+UnLock( $1D87F570 )
+LoadSeg( C:Mount ) = YES ($1D968C01)
+Lock( "C:Mount", $FFFFFFFE ) = YES
+UnLock( $1D87F570 )
+CurrentDir( $1D879110 ) = YES
+Open( "NIL:", $3EE ) = YES
+CurrentDir( $1D87F638 ) = YES
+Open( "PIPE", $3ED ) = YES
+Close( $1D87B791 ) = YES
+Open( "PIPE.info", $3ED ) = YES
+Close( $1D87C3C5 ) = YES
+CurrentDir( $1D879110 ) = YES
+CurrentDir( $1D87F638 ) = YES
+Open( "AUDIO", $3ED ) = YES
+Close( $1D87C3C5 ) = YES
+Open( "AUDIO.info", $3ED ) = YES
+Close( $1D87C3C5 ) = YES
+CurrentDir( $1D879110 ) = YES
+CurrentDir( $1D87F638 ) = YES
+Open( "VNR", $3ED ) = YES
+Close( $1D87F6C7 ) = YES
+Open( "VNR.info", $3ED ) = YES
+Close( $1D87F6C7 ) = YES
+CurrentDir( $1D879110 ) = YES
+CurrentDir( $1D87F638 ) = YES
+Open( "VNC", $3ED ) = YES
+Close( $1D87FD7B ) = YES
+Open( "VNC.info", $3ED ) = YES
+Close( $1D87FAAF ) = YES
+CurrentDir( $1D879110 ) = YES
+Close( $1D87B759 ) = YES
+UnLock( $1D87F5E8 )
+
+;----C:LoadMonDrvs
+
+CurrentDir( $1D879110 ) = YES
+Lock( "C:LoadMonDrvs", $FFFFFFFE ) = YES
+UnLock( $1D87F570 )
+LoadSeg( C:LoadMonDrvs ) = YES ($1D8B32E3)
+Lock( "C:LoadMonDrvs", $FFFFFFFE ) = YES
+UnLock( $1D87F5E8 )
+CurrentDir( $1D879110 ) = YES
+Lock( "DEVS:Monitors", $FFFFFFFE ) = YES
+CurrentDir( $1D87F5E8 ) = YES
+Open( "NIL:", $3EE ) = YES
+CurrentDir( $1D87FAA0 ) = YES
+Lock( "VGAOnly", $FFFFFFFE ) = NO
+CurrentDir( $1D87FAA0 ) = YES
+CurrentDir( $1D81B87E ) = YES
+Lock( "VGAOnly", $FFFFFFFE ) = NO
+CurrentDir( $1D87FAA0 ) = YES
+CurrentDir( $1D87FAA0 ) = YES
+Lock( "VGAOnly", $FFFFFFFE ) = NO
+CurrentDir( $1D87FAA0 ) = YES
+CurrentDir( $1D81B87E ) = YES
+Lock( "Voodoo", $FFFFFFFE ) = NO
+CurrentDir( $1D87FAA0 ) = YES
+Close( $1D87F9D1 ) = YES
+Close( $1D87FD33 ) = YES
+UnLock( $1D87FAA0 )
+CurrentDir( $1D87FAA0 ) = YES
+Lock( "Voodoo", $FFFFFFFE ) = YES
+UnLock( $1D87FD78 )
+LoadSeg( Voodoo ) = YES ($1D8E8401)
+Lock( "Voodoo", $FFFFFFFE ) = YES
+UnLock( $1D87FE78 )
+CurrentDir( $1D87FAA0 ) = YES
+LoadSeg( LIBS:picasso96/rtg.library ) = YES ($1D968C01)
+LoadSeg( LIBS:iffparse.library ) = YES ($1D98790D)
+Lock( "ENV:Picasso96/AmigaVideo", $FFFFFFFE ) = YES
+UnLock( $1D88778F )
+Open( "ENV:Picasso96/AmigaVideo", $3ED ) = YES
+Close( $1D88778F ) = YES
+Lock( "ENV:Picasso96/Debug", $FFFFFFFE ) = YES
+UnLock( $1D88778F )
+Open( "ENV:Picasso96/Debug", $3ED ) = YES
+Close( $1D88778F ) = YES
+Lock( "ENV:Picasso96/BlackSwitching", $FFFFFFFE ) = YES
+UnLock( $1D88778F )
+Open( "ENV:Picasso96/BlackSwitching", $3ED ) = YES
+Close( $1D88778F ) = YES
+Lock( "ENV:Picasso96/DirectColorMask", $FFFFFFFE ) = YES
+UnLock( $1D88778F )
+Open( "ENV:Picasso96/DirectColorMask", $3ED ) = YES
+Close( $1D88778F ) = YES
+Lock( "ENV:Picasso96/DoNotSetMMU", $FFFFFFFE ) = YES
+UnLock( $1D88778F )
+Open( "ENV:Picasso96/DoNotSetMMU", $3ED ) = YES
+Close( $1D88778F ) = YES
+Lock( "ENV:Picasso96/ShowModes", $FFFFFFFE ) = YES
+UnLock( $1D88778F )
+Open( "ENV:Picasso96/ShowModes", $3ED ) = YES
+Close( $1D88778F ) = YES
+Lock( "ENV:Picasso96/PlanarOnlyDIPFDBUF", $FFFFFFFE ) = YES
+UnLock( $1D88778F )
+Open( "ENV:Picasso96/PlanarOnlyDIPFDBUF", $3ED ) = YES
+Close( $1D883A1D ) = YES
+Lock( "ENV:Picasso96/DisableAmigaBlitter", $FFFFFFFE ) = YES
+UnLock( $1D883A1F )
+Open( "ENV:Picasso96/DisableAmigaBlitter", $3ED ) = YES
+Close( $1D883A19 ) = YES
+Lock( "ENV:Picasso96/PlanesToFast", $FFFFFFFE ) = YES
+UnLock( $1D88778F )
+Open( "ENV:Picasso96/PlanesToFast", $3ED ) = YES
+Close( $1D883A19 ) = YES
+Lock( "ENV:Picasso96/Experimental", $FFFFFFFE ) = YES
+UnLock( $1D883A1B )
+Open( "ENV:Picasso96/Experimental", $3ED ) = YES
+Close( $1D883A15 ) = YES
+Lock( "ENV:Picasso96/EnableBootVGA", $FFFFFFFE ) = YES
+UnLock( $1D88778F )
+Open( "ENV:Picasso96/EnableBootVGA", $3ED ) = YES
+Close( $1D883A15 ) = YES
+Lock( "ENV:Picasso96/AlertSupport", $FFFFFFFE ) = YES
+UnLock( $1D88778F )
+Open( "ENV:Picasso96/AlertSupport", $3ED ) = YES
+Close( $1D883A15 ) = YES
+Lock( "ENV:Picasso96/AreaEndSupport", $FFFFFFFE ) = YES
+UnLock( $1D88778F )
+Open( "ENV:Picasso96/AreaEndSupport", $3ED ) = YES
+Close( $1D883A15 ) = YES
+LoadSeg( LIBS:Picasso96/fastlayers.library ) = YES ($1D9690C5)
+Open( "Voodoo.info", $3ED ) = YES
+Close( $1D88778F ) = YES
+LoadSeg( LIBS:picasso96/Voodoo.card ) = YES ($1D98A069)
+Open( "ENV:Mediator/VoodooMem", $3ED ) = YES
+Close( $1D88778F ) = YES
+Open( "ENV:Mediator/VoodooInt", $3ED ) = YES
+Close( $1D88778F ) = YES
+LoadSeg( LIBS:pci.library ) = YES ($1D98AEAD)
+Open( "ENVARC:Mediator/MMU", $3ED ) = YES
+Close( $1D88FC97 ) = YES
+Open( "ENVARC:Mediator/NoCache", $3ED ) = YES
+Close( $1D88FC97 ) = YES
+Open( "ENVARC:Mediator/Warp3D", $3ED ) = NO
+Open( "ENVARC:Mediator/Emulation", $3ED ) = NO
+Open( "ENVARC:Mediator/PatchInt", $3ED ) = NO
+Open( "S:Vendors.txt", $3ED ) = YES
+Close( $1D88FC97 ) = YES
+Open( "SYS:Devs/Picasso96Settings", $3ED ) = YES
+Close( $1D897955 ) = YES
+UnLock( $1D883754 )
+Close( $1D87F9D1 ) = YES
+Close( $1D87FD33 ) = YES
+Close( $1D87F6B9 ) = YES
+UnLock( $1D87FAA0 )
+CurrentDir( $1D879110 ) = YES
+UnLock( $1D87F5E8 )
+UnLock( $1D87F638 )
+UnLock( $0 )
+UnLock( $0 )
+UnLock( $0 )
+UnLock( $0 )
+UnLock( $0 )
+
+;---- C:AddDataTypes REFRESH QUIET
+
+CurrentDir( $1D879110 ) = YES
+Lock( "C:AddDataTypes", $FFFFFFFE ) = YES
+UnLock( $1D87F5E8 )
+LoadSeg( C:AddDataTypes ) = YES ($1D97AD0F)
+Lock( "C:AddDataTypes", $FFFFFFFE ) = YES
+UnLock( $1D87F5E8 )
+CurrentDir( $1D879110 ) = YES
+Lock( "DEVS:DataTypes", $FFFFFFFE ) = YES
+UnLock( $1D87F5E8 )
+CurrentDir( $1D883754 ) = YES
+Open( "JPEG", $3ED ) = YES
+Close( $1D87F6B9 ) = YES
+CurrentDir( $1D879110 ) = YES
+CurrentDir( $1D883754 ) = YES
+CurrentDir( $1D879110 ) = YES
+CurrentDir( $1D883754 ) = YES
+Open( "PNGIconObject", $3ED ) = YES
+Close( $1D87F6B9 ) = YES
+CurrentDir( $1D879110 ) = YES
+CurrentDir( $1D883754 ) = YES
+CurrentDir( $1D879110 ) = YES
+CurrentDir( $1D883754 ) = YES
+Open( "AmigaIconObject", $3ED ) = YES
+Close( $1D87F6B9 ) = YES
+CurrentDir( $1D879110 ) = YES
+CurrentDir( $1D883754 ) = YES
+CurrentDir( $1D879110 ) = YES
+CurrentDir( $1D883754 ) = YES
+Open( "AmigaIconObject", $3ED ) = YES
+Close( $1D87F6B9 ) = YES
+CurrentDir( $1D879110 ) = YES
+CurrentDir( $1D883754 ) = YES
+CurrentDir( $1D879110 ) = YES
+CurrentDir( $1D883754 ) = YES
+Open( "AmigaIconObject", $3ED ) = YES
+Close( $1D87F6B9 ) = YES
+CurrentDir( $1D879110 ) = YES
+CurrentDir( $1D883754 ) = YES
+CurrentDir( $1D879110 ) = YES
+CurrentDir( $1D883754 ) = YES
+Open( "AmigaIconObj35", $3ED ) = YES
+Close( $1D87F6B9 ) = YES
+CurrentDir( $1D879110 ) = YES
+CurrentDir( $1D883754 ) = YES
+CurrentDir( $1D879110 ) = YES
+CurrentDir( $1D883754 ) = YES
+CurrentDir( $1D879110 ) = YES
+CurrentDir( $1D883754 ) = YES
+Open( "BMP", $3ED ) = YES
+Close( $1D87F6B9 ) = YES
+CurrentDir( $1D879110 ) = YES
+CurrentDir( $1D883754 ) = YES
+CurrentDir( $1D879110 ) = YES
+CurrentDir( $1D883754 ) = YES
+Open( "PNG", $3ED ) = YES
+Close( $1D87F6B9 ) = YES
+CurrentDir( $1D879110 ) = YES
+CurrentDir( $1D883754 ) = YES
+CurrentDir( $1D879110 ) = YES
+CurrentDir( $1D883754 ) = YES
+Open( "ILBM", $3ED ) = YES
+Close( $1D87F6B9 ) = YES
+CurrentDir( $1D879110 ) = YES
+CurrentDir( $1D883754 ) = YES
+CurrentDir( $1D879110 ) = YES
+CurrentDir( $1D883754 ) = YES
+Open( "ILBM", $3ED ) = YES
+Close( $1D87F6B9 ) = YES
+CurrentDir( $1D879110 ) = YES
+CurrentDir( $1D883754 ) = YES
+CurrentDir( $1D879110 ) = YES
+CurrentDir( $1D883754 ) = YES
+Open( "GIF", $3ED ) = YES
+Close( $1D87F6B9 ) = YES
+CurrentDir( $1D879110 ) = YES
+CurrentDir( $1D883754 ) = YES
+CurrentDir( $1D879110 ) = YES
+CurrentDir( $1D883754 ) = YES
+Open( "SVX", $3ED ) = YES
+Close( $1D87F6B9 ) = YES
+CurrentDir( $1D879110 ) = YES
+CurrentDir( $1D883754 ) = YES
+CurrentDir( $1D879110 ) = YES
+CurrentDir( $1D883754 ) = YES
+Open( "TIFF", $3ED ) = YES
+Close( $1D87F6B9 ) = YES
+CurrentDir( $1D879110 ) = YES
+CurrentDir( $1D883754 ) = YES
+CurrentDir( $1D879110 ) = YES
+CurrentDir( $1D883754 ) = YES
+Open( "PSD", $3ED ) = YES
+Close( $1D87F6B9 ) = YES
+CurrentDir( $1D879110 ) = YES
+CurrentDir( $1D883754 ) = YES
+CurrentDir( $1D879110 ) = YES
+CurrentDir( $1D883754 ) = YES
+Open( "FTXT", $3ED ) = YES
+Close( $1D87F6B9 ) = YES
+CurrentDir( $1D879110 ) = YES
+CurrentDir( $1D883754 ) = YES
+CurrentDir( $1D879110 ) = YES
+CurrentDir( $1D883754 ) = YES
+Open( "CDXL", $3ED ) = YES
+Close( $1D87F6B9 ) = YES
+CurrentDir( $1D879110 ) = YES
+CurrentDir( $1D883754 ) = YES
+CurrentDir( $1D879110 ) = YES
+CurrentDir( $1D883754 ) = YES
+Open( "ANIM", $3ED ) = YES
+Close( $1D87F6B9 ) = YES
+CurrentDir( $1D879110 ) = YES
+CurrentDir( $1D883754 ) = YES
+CurrentDir( $1D879110 ) = YES
+CurrentDir( $1D883754 ) = YES
+Open( "AmigaGuide", $3ED ) = YES
+Close( $1D87F6B9 ) = YES
+CurrentDir( $1D879110 ) = YES
+CurrentDir( $1D883754 ) = YES
+CurrentDir( $1D879110 ) = YES
+CurrentDir( $1D883754 ) = YES
+Open( "AIFF", $3ED ) = YES
+Close( $1D87F6B9 ) = YES
+CurrentDir( $1D879110 ) = YES
+UnLock( $1D87F638 )
+
+;----C:IPrefs
+
+CurrentDir( $1D879110 ) = YES
+Lock( "C:IPrefs", $FFFFFFFE ) = YES
+UnLock( $1D87F5E8 )
+LoadSeg( C:IPrefs ) = YES ($1D98E44F)
+Lock( "C:IPrefs", $FFFFFFFE ) = YES
+UnLock( $1D87F5E8 )
+
+;----C:ConClip
+
+CurrentDir( $1D879110 ) = YES
+Lock( "ENV:Sys/locale.prefs", $FFFFFFFE ) = YES
+UnLock( $1D87B759 )
+Lock( "ENV:Sys/icontrol.prefs", $FFFFFFFE ) = NO
+Open( "ENV:Sys/screenmode.prefs", $3ED ) = YES
+Close( $1D8B45DD ) = YES
+Open( "ENV:Sys/input.prefs", $3ED ) = YES
+Close( $1D883817 ) = YES
+Open( "ENV:Sys/pointer.prefs", $3ED ) = YES
+Close( $1D883817 ) = YES
+Open( "ENV:Sys/palette.prefs", $3ED ) = YES
+Close( $1D81AFED ) = YES
+Open( "ENV:Sys/locale.prefs", $3ED ) = YES
+Open( "ENV:Sys/locale.prefs", $3ED ) = YES
+Close( $1D8B4533 ) = YES
+LoadSeg( LIBS:workbench.library ) = YES ($1D990E77)
+Close( $1D81AFED ) = YES
+Open( "ENV:Sys/font.prefs", $3ED ) = YES
+Open( "FONTS:xen_WIN.font", $3ED ) = YES
+Close( $1D88901F ) = YES
+LoadSeg( FONTS:xen_WIN/11 ) = YES ($1D99D19F)
+Close( $1D81AFED ) = YES
+Open( "ENV:Sys/wbpattern.prefs", $3ED ) = YES
+Close( $1D81AFED ) = YES
+Open( "ENV:Sys/workbench.prefs", $3ED ) = YES
+Close( $1D81AFED ) = YES
+Open( "ENV:Sys/amigaxl.prefs", $3ED ) = YES
+Close( $1D81AFED ) = YES
+Open( "ENV:Sys/amigaxl.prefs", $3ED ) = YES
+LoadSeg( LIBS:native.library ) = YES ($1D99D4FF)
+Close( $1D81AFED ) = YES
+UnLock( $1D87F638 )
+
+;----Path >NIL: RAM: C: SYS:Utilities SYS:Rexxc SYS:System S: SYS:Prefs SYS:WBStartup SYS:Tools SYS:Tools/Commodities
+
+CurrentDir( $1D879110 ) = YES
+Lock( "Path", $FFFFFFFE ) = YES
+UnLock( $1D87F638 )
+LoadSeg( Path ) = YES ($1D99D4FF)
+Lock( "Path", $FFFFFFFE ) = YES
+UnLock( $1D87F638 )
+CurrentDir( $1D879110 ) = YES
+UnLock( $1D87F67A )
+Open( "NIL:", $3EE ) = YES
+Lock( "RAM:", $FFFFFFFE ) = YES
+Lock( "C:", $FFFFFFFE ) = YES
+Lock( "SYS:Utilities", $FFFFFFFE ) = YES
+Lock( "SYS:Rexxc", $FFFFFFFE ) = YES
+Lock( "SYS:System", $FFFFFFFE ) = YES
+Lock( "S:", $FFFFFFFE ) = YES
+Lock( "SYS:Prefs", $FFFFFFFE ) = YES
+Lock( "SYS:WBStartup", $FFFFFFFE ) = YES
+Lock( "SYS:Tools", $FFFFFFFE ) = YES
+Lock( "SYS:Tools/Commodities", $FFFFFFFE ) = YES
+Close( $1D87F67B ) = YES
+UnLock( $0 )
+
+;----SYS:System/REXXMast >NIL:
+
+CurrentDir( $1D879110 ) = YES
+Lock( "SYS:System/REXXMast", $FFFFFFFE ) = YES
+UnLock( $1D87F680 )
+LoadSeg( SYS:System/REXXMast ) = YES ($1D97B0F7)
+Lock( "SYS:System/REXXMast", $FFFFFFFE ) = YES
+UnLock( $1D887516 )
+CurrentDir( $1D879110 ) = YES
+Open( "NIL:", $3EE ) = YES
+LoadSeg( LIBS:mathieeedoubbas.library ) = YES ($1D99DEA5)
+LoadSeg( LIBS:rexxsyslib.library ) = YES ($1D99E21B)
+Close( $1D8838C5 ) = YES
+UnLock( $1D887528 )
+
+;---- IF EXISTS S:User-Startup
+;----   Execute S:User-Startup
+;---- EndIF

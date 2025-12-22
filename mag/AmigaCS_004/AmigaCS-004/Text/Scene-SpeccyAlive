@@ -1,0 +1,268 @@
+@{xoffset 0}@{d 8AEEEA}¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+@{xstep 450}@{font ACS-Title.font 18}@{c 85B9FF}Speccy is alive!@{c}@{font}
+@{xstep 493}@{c A6FFF8}@{i}Factor6/ESA@{ui}@{c}@{ystep -8}
+ @{i} Zdravím ctëné Amigistické obecenstvo!@{ui}
+
+  Kdyù  se  nëkdo zmíní o @{c 85B9FF}Sinclairu@{c} nebo @{c 85B9FF}ZX Spectru@{c}, u 99% z vás to vyvolá nostalgické
+vzpomínky na staré çasy svých zaçátkû s poçítaçi.  Pravdëpodobnë byste më pokládali za
+blázna,  kdyù  bych  têeba  êekl,  ze  @{b}@{f F0E1FF}ZX Spectrum ùije@{f}@{ub}, ZX Spectrum má pomërnë velkou
+scénu,  ZX  Spectrum  s  klidem pêeùije rok 2000.  Pokud si právë teð klepete na çelo,
+vaîe vëc, ale vîechna uvedená fakta jsou naprosto pravdivá a jestli ne, tak sním svoji
+turbokartu  :-).  Vîechno to zaçalo nëkdy v roce 1995.  Speccy bylo jiù totálnë mrtvé,
+nikdo nedëlal ùádný soft a u nás ho vlastnilo uù jen pár ùivoêících zarputilcû.  Mnozí
+z nich uù jej mëli nëkde ve skêíni a prohánëli@{i} písidlo nebo Amigu@{ui}.
+
+  Zhruba  v  té  dobë  se  nëkolik  tëchto  lidiçek dostalo k tehdy u nás zaçínajícímu
+@{c 85B9FF}Internetu@{c}  s  úmyslem  postahovat  nëjaké  staré  dobré gamesky a dema, které jim doma
+chybëly.   Zabrousili  na  jeden  ftp  server  do  bývalého  @{c 85B9FF}SSSR@{c}  a jaké na në çekalo
+pêekvapení!   Tento server byl @{i}pêeplnëný@{ui} zcela neznámými hrami a hlavnë demy.  Nastalo
+zbësilé stahování.  Po pêíjezdu domû bylo zjiîtëno, ùe takêka vîechny staùené programy
+fungují  pouze  na  Spectru  128,  coù  bylo  pro  mnohé  nemilým pêekvapením, protoùe
+"@{c 85B9FF}stodvacetosmiçku@{c}" mël jen málokdo.
+
+  Vîechna  ruská  produkce  je  urçena  pro  diskový  systém  @{c 85B9FF}TR-DOS@{c},  známý  téù jako
+tzv.@{c 85B9FF}BetaDisk@{c}  a  betadiskaêû  u  nás  není  mnoho.   Proto  musíme  veîkerý tento soft
+»recracknout«  do pêijatelné podoby.  K tomu výbornë poslouùí nëkterý z êady emulátorû
+pro  PC.  Bohuùel, na Amize není ani jeden schopný emulátor Spectra, podporující bëùné
+formáty jako .TAP, HoBeta nebo .TRD.  Jediný celkem schopný je @{c 85B9FF}ZXAM@{c}, který má ale svûj
+vlastní  formát,  je  pouze  48kB  a  umí  pracovat  jen  se  snapshoty  .SNA  a .Z80.
+O emulátoru  128 ani nemluvë.  Ten se objevil zcela nedávno, je straînë pomalý (prý na
+060  beùí  jakù-takù,  na moji 030 je to skuteçnë udësné) a plný chyb, zkouîel jsem na
+nëm nëjaká ruska dema a takêka vîechna se hroutí :-(. Navíc vûbec neemuluje zvuk.
+
+  Na  PeCi  se  objevil  velice  schopný  emulátor  @{c 85B9FF}Z80-TRDOS@{c} - vlastnë to je upravený
+Lunterûv  Z80  3.0  od  nëjakého  Rusa  (jak  jinak ;-) pro práci s betovými disketami
+a pozdëji  emulátor  @{c 85B9FF}X128@{c}, který sice neçte pêímo TRDOS, ale spolupracuje s takzvanými
+disk-imagemi  TRDOSových  disket  a  navíc je to asi nejlépe provedený emulátor, který
+kromë  jiného  celkem  sluînë  emuluje  zvukový  çip  @{c 85B9FF}AY-3-8912@{c} i s tzv.  hardwarovými
+obálkami,  coù  se o Z80 ani amigáckém ZXAMu (který zatím jako jediný na Amize emuluje
+tento çip) êíct skuteçnë nedá.
+
+  A  proç si vîichni v bývalých zemích @{f FF0000}Sovëtského@{f} @{f FFF600}Svazu@{f} tolik oblíbili právë Spectrum?
+Odpovëð  je  celkem  jednoduchá:   Poçítaçový  boom  k nim dorazil teprve po roce 1991
+a taktéù  ceny Amig a PC nebyly pro kaùdého.  Naîlo se rovnëù nëkolik ruských výrobcû,
+kteêí  zaçali  dëlat  kopie  ZX  Spectra (jako u nás pêed lety @{c 85B9FF}Didaktik@{c}) a daêí se jim
+celkem  sluînë.   Na  svët  pêiîel  poçítaç zvaný @{c 85B9FF}Pentagon 128@{c}, který má procesor Z80A
+taktovaný  zhruba  na  @{b}8MHz@{ub}  (!), narozdíl od klasickeho Speccy, které bëhá na 3,5MHz.
+Pentagon  má  zabudovaný  BetaDiskový  êadiç  a  stal  se jakýmsi "ruským" standardem.
+Bohuùel pro nás...
+
+  Proç?   Teð  pêijde  trocha  teorie.   Klasické Spectrum má svou pamëï rozdëlenou na
+2 pomyslné  çásti  a  to  od  adresy  0 do 32768 a od 32768 do 65536.  Ujaly se pro to
+termíny  Slow  a  Fast.   Ta  "dolní" pamëï je o nëkolik taktû brzdëna neù ta "horní",
+takùe  je  pomalejîí.  Pamëï Pentagonu je ve vîech sekcích Fast a tudíù stejnë rychlá.
+No  a  pro  nás  ubohé  majitele originálních Specter z toho vyplývá, ùe pustíme-li si
+nëjaké  ruské  demo a urçitý efekt v nëm bude umístën zrovna v dolní çásti pamëti, vîe
+se  nechutnë zpomalí.  Podle tvrzení Rusû z @{c 85B9FF}IRC kanálu #Z80@{c} u nich originální Spectrum
+nikdy  nevidëli  a  znají  pouze  ty  jejich klony, pêedevîím @{c 85B9FF}Pentagon@{c}, dalîí známý je
+@{c 85B9FF}Scorpion@{c}  ZS-256 s 256kB RAM, @{c 85B9FF}Sprinter@{c}, @{c 85B9FF}Leningrad 128@{c}, @{c 85B9FF}Moskva 128@{c}...  (@{c FFFFFF}cool názvy, ne?@{c}
+;-).   Na  poli  pêídavného  hardware v Rusku taktéù nezûstali pozadu.  Existuje napê.
+zvuková  karta  @{c BAC2FF}General  Sound@{c} se 4mi 8bitovymi kanály, která hraje zcela nezávisle na
+poçítaçi  (jakýsi  multitasking).   V  ROM  má  umístëny  pêehrávaç 4kanálových modulû
+z Amigy  (!!).   Dalîí,  hlavnë ve hrách podporovaná zvukovka je @{c BAC2FF}Covox@{c}, coù je vlastnë
+"zvukovka" z PeCe, pêizpûsobená Spectru.
+
+  Ale  zpátky  ke scénë.  V Rusku se poêádají obdobné demoparty, jakými jsou na Západë
+napê. @{c BAC2FF}Assembly@{c},  @{c BAC2FF}The  Party@{c}, atd.  Na loñský @{c BAC2FF}ENLIGHT'97@{c} se do @{c BAC2FF}St.  Petersburgu@{c} (bývalý
+Leningrad)  sjelo  mnoho  spectristû  z  celého  ex-SSSR.  A mëli vëru s çím soutëùit.
+Konkurence  byla  tvrdá.   Leckterý  Amigista  çi  PeCar by se divil, co jde udëlat na
+obyçejném  Spectru.  Po letoîní srpnové moskevské party @{c BAC2FF}FUNTOP'98@{c} smële prohlaîuji, ùe
+Rusové  jsou  schopni  udëlat na Spectru úplnë vîechno.  Plasmy, otáçející-se realtime
+krychle,  plasmové tunely, teçkové tunely, jiné bláznivé tunely, phong-shaded objekty,
+texturované  3D  objekty,  no  prostë  z toho nechápu a asi ani vy nebudete, jestli se
+nëkdy  pêemûùete  a  pustíte  si na PeCi aspoñ X128 a nëjaká ruská dema.  Jako lákadlo
+pêikládám  k tomuto çlánku vítëzné demo çeské demoparty @{c BAC2FF}DOXYCON'98@{c} - "@{c BAC2FF}Higher State@{c}" od
+slovenské skupiny 3SC, které je pro Spectrum 48 a myslím, ùe vyhrálo zaslouùenë.  Demo
+je ve formátu pro emulátor ZXAM.  Jediné, o co pêijdete, jsou jiù zmiñované HW obálky,
+tvoêící  podstatnou  çást  basove linky doprovodné hudby.  HW obálky se dnes pouùívají
+prakticky  ve  vîech  hudbach  pro AY a pokud pouùíváte pouze emulátor, uslyîíte místo
+nich  ticho,  pêinejlepîím  jakési  skêípání.  Nejlépe je na tom s emulací zvuku právë
+X128 pro PC (fuj!) :-(.  Tam jsou "hardwary" slyîet, i kdyù nejsou zcela pêesné.  Holt
+si  seùeñte  Speccy  128  nebo  aspoñ  48  s  AY  çipem @{i}(nebo emulátor ZX 128 pro Maca
+a spusïte si ho pod ShapeShifterem ...  pozn.Shaman)@{ui}.
+
+  Napsal  jsem  @{f 9EFFA1}çeská  demoparty@{f}?!  No jo!  Vùdyï já bych na to úplnë zapomnël!  Tahle
+akce  se  konala  14.   aù 16.  srpna v @{i}Doksech u Máchova jezera@{ui}.  Sjelo se okolo 50ti
+(slovy  @{c BAC2FF}padesáti@{c} - coù je úctyhodný poçet!) Spectristû, z toho nëkolik Slovákû a jeden
+Rakuîan,  kteêí s napëtím sledovali soutëùe o nejlepîí demo, grafiku a hudbu.  Opravdu
+më pêekvapil takový zájem.  Jako Amigisti bychom se mëli stydët, netroufám si tipnout,
+kolik  lidi  by pêijelo na podobnou, ale Amigistickou akci.  Neoficiální výsledky jsou
+k dispozici @{goto 10}dále v çlánku@{goto}.
+  Takùe  abych  to  shrnul.   V roce 1998 si na normálním ZX Spectru 128 mûùete zahrát
+têeba  kompletního  @{c BAC2FF}Prince  of  Persia@{c},  @{c BAC2FF}Mortal  Kombat@{c}  1, kompletního @{c BAC2FF}Warcrafta@{c} (!),
+existují  demoverze  her  @{c BAC2FF}Worms@{c},  @{c BAC2FF}Walker@{c}  a  prý  i  @{c BAC2FF}Cannon  Fodde@{c}r.  Legendární série
+o vajíçku  @{c BAC2FF}Dizzy@{c}  se  nám rozrostla a vznikly tak pokraçování Dizzy 7, 8, 9, Dizzy 10,
+Dizzy 11 a k máni je i demoverze Dizzy XX (ùeby 20?).  Je libo Dooma?  V pohodë!  @{c BAC2FF}Doom@{c}
+na  Speccy  se  dokonçuje  a  k mání je jeho plnë hratelný pre-release!  Skuteçnë jsem
+nevëêil  svým  oçím!   Ono  je to dokonce rychlejîí neù kdejaká 3D slátanina pro A500!
+Mapa,  zmëna  velikosti  okna,  barvy,  prostë  paráda!  Staçí mít Speccy 128 a nëjaký
+disketový  êadiç.  U nás je nejrozîíêenejîí série D40/D80 ze Skalice (MDOS), ale jistá
+@{i}8bit  Company  ze  Zlína@{ui}  vyrábí  takêka na kolenë systém @{c BAC2FF}MB-02+@{c}, o kterém se rozepíîu
+pozdëji.
+
+ @{c BAC2FF} Dema  z  Ruska@{c}  se  k  nám  hrnou  proudem, ùe je nestaçíme ani crackovat!  Existuje
+nejménë  desítka rusky psaných diskmagû o vîem moùném (Teð teprve nelituju, ùe jsem se
+na základní îkole musel uçit rusky ;-).
+
+  Dema  jako jsou Brain Crash (Progress), Brain Surgery (Rush), Yolka (Rush), Power Up
+(Extreme),  Shit  4  Brains  (Progress),  Blame (Extreme) (demo zamëêené proti deBillu
+Gatesovi ;-), Forever (Digital Reality) a desítky dalîích vám vyrazí dech a tak trochu
+asi budete litovat, ùe jste pêed lety to Spectrum prodali.
+
+  Takùe  teð  nëco  o  tom slibovaném zázraku MB-02+.  Diskový êadiç MB-02+ je opravdu
+výborná  vëc  a  já  ji  dosud nevlastním pouze z dûvodu pomërnë vysoké ceny.  Posuðte
+sami:
+
+  @{c BAC2FF}Základní charakterisktika@{c}:
+  @{c BAC2FF}¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+@{c 9EFF7D} @{c A8FFA1} @{c 9CFFF6}- kapacita diskety        HD: 1.800kB
+                            DD:   840kB
+  - rychlost pêenosu        HD: 40-50kB/sec.
+                            DD:    25kB/sec.
+  - interní pamëï           EPROM   2kB (max. 64kB)
+                            SRAM   128K (max. 512kB) - zálohováno baterií
+  - mëêení çasu             RTC procesor - zálohován baterií
+  - pêipojitelné aù 4 FDD mechaniky (pro porovnání: u MDOSu jdou jenom 2)
+  - Kempston / Amiga-mouse port@{c}
+  - têíkanálový obousmërný paralelní port (pêes obvod 8255)
+  - Full-RAM mode (= mod souvisleho bloku RAM 64kB)
+  - velice, ale opravdu (!) velice kvalitní DOS 
+  - aù 256 adresáêû na disketë, v kaùdém adresáêi aù 65279 souborû
+  - softwarový reset systému ;-)
+
+  "eMBéçko"  má  vylepîenou  ROMku,  která nahrazuje "starou" ROMku Spectra vylepîeným
+interpretem  Basicu,  ovládaní diskety se dëlá pêes klasické SAVE/LOAD kazetové rutiny
+v ROM  (jenom  upravené  pro  disk),  takùe  jenom  pêepnete  do modu Tape a nahráváte
+z kazety,  nebo  Disk  a pouùíváte disketu.  Tímto je umoùnëna práce na disku i s dnes
+jiù  nepouùívanými  "bezhlaviçkovými"  soubory.   Pêenos dat mezi BS-DOSem a MS-DOSem,
+MDOSem  a  DP-DOSem  je zajiîtën pomocí konverzního programu.  Jen zatím chybí podpora
+v Rusku populárního TR-DOSu, ale na tom se pracuje.  Zálohovaná SRAMka umoùñuje pouùít
+RamDisk a mít v nëm nastálo têeba oblíbený editor assembleru atp.
+
+  MBçko  vám  umoùní mít pêi nahrávání z diskety zapnuté pêeruîení (IM2), takùe mûùete
+pêehrávat  têeba  hudbu a pêitom sosat.  Na Amize bëùné, ale na Speccy jde tohle jenom
+s MBçkem (umí to i TR-DOS, ale ten je hodne pomalý)!
+
+  MB-02+  mûùete  pêipojit  bez  problémû  k  tëmto  strojovnám:  ZX Spectrum (gumak),
+Plusko,  ZX Spectrum 128, 128+2, 128+2A, +3, Didaktik M.  S Didaktikem Gama to bohuùel
+(nebo bohudík?) nejede, protoùe jsou v nëm pouùity pamëti s pêíliî dlouhou pêístupovou
+dobou.  K Didaktiku Kompakt to tuîím rovnëù nejde, ale proç, to vám nepovím.
+
+  Cena  základní  sestavy  je  i  se  zdrojem a 1 HD mechanikou z PC nëco pêes 5.000,-
+Celkem  dost,  vezmeme-li  v  úvahu,  ùe klasické Spectrum 128 se dá sehnat na inzerát
+(jinak snad uù ani ne) zhruba za 1.500,- kaçek.
+
+  @{c 9EFF7D}Takùe  milí  Amigisti.@{c}  Pokud chcete jít s dobou :-), seùeñte si @{c 9EFF7D}ZX Spectrum 128@{c}, +2
+nebo pêinejhorîím +2A nebo +3.  Jistý @{b}Kompakt Servis@{ub} také provádí pêestavbu klasických
+Specter  48  (a  plusek  a  dokonce  _vîech_  Didaktikû)  na PLNOHODNOTNOU 128içku !!!
+(samozêejmë  bez  zvukového  çipu,  ten  musíte  zapojit  jako samostatný interface na
+sbërnici poçítaçe).  Úprava stojí asi 1.200,- coù celkem jde.  Ke své 128içce pêipojte
+nejlépe êadiç MB-02+, v horîím pêípadë D40 nebo D80, jako monitor poslouùí staré dobré
+RGBçko z Amigy.  Postahujte si z Netu nejnovëjîí hry, dema, hudební trackery, grafické
+editory, assemblery a@{c 9EFF7D} rozjeðte to ve velkém@{c}!
+ @{b} @{c 9EFF7D}Takùe tady máte kompletní výsledky DoxyConu'98@{c}@{ub}
+
+   @{c 9EFF7D}Demo compo@{c}:
+   @{c 9EFF7D}-----------@{c}
+   #1 ... Higher State / 3SC                     (Slovensko)
+   #2 ... Genetic Error / K3L Corp.              (Çechy)
+   #3 ... The Last 48 / Excellent Spectrum Aces  (Çechy)
+   #4 ... Circlelusions / Speccy Boyz            (Slovensko)
+   #5 ... Fear Zone / Naughty Crew               (Çechy)
+
+   @{c 9EFF7D}Music-in-interrupt compo:
+   -------------------------@{c}
+   #1 ... SelfExe          Chrysagon / Naughty Crew
+   #2 ... Genetic Error    Bell / K3L Corp.
+   #3 ... Renegade         TDM / K3L Corp.
+   #4 ... Razor            Bell/ K3L Corp.
+   #5 ... He's Coming      Cobra / Speccy Boyz
+   #6 ... Personal Fairl.  Factor 6 / Excellent Spectrum Aces
+   #7 ... Hnus             Johny-X / Naughty Crew
+   #8 ... Old Skool        Chrysagon / Naughty Crew
+   #9 ... Robocop 2        TDM / K3L Corp.
+  #10 ... Hood 4 Doxy      Hood
+  #11 ... Follin 2B        Factor 6 / Excellent Spectrum Aces
+  #12 ... Lupruz           MGSak
+
+   @{c 9EFF7D}Graphics compo:
+   ---------------@{c}
+   #1 ... Beast (Diablo)   Marwin / K3L Corp.
+   #2 ... Men in Black 1   Agyagos Graphics
+   #3 ... Men in Black 2   Agyagos Graphics
+   #4 ... F.A. Endpicture  Art / NOP
+   #5 ... DoxyCon          Factor 6 / Excellent Spectrum Aces
+   #6 ... Alien            Chrysagon's brother
+   #7 ... U R My Friend    Marwin / K3L Corp.
+   #8 ... F.A. Title       SiGGY
+   #9 ... Xena             Tuleby / Excellent Spectrum Aces
+  #10 ... Kaspar           Chrysagon's brother
+  #11 ... Dark Ufo         Agyagos Graphics
+  #12 ... Other Face       ?
+ 
+  Kaùdý  mohl  dát  dva  pêíspëvky,  u  demo-compa  pouze  jeden.   Dema  nebyla nijak
+limitována  a  to  ani  délkou  trvání  ani  HW poùadavky.  GFX compo tvoêily výhradnë
+obrázky typu SCREEN$ (6912 bajtû) - jak jinak.  Do music compa mohla být pêihláîena AY
+nebo samplovaná hudba ve formátu zdrojáku do SQ-Trackeru nebo v pêípadë pouùití jiného
+editoru jako zkompilovaný spustitelný program.
+
+
+  ...a jeîtë výsledky moskevské demoparty FunTop'98, konané 24. az 26. srpna 1998:
+
+   @{c 9EFF7D}4K intro compo:
+   ---------------@{c}
+   #1 ... Goa / Exploder^Extreme
+   #2 ... Dizzy / Research Soft
+   #3 ... Neverland / Senat^EI
+
+   @{c 9EFF7D}Graphics compo:
+   ---------------@{c}
+   #1 ... Polesje / Arthur Burn^Elssland
+   #2 ... Trassa / Suranov
+   #3 ... Alf #13 / Demiurge Ash^EI
+
+   @{c 9EFF7D}Music-in-interrupt compo:
+   -------------------------@{c}
+   #1 ... I Must Win A Compo / EA-Soft
+   #2 ... ZX-SOS / Igo^Treangle
+
+   @{c 9EFF7D}Demo compo:
+   -----------@{c}
+   #1 ... Refresh / Extreme
+   #2 ... Forever / Digital Reality
+   #3 ... Blame / Stars of Keladan&Speed Co. (subdivision of Extreme)
+
+
+              @{c FFFF94} Kde stahovat soft?  Podívejte se na naîí (ESA) stránku:@{c}
+
+
+                    @{i} http://www.fortunecity.com/skyscraper/dos/79@{ui}
+
+                          @{c FFFF94}        nebo Chrysagonovu:@{c}
+
+                        @{i}    http://www.fi.muni.cz/~xhotarek@{ui}
+
+  kde  najdete  mnoho odkazû na ruské ftp a www servery zamëêené na Speccy.
+  Z nich tu uvedu jenom 2 nejznámëjîí, a to Acid-Nature:
+
+                 @{i}    ftp://ftp.ogre2vsk.edu.lv/acid-nature/speccy@{ui}
+
+        @{c FFFF94}  (zapêísáhlí Amigisté mûùou zkusit i .../acid-nature/amiga ;-) nebo@{c}
+                                          
+
+ 
+                         @{i}      ftp://129.78.238.196/pub@{ui}
+
+                             @{c FFFF94}coù je server zvaný Chaosite.@{c}
+
+    B-Ware:  Na ruských ftp najdete z 99% pouze BetaDiskové verze pokud byste mëli
+    zájem o nëjaké "recracky" pro naîe systémy (tape, MDOS, BS-DOS), mailnëte mi!
+
+
+
+                    váî @{c FFFF94}<fA[70R6>@{c} / @{c FFFF94}E@{c}xcellent @{c FFFF94}S@{c}pectrum @{c FFFF94}A@{c}ces (ESA)
+                       @{i}petrik@ius.prf.cuni.cz@{ui} / @{i}factor6@usa.net@{ui}
+
+
+    
+                     @{f B0FFF1}    AMiGA RULEZ, BUT SPECCY F0REVER !!!@{f}

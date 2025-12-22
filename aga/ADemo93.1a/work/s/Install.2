@@ -1,0 +1,135 @@
+setfont topaz 8
+echo "*N Installation der ADemo93 auf A1200 oder A4000*N"
+; Stand 14.5.93, P. Kittel, CBM Ffm
+echo   " Betrieb auf Rechnern ohne AA-Chipsatz ist NICHT möglich!"
+echo   " Der Rechner MUSS außerdem eine Festplatte haben."
+echo   " Auf der Festplatte MUSS das komplette Betriebssystem 3.0"
+echo   " installiert sein."
+echo   " Der Monitor MUSS ein Multiscan-Monitor (z. B. Commodore 1950, 1960, 1942)"
+echo   " sein, da die Demo zumeist aus Interlace-Bildern besteht, die sonst"
+echo   " extrem flimmern würden."
+echo "*N WENN das alles gegeben ist, dann weiter mit Return-Taste oder"
+ask    " Abbruch mit y und Return-Taste:*N"
+if warn
+  endcli
+  quit
+  endif
+
+echo "*N Diskette ADemo93.1:"
+
+echo "*N Kopieren der Systemverzeichnisse"
+echo   " Einige Systemdateien werden durch spezielle Versionen überschrieben."
+echo   " Sie werden zur Sicherheit in ein Verzeichnis SYSALT auf der System-"
+echo   " partition kopiert und können von dort ggf. wiederhergestellt werden."
+if not exists sys:SYSALT/prefs/env-archive
+  failat 22
+  makedir sys:SYSALT
+  makedir sys:SYSALT/c
+  copy c:IPrefs sys:SYSALT/c
+  makedir sys:SYSALT/prefs
+  makedir sys:SYSALT/prefs/env-archive
+  makedir sys:SYSALT/prefs/env-archive/sys
+  copy sys:prefs/env-archive/sys/(sc|ic|ov)#? sys:SYSALT/prefs/env-archive/sys quiet
+  makedir sys:SYSALT/devs
+  makedir sys:SYSALT/devs/monitors
+  copy devs:monitors sys:SYSALT/devs/monitors quiet
+  failat 10
+  endif
+copy ADemo93.1:sys sys: all clone quiet
+delete >nil: sys:prefs/env-archive/sys/oversca#? quiet
+
+if not exists work:
+  echo "*N Der Rechner verfügt über keine Work:-Partition!"
+  echo   " Bitte ausnahmnsweise in der Datei s:Startup-Sequence eine Zeile mit"
+  echo   " einem Assign für Work: (auf einen vernünftigen Pfad) einfügen, und"
+  echo   " zwar VOR dem Aufruf von User-Startup."
+  echo   " Dann Rechner neu starten und die Installation nochmal starten."
+  ask  "*N Ende mit Return-Taste"
+  endcli
+  quit
+  endif
+if not exists work:demo
+  echo "*N Anlegen eigener Demo-Verzeichnisse auf Work:"
+  makedir work:demo
+  endif
+if not exists work:demo/s
+  makedir work:demo/s
+  endif
+if not exists work:demo/c
+  makedir work:demo/c
+  endif
+if not exists work:demo/pic
+  makedir work:demo/pic
+  endif
+if not exists work:demo/anim
+  makedir work:demo/anim
+  endif
+assign ds: work:demo/s
+assign dc: work:demo/c
+assign da: work:demo/anim
+assign dp: work:demo/pic
+echo "*N Kopieren der Demo-Skripts"
+copy ADemo93.1:work/s ds: clone quiet
+copy ds:Demo01 s: clone
+if exists s:User-Startup
+  search >nil: s:User-Startup Demoscript
+  if warn
+    echo "*N Demo-Teil wird vor existierendes User-Startup gehängt."
+    join ds:user-startup s:user-startup as ram:us
+    copy ram:us s:User-Startup
+    delete >nil: ram:us
+      else
+    echo "*N Demo-Teil ist schon in User-Startup integriert."
+    endif
+      else
+  echo "*N User-Startup wird neu eingerichtet."
+  copy ds:User-Startup s:
+  endif
+echo "*N Kopieren der Demo-Befehle"
+copy ADemo93.1:work/c dc: quiet
+echo "*N Kopieren einiger Animationsdateien"
+copy ADemo93.1:work/anim da: quiet
+echo "*N Kopieren der Bilddateien"
+copy ADemo93.1:work/pic dp: quiet
+echo "*N Bitte Diskette ADemo93.2 einlegen"
+if exists ADemo93.2:
+  echo " ok"
+  endif
+copy ADemo93.2:#? dp: quiet
+echo "*N Bitte Diskette ADemo93.3 einlegen"
+if exists ADemo93.3:
+  echo " ok"
+  endif
+copy ADemo93.3:#? dp: quiet
+echo "*N Bitte Diskette ADemo93.4 einlegen"
+if exists ADemo93.4:
+  echo " ok"
+  endif
+copy ADemo93.4:#? dp: quiet
+echo "*N Bitte Diskette ADemo93.5 einlegen"
+if exists ADemo93.4:
+  echo " ok"
+  endif
+copy ADemo93.5:#? dp: quiet
+
+echo >s:Demo "Aktiv!"
+echo "*N*N Die Demo ist jetzt fertig installiert und aktiviert,"
+echo     " so daß sie beim nächsten Neustart automatisch losläuft."
+echo "*N Nach dem ersten Start der Demo sollte der Monitor nach"
+echo   " Breite, Höhe und Position nachgestellt werden."
+echo "*N Es wurde eine Datei namens s:Demo angelegt (Inhalt egal)."
+echo   " Wenn sie existiert, startet der Rechner in die Demo durch."
+echo   " Wenn man normal mit ihm arbeiten will, braucht man nur diese"
+echo   " Datei zu löschen. Damit man einfach zwischen automatischem"
+echo   " Start der Demo und Normalbetrieb wechseln kann, gibt es das"
+echo   " vorbereitete Shell-Skript Demo01. Rufen Sie in einer Shell"
+echo   " einfach Demo01 (oder s:Demo01) auf, dann wird dieser Zustand"
+echo   " gewechselt, und man erhält eine entsprechende Meldung."
+echo "*N Wenn die Demo aus dem Normalbetrieb heraus gestartet werden soll,"
+echo   " geht das mit dem Shell-Skript DemoStart. Einfach in einer Shell"
+echo   " DemoStart (oder s:DemoStart) aufrufen, und die Demo startet. Dies"
+echo   " hat keinen Einfluß darauf, ob die Demo beim nächstenmal automatisch"
+echo   " beim Start anläuft."
+ask  "*N*N Abschluß der Installation mit Return-Taste."
+endcli
+

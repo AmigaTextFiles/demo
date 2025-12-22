@@ -1,0 +1,355 @@
+V3.0
+
+MOUSE on
+FKEYS on
+
+EVENT StartTheme
+SOUND play "TM:MODS/mod.introTune" volume 64 pan 0 period 350 loops 1
+PAUSE 8
+END
+
+EVENT part48
+ANIM "TM:Anims/part48" 50 2
+END
+
+EVENT Part47
+ANIM "TM:Anims/Part47" 50 1
+TABS 100 200 300 400 500
+MARGINS off 32 607
+PALETTE 000 005 00a 00f 050 055 05a 05f 0a0 0a5 0aa 0af 0f0 0f5 0fa 0ff 500 505 50a 50f 550 555 55a 55f 5a0 5a5 5aa 5af 5f0 5f5 5fa 5ff a00 a05 a0a a0f a50 a55 a5a a5f aa0 aa5 aaa aaf af0 af5 afa aff f00 f05 f0a f0f f50 f55 f5a f5f fa0 fa5 faa faf ff0 ff5 ffa fff 424 faf fef 88f 448 ccf 66c 224 aaf eef c8f 648 fcf 96c 324 faf fef 48f 248 6cf 36c 124 5af 7ef fcf 868 fff c9c 434 fff fff 8cf 468 cff 69c 234 aff eff ccf 668 fff 99c 334 fff fff 4cf 268 6ff 39c 134 5ff 7ff f4f 828 f6f c3c 414 f5f f7f 84f 428 c6f 63c 214 a5f e7f c4f 628 f6f 93c 314 f5f f7f 44f 228 66f 33c 114 55f 77f ff8 884 ffc cc6 442 ffa ffe 8f8 484 cfc 6c6 242 afa efe cf8 684 ffc 9c6 342 ffa ffe 4f8 284 6fc 3c6 142 5fa 7fe f88 844 fcc c66 422 faa fee 888 444 ccc 666 222 aaa eee c88 644 fcc 966 322 faa fee 488 244 6cc 366 122 5aa 7ee fc8 864 ffc c96 432 ffa ffe 8c8 464 cfc 696 232 afa efe cc8 664 ffc 996 332 ffa ffe 4c8 264 6fc 396 132 5fa 7fe f48 824 f6c c36 412 f5a f7e 848 424 c6c 636 212 a5a e7e c48 624 f6c 936 312 f5a f7e 448 224 66c 336 112 55a 77e
+COLOR 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ATTRIBUTES kerning
+STYLE 0 3 4 3 6 1 1 8 1 1 13 0 2 5 0 0 4 4 3
+TEXTWIPE dump speed 6
+BOX 624 -44 663 262
+END
+
+EVENT MassiveKnall
+PICTURE "Tm:Static/MassiveLogo"
+PAUSE 10
+END
+
+EVENT Presents.ANIM32
+ANIM "tm:anims/Presents.ANIM32" 50 1
+END
+
+EVENT at.ANIM32
+ANIM "tm:anims/at.ANIM32" 50 1
+WIPE push north damped speed 1
+END
+
+EVENT Tg-97.ANIM32
+ANIM "tm:anims/Tg-97.ANIM32" 50 1
+END
+
+EVENT Called
+PICTURE "TM:Static/Called"
+PAUSE 8
+END
+
+EVENT TwistedMindsScrollerAnim
+ANIM "TM:Anims/Part2.b" 25 1
+END
+
+EVENT NEWOpenTM.ANIM32
+ANIM "tm:anims/NEWOpenTM.ANIM32" 50 1
+END
+
+EVENT StorySoFar
+ANIM "TM:anims/Part38" 50 1
+END
+
+EVENT Text1.ANIM32
+ANIM "tm:anims/Text1.ANIM32" 50 1
+END
+
+EVENT TEXT2.ANIM32
+ANIM "tm:anims/TEXT2.ANIM32" 50 1
+END
+
+EVENT SUMEThingTwistedOpenAnim
+ANIM "TM:Anims/Part2" 25 1
+END
+
+EVENT Int1
+PICTURE "TM:Static/INT1"
+PAUSE 12
+END
+
+EVENT Fly-OVA-Anim
+ANIM "TM:Anims/Part3" 50 4
+END
+
+EVENT INTROFELY
+ANIM "TM:Anims/Part28" 20 1
+END
+
+EVENT BallongStart
+ANIM "TM:Anims/Part3.b" 20 1
+TABS 100 200 300 400 500
+MARGINS off 32 607
+PALETTE 000 005 00a 00f 050 055 05a 05f 0a0 0a5 0aa 0af 0f0 0f5 0fa 0ff 500 505 50a 50f 550 555 55a 55f 5a0 5a5 5aa 5af 5f0 5f5 5fa 5ff a00 a05 a0a a0f a50 a55 a5a a5f aa0 aa5 aaa aaf af0 af5 afa aff f00 f05 f0a f0f f50 f55 f5a f5f fa0 fa5 faa faf ff0 ff5 ffa fff
+COLOR 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ATTRIBUTES kerning
+STYLE 0 3 4 3 6 1 1 7 1 1 13 0 0 5 0 0 4 4 3
+TEXTWIPE dump speed 1
+BOX 604 -11 642 251
+END
+
+EVENT LOOOOPS
+ANIM "TM:Anims/Part3.c" 20 1
+END
+
+EVENT SIIIIIIIGE
+ANIM "TM:Anims/Part3.d" 30 1
+END
+
+EVENT TWISTEDLOGOERMEDFELY
+ANIM "TM:Anims/Part3.e" 20 1
+END
+
+EVENT BallongJakt1
+ANIM "TM:Anims/Part4" 30 1
+END
+
+EVENT BALLONG
+ANIM "TM:Anims/Part4.b" 25 1
+END
+
+EVENT Scene5
+ANIM "TM:Anims/Part5" 25 1
+END
+
+EVENT HeroGlowmedlys001
+PICTURE "TM:Static/HeroGlowmedlys001"
+PAUSE 4
+END
+
+EVENT HeroGlow!001
+PICTURE "TM:Static/HeroGlow!001"
+PAUSE 10
+END
+
+EVENT CLOSED
+SOUND play "TM:MODS/mod.DemoTune" volume 64 pan 0 period 350 loops 1
+END
+
+EVENT ssMiGkommer3
+ANIM "TM:Anims/Part6" 30 1
+END
+
+EVENT Scene9
+ANIM "TM:Anims/Part7" 20 1
+END
+
+EVENT SceneSteil
+ANIM "TM:Anims/Part8" 20 1
+END
+
+EVENT SceneSplit
+ANIM "TM:Anims/Part9" 24 1
+END
+
+EVENT SkytesegSelv
+ANIM "TM:Anims/Part10" 24 1
+END
+
+EVENT Scene24
+ANIM "TM:Anims/Part11" 20 1
+END
+
+EVENT Sceneturener
+ANIM "TM:Anims/Part12" 18 1
+END
+
+EVENT Scene26
+ANIM "TM:Anims/Part13" 24 1
+END
+
+EVENT Scene27
+ANIM "TM:Anims/Part14" 20 1
+END
+
+EVENT SceneSNURpåMIG
+ANIM "TM:Anims/Part15" 25 1
+END
+
+EVENT SceneSnurr
+ANIM "TM:Anims/Part16" 30 1
+END
+
+EVENT Scene19
+ANIM "TM:Anims/Part17" 30 1
+END
+
+EVENT KlarTilAction
+ANIM "TM:Anims/Part31" 20 1
+END
+
+EVENT FIGHTEEE
+ANIM "TM:Anims/Part19.b" 30 1
+END
+
+EVENT OBJECTosANDo
+PICTURE "TM:Static/OBJECTSAND"
+PAUSE 11
+END
+
+EVENT AnimationsBy
+PICTURE "TM:Static/AnimationsBy"
+PAUSE 11
+END
+
+EVENT Repo.ANIM32
+ANIM "tm:anims/Repo.ANIM32" 20 1 disk
+END
+
+EVENT TW2
+PICTURE "TM:Static/REPERN"
+PAUSE 17
+END
+
+EVENT "mod.Yellow DeathZone"
+SOUND play "TM:Mods/mod.Yellow DeathZone" volume 64 pan 0 period 350 loops 1
+END
+
+EVENT Motion1
+ANIM "TM:Anims/Part20" 18 1
+END
+
+EVENT MOIFF
+ANIM "TM:Anims/Part20.b" 30 1
+END
+
+EVENT Motion2
+ANIM "TM:AniMs/Part21" 25 1
+END
+
+EVENT Motion45
+ANIM "TM:AniMs/Part22" 20 1
+END
+
+EVENT Motiddon45
+ANIM "TM:AniMs/Part23" 20 1
+END
+
+EVENT SHOTDOWN2
+ANIM "TM:AniMs/Part23.b" 30 1
+END
+
+EVENT FrittFall
+ANIM "TM:AniMs/Part24" 20 1
+END
+
+EVENT FrittFallAttack
+ANIM "TM:AniMs/Part24.a" 10 1
+END
+
+EVENT FrittFall2
+ANIM "TM:AniMs/Part24.b" 10 1
+END
+
+EVENT FrittFall3
+ANIM "TM:AniMs/Part25" 20 1
+END
+
+EVENT SigeNedOver
+ANIM "TM:AniMs/Part27" 15 1
+END
+
+EVENT HJJJJJJELP!
+ANIM "TM:AniMs/Part26" 20 1
+END
+
+EVENT Part40
+ANIM "TM:Anims/Part40" 50 1
+END
+
+EVENT Reformasjon
+ANIM "TM:AniMs/Part30" 20 1
+END
+
+EVENT hurhur_5.ANIM32
+ANIM "TM:anims/part46" 50 1
+END
+
+EVENT part40.a
+ANIM "TM:Anims/part40.a" 50 1
+END
+
+EVENT Part40.b
+ANIM "TM:Anims/Part40.b" 50 1
+END
+
+EVENT part44
+ANIM "TM:Anims/part44" 50 1 disk
+END
+
+EVENT Part33
+ANIM "TM:Anims/Part33" 20 1
+END
+
+EVENT RAKKETIROMPO
+ANIM "TM:AniMs/Part32" 20 1
+END
+
+EVENT REKYL22
+ANIM "TM:AniMs/Part34" 15 1
+END
+
+EVENT mod.underworld
+SOUND play "TM:Mods/mod.underworld" volume 64 pan 0 period 350 loops 1
+END
+
+EVENT attackpt2.ANIM32
+ANIM "tm:anims/attackpt2.ANIM32" 50 1
+END
+
+EVENT Attackpt3.ANIM32
+ANIM "tm:anims/Attackpt3.ANIM32" 50 1
+END
+
+EVENT StikkerAv
+ANIM "TM:AniMs/Part29" 20 1
+END
+
+EVENT STYRTEUAAA
+ANIM "TM:Anims/Part35" 25 1
+END
+
+EVENT STYYYYYYYRTE
+ANIM "TM:Anims/Part36" 30 1
+END
+
+EVENT SorthullBack
+ANIM "TM:Anims/Part36.b" 15 1
+END
+
+EVENT Tunneltoo2
+ANIM "TM:Anims/Part37" 50 1
+END
+
+EVENT JIMBO
+PICTURE "TM:Static/MusicBy"
+PAUSE 5
+END
+
+EVENT DRDEATHANIM
+ANIM "TM:Otha/DDEATH.Anim" 30 1
+END
+
+EVENT LogoTo
+PICTURE "TM:Static/DDEATH"
+PAUSE 8
+END
+
+EVENT Part49
+ANIM "Tm:Anims/Part49" 50 1
+PAUSE 5
+END
+
+EVENT TheEnd
+PICTURE "TM:Static/TheEnd"
+PAUSE -1
+EXIT
+END

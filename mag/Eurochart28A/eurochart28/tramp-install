@@ -1,0 +1,52 @@
+; Install script for the Death Row demo Tramp
+
+(procedure iaskdisk
+ (askdisk
+        (dest (substr ts 0 (- (strlen ts) 1)))
+	(prompt "Please insert volume "ts" in any drive...")
+	(help @askdisk-help)
+ )
+)
+
+(message "Welcome to the Tramp installer\n\nThis utility will join and uncompress the split data files to a directory of your own choise. Click proceed to continue.")
+
+(set @default-dest
+ (askdir 
+        (help @askdir-help)
+	(prompt "Select a directory to install to\nA directory named "DR-Tramp" will be created there.")
+	(default "")
+ )
+)
+
+(set @default-dest 
+	(tackon @default-dest "DR-Tramp/")
+)
+
+(makedir @default-dest)
+
+(set ts "")
+(if (not (exists "dr-Tramp.000")) ( (set ts "Tramp1:") (iaskdisk) ))
+(working "Copying files, please hold...")
+(run (cat 'join '(tackon ts "dr-Tramp.000")' to '(tackon @default-dest "Tramp.t3")'') (prompt "Copying files, please hold on..."))
+
+(set ts "")
+(if (not (exists "dr-Tramp.001")) ( (set ts "Tramp2:") (iaskdisk) ))
+(working "Copying files, please hold...")
+(run	(cat 'join '(tackon @default-dest "Tramp.t3")' '(tackon ts "dr-Tramp.001")' to '(tackon @default-dest "Tramp.t2")'') (prompt "Copying files, please hold on..."))
+
+(set ts "")
+(if (not (exists "dr-Tramp.002")) ( (set ts "Tramp3:") (iaskdisk) ))
+(working "Copying files, please hold...")
+(run	(cat 'join '(tackon @default-dest "Tramp.t2")' '(tackon ts "dr-Tramp.002")' to '(tackon @default-dest "Tramp.t1")'') (prompt "Copying files, please hold on..."))
+
+(set ts "")
+(if (not (exists "dr-Tramp.003")) ( (set ts "Tramp4:") (iaskdisk) ))
+(working "Copying files, please hold...")
+(run	(cat 'join '(tackon @default-dest "Tramp.t1")' '(tackon ts "dr-Tramp.003")' to '(tackon @default-dest "Tramp.lzx")'') (prompt "Copying files, please hold on..."))
+
+(run    (cat 'delete "' (tackon @default-dest 'Tramp.t#?') '" all quiet')    (prompt ""))
+
+(working "Depacking archives, please hold...")
+(run (cat 'lzx x '(tackon @default-dest "Tramp.lzx")' '@default-dest''))
+
+(exit)

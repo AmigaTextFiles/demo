@@ -1,0 +1,275 @@
+
+ The effect module BMFontAndEffect.Fx
+     +----------------------------------------------------------+
+     | "Ce qu'il manque à ces messieurs, c'est la dialectique." |
+     +----------------------------------------------------------+
+
+ It brings tools to display bitmap fonts build with an image,
+ and to build text too.
+ All upper-case are converted to lower case.
+
+ The builder <BMFONT > can create a bitmap font:
+
+<BMFONT > bitmapfontlabel | imagepath.image.iff |
+                            charatcerwidth in pixel |
+                            characterHeight in pixel |
+                            number of character by line on the gfx. |
+                            list of charatcter described. </bmfont>
+
+ so if you look at data/fonts1.iff you will understand how
+ you could build a bitmap font.
+ each caracter are 32x32 , and there are 8 character in a line so
+ look the builder bellow.
+
+ In the other side you can create text object:
+
+ <KTEXT > textlabel  | do you think it is good for you ?   </KTEXT>
+
+ the text "textlabel" will consist of the coming sentence.
+ no ascii tricks like "\n" will work. all space and tabs before
+ and after the sentence will be cutted. cariage returns will be converted
+ to spaces.
+ the way the text will return the line depends on the effect that use it.
+
+
+ Then you have 2 strange effects to display the bitmapfont using a text:
+
+   <Fx ><Pa> DisplayText </Pa>
+        <Pa></Pa>               the rectangle where to draw
+        <Pa> bmft </Pa>         a bitmap font object from < BMFONT>
+        <Pa> ttext2 </Pa>       a text object with < KTEXT>
+
+        <Pa> cte | 10 </Pa> number of char before return.
+        <Pa> cte | 40 </Pa> max number of char to draw.
+        <Pa> cte | 0 </Pa> char start offset
+
+        <Pa> 4cte| 0 |0|0.05|0.05 </pa>  X1 Y1 X2 Y2
+                                         parameters that stand
+                                         FOR THE DRAWING
+                                         OF THE FIRST
+                                         CHARACTER !!!
+    </Fx>
+
+ Note that you place the text with a rectangle, but
+ this rectangle is in fact the 1st character. the others
+ will be diplay to the left and down.
+
+ Note again DisplayTextPlain exists, it's the same
+ but color 0 is printed. (fast)
+
+ Let's have some example:
+----------------------------------------------------
+
+<BMFONT> bmft  | data/fonts1.iff | 32 |  32 | 8 | abcdefghijklmnopqrstuvwxyz0123456789    !?'[],-. </bmfont>
+
+<KIMG>   imfont| data/fonts1.iff </KIMG>   we take the image of the font too.
+                                            to use it as an image.
+
+<KTEXT> ttext2 | so you can see what a k.a.r.a.t.e. bitmap font can look like. very useful to display stupid scrooler like this. !-] </KTEXT>
+
+------------------------------------------------
+<MAIN> myscript |0|1</MAIN>              the main script to play...
+                                                    Note this image must be 256x256
+<KIMG> impacman | data/oldpac.iff </KIMG>       These one, used for sprites
+<KIMG> imghost  | data/ghost1.iff </KIMG>       can be any-sized.
+
+a music
+<KDBM> DBMmusic | data/chiptune.DBM  </KDBM>
+
+ 2 rectangles gfor some chaining.
+<KRECT> kc1 | 0|0|0|0||0|0|0|0|  </KRECT>
+<KRECT> kc2 | 0|0|0|0||0|0|0|0|  </KRECT>
+
+a camera for ghost
+<KCAM> cam_1 | 0|0|0|0|0|0|1  </KCAM>
+
+
+--------------------------------------------------
+<KSCRIPT>                           let's write a script to play.
+
+    <ID> myscript </ID>
+
+    <PLAY> HorizontalScroll | 950 | 0 | 1 </PLAY>
+    <PLAY> VerticalScroll | 2700 | 0 | 1 </PLAY>
+
+</KSCRIPT>
+
+--------------------------------------------------------
+///<KPART><ID> HorizontalScroll  </ID>
+--------------- set screen colors.
+    <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> impacman </Pa>   we have seen each image stands for a 256 color palette too.
+    </Fx>
+
+---------------     throw the music
+    <Fx><Pa> PlayDBM</Pa>
+        <Pa> DBMmusic   </Pa>
+    </Fx>
+----------------- clear screen
+<Fx><Pa> fillrc  </Pa><Pa></Pa> <Pa>cte|0</Pa></Fx>
+
+------------- display comin-up font texture.
+
+    <Fx><Pa> SpritePlain  </Pa>
+        <Pa></Pa>
+        <Pa> imfont  </Pa>
+        <Pa> cte|0.1</Pa>
+        <Pa> bounce |0|100|800|-0.5|0 </Pa>
+        <Pa> cte|0.9</Pa>
+        <Pa> bounce |0|100|800|0|0.8 </Pa>
+    </Fx>
+------------ I like pacmans
+
+    <Fx><Pa> Sprite  </Pa>
+        <Pa></Pa>
+        <Pa> impacman  </Pa>
+        <Pa> bounce |150|200|800|-0.1|0 </Pa>
+        <Pa> cte|0.05</Pa>
+        <Pa> bounce |150|200|800|0|0.2 </Pa>
+        <Pa> cte|0.25</Pa>
+    </Fx>
+
+
+
+--------------- display scroltext
+   <Fx><Pa> DisplayTextPlain </Pa>
+        <Pa></Pa>               the rectangle where to draw
+        <Pa> bmft </Pa>         a bitmap font object from < BMFONT>
+        <Pa> ttext2 </Pa>       a text object with <KTEXT >
+
+        <Pa> cte | 1000 </Pa> number of char before return.
+        <Pa> cte | 1000 </Pa> max number of char to draw.
+        <Pa> cte | 0 </Pa> char start offset
+
+        <Pa> aff |1    |-0.01</Pa>                X1 Y1 X2 Y2 of 1st caracter.
+        <Pa> sin |0.7 |1.6|0.15 </Pa>
+        <Pa> aff |1.0625 |-0.01 </Pa>
+        <Pa> sin |0.88|1.6|0.1 </Pa>
+
+    </Fx>
+
+
+///</KPART>
+--------------------------------------------------------
+///<KPART><ID> VerticalScroll  </ID>
+
+    <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> impacman </Pa>   we have seen each image stands for a 256 color palette too.
+    </Fx>
+
+----------------- clear screen
+<Fx><Pa> SetRect </Pa>
+        <Pa> kc1  </Pa>
+        <Pa>bounce  |0|200|2450|1|0  </Pa>
+        <Pa>cte|0</Pa>
+        <Pa>2cte|1|1</Pa> x2,y2
+        <Pa> 4cte |0|0|1|1 </Pa>
+</Fx>
+
+<Fx><Pa> fillrc  </Pa><Pa> kc1 </Pa> <Pa>cte|4</Pa></Fx>
+
+<Fx><Pa> SetRect </Pa>
+        <Pa> kc1  </Pa>
+        <Pa>2cte|0|0</Pa>
+        <Pa>bounce  |0|200|2450|1|0  </Pa>
+        <Pa>cte|1</Pa>
+        <Pa> 4cte |0|0|1|1 </Pa>
+</Fx>
+
+<Fx><Pa> fillrc  </Pa><Pa> kc1 </Pa> <Pa>cte|0</Pa></Fx>
+
+
+------------ I like ghosts
+    <Fx><Pa> setcamcoord  </Pa>
+        <PA> cam_1 </Pa>
+        <PA> 2cte |0|0</Pa>   x,y,
+        <PA> bounce |0|200|2550|-15|-1   </Pa>     z
+        <PA>  4cte|0|0|0|1  </Pa>        o1 o2 o3 fov
+    </Fx>
+<Fx><Pa> SetRect </Pa>
+        <Pa> kc2  </Pa>
+        <Pa> 4cam|cam_1|1|1|0|0|0</Pa>
+        <Pa> 4cam|cam_1|1|1|0|0|0</Pa>
+</Fx>
+
+    <Fx><Pa> Sprite  </Pa>
+        <Pa> kc2 </Pa>
+        <Pa> imghost  </Pa>
+        <Pa> rnd |0.25|0.255 </Pa>
+        <Pa> rnd |0.25|0.255</Pa>
+        <Pa> rnd |0.75|0.745 </Pa>
+        <Pa> rnd |0.75|0.745 </Pa>
+    </Fx>
+
+  we build object where we want. here as we set maximum character by line is 14,
+  and this text's return character count for a space (as all invalid char)
+  we use + to stand for the return.
+
+<KTEXT> ttext1 |
++  karate   +
+            +
+ demo script+
+  fighter   +
+ version 0.9+
+            +
+now you have+
+read and seen
+   all this +
+examples, any
+of you should
+be able to do
+strange demos
+   quikly   +
+            +
+            +
+and now some+
+  greetings.+
+            +
+ mawi       +
+ rno        +
+ darkage    +
+ tbl        +
+ pure       +
+ wipe       +
+ universe   +
+ lucis magia+
+ xmfc       +
+            +
+ see you at +
+ ...the...  +
+            +
+slach party 4
+            +
+ 8-11 august+
+    2002    +
+  bordeaux  +
+   france   +</KTEXT>
+
+--------------- display scroltext
+   <Fx><Pa> DisplayText </Pa>
+        <Pa></Pa>               the rectangle where to draw
+        <Pa> bmft </Pa>         a bitmap font object from < BMFONT>
+        <Pa> ttext1 </Pa>       a text object with <KTEXT >
+
+        <Pa> cte | 14 </Pa> number of char before return.
+        <Pa> cte | 1000 </Pa> max number of char to draw.
+        <Pa> cte | 0 </Pa> char start offset
+
+        <Pa> cte |0.0625 </Pa>                X1 Y1 X2 Y2 of 1st caracter.
+        <Pa> aff |1.5      |-0.0025 </Pa>
+        <Pa> cte |0.125  </Pa>
+        <Pa> aff |1.625  |-0.0025 </Pa>
+
+    </Fx>
+
+----------- I want the music to decay in the last 3 seconds.
+
+<KTABLE> volumetable | 0,1.0 | 2400,1.0 | 2675,0.0 </KTABLE>
+
+<Fx><Pa> DBMVol</Pa> <Pa> aft | volumetable |0|0 </Pa> </Fx>
+
+
+///</KPART>
+-------------------------------------------------------

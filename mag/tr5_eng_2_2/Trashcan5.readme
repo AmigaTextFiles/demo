@@ -1,0 +1,169 @@
+
+       .: ............. :.
+        ..:           :..
+  ______:               : [ ] . ..TRASHCAN ISSUE 5.. . [ ] .______
+  )     |____       ____:__      _______  ______      _____|     /
+ _\    _____/_______\_    /______\__   /__)   _/______\    |_   /_
+ \     \|     /     _/   / /     __/    / \_____     /     _/    /
+/_______|_____\_____\______\_____\|_____\_____|/_____\_____|______\
+ <--dKS!:               :---------------------------------------->
+        :             ..: ..        _______           _______      _______
+        :.............:.:  :       _\    _/___________\__   /______\_    /_
+                      :....:.. .   \     \      \     __/    \      /     /
+                           :      /_____________/_____\|_____/_____/_______\
+
+
+
+  Legal Issues
+----------------------------------------------------------------------------
+
+  THIS  SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND
+  ANY  EXPRESS  OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  IMPLIED  WARRANTIES  OF  MERCHANTABILITY  AND  FITNESS FOR A PARTICULAR
+  PURPOSE  ARE  DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS
+  BE  LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+  CONSEQUENTIAL  DAMAGES  (INCLUDING,  BUT NOT LIMITED TO, PROCUREMENT OF
+  SUBSTITUTE  GOODS  OR  SERVICES;  LOSS  OF  USE,  DATA,  OR PROFITS; OR
+  BUSINESS  INTERRUPTION)  HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+  OTHERWISE)  ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+    This software has to be spread as a whole, together in the same archive,
+the  same disks, or whatever the same.  If you want to include it in a CD, a
+compilation  or  a  magazine  for  selling it, then you have to send us, the
+Trashcan Staff, a full copy FREE OF CHARGE.  If you review this diskmag in a
+commercial  magazine,  then  you  also  have  to send a copy of the magazine
+including  any  CDs or gifts it normally includes.  You can find the address
+at  the  end  of  this textfile.  This includes, but does not exclude if not
+mentioned:   Aminet CDs, Amiga Format, Amiga Power, CU Amiga, Amiga Shopper,
+Amiga  Computing  and Fred Fish.  If you don't want to abide to these rules,
+then DON'T sell this software.
+
+    In  case  your  monitor explodes, or your cat dies, or anything goes bad
+when  you  try to run this software, then we, the Trashcan Staff, should NOT
+be held responsible for any charges/resposabilities.
+
+
+  How to run the mag
+----------------------------------------------------------------------------
+
+    Boot  from  disk  one and you will see.  We added some texts so that the
+mag  tells  you  when  to swap disks.  In case you got the files spread over
+many  archives,  these  are the files that go in each disk, along with their
+diskname.   In  case  you  downloaded  from  aminet, then you don't have the
+needed workbench 1.3 commands and files.  We can supply you with them if you
+need to.
+
+
+ Complete file structure:
+ ------------------------
+
+  trash5-[disk1]:
+
+    c (dir)
+
+      border
+      Install1.3
+      Type
+
+    devs (dir)
+
+      system-configuration
+
+    s (dir)
+      menu
+      startup-sequence
+
+    file_id.diz
+    Trashcan5.exe
+    Trashcan_A
+    Trashcan_B
+    Trashcan_D
+
+
+  trash5-[disk2]:
+
+    Trash-Stuff (dir)
+
+      Buses and Caches on 020-060 (dir)
+
+        BUSCACHE.LHA
+
+      Parenting 3d Engines (dir)
+
+        makematrix.asm
+
+    World-Charts (dir)
+
+        Votesheet.Trashcan.lha
+        VoteTool.exe
+
+    file_id.diz
+    Trashcan5
+    Trashcan5.info
+    Trashcan5.readme
+    Trashcan_C
+
+
+  How to Install the mag
+----------------------------------------------------------------------------
+
+    Installing the mag to HD is real easy.  Just copy all the files into the
+same directory and the run the executable.
+
+
+  Hardware Stuff
+----------------------------------------------------------------------------
+
+    We executed Trashcan on many configs and it ran on all of them.  Most of
+the  test were done with all the OS loaded, with DOpus running and also with
+lots of patches.  Notice that this includes, of course, a500 with one meg of
+memory and 1 disk drive.
+
+
+  Exiting to AmigaDOS
+----------------------------------------------------------------------------
+
+    In  case you want to exit back to the system, just press Esc while being
+on the index page.
+
+
+  Little Bugs
+----------------------------------------------------------------------------
+
+    Most  bugs  from the last issue have been debugged.  However, we have to
+tell  you  that  you should not press Amiga+M because then the AmigaDOS will
+get a bit confused.
+
+    In  OS  versions  starting  from  2.0,  if  you need to re-make a floppy
+distribution  from  the LHA archives, you'll need to take an extra step.  If
+you  install  a  2.0+  bootblock,  the  mag will conflict with the OS at the
+diskchange  routine,  so you need to install a 1.3 bootblock.  Anything will
+do,  so  get  out  all  your  old  packdisks (you MUST have them!) with cool
+bootblocks and install from there...  we officially recomend you the CarGame
+coded by Touchstone/Essence included on the C directory.
+
+
+  More Words
+----------------------------------------------------------------------------
+
+    As usual, sorry for the delay, but we had a lot of stuff running besides
+the mag and it was real difficult to start working on it without any editors
+in  the  staff...  now with some of them, we'll try to start working now and
+also in our new features for issue 6.  Enjoy Trashcan.
+
+                                                                Best Regards
+
+  Address for contacting: (also for the Trashcan Fan Club)
+
+  LEUNAM/NETWORK
+
+  Manuel Sanchez
+  Leon XIII 5-3C
+  41009  Sevilla
+  Spain
+
+  network@redestb.es
+  network@amigascne.org
+

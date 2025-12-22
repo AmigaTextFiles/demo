@@ -1,0 +1,328 @@
+@database "LaChopper.guide"
+@author "Morbid Visions"
+@$VER: LaChopper.guide (22/Jan/07)
+@index Main
+
+@node Main "LaChopper"
+
+
+               __  /\\  __         __                               __
+   _ _________\\\\  /  \\  //_______\\\\   M O R B I D   V I S I O N S   //__ _
+                 /   \\\\
+        ______  /      \\ _ _____/\\ _ ___/\\  _ ___/\\      ___  _ _____/\\
+       /      \\/        \\        \\\\ ___  \\\\ ___.  _)____(___)_.____   \\\\
+      //      \\/         \\  |      \\  /  _/____|        \\     |_  /     \\
+     /________||          \\_ ______/__\\        \\_ ______/____ '/________/
+               |___________/           \\________/        yop \\/
+        .__________           ..                     ._________     ::
+ _______|         /_     .....::    ___   _ ____/\\ __|       _/.....::
+ \\      |       //__)_. ::    :: __(___)_.       \\\\  \\       |::    ::
+  \\\\            /     |_::               |_ |      \\ \\       |::
+   \\___________/_____ '/`::::::::::::. _ '/________/_|\\______|`::::::::::::.
+                .....\\/....   ::::::::  \\/            ...........   ::::::::
+     _ _____ _ ::::::::::::   :::::::: _ _________ _ ::::::::::::   ::::::::
+               `:::::::::::::::::::::'               `:::::::::::::::::::::'
+
+
+
+
+               present               "Call me MORBID, call me pale
+                                     I've spent six years on your trail
+                a 64k                Six long years
+                                     On your trail  
+                intro
+
+               called                Call me MORBID, call me pale
+                                     I've spent six years on your trail
+                                     Six full years of my life on your trail
+
+          L a C h o p p e r                            ...
+
+
+                                     Call me MORBID, call me pale
+              25/NOV/00              I've spent six years on your trail
+                                     Far too long
+              25/NOV/06              Chasing your tail"
+
+
+                                        (from The Smiths's song
+                                         "Half a Person")
+
+
+All was written in Morrissey's word. Or at least something similar.
+
+	@{"Disclaimer" link Disclaimer}
+	@{"Requirements" link Requirements}
+	@{"Information" link Information}
+	@{"Credits" link Credits}
+	@{"The Story" link Story}
+	@{"The Future" link Future}
+        @{"Acknowledgements" link Acknowledgements}
+        @{"Greetings" link Greetings}
+
+@endnode
+
+@node Story
+
+It was 25th November 2000, early evening, and the two of us, namely
+what was left of Morbid Visions, were stuck in a car with three crazy guys,
+driving fast toward Spoleto. Our fellow travellers were the gorgeous
+Rocketeer, brilliant editor of the glorious magazine The Charts and two cool
+friends, named Syncro and Marco, not yet involved in that crazy world called
+the scene (we spent part of the trip explaining to Marco what demos are, what
+makes Amiga a special computer, and what we were going to do that night). We
+were bringing with us a lot of wine and a still warm floppy disk containing
+our freshly assembled 64k intro, LaChopper! Though we had slept only a few
+hours, we were overexcited by a more than 20 hours long deep-coding session.
+Our target was Spoletium 3!
+
+Spoletium was a small but very funny party. At that time, the Italian
+scene had already lost many prominent players, but all those
+who were still active joined the event and brought some productions.
+There were members of Genesis, Darkage, Trinity, The Spookie
+Fellows, Ram-Jam. More productions were submitted by email from
+foreign sceners. People knew each other since several scene and
+Amiga events, and many hours spent on IRC. The atmosphere was really
+good, friendship ruled and wine was abundant. Some guys ;-) wanted
+to organize a race-in-a-trolley compo, but Modem, afraid of
+police, didn't reveal where trolleys could be stolen from!
+Too bad!! When the 64k compo started, LaChopper was run on an A1200
+equipped with a 68060. Although it didn't crash, many bugs came out
+spoiling the show. Before the party, indeed, we had only tested LaChopper
+on the development systems, which were an A1200/030/50 and an A4000/030/25.
+Hopefully, Modem launched a second time the intro using a software
+degrader. This time LaChopper performed a lot better. In spite of the bugs,
+we won the 64k intro compo but we were a bit disappointed because it
+was the first time that one of our productions had bugs so clear
+and visible. So, while receiving the compo prize, we sincerely
+promised to ourselves to immediately track down those bastards, smash
+them and release a fixed LaChopper.
+
+                     A BROKEN PROMISE !!
+
+By the time we recovered from the drunkness, Modem had already released and
+spread all party's contributions, including our bugged winning intro.
+"So", we said, "the damage is done, there is no hurry to fix the bugs,
+let's do that when we'll have more spare time!". You can image how the story
+went. We got back to our lazy lifestyle, kept doing, from time to time,
+some coding work on other stuff, and soon forgot about LaChopper.
+
+That was typical Morbid Visions attitude. Our group was born between '94 and '95
+with 10 people in the memberlist. Half of them never did anything scene
+related! And the rest of us (including those who joined the group later)
+was always too little productive. We stayed active from 1995 to 2001, and in
+that time we completed and released six main productions. None of them had a
+big impact on the scene, but we gained some notoriety, at least in the small
+but nice Italian scene. After 2001, we lost interest in the Amiga scene,
+as well as time to dedicate to it. Morbid Visions stopped all activities but
+they were not declared dead.
+
+But banging the hardware gives you special emotions, is incomparably more
+thrilling and involving than any other programming experience. It is
+impossible to forget, something you cannot stay without for long.
+After some time, the one of us known as The Dark Coder joined Trinity and
+came back in the stagnating Amiga world, while Deathbringer started a new
+metal-bashing career on innovative, cutting-edge digital platforms.
+The coding eagerness filled again our souls, bringing new ideas and projects
+to work on. But we weren't completely free to comply with our wishes.
+The shame of the buggy LaChopper was a regret entangled in our minds,
+obstructing to cloudlessly pursue new projects. So, in 2005, we
+decided to recover the old sources and fix LaChopper. Very soon, we
+rediscovered the unique fun of Amiga metal-bashing. Then we decided to not
+only fix bugs but also implement additional effects, graphics and ideas
+we had planned during the early development of LaChopper but in the end
+not realized for time restrictions or inability. We thought it was not fair
+to name "fixed version" an intro rather different from the original
+LaChopper. Hence we started working on two new "editions" of the intro.
+The former, named LaChopper Fx, is meant to fix bugs of the original
+edition otherwise being as similar as possible to it. The latter, named
+LaChopper Dx, is a "deluxe" edition featuring the additional effects and
+improved graphics and direction. On 1st July 2005, Codex Alpe Adria took
+place in Udine. It was the year 2005 edition of an annual event dedicated to
+various and "general" aspects of the Amiga world, as well as to retrocomputing
+and new alternative computing platforms. For the first time, a small
+demo-compo had been organized as part of Codex Alpe Adria. The effort of
+organizing a demo-compo in Italy after many years of nothing, was admirable
+and deserved support. Since the new LaChopper editions were not ready, we
+decided to contribute with a "Trailer" of LaChopper Dx, quickly prepared.
+Finally, 2006 arrived. According to our plans, we completed the new editions
+on the 6th anniversary of the magical night we enjoyed in Spoleto. We released
+LaChopper Dx at The Ultimate Meeting, which took place from 27th to 29th
+December 2006. It was the first and the last time Morbid Visions attended an
+international demo party. The very last blitz before we go.
+
+On 25th November 2006, our chase to LaChopper bugs and to the regret
+disturbing our mind is over. We have spent six years on the trail of the
+ghost of our imperfection, like six are the years of Morbid Visions really
+active life (1995-2001), and six are our main productions.
+Six-six-six.
+
+                    666, the number of Morbid Visions.
+
+@endnode
+
+@node Information
+
+LaChopper is a 64k intro. It is designed to run smoothly on an Amiga
+with a 68030/50 CPU, but thanks to its Chunky-Copper technology,
+it exhibits an enjoyable frame-rate also on slower systems, including the
+plain A1200 with a 68020/14 CPU. The AGA chipset and 8M of Fast RAM are
+required.
+
+There exist 4 different editions of LaChopper, described below.
+
+  FILENAME               SIZE         DATE                NAME
+
+lachopper.vaff          59948 25-Nov-00 16:46:38   LaChopper original edition
+LaChPDx_Trailer        199180 01-Jul-05 09:19:07   Trailer of LaChopper Dx
+lachopper.fijedescro    61716 25-Nov-06 19:15:27   LaChopper Fx
+lachopper.futt't        63748 25-Nov-06 19:15:54   LaChopper Dx
+
+The original edition was released on 25th November 2000 at Spoletium 3,
+where reached the 1st place in the 64k intro compo. This edition has several
+bugs in both code and graphics, especially visible when running on a 68060
+equipped Amiga. It generally runs quite well on systems with a 68030 CPU.
+
+The Trailer of LaChopper Dx is a special edition displaying only some static
+screenshots of a preliminary version of LaChopper Dx. It was released
+on 1st July 2005 at Codex Alpe Adria 2005.
+
+The fixed edition, LaChopper Fx, features the same storyboard
+and effects of the original edition but without bugs. Note that the visual
+appearance is very similar but not exactly identical to the one of LaChopper
+original edition because most of the bugs were in the frame-interpolation
+routine, so fixing them caused small but unavoidable changes. Some of the
+routines of LaChopper Fx are also faster than those in the original edition,
+and as a result the fixed edition enjoys an higher frame rate, especially
+on the plain A1200/020/14. It was completed on 25th November 2006.
+It was released on 25th January 2007.
+
+LaChopper Dx is the deluxe edition, featuring new effects and improved
+graphics and direction. It was completed on 25th November 2006.
+It was released at The Ultimate Meeting 2006, where reached the 6th place in
+the combined 64k intro compo.
+
+@endnode
+
+@node Credits
+
+Credits (for all LaChopper editions)
+
+Direction, Code, Gfx:                           Deathbringer
+                                                The Dark Coder
+Music (used without permission):                Cancer
+
+@endnode
+
+@node Requirements
+
+Requirements (same for all LaChopper editions)
+
+- 68020 or higher CPU
+- AGA chipset
+- 8M Fast RAM
+- PAL compatible monitor
+
+@endnode
+
+@node Future
+
+LaChopper Dx is the final work of Morbid Visions. There will be no more
+productions from our group. Our long trip along the border between
+the world of the living and the one of death will finish soon.
+But the time is not come yet. Before vanishing in the dark, Morbid
+Visions will release a couple of other bugfixes. Indeed some other
+productions of ours have defects, too. Since we want to reach...
+Zero Defects, we'll release fixed editions also for them. In these
+other cases (in contrast with the LaChopper one) the bugs are rather
+small, hence we hope that the fixing job will take less than 6 years!
+;-)
+
+@endnode
+
+@node Acknowledgements
+
+LaChopper has been completed with a little help from some friends.
+We wish to thank:
+
+ Kfd, Lanch, Z3k and Zeroha        for many useful suggestions and
+                                   for testing LaChopper beta versions
+
+ Ghandy                            for providing us beautiful ASCIIs!
+
+
+@endnode
+
+@node Greetings
+
+Our sincere gold greetings are for the guys that shared with us the trip
+to Spoleto, the wine and the fun of the party:
+
+                           --  Marco  --
+
+                          -- Rocketeer --
+
+                           -- Syncro  --
+
+
+Silver greetings go to our friends          Special greetings go to all
+scattered along the scene                   past Morbid Visions members:
+(in random order):
+
+   Dr. Sam                                     Alex
+   Mase                                        Andy Wet
+   Posdnous                                    Guru Trasher
+   Nikdom                                      Lex
+   Maxime                                      Mase
+   Flender                                     MeTaL MaNiAc
+   Skywalker                                   Nexus 6
+   Maverik                                     Nikdom
+   Zek                                         Ruggy
+   Kfd                                         The Hobbit
+   Psyko                                       The Trayzer
+   Metal Designer                              Zeroha
+   Lanch
+   Dip
+   Modem
+   Blueberry
+   Apex
+   AGA060
+   Hagbard
+   Premium
+   Zeroha
+   PirlAGA
+   Phoenix
+   Randy
+   Corrosion
+   Yure
+   Paranoid
+   Skan
+   Ghandy
+   Voodoo Chile
+   Hedgehog
+   Surfing
+   The Jammer
+   Hexaae
+   Photon
+   Sauzer
+   Parsec
+   Manta
+   Dixan
+   PaN
+   Soolta
+   dBiz
+   Rio
+   plus the others we forgot!!
+
+@endnode
+
+@node Disclaimer
+
+All editions of LaChopper are copyDEATH 2000-2006 by Morbid Visions.
+All rights reserved. They are freely distributable. We are in no way
+responsible or liable for any loss of data, or damages to software or
+hardware that may result directly or indirectly from the use of these
+programs, especially when executed on a emulated Amiga environment not
+based on a real 680x0 CPU and a silicon AGA chipset.
+
+@endnode

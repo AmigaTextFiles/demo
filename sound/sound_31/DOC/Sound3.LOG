@@ -1,0 +1,722 @@
+This is a logfile of changes in Sound 2, 3, 4 etc. etc.
+
+Log started on 30.01.1995
+
+Revisions :
+FileSupport.c   : 0.09
+GFXSupport.c    : 0.36
+IntroSequence.c : 0.03
+Main.c          : 0.51
+OnBoardGFX.c    : 0.01
+
+Note, the history for changes before these are lost to the great software
+heaven in the sky, since I am not to good at remembering which went were
+at what time :)
+
+;------------------------------------------
+ + = New Feature
+ * = Change
+ - = Bug Fix
+ ! = Major Event
+;------------------------------------------
+
+Changes at 30.01.1995 by John Hinge :
+
+FileSupport.c : 0.10
+* Changed a string
+
+GFXSupport.c : 0.37
+* Changed RawKey Handler to use a new include file with definitions
+  of most rawkeys (the rest can be built by clever additions :)
+
+IntroSequence.c : 0.04
+- Changed minor include file error.. I was still referring to my old
+  P60 includes, when the rest of the project believes in P61 :)
+
+Main.c : 0.52
++ Changed Revision string to external reference, thereby ensuring correct
+  date even though I only change a 'minor' file
+
+REV.c : 0.52
++ The new revision header file
+
+makefile :
++ included REV.o as a link object, and REV.c dependent of all other .o
+  files, ensuring correct date in version string
+
+;------------------------------------------
+Changes at 31.01.1995 by John Hinge :
+
+makefile :
+- I had put in REV.o and all of its dependencies, except REV.c ;^c
+
+REV.c : 0.53
+* Changed set up of version string to acommodate my printing of some
+  of the string
+
+Main.c : 0.53
+* Change of strings for the 'Nagging Beta Version' Requester
+;------------------------------------------
+Changes at 01.02.1995 by John Hinge :
+
+! Removed ASMSupport.*, now ALL my own code is pure C :)
+
+makefile :
+* Removed ASMSupport.* dependencies
+
+Main.c : 0.54
+* Removed call of CheckAGA(), since GFXSupport handles this
+
+GFXSupport.c : 0.38
+* Implemented check for AGA chipset, to remove the need for ASM stuff
+
+REV.c : 0.55
+  Bumped master revision to 0.55
+
+;------------------------------------------
+Changes at 05.02.1995 by John Hinge :
+
+OnboardGFX.c : 0.2
++ added 4 more gadget images
+
+REV.C : 0.56
+  Bumped master revision to 0.56
+
+GFXSupport.c : 0.39
++ added InfoGadget
+
+REV.C : 0.57
+  Bumped master revision to 0.57
+
+GFXSupport.c : 0.40
++ added HitListGadget
++ added RulesGadget
++ added MainScreenGadget
++ added Print() routine for systematic printing ;)
+
+REV.C : 0.58
+  Bumped master revision to 0.58
+
+GFXSupport.c : 0.41
++ added loading of the other 2 packed screens
+
+REV.c : 0.59
+  Bumped master revision to 0.59
+
+GFXSupport.c : 0.42
++ added routine to clear selector area
+
+Main.c : 0.55
++ added call of selector clear
+
+REV.c : 0.60
+  Bumped master revision to 0.60
+
+Main.c : 0.56
+  changed string for module loading
+
+REV.c : 0.61
+  Bumped master revision to 0.61
+
+GFXSupport.c : 0.43
+! now you can switch between 3 different screens
+  with wipes and all :)
+
+Main.c : 0.57
++ Added a cosmetic setting of black colors before opening screen
+  the first time
+
+REV.c : 0.62
+  Bumped master revision to 0.62
+
+GFXSupport.c : 0.44
++ Added two more wipes
+
+Main.c : 0.58
+! Created a separate LoadTune routine, this prepares for the loading
+  of a new tune, whle listening to another...
+
+REV.c: 0.63
+  Bumped master revision to 0.63
+;------------------------------------------
+Changes at 09.02.1995 by John Hinge :
+
+
+Main.c : 0.59
++ Sound now needs disk 2 in order to run
++ added a routine to get an ID file from Sound2_2:
+
+GFXSupport.c : 0.45
+* Change of strings for loading files, now loads from Sound2_2:
+
+REV.C : 0.64
+  Bumped master revision to 0.64
+
+Main.c : 0.60
++ Now checks for presence of ID file in PROGDIR:, and if
+  present loads from PROGDIR: (typical from Hard drive, but could be HD-
+  floppy disk)
+
+GFXSupport.c : 0.46
++ checks external BOOL OneDisk, to load from PROGDIR: or from Sound2_2:
+
+REV.C : 0.65
+  Bumped master revision to 0.65
+
+;------------------------------------------
+Changes at 11.2.1995 by John Hinge :
+
+Sound2.font :
+* Re drew most of the small letters, since CDLQ complained about them..
+
+GFXSupport : 0.47
++ Implemented Rules Screen text ...
+
+GFXSupport : 0.48
++ Made new wipe for textplanes not in selector box...
+
+Main.c : 0.61
+* Changed Beta Notification form requester to Printf()
+* Removed "bye bye" requester
+
+REV.C : 0.66
+  Bumped master revision to 0.65
+;------------------------------------------
+Changes at 12.2.1995 by John Hinge :
+
+Main.c : 0.62
+* changed some strings
+
+REV.C : 0.67
+* Changed versin string layout
+  Bumped master revision to 0.67
+
+GFXSupport.c : 0.49
+* Changed to use external string arrays for smaller compilation time
+
+Texts.c : 0.1
++ Definition of the text arrays for ModInfo's & RulesScreen
+
+Texts.c : 0.2
++ Added Editorial text
+;------------------------------------------
+Changes at 14.2.1995 by John Hinge :
+
+Main.c : 0.64
+* removed embarrasing bug :
+  when I faded down, I forgot to restore volume afterwards :)
+
+GFXSupport: 0.50
++ Added shortcut to modules..
+  just press the keys 1-0
+
+REV.C : 0.68
+  Bumped master revision to 0.68
+
+GFXSupport: 0.51
++ Just thought it would be nice if the InfoScreen got updated,
+  if you use the shortcut to load while it is shown :)
+
+REV.C: 0.69
+  Bumped master revision to 0.69
+
+GFXSupport: 0.52
++ Added the editorial upscroller
+* fixed SEVERAL embarrasing memory bugs..
+  some of them could, in case of failure lead
+  to memory loss, but not (I hope) to errors...
+
+Texts.c : 0.03
+* added some text to the editorial explaining
+  my keyboard shortcuts..
+
+REV.C: 0.70
+  Bumped master revision to 0.70
+
+;------------------------------------------
+Changes at 16.2.1995 by John Hinge :
+
+GFXSupport.c : 0.53
++ Added a centerprint routine
+
+OnboardGFX.c : 0.03
++ Added images for selector gadgets
+
+REV.C : 0.71
+  Bumped master revision to 0.71
+
+GFXSupport.c : 0.54
+* changed positions of selector texts
+
+Texts.c : 0.04
+* changed a little error in editorial text
+  'you can use the keys > 1 - 0 <' instead of '> 1 - 9 <' :)
+
+REV.C : 0.72
+  Bumped master revision to 0.72
+;------------------------------------------
+Changes at 17.2.1995 by John Hinge :
++++ Now everything works :) ('cept ofcourse the introsequence..)
+
+GFXSupport.c : 0.60
+! Selector and ModsHit Selectors up and running
+
+OnboardGFX.c : 0.10
+! All images corrected images for selctor changed to Border structs
+
+Main.c : 0.70
+* change of strings for filenames, added Hit modules etc..
+
+Texts.c : 0.10
++ Added Hit modules to info texts
+
+REV.C : 0.80
+  Bumped master revision to 0.80
+;------------------------------------------
+Changes at 18.2.1995 by John Hinge :
+
+GFXSupport.c : 0.61
+* added RMBTrap to the window flags..
+
+REV.C : 0.81
+  Bumped master revision to 0.81
+
+GFXSupport.c : 0.62
++ Editorial Upscroller put on VBLANK IRQ to eliminate 'flickering' scroll
++ Added GFXSupportLEV3() entry for VBLANK stuff..
+  this could later be the base for VU-meters etc..
+
+REV.C : 0.82
+  Bumped master revision to 0.82
+
+GFXSupport.c : 0.63
+* Changed filenames for screens, to GDAT.Mx, as all other files have
+  cryptic names it seemed reasonable to complete the process :)
+
+REV.C : 0.83
+  Bumped master revision to 0.83
+
+IntroSequence.c : 0.5
++ now loads all data and starts the intro module
+
+;------------------------------------------
+Changes at 19.2.1995 by John Hinge :
+
+IntroSequence.c : 0.10
++ Fully running, showing all pictures with nice wipes
+
+Main.c : 0.80
++ delegated some of the work out to IntroSequence.c
+
+REV.C : 0.90
+  Bumped master revision to 0.90
+
+GFXSupport.c : 0.64
+* moved the opening of the font to Main.c
+
+Main.c : 0.81
++ now opens the font here, to comply with the disklayout&strategy
+
+REV.C : 0.91
+  Bumped master revision to 0.91
+;------------------------------------------
+Changes at 20.2.1995 by John Hinge :
+
+GFXSupport.c : 0.65
+* removed nasty 'white color flash' bug = 
+  added WaitTOF() at strategic locations :)
+REV.C : 1.00
+  Bumped master revision to 0.00
+change of Printf() to ShowRequester() all around... almost no Printf's left
+
+;------------------------------------------
+Changes at 22.2.1995 by John Hinge :
+
+GFXSupport.c : 0.70
++ added backdrop window to prevent gadget access while loading music
++ added showing of current module
++ changed some texts to a textarray
+
+I finally think I am about finished :)
+;------------------------------------------
+Changes at 23.2.1995 by John Hinge :
+
+GFXSupport.c : 0.71
+:( No I was not finished.. It seems that the nice gfx lady had drawn some
+   images for the selector.. so here goes some revisions again :)
+
+GFXSupport.c : 0.72
+* quite some fixin, but now the Image based Selector and ModsHit works :)
+  (Why can't the system blit 23 bytes wide things ?? :)
+
+REV.C : 1.00 (still)
+;------------------------------------------
+Changes at 24.2.1995 by John Hinge :
+
+GFXSupport.c : 0.71
+* change of speed in editorial scroller.
++ added 'cute' pointer
+
+IntroSequence.c :
+ music now comes in while revealing screen 2, plus it fades in !:)
+
+GFXSupport.c : 0.72
+* more changes as I try to finish this...
+  added shortcut keys for the 3 hit modules
+
+Texts.c :
+* changed editorial to reflect the new range of shortcuts
+;------------------------------------------
+Changes at 2.3.1995 by John Hinge :
+
+Buttons.asm :(
++ added to facilitate testing of mousebutton status
+:( I really have to get this rewritten A.S.A.P
+
+FileSupport.c : 1.00
+  Bumped Revision to 1.00
+
+GFXSupport.c : 1.00
+! fixed that 'screen won't open bug'
+*  rewrote lots'a screen stuff
+
+IntroSequence.c : 1.00
+* changed Screen stuff to look like GFXSupport (and thereby work :)
+
+Main.c : 1.00
+* small changes
+
+OnBoardGFX.c : 1.00
+  Bumped Revision to 1.00
+
+Texts.c :
+* changed editorial text (yet yet yet again :)
+
+REV.C : 1.00
+  Locked master revision at 1.00
+
+Next update will be Sound3 1.xx
+
+;------------------------------------------
+Changes at 8.3.1995 by John Hinge :
+
+Well, I really thought this was locked, but while waiting for a (MUCH)
+delayed intro, I could brush up a few minor details :
+
+* Buttons.ASM : REMOVED, I much prefer using 'C' everywhere :)
+
+Main.c : 1.01
+* added two BOOLs reflecting mousebuttonstate
+
+GFXSupport.c : 1.01
+* all decrunchs now done via GFXDecrunch(), this saves space, and ensures
+  uniform response to decrunch errors
+
+GFXSupport.c : 1.02
+* now fully cleans up, and makes meaningfull requesters informing of
+  eventual error conditions, however, in the case of a severe error,
+  I can't always guarantee a stable machine
+
+REV.c : 1.01
+  Bumped master revision to 1.01
+;------------------------------------------
+Changes at 14.3.1995 by John Hinge :
+
+IntroSequence.c : 1.05
++ Added exitfunction to IntroSequence.. Just Hold LMB a little while
+
+Main.c : 1.02
+* changed the sign on text a little, added releasedate
+
+ SOUND 2 is locked at this revision level...
+ next update will be Sound 3 !!
+
+ Forthcoming features :
+ Running better on GFX cards, at the moment it can be MADE to run
+ more or less (mostly less) smoothly on Retina blt Z3
+ This will not be easy, but if it can be done, then this proggy will
+ be real hot, as the mods will enable it to run on most major GFX cards
+ (under their relevant Emulators !!)
+
+;------------------------------------------
+Changes at 20.04.1995 by John Hinge :
+
+Here we go again : Project renamed to Sound 3, all files updated to
+reflect this, new compile of GST, and numerous minor details...
+
+GFXSupport.c : 1.04
+* changed return to mainscreen functions a little, to make it more
+  logical for the user.. Suggested by : Various
+
+GFXSupport.c : 1.05
+* Begun changes in GFX layout :
+  New MainScreen is up (neat..)
+  New BackGround on Info and RulesScreen.. (Too bad RulesScreen is going ...
+   (although the replacement will be nice...)
+;------------------------------------------
+Changes at 21.04.1995 by John Hinge :
+
+MainScreen changed, Empty GadgetBoxes added, for nice visual cues
+P61.O : 
+* Update to 610.1 / 19.03.1995
+  As always, quite a mess to do, since ASM-One wasn't made for easy
+  creation of code interfacing to anything (Why can't I decide the section
+  names without loosing my XDEF's ???)
+  (Now I atleast have made a 'skeleton' to bang up the new revisions
+   of the replayer on...)
+;------------------------------------------
+Changes at 22.04.1995 by John Hinge :
+
+GFXSupport.c : 1.06
+* Changed Wipes a little, to improve speed
+* Added new Variable : DecrunchedImage...
+  Saves me from decrunching an already decrunched image (i.e. SPEED)
+
+;------------------------------------------
+Changes at 23.04.1995 by John Hinge :
+
+GFXSupport.c : 1.07
++ Now decrunches MainScreen and BackGround Image one time, into 2 spare
+  bitmaps, to enhance the speed...
+  This ofcourse means a higher cost of memory, but....
+* DecrunchedImage changed to CurrentImage, since there is no decrunching
+  when The proggy is running, only at init time..
+* Uses CopyMem instead of GFXDecrunch...
+  This is 'slightly' faster :)
+
+OnBoardGfx.c : 1.01
++ Added the small ball gadgets
+
+GFXSupport.c : 1.08
++ Added the nice new gadgets to InfoScreen
+
+OnboardGFX.c : 1.02
++ Added the InfoScreen Gadgets
+* Removed the stand alone ball images, since they tended to blast
+  a small square hole in the screen :)
+  replaced with images including the background to avoid such small
+  embarrasments ;)
+;------------------------------------------
+Changes at 24.04.1995 by John Hinge :
+
+GFXSupport.c : 1.09
++ Added small font
+
+Main.c : 1.03
++ Added small font to initialization
+
+;------------------------------------------
+Changes at 25.04.1995 by John Hinge :
+
+GFXSupport.c : 1.10
+! Added 'mutual exlude' gadget set for InfoScreen
+! Added logics for 'mutual exclude'
+ ( Mutual Exclude, means that I (hopefully) knows which text
+   screen I am plotting, and which gadget, that can not be activated)
+
+;------------------------------------------
+Changes at 27.04.1995 by John Hinge :
+
+Main.c : 1.04
+* Changed some filenames I had 'forgot'.. ;)
+
+GFXSupport.c : 1.12
+
+* Changed Wipe handling, since InfoScreen doesn't need the big
+  wipe when changing between the texts !!
+
+* InfoScreen now prints various texts with the small font
+  Currently only ModInfos and Laws implemented...
+
+;------------------------------------------
+Changes at 08.05.1995 by John Hinge :
+
+GFXSupport.c : 1.14
+
+* Added hotkeys to InfoScreen
+* Rulestext text,positions etc, updated to V3
+  Updated Typecasting, and removed an obsolete routine ;)
+;------------------------------------------
+Changes at 10.05.1995 by John Hinge :
+
+Texts.c : 1.05
+* added HowVote,Addresses,Features,Rules text
+
+GFXSupport.c : 1.15
+* added Printing of several texts on Info Screen
+;------------------------------------------
+Changes at 11.05.1995 by John Hinge :
+
++ New file : TIGFX.c,o,h
+  This file contains struct image's for the tekst indicator arrows
+  They are here because OnboardGFX.c got crowded ;)
+
+;------------------------------------------
+Changes at 23.05.1995 by John Hinge :
+
+Main.c : 1.05
+* Added call to GFXLowlevelIRQ
+  a routine for doing stuff that doesn't need to be on the 'real' IRQ
+
+GFXSupport.c : 1.16
+* Added GFXLowlevelIRQ routine
+  Currently this handles the 'zooming' arrows for the pageshifter
+;------------------------------------------
+Changes at 24.05.1995 by John Hinge :
+
+GFXSupport.c : 1.17
+* Implemented Arrow-Indicator system
+* Implemented Pageshifting on Extrascreen
+
+GFXSupport.c : 1.18
+* mucho 'magic' bug removing...
+  apparently adding the pageshifter wasn't just 'a piece of cake' ;)
+
+;------------------------------------------
+Changes at 29.05.1995 by John Hinge :
+
+OnboardGFX.c : 1.03
+* Added the last 2 gadgets for ExtraScreen (MainScreen+HitList)
+
+GFXSupport.c : 1.19
+* Added those gadgets to the ExtraScreen...
+
+;------------------------------------------
+Changes at 30.05.1995 by John Hinge :
+
+IntroSequence.c : 1.06
+* Begun changes for V3 introsequence...
+  As usual all new gfx and sequence ;Q
+
+;------------------------------------------
+Changes at 02.06.1995 by John Hinge :
+ All modules :
+ Changed FileSupport to use shayera.library (Support lib)
+
+;------------------------------------------
+Changes at 05.06.1995 by John Hinge :
+ All modules :
+  Decruncher moved to shayera.library
+  Calls changed to reflect this
+;------------------------------------------
+Changes at 13.06.1995 by John Hinge :
+ All modules :
+  Dropped using shayera.library for the time being, as
+  using it makes it harder to port...
+
+IntroSequence.c : 1.06
+* Added Head sequence (very trance like..)
+;------------------------------------------
+Changes at 16.06.1995 by John Hinge :
+
+Main.c : 1.06
+ Cleanup, and documenting of some of the weird stuff in the code..
+
+;------------------------------------------
+Changes at 18.06.1995 by John Hinge :
+
+IntroSequence.c : 1.07
+* Now all the GFX is up and running...
+
+;------------------------------------------
+Changes at 17.07.1995 by John Hinge : (summer has come and gone ;)
+
+P612.asm|.o :
+* Now the devpac version of the replayer is back (WHOOPIE)
+* It seems Jarno is back on track....
+* An this means I don't have to make weird happenings with Asm-One
+
+Main.c : 1.07
+* since the replayer now is a major source amongst the others,
+* some changes were made here and there ....
+
+;------------------------------------------
+Changes at 31.07.1995 by John Hinge :
+
+IntroSequence.c : 1.08
+* CDLQ requested that the Head sequence shouldn't 'blank' between
+  the different heads... so there...
+
+Texts.c : 1.06
+* Added Sound Surfer Society texts...
+
+GFXSupport.c : 1.20
+* Added Surfer Society text to InfoScreen....
+
+;------------------------------------------
+Changes at 10.08.1995 by John Hinge :
+Texts.c : 1.07
+* Added all the new mod info's
+* changed text layout for modinfo's since CDLQ insists
+* that Ramosa's should have 2 pages (GRRRRRR !!!)
+* If this fucker works.. I am happy indeed
+* Added Editorial text
+
+GFXSupport.c : 1.21
+* Incorporated the new ModInfo texts via the just as new
+* ModInfo structure...
+* Apparently much of that code had been done already...
+* (Sometimes I amaze even myself ;)
+* When I did the pageselect stuff 4 the other texts, I apparently
+* foresaw the need for several pages in the ModInfos...
+
+;------------------------------------------
+Changes at 12.08.1995 by John Hinge :
+GFXSupport.c : 1.22
+* Updating of Selector Images....
+
+;------------------------------------------
+From 12.08 -> 2x.08 :
+Very irritating bughunt....
+A VERY sneaky error has been introduced into the gadget system
+for the InfoScreen.. This has sofar taken VERY much time to find..
+
+;------------------------------------------
+Changes at 28.08.1995 by John Hinge :
+Change of Compiler to SAS/C 6.55...
+thx must go to SubAcid for supplying the Update...
+NOTE: This is not an illegal update (pirates beware..)
+I (as opposed to many others) am a registered user of SAS/C
+(and much poorer for that ;)
+
+;------------------------------------------
+Changes at 12.09.1995 by John Hinge :
+GFXSupport.c : 1.30
+I finally tracked down the bugger :
+It seems that my Gadget structures somehow looses the contents of
+the Flags variable, and this must then be put in before
+the calling of AddGList() and RefreshGList(), but then
+everything works.... (This HAS to be an OS error, so I wonder if
+ Amiga Technologies know about it, and if so, will they fix it ??..
+ Sofar nobody has fixed the bug in the 'FileSystem' which allows
+ disk to go very corupt and NOT be able to validate them...)
+ (It happens when the OS wants to validate the disk, but there is
+  no free block to write the new bitmap BEFORE deleting the old !!
+  Then the OS just gives up INSTEAD of writing the new IN TOP OF the old)
+;------------------------------------------
+Changes at 20.9.1995 by John Hinge :
+Added special functions for the HitList selector :
+It now displays the name of the runner ups, when you press the
+modulenames.. This was a real bugger to install
+
+;------------------------------------------
+Changes at 12.10.1995 by John Hinge :
+ WELL, WELL, WELL
+It seems that The Player V6.1 (610.2) has a slight bug :
+E6x (Pattern loop) goes bonkers sometimes, so I was forced to
+bolt on another replayer, meaning that Sound now has 2 onboard
+replayers :
+  The Player V6.1 (610.2)
+  Tracker Packer V3.1
+That took a little sorting out, and a new file : ReplayerStub.c
+
+;------------------------------------------
+Changes at 22.10.1995 by John Hinge :
+ Replaced two modules with new versions, since they used 'illegal'
+ effect commands..
+ Changed some strings to make this a Release version..
+ Sound #3 is now Finished (I Hope)
+;------------------------------------------
+Changes at ..1995 by John Hinge :
+;------------------------------------------
+Changes at ..1995 by John Hinge :

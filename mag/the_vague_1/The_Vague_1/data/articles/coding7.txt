@@ -1,0 +1,193 @@
+                      Classic amiga virii, or 'just for fun'
+                         by kas1e (kas1e@yandex.ru)
+                          Corrected by Itix & Kiero
+
+°PROGDIR:data/clips/wahnfried.raw°7°  
+[1] .~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~ introduction.
+[2] .~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~ executable file structure.
+[3] .~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~ infect.
+[4] .~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~ how stay resident ?
+[5] .~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~.~. the end.
+
+                                               --- [1] dc.~b "introduction", $a
+
+Some ~time ~ago ~I ~wrote ~this ~article ~for one of the Russian magazines. I ~decided it
+might be of interest to people, so I have corrected it and put it in this zine.
+
+                                  --- [2] dc.~b "executable file structure", $a
+
+In the ~beginning we ~will describe a structure~~~~of~~~standard Amiga OS executable file.
+Becouse ~the dos.~library ~was ~written ~in some haste, in BCPL language, one ~of ~the
+requirements ~is ~that ~all ~data ~should ~be ~leveled ~to ~32 ~bit ~value. Therefore, it ~is of
+no surprise that in the executable files,~~~all fields are~~~~32~~~~bits.~~~The executable file can
+be divided into 3 logical parts:
+
+  1. Header section.
+  2. Memalloc table.
+  3. Hunks (further - section).
+
+ More detailed description of each part:
+
+  ---[ Header (20 bytes) ]:
+
+ 1 field: kind of section hunk_header - $000003f3
+ 2 field: it is the length of~~~~~a name of resident/shared library.~~The field is necessary
+        for  creation of ~a shared  files, and  for  usual  executable ~it's ~value ~is
+        $00000000 
+ 3 field: number of sections (including resident libraries and sections as:
+        code, data, bss) 
+ 4 field: Index of the first section (indexed from zero,~~usualy the first~~=~~$00000000)
+ 5 field: Index of the last section (indexed from zero, i.e.-1)  
+ 
+  ---[ Memalloc table (the size depends on quantity of section) ]:
+
+The~~~~table~~~~describes~~~~how much memory is~~~~required to allocate for each section.~~~~Each
+field of ~the ~table ~contains an amount of longwords (in hex) ~necessary ~to ~reserve
+for each section.
+
+  ---[ Hunks (sections), size also depends on type of section ]:
+ 
+A ~section ~~always ~~has ~a ~~header ~in ~first ~field ~-~ hunk_name. Further, ~depending ~on
+section ~type, ~there ~can ~be ~differencies. ~For ~~section ~code ~and ~data, ~after ~~section
+header we have:
+
+       - size of section in longwords (value in hex). 
+       - data
+       - [reloc sections and/or symbol sections].
+       - hunk_end ($000003f2)
+   
+Right ~after memalloc ~table, ~as I also ~told ~before, other ~sections ~follow. First ~of ~all
+there is a code section ($000003e9), so, let's talk about it first.
+
+The given section, as well as all other sections, has header (hunk_code), length ~of
+the section's data, data itself, (i.e. directly a code),~~~~reloc and symbol tables~~~~(can be
+absent) ~and ~hunk_end. ~We ~~shall ~~consider ~reloc ~and ~~symbol ~~as ~'subsections'. ~The
+section reloc is used as references ~inside~ section and also as reference from one
+section to another section.~~~~For example we~~~~will have reloc section after assembling
+such code:
+
+ start:
+      jmp start
+ end
+ 
+Reloc table is placed either in data, or into code section. In total there are 3 kinds
+reloc sections (reloc32, ~reloc16 and reloc8), for the simplicity we ~will ~consider ~only
+reloc32:
+
+ 1 field: hunk_reloc32 ($000003ec)
+ 2 field: how many references
+ 3 field: to what section we refer (index)
+
+Further  depending  on number of references, offsets from the begining of a code.
+Last field of section: $00000000.
+
+Now for for better understanding, let's look at a simple 'hello world' example.
+°PROGDIR:data/clips/vir_code.raw°16°
+°PROGDIR:data/clips/vir_shell.raw°11°  136 bytes. From them: 
+
+  20 bytes  - header
+   4 byte   - memoloc table
+ 112 bytes  ~~~~- hunk_code:
+ 
+         4 byte  - section header
+         4 byte  - the length of section data
+        76 bytes - directly a code (and the data put in him).
+        24 bytes - reloc32_hunk
+         4 byte  - end_hunk
+                 
+When comparing binaries produced by phxass or genam (old assembler), to any elf
+binaries,~~~~we can see that phxass and genam generates compact code without any
+superfluous subsections. Unlike elf there is nothing to strip from this binary.
+
+In ~given ~example, ~we ~can ~also ~define ~a ~data ~section, ~but ~~it's ~~possible ~~to ~~create
+binary ~without ~it. Data ~section ~have ~the ~same ~structure ~as ~code ~section ~(except
+name of section ($00003ea))
+
+There are other section types such as bss,~~~~~name,~~~~~debug,~~~~~etc,~~~~~but they are not yet
+necessary for us.
+                                                    --- [3] dc.~b "infect", $a
+
+So,~~~~it was brief,~~~~but~~~~I~~~~~hope more or less clear description,~~~~and you have understood
+the executable file structure.~~~Time has come to learn about the~~~~silly~~~~and~~~~~simple way
+of infecting. It works by adding data to the first section and changing ~last ~'rts' ~to
+'bra.b' on a virus. 
+
+This example of course has lots of limitations,~~~like assuming writing to code section
+(like in above example, where~ there ~is ~no ~data ~section), ~and then ~just ~looking ~for
+first 'rst'... On the other ~hand ~realizationn ~is ~pretty ~easy. The ~structure ~of ~actions
+is could look like this:
+
+   a. open a file.
+   b. read hunk_header to get how many sections there are. Depending on it we
+     ~~locate code section (it is counted memaloc tablle).
+   c. it is readed and we remember the size of section (to know where the end)
+   d. change the size of section to add bytes required by a virus. 
+   e. jump to the end, add a body of a virus and start to move upwards,
+     ~~in search for 'rts'. 
+   f. when we find 'rts', we replace it with bra.b to a virus code. all
+     this is stored to a file.
+
+This is the ~~most ~~simple way  of ~~infecting  a ~~file ~~and ~~the ~~technic is ~~reffered as
+'linking'. More ~complex ~method ~might ~work ~by adding a new, first section. Difficultly
+is ~~that ~~it's ~necessary ~to ~take ~care ~~of ~~changing ~~the ~~reloc ~~information, ~all ~~original
+hunks are displaced by 1 and etc. Advantages of this approach are:
+
+        1. virus is stored out before the program. 
+        2. code of the original program does not change, so there 
+          ~~are no checksum errors.
+
+There are many different methods of infection,~~~~~but anyway,~~~~the majority amiga viriis
+are based on a combination of these methods.
+
+                                       --- [4] dc.~b "how stay resident ?", $a
+
+In the end,~~~~I will briefly tell about how to patch some AmigaOS functions and~~~~make
+them resident. What's necessary for this purpose:
+
+   1. ~~Allocate memory (a best/clear way  is by using AllocMem ()). 
+   2. To allocated memory we copy a virus. It is very important to flush 
+      ~caches after copying code to a new location:
+                             move.l   4.w,a6               ~; get ExecBase
+                             jsr      _LVOCacheClearU(a6)  ; clear cashes
+   3. Patching functions directly.
+
+Easiest ~way ~is ~~to ~~simply ~~patch ~~library ~vectors. The ~~idea ~~requires ~some ~tinkering.
+(counting library checksum,~~~~etc),~~~but to our happy surprise the system ~function ~can
+be ~used ~to ~do ~all this - SetFunction(). ~For ~example ~we ~can ~patch ~functions ~from
+dos.~library~: ~loadseg~~(), open~~(), read~~(), seek~~(), examine~~(), etc. ~~This ~~way ~~is ~certainly
+very simple, but (but?) for a virus it will not work. 
+
+Even the ~most ~basic ~antivirus ~programs ~trace ~changes ~of ~vectors. For sure there
+are ~~many ~ways ~to ~overcome ~that, ~but ~I ~shall ~not tell ~about ~them ~yet. ~I ~want ~to
+only~~~~tell~~~~~how viruses survive after reset.~~~This is the most standard way.~~~~In amigaos
+there are some pleasant features which could help us: 
+ 
+  ExecBase-> ColdCapture
+  ExecBase-> CoolCapture
+  ExecBase-> WarmCapture
+
+inputs which are caused at various stages of loading.~~~Usually they are initialized to
+zero,~~~~but some programs and the majority of viruses modify them. To change them,
+it ~is ~necessary ~to ~calculate ~ExecBase->~ChkSum ~and ~OS ~will ~alter ~ExecBase ~after
+reset. For calculation of the checksum it is possible to use code below:
+
+    move.~l  ~~~~~4.~w,~a6          ;get ExecBase
+    lea     ~~~~~SoftVer(a6),~a0   ;the beginning of calculation structure checksum.
+    moveq   #0,~d0
+    moveq   #24-1,~d1        ;checksum through 24 word
+.~~l  ~~~~~add.~w   (a0)+,~d0        ;adding words
+    dbf     ~~~d1,~.~l
+    not.~w   ~~d0
+    move.~w  d0,(a0)         ;remember checksum in ExecBase->ChkSum
+    jsr     ~~~_LVOClearCacheU(a6)  ; avoid problems with caches.
+
+It's frequently used for bootblock viruses. And certainly will survive after a ~restart.
+There ~is ~also ~a ~heap ~of ~different ~ways ~about ~which I also shall not speak about
+yet.
+
+°PROGDIR:data/clips/bgs9.raw°9°  
+                                                   --- [5] dc.~b "the end", $a
+
+I ~think ~this ~article ~will ~be ~useful ~for ~so to say expansion ~of ~a ~view. ~It would ~be
+desirable ~to ~tell ~special ~thank ~~Poles :)~, ~in ~~particular ~beol/xine#2~, madroger/epidemic
+and certainly guru book.¤

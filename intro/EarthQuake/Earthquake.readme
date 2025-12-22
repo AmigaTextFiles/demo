@@ -1,0 +1,38 @@
+Short:    old AGA Intro, just a little bugfix.
+Author:   emiespo@tiscalinet.it (Emiliano Esposito)
+Uploader: emiespo@tiscalinet.it (Emiliano Esposito)
+Type:     demo/intro
+Requires: AGA chipset
+
+ - English:
+
+      This is an old intro from the italian group Genesis. It was released in
+      1998, giving a nostaling look at it I found a small bug and fixed it.
+
+      There's also a new feature, useful for people with slow 030 processors,
+      if you give the intro any CLI arguments, it will use a cooperative
+      blitter c2planar routine. On 020's the blitter is always used, while on
+      030/040/060s never.
+
+      Enjoy it!
+
+   FUTURE:
+      - I could add a couple of routine and make it RTG... anyone who's
+        interested?
+
+
+  - Italiano:
+
+      Questa è una vecchia intro dei Genesis, uscita all'inizio del 1998 al
+      Tig (mi pare... non ricordo perché l'ho fatta in 2 giorni e spedita via
+      internet con la febbre a 40 addosso, maledette deadline!! :)).
+
+      E' identica all'originale, ma con una piccola aggiunta: se si indica un
+      qualunque parametro da CLI verrà usato il blitter per la c2planar. Su
+      020 viene usato comunque, su altre cpu no.
+
+      Buona visione.
+
+   FUTURO:
+      - Potrei aggiungere un paio di routine e renderla anche RTG... se a
+        qualcuno interessasse...

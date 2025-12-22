@@ -1,0 +1,22 @@
+Kilka s³ów o wymaganiach magazynu.
+
+By  go  uruchomiæ  trzeba  mieæ  system 3.0+ oraz zainstalowane (nie liczâc
+systemowych) biblioteki:
+
+1. GUIGFX.library w wersji 15+,
+2. Render.library w wersji 30+,
+3. Reqtools.library w wersji 38+,
+4. DBPlayer.library w wersji 2+ (tylko gdy wîâczona jest opcja AHI w menu).
+
+By  usîyszeæ muzykë konieczne jest poprawne zainstalowanie AHI w wersji 4+.
+Aby  biblioteka  DBPlayer.library nie spowodowaîa zawieszenia 7days  podczas
+jego  uruchamiania,  musi  byæ  zainstalowane w systemie urzâdzenie AUDIO z
+handlerem AHI-Handler. 
+
+
+Prócz tego naleûy mieæ zainstalowane datatypy:
+
+1. JPEG,
+2. IFF,
+3. PNG,
+4. GIF.  

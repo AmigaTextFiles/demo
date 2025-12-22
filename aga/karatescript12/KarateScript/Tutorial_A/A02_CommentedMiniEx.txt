@@ -1,0 +1,236 @@
+
+
+ This Script is the same as the "A01" first, exepted you
+ can find a lots of comments added to explain it.
+ In karate you can write anywhat as a comment , as far as it
+ does not disturb the script. You can write comments when you're not
+ inside a tag (of the form:<TAG>...inside...</TAG> ).
+ you can also write comments into < KPART>...</KPART> tags and < KSCRIPT>...</KSCRIPT>
+ tags, but that's all. in < KPART >, karate is only interested by 2 types
+ of tags: <ID>...</ID> and <Fx>...</Fx>. In <KSCRIPT > karate only look
+ for <ID></ID> and <PLAY></PLAY>. so it's very simple to write comments.
+ note I writed < KPART> (with a space) in the comment, so it is
+ not read as the start of a part. If you change a character in a tag,
+ it will disable it and be took for a comment !!!. Nevertheless,
+ everything is non case-sensitive: < KpArT> is the same as < kPaRt> or < kpart>
+
+
+ All you do with Karate Scripts is creating a database.
+ It means you create a serie of objects, which all have a type that stand
+ for what they do, and a name to identify them.
+ Most of the tags are dedicated to create an object with a given type,
+ like <KIMG > label | imagefile </KIMG> which create an image object usable
+ by any graphic effect, with the name "label".
+
+ All karate name label are non-case-sensitive, and can contains spaces.
+ only spaces and tabs BEFORE and AFTER the labels are cuted. they can
+ use any strange characters.
+
+ Some tags needs more than one data. you separe datas within a tag
+ with the charatcter "|" (pipe).
+
+ Now that these simple writings rules are in your heads, let's comment this
+ minimal exemple lines by lines !!!
+
+
+
+
+
+        Ho ho, this is the < MAIN> tag.
+        You Must have One < MAIN> tag by demo, and only one !!!
+        you tell karate which demo script he has to play,
+        because you can create more than one script.
+        It needs:
+           - a script label ( myscript)
+           - a time offset (0 is default)
+           - a time playing rate ( 1 is default.)
+
+        time is not important since the script shows an image
+        that doesn't move !!!
+        It does not create an object.
+
+
+  <MAIN> myscript |0|1</MAIN>
+
+
+
+        Ho ho here is a < KIMG> tag, it creates an object
+        with the "image" type. you can use a lot of these
+        tags to create a lot of images. note it uses the
+        AMIGAOS (c) datatypes (c) system to read image.
+        Note you can perfectly imagine another constructor-tag
+        that would create the same type of object.
+
+  <KIMG> myimage | data/realeyez.iff </KIMG>
+
+
+
+       Ho ho ho, THE script of the demo is here.
+       Like < KIMG>, it create an object, but the type
+       of this object is "script", and his label is given between
+       the <ID>...</ID> tags, so understand you must have one AND ONLY ONE
+       <ID></ID> tags by script, to identify them.
+       after follow a list of <PLAY>...</PLAY> tags... OK, it is
+       a bad exmple, because there is only one <PLAY>, but
+       it is because the exemple is simple :-).
+       < KSCRIPT>s are in fact like a movie storyboard describing the cutting.
+       each < PLAY> stands for a scene, that is shown a certain time.
+       Karate time base unit is 1/50 second, 50Hz.
+       Here is what need a < PLAY>:
+
+       < PLAY> PartNameReference | TimeToPlayThePart | time offset  | time playing rate.  </PLAY>
+
+       This is very powerful because you can use a same part more than once,
+       and continue it at any time when it was stopped with the time offset.
+       ( You can change the speed rate it is played too with the last argument,
+       and even set it to negative values, but it a bit more complicated to understand)
+       some exmple:
+            ...
+         < PLAY> part1 | 50 | 0 | 1  </PLAY> ( play part1 1 second.)
+        < PLAY>  part2 | 500| 0 | 1  </PLAY>  ( ...then play part2 10 seconds.)
+          ...
+
+
+<KSCRIPT>
+    <ID> myscript </ID>
+    <PLAY> mypart | 99999 | 0 | 1 </PLAY>      If I want to write a comment here, no one can forbid me.(hehe)
+
+    (... other plays possible here.)
+
+</KSCRIPT>
+
+
+
+        Here is the description of the part used by the script.
+        As you might guest, it describes what happens on the screen.
+        like scripts, it must have a unique <ID>, and < KPART> can
+        be seen like a constructor of object of type "part".
+
+        All part contains a list of effects created with the special tags
+        <Fx>...</Fx>. you can set 0 or more effects in a part.
+        when a part is played, all effects are executed one after the other,
+        in the ORDER THEY WAS WRITTEN, for each frame.
+          This is very important, because an <Fx> can perfectly mask
+          another <Fx> if it is drawn after on the screen.
+
+        An effect can do anywhat, so it can have a graphic result or not,
+        (some can play music...)
+
+        for this exemple , this part just draw an image on the whole screen,
+        but it needs 2 effects because we are in 8bit (256 color) mode.
+        each "image" types contains their drawing , plus a color palette.
+        we must:
+           -set the correct image palette to the screen.
+           -display the image itself.
+
+        So let's use the 2 effects " SetPalette " and " Sprite " to do it.
+
+        You can only find one type of tag into a <Fx> (effects):
+        the <Pa> tags (parameters).
+        it's a rule: the first parameter give the name of the effect used.
+
+        here:   <Pa>setpalette</Pa>.
+
+        The effect described will be a SetPalette effect.
+        then the other <Pa> tags give the parameters needed by setpalette.
+        there is only one parameter needed for setpalette: an image.
+        ( you can verify this with the shell command "karate c")
+
+        Adding other non-desired <Pa> would cause an error and the demo
+        wouldnt start.
+        Omitting the <Pa> myimage  </Pa> would cause an error , because
+        a parameter would lack.
+        Setting anywhat instead of "myimage" that would not be a image object
+        would cause error too.
+
+
+       The second effect is the sprite effect. It needs 6 parameters:
+
+          - the screen rectangle where to print the image.
+             Well, screen rectangle management is a very powerful
+             side of karate.(see more advanced tutorial.)
+             Each graphical effects need a screen rectangle.
+             Keep in mind for the moment that: when you set nothing
+             to a screen rectangle parameter, it uses the main
+             screen by default. So , set nothing !!= <Pa> </Pa>
+
+          - the image (the one created with < KIMG> )
+
+          - 4 coordinates that stand for the rectangle to be filled with the image.
+
+         Let's see that important point:
+
+         KARATE HAS NO DEFINED RESOLUTION.
+
+         the screen coordinates are always given with a ratio from 0 to 1
+         with floating points numbers.
+         the center of the screen is ( 0.5 ; 0.5 )
+         the up-left corner is ( 0.0 ; 0.0 ) and the down-right is  ( 1.0 ; 1.0 )
+         the screen resolution the demo is played only depend
+         on option when launching karate as commandline.
+
+         Where the Sprite effect need 4 floating numbers as parameters we see:
+
+        <Pa> cte | 0.0 </pa>
+        <Pa> cte | 0.0 </pa>
+        <Pa> cte | 1.0 </pa>
+        <Pa> cte | 1.0 </pa>
+
+         To fill parameters, Karate uses a kind of 2-dimension parameters:
+         that gives a large field of possibility to manipulates effects:
+
+         <Pa> cte | 0.0 </Pa>      Means: Always Fill the parameter with constant "0.0"
+
+         we could have set:
+         <Pa> rnd | 0.0 | 0.25 </Pa>   Means: fill the parameters with a random value between 0 and 0.25.
+
+         or even:
+         <Pa> cos | 0.0 | 0.5 |0.01 </Pa>  Return: 0.0 + ( cos( time * 0.5 ) * 0.01 )
+
+         There are a lots of functions that return a floating point value
+         according to an equation (or anywhat), and the frame date.
+         This mechanism stands for all the things moving at the screen.
+         It can appear a bit complicated, but it provides an interface
+         to anything that could describe a movement.
+         ( equations , tables, interaction .)
+
+ so now let's see that < KPART>, you can now understand everything !!!
+
+
+<KPART>
+
+    <ID> mypart  </ID>
+
+    <Fx>
+        <Pa>setpalette</Pa>     This first effect throw a palette change.
+        <Pa> myimage </Pa>     the image that got the palette.
+    </Fx>
+
+    <Fx>
+        <Pa>Sprite</Pa>        This second effect zoom an image to fit the screen.
+        <Pa></Pa>                the rectangle where to print (default)
+        <Pa> myimage </Pa>       the image, whatever is its size.
+        <Pa> cte | 0.0 </pa>     X1
+        <Pa> cte | 0.0 </pa>     Y1  the rectangle coordinates to fit the image on.
+        <Pa> cte | 1.0 </pa>     X2
+        <Pa> cte | 1.0 </pa>     Y2
+    </Fx>
+
+
+
+ It correspond to the coordinates of a rectangle: !!!
+
+X1,Y1
+ +--------+
+ |        |
+ |        |
+ +--------+
+        X2,Y2
+
+
+</KPART>
+
+ That's all. Note that you can Invert the orders Scripts, Parts and mains,
+ are written, it will always work !!!
+
+

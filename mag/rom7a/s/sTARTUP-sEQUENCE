@@ -1,0 +1,8 @@
+Assign Env: ROM7a:
+ROM_7 ROM7%1a:ROM7_%2d.DATA
+
+;FLOPPY  users should copy the data file ROM7_01.DATA on a disk named ROM7b:
+;and  the  rest  of the main files (ROM_7, ROM_7.info, ROM7_00.DATA) and the
+;contents  of  all  the  sub  directories (c, devs, libs, s) on a disk named
+;ROM7a:     and    adjust    the    tooltype    of   ROM_7.info   to   read;
+;MAGAZIN=ROM7%1a:ROM7_%2d.DATA

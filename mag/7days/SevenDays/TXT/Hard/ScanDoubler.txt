@@ -1,0 +1,94 @@
+Zewnêtrzny ScanDoubler Elbox z FlickerFixer
+
+
+
+Scandoubler  jest  umieszczony  w  ma³ej  prostok±tnej  obudowie  koloru
+bia³o-kremowego.  Dla  nie wtajemniczonych (a czy s± tacy ?) wyja¶niam, ûe
+scandoubler  to  urz±dzenie  konwertuj±ce  wszystkie  tryby  15   kHz   na
+standardow czêstotliwo¶æ VGA 31.5 kHz. Umoûliwia to pod³±czenie wszystkich
+modeli Amig (oczywi¶cie bez karty graficznej) do dowolnego  monitora  VGA.
+Przenosi  pe³n±  24-bitow±  paletê  kolorów  (16  milionów)  we wszystkich
+trybach wiekszych niû 15 kHz.
+
+
+W  Scandoublerze zewnêtrznym konstrukcja nie wymaga otwierania ani zmiany
+w komputerze. W urz±dzeniu wej¶ciem jest z³±cze RGB a wyj¶ciem jest z³±cze
+VGA.  Niestety  wej¶cie  i  wyj¶cie jest zamontowane na p³ytce urz±dzenia.
+Takie rozwi±zanie jest dobre gdy posiadamy nasz± Amigê w obudowie desktop.
+Wtedy  scandoubler  po  zamontowaniu  leûy  spokojnie  wraz  z komputerem.
+Natomiast gdy posiadamy nasz± Amigê w obudowie Tower  ScanDoubler  wystaje
+za   obudow±   i  jest  dodatkowo  obci±ûony  kablem  od  monitora.  Dobre
+rozwi±zanie  zastosowa³a  w  swoich  zewnêtrznych   Scandoublerach   firma
+Micronic.  Wej¶cie  i  wyj¶cie  zamontowala  na  krótkich  kablach  wraz z
+koïcówkami które moûna przykreciæ do wyj¶cia RGB w  komputerze.  Opisywany
+Scandoubler  posiada  wysokiej precyzji uk³ad PLL stosowany do generowania
+pixeli ekranu (nie s± one generowane zewnêtrznie,  jak  to  ma  miejsce  w
+Amidze)  zapewnia  pê³n±  kompatybilno¶æ  ze wszystkimi typami Amigi (STD,
+ECS, AGA)  i  standardami  video  (PAL,  NTSC).  Zastosowanie  uk³adu  PLL
+umoûliwia   bezproblemowa   wspó³pracê   z  genlockami.  Zainstalowanie  w
+Scandoublerze FlickerFixera umoûliwia konwertowanie wszystkich  trybów  15
+kHz  z  przelotem (Interlace) do nie migotaj±cych standardowych trybów VGA
+31.5 kHz. Scandoubler/FF firmy  Elbox  bez  zainstalowanego  FlickerFixera
+moûna    w    kaûdej    chwili    przekszta³ciæ    w    pe³ne   urz±dzenie
+ScanDoubler/FlickerFixer poprzez zainstalowanie uk³adów pamiêci ramki.  Do
+dokonania  upgrade`u  urz±dzenia  do  wersji FlickerFixer potrzebne sa dwa
+uk³ady pamiêci typu OKI 518221Z-30  lub  OKI  518222Z-30  w  obudowie  ZIP
+(zig-zag).  Ko¶ci  te moûna zakupiæ jako pakiet rozszerzenia u tego samego
+dostawcy, u którego zakupili¶my ScanDoubler/FF. Instalacja uk³adów pamiêci
+jest  bardzo  prosta. Zdejmujemy obudowe z urz±dzenia i wk³adamy uk³ady do
+gniazda ZIP. Naleûy  zwróciæ  uwagê,  aby  kierunek  u³oûenia  uk³adów  by
+poprawny. Na koniec ustawiamy zworki jak opisuje do³±czona instrukcja i to
+wszystko.  Od³±czamy  zasilanie  od  komputera  i  monitora  i  pod³±czamy
+Scandoubler z FlickerFixerem.
+
+
+Scandoubler nie wymaga ûadnego oprogramowania  do  poprawnego  dzia³ania.
+Nie  spotka³em sie z ûadnym oprogramowaniem poprawiaj±cym pracê urz±dzenia
+i jak sadzê nie ma takiego (bo po co?:). Po dokrêceniu  wszystkich  ¶rubek
+moûemy w³±czyæ nasz sprzêt.
+
+
+W instrukcji do ScanDoublera jest napisane, ûe naleûy  najpierw  uruchomi
+monitor  a  nastepnie  komputer.  Zawsze  uwaûa³em  (i nawet uczono mnie w
+¶redniej), ûe najpierw powinno sie uruchomiæ komputer a nastepnie monitor.
+Teraz  naleûy  (wg  Elboxu)  najpierw  w³±czyc  monitor  aby nie uszkodziæ
+ScanDoublera. Decyzja  co  najpierw  uruchomimy  naleûy  do  nas.  I  sami
+zdecydujemy  co  wolimy uszkodziæ ;). Oczywi¶cie ScanDoubler pod³±czamy na
+wy³±czonym komputerze. Po uruchomieniu komputera naleûy odczekaæ  oko³o  5
+minut.  ScanDoubler  powinien rozgrzaæ siê do temperatury roboczej. Wynika
+wiêc z tego, ûe ScanDoubler musi byæ "gor±cy", aby poprawnie pracowa³.  To
+jest  normalne  i  nie  naleûy  sie  tym  przejmowaæ.  Taka  juû jest jego
+konstrukcja. Po "rozgrzaniu" moûemy przystapiæ do regulacji  obrazu  je¶li
+stwierdzimy,  ûe  nasz  obraz  nie jest poprawny. Obraz regulujemy poprzez
+pokrêcenie ¶rubokrêtem ma³ej ¶rubki potecjometru oznaczonej napisem Adjust
+przy  wyj¶ciu  VGA.  Jest  to  precyzyjny potencjometr wieloobrotowy, wiêc
+pe³ny jego zakres  obejmuje  oko³o  20  pe³nych  obrotów.  W  taki  sposób
+ustawiamy  obraz.  Je¶li odczujesz opór przy obracaniu ¶rubokrêtem oznacza
+to, ûe dotar³e¶ do  koïca  zakresu  regulacji.  Nie  naleûy  dalej  krêciæ
+¶rubokrêtem  aby  pokonaæ  opór,  poniewaû  moûesz uszkodziæ potencjometr.
+Jeûeli nie moûesz znaleúæ odpowiedniego ustawienia, za³óû zworkê na jumper
+oznaczony   Phase   (standardowo  bez  zworki)  i  powtórz  procedurê.  Po
+wyregulowaniu obrazu ScanDobler jest  juû  gotowy  do  prawid³owej  pracy.
+Teraz   moûesz   spokojnie   uûywaæ  Workbencha  na  monitorze  SVGA  przy
+rozdzielczo¶ci 728x567 w trybie PAL bez  denerwuj±cego  migotania  obrazu.
+Zalet  ScanDoubler  z  opcj±  FlickerFixer  jest niew±tpliwie wy¶wietlanie
+wszystkich trybów 15 kHz z czêstotliwo¶ci± 31  kHz  bez  migotania  obrazu
+oraz  wy¶wietlanie we wszystkich programach pracuj±cych w trybach 15 kHz z
+przelotem i nie moûna ich prze³±czyæ na inne tryby  ekranowe.  Szczególnie
+jest  to widoczne w starszych grach uruchamianych z dyskietek. Waûn± zalet
+jest  równieû  ogromne  przyspieszenie  trybów  AGA   high-color.   Je¶li,
+przyk³adowo, chcesz uzyskaæ obraz 640x512 przy 256 kolorach bez migotania,
+musisz wybraæ opcje Multiscan.  W  takiej  sytuacji  pasmo  pracy  uk³adów
+pamiêci ChipRAM zmniejsza siê aû do 0,6 MB/s, co powoduje niezno¶nie wolne
+od¶wieûanie ekranu. Zainstalowaie opcji FlickerFixer pozwala na  uzyskanie
+tej samej rozdzielczo¶ci w trybie PAL z przelotem, ale pasmo pracy uk³adów
+pamiêci nadal bêdzie wynosiæ 3-4 MB/s. ScanDoubler  z  opcj±  FlickerFixer
+jest  ¶wietnym  rozwi±zaniem  dla  osób  chc±cych  wy¶wietliæ Workbencha w
+wiêkszej rozdzielczo¶ci niû  640x240  bez  migotania  a  nie  posiadaj±cej
+jeszcze  odpowiednich  funduszy na zakup do Amigi karty graficznej. Dziêki
+temu moûna wygodnie pracowaæ w ¶rodowisku Amigi poprzez powiêkszony obszar
+roboczy.  Polecam  osobom  które  stoj±  nad dylematem czy op³aca siê taki
+zakup.
+
+
+Mave-rick [lm+7d]

@@ -1,0 +1,90 @@
+@{d FFECA1}                       @{i}@{c F8FFFD}Keep the dream coming... Dream powered!@{ui}@{c}
+
+  Mediaprocesor  (@{c FFFA38}MMC@{c}) - co se za tímhle slovem skrývá?  Nejsou to konvençní procesory
+typu  68k,  PPC nebo x86, ale çipy budoucnosti, o kterých jeîtë zêejmë hodnë uslyîíme.
+Hlavním  úçelem  je  ne  nahradit  stávající procesory, ale zkombinovat a na jeden çip
+dostat  pêímou podporu pro grafiku, zvuk, síïové protokoly, kompresi atd.  Dá se êíci,
+ùe  hlavním  cílem návrhu a vlastnë hlavní výhodou mediaprocesorû je práce s promënnou
+îíêkou slova.
+
+  Klasické procesory byly a jsou navrhovány a dëlíme je podle îíêky slova - 8, 16, 32,
+64bitové.   Tyto  procesory  samy  o  sobë  jsou  z hlediska efektivity, komplexnosti,
+velikosti  samotného  çipu  a vûbec moùností na samém konci.  Názorným pêíkladem budiù
+dovybavování   instrukçního   souboru  dneîních  hlavních  êad  procesorû  speciálními
+instrukcemi  pro  maticové  operace, 3D a mnohé dalîí.  Staçí zmínit Intel a jeho MMX,
+AMD  s  jeho  3DNow  i  Motorolu  s  Altivecem.  Zkrátka dneîním poùadavkûm nevyhovují
+a zvyîování  výkonu  se  nedosahuje  zásadním  vylepîováním architektury, ale víceménë
+pouze  technologicky,  tzn. sniùováním îíêky vodivého kanálu a potaùmo tedy zvyîováním
+frekvence procesoru.
+  Tento  stav  v  podstatë  trvá  uù  delîí dobu a je jen pêirozené, ùe to nedalo spát
+nëkolika   skupinám   lidí,   kteêí   chtëjí  zmënit  budoucnost.   Co  takhle  pêijít
+s procesorem,   který  místo  jakkoli  stupidního  (MMX)  nebo  chytêejîího  (Altivec)
+rozîíêení  poskytne  vîechny  tyto  funkce  a  samozêejmë  mnohem  více na úplnë novém
+základë, rychle a levnë?
+
+  Jak  bylo  êeçeno,  dneîní  32bitové procesory mají nevýhodu v tom, ùe vëtîinou musí
+pracovat  s  rûznými  typy  dat,  která  potêebují rûznë zpracovat.  Nëkteré potêebují
+skuteçnë  velkou  îíêku  slova, napê. îifrování a opravné kódy pro chyby, nëkteré zase
+velmi malé (video).  Zpracovávat je na stávajících procesorech je pêirozenë moùné, ale
+zpûsobuje  to  vyîîí  reùii  neù  je  nezbytnë  nutné  v  podobë nadbyteçných operací.
+V budoucích  procesorech  souçasného  typu  bude  tento problém êeîen nëkolika rûznými
+pêístupy.   Jedním  z nejznámëjîích je napê. metoda VLIW (Very Long Instruction Word).
+To  je metoda umoùñující skládat skupiny rûznë dlouhých instrukcí do jakýchsi "balíkû"
+o stejné velikosti a ty potom v nëkolika exekuçních jednotkách procesoru vykonávat bez
+rûzných  çasových a koherençních problémû.  Tolik teorie a teprve praxe ukáùe aù Intel
+a  H&P vyrobí Merced.  Nakolik nesplnitelné poùadavky tato metoda klade na kompilátory
+je  druhá  otázka.  A tento procesor bude zase zêejmë urçen "na vîe".  Uvidíme po roce
+2000,  do  té  doby  tu  bude plno Xeonû apod., coù jsou stále tytéù Intely na vyîîích
+frekvencích,  na  vëtîí  ploîe  çipu  (ten poslední @{l Xeon}Xeon@{l} má vëête nevëête cca 15x15cm)
+a vëtîím tepelným rozptylem...
+
+                                 @{c FFFA38}@{i}Role mediaprocesorû@{ui}@{c}
+
+  Mediaprocesory   se   vydávají  opaçnou  cestou...   Rád  bych  opët  zdûraznil,  ùe
+mediaprocesor  nemusí  být  nutnë hlavním procesorem a koneckoncû to není hlavní dûvod
+jeho pouùití.
+
+  Kdyù  se nad tím çlovëk dále zamyslí, je to jen pokraçování v pûvodním návrhu Amigy,
+byï  v  naprosto  novém  kabátu.  Amigy byla od poçátku navrùena vlastnë tímto stylem,
+tj.hlavnímu procesoru je odlehçováno speciálními koprocesory pro grafiku, zvuk a IO.
+
+  Nelze  také  sklouznout  do  pozice  pêecenëní  role  mediaprocesorû.   I kdyù budou
+primárnë  urçeny  pro výkonné a levné poçítaçe (v cenë do 500USD), do herních konzolí,
+síïových  poçítaçû  (NC),  telefonû, modemû, pêepínaçû a dalîích výrobkû s poçítaçi uù
+zase  ne  tak  moc  spojených,  jejich  výkon  nebude dosahovat v té dobë existujících
+îpiçkových  çipû  napê. pro grafiku nebo zvuk.  Rozhodujícím kritériem je cena a té je
+podêízeno  maximum  a  tedy  i  vlastnosti.  Bájná hranice 500USD musí být pokoêena...
+Stávající systémy za výîe uvedenou cenu nelze nazvat poçítaçi.
+
+  K  nasazení ve stêední têídë desktopû a ve têídë pracovních stanic bude zêejmë nutné
+pêidat  vedle  mediaprocesoru  také  reálný  procesor,  protoùe  pravdëpodobná emulace
+nëkterého z bëùných procesorû uù nebude vyhovovat.
+
+
+                                @{i}@{c FFFA38}Amiga a mediaprocesor@{c}@{ui}
+
+  Volba  mediaprocesoru  jako  çipu, na kterém bude v podstatë postavena nová Amiga je
+nepochybnë  správná.   Nový  hardware  je definitivnë nutný a volba nëçeho co bude mít
+bezesporu  urçitou  gloriolu  nëçeho tajemného, nabízejícího více neù ostatní mûùe být
+jedinë  pozitivní.  Zkrátka jako v '85 pêi uvedení A1000.  Sázka na generický hardware
+by  k niçemu nevedla, protoùe na tëchto strojích mûùeme vùdycky dostat pêedinstalované
+Windows nebo v lepîím pêípadë Linux, ale ne (v takovém mnoùství, aby to za nëco stálo)
+AmigaOS.  Navíc by tu nastal velký problém, o kterém nechtëjí ani slyîet zastánci výîe
+zmínëného.   Oficiální  podpora  v oblasti ovladaçû, kde mají výrobci zájem podporovat
+jen  vëtîinové  platformy.   Varovným  pêíkladem  je tady BeOS.  Tento OS, chlubící se
+integrací  tëch  nejlepîích  vëcí z Amigy a Macintoshû, dnes (za cca 3 roky existence)
+podporuje  pouze  nëkolik  grafických  karet,  êadiçû SCSI, zvukových karet, o dalîích
+nemluvë.  Zdánlivá svoboda ve výbëru obrovského mnoùství hardware by se tedy nekonala.
+
+  Na  závër  bych  uvedl,  ùe  výîe zmínëných çipû je ve vývoji nëkolik (pravdëpodobnë
+desítek),  ale  zmíním  se  ale jen o têech oficiálnë oznámených, o kterých lze získat
+alespoñ  nëkolik  informací.   Patêí  mezi  në  MicroUnity <www.microunity.com>, Mpact
+<www.mpact.com>  a  TriMedia.   Jediný  z  nich  má za sebou urçitý debut, a to Mpact.
+Takový  pêedchûdce  mediaprocesoru  Mpact2  je  v  souçasnosti  bëùnë k dostání a jeho
+parametry  jsou  velmi  zajímavé  (jen  pro  pêedstavu - podpora 2D, 3D, DVD video, TV
+output, 64-voice Mpact Forte Wavetable audio, Dolby AC3, Mpact AudioStorm3D v AGP nebo
+PCI  verzi).   Oçekává  se,  ùe  první reálné a funkçní prototypy mediaprocesorû budou
+k dispozici v prvním çtvrtletí 1999, rozhodnë se v budoucnu máme na co tëîit...
+
+
+                                       @{c 3BEE3F}-@{c} @{f 65FF51}uF0@{f} @{c 3BEE3F}-@{c}

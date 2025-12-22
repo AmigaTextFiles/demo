@@ -1,0 +1,647 @@
+@{xoffset 21}@{d E1FFA1}¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+@{xstep 230}@{font ACS-Title.font 18}Proç nemám (a nikdy mít nebudu) pC?@{font}
+@{xstep 445}@{c A6FFF8}@{i}Troda/Pegas@{ui}@{c}@{ystep -8}
+
+
+
+@{c FFD02B}  @{font ACS-Title.font 18}V@{font} tomto çlánku se pokusím shrnout nëkolik dûvodu, PROÇ vlastním Amigu. A také
+bych  rád  reagoval  na nëkolik çlánkû, uveêejnëných v mnoha diskmazích.  Úvodem
+bych  chtël  upozornit,  ùe  nehodlám obhajovat A500 - povaùuji ji za dëjiny, do
+kterých  veîla jakoùto poçítaç, jemuù k provozování 100% multitaskingu postaçilo
+512kB  RAM a jedna disketová jednotka.  Nëkteré informace se budou vztahovat (çi
+z nëj plynout) k mému @{text PC-NoPC-specs}hardware@{text}.  Takùe pokud budou dále uvedena nëjaká srovnání,
+tak víte, k çemu se vztahují.@{c}
+
+
+- Nemám  rád  textové rozhraní v DOSu, a zvláîtë nesnáîím myî v textovém reùimu.
+  Taktéù  toto  rozhraní  nemá  absolutní  tabelátory, tak vhodné pro jednoduché
+  a pêehledné uspoêádání textu.
+- Jeîtë  nikdy  jsem  na  pC  nevidël  PLYNULE se pohybující, a NEBLIKAJÍCÍ myî.
+  A ani  neuvidím.   Je  to  daný hardwarem...  [@{c FFD02B}neblikající jsem vidël, ale jen
+  çernobílou, barevná uù blikala - pozn.Shaman@{c}]
+
+- Nemám  rád  emulaci VGA - a tu provádí pod DOSem KAÙDÁ grafická karta.  Abyste
+  danou kartu vyuùili, musíte k ní mít driver pod ten který urçitý program.  Pod
+  DOSem  to  nepûjde  (karet  je  moc a programy pêistupují VÙDY na VGA!).  Malé
+  vyjímky existují, napê. AutoCad.
+
+- Neumí to OBRAZOVKY!!!  Ùe kdyù mám 1600×1200×24bit tak nepotêebuji nic jinýho?
+  Tak  prrr.   To  neumí  na pC skoro ùádná karta (Mac ANO).  Co takhle hry, he?
+  V 1600×1200×24  není  îance,  rychlost pêekreslování se nebezpeçnë blíùí nule.
+  Takùe  DOS,  ùádný  okýnko.  Hmmm.  Ale co têeba kreslení?  Surfovat potêebuji
+  alespoñ  v  16bitech a nemusím mít Workbench v 16bitech - otevêe se mi SCREEN.
+  WB  mi  staçí  v  8bit s pár texturkami (windoze neumí texturovat okna!!!  ani
+  obsah,  ani  liîtu  - Birdie), CeD je ale lepîí v 640×480 (oçi 800×600 neudrùí
+  dlouho...).    [@{c FFD02B}no  asi  jak  çí,  já  jedu  CEd  jen v 800×600 - pozn.Shaman@{c}]
+  A kreslím vëtîinou v 320×256.  Ve Windows abych jen restartoval...
+- Kdyù  uù  jsme  u  tëch  obrazovek, w95 a 98 mají jeden, pro më celkem závaùný
+  nedostatek.   Takzvaný  "Program manager" uù nemá vlastní ikonu/okno jako jiný
+  program  (uù  jsem  chtël  napsat proces nebo task, hluboce se stydím...).  Ùe
+  proç?   Protoùe já chci spustit program z ikonky, kterou mám na desktopu, aniù
+  bych  musel  ikonifikovat  çi  pêeîoupat  vîe,  co mám otevêeno...  To uù nyní
+  nejde.   3.11 to umëly a bylo to dobré...  Nëco jako "Amiga + n" -> WB, "Amiga
+  + m" - dalîí screen...  Mimochodem, stejnë jako na pC si to pamatuje pêedchozí
+  screen,  takùe  pomocí  "Amiga  n"  a  "Amiga m" lze cyklovat mezi WB a jedním
+  (a tím  samým)  screenem,  ze  kterého  jste skoçili na WB...  Jak jednoduché,
+  intuitivní a pêíjemné!!!  w95/98 sucks!!!
+
+- Nesnáîím @{c FFD02B}zavádëní@{c} systému ve virtuálním módu 8086. Hezky slow i na p200+.
+
+- Dokáùe  më  spolehlivë  vytoçit hláîení o nedostatku pamëti - i kdyù mám 64MB,
+  DOS má pouze 640kB.  A z toho mu jestë ukusují rûzné drivery.  A poùadavky dem
+  a her  jsou  na  konvençní  pamëï  nechutnë vysoké, takùe není ùádnou vyjímkou
+  spouîtët  64k intro pûl hodiny...  Pêeskládávat drivery a tak.  Program is too
+  bit to be fit into memory.  Oblíbená hláîka na 64MB RAM...
+
+- A  nëco  pro  game  playery.   Na  pC  není  podporováno  pêipojení klasických
+  joystickû.   Ty pC joysticky jsou analogový - s nimi hrát je asi tak pêíjemné,
+  jako  hrát  s myîí akçní hru pro joy.  A taky to nëco stojí...  A pak ùe pC je
+  levné.  Kdyù to vîechno spoçítám...
+
+- I  drivery  na  klávesnici  jsou  potêeba, kdyù máte micro$hití...  A to psaní
+  çeîtiny!!!    To   je  ALE  @{c FFD02B}LAME@{c}!!!   Proç?   Inu,  kdyù  chci  velké  písmeno
+  s interpunkçním  znaménkem,  musím  stisknout shift + háçek çi jen çárku a pak
+  teprve shift + dané písmeno.  Na Macku mi staçí zmáçknout CapsLock a hnedle ty
+  malá  písmena  nahoêe (místo çíslic) se píîou velká.  Není to nic pêevratného,
+  ale náramnë to zrychlí a ulehçí práci (zvláîtë lidem jako já, co jim psaní moc
+  nejde...).   Ovîem  na  Amize  si to mohu nadefinovat jeîtë lépe, staçí mi jen
+  shift  a  písmeno  je velké, s altem je tam speciální znak (têeba % pod ç.  5)
+  a alt + shift mi dá çíslo (stejnë radîi pouùívám numlock, ale A600...).  To je
+  uù  ale  nëco!   A  aby toho nebylo dosti, tak speciální znaky jako d s háçkem
+  a tak  mám  jako alt + znak, têeba "ñ" - staçí ?  A se shiftem ...  @{c FFD02B}Ñ@{c} ...  Jak
+  jednoduché a vynikající.  Windows? @{c FFD02B} Ne, díky...@{c}
+
+- Nemám  rád  Windows  pro jejich pomalost a nestabilitu.  Domnívám se, ùe pokud
+  pêi  chybë  typu "Divide by zero" spadne Corel (jen jsem zmenîoval objekt a on
+  "skoçil"  na guidelinu (mël tak vlastnë nulovou výîku...), nemusí mi to shodit
+  i wokna  do  blikajícího  podtrùítka!   Takové  chyby  by  uù  pêece mohly být
+  odstranëny.   Taktéù  ty  malé  requestery  nejsou  moc  optimální  na hledání
+  souboru.   Já  chci  @{c FFD02B}ZVËTÎIT@{c}!!!  Ikonky mohou být pouze 32*32 pixlu a 16 barev
+  (w98  256  barev)  (ve vyîîím rozliîení se na në je umëní trefit) a gadgety na
+  posunování  obrazu  v  oknë  neodpovídají  pomëru  vidëné a skuteçné velikosti
+  obrazu  (w95/98  a  NextStep  mají,  ale  w95  jen  pro  urçité aplikace - ani
+  nejnovëjîí VisualFoxPro 5 nemá ve w95 takové îoupátka - to znamená, ùe to bylo
+  do  w95 implementováno jako speciální, NE default, vlastnost jen pro micro$hit
+  programy!!!   Stejný program v tom FoxPro uù v w98 má tyhle îoupátka, takùe je
+  to jasný...  Jo, bylo to bez pêeloùení pro w98...)
+
+- Windows  98 më zcela @{c FFD02B}nadchly@{c}.  To proto, ùe jsem byl uchvácen novými moùnostmi
+  mého  poçítaçe...   Blaah...  Co to tu kecám, tohle není reklama microshitu...
+  Aha,  tak  jinak.   w98  më  îtvou.   Myslel jsem si, ùe by mohli alespoñ nëco
+  opravit,  ale  opak  je pravdou, pêidali tunu nesmyslû...  Ano, 8bitové ikonky
+  vypadají  o  poznání  lépe a ty gradienty na oknech (16bit+ ), "real-ehm-time"
+  (nic  moc  rychlost)  pêesouvání  oken uù v základní verzi (super!  nemusím si
+  kupovat Microshit Plus...) a tak...  -> he he, tak to jsem si myslel.  To bylo
+  DEMO.   V plné  verzi  to  chybí!  m$ forever.  Pêekreslování oken má stále ty
+  bugsy jako w95 a nëkteré vëci se mi zdají îílené.  Posuðte sami.  Vîechna menu
+  "nascrollovávají"!!!   Co  to?   Níííc,  to  jen  vëtêíçek...  A taky to nejde
+  vypnout  (!)  .   Napoprvé  jsem  si  êekl,  jééé,  to je hezký...  Napodruhé,
+  hmmmm....   Po pûlhodinë práce - nejde to vypnout?  Nejde :(((( .  Takùe hezké
+  scrollování,  zvláîtë  velkých  nenu...  To je snad @{c FFD02B}zlý sen@{c}!!!  Nic proti, ale
+  takhle  se  nascrolovává  vîechno  a  vîude,  a  nejde  to  vypnout...  (têeba
+  i bublinková   online  nápovëda...)  Zdá  se,  ùe  m$  nepochopil,  ùe  takové
+  "frajeêinky" nesvëdçí uùivatelské pêívëtivosti a pouùitelnosti systému...  Ale
+  o  to  pêeci  u  windows  nikdy  neîlo, nebo snad ano???  A to prý je w98 více
+  konfigurovatelné...   :(((  Jenom lùou a lùou...  No a perliçka k w98 nakonec.
+  Po  dvou  mësících  pouùívání (a têech formátováních disku...  :(((( ) dospëly
+  windoze  k  závëru,  ùe  uù  dále  nebudou  fungovat, ùe si máme sehnat update
+  a POÎKODILY  SI S*A*M*Y win.com, takùe to zatuhne pêi startu...  Staçí mít w98
+  boot  disk (32bit fat není pêístupná pro w95 boot disk!) a pêehrát win command
+  a  nastavit  v  biosu  datum  o  2  mësíce  zpátky...   Anebo zformátovat disk
+  (ZASE!!!)  a  nainstalovat (pokud to pûjde...) w95 nazpátky...  Taky jsme se k
+  tomu  nakonec  dopracovali.   I  kdyù  nejsou  tak pëkný (dyï je to hnusný jak
+  çertovy hraçky!), alespoñ se samovolnë neniçí (jen aby...) ...  Happy days are
+  here  again,  w98  comming!   Or you want try Win@{c FFD02B}NT@{c} = @{c FFD02B}N@{c}_ew @{c FFD02B}T@{c}_roubles ?!?!  No,
+  tyhle  "problémy"  bylo  samozêejmë  kvûli çasovë omezené demoverzi, ale to se
+  pêece nedëlá, no ne?
+
+
+- GUI.  No to je ale hrûza.  Nejen, ùe je to nepraktický, ale tak se to rozlízá!
+  Uù  vás  trklo,  o kolik ùe liîty a okna zabírají víc neù na Mackovi çi Amize?
+  Jak v tom mám pracovat, kdyù mi celou plochu seùerou ruzný liîty a tak.  Jeîtë
+  ùe  alespoñ  ten  @{c FFD02B}Exploder@{c}  4  je  takový  celoobrazovkový...   Ale je to zase
+  nedokumentovaná   funkce,  nebo  alespoñ  programátor  pêi  mém  poùadavku  na
+  odstranëní  té  liîty  dole  êíkal,  ùe  to nejde...  Takùe zase jeden z mnoha
+  microshitích úskokû a podrazû...
+
+- Fonty.   Je  bezvadný,  ùe  si  mûùu  vybrat  malé nebo velké fonty, ale to je
+  vîechno!   Ùe  Amiga  çi Mac umí i jiné velikosti (neù malé a velké...) fontû,
+  jiné  fonty  pro  jiné  vëci (ikonky, menu, adresáêe...), o tom uù radîi vûbec
+  nemluvím...   Kam  ten  svët  spëje, kdyù "nejlepîí" operaçní systém z roku 98
+  neumí  ani  to, co jiný (paradoxnë skoro neznámý) OS uù v roce 88 (2.0)...  To
+  je snad výsmëch nebo co...  Jasnë, na druhou stranu to straînë usnadñuje práci
+  programátorûm,  prostë  mají  jen  2  varianty...  Mimochodem vëtîinou natvrdo
+  poçítají  (zvláîï u rûzných "multimediálních" shitû) s urçitou velikostí písma
+  a  pak Vám krásnë pêekreslí wokna...  No to je paráda.  To na Amize je spousta
+  programû napsaná tak, ùe jsou tzv.  Font Sensitive, coù znamená, ùe si omrknou
+  velikost  fontu  a  pêizpûsobí  velikost  oken.   Ano,  je  to sloùitëjîí, ale
+  na druhou stranu celkem potêebná vëc.  Programy se nedají psát natvrdo, jak ve
+  woknech.  To ale není chyba OS, ten prý je font-sensitive...
+
+
+@{c FFD02B}******************************** malá vsuvka **********************************
+
+  Jedna shamanova pêíhoda z práce - pêijel "programátor z Prahy".@{c}
+@{c FFD02B}  Závada:  okno jeho aplikace se neveîlo celý na obrazovku.
+
+expert>  vím çím to je - nemáte nastaveno rozliîení 800×600
+Shaman>  mám
+expert>  (po ovëêení) aha, tak máte blbë nainstalovaný Windows
+Shaman>  nemám
+expert>  (dvë, têi minuty pátrá v ovládacích panelech)
+Shaman>  ...moùná to bude fontama...
+expert>  nojo, jasnë musíte mít PÊECE MALÝ fonty, TO DÁ ROZUM, NE?!
+Shaman>  nedá, ty nejsou na tadytý 14tce skoro vûbec vidët.
+expert>  (nedbaje zmëní nastavení; program po restartu widlí funguje)
+         "Tak vidíte, ùe byla chyba u vás!"
+Shaman>  kdepak, to je îpatnë napsaným programem...
+expert>  no dovolte... ono je tam hodnë poloùek - jinak to prostë nejde udëlat
+Shaman>  to je blbý - co takhle pouùít svûj menîí font namísto systémovýho?
+expert>  (udëlal pohled, jako bych zrovna êekl sprostý slovo)
+Shaman>  tak supr... jeîtë jsem se chtël zeptat, to se budou posílat
+         jen novë poêízený data do Prahy, nebo vùdy za aktuální mësíc?@{c}
+@{c FFD02B}expert>  ne - pêi kaùdým odeslání se odesílá celá databáze; to je kvûli tomu aby
+         se v tom mohlo zpëtnë mënit - ale to zatím nefunguje, protoùe teð zkouîíme
+         ty 'nový technologie' (myîleno Windows NT... pozn.Shaman ;-) a máme s tím
+         jeîtë nëjaký problémy.
+Shaman>  to ale bude moc velký a drahý -> Nextel nám úçtuje 44,- Kç za 64kB
+         (tzv. KILOSEGMENT DAT !!! :-O) + dalîí poplatky za ças a pauîál...
+expert>  aï se vám to líbí nebo ne, budete to muset takto pouùívat
+
+  Jaké byly ohlasy uùivatelû na nový ¢software¡?
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+	ªJé ... Jardo, proç si nám sem dal takový blechy?  To se nedá pêeçíst.º
+	ªKdy dostaneme novëjîí verzi? Uù çekám pûl hodiny neù to najede...º
+    ªKterej idiot vymyslel takový údaje?  To je nám pêece úplnë na hovno!º
+	ªJardo, proç u muùe jde zadat jen ùenatý nebo nic?º
+	ªOno më to nechce pustit dál. Ale já fakt nevím kolik má dëtí!!!º
+	ªZase se to se mnou nebaví... jdu na obëd!º
+
+******************************** konec vsuvky **********************************@{c}
+- @{c FFD02B}Multiselect@{c}.   To  je  taková  îkaredá  vëc  s shiftem.  Aby îlo vybrat tento,
+  tenhle a tamten + tamty soubory naráz a smazat çi zkopírovat je.  Umí to kaùdý
+  OS,  vîechny  pouùívají shift, jen ve windows oznaçujete se shiftem vùdy blok,
+  to  co  dëláte  normálnë  se  shiftem (Amiga, Mac...) je tady na Ctrl.  Coù më
+  pêipadá  jako  nemístná nestandartizace ovládání - anebo, to bude asi ono, ono
+  to bude asi nový (m$) standard, tak to bude.
+
+- Dále  si  neodpustím  popíchnout  ty  zobrazovací  chyby  v  wokenním  systému
+  win95/98.   Nastávají zvláîtë tehdy, kdyù se pokusíte (jako na Amize) "îoupat"
+  s requestry  a  systém  se  snaùí  nëco  dëlat  (@{c FFD02B}tttaaassskkk@{c}@{c FFD02B}...@{c}).   Çím  více
+  "bëùících" "procesû", tím horîí situace s pêekreslováním (a padáním...). Tuhle
+  se mi w98 zhrutly, kdyù jsem si dovolil pêi kopírování na Zip posunout oknem.
+
+- Dost  dobêe  nechápu,  proç  i  u  takové  karty  jako  Diamond  Virge,  musím
+  restartovat  Windows  i  pro  takovou @{c FFD02B}bleîku@{c}, jako je zmëna velikosti kurzoru.
+  O zmënë  rozliîení  çi poçtu barev nemluvë.  No, u w95/98 je to lepîí, ale jen
+  kdyù  máte  dobrou kartu a ms+ pro w95.  Ovîem kvûli kurzoru a spoustë dalîích
+  maliçkostí je restart (pomalý i na 200MHz + SCSI...) nezbytný...
+
+- Instalace.    Instalace  =  67  @{c FFD02B}restartû@{c}.   Nevëêíte?   Tak  zapoçíteje  SCSI,
+  zvukovku, síïovku, m$ mouse a tak dále, a tak podobnë...  w98...  Restart OS!
+
+@{i}@{f 8FF8FF}  [...a jestli neumêeli, tak tam reinstalují a restartují dodnes - pozn.Shaman]@{ui}@{f}
+
+- Internet.   Médium,  promílané  ze  strany  na  stranu.   Musím se pêiznat, ùe
+  s instalací  netu  jsem nemël ùádné zkuîenosti ani z Maca ani nedejboùe, z pC,
+  a tak  jsem  mël  z  zprovoznëní tohoto na Amize docela strach.  Ale rozbalení
+  Miami  a jeho  jednoduchá konfigurace më zcela @{c FFD02B}fascinovalo@{c}, zadal jsem JEN typ
+  modemu  (s autodetekcí  mám  z  windows  îpatné  zkuîenosti...) a pêihlaîovací
+  (systémové)  jméno  a  heslo + tel.  çíslo.  Vîe ostatní Miami nakonfigurovalo
+  samo,  dobêe  a rychle,  dokonce  navázalo  spojení  se serverem a zjistilo si
+  vîechny ostatní potêebné údaje - prostë bájo, po "online" se vytvoêí dynamická
+  knihovna   "bsdsocket.library",  pêes  kterou  standardnë  pêistupují  ostatní
+  aplikace  - têeba IBrowse nebo YAM, nebo AmFTP...  Vîechno mi jelo bëhem 10-15
+  minut,  coù më pêíjemnë pêekvapilo.  S posíleným sebevëdomím jsem se vrhnul na
+  pracovní   pC,   jakoùe  bude  net...   Po  têech  hodinách  @{c FFD02B}kuchání@{c}  poçítaçe
+  a konfigurování  karet  (bohuùel,  ale  nebylo  jiù  volné  IRQ  pro  COM2 (pC
+  deformovaný  název  pro  25pin  sériový  port),  protoùe IRQ potêebují têeba i
+  hodiny,  fpu  a  tak  a podobnë...   A máte jich jen 15, coù se sice mûùe zdát
+  dostateçné,  ale  jak  komu  -  pêidáte-li  dvoukanálové  IDE  (2  IRQ), scsi,
+  zvukovku, síïovku a tak, máte smûlu, IRQ se @{c FFD02B}nekotëj@{c} a tak jsem prostë zjistil,
+  ùe  i  kdyù  pC  nehlásí konflikt síïovky s çímkoli, tak síï nejede a navíc se
+  v systému hlásí dalîí PCI karta (!!!), o které mi win95 ani nic nejsou schopny
+  êíci,  jen mi ji pêi kaùdém startu ukazují a nic nepomáhá...  No nic, pochopil
+  jsem  a  vydal  jsem  se  instalovat  modem  a  internet na jednoduché pC (jen
+  grafická  karta  s  síïovka),  kde  se mi to po nëkolika hodinách instalace m$
+  exploderu  4.0  (má jakýsi vlastní (?!) formát html souborû a vîechny na disku
+  mi  zkonvertoval  do  jeho  nového  "super" html formátu, coù zabralo více neù
+  hodinu...   :(  ).   Následnë  probëhla  pêíîerná  konfigurace pêipojení, kde,
+  kupodivu,  nelze  zadat  ani více çísel - kdyù bude jedno nepêístupné u Vaîeho
+  providera,  tak  prostë si budete muset pamatovat to druhé (têetí, çtvrté...!)
+  a pêepsat  jej  - v Miami gadget/F5 - dial next...  A k dovrîení mojí hrûzy to
+  jede skoro 3x pomaleji, neù na mojí Amize (stejný modem i provider...  :(()...
+  A to mám jen Z2 a standardní sériový A1200 port.
+
+@{c FFD02B}- U   "Telefonického  pêipojení  sítë"  ve  w95  je  spousta  roztomilých  bugû.
+  Napêíklad  staçí  vytvoêit  druhé  pêipojení a nezadat heslo (napê. IPB ho pro
+  spojení  nevyùaduje).   Poté w95 zapomenou vîechna ostatní hesla (i v Exchange
+  :-)  a  musíte  je  jiù  napoêád  znova  zadávat.   Nebo  pêi omylem vyvolaném
+  pêipojení  staçí  dát @{c FFD02B}STORNO@{c}@{c FFD02B} a pak se (pokud ihned nerestartujete) dëjou vëci.
+  Buð  se  to  zhroutí  hned,  nebo  pêestane chodit síï çi nëco jiného, nebo po
+  dalîím pêipojení je "mnoùina síïových protokolû nesrozumitelná". [pozn.Shaman]@{c}
+
+- Dále  bych  chtël  upozornit  na  jednu dûleùitou vëc.  A sice ze výkonnost se
+  neodvozuje  z  údajû  v  megahertzích  a nanosekundách, ale z efektivity práce
+  lidí,  kteêí  s  Amigami  pracují.   Tato  skuteçnost  vedla v DOSovském svëtë
+  k vytvoêení  Windows,  které  mëly  odstranit  nedostatky  znakového  rozhraní
+  a pokusit se dosáhnout kvalit GUI na Macu.  Pokud ale srovnáme jejich skuteçný
+  pêínos  s  tím,  çím by chtëly být, musíme si poloùit otázku nadnesenou Stevem
+  Jobsem  na  adresu  DOS  a  Windows:   "@{i}@{c FFD02B}Mûùe se kûñ postupným vývojem pêemënit
+  v automobil?@{c}@{ui}"  Pro mnoho lidí Windows jistë znamenají velký posun dopêedu, ale
+  pokud  se  na  toto  prostêedí  podíváme  z  hlediska  produktivity  uùivatele
+  a srovnáme  ji  s  produktivitou  na  Amize çi Macu, není výsledek pro Windows
+  pêíliî  pêíznivý.   Pravëký dosovský kûñ totiù zûstane nadále konëm, i kdyù si
+  pêes  sebe  pêehodí  autoplachtu  a na @{c FFD02B}krk@{c} povësí SPZ a i kdyù se bude spousta
+  lidí na první pohled domnívat, ùe to uù kûñ není.
+
+- Pozn.   DOSovský  vliv  je  v w95 i 98 stále jeîte dominantní.  (autoexec.fak,
+  config.shit,   MS-DOS  ovladaçe,  zavádëní...)  Stále  je  to  POUZE  grafická
+  nadstavba DOSu.  @{c FFD02B}Shit@{c}...
+
+- Overscan.   Na  pC  @{c FFD02B}NEEXISTUJE@{c}!   Tento  stav  je  navíc  podporován nëkterými
+  monitory,  kteréù  mají  kvûli  rychlosti  pêekreslování  screenu  zûùeno pole
+  vykreslování  na  menîí  pole,  neù  je  obrazovka!   A pêitom je to tak pëkná
+  funkce...   Námitka  o  vëtîí  ergonomii vyîîí opakovací frekvence nemá smysl,
+  jelikoù  i  na  Amize  lze  jet  ve  více  Hz.  A pak, staçí mít dlouhosvítící
+  luminofory a rázem to nebliká.  Pokud jsou @{c FFD02B}luminofory@{c} schopny svítit déle, tak
+  není  potêeba pêekreslovat obrazovku tak çasto.  Pokud by svítily 2× déle, tak
+  by  byl obraz tak stabilní, jako pêi 100Hz.  Já mám 100Hz ve vîech rozliîeních
+  a je to BÁJO!
+
+- Taky neexistuje volitelné rozliîení.  Na co?  Têebas na kreslení pozadí ke hêe
+  -  1280*256  =  4 obrazovky v Lowresu.  Nebo fontu - potêeboval jsem dostat do
+  fontu  více  znakû  - 320*384!  Je to @{c FFD02B}ÚPLNË@{c} libovolné!!!  No, omezení blitteru
+  je,  ùe  îíêka  musí být násobkem osmi...  Teoretické omezení intuitionu je 16
+  368 * 16 384 pixlû, coù není tak zlé, ne?
+
+- Dále  se  podíváme  na  grafiku.   Aï si êíká kdo chce co chce, paleta 262 144
+  barev  (VGA  omezení)  je  málo.  Paleta 16 777 216 je uù to pravé.  Tyhle VGA
+  omezení  se  nám ale bohuùel s pêíchodem RTG dostaly i na Amigu, coù je trochu
+  îkoda...   Jen  2 barvy na pointer, a pouze @{c FFD02B}18bitová@{c} barevná hloubka v menîích
+  neù  24bit rozliîeních...  Vlastnë jako HAM8 mód, ale bez bugsû...  :-/ Taktéù
+  320*200  je,  zvláîtë ve vertikálním smëru málo.  Pro ty, kteêí by snad chtëli
+  dëlat  nëco  s  videem  na pC mám jedno upozornëní.  Pomëry pixelû v TV a v pC
+  jsou  dost rozdílné.  Nëkteré karty slibují zobrazit obraz z pC na TV.  Hmm...
+  To  jsem  se  nasmál,  kdyù  se ukázalo, ùe se v NC skoro nedají çíst písmena.
+  Navíc  to  funguje  pouze  tehdy, kdyù máte 60 Hz na screenu.  Víc ta kartiçka
+  nestíhá.   Takùe dalîí driver na pêepnutí do 60Hz.  Vzhledem k tomu, ùe systém
+  bootuje v 70Hz a spousta programû (her a dem) si nenechá mluvit do zobrazovací
+  frekvence...  I karta FASTMovie není mooc fast, spíî docela slow.  A na dëlání
+  prezentace  k  ní  zase  není  soft.   Srovnání  s  Amigou vybavenou Genlockem
+  a Scalou  bylo pro pC zdrcující.  Çásteçnë za to mûùou Windy - dodaný soft jel
+  právë pod Windama.
+
+- Pouùité  procesory  Intel  mají  nëkteré  slabiny.   Vîeobecnë  je známa chyba
+  v dëlení  od  çtvrtého  desetinného  místa  u  procesoru  Pentium  uù prý byla
+  opravena,   to  ano,  ale  daleko  závaùnëjîí  (anùto  fpu  výpoçty  se  mnoho
+  neuùívají...   jasnë,  jsou  vyjímky)  chyba  je vîak chyba opët Pentia (a pro
+  zmënu  skoro  neznámá)  v multihreadingu.  Jde o to, ùe pêi zhruba 150 tascích
+  (12  oken  v  WinNT,  çi  bëùná  situace pod @{c FFD02B}UNIXEM@{c}) dojde posléze k pêeteçení
+  stavového  registru.   Následuje  silné  zpomalení  aù  pád  systému...  Podle
+  oficiálního  prohláîení  Intelu bude tato chyba nepêíznivë ovlivñovat výkon ve
+  víceuùivatelských  aplikacích  jako  WindowsNT a UNIX...  Fundovaný popis chyb
+  Pentidla viz.  CHIP 1/95.  Chybovost neni "výsadou" pENTIDLA.  Kaùdý zbëhlejîí
+  programátor  v  assembleru  Vám prozradí, ùe na 486 a starîích pentidlách (60,
+  66MHz)  dojde semtam k pêeteçení (nekoneçnë velké çíslo) pêi dëlení dvojkou...
+  No a na 386 bylo taky "pár" chyb...  Jasnë, nic není dokonalé, i Motoroly mají
+  chyby...   Vîechny  Intely  mají  pouze  8  registrû (Motoroly mají 16 a dalîí
+  podpûrné, nemluvë o fpu (tam má 8 i intel a kdyù je pouùívá mmx...  hádejte co
+  dëlá  fpu  ;)  ) kde máme dalîích 16...  PPC rulez, to má 32 integrálních a 32
+  fpu)  a tyto jsou navíc vázány instrukcemi - je potêeba stále vzpomínat, který
+  ùe  to  registr  mûùe  pouùít tuto instrukci (@{f FF97D8}FUCK OFF@{f}@{f 5CDD00}!!!@{f}).  Navíc Intely mají
+  dost  hloupou sadu instrukci (no jo, rok 85...) - jen pro sçítání mají nëkolik
+  instrukcí;  záleùí jestli sçítáte çíslo mezi registry, v operaçní pamëti, atd.
+  Zkrátka  hromada  omezení,  jenù na Motorole neexistuje.  Motoroly jsou docela
+  kompatibilní  v rámci uùivatelského módu (ne @{c FFD02B}SUPERVISOR@{c}), jen, bohuùel nëkterá
+  pozdëjîí  technická vylepîení êady 68k zpûsobila nemoùnost implementace tëchto
+  instrukcí - viz nëkteré emulované instrukce na 040 a 060.  Naproti tomu Intely
+  dosahují jakéstakés kompatibility pouze hafolem rûzných reùimû práce procesoru
+  (reálný,  chránëný, virtuální..).  Srovnání vëkem shodných procesorû (je têeba
+  si  DÛRAZNË UVËDOMIT ÙE 040 BYLA VYROBENA V ROCE 1990!!!!!!) dopadne pro Intel
+  dost  katastrofálnë.   DHR  jsou  Dhrystones  -  jde o test, jenù provede daný
+  výpoçet  v  celoçíselném  módu  a  poçítá  se  kolikrát  za  sekundu.   Pouùit
+  Checkit3.0 (pC) a AIBB6.5 (Amiga).
+   @{c FFD02B}   Procesor Bits      DHR        Procesor Bits     DHR@{c}
+
+    8088    8/16     344/4.7        68000  16/32   1600/7
+    80286  16       4100/20         68020  32      5700/14
+    80386  16/32   11000/40         68030  32     19400/50
+    80486  32      41000/100        68040  32     52000/40
+    80586  32/64  107000/133        68060  32    122000/66
+    
+ @{c FFD02B} @{i}  No a kdyù budou frekvence stejné... (aby se to lépe porovnávalo)
+    tak to bude vypadat takto:@{ui}@{c}
+
+    8088    8/16     512/7          68000  16/32   1600/7
+    80286  16       2800/14         68020  32      5700/14
+    80386  16/32   11000/40         68030  32     15500/40
+    80486  32      38000/50 *       68040  32     52000/40 *
+    80586  32/64   70000/90 *       68060  32     92000/50 *
+
+   @{i} *) k pomalejîí verzím jsem nemël pêístup@{ui}
+
+          @{c FFD02B}  No a teð se podíváme na efektivitu
+            _vyuùití_ megahertzû pêivádëných na
+            procesor. VYPOÇTENÁ çísla jsou
+            pro 7MHz. (68000 counting ;) )
+@{c}
+        Na tomhle uù je moc dobêe vidët, jak intel
+        honí výkon jen MHz, ale Motorola architekturou.
+        Na to, ùe jde o 68k, celkem dobêe drùíme výkon, ne?
+
+    8088    8/16     510            68000  16/32   1600
+    80286  16       1430            68020  32      2850
+    80386  16/32    1920            68030  32      2710 *
+    80486  32       2870            68040  32      9100 (!)
+    80586  32/64    5630            68060  32     12930 (!!!)
+
+ @{i}   *) to asi zpûsobil pomalý phase5 memory bus...@{ui}
+
+  Nëkolik  poznámek k objektivnosti testu.  Dhrystony jsou asi nejobjektivnëjîí.
+  Stejný  výpoçet  probëhne  stejnë  na  kterémkoliv  procesoru.   Jde  o  výkon
+  integrální  çásti  procesoru.   Záleùí  samozêejmë  na  tom,  zda  programátor
+  neudëlal nëjakou optimalizaci kódu.  Dále bych znovu upozornil, ùe jde o výkon
+  PROCESORU,  NIKOLIV SYSTÉMU!  pC má externí cache pamëï (L2), do níù se urçitë
+  pêemístí  daná  rutina testu a ten pak jede MNOHEM rychleji.  Apropó, u Pentia
+  dojde  k pêesunutí CELÉ rutiny testu Checkitu do INTERNÍ cache - tzn.  opravdu
+  hodnë  optimalizovaný výkon procesoru.  Alespoñ çásteçné omezení vlivu externí
+  cache  pamëti  (kromë jejího vypnutí v biosu - ovîem to pak je pC tak slow, ùe
+  se  namëêené  výsledky  nehodí  vûbec  zveêejnit...)  poskytuje test pakováním
+  stejného  souboru  pomocí  LhA  na  Amize  a  Arj  na  pC.  (to jsou pêece dva
+  nejrozîíêenëjîí packery,  ùe)  Pêi @{c FFD02B}pakování@{c} se musí pêistupovat do pamëti - ne
+  tak  pêi  testu  (i  kdyù rychlost závisí hlavnë na pakovací rutinë, a ta je v
+  interní  keîi...   a  pêístup  k  ostatním  datûm  v  pamëti zrychluje zase L2
+  cache...)  Pak  má  stará  Amiga (030/50) dosahuje 54% výkonu Pentia na 90MHz.
+  Podle  DHR by to mëlo být pouze 26%...  A pokud sníùíme Pentidlu takt na 50MHz
+  (teoreticky), pak jsou výkony obou systémû (cenovë neporovnatelných a 32MB RAM
+  + scsi kontra 16MB RAM + ide...) TÉMËÊ STEJNÉ!!!  Pakoval jsem DPaint 4.6, Arj
+  se  s  tím  vypoêádalo  za  3.8sec,  Lha  za  7sec  =>  0.54%  vykonu.  Pomëry
+  taktovacích frekvencí 90 ku 50 => 0.55 !!!  A to mám pouze starou Lha (1.30r).
+  Jo, Arj bylo na pC o 2kB úçinnëjîí (232 563 ku 235 828; DPaint 412 512).  Nová
+  LzX 1.21r pakuje jeîtë rychleji, a dostane DPaint na neuvëêitelných 213 549 za
+  asi o sekundu rychlejîí ças (!!!).  Ani RaR není tak úçinný, a to je pomalejîí
+  (a o dost) i na Pentiu.  Testovací soubor dostane na maximální kompresi na 224
+  431.   LhX  na  max  (-9)  @{c FFD02B}kompresi@{c}  vytáhne  208  563 (!!!), ale 25 sekund...
+  Vîechny  testy  na  pC  jsem  sám namëêil a na Amize taktéù.  Hodnoty jsou pro
+  030/50.  060 je rychlejîí neù cokoliv ;) .  U Amig byla pêítomna REAL FAST RAM
+  (pokud  ji  nemáte,  defacto  nemáte  Amigu...).  Apropó, 040 a 060 jedou sice
+  internë  na  dvojnásobku  externí frekvence - tzn.  060/50 jede na 100, 060/66
+  jede  na  132  MHz.   Jenùe, bohuùel, tato frekvence je jen pro synchronizaci,
+  instrukce se vykonávají externí frekvencí...
+
+- Dále  bych  si  vzal  na  muîku nëkteré programy, napê.  MSDOS.  Jeho ovladaçe
+  (HIMEM, EMM386) jsou dost pomalé, a zabírají pamëï.  U starých woken (3.11) je
+  SMARTDRIVE.   Ùere  skoro  1MB  (samozêejmë  @{c FFD02B}to jde@{c} pêestavit)!  Ale zkuste si
+  startovat  w3.11  bez  nëj!  Je to pak tak pomalý jak w95/98...  Taky nechápu,
+  jak  mám  do  8  velkých  písmen vtësnat vîe, co daný program dëlá...  Chybová
+  hláîení  DOSu  by  také  vydala na samostatnou kníùku.  Toto zachrañuje akorát
+  nápovëda.   Málo  známým bugsem který byl v starîích verzích DOSu byla moùnost
+  mít  pouze  256  (!)  souborû  v  jednom  adresáêi.   Ono to çlovëk sice skoro
+  nepotêebuje,  (DOBRÝ  program  má  pouze  málo  externích  souborû, nebo je má
+  "zabaleny"  do  jednoho!   viz.   @{c FFD02B}DOOM@{c}) ale pêesto to nëco êíká o DOSu jakoùto
+  takovém  -  8/16  bitová správa souborû...  Toto bylo opraveno u vyîîích verzí
+  DOSu...   Nicménë  Windows  snad  pêevzaly  chybová hláîení z DOSu.  Chybu pêi
+  ukládání  hlásí  jako  ùe  nelze  çíst  (!!!)  z mechaniky A:...  - A ty jména
+  zaêízení.  A:, C:, D:  -> FUCK OFF!!!  Já si chci pojmenovat disk jak chci!!!
+
+@{c FFD02B}- Jen  upozornëní na "vymakanost" souborového systému W95.  Vëzte, ùe na disketu
+  do  rootu  neuloùíte více jak 64 souborû - i kdyù se bez problémû vejdou :-)).
+  Nelze - jeîtë navíc W95 hlásí matoucí hláîky...  [pozn.Shaman]@{c}
+
+- Dále  ten swapping!!!  No to je hrûza.  Úplnë to niçí disky.  Zkuste si takhle
+  v  obyçejném  Write  nëco  psát a ukládat na disketu.  Zjistíte, ùe windoze si
+  i ten  text (!!!) ukládají na disketu a v pamëti ho nemají.  Çemu to vadí?  No
+  tak  si  pêedstavte,  ùe  se  Vám disketa zaplní çi dojde k chybë (u pC çasto)
+  diskety.   No  a  celý  text  máte v ...  Krom toho to jede dësnë pomalu - pêi
+  posouvání se  (termín scrolling se nehodí...) v dokumentu se vùdy pêi posunutí
+  naçítá  z  diskety.   Nepêedstavitelnë hrozné...  No a tak je to skoro se vîím
+  pod  woknama.   @{f DCDD44}Big piece of shit@{f}!  Mimochodem, na tuto vlastnost jsem pêiîel,
+  kdyù  jsem  skuteçnë psal velký soupis a protoùe jsem dëlal na îéfovë poçítaçi
+  a nechtël  jsem  po  sobë  zanechat stopy çi nepoêádek, neîïastnë jsem si text
+  prûbëùnë ukládal na disketu, coù se mi vymstilo - kdyù uù text byl dlouhý pêes
+  150Kb  (!),  doîlo  k  diskové  chybë (zêejmë neustálým pouùíváním diskety pêi
+  posouvání  se v textu...) a o celý text jsem pêiîel, protoùe pêesunout se dále
+  a  zkopírovat  do  clipboardu  více  textu  bylo vylouçeno...  NEÎEL NAÇÍST!!!
+  Nemusím  snad dodávat, jak jsem klel...  Amiga & CeD RULEZ!!!  @{c FFD02B}[pêesnë to samé
+  se çasto stává s Wordem - navíc si Word ukládá na disketu ten soubor 2×, jeden
+  z nich je HIDDEN, coù ale CrossDOSu nevadí :-) - pozn.Shaman]@{c}
+
+- Zamknuté  soubory.  Pokud jste si pêeçetli pêedchozí odstavec, tak je Vám snad
+  jasné,  ùe  ze  souboru,  který  máte  otevêený,  je  neustále çteno çi do nëj
+  zapisováno.   Aby  to  microshit zrychlil, tak je tento soubor zamknut.  To by
+  samo  o sobë nebylo aù zase tak îpatným nápadem @{c FFD02B}[EHH?  TO JE TOTÁLNË NA HOVNO!
+  Radîi  nebudu  vzpomínat,  kolikrát më useêi volali, ùe nejde odstranit soubor
+  z Word-requesteru, protoùe i pouhý náhled jaksi uzamyká soubor - pozn.Shaman]@{c},
+  ale  implementace zamyká soubor i ke çtení, coù v praxi znamená, ùe pokud nëco
+  píîi  ve  Wordu çi Xpressu tak uù to nemohu ani zkopírovat!!!  (dokud neuzavêu
+  dokument, v nëkterých  pêípadech  neopustím  program)  To pêece není oS, to je
+  shit!   A to  uù nemluvím o tom, ùe kdyù prûbëùnë exportuji svou práci çi její
+  çást,  ani  tento  soubor (pêestoùe není nikde otevêen!) NELZE ani zkopírovat,
+  dokud  není  zdrojový dokument (který ale pêece NIJAK nesouvisí s exportovaným
+  fajlem!!!) uzavêen!!!  Tomu êíkám "@{c FFD02B}moùnosti@{c}"!
+
+- Mirror.   He?   No  pêece  zrcadlení!   ???   Klíííd, to je jednoduché.  Pokud
+  chcete  dodávat  podklady  pro  tisk  do  tiskárny  a nejde o nic sloùitého çi
+  speciálního,  co by vyùadovalo osvit (ten je @{c FFD02B}nároçný a drahý@{c}), tak se to çasto
+  tiskne  pouze  na pauzáky çi lepîí fólie.  Bohatë to dostaçuje, ale to je jiná
+  story.   Protoùe  pauzák  çi  fólie  se  MUSÍ pêiloùit na svëtlocitlivou desku
+  emulzí  dolû  (aby  nedoîlo  k podkopírování), tak je nezbytnë nutné zrcadlové
+  horizontální  otoçení, jenù je na Mackovi uù od roku 88...  Bohuùel, Microshit
+  toto  zêejmë  nehodlá  v dohledné dobë podporovat, a tak pêesto, ùe se jedná o
+  jednoduchou funkci, tak toto z pC není bez PS tiskárny moùné...  Pouze nëkolik
+  DTP  programû  toto  nabízí,  vëtîina  jen  s  PS tiskárnou.  Nicménë, vîechny
+  ostatní  programy  jsou  o  tuto  vlastnost  ochuzeny  (@{c FFD02B}je  to  vlastnë taková
+  "analogie"  k  tomu,  ùe  na  Mackovi  tuto NEPOSTRADATELNOU vlastnost vîechny
+  programy  mají...@{c})  -  a  vëête, ùe je velmi obtíùné, vysvëtlit zákazníkûm, ùe
+  jejich  skvëlý  dokument z Wordu 98 (AmiPro, etc..) prostë nepûjde vytisknout,
+  ale  musí  ze  pêelámat  do Macka...  pC prostë na DTP ani nezkouîejte pouùít,
+  anùto  "volbë  professionálû  -  CorelDRAW  8" se v DTP studijích vîichni leda
+  smëjí a pêi osvitu takových výtvorû z CorelDRAW X dochází k zajímavým vëcem...
+  ;)  Máme  zákazníka,  který pracuje v Corelu, a POKAÙDÉ, kdyù donese filmy, je
+  tam  nëkolik takzvanë "malých" chybek, jejichù výsledkem je, ùe archív oprav a
+  dodëlávek  v  Mackovi  je  jiù  pëknë  rozsáhlý...  Tu vypadne písmenko, jinde
+  slovo,  tamhle  kus  vektoru, tohle písmenko ze zmëní na toto a tak...  Zdá se
+  Vám  to  neuvëêitelné?   Ano, na Mackovi se mi nic takového nikdy (!) nestalo,
+  ale u pC & wInDoWs je to zcela bëùné!!!
+
+
+- Pak  mi  na  pC  dosti  chybí  "virtuální"  amigáçské  obrazovky.  To je nëco!
+  Pêepínání  barev  pêi  vykreslování,  to  je NËCO!  Dualplayfieldy - pêináîejí
+  témëê  neomezené  moùnosti  barev.   A to i na A500!  Vzpomeñme na Lionhearta!
+  600  barev  na  screenu, nádherný bitmapový scroll, atd.  Nebo alespoñ na demo
+  ICE  (Silents),  pozadí  v  HAM (320*512) a na nëm vektory tak v 8 barvách a v
+  320*256!!!   NO  @{c FFD02B}HAM BUGS@{c}, VERY Fast...  Ùe by skládané sprity?  Dále v demu 3
+  dualplayfieldy, atd...  Nëkolik sinuscsrollû...  Myslím ùe 8...
+
+- Sprites.  Na pC neexistující záleùitost - jistë, kurzor je jako hw sprite, ale
+  jak îkubá a bliká!  A více spritû?  He he...  Napê.  kurzor na AMize je dëlaný
+  jako  sprite.   To dost ulehçuje jeho posunování po obrazovce - proto má Amiga
+  tak perfektní pohyb myîi (Mac taky).  Dalîí vyuùití sprajtû je opravdu îiroké,
+  staçí  si  uvëdomit,  ùe  sprajtû  mûùe  být  na  obrazovce  mnoho,  mohou být
+  animované,  ve  více  barvách,  çi  skládat se do objektu...  fantazii se meze
+  nekladou.   Taky  chipset  sprajty  jsou  mnohem  lepîí,  neù  hw  sprajty VGA
+  grafických  karet.   Napêíklad @{c FFD02B}Permedia2@{c} umí jen 64*64 pixlû a JEDEN (jen!) hw
+  sprajt.  Amigáçské sprajty jsou výîkovë neomezené, pokud më pamëï neplete ;) .
+  VGA çipy jsou prostë jen VGA çipy...
+  
+- Kdyù  uù  jsme  u  toho  DOSu (DOST uù bylo DOSu!), pêipadá mi ponëkud zmatené
+  a omezující,  urçování  typu  souboru podle koncovky, sloùené ze têech velkých
+  písmen.   Zaprvé  je  tím moùno prohlásit, ùe daný soubor je nëçím, çím není -
+  výsledek  => çasto zmatený program aù pád "systému" @{c FFD02B}[napê.  prohlásit *.iff za
+  *.bmp - Malování ve w95 sletí jak namydlenej blesk - pozn.Shaman@{c}].  A za druhé
+  to  opët  omezuje  uùivatele  v  definici  vlastního  názvu.  Na Amize neznámé
+  problémy...   Stejnë  se  musí "pravost" typu souboru ovëêovat z hlaviçky, tak
+  proç  takové zmatky s koncovkou?  Teùko êíci ;) .  Ale uvedu malý pêíklad, jak
+  jsem narazil.  Protoùe jedno audio cd neîlo ripovat na pC, tak jsem na zkouîku
+  na  Mackovi  îéfovi "rípnul" jednu skladbu do wejvu.  Pêidat koncovku *.wav më
+  opravdu ani ve snu nenapadlo...  Hrdë jsem pêinesl výsledek na Zipu (to je ten
+  Mac ale dobrej, ùe? ;) )  a îéf ùe si to teda pustí.  Moje doporuçení, ùe bude
+  lepîí  pêejmenovat  to na *.wav ignoroval (@{c FFD02B}îéf má vùdycky pravdu...@{c}) a spustil
+  pêehrávaç  záznamû  s  tím,  ùe  si tady pêece vybere ùe chce zobrazit vîechny
+  soubory,  tak  proç...   A  cvaknul na to...  Program se zhroutil.  Po chvilce
+  dohadování,  restartování  a  pêejmenování  na *.wav uù pêehrávání îlapalo bez
+  problému...  w95 - jaký to skvëlý "oS" !!!
+- Blokový  zápis na harddisk je zajímavá vëc.  Pêináîí zrychlení çtení z HD, ale
+  taktéù soubor zabírá na disku çasto ZNAÇNË více, neù musí.  Jak to?  Pêi bloku
+  4096  bitû,  zabírá  i  menîí  soubor právë toto místo na disku.  ALE, kdyù je
+  soubor  "@{c FFD02B}rozsekán@{c}" na více dílû (bëùná situace - defrag od microshitu stojí za
+  ...),  pak  kapacita  kaùdého  dílu  se  zaokrouhlí  smërem nahoru.  Çasto pak
+  dochází i k velkým zmënám kapacity smërem nahoru.  Pêítel mël 1GBy disk - blok
+  DOSu 32kB!  To bylo radosti, kdyù svých 690MB dostal do 500MB partitionu, a to
+  mu  jeîtë  zbylo  místo!   Takùe  pozor  na velké çásti disku - DOS nespí, DOS
+  nasadí "dostateçnë" velké bloky...  Poêádná pêístupová rutina na pêístup na HD
+  pêedvádí  na  Amize  (jenù  má  vëtîinou neîïastnë malé 512By bloky - takùe je
+  handicapovaná  v  rychlosti...) vyîîí rychlost pêenosu, neù na pC.  Buy a NICE
+  WesternDigital  EIDE  HDD!   10mS!   FAAAST!   Tahá  mi  2.5MB/sec!   [@{c FFD02B}kdyù uù
+  reklamy:  Buy  EIDE Quantum Fireball, tahá mi >2.8MB/s!  - pozn.Shaman@{c}].  Toto
+  je  umocnëno i niùîí kapacitou programû na Amize.  Podívejte se na Checkit 3.0
+  na  pC...   200MHz  mmx  pêedvádí  1.8MB/sec.   Na  32K blocích a rychlém 4GBy
+  disku...   Moje  Amça  dokáùe 9MB/sec s SCSI...  Vëc s bloky se má takto.  DOS
+  mël  16bitovou  adresaci blokû, tudíù muselo dojít k tomu, ùe 65536 (max 16bit
+  çíslo  ;)  2  na  16)  vynásobeno  32K dëlá právë 2GBy.  Pokud by blok mël jen
+  512Bytû,  pêi  16bit adresaci by bylo k dispozici pouze 4MB diskového prostoru
+  (65536*512/8/1024/1024),  coù by nestaçilo ani na DOS, ùe...  Takùe se to nyní
+  (koneçnë!)  êeîí  pouùitím  nového FAT32 (m$+ çi w98).  Psali, ùe to bude také
+  rychlejîí...   Hmmmm....   Na  200mmx  +  64MB  RAM  a  1GBy  fast disk trvala
+  reorganizace  TÊI hodiny, a to na disku byly jen a pouze çerstvë nainstalované
+  w98...   (cca  260MB) A to nemluvím o tom, ùe defrag stále (ani w98/nt!) neumí
+  defragmentovat  swapovací  çásti  - windoze postupnë vyplñují volná místa swap
+  çástmi  - a tak uù to navùdy zûstane...  :(((( Na moji Amçe mi to reorganizuje
+  1GBy  partition s 4096Bytes bloky (jasná nevýhoda, pC mëlo 32K bloky, takùe 8x
+  ménë!), zaplnëno asi 700MB (pC mëlo JEN 260MB) a pêemazáním volných blokû a to
+  mám pouze 48MB RAM (pC 64MB) - 4 minuty 2 sekundy.  pC je rychlé?  @{c FFD02B}He he he@{c}...
+
+- Taktéù  pêístup  na  FloppyDiskDrive  je u pC problematická záleùitost - (a co
+  není?)  diskety çasto vykazují dajaký ten error, a jejich rozjetí je prakticky
+  vylouçeno  -  dodnes  pouùívám  na  Amize disketu, jenù na PC vykazovala 194kB
+  (!!!)  ve @{c FFD02B}vadných@{c} sektorech  na  nëkolika mechanikách a bez nejmenîího náznaku
+  chyby  na ni zapisuji 982kB v 82 tracích!  (DS0:)  No a moje milá HD mechanika
+  -  1.78MB  na disku .  ShAmaN tady upozornil, ùe kdyù se na pC moc nepouùívají
+  FDD  mechaniky, tak se to çasto stává...  Ale vîechny poçítaçe byly intenzivnë
+  pouùívány  (na  kterých  jsem  danou disketu formátoval), jeden dokonce proîel
+  instalací w95 z DISKET!!!  (@{c FFD02B}kdo zkusil, nezapomene...@{c})
+
+- pC  hroznë  huçí!   To  je  neuvëêitelný,  kolik  to  potêebuje ventilátorû...
+  Naproti tomu v mojí Amize se mi netoçí ani jeden vëtrák - ono se sice zdroj (a
+  disky)  zahêívá, ale ne tak, aby se to muselo chladit.  Slyîel jsem, ùe takové
+  dlouhodobé  poslouchání  zvuku  tohoto  typu  má  mít nëjaký negativní vliv na
+  psychiku...  A pak proç je vëtîina pC userû @{c FFD02B}<censored>@{c}.
+
+- Malá  kompatibilita s okolními poçítaçi.  Ono mockrát potêebujete nëco pêenést
+  z  Macka  çi  Amigy  a  ouha!   pC  neumí!!!  pC prostë nedokáùe pêeçíst Amiga
+  disketu, ale ani disketu z Macka [@{c FFD02B}To je HW problém - existuje Catweasel pro PC
+  a pak  to  jde  - pozn.Shaman@{c}].  Nëco takového, jako je CrossDos NEEXISTUJE na
+  pC...   Pëknë  lame.   Prostë  filesystém,  který by transparentnë zpêístupnil
+  vloùenou  Mac  çi Amiga disketu ostatním aplikacím na pC prostë NENÍ.  Naproti
+  tomu  jak  Mac  tak  Amiga dokáùou více "spolupracovat" s pC - Mac má ovládací
+  panel pC pêenos a Amça CrossDOS a CrossMAC.  Zase jsme v nëçem lepîí ;))).
+- Dalîí  nemilé  pêekvápko çeká na @{c FFD02B}pC@{c} @{c FFD02B}user@{c}a v podobë programu UNDELETE.  Smazaný
+  soubor i s adresáêem jiù neobnoví...  SHIT!
+
+- A  aby  toho nebylo dosti, na pC existuje @{c FFD02B}MOOOC@{c} virû.  Alespoñ 40× více neù na
+  Amigu.  Zaplaïpánbû...
+
+- RamDisk.   Velice  uùiteçná vëc na odkládání souborû - rychlá, flexibilní.  Na
+  pC  nepodporováno.   Ano,  lze  jej  vytvoêit, ale @{c FFD02B}NENÍ@{c} dynamicky alokovatelný
+  (dynamicky  alokovatelný znamená, ùe potêebuje právë a jen tolik pamëti, kolik
+  obsahuje dat).
+
+- Dosti  na pC postrádám Cooper, je to dobrá vëciçka na barevné pozadí.  Apropó,
+  na pC je taky moùné pêepínat barvy pêi vykreslování (VGA trick...) - ale pouze
+  po  êádcích...   A500 stíhá po 8 pixlech, A1200 po 4 çi dvou???  Nevím.  Navíc
+  je  moùné  urçit  jeden  çi VÍCE (!!!) bitplánû, pro který ten cooperlist bude
+  platit.   Vynikající  vymoùenost.   Skládáním bitplánû je moùno vytvoêit i 1x1
+  plazmu  na  A500 - viz demo @{c FFD02B}Joyride/Majic12@{c}, çi GlobalTrash od @{c FFD02B}Silents@{c} (slabîí
+  ukázka...).
+- Na  Amize  je  moùné  dostat  na  obrazovku  více barev i tak, ùe po vyçerpání
+  pûvodní  palety  se pêepnete na druhou - opravdu to jde, a dost rychle.  Na pC
+  vylouçená  záleùitost.   Je to vlastnë to samé, jako kdyù se stahují obrazovky
+  pêes sebe.  Ças, který se spotêebuje na pêepnutí, to je ten çerný prouùek (1 -
+  8  pixlû  na  3.1  a  nastavené  @{c FFD02B}minimální@{c}  velikosti  tohoto  "odskoku") mezi
+  obrazovkami.  Tak to zvládá OS, kodérûm to jde rychleji (hack), naçtení nových
+  16  barev  pro  zrcadlo  trvalo  tuîím 16 nebo 32 rasterpixelû (doba, za jakou
+  paprsek vykreslí 16 nabo 32 low-res pixlû obrazovky na palu).
+
+- Co  se  týçe  hudby, SoundBlaster64AWE je sice teoreticky lepîí neù standardní
+  zvuk  Amigy,  avîak  frekvençní  modulací  není moùné vytvoêit nëkteré zvukové
+  efekty  (výstêel  z  pistole,  êeç  atd.), speciálnë ty s rychlou a dynamickou
+  zmënou  kmitoçtu.   A  tak  se i v pC pouùívá PCM (@{c FFD02B}PulsnëCódováModulace@{c}) jak v
+  Amize!  A pak závisí hlavnë a JEN na kvalitë samplu.  I v 7thQUESTu nejsou moc
+  kvalitní...  Na Amize jsem slyîel lepîí.  Like TFMX and CrisHusbeck.  Amiga má
+  sice jen 14bitû, ale zase vysokou vzorkovací frekvencí (max.  56 kHz nebo 60?)
+  to  hravë  dohání.   Ahi  hraje  mnohem  líp,  neù îumblástr!  A taky a HLAVNË
+  @{c FFD02B}NEÎUMÍ@{c}!!!
+
+- Vidël uù nëkdy nëkdo na pC více @{c FFD02B}sinusscrollû@{c}??? V ICE OSMINÁSOBNÝ!!!
+
+- Vidël  uù  nëkdy  nëkdo  na  pC  stíhající horizontální scroll???  (tím myslím
+  skuteçný  scroll,  kde  se  pêidávají objekty, skládají se a tak...  no prostë
+  normální  hra  jako  Lionheart,  Elfmania,  Overkill a dalîí...  stíhající tak
+  rychle, jako VBlank)
+
+- Vidël  na  pC  uù  nëkdy  nëkdo více @{c FFD02B}scrolujících rovin@{c} tak, aby to stíhalo???
+  Beast, JimPower, Lionheart a desítky dalîích...
+
+--------------------------------------------------------------------------------
+  No  dobêe,  na  scroll,  grafiku  a video máme hardwarovou podporu, tady se pC
+nechytá  ani  omylem.   Tak  si  @{c FFD02B}@{b}nebudeme  vyskakovat na slabîí@{ub}@{c} a podíváme se na
+rozîíêení platformy.
+
+@{c 8AFF95}+ pC  je  nejrozîíêenëjîí poçítaçová platforma.  Ùe je to taky její jediné plus,
+  to  uù  je  vëc  druhá.  V praxi totiù témëê nikdo, kdo si kupuje poçítaç nemá@{c}
+ @{c 8AFF95} pêedstavu  o tom, co si vlastnë kupuje - a nic jiného neù pC vlastnë ani nikdo
+  nezná.   Takùe  dalîí  uùivatelský  pêírustek  do  pC  stáje...  Ùe Mac nabízí
+  kvalitnëjîí  aplikace  a  lepîí  uùivatelské  rozhraní  a s tím spojenou vëtîí
+  efektivitu práce?  Kdo to ví?  Koho napadne, ùe v oblasti videa nemá Amiga ani
+  dnes  konkurenci?   Nikoho.   Prostë  pC  a basta.  A problémy?  Ty pêijdou aù
+  poté...  Vëtîinou aù s rozîiêováním pC, a to uù je pozdë na zmënu platformy...
+  A kdyù Vám microshit a ostatní stále cpou windoze - no kdo by odolal?!?!@{c}
+
+@{c 82FFDA}+ Vëtîina  pC je mnohem lépe vybavena neù Amigy.  To je fakt.  Skuteçnost, ùe na
+  pC  je  pentium  standard  a  na Amize má 060 çi PPC jen zlomek lidí, odrazuje
+  kohokoliv  od  vývoje  çehokoliv  poêádného,  protoùe  na  020 a 030 to prostë
+  nepojede, a kdyù uù, tak jen za cenu zbyteçné pracnosti a zpomalení na vyîîích
+  CPU...   A  stejnë  ùádná  030 NEMÁ na nëco, jako je Quake, takùe tak.  Vznikl
+  tady  jakýsi  bludný  kruh, kdy se na jedné stranë podporuje zastaralý hw a na
+  stranë   druhé   si   uùivatelé   nekupují   lepîí   hw,   protoùe  je  údajnë
+  "nekompatibilní"  (to  umím  taky,  napsat program, který spadne na 040+ a pak
+  tvrdit  nëco  o  nekompatibilitë...)  a drahý a - protoùe (a to je to HLAVNÍ!)
+  programátoêi STÁLE podporují i takové hrûzy jako 020/030 a KS 2.x...  Pokud se@{c}
+@{c 82FFDA}  tato situace nezmëní, nezmëní se ceny hardware (ceny pûjdou dolû, ale jen kdyù
+  se prodá dostatek zboùí) a nezmëní se styl programování, Amiga zemêe.@{c}
+
+
+ @{i} Jak napsal kodér vítëzného dema Relic na Asembly 98 - pokud máte rádi scénu
+  a svou Amigu.... upgradujte.
+@{ui}
+@{c FFC37D}  Pro  ty,  kteêí  pêece jen i po dûkladném seznámení s pC uvaùují o jeho koupi,
+bych  rád  upozornil  na  to,  ùe  pC  budou  muset  v  brzké  dobë  upgradovat,
+a upgradovat,  takùe  ona  ta  "drahá  Amiga"  by se  jim za chvíli vyplatila...
+A také, na pC jsou aplikace dost nestabilní, mají velmi vysoké hardwarové nároky
+a celkovë  stojí  za  psí  îtëk.   A taky pro kaùdý následující "oS" je nezbytnë
+nutné upgradovat HW...@{c}
+
+      @{f F3FFF0}   Amiga je prostë lepîí. Rychlejîí. Stabilnëjîí. Spolehlivëjîí.@{f}
+
+         @{i}  A pak, dnes uù máme PPC.  PPC Amiga - ///FEEL THE POWER!!!@{ui}

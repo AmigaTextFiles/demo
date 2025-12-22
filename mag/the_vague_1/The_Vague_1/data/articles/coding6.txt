@@ -1,0 +1,138 @@
+                          Coding with Warp3D 
+                      by Kas1e (kas1e@yandex.ru)
+                       Edited by Browallia/Nukleus
+                            corrected by kiero
+
+This ~article was already published in Jurassic Pack #15, but ~this ~version ~is ~a ~total
+rewrite and update for our mag, so i decided to put it here.
+
+As always the ~plans ~about ~Warp3d ~article ~were ~big, and ~I ~thought ~about ~writing
+a big tutorial about Warp3d coding (in fact there were tons of ~things ~and ~sad ~to
+say ~-~ bugs), ~~~but ~~~it's ~~~impossible ~~~to ~~~spend ~~~too ~~~much ~~~time ~~~only ~~~for ~~~one ~~~article,
+(especialy ~when ~you ~are ~organizing ~the ~whole ~mag too:) ). Anyway, if this article
+will ~catch ~your ~interest ~and ~we ~will ~recieve some feedbacks, i will write a bigger
+tutorial for next issues about this stuff.
+
+Well, for ~what ~reasons~ I ~wrote ~this ~article ~you ~may ~ask ? First, I ~didn't see ~any
+articles ~about ~warp3d programming except ~basic ~warp3d_devil.guide from developer
+archive, and 2 lessons from the paper magazine Amiga Active (issue 25 and 26).
+
+°PROGDIR:data/clips/w3d_aa.raw°16°  
+Both ~texts won't ~give ~you ~explanation ~of ~'tricks' ~and ~'bugs' ~(maybe all authors of
+those texts thought there were~~~~no bugs, and warp3d drivers will work~~~~1:1~~~~on~~~~every
+card ~warp3d ~driver ~was ~ever ~written ~for). And ~second, in ~the ~moment ~of writing
+these ~articles, ~morphos, ~amigaos4.~0, ~pci ~busboards ~for ~classic ~~amigas ~and ~winuae
+wrapper weren't ready, and these articles were based only~~~~on~~~~classic Amigas with
+Permedia2 cards. 
+
+So, let's ~start ~with ~some ~basics: ~What ~is ~Warp3d ? Warp3d ~is ~for ~Amiga world,
+what DirectX 5.0 is for the PC. Or ~like ~Rave ~for ~MacOS. In ~other ~words, low-level
+3d api. It is just a ~renderer, without ~any ~highlevel ~3d ~operations, like ~virgin ~d3d ~is
+for win32. This renderer provides: alpha, fogging, texture mapping, scaling, etc. (~you
+can find all features in Warp3D_Devel.guide from development archive).
+ 
+Haage-partner~~~~-~~~~this is the brand which produced the first version of Warp3d (and
+the ~~last ~~too, ~but ~~it ~~has ~~to ~~be ~~said ~~that ~~Warp3D ~~for ~Mediator ~was ~adapted ~by
+Hyperion).~~~For aos4.~0 and morphos,~~~warp3d was adapted~~~~by~~~~teams who made these
+OSs (for aos4 it's Hyperion, for morphos it's morphos developer team).
+
+°PROGDIR:data/clips/w3d_HP.raw°9°  
+Warp3D ~drivers ~were ~written ~for ~a ~few ~graphics ~boards, ~but ~~most ~~common ~~and
+widespread for classic machines were bvision/cybervision (based ~on ~the permedia2
+chip) and Voodoo3.~~~~~For modern Amigas (a1/peg) mostly Voodoo3 and Radeon family
+cards were used.
+
+For all those cards we have warp3d drivers,~~~but sad~~~~to~~~~say,~~~they implement verious
+Warp3D ~features ~~with ~~varying ~~accuracy. ~One ~~of ~~the ~~examples ~~is ~~a ~~ColorKeying
+feature. ColorKey ~allows ~you ~to ~mark ~some ~colors on a texture and apply various
+operations to this selection when rendering.~~Very common practice is~~~~to~~~~make these
+areas transparent~~~(kind of alpha testing without actual alpha values) Warp3d has~~~~a
+function for it:~~~W3D_SetChromaTestBounds.~~This function allows you to set a ~range
+of ~~colours ~~(both ~~defined ~~as ~~32-bit ~~ARGB ~~values). ~~If ~~you ~~~set ~~~(for ~~example) ~~the
+lower ~~range ~~as ~~0x00010101 ~~and ~~the ~~upper ~~limit ~as ~0xFFFFFFFF ~and ~the mode to
+W3D_CHROMATEST_INCLUSIVE, ~~then ~~all ~~texels ~~that ~~aren't ~~black ~~will ~~be ~~affected.
+But ~this ~feature ~works ~only ~on ~~voodoo3/b(c)vision cards on ~classic machines and
+on voodoo3 on A1 machines. It doesn't work on: Morphos, Winuae ~and on A1 with
+Radeons card. ~This ~is ~somethnig ~You ~need ~to ~consider ~~when ~you ~~want ~to ~~code
+Warp3D application which runs on all machines.
+
+Another difference for example,~~~is that the Permedia2~~~~(b(c)vision)~~~can only have one
+alpha ~value ~for ~whole ~primitive. It ~doesn't ~support ~~interpolated ~~alpha ~value ~across
+the primitive like all other cards. 
+
+And ~so ~on, ~and ~so ~on ... ~(if ~someone ~will ~be ~interested, I ~can ~make ~a ~big ~list of
+features and bugs in all warp3d drivers. Big thanks to Karlos for help with it).
+
+Anyway, ~~let's ~~~start ~~~talking ~~~about ~~Warp3D ~~coding ~~~itself. ~~~The ~~~first ~~~moment ~~~(and
+most ~important ~aspect ~in ~Warp3D coding (and any other ~demo ~coding I think) - is
+synchronization. ~Back ~in ~the ~past, ~I ~remember ~my ~experience ~with MS-Dos coding:
+I've ~done ~a ~vertical/horizontal ~retrace ~and ~did a synchro with it. ~But ~it ~was good
+for easy~~~~and litte cracktros/intros.~~~If i was trying to do demos or something bigger,
+my ~result ~were ~crappy. ~So, ~the ~solution ~for ~me ~was ~a ~double-buffering. ~It ~means
+one~~~~more chunk~~~of display memory (We write to a second~~~~(hidden)~~~~buffer~~~~and~~~~swap
+it with visible one when the drawing is finished)
+
+For Aos3.x we have two system friendly ways to implement double-buffering:
+
+1.  ~~ScrollVPort() 
+2.  ScreenBuffer() functions
+
+ScrollVPort ~solution ~is ~~old ~~and ~~crappy, and ~~the ~best ~way ~is to use ScreenBuffer
+functions (Alloc/Free/Change). So, here is an example:
+
+°PROGDIR:data/clips/w3d_test.raw°14° 
+°PROGDIR:data/clips/w3d_test2.raw°8°  
+If you want a deeper insight about these functions, please read the autodocs. 
+
+One ~~interesting ~~feature ~~of ~~double-buffering ~~under ~~AOS ~~and ~Warp3D, ~is ~that ~you
+MUST set SA_Depth on openscreen stage to certain values, like this:
+
+°PROGDIR:data/clips/w3d_3.raw°5°  
+If ~you ~don't, ~double-buffering ~will ~not ~work. It ~was ~a ~bit ~strange ~for me, because
+Warp3D has an option to specify Depth aswell.
+
+Next, let's ~look ~at Warp3d ~itself. How to use Warp3d and Warp3d functions ? All
+answers can be found~~~~in~~~~the documentation int the warp3d_dev archive.~~~~There is a
+nice ~guide ~called warp3ddev. This one is really basic, but for the~ start you ~should
+read it too.
+
+Warp3d~~~~is~~~a~~~shared system library. There are two versions of it: warp3d.~library and
+warp3dppc.~library. First ~one ~is meant for 68k ~applications~ and ~the ~second ~one ~for
+WarpOS PPC applications. After ~opening ~the ~library~ we ~should ~query ~the ~available
+driver ~~to ~~check ~~if ~~hardware ~~acceleration ~~is ~~possible ~~at ~~all ~~(there ~might ~~be ~~only
+software rasterizing driver):
+
+°PROGDIR:data/clips/w3d_4.raw°6°    
+Next, we can use a warp3d functions. When we are done,~~~~remember to close the
+library :) Nothing special.
+
+Secondly, if ~you ~want ~to ~do ~some ~specific ~features - you ~must ~check if a ~driver
+supports them. It's possible with the W3D_Query() function:
+
+°PROGDIR:data/clips/w3d_5.raw°8°   
+As~~~~said earlier,~~You also need~~~~to~~~~take care about special~~~'features'~~~of certain drivers.
+Even~~~~if~~~~it reports some function to be supported further,~~~more detailed checks might
+be needed (os version, chip vendor and so on). 
+
+One ~thing~ you ~need ~to ~remember, is that Warp3D can only render. All calculations
+have ~to ~be ~done ~by ~Your application itself (transformations, lighting, etc). In ~bonus
+directory you will find some easy examples which can be compiled~~~~by~~~~vbcc~~~or~~~sasc.
+
+And in the end of this article, I would like~~~~to~~~~talk a bit about assembler. Assembler,
+is~~~~power (with JIT in an almost system friendly way~~~:)~~~).~~~With help of assemler you
+can ~~create ~~little ~~by ~~size ~~and ~~a ~~bit ~~faster ~~stuff (if ~you ~replace ~~functions ~~which
+process ~memory ~blocks (like 'inline' for ~memcpy() ~from ~vbcc). For ~slower ~68k cpus
+it ~will ~help ~a ~lot. ~Easy ~~way ~for ~~you ~to ~get ~asm ~listing ~(dissasembly) ~is ~to ~write
+all your stuff in C, and on ~compile stage add option which will give you assembler
+output aswell.~~~~In vbcc and gcc,~~~~this is -S option.~~~After it you can cleanup the code
+a bit, make some changes and so ~on. For ~example, have ~a ~look ~at ~some ~piece ~of
+code:
+
+      Inside W3D calls:                           Main code itself:
+
+°PROGDIR:data/clips/w3d_asm.raw°16°   
+Looks ~pretty ~understandable ~for ~all ~who ~know ~assembler a bit. As always it's ~up
+to you to choose, if you want ~C ~or ~Asm ~for ~your ~production, but ~mixing ~these ~2
+languages will~~~~be~~~~the best choice ~i ~think.~~In addition~~~~I~~~~put ~some examples and scans
+from Amiga Active magazine ~about ~warp3d ~coding. Hope it will help ~someone ~with
+some basics and you will start to do some code over warp3d.¤

@@ -1,0 +1,342 @@
+From: Cupid/Unique
+To: Evil editors of D.I.S.C (I'll get you!)
+Reach me at: cupid@plastique.dk
+
+Hi! :) This text will be a how-to/tutorial on setting up an issue of D.I.S.C
+using my new, fabulously user-friendly diskmag engine. I'll try to be as
+patronizing as I can. And I'm writing this in a hurry so don't mind the
+tpyos, missingspaces and such. A few notes before we begin, though:
+
+ 1) The code is NOT finished. Or well, it's finished, but not final. Hmm.. 
+    I want to add many more features like animated clipart, transparent 
+    clipart, UAE protection, perhaps some background fx, a nicer pointer and
+    much more. It will be generally faster as well. Still, this version is 
+    working, and it'll do for issue 11 at least.. ehe, can't be worse than 
+    issue 9, can it? ;)
+ 2) Apart from being unfinished, the engine's probably packed with bugs.
+    Please report them all to me.
+ 3) The article editor was written in an extreme hurry. I KNOW it has a lot
+    of bugs and will crash if you try to load a picture that's bigger than
+    the screen and generally act weird if you're not extremely gentle with
+    it. :)
+ 4) All filenames should be relative to the path of the executables, and the
+    executables shouldn't be moved about. This is because the engine and the
+    editor always expect to find clipart in gfx/, music in music/, and so 
+    on. And it's a little case-sensitive when it comes to filenames too.
+    Remember that. ;)
+
+--------------------------  INITIALIZING EVERYTHING -------------------------
+
+I've included some sample articles, music and gfx to give you an idea of what
+you can do with the mag. The panel gfx, though, were given to me long ago,
+supposedly drawn by Wade who's no logner drawing. There were lots of
+problems - first off, the lower panel may not use more than 64 colours. So I
+used PPaint to reduce the no. colours with F-S dithering, and it looks UGLY.
+What's more, the search button has to be removed if we're to use these 
+panels. The search function might be ready for the next issue.
+
+Once you've enjoyed my sample mag (apart from the panels, everything is 
+stolen from other mags, even the fonts.. oh, except the softcore porn :),
+it's time to set up a new one. Backup what you want and then start off by
+erasing all files in gfx/, articles/, text/ and music/. fonts/ isn't really
+used by the mags, it just holds the fonts that have to be copied to fonts:
+anyway. 
+
+-------------------------------- THE MUSIC  ------------------------------
+
+The music is in Trackerpacker 3 format. Use the TrackerPackerV3.1 program to
+convert normal Protracker mods to this format and place the files (any number
+of files :) in the music/ directory. Now, the module that's to be played on
+startup has to be renamed to "default.tp3". And that's it. The other tunes
+are started by links, but more about that later.. :)
+
+------------------------------- THE FONTS ------------------------------
+
+Right, a diskmag needs fonts, and this one needs system fonts. The mag itself
+only needs one font, and it's called disc.font (size 8). It may be
+proportional or fixed-width, doesn't matter. This is the font used for
+displaying the title of the current article etc. Articles may use the same
+font, or any other fonts you want them to.
+
+---------------------------- THE TITLE PICTURE ------------------------------
+
+The engine always reads the file called gfx/title.gif to get the titlepicture.
+The file must be 320x256, 640x256 or 640x512.. this is so the mag will be able
+to determine the appropriate screenmode. If this is very inconvenient (e.g. 
+you have a picture that uses overscan or a 320x512 mode), let me know. Needless
+to say, it has to be a valid GIF file. Up to 256 cols are allowed in the title
+picture. No HAM. ;)
+
+------------------------------- THE PANELS ------------------------------
+
+Both the editor and the mag require that the panels are present. This is a
+little complicated, so pay attention. :) Each panel is a GIF animation of two
+frames. The first frame contains the entire panel with buttons and all, and
+the second contains pictures of the buttons when they're pressed. Each panel
+is accompanied by a mask file which tells the mag where the buttons are 
+located.
+
+The sizes of the panels determine the height of the article space between 
+them.
+
+Let's start with the top panel, called gfx/panel1.gif, with the mask file
+being gfx/panel1mask.gif. Both of these files may use up to 256 cols, but the
+mask file only needs 4 so.. :) The top panel contains 1 button (quit) but has
+an additional mask that shapes the area where the title of the current 
+article and the page number is printed (this text uses colour 1 of the 
+upper panel's palette). This second mask should be at least 16 pixels tall.
+Look at the samples I included (you didn't erase them did you? ;), and you
+should get the picture. If not, you know where to reach me. Anyway, the masks
+for panel 1 have the following meanings:
+
+Colour 1 - quit button
+Colour 2 - title field
+
+The second panel works just like the first one, only with different buttons.
+Oh, and the lower panel can NOT use more than 64 colours. This sucks, I know,
+but it's the price you pay for the nifty scroller. :) panel2.gif holds the
+two frames of gfx and panel2mask.gif defines the buttons:
+
+Colour 1 - prefs button (go to articles/prefs article, see later)
+Colour 2 - menu button (go to articles/menu article, see later)
+Colour 3 - next article
+Colour 4 - previous article
+Colour 5 - previous page
+Colour 6 - next page
+Colour 7 - search button (not used, should be left out)
+
+How you position the buttons and how big the panels get doesn't matter, just
+remember, 64 cols for the lower panel and both panels must be 640 pixels 
+wide. Oh, and apart from the title picture, the mag runs in hires
+non-interlaced mode, so make sure all the gfx are in 1:2 aspect. Ah, and I
+almost forgot, both frames of animation must use the same palette or you'll
+get an "invalid GIF" error.
+
+I recommend using PPaint to make the animated GIFs.
+
+--------------- MAKING AN EMPTY ARTICLE FOR NO APPARENT REASON -----------------
+
+Ok, now that the panels are in place you can start the article editor. Type
+
+editarticle articles/menu "Main Menu"
+
+And the editor appears. It looks ugly. :) So press the S (save) button and hit 
+ESC. This will create an empty article called articles/menu with the title
+"Main Menu".
+
+Now, load up an ASCII editor and create a file called articles/order. Write 
+"articles/menu" (without the quotation marks) on the first line, save the file
+and exit.
+
+You should be able to start the diskmag, ie. if everything went right with the
+panels and all. Don't try to press any of the buttons (except the quit button)
+though. :)
+
+Create another article by typing
+
+editarticle articles/prefs "Preferences"
+
+Press S and ESC to save and exit without doing anything.
+
+Now load up the articles/order file again and write "articles/prefs" on the
+first line (with "menu" now being on the 2nd line). It should now be safe to
+press all the buttons. Not that anything will happen, but.. :)
+
+--------------------------- INSERTING CLIPART ------------------------------
+
+Time for some clipart. Take any small GIF picture in 1:2 aspect and place it
+in the gfx/ dir. Be careful that it doesn't use too many colours. Hmm.. I'll
+try to explain this limitation: Because the mag uses attached screens, and
+because the inter-screen gap shouldn't be too big (it's 3 pixels now), the
+maximum number of colours is 64 for all screens except the upper one (the upper
+panel). 
+
+The way the scroller works, two pages can actually be on the same screen at
+one time. And as the screen is limited to 64 colours, with 8 colours reserved 
+for the text and pointer, that leaves 56 cols for graphics on TWO PAGES next
+to one another.
+
+               these 2 pages may use
+                 up to 56 cols for
+                     clipart
+                        |
+                  .-----------.
+                  |           |
+
+  ________    ________    ________    ________    ________
+ |        |  |        |  |        |  |        |  |        |
+ |  p 1   |  |  p 2   |  |  p 3   |  |  p 4   |  | ...    |
+ |        |  |        |  |        |  |        |  |        |
+ |________|  |________|  |________|  |________|  |________|
+
+     |            |
+     `------------'
+           |
+ these 2 pages may use
+   up to 56 cols for
+       clipart
+
+And so on.. :) In other words, these conditions have to be met:
+
+cols(page1)+cols(page2) =< 56
+cols(page2)+cols(page3) =< 56
+cols(page3)+cols(page4) =< 56
+etc.
+
+Anyway, place a picture in gfx/clipart and load up the article editor by
+typing
+
+editarticle articles/menu
+
+Note that you only need to write the title when you want to change it. Now
+press ENTER and a requester should appear. Select the picture in this 
+requester and click ooohkaaay.. you should get a rectangle that you can
+move about with the mouse. Place it somewhere nice and press S to save the
+article, then ESC to quit. You needn't bother with remapping the palette,
+the mag handles that automagically.
+
+Start DISC to see if it worked.
+
+----------------------------- INSERTING TEXT -------------------------------
+
+Text is more complicated.. and an important thing to note is that the text
+routines are extremely bad :).. they'll be rewritten eventually, and all
+of the stupid limitations in this version will be gone. :)
+
+Use an ASCII editor to create a file, let's call it text/pik, it's not
+important, as long as it's in the dir text/, or the mag will get all
+confused and scared. This is a quick example of how the file could look:
+
+disc.font,8
+«c5»Hello M8.. this is text.. blah blah..«»
+This is the second line«»
+«e»
+
+The first line of each file in text/ selects the font. The «c5» is the
+command (there are more of these, see L8R) that sets the colour, in this
+case to colour 5. On the rest of the line is some text, and the line is
+terminated by «», which forces a linefeed. A normal linefeed is interpreted
+as a space. This makes it easy to setup article text. It really does. :)
+«e» ends the article.
+
+These are all the commands:
+
+    «» - end of paragraph. The line is terminated and not stretched to
+         reach both margins if «as» has been selected.
+
+    «e» - end of file. This must be present or bad things will happen. It
+          must be preceded by a «» or the last line of text will vanish.
+
+    «t?» - produce ? non-adjusted spaces. Only really valid at the 
+           beginning of a paragraph.
+
+    «al» - left-justified text from this line forward.
+
+    «ar» - right-justified text from this line forward.
+
+    «as» - text is stretched to reach both margins from this line 
+           forward.
+
+    «ac» - centered text from this line forward.
+
+    «c?» - set colour # ?. These colours are valid:
+           0 - black
+           1 - grey
+           2 - white
+           3 - flashing (i like this one :)
+           4 - blueish
+           5 - brighter blueish
+           6 - user defined colour 1 (see below)
+           7 - user defined colour 2
+
+    «s?=??,???,????» - set colour ? to the RGB value (??,???,????). Only do
+                       this with colours 6 and 7. 
+
+    «l:???» - link to file named ???. See below.
+
+    «le» - end link. See below.
+
+About colours: each word can only use one colour because the mag prints them
+one at a time. The colour has to be set at the beginning of each word. If 
+you try to do this:
+
+  «c1»Oh my god, they killed Kenny!«c2» You Bastards!«»
+
+Then the word "Kenny!" will be printed in colour two. You need to do this:
+
+  «c1»Oh my god, they killed Kenny! «c2»You Bastards!«»
+
+This is a PITA if you want one word in a specific colour, and it's followed 
+by a comma which has to be in another colour (not possible). But hey, gimme
+money and I'll fix it. 8)
+
+About links: DISC uses an object-oriented hypertext navigation system ;D
+It's used a lot like in e.g. HTML:
+
+  This paragraph contains a link - if you click
+  «l:articles/otherarticle»here«le», you'll go to another article.«»
+
+There is no recursion though. You cannot retrace your steps. So it's not 
+really a hypertext system :). But it's just as good. The texts for the
+menu article would contain entries like this:
+
+«l:articles/why_pcs_suck»Why PC's suck, a poem by Cupid«le»«»
+«l:articles/im_horny»I am horny, another poem by Cupid«le»«»
+«l:articles/x_files_crap»The truth is out there«le»«»
+
+Putting links to articles in other places is possible but probably a bad
+idea. :) You may link to other things too. So far I'm only supporting
+music, but I could add full-screen images, or perhaps executables etc.
+if necessary - just ask. To link to a module, you do the same:
+
+«l:music/idunno.tp3»Another silly module by Cupid«le»
+
+When you click this, that module will start playing. This is for use in the
+prefs article primarily.
+
+Don't forget the «le» code. If a link isn't terminated, you'll get a
+'link within link' error, or the link will never become active, or worse :).
+A link may not span two different lines or frames. If you think this is 
+inconvenient, let me know, and I'll tell you why I don't give a fuck. ;)
+
+If this made no sense to you, see the example stuff I sent, or contact me.
+
+Okay, to insert your text file in an article, you load up the article
+editor and press ENTER again. In the requester, select text/pik or whatever
+you called it, and it'll appear in the upper-left corner of the editor.
+Because this is a text file, it can be resized as well as moved about. Don't
+mind the flickering, it's supposed to do that =).. hmmm... place it where
+you like, save the article, and exit. If all went well the article now has
+a bit of text.. :)
+
+--------------------------- THE ARTICLE EDITOR -----------------------------
+
+I might as well explain this now. The following keys (should) work in the
+editor:
+
+  S      - save article
+  ESC    - exit
+  RIGHT  - go to next page
+  LEFT   - go to previous page
+  D      - delete current page
+  P      - append page
+  I      - insert page
+  ENTER  - add frame (text or gfx)
+  DEL    - delete frame under cursor
+
+The order in which frames are created is important. If you want to add a
+background picture, for instance, it has to be the first thing you add to
+the page, or it'll be drawn on top of something else. Text is written in
+frames in the order in which the frames are created. Ie. if you want a
+text file to span more than one frame, the first part of the text will
+appear in the frame that's created first.
+
+--------------------------- THE ORDER OF ARTICLES ------------------------
+
+When paging through the articles, the mag needs to know the order in which
+they should be shown. So put ALL the articles in the articles/order file.
+
+There.
+
+Hmm... I probably left out something really important, but I check my email
+regularly, so write if there's anything. Ciao.

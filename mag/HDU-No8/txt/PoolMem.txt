@@ -1,0 +1,37 @@
+============================================
+Short:    Memory defragmentizer/AllocP superset
+Author:   thor@math.tu-berlin.de (Thomas Richter)
+Requires: OS 2.0 at least
+============================================
+
+About PoolMem:
+	
+If you run a lot of programs without resetting the system, you'll 
+usually find that the main memory of the computer is getting 
+"messed up", split in lots of tiny memory "snippets" that are more or 
+less useless due to their tinyness. It may happen that you can't 
+start an application even though enough memory is available - 
+because this memory is too fragmentated to be of any use.
+
+That's the point where PoolMem tries to help you : It manages the 
+main memory in a way such that it can't get fragmentated too 
+easely. It replaces also the function of AllocP, which is therefore 
+obsolete.
+
+Installation and Usage:
+
+Copy the PoolMem program in this archive to the C: directory of 
+your system partition. Add the following line to your startup - 
+sequence:
+
+PoolMem >NIL:
+
+You might also want to install "PatchRAM" which is included in this 
+archive, too. It modifies the system RAM disk in a way that avoids 
+memory fragmentation, too. Another bonus is that the RAM disk 
+will show its true size from now on, i.e. it won't be no longer 100% 
+full. To remove PoolMem later on, open a shell window and enter
+
+PoolMem remove
+
+For other infos please consult documentation.

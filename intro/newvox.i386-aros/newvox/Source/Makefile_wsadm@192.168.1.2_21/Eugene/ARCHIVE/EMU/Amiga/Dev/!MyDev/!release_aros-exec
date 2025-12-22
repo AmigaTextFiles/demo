@@ -1,0 +1,6 @@
+sdlmove:	newvox.c
+	i386-aros-gcc -lm -w newvox.c -o ../newvox -lSDL
+	i386-aros-strip --strip-unneeded --remove-section .comment ../newvox
+
+clean:
+	rm sdlmove

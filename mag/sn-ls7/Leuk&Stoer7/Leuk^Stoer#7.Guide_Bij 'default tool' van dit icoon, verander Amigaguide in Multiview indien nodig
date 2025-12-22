@@ -1,0 +1,170 @@
+@Database LeukStoer
+
+@NODE Main "Leuk & Stoer... 2e Jaargang"
+
+                          L E U K & S T O E R  7
+
+                             @{" »  Voorwoord  « " link "artikels/voorwoord/main" 0}
+
+
+                             @{" »   Nieuws.   « " link nieuws 0}
+                      De laatste roddels en nieuwtjes.
+
+                             @{" »   Muziek.   « " link muziek 0}
+                 Een beetje muziek voor tijdens het lezen.
+
+                             @{" » De talkshow « " link talk 0}
+                   interviews, reports, recepten, alles!
+
+                             @{" » Moppendoos. « " link mop 0}
+                               Snel openmaken!!
+
+                             @{" »  Berichten  « " link berichten 0}
+                  Mischien zit er wel eentje voor jou bij!
+
+
+                             @{" » Afsluitend! « " link "artikels/afsluiting/main" 0}
+@ENDNODE
+
+
+
+@node "Nieuws" "Nieuws"
+
+         Rechtstreeks van onze speciale roddel journalisten.
+
+                 Allereerst een @{"» nieuwflitsje «" link "artikels/goednieuws/main" 0}
+
+                 Het laatste scene achtige @{"nieuws." link "artikels/scenenews/main" 0}
+
+                 En ook nog een dosis @{"spelnieuws" link "artikels/l&s.spel.txt/main" 0}
+
+
+       Speciaal bericht. Geeft Radavi dan toch @{"complimenten!?" link "artikels/compliment.txt/main" 0}
+
+@endnode
+
+@node "muziek" "muziek"
+
+                 @{" » GUITAR SLINGER 2 « " system "data/yamp data/mod.guitar "}  van Chromag/DCN
+
+                 @{" »     JEZZ-E       « " system "data/yamp data/mod.jezze "}  van Hifi/Effect
+@endnode
+
+@node "talk" "de talkshow"
+
+                  Als eerste een @{"» Megafestatie «" link "artikels/l&s.mega.txt/main" 0} report.
+
+   Drastische veranderingen voor @{"» Internet «" link "artikels/interpuin.txt/main" 0} providers? Je leest het hier.
+
+    Heb je een vraag!? Mischien staat het antwoord in de @{"» Wist u datjes «" link "artikels/l&s.wizzuda?.txt/main" 0}
+
+       @{"» Amazing Discoveries. «" link "artikels/ls7-amazing.orl/main" 0}  Met weer een wonderbaarlijke ontdekking.
+
+               Orlingo zingt een @{"» liedje... «" link "artikels/ls7-vlieg.orl/main" 0}  En niet eens vals.
+
+                        Radavi en @{"» Magic «" link "artikels/magic01/main" 0} samen op IRC.
+
+                 Radavi en @{"» Magic... «" link "artikels/magiczoveel.txt/main" 0}  Even gezellig bijpraten.
+
+                         @{"» Nickname. «" link "artikels/nickname=dood/main" 0}  Dood of ...?!
+
+     In de nieuwe aflevering van @{"» Spoorloos «" link "artikels/spoorloos/main" 0} ontroerende gebeurtenissen.
+
+                Hoe je het beste je @{"» homepage «" link "artikels/promotie-hp.txt/main" 0} kan promoten.
+
+                Gaat de @{"» ZIP-Drive «" link "artikels/zipschijfje.txt/main" 0} voor wereldheerschappij?!
+
+             Een overheerlijk @{"» Recept «" link "artikels/paddo.asc/main" 0} van onze meesterkok Cloak.
+
+                  De resultaten van de @{"» Votes «" link "artikels/votes/main" 0} op Wild Palms.
+
+@endnode
+
+@node "mop" "de moppendoos"
+
+Al vanaf de buitenkant ruik je onraad. De doos is stoffig en er zitten
+een aantal deuken in. Ondanks alles waag je het er toch maar op.
+Je doet de doos open, slikt een keertje en kijkt erin. Op wat spinrag
+en stof na is de doos helemaal leeg. Wat een verspilling van tijd zeg.
+
+@endnode
+
+
+@node "berichten" "berichten"
+
+Berichten gericht aan,
+
+                    @{"MAGIC" link MagBer }
+
+                       @{"RADAVI" link RadBer }
+
+                          @{"MSW" link MSWBer }
+
+                    @{"ORLINGO" link OrlBer }
+
+                         @{"XTRALARGE" link XLBer }
+
+                    @{"DELITE" link DelBer }
+
+@endnode
+
+@node "MagBer" "Berichten aan Magic"
+
+FROM: DAZZLER/EFFECT
+TO  : MAGIC/NAH-KOLOR
+
+Erhm... lees jij L&S nou of niet?
+Najaa. als ik een boos /msg'tje op IRC van je krijg waarom ik de logs er
+in heb gestopt merk ik het vanzelf wel :))
+
+@endnode
+
+@node "RadBer" "Berichten aan Radavi"
+
+FROM: DAZZLER/EFFECT
+TO  : RADAVI/EFFECT
+
+Tsja, er moesten toch wat berichten in.
+
+@endnode
+
+@node "MSWBer" "Berichten aan MSW"
+
+FROM: DAZZLER/EFFECT
+TO  : MSW/EFFECT
+
+Erhm....... ja
+
+@endnode
+
+@node "OrlBer" "Berichten aan Orlingo"
+
+FROM: DAZZLER/EFFECT
+TO  : ORLINGO/BLACK SISTA
+
+Hoi
+
+@endnode
+
+@node "XLBer" "Berichten aan Xtralarge"
+
+FROM: DAZZLER/EFFECT
+TO  : XTRALARGE/S&N
+
+Hmm. ik snap eigelijk best waarom je met L&S gestopt bent. Het is nog meer
+werk dan ik dacht :)  Maar ik geef voorlopig nog niet op. (mits genoeg
+mensen artikelen uiteraard.)
+
+
+@endnode
+
+@node "DelBer"
+
+FROM: DAZZLER/EFFECT
+TO  : DELITE/MYTH
+
+Betaal die rekening nou een gewoon op tijd zeg... Dit is al de 4e keer
+achter elkaar ofzo...
+
+@endnode
+

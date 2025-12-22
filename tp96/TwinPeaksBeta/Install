@@ -1,0 +1,22 @@
+
+ECHO " "
+ECHO " [>> TWIN PEAKS (AGA) DEMO FROM TRSi FASTMADE HD-INSTALLER <<]"
+ECHO " [-----------------------------------------------------------]"
+ECHO " "
+ECHO " [ JOINING FILES; 3.X MB OF HD-SPACE IS NEEDED FOR OPERATION ]"
+ECHO " "
+
+
+Join >NIL: Voxel.1 Voxel.2 TO Voxel.exe
+Rename >NIL: TwinPeaks.icon TwinPeaks.info
+Rename >NIL: ReadMe.icon ReadMe.info
+Delete >NIL: Voxel.1 Voxel.2 Install#?
+
+ECHO " "
+ECHO " "
+ECHO " [ INSTALLATION COMPLETE; RESCAN DIRECTORY AND START DEMO BY ]"
+ECHO " [ DOUBLECLICKING; (C)OPYRIGHT 1996 TRiSTAR & RED SECTOR INC ]"
+ECHO " [-----------------------------------------------------------]"
+ECHO " "
+Quit
+

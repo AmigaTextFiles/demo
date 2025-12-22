@@ -1,0 +1,149 @@
+
+ This script explains 3 parameters that return an image,
+ in a dynamic way, contrary to the usual <pa> imagename </pa>
+ Here we describe imastop, imablit and imanim:
+
+
+
+  the form of imastop is:
+        <Pa> imastop | imagename | starttime | endtime  </Pa>
+
+  an example could be:
+        <Pa> imastop | imghost2 | 200 | 600  </Pa>  image imghost2 correct between 4 and 12 seconds.
+
+    "imastop" return an image IF AND ONLY IF the time date is
+    between the two date given. before and after, the image is not there.
+    that means a karate effect willing for an image can perfectly
+    have no image, in which case the effect is disabled.
+    so in our exemple, the sprite will only be drawn between date 200 and 600.
+    ( 50= 1 second.)
+
+
+
+  the form of imablit is:
+        <Pa> imablit | imagename | start date | stop date | restart date </Pa>
+  an example could be:
+        <Pa> imablit | imghost | 20|40 |60 </Pa>
+
+    "imablit" provide a ways of blitting an image.
+    it's the same as "imastop" exept a third time parameter give the date
+    when it all restart (a modulo on time.) so the image will be displayed
+    at 20, stoped at 40, restarted at (60+20), restoped at (60+40), restarted at
+    (120+20), re-re-stoped at (120+40), et ceterae, et ceterae.
+
+
+
+  the form of "imanimtext" is:
+    <Pa> imanimtext | a bitmap font | a kext |frames displayed | preference </Pa>
+  an exemple could be:
+    <Pa> imanimtext | animpacman | animtxt1 | 10 | 2 </Pa>
+
+  "imanimtext" provides a powerful way to display animations on a sprite or a lots
+  of other image-needing fxs, using the fonts image constructors and texts constructors
+  we have already seen in the "bitmapfont" tutorial. an image stand for a letter
+  in the text. here, 'a' 'b' and 'c' stand for the 3 images you can see in the
+  oldpacAnim.iff files.
+ "frames displayed" is the number of frame a single image stands.
+ "preference" stand for this 3 possible values:
+  0 - played once, then stoped.
+  1 - played back again the same way: a,b,c, a,b,c, a,b,c,....
+  2 - ping pong playing:  a,b,c,b,a,b,c,b,a,b,...
+
+  note this effect can't fit a deformation effects, because these effects need
+  256 pixels width images, and this width is not the sub-images width you can have
+  in the bmfonts. (you will only get the big image as texture.)
+  So other anim params will be soon prepared for this.
+
+    Note again that initialy, karate was meant to read anim.datatypes
+    as simply as it does with image.datatypes, but i wasn't able to code it,
+    maybe one day.
+    so this "imanimtext" provide a first solution.
+
+
+-------------- the main script is:
+<MAIN> myscript |0|1</MAIN>
+
+------------- let's build image
+
+<KIMG> imghost  | data/ghost1.iff </KIMG>
+<KIMG> imghost2  | data/inky.iff </KIMG>
+
+<bmfont>  animpacman | data/oldpacAnim.iff |85|76| 3 | abc </bmfont>
+<ktext> animtxt1 | abcabcabcabc  </ktext>
+
+------------- let's build a camera object
+
+<KCAM> cam_1 |0|0|0|0|0|0|1  </KCAM>
+  the camera cam_1 has position X,Y,Z to 0 and
+  angle O1,O2,O3 to 0, focale length = 1 (90° of angle view.)
+
+
+---------------------------- just one part to play
+
+<KSCRIPT>
+    <ID> myscript </ID>
+    <PLAY> mypart | 99999 | 0 | 1 </PLAY>
+
+</KSCRIPT>
+
+---------------------------------------------
+
+<KPART>
+
+    <ID> mypart  </ID>
+
+ as usually, colors need to be set:
+
+    <Fx>
+        <Pa>setpalette</Pa>
+        <Pa> imghost </Pa>
+    </Fx>
+
+----------------- screen to black
+    <Fx><Pa> FillRC</Pa>
+        <Pa></Pa>
+        <Pa> cte | 0  </Pa>
+    </Fx>
+
+
+------------- place camera in space according to a sinus movement.
+ <Fx><Pa> SetCamCoord </Pa>
+            <Pa> cam_1 </Pa>
+
+            <Pa> cos |0|0.8|1</Pa>    x
+            <Pa> cte | 0 </Pa>        y
+            <Pa> sin |-0.5|0.8|1</Pa>    z
+
+            <Pa> 3cte |0|0|0</Pa>  a multiparameter setting angle o1,o2,o3 to 0
+
+            <Pa> CTE | 0.8 </Pa>  FOV (never set 0 or negative, mathematicaly impossible.)
+            </Fx>
+
+
+-------------- display sprite
+   <Fx><Pa> Sprite </Pa>
+        <Pa></Pa>
+        <Pa> imanimtext | animpacman | animtxt1 | 10 | 2 </Pa>
+        <Pa> 4cam| cam_1 |1|1|-1|0|4 </Pa>  z=4,far away in front of the camera
+    </Fx>
+
+-------------- display sprite
+
+  <Fx><Pa> Sprite </Pa>
+        <Pa></Pa>
+        <Pa> imastop | imghost2 | 200 | 600  </Pa> image will be correct IF between 4 seconds and 12 seconds
+
+        <Pa> 4cam| cam_1 |1|1| 1|0|4 </Pa>  z=4,far away in front of the camera
+    </Fx>
+
+----------------------
+   <Fx><Pa> Sprite </Pa>
+        <Pa></Pa>
+        <Pa> imablit | imghost | 20|40 |60 </Pa>
+        <Pa> 4cam| cam_1 |1|1|0|0|3 </Pa>  z=3,far away in front of the camera
+    </Fx>
+
+
+
+ 
+</KPART>

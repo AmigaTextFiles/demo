@@ -1,0 +1,395 @@
+@{d A3FFC2}          @{c 99FFEE}Koniec C=, koniec chipsetov?@{c}
+        @{b}@{c 99FFEE}AAA - Advanced AMiGA Architecture@{c}@{ub}
+
+  Napriek legendám, ktoré tvrdia opak, AAA çipset
+nebol  nikdy  dokonçený.   AAA  çipset  bol úplne
+novou  koncepciou,  vnútorná  architektúra nemala
+niç  spoloçné  s  predchádzajúcimi OCS, ECS a AGA
+çipsetmi   (AGA   bola   iba  vylepîením  ECS/OCS          @{p Virge.iff 405 10}
+çipsetu).  Okrem výrazného zlepîenia grafických a
+zvukových  schopností  nového  çipsetu pokraçoval
+trend   "odbremeñovania"   procesora   od   çasto
+pouùívaných  funkcií  (napr.  riadenie blitteru),
+çoho následkom bol vysoký výkon systému.
+
+  Vývoj  zaçal  uù  koncom  80.   rokov a v roku 1992 bol hotový prvý prototyp (slávny
+prototyp  s  kodovým  oznaçením  NYX  navrhol  Dave  Haynie,  autor Zorro III zbernice
+a testovacieho  AGA  prototypu  A3000+  s  integrovaným  DSP  AT&T  3210 slúùiacim ako
+local-bus master, priblizný výkon 30 MFLOPS).
+  Prvé  prototypy  základných  dosiek  (mali byï dve - asi doteraz ich schováva niekto
+z ex-vývojoveho  týmu  C=,  ale  oficiálne  nie je jasné, kam zmizli), ktoré mali eîte
+mnoho  chýb,  ale fungovali a dokazovali mnoho neobyçajných vlastností nového çipsetu.
+AAA  çipset  bol 32/64 bitovou implementáciou Amiga architektúry.  Kompatibilita s ECS
+çipsetom  na úrovni registrov bola zachovaná do najväçîej moùnej miery, a zároveñ bolo
+implementovaných  veãké mnoùstvo nových 32-bitových registrov.  AAA tvorili îtyri nové
+çipy:   Andrea,  Linda,  Monica  a  Mary.   Andrea  nahradila Agnus, Monica bola novou
+Denisou  a  Paula  bola  náhradou Mary.  Posledným çipom bola Linda - dvojitý riadkový
+buffer,  ktorým  sa  dosahovala  nezávislosï  rýchlosti  AAA  zbernice od zobrazovacej
+frekvencie.
+
+  AAA systémy sa mali dodávaï v dvoch konfiguraciách:  32-bitový pozostával zo îtyroch
+çipov a 64-bitový zo îiestich:  obsahoval po dvoch çipoch Linda a Monica.
+
+  Chip  RAM  mohla  byï  typu DRAM alebo VRAM - pouùitím VRAM sa rýchlosï zobrazovania
+pixelov  zvýîila  dvojnásobne.   Maximálne  rozlíîenie 64-bitového systému s VRAM bolo
+1280x1024  bodov  v  hãbke 11-12 bitov na pixel pri 60Hz vertikálnej frekvencii.  Boli
+podporované i mnohé iné rozlíîenia, medzi inými i vîetky AGA módy.  Bitplánová grafika
+bola  zachovaná,  farebná hãbka maximálne 16 bitov.  Pribudli chunky módy, HAM8-chunky
+a HAM10.
+
+  Maximálny  poçet spritov bol stále 8, ale mohli byï aù 128 bodov îiroké.  AAA çipset
+umoùñoval   jednobitový   overlay,  a  taktieù  8-bitový  dual  playfield.   24-bitové
+rozlíîenie  sa  dosiahlo  pouùitím  "byte-plánov",  tzv.   "hybridné" módy (tak trochu
+chunky, tak trochu bitplánové).
+
+  Takmer  po  desaïroçí preîiel mnohými zmenami blitter a copper.  Oba boli 32-bitové,
+ale  stále  boli  schopné  pracovaï i 16-bitovo.  AAA blitter bol omnoho rýchlejîí ako
+starý  AGA  (OCS)  blitter.   Nový blitter podporoval nové operácie - saturation, sort
+a tally.   Vyuùitím  dlhých  burstov  bolo moùné presunúï 32 bitov za 70ns, ço sa nedá
+porovnaï  s AGA çipsetom, ktorý to zvládne za 280ns.  Copper mal novú inîtrukciu "move
+multiple"  a schopnosï obslúùiï preruîenie blitteru namiesto toho, aby toto preruîenie
+musel obsluhovaï procesor (çiùe blitter bol riadený pomocou copper-listu).
+
+  Audio  systém bol taktieù koneçne zdokonalený:  16-bitový, 8 kanálov so samplovaciou
+frekvenciou do 64kHz a integrovaný 8-bitový sampler.  Bol podporovaný priamy 18-bitový
+digitálny  výstup.   Nevyuùíval sa panning, ale dalo sa urçiï, çi kanál má hraï vpravo
+alebo vãavo prípadne na oboch stranách, a to s rozdielnou hlasitosïou.  Na çipe nebola
+implementovaná ùiadna zvuková syntéza.
+
+  Úplne  nový  bol  i  floppy  interface  -  bol  urýchlený  pribliùne  20-krát.   MFM
+dekódovanie  bolo  hardwarové,  çím  sa  veãmi  urýchlila práca s PC HD disketami, MAC
+formát  bol  podporovaný softwarovo.  Îtandartné diskety bolo moùné bez ðalîích trikov
+formátovaï na 2 a 4 MB!
+
+--------------------------------------------------------------------------------------
+
+@{c 39FF28}@{u}Plánované vylepîenia AAA çipsetu@{uu}:
+@{c}
+- nezávislá procesorová zbernica
+- implementácia signalového procesora AT&T DSP3210, 8kB cache na çipe s vlastným DMA
+  a spoloçnou zbernicou s MOTOROLA CPU
+  - hrubý výkon 33 MFLOPS - pomocou diskrétnej kosínusovej transformácie by bolo moùné
+    hardwarovo dekódovaï JPEG/MPEG dáta
+  - podpora 3D grafických funkcií
+  - hlasové ovládanie, rozpoznávanie hlasu, 7kHz syntéza hlasu
+  - emulácia faxu, modemu
+- MIDI
+
+Ale hovorí sa aj, ùe...
+
+- AAA projekt bol takmer dokonçený a pripravený do výroby...
+- AAA çipset mal eîte dosï chýb na to, aby mohol nabootovaï AmigaOS...
+- Zorro III mala byï zachovaná, ale vylepîená (400-600 MB/s)...
+- Dave Haynie má AAA prototyp (NYX?) doma...
+
+--------------------------------------------------------------------------------------
+
+@{u}@{c 39FF28}Poznámka autora:@{uu}
+
+  Predpokladalo  sa,  ùe  Amiga 5000, plne 64 bitový poçítaç, bude významným pokrokom,
+pretoùe  v  tej  dobe  takéto  vlastnosti  neposkytoval ùiadny iný hardware (minimálne@{c}
+@{c 39FF28}v danej  cenovej  hladine).  Ak by sa sen bol býval stal naozaj skutoçnosïou, jedinými
+limitujúcimi  faktormi by asi boli veci ako veãkosï fastky alebo hardisku.  Taktieù sa
+uvaùovalo  nad  tým, ùe Widle NT ("Bleeee....") mali byï portované na A5000, priçom sa
+hovorilo o 'natívnej rýchlosti emulácie PC a Maca'.  Hmmm, hmmm....@{c}
+
+                                       - @{c FF0A07}D@{c}@{c 1A00FF}N@{c}@{c 06FF00}A@{c} -
+
+--------------------------------------------------------------------------------------
+
+@{i}@{c 06FF00}FULL TECHNICAL DETAILS:@{ui}
+//////////////////////@{c}
+
+4*Chips VLSI, high speed CMOS
+
+AAA is largely compatible with ECS
+AA registers are not supported in AAA
+ECS compatibility is to be eliminated
+
+-> @{c 06FF00}MEMORY BANDWITH@{c}
+AAA chips run a 4 cycle burst to Chip RAM, i.e. 4.56 times ECS
+                                             or 1.14 times AGA`s two-cycle burst
+Bursts of up to 512 words can be run to keep up with hi-res displays.
+
+
+-> @{c 06FF00}CPU BANDWITH@{c}
+CPU access to Chip RAM is improved
+AAA chips manage an asynchronous interface to the CPU
+CPU with some extra support logic can completly master the AAA chip RAM bus, allowing
+Chip RAM access as fast as today`s 32-bit Fast RAM
+
+-> @{c 06FF00}CPU BUS DMA@{c}
+AAA chip bus DMA activity is dynamically managed
+40 DMA channels, with dynamic allocation between BLITTER  CPU
+
+-> @{c 06FF00}BLITTER@{c}
+AAA blitter is much faster than today`s.
+It scrolls 640*200*2 6 times the speed, 640*200*4 9 times faster than the
+old Blitter. It has a 32-bitmode which operates in pixel addressing and can
+handle the chunky modes as well (2,4,8,16 bits). Line draw has auto clipping.
+Blitter has arithmetic function now like "sort" and "tally" at any pixel
+depth, addition, average, subtracing, saturated subtractions, etc.  Blitter
+speeds:
+
+DRAM single
+2 planes  @ 640*200 =  489.06 frames/sec
+16 planes @ 640*200 =   41.61 frames/sec
+2 planes  @ 800*560 =  124.54 frames/sec
+8 planes  @ 800*560 =   14.96 frames/sec
+
+VRAM single
+2 planes  @ 640*200 = 504.23 frames/sec
+16 planes @ 640*200 =  56.78 frames/sec
+2 planes  @ 800*560 = 124.54 frames/sec
+8 planes  @ 800*560 =  14.96 frames/sec
+-> @{c 06FF00}COPPER@{c}
+Copper handles 32-bit operations and supports move-multiple.
+Copper has interrupt capability, let it receive ints from blitter.
+
+
+-> @{c 06FF00}GRAPHICS@{c}
+single chipset system:
+DRAM system: 800*560*9 planes
+VRAM system: 800*560*13 planes or 800*560*24 using "hybrid pixels"
+
+dual chipset system:
+DRAM system: 1280*1024*5 planes
+VRAM system: 1280*1024*8 planes or 1024*768*24 using "hybrid pixels"
+
+sprites are now 128 pixels wide
+16 planes supported, 8-bit playfields
+AAA pixel clock is no longer tied to the AAA bus clock
+pixel clocks can be scaled
+-> @{c 06FF00}NEW MODES@{c}
+
+HAM10
+HALF-CHUNKY- 2,4 or 8 bit depths
+CHUNKY- 16 bits (5bit guns) no palette
+HYBRID- 24 bits, separate chunky planes
+
+PACKLUT- 2 bits per pixel decompress to 8-bit half chunky, in 4*4 pixel
+regions, each region has colors, 8-bit values indexed thru CLUT and 16
+pixels
+
+PACKHY- 4 bits per pixel decompress to 24-bit direct pixels in 4*4 pixel
+regions, each region has colors 24-bit direct values and sixteen pixels
+
+
+-> @{c 06FF00}VIDEO CAPTURE@{c}
+AAA pixel bus is reversed, (ONLY ON VRAM), capture to any chunky mode
+
+-> @{c 06FF00}SOUND@{c}
+64 khz with 16-bit resolution
+8 channels, both sides i.e. 1 channel on both sides with different volume
+8-bit audio sampling is also supported
+
+
+-> @{c 06FF00}FLOPPY DISKS@{c}
+2 or 4 megs per disks direct, no tricks
+built in decoding hardware MFM, (RLL2,7), Biphase Mark (CD-ROM)
+
+xfer in track, sector and CD-MODE and a high speed track mode
+xfer rate is 20 times faster. 11.4 Mbit/sec from 0.5 Mbit/sec through DMA peek is
+9.9 Mbit/sec
+
+hardware can decode IBM format as well
+MAC format supported as well with software
+
+
+-> @{c 06FF00}UART@{c}
+2 UARTS are supported, 4-byte FIFO
+
+
+-> @{c 06FF00}AAA chips descriptions:@{c}
+
+1. @{c 06FF00}Andrea@{c} - chip bus controller
+   - chip ram control
+   - "high-priority" bus request allows external device to master the chip ram bus
+     rather than Andrea
+   - CPU bus gating
+   - manages clocking of both CHIP and Video display 8 possible pixel clock values
+     at any time
+   - Video timing hsync, vsync etc...
+   - Blitter, pixel addressing / arithmetic modes
+
+2. @{c 06FF00}Monica@{c} - new display controller
+   - It takes in display timing data generated by Andrea and graphics data
+     fetched by Linda and from that generates 25-bit digital and analog RGB
+     output (24bit color, 1bit genlock)
+   - HAM mode logic, sprites, color regs
+
+3. @{c 06FF00}Linda@{c}  - double buffers full display lines
+   - while one complete line of Linda`s line buffers,
+     the next line is being fetched into Linda`s other line buffer
+   - PACKLUT, PACKHY modes are decoded here
+   - Between them are, 256 word regs (ECS compatible)
+   - 384 longword address regs (new stuff)
+   - 512 longword address CLUT registers
+
+4. @{c 06FF00}Mary@{c}  - controls types of I/O
+   - disk controller
+   - raw bit with = 88-9000ns
+   - max raw bit rate = 11.4 Mbit/sec
+   - hardware encoding = raw GCR MFM RLL(2,7) BiPhase Mark
+   - sync = 32, 17, 8-bit
+   - xfer modes = track sector cd-digital track-plus
+   - hardware CRC (sector/track)
+   - async PLL clock
+   - input types = pulse, NRZ
+
+   @{c 06FF00}AUDIO CONTROLLER:@{c}
+   - sample rate = 64 khz
+   - channels = 8
+   - volume = 12bit signed
+   - volume aliasing = no
+   - sample size = 8/16 bits
+   - digital output
+   - dynamic range = 16 bits
+   - channels left/right = 0-7 on both sides
+   - global mono bit
+   - period resolution = 280/64ns
+   - 8-bit sampler supported using the pot-in lines
+
+-> @{c 06FF00}FUTURE SYSTEM DESIGN@{c}
+
+Processor-independent system bus optimized for chip to chip interconnect.  Motherboard
+will be a basic design -- CPU, Amiga, CHIPs and other various elements will be located
+on seperate modules (cards).
+
+@{i}[toto je vlastne projekt Acutiator, ço bol papierový projekt D. Haynieho na vytvorenie
+vysoko  modulárneho  systému  s  generickou  (CPU  nezávislou) zbernicou - zdokonalenú
+podobu tohoto projektu predstavuje PIOS-one architektúra (TransAM)]@{ui}
+
+@{c 06FF00}AMIGA DSP -- AT&T DSP3210@{c}:
+   - 32-bit floating point arithmetic
+   - 32-bit addressing
+   - large 8K on-chip cache 0 wait
+   - 33MFLOPS of power
+   - shared bus with Motorola CPU
+   - Serial I/O with DMA 24 Mbits/sec
+   - Barrel shifter
+   - mu-law & A-law encoding
+   - Bit I/O general purpose 8-bit I/O port
+
+It can emulate:
+   - V32 / V22bis MNP5 / V29 G3 fax / modem emulation with fallback
+   - subband coder
+   - G.722 7khz speech coder (1000% better than SAY)
+   - DTMF generator/decoder
+   - JPEG still/ MPEG encode/decode
+   - Call progress detector
+   - non-integer sample rate converter
+   - delta-ceptrum feature extractor
+   - text to phones LPC, LPC to speech
+   - speech recognizer
+   - talker verification
+   - 3d GFX library
+   - MIDI music synth with EMU proteus soundlibs
+   - perceptual image coder
+--------------------------------------------------------------------------------------
+
+                                @{c 06FF00}Nyx, The AAA Prototype@{c}
+                                ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+
+  Najpokroçilejîím  projektom  v  histórii  Commodoru  bolo  vytvorenie Advanced Amiga
+Architektúry.  Cieãom projektu AAA, ktorý zaçal koncom 80.  rokov, bolo vytvoriï úplne
+novú  Amiga  architektúru,  ktorá  by bola o krok ðalej ako mainstream a dostala Amigu
+opäï tam, kde bolo jej miesto.
+
+  AAA bolo naozaj veãkým pokrokom v çase, keð Amiga zaçínala strácaï hlavne po stránke
+CPU  výkonu  a  grafiky  (menîia  farebná  hãbka,  horîie rozlíîenia, nízke opakovacie
+frekvencie).   Treba  ale povedaï, ùe hlavnou príçinou tohto stavu bol najmä maximálne
+skostnatený,  a  preto  neschopný  management  Commodoru,  ktorý  v  çasoch najväçîích
+úspechov  Amigy  (1989-1992)  financoval  stratovú  výrobu svojej PC divízie.  A práve
+v tomto  období,  keð  prezidentom CBM bol vîeobecne nenávidený Mehdi Ali, zaçal autor
+Amiga  3000  architektúry  -  Dave  Haynie  -  pracovaï  na  AAA prototype pod kódovým
+oznaçením NYX.
+  NYX  bol  teda  testovacou  implementáciou  (32  alebo  64-bitovou  v  závislosti na
+konfigurácii)  AAA çipsetu.  Procesorom mala byï MOTOROLA 040/060, ale uvaùovalo sa aj
+s nejakým RISC procesorom - buð PowerPC 601, R4000 alebo Alpha.  RISC procesor mal byï
+zo  zaçiatku  na  samostatnej  karte,  ale  neskorîie  generácie  AAA  Amíg  mali  maï
+implementovanú nezávislú CPU zbernicu...
+
+  Vyuùitím  AAA  çipsetu  bolo  moùné  dosahovaï  rozlíîenia  aù  do 1280x1024 pixelov
+noninterlace, priçom rozlíîenie sa mohlo meniï nielen prechodom na ðalîí riadok (jedna
+zo základných vlastnosti Amiga hardwaru - umoùnuje koncepciu vertikálne sïahovateãných
+obrazoviek tak ako ju pozná kaùdý amigista ;-), ale rozlíîenie sa mohlo meniï aj poças
+prechodu  elektrónového  lúça  jedným  riadkom.  Zaujímavé je, ùe s týmto sa rátalo uù
+dávno,  pretoùe  aj  súçasný  AmigaOS  obsahuje  na  to  urçené  îtruktúry  -  funkciu
+MoveScreen(Screen,  DeltaX,  DeltaY),  kde  práve  parameter  DeltaX predstavuje posun
+obrazovky po riadku.  Jednoducho by sa dali aj promotovaï starîie screen módy.
+
+  Ako  uù  bolo  povedané,  NYX prototyp navrhol Dave Haynie uù v roku 1992.  A to bol
+vlastne  rok,  keð  C=  predstavoval  prvé  A4000....  Na základoch A3000 architektúry
+a mnoùstva  programovateãnej  logiky  boli  postavené  dva  (moùno  tri)  funkçné  NYX
+prototypy.  Potom Commodore pozastavil financovanie tohoto projektu...
+
+  NYX  prototyp  dokazoval  schopnosti  a  moùnosti  AAA  çipsetu:  24-bit grafiku pri
+vysokých  rozlíîeniach,  demá,  pri  ktorých  copper  ovládal  blitter,  ço umoùñovalo
+animácie  s  niùîím  zaïaùením  procesoru.   Predpokladalo  sa, ùe ðalîia revízia bude
+schopná nabootovaï AmigaOS....
+
+--------------------------------------------------------------------------------------
+
+@{c 06FF00}Slovník:@{c}
+
+@{c 06FF00}AA@{c}   ->  Pracovný názov AGA çipsetu.
+
+@{c 06FF00}AA+@{c}  ->  Pracovný názov pre low-end çipset, ktorý mal neskôr nahradiï AGA çipset.
+         I keð jeho vývoj moùno zaçal, pravdepodobne nikdy nebol dokonçený.
+         [IMHO toto je presne to, o ço sa asi snaùí INDEX (ich projekt AGA2) resp.
+          to, o çom hovoril Petro na SAKU98 <"...naîe zákaznícke çipy sú uù troîku
+          zastaralé. Dobre? Takùe, musíme na nich urobiï nejaké úpravy...">]
+@{c 06FF00}AAA@{c}  ->  Advanced Amiga Architecture
+         Pracovný názov zatiaã poslednej Amiga architektúry. [okrem PowerUP, ale to
+         to je, aspoñ zatiaã, dosï o inom] AAA mala byï základom Amigy 5000.
+         4 custom çipy, 24-bit grafika a 16-bit audio.
+
+@{c 06FF00}AGA@{c}  ->  Advanced Graphics Architecture
+         Pozostáva z troch základných çipov: Alice, Lisa, Paula. Podporuje HAM8
+         (262k farieb) a max. 8 bitplánov. Pouùitý v Amige A1200, A4000, A4000T
+         a CD32. Predstavený v roku 1992.
+
+@{c 06FF00}ECS@{c}  ->  Enhanced Chip Set
+         Hlavnou zmenou oproti OCS bol "Fatter Agnus" (1MB chipram).
+         ECS çipset bol základom Amigy 500+, Amigy 600, Amigy 3000 a Amigy 3000T.
+         Predstavený zaçiatkom 90. rokov.
+
+@{c 06FF00}OCS@{c}  ->  Original Chip Set
+         Tvorili ho tri legendárne çipy: Agnus, Denisa, Paula.
+         OCS bol pouùitý v Amige 1000, A2000, A2500, A500, CDTV,
+         Prvýkrát predstavený v januári 1984 na Consumer Electronics Show v Chicagu
+         spolu s prvým demom na Amigu -- BOING!
+
+@{c 06FF00}Akiko@{c} ->  AGA çip pouùitý v CD32 (rok 1993).
+          CIA funkcie a chunky-to-planar (C2P) konverzia. Výhodný pri konverzii PC
+          hier na Amigu. Pôvodný názov - Arizona çip.
+
+                                       - @{c 06FF00}DNA@{c} -
+
+  @{c 61E4FF}Dovëtek od Shamana:@{c}
+  @{c A3FFD7}¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯@{c}
+@{c 61E4FF}  No  êeknëte  sami  --  je  budoucnost  Amigy v PCI sbërnici?  IMHO NIKOLIV (tím vîak
+neêíkám,  ùe  Amiga nemá obsahovat nëjakou standardní expanzní sbërnici, jen ji nechci
+jako  základ architektury).  Navíc, dnes se çipy dëlají zcela jinou technologií.  Vîe,
+pêes  blitter,  copper,  zvuk,  êadiçe  pamëti, diskû, portû, bus-bridge, çasovaçe; by
+mohlo  být  v jednom  jediném  çipu.   Pochopitelnë  jiù plnë 64/128 bitovë.  Planární
+grafiku,  HAM6-10,  hybrid finesy i ECS/AA kompatibilitu by kaùdý jistë oùelel - potom
+by  i návrh  takového  nového  çipu  nemusel  trvat  vëçnë (zvláîtë, kdyù se dá pouùít@{c}
+@{c 61E4FF}spousta  standardních,  jiù  hotových  modulû  nabízených  výrobci  zákaznických çipû)
+a znamenal  by znovuzrození Amigy v pro ní tak typické koncepci.  Co vîak nelze oùelet
+je  Copper,  sprity,  Blitter, PAL/NTSC kompatibilita....  Pêi velkých sériích /êádovë
+100.000 kusû/   by   takovýto   çip   vyîel   levnëji,  neù  hromada  specializovaných
+a nesourodých  karet.   Zdá  se, ùe právë v tuto chvíli Amiga, Inc.  nad nëçím takovým
+uvaùuje...
+
+  Pokud  má  mít  nová  Amiga podobný potenciál jako pêed 12 lety, je podobný çip[set]
+nutností.   Dnes  nikoho  neohromíte  sebevýkonnëjîí  grafickou  çi zvukovou kartou...
+Jádro  úspëchu  tkví  v  dokonalé  souhêe hardware a systému.  Nikoho nedojme, ùe máte
+333MHz  PentiumII  MMX2,  kdyù vám zadrhává animace, nebo není sladëna se zvukem, nebo
+çekáte  na  pêekreslení  pêes  sebe  naplácaných  oken, nebo zatuhává systém pêi práci
+s disketou, çi bliká a poskakuje kurzor myîi atd, atd...@{c}
+
+                                      @{c A3FFD7}- @{c 06FF00}S@{c}h@{c 06FF00}Am@{c}a@{c 06FF00}N@{c} -
+
+@{c 06FF00}P@{c}oz@{c 06FF00}n@{c}: souhlasím :) [@{c 06FF00}D@{c}N@{c 06FF00}A@{c}]

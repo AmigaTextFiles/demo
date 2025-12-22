@@ -1,0 +1,26 @@
+==============================================
+Short:    Generate key- & other events by mouse
+Author:   albert@cs.tut.fi (Pasi 'Albert' Ojala)
+==============================================
+
+Stroke Commodity 1.2 (12.6.98)
+
+~~~~~~~
+What is Stroke Commodity?
+~~~~~~~
+Stroke commodity is a mouse-controlled Intuition event 
+generator. That's a short explanation. A longer version explains 
+that you can draw different symbols using the mouse and the 
+commodity will then interpret them and insert the appropriate 
+events into the input stream, such as menu shortcut keypresses.
+
+Strokes are most useful with a 3-button mouse. You assign the 
+middle button to be the stroke 'key'. Press the button down, draw 
+a symbol, and release the button. Stroke commodity will then 
+check what you wanted, creates the corresponding input events 
+and inserts them into the input event chain. 
+
+~~~~~~~
+Installation
+~~~~~~~
+Use the accompanied installation script.

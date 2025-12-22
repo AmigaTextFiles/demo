@@ -1,0 +1,182 @@
+{
+  "actions": [
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              4.348712,
+              3.578745,
+              8.901722,
+              4.348712,
+              3.578745,
+              8.901722,
+              4.348712,
+              3.578745,
+              8.901722
+            ],
+            "interpolation": "bezier",
+            "time": 7960
+          },
+          {
+            "float_values": [
+              -6.248558,
+              4.306577,
+              7.898267,
+              -3.617975,
+              4.306577,
+              8.901722,
+              -8.892359,
+              4.306577,
+              6.889769
+            ],
+            "interpolation": "bezier",
+            "time": 8000
+          },
+          {
+            "float_values": [
+              -9.141699,
+              3.890673,
+              -2.540401,
+              -9.141699,
+              4.306577,
+              1.644323,
+              -9.141699,
+              3.705596,
+              -4.402604
+            ],
+            "interpolation": "bezier",
+            "time": 3560
+          },
+          {
+            "float_values": [
+              -6.999596,
+              3.108187,
+              -7.434886,
+              -6.999596,
+              3.108187,
+              -7.434886,
+              -6.999596,
+              3.108187,
+              -7.434886
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "camera_1"
+        }
+      ],
+      "loops": 1,
+      "name": "camera_1Action",
+      "start_time": 0,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -22.751542,
+              17.407249,
+              -0.0,
+              -22.751542,
+              17.407249,
+              -0.0,
+              -22.751542,
+              17.407249,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 7960
+          },
+          {
+            "float_values": [
+              -27.371332,
+              -36.087468,
+              -0.0,
+              -27.371332,
+              -12.752458,
+              -0.0,
+              -27.371332,
+              -59.539743,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 8000
+          },
+          {
+            "float_values": [
+              -26.157341,
+              -102.465228,
+              -0.0,
+              -27.371332,
+              -74.983961,
+              -0.0,
+              -25.617114,
+              -114.694394,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 3560
+          },
+          {
+            "float_values": [
+              -23.354518,
+              -135.574679,
+              -0.0,
+              -23.354518,
+              -135.574679,
+              -0.0,
+              -23.354518,
+              -135.574679,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "camera_1"
+        }
+      ],
+      "loops": 1,
+      "name": "camera_1Action",
+      "start_time": 0,
+      "type": "rotation_xyz"
+    }
+  ],
+  "cameras": [
+    {
+      "far_clip_plane": 100.0,
+      "fov_x": 49.134342,
+      "fov_y": 28.841546,
+      "hide": false,
+      "name": "camera_1",
+      "near_clip_plane": 0.1,
+      "position": [
+        4.348712,
+        3.578745,
+        8.901722
+      ],
+      "rotation": [
+        -22.751542,
+        17.407249,
+        -0.0
+      ]
+    }
+  ],
+  "enc_info": {
+    "data_type": "ENCSCN",
+    "date": "29 Mar 2020 22:26:47",
+    "version": "2.0"
+  },
+  "loops": 1,
+  "name": "Scene",
+  "time": 19520
+}

@@ -1,0 +1,1502 @@
+{
+  "actions": [
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "int32_values": 0,
+            "time": 16042
+          },
+          {
+            "int32_values": 1,
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "la_scene_1"
+        }
+      ],
+      "loops": 1,
+      "name": "scene_hide",
+      "start_time": 0,
+      "type": "property_int32"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 2083
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 12917
+          },
+          {
+            "float_values": 1.0,
+            "interpolation": "linear",
+            "time": 1042
+          },
+          {
+            "float_values": 0.0,
+            "interpolation": "linear",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "la_scene_1"
+        }
+      ],
+      "loops": 1,
+      "name": "scene_color",
+      "start_time": 0,
+      "type": "property_float"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "int32_values": 0,
+            "time": 15000
+          },
+          {
+            "int32_values": 1,
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "la_scene_1"
+        }
+      ],
+      "loops": 1,
+      "name": "start_scene",
+      "start_time": 0,
+      "type": "property_int32"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -9.165843,
+              7.085512,
+              -3.916791,
+              -9.165843,
+              7.085512,
+              -3.916791,
+              -9.165843,
+              7.085512,
+              -3.916791
+            ],
+            "interpolation": "bezier",
+            "time": 4375
+          },
+          {
+            "float_values": [
+              -5.574594,
+              0.572642,
+              -23.458139,
+              -8.428752,
+              0.572642,
+              -17.766739,
+              -3.943646,
+              0.572642,
+              -26.710369
+            ],
+            "interpolation": "bezier",
+            "time": 2500
+          },
+          {
+            "float_values": [
+              0.728282,
+              2.027857,
+              -28.952173,
+              -1.997167,
+              2.027857,
+              -28.952173,
+              6.860541,
+              2.027857,
+              -28.952173
+            ],
+            "interpolation": "bezier",
+            "time": 5625
+          },
+          {
+            "float_values": [
+              17.961151,
+              1.900253,
+              1.83443,
+              17.961151,
+              1.900253,
+              -15.199328,
+              17.961151,
+              1.900253,
+              7.638525
+            ],
+            "interpolation": "bezier",
+            "time": 1917
+          },
+          {
+            "float_values": [
+              -3.753971,
+              5.173224,
+              21.0774,
+              5.448354,
+              4.739865,
+              21.0774,
+              -11.555942,
+              5.540637,
+              21.0774
+            ],
+            "interpolation": "bezier",
+            "time": 1625
+          },
+          {
+            "float_values": [
+              -25.31126,
+              5.540637,
+              -0.261019,
+              -25.31126,
+              5.540637,
+              -0.261019,
+              -25.31126,
+              5.540637,
+              -0.261019
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "camera_1"
+        }
+      ],
+      "loops": 1,
+      "name": "camera_1Action.001",
+      "start_time": 0,
+      "type": "position_xyz"
+    },
+    {
+      "frame_anim": {
+        "frame_anim_keys": [
+          {
+            "float_values": [
+              -0.871892,
+              232.521059,
+              -0.068779,
+              -0.871892,
+              232.521059,
+              -0.068779,
+              -0.871892,
+              232.521059,
+              -0.068779
+            ],
+            "interpolation": "bezier",
+            "time": 4375
+          },
+          {
+            "float_values": [
+              2.505555,
+              206.234188,
+              -0.019574,
+              2.505555,
+              220.325483,
+              -0.035629,
+              2.505555,
+              198.182023,
+              -0.0104
+            ],
+            "interpolation": "bezier",
+            "time": 2500
+          },
+          {
+            "float_values": [
+              -3.196874,
+              180.005619,
+              -0.000693,
+              -3.196874,
+              192.996694,
+              -0.001001,
+              -3.196874,
+              150.775702,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 5625
+          },
+          {
+            "float_values": [
+              8.124157,
+              89.2809,
+              -0.0,
+              8.124157,
+              162.599661,
+              -0.0,
+              8.124157,
+              64.298212,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 1917
+          },
+          {
+            "float_values": [
+              -3.249296,
+              -7.786808,
+              -0.0,
+              -3.249296,
+              31.005924,
+              -0.0,
+              -3.249296,
+              -40.676297,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 1625
+          },
+          {
+            "float_values": [
+              -3.249296,
+              -93.976545,
+              -0.0,
+              -3.249296,
+              -93.976545,
+              -0.0,
+              -3.249296,
+              -93.976545,
+              -0.0
+            ],
+            "interpolation": "bezier",
+            "time": 0
+          }
+        ]
+      },
+      "listeners": [
+        {
+          "name": "camera_1"
+        }
+      ],
+      "loops": 1,
+      "name": "camera_1Action.001",
+      "start_time": 0,
+      "type": "rotation_xyz"
+    }
+  ],
+  "cameras": [
+    {
+      "far_clip_plane": 100.0,
+      "fov_x": 49.134342,
+      "fov_y": 28.841546,
+      "hide": false,
+      "name": "camera_1",
+      "near_clip_plane": 0.1,
+      "position": [
+        -9.165843,
+        7.085512,
+        -3.916791
+      ],
+      "rotation": [
+        -0.871892,
+        232.521059,
+        -0.068779
+      ]
+    }
+  ],
+  "enc_info": {
+    "data_type": "ENCSCN",
+    "date": "29 Mar 2020 20:24:49",
+    "version": "2.0"
+  },
+  "loops": 1,
+  "name": "la_scene_1",
+  "objects": [
+    {
+      "mesh_name": "la1_fan_8",
+      "name": "fan_8",
+      "position": [
+        -4.19619,
+        7.27668,
+        -0.565869
+      ],
+      "properties": {
+        "num_lines": 25,
+        "rnd_xz": 0.029999999329447746,
+        "rnd_y": 0.01,
+        "shape_object": 1
+      },
+      "rotation": [
+        -0.0,
+        -0.0,
+        -225.000023
+      ]
+    },
+    {
+      "mesh_name": "la1_fan_7",
+      "name": "fan_7",
+      "position": [
+        -4.19619,
+        7.27668,
+        -0.565869
+      ],
+      "properties": {
+        "num_lines": 25,
+        "rnd_xz": 0.029999999329447746,
+        "rnd_y": 0.01,
+        "shape_object": 1
+      },
+      "rotation": [
+        -0.0,
+        -0.0,
+        -135.0
+      ]
+    },
+    {
+      "mesh_name": "la1_fan_6",
+      "name": "fan_6",
+      "position": [
+        -4.19619,
+        7.27668,
+        -0.565869
+      ],
+      "properties": {
+        "num_lines": 25,
+        "rnd_xz": 0.029999999329447746,
+        "rnd_y": 0.01,
+        "shape_object": 1
+      },
+      "rotation": [
+        0.0,
+        0.0,
+        -45.000001
+      ]
+    },
+    {
+      "mesh_name": "la1_fan_5",
+      "name": "fan_5",
+      "position": [
+        -4.19619,
+        7.27668,
+        -0.565869
+      ],
+      "properties": {
+        "num_lines": 25,
+        "rnd_xz": 0.029999999329447746,
+        "rnd_y": 0.01,
+        "shape_object": 1
+      },
+      "rotation": [
+        0.0,
+        0.0,
+        45.000005
+      ]
+    },
+    {
+      "mesh_name": "la1_fan_4",
+      "name": "fan_4",
+      "position": [
+        -4.19619,
+        7.27668,
+        -0.565869
+      ],
+      "properties": {
+        "num_lines": 25,
+        "rnd_xz": 0.029999999329447746,
+        "rnd_y": 0.01,
+        "shape_object": 1
+      },
+      "rotation": [
+        -0.0,
+        0.0,
+        90.000003
+      ]
+    },
+    {
+      "mesh_name": "la1_fan_3",
+      "name": "fan_3",
+      "position": [
+        -4.19619,
+        7.27668,
+        -0.565869
+      ],
+      "properties": {
+        "num_lines": 25,
+        "rnd_xz": 0.029999999329447746,
+        "rnd_y": 0.01,
+        "shape_object": 1
+      },
+      "rotation": [
+        -0.0,
+        0.0,
+        -89.999996
+      ]
+    },
+    {
+      "mesh_name": "la1_fan_2",
+      "name": "fan_2",
+      "position": [
+        -4.19619,
+        7.27668,
+        -0.565869
+      ],
+      "properties": {
+        "num_lines": 25,
+        "rnd_xz": 0.029999999329447746,
+        "rnd_y": 0.01,
+        "shape_object": 1
+      },
+      "rotation": [
+        -0.0,
+        -0.0,
+        -180.000019
+      ]
+    },
+    {
+      "mesh_name": "la1_fan_1",
+      "name": "fan_1",
+      "position": [
+        -4.19619,
+        7.27668,
+        -0.565869
+      ],
+      "properties": {
+        "num_lines": 25,
+        "rnd_xz": 0.029999999329447746,
+        "rnd_y": 0.01,
+        "shape_object": 1
+      }
+    },
+    {
+      "mesh_name": "la1_ground_1_2",
+      "name": "ground_1_2",
+      "position": [
+        -0.292035,
+        0.0,
+        1.055731
+      ],
+      "properties": {
+        "angle_x": 90.0,
+        "num_lines": 36,
+        "rnd_xz": 1.0,
+        "rnd_y": 1.0,
+        "shape_object": 1
+      }
+    },
+    {
+      "mesh_name": "la1_plants_2",
+      "name": "plants_2",
+      "position": [
+        3.867142,
+        0.0,
+        -8.441466
+      ],
+      "properties": {
+        "num_objects": 12,
+        "rnd_xz": 0.800000011920929,
+        "rnd_y": 0.6000000238418579,
+        "shape_object": 1
+      }
+    },
+    {
+      "mesh_name": "la1_plants_1",
+      "name": "plants_1",
+      "position": [
+        -2.610116,
+        0.0,
+        -8.441466
+      ],
+      "properties": {
+        "num_objects": 18,
+        "rnd_xz": 0.800000011920929,
+        "rnd_y": 0.6000000238418579,
+        "shape_object": 1
+      }
+    },
+    {
+      "mesh_name": "la1_bridge_1_13",
+      "name": "bridge_1_13",
+      "position": [
+        -0.799379,
+        0.197611,
+        -18.77607
+      ],
+      "properties": {
+        "num_lines": 80,
+        "rnd_xz": 0.0,
+        "rnd_y": 0.009999999776482582,
+        "shape_object": 1
+      },
+      "rotation": [
+        90.000003,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "mesh_name": "la1_bridge_1_12",
+      "name": "bridge_1_12",
+      "position": [
+        -0.799379,
+        0.197611,
+        -14.063005
+      ],
+      "properties": {
+        "num_lines": 80,
+        "rnd_xz": 0.0,
+        "rnd_y": 0.009999999776482582,
+        "shape_object": 1
+      },
+      "rotation": [
+        90.000003,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "mesh_name": "la1_bridge_1_11",
+      "name": "bridge_1_11",
+      "position": [
+        0.760937,
+        0.197611,
+        -17.927607
+      ],
+      "properties": {
+        "num_lines": 90,
+        "rnd_xz": 0.0,
+        "rnd_y": 0.009999999776482582,
+        "shape_object": 1
+      },
+      "rotation": [
+        90.000003,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "mesh_name": "la1_bridge_1_10",
+      "name": "bridge_1_10",
+      "position": [
+        0.760937,
+        0.197611,
+        -13.552626
+      ],
+      "properties": {
+        "num_lines": 80,
+        "rnd_xz": 0.0,
+        "rnd_y": 0.009999999776482582,
+        "shape_object": 1
+      },
+      "rotation": [
+        90.000003,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "mesh_name": "la1_bridge_1_9",
+      "name": "bridge_1_9",
+      "position": [
+        -0.799379,
+        0.197611,
+        -9.27798
+      ],
+      "properties": {
+        "num_lines": 80,
+        "rnd_xz": 0.0,
+        "rnd_y": 0.009999999776482582,
+        "shape_object": 1
+      },
+      "rotation": [
+        90.000003,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "mesh_name": "la1_bridge_1_8",
+      "name": "bridge_1_8",
+      "position": [
+        0.760937,
+        0.197611,
+        -9.20949
+      ],
+      "properties": {
+        "num_lines": 80,
+        "rnd_xz": 0.0,
+        "rnd_y": 0.009999999776482582,
+        "shape_object": 1
+      },
+      "rotation": [
+        90.000003,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "mesh_name": "la1_fence_5",
+      "name": "fence_5",
+      "position": [
+        3.831727,
+        0.701174,
+        -1.865106
+      ],
+      "properties": {
+        "num_lines": 60,
+        "rnd_xz": 0.004999999888241291,
+        "rnd_y": 0.019999999552965164,
+        "shape_object": 1
+      },
+      "rotation": [
+        -0.0,
+        0.0,
+        -89.999996
+      ]
+    },
+    {
+      "mesh_name": "la1_fence_4",
+      "name": "fence_4",
+      "position": [
+        3.831727,
+        1.143293,
+        -1.865106
+      ],
+      "properties": {
+        "num_lines": 60,
+        "rnd_xz": 0.004999999888241291,
+        "rnd_y": 0.019999999552965164,
+        "shape_object": 1
+      },
+      "rotation": [
+        -0.0,
+        0.0,
+        -89.999996
+      ]
+    },
+    {
+      "mesh_name": "la1_fence_3",
+      "name": "fence_3",
+      "position": [
+        2.663499,
+        0.704344,
+        -1.865106
+      ],
+      "properties": {
+        "num_lines": 30,
+        "rnd_xz": 0.004000000189989805,
+        "rnd_y": 0.009999999776482582,
+        "shape_object": 1
+      }
+    },
+    {
+      "mesh_name": "la1_fence_2",
+      "name": "fence_2",
+      "position": [
+        3.850535,
+        0.704344,
+        -1.865106
+      ],
+      "properties": {
+        "num_lines": 30,
+        "rnd_xz": 0.004000000189989805,
+        "rnd_y": 0.009999999776482582,
+        "shape_object": 1
+      }
+    },
+    {
+      "mesh_name": "la1_fence_1",
+      "name": "fence_1",
+      "position": [
+        4.998615,
+        0.704344,
+        -1.865106
+      ],
+      "properties": {
+        "num_lines": 30,
+        "rnd_xz": 0.004000000189989805,
+        "rnd_y": 0.009999999776482582,
+        "shape_object": 1
+      }
+    },
+    {
+      "mesh_name": "la1_fan_center",
+      "name": "fan_center",
+      "position": [
+        -4.19619,
+        7.27668,
+        -0.56587
+      ],
+      "properties": {
+        "num_lines": 14,
+        "rnd_xz": 0.04,
+        "shape_object": 1
+      },
+      "rotation": [
+        90.000003,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "mesh_name": "la1_tower_6",
+      "name": "tower_6",
+      "position": [
+        -4.181705,
+        7.278228,
+        1.339494
+      ],
+      "properties": {
+        "num_lines": 23,
+        "rnd_xz": 0.006000000052154064,
+        "rnd_y": 0.019999999552965164,
+        "shape_object": 1
+      },
+      "scale": [
+        0.8249,
+        0.8249,
+        0.8249
+      ]
+    },
+    {
+      "mesh_name": "la1_tower_5",
+      "name": "tower_5",
+      "position": [
+        -4.181705,
+        7.26676,
+        0.218267
+      ],
+      "properties": {
+        "num_lines": 35,
+        "rnd_xz": 0.03999999910593033,
+        "rnd_y": 0.019999999552965164,
+        "shape_object": 1
+      }
+    },
+    {
+      "mesh_name": "la1_tower_4",
+      "name": "tower_4",
+      "position": [
+        -4.181705,
+        4.846374,
+        0.218267
+      ],
+      "properties": {
+        "num_lines": 85,
+        "rnd_xz": 0.019999999552965164,
+        "rnd_y": 0.019999999552965164,
+        "shape_object": 1
+      }
+    },
+    {
+      "mesh_name": "la1_tower_3",
+      "name": "tower_3",
+      "position": [
+        -4.181705,
+        2.06057,
+        0.903376
+      ],
+      "properties": {
+        "num_lines": 120,
+        "rnd_xz": 0.019999999552965164,
+        "rnd_y": 0.019999999552965164,
+        "shape_object": 1
+      },
+      "rotation": [
+        -10.494183,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "mesh_name": "la1_tower_2",
+      "name": "tower_2",
+      "position": [
+        -4.881286,
+        2.06057,
+        -0.184596
+      ],
+      "properties": {
+        "num_lines": 120,
+        "rnd_xz": 0.019999999552965164,
+        "rnd_y": 0.019999999552965164,
+        "shape_object": 1
+      },
+      "rotation": [
+        7.082124,
+        1.208556,
+        -10.817701
+      ]
+    },
+    {
+      "mesh_name": "la1_tower_1",
+      "name": "tower_1",
+      "position": [
+        -3.588999,
+        2.06057,
+        -0.179035
+      ],
+      "properties": {
+        "num_lines": 120,
+        "rnd_xz": 0.019999999552965164,
+        "rnd_y": 0.019999999552965164,
+        "shape_object": 1
+      },
+      "rotation": [
+        5.641216,
+        -0.834184,
+        8.476593
+      ]
+    },
+    {
+      "mesh_name": "la1_tree_1_3",
+      "name": "tree_1_3",
+      "position": [
+        3.47872,
+        4.238039,
+        2.462404
+      ],
+      "properties": {
+        "angle_z": -35.0,
+        "num_lines": 15,
+        "rnd_xz": 2.5,
+        "shape_object": 1
+      }
+    },
+    {
+      "mesh_name": "la1_tree_1_2",
+      "name": "tree_1_2",
+      "position": [
+        3.47872,
+        4.238039,
+        2.462404
+      ],
+      "properties": {
+        "angle_z": 35.0,
+        "num_lines": 15,
+        "rnd_xz": 2.5,
+        "shape_object": 1
+      }
+    },
+    {
+      "mesh_name": "la1_tree_1_1",
+      "name": "tree_1_1",
+      "position": [
+        3.47872,
+        1.465989,
+        2.462404
+      ],
+      "properties": {
+        "num_lines": 40,
+        "rnd_xz": 1.0,
+        "shape_object": 1
+      }
+    },
+    {
+      "mesh_name": "la1_boat_1_5",
+      "name": "boat_1_5",
+      "position": [
+        1.687148,
+        -0.326991,
+        -17.54121
+      ],
+      "properties": {
+        "angle_x": 90.0,
+        "num_lines": 30,
+        "rnd_xz": 0.002,
+        "shape_object": 1
+      },
+      "rotation": [
+        2.898447,
+        155.298817,
+        -26.044891
+      ]
+    },
+    {
+      "mesh_name": "la1_boat_1_3",
+      "name": "boat_1_3",
+      "position": [
+        2.092721,
+        -0.180457,
+        -14.996312
+      ],
+      "properties": {
+        "angle_z": 90.0,
+        "rnd_xz": 0.01,
+        "shape_object": 1
+      },
+      "rotation": [
+        0.0,
+        178.498197,
+        0.0
+      ]
+    },
+    {
+      "mesh_name": "la1_boat_1_2",
+      "name": "boat_1_2",
+      "position": [
+        2.128754,
+        -0.180457,
+        -16.370722
+      ],
+      "properties": {
+        "angle_z": 90.0,
+        "rnd_xz": 0.001,
+        "shape_object": 1
+      },
+      "rotation": [
+        0.0,
+        178.498197,
+        0.0
+      ]
+    },
+    {
+      "mesh_name": "la1_boat_1_1",
+      "name": "boat_1_1",
+      "position": [
+        2.153184,
+        -0.262251,
+        -18.307863
+      ],
+      "properties": {
+        "num_lines": 12,
+        "rnd_xz": 0.001,
+        "shape_object": 1
+      },
+      "rotation": [
+        -38.223999,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "mesh_name": "la1_boat_1_4",
+      "name": "boat_1_4",
+      "position": [
+        2.03212,
+        -0.262251,
+        -13.693891
+      ],
+      "properties": {
+        "angle_z": 90.0,
+        "num_lines": 30,
+        "rnd_xz": 0.002,
+        "shape_object": 1
+      },
+      "rotation": [
+        -5.968791,
+        178.498197,
+        0.0
+      ]
+    },
+    {
+      "mesh_name": "la1_boat_1_9",
+      "name": "boat_1_9",
+      "position": [
+        2.581695,
+        -0.326991,
+        -17.478128
+      ],
+      "properties": {
+        "angle_x": 90.0,
+        "num_lines": 30,
+        "rnd_xz": 0.002,
+        "shape_object": 1
+      },
+      "rotation": [
+        -2.139448,
+        211.387566,
+        26.676289
+      ]
+    },
+    {
+      "mesh_name": "la1_boat_1_8",
+      "name": "boat_1_8",
+      "position": [
+        2.101646,
+        -0.541229,
+        -16.063354
+      ],
+      "properties": {
+        "angle_x": 90.0,
+        "num_lines": 60,
+        "rnd_xz": 0.0,
+        "shape_object": 1
+      },
+      "rotation": [
+        0.0,
+        178.498197,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        0.7,
+        1.0
+      ]
+    },
+    {
+      "mesh_name": "la1_boat_1_7",
+      "name": "boat_1_7",
+      "position": [
+        1.413091,
+        -0.317409,
+        -15.88899
+      ],
+      "properties": {
+        "angle_x": 90.0,
+        "num_lines": 60,
+        "rnd_xz": 0.002,
+        "shape_object": 1
+      },
+      "rotation": [
+        0.389561,
+        180.447027,
+        -11.526523
+      ]
+    },
+    {
+      "mesh_name": "la1_boat_1_6",
+      "name": "boat_1_6",
+      "position": [
+        2.775943,
+        -0.317409,
+        -15.85326
+      ],
+      "properties": {
+        "angle_x": 90.0,
+        "num_lines": 60,
+        "rnd_xz": 0.002,
+        "shape_object": 1
+      },
+      "rotation": [
+        0.536795,
+        176.77132,
+        18.10522
+      ]
+    },
+    {
+      "mesh_name": "la1_bridge_1_2",
+      "name": "bridge_1_5",
+      "position": [
+        0.783548,
+        0.197611,
+        -10.37501
+      ],
+      "properties": {
+        "num_lines": 60,
+        "rnd_xz": 0.009999999776482582,
+        "rnd_y": 0.009999999776482582,
+        "shape_object": 1
+      }
+    },
+    {
+      "mesh_name": "la1_bridge_1_2",
+      "name": "bridge_1_6",
+      "position": [
+        -0.820624,
+        0.197611,
+        -10.37501
+      ],
+      "properties": {
+        "num_lines": 60,
+        "rnd_xz": 0.009999999776482582,
+        "rnd_y": 0.009999999776482582,
+        "shape_object": 1
+      }
+    },
+    {
+      "mesh_name": "la1_bridge_1_2",
+      "name": "bridge_1_7",
+      "position": [
+        -0.820624,
+        0.197611,
+        -15.58204
+      ],
+      "properties": {
+        "num_lines": 60,
+        "rnd_xz": 0.009999999776482582,
+        "rnd_y": 0.009999999776482582,
+        "shape_object": 1
+      }
+    },
+    {
+      "mesh_name": "la1_bridge_1_2",
+      "name": "bridge_1_4",
+      "position": [
+        0.783548,
+        0.197611,
+        -15.58204
+      ],
+      "properties": {
+        "num_lines": 60,
+        "rnd_xz": 0.009999999776482582,
+        "rnd_y": 0.009999999776482582,
+        "shape_object": 1
+      }
+    },
+    {
+      "mesh_name": "la1_bridge_1_2",
+      "name": "bridge_1_3",
+      "position": [
+        0.783548,
+        0.197611,
+        -20.635494
+      ],
+      "properties": {
+        "num_lines": 60,
+        "rnd_xz": 0.009999999776482582,
+        "rnd_y": 0.009999999776482582,
+        "shape_object": 1
+      }
+    },
+    {
+      "mesh_name": "la1_bridge_1_2",
+      "name": "bridge_1_2",
+      "position": [
+        -0.820624,
+        0.197611,
+        -20.635494
+      ],
+      "properties": {
+        "num_lines": 60,
+        "rnd_xz": 0.009999999776482582,
+        "rnd_y": 0.009999999776482582,
+        "shape_object": 1
+      }
+    },
+    {
+      "mesh_name": "la1_bridge_1_1",
+      "name": "bridge_1_1",
+      "position": [
+        -0.018912,
+        0.197611,
+        -12.518593
+      ],
+      "properties": {
+        "angle_z": 90,
+        "num_lines": 130,
+        "rnd_xz": 0.03999999910593033,
+        "rnd_y": 0.03999999910593033,
+        "shape_object": 1
+      }
+    },
+    {
+      "mesh_name": "la1_ground_1_1",
+      "name": "ground_1_1",
+      "position": [
+        -0.292035,
+        0.0,
+        1.055731
+      ],
+      "properties": {
+        "angle_z": 90.0,
+        "num_lines": 46,
+        "rnd_xz": 1.0,
+        "rnd_y": 1.0,
+        "shape_object": 1
+      }
+    },
+    {
+      "mesh_name": "la1_ob_1_19",
+      "name": "ob_1_19",
+      "position": [
+        0.05897,
+        0.775142,
+        3.242968
+      ],
+      "properties": {
+        "angle_z": 90.0,
+        "num_lines": 15,
+        "shape_object": 1
+      },
+      "scale": [
+        1.8182,
+        0.8275,
+        1.0
+      ]
+    },
+    {
+      "mesh_name": "la1_ob_1_18",
+      "name": "ob_1_18",
+      "position": [
+        0.05897,
+        0.775142,
+        1.21397
+      ],
+      "properties": {
+        "angle_z": 90.0,
+        "num_lines": 15,
+        "shape_object": 1
+      },
+      "scale": [
+        1.736,
+        0.8275,
+        1.0
+      ]
+    },
+    {
+      "mesh_name": "la1_ob_1_17",
+      "name": "ob_1_17",
+      "position": [
+        0.482545,
+        1.570585,
+        1.21397
+      ],
+      "properties": {
+        "num_lines": 20,
+        "rnd_xz": 0.05,
+        "shape_object": 1
+      }
+    },
+    {
+      "mesh_name": "la1_ob_1_16",
+      "name": "ob_1_16",
+      "position": [
+        -0.375963,
+        1.580459,
+        1.21397
+      ],
+      "properties": {
+        "num_lines": 20,
+        "rnd_xz": 0.05,
+        "shape_object": 1
+      }
+    },
+    {
+      "mesh_name": "la1_ob_1_15",
+      "name": "ob_1_15",
+      "position": [
+        -0.893602,
+        2.877677,
+        2.190146
+      ],
+      "properties": {
+        "angle_x": 90.0,
+        "num_lines": 22,
+        "rnd_xz": 0.01,
+        "shape_object": 1
+      }
+    },
+    {
+      "mesh_name": "la1_ob_1_14",
+      "name": "ob_1_14",
+      "position": [
+        1.067627,
+        2.877677,
+        2.190146
+      ],
+      "properties": {
+        "angle_x": 90.0,
+        "num_lines": 22,
+        "rnd_xz": 0.01,
+        "shape_object": 1
+      }
+    },
+    {
+      "mesh_name": "la1_ob_1_13",
+      "name": "ob_1_13",
+      "position": [
+        1.067627,
+        0.775376,
+        2.190146
+      ],
+      "properties": {
+        "angle_x": 90.0,
+        "num_lines": 25,
+        "rnd_xz": 0.009999999776482582,
+        "shape_object": 1
+      }
+    },
+    {
+      "mesh_name": "la1_ob_1_12",
+      "name": "ob_1_12",
+      "position": [
+        -0.927679,
+        0.775376,
+        2.190146
+      ],
+      "properties": {
+        "angle_x": 90.0,
+        "num_lines": 25,
+        "rnd_xz": 0.01,
+        "shape_object": 1
+      }
+    },
+    {
+      "mesh_name": "la1_ob_1_11",
+      "name": "ob_1_11",
+      "position": [
+        0.05897,
+        0.764296,
+        2.182353
+      ],
+      "properties": {
+        "angle_z": 90.0,
+        "num_lines": 30,
+        "rnd_xz": 0.1,
+        "shape_object": 1
+      }
+    },
+    {
+      "mesh_name": "la1_ob_1_10",
+      "name": "ob_1_10",
+      "position": [
+        0.105966,
+        3.851392,
+        2.190146
+      ],
+      "properties": {
+        "angle_x": 90.0,
+        "num_lines": 22,
+        "rnd_xz": 0.01,
+        "shape_object": 1
+      }
+    },
+    {
+      "mesh_name": "la1_ob_1_09",
+      "name": "ob_1_09",
+      "position": [
+        0.05897,
+        2.287802,
+        1.21397
+      ],
+      "properties": {
+        "angle_z": 90.0,
+        "num_lines": 20,
+        "rnd_xz": 0.05,
+        "shape_object": 1
+      }
+    },
+    {
+      "mesh_name": "la1_ob_1_08",
+      "name": "ob_1_08",
+      "position": [
+        -0.600722,
+        3.161448,
+        2.21969
+      ],
+      "properties": {
+        "angle_z": -45.0,
+        "num_lilnes": 40,
+        "shape_object": 1
+      },
+      "scale": [
+        1.0,
+        1.0,
+        1.0266
+      ]
+    },
+    {
+      "mesh_name": "la1_ob_1_07",
+      "name": "ob_1_07",
+      "position": [
+        0.803115,
+        3.161447,
+        2.184888
+      ],
+      "properties": {
+        "angle_z": 45.0,
+        "num_lines": 40,
+        "shape_object": 1
+      },
+      "scale": [
+        1.0,
+        1.0,
+        1.0677
+      ]
+    },
+    {
+      "mesh_name": "la1_ob_1_06",
+      "name": "ob_1_06",
+      "position": [
+        -0.664768,
+        1.521057,
+        1.21397
+      ],
+      "properties": {
+        "shape_object": 1
+      }
+    },
+    {
+      "mesh_name": "la1_ob_1_05",
+      "name": "ob_1_05",
+      "position": [
+        0.787561,
+        1.521057,
+        1.21397
+      ],
+      "properties": {
+        "shape_object": 1
+      }
+    },
+    {
+      "mesh_name": "la1_ob_1_04",
+      "name": "ob_1_04",
+      "position": [
+        0.077473,
+        2.682198,
+        1.21397
+      ],
+      "properties": {
+        "shape_object": 1
+      }
+    },
+    {
+      "mesh_name": "la1_ob_1_03",
+      "name": "ob_1_03",
+      "position": [
+        0.077961,
+        1.893902,
+        3.21397
+      ],
+      "properties": {
+        "num_lines": 40,
+        "shape_object": 1
+      }
+    },
+    {
+      "mesh_name": "la1_ob_1_02",
+      "name": "ob_1_02",
+      "position": [
+        -0.922527,
+        1.72016,
+        2.21397
+      ],
+      "properties": {
+        "shape_object": 1
+      }
+    },
+    {
+      "mesh_name": "la1_ob_1_01",
+      "name": "ob_1_01",
+      "position": [
+        1.077473,
+        1.72016,
+        2.21397
+      ],
+      "properties": {
+        "shape_object": 1
+      }
+    }
+  ],
+  "properties": {
+    "angle_x": 0.0,
+    "angle_y": 0.0,
+    "angle_z": 0.0,
+    "line_width": 0.029999999329447746,
+    "num_lines": 25,
+    "rnd_xz": 0.15000000596046448,
+    "rnd_y": 0.15000000596046448,
+    "scene_color": 0.0,
+    "scene_hide": 0,
+    "start_scene": 0
+  },
+  "time": 16042
+}

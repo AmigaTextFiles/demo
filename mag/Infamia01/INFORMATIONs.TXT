@@ -1,0 +1,245 @@
+Coming soon from OTM is "The only driving experience".
+"Virtual Karting" is the fastest fully texture mapped game the Amiga has
+ ever seen. It's incredibly fast, playable and realistic and offers
+ the only driving experience. From real karts to your Amiga.
+For those that want to fly without wings!
+
+VIRTUAL KARTING:
+ Copyright Fabio Bizzetti 1995
+ Published by --OTM Publications & Promotions--
+ Design,Program,Graphics,SoundFX by Fabio Bizzetti
+ Music by Ruben Monteiro
+
+ Release date: 10Th October 1995
+ Price £24.95
+ AGA Amiga only.
+
+
+INFORMATIONS ABOUT THIS DEMO:
+> Many features have been removed to fit the demo into one disk.
+  You can select only the 125cc Kart and the "Advanced" Track.
+  There is a 60 seconds TimeOut if you play the game (disabled in Demo mode).
+
+
+VIRTUAL KARTING keys (available only in playable demo):
+F10  = toggles "3D mode" or "2D mode".
+F9   = toggles "full/half screen" in 2D mode: 25/50 fps on unexpanded A1200.
+F1   = low view    (only available in 3D mode)
+F2   = normal view (only available in 3D mode)
+F3   = mid-view    (only available in 3D mode)
+F4   = high view   (only available in 3D mode)
+DEL  = manual gears
+HELP = automatic gears
+LEFT ALT / RIGHT AMIGA = Change gear down (both manual and automatic gears)
+LEFT AMIGA / RIGHT ALT = Change gear up (both manual and automatic gears)
+J = select digital joystick as driving device (default)
+M = select mouse as driving device
+A = select analogue joystick as driving device (recommended)
+
+VIRTUAL KARTING keys (available both in playable demo and automatic demo):
+B = toggles background between "none" or "simple 3D".
+ESC = exit from this Race/Qualify/Demo
+SPACE = toggles "pause" on/off.
+
+
+SOME TECHNICAL INFORMATIONS ABOUT THE TEXTURE MAPPING ROUTINES:
+> The background is not scrolled like in every game for Amiga and PC, it is
+  rendered; you can notice it near the left/right borders, it looks like the
+  effect given by a video camera.
+> The game does NOT use BlitterScreen or similar methods, it uses the fastest
+  method possible (about 3 times faster than BlitterScreen). I can't give many
+  informations about it, I can say only that every texture mapping algorithm
+  that draws sequentially (horiz. OR vert.) can be translated into a planar
+  algorithm with no loss of speed. VK uses an hybrid; everything is fine to
+  get the best result possible. It is full screen 2x2 dithered to 1x1.
+  There is no c2p conversion, no CPU cicles stealing, no blitter usage, no
+  copper usage. No real chunky screen, Amiga has not it. Texture mapping can
+  be done in a lot of original ways, not only the "academical" ones, there
+  is no reason to try to do it in the way they do it on PC or Consoles.
+  Amiga is the best of all: let's program it like it was an Amiga, not a PC.
+> The 3D section is real texture mapping 2 axis rotation and X,Y,Z movement.
+  25 frames/sec on unexpanded A1200.
+> The 2D section runs 25/50 frames/sec on unexpanded A1200 and is ZOOM and
+  ROTATE at the same time.
+> The Flight section is the same as the 3D section but slightly rotated in
+  the "Pitch" axis and full screen. Although it is full screen, it has no
+  problem in giving 25 frames/sec on unexpanded A1200.
+> Everything reach 50 frames/second if a small accelerator board
+  (with FastRam) is found.
+> The game has been written using my H.L.A. (High Level Assembly): an extremely
+  powerful and flexile programming language not commercialized (and never,
+  it contains my know how). The game would NOT be faster if written in 100%
+  pure Assembly, it simply would have taken much more time to write it.
+  The game is fully Hard Disk installable, however when played from floppys
+  there is no disk swapping and the loading occurs only when you load a new
+  Track or Kart.
+  "Virtual Karting" has been thought like a "coin'op" game for standard A1200.
+  On accelerated A1200 (or A4000) it looks much better (thanks to the 50 fps).
+  I hope every (unexpanded) A1200 owner will consider to get a 50Mhz
+  accelerator board: next games will need it or will be optimized for it.
+
+
+ABOUT THE GAME AND PLAYABILITY:
+> There is a reason why I love fast games (at least 25 fps): the playability.
+  I don't like games that looks pretty but are slow. The action is the
+  most important thing on a driving game, so I gave the priority to this
+  aspect. "Virtual Karting" has a great detail too, but the speed of the
+  game is something amazing. It means real action and playability.
+> Intelligent computer karts.
+> Very realistic kart simulation.
+> 3 devious tracks. 100cc and 125cc karts to choose. Qualify section.
+> Playable by Digital Joystick, Mouse or Analogue Joystick.
+  The "Steering Wheels" that use Mouse or Paddle inputs are supported too.
+> Selectable both Automatic and Manual gears.
+
+
+ABOUT THE LONGEVITY:
+> "Virtual Karting" has a lot of longevity, not only 3 tracks and 2 karts to
+  study and drive at their best, but also 4 different heights of view in 3D
+  mode and a 2D game as well. From easiest to hardest, but "hard" still
+  means total playability, more realism. The kart's behaviour is always 
+  realistic, the "responsability" is of the player; the kart always gives the
+  best realism and control possible with a joystick/mouse/analogue-joystick
+  input device.
+
+
+ABOUT PIRACY AND THE AMIGA GAMES MARKET:
+> The Amiga games market has suffered year after year, not only after the
+  bankruptcy of Commodore. Either the Christmas period, the most important
+  period for the Amiga games to sell, has seen shrinking the number of
+  games year after year, even years before the bankruptcy of Commodore.
+  Escom has not changed this tendence yet, and I think it will be hard if
+  they continue to sell old Amiga 1200 as it was (obsolete) in 1992, with a
+  price that would haven't let the Amiga 1200 to be competitive years ago.
+  I think Amiga will survive only because -some- developers still want to
+  write software for Amiga and not for PC. My publisher, OTM, was the
+  only one that didn't ask for a PC version too. This is very important for
+  me, since PC keyboard is not that one I want under my fingers..
+  BUT if the kids called pirates will think that it's still intelligent to
+  pirate games, you'll see the real death of the Amiga and the few developers
+  will go to PC or will not release nothing more. There are charges to
+  produce a game, neither OTM nor me are "greedy", the only greedy people
+  are the pirates. Think twice when you pirate an Amiga game, game-demos and
+  coverdisks (and some test in the shop) are there to let you understand if
+  a game is worth or not to be bought. Amiga situation is the same of Atari ST
+  some time ago. Now Vista PRO is on PC and no more on Amiga (it has been
+  abandoned on Amiga, surely not because Amy is crap) and now PC has also our
+  Scala (MM100) Multimedia!! Pirates should PAY the developers and companies
+  now, to give back what they have stoled in the past years KILLING the Amiga.
+  Long live the Amiga, not only because "it is the only multitasking personal
+  computer"...you know, it's OUR computer.  8)
+  I really think "Virtual Karting" can be the begin of the demonstration of
+  what a "humble" Amiga CAN DO but, you know, nobody likes to release games
+  if stupid and criminal kids called "pirates" kill the market. I would
+  prefer to keep my games and programs for me and for some friends.
+
+
+ABOUT YOU:
+  If you are an Amiga owner that knows how the Amiga is different from PC,
+  you should do 3 things and then you'll be able to ask me the promise
+  "Make games for Amiga better than they do on Pentium PC". The 3 points:
+1) An accelerator board is really indispensible; a 28Mhz 020 + 4Mb FastRam
+   without math coprocessor could be enough, although I consider as standard
+   a cheap 50Mhz board + 4mb FastRam. Get it if you wanna see incredible
+   things (VK is not included) on AGA Amigas. PC games will seem crap.
+   You'll see that an accelerated A1200 is another computer, unexpanded
+   A1200 is the past.
+   The problem that will be solved isn't only the speed of the A1200, but
+   the bottleneck of ChipRam and the lack of memory for texture mapping /
+   realtime raytracing methods (coming soon) and CPU power. Moreover, a
+   50Mhz board helps the frame rate: I really think 25 frames/sec is SLOW.
+   Well, the mad is not me ;) just watch the "Daytona", "Ridge Racer" and
+   the other coin'ops, if they were 8 frames/sec it would not be the same
+   thing ("Daytona" seems to me 60-70 frames/sec!). "Virtual Karting" is
+   already a fast driving game (thanks to the 25 fps), and it reachs only
+   about 100 Kph! If you get an accelerator board, you can pretend 50fps
+   from games, that means you can drive at Mach 1 (if you're able!) still
+   understanding WHERE you are going..  If you play it 4 frames/sec, it
+   will be like you were watching some diapositives or a game on a
+   PC486DX2-67.000000001Mhz.
+   Anyway, VK has a cheat mode that will show it as the fastest racing game
+   ever! Adrenaline required, and 50fps recommended for clear gfx and fun.
+  On Virtual Karting a "fast" accelerator board (50Mhz 68030) computes more
+   than 320 (3 hundreds+20) frames/sec, if it was a standard, VK would have
+   had 5 times more details at 50 frames/sec speed WITH walls/buildings.
+   Buy the 50Mhz board and you'll get the new AGA Amiga games generation
+   that will let you laugh at Pentium PC games. DO IT!
+  NEVER consider PCMCIA ram expansion because it would slow down your
+   unexpanded A1200!!! and never buy only FastRam, if so get at least a
+   28Mhz 68020 board, but think twice: the 50Mhz should be the standard for
+   many years to come. With a 28Mhz board you will "suffer", with a 50Mhz
+   board you'll enjoy incredible (and, mostly, ORIGINAL, not adaptions
+   from PC, like "Doom" or others..) games on Amiga, that PC will try
+   (sigh!) to copy. With crap or null results.
+  The 50Mhz board is useful for everything, obviously not only for games.
+  I am getting a 68060 on my A1200 to work better, but although I will give
+  benefits to the users that have it too, I will advice as best choice a
+  50 Mhz 68030. Not more, not less. It's cheap now, and it is worth the money.
+  If Amiga is not upgrated by Escom / Amiga Technologies, it doesn't mean
+  that it doesn't need to be upgraded. Do it by yourself, and you will never
+  need to abandon the hobby of computer (that is leaving or buying a PC).
+  Please note that I don't "complain" about the AGA chipset, it can do a
+   lot of funny things for the years to come.
+  A last note about the accelerator board: a lot of people say that the math
+  coprocessor gives benefits to games; this is really funny. I think it is
+  not sufficient to imagine that it -should- to say that it does. The FPU
+  gives "benefits" ONLY to the programs that explicitly use it, directly
+  or through the O.S. I don't think any game needs the math coprocessor, they
+  would be slower indeed. The FPU is NOT faster than the CPU in integer math,
+  that is the most used in any games and most utilities, the FPU is faster
+  only in floating point math. This means high-end utilities or some
+  scientifical programs that needs it. Not games indeed.
+2) A (small or not,new or used) hard disk is indispensible too.
+   It's cheap now. You'll see how many benefits hard disk can give to
+   programmers like me (please -forgive- me about the lack of modesty!).
+3) If you use a program or play a game, then buy it.
+   Don't buy things you don't like!! BUT buy software you need or like
+   (use), or you'll not get software anymore. Sad but simple enough.
+If you respect these 3 points, I can do promises (this means I will keep
+ the promises):
+A "Daytona" style game with height modeled textures is already possible on
+ unexpanded A1200, but it needs extra memory to have detailed scenarios
+ and thus it's better to have also a faster CPU when you get the FastRam.
+A "Descent" like graphic engine is nearly completed. Works with unexpanded
+ A1200 too, giving 16.6 fps fullscreen. The final version will give 25 fps.
+These are the "copies" of PC / Console games, now there is the list of mine:
+A new "raytracing" style method never seen on PC or Consoles: it's FAAST
+ but requires fast CPU and FastRam, it's like "Flight Unlimited" but i.e.
+ you can see the mountains reflected in the lake. Needs about 120 CPU cicles
+ per pixel (16000 pixels fullscreen). 25 frames/sec on my 50Mhz 030 board.
+ This is what we need to laugh at PC games.
+LAMER DETECTOR ALGORITHM:
+If you think I am a liar, like some lamers thought about VK and me the past
+ months on the Internet, then you have the proof you're a lamer too.  =;)
+ It's simple and works with unexpanded brains too.  =8)
+You've seen a list of "work in progress", that will be reality if the 3
+ points will be reality too and I'll have feedback from you (registration
+ cards include space where to fill your Amiga configuration, etc..),
+ however there is already a new game nearly finished from me. Published and
+ promoted by OTM.
+Its name is "StarFighter", will be ready in some months (hopefully in 1995).
+ It will still run on unexpanded A1200 but will overwork accelerator boards
+ and hard disk. It ALREADY has a lot of features that no PC or Console game
+ has, like RAY TRACING space routines (25fps on unexpanded A1200, it's a
+ semplification of the above raytracing method), a "Doom" like section
+ (I hate "Doom"! this is NOT a clone, it's simply an old idea) into their
+ biggest spaceship, 25 fps on unexpanded A1200, a lot of action of course!
+ Other graphic engines (game sections) under final development.
+ Everything has a great detail, faster CPUs will show 50 fps and (perhaps)
+ more objects on the scenarios, but there are already enough! It's all.
+Please don't think I wanna make big money, I got a LOT of requests to code on
+ PC and PlayStation and I REFUSED. ONLY PC and PlayStation are for big money.
+ I wanna show how much Amiga is GREAT, and people at OTM are extremely cool 
+ and concerned to the Amiga, but obviously as long as the Amiga market exists
+ and is promising for further games. There are charges to produce and promote
+ a game, and who make the game deserves the (on Amiga small) earnings, not
+ the pirates.
+Neither me nor OTM are greedy, only pirates are (THEY do big money), I hate
+ what pirates did to the Amiga. It seems like our computer is sh*t for a lot
+ of journalists, the PC/Amiga (no more Amiga/PC!) magazines review 20 PC
+ games and 1 Amiga game only to keep Amiga readers buying their s**tty mags.
+
+Long live the Amiga; it's the best of all.
+
+
+Written by the maker of VK, Fabio Bizzetti (Maverick/RamJam in the scene)

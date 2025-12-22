@@ -1,0 +1,48 @@
+==========================================
+Short: JOTD Startup for HD Installs & Degrader
+Type: game/patch
+Author: jffabre@ensica.fr (Jean-François Fabre)
+=========================================
+
+
+JOTD Startup: THE ULTIMATE GAMESTARTER FROM 
+WORKBENCH
+
+As you could notice, I created and uploaded many HD-Install & fix 
+programs for non-dos games, but all of them were standalone, 
+and in case of an error in the general loader routines, I had to 
+remake the loader (relink) and upload again.
+
+Bert Jahn had developped WHDLoad, which solves this problem 
+because it allows to load small, game-specific loaders and run 
+them using its own degrade/hd/dos code. This technique allows 
+easy updates in case of bugs or new functionnalities.
+
+That's what I decided to do myself. JST was born from a 8-hour 
+adaptation of my link library. It's an equivalent to WHDLoad but a 
+bit more powerful, as the system can be called in the slave loader, 
+messages can be printed, a gui can be opened, there are lots of 
+cool functions, and much more. It also allows easier programming 
+of loaders (but WHDLoad is still cool!), and can run normal DOS 
+programs in degraded mode (68060 support).
+
+JOTD HD Startup is © 1995-1997 Jean-François FABRE
+JOTDStartup is © 1997 Jean-François FABRE
+JOTDStartup is SHAREWARE!
+
+From V0.3 I decided to ask a fee of US$10, 20DM, 7£ or 50FF to 
+be able to become a registered user. However, I will register 
+whoever I think he or she did something cool for me (already sent 
+disks, money, sports cars, Sandra Bullock clones...). Lots of 
+people are already on the list. If you think I forgot you, contact me.
+To register, send the money to:
+
+Jean-François Fabre
+19 Rue Emile Duploye
+34500 BEZIERS
+FRANCE
+
+Specify your e-mail or send a blank disk with the money (for 
+non-internet users), and I'll send you the registered version of JST 
+(+the latest installs for the ones who sent a floppy but specify 
+which ones in priority as the whole archive is big).

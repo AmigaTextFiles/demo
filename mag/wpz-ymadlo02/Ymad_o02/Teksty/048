@@ -1,0 +1,95 @@
+5                        ð03º35Digitalizer  FG - 24  Movieð04º01
+
+
+   Zacznijmy najpierw od tego, co to jest º10digitalizerº01. Nazwa ta nie jest zbyt
+poprawna  jëzykowo,  ale  pozwólcie,  ûe bëdë sië jâ posîugiwaî. Przejdúmy do
+sedna  sprawy.  Wiëc  º10digitalizerº01  to  takie urzâdzenie, które pozwala nam na
+"przetîumaczenie"  danych  analogowych  na dane cyfrowe i przetransportowanie
+ich  do  komputera.  Urzâdzenia  te  mogâ  byê  róûnego  rodzaju.  Mamy  wiëc
+digitalizery º10dúwiëkuº01 (samplery) i º10obrazuº01. O takim wîaônie teraz napiszë.
+   Producentem tegoû urzâdzenia jest warszawska firma º10Elsatº01, która jest znana
+ze  sprzedaûy  wielu  przystawek do naszych º09Amigº01. Jednym ze znanych produktów
+tej  firmy  jest  "starszy brat" opisywanego tutaj urzâdzenia, º10FG - 24º01, który
+jest   profesjonalnym,   24   bitowym   (co  daje  nam  16,  7  mln  kolorów)
+digitalizerem. Jedynâ jego wadâ jest cena. Wraz z interfejsem PCMCIA kosztuje
+okoîo  400  zî.  Zapewne  z  tego powodu º10Elsatº01 zdecydowaî sië na wypuszczenie
+nieco  taïszej  wersji  digitalizera. Jest niâ wîaônie º10FG - 24 Movieº01. Jest to
+urzâdzenie  przystosowane  do  pracy z º09Amigâº10 1200º01, poniewaû posiada wbudowany
+interfejs  PCMCIA.  Rozwiâzanie  to  jest bardzo dobre, poniewaû zîâcze to ma
+znacznie  wiëkszâ przepustowoôê niû port drukarki, do którego jest podîâczana
+wiëkszoôê  innych  digitalizerów  obrazu  jak  i dúwiëku. Obraz do urzâdzenia
+moûemy  wprowadzaê  za  pomocâ  2 niezaleûnych wejôê: composite video (sygnaî
+zîoûony wizji, czyli po prostu wyjôcie video z magnetowidu, telewizora lub na
+przykîad  z  º09Amigiº01)  i  super  vhs  (wyjôcie takie posiadajâ niektóre kamery,
+telewizory  i  magnetowidy).  Przeîâczanie  tych  wejôê  odbywa sië na drodze
+programowej.  Wraz z urzâdzeniem dostajemy zasilacz niestabilizowany 9 V, 700
+mA.
+   Gîównym przeznaczeniem º10FG-24 Movieº01 jest digitalizowanie gotowych animacji.
+Pozwala ono na tworzenie "filmów" w takich oto trybach:
+
+a) 128 na 94 piksele w trybie czarno-biaîym i kolorowym
+b) 384 na 283 piksele w trybie czarno-biaîym i kolorowym
+
+Animacja  kolorowa  jest  zbudowana  z  klatek w º10256º01 barwach kaûda, a czarno-
+biaîa  w  º10256º01  odcieniach szaroôci. W animacji kolorowej kaûda klatka posiada
+swojâ,  oddzielnâ paletë, a w czarno-biaîej paleta dla wszystkich klatek jest
+wspólna.  Liczba  zrzucanych  klatek  na sekundë waha sië w granicach od º108º01 na
+sekundë  (w trybie (b), obraz kolorowy) do aû º1025º01, ale w trybie (a), gdy obraz
+jest  czarno-biaîy.  W  digitalizowaniu  naleûy zwróciê uwagë na iloôê wolnej
+pamiëci, gdyû klatki zajmujâ sporo miejsca. Jedna klatka zajmuje w pamiëci:
+
+a) 128 na 94 piksele:
+
+- czarno-biaîa 12032 bajtów
+- kolorowa     24064 bajtów
+
+b) 384 na 283 piksele:
+
+- czarno-biaîa 108672 bajtów
+- kolorowa     217344 bajtów
+
+Do  tej  iloôci  pamiëci  naleûy doliczyê okoîo 400 kB na dekodowanie klatek.
+Producent podaje, ûe wymagane jest º108 MBº01 pamiëci, lecz jednak to jest minimum.
+Z  tâ  iloôciâ  pamiëci  nie moûna zrobiê zbyt dîugich animacji. Dobrze, ûe w
+programie  jest  opcja  zrzucania klatek na twardy dysk. Bardzo dobry pomysî,
+ale ma jednâ wadë, zapis na dysk wyraúnie obniûa iloôê klatek na sekundë.
+   Teraz  opiszë  pokrótce  oprogramowanie jakie otrzymujemy z urzâdzeniem. W
+pudeîku  moûemy znaleúê dyskietkë, na której znajdziemy kilka programów. Jest
+tam  º10Main  Actorº01, który sîuûy do obróbki animacji i program gîówny, pod nazwâ
+º10FG24  Movieº01.  Przed jego uruchomieniem upewnij sië, ûe w startup-sequence nie
+masz   zainstalowanego   programiku   º10RemCardsº01,   który   wyrzuca  z  pamiëci
+º10carddisk.deviceº01  i dezaktywizuje urzâdzenie º10CC0:º01, bez którego program ten nie
+uruchomi  sië. Program uruchamia sië na wîasnym ekranie. W menu moûemy wybraê
+uruchomienie  podglâdu  czarno-biaîego,  którego rozmiar (128x94 lub 384x283)
+zaleûy  od  tego, co wybierzemy w pozycji rozdzielczoôê. Moûemy takûe wybraê,
+czy  animacja  bëdzie  w kolorze, czy bëdzie "black & white". Wybieramy takûe
+wejôcie,  do  którego  podîâczone  jest úródîo obrazu. Przed digitalizowaniem
+musimy  ustawiê  iloôê  klatek,  z  których  bëdzie zbudowana animacja. Potem
+zostaje  nam  tylko  wybór,  czy  klatki  bëdâ  zrzucane do RAM'u, czy teû na
+"twardziela".  Jeûeli ustawimy zbyt duûâ iloôê klatek i nie zmieszczâ sië one
+do pamiëci, to program nas o tym poinformuje (dziaîa to wtedy gdy klatki bëdâ
+wëdrowaê do pamiëci, a nie na HDD).
+   Moim  zdaniem  najsîabszâ  stronâ  zestawu  jest  wîaônie  oprogramowanie.
+Brakuje  mi opcji, dziëki której byîo by moûliwe digitalizowanie pojedyïczych
+klatek. Takûe wyglâd programu nie jest zbyt atrakcyjny (dobrze, ûe nie jest w
+amosie...).  Ale miejmy nadziejë, ûe oprogramowanie to bëdzie unowoczeôniane.
+Co  do samego urzâdzenia nie ma sië do czego przyczepiê. Nie bojâc sië utraty
+gwarancji,  rozebraîem  digitalizer  i jak zwykle, w produktach º10Elsatuº01, byîem
+mile  zaskoczony.  Wykonanie  jest  bardzo  dobre,  gîówny  ukîad  (pewnie to
+przetwornik  A/C)  jest produkcji º10Philipsaº01. Na pîytce drukowanej znajduje sië
+jeszcze  kilka  innych  ukîadów  i  ukîady  pamiëci.  Pîytka elektroniki jest
+wykonana w technice SMD. Ogólnie wykonanie jest ok. Gîównâ zaletâ zestawu (wg
+mnie)  jest  jego cena. Kosztuje tylko º10189 zîº01, czyli o poîowë taïszy niû º10FG -
+24º01  z  interfejsem  PCMCIA.  Digitalizer ten w zupeînoôci nadaje sië do celów
+amatorskich,  a  dziëki  w  miarë  duûej prëdkoôci zrzucania klatek, nawet do
+celów  póî  profesjonalnych.
+
+                                 º58Gorzyga/BBDº01
+
+P.S.
+   Jeûeli  ktoô  chce  zasiëgnâê  wiëcej  informacji, niech skontaktuje sië z
+firmâ º10Elsatº01, oto jej adres:
+
+                                 Elsat S.C.
+                    00-714 Warszawa ul.Czerniakowska 28 B
+                            tel. (022) 651 25 06

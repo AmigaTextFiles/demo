@@ -1,0 +1,214 @@
+Mediacje.SZAMAN&MURDZEK
+
+             - Mediacje -
+
+   Przed  Wami   rozmowa   uûytkownika
+koôci  AGA,   nie   majâcego   pojëcia
+o kartach graficznych  i  slotach  PCI
+(w postaê tâ wcieliî  sië  SZAMAN)  ze
+ôwieûo     upieczonym      posiadaczem
+Mediatora - Grzegorzem Murdzekiem.
+
+SZ: Ile zapîaciîeô za Mediatora  i  co
+znalazîeô w pudeîku?
+
+GM: Za  samego  Mediator'a  zapîaciîem
+852zî, ale  w  pudeîku  znalazîem  teû
+Voodoo3 i FastATA (bo to zamówiîem).
+
+SZ: Z tego  co  mi  wiadomo,  aby  móc
+zainstalowaê     Mediatora      naleûy
+oczywiôcie  posiadaê  obudowë   tower.
+Samâ instalacjë wyobraûam  sobie  tak,
+ûe wyjmujë kartë turbo i zamiast  niej
+wkîadam do slotu Mediatora, który jest
+przelotowy, dziëki czemu mogë ponownie
+zaîoûyê  kartë   turbo.   Mam   jednak
+
+åmed
+
+pytanie - czy  taka  konstrukcja  jest
+stabilna?
+
+GM: Tak, jest  stabilna,  bo  przecieû
+Mediator'a przykrëca sië  ôrubkami  do
+pîyty    gîównej    w     odpowiednich
+miejscach.
+
+SZ:  Jestem   posiadaczem   kontrolera
+Fast-ATA. Czy ma to  jakieô  znaczenie
+przy instalacji Mediatora?
+
+GM: Tylko takie, ûe musisz wyjâê pîytë
+gîównâ z obudowy na czas  przykrëcania
+Mediatora.   Odîâczasz   wiëc    taômy
+sygnaîowe.
+Jeôli ktoô by sië obawiaî  o  to,  czy
+sië zmieôci Fast-ATA  i  Mediator,  to
+proszë  sië  nie  martwiê  -   miejsca
+pomiëdzy jednym od  drugim  jest  duûo
+(iloôê  miejsca   =   gruboôê   modemu
+zewn.).
+
+SZ:   A   gdybym    miaî    wewnëtrzny
+scandoubler?
+
+GM:  Nie  mogë  odpowiedzieê   na   to
+pytanie,  bo   nie   widziaîem   nigdy
+wewnëtrznego  scandoublera  na  pîycie
+gîównej,  ale  sâdzë,  ûe  to  nie  ma
+znaczenia, bo  Mediator  przecieû  nie
+przywiera do pîyty.
+
+SZ: Ile slotów PCI Mediator udostëpnia
+i co moûna w nie wîoûyê?
+
+GM: 4 Sloty PCI. Obecnie moûna  w  nie
+wîoûyê  wszystkie   karty   PCI,   ale
+sterowniki na dzieï dzisiejszy  sâ  do
+kart:
+
+Karty graficzne:
+* S3 Virge 4MB
+* Voodoo Banshee 8 MB
+* Voodoo3 2000/3000 16 MB 
+* Voodoo4 4500 32 MB 
+* Voodoo5 5500 64 MB 
+
+Karty sieciowe:
+               (Vendor ID, Product ID)
+Winbond 89C940F     (1050, 0940)
+Winbond 89C940F     (1050, 5A5A)
+RealTek RTL-8029    (10EC, 8029)
+NetVin NV5000SC     (4A14, 5000)
+Holtek HT80232      (12C3, 0058)
+Holtek HT80229      (12C3, 5598)
+Compex RL2000       (11F6, 1401)
+SureCom NE34        (10BD, 0E34)
+KTI ET32P2          (8E2E, 3000)
+Via 86C926          (1106, 0926)
+
+W przygotowaniu  sâ  nastëpne  pakiety
+driverów:
+
+-  dla  kart  hardwarowych   dekoderów
+MPEG-2,
+
+- dla kart modemów, w tym ISDN, 
+     
+- dla kart USB, 
+     
+- dla kart tunerów TV
+
+oraz oczywiôcie dla SharkPPC(+).
+
+SZ: Zakupiîeô kartë graficznâ Voodoo3.
+Dlaczego    akurat    na    niâ    sië
+zdecydowaîeô?
+
+GM: Jest  to  najszybsza  i  najtaïsza
+karta gfx jakâ mogîem sobie zakupiê do
+mojego zestawu (040/40).
+
+SZ: Jak i gdzie wyprowadziîeô  gniazdo
+z sygnaîem od karty grafiki?
+
+GM:   Wîoûyîem   kartë    do    slotu,
+a wczeôniej  odkrëciîem  tzw.  ôledzia
+i sygnaî  zostaî wyprowadzony.:)
+
+SZ:    Kiedy    juû    uporaîeô    sië
+z instalacjâ sprzëtowâ  to  oczywiôcie
+uruchomiîeô   komputer   jeszcze    na
+koôciach     AGA     i    przystâpiîeô
+do      instalacji       odpowiedniego
+oprogramowania.   Co    trzeba    wiëc
+zainstalowaê,  aby   system   zobaczyî
+Mediatora i kartë grafiki?
+
+GM:   Zainstalowaê    naleûy    system
+Picasso96    i    sterowniki,    które
+dostarczone  sâ  na  dyskietce   razem
+z Mediatorem.
+
+SZ: Jakie parametry  obrazu  wybraîeô?
+Jakâ rozdzielczoôê? Przecieû zaleûy to
+równieû  od  tego  jaki  posiada   sië
+monitor.
+
+GM: Próbowaîem róûnych  rozdzielczoôci
+i  doszedîem  do  wniosku,  ûe   jeôli
+chodzi o WB, to 1024x768x24bit  bëdzie
+dobra.
+Wszystko  bardzo  szybko  i   sprawnie
+ustawia  sië  programem  P96Mode.   Ja
+zmieniîem    gîównie    czëstotliwoôci
+odôwieûania    na    trochë    wiëksze
+(próbowaîem do oporu!).
+
+SZ: A wyjaônij mi jak  dla  posiadaczy
+kart   graficznych   wyglâda    sprawa
+z pamiëciâ Chip?
+
+GM: Nie ma z niâ ûadnego problemu,  bo
+karta gfx ma swojâ  pamiëê  graficznâ.
+Po wîâczeniu WB na górnej belce widzë,
+ûe jest ok. 1,999...  -  czyli  prawie
+caîa  pamiëê   Chip   (pewnie   dúwiëk
+z Prefs:Sound   coô  zajâî,  ale   nie
+jestem pewien).
+
+SZ: Czy majâc kartë grafiki korzystasz
+programów  do  promocji  ekranów?
+
+GM: Trudniej jest wypromowaê  niektóre
+gry  (promowaîy  sië   wczeôniej   bez
+problemów   -   np.    CivilizationAGA
+promuje sië, ale jednostki i szczegóîy
+nie sâ widoczne). Z programami nie  ma
+problemów.
+
+SZ: Jak sprawujâ sië emulatory Maca na
+Voodoo3?
+
+GM: Bardzo dobrze  dziaîajâ  -  jestem
+zadowolony.  Zarówno   programy,   jak
+i gry dziaîajâ  szybko  (jeôli  chodzi
+o  grafikë,  bo  wiadomo,  ûe   czasem
+szybszy procek by sië przydaî).
+
+SZ: Powstaîo juû na Amigë trochë  gier
+wykorzystujâcych   karty    graficzne.
+Przetestowaîeô którâô z nich?
+
+GM: Napalm i FoundationDC  -  dziaîajâ
+nieúle. Nabraîy szybkoôci i  gîëbszego
+sensu (wyûsza rozdzielczoôê).
+Quake - nieúle, ale tu pomaga  gîównie
+procesor,  wiëc  przyspieszenie   jest
+u mnie niewielkie, bo mam 040/40MHz.
+Doom i Hexen - dziaîajâ  bardzo szybko
+(320x240),  ale  wczeôniej   teû   tak
+dziaîaîy.        Przy         wyûszych
+rozdzielczoôciach   przydaî   by   sië
+lepszy procesor.
+Nie mam procesora PPC i nie  gram  "we
+wszystko" wiëc  nie  mogë  nic  wiëcej
+napisaê.
+
+SZ: 020 + Mediator&Voodoo3 - czy  jest
+moûliwe  uruchomienie  "goîej"   A1200
+z kartâ graficznâ?
+
+GM: Wydaje mi sië,  ûe  daîo  by  sië,
+tylko  wâtpliwy  byîby  sens  uûywania
+Mediatora i Voodoo3 (czy innej  karty)
+z takim procesorem jak 020.
+
+SZ: Czy planujesz zakup  Shark'a  PPC,
+który ma byê wkîadany w slot PCI?
+
+GM:   Tak,   planujë,   ale   najpierw
+poczekam,  aû  sië  wszystko  wyjaôni,
+zasiëgnë      opinii      uûytkowników
+i poczytam testy w prasie.

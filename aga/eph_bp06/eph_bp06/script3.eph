@@ -1,0 +1,130 @@
+# planet
+0 : effect name=planet state=3
+.0 : planetx from=530 to=530 dur=1
+.0 : planety from=790 to=790 dur=1
+.0 : fader from=0 to=256 dur=66000
+#321600 : fader from=256 to=0 dur=66000
+-66000 : fader from=256 to=0 dur=66000
+409600 : effect name=planet state=2
+.0 : planetx from=1180 to=1180 dur=1
+.0 : planety from=1050 to=1050 dur=1
+.0 : fader from=0 to=256 dur=66000
+-66000 : fader from=256 to=0 dur=66000
+782336 : effect name=planet state=1
+.0 : planetx from=520 to=520 dur=1
+.0 : planety from=220 to=220 dur=1
+.0 : fader from=0 to=256 dur=66000
+-66000 : fader from=256 to=0 dur=66000
+1138688 : effect name=planet state=4
+.0 : planetx from=960 to=960 dur=1
+.0 : planety from=640 to=640 dur=1
+.0 : fader from=0 to=256 dur=66000
+1631344 : fader from=256 to=0 dur=66000
+
+#credits
+1716352 : effect name=credits state=0
+.0 : fader from=0 to=256 dur=34000
+-34000 : fader from=256 to=0 dur=34000
++181000 : effect name=credits state=1
+.0 : fader from=0 to=256 dur=34000
+-34000 : fader from=256 to=0 dur=34000
++181000 : effect name=credits state=2
+.0 : fader from=0 to=256 dur=34000
+-34000 : fader from=256 to=0 dur=34000
++181000 : effect name=credits state=3
+.0 : fader from=0 to=256 dur=34000
+-34000 : fader from=256 to=0 dur=34000
++181000 : effect name=credits state=4
+.0 : fader from=0 to=256 dur=34000
+-34000 : fader from=256 to=0 dur=34000
++181000 : effect name=credits state=5
+#2621080
+
+# stoppebiten
+2641408 : effect name=fjell state=0
+.0 : fader from=0 to=256 dur=44000
+.0 : play nr=2 dur=250000
+
+2967040 : play nr=0 dur=300000
+.0 : fader from=0 to=256 dur=44000
+
+3311616 : fader from=0 to=256 dur=64000
+.0 : effect name=shy state=0
+-88000: fader from=256 to=0 dur=88000
+3660288 : effect name=fjell state=0
+.0 : fader from=0 to=256 dur=44000
+.0 : play nr=4 dur=250000
+
+3905856 : effect name=fjell state=0
+.0 : play nr=6 dur=400000
+
+# 3960968 fadeuter og akvedukt
+# brekk
+4237244 : effect name=bygninger state=0
+.0: play nr=4 dur=200000
+.0: fader from=0 to=256 dur=44000
+.144000: fader from=256 to=0 dur=60000
++200000 : effect name=vinger state=0
+.0: play nr=0 dur=200000
+.0: fader from=0 to=256 dur=44000
+-44000 : fader from=256 to=0 dur=44000
+#andre crescendo start
+
+4580000 : effect name=akvedukt state=0
+.0 : play nr=0 dur=400000
+.0 : fader from=0 to=256 dur=44000
+5026828 : play nr=2 dur=250000
+.0 : fader from=0 to=256 dur=44000
+5129696: fader from=256 to=0 dur=70000
+
++70000 : effect name=vinger state=0
+.0: play nr=2 dur=200000
+.0: fader from=0 to=256 dur=44000
+-44000 : fader from=256 to=0 dur=44000
+5298660: fader from=0 to=256 dur=60000
+.0: effect name=unge state=0
+5775872: fader from=256 to=0 dur=30000
+
++30000: effect name=akvedukt state=0
+.0: play nr=4 dur=400000
+.0: fader from=0 to=256 dur=22000
+
+6200000: fader from=0 to=256 dur=20000
+.0: effect name=statue state=0
+.0: play nr=0 dur=300000
++300000 : play nr=2 dur=300000
+
+#fettass:
+6799320: effect name=dame state=0
+.0: play nr=6 dur=200000
+.0: fader from=0 to=256 dur=30000
++180000: play nr=8 dur=200000
+.0 : fader from=0 to=256 dur=44000
++180000: play nr=10 dur=200000
+.0 : fader from=0 to=256 dur=44000
++180000: play nr=12 dur=200000
+.0 : fader from=0 to=256 dur=44000
++180000: play nr=4 dur=200000
+.0 : fader from=0 to=256 dur=44000
+
+#takeoff tårnet
+7463500 : effect name=tarn state=0
+.0: play nr=0 dur=200000
+.0: fader from=0 to=256 dur=30000
++200000: play nr=2 dur=200000
++200000: play nr=4 dur=200000
++200000: play nr=6 dur=200000
++200000: play nr=8 dur=300000
+
+#neant
+8556460: effect name=neant state=0
+.0 : fader from=0 to=256 dur=176000
+.100 : play nr=2 dur=1000
+
+#hjerte
+9070556: effect name=hjerte state=0
+.0 : fader from=0 to=256 dur=66000
+.200: play nr=0 dur=150000
++150000: play nr=2 dur=150000
+-88000: fader from=256 to=0 dur=88000
+9461760 : effect name=exit dur=0

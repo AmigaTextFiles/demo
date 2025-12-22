@@ -1,0 +1,39 @@
+; $VER: Install DSoaB 1.0 (26.9.1999) ©1999, CdBS Software
+;
+; Installation script for the demo "Dark Sides of a Brain"
+
+(Welcome @intro-help)
+
+(Set @Default-Dest
+  (tackon
+    (AskDir
+      (prompt "Where do you want to install the demo ?\n A drawer called 'DSoaB' will be created")
+      (Help @AskDir-Help)
+      (Default @Default-Dest)
+    )
+    "DSoaB"
+  )
+)
+
+(MakeDir
+  @Default-Dest
+  (Prompt (Cat "Creating Drawer " @Default-Dest "..."))
+  (infos)
+)
+
+(CopyFiles
+  (Prompt "Copying DBPlayer.library...")
+  (Help @CopyFiles-Help)
+  (Source (ExpandPath "dbplayer.library"))
+  (Dest "Libs:")
+)
+
+(CopyFiles
+  (Prompt "Copying Demo files, please wait...")
+  (Help @CopyFiles-help)
+  (Source (ExpandPath ""))
+  (Dest @Default-Dest)
+  (Pattern  "~(#?.library|Install_DSoaB(|.info))")
+)
+
+(exit)

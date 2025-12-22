@@ -1,0 +1,124 @@
+; *************************************************************************
+; *****************  HIGH ANXIETY INSTALLATION SCRIPT  ********************
+; *************************************************************************
+; © 1995 by Bartman/Abyss
+; *************************************************************************
+
+(set demo_space_required 1620)
+
+(set #pattern "H#?")
+
+(set qube_space_required 15)
+(set space_required (+ demo_space_required qube_space_required))
+
+(set @default-dest "")
+
+
+(set #hello-msg
+  (cat
+    "Welcome to\n\nHigh Anxiety\n"
+     "© 1995 by Abyss\n\n"
+     "released at Assembly'95\n\n"
+     "a high quality demo designed for Amigas capable of AA-chip quality graphics processors (A1200/A4000)\n\n"
+     "             Code: Dexter, Moon     \n"
+     "          Visuals: Toxic            \n"
+     "Audio, Raytracing: Pink             \n"
+     " Installer, Icons: Bartman          "
+  )
+)
+
+(set #bad-kick-msg "High Anxiety requires AGA-chipset and Kickstart 3.0 or better!")
+
+; Check for KickV39 or better
+
+(if (< (/ (getversion) 65536) 39)
+        (
+        (abort #bad-kick-msg)
+        )
+)
+
+; Beginn
+
+(message #hello-msg)
+
+;
+
+(set destdir
+  (askdir
+    (prompt ("Please select the directory where you want a \"High Anxiety\" drawer to be created.\n %ld KB free space on drive required." space_required))
+    (help @askdir-help)
+    (default ":")
+    (disk)
+  )
+)
+
+(set options
+  (askoptions
+    (prompt "Select the features of High Anxiety to install")
+    (help @askoptions-help)
+    (choices
+      ("High Anxiety Demo (%ld KB)" demo_space_required)
+      ("Abyss WinQube (%ld KB)" qube_space_required)
+    )
+    (default -1)
+  )
+)
+
+(set destdir (tackon destdir "High Anxiety"))
+
+(makedir destdir
+  (prompt "A directory called \"High Anxiety\" will be created.")
+  (help @makedir-help)
+  (infos)
+)
+
+(askdisk
+  (prompt "\nPlease insert \"High Anxiety Disk 1\".")
+  (help @askdisk-help)
+  (dest "High Anxiety Disk 1")
+)
+
+(if (= (BITAND options 2) 2)
+  (copyfiles
+    (prompt "Select the files to copy from High Anxiety Disk 1.")
+    (help @copyfiles-help)
+    (source "High Anxiety Disk 1:")
+    (dest destdir)
+    (pattern "WinQube#?")
+    (infos)
+  )
+)
+
+(if (= (BITAND options 1) 1)
+  (
+    (complete 5)
+    
+    (copyfiles
+      (prompt "Select the files to copy from High Anxiety Disk 1.")
+      (help @copyfiles-help)
+      (source "High Anxiety Disk 1:")
+      (dest destdir)
+      (pattern #pattern)
+      (infos)
+    )
+    
+    (complete 50)
+    
+    (askdisk
+      (prompt "\nPlease insert \"High Anxiety Disk 2\".")
+      (help @askdisk-help)
+      (dest "High Anxiety Disk 2")
+    )
+    
+    (copyfiles
+      (prompt "Select the files to copy from High Anxiety Disk 2.")
+      (help @copyfiles-help)
+      (source "High Anxiety Disk 2:")
+      (dest destdir)
+      (pattern #pattern)
+      (infos)
+    )
+  )
+)    
+
+(complete 100)

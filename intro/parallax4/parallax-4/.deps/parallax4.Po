@@ -1,0 +1,114 @@
+parallax4.o : \
+ parallax4.c /gg/includestd/stdlib.h \
+ /gg/includestd/machine/ansi.h \
+ /gg/lib/gcc-lib/ppc-morphos/2.95.3/include/stdarg.h \
+ /gg/lib/gcc-lib/ppc-morphos/2.95.3/include/va-ppc.h \
+ /gg/includestd/sys/types.h /gg/includestd/machine/types.h \
+ /gg/includestd/sys/cdefs.h /gg/includestd/machine/cdefs.h \
+ /gg/includestd/machine/endian.h /gg/includestd/string.h \
+ /gg/includestd/math.h /gg/include/float.h \
+ /gg/includestd/machine/float.h /gg/include/SDL.h \
+ /gg/include/SDL_main.h /gg/include/SDL_types.h \
+ /gg/include/SDL_getenv.h /gg/include/SDL_error.h \
+ /gg/include/begin_code.h /gg/include/close_code.h \
+ /gg/include/SDL_rwops.h /gg/includestd/stdio.h \
+ GG:os-include/dos/dos.h GG:os-include/exec/types.h \
+ /gg/include/SDL_timer.h /gg/include/SDL_audio.h \
+ /gg/include/SDL_byteorder.h /gg/include/SDL_cdrom.h \
+ /gg/include/SDL_joystick.h /gg/include/SDL_events.h \
+ /gg/include/SDL_active.h /gg/include/SDL_keyboard.h \
+ /gg/include/SDL_keysym.h /gg/include/SDL_mouse.h \
+ /gg/include/SDL_video.h /gg/include/SDL_mutex.h \
+ /gg/include/SDL_quit.h /gg/include/SDL_version.h \
+ GG:os-include/proto/powersdl.h GG:os-include/clib/powersdl_protos.h \
+ GG:os-include/SDL/SDL_active.h GG:os-include/SDL/SDL_audio.h \
+ GG:os-include/SDL/SDL_byteorder.h GG:os-include/SDL/SDL_cdrom.h \
+ GG:os-include/SDL/SDL_copying.h GG:os-include/SDL/SDL_cpuinfo.h \
+ GG:os-include/SDL/begin_code.h GG:os-include/SDL/close_code.h \
+ GG:os-include/SDL/SDL_endian.h GG:os-include/SDL/SDL_types.h \
+ GG:os-include/SDL/SDL_rwops.h GG:os-include/SDL/SDL_error.h \
+ GG:os-include/SDL/SDL_events.h GG:os-include/SDL/SDL_getenv.h \
+ GG:os-include/SDL/SDL_joystick.h GG:os-include/SDL/SDL_keyboard.h \
+ GG:os-include/SDL/SDL_keysym.h GG:os-include/SDL/SDL_loadso.h \
+ GG:os-include/SDL/SDL_main.h GG:os-include/SDL/SDL_mouse.h \
+ GG:os-include/SDL/SDL_mutex.h GG:os-include/SDL/SDL_name.h \
+ GG:os-include/SDL/SDL_quit.h GG:os-include/SDL/SDL_syswm.h \
+ GG:os-include/SDL/SDL_version.h GG:os-include/SDL/SDL_thread.h \
+ GG:os-include/SDL/SDL_timer.h GG:os-include/SDL/SDL_video.h \
+ GG:os-include/ppcinline/powersdl.h GG:os-include/ppcinline/macros.h \
+ GG:os-include/emul/emulregs.h GG:os-include/emul/emulinterface.h \
+ parallax4.h
+parallax4.c :
+/gg/includestd/stdlib.h :
+/gg/includestd/machine/ansi.h :
+/gg/lib/gcc-lib/ppc-morphos/2.95.3/include/stdarg.h :
+/gg/lib/gcc-lib/ppc-morphos/2.95.3/include/va-ppc.h :
+/gg/includestd/sys/types.h :
+/gg/includestd/machine/types.h :
+/gg/includestd/sys/cdefs.h :
+/gg/includestd/machine/cdefs.h :
+/gg/includestd/machine/endian.h :
+/gg/includestd/string.h :
+/gg/includestd/math.h :
+/gg/include/float.h :
+/gg/includestd/machine/float.h :
+/gg/include/SDL.h :
+/gg/include/SDL_main.h :
+/gg/include/SDL_types.h :
+/gg/include/SDL_getenv.h :
+/gg/include/SDL_error.h :
+/gg/include/begin_code.h :
+/gg/include/close_code.h :
+/gg/include/SDL_rwops.h :
+/gg/includestd/stdio.h :
+GG:os-include/dos/dos.h :
+GG:os-include/exec/types.h :
+/gg/include/SDL_timer.h :
+/gg/include/SDL_audio.h :
+/gg/include/SDL_byteorder.h :
+/gg/include/SDL_cdrom.h :
+/gg/include/SDL_joystick.h :
+/gg/include/SDL_events.h :
+/gg/include/SDL_active.h :
+/gg/include/SDL_keyboard.h :
+/gg/include/SDL_keysym.h :
+/gg/include/SDL_mouse.h :
+/gg/include/SDL_video.h :
+/gg/include/SDL_mutex.h :
+/gg/include/SDL_quit.h :
+/gg/include/SDL_version.h :
+GG:os-include/proto/powersdl.h :
+GG:os-include/clib/powersdl_protos.h :
+GG:os-include/SDL/SDL_active.h :
+GG:os-include/SDL/SDL_audio.h :
+GG:os-include/SDL/SDL_byteorder.h :
+GG:os-include/SDL/SDL_cdrom.h :
+GG:os-include/SDL/SDL_copying.h :
+GG:os-include/SDL/SDL_cpuinfo.h :
+GG:os-include/SDL/begin_code.h :
+GG:os-include/SDL/close_code.h :
+GG:os-include/SDL/SDL_endian.h :
+GG:os-include/SDL/SDL_types.h :
+GG:os-include/SDL/SDL_rwops.h :
+GG:os-include/SDL/SDL_error.h :
+GG:os-include/SDL/SDL_events.h :
+GG:os-include/SDL/SDL_getenv.h :
+GG:os-include/SDL/SDL_joystick.h :
+GG:os-include/SDL/SDL_keyboard.h :
+GG:os-include/SDL/SDL_keysym.h :
+GG:os-include/SDL/SDL_loadso.h :
+GG:os-include/SDL/SDL_main.h :
+GG:os-include/SDL/SDL_mouse.h :
+GG:os-include/SDL/SDL_mutex.h :
+GG:os-include/SDL/SDL_name.h :
+GG:os-include/SDL/SDL_quit.h :
+GG:os-include/SDL/SDL_syswm.h :
+GG:os-include/SDL/SDL_version.h :
+GG:os-include/SDL/SDL_thread.h :
+GG:os-include/SDL/SDL_timer.h :
+GG:os-include/SDL/SDL_video.h :
+GG:os-include/ppcinline/powersdl.h :
+GG:os-include/ppcinline/macros.h :
+GG:os-include/emul/emulregs.h :
+GG:os-include/emul/emulinterface.h :
+parallax4.h :

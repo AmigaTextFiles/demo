@@ -1,0 +1,61 @@
+Examles
+=======
+
+For benchmarking, type f.ex.
+
+Shell> BoingCube -benchmark
+Shell> BoingCube -benchmark -software
+Shell> BoingCube -benchmark20 -gofullscreen
+Shell> BoingCube -benchmark60 -gofullscreen -sync
+
+Note, for best results close all programs that you don't absolutely need before
+benchmarking. Or even better, deactivate all modules in WBStartup and reboot
+(or start without WBStartup modules), then benchmark.
+
+On my machine (Sam440ep-flex 800MHz, 1GB RAM and Radeon 9250 with AOS4.1 FE,
+1920x1080 ARGB32 WB screen) and WITHOUT any WBStartup modules I get:
+
+
+1.> boingcube -benchmark
+
+*** BoingCube benchmark ***
+Name:            -benchmark10 (Counts iterations per ten seconds.)
+Version:         1.45 - 6.1 - 6.1 (20160425)
+Mode:            Windowed NON-vsynced HARDware
+Hardware acc.:   Buff: ON (hardware)   Gfx: ON (hardware)
+Iterations:      662 frames
+Duration:        10013 ms (10.013 seconds)
+Rendering time:  90 ms (0.090 seconds) [lower is better]
+R. frame-rate:   7355.555 FPS (rendering frame-rate) [higher is better]
+Result:          66.114 FPS (displayed frames/second) [higher is better]
+
+
+1.> boingcube -benchmark -software
+
+*** BoingCube benchmark ***
+Name:            -benchmark10 (Counts iterations per ten seconds.)
+Version:         1.45 - 6.1 - 6.1 (20160425)
+Mode:            Windowed NON-vsynced SOFTware
+Hardware acc.:   Buff: OFF (software)   Gfx: OFF (software)
+Iterations:      587 frames
+Duration:        10003 ms (10.003 seconds)
+Rendering time:  785 ms (0.785 seconds) [lower is better]
+R. frame-rate:   747.770 FPS (rendering frame-rate) [higher is better]
+Result:          58.682 FPS (displayed frames/second) [higher is better]
+
+
+1.> boingcube -benchmark -gofullscreen
+
+*** BoingCube benchmark ***
+Name:            -benchmark10 (Counts iterations per ten seconds.)
+Version:         1.45 - 6.1 - 6.1 (20160425)
+Mode:            Fullscreen NON-vsynced HARDware
+Hardware acc.:   Buff: ON (hardware)   Gfx: ON (hardware)
+Iterations:      650 frames
+Duration:        10009 ms (10.009 seconds)
+Rendering time:  88 ms (0.088 seconds) [lower is better]
+R. frame-rate:   7386.363 FPS (rendering frame-rate) [higher is better]
+Result:          64.941 FPS (displayed frames/second) [higher is better]
+
+
+For more info, see BoingCube.readme
